@@ -364,35 +364,106 @@ def parse_problems():
     toc_new_df = load_toc_new_csv()
     content_list_json = get_content_list_json()
 
+    problem_list = []
+    cur_problem_lines = []
+
+    chap_starts = []
     for index, row in toc_new_df.iterrows():
-        chapter = row["chapter"]
-        section = row["section"]
-        page = row["page"]
-        json_idx = row["json_idx"]
-        if index < len(toc_new_df) - 1:
-            next_json_idx = toc_new_df.iloc[index + 1]["json_idx"]
-        else:
-            next_json_idx = len(content_list_json)
+        chaps = row["chapter"].split(".")
+        if len(chaps) == 1:
+            chap_starts.append(row["json_idx"])
 
-        chapter_path = get_chapter_output_path(chapter)
-        if not os.path.exists(chapter_path):
-            os.makedirs(chapter_path)
+    state = 0  # 0: not in problems, 1: in Conceptual Questions, 2: in Problems & Exercises
+    cur_chap = 0
+    cur_subchap = ''
+    for idx, content in enumerate(content_list_json):
+        if content['page_idx'] < 17:
+            continue
 
-        # Create problems.json and problems.txt for each chapter
-        problems_list = []
-        for i in range(json_idx, next_json_idx):
-            content = content_list_json[i]
-            if content["type"] == "problem":
-                problems_list.append(content)
+        if content['page_idx'] >= 1554:
+            # Skip appendix
+            break
 
-        json_file_path = os.path.join(chapter_path, f"problems.json")
-        with open(json_file_path, "w") as json_file:
-            json.dump(problems_list, json_file, indent=4)
+        if content['type'] != 'text':
+            continue
 
-        text_file_path = os.path.join(chapter_path, f"problems.txt")
-        with open(text_file_path, "w") as text_file:
-            content = json_to_text(problems_list)
-            text_file.write(content)
+        if idx in chap_starts:
+            state = 0
+            continue
+
+        text = content['text'].strip()
+        if text.startswith("Conceptual Questions"):
+            cur_chap += 1
+            state = 1
+            continue
+        
+        if text == "Problems & Exercises":
+            state = 2
+            continue
+
+        def save_problem():
+            problem = "\n".join(cur_problem_lines)
+            problem = problem.strip()
+            cur_problem_lines.clear()
+            if not problem or not problem[0].isdigit():
+                return
+            problem_list.append({
+                "chapter": str(cur_chap),
+                "subchapter": cur_subchap,
+                "problem": problem,
+                "page_idx": content['page_idx'],
+            })
+
+        if state == 0:
+            if len(cur_problem_lines) > 0:
+                save_problem()
+            continue
+
+
+        if state == 1:
+            if "text_level" in content and text.startswith(str(cur_chap)):
+                cur_subchap = text.split(" ")[0]
+                continue
+            else:
+                problems = text.split("\n")
+                for problem in problems:
+                    problem = problem.strip()
+                    if not problem:
+                        continue
+                    if problem[0].isdigit() and len(cur_problem_lines) > 0:
+                        save_problem()
+                    cur_problem_lines.append(problem)
+        
+        if state == 2:
+            if "text_level" in content and text.startswith(str(cur_chap)):
+                cur_subchap = text.split(" ")[0]
+                continue
+            else:
+                problems = text.split("\n")
+                for problem in problems:
+                    problem = problem.strip()
+                    if not problem:
+                        continue
+                    if problem[0].isdigit() and len(cur_problem_lines) > 0:
+                        save_problem()
+                    cur_problem_lines.append(problem)
+
+
+    # Save the problems to a JSON file
+    problems_output_path = os.path.join(output_path, "problems.json")
+    with open(problems_output_path, "w") as f:
+        json.dump(problem_list, f, indent=4)
+
+    # Save a version removing math symbols
+    problems_output_path_no_math = os.path.join(output_path, "problems_no_math.json")
+    with open(problems_output_path_no_math, "w") as f:
+        problems_no_math = []
+        for problem in problem_list:
+            problem_no_math = problem.copy()
+            problem_no_math["problem"] = remove_math_symbols(problem["problem"])
+            problems_no_math.append(problem_no_math)
+        json.dump(problems_no_math, f, indent=4)
+    
 
 
 if __name__ == "__main__":
@@ -405,8 +476,23 @@ if __name__ == "__main__":
     # ---
 
     # Call this if either toc.txt or toc.csv is modified
-    init_new_toc()
+    # init_new_toc()
 
     # Call this to parse the content_list_json into separate chapter files
-    parse_content_list_json()
+    # parse_content_list_json()
+
+    parse_problems()
+
+    with open(os.path.join(output_path, "problems.json"), "r") as f:
+        problems = json.load(f)
+    for problem in problems:
+        text = problem["problem"]
+        try:
+            if not text.split(".")[0].isdigit():
+                assert False
+        except:
+            print(f"Problem {problem['subchapter']} has no number: {text}")
+
+
+
     pass

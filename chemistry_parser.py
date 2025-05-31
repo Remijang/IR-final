@@ -360,6 +360,91 @@ def parse_content_list_json():
             content = json_to_markdown(content_list)
             markdown_file.write(content)
 
+def parse_problems():
+    toc_new_df = load_toc_new_csv()
+    content_list_json = get_content_list_json()
+
+    problem_list = []
+    cur_problem_lines = []
+
+    chap_starts = []
+    for index, row in toc_new_df.iterrows():
+        chaps = row["chapter"].split(".")
+        if len(chaps) == 1:
+            chap_starts.append(row["json_idx"])
+
+    state = 0  # 0: not in problems, 1: in Conceptual Questions, 2: in Problems & Exercises
+    cur_chap = 0
+    cur_subchap = ''
+    for idx, content in enumerate(content_list_json):
+        if content['page_idx'] < 12:
+            continue
+
+        if content['page_idx'] >= 1090:
+            # Skip appendix
+            break
+
+        if content['type'] != 'text':
+            continue
+
+        if idx in chap_starts:
+            state = 0
+            continue
+
+        text = content['text'].strip()
+        
+        if text == "Exercises":
+            cur_chap += 1
+            state = 1
+            continue
+
+        def save_problem():
+            problem = "\n".join(cur_problem_lines)
+            problem = problem.strip()
+            cur_problem_lines.clear()
+            if not problem or not problem[0].isdigit():
+                return
+            problem_list.append({
+                "chapter": cur_chap,
+                "subchapter": cur_subchap,
+                "problem": problem,
+                "page_idx": content['page_idx'],
+            })
+
+        if state == 0:
+            if len(cur_problem_lines) > 0:
+                save_problem()
+            continue
+
+
+        if state == 1:
+            if "text_level" in content and text.startswith(str(cur_chap)):
+                cur_subchap = text.split(" ")[0]
+                continue
+            else:
+                problems = text.split("\n")
+                for problem in problems:
+                    problem = problem.strip()
+                    if not problem:
+                        continue
+                    if problem[0].isdigit() and len(cur_problem_lines) > 0:
+                        save_problem()
+                    cur_problem_lines.append(problem)
+        
+    # Save the problems to a JSON file
+    problems_output_path = os.path.join(output_path, "problems.json")
+    with open(problems_output_path, "w") as f:
+        json.dump(problem_list, f, indent=4)
+
+    # Save a version removing math symbols
+    problems_output_path_no_math = os.path.join(output_path, "problems_no_math.json")
+    with open(problems_output_path_no_math, "w") as f:
+        problems_no_math = []
+        for problem in problem_list:
+            problem_no_math = problem.copy()
+            problem_no_math["problem"] = remove_math_symbols(problem["problem"])
+            problems_no_math.append(problem_no_math)
+        json.dump(problems_no_math, f, indent=4)
 
 if __name__ == "__main__":
     # DON'T CALL THE BELOW FUNCTIONS, AS THE FILE HAS BEEN MANUALLY MODIFIED
@@ -371,7 +456,12 @@ if __name__ == "__main__":
     # ---
 
     # Call this if either toc.txt or toc.csv is modified
-    init_new_toc()
+    # init_new_toc()
 
     # Call this to parse the content_list_json into separate chapter files
-    parse_content_list_json()
+    # parse_content_list_json()
+
+    # Call this to parse the problems
+    parse_problems()
+
+    pass
