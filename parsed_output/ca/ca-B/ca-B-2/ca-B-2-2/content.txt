@@ -1,0 +1,3 @@
+B.2.2 GPU Compute Engines
+
+The GeForce 8800 GPU has 128 cores. The cores are organized into 8 groups. Each group is known as a TPC (texture/ processor cluster). Each TPC contains two SMs (Streaming Multiprocessors). Moreover, each SM contains 8 cores known as streaming processors (SPs). Each SP is a simple inorder core that has an IEEE 754 compliant floating point ALU, branch and memory access units. Along with the set of simple cores, each SM contains some dedicated memory structures. These memory structures contain constants, texture data, and GPU instructions. All the SPs can execute a set of instructions in parallel, and are tightly synchronized with each other.

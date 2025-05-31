@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "7.4.2 Content Addressable Memory (CAM) ",
+        "text_level": 1,
+        "page_idx": 291
+    },
+    {
+        "type": "text",
+        "text": "CAM Cell ",
+        "text_level": 1,
+        "page_idx": 291
+    },
+    {
+        "type": "text",
+        "text": "In this section, we shall look at a special type of memory cell called a CAM (Content Addressable Memory) cell. First, consider an SRAM array. A typical SRAM array is a matrix of SRAM cells. Each row contains a vector of data. A given row is addressed or located by using a specific set of address bits. However, it is possible to locate a row using a different method. We can address a row by its content. For example, if each row contains 32 SRAM cells, then we can think of the contents of a row as a 32-bit number. We wish to address the row this 32-bit number. For example, if a row contains 0x AB 12 32 54, then we should be able to find the index of the row that contains this value. Such a memory is known as a CAM memory, and each basic cell is known as a CAM cell. A CAM memory is typically used to implement a hashtable(see [Cormen et al., 2009]) in hardware. A hashtable saves key-value pairs such as (name and address). We address a hashtable by its key, and read the value. It is a more flexible data structure than an array, because we are not limited to integer indices. We shall use CAM arrays to implement some memory structures in Chapter 11. ",
+        "page_idx": 291
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at a 10 transistor CAM cell in Figure 7.28. If the value stored in the SRAM cell, $V$ , is not equal to the input bit, $A _ { i }$ , then we wish to set the value of the match line to 0. In the CAM cell, the upper half is a regular SRAM cell with 6 transistors. We have 4 extra transistors in the lower half. Let us now consider transistor $^ { \\prime \\prime 1 }$ . It is connected to a global match line, and transistor $T 2$ . $T 1$ is controlled, by the value, $V$ , which is stored in the SRAM cell, and $T 2$ is controlled by $\\overline { { A _ { i } } }$ . Let us assume that $V = { \\overline { { A _ { i } } } }$ . If both of them are 1, then transistors $T 1$ and $T 2$ are in the ON state, and there is a direct conducting path between the match line and ground. Thus, the value of the match line will get set to 0. However, if $V$ and $\\overline { { A _ { i } } }$ are both $0$ , then the path through $^ { \\prime \\prime 1 }$ and $^ { \\prime } L ^ { \\prime } 2$ is not conducting. But, in this case, the path through $T 3$ , and $T 4$ becomes conducting, because the gates of these transistors are connected to $\\overline { V }$ , and $A _ { i }$ , respectively. The input to both the gates is a logical 1. Thus, the match line will be pulled down to 0. The reader can verify that if $V = A _ { i }$ , no conducting path is formed. Thus, a CAM cell drives the match line to a logical $0$ , if there is a mismatch between the value stored and the input bit, $A _ { i }$ . ",
+        "page_idx": 291
+    },
+    {
+        "type": "image",
+        "img_path": "images/8b8f46fac25c27d4618d54cd0d929ae1f2392fa52d1bf30ffb265f0cc56f0c93.jpg",
+        "img_caption": [
+            "Figure 7.28: A 10 Transistor CAM cell "
+        ],
+        "img_footnote": [],
+        "page_idx": 292
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 292
+    },
+    {
+        "type": "text",
+        "text": "Array of CAM Cells ",
+        "text_level": 1,
+        "page_idx": 292
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.29 shows an array of CAM cells. The structure is mostly similar to an SRAM array. We can address a row by its index, and perform a read/write access. Additionally, we can compare each row of the CAM cell with the input, $A$ . If any row matches the input, then the corresponding match line will have a value of 1. We can compute a logical OR of all the match lines, and decide if we have a match in the CAM array or not. Additionally, we can connect all the match lines of the CAM array to a priority encoder to find the index of the row that matches the data. ",
+        "page_idx": 292
+    },
+    {
+        "type": "image",
+        "img_path": "images/084f8e24fbe1ece3ff8e7eb9ec6a76f3d65e7bf8556cbf9e167e2f412930f221.jpg",
+        "img_caption": [
+            "Figure 7.29: Array of CAM Cells "
+        ],
+        "img_footnote": [],
+        "page_idx": 293
+    }
+]

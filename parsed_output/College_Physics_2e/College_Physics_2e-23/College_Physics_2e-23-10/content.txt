@@ -1,0 +1,57 @@
+23.10 RL Circuits
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Calculate the current in an RL circuit after a specified number of characteristic time steps.   
+• Calculate the characteristic time of an RL circuit.   
+• Sketch the current in an RL circuit over time.
+
+We know that the current through an inductor  cannot be turned on or off instantaneously. The change in current changes flux, inducing an emf opposing the change (Lenz’s law). How long does the opposition last? Current wil flow and canbe turned off, but how long does it take? Figure 23.42 shows a switching circuit that can be used to examine current through an inductor as a function of time.
+
+When the switch is first moved to position 1 (at  ), the current is zero and it eventually rises to  , where  is the total resistance of the circuit. The opposition of the inductor  is greatest at the beginning, because the amount of change is greatest. The opposition it poses is in the form of an induced emf, which decreases to zero as the current approaches its final value. The opposing emf is proportional to the amount of change left. This is the hallmark of an exponential behavior, and it can be shown with calculus that
+
+is the current in an  circuit when switched on (Note the similarity to the exponential behavior of the voltage on a charging capacitor). The initial current is zero and approaches  with a characteristic time constant  for an  circuit, given by
+
+where  has units of seconds, since  . In the first period of time  , the current rises from zero to  , since  . The current will  of the remainder in the next time  . A well-known property of the exponential is that the final value is never exactly reached, but 0.632 of the remainder to that value is achieved in every characteristic time  . In just a few multiples of the time  , the final value is very nearly achieved, as the graph in Figure 23.42(b) illustrates.
+
+The characteristic time  depends on only two factors, the inductance  and the resistance  . The greater the inductance  , the greater  is, which makes sense since a large inductance is very effective in opposing change. The smaller the resistance  , the greater  is. Again this makes sense, since a small resistance means a large final current and a greater change to get there. In both cases—large  and small  —more energy is stored in the inductor and more time is required to get it in and out.
+
+When the switch in Figure 23.42(a) is moved to position 2 and cuts the battery out of the circuit, the current drops because of energy dissipation by the resistor. But this is also not instantaneous, since the inductor opposes the decrease in current by inducing an emf in the same direction as the battery that drove the current. Furthermore, there is a certain amount of energy,  , stored in the inductor, and it is dissipated at a finite rate. As the current approaches zero, the rate of decrease slows, since the energy dissipation rate is  . Once again the behavior is exponential, and  is found to be
+
+(See Figure 23.42(c).) In the first period of time  after the switch is closed, the current falls to 0.368 of its initial value, since  . In each successive time  , the current falls to 0.368 of the preceding value, and in a few multiples of  , the current becomes very close to zero, as seen in the graph in Figure 23.42(c).
+
+EXAMPLE 23.9
+
+Calculating Characteristic Time and Current in an RLCircuit
+
+(a) What is the characteristic time constant for a  inductor in series with a  resistor? (b) Find the current  after the switch is moved to position 2 to disconnect the battery, if it is initially  .
+
+Strategy for (a)
+
+The time constant for an  circuit is defined by  .
+
+Solution for (a)
+
+Entering known values into the expression for  given in  yields
+
+Discussion for (a)
+
+This is a small but definitely finite time. The coil will be very close to its full current in about ten time constants, or about  .
+
+Strategy for (b)
+
+We can find the current by using  , or by considering the decline in steps. Since the time is twice the characteristic time, we consider the process in steps.
+
+Solution for (b)
+
+In the first  , the current declines to 0.368 of its initial value, which is
+
+After another 2.50 ms, or a total of  , the current declines to 0.368 of the value just found. That is,
+
+Discussion for (b)
+
+After another 5.00 ms has passed, the current will be 0.183 A (see Exercise 23.69); so, although it does die out, the current certainly does not go to zero instantaneously.
+
+In summary, when the voltage applied to an inductor is changed, the current also changes, butthechangeincurent lagsthechangeinvoltageinanRLcircuit. In Reactance, Inductive and Capacitive, we explore how an RLcircuit behaves when a sinusoidal AC voltage is applied.

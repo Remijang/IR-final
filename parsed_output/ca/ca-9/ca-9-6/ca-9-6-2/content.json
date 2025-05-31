@@ -1,0 +1,144 @@
+[
+    {
+        "type": "text",
+        "text": "9.6.2 Microinstructions ",
+        "text_level": 1,
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "Let us look at the life cycle of a regular program instruction. The first step is to fetch the contents of the instruction from the instruction memory. Let us introduce a microinstruction to read the contents of the instruction from the instruction memory and place it in the IR $( i r )$ . Let us call it mloadIR. Note that we will add the prefix $m$ ( $m$ for micro) to every microinstruction. This is to denote the fact that it is a microinstruction, and differentiate it from regular program instructions. ",
+        "page_idx": 388
+    },
+    {
+        "type": "table",
+        "img_path": "images/2b1f0d0429f10b6f7313490342b930e0ff7bcaab847954793d54a86a8a924d9a.jpg",
+        "table_caption": [
+            "Table 9.7: List of all the internal registers "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Serial No.</td><td>Register</td><td>Size (bits)</td><td>Function</td></tr><tr><td>1</td><td>pc</td><td>32</td><td>program counter</td></tr><tr><td>2</td><td>ir</td><td>32</td><td>instruction register</td></tr><tr><td>3</td><td>I</td><td>1</td><td>immediate bit in the instruc- tion</td></tr><tr><td>4</td><td>rd</td><td>4</td><td>destination register id</td></tr><tr><td>5</td><td>rs1</td><td>4</td><td>id of the first source register</td></tr><tr><td>6</td><td>rs2</td><td>4</td><td>id of the second source regis- ter</td></tr><tr><td>7</td><td>immx</td><td>32</td><td>immediate embedded in the instruction (after processing modifiers)</td></tr><tr><td>8</td><td>branchTarget</td><td>32</td><td>branch target\uff0c computed as the sum of the PC and the off- set embedded in the instruc- tion</td></tr><tr><td>9</td><td>regSrc</td><td>4</td><td>contains the id of the register that needs to be accessed in the register file</td></tr><tr><td>10</td><td>regData</td><td>32</td><td>contains the data to be writ- ten into the register file</td></tr><tr><td>11</td><td>regVal</td><td>32</td><td>value read from the register file</td></tr><tr><td>12</td><td>A</td><td>32</td><td>first operand of the ALU</td></tr><tr><td>13</td><td>B</td><td>32</td><td>second operand of the ALU</td></tr><tr><td>14</td><td>flags.E</td><td>1</td><td>the equality flag</td></tr><tr><td>15</td><td>flags.GT</td><td>1</td><td>the greater than fag</td></tr><tr><td>16</td><td>aluResult</td><td>32</td><td>the ALU result</td></tr><tr><td>17</td><td>mar</td><td>32</td><td>memory address register</td></tr><tr><td>18</td><td>mdr</td><td>32</td><td>memory data register</td></tr><tr><td>19</td><td>ldResult</td><td>32</td><td>the value loaded from memory</td></tr></table></body></html>\n\n",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 389
+    },
+    {
+        "type": "table",
+        "img_path": "images/91b45b28eab6c3eeecf64d2732e6f2ab249276f6d1f35a979f54e201bdd5d85b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>mloadIR</td><td>Loads the ir with the contents of the instruction</td></tr></table></body></html>\n\n",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "Once, we have loaded the instruction register, it automatically sends the contents to all the subunits in the decode unit, and they extract the appropriate bit fields, and save them in the decode registers \u2013 $I$ , $r d$ , rs1, rs2, immx, and branchT arget. We envision an mdecode instruction in the 0-address format that makes the $\\mu$ control unit wait for 1 cycle. In this cycle, all the decode registers get populated. ",
+        "page_idx": 390
+    },
+    {
+        "type": "table",
+        "img_path": "images/9a80355cb853f87fefa538d6579f11d3b677aa3328676a4e6fd69713b13ec58e.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>mdecode</td><td>Waitsfor1cycle.Meanwhile, all the decode registers get populated.</td></tr></table></body></html>\n\n",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "Note that these two steps (mloadIR and mdecode) are common for all program instructions. After this, we need to load the microinstructions for the specific program instruction. This is achieved through an mswitch instruction that instructs the \u00b5control unit to jump to the appropriate location in the microinstruction memory, and begins executing microinstructions starting from that location. ",
+        "page_idx": 390
+    },
+    {
+        "type": "table",
+        "img_path": "images/405d56c49d6009062963df28ae05c6c21053cfb7d749a33629aa438cb416f24d.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>mswitch</td><td>Load the set of microinstruc- tions corresponding to the program instruction</td></tr></table></body></html>\n\n",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "Now, the processing of the instruction can start. The aim here is to use as few microinstructions as possible. We want to keep the microassembly interface very simple. Let us first introduce the mmov instruction that moves data from the source register to a destination register. Additionally, it can set the arguments of the unit corresponding to the destination register. We thus introduce a 2-address and 3-address format of the mmov instruction. The 3-address format contains the arguments (args) of the unit corresponding to the destination register, as shown below. ",
+        "page_idx": 390
+    },
+    {
+        "type": "table",
+        "img_path": "images/2474757005f6027afa80e7e43b2e6d50c2e7ac3f69044808e6cee12e1788ff4a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>mmov r1, r2</td><td>r1\u2190r2</td></tr><tr><td>mmov r1, r2, (args)</td><td>rl \u2190 r2\uff0csend the value of args on the bus</td></tr></table></body></html>\n\n",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "We sometimes face the need to load constants into registers. Hence, we introduce the mmovi instruction that loads a constant into a register. ",
+        "page_idx": 390
+    },
+    {
+        "type": "table",
+        "img_path": "images/ef28d94200e1e64b1d3f1ea3feedc6b575aa64a5c0bec122b35aab528a2c59f6.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>mmovi rl, (imm)</td><td>r1\u2190imm</td></tr><tr><td>mmovi rl, (imm), (args)</td><td>r1 \u2190 imm,send the value of args on the bus</td></tr></table></body></html>\n\n",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "We need an madd instruction because we need to increment the values of registers such as the $p c$ . Instead of using the main ALU, we can have a small adder as a part of the $\\mu$ control unit. We refer to this as the $\\mu$ adder. Here, there is a tradeoff to make. Do we need an add instruction that adds two registers, and saves it in another register? At the microinstruction level, this is seldom required. We definitely do not require this instruction to implement the SimpleRisc instruction set. Hence, we do not see a reason to include this microinstruction. If there is ever a need to have one such microinstruction, then we can always use the main ALU in the data path to perform the addition. We thus introduce a simple add instruction in the 2-address format. It adds an immediate value to a register. The semantics of this instruction is shown below. ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 391
+    },
+    {
+        "type": "table",
+        "img_path": "images/65f60fed7b25c7521f806452cf258a84608afc67d3de30eb1be566c0f7442d54.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>madd r1, (imm)</td><td>r1\u2190r1+imm</td></tr><tr><td>madd r1, (imm), (args)</td><td>r1\u2190 r1+imm,send the value of {args) on the bus</td></tr></table></body></html>\n\n",
+        "page_idx": 391
+    },
+    {
+        "type": "text",
+        "text": "Here, the madd instruction adds imm to $r 1$ , and saves the result in $r 1$ . imm can be a positive or a negative number. We restrict it to a 12-bit number, because we do not need more bits in most cases. The range of the immediate is thus between -2048 and $+ 2 0 4 7$ . ",
+        "page_idx": 391
+    },
+    {
+        "type": "text",
+        "text": "Lastly, we need branch instructions. We need both conditional branches, and unconditional branches. We thus introduce two new microinstructions \u2013 mb (branch) and mbeq (branch if the arguments are equal). The mb microinstruction takes a single argument, which is the address of the target microinstruction (or its label while writing microassembly code). We use the PC-direct addressing mode here as compared to the PC-relative addressing mode because, we expect the total number of microinstructions to be small. Secondly, if we would have use a PC-relative addressing mode, then we would have required an extra adder in our data path to add the offset to the PC. The SimpleRisc instruction set allocates 5 bits for the opcode. This means that at the most we can have 32 instructions in our instruction set. Let us assume that in the worst case, an instruction translates to 20 microinstructions. We would thus need to store 640 microinstructions. We can thus allocate 10 bits for the specifying the address of the microinstruction and our \u00b5pc (micro-PC) can also be 10 bits wide. This means that at the most we can support a total of 1024 microinstructions. This is much more than what we actually require. However, it is not a bad idea to over design hardware because it cannot be changed later. Note that in the microinstruction memory, the address refers to the index of the microinstruction (not to the starting address of the first byte). ",
+        "page_idx": 391
+    },
+    {
+        "type": "text",
+        "text": "The mbeq instruction requires three operands. The first operand is a register, the second operand is an immediate, and the third operand is the address(label) of a microinstruction. If the value contained in the register is equal to the immediate operand, then the microPC jumps to the microinstruction specified by the third operand. Otherwise, the next microinstruction in sequence is executed. ",
+        "page_idx": 391
+    },
+    {
+        "type": "table",
+        "img_path": "images/0585494d699e24f4f2df76ebb33f3de3b8f73c57f9d0e9faa962d03f00a47b24.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Microinstruction</td><td>Semantics</td></tr><tr><td>mb (addr)</td><td>execute the microinstructionat (addr>(label) in the microprogram memory</td></tr><tr><td>mbeq reg,imm, (addr)</td><td>If the value in the internal register reg is equal to imm\uff0cthen the mi- croPC needs to jump to (add)(label)</td></tr></table></body></html>\n\n",
+        "page_idx": 391
+    },
+    {
+        "type": "table",
+        "img_path": "images/9bfdbad71ffbbf77e7eb0e5c966a4381cce3eca3c0a61cc436706c75a52bd4e3.jpg",
+        "table_caption": [
+            "Table 9.8: List of microinstructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Serial No.</td><td>Microinstruction</td><td colspan=\"2\">Semantics</td></tr><tr><td>1</td><td>mloadIR</td><td>ir\u2190[pc]</td><td></td></tr><tr><td>2</td><td>mdecode</td><td colspan=\"2\">populate all the decode regis- ters</td></tr><tr><td>3</td><td>mswitch</td><td colspan=\"2\">jump to the \u03bcpc correspond- ing to the opcode</td></tr><tr><td>4</td><td>mmov regl, reg2, (args)</td><td colspan=\"2\">reg1 \u2190 reg2\uff0csend the value of args to the unit that owns</td></tr><tr><td>5</td><td>mmovi regl, imm, (args)</td><td colspan=\"2\">regl,{args) is optional regl \u2190 imm\uff0c{args) is op- tional</td></tr><tr><td>6</td><td>madd regl, imm, (args)</td><td colspan=\"2\">regl \u2190regl+imm,{args) is optional</td></tr><tr><td>7</td><td>mbeq regl,imm, (addr)</td><td colspan=\"2\">if (reg1 = imm\uff09 \u03bcpc \u2190 addr(label)</td></tr><tr><td>8</td><td>mb (addr)</td><td colspan=\"2\">\u03bcpc \u2190 addr(label)</td></tr></table></body></html>\n\n",
+        "page_idx": 392
+    },
+    {
+        "type": "text",
+        "text": "To summarize, Table 9.8 shows the 8 microinstructions that we have described in this section. We have a compact list of 8 microinstructions, and thus we can encode each microinstruction using just 3 bits. ",
+        "page_idx": 392
+    }
+]

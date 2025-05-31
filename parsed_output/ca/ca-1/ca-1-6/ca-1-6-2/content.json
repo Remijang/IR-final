@@ -1,0 +1,146 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.2 Turing Machine\\* ",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "The general structure of a Turing machine is shown in Figure 1.6. A Turing machine contains an infinite tape that is an array of cells. Each cell can contain a symbol from a finite alphabet. There is a special symbol $\\$ 9$ that works as a special marker. A dedicated tape head points to a cell in the infinite tape. There is a small piece of storage to save the current state among a finite set of states. This storage element is called a state register. ",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "The operation of the Turing machine is very simple. In each step, the tape head reads the symbol in the current cell, its current state from the state register, and looks up a table that contains the set of actions for each combination of symbol and state. This dedicated table is called a transition function table or action table. Each entry in this table specifies three things \u2013 whether to move the tape head one step to the left or right, the next state, and the symbol that should be written in the current cell. Thus, in each step, the tape head can overwrite the value of the cell, change its state in the state register and move to a new cell. The only constraint is that the new cell needs to be to the immediate left or right of the current cell. Formally, its format is $( s t a t e , s y m b o l ) \\to ( \\{ L , R \\} , n e w \\_ s t a t e , n e w \\_ s y m b o l ) .$ . $L$ stands for left, and $R$ stands for right. ",
+        "page_idx": 25
+    },
+    {
+        "type": "image",
+        "img_path": "images/4e005c5bdde954b0beb2947ec3e988313c50398405b6ccb3fa643ac256766a97.jpg",
+        "img_caption": [
+            "Figure 1.6: A Turing machine "
+        ],
+        "img_footnote": [],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "This seemingly abstract and obscure computing device is actually very powerful. Let us explain with examples. See Examples 2, 3, and 4. In all the cases, we assume that the input is demarcated by the special marker symbol \\$. ",
+        "page_idx": 26
+    },
+    {
+        "type": "image",
+        "img_path": "images/db1d6fd4a46aede0b4b16b658ef6f44ad326a877ac9c6eb171e42c645f522871.jpg",
+        "img_caption": [
+            "Example 2 Design a Turing machine to increment a number by 1. "
+        ],
+        "img_footnote": [],
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "Answer: Each cell contains a single digit. The number is demarcated at both ends by the special marker $\\boldsymbol { \\mathcal { S } }$ . Lastly, the tape head points to the unit\u2019s digit. ",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "We first define four states $( S _ { 0 } , S _ { 1 } ) .$ pre-exit and exit. The computation is over when the Turing machine reaches the exit state. The states $S _ { 0 }$ and $S _ { 1 }$ represent the value of the carry, 0 or 1, respectively. The state register is initialized to $S _ { 1 }$ since we are incrementing the number by 1. In other words, we can assume that the starting value of the carry digit is equal to 1. ",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "At each step, the tape head reads the current digit, $d$ , and the value of the carry, c, from the state register. For each combination of $d$ , and $c$ , the action table contains the next state (new value of carry), and the result digit. The tape head always moves to the left. For example, if $( d , c ) = ( 9 , 1 )$ , then we are effectively adding $( 9 + 1 )$ . The next state is equal to $S _ { 1 }$ (output carry), the Turing machine writes $\\boldsymbol { \\theta }$ in the current cell, and the tape head moves to the cell on the left. ",
+        "page_idx": 26
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "The only special case arises when the computation is ending. When the tape head encounters the $\\$ 8$ symbol, then it looks at the value of the carry. If it is equal to $\\boldsymbol { \\theta }$ , then it leaves the value untouched and moves to the exit state. If it is equal to 1, then it moves to the pre-exit state, writes 1 to the cell, and moves to the left. Subsequently, it writes $\\$ 8$ to the cell under the tape head, and then moves to the exit state. ",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Example 3 Design a Turing machine to find out if a string is of the form aaa . . . abb . . . bb. ",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us define two states $( S _ { a } , S _ { b } )$ , and two special states \u2013 exit and error. If the state becomes equal to exit or error, then the computation stops. The Turing machine can start scanning the input from right to left as Example 2. It starts in state $S _ { b }$ . The action table is as follows: ",
+        "page_idx": 27
+    },
+    {
+        "type": "table",
+        "img_path": "images/140c39b7b773358a4a3c2618318253085d19f985966b67d338d98bad46050b35.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>(Sb,b)\u2192(L,Sb,b)</td></tr><tr><td></td><td>(Sb,a) \u2192(L,Sa,a)</td></tr><tr><td></td><td>(Sb,$) \u2192 (L,error,$)</td></tr><tr><td></td><td>(Sa,b) \u2192 (L,error,b)</td></tr><tr><td></td><td>(Sa,a)\u2192(L,Sa,a)</td></tr><tr><td></td><td>(Sa,$)\u2192(L,exit,$)</td></tr></table></body></html>\n\n",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Example 4 ",
+        "text_level": 1,
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Design a Turing machine to find out if a string of characters is a palindrome. A palindrome is a word that reads the same forward and backwards. Example: civic, rotator, rotor. Furthermore, assume that each character is either \u2018a\u2019 or \u2018b\u2019. ",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us assume that the Turing machine starts at the rightmost character in the begin state. Let us consider the case when the symbol under the tape head is a in the begin state. The machine enters the state $L _ { a }$ (move left, starting symbol is a) and replaces a with $\\$ 8$ . Now it needs to see if the leftmost character is $a$ . Hence, the tape head moves towards the left until it encounters $\\boldsymbol { \\mathcal { S } }$ . It then enters the Rchecka state. It moves one cell to the right and checks if the symbol is equal to $a$ . If it is $a$ , then the string might be a palindrome. Otherwise, it is definitely not a palindrome and the procedure can terminate by entering the error state. The tape head again rewinds by moving all the way to the right and starts at the cell, which is to the immediate left of the starting cell in the previous round. The same algorithm is performed iteratively till either an error is encountered or all the symbols are replaced with $\\mathcal { S }$ . ",
+        "page_idx": 27
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "If the starting symbol was $b$ , the procedure would have been exactly the same albeit with a different set of states \u2013 $L _ { b }$ and Rcheckb. The action table is shown below. ",
+        "page_idx": 28
+    },
+    {
+        "type": "table",
+        "img_path": "images/fdca1e908b4e28a0af8a2081c1cddd9ac3a7a25a68aa6a4d715495a849cf4989.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>(begin,$) \u2192(L,exit,$)</td></tr><tr><td>(begin,a) \u2192(L,La,$)</td></tr><tr><td>(La,a)\u2192 (L,La,a)</td></tr><tr><td>(La,b) \u2192 (L,La,b)</td></tr><tr><td>(La,$) \u2192 (R,Rchecka,$)</td></tr><tr><td>(Rchecka,a) \u2192 (R,Rmove,$)</td></tr><tr><td>(Rchecka,b) \u2192(R,error,$)</td></tr><tr><td>(Rmove,a) \u2192 (R,Rmove,a)</td></tr><tr><td>(Rmove,b) \u2192 (R,Rmove,b)</td></tr><tr><td>(Rmove,$) \u2192 (L,begin,$)</td></tr></table></body></html>\n\n",
+        "page_idx": 28
+    },
+    {
+        "type": "table",
+        "img_path": "images/df60ffb3df7790b0f8cf74c08658d380d1ed3fcd560954b7c8e69c7adc87f0f3.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>(begin,b)\u2192 (L,Lb,$)</td></tr><tr><td>(Lb,a)\u2192(L,Lb,a)</td></tr><tr><td>(Lb,b)\u2192(L,L6,b)</td></tr><tr><td>(Lb,$)\u2192 (R,Rcheckb,$)</td></tr><tr><td>(Rcheckb,a)\u2192 (R,error,$)</td></tr><tr><td>(Rcheckb,b) \u2192 (R,Rmove,$)</td></tr><tr><td></td></tr></table></body></html>\n\n",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "In these examples we have considered three simple problems and designed Turing machines from them. We can immediately conclude that designing Turing machines for even simple problems is difficult, and cryptic. The action table can contain a lot of states, and quickly blow out of size. However, the baseline is that it is possible to solve complex problems with this simple device. It is in fact possible to solve all kinds of problems such as weather modeling, financial calculations, and solving differential equations with this machine! ",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "Definition 7 Church-Turing thesis: Any real-world computation can be translated into an equivalent computation involving a Turing machine. (source: Wolfram Mathworld) ",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "This observation is captured by the Church-Turing thesis, which basically says that all functions that are computable by any physical computing device are computable by a Turing machine. In lay man\u2019s terms, any program that can be computed by deterministic algorithms on any computer known to man, is also computable by a Turing machine. ",
+        "page_idx": 28
+    },
+    {
+        "type": "text",
+        "text": "This thesis has held its ground for the last half century. Researchers have up till now not been able to find a machine that is more powerful than a Turing machine. This means that there is no program that can be computed by another machine, and not by a Turing machine. There are some programs that might take forever to compute on a Turing machine. However, they would also take infinite time on all other computing machines. We can extend the Turing machine in all possible ways. We can consider multiple tapes, multiple tape heads, or multiple tracks in each tape. It can be shown that each of these machines is as powerful as a simple Turing machine. ",
+        "page_idx": 28
+    }
+]

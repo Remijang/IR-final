@@ -1,0 +1,80 @@
+[
+    {
+        "type": "text",
+        "text": "10.5.2 Control Hazards ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to use the same set of techniques to solve the issue of control hazards. If we take a look at the pipeline diagram again, then we can conclude that there need to be a minimum of two instructions between the branch instruction and the instruction at the branch target. This is because, we get both the branch outcome, and the branch target at the end of the EX stage. At this point of time there are two more instructions in the pipeline. These instructions have been fetched when the branch instruction was in the OF, and EX stages, respectively. They might potentially be on the wrong path. After the branch target, and outcome have been determined in the EX stage, we can proceed to fetch the correct instruction in the IF stage. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Now, let us consider these two instructions that were fetched, when we were not sure of the branch outcome. If the PC of the branch is equal to $p _ { 1 }$ , then their addresses are $p _ { 1 } + 4$ , and $p _ { 1 } + 8$ , respectively. They are not on the wrong path if the branch is not taken. However, if the branch is taken, then these instructions need to be discarded from the pipeline since they are on the wrong path. For doing this, let us look at a simple solution in software. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a scheme where the hardware assumes that the two instructions immediately after a branch instruction are not on the wrong path. The positions of these two instructions are known as the delay slots. Trivially, we can ensure that the instructions in the delay slots do not introduce errors, by inserting two nop instructions after a branch. However, we will not gain any extra performance by doing this. We can instead find two instructions that execute before the branch instruction, and move them to the two delay slots immediately after the branch. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Note that we cannot arbitrarily move instructions to the delay slots. We cannot violate any data dependence constraints, and we need to also avoid RAW hazards. Secondly, we cannot move any compare instructions into the delay slots. If appropriate instructions are not available, then we can always fall back to the trivial solution and insert nop instructions. It is also possible that we may find just one instruction that we can reorder, then we just need to insert one nop instruction after the branch instruction. The method of delayed branches is a very potent method in reducing the number of $n O p$ instructions that need to be added to avoid control hazards. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "The reader should convince herself that to support this simple software scheme, we do not need to make any changes in hardware. The pipelined data path shown in Figure 10.9 already supports this scheme. In our simple pipelined data path, the two instructions fetched after the branch have their PCs equal to $p _ { 1 } + 4$ , and $p _ { 1 } + 8$ , respectively ( $p _ { 1 }$ is the PC of the branch instruction). Since the compiler ensures that these instructions are always on the correct path irrespective of the outcome of the branch, we do not commit an error by fetching them. After the outcome of the branch has been determined, the next instruction that is fetched either has a PC equal to $p _ { 1 } + 1 2$ if the branch is not taken, or the PC is equal to the branch target if the branch is taken. Thus, in both the cases, the correct instruction is fetched after the outcome of the branch is determined, and we can conclude that our software solution executes programs correctly on the pipelined version of our processor. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "To summarize, the crux of our software technique is the notion of the delay slot. We need two delay slots after a branch because we are not sure about the two subsequent instructions. They might be on the wrong path. However, using a smart compiler we can manage to move instructions that get executed irrespective of the outcome of the branch to the delay slots. We can thus avoid placing nop instructions in the delay slots, and consequently increase performance. Such a branch instruction is known as a delayed branch. ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "Definition 72 ",
+        "text_level": 1,
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "A branch instruction is known as a delayed branch if the processor assumes that all the succeeding instructions that are fetched before its outcome is determined, are guaranteed to be on the correct path. If the processor fetches n instructions between the time that a branch instruction has been fetched, and its outcome has been determined, then we say that we have n delay slots. The compiler needs to ensure that instructions on the correct path occupy the delay slots, and no additional control or RAW hazards are introduced. The compiler can also trivially introduce nop instructions in the delay slots. ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "Now, let us consider a set of examples. ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "Example 139 Reorder the following piece of assembly code to correctly run on a pipelined SimpleRisc processor with delayed branches. Assume two delay slots per branch instruction. ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "add r1, r2, r3 add r4, r5, r6 b .foo add r8, r9, r10 ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "b .foo add r1, r2, r3 add r4, r5, r6 add r8, r9, r10 ",
+        "page_idx": 432
+    }
+]

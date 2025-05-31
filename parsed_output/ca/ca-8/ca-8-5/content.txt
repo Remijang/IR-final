@@ -1,0 +1,9 @@
+8.5 Multiplication of Floating Point Numbers
+
+The algorithm for multiplying floating point numbers is of exactly the same form as the algorithm for generic addition without a few steps. Let us again try to multiply  to obtain the product  . Again, let us assume without loss of generality that  .
+
+The flowchart for multiplication is shown in Figure 8.18. We do not have to align the exponents in the case of multiplication. We initialize the algorithm as follows. We load the significand of  into register  . In this case, the width of  is equal to double the size of the operands such that the product can be accommodated. The  register is initialized to  . This is because in the case of multiplication, the exponents are added together. We subtract the bias to avoid double counting. Computing the sign of the result is trivial.
+
+After initialization, we multiply the significand of  with  and save the product in  . The product contains 46 bits after the floating point. We might need to discard some bits to ensure that the final mantissa is 23 bits long. Hence, it might be necessary to normalize the result by shifting it to the right (normal numbers), or shifting it to the left (denormal numbers).
+
+As with the case of addition, we can then proceed to round the result to contain 23 bits in the mantissa, and renormalize if necessary. Since there are a constant number of add operations, the time complexity is equal to the sum of the time complexity of normal multiplication and addition. Both of them are  operations. The total time taken is thus  .

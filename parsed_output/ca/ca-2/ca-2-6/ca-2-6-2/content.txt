@@ -1,0 +1,121 @@
+2.6.2 Further Reading
+
+Boolean algebra is a field of study by itself. Boolean formulae, logic, and operations form the basis of modern computer science. We touched upon some basic results in this chapter. The reader should refer to [Kohavi and Jha, 2009] for a detailed discussion on Boolean logic, Karnaugh Maps, and a host of other advanced techniques to minimize the number of terms in Boolean expressions. For Boolean logic and algebra, the reader can also consult [Gregg, 1998, Patt and Patel, 2003, Whitesitt, 2010] The next step for the reader is to read more about the synthesis and optimization of large digital circuits. The book by Giovanni de Michel [Micheli, 1994] can be a very helpful reference in this regard. Number systems such as 2’s complement naturally lead to computer arithmetic where we perform complex operations on numbers. The reader should consult the book by Zimmermann [Brent and Zimmermann, 2010]. For learning more about the representation of characters, and strings, especially in different languages, we refer the reader to the Unicode standard [uni, ].
+
+Exercises
+
+Boolean Logic
+
+Ex. 1 —  ,  ,  and  are Boolean variables. Prove the following results:
+
+a)    
+b)    
+c)    
+d) 
+
+Ex. 2 — Construct a circuit to compute the following functions using only NOR gates. 
+
+Ex. 3 — Construct a circuit to compute the following functions using only NAND gates. 
+
+\*\* Ex. 4 — Prove that any Boolean function can be realized with just NAND or NOR gates. [HINT: Use the idea of decomposing a function into its set of minterms.]
+
+Ex. 5 — Why are the first and last rows or columns considered to be adjacent in a Karnaugh Map?
+
+Ex. 6 — Minimize the following Boolean functions using a Karnaugh Map. a)  b 
+
+\* Ex. 7 — Consider the Karnaugh map of the function  . Prove that it looks like a chess board. Why cannot we minimize this expression further?
+
+Integer Number Systems
+
+Ex. 8 — Convert the following 8-bit binary numbers in 1’s complement form to decimal.
+
+a) 01111101   
+b) 10000000   
+c) 11111111   
+d) 00000000   
+e) 11110101
+
+Ex. 9 — Convert the following unsigned numbers (in the given base) to decimal: a) (243)5 b) (77)8 c)  d) (100)4 e) (55)6
+
+Ex. 10 — Do the following calculations on unsigned binary numbers and write the result as an unsigned binary number.
+
+a)  b)  c)  d) 10000000 111
+
+Ex. 11 — What are the pros and cons of the 1’s complement number system?
+
+Ex. 12 — What are the pros and cons of the sign-magnitude number system?
+
+Ex. 13 — What is a number circle? How is it related to the 2’s complement number system?
+
+Ex. 14 — What does the point of discontinuity on the number circle signify?
+
+Ex. 15 — Why is moving  steps on the number circle in a clockwise direction equivalent to moving  -  steps in an anti-clockwise direction? Assume that the number circle contains  nodes.
+
+Ex. 16 — What are the advantages of the 2’s complement notation over other number systems?
+
+Ex. 17 — Outline a method to quickly compute the 2’s complement of a number.
+
+Ex. 18 — Prove the following result in your own words:
+
+Ex. 19 — Let us define sign contraction to be the reverse of sign extension. What are the rules for converting a 32-bit number to a 16-bit number by using sign contraction? Can we do this conversion all the time without losing information?
+
+Ex. 20 — What are the conditions for detecting an overflow while adding two 2’s complement numbers?
+
+Floating Point Number System
+
+Ex. 21 — Describe the IEEE 754 format.
+
+Ex. 22 — Why do we avoid representing the bit to the left of the decimal point in the significand?
+
+Ex. 23 — Define denormal numbers. How do they help to extend the range of normal floating point numbers?
+
+Ex. 24 — In the standard form of a denormal number, why is the exponent term equal to  ? Why is it not equal to  ?
+
+Ex. 25 — Convert the following floating point numbers into the IEEE 32-bit 754 format.   
+Write your answer in the hexadecimal format.
+
+a)  0   
+b) 52
+
+Ex. 26 — What is the range of positive and negative denormal floating point numbers?
+
+Ex. 27 — What will be the output of the following C code snippet assuming that the fractions   
+are stored in an IEEE 32-bit 754 format:   
+float  ;   
+float b=pow(2,-74);   
+float  ;   
+for(  ; i<100000; i++)   
+{  ;   
+}   
+if  ) printf("%d",1);   
+else printf("%d",2);
+
+Ex. 28 — We claim that the IEEE 754 format represents real numbers approximately. Is this statement correct?
+
+\* Ex. 29 — Prove that it is not possible to exactly represent  even if we have an indefinitely large number of bits in the mantissa.
+
+\* Ex. 30 — How does having denormal numbers make floating point mathematics slightly more intuitive?
+
+\* Ex. 31 — What is the correct way for comparing two floating point numbers for equality?
+
+\*\* Ex. 32 — Assume that the exponent  is constrained to lie in the range  with a bias of  , and the base is  . The significand is  digits in length. Use an IEEE 754 like encoding. However, you need to devote one digit to store the value to the left of the decimal point in the significand.
+
+a) What are the largest and smallest positive values that can be written in normal form.   
+b) What are the largest and smallest positive values that can be written in denormal form.
+
+\* Ex. 33 — Most of the floating point numbers cannot be represented accurately in hardware due to the loss of precision. However, if we choose some other representation, we can represent certain kinds of floating point numbers without error.
+
+a) Give a representation for storing rational numbers accurately. Devise a normal form for it. b) Can other floating point numbers such as  be represented similarly?
+
+Ex. 34 — Design a floating point representation, for a base 3 system on the lines of the IEEE 754 format.
+
+Strings
+
+Ex. 35 — Convert the string “459801” to ASCII. The ASCII representation of 0 is 0x30.   
+Assume that all the numbers are represented in the ASCII format in sequence.
+
+Ex. 36 — Find the Unicode representation for characters in a non-English language, and compare it with the ASCII encoding.
+
+Design Problems
+
+Ex. 37 — In this section, we have minimized Boolean expressions using Karnaugh maps. We solved all our examples manually. This method is not scalable for expressions containing hundreds of variables. Study automated techniques for minimizing Boolean expressions such as the Quinn-McCluskey tabulation method. Write a program to implement this method.

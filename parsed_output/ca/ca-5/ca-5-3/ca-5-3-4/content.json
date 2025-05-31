@@ -1,0 +1,206 @@
+[
+    {
+        "type": "text",
+        "text": "5.3.4 Advanced Memory Instructions ",
+        "text_level": 1,
+        "page_idx": 205
+    },
+    {
+        "type": "text",
+        "text": "String Instructions ",
+        "text_level": 1,
+        "page_idx": 205
+    },
+    {
+        "type": "table",
+        "img_path": "images/4dbdfbac37575de212199785503e122155fc684a9e8910f92c8bb6a7f9b10a05.jpg",
+        "table_caption": [
+            "Table 5.18: Semantics of advanced memory instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>lea reg,mem</td><td>lea ebx,[esi + edi*2 + 10]</td><td>ebx\u2190 esi +edi*2+ 10</td></tr><tr><td>stos(b/w/d/q)</td><td>stosd</td><td>[edi]\u2190 eax; edi \u2190 edi +4*(-1)DF</td></tr><tr><td>lods(b/w/d/q)</td><td>lodsd</td><td>eax\u2190 [esi]; esi \u2190 esi + 4* (-1)DF</td></tr><tr><td>movs(b/w/d/q)</td><td>movsd</td><td>[edi] \u2191 [esi] \uff0c esi \u4e2a esi (-1) DF edi\u2190 +4* edi+4*(-1)DF</td></tr><tr><td>std</td><td>std</td><td>DF \u4e2a 1</td></tr><tr><td>cld</td><td>cld</td><td>DF \u2191 0</td></tr><tr><td colspan=\"3\">DF \u2192Direction Flag</td></tr></table></body></html>\n\n",
+        "page_idx": 205
+    },
+    {
+        "type": "text",
+        "text": "The lea instruction stands for load effective address. It has a register operand, and a memory operand. The role of the lea instruction is to copy the address of the memory operand (not its contents) to the register. ",
+        "page_idx": 205
+    },
+    {
+        "type": "text",
+        "text": "Let us now introduce a special set of instructions known as string instructions. We shall introduce the following instructions: stos, lods, and movs. The stos instruction transfers data from the eax register to the location specified by the edi register. It comes in four flavors depending upon the amount of data that we wish to transfer. It uses the \u2019b\u2019 suffix for 1 byte, \u2019w\u2019 for 2 bytes, \u2019d\u2019 for 4 bytes, and \u2019q\u2019 for 8 bytes. We show an example of the stosd instruction in Table 5.18. The stosd instruction transfers the contents of eax (4 bytes) to the memory address specified by edi. Subsequently, this instruction increments or decrements the contents of edi by 4 depending on the direction flag. The direction flag $( D F )$ is a field in the f lags register similar to zero, carry, and overflow. If the direction flag is set (equal to 1), then the stos instruction subtracts the size of the operand from the contents of edi. Conversely, if $D F$ is equal to 0, then the stos instruction adds the size of the operand to edi. ",
+        "page_idx": 205
+    },
+    {
+        "type": "text",
+        "text": "We introduce two 0-address format instructions namely $s t d$ and $c l d$ to set and reset the direction flag, respectively. ",
+        "page_idx": 205
+    },
+    {
+        "type": "text",
+        "text": "The lods and movs set of instructions are defined similarly. For example, the lodsd instruction transfers the contents of the memory location specified by esi to eax. It subsequently increments or decrements the contents of esi by the size of the operands based on the value of $D F$ . The movs instruction combines the functionality of lods and stos. It first fetches a set of bytes from the memory address stored in esi. Subsequently, it writes the bytes to the memory address specified by edi. It increments or decrements esi and edi based on the value of the direction flag. ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Trivia 2   \nThe si register (16-bit version of esi) stands for the source index register. Similarly, the di register stands for the destination index register. ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at a set of examples. ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Example 79 What is the value of ebx? ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "lea edi, [esp+4]   \nmov eax, 21   \nstosd saves eax in [edi]   \nmov ebx, [esp+4] ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Answer: We save 21 (eax) in the memory address specified in edi by using the stosd instruction. This memory address is equal to (esp + 4). After executing the stosd instruction, we load the contents of this memory address into ebx. The result is equal to the value of eax seen by the stosd instruction, which is 21. ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Example 80 What is the value of eax after executing this code snippet? ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "lea esi, [esp+4] mov dword [esp+4], 19 lodsd ; eax <-- [esi] ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Answer: Note the use of the modifier dword here. We need to use it because we are saving an immediate to a memory location, and we need to specify its size. The value of eax is equal to the value stored in [esp $^ +$ 4], which is 19. ",
+        "page_idx": 206
+    },
+    {
+        "type": "text",
+        "text": "Example 81 What is the value of eax after executing this code snippet? ",
+        "page_idx": 207
+    },
+    {
+        "type": "table",
+        "img_path": "images/525a37c7731cc6ebfba62da39e1dd14e0c39f24d82786edd68f0f3644bafa7c1.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td><td>mov dword [esp+4]\uff0c192</td><td></td></tr><tr><td></td><td></td><td>lea esi,[esp+4]</td><td></td></tr><tr><td></td><td></td><td>lea edi\uff0c[esp+8]</td><td></td></tr><tr><td>movsd</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>mov eax\uff0c[esp+8]</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Answer: The movsd instruction transfer 4 bytes from the memory address specified in esi to the memory address specified in edi. Since we write 192 to the memory address specified in esi, we shall read back the same value in the last line. ",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Instructions with the rep Prefix ",
+        "text_level": 1,
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "The string instructions can additionally increment or decrement the values of esi and $e d i$ . We have not used this feature up till now. Let us use this feature to transfer an array of 10 integers from one location to another. This feature is very frequently used in modern processors to transfer large amounts of data between two locations. ",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Let us first show a conventional solution in Example 82. ",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Example 82 Write a program to create a copy of a 10 element integer array. Assume that the starting address of the original array is stored in esi, and the starting address of the destination array is stored in edi. ",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 207
+    },
+    {
+        "type": "table",
+        "img_path": "images/9c2f6bcbc6378d28ef4a38bd58ae407437e56215bb266263612657e35f232d7f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>mov ebx, 0 .loop:</td><td></td><td>\uff1binitialize</td></tr><tr><td>mov edx\uff0c[esi+ebx*4]</td><td></td><td>\uff1btransfer the contents</td></tr><tr><td></td><td>mov [edi + ebx*4]\uff0cedx</td><td></td></tr><tr><td>inc ebx</td><td></td><td>\uff1bincrement the index</td></tr><tr><td></td><td></td><td>\uff1b loop condition</td></tr><tr><td>cmp ebx\uff0c10 jne .loop</td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Example 83 Write a program to create a copy of a 10 element integer array. Assume that the starting address of the original array is stored in esi, and the starting address of the destination array is stored in edi. Use the movsd instruction. ",
+        "page_idx": 207
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 207
+    },
+    {
+        "type": "table",
+        "img_path": "images/129fba6ab1c357f08dd34d8a56755f818f5b5b3216b8b9ffb2ec484393c07d3a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>cd</td><td>\uff1bDF = 0</td></tr><tr><td>mov ebx\uff0co .loop:</td><td>\uff1binitialization of the loop index</td></tr><tr><td></td><td></td></tr><tr><td>movsd</td><td>\uff1b[edi]<-- [esi]</td></tr><tr><td></td><td>inc ebx \uff1bincrement the index</td></tr><tr><td></td><td></td></tr><tr><td>cmp ebx\uff0c10</td><td>\uff1bloop condition</td></tr><tr><td>jne .loop</td><td></td></tr><tr><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "As compared to Example 82, we reduce the number of instruction in the loop from 5 to 4. ",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "In Example 83, we use the movsd instruction to replace a pair of load/store instructions with just one instruction. This reduces the number of instructions in the loop from 5 to 4. We were not able to get a bigger reduction because we still need to update the loop index, and compute the loop condition. ",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "To make our code look even more elegant, the x86 ISA defines a rep prefix that can used with any string instruction. The rep prefix instructs the processor to execute a single string instruction $n$ times, where $n$ is the value stored in the ecx register. Every time the processor executes the string instruction, it decrements $e c x$ . At the end, the value of $e c x$ becomes 0. Its semantics is shown in Table 5.19. ",
+        "page_idx": 208
+    },
+    {
+        "type": "table",
+        "img_path": "images/fa10dd5975c6e1d84b8cc07519c7ab0c347c9d1cbfc06ab30db97197be3bbed8.jpg",
+        "table_caption": [
+            "Table 5.19: Semantics of rep instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>rep inst</td><td>rep movsd</td><td>val \u2190 ecx;Execute the movsd in- struction val times;ecx \u21900</td></tr></table></body></html>\n\n",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "Example 84 Write a program to create a copy of a 10 element integer array. Assume that the starting address of the original array is stored in esi, and the starting address of the destination array is stored in edi. Use the rep prefix with the movsd instruction. ",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "cld ; DF = 0 mov ecx, 10 ; Set the count to 10 rep movsd ; Execute movsd 10 times ",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "The rep prefix thus allows us to fold an entire loop into just one instruction as shown in Example 84. The rep prefix is meant to be used with string instructions for copying large regions of data. It makes the code for operating on strings of data very compact and elegant. The rep instruction has two variants namely repe, and repne. These instructions use an additional termination condition, along with the value of $e c x$ . Instructions prefixed with repe can also terminate when the zero flag becomes 0, and an instruction prefixed with repne also terminates when the zero flag becomes 1. ",
+        "page_idx": 208
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 209
+    }
+]

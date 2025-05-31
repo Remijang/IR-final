@@ -1,0 +1,70 @@
+[
+    {
+        "type": "text",
+        "text": "11.1.4 Characterizing Temporal Locality ",
+        "text_level": 1,
+        "page_idx": 511
+    },
+    {
+        "type": "text",
+        "text": "Let us describe a method called the method of stack distances to characterize temporal locality in programs. ",
+        "page_idx": 511
+    },
+    {
+        "type": "text",
+        "text": "Stack Distance ",
+        "text_level": 1,
+        "page_idx": 511
+    },
+    {
+        "type": "text",
+        "text": "We maintain a stack of data addresses accessed by the program. For each memory instruction (load/store), we search for the corresponding address in the stack. The position at which the entry is found (if found) is termed the \u201dstack distance\u201d. Here, the distance is measured from the top of the stack. The top of the stack has distance equal to zero, whereas the $1 0 0 ^ { t h }$ entry has a stack distance equal to 99. Whenever, we detect an entry in the stack we remove it, and push it to the top of the stack. ",
+        "page_idx": 511
+    },
+    {
+        "type": "text",
+        "text": "If the memory address is not found, then we make a new entry and push it to the top of the stack. Typically, the depth of the stack is bounded. It has length, $L$ . If the number of entries in the stack exceeds $L$ because of the addition of a new entry, then we need to remove the entry at the bottom of the stack. Secondly, while adding a new entry, the stack distance is not defined. Note that since we consider bounded stacks, there is no way of differentiating between a new entry, and an entry that was there in the stack, but had to be removed because it was at the bottom of the stack. Hence, in this case we take the stack distance to be equal to $L$ (bound on the depth of the stack). ",
+        "page_idx": 511
+    },
+    {
+        "type": "text",
+        "text": "Note that the notion of stack distance gives us an indication of temporal locality. If the accesses have high temporal locality, then the mean stack distance is expected to be lower. Conversely, if memory accesses have low temporal locality, then the mean stack distance will be high. We can thus use the distribution of stack distances as a measure of the amount of temporal locality in a program. ",
+        "page_idx": 512
+    },
+    {
+        "type": "text",
+        "text": "Experiment to Measure Stack Distance ",
+        "text_level": 1,
+        "page_idx": 512
+    },
+    {
+        "type": "text",
+        "text": "We perform a simple experiment with the SPEC2006 benchmark, Perlbench, which runs different Perl programs 1. We maintain counters to keep track of the stack distance. The first million memory accesses serve as a warm-up period. During this time the stack is maintained, but the counters are not incremented. For the next million memory accesses, the stack is maintained, and the counters are also incremented. Figure 11.1 shows a histogram of the stack distance. The size of the stack is limited to 1000 entries. It is sufficient to capture an overwhelming majority of memory accesses. ",
+        "page_idx": 512
+    },
+    {
+        "type": "image",
+        "img_path": "images/77079f31a659446c5be36c32a0895351f41d57c1b769672a32b37ed449865f70.jpg",
+        "img_caption": [
+            "Figure 11.1: Stack distance distribution "
+        ],
+        "img_footnote": [],
+        "page_idx": 512
+    },
+    {
+        "type": "text",
+        "text": "We observe that most of the accesses have a very low stack distance. A stack distance between 0-9 is the most common value. Approximately 27% of all the accesses are in this bin. In fact, more than two thirds of the memory accesses have a stack distance less than 100. Beyond 100, the distribution tapers off, yet remains fairly steady. The distribution of stack distances is typically said to follow a heavy tailed distribution. This means that the distribution is heavily skewed towards smaller stack distances; however, large stack distances are not uncommon. The tail of the distribution continues to be non-zero for large stack distances. We observe a similar behavior here. ",
+        "page_idx": 512
+    },
+    {
+        "type": "text",
+        "text": "Trivia 3 Researchers have tried to approximate the stack distance using the log-normal distribution. ",
+        "page_idx": 513
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( x ) = { \\frac { 1 } { x \\sigma { \\sqrt { 2 \\pi } } } } e ^ { - { \\frac { ( l n ( x ) - \\mu ) ^ { 2 } } { 2 \\sigma ^ { 2 } } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 513
+    }
+]

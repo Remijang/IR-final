@@ -1,0 +1,151 @@
+10.12.2 Further Reading
+
+The design of high performance pipelines is a prime focus of computer architecture researchers. Researchers mostly look at optimizing performance of pipelines and simultaneously reducing power consumption. The reader can start out with textbooks on advanced computer architecture [Hennessy and Patterson, 2012, Hwang, 2003, Baer, 2010, Sima et al., 1997, Culler et al., 1998]. After getting a basic understanding of the techniques underlying advanced processors such as out-of-order and superscalar execution, the reader should be able to graduate to reading research papers. The first step in this journey should be the book titled, “Readings in Computer Architecture” [Hill et al., 1999]. This book comprises a set of foundational research papers in different areas of computer architecture. Subsequently, the reader can move on to reading research papers for getting a deeper understanding of state-of-the-art techniques in processor design.
+
+The reader should start with some basic references in the design of out-of-order processors [Brown et al., 2001, Smith and Sohi, 1995, Hwu and Patt, 1987]. After getting a basic understanding, she can move on to read papers that propose important optimizations such as [Brown et al., 2001, Petric et al., 2005, Akkary et al., 2003]. For a thorough understanding of branch prediction schemes and fetch optimization, the reader should definitely look at the work of Yeh and Patt [Yeh and Patt, 1991, Yeh and Patt, 1992, Yeh and Patt, 1993], and the patent on Pentium 4 trace caches [Krick et al., 2000].
+
+Simultaneously, the reader can also look at papers describing the complete architecture of processors such as the Intel Pentium 4 [Boggs et al., 2004], Intel ATOM [Halfhill, 2008], Intel Sandybridge [Gwennap, 2010], AMD Opteron [Keltcher et al., 2003], and IBM Power 7 [Ware et al., 2010]. Finally, readers can find descriptions of state-of-the-art processors in the periodical, “Microprocessor Report”, along with emerging trends in the processor industry.
+
+Exercises
+
+Pipeline Stages
+
+Ex. 1 — Show the design of the IF, OF, EX, MA, and RW pipeline stages. Explain their functionality in detail. Ex. 2 — Why do we need to store the op2 field in the instruction packet? Where is it used? Ex. 3 — Why is it necessary to have the control field in the instruction packet? Ex. 4 — Why do we require latches in a pipeline? Why are edge sensitive latches preferred? Ex. 5 — Why is it necessary to split the work in a data path evenly across the pipeline stages?
+
+\* Ex. 6 — We know that in an edge sensitive latch, the input signal has to be stable for  units of time after the negative edge. Let us consider a pipeline stage between latches  and  . Suppose the output of  is ready immediately after the negative edge, and almost instantaneously reaches the input of  . In this case, we violate the hold time constraint at  . How can this situation be avoided?
+
+Pipeline Design
+
+Ex. 7 — Enumerate the rules for constructing a pipeline diagram.   
+Ex. 8 — Describe the different types of hazards in a pipeline.   
+Ex. 9 — In the SimpleRisc pipeline, why don’t we have structural hazards?   
+Ex. 10 — Why does a branch have two delay slots in the SimpleRisc pipeline?   
+Ex. 11 — What are the Data-Lock and Branch-Lock conditions?   
+Ex. 12 — Write pseudo-code for detecting and handling the Branch-Lock condition? (without delayed branches)
+
+Ex. 13 — What is delayed branching?
+
+\* Ex. 14 — Let us consider two designs:  and  .  uses a software-based approach for hazards, and assumes delayed branching.  uses interlocks, and assumes that a branch is not taken till the outcome is decided. Intuitively, which design is faster?
+
+Ex. 15 — Assume that 20% of the dynamic instructions executed on a computer are branch instructions. We use delayed branching with one delay slot. Estimate the CPI, if the compiler is able to fill 85% of the delay slots. Assume that the base CPI is 1.5. In the base case, we do not use any delay slot. Instead, we stall the pipeline for the total number of delay slots.
+
+Ex. 16 — Describe the role of the forwarding multiplexers in each stage of the pipeline.
+
+Ex. 17 — Why do we not require a forwarding path from  to  for the op2 field?
+
+Ex. 18 — Answer the following questions.
+
+i) What are the six possible forwarding paths in our SimpleRisc processor? ii) Which four forwarding paths, are required, and why? (Give examples to support your answer).
+
+Ex. 19 — Assume that we have an instruction immediately after a call instruction that reads ra. We claim that this instruction will get the correct value of  in a pipeline with forwarding. Is this true? Prove your answer.
+
+Ex. 20 — Reorder the following code snippet to minimize the execution time for the following configurations:
+
+1.We use software techniques, and have 2 delay slots.
+
+2.We use interlocks, and predict not taken.
+
+3.We use forwarding, and predict not taken.
+
+add r1, r2, r3   
+sub r4, r1, r1   
+mul r8, r9, r10   
+cmp r8, r9   
+beq .foo
+
+Ex. 21 — Reorder the following code snippet to minimize execution time for the following configurations:   
+1.We use software techniques, and have 2 delay slots.   
+2.We use interlocks, and predict not taken.   
+3.We use forwarding, and predict not taken.
+
+add r4, r3, r3 st r3, 10[r4] ld r2, 10[r4] mul r8, r9, r10 div r8, r9, r10 add r4, r2, r6
+
+Ex. 22 — Answer the followin   
+add r1, r2, r3   
+sub r4, r1, r6   
+ld r5, 10[r4]   
+add r6, r5, r5   
+sub r8, r8, r9   
+mul r10, r10, r11   
+cmp r8, r10   
+beq .label   
+add r5, r6, r8   
+st r3, 20[r5]   
+ld r6, 20[r5]   
+ld r7, 20[r6]   
+lsl r7, r7, r10 i) Assuming a traditional SimpleRisc pipeline, how many cycles will this code take to execute in a pipeline with just interlocks? Assume that time starts when the first instruction reaches the RW stage. This means that if we had just one instruction, then it would have taken exactly 1 cycle to execute (Not 5). Moreover, assume that the branch is not taken. [Assumptions: No forwarding, No delayed branches, No reordering]   
+ii) Now, compute the number of cycles with forwarding (no delayed branches, no reordering).   
+iii) Compute the minimum number of cycles when we have forwarding, and we allow instruction reordering. We do not have delayed branches, and in the reordered code, the branch instruction cannot be one of the last three instructions.   
+iv) Compute the minimum number of cycles when we have forwarding, allow instruction reordering, and have delayed branches. Here, again, we are not allowed to have the branch instruction as one of the last three instructions in the reordered code.
+
+\*\* Ex. 23 — We have assumed up till now that each memory access requires one cycle. Now, let us assume that each memory access takes two cycles. How will you modify the data path and the control path of the SimpleRisc processor in this case.
+
+ Ex. 24 — Assume you have a pipeline that contains a value predictor for memory. If there is a miss in the L2 cache, then we try to predict the value and supply it to the processor. Later this value is compared with the value obtained from memory. If the value matches, then we are fine, else we need to initiate a process of recovery in the processor and discard all the wrong computation. Design a scheme to do this effectively.
+
+Performance and Power Modeling
+
+Ex. 25 — If we increase the average CPI (Cycles per Instruction) by 5%, decrease the instruction count by 20% and double the clock rate, what is the expected speedup, if any, and why?
+
+Ex. 26 — What should be the ideal number of pipeline stages (  ) for a processor with   and clock cycle time  ?
+
+Ex. 27 — What is the relationship between dependencies in a program, and the optimal number of pipeline stages it requires?
+
+Ex. 28 — Is a 4 GHz machine faster than a 2 GHz machine? Justify your answer.
+
+Ex. 29 — How do the manufacturing technology, compiler, and architecture determine the performance of a processor?
+
+Ex. 30 — Define dynamic power and leakage power.
+
+\* Ex. 31 — We claim that if we increase the frequency, the leakage power increases. Justify this statement.
+
+Ex. 32 — What is the justification of the  metric?
+
+\* Ex. 33 — How do power and temperature considerations limit the number of pipeline stages? Explain your answer in detail. Consider all the relationships between power, temperature, activity, IPC, and frequency that we have introduced in this chapter.
+
+\* Ex. 34 — Define the term DVFS.
+
+\*\* Ex. 35 — Assume that we wish to estimate the temperature at different points of a processor. We know the dynamic power of different components, and the leakage power as a function of temperature. Furthermore, we divide the surface of the die into a grid as explained in Section 10.10.4. How do we use this information to arrive at a steady state value of temperature for all the grid points?
+
+Interrupts and Exceptions
+
+Ex. 36 — What are precise exceptions? How does hardware ensure that every exception is a precise exception?
+
+Ex. 37 — Why do we need the movz and  instructions?
+
+Ex. 38 — List the additional registers that we add to a pipeline to support interrupts and exceptions.
+
+Ex. 39 — What is the role of the  register? How do we set and reset it?
+
+Ex. 40 — How do we locate the correct interrupt handler? What is the structure and role of an interrupt handler?
+
+Ex. 41 — Why do we need the registers oldP C, and oldSP ?
+
+Ex. 42 — Why do we need to add a flags field to the instruction packet? How do we use the oldF lags register?
+
+\* Ex. 43 — Consider a hypothetical situation where a write back to a register may generate an exception (register-fault exception). Propose a mechanism to handle this exception precisely.
+
+\* Ex. 44 — Define the concept of register windows. How can we use register windows to speed up the implementation of functions?
+
+Advanced Topics
+
+Ex. 45 — Can you intuitively say why most of the branches in programs are predictable?
+
+Ex. 46 — Is the following code sequence amenable to branch prediction. Why or why not?
+
+Ex. 47 — We need to design a 2-issue inorder pipeline that accepts a bundle of two instructions every cycle. These bundles are created by the compiler.
+
+(a) Given the different instruction types, design an algorithm that tells the compiler the different constraints in designing a bundle. For example, you might decide that you don’t want to have two instructions in a bundle if they are of certain types, or have certain operands.
+
+(b) To implement a two-issue pipeline, what kind of additional functionality will you need in the MEM stage?
+
+Ex. 48 — Describe the main insight behind out-of-order pipelines? What are their major structures?
+
+Design Problems
+
+Ex. 49 — Implement a basic pipelined processor with interlocks using Logisim (refer to the design problems in Chapter 9).
+
+Ex. 50 — Implement a basic pipelined processor in a hardware description language such as Verilog or VHDL. Try to add forwarding paths and interrupt processing logic.
+
+Ex. 51 — Learn the language SystemC. It is used to model hardware at a high level. Implement the SimpleRisc pipeline in SystemC.
+
+Part III

@@ -1,0 +1,163 @@
+# 5.1 Friction
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Discuss the general characteristics of friction.   
+• Describe the various types of friction.   
+• Calculate the magnitude of static and kinetic friction.
+
+Friction is a force that is around us all the time that opposes relative motion between surfaces in contact but also allows us to move (which you have discovered if you have ever tried to walk on ice). While a common force, the behavior of friction is actually very complicated and is still not completely understood. We have to rely heavily on observations for whatever understandings we can gain. However, we can still deal with its more elementary general characteristics and understand the circumstances in which it behaves.
+
+# Friction
+
+Friction is a force that opposes relative motion between surfaces in contact.
+
+One of the simpler characteristics of friction is that it is parallel to the contact surface between surfaces and always in a direction that opposes motion or attempted motion of the systems relative to each other. If two surfaces are in contact and moving relative to one another, then the friction between them is called kinetic friction. For example, friction slows a hockey puck sliding on ice. But when objects are stationary, static friction can act between them; the static friction is usually greater than the kinetic friction between the surfaces.
+
+# Kinetic Friction
+
+If two surfaces are in contact and moving relative to one another, then the friction between them is called kinetic friction.
+
+Imagine, for example, trying to slide a heavy crate across a concrete floor—you may push harder and harder on the crate and not move it at all. This means that the static friction responds to what you do—it increases to be equal to and in the opposite direction of your push. But if you finally push hard enough, the crate seems to slip suddenly and starts to move. Once in motion it is easier to keep it in motion than it was to get it started, indicating that the kinetic friction force is less than the static friction force. If you add mass to the crate, say by placing a box on top of it, you need to push even harder to get it started and also to keep it moving. Furthermore, if you oiled the concrete you would find it to be easier to get the crate started and keep it going (as you might expect).
+
+Figure 5.2 is a crude pictorial representation of how friction occurs at the interface between two objects. Close-up inspection of these surfaces shows them to be rough. So when you push to get an object moving (in this case, a crate), you must raise the object until it can skip along with just the tips of the surface hitting, break off the points, or do both. A considerable force can be resisted by friction with no apparent motion. The harder the surfaces are pushed together (such as if another box is placed on the crate), the more force is needed to move them. Part of the friction is due to adhesive forces between the surface molecules of the two objects, which explain the dependence of friction on the nature of the substances. Adhesion varies with substances in contact and is a complicated aspect of surface physics. Once an object is moving, there are fewer points of contact (fewer molecules adhering), so less force is required to keep the object moving. At small but nonzero speeds, friction is nearly independent of speed.
+
+The magnitude of the frictional force has two forms: one for static situations (static friction), the other for when there is motion (kinetic friction).
+
+When there is no motion between the objects, the magnitude of static friction ${ \bf f } _ { \mathrm { s } }$ is
+
+$$
+f _ { \mathrm { s } } \leq \mu _ { \mathrm { s } } N ,
+$$
+
+where $\mu _ { \mathrm { s } }$ is the coefficient of static friction and $N$ is the magnitude of the normal force (the force perpendicular to the surface).
+
+# Magnitude of Static Friction
+
+Magnitude of static friction $f _ { \mathrm { s } }$ is
+
+$$
+f _ { \mathrm { s } } \leq \mu _ { \mathrm { s } } N ,
+$$
+
+where $\mu _ { \mathrm { s } }$ is the coefficient of static friction and $N$ is the magnitude of the normal force.
+
+The symbol $\leq$ means les thanorequalto, implying that static friction can have a minimum and a maximum value of $\mu _ { \mathrm { s } } N$ . Static friction is a responsive force that increases to be equal and opposite to whatever force is exerted, up to its maximum limit. Once the applied force exceeds $f _ { \mathrm { s ( m a x ) } }$ , the object will move. Thus
+
+$$
+f _ { \mathrm { s ( m a x ) } } = \mu _ { \mathrm { s } } N .
+$$
+
+Once an object is moving, the magnitude of kinetic friction $\mathbf { f } _ { \mathrm { k } }$ is given by
+
+$$
+f _ { \mathrm { k } } = \mu _ { \mathrm { k } } N ,
+$$
+
+where $\mu _ { \mathrm { k } }$ is the coefficient of kinetic friction. A system in which $f _ { \mathrm { k } } = \mu _ { \mathrm { k } } N$ is described as a system in which friction behavessimply.
+
+# Magnitude of Kinetic Friction
+
+The magnitude of kinetic friction $f _ { \mathrm { k } }$ is given by
+
+$$
+f _ { \mathrm { k } } = \mu _ { \mathrm { k } } N ,
+$$
+
+where $\mu _ { \mathrm { k } }$ is the coefficient of kinetic friction.
+
+As seen in Table 5.1, the coefficients of kinetic friction are less than their static counterparts. That values of $\mu$ in Table 5.1 are stated to only one or, at most, two digits is an indication of the approximate description of friction given by the above two equations.
+
+The equations given earlier include the dependence of friction on materials and the normal force. The direction of friction is always opposite that of motion, parallel to the surface between objects, and perpendicular to the normal force. For example, if the crate you try to push (with a force parallel to the floor) has a mass of $1 0 0 \mathsf { k g }$ , then the normal force would be equal to its weight, $W = m g = ( 1 0 0 \mathrm { k g } ) ( 9 . 8 0 \mathrm { m / s ^ { 2 } } ) = 9 8 0 \mathrm { N }$ , perpendicular to the floor. If the coefficient of static friction is 0.45, you would have to exert a force parallel to the floor greater than $f _ { \mathrm { s ( m a x ) } } = \mu _ { \mathrm { s } } N = ( 0 . 4 5 ) ( 9 8 0 \ : \mathrm { N } ) = 4 4 0 \ : \mathrm { N }$ to move the crate. Once there is motion, friction is less and the coefficient of kinetic friction might be 0.30, so that a force of only $2 9 0 \mathrm { N } ( f _ { \mathrm { k } } = \mu _ { \mathrm { k } } N = ( 0 . 3 0 ) ( 9 8 0 \mathrm { N } ) = 2 9 0 \mathrm { N } )$ would keep it moving at a constant speed. If the floor is lubricated, both coefficients are considerably less than they would be without lubrication. Coefficient of friction is a unit less quantity with a magnitude usually between 0 and 1.0. The coefficient of the friction depends on the two surfaces that are in contact.
+
+# Take-Home Experiment
+
+Find a small plastic object (such as a food container) and slide it on a kitchen table by giving it a gentle tap. Now spray water on the table, simulating a light shower of rain. What happens now when you give the object the same-sized tap? Now add a few drops of (vegetable or olive) oil on the surface of the water and give the same tap. What happens now? This latter situation is particularly important for drivers to note, especially after a light rain shower. Why?
+
+Many people have experienced the slipperiness of walking on ice. However, many parts of the body, especially the joints, have much smaller coefficients of friction—often three or four times less than ice. A joint is formed by the ends of two bones, which are connected by thick tissues. The knee joint is formed by the lower leg bone (the tibia)
+
+and the thighbone (the femur). The hip is a ball (at the end of the femur) and socket (part of the pelvis) joint. The ends of the bones in the joint are covered by cartilage, which provides a smooth, almost glassy surface. The joints also produce a fluid (synovial fluid) that reduces friction and wear. A damaged or arthritic joint can be replaced by an artificial joint (Figure 5.3). These replacements can be made of metals (stainless steel or titanium) or plastic (polyethylene), also with very small coefficients of friction.
+
+Other natural lubricants include saliva produced in our mouths to aid in the swallowing process, and the slippery mucus found between organs in the body, allowing them to move freely past each other during heartbeats, during breathing, and when a person moves. Artificial lubricants are also common in hospitals and doctor’s clinics. For example, when ultrasonic imaging is carried out, the gel that couples the transducer to the skin also serves to lubricate the surface between the transducer and the skin—thereby reducing the coefficient of friction between the two surfaces. This allows the transducer to move freely over the skin.
+
+# EXAMPLE 5.1
+
+# Skiing Exercise
+
+A skier with a mass of $6 2 \ k \ g$ is sliding down a snowy slope. Find the coefficient of kinetic friction for the skier if friction is known to be $4 5 . 0 \mathsf { N }$ .
+
+# Strategy
+
+The magnitude of kinetic friction was given in to be 45.0 N. Kinetic friction is related to the normal force as $f _ { \mathrm { k } } = \mu _ { \mathrm { k } } N$ ; thus, the coefficient of kinetic friction can be found if we can find the normal force of the skier on a slope. The normal force is always perpendicular to the surface, and since there is no motion perpendicular to the surface, the normal force should equal the component of the skier’s weight perpendicular to the slope. (See the skier and free-body diagram in Figure 5.4.)
+
+That is,
+
+$$
+N = w _ { \perp } = w \cos 2 5 ^ { \circ } = m g \cos 2 5 ^ { \circ } .
+$$
+
+Substituting this into our expression for kinetic friction, we get
+
+$$
+f _ { \mathrm { k } } = \mu _ { \mathrm { k } } m g \cos 2 5 ^ { \circ } ,
+$$
+
+which can now be solved for the coefficient of kinetic friction $\mu _ { \mathrm { k } }$ .
+
+# Solution
+
+Solving for $\mu _ { \mathrm { k } }$ gives
+
+$$
+\mu _ { \mathrm { k } } = { \frac { f _ { \mathrm { k } } } { N } } = { \frac { f _ { \mathrm { k } } } { w \cos 2 5 ^ { \circ } } } = { \frac { f _ { \mathrm { k } } } { m g \cos 2 5 ^ { \circ } . } }
+$$
+
+Substituting known values on the right-hand side of the equation,
+
+$$
+\mu _ { \mathrm { k } } = { \frac { 4 5 . 0 \mathrm { N } } { ( 6 2 \mathrm { k g } ) ( 9 . 8 0 \mathrm { m / s } ^ { 2 } ) ( 0 . 9 0 6 ) } } = 0 . 0 8 2 .
+$$
+
+# Discussion
+
+This result is a little smaller than the coefficient listed in Table 5.1 for waxed wood on snow, but it is still reasonable since values of the coefficients of friction can vary greatly. In situations like this, where an object of mass slides down a slope that makes an angle $\theta$ with the horizontal, friction is given by $f _ { \mathrm { k } } = \mu _ { \mathrm { k } } m g \cos \theta .$ . All objects will slide down a slope with constant acceleration under these circumstances. Proof of this is left for this chapter’s Problems and Exercises.
+
+# Take-Home Experiment
+
+An object will slide down an inclined plane at a constant velocity if the net force on the object is zero. We can use this fact to measure the coefficient of kinetic friction between two objects. As shown in Example 5.1, the kinetic friction on a slope $f _ { \mathrm { k } } = \mu _ { \mathrm { k } } m g \cos \theta .$ . The component of the weight down the slope is equal to $\theta$ (see the free-body diagram in Figure 5.4). These forces act in opposite directions, so when they have equal magnitude, the acceleration is zero. Writing these out:
+
+$$
+f _ { \mathrm { k } } = m g _ { x }
+$$
+
+$$
+\mu _ { \mathrm { k } } m g \cos \theta = m g \sin \theta .
+$$
+
+Solving for $\mu _ { \mathrm { k } }$ , we find that
+
+$$
+\mu _ { \mathrm { k } } = { \frac { m g \sin \theta } { m g \cos \theta } } = \tan \theta .
+$$
+
+Put a coin on a book and tilt it until the coin slides at a constant velocity down the book. You might need to tap the book lightly to get the coin to move. Measure the angle of tilt relative to the horizontal and find $\mu _ { \mathrm { k } }$ . Note that the coin will not start to slide at all until an angle greater than $\theta$ is attained, since the coefficient of static friction is larger than the coefficient of kinetic friction. Discuss how this may affect the value for $\mu _ { \mathrm { k } }$ and its uncertainty.
+
+We have discussed that when an object rests on a horizontal surface, there is a normal force supporting it equal in magnitude to its weight. Furthermore, simple friction is always proportional to the normal force.
+
+# Making Connections: Submicroscopic Explanations of Friction
+
+The simpler aspects of friction dealt with so far are its macroscopic (large-scale) characteristics. Great strides have been made in the atomic-scale explanation of friction during the past several decades. Researchers are finding that the atomic nature of friction seems to have several fundamental characteristics. These characteristics not only explain some of the simpler aspects of friction—they also hold the potential for the development of nearly friction-free environments that could save hundreds of billions of dollars in energy which is currently being converted (unnecessarily) to heat.
+
+Figure 5.5 illustrates one macroscopic characteristic of friction that is explained by microscopic (small-scale) research. We have noted that friction is proportional to the normal force, but not to the area in contact, a somewhat counterintuitive notion. When two rough surfaces are in contact, the actual contact area is a tiny fraction of the total area since only high spots touch. When a greater normal force is exerted, the actual contact area increases, and it is found that the friction is proportional to this area.
+
+But the atomic-scale view promises to explain far more than the simpler features of friction. The mechanism for how heat is generated is now being determined. In other words, why do surfaces get warmer when rubbed? Essentially, atoms are linked with one another to form lattices. When surfaces rub, the surface atoms adhere and cause atomic lattices to vibrate—essentially creating sound waves that penetrate the material. The sound waves diminish with distance and their energy is converted into heat. Chemical reactions that are related to frictional wear can also occur between atoms and molecules on the surfaces. Figure 5.6 shows how the tip of a probe drawn across another material is deformed by atomic-scale friction. The force needed to drag the tip can be measured and is found to be related to shear stress, which will be discussed later in this chapter. The variation in shear stress is remarkable (more than a factor of $1 0 ^ { 1 2 }$ ) and difficult to predict theoretically, but shear stress is yielding a fundamental understanding of a large-scale phenomenon known since ancient times—friction.
+
+# PHET EXPLORATIONS
+
+# Forces and Motion
+
+Explore the forces at work when you try to push a filing cabinet. Create an applied force and see the resulting friction force and total force acting on the cabinet. Charts show the forces, position, velocity, and acceleration vs. time. Draw a free-body diagram of all the forces (including gravitational and normal forces).
+
+Click to view content (https://openstax.org/books/college-physics-2e/pages/5-1-friction)

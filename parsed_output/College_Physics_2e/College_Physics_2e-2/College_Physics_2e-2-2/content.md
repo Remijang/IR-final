@@ -1,0 +1,26 @@
+# 2.2 Vectors, Scalars, and Coordinate Systems
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Define and distinguish between scalar and vector quantities.   
+• Assign a coordinate system for a scenario involving one-dimensional motion.
+
+What is the difference between distance and displacement? Whereas displacement is defined by both direction and magnitude, distance is defined only by magnitude. Displacement is an example of a vector quantity. Distance is an example of a scalar quantity. A vector is any quantity with both magnitudeanddirection. Other examples of vectors include a velocity of $9 0 ~ \mathrm { { k m / h } }$ east and a force of 500 newtons straight down.
+
+The direction of a vector in one-dimensional motion is given simply by a plus $( + )$ or minus $( - )$ sign. Vectors are represented graphically by arrows. An arrow used to represent a vector has a length proportional to the vector’s magnitude (e.g., the larger the magnitude, the longer the length of the vector) and points in the same direction as the vector.
+
+Some physical quantities, like distance, either have no direction or none is specified. A scalar is any quantity that has a magnitude, but no direction. For example, a $2 0 ^ { \circ } \mathrm { C }$ temperature, the 250 kilocalories (250 Calories) of energy in a candy bar, a $9 0 ~ \mathrm { k m / h }$ speed limit, a person’s $1 . 8 \mathsf { m }$ height, and a distance of $2 . 0 \mathsf { m }$ are all scalars—quantities with no specified direction. Note, however, that a scalar can be negative, such as a $- 2 0 ^ { \circ } \mathrm { C }$ temperature. In this case, the minus sign indicates a point on a scale rather than a direction. Scalars are never represented by arrows.
+
+# Coordinate Systems for One-Dimensional Motion
+
+In order to describe the direction of a vector quantity, you must designate a coordinate system within the reference frame. For one-dimensional motion, this is a simple coordinate system consisting of a one-dimensional coordinate line. In general, when describing horizontal motion, motion to the right is usually considered positive, and motion to the left is considered negative. With vertical motion, motion up is usually positive and motion down is negative. In some cases, however, as with the jet in Figure 2.6, it can be more convenient to switch the positive and negative directions. For example, if you are analyzing the motion of falling objects, it can be useful to define downwards as the positive direction. If people in a race are running to the left, it is useful to define left as the positive direction. It does not matter as long as the system is clear and consistent. Once you assign a positive direction and start solving a problem, you cannot change it.
+
+# CHECK YOUR UNDERSTANDING
+
+A person’s speed can stay the same as they round a corner and changes direction. Given this information, is speed a scalar or a vector quantity? Explain.
+
+# Solution
+
+Speed is a scalar quantity. It does not change at all with direction changes; therefore, it has magnitude only. If it were a vector quantity, it would change as direction changes (even if its magnitude remained constant).

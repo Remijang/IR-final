@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.5 Logical Instructions ",
+        "text_level": 1,
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has three logical instructions \u2013 and, or, and not. and and or are 3-address instructions. They compute the bitwise AND and OR of two values, respectively. The not instruction is a 2-address instruction that computes the bitwise complement of a value. Note that the source operand of the not instruction can be an immediate or a register. Refer to Table 3.4. ",
+        "page_idx": 112
+    },
+    {
+        "type": "table",
+        "img_path": "images/45af8a8306ee898ddeaa971d7d3453f482b726cb715d10681b5563fe31c9c484.jpg",
+        "table_caption": [
+            "Table 3.4: Semantics of logical instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>and reg, reg, (reg/imm)</td><td>and r1, r2, r3</td><td>r1\u2190r2>r3</td></tr><tr><td>or reg, reg,(reg/imm)</td><td>or rl, r2, r3</td><td>r1\u2190r2Vr3</td></tr><tr><td>not reg, (reg/imm)</td><td>not rl,r2</td><td>r1\u2190~r2</td></tr><tr><td colspan=\"2\">\u2227 bitwise AND\uff0cV bitwise OR,~ logical complement</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "Example 28   \nCompute $\\overline { { ( a \\vee b ) } }$ . Assume that a is stored in r0, and b is stored in r1. Store the result in $r 2$ . ",
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc ",
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "or r3, r0, r1   \nnot r2, r3 ",
+        "page_idx": 112
+    }
+]

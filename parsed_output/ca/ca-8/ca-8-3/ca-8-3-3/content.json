@@ -1,0 +1,105 @@
+[
+    {
+        "type": "text",
+        "text": "8.3.3 Non-Restoring Division ",
+        "text_level": 1,
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "We observe that there can be a maximum of two add/subtract operations per iteration. It is possible to circumvent it by using another temporary register to store the result of the subtract operation $U - D$ . We can move it to $U$ only if $U - D \\geq 0$ . However, this also involves additional circuitry. The $U$ register will get complicated and slower too. ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "The non-restoring algorithm does either one addition or one subtraction per iteration. Hence, it is more efficient even though the asymptotic time complexity is the same. The hardware setup ( $U$ and $V$ registers, dividend ( $N$ ), divisor $( D )$ ) is the same as that for the ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "restoring algorithm. ",
+        "page_idx": 341
+    },
+    {
+        "type": "table",
+        "img_path": "images/ba74cd7ea290b5a0fe9643e8b5b8050ec4841a3fc0c6963870c1487da383c9b8.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Algorithm 4: Non-restoring algorithm to divide two 32-bit numbers</td></tr><tr><td>Data: Divisor in D, Dividend in V, U = 0 Result: U contains the remainder,and V contains the quotient 1i\u21900</td></tr></table></body></html>\n\n",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "We see that the non-restoring algorithm is very similar to the restoring algorithm with some minor differences. The non-restoring algorithm shifts $U V$ as the first step in an iteration. Then, if the value of $U$ is negative, it adds $D$ to $U$ . Otherwise, it subtracts $\\mathcal { D }$ from $U$ . If the addition or subtraction has resulted in a value that is greater than or equal to zero, the non-restoring algorithm sets the appropriate quotient bit to 1, else it sets it to 0. ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "Finally, at the end $V$ contains the entire quotient. If $U$ is negative, then we need to add the divisor ( $D$ ) to $U$ . $U$ will contain the remainder. ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "Proof of Correctness\\* ",
+        "text_level": 1,
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "Like the restoring algorithm, let us assume that when we refer to the value of $U V$ , we assume that all the quotient bits are equal to 0. As long as $U$ remains positive or 0, the state of $U$ and $V$ is equal to that produced by the restoring algorithm. Let us assume that in the $j ^ { t h }$ iteration, $U$ becomes negative for the first time. Let us consider the value represented by the register $U V$ just after it is shifted to the left by 1 position, and call it $U V _ { j }$ ( $j$ stands for the iteration number). ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "At the end of the $j ^ { t h }$ iteration, $U V = U V _ { j } - D ^ { \\prime }$ , where $D ^ { \\prime } = D \\times 2 ^ { n }$ . We shift $D$ by $n$ places to the left because we always add or subtract $D$ from $U$ , which is the upper half of $U V$ . ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "According to our assumption $U V _ { j }$ is negative. In this case the restoring algorithm would not have subtracted $D ^ { \\prime }$ , and it would have written 0 to the quotient. The non-restoring algorithm sets the quotient bit correctly since it finds $U V$ to be negative (Line 15). Let us now move to the $( j + 1 ) ^ { t h }$ iteration. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "$U V _ { j + 1 } = 2 U V _ { j } - 2 D ^ { \\prime }$ . At the end of the $( j + 1 ) ^ { t h }$ iteration, $U V = 2 U V _ { j } - 2 D ^ { \\prime } + D ^ { \\prime } =$ $2 U V _ { j } - D ^ { \\prime }$ . If $U V$ is not negative, then the non-restoring algorithm will save 1 in the quotient. Let us now see at this point what the restoring algorithm would have done (assuming $U V$ is non-negative). In the $( j + 1 ) ^ { t h }$ iteration, the restoring algorithm would have started the iteration with $U V = U V _ { j }$ . It would have then performed a shift and subtracted $D ^ { \\prime }$ to set $U V = 2 U V _ { j } - D ^ { \\prime }$ , and written 1 to the quotient. We thus observe that at this point the state of the registers $U$ and $V$ matches exactly for both the algorithms. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "However, if $U V$ is negative then the restoring and non-restoring algorithms will have a different state. Nonetheless, the quotient bits will be set correctly. $U V _ { j + 2 } = 4 U V _ { j } - 2 D ^ { \\prime }$ . Since a negative number multiplied by 2 (left shifted by 1 position) is still negative, the non-restoring algorithm will add $D ^ { \\prime }$ to $U$ . Hence, the value of $U V$ at the end of the $( j + 2 ) ^ { t h }$ iteration will be $4 U V _ { j } - D ^ { \\prime }$ . If this is non-negative, then the restoring algorithm would also have exactly the same state at this point. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "We can continue this argument to observe that the quotient bits are always set correctly and the state of $U$ and $V$ exactly matches that of the restoring algorithm when $U V \\geq 0$ at the end of an iteration. Consequently, for dividing the same pair of numbers the states of the restoring and non-restoring algorithms will start as the same, then diverge and converge several times. If the last iteration leads to a non-negative $U V$ then the algorithm is correct because the state exactly matches that produced by the restoring algorithm. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "However, if the last iteration leaves us with $U V$ as negative, then we observe that $U V$ $= 2 ^ { n - k } U V _ { k } - D ^ { \\prime }$ , where $k$ is the iteration number at which the states had converged for the last time. If we add $D ^ { \\prime }$ to $U V$ , then the states of both the algorithms match, and thus the results are correct (achieved in Line 20). ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Important Point 12 ",
+        "text_level": 1,
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to prove that the non-restoring algorithm does not suffer from overflows while performing a left shift, and adding or subtracting the divisor. Similar to the proof for the restoring algorithm, let us first prove that just before the shift operation, $| U | < D$ . For the base case, $\\mathit { \\Pi } \\left( U = 0 \\right)$ ), the proposition holds. Let us consider the $n ^ { t h }$ iteration, and let the value of $U$ just before the shift operation be $\\hat { U }$ . Let us first assume that $\\hat { U } \\geq 0$ . In this case, we can use the same logic as the restoring algorithm, and prove that $| U | < D$ at the beginning of the $( n + 1 ) ^ { t h }$ iteration. Let us now assume that $\\hat { U } < 0$ . From the induction hypothesis, $| \\hat { U } | < D \\Rightarrow \\hat { U } \\geq - ( D - 1 )$ . Now, if we shift $\\hat { U }$ by $\\mathit { 1 }$ position, and shift in a $\\boldsymbol { \\theta }$ or $\\mathit { 1 }$ , we compute $U \\geq 2 \\hat { U }$ (for $\\hat { U } < 0$ , shifting in a $^ { 1 }$ reduces the absolute value). After the shift operation, we add $D$ to $U$ . We thus have, $U = U + D \\ge 2 \\hat { U } + D \\ge 2 \\times ( 1 - D ) + D = 2 - D$ . Thus, in this case also $| U | < D$ , just before the shift, and after the shift we have $| U | \\le 2 D - 1$ . We thus need to allocate an extra bit to register $U$ to correctly store all the possible intermediate values of $U$ . Hence, the $U$ register is 33 bits wide. We are thus guaranteed to not have overflows during the operation of the non-restoring algorithm. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Example 129 Divide two 4-bit numbers: 7 (0111) / 3(0011) using non-restoring division. Answer: ",
+        "page_idx": 343
+    },
+    {
+        "type": "image",
+        "img_path": "images/3bd303794ed9e01317ea543a23e763b659f59bfaa23761ef4e58980380f1c310.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 343
+    }
+]

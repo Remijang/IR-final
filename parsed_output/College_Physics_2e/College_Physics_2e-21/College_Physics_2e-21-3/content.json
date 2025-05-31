@@ -1,0 +1,390 @@
+[
+    {
+        "type": "text",
+        "text": "21.3 Kirchhoff\u2019s Rules ",
+        "text_level": 1,
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Analyze a complex circuit using Kirchhoff\u2019s rules, using the conventions for determining the correct signs of various terms. ",
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Many complex circuits, such as the one in Figure 21.21, cannot be analyzed with the series-parallel techniques developed in Resistors in Series and Parallel and Electromotive Force: Terminal Voltage. There are, however, two circuit analysis rules that can be used to analyze any circuit, simple or complex. These rules are special cases of the laws of conservation of charge and conservation of energy. The rules are known as Kirchhoff\u2019s rules, after their inventor Gustav Kirchhoff (1824\u20131887). ",
+        "page_idx": 939
+    },
+    {
+        "type": "image",
+        "img_path": "images/1c9f31c014f60a0e4b75eb7e21271697789707c8054ce953606f928d9992af0a.jpg",
+        "img_caption": [
+            "FIGURE 21.21 This circuit cannot be reduced to a combination of series and parallel connections. Kirchhoff\u2019s rules, special applications of the laws of conservation of charge and energy, can be used to analyze it. (Note: The script E in the figure represents electromotive force, emf.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s Rules ",
+        "text_level": 1,
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Kirchhoff\u2019s first rule\u2014the junction rule. The sum of all currents entering a junction must equal the sum of all currents leaving the junction.   \n\u2022 Kirchhoff\u2019s second rule\u2014the loop rule. The algebraic sum of changes in potential around any closed circuit path (loop) must be zero. ",
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Explanations of the two rules will now be given, followed by problem-solving hints for applying Kirchhoff\u2019s rules, and a worked example that uses them. ",
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s First Rule ",
+        "text_level": 1,
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s first rule (the junction rule) is an application of the conservation of charge to a junction; it is illustrated in Figure 21.22. Current is the flow of charge, and charge is conserved; thus, whatever charge flows into the junction must flow out. Kirchhoff\u2019s first rule requires that $I _ { 1 } = I _ { 2 } + I _ { 3 }$ (see figure). Equations like this can and will be used to analyze circuits and to solve circuit problems. ",
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Conservation Laws ",
+        "text_level": 1,
+        "page_idx": 940
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s rules for circuit analysis are applications of conservation laws to circuits. The first rule is the application of conservation of charge, while the second rule is the application of conservation of energy. Conservation laws, even used in a specific application, such as circuit analysis, are so basic as to form the foundation of that application. ",
+        "page_idx": 940
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 1 } = I _ { 2 } + I _ { 3 }\n$$",
+        "text_format": "latex",
+        "page_idx": 940
+    },
+    {
+        "type": "image",
+        "img_path": "images/b75127586556f07dc3ff5aff94a92988961e0e746a81817aca8e9c15faaea830.jpg",
+        "img_caption": [
+            "FIGURE 21.22 The junction rule. The diagram shows an example of Kirchhoff\u2019s first rule where the sum of the currents into a junction equals the sum of the currents out of a junction. In this case, the current going into the junction splits and comes out as two currents, so that $I _ { 1 } = I _ { 2 } + I _ { 3 }$ . Here $I _ { 1 }$ must be $\\mathtt { 1 1 A }$ , since $I _ { 2 }$ is $7 \\mathsf { A }$ and $I _ { 3 }$ is $4 \\mathsf { A }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 940
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s Second Rule ",
+        "text_level": 1,
+        "page_idx": 940
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s second rule (the loop rule) is an application of conservation of energy. The loop rule is stated in terms of potential, $V$ , rather than potential energy, but the two are related since $\\mathrm { P E _ { e l e c } } = q V .$ Recall that emf is the potential difference of a source when no current is flowing. In a closed loop, whatever energy is supplied by emf must be transferred into other forms by devices in the loop, since there are no other ways in which energy can be transferred into or out of the circuit. Figure 21.23 illustrates the changes in potential in a simple series circuit loop. ",
+        "page_idx": 940
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff\u2019s second rule requires $- I r - I R _ { 1 } - I R _ { 2 } = 0$ . Rearranged, this is $= I r + I R _ { 1 } + I R _ { 2 }$ , which means the emf equals the sum of the $I R$ (voltage) drops in the loop. ",
+        "page_idx": 940
+    },
+    {
+        "type": "image",
+        "img_path": "images/b85c6e983b35f1a9f984aba793c1af1b15604344b9bd7cea4bd06a2a81652e55.jpg",
+        "img_caption": [
+            "FIGURE 21.23 The loop rule. An example of Kirchhoff\u2019s second rule where the sum of the changes in potential around a closed loop must be zero. (a) In this standard schematic of a simple series circuit, the emf supplies $\\mathtt { 1 8 V }$ , which is reduced to zero by the resistances, with 1 V "
+        ],
+        "img_footnote": [],
+        "page_idx": 940
+    },
+    {
+        "type": "text",
+        "text": "across the internal resistance, and $\\boldsymbol { \\mathsf { 1 2 V } }$ and 5 V across the two load resistances, for a total of 18 V. (b) This perspective view represents the potential as something like a roller coaster, where charge is raised in potential by the emf and lowered by the resistances. (Note that the script E stands for emf.) ",
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "Applying Kirchhoff\u2019s Rules ",
+        "text_level": 1,
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "By applying Kirchhoff\u2019s rules, we generate equations that allow us to find the unknowns in circuits. The unknowns may be currents, emfs, or resistances. Each time a rule is applied, an equation is produced. If there are as many independent equations as unknowns, then the problem can be solved. There are two decisions you must make when applying Kirchhoff\u2019s rules. These decisions determine the signs of various quantities in the equations you obtain from applying the rules. ",
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "1. When applying Kirchhoff\u2019s first rule, the junction rule, you must label the current in each branch and decide in what direction it is going. For example, in Figure 21.21, Figure 21.22, and Figure 21.23, currents are labeled $I _ { 1 }$ , $I _ { 2 } , I _ { 3 }$ , and $I$ , and arrows indicate their directions. There is no risk here, for if you choose the wrong direction, the current will be of the correct magnitude but negative.   \n2. When applying Kirchhoff\u2019s second rule, the loop rule, you must identify a closed loop and decide in which direction to go around it, clockwise or counterclockwise. For example, in Figure 21.23 the loop was traversed in the same direction as the current (clockwise). Again, there is no risk; going around the circuit in the opposite direction reverses the sign of every term in the equation, which is like multiplying both sides of the equation by $^ { - 1 }$ ",
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "Figure 21.24 and the following points will help you get the plus or minus signs right when applying the loop rule. Note that the resistors and emfs are traversed by going from a to b. In many circuits, it will be necessary to construct more than one loop. In traversing each loop, one needs to be consistent for the sign of the change in potential. (See Example 21.5.) ",
+        "page_idx": 941
+    },
+    {
+        "type": "image",
+        "img_path": "images/7247cbdedf2e8d7dbe58fe9a4ac3db8402fd16bac24c0e4f2d7a7f70c1389463.jpg",
+        "img_caption": [
+            "FIGURE 21.24 Each of these resistors and voltage sources is traversed from a to b. The potential changes are shown beneath each element and are explained in the text. (Note that the script E stands for emf.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "When a resistor is traversed in the same direction as the current, the change in potential is $- I R$ . (See Figure 21.24.)   \nWhen a resistor is traversed in the direction opposite to the current, the change in potential is $+ I R$ . (See Figure 21.24.)   \n\u2022 When an emf is traversed from to $^ +$ (the same direction it moves positive charge), the change in potential is +emf. (See Figure 21.24.)   \nWhen an emf is traversed from $^ +$ to (opposite to the direction it moves positive charge), the change in potential is emf. (See Figure 21.24.) ",
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 21.5 ",
+        "text_level": 1,
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "Calculating Current: Using Kirchhoff\u2019s Rules ",
+        "text_level": 1,
+        "page_idx": 941
+    },
+    {
+        "type": "text",
+        "text": "Find the currents flowing in the circuit in Figure 21.25. ",
+        "page_idx": 941
+    },
+    {
+        "type": "image",
+        "img_path": "images/1019568faac0ef9ddd620a8edae7b4c978364829b3b1c7069f36292686a57062.jpg",
+        "img_caption": [
+            "FIGURE 21.25 This circuit is similar to that in Figure 21.21, but the resistances and emfs are specified. (Each emf is denoted by script E.) The currents in each branch are labeled and assumed to move in the directions shown. This example uses Kirchhoff\u2019s rules to find the currents. "
+        ],
+        "img_footnote": [],
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "This circuit is sufficiently complex that the currents cannot be found using Ohm\u2019s law and the series-parallel techniques\u2014it is necessary to use Kirchhoff\u2019s rules. Currents have been labeled $I _ { 1 } , I _ { 2 }$ , and $I _ { 3 }$ in the figure and assumptions have been made about their directions. Locations on the diagram have been labeled with letters a through h. In the solution we will apply the junction and loop rules, seeking three independent equations to allow us to solve for the three unknown currents. ",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "We begin by applying Kirchhoff\u2019s first or junction rule at point a. This gives ",
+        "page_idx": 942
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 1 } = I _ { 2 } + I _ { 3 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "since $I _ { 1 }$ flows into the junction, while $I _ { 2 }$ and $I _ { 3 }$ flow out. Applying the junction rule at e produces exactly the same equation, so that no new information is obtained. This is a single equation with three unknowns\u2014three independent equations are needed, and so the loop rule must be applied. ",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "Now we consider the loop abcdea. Going from a to b, we traverse $R _ { 2 }$ in the same (assumed) direction of the current $I _ { 2 }$ , and so the change in potential is $- I _ { 2 } R _ { 2 }$ . Then going from b to c, we go from to $^ +$ , so that the change in potential is $+ \\mathrm { e m f } _ { 1 }$ . Traversing the internal resistance $r _ { 1 }$ from c to d gives $- I _ { 2 } r _ { 1 }$ . Completing the loop by going from d to a again traverses a resistor in the same direction as its current, giving a change in potential of $- I _ { 1 } R _ { 1 }$ . ",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "The loop rule states that the changes in potential sum to zero. Thus, ",
+        "page_idx": 942
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { - I _ { 2 } R _ { 2 } + \\mathrm { e m f } _ { 1 } - I _ { 2 } r _ { 1 } - I _ { 1 } R _ { 1 } = - I _ { 2 } ( R _ { 2 } + r _ { 1 } ) + \\mathrm { e m f } _ { 1 } - I _ { 1 } R _ { 1 } = 0 . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "Substituting values from the circuit diagram for the resistances and emf, and canceling the ampere unit gives ",
+        "page_idx": 942
+    },
+    {
+        "type": "equation",
+        "text": "$$\n- 3 I _ { 2 } + 1 8 - 6 I _ { 1 } = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "ow applying the loop rule to aefgha (we could have chosen abcdefgha as well) similarly gives ",
+        "page_idx": 942
+    },
+    {
+        "type": "equation",
+        "text": "$$\n+ I _ { 1 } R _ { 1 } + I _ { 3 } R _ { 3 } + I _ { 3 } r _ { 2 } - \\mathrm { e m f } _ { 2 } { = } + I _ { 1 } R _ { 1 } + I _ { 3 } ( R _ { 3 } + r _ { 2 } ) \\mathrm { - e m f } _ { 2 } { = } 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "Note that the signs are reversed compared with the other loop, because elements are traversed in the opposite direction. With values entered, this becomes ",
+        "page_idx": 942
+    },
+    {
+        "type": "equation",
+        "text": "$$\n+ 6 I _ { 1 } + 2 I _ { 3 } - 4 5 = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 942
+    },
+    {
+        "type": "text",
+        "text": "These three equations are sufficient to solve for the three unknown currents. First, solve the second equation for $I _ { 2 }$ ",
+        "page_idx": 942
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 2 } = 6 - 2 I _ { 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Now solve the third equation for $I _ { 3 }$ : ",
+        "page_idx": 943
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 3 } = 2 2 . 5 - 3 I _ { 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Substituting these two new equations into the first one allows us to find a value for $I _ { 1 }$ : ",
+        "page_idx": 943
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 1 } = I _ { 2 } + I _ { 3 } = ( 6 - 2 I _ { 1 } ) + ( 2 2 . 5 - 3 I _ { 1 } ) = 2 8 . 5 - 5 I _ { 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Combining terms gives ",
+        "page_idx": 943
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { 6 { I _ { 1 } } = 2 8 . 5 , \\mathrm { a n d } } \\\\ { { { I _ { 1 } } = 4 . 7 5 \\mathrm { A } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Substituting this value for $I _ { 1 }$ back into the fourth equation gives ",
+        "page_idx": 943
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { I _ { 2 } = 6 - 2 I _ { 1 } = 6 - 9 . 5 0 } } \\\\ { { I _ { 2 } = - 3 . 5 0 \\mathrm { A } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "The minus sign means $I _ { 2 }$ flows in the direction opposite to that assumed in Figure 21.25. ",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Finally, substituting the value for $I _ { 1 }$ into the fifth equation gives ",
+        "page_idx": 943
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 3 } = 2 2 . 5 - 3 I _ { 1 } = 2 2 . 5 - 1 4 . 2 5\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI _ { 3 } = 8 . 2 5 \\mathrm { A } .\n$$",
+        "text_format": "latex",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Just as a check, we note that indeed $I _ { 1 } = I _ { 2 } + I _ { 3 }$ . The results could also have been checked by entering all of the values into the equation for the abcdefgha loop. ",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategies for Kirchhoff\u2019s Rules ",
+        "text_level": 1,
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "1. Make certain there is a clear circuit diagram on which you can label all known and unknown resistances, emfs, and currents. If a current is unknown, you must assign it a direction. This is necessary for determining the signs of potential changes. If you assign the direction incorrectly, the current will be found to have a negative value\u2014no harm done.   \n2. Apply the junction rule to any junction in the circuit. Each time the junction rule is applied, you should get an equation with a current that does not appear in a previous application\u2014if not, then the equation is redundant.   \n3. Apply the loop rule to as many loops as needed to solve for the unknowns in the problem. (There must be as many independent equations as unknowns.) To apply the loop rule, you must choose a direction to go around the loop. Then carefully and consistently determine the signs of the potential changes for each element using the four bulleted points discussed above in conjunction with Figure 21.24.   \n4. Solve the simultaneous equations for the unknowns. This may involve many algebraic steps, requiring careful checking and rechecking.   \n5. Check to see whether the answers are reasonable and consistent. The numbers should be of the correct order of magnitude, neither exceedingly large nor vanishingly small. The signs should be reasonable\u2014for example, no resistance should be negative. Check to see that the values obtained satisfy the various equations obtained from applying the rules. The currents should satisfy the junction rule, for example. ",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "The material in this section is correct in theory. We should be able to verify it by making measurements of current and voltage. In fact, some of the devices used to make such measurements are straightforward applications of the principles covered so far and are explored in the next modules. As we shall see, a very basic, even profound, fact results\u2014making a measurement alters the quantity being measured. ",
+        "page_idx": 943
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 944
+    },
+    {
+        "type": "text",
+        "text": "Can Kirchhoff\u2019s rules be applied to simple series and parallel circuits or are they restricted for use in more complicated circuits that are not combinations of series and parallel? ",
+        "page_idx": 944
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 944
+    },
+    {
+        "type": "text",
+        "text": "Kirchhoff's rules can be applied to any circuit since they are applications to circuits of two conservation laws. Conservation laws are the most broadly applicable principles in physics. It is usually mathematically simpler to use the rules for series and parallel in simpler circuits so we emphasize Kirchhoff\u2019s rules for use in more complicated situations. But the rules for series and parallel can be derived from Kirchhoff\u2019s rules. Moreover, Kirchhoff\u2019s rules can be expanded to devices other than resistors and emfs, such as capacitors, and are one of the basic analysis devices in circuit analysis. ",
+        "page_idx": 944
+    }
+]

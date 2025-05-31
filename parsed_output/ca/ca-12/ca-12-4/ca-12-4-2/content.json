@@ -1,0 +1,102 @@
+[
+    {
+        "type": "text",
+        "text": "12.4.2 Coherence ",
+        "text_level": 1,
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "The term coherence in the memory system refers to the way multiple threads access the same location. We shall see that diverse behaviors are possible, when multiple threads access the same memory location. Some of the behaviors are intuitively wrong, yet possible. Before looking at coherence, we need to note that inside the memory system, we have many entities such as caches, write buffers, and different kinds of temporary buffers. Processors typically write values to temporary buffers, and resume their operation. It is the job of the memory system to transfer the data from these buffers to locations in the cache subsystem. Now, we need to understand that large caches are very slow. Hence, it is common practice to associate a small private cache with each core in a multicore system. For example, each core may have a small, private L1 cache. The ensemble of these L1 caches (across cores) needs to act like a single L1 cache. In other words, an external entity such as a software program should perceive the distributed L1 cache comprising multiple private caches as one entity (insofar as memory accesses are concerned). ",
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "It is thus possible that internally, a given memory address might be associated with many physical locations at a given point of time. For example, a variable $x$ can have many replicas that are distributed across the private caches. Any write operation has to update all the replicas. Synchronizing these replicas is the key problem that cache coherence solves. Secondly, the process of transferring data from the processor to the correct location in the memory system (typically a cache block) is not instantaneous. It sometimes takes more than tens of cycles for the memory read or write request to reach its location. Sometimes these memory request messages can wait even longer, if there is a lot of memory traffic. Messages can also get reordered with other messages that were sent after them. This internal complexity of a multiprocessor memory system leads to several interesting behaviors for programs that access the same set of shared variables. Let us consider a set of examples. ",
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "In each of these examples, all shared values are initialized to 0. All the local variables start with $t$ such as $t 1$ , $t 2$ , and $t 3$ . They are stored in registers. Let us say that thread 1 writes to a variable $x$ that is shared across threads. Immediately later, thread 2 tries to read its value. ",
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "Thread 1: x = 1 ",
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "Thread 2: $\\mathtt { t 1 } \\ = \\ \\mathtt { x }$ ",
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "Is thread 2 guaranteed to read 1? Or, can it get the previous value 0? What if thread 2, reads the value of $x$ , 2 ns later, or even 10 ns later? What is the time that it takes for a write in one thread to propagate to the other threads? This depends on the implementation of the memory system. If a memory system has fast buses, and fast caches, then a write can propagate very quickly to other threads. However, if the buses and caches are slow, then it can take some time for other threads to see a write to a shared variable. ",
+        "page_idx": 583
+    },
+    {
+        "type": "text",
+        "text": "Now, let us further complicate the example. Let us assume that thread 1 writes to $x$ twice. ",
+        "page_idx": 583
+    },
+    {
+        "type": "table",
+        "img_path": "images/9d3c2c6c00e5e3a9e9ac350e8f4ed8ce6f42ffac42bb02c165d7e7cf3dbed74e.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Example 151</td></tr><tr><td>Thread 1:</td><td>Thread 2:</td></tr><tr><td>8=1</td><td>t1=x</td></tr><tr><td>8=2</td><td>t2= x</td></tr><tr><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the set of possible outcomes. $( t 1 , t 2 ) = ( 1 , 2 )$ is possible. $( t 1 , t 2 ) = ( 0 , 1 )$ is also possible. This is possible when $t 1$ was read before thread 1 started, and $t 2$ was read after the first statement of thread 1 completed. Likewise, we can systematically enumerate the set of all possible outcomes, which are as follows: (0,0), (0,1), (0,2), (1,1), (1,2), (2,2). The reader is requested to write a simple program using a parallel multithreaded framework such as OpenMP or pthreads and look at the set of possible outcomes. The interesting question is whether the outcome (2,1) is possible? This might be possible if somehow the first write to $x$ got delayed in the memory system, and the second write overtook it. The question is whether we should allow such behavior. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "The answer is NO. If we were to allow such behavior, then implementing a multiprocessor memory system would undoubtedly become simpler. However, it will become very difficult to write and reason about parallel programs. Hence, most multiprocessor systems disallow such behavior. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the issue of accesses to the same memory location by multiple threads slightly more formally. Let us define the term, coherence, as the behavior of memory accesses to the same memory address (such as $x$ in our examples). We ideally want our memory system to be coherent. This basically means that it should observe a set of rules while dealing with different accesses to the same memory address such that it is easier to write programs. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "Definition 122 ",
+        "text_level": 1,
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "The behavior of memory accesses to the same memory address is known as coherence. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "Typically, coherence has two axioms. These are as follows: ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "1. Completion A write must ultimately complete. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "2. Order All the writes to the same memory address need to be seen by all the threads in the same order. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "Both of these axioms are fairly sublime in nature. The completion axiom says that no write is ever lost in the memory system. For example, it is not possible that we write 10 to variable $x$ , and the write request gets dropped by the memory system. It needs to reach the memory location(s) corresponding to $x$ , and then it needs to update its value. It might get overwritten later by another write request. However, the bottom line is that the write request needs to update the memory location at some point of time in the future. ",
+        "page_idx": 584
+    },
+    {
+        "type": "text",
+        "text": "The order axiom says that all the writes to a memory location are perceived to be in the same order by all the threads. This means that it is not possible to read (2,1) in Example 151. Let us now explain the reasons for this. Thread 1 is aware that 2 was written after 1 to the memory location $x$ . By the second axiom of coherence, all other threads need to perceive the same order of writes to $x$ . Their view of $x$ cannot be different from that of thread 1. Hence, they cannot read 2 after 1. If we think about it, the axioms of coherence make intuitive sense. They basically mean that all writes eventually complete, as is true for uniprocessor systems. Second, all the processors see the same view of a single memory location. If its value changes from 0 to $^ 1$ to 2, then all the processors see the same order of changes ( $0  1  2$ ). No processor sees the updates in a different order. This further means that irrespective of how a memory system is implemented internally, externally each memory location is seen as a globally accessible single location. In terms of theory, this is just the tip of the iceberg. The advanced text on computer architecture by your author [Sarangi, ] has more details. ",
+        "page_idx": 585
+    }
+]

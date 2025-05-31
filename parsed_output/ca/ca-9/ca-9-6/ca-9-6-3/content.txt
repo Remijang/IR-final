@@ -1,0 +1,19 @@
+9.6.3 Implementing Instructions in the Microassembly Language
+
+Let us now try to implement program instructions in the microassembly language using the set of basic microinstructions enumerated in Table 9.8.
+
+For all the instructions, they start with a common set of microinstructions as shown below. We refer to these 4 microinstructions as the preamble.
+
+.begin:   
+2 mloadIR   
+3 mdecode   
+4 madd pc, 4   
+5 mswitch
+
+Definition 64
+
+A set of microinstructions that is common to all program instructions and is executed at the beginning before proceeding to implement the logic of the instruction, is known as the preamble, or microcode preamble.
+
+Every instruction needs to pass through at least three of these steps. We need to fetch the contents of the PC and load them into the ir register. Then, we need to decode the instruction, and break it down into its constituent fields. For instructions, other than branches, we need to increment the value of the PC by 4. In our microcode we prefer to do this step for all the instructions. For taken branches, we need to later overwrite the PC with the branch target. Lastly, we need to execute the mswitch instruction to jump to the starting location of the set of microinstructions that are specific to the program instruction.
+
+The label .begin points to the beginning of this routine. Note that after finishing the execution of an instruction, we need to jump to the .begin label such that we can start processing the next instruction in the program. Note that in our microassembly code we specify the label that we need to branch to. When the microassembly code is translated to actual machine level microinstructions, then each label is replaced by the address of the corresponding microinstruction.

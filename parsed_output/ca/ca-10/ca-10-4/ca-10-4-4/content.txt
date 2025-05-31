@@ -1,0 +1,19 @@
+10.4.4 Structural Hazards
+
+Definition 71
+
+ structural hazard refers to the possibility of instructions not being able to execute because of resource constraints. For example, this can arise when multiple instructions try to access a functional unit in the same cycle, and due to capacity limitations, the unit cannot allow all the interested instructions to proceed. In this case, a few of the instructions in the conflict need to stall their execution.
+
+Structural hazards do not arise in the SimpleRisc pipeline. However, for the sake of completeness, we should still study them. They arise when different instructions try to access the same resource, and the resource cannot allow all of them to access it in the same cycle. Let us give an example. Let us suppose that we had an add instruction that could read one operand from memory. It could have the following form:
+
+add r1, r2, 10[r3]
+
+Here, we have one register source operand,  , and a memory source operand, 10[r3]. Let us further assume that our pipeline reads the value of the memory operand in the OF stage. Let us now look at a potentially conflicting situation.
+
+[1]: st r4, 20[r5] [2]: sub r8, r9, r10 [3]: add r1, r2, 10[r3]
+
+Note that there are no control and data hazards here. Let us nonetheless, consider a point in the pipeline diagram when the store instruction is in the MA stage. At this point instruction 2 is in the EX stage, and instruction 3 is in the OF stage. Note that in this cycle, both instructions 1 and 3 need to access the memory unit. However, if we assume that the memory unit can service only one request per cycle, then clearly there is a conflicting situation. One of the instructions needs to stall its execution. This situation is an example of a structural hazard.
+
+We claim that in our SimpleRisc pipeline there are no structural hazards. In other words, we never have a situation in which multiple instructions across different pipeline stages wish to access the same unit, and that unit does not have the capacity to service all the requests. This statement can be proved by considering that the only units that are accessed by multiple stages are the fetch unit, and the register file. The fetch unit is accessed by an instruction in the IF stage, and by branch instructions in the EX stage. It is designed to handle both the requests. Likewise, the register file is accessed by instructions in the OF stage, and RW stage. Our register file has two read ports, and one write port. It can thus handle both the requests in the same cycle.
+
+Let us thus focus on trying to eliminate RAW and control hazards.

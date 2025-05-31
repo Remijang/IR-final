@@ -1,0 +1,94 @@
+5.6.2 Further Reading
+
+The most accurate source of information is the x86 developer manuals released by Intel on their website [int, , INTEL, 2010].
+
+For the sake of brevity, we have only discussed the popularly used instructions. However, there are many instructions in the x86 ISA that might prove to be useful in a specific set of scenarios, which we have not covered in this book. Intel’s software developer manuals are always the best places to find this information. Secondly, we have only discussed the basic x86 ISA. The reader should definitely look at the extensions to the x86 ISA such as the MMXTM, SSE, and 3d Now! (by AMD) extensions. These extensions add vector instructions, which can operate on arrays of data. These instructions are used in graphics, games, and scientific applications. The Intel AVX instruction set is the latest addition in the long line of x86 ISAs. It introduces 512 bit registers that can contain multiple integers. The interested reader should definitely take a look at this instruction set and try to write programs with it. In this book, we shall show an example using the SSE instruction set in Section 12.5.3.
+
+The reader can additionally refer to books that describe the x86 instruction set in great detail, and have a wealth of solved examples. The following books [Cavanagh, 2013, Das, 2010, Kumar, 2003] are useful references in this regard.
+
+Exercises
+
+x86 Machine Model
+
+Ex. 1 — What are the advantages of the segmented addressing mode? Why do modern x86 processors need the LDT and GDT tables?
+
+Ex. 2 — Explain the memory addressing modes in x86.   
+Ex. 3 — Describe the floating point registers and the floating point stack in x86.
+
+\* Ex. 4 — We can specify an entire 32-bit immediate in a single instruction in x86. Recall that this was not possible in ARM and SimpleRisc . What are the advantages and disadvantages of having this feature in the ISA?
+
+\* Ex. 5 — We claim that using a stack-based architecture makes the software very portable. It does not need to be aware of the number and semantics of registers in an ISA. Comment on this statement, and try to find other reasons for preferring a stack-based machine.
+
+ Ex. 6 — Given an arithmetic expression containing floating point operands, how can we evaluate it using a floating point stack? What should be the order of loading and operating on operands? [HINT: A regular arithmetic operation such as – (1 + 2.5) \* 3.9 – is called an infix expression. To evaluate expressions using a stack, we need to convert it into a postfix expression of the form – 1  . Here, we first push 1 and 2.5 on the stack, add the result, push 3.9 on the stack, and multiply the first two entries. The reader should read more about postfix expressions in textbooks on discrete mathematics.]
+
+Assembly Programming using Integer Instructions
+
+Ex. 7 — Write x86 assembly code snippets to compute the following:
+
+i)  ii)  iii) 
+
+iv)  v) 
+
+Ex. 8 — Write an assembly program to convert an integer stored in memory from the little endian to the big endian format.
+
+Ex. 9 — Compute the factorial of a positive number using an iterative algorithm.
+
+Ex. 10 — Compute the factorial of a positive number using a recursive algorithm.
+
+Ex. 11 — Write an assembly program to find if a number is prime.
+
+Ex. 12 — Write an assembly program to test if a number is a perfect square.
+
+Ex. 13 — Write an assembly program to test if a number is a perfect cube.
+
+Ex. 14 — Given a 32-bit integer, count the number of 1 to 0 transitions in it.
+
+Ex. 15 — Write an assembly program that checks if a 32-bit number is a palindrome. A palindrome is a number which is the same when read from both sides. For example, 1001 is a 4-bit palindrome.
+
+Ex. 16 — Write an assembly program to examine a 32-bit value stored in  and count the number of contiguous sequences of 1s. For example, the value:
+
+01110001000111101100011100011111
+
+contains six sequences of 1s. Write the final value in register ebx.
+
+Ex. 17 — Write an assembly program to count the number of 1’s in a 32-bit number.
+
+ . 18 — Write an assembly program to find the smallest number that is a sum of two different pairs of cubes. [Note: 1729 is known as the Hardy-Ramanujan number. 1729 =  ].
+
+\*\* Ex. 19 — In some cases, we can rotate an integer to the right by  positions (less than or equal to 31) so that we obtain the same number. For example: An 8-bit number 01010101 can be right rotated by 2, 4, or 6 places to obtain the same number. Write an assembly program to efficiently count the number of ways we can rotate a number to the right such that the result is equal to the original number.
+
+\*\*\* Ex. 20 — Write an assembly language program to find the greatest common divisor of two binary numbers  and  . Assume the two inputs (positive integers) to be available in  and  . Store the result in ecx. [HINT: The gcd of two even numbers  and  is 
+
+Ex. 21 — Write an assembly program that uses string instructions to set the value of a range of memory addresses to 0. Reduce the code size by using the rep prefix.
+
+Assembly Programming using Floating Point Instructions
+
+Ex. 22 — How do you load and store floating point numbers?
+
+Ex. 23 — Write an assembly program to find the roots of the equation  . Recall that the roots of a quadratic equation of the form ax2 + bx + c are equal to −b±√2ba2−4ac .
+
+Ex. 24 — Verify the following trigonometric identities for random values of  using assembly programs. Use the rdrand instruction that loads a random 32-bit integer into a register.
+
+Ex. 25 — Assume that we have two arrays of 10 floating point numbers, where the starting addresses of the arrays are stored in  and  , respectively. Find the arithmetic mean (AM), geometric mean (GM), and harmonic mean (HM) using assembly routines. Verify that  .
+
+ . 26 — Let us compute the value of the constant  using an assembly program. Use the following mathematical expression.
+
+\*\* Ex. 27 — For random values of  show that the following identity holds:
+
+ ISA Encoding
+
+Ex. 28 — What are the values of the SIB and ModR/M bytes for the instruction, mov eax, 
+
+Ex. 29 — What are the values of the SIB, ModR/M, and displacement bytes for the instruction, mov eax, 
+
+Ex. 30 — What is the value of the  byte when we need to specify a memory address that does not have any base or index registers? Assume that the value of the reg field is 000.
+
+\* Ex. 31 — Assume that we have an instruction that has two operands: eax and [ebp]. How do we encode it (specify the values of the relevant bytes)?
+
+\* Ex. 32 — What are the values of the SIB and ModR/M bytes for the instruction, mov eax, [ebx\*4]?
+
+Design Problems
+
+Ex. 33 — Write an x86 assembly emulator that can read an assembly file, and execute each assembly instruction one by one.
+
+Ex. 34 — Use the GNU compiler to generate an assembly file for a test program written in C using the command, gcc -S -masm=intel.

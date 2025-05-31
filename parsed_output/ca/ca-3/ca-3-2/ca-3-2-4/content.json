@@ -1,0 +1,85 @@
+[
+    {
+        "type": "text",
+        "text": "3.2.4 Types of Instructions ",
+        "text_level": 1,
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "Classification by Functionality ",
+        "text_level": 1,
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "The four major types of instructions are as follows: ",
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "1. Data Processing Instructions: Data processing instructions are typically arithmetic instructions such as add, subtract, and multiply, or logical instructions that compute bitwise or, and exclusive or. Comparison instructions also belong to this family.   \n2. Data Transfer Instructions: These instructions transfer values between two locations. A location can be a register or a memory address.   \n3. Branch Instructions: Branch instructions help the processor\u2019s control unit to jump to different parts of the program-based on the values of operands. They are useful in implementing for loops and if-then-else statements.   \n4. Exception Generating Instructions: These specialized instructions help transfer control from a user level program to the operating system. ",
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "In this book we shall cover data processing, data transfer, and control instructions. ",
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "Classification Based on the Number of Operands ",
+        "text_level": 1,
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "As mentioned in Section 3.2.3, all assembly language statements in the GNU assembler have the same structure. They start with the name of the instruction, and are succeeded by a list of operands. We can classify instructions based on the number of operands that they require. If an instruction requires $n$ operands, then we typically say that it is in the $n$ -address format. For example, an instruction that does not require any operands is a 0-address format instruction. If it requires 3 operands, then it is a 3-address format instruction. ",
+        "page_idx": 105
+    },
+    {
+        "type": "text",
+        "text": "Definition 31   \nIf an instruction requires n operands (including source and destination), then we say that it is an $n$ -address format instruction. ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "In ARM most of the data processing instructions are in the 3-address format, and data transfer instructions are in the 2-address format. However, in x86 most of the instructions are in the 2-address format. The first question that comes to our mind is what is the logic of having a 3-address format instruction versus having a 2-address format instruction? There must be some trade-off here. ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "Let us outline some general rules of thumb. If an instruction has more operands, we will require more bits to represent the instruction. Consequently, we will require more resources to store, and handle instructions. However, there is a flip side to this argument. Having more operands will also make the instruction more generic and flexible. It will make the life of compiler writers and assembly programmers much easier, because it will be possible to do more things with an instruction that uses more operands. The reverse logic applies to instructions that take fewer operands. They take less space to store, and are less flexible. Let us consider an example. Assume that we are trying to add two numbers, 3 and 5, to produce a result, 8. ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "An ARM instruction for addition would look like this: ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "add r3, r1, r2 ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "This instruction adds the contents of registers, $r 1 ( 3 )$ , and $r 2 ( 5 )$ , and saves it in $r 3 ( 8 )$ . However, an x86 instruction would look like this: ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "add edx, eax ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "Here, we assume that edx contains 3, and $e a x$ contains 5. The addition is performed, and the result, 8, is stored back in edx. Thus, in this case the x86 instruction is in the 2-address format because the destination register is the same as the first source register. ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "When we describe the details of the ARM and x86 instruction sets in Chapters 4 and 5, we shall see many more examples of instructions that have different address formats. We will be able to appreciate the trade-offs of having different address formats in all their glory. ",
+        "page_idx": 106
+    }
+]

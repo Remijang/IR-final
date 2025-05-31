@@ -1,0 +1,19 @@
+8.6.3 Division Using the Newton-Raphson Method
+
+We detail another algorithm that also takes  time. We assume that we are trying to divide  by  . Let us only consider normal numbers. Akin to Goldschmidt division, the key point of the algorithm is to find the reciprocal of the significand of  . Adjusting the exponents, computing the sign bit, and multiplying the reciprocal with  are fast operations  .
+
+For readability, let us designate  as  (  ). We wish to compute  . Let us create a function:  .  when  . The problem of computing the reciprocal of  is thus the same as computing the root of  . Let us use the Newton Raphson method [Kreyszig, 2000].
+
+The gist of this method is shown in Figure 8.19. We start with an arbitrary value of  such as  . We then locate the point on  that has  as its x co-ordinate and then draw a tangent to  at  . Let the tangent intersect the x axis at  . We again follow the same procedure, and draw another tangent at  . This tangent will intersect the x axis at  . We continue this process. As we can observe in the figure, we gradually get closer to the root of  . We can terminate after a finite number of steps with an arbitrarily small error. Let us analyze this procedure mathematically.
+
+The derivative of  at  is  . Let the equation of the tangent be  . The slope is equal to  . The equation is thus:  . Now, we know that at  , the value of  is  . We thus have:
+
+The equation of the tangent is  . This line intersects the  axis when  , and  . We thus have:
+
+Let us now define an error function of the form:  . Note that  is  , when  is equal to  . Let us compute the error:  and  .
+
+Thus, the error gets squared every iteration, and if the starting value of the error is less than 1, then it will ultimately get arbitrarily close to  . If we can place bounds on the error, then we can compute the number of iterations required.
+
+We start out by observing that  since we only consider normal floating point numbers. Let  be  . The range of  is thus  . We can thus bound the  as  . Therefore, we can say that  . Let us now take a look at the maximum value of the error as a function of the iteration in Table 8.8.
+
+Since we only have 23 mantissa bits, we need not go beyond the fifth iteration. Thus, in this case also, the number of iterations is small, and bounded by a small constant. In every step, we have a multiplication and subtraction operation. These are  time operations. Let us compute the time complexity for  bit floating point numbers. Here, also we assume that a fixed fraction of bits is used to represent the mantissa. Like the case of Goldschmidt division, we need  iterations, and each iteration takes  time. Thus, the total complexity is  .

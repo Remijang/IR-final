@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "3.2.1 Machine Model ",
+        "text_level": 1,
+        "page_idx": 98
+    },
+    {
+        "type": "text",
+        "text": "Let us reconsider the basic abstract machine model explained in Chapter 1. We had finished the chapter by describing a form of the Harvard and Von Neumann machines with registers. Assembly languages do not see the instruction memory and data memory as different entities. They assume an abstract Von Neumann machine augmented with registers. ",
+        "page_idx": 98
+    },
+    {
+        "type": "text",
+        "text": "Refer to Figure 3.2 for a pictorial representation of the machine model. The program is stored in a part of the main memory. The central processing unit (CPU) reads out the program instruction by instruction, and executes the instructions appropriately. The program counter keeps track of the memory address of the instruction that a CPU is executing. We typically refer to the program counter using the acronym \u2013 PC. Most instructions are expected to get their input operands from registers. Recall that every CPU has a fixed number of registers (typically $< 6 4$ ). However, a large number of instructions, can also get their operands from the memory directly. It is the job of the CPU to co-ordinate the transfers to and from the main memory and registers. Secondly, the CPU also needs to perform all the arithmetic/logical calculations, and liaise with external input/output devices. ",
+        "page_idx": 98
+    },
+    {
+        "type": "image",
+        "img_path": "images/266df11d4240bddc12986af0ddb441a55b7327e93b9d9719b532189c9c5c8067.jpg",
+        "img_caption": [
+            "Figure 3.2: The Von Neumann machine with registers "
+        ],
+        "img_footnote": [],
+        "page_idx": 98
+    },
+    {
+        "type": "text",
+        "text": "Most flavors of assembly language assume this abstract machine model for a majority of their statements. However, since another aim of using assembly language is to have more fine grained and intrusive control of hardware, there are a fair number of assembly instructions that are cognizant of the internals of the processor. These instructions typically modify the behavior of the processor by changing the behavior of some key internal algorithms; they modify built-in parameters such as power management settings, or read/write some internal data. Finally, note that the assembly language does not distinguish between machine independent and machine dependent instructions. ",
+        "page_idx": 98
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "View of Registers ",
+        "text_level": 1,
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "Every machine has a set of registers that are visible to the assembly programmer. ARM has 16 registers, x86 (32-bit) has 8 registers, and x86 64 (64 bits) has 16 registers. The registers have names. ARM names them $r 0 \\ldots r 1 5$ , and x86 names them $e a x , e b x , e c x , e d x , e s i , e d i , e b p$ , and esp. A register can be accessed using its name. ",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "In most ISAs, a return address register is used for function calls. Let us assume that a program starts executing a function. It needs to remember the memory address that it needs to come back to after executing the function. This address is known as the return address. Before jumping to the starting address of a function, we can save the value of the return address in this register. The return statement can simply be implemented by copying the value saved in the return address register to the PC. The return address register is visible to the programmer in assembly languages such as ARM and MIPS. However, x86 does not use a return address register. It uses another mechanism called a stack, which we shall study in Section 3.3.10. ",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "In an ARM processor, the PC is visible to the programmer, and it is the last register ( $r$ 15). It is possible to read the value of the PC, as well as set its value. Setting the value of the PC means that we want to branch to a new location within the program. However, in x86, the program counter is implicit, and is not visible to the programmer. ",
+        "page_idx": 99
+    }
+]

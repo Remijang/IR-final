@@ -1,0 +1,46 @@
+[
+    {
+        "type": "text",
+        "text": "8.2.4 An $O ( l o g ( n ) ^ { 2 } )$ Time Algorithm ",
+        "text_level": 1,
+        "page_idx": 332
+    },
+    {
+        "type": "text",
+        "text": "Let us make our life slightly easier now. Let us multiply two $n$ -bit numbers, and save the product also as an $n$ -bit number. We shall ignore overflows, and concentrate only on performance. The issue of detecting overflows in a high performance multiplier is fairly complex, and is beyond the scope of this book. Using our results from Section 2.3.4, we use simple unsigned multiplication to compute the product of signed numbers. If there are no overflows then the result is correct. ",
+        "page_idx": 332
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at the problem of multiplication again. We basically consider each bit of the multiplier in turn, and multiply it with a shifted version of the multiplicand. We obtain $n$ such partial sums. The product is the sum of the $n$ partial sums. Generating each partial sum is independent of the other. This process can be performed in parallel in hardware. To generate the $i ^ { t h }$ partial sum, we need to simply compute an AND operation between the $i ^ { t h }$ bit of the multiplier and each bit of the multiplicand. This takes $O ( 1 )$ time. ",
+        "page_idx": 332
+    },
+    {
+        "type": "text",
+        "text": "Now, we can add the $n$ partial sums $( P ^ { 1 } \\ldots P ^ { n } )$ in parallel using a tree of adders as shown in Figure 8.12. There are $O ( l o g ( n ) )$ levels. In each level we are adding two $O ( n )$ bit numbers; hence, each level takes $O ( l o g ( n ) )$ time. The total time requirement is thus $O ( l o g ( n ) ^ { 2 } )$ . By exploiting the inherent parallelism, we have significantly improved the time from $O ( n l o g ( n ) )$ to $O ( l o g ( n ) ^ { 2 } )$ . It turns out that we can do even better, and get an $O ( l o g ( n ) )$ time algorithm. ",
+        "page_idx": 332
+    },
+    {
+        "type": "image",
+        "img_path": "images/2643566e37ea5237dc832bb883ecc5e77e866bb93c54c9a99419c9cd64a9e441.jpg",
+        "img_caption": [
+            "Figure 8.12: Tree of adders for adding partial sums "
+        ],
+        "img_footnote": [],
+        "page_idx": 333
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 333
+    },
+    {
+        "type": "image",
+        "img_path": "images/44bec532ab2d8e022ebb9a88b6b0783aa67a7e285ead67394486720a777164f7.jpg",
+        "img_caption": [
+            "Figure 8.13: Carry Save Adder "
+        ],
+        "img_footnote": [],
+        "page_idx": 333
+    }
+]

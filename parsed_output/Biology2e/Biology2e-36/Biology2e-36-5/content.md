@@ -1,0 +1,333 @@
+# 36.5 Vision
+
+# Bytheendofthissection,youwil beabletodothefolowing:
+
+Explain how electromagnetic waves differ from sound waves Trace the path of light through the eye to the point of the optic nerve Explain tonic activity as it is manifested in photoreceptors in the retina
+
+Vision is the ability to detect light patterns from the outside environment and interpret them into images. Animals are bombarded with sensory information, and the sheer volume of visual information can be problematic. Fortunately, the visual systems of species have evolved to attend to the most-important stimuli. The importance of vision to humans is further substantiated by the fact that about one-third of the human cerebral cortex is dedicated to analyzing and perceiving visual information.
+
+# Light
+
+As with auditory stimuli, light travels in waves. The compression waves that compose sound must travel in a medium—a gas, a liquid, or a solid. In contrast, light is composed of electromagnetic waves and needs no medium; light can travel in a vacuum (Figure 36.17). The behavior of light can be discussed in terms of the behavior of waves and also in terms of the behavior of the fundamental unit of light—a packet of electromagnetic radiation called a photon. A glance at the electromagnetic spectrum shows that visible light for humans is just a small slice of the entire spectrum, which includes radiation that we cannot see as light because it is below the frequency of visible red light and above the frequency of visible violet light.
+
+Certain variables are important when discussing perception of light. Wavelength (which varies inversely with frequency) manifests itself as hue. Light at the red end of the visible spectrum has longer wavelengths (and is lower frequency), while light at the violet end has shorter wavelengths (and is higher frequency). The wavelength of light is expressed in nanometers (nm); one nanometer is one billionth of a meter. Humans perceive light that ranges between approximately 380 nm and 740 nm. Some other animals, though, can detect wavelengths outside of the human range. For example, bees see near-ultraviolet light in order to locate nectar guides on flowers, and some non-avian reptiles sense infrared light (heat that prey gives off).
+
+Wave amplitude is perceived as luminous intensity, or brightness. The standard unit of intensity of light is the candela, which is approximately the luminous intensity of one common candle.
+
+Light waves travel 299,792 km per second in a vacuum, (and somewhat slower in various media such as air and water), and those waves arrive at the eye as long (red), medium (green), and short (blue) waves. What is termed “white light” is light that is perceived as white by the human eye. This effect is produced by light that stimulates equally the color receptors in the human eye. The apparent color of an object is the color (or colors) that the object reflects. Thus a red object reflects the red wavelengths in mixed (white) light and absorbs all other wavelengths of light.
+
+
+
+# Anatomy of the Eye
+
+The photoreceptive cells of the eye, where transduction of light to nervous impulses occurs, are located in the retina (shown in Figure 36.18) on the inner surface of the back of the eye. But light does not impinge on the retina unaltered. It passes through other layers that process it so that it can be interpreted by the retina (Figure 36.18b). The cornea, the front transparent layer of the eye, and the crystalline lens, a transparent convex structure behind the cornea, both refract (bend) light to focus the image on the retina. The iris, which is conspicuous as the colored part of the eye, is a circular muscular ring lying between the lens and cornea that regulates the amount of light entering the eye. In conditions of high ambient light, the iris contracts, reducing the size of the pupil at its center. In conditions of low light, the iris relaxes and the pupil enlarges.
+
+# VISUAL CONNECTION
+
+Which of the following statements about the human eye is false?
+
+a. Rods detect color, while cones detect only shades of gray.   
+b. When light enters the retina, it passes the ganglion cells and bipolar cells before reaching photoreceptors at the rear of the eye.   
+c. The iris adjusts the amount of light coming into the eye.   
+d. The cornea is a protective layer on the front of the eye.
+
+The main function of the lens is to focus light on the retina and fovea centralis. The lens is dynamic, focusing and re-focusing light as the eye rests on near and far objects in the visual field. The lens is operated by muscles that stretch it flat or allow it to thicken, changing the focal length of light coming through it to focus it sharply on the retina. With age comes the loss of the flexibility of the lens, and a form of farsightedness called presbyopia results. Presbyopia occurs because the image focuses behind the retina. Presbyopia is a deficit similar to a different type of farsightedness called hyperopia caused by an eyeball that is too short. For both defects, images in the distance are clear but images nearby are blurry. Myopia (nearsightedness) occurs when an eyeball is elongated and the image focus falls in front of the retina. In this case, images in the distance are blurry but images nearby are clear.
+
+There are two types of photoreceptors in the retina: rods and cones, named for their general appearance as illustrated in Figure 36.19. Rods are strongly photosensitive and are located in the outer edges of the retina. They detect dim light and are used primarily for peripheral and nighttime vision. Cones are weakly photosensitive and are located near the center of the retina. They respond to bright light, and their primary role is in daytime, color vision.
+
+The fovea is the region in the center back of the eye that is responsible for acute vision. The fovea has a high density of cones. When you bring your gaze to an object to examine it intently in bright light, the eyes orient so that the object’s image falls on the fovea. However, when looking at a star in the night sky or other object in dim light, the object can be better viewed by the peripheral vision because it is the rods at the edges of the retina, rather than the cones at the center, that operate better in low light. In humans, cones far outnumber rods in the fovea.
+
+# LINK TO LEARNING
+
+Review the anatomical structure (http://openstax.org/l/eye_diagram) of the eye, clicking on each part to practice identification.
+
+# Transduction of Light
+
+The rods and cones are the site of transduction of light to a neural signal. Both rods and cones contain photopigments. In vertebrates, the main photopigment, rhodopsin, has two main parts (Figure 36.20): an opsin, which is a membrane protein (in the form of a cluster of $\alpha$ -helices that span the membrane), and retinal—a molecule that absorbs light. When light hits a photoreceptor, it causes a shape change in the retinal, altering its structure from a bent (cis) form of the molecule to its linear (trans) isomer. This isomerization of retinal activates the rhodopsin, starting a cascade of events that ends with the closing of $\mathrm { N a } ^ { + }$ channels in the membrane of the photoreceptor. Thus, unlike most other sensory neurons (which become depolarized by exposure to a stimulus) visual receptors become hyperpolarized and thus driven away from threshold (Figure 36.21).
+
+# Trichromatic Coding
+
+There are three types of cones (with different photopsins), and they differ in the wavelength to which they are most responsive, as shown in Figure 36.22. Some cones are maximally responsive to short light waves of 420 nm, so they are called S cones ( $^ { \mathfrak { a } } \mathbf { S } ^ { \mathfrak { n } }$ for “short”); others respond maximally to waves of 530 nm (M cones, for “medium”); a third group responds maximally to light of longer wavelengths, at $5 6 0 \mathrm { n m }$ (L, or “long” cones). With only one type of cone, color vision would not be possible, and a twocone (dichromatic) system has limitations. Primates use a three-cone (trichromatic) system, resulting in full color vision.
+
+The color we perceive is a result of the ratio of activity of our three types of cones. The colors of the visual spectrum, running from long-wavelength light to short, are red (700 nm), orange $( 6 0 0 \mathrm { n m } )$ ), yellow $\mathrm { 5 6 5 { n m } ) }$ ), green $( 4 9 7 \mathrm { n m } )$ ), blue (470 nm), indigo $( 4 5 0 \mathrm { n m } )$ , and violet $( 4 2 5 \mathrm { n m } )$ ). Humans have very sensitive perception of color and can distinguish about 500 levels of brightness, 200 different hues, and 20 steps of saturation, or about 2 million distinct colors.
+
+# Retinal Processing
+
+Visual signals leave the cones and rods, travel to the bipolar cells, and then to ganglion cells. A large degree of processing of visual information occurs in the retina itself, before visual information is sent to the brain.
+
+Photoreceptors in the retina continuously undergo tonic activity. That is, they are always slightly active even when not stimulated by light. In neurons that exhibit tonic activity, the absence of stimuli maintains a firing rate at a baseline; while some stimuli increase firing rate from the baseline, and other stimuli decrease firing rate. In the absence of light, the bipolar neurons that connect rods and cones to ganglion cells are continuously and actively inhibited by the rods and cones. Exposure of the retina to light hyperpolarizes the rods and cones and removes their inhibition of bipolar cells. The now active bipolar cells in turn stimulate the ganglion cells, which send action potentials along their axons (which leave the eye as the optic nerve). Thus, the visual system relies on change in retinal activity, rather than the absence or presence of activity, to encode visual signals for the brain. Sometimes horizontal cells carry signals from one rod or cone to other photoreceptors and to several bipolar cells. When a rod or cone stimulates a horizontal cell, the horizontal cell inhibits more distant photoreceptors and bipolar cells, creating lateral inhibition. This inhibition sharpens edges and enhances contrast in the images by making regions receiving light appear lighter and dark surroundings appear darker. Amacrine cells can distribute information from one bipolar cell to many ganglion cells.
+
+You can demonstrate this using an easy demonstration to “trick” your retina and brain about the colors you are observing in your visual field. Look fixedly at Figure 36.23 for about 45 seconds. Then quickly shift your gaze to a sheet of blank white paper or a white wall. You should see an afterimage of the Norwegian flag in its correct colors. At this point, close your eyes for a moment, then reopen them, looking again at the white paper or wall; the afterimage of the flag should continue to appear as red, white, and blue. What causes this? According to an explanation called opponent process theory, as you gazed fixedly at the green, black, and yellow flag, your retinal ganglion cells that respond positively to green, black, and yellow increased their firing dramatically. When you shifted your gaze to the neutral white ground, these ganglion cells abruptly decreased their activity and the brain interpreted this abrupt downshift as if the ganglion cells were responding now to their “opponent” colors: red, white, and blue, respectively, in the visual field. Once the ganglion cells return to their baseline activity state, the false perception of color will disappear.
+
+# Higher Processing
+
+The myelinated axons of ganglion cells make up the optic nerves. Within the nerves, different axons carry different qualities of the visual signal. Some axons constitute the magnocellular (big cell) pathway, which carries information about form, movement, depth, and differences in brightness. Other axons constitute the parvocellular (small cell) pathway, which carries information on color and fine detail. Some visual information projects directly back into the brain, while other information crosses to the opposite side of the brain. This crossing of optical pathways produces the distinctive optic chiasma (Greek, for “crossing”) found at the base of the brain and allows us to coordinate information from both eyes.
+
+Once in the brain, visual information is processed in several places, and its routes reflect the complexity and importance of visual information to humans and other animals. One route takes the signals to the thalamus, which serves as the routing station for all incoming sensory impulses except olfaction. In the thalamus, the magnocellular and parvocellular distinctions remain intact, and there are different layers of the thalamus dedicated to each. When visual signals leave the thalamus, they travel to the primary visual cortex at the rear of the brain. From the visual cortex, the visual signals travel in two directions. One stream that projects to the parietal lobe, in the side of the brain, carries magnocellular (“where”) information. A second stream projects to the temporal lobe and carries both magnocellular (“where”) and parvocellular (“what”) information.
+
+Another important visual route is a pathway from the retina to the superior colliculus in the midbrain, where eye movements are coordinated and integrated with auditory information. Finally, there is the pathway from the retina to the suprachiasmatic nucleus (SCN) of the hypothalamus. The SCN is a cluster of cells that is considered to be the body’s internal clock, which controls our circadian (day-long) cycle. The SCN sends information to the pineal gland, which is important in sleep/wake patterns and annual cycles.
+
+# LINK TO LEARNING
+
+View this interactive presentation (http://openstax.org/l/sense_of_sight) to review what you have learned about how vision functions.
+
+# KEY TERMS
+
+audition sense of hearing   
+basilar membrane stiff structure in the cochlea that indirectly anchors auditory receptors   
+bipolar neuron neuron with two processes from the cell body, typically in opposite directions   
+candela (cd) unit of measurement of luminous intensity (brightness)   
+circadian describes a time cycle about one day in length   
+cochlea whorled structure that contains receptors for transduction of the mechanical wave into an electrical signal   
+cone weakly photosensitive, chromatic, cone-shaped neuron in the fovea of the retina that detects bright light and is used in daytime color vision   
+cornea transparent layer over the front of the eye that helps focus light waves   
+fovea region in the center of the retina with a high density of photoreceptors and which is responsible for acute vision   
+free nerve ending ending of an afferent neuron that lacks a specialized structure for detection of sensory stimuli; some respond to touch, pain, or temperature   
+glabrous describes the non-hairy skin found on palms and fingers, soles of feet, and lips of humans and other primates   
+glomerulus in the olfactory bulb, one of the two neural clusters that receives signals from one type of olfactory receptor   
+Golgi tendon organ muscular proprioceptive tension receptor that provides the sensory component of the Golgi tendon reflex   
+gustation sense of taste   
+hyperopia (also, farsightedness) visual defect in which the image focus falls behind the retina, thereby making images in the distance clear, but close-up images blurry   
+incus (also, anvil) second of the three bones of the middle ear   
+inner ear innermost part of the ear; consists of the cochlea and the vestibular system   
+iris pigmented, circular muscle at the front of the eye that regulates the amount of light entering the eye   
+kinesthesia sense of body movement   
+labyrinth bony, hollow structure that is the most internal part of the ear; contains the sites of transduction of auditory and vestibular information   
+lens transparent, convex structure behind the cornea that helps focus light waves on the retina   
+malleus (also, hammer) first of the three bones of the middle ear   
+mechanoreceptor sensory receptor modified to respond to mechanical disturbance such as being bent, touch, pressure, motion, and sound   
+Meissner’s corpuscle (also, tactile corpuscle) encapsulated, rapidly-adapting mechanoreceptor in the skin that responds to light touch   
+Merkel's disk unencapsulated, slowly-adapting mechanoreceptor in the skin that responds to touch   
+middle ear part of the hearing apparatus that functions to transfer energy from the tympanum to the oval window of the inner ear   
+muscle spindle proprioceptive stretch receptor that lies within a muscle and that shortens the muscle to an optimal length for efficient contraction   
+myopia (also, nearsightedness) visual defect in which the image focus falls in front of the retina, thereby making images in the distance blurry, but close-up images clear   
+nociception neural processing of noxious (such as damaging) stimuli   
+odorant airborne molecule that stimulates an olfactory receptor   
+olfaction sense of smell   
+olfactory bulb neural structure in the vertebrate brain that receives signals from olfactory receptors   
+olfactory epithelium specialized tissue in the nasal cavity where olfactory receptors are located   
+olfactory receptor dendrite of a specialized neuron   
+organ of Corti in the basilar membrane, the site of the transduction of sound, a mechanical wave, to a neural signal   
+ossicle one of the three bones of the middle ear   
+outer ear part of the ear that consists of the pinna, ear canal, and tympanum and which conducts sound waves into the middle ear   
+oval window thin diaphragm between the middle and inner ears that receives sound waves from contact with the stapes bone of the middle ear   
+Pacinian corpuscle encapsulated mechanoreceptor in the skin that responds to deep pressure and vibration   
+papilla one of the small bump-like projections from the tongue   
+perception individual interpretation of a sensation; a brain function   
+pheromone substance released by an animal that can affect the physiology or behavior of other animals   
+pinna cartilaginous outer ear   
+presbyopia visual defect in which the image focus falls behind the retina, thereby making images in the distance clear, but close-up images blurry; caused by age-based changes in the lens   
+proprioception sense of limb position; used to track kinesthesia   
+pupil small opening though which light enters   
+reception receipt of a signal (such as light or sound) by sensory receptors   
+receptive field region in space in which a stimulus can activate a given sensory receptor   
+receptor potential membrane potential in a sensory receptor in response to detection of a stimulus   
+retina layer of photoreceptive and supporting cells on the inner surface of the back of the eye   
+rhodopsin main photopigment in vertebrates   
+rod strongly photosensitive, achromatic, cylindrical neuron in the outer edges of the retina that detects dim light and is used in peripheral and nighttime vision   
+Ruffini ending (also, bulbous corpuscle) slowly-adapting mechanoreceptor in the skin that responds to skin stretch and joint position   
+semicircular canal one of three half-circular, fluid-filled tubes in the vestibular labyrinth that monitors angular acceleration and deceleration   
+sensory receptor specialized neuron or other cells associated with a neuron that is modified to receive specific sensory input   
+sensory transduction conversion of a sensory stimulus into electrical energy in the nervous system by a change in the membrane potential   
+stapes (also, stirrup) third of the three bones of the middle ear   
+stereocilia in the auditory system, hair-like projections from hair cells that help detect sound waves   
+superior colliculus paired structure in the top of the midbrain, which manages eye movements and auditory integration   
+suprachiasmatic nucleus cluster of cells in the hypothalamus that plays a role in the circadian cycle   
+tastant food molecule that stimulates gustatory receptors   
+taste bud clusters of taste cells   
+tectorial membrane cochlear structure that lies above the hair cells and participates in the transduction of sound at the hair cells   
+tonic activity in a neuron, slight continuous activity while at rest   
+tympanum (also, tympanic membrane or ear drum) thin diaphragm between the outer and middle ears   
+ultrasound sound frequencies above the human detectable ceiling of approximately 20,000 Hz   
+umami one of the five basic tastes, which is described as “savory” and which may be largely the taste of Lglutamate   
+vestibular sense sense of spatial orientation and balance   
+vision sense of sight
+
+
+
+
+
+
+
+# CHAPTER SUMMARY
+
+# 36.1 Sensory Processes
+
+A sensory activation occurs when a physical or chemical stimulus is processed into a neural signal (sensory transduction) by a sensory receptor. Perception is an individual interpretation of a sensation and is a brain function. Humans have special senses: olfaction, gustation, equilibrium, and hearing, plus the general senses of somatosensation.
+
+Sensory receptors are either specialized cells associated with sensory neurons or the specialized ends of sensory neurons that are a part of the peripheral nervous system, and they are used to receive information about the environment (internal or external). Each sensory receptor is modified for the type of stimulus it detects. For example, neither gustatory receptors nor auditory receptors are sensitive to light. Each sensory receptor is responsive to stimuli within a specific region in space, which is known as that receptor’s receptive field. The most fundamental function of a sensory system is the translation of a sensory signal to an electrical signal in the nervous system.
+
+All sensory signals, except those from the olfactory system, enter the central nervous system and are routed to the thalamus. When the sensory signal exits the thalamus, it is conducted to the specific area of the cortex dedicated to processing that particular sense.
+
+# 36.2 Somatosensation
+
+Somatosensation includes all sensation received from the skin and mucous membranes, as well as from the limbs and joints. Somatosensation occurs all over the exterior of the body and at some interior locations as well, and a variety of receptor types, embedded in the skin and mucous membranes, play a role.
+
+There are several types of specialized sensory receptors. Rapidly adapting free nerve endings detect nociception, hot and cold, and light touch. Slowly adapting, encapsulated Merkel’s disks are found in fingertips and lips, and respond to light touch. Meissner’s corpuscles, found in glabrous skin, are rapidly adapting, encapsulated receptors that detect touch, low-frequency vibration, and flutter. Ruffini endings are slowly adapting, encapsulated receptors that detect skin stretch, joint activity, and warmth. Hair receptors are rapidly adapting nerve endings wrapped around the base of hair follicles that detect hair movement and skin deflection. Finally, Pacinian corpuscles are encapsulated, rapidly adapting receptors that detect transient pressure and highfrequency vibration.
+
+# 36.3 Taste and Smell
+
+There are five primary tastes in humans: sweet, sour, bitter, salty, and umami. Each taste has its own receptor type that responds only to that taste. Tastants enter the body and are dissolved in saliva. Taste cells are located within taste buds, which are found on three of the four types of papillae in the mouth.
+
+
+
+Regarding olfaction, there are many thousands of odorants, but humans detect only about 10,000. Like taste receptors, olfactory receptors are each responsive to only one odorant. Odorants dissolve in nasal mucosa, where they excite their corresponding olfactory sensory cells. When these cells detect an odorant, they send their signals to the main olfactory bulb and then to other locations in the brain, including the olfactory cortex.
+
+# 36.4 Hearing and Vestibular Sensation
+
+Audition is important for territory defense, predation, predator defense, and communal exchanges. The vestibular system, which is not auditory, detects linear acceleration and angular acceleration and deceleration. Both the auditory system and vestibular system use hair cells as their receptors.
+
+Auditory stimuli are sound waves. The sound wave energy reaches the outer ear (pinna, canal, tympanum), and vibrations of the tympanum send the energy to the middle ear. The middle ear bones shift and the stapes transfers mechanical energy to the oval window of the fluid-filled inner ear cochlea. Once in the cochlea, the energy causes the basilar membrane to flex, thereby bending the stereocilia on receptor hair cells. This activates the receptors, which send their auditory neural signals to the brain.
+
+The vestibular system has five parts that work together to provide the sense of direction, thus helping to maintain balance. The utricle and saccule measure head orientation: their calcium carbonate crystals shift when the head is tilted, thereby activating hair cells. The semicircular canals work similarly, such that when the head is turned, the fluid in the canals bends stereocilia on hair cells. The vestibular hair cells also send signals to the thalamus and to the somatosensory cortex, but also to the cerebellum, the structure above the brainstem that plays a large role in timing and coordination of movement.
+
+
+
+# 36.5 Vision
+
+Vision is the only photo responsive sense. Visible light travels in waves and is a very small slice of the electromagnetic radiation spectrum. Light waves differ based on their frequency (wavelength $\mathbf { \sigma } = \mathbf { \sigma }$ hue) and amplitude (intensity $\mathbf { \sigma } = \mathbf { \sigma }$ brightness).
+
+In the vertebrate retina, there are two types of light receptors (photoreceptors): cones and rods. Cones, which are the source of color vision, exist in three forms—L, M, and S—and they are differentially sensitive to different wavelengths. Cones are located in the retina, along with the dim-light, achromatic receptors (rods). Cones are found in the fovea, the central region of the retina, whereas rods are found in the peripheral regions of the retina.
+
+Visual signals travel from the eye over the axons of retinal ganglion cells, which make up the optic nerves. Ganglion cells come in several versions. Some ganglion cell axons carry information on form, movement, depth, and brightness, while other axons carry information on color and fine detail. Visual information is sent to the superior colliculi in the midbrain, where coordination of eye movements and integration of auditory information takes place. Visual information is also sent to the suprachiasmatic nucleus (SCN) of the hypothalamus, which plays a role in the circadian cycle.
+
+# VISUAL CONNECTION QUESTIONS
+
+1. Figure 36.5 Which of the following statements about mechanoreceptors is false?
+
+a. Pacini corpuscles are found in both glabrous and hairy skin.   
+b. Merkel’s disks are abundant on the fingertips and lips.   
+c. Ruffini endings are encapsulated mechanoreceptors.   
+d. Meissner’s corpuscles extend into the lower dermis.
+
+2. Figure 36.14 Cochlear implants can restore hearing in people who have a nonfunctional cochlea. The implant consists of a microphone that picks up sound. A speech processor selects sounds in the range of human speech, and a transmitter converts these sounds to electrical impulses, which are then sent to the auditory nerve. Which of the following types of hearing loss would not be restored by a cochlear implant?
+
+a. Hearing loss resulting from absence or loss of hair cells in the organ of Corti.   
+b. Hearing loss resulting from an abnormal auditory nerve.   
+c. Hearing loss resulting from fracture of the cochlea.   
+d. Hearing loss resulting from damage to bones of the middle ear.
+
+3. Figure 36.18 Which of the following statements about the human eye is false?
+
+a. Rods detect color, while cones detect only shades of gray.   
+b. When light enters the retina, it passes the ganglion cells and bipolar cells before reaching photoreceptors at the rear of the eye.   
+c. The iris adjusts the amount of light coming into the eye.   
+d. The cornea is a protective layer on the front of the eye.
+
+# REVIEW QUESTIONS
+
+4. Where does perception occur?
+
+a. spinal cord b. cerebral cortex c. receptors d. thalamus
+
+5. If a person’s cold receptors no longer convert cold stimuli into sensory signals, that person has a problem with the process of
+
+a. reception b. transmission c. perception d. transduction
+
+6. After somatosensory transduction, the sensory signal travels through the brain as a(n) _____ signal.
+
+a. electrical b. pressure c. optical d. thermal
+
+7. Many people experience motion sickness while traveling in a car. This sensation results from contradictory inputs arising from which senses?
+
+a. Proprioception and Kinesthesia b. Somatosensation and Equilibrium c. Gustation and Vibration d. Vision and Vestibular System
+
+8. are found only in _____ skin, and detect skin deflection.
+
+a. Meissner’s corpuscles; hairy b. Merkel’s disks; glabrous c. hair receptors; hairy d. Krause end bulbs; hairy
+
+9. If you were to burn your epidermis, what receptor type would you most likely burn?
+
+a. free nerve endings b. Ruffini endings c. Pacinian corpuscle d. hair receptors
+
+10. Many diabetic patients are warned by their doctors to test their glucose levels by pricking the sides of their fingers rather than the pads. Pricking the sides avoids stimulating which receptor?
+
+a. Krause end bulbs b. Meissner’s corpuscles c. Ruffini ending d. Nociceptors
+
+11. Which of the following has the fewest taste receptors?
+
+a. fungiform papillae b. circumvallate papillae c. foliate papillae d. filiform papillae
+
+12. How many different taste molecules do taste cells each detect?
+
+a. one   
+b. five   
+c. ten   
+d. It depends on the spot on the tongue.
+
+13. Salty foods activate the taste cells by a. exciting the taste cell directly b. causing hydrogen ions to enter the cell c. causing sodium channels to close d. binding directly to the receptors
+
+
+
+14. All sensory signals except ___ travel to the in the brain before the cerebral cortex.
+
+a. vision; thalamus b. olfaction; thalamus c. vision; cranial nerves d. olfaction; cranial nerves
+
+15. How is the ability to recognize the umami taste an evolutionary advantage?
+
+a. Umami identifies healthy foods that are low in salt and sugar.   
+b. Umami enhances the flavor of bland foods.   
+c. Umami identifies foods that might contain essential amino acids.   
+d. Umami identifies foods that help maintain electrolyte balance.
+
+16. In sound, pitch is measured in _____, and volume is measured in
+
+a. nanometers (nm); decibels (dB) b. decibels (dB); nanometers (nm) c. decibels (dB); hertz (Hz) d. hertz $\left( \mathrm { H z } \right)$ ; decibels (dB)
+
+17. Auditory hair cells are indirectly anchored to the
+
+a. basilar membrane b. oval window c. tectorial membrane d. ossicles
+
+18. Which of the following are found both in the auditory system and the vestibular system?
+
+a. basilar membrane b. hair cells   
+c. semicircular canals d. ossicles
+
+19. Benign Paroxysmal Positional Vertigo is a disorder where some of the calcium carbonate crystals in the utricle migrate into the semicircular canals. Why does this condition cause periods of dizziness?
+
+a. The hair cells in the semicircular canals will be constantly activated.   
+b. The hair cells in the semicircular canals will now be stimulated by gravity.   
+c. The utricle will no longer recognize acceleration.   
+d. There will be too much volume in the semicircular canals for them to detect motion.
+
+20. Why do people over 55 often need reading glasses?
+
+a. Their cornea no longer focuses correctly.   
+b . Their lens no longer focuses correctly.   
+c. Their eyeball has elongated with age, causing images to focus in front of their retina.   
+d. Their retina has thinned with age, making vision more difficult.
+
+21. Why is it easier to see images at night using peripheral, rather than the central, vision?
+
+a. Cones are denser in the periphery of the retina.   
+b. Bipolar cells are denser in the periphery of the retina.   
+c. Rods are denser in the periphery of the retina.   
+d. The optic nerve exits at the periphery of the retina.
+
+22. A person catching a ball must coordinate her head and eyes. What part of the brain is helping to do this?
+
+a. hypothalamus b. pineal gland c. thalamus d. superior colliculus
+
+23. A satellite is launched into space, but explodes after exiting the Earth’s atmosphere. Which statement accurately reflects the observations made by an astronaut on a space walk outside the International Space Station during the explosion?
+
+a. The astronaut would see the explosion, but would not hear a boom.   
+b. The astronaut will not sense the explosion.   
+c. The astronaut will see the explosion, and then hear the boom.   
+d. The astronaut will feel the concussive force of the explosion, but will not see it.
+
+# CRITICAL THINKING QUESTIONS
+
+24. If a person sustains damage to axons leading from sensory receptors to the central nervous system, which step or steps of sensory perception will be affected?   
+25. In what way does the overall magnitude of a stimulus affect the just-noticeable difference in the perception of that stimulus?   
+26. Describe the difference in the localization of the sensory receptors for general and special senses in humans.   
+27. What can be inferred about the relative sizes of the areas of cortex that process signals from skin not densely innervated with sensory receptors and skin that is densely innervated with sensory receptors?   
+28. Many studies have demonstrated that women are able to tolerate the same painful stimuli for longer than men. Why don’t all people experience pain the same way?   
+29. From the perspective of the recipient of the signal, in what ways do pheromones differ from other odorants?   
+30. What might be the effect on an animal of not being able to perceive taste?   
+31. A few recent cancer detection studies have used trained dogs to detect lung cancer in urine samples. What is the hypothesis behind this study? Why are dogs a better choice of detectors in this study than humans?   
+32. How would a rise in altitude likely affect the speed of a sound transmitted through air? Why?   
+33. How might being in a place with less gravity than Earth has (such as Earth’s moon) affect vestibular sensation, and why?   
+34. How does the structure of the ear allow a person to determine where a sound originates?   
+35. How could the pineal gland, the brain structure that plays a role in annual cycles, use visual information from the suprachiasmatic nucleus of the hypothalamus?   
+36. How is the relationship between photoreceptors and bipolar cells different from other sensory receptors and adjacent cells?   
+37. Cataracts, the medical condition where the lens of the eye becomes cloudy, are a leading cause of blindness. Describe how developing a cataract would change the path of light through the eye.

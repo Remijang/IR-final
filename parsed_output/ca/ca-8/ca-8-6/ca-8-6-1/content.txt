@@ -1,0 +1,9 @@
+8.6.1 Simple Division
+
+The major difference between integer and floating point division is that floating point division does not have a remainder. It only has a quotient. Let us try to divide  by  to obtain  .
+
+We initialize the algorithm by setting the  register to contain the significand  of  . The  register is initialized as  . This is done because in division, we subtract the exponents. Hence, in their biased representation we need to subtract  from  , and we need to add the value of the bias back. Computing the sign of the result is also trivial in this case.
+
+We start out by dividing  by  . The rest of the steps are the same as that of multiplication (see Section 8.5). We normalize the result, round it, and then renormalize if necessary.
+
+The time complexity of this operation is the same as the time complexity of the restoring or non-restoring algorithms. It is equal to  . It turns out that for the case of floating point division, we can do much better.

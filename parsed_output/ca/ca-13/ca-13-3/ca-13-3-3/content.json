@@ -1,0 +1,159 @@
+[
+    {
+        "type": "text",
+        "text": "13.3.3 Asynchronous Buses ",
+        "text_level": 1,
+        "page_idx": 665
+    },
+    {
+        "type": "text",
+        "text": "Clock Detection and Recovery\\* ",
+        "text_level": 1,
+        "page_idx": 665
+    },
+    {
+        "type": "text",
+        "text": "Now, let us consider the most general class of buses known as asynchronous buses. Here, we do not make any guarantees regarding the synchronization of the clocks of the sender and the receiver. Nor, do we send the clock of the sender along with the signal. It is the job of the receiver, to extract the clock of the sender from the signal, and read the data in correctly. Let us take a look at the circuit for reading in the data as shown in Figure 13.18. ",
+        "page_idx": 665
+    },
+    {
+        "type": "image",
+        "img_path": "images/783aafc9b0658502371c8a6e4e3cb5ba1fc1aab56c2081a2b48d2ae547781141.jpg",
+        "img_caption": [
+            "Figure 13.18: The receiver circuit in an asynchronous bus "
+        ],
+        "img_footnote": [],
+        "page_idx": 665
+    },
+    {
+        "type": "text",
+        "text": "For the sake of explanation, let us assume that we use the NRZ method of encoding bits. Extending the design to other kinds of encodings is fairly easy, and we leave it as an exercise for the reader. The logical bit stream passed on by the transmission sublayer is sent to the first D flip-flop, and simultaneously to the clock detector and recovery circuit. These circuits examine the transitions in the I/O signal and try to guess the clock of the sender. Specifically, the clock recovery circuit contains a PLL (phase locked loop). A $P L L$ is an oscillator that generates a clock signal, and tries to adjust its phase and frequency such that it is as close as possible to the sequence of transitions in the input signal. Note that this is a rather involved operation. ",
+        "page_idx": 665
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 666
+    },
+    {
+        "type": "text",
+        "text": "In the case of the RZ or Manchester encodings, we have periodic transitions. Hence, it is easier to synchronize the PLL circuits at the receiver. However, for the NRZ encoding, we do not have periodic transitions. Hence, it is possible that the PLL circuits at the receiver might fall out of synchrony. A lot of protocols that use the NRZ encoding (notably the USB protocol) insert periodic transitions or dummy bits in the signal to resynchronize the PLLs at the receiver. Secondly, the PLL in the clock recovery circuit also needs to deal with the issue of long periods of inactivity in the bus. During this time, it can fall out of synchronization. There are advanced schemes to ensure that we can correctly recover the clock from an asynchronous signal. These topics are taught in advanced courses in communication, and digital systems. We shall only take a cursory look in this chapter, and assume that the clock recovery circuit does its job correctly. ",
+        "page_idx": 666
+    },
+    {
+        "type": "text",
+        "text": "We connect the output of the clock detection and recovery circuit to the clock input of the first D flip-flop. We thus clock in data according to the sender\u2019s clock. To avoid metastability issues we introduce delay elements between the two D flip-flops. The second D flip-flop is in the receiver\u2019s clock domain. This part of the circuit is similar to that of source synchronous buses. ",
+        "page_idx": 666
+    },
+    {
+        "type": "text",
+        "text": "Note that in the case of ternary signaling, it is easy to find out when a bus is active (when we see a physical 0 or 1 on the bus). However, in the case of binary signaling, we do not know when the bus is active, because in principle we have a 0 or 1 bit being transmitted all the time. Hence, it is necessary to use an additional strobe signal to indicate the availability of data. Let us now look at protocols that use a strobe signal to indicate the availability of data on the bus. The strobe signals can also be optionally used by ternary buses to indicate the beginning and end of an I/O request. In any case, the reader needs to note that both the methods that we present using strobe signals are rather basic, and have been superseded by more advanced methods. ",
+        "page_idx": 666
+    },
+    {
+        "type": "text",
+        "text": "Asynchronous Communication with Strobe Signals ",
+        "text_level": 1,
+        "page_idx": 666
+    },
+    {
+        "type": "text",
+        "text": "Let us assume that the source wishes to send data to the destination. It first places data on the bus, and after a small delay sets (sets to 1) the strobe as shown in the timing diagram in Figure 13.19. This is done to ensure that the data is stable on the bus before the receiver perceives the strobe to be set. The receiver immediately starts to read data values. Till the strobe is on, the receiver continues to read data, places it in a register, and transfers chunks of data to higher layers. When the source decides to stop sending data, it resets (sets to $0$ ) the strobe. Note that timing is important here. We typically reset the strobe just before we cease sending data. This needs to be done because we want the receiver to treat the contents of the bus after the strobe is reset as the last bit. In general, we want the data signal to hold its value for some time after we have read it (for metastability constraints). ",
+        "page_idx": 666
+    },
+    {
+        "type": "image",
+        "img_path": "images/5c33619f9561b90d74f54991c9f7f3a9f223769512c0633f4eef670718a95682.jpg",
+        "img_caption": [
+            "Figure 13.19: Timing diagram of a strobe-based asynchronous communication system "
+        ],
+        "img_footnote": [],
+        "page_idx": 667
+    },
+    {
+        "type": "text",
+        "text": "Asynchronous Communication with Handshaking (4 Phase) ",
+        "text_level": 1,
+        "page_idx": 667
+    },
+    {
+        "type": "text",
+        "text": "Note that in simple asynchronous communication with strobe signals the source has no way of knowing if the receiver has read the data. We thus introduce a handshaking protocol where the source is explicitly made aware of the fact that the receiver has read all its data. The associated timing diagram is shown in Figure 13.20. ",
+        "page_idx": 667
+    },
+    {
+        "type": "image",
+        "img_path": "images/a661621aa29d14f8e8202e1d4f059501e45cbf21261edb34bb641eae1424801f.jpg",
+        "img_caption": [
+            "Figure 13.20: Timing diagram of a strobe-based asynchronous communication system with handshaking "
+        ],
+        "img_footnote": [],
+        "page_idx": 667
+    },
+    {
+        "type": "text",
+        "text": "At the outset, the sender places data on the bus, and then sets the strobe. The receiver begins to read data off the bus, as soon as it observes the strobe to be set. After it has read the data, it sets the ack line to 1. After the transmitter observes the ack line set to 1, it can be sure of the fact that the receiver has read the data. Hence, the transmitter resets the strobe, and stops sending data. When the receiver observes that the strobe has been reset, it resets the ack line. Subsequently, the transmitter is ready to transmit again using the same sequence of steps. ",
+        "page_idx": 667
+    },
+    {
+        "type": "text",
+        "text": "This sequence of steps ensures that the transmitter is aware of the fact that the receiver has read the data. Note that this diagram makes sense when the receiver can ascertain that it has read all the data that the transmitter wished to transmit. Consequently, designers mostly use this protocol for transmitting single bits. In this case, after the receiver has read the bit, it can assert the ack line. Secondly, this approach is also more relevant for the RZ and Manchester coding approaches because the transmitter needs to return to the default state before transmitting a new bit. After it receives the acknowledgement, the transmitter can begin the process of returning to the default state, as shown in Figure 13.19. ",
+        "page_idx": 667
+    },
+    {
+        "type": "text",
+        "text": "To transmit multiple bits in parallel, we need to have a strobe for each data line. We can however, have a common acknowledgement line. We need to set the ack signal when all the receivers have read their bits, and we need to reset the ack line, when all the strobe lines have been reset. Lastly, let us note that there are four separate events in this protocol (as shown in the diagram). Hence, this protocol is known as a 4-phase handshake protocol. ",
+        "page_idx": 667
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "Asynchronous Communication with Handshaking (2 Phase) ",
+        "text_level": 1,
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "If we are using the NRZ protocols, then we do not need to return to the default state. We can immediately start transmitting the next bit after receiving the acknowledgement. However, in this case, we need to slightly change the semantics of the strobe and acknowledgement signals. Figure 13.21 shows the timing diagram. ",
+        "page_idx": 668
+    },
+    {
+        "type": "image",
+        "img_path": "images/af3d6f712eb1c68af444ddf58dd47266fe174ba2dc79c40051192a94e80ef267.jpg",
+        "img_caption": [
+            "Figure 13.21: Timing diagram of a strobe-based asynchronous communication system with 2-phase handshaking "
+        ],
+        "img_footnote": [],
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "In this case, after placing the data on the bus, the transmitter toggles the value of the strobe. Subsequently, after reading the data, the receiver toggles the value of the ack line. After the transmitter detects that the ack line has been toggled, it starts transmitting the next bit. After a short duration, it toggles the value of the strobe to indicate the presence of data. Again, after reading the bit, the receiver toggles the ack line, and the protocol thus continues. Note that in this case, instead of setting and resetting the ack and strobe lines, we toggle them instead. This reduces the number of events that we need to track on the bus. However, this requires us to keep some additional state at the side of the sender and the receiver. This is a negligible overhead. Our 4-phase protocol thus gets significantly simplified. The NRZ protocols are more amenable to this approach because they have continuous data transmission, without any intervening pause periods. ",
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "Definition 149 ",
+        "text_level": 1,
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "Simple Synchronous Bus A simple synchronous bus that assumes that the transmitter and the receiver share the same clock, and there is no skew (deviation) between the clocks. ",
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "Mesochronous Bus Here, the transmitter and receiver have the same clock frequency, but there can be a phase delay between the clocks. ",
+        "page_idx": 668
+    },
+    {
+        "type": "text",
+        "text": "Plesiochronous Bus In a plesiochronous bus, there is a small amount of mismatch between the frequencies of the clocks of the transmitter and receiver.   \nSource Synchronous Bus In a source synchronous bus, there is no relationship between the clocks of the transmitter and receiver. Consequently, we send the clock of the transmitter to the receiver along with the message, such that it can use it to sample the bits in the message.   \nAsynchronous Bus An asynchronous bus does not assume any relationship between the clocks of the transmitter and receiver. It typically has sophisticated circuitry to recover the clock of the transmitter by analyzing the voltage transitions in the message. ",
+        "page_idx": 669
+    }
+]

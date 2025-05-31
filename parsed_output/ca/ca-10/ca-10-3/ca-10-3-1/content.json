@@ -1,0 +1,22 @@
+[
+    {
+        "type": "text",
+        "text": "10.3.1 IF Stage ",
+        "text_level": 1,
+        "page_idx": 419
+    },
+    {
+        "type": "image",
+        "img_path": "images/8f9271d45265e7dffd24161a5a70002830b9ed79d05800889345235e7d078352.jpg",
+        "img_caption": [
+            "Figure 10.4: The IF stage in a pipelined processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 419
+    },
+    {
+        "type": "text",
+        "text": "Figure 10.4 shows the IF stage augmented with a pipeline register. We save the value of the PC, and the contents of the instruction in the pipeline register. This is all the information that we need to carry forward to the subsequent stages of the pipeline. Other than this small change, we do not need to make any other change in this part of the data path. ",
+        "page_idx": 419
+    }
+]

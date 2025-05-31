@@ -1,0 +1,35 @@
+3.2.4 Types of Instructions
+
+Classification by Functionality
+
+The four major types of instructions are as follows:
+
+1. Data Processing Instructions: Data processing instructions are typically arithmetic instructions such as add, subtract, and multiply, or logical instructions that compute bitwise or, and exclusive or. Comparison instructions also belong to this family.   
+2. Data Transfer Instructions: These instructions transfer values between two locations. A location can be a register or a memory address.   
+3. Branch Instructions: Branch instructions help the processor’s control unit to jump to different parts of the program-based on the values of operands. They are useful in implementing for loops and if-then-else statements.   
+4. Exception Generating Instructions: These specialized instructions help transfer control from a user level program to the operating system.
+
+In this book we shall cover data processing, data transfer, and control instructions.
+
+Classification Based on the Number of Operands
+
+As mentioned in Section 3.2.3, all assembly language statements in the GNU assembler have the same structure. They start with the name of the instruction, and are succeeded by a list of operands. We can classify instructions based on the number of operands that they require. If an instruction requires  operands, then we typically say that it is in the  -address format. For example, an instruction that does not require any operands is a 0-address format instruction. If it requires 3 operands, then it is a 3-address format instruction.
+
+Definition 31   
+If an instruction requires n operands (including source and destination), then we say that it is an  -address format instruction.
+
+In ARM most of the data processing instructions are in the 3-address format, and data transfer instructions are in the 2-address format. However, in x86 most of the instructions are in the 2-address format. The first question that comes to our mind is what is the logic of having a 3-address format instruction versus having a 2-address format instruction? There must be some trade-off here.
+
+Let us outline some general rules of thumb. If an instruction has more operands, we will require more bits to represent the instruction. Consequently, we will require more resources to store, and handle instructions. However, there is a flip side to this argument. Having more operands will also make the instruction more generic and flexible. It will make the life of compiler writers and assembly programmers much easier, because it will be possible to do more things with an instruction that uses more operands. The reverse logic applies to instructions that take fewer operands. They take less space to store, and are less flexible. Let us consider an example. Assume that we are trying to add two numbers, 3 and 5, to produce a result, 8.
+
+An ARM instruction for addition would look like this:
+
+add r3, r1, r2
+
+This instruction adds the contents of registers,  , and  , and saves it in  . However, an x86 instruction would look like this:
+
+add edx, eax
+
+Here, we assume that edx contains 3, and  contains 5. The addition is performed, and the result, 8, is stored back in edx. Thus, in this case the x86 instruction is in the 2-address format because the destination register is the same as the first source register.
+
+When we describe the details of the ARM and x86 instruction sets in Chapters 4 and 5, we shall see many more examples of instructions that have different address formats. We will be able to appreciate the trade-offs of having different address formats in all their glory.

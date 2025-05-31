@@ -1,0 +1,86 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.5 Data Processing Instructions that use CPSR Flags ",
+        "text_level": 1,
+        "page_idx": 149
+    },
+    {
+        "type": "text",
+        "text": "There are three simple data processing instructions that use the CPSR flags in their computation. They are sbc, rsc, and adc. ",
+        "page_idx": 149
+    },
+    {
+        "type": "text",
+        "text": "Let us now motivate this section with an example. Our basic ARM instruction format does not support 64-bit registers. Consequently, if we desire to implement the long data type that uses 64 bits, we need to use two registers. Let us assume that one long value is present in registers, $r 2$ , and $r 1$ . Here, $r 2$ contains the upper 32 bits, and $r 1$ contains the lower 32 bits. Let the second long value be present in registers $r 4$ , and $r 3$ . Let us now try to add these two long values to produce a 64-bit result, and save it in registers, $r 6$ and $r 5$ . See Example 42. ",
+        "page_idx": 149
+    },
+    {
+        "type": "text",
+        "text": "Example 42 Add two long values stored in $^ { r 2 , r 1 }$ and $^ { r 4 , r 3 }$ . ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "adds r5, r1, r3   \nadc r6, r2, r4 ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "The (adds) instruction adds the values in r1 and r3. adc(add with carry) adds r2, r4, and the value of the carry flag. This is exactly the same as normal addition. ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "Example 43 shows how to subtract the values. ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "Example 43 ",
+        "text_level": 1,
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "Subtract two long values stored in r2,r1 and r4,r3. ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "subs r5, r1, r3   \nsbc r6, r2, r4 ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "subs subtracts the value of r3 from the value in r1. sbc(subtract with carry) subtracts the value in r4 from the value in r2. Additionally, if the previous instruction resulted in a borrow (carry equal to 0), then it also subtracts the carry bit. This is the same as normal subtraction. ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "We list the semantics of the instructions in Table 4.8. Note that in the case of a subtraction the carry flag is set to 0, when there is a borrow. The $N O T$ operation flips a 0 to 1, and vice versa. Lastly, rsc stands for \u2013 reverse subtract with carry. ",
+        "page_idx": 150
+    },
+    {
+        "type": "table",
+        "img_path": "images/30326b53b130b68280c88309601702c6c747eec3fcc794a02682d6bd5a37afd9.jpg",
+        "table_caption": [
+            "Table 4.8: Semantics of adc, sbc, and $r s c$ instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>adc reg,reg, reg</td><td>adc rl, r2, r3</td><td>rl = r2 + r3 + Carry_Flag</td></tr><tr><td>sbc reg, reg, reg</td><td>sbc rl, r2, r3</td><td>r1 = r2 - r3 - NOT(Carry_Flag)</td></tr><tr><td>rsc reg, reg, reg</td><td>rsc rl, r2, r3</td><td>rl = r3 - r2 - NOT(Carry_Flag)</td></tr></table></body></html>\n\n",
+        "page_idx": 150
+    }
+]

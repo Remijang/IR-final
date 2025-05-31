@@ -1,0 +1,7 @@
+9.6.1 Machine Model
+
+All the internal registers in Figure 9.22 are the set of registers that are visible to microassembly instructions. Ideally microassembly instructions are not supposed to be aware of regular architectural registers, and other aspects of architectural state. They are only supposed to be aware of internal registers that are not externally visible.
+
+Table 9.7 shows the list of internal registers in our microprogrammed data path. Note that we have 1-bit registers, 4-bit registers, and 32-bit registers.
+
+Microprogrammed instructions do not access memory. Hence, they do not need a view of memory.

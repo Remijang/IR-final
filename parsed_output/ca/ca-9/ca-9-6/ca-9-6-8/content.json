@@ -1,0 +1,196 @@
+[
+    {
+        "type": "text",
+        "text": "9.6.8 Branch Instructions ",
+        "text_level": 1,
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "There are five branch instructions in SimpleRisc : b, beq, bgt, call, and ret. ",
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "Implementing the unconditional branch instruction is trivial. We simply need to transfer the value of the branch target to the PC. ",
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "$b$ instruction mmov pc, branchTarget 2 mb .begin ",
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "We can make a minor modification to this code to implement the beq, and bgt instructions. We need to check the value of the flags registers, and set the branchTarget to the PC only if the corresponding flags register contains a 1. ",
+        "page_idx": 398
+    },
+    {
+        "type": "image",
+        "img_path": "images/2ac3aea4fa8324dd4dd57a6dbab57db3d7d593d197767c273e08eb69719afc13.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "The last two instructions that we need to implement are the call and ret instructions. The call instruction is a combination of a simple branch, and a register write operation that adds the value of the next PC $( P C + 4 )$ to the return address register (register 15). The microcode is as follows. Note that we do not increment the PC by 4 because it is already incremented in the preamble. ",
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "call instruction /\\* save PC + 4 in the return address register \\*/ 2 mmov regData, pc 3 mmovi regSrc, 15, <write> 4 5 /\\* branch to the function \\*/ 6 mmov pc, branchTarget mb .begin ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "We save the address of the next PC in the register file in lines 2 to 3. Then we move the branchT arget to the PC, and then proceed to execute the first instruction in the invoked function. ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "The ret instruction performs the reverse operation, and transfers the return address to the PC. ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "ret instruction   \n1   \n2 /\\* save the contents of the return   \n3 address register in the PC \\*/   \n4 mmovi regSrc, 15, <read>   \n5 mmov pc, regVal   \n6 mb .begin ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "We have thus implemented all our SimpleRisc instructions in microcode. A microcoded implementation is definitely slower that our hardwired data path. However, we have gained a lot in terms of flexibility. We can implement some very complex instructions in hardware, and thus make the task of software developers significantly easier. We can also dynamically change the behavior of instructions. For example, if we wish to store the return address on the stack rather than the return address register, we can do so easily (see Examples 132 and 133). ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "Example 132   \nChange the call instruction to store the return address on the stack. The preamble need not be shown (study carefully). ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "stack-based call instruction /\\* read and update the stack pointer \\*/ 3 mmovi regSrc, 14, <read> /\\* regSrc contains the id 4 of the stack pointer \\*/ \u3011 madd regVal, -4 /\\* decrement the stack pointer \\*/ 6 mmov mar, regVal /\\* MAR contains the new stack pointer \\*/ 7 ",
+        "page_idx": 399
+    },
+    {
+        "type": "text",
+        "text": "mmov regData, regVal, <write> /\\* update the stack pointer \\*/   \n9   \n10 /\\* write the return address to the stack \\*/   \n11 mmov mdr, pc, <store>   \n12   \n13 mb. begin ",
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "Example 133 ",
+        "text_level": 1,
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "Change the ret instruction to load the return address from the stack. The preamble need not be shown. ",
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 400
+    },
+    {
+        "type": "image",
+        "img_path": "images/feceec8574df4c5a48ee037d74136fe1551ef9e8c970daa2f65cdc058699a87f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "Example 134 ",
+        "text_level": 1,
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "Implement an instruction to compute the factorial of the number saved in register r2. You can destroy the contents of r2. Save the result in register r3. Assume that the number is greater than 1. ",
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "stack-based call instruction ",
+        "page_idx": 400
+    },
+    {
+        "type": "text",
+        "text": "/\\* code to set the inputs to the multiplier \\*/   \n3 mmovi B, 1   \n4 mmovi regSrc, 2, <read>   \n5 mmov A, regVal   \n/\\* at this point A = r2, B = 1 \\*/ ",
+        "page_idx": 400
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\{ \\begin{array} { l l } { \\int _ { 0 } ^ { \\infty } , } & { i < \\omega g } \\\\ { , } & { \\omega \\in \\mathcal { S } , } \\\\ { , } & { \\lambda < \\omega g \\epsilon ^ { 2 } } \\\\ { , } & { \\omega \\in \\mathcal { S } , } \\\\ { \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B , \\ c , \\omega g ) + \\frac { \\lambda + \\omega g \\lambda + \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } } \\\\ { , } & { \\lambda < \\omega g \\epsilon ^ { 2 } B \\epsilon ^ { ( 0 ) } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B , \\ c , \\omega g ) + \\frac { \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B , \\ c , \\omega g ) + \\frac { \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { , } & { \\lambda < \\omega g \\epsilon ^ { 2 } B \\epsilon ^ { ( 0 ) } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B , \\ c , \\omega g ) + \\frac { \\lambda ^ { ( 0 ) } + \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } } \\\\ { , } & { \\lambda ^ { ( 0 ) } + \\frac { \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B , \\ c , \\omega g ) - \\omega g \\omega ^ { ( 0 ) } \\omega ^ { ( 0 ) } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B , \\ c , \\omega g ) + \\frac { \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\frac { \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\frac { \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\frac { \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\frac { \\lambda ^ { ( 0 ) } } { \\lambda ^ { ( 0 ) } } , } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\lambda ^ { ( 0 ) } - \\lambda ^ { ( 0 ) } } \\\\ { | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\lambda ^ { ( 0 ) } | \\omega ( 0 . 5 \\omega ^ { ( 0 ) } B \\omega ) - \\lambda ^ { ( 0 ) } } \\\\  |  \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 401
+    },
+    {
+        "type": "text",
+        "text": "Example 135 ",
+        "text_level": 1,
+        "page_idx": 401
+    },
+    {
+        "type": "text",
+        "text": "Implement an instruction to find if the value saved in register $r 2$ is a cubic Armstrong Number. A cubic Armstrong number is equal to the sum of the cubes of its decimal digits. For example, 153 is one such number. $\\begin{array} { r } { { 1 5 ^ { \\mathrm { 2 } } } = 1 ^ { 3 } + 5 ^ { 3 } + 3 ^ { 3 } } \\end{array}$ . Save the Boolean result in r3. Assume two scratch registers: sr1 and sr2. ",
+        "page_idx": 401
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 401
+    },
+    {
+        "type": "text",
+        "text": "stack-based call instruction /\\* Set the inputs of the ALU \\*/ 3 mmovi regSrc, 2, <read>   \n4 mmov A, regVal   \n5 mmov sr1, regVal   \n6 mmovi B, 10 7 mmovi sr2, 0 /\\* sum = 0 \\*/   \n8 9 /\\* loop \\*/   \n10 .loop:   \n11 /\\* test \\*/   \n12 mbeq A, 0, .out   \n13   \n14 /\\* compute the mod and cube it \\*/   \n15 mmov B, B, <mod> /\\* aluResult = A % B \\*/   \n16 mmov B, aluResult /\\* B = aluResult \\*/   \n17 mmov A, aluResult, <multiply> /\\* aluResult = (A%B)^2 \\*/ ",
+        "page_idx": 401
+    },
+    {
+        "type": "image",
+        "img_path": "images/e65c421ccf75b150c8bd7a2a9c8bbf537efeeb6e1c3bc2f505e9374cae155703.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 402
+    },
+    {
+        "type": "text",
+        "text": "Example 136 ",
+        "text_level": 1,
+        "page_idx": 402
+    },
+    {
+        "type": "text",
+        "text": "Implement an instruction to test if a number saved in register r2 is prime. Assume that the number is greater than 3. Save the result in r3. ",
+        "page_idx": 402
+    },
+    {
+        "type": "text",
+        "text": "stack-based call instruction ",
+        "page_idx": 402
+    },
+    {
+        "type": "text",
+        "text": "/\\* Read the register and set the ALU inputs \\*/   \nmmovi regSrc, 2, <read>   \nmmov A, regVal   \nmmovi B, 1   \n.loop: /\\* test for divisibility \\*/ madd B, 1, <mod> /\\* aluResult = A % (B+1), B = B + 1 \\*/ ",
+        "page_idx": 402
+    },
+    {
+        "type": "image",
+        "img_path": "images/12482f5b542d3d40a0bfe2e6abd11401c8f893eb29d3cc192fe02d73165f5953.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 403
+    }
+]

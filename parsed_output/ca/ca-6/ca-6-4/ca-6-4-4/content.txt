@@ -1,0 +1,13 @@
+6.4.4 Floating Point Conversion Instructions
+
+Example 117
+
+Compute  , and store the result in f a0. Convert the result to an integer and store the result in a0.
+
+Answer:
+
+pi: . float 3.14   
+e: . float 2.72   
+. main : la a1 , pi # load pi flw fs1 , 0( a1) la a2 , e # load e flw fs2 , 0( a2) addi t1 , zero , 4 # load 4.0 in a register fcvt .s.w ft1 , t1 fmadd .s fa0 , fs1 , fs2 , ft1 # pi \* e + 4 fcvt .w.s a0 , fa0 # convert to int
+
+Table 6.17 shows the floating point to integer conversion (and vice versa) instructions. The  instruction proves to be very helpful. It can be used to convert integer immediates to floating point numbers, whenever we wish to multiply a floating point number with a multiplier of the form 2.0 or 3.0.

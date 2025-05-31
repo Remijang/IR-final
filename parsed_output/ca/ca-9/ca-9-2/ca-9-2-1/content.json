@@ -1,0 +1,77 @@
+[
+    {
+        "type": "text",
+        "text": "9.2.1 Instruction Fetch \u2013 Fetch Unit ",
+        "text_level": 1,
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "We start out by fetching an instruction from main memory. Recall that a SimpleRisc instruction is encoded as a sequence of 32 bits or 4 bytes. Hence, to fetch an instruction we need the starting address of the instruction. Let us store the starting address of the instruction in a register called the program counter $( p c )$ . ",
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "Important Point 13 Let us make an important distinction here between the terms PC and pc. PC is an acronym for \u201cprogram counter\u201d. In comparison, pc is a register in our pipeline, and will only be used to refer to the register, and its contents. However, PC is a general concept and will be used in the place of the term, \u201cprogram counter\u201d, for the sake of brevity. ",
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 364
+    },
+    {
+        "type": "text",
+        "text": "Secondly, we need a mechanism to update the PC to point to the next instruction. If the instruction is not a branch then the PC needs to point to the next instruction, whose starting address is equal to the value of the old PC plus 4 (REASON: each instruction is 4 bytes long). If the instruction is a branch, and it is taken, then the new value of the PC needs to be equal to the address of the branch target. Otherwise, the address of the next instruction is equal to the default value (current PC + 4). ",
+        "page_idx": 364
+    },
+    {
+        "type": "image",
+        "img_path": "images/fab6ccbc21167decbac9891a0bbcef7d114388c4ba37dcdb1b85504111f0dc3a.jpg",
+        "img_caption": [
+            "Figure 9.3: The Fetch Unit "
+        ],
+        "img_footnote": [],
+        "page_idx": 364
+    },
+    {
+        "type": "text",
+        "text": "Figure 9.3 shows an implementation of the circuit for the fetch unit. There are two basic operations that need to be performed in a cycle \u2013 (1) computation of the next PC, and (2) fetching the instruction. ",
+        "page_idx": 364
+    },
+    {
+        "type": "text",
+        "text": "The PC of the next instruction can come from two sources in SimpleRisc as shown in Figure 9.3. We can either use an adder and increment the current PC by 4, or we can get the address from another unit that calculates the branch target(branchP C), and the fact that the branch is taken. We can use a multiplexer to choose between these two inputs. Once, the correct input is chosen, it needs to be saved in the pc register and sent to the memory system for fetching the instruction. We can either use a combined memory for both instruction and data (Von Neumann Machine) or use a separate instruction memory (Harvard Machine). The latter option is more common. The instruction memory is typically implemented as an array of SRAM cells. The fetch unit provides the address in the SRAM array, and then uses the 32 bits stored at the specified starting address as the contents of the instruction. ",
+        "page_idx": 364
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 365
+    },
+    {
+        "type": "text",
+        "text": "Before proceeding to decode the instruction, let us make an important observation. Let us list down the external inputs of the fetch unit. They consist of the (1) branch target(branchP C), (2) instruction contents, (3) and the signal to control the multiplexer (isBranchT aken). The branch target is typically provided by the decode unit, or the instruction execution unit. The instruction contents are obtained from the instruction memory. Let us now consider the case of the signal to control the multiplexer \u2013 isBranchT aken. The conditions for setting isBranchT aken are shown in Table 9.1. ",
+        "page_idx": 365
+    },
+    {
+        "type": "table",
+        "img_path": "images/f7842a30a0096a0bd55fe050f5144790c55794accb692913b0d2f27081f11ff2.jpg",
+        "table_caption": [
+            "Table 9.1: Conditions for setting the isBranchT aken signal "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Instruction</td><td>Value of isBranchTaken</td><td></td></tr><tr><td></td><td>non-branch instruction</td><td>0</td><td></td></tr><tr><td></td><td></td><td>1</td><td></td></tr><tr><td>call</td><td></td><td>1</td><td></td></tr><tr><td>ret b</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>1</td><td></td></tr><tr><td>beq</td><td></td><td>branch note naken - 0 branch taken -1</td><td></td></tr><tr><td>bgt</td><td></td><td>branch not taken -0</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 365
+    },
+    {
+        "type": "text",
+        "text": "In our processor, a dedicated branch unit generates the isBranchT aken signal. It first analyzes the instruction. If the instruction is a non-branch instruction, or a call/ret/b instruction, then the value of isBranchT aken can be decided according to Table 9.1. However, if the instruction is a conditional branch instruction $( b e q / b g t )$ , then it is necessary to analyze the flags register. Recall that the flags register contains the results of the last compare instruction (also see Section 3.3.2). We shall describe a detailed circuit for the branch unit in Section 9.2.4. ",
+        "page_idx": 365
+    },
+    {
+        "type": "text",
+        "text": "Let us refer to this stage of instruction processing as the $I F$ (instruction fetch) stage. Before, we proceed to other stages, let us slightly digress here, and discuss two important concepts \u2013 data path, and control path. ",
+        "page_idx": 365
+    }
+]

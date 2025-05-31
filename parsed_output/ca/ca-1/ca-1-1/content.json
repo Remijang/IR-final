@@ -1,0 +1,92 @@
+[
+    {
+        "type": "text",
+        "text": "1.1 What is a Computer? ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Let us now answer the following questions. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Question 1 ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "What is a computer? What it can do, and what it cannot do? How do we make it do intelligent things? ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Let us start out with some basic definitions. The first question that we need to answer is \u2013 What is a computer? Well to answer this question, we just need to look all around us. We are surrounded by computers. Nowadays, computers are embedded in almost any device such as mobile phones, tablets, MP3 players, televisions, DVD players, and obviously desktops and laptops. What is common between all of these devices? Well, each one of them has a computer that performs a specific task. For example, the computer in a MP3 player can play a song, and the computer in a DVD player can play a movie. It is absolutely not necessary that the MP3 player and DVD player contain different types of computers. In fact, the odds are high that both the devices contain the same type of computer. However, each computer is programmed differently, and processes different kinds of information. An MP3 player processes music files, and a DVD player processes video files. One can play a song, while the other can play a video. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Using these insights, let us formally define a computer in Definition 2. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Definition 2   \nA computer is a general purpose device that can be programmed to process information, and yield meaningful results. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Note that there are three important parts to the definition as shown in Figure 1.1 \u2013 the computer, information store, and the program. The computer takes as an input a program, and in response performs a set of operations on the information store. At the end it yields meaningful results. A typical program contains a set of instructions that tell the computer regarding the operations that need to be performed on the information store. The information store typically contains numbers and pieces of text that the program can use. Let us consider an example. ",
+        "page_idx": 16
+    },
+    {
+        "type": "image",
+        "img_path": "images/45411431165b4ddce205bc9e373ffc90731a69e9e54a25082cc8c7b22b5dc070.jpg",
+        "img_caption": [
+            "Figure 1.1: A basic computer "
+        ],
+        "img_footnote": [],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Example 1 Here is a snippet of a simple $C$ program. ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "1: $\\textsf { a } = \\textsf { 4 }$ ;   \n2: $b = 6$ ;   \n3: $\\texttt { c } = \\texttt { a } + \\texttt { b } ;$   \n4: print c ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "A computer will produce the output - 10. This $C$ program contains four statements. Here, each statement can conceptually be treated as an instruction. Each statement instructs the computer to do something. Statements 1 and 2 instruct the computer to assign the variables a and b, the values 4 and 6, respectively. Statement 3 instructs the computer to add a and b, and assign the result to variable c. Finally, statement 4 instructs the computer to print the value of c (output of the program). ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Given the fact that we have defined a computer as a sophisticated device that follows the instructions in a program to produce an output, let us see how it can be built. Modern day computers are made of silicon-based transistors and copper wires to connect them. However, it is absolutely not necessary that computers need to be built out of silicon and copper. Researchers are now looking at building computers with electrons (quantum computers), photons(optical computers), and even DNA. If we think about it, our own brains are extremely powerful computers themselves. They are always in the process of converting thoughts(program) into action(output). ",
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/06300f8a34c0ba11d90a9ed87dec4d206250f596bb44c6ee155115fff53e2cb4.jpg",
+        "img_caption": [
+            "Figure 1.2: "
+        ],
+        "img_footnote": [],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 18
+    }
+]

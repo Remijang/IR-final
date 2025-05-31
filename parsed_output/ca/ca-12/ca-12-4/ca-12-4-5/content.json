@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "12.4.5 Shared Caches ",
+        "text_level": 1,
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "In the simplest embodiment of a shared cache, we can implement it as a regular cache in a uniprocessor. However, this will prove to be a very bad approach in practice. The reason for this is that in a uniprocessor, only one thread accesses the cache; however, in a multiprocessor multiple threads might access the cache, and thus we need to provide more bandwidth. If all the threads need to access the same data and tag array, then either requests have to stall or we have to increase the number of ports in the arrays. This will have very negative consequences in terms of area and power. Lastly, cache sizes (especially L2 and L3) are roughly doubling as per Moore\u2019s law. As of 2012, on-chip caches can be as large as 4-8 MB. If we have a single tag array for the entire cache, then it will be very large and slow. Let us define the term last level cache (LLC) as the on chip cache that has the lowest position in the memory hierarchy (with main memory being the lowest). For example, if a multicore processor has an on-chip L3 cache that is connected to main memory, then the LLC is the L3 cache. We shall use the term LLC frequently from now onwards. ",
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "To create a multi-megabyte LLC that can simultaneously support multiple threads, we need to split it into multiple subcaches. Let us assume that we have a 4 MB LLC. In a typical design, this will be split into 8-16 smaller subcaches. Thus, each subcache will be 256-512 KB in size, which is an acceptable size. Each such subcache is a cache in its own right, and is known as a cache bank. Hence, we have in effect split a large cache into a set of cache banks. A cache bank can either be direct mapped, or can be set associative. ",
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "There are two steps in accessing a multibank cache. We first calculate the bank address, and then perform a regular cache access at the bank. Let us explain with an example. Let us consider a 16-bank, 4 MB cache. Each bank thus contains 256 KB of data. Now 4 $\\mathrm { M B } = 2 ^ { 2 2 }$ bytes. We can thus dedicate bits 19-22 for choosing the bank address. Note that bank selection is independent of associativity in this case. After choosing a bank, we can split the remaining 28 bits between the offset within the block, set index, and tag. ",
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "There are two advantages of dividing a cache into multiple banks. The first is that we decrease the amount of contention at each bank. If we have 4 threads, and 16 banks, then the probability that 2 threads access the same bank is low. Secondly, since each bank is a smaller cache, it is more power efficient, and faster. We have thus achieved our twin aims of supporting multiple threads, and designing a fast cache. We shall look at the problem of placing processors, and cache banks in a multicore processor in Section 12.6. ",
+        "page_idx": 598
+    }
+]

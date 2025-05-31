@@ -1,0 +1,61 @@
+[
+    {
+        "type": "text",
+        "text": "10.6.2 Ensuring the Data-Lock Condition ",
+        "text_level": 1,
+        "page_idx": 437
+    },
+    {
+        "type": "text",
+        "text": "To ensure the Data-Lock condition we need to ensure that there is no conflict between the instruction in the OF stage, and any instruction in the subsequent stages. A conflict is defined as a situation that can cause a RAW hazard. In other words, a conflict exists if an instruction in a subsequent stage writes to a register that is read by the instruction in the OF stage. There are thus two pieces of hardware that we require to implement the Data-Lock condition. The first is to check if a conflict exists, and the second is to ensure that the pipeline gets stalled. ",
+        "page_idx": 437
+    },
+    {
+        "type": "text",
+        "text": "Let us first look at the conflict detection hardware. The conflict detection hardware needs to compare the contents of the instruction in the OF stage with the contents of each of the instructions in the other three stages namely EX, MA, and RW. If there is a conflict with any of these instructions, we can declare a conflict. Let us thus focus on the logic of detecting a conflict. We leave the design of the exact circuit as an exercise for the reader. Let us outline the brief pseudo-code of a conflict detection circuit. Let the instruction in the OF stage be [A], and an instruction in a subsequent stage be [B]. The algorithm to detect a conflict is shown as Algorithm 5. ",
+        "page_idx": 437
+    },
+    {
+        "type": "text",
+        "text": "Implementing Algorithm 5 in hardware is straightforward. The reader can draw a simple circuit and implement this algorithm. All we need is a set of logic gates and multiplexers. Most hardware designers typically write the description of a circuit similar to Algorithm 5 in a hardware description language such as Verilog or VHDL, and rely on smart compilers to convert the description to an actual circuit. Hence, we shall refrain from showing detailed implementations of circuits henceforth, and just show the pseudo code. ",
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "We need three conflict detectors ( $\\mathrm { O F }  \\mathrm { E X }$ , OF $$ MA, OF $$ RW). If there are no conflicts, then the instruction is free to proceed to the EX stage. However, if there is at least one conflict, we need to stall the IF and OF stages. Once an instruction passes the OF stage, it is guaranteed to have all of its source operands. ",
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "Stalling the Pipeline: ",
+        "text_level": 1,
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at stalling the pipeline. We essentially need to ensure that till there is a conflict no new instruction enters the IF and OF stages. This can be trivially ensured by disabling the write functionality of the PC and the IF-OF pipeline register. Consequently, they cannot accept new data on a clock edge, and thus will continue to hold their previous values. ",
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "Secondly, we also need to insert bubbles in the pipeline. For example, the instruction that passes from the OF to the EX stage needs to be an invalid instruction, or alternatively a bubble. This can be ensured by passing a nop instruction. Hence, the circuit for ensuring the Data-Lock condition is straightforward. We need a conflict detector that is connected to the PC, and the IF-OF register. Till there is a conflict, these two registers are disabled, and cannot accept new data. We force the instruction in the OF-EX register to contain a nop. The augmented circuit diagram of the pipeline is shown in Figure 10.16. ",
+        "page_idx": 438
+    },
+    {
+        "type": "image",
+        "img_path": "images/f7c9e179e0ffe64ff7eb616074b600464c2d47f3095754e527f34d91c07f0cba.jpg",
+        "img_caption": [
+            "Figure 10.16: Data path of a pipeline with interlocks (implements the Data-Lock condition) "
+        ],
+        "img_footnote": [],
+        "page_idx": 438
+    },
+    {
+        "type": "table",
+        "img_path": "images/6596655be7cbcd32e803a3122387301c81dae0250ada50295b220520fafbad79.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Algorithm 5:Algorithm to detect conflicts between instructions Data: Instructions: [A] and [B] Result: Conflict exists (true), no conflict (false) 1 if [A].opcode \u2208 (nop,b,beq,bgt,call) then</td></tr><tr><td>/* Does not read from any register */ 2 return false 3 end 4 if [B].opcode \u2208 (nop,cmp\uff0cst,b, beq,bgt,ret) then</td></tr><tr><td>/* Does not write to any register */ 5 return false 6 end</td></tr><tr><td>/* Set the sources */ 7 srcl\u2190[A].rs1</td></tr><tr><td>8 src2 \u2190 [A].rs2 9 if [A].opcode = st then</td></tr><tr><td>10src2 \u2190[A].rd 11 end</td></tr><tr><td>12 if [A].opcode = ret then 13 src1 \u2190 ra</td></tr><tr><td>14 end</td></tr><tr><td>/* Set the destination */ 15 dest \u2190 [B].rd</td></tr><tr><td>16 if [B].opcode = call then</td></tr><tr><td>17dest \u2190ra 18 end</td></tr><tr><td>/* Check if the first operand exists */</td></tr><tr><td>19 hasSrcl \u2190 true 20 if [A].opcode \u2208 (not,mov\uff09 then</td></tr><tr><td>21 hasSrcl \u2190 false</td></tr><tr><td>22 end</td></tr><tr><td>/* Check the second operand to see if it is a register */ 23 hasSrc2 \u2190 true</td></tr><tr><td>24 if [A].opcode \u2260 (st) then</td></tr><tr><td>25 if [A].I=1 then</td></tr><tr><td>26 hasSrc2 \u2190 false</td></tr><tr><td>27 end</td></tr><tr><td>28 end</td></tr><tr><td>/* Detect conflicts */</td></tr><tr><td>29 if (hasSrcl= true) and (srcl = dest) then</td></tr><tr><td>30 return true 31 end 32 else if (hasSrc2= true) and (src2 = dest) then</td></tr></table></body></html>\n\n",
+        "page_idx": 439
+    }
+]

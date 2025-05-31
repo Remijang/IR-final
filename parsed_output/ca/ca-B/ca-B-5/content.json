@@ -1,0 +1,349 @@
+[
+    {
+        "type": "text",
+        "text": "B.5 CUDA Programs ",
+        "text_level": 1,
+        "page_idx": 762
+    },
+    {
+        "type": "text",
+        "text": "A CUDA program naturally maps to the structure of a GPU. We first write a kernel in CUDA that performs a set of operations depending on the thread id that it is assigned at runtime. A dynamic instance of a kernel is a thread (similar to a thread in the context of a CPU). We group a set of threads into a block, or a CTA (co-operative thread array). A block or a CTA corresponds to a warp. We can have 1\u2013512 threads in a block, and each SM can buffer the state of at most 8 blocks at any point of time. Each thread in a block has a unique thread id. Similarly, blocks are grouped together in a grid. The grid contains all the threads for an application. Different blocks (or warps) may execute independently of each other, unless we explicitly enforce some form of synchronization. In our simple example, we consider a block to be a linear array of threads, and a grid to be a linear array of blocks. Additionally, we can define a block to be a 2D or 3D array of threads, or a grid to be a 2D or 3D array of blocks. ",
+        "page_idx": 762
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at a small CUDA program to add two $n$ element arrays. Let us consider the CUDA program in parts. In the following code snippet, we initialize three arrays $a$ , $b$ , and $c$ . We wish to add $a$ and $b$ element wise and save the results in $c$ . ",
+        "page_idx": 762
+    },
+    {
+        "type": "image",
+        "img_path": "images/22ed1aa7b6500d517cdbed1a9e2e4627bfac2d2d8a978feda3d3c108b10a7644.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 762
+    },
+    {
+        "type": "table",
+        "img_path": "images/c29a102035a7f8eb24e42a99695139d53c3b9a5a1f6fca5792b22c25e73a6c9a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>12</td><td>cudaMalloc((void**\uff09&gpu_a\uff0csize); cudaMalloc((void**\uff09&gpu_b\uff0csize);</td></tr><tr><td>13</td></tr><tr><td>14</td></tr><tr><td>cudaMalloc((void**\uff09&gpu_c\uff0csize); 15</td></tr><tr><td>16 /* initialize arrays\uff0ca and b */</td></tr><tr><td>17</td></tr><tr><td></td></tr><tr><td>18 19 /* copy the arrays to the GPU */</td></tr><tr><td>20 cudaMemcpy (gpu_a\uff0ca\uff0csize\uff0ccudaMemcpyHostToDevice\uff09;</td></tr><tr><td>21 cudaMemcpy (gpu_b\uff0cb\uff0csize\uff0ccudaMemcpyHostToDevice\uff09;</td></tr></table></body></html>\n\n",
+        "page_idx": 763
+    },
+    {
+        "type": "text",
+        "text": "In this code snippet we declare three arrays $( a , \\ b$ , and $c$ ) with $N$ elements in Line 5. Subsequently, in Line 9, we define their corresponding storage locations (gpu a, gpu b and gpu c) in the GPU. We then allocate space for them in the GPU by using the cudaMalloc call. Next, we initialize arrays $a$ and $b$ with values (code not shown), and then copy these arrays to the corresponding locations (gpu a, and gpu b) in the GPU using the CUDA function cudaMemcpy. It uses a flag called cudaMemcpyHostT oDevice. In this case the host is the CPU and the device is the GPU. ",
+        "page_idx": 763
+    },
+    {
+        "type": "text",
+        "text": "The next operation is to add the vectors gpu a, and gpu b in the GPU. For this purpose, we need to write a vectorAdd function that can add the vectors. This function should take three arguments consisting of two input vectors, and an output vector. Let us for the time being assume that we have such a function with us. Let us show the code to invoke this function. ",
+        "page_idx": 763
+    },
+    {
+        "type": "table",
+        "img_path": "images/ead6e4e39c4b39d3896b8db596aa650242ab875963e9c7615d9c4c99baa9c64a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>vectorAdd <<< N/32\uff0c32 v>> (gpu_a\uff0cgpu_b\uff0cgpu_c);</td></tr></table></body></html>\n\n",
+        "page_idx": 763
+    },
+    {
+        "type": "text",
+        "text": "We invoke the vectorAdd function with three arguments: gpu a, gpu b and gpu c. Let us now look at the expression: $< < < N / 3 2 , 3 2 > > >$ . This piece of code indicates to the GPU that we have $N / 3 2$ blocks, and each block contains 32 threads. Let us now assume that the GPU magically adds the two arrays and saves the results in the array gpu c in its physical memory space. The last step in the main function is to fetch the results from the GPU, and free space in the GPU. The code for it is as follows. ",
+        "page_idx": 763
+    },
+    {
+        "type": "table",
+        "img_path": "images/0cdb757614d83007203aa3ad43ed63d1318cc8c33b737d056352c28d5e475d7b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>/* Copy from the GPU to the CPU */</td></tr><tr><td>cudaMemcpy (c\uff0cgpu_c\uff0csize\uff0ccudaMemcpyDeviceToHost\uff09;</td></tr><tr><td>3</td></tr><tr><td>/* free space in the GPU */</td></tr><tr><td>1 cudaFree (gpu_a);</td></tr><tr><td>cudaFree (gpu_b);</td></tr><tr><td>cudaFree (gpu_c\uff09;</td></tr><tr><td>8</td></tr><tr><td>/* end of the main function */</td></tr></table></body></html>\n\n",
+        "page_idx": 763
+    },
+    {
+        "type": "text",
+        "text": "Now, let us define the function vectorAdd, which needs to be executed on the GPU. ",
+        "page_idx": 763
+    },
+    {
+        "type": "text",
+        "text": "/\\* The GPU kernel \\*/ __global__ void vectorAdd ( int \\*gpu a, int \\*gpu b, int \\*gpu c) { 3 /\\* compute the index \\*/ 4 int idx $\\mathbf { \\tau } = \\mathbf { \\tau }$ threadIdx.x $^ +$ blockIdx.x $*$ blockDim.x; 5 6 /\\* perform the addition \\*/ 7 gpu_c[idx] $\\mathbf { \\tau } = \\mathbf { \\tau }$ gpu_a[idx] + gpu_b[idx]; 8 ",
+        "page_idx": 764
+    },
+    {
+        "type": "text",
+        "text": "Here, we access some built in variables that are populated by the CUDA runtime. In general, a grid and a block have three axes (x, y, and z). Since we assume only one axis in the blocks and the grid in this example, we only use the x axis. The variable blockDim.x is equal to the number of threads in a block. If we had considered 2D grids, then the dimension of a block would have been $b l o c k D i m . x \\times b l o c k D i m . y$ . blockIdx. $x$ is the index of the block, and threadIdx. $x$ is the index of the thread in the block. Thus, the expression $t h r e a d I d x . x + b l o c k I d x . x * b l o c k D i m . x$ represents the index of the thread. Note that in this example, we associate each element of the arrays with a thread. Since the overhead of creation, initialization, and switching of threads is small, we can adopt this approach in the case of a GPU. In the case of a CPU that has large overheads with creating and managing threads, this approach is not feasible. Once, we compute the index of the thread, we perform the addition in Line 7. ",
+        "page_idx": 764
+    },
+    {
+        "type": "text",
+        "text": "The GPU creates $N$ copies of this kernel, and distributes it among $N$ threads. Each of the kernels computes a different index in Line 4, and proceeds to perform the addition in Line 7. We showed a simple example. However, it is possible to write extremely complicated programs using the CUDA extensions to C/C++ replete with synchronization statements, and conditional branch statements. The reader can consult the book by Farber [Farber, 2011] for an in-depth coverage of CUDA programming. ",
+        "page_idx": 764
+    },
+    {
+        "type": "text",
+        "text": "To summarize, let us show the entire GPU program. Note that we club the kernel of the GPU along with the code that is executed by the CPU into a single program. NVIDIA\u2019s compiler splits the single file into two binaries. One binary runs on the CPU and uses the CPU\u2019s instruction set, and the other binary runs on the GPU and uses the PTX instruction set. This is a classical example of a MPMD style of execution where we have different programs in different instruction sets, and multiple streams of data. Thus, we can think of the GPU\u2019s parallel programming model as a combination of SIMD, MPMD, and fine grained multithreading at the level of warps. We leave the readers with an artist\u2019s impression of a GPU (see Figure B.5). ",
+        "page_idx": 764
+    },
+    {
+        "type": "image",
+        "img_path": "images/2158880bbfc2cdd16f77e438bf37f7ccc8b79209b19a64a480bffa5eff21e57e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 764
+    },
+    {
+        "type": "image",
+        "img_path": "images/3a3977f38d5d38a8e78d3ae7de2ea1200dbed34bb69f0fc6189c68479f11f34f.jpg",
+        "img_caption": [
+            "Figure B.5: Artist\u2019s impression of a GPU "
+        ],
+        "img_footnote": [],
+        "page_idx": 765
+    },
+    {
+        "type": "text",
+        "text": "10   \n11 void main()   \n12 $^ { \\prime * }$ Declare three arrays a, b, and c \\*/   \n13 int a[N], b[N], c[N];   \n14   \n15 $^ { \\prime * }$ Declare the corresponding arrays in the GPU \\*/   \n16 int size $\\mathbf { \\sigma } = \\mathbf { \\sigma }$ N \\* sizeof(int);   \n17 int \\*gpu_a, \\*gpu_b, \\*gpu_c;   \n18   \n19 $^ { \\prime * }$ allocate space for the arrays in the GPU \\*/   \n20 cudaMalloc((void\\*\\*) &gpu_a, size);   \n21 cudaMalloc((void $^ { * * }$ ) &gpu_b, size);   \n22 cudaMalloc((void\\*\\*) &gpu_c, size);   \n23   \n24 $^ { \\prime * }$ initialize arrays, a and b \\*/   \n25   \n26   \n27 /\\* copy the arrays to the GPU $\\ast /$   \n28 cudaMemcpy (gpu_a, a, size, cudaMemcpyHostToDevice);   \n29 cudaMemcpy (gpu_b, b, size, cudaMemcpyHostToDevice);   \n30   \n31 /\\* invoke the vector add operation in the GPU \\*/ ",
+        "page_idx": 765
+    },
+    {
+        "type": "image",
+        "img_path": "images/4a98e6ee3d9d1b95543a75dd92f8b6a6a11e405553514625cb2f664be4732d0d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 766
+    },
+    {
+        "type": "text",
+        "text": "Bibliography ",
+        "text_level": 1,
+        "page_idx": 767
+    },
+    {
+        "type": "text",
+        "text": "[arm, a] The arm architecture with a focus on v7a and cortex-a8. www.arm.com/files/pdf/ ARM_Arch_A8.pdf. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[arm, b] Arm cortex-m3 introduction. www.arm.com/files/pdf/CortexM3_Uni_Intro.pdf. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[nic, ] Atm network interface. http://en.wikipedia.org/wiki/File:ForeRunnerLE_25_ ATM_Network_Interface_%281%29.jpg. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[bak, ] Bakhshali manuscripl. http://en.wikipedia.org/wiki/Bakhshali_manuscript/. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[dis, ] Compact disc. http://openclipart.org/detail/104191/ compact-disc-by-decosigner. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[arm, c] Cortex -a15 mpcore tm tm revision: r3p2 technical reference manual. www.arm.com. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[ccl, ] Creative commons share alike license 3.0. http://creativecommons.org/licenses/ by-sa/3.0/. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[arm, d] Exploring the design of the cortex-a15 processor. www.arm.com/files/pdf/ at-exploring_the_design_of_the_cortex-a15.pdf. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[gx8, ] Gnu x86 assembler. http://www.gnu.org. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[har, ] Hard disc \u2013 open clipart. http://openclipart.org/detail/170369/ hard-disk-by-ilnanny-170369. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[fir, ] Ieee 1394 standard. http://standards.ieee.org/findstds/standard/1394-1995. html. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[int, ] Intel 64 and ia 32 architectures software developer manuals. http://www.intel.com/ content/www/us/en/processors/architectures-software-developer-manuals.html.   \n[ind, ] Interesting facts about india \u2013 my india, my pride \u2013 national portal of india. http: //knowindia.gov.in/myindia/myindia_frame.php?id=10.   \n[mas, ] Microsoft macro assembler 8.0 (masm) package. http://www.microsoft.com/en-in/ download/details.aspx?id $\\ c =$ 12654. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[nas, ] The netwide assembler. http://www.nasm.us. Online: accessed on $2 1 ^ { s t }$ Nov, 2013. ",
+        "page_idx": 767
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 767
+    },
+    {
+        "type": "text",
+        "text": "[pci, ] Pci express specifications. http://www.pcisig.com/specifications/pciexpress. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[red, ] Red book (audio cd standard). http://www.princeton.edu/\\~achaney/tmve/ wiki100k/docs/Red_Book_(audio_CD_standard).html.   \n[ris, ] The risc-v instruction set manual volume i. www.riscv.org. Online: accessed on $1 6 ^ { t h }$ May, 2024.   \n[sat, ] Sata specifications. https://www.sata-io.org/technical-library. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[uni, ] The unicode standard. http://www.unicode.org/standard/standard.html. Online: accessed on $2 1 ^ { s t }$ Nov, 2013.   \n[usb, ] Usb specification. http://www.usb.org/developers/docs/. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[scs, ] Www virtual library for scsi. http://www.scsilibrary.com. Online: accessed on $1 2 ^ { t h }$ October, 2013.   \n[arm, 2000] (2000). ARM Architecture Reference Manual . ARM Limited.   \n[Abramovitch, 2001] Abramovitch, D. (2001). Magnetic and optical disk control: parallels and contrasts. In American Control Conference, 2001. Proceedings of the 2001, volume 1, pages 421\u2013428 vol.1.   \n[Adve and Gharachorloo, 1996] Adve, S. V. and Gharachorloo, K. (1996). Shared memory consistency models: A tutorial. computer, 29(12):66\u201376.   \n[Adve et al., 2003] Adve, V., Lattner, C., Brukman, M., Shukla, A., and Gaeke, B. (2003). Llva: a low-level virtual instruction set architecture. In Microarchitecture, 2003. MICRO-36. Proceedings. 36th Annual IEEE/ACM International Symposium on, pages 205 \u2013 216.   \n[Aho et al., 2006] Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. (2006). Compilers, Principles, Techniques, and Tools. Addison Wesley.   \n[Akkary et al., 2003] Akkary, H., Rajwar, R., and Srinivasan, S. T. (2003). Checkpoint processing and recovery: Towards scalable large instruction window processors. In Microarchitecture, 2003. MICRO-36. Proceedings. 36th Annual IEEE/ACM International Symposium on, pages 423\u2013434. IEEE.   \n[Arvind and Maessen, 2006] Arvind, A. and Maessen, J.-W. (2006). Memory model= instruction reordering+ store atomicity. In ACM SIGARCH Computer Architecture News, volume 34, pages 29\u201340. IEEE Computer Society.   \n[Asanovi\u00b4c and Patterson, 2014] Asanovic\u00b4, K. and Patterson, D. A. (2014). Instruction sets should be free: The case for risc-v. EECS Department, University of California, Berkeley, Tech. Rep. UCB/EECS-2014-146.   \n[Austin et al., 2002] Austin, T., Larson, E., and Ernst, D. (2002). SimpleScalar: An infrastructure for computer system modeling. IEEE Computer, 35(2):59\u201367.   \n[Baer, 2010] Baer, J.-L. (2010). Microprocessor Architecture: from simple pipelines to chip multiprocessors. Cambridge University Press.   \n[Balasubramonian et al., 2011] Balasubramonian, R., Jouppi, N. P., and Muralimanohar, N. (2011). Multi-core cache hierarchies. Synthesis Lectures on Computer Architecture, 6(3):1\u2013 153.   \n[Bergstra and Middelburg, 2012] Bergstra, J. A. and Middelburg, C. A. (2012). Instruction Sequences for Computer Science . Atlantis.   \n[Blythe, 2008] Blythe, D. (2008). Rise of the graphics processor. Proceedings of the IEEE, 96(5):761\u2013778.   \n[Boggs et al., 2004] Boggs, D., Baktha, A., Hawkins, J., Marr, D. T., Miller, J. A., Roussel, P., Singhal, R., Toll, B., and Venkatraman, K. (2004). The microarchitecture of the intel pentium 4 processor on 90nm technology. Intel Technology Journal, 8(1):1\u201317.   \n[Borrill, 1987] Borrill, P. (1987). Ieee 896.1: the futurebus. Electronics and Power, 33(10):628\u2013 631.   \n[Bourgeat et al., 2021] Bourgeat, T., Clester, I., Erbsen, A., Gruetter, S., Wright, A., and Chlipala, A. (2021). A multipurpose formal risc-v specification. arXiv preprint arXiv:2104.00762.   \n[Brent and Zimmermann, 2010] Brent, R. P. and Zimmermann, P. (2010). Modern Computer Arithmetic. Cambridge University Press.   \n[Brewer and Gill, 2008] Brewer, J. and Gill, M. (2008). Nonvolatile Memory Technologies with Emphasis on Flash: A Comprehensive Guide to Understanding and Using Flash Memory Devices. IEEE Press Series on Microelectronic Systems (Book 8). Wiley-IEEE Press.   \n[Brown et al., 2001] Brown, M. D., Stark, J., and Patt, Y. N. (2001). Select-free instruction scheduling logic. In Microarchitecture, 2001. MICRO-34. Proceedings. 34th ACM/IEEE International Symposium on, pages 204\u2013213. IEEE.   \n[Burgess et al., 2011] Burgess, B., Cohen, B., Denman, M., Dundas, J., Kaplan, D., and Rupley, J. (2011). Bobcat: Amd\u2019s low-power x86 processor. Micro, IEEE, 31(2):16\u201325.   \n[Butler et al., 2011] Butler, M., Barnes, L., Sarma, D. D., and Gelinas, B. (2011). Bulldozer: An approach to multithreaded compute performance. Micro, IEEE, 31(2):6\u201315.   \n[Carpenter and Doran, 1986] Carpenter, B. E. and Doran, R. W. (1986). Turing\u2019s ACE Report of 1946 and Other Papers. Technical report, Cambridge.   \n[Carter, 1995] Carter, J. W. (1995). Microprocessor Architecture and Microprogramming: A State Machine Approach. Prentice Hall.   \n[Cavanagh, 2013] Cavanagh, J. (2013). x86 Assembly Language and C Fundamentals. CRC Press.   \n[Celio et al., 2017] Celio, C., Chiu, P.-F., Nikolic, B., Patterson, D. A., and Asanovic, K. (2017). Boomv2: an open-source out-of-order risc-v core. In First Workshop on Computer Architecture Research with RISC-V (CARRV).   \n[Chen and Patterson, 2016] Chen, T. and Patterson, D. A. (2016). Risc-v geneology. EECS Department, University of California, Berkeley, Tech. Rep. UCB/EECS-2016-6.   \n[Cheng and Hu, 1999] Cheng, Y. and Hu, C. (1999). MOSFET Modeling and Bsim3 User\u2019s Guide. Kluwer Academic Publishers, Norwell, MA, USA.   \n[Consortium et al., 2006] Consortium, H. T. et al. (2006). Hypertransport i/o link specification revision 3.00. Document# HTC20051222-0046-0008.   \n[Conway and Hughes, 2007] Conway, P. and Hughes, B. (2007). The amd opteron north bridge architecture. Micro, IEEE, 27(2):10\u201321.   \n[Cormen et al., 2009] Cormen, T. H., Leiserson, C. E., Rivest, R. L., and Stein, C. (2009). Introduction to Algorithms. MIT Press, third edition.   \n[Cover and Thomas, 2013] Cover, T. M. and Thomas, J. A. (2013). Elements of Information Theory. Wiley.   \n[Culler et al., 1998] Culler, D., Singh, J. P., and Gupta, A. (1998). Parallel Computer Architecture: A Hardware/Software Approach. The Morgan Kaufmann series in Computer Architecture Design. Morgan Kaufmann.   \n[Dally and Poulton, 1998] Dally, W. J. and Poulton, J. W. (1998). Digital Systems Engineering. Cambridge University Press.   \n[Danowitz et al., 2012] Danowitz, A., Kelley, K., Mao, J., Stevenson, J. P., and Horowitz, M. (2012). Cpu db: recording microprocessor history. Communications of the ACM, 55(4):55\u201363.   \n[Das, 2010] Das, L. B. (2010). The X86 Microprocessors : Architecture and Programming (8086 to Pentium). Pearson.   \n[Downing and Meyer, 1997] Downing, T. and Meyer, J. (1997). Java Virtual Machine. O\u2019Reilly Media.   \n[Durr et al., 2009] Durr, S., Fodor, Z., Frison, J., Hoelbling, C., Hoffmann, R., Katz, S. D., Krieg, S., Kurth, T., Lellouch, L., Lippert, T., Szabo, K. K., and Vulvert, G. (2009). Abinitio determination of light hadron masses.   \n[Edler and Hill, 1999] Edler, J. and Hill, M. D. (1999). Dinero iv trace-driven uniprocessor cache simulator\u201d http://www. cs. wisc. edu/markhill.   \n[Elsner and Fenlason, 1994] Elsner, D. and Fenlason, J. (1994). Using as \u2013 The GNU Assembler.   \n[Farber, 2011] Farber, R. (2011). CUDA Application Design and Development. Morgan Kaufmann.   \n[Farquhar and Bunce, 2012] Farquhar, E. and Bunce, P. J. (2012). The MIPS Programmers Handbook . Morgan Kaufmann.   \n[Frolov et al., 2021] Frolov, V. A., Galaktionov, V. A., and Sanzharov, V. V. (2021). Investigation of risc-v. Programming and Computer Software, 47:493\u2013504.   \n[Gharachorloo et al., 1992] Gharachorloo, K., Adve, S. V., Gupta, A., Hennessy, J. L., and Hill, M. D. (1992). Programming for different memory consistency models. Journal of parallel and distributed computing, 15(4):399\u2013407.   \n[Gibson, 2011] Gibson, J. R. (2011). ARM Assembly Language an Introduction. Lulu.   \n[Gilreath and Laplante, 2003] Gilreath, W. F. and Laplante, P. A. (2003). Computer Architecture: A Minimalist Perspective. Springer.   \n[gnu.org, ] gnu.org. Gnu binutils. http://www.gnu.org/software/binutils.   \n[Greengard, 2020] Greengard, S. (2020). Will risc-v revolutionize computing? Communications of the ACM, 63(5):30\u201332.   \n[Gregg, 1998] Gregg, J. (1998). Ones and zeros: understanding boolean algebra, digital circuits, and the logic of sets. Wiley-IEEE Press.   \n[Guiady et al., 1999] Guiady, C., Falsafi, B., and Vijaykumar, T. N. (1999). Is sc+ ilp= rc? In Computer Architecture, 1999. Proceedings of the 26th International Symposium on, pages 162\u2013171. IEEE.   \n[Gwennap, 2010] Gwennap, L. (2010). Sandy bridge spans generations. Microprocessor Report, 9(27):10\u201301.   \n[Halfhill, 2008] Halfhill, T. R. (2008). Intel\u2019s tiny atom. Microprocessor Report, 22(4):1.   \n[Hamacher et al., 2001] Hamacher, C., Vranesic, Z., and Zaky, S. (2001). Computer Organization. McGrawHill.   \n[Hartstein et al., 2006] Hartstein, A., Srinivasan, V., Puzak, T. R., and Emma, P. G. (2006). Cache miss behavior: is it &#8730;2? In Proceedings of the 3rd conference on Computing frontiers, CF \u201906, pages 313\u2013320.   \n[Henessey and Patterson, 2010] Henessey, J. and Patterson, D. (2010). Computer Organization and Design: The Hardware/Software Interface. Morgan Kaufmann.   \n[Hennessy and Patterson, 2012] Hennessy, J. L. and Patterson, D. A. (2012). Computer architecture: a quantitative approach. Elsevier.   \n[Hill et al., 1999] Hill, M. D., Jouppi, N. P., and Sohi, G. S. (1999). Readings in Computer Architecture. The Morgan Kaufmann series in Computer Architecture Design. Morgan Kaufmann.   \n[Hohl, 2009] Hohl, W. (2009). ARM Assembly Language: Fundamentals and Techniques. CRC Press.   \n[Hopcroft et al., 2006] Hopcroft, J. E., Motwani, R., and Ulmann, J. D. (2006). Introduction to Automata Theory, Languages, and Computation. Prentice Hall.   \n[Hughes et al., 2013] Hughes, J. F., Dam, A. V., Mcguire, M., Sklar, D. F., Foley, J. D., Feiner, S. K., and Akeley, K. (2013). Computer Graphics: Principles and Practice. Addison Wesley.   \n[Husson, 1970] Husson, S. S. (1970). Microprogramming: Principles and Practices. Prentice Hall.   \n[Hwang, 2003] Hwang, K. (2003). Advanced computer architecture. Tata McGraw-Hill Education.   \n[Hwu and Patt, 1987] Hwu, W.-M. W. and Patt, Y. N. (1987). Checkpoint repair for high-performance out-of-order execution machines. Computers, IEEE Transactions on, 100(12):1496\u20131514.   \n[INTEL, 2010] INTEL, I. (2010). Intel r 64 and ia-32 architectures software developer\u2019s manual.   \n[ITRS, 2011] ITRS (2011). International Technology Roadmap for Semiconductors. http: //www.itrs.net/Links/2011ITRS/Home2011.htm.   \n[Jacob, 2009] Jacob, B. (2009). The memory system: you can\u2019t avoid it, you can\u2019t ignore it, you can\u2019t fake it. Synthesis Lectures on Computer Architecture, 4(1):1\u201377.   \n[Jacob et al., 2007] Jacob, B., Ng, S., and Wang, D. (2007). Memory Systems: Cache, DRAM, Disk. Morgan Kaufmann.   \n[Jerger and Peh, 2009] Jerger, N. E. and Peh, L.-S. (2009). On-chip networks. Synthesis Lectures on Computer Architecture, 4(1):1\u2013141.   \n[Kahan, 1996] Kahan, W. (1996). Ieee standard 754 for binary floating-point arithmetic. Lecture Notes on the Status of IEEE, 754.   \n[Kanter, 2016] Kanter, D. (2016). Risc-v offers simple, modular isa. Microprocessor Report, 1:1\u20135.   \n[Keleher et al., 1994] Keleher, P., Cox, A. L., Dwarkadas, S., and Zwaenepoel, W. (1994). Treadmarks: Distributed shared memory on standard workstations and operating systems. In USENIX Winter, volume 1994.   \n[Keltcher et al., 2003] Keltcher, C. N., McGrath, K. J., Ahmed, A., and Conway, P. (2003). The amd opteron processor for multiprocessor servers. Micro, IEEE, 23(2):66\u201376.   \n[Kohavi and Jha, 2009] Kohavi, Z. and Jha, N. K. (2009). Switching and Finite Automata Theory. Cambridge University Press.   \n[Koren, 2001] Koren, I. (2001). Computer Arithmetic Algorithms. CRC Press, second edition.   \n[Kreyszig, 2000] Kreyszig, E. (2000). Advanced Engineering Mathematics. Wiley, eigth edition.   \n[Krick et al., 2000] Krick, R. F., Hinton, G. J., Upton, M. D., Sager, D. J., and Lee, C. W. (2000). Trace based instruction caching. US Patent 6,018,786.   \n[Kumar, 2003] Kumar, V. R. (2003). Microprocessor x86 Programming. BPB.   \n[Lafore, 2002] Lafore, R. (2002). Data Structures and Algorithms in Java. Sams Publishing.   \n[Lin, 2011] Lin, M.-B. (2011). Introduction to VLSI Systems: A Logic, Circuit, and System Perspective. CRC Press.   \n[Lindholm et al., 2008] Lindholm, E., Nickolls, J., Oberman, S., and Montrym, J. (2008). Nvidia tesla: A unified graphics and computing architecture. Micro, IEEE, 28(2):39\u201355.   \n[Ling and Xing, 2004] Ling, S. and Xing, C. (2004). Coding Theory: A First Course. Cambridge University Press.   \n[Mano, 2007] Mano, M. M. (2007). Computer Systems Architecture. Pearson.   \n[Mezger et al., 2022] Mezger, B. W., Santos, D. A., Dilillo, L., Zeferino, C. A., and Melo, D. R. (2022). A survey of the risc-v architecture software support. IEEE Access, 10:51394\u201351411.   \n[Micheli, 1994] Micheli, G. D. (1994). Synthesis and Optimization of Digital Circuits. McGrawHill.   \n[Micheloni et al., 2010] Micheloni, R., Crippa, L., and Marelli, A. (2010). Inside NAND Flash Memories. Springer.   \n[Mitra, 1999] Mitra, T. (1999). Dynamic random access memory: A survey. Department of Computer Science, State University of New York at Stony Brook, 25.   \n[Muchnick, 1997] Muchnick, S. (1997). Advanced Compiler Design and Implementation. Morgan Kaufmann.   \n[Neubauer et al., 2007] Neubauer, A., Freudenberger, J., and Kuhn, V. (2007). Coding Theory: Algorithms, Architectures and Applications. Wiley-Blackwell.   \n[Owen and Steinman, 2008] Owen, J. and Steinman, M. (2008). North bridge architecture of amd\u2019s griffin microprocessor family. Micro, IEEE, 28(2):10\u201318.   \n[Parhami, 2009] Parhami, B. (2009). Computer Arithmetic: Algorithms and Hardware Designs. Oxford University Press.   \n[Patsidis et al., 2020] Patsidis, K., Nicopoulos, C., Sirakoulis, G. C., and Dimitrakopoulos, G. (2020). Risc-v 2: a scalable risc-v vector processor. In 2020 IEEE International Symposium on Circuits and Systems (ISCAS), pages 1\u20135. IEEE.   \n[Patt and Patel, 2003] Patt, Y. and Patel, S. (2003). Introduction to Computing Systems: From bits & gates to C & beyond. McGraw-Hill.   \n[Patterson and Waterman, 2017] Patterson, D. and Waterman, A. (2017). The risc-v reader: an open architecture atlas.   \n[Paul, 1993] Paul, R. (1993). SPARC Architecture, Assembly Language Programming and $C$ . Prentice Hall.   \n[Peterson et al., 1991] Peterson, C., Sutton, J., and Wiley, P. (1991). iwarp: a 100-mops, liw microprocessor for multicomputers. Micro, IEEE, 11(3):26\u201329.   \n[Petric et al., 2005] Petric, V., Sha, T., and Roth, A. (2005). Reno: A rename-based instruction optimizer, volume 33. IEEE Computer Society.   \n[Phelps and Parks, 2004] Phelps, A. M. and Parks, D. M. (2004). Fun and Games: MultiLanguage Development. Queue, 1(10):46\u201356.   \n[Pratt, 1995] Pratt, V. (1995). Anatomy of the pentium bug. In TAPSOFT\u201995: Theory and Practice of Software Development, pages 97\u2013107. Springer.   \n[Proakis and Salehi, 2007] Proakis, J. and Salehi, M. (2007). Digital Communications. McGrawHill.   \n[Quinn, 2003] Quinn, M. (2003). Parallel Programming in $C$ with OpenMP and MPI. Tata McGrawHill.   \n[Qureshi et al., 2011] Qureshi, M. K., Gurumurthi, S., and Rajendran, B. (2011). Phase change memory: From devices to systems. Synthesis Lectures on Computer Architecture, 6(4):1\u2013134.   \n[Radhakrishnan et al., 2007] Radhakrishnan, S., Chinthamani, S., and Cheng, K. (2007). The blackford north bridge chipset for the intel 5000. Micro, IEEE, 27(2):22\u201333.   \n[Ram\u0131\u00b4rez et al., 2020] Ram\u0131\u00b4rez, C., Hern\u00b4andez, C. A., Palomar, O., Unsal, O., Ram\u0131\u00b4rez, M. A., and Cristal, A. (2020). A risc-v simulator and benchmark suite for designing and evaluating vector architectures. ACM Transactions on Architecture and Code Optimization (TACO), 17(4):1\u201330.   \n[russell, 1978] russell, r. m. (1978). the cray-1 computer system. communications of the acm, 21(1):63\u201372.   \n[Sarangi, ] Sarangi, S. R. Next-Gen Computer Architecture. White Falcon, 1st edition edition.   \n[Sarangi et al., 2014] Sarangi, S. R., Ananthanarayanan, G., and Balakrishnan, M. (2014). Lightsim: A leakage aware ultrafast temperature simulator. In ASPDAC.   \n[Sarangi et al., 2006] Sarangi, S. R., Tiwari, A., and Torrellas, J. (2006). Phoenix: Detecting and recovering from permanent processor design bugs with programmable hardware. In Proceedings of the 39th Annual IEEE/ACM International Symposium on Microarchitecture, pages 26\u201337. IEEE Computer Society.   \n[Silberschatz et al., 2008] Silberschatz, A., Galvin, P. B., and Gagne, G. (2008). Operating System Concepts. Wiley, 8 edition.   \n[Sima et al., 1997] Sima, D., Fountain, T., and Karsuk, P. (1997). Advanced Computer Architectures: A Design Space Approach. Addison-Wesley.   \n[Singh and Sarangi, 2021] Singh, S. S. and Sarangi, S. R. (2021). Isamod: A tool for designing asips by comparing different isas. In 2021 34th International Conference on VLSI Design and 2021 20th International Conference on Embedded Systems (VLSID), pages 1\u20136. IEEE.   \n[Sklar, 2001] Sklar, B. (2001). Digital Communications: Fundamentals and Applications. Prentice Hall.   \n[Smith and Sohi, 1995] Smith, J. E. and Sohi, G. S. (1995). The microarchitecture of superscalar processors. Proceedings of the IEEE, 83(12):1609\u20131624.   \n[Snir et al., 1995] Snir, M., Otto, S. W., Walker, D. W., Dongarra, J., and Huss-Lederman, S. (1995). MPI: the complete reference. MIT press.   \n[Sorin et al., 2011] Sorin, D. J., Hill, M. D., and Wood, D. A. (2011). A primer on memory consistency and cache coherence. Synthesis Lectures on Computer Architecture, 6(3):1\u2013212.   \n[Srinivasan et al., 2004] Srinivasan, J., Adve, S. V., Bose, P., and Rivers, J. A. (2004). The case for lifetime reliability-aware microprocessors. In Proceedings of the 31st annual international symposium on Computer architecture, ISCA \u201904, pages 276\u2013.   \n[Stallings, 2010] Stallings, W. (2010). Computer Organization and Architecture: Designing for Performance. Pearson.   \n[Stangherlin and Sachdev, 2022] Stangherlin, K. and Sachdev, M. (2022). Design and implementation of a secure risc-v microprocessor. IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 30(11):1705\u20131715.   \n[Stenstrom, 1990] Stenstrom, P. (1990). A survey of cache coherence schemes for multiprocessors. Computer, 23(6):12\u201324.   \n[Streetman and Banerjee, 2005] Streetman, B. and Banerjee, S. (2005). Solid State Electronic Devices. Prentice-Hall.   \n[Sze and Ng, 2006] Sze, S. M. and Ng, K. K. (2006). Physics of semiconductor devices. WileyInterscience.   \n[Tanenbaum, 2007] Tanenbaum, A. S. (2007). Modern Operating Systems. Prentice Hall, third edition.   \n[Tarjan et al., 2006] Tarjan, D., Thoziyoor, S., and Jouppi, N. P. (2006). Cacti 4.0. HP laboratories, Technical report.   \n[Taub and Schilling, 1977] Taub, H. and Schilling, D. L. (1977). Digital integrated electronics. McGraw-Hill New York.   \n[Verma et al., 2008] Verma, A. K., Brisk, P., and Ienne, P. (2008). Variable Latency Speculative Addition: A New Paradigm for Arithmetic Circuit Design. In DATE, pages 1250\u20131255.   \n[von Neumann, 1945] von Neumann, J. (1945). First Draft of a Report on the EDVAC. Technical report.   \n[Vranas et al., 2006] Vranas, P., Bhanot, G., Blumrich, M., Chen, D., Gara, A., Heidelberger, P., Salapura, V., and Sexton, J. C. (2006). The BlueGene/L Supercomputer and Quantum ChromoDynamics. In Proceedings of the 2006 ACM/IEEE conference on Supercomputing, SC \u201906, New York, NY, USA. ACM.   \n[Wakerly, 2000] Wakerly, J. F. (2000). Digital design: principles and practices. Prentice-Hall, Inc.   \n[Ware et al., 2010] Ware, M., Rajamani, K., Floyd, M., Brock, B., Rubio, J. C., Rawson, F., and Carter, J. B. (2010). Architecting for power management: the ibm R\u20dd power7 $\\mathrm { T M }$ approach. In High Performance Computer Architecture (HPCA), 2010 IEEE 16th International Symposium on, pages 1\u201311. IEEE.   \n[Waterman, 2016] Waterman, A. S. (2016). Design of the RISC-V instruction set architecture. University of California, Berkeley.   \n[Wessman et al., 2021] Wessman, N.-J., Malatesta, F., Andersson, J., Gomez, P., Masmano, M., Nicolau, V., Le Rhun, J., Cabo, G., Bas, F., Lorenzo, R., et al. (2021). De-risc: the first risc-v space-grade platform for safety-critical systems. In 2021 IEEE space computing conference (SCC), pages 17\u201326. IEEE.   \n[Whitesitt, 2010] Whitesitt, J. E. (2010). Boolean Algebra and its Applications. Dover Books on Computer Science.   \n[Wikipedia, ] Wikipedia. Dadda multiplier. http://en.wikipedia.org/wiki/Dadda_ multiplier. Accessed on Oct 22nd, 2012.   \n[Yeager, 1996] Yeager, K. (1996). The mips r10000 superscalar microprocessor. Micro, IEEE, 16(2):28\u201341.   \n[Yeh and Patt, 1991] Yeh, T.-Y. and Patt, Y. N. (1991). Two-level adaptive training branch prediction. In Proceedings of the 24th annual international symposium on Microarchitecture, pages 51\u201361. ACM.   \n[Yeh and Patt, 1992] Yeh, T.-Y. and Patt, Y. N. (1992). Alternative implementations of twolevel adaptive branch prediction. In ACM SIGARCH Computer Architecture News, volume 20, pages 124\u2013134. ACM.   \n[Yeh and Patt, 1993] Yeh, T.-Y. and Patt, Y. N. (1993). A comparison of dynamic branch predictors that use two levels of branch history. ACM SIGARCH Computer Architecture News, 21(2):257\u2013266.   \n[Yiu, 2009] Yiu, J. (2009). The Definitive Guide to ARM Cortex-M3. Newnes.   \n[Yiu, 2011] Yiu, J. (2011). The Definitive Guide to ARM Cortex-M0. Newnes.   \n[Yourst, 2007] Yourst, M. (2007). Ptlsim: A cycle accurate full system x86-64 microarchitectural simulator. In ISPASS, pages 23\u201334. ",
+        "page_idx": 768
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 769
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 770
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 771
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 772
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 773
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 774
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 775
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 776
+    },
+    {
+        "type": "text",
+        "text": "Index ",
+        "text_level": 1,
+        "page_idx": 777
+    },
+    {
+        "type": "text",
+        "text": "1\u2019s Complement, 65   \n2 Phase Handshaking, 668   \n2\u2019s Complement, 67 alternative representation, 73 properties, 70 overflow checking, 73 sign extension, 72   \n2-bit Saturating Counter, 489   \n2-bit Saturating Counter-Based Branch Predictor, 489   \n2.5D Memory Organization, 288   \n4 Phase Handshaking, 667 ",
+        "page_idx": 777
+    },
+    {
+        "type": "text",
+        "text": ", 447 ",
+        "page_idx": 777
+    },
+    {
+        "type": "text",
+        "text": "Access Graph, 606   \nAddition, 305   \nAddress Distance, 513   \nAddress format, 103   \nAddressing mode, 104, 105 base-index, 105 base-index-offset, 105 immediate, 105 memory-direct, 105 memory-indirect, 105 register, 105 register-indirect, 105   \nAgeing, 480   \nALU, 361   \nAmbient Temperature, 485   \nAMD Bobcat, 741   \nAMD Bulldozer, 743   \nAmdahl\u2019s Law, 578   \nAncient Number Systems, 57 Indian numerals, 58 Roman numerals, 58   \nAntifuse, 294   \nArbiter, 677   \nArbitration, 676 bus grant signal, 677 bus request signal, 677 star topology, 677   \nArbitration Policy, 677   \nArchitecture, 14   \nARM condition code, 153 condition codes, 152 CPSR register, 146 instruction encoding, 163 shifter operand, 145   \nARM assembly, 139   \nARM Cortex-A15, 738   \nARM Cortex-A8, 736   \nARM Cortex-M3, 734   \nARM instruction adc, 147 add, 141 and, 141 b, 148 beq, 148 bic, 141 bl, 150 bne, 148 branch instructions, 148 cmn, 147 cmp, 147 conditional instruction, 152 eor, 141 ldmfd, 160 ldr, 155 mla, 142 mov, 140 mul, 142 mvn, 140 orr, 141 rsb, 141 rsc, 147 ",
+        "page_idx": 777
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 777
+    },
+    {
+        "type": "text",
+        "text": "Booth Multiplier, 324   \nBranch Prediction, 487   \nBranch Target Buffer, 489   \nBss Section, 545   \nBubble, 435   \nBuffering, 669   \nBurst Error, 675   \nBurst Mode, 690   \nBus, 382   \nBus Controller, 649   \nBus Frequency, 654   \nBus Master, 677   \nBus Transaction, 681   \nByte, 39, 47   \nByte Stuffing, 670 ",
+        "page_idx": 778
+    },
+    {
+        "type": "text",
+        "text": "sbc, 147 smull, 142 stmfd, 160 str, 155 sub, 141 teq, 147 tst, 147 umull, 142 ARM instruction set, 139 machine model, 139 registers, 139 Array of CAM Cells, 290 Array of DRAM Cells, 293 Array of SRAM Cells, 287 ASCII format, 82 Assembler, 95 Assembly language, 94 generic statement structure, 102 label, 102 statement, 100 Assembly language file structure, 100 Associativity Rule, 539 Asymmetric Multiprocessing, 569 Asymptotic time complexity, 310 Asynchronous Bus, 665 Asynchronous I/O, 666 clock detection, 665 clock recovery, 665 Atomic Instruction, 187 Atomicity, 589 Back Side Bus, 650 Backplane Bus, 650 Backward Error Correction, 671 Bias Based Representation, 66 Big endian, 98 Binary, 19 Binary Number System, 59 Bisection Bandwidth, 625 Bit, 39, 47 Bit Error Rate, 670 Bit Line, 287 Bit Period, 657 Bit Stuffing, 670 Boolean Algebra, 50 ",
+        "page_idx": 778
+    },
+    {
+        "type": "text",
+        "text": "Cache, 516 associativity, 524 cache hit, 516 cache miss, 516 data read operation, 528 data write operation, 528 global miss rate, 536 insert operation, 529, 530 local miss rate, 536 lookup, 520 operations, 519 replacement policy, 530 replacement schemes, 530 way, 524 write back, 528 write through, 528   \nCache Bank, 598   \nCache Coherence, 596, 598 directory protocol, 601 write-invalidate protocol, 602 write-update protocol, 600   \nCallee, 116   \nCaller, 116   \nCAM Cell, 289 match line, 289   \nCard, 648   \nCarry, 306   \nCarry lookahead adder, 314   \nCarry select adder, 313 ",
+        "page_idx": 778
+    },
+    {
+        "type": "text",
+        "text": "Case Studies, 733   \nChannel, 267   \nCharge Carriers, 265   \nelectron, 265   \nhole, 265   \nCheckerboard Design, 622   \nChip Package, 480   \nChipset, 649   \nChurch Turing Thesis, 26   \nCISC, 21   \nClock, 279   \nClock Detection, 665   \nClock Recovery, 665   \nClocked SR Latch, 280   \nCluster Computer, 625   \nCMOS Logic, 268   \nCoarse-Grained Multithreading, 611   \nCode Reordering, 430   \nCoherence, 584   \naxioms, 584   \nColumn major, 99   \nComma, 670   \nCompiler, 92   \nComputer, 14   \nComputer arithmetic, 305   \nConsensus Rule, 52   \nConstant Linear Velocity, 716   \nContent Addressable Memory, 289   \nContext of a Program, 461   \nControl Hazard, 427   \nControl Path, 363   \nControl Unit, 375   \nCPI, 467   \nCPU, 16   \nCritical Word First, 540   \nCross-compiler, 93   \nCrosstalk, 670   \nCUDA, 760, 762   \nblock, 762   \nCTA, 762   \ngrid, 762   \nkernel, 760   \nprogram, 762   \nCurrent Privilege Level (CPL), 464   \nCycle Stealing Mode, 690 ",
+        "page_idx": 779
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 779
+    },
+    {
+        "type": "text",
+        "text": "Cyclic Redundancy Check (CRC) Codes, 675   \nD Flip-flop, 283   \nDaisy Chain Based Arbitration, 6   \nDaisy Chain Bus, 678   \nData Array, 520   \nData Hazard, 426 RAW hazard, 426 WAR hazard, 426 WAW hazard, 426   \nData Lane, 618   \nData Link Layer, 669   \nData Path, 363   \nData Section, 545   \nData Strobe Encoding, 699   \nDDR Memory, 293 DDR 1, 293 DDR 2, 293 DDR 3, 293   \nDe Morgan\u2019s Laws, 52   \nDecoder, 272   \ndecoder, 131   \nDecoding, 360   \nDelay Slot, 432   \nDelayed Branch, 432   \nDemultiplexer, 274   \nDenormal Numbers, 79   \nDevice Driver, 543   \nDiffusion, 266   \nDigital Logic, 263   \nDiode, 266   \nDirect Mapped Cache, 522   \nDirect Memory Access, see DMA   \nDirectory, 601   \nDirectory Protocol, 601   \nDisplacement, 184   \nDivision, 333   \nDMA, 689 burst mode, 690 cache snoop engine, 690 cycle stealing mode, 690   \nDoping, 265   \nDouble Precision Numbers, 80   \nDrain, 267   \nDRAM, 291 ",
+        "page_idx": 779
+    },
+    {
+        "type": "text",
+        "text": "Drift, 266   \nDynamic Instruction, 469   \nDynamic Power, 481   \nDynamic RAM (DRAM), 291   \nDynamic Voltage Frequency Scaling   \n486   \nDynamically Loaded Libraries, 546 ",
+        "page_idx": 780
+    },
+    {
+        "type": "text",
+        "text": "Early Restart, 540   \nEdge Sensitive, 281   \nEdge Sensitive SR Flip-flop, 281   \nEEPROM, 717   \nEffective memory address, 106   \nEncoder, 274   \nEnergy Delay $^ 2$ , 485   \nEPIC, 493   \nEPROM, 717   \nError Detection and Correction, 670   \nException, 458   \nExecutable, 19   \nExecute Unit, 369   \nFail Stop Failure Model, 710   \nFC (Fiber Channel) , see also SCSI   \nfcsr, 245   \nFeature Size, 571   \nFetch Unit, 361   \nfflags, 245   \nFine-Grained Multithreading, 613   \nFireWire Protocol, 699   \nFirmware, 381   \nFlash program/erase cycle, 722   \nFlash Memory, 717 block, 721 floating gate transistor, 718 page, 721 read disturbance, 723 wear leveling, 722   \nFlip-flop, 280   \nFloating Gate Transistor, 718   \nFloating point addition opposite signs, 346   \nFloating Point Control and Status 245   \nFloating point division, 349 ",
+        "page_idx": 780
+    },
+    {
+        "type": "text",
+        "text": "Goldschmidt division, 349 Newton-Raphson division, 350 simple method, 349 Floating Point Mathematics, 81 Floating point multiplication, 347 Floating Point Numbers, 74 binary, 75 IEEE 754 format, 77 normal form, 76 special numbers, 78 Floating Point Rounding, 344 Floating point subtraction, 346 Flynn\u2019s Classification, 580 Forward Bias, 266 Forward Error Correction, 671 Forwarding, 442 Forwarding Conditions, 452 Forwarding Unit, 453 Frame, 550 Framing, 669 Front Side Bus, 650 Full Adder, 306 Full Duplex Bus, 680 Fully Associative Cache, 520 ",
+        "page_idx": 780
+    },
+    {
+        "type": "text",
+        "text": "GCC Intrinsics, 618   \nGenerate function, 314   \nGeneric I/O Device, 644   \nGFLOPS, 476   \nGlobal Descriptor Table (GDT), 181   \nGlobal Miss Rate, 536   \nGoldschmidt division, 349   \nGPU, see Graphics Processors   \nGraphics Pipeline, 755 depth buffering, 755 rendering, 755   \nGraphics Processors, 753 CUDA programming model, see CUDA ",
+        "page_idx": 780
+    },
+    {
+        "type": "text",
+        "text": "Half adder, 306   \nHalf Duplex Bus, 680   \nHamming Code, 675   \nHamming Distance, 675   \nHappens Before Relationship, 606   \nHard Disk, 703   \ncylinder, 707 ",
+        "page_idx": 780
+    },
+    {
+        "type": "text",
+        "text": "head, 704 platter, 704 read head, 704 rotational latency, 709 seek time, 709 servo control, 708 track, 704 transfer time, 709 write head, 704 zoned-bit recording(zbr), 706   \nHardwired Control Unit, 375   \nHarvard Architecture, 34   \nHazard control, 427 data, 426 structural, 429   \nHazards, 422   \nHeap, 546   \nHeat Sink, 480   \nHexadecimal Number System, 60   \nHigh level language, 92   \nHold Time, 284   \nHorizontal Microprogramming, 406   \nHyperthreading, 614   \nI/O Address Space, 683   \nI/O and Storage, 643   \nI/O Case Studies, 690   \nI/O Clock, 657   \nI/O Devices, 643   \nI/O Layers, 652 data link layer, 652 network layer, 652 physical layer, 652 protocol layer, 652   \nI/O Port, 643, 644 software interface, 682   \nI/O Port Addressing port-mapped I/O, 685 memory-mapped i/o, 686   \nI/O Routing Table, 685   \nIDE (Integrated Drive Electronics), 693   \nIEEE 754 Format, 77 denormal numbers, 79 infinity, 78 ",
+        "page_idx": 781
+    },
+    {
+        "type": "text",
+        "text": "NAN, 78 ILP, 496 Immediate, 100 In-order Pipeline, 426 Inorder Pipeline, 491 Inorder Processor, 491 Instruction definition, 18 Instruction format branch, 127 immediate, 128 register, 128 Instruction Level Parallelism, 496 Instruction Packet, 418 Instruction Queue, 495 Instruction Select, 495 Instruction set architecture, 19 complete, 20 concise, 20 generic, 21 multiple instruction ISA, 31 simple, 21 Single Instruction ISA, 30 Instruction Wakeup, 495 Instruction Window, 495 Intel 8086, 175 Intel Atom, 746 Intel Sandy Bridge, 748 Interconnection Networks, see Network-on-Chip Interrupt, 457 Interrupt Handler, 457 interrupt masking, 688 Interrupts, 688 Inverted Page Table, 553 Inverter, 268 IPC, 469 ISA, 19 Iterative Multiplier, 320 JK Flip-flop, 282 Karnaugh Maps, 54 ",
+        "page_idx": 781
+    },
+    {
+        "type": "text",
+        "text": "Kernel, 543   \nKIPS, 476   \nLast Level Cache (LLC), 598 ",
+        "page_idx": 781
+    },
+    {
+        "type": "text",
+        "text": "Leakage Current, 483   \nLeakage Power, 483   \nLevel Sensitive, 281   \nLinear Memory Model, 180   \nLink, 623   \nLittle endian, 98   \nLoad Store Queue, 495   \nLocal Descriptor Table (LDT), 181   \nLocal Miss Rate, 536   \nLogic Gates, 52   \nLogical Operator and, 49 nand, 50 nor, 50 not, 49 or, 49 xor, 51   \nLogical Operators, 49   \nLoop Buffer, 739   \nLoosely Coupled Multiprocessing, 572   \nLow level programming language, 94   \nLSB, 60   \nLVDS (Low Voltage Differential Signaling) , 655   \nMain Memory, 515   \nManchester Encoding, 658   \nMaster Slave Flip-flop, 281   \nMaster-slave D Flip-flop, 283   \nMemory, 286 theoretical definition, 29   \nMemory Access Unit, 372   \nMemory Consistency, 585   \nMemory Management Unit, 555   \nMemory Map, 544   \nMemory Model, 586   \nMemory System, 507 average memory access time, 536 performance, 535   \nMemory-Mapped Files, 546   \nMemory-Mapped I/O, 685, 686   \nMESI Protocol, 605   \nMesochronous Bus, 661   \nMetastability, 284   \nMFLOPS, 476   \nMicroassembly Language, 387   \nMicrocode, 380   \nMicrocode Preamble, 391   \nMicrocontrol Unit, 387   \nMicroinstruction, 380   \nMicroprogram Counter, 387   \nMicroprogram Memory, 387   \nMicroprogrammed Processor, 380 decode unit, 383 register file, 384   \nMicroprogrammed processor alu, 385 data path, 382, 386 fetch unit, 383 memory unit, 386   \nMicroprogramming, 380   \nMIMD, 580   \nminterm, 54   \nMIPS, 476   \nMISD, 580   \nMMU, 555   \nModifiers, 124   \nMoore\u2019s Law, 570   \nMotherboard, 649   \nMPMD, 580   \nMSB, 60   \nMSI Protocol, 600   \nMulticomputer, 572   \nMulticore, 569   \nMultidrop Bus, 679   \nMultiple instruction ISA, 31   \nMultiple Issue In-Order Pipeline, 491   \nMultiplexer, 272   \nMultiplication, 319 multiplicand, 319 multiplier, 319 product, 319   \nMultiprocessing, 569   \nMultiprocessor Systems, 567   \nMultithreaded Processors, 610   \nMultithreading, 610   \nN-type Semiconductor, 265   \nNAND Gate, 269 ",
+        "page_idx": 782
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 782
+    },
+    {
+        "type": "text",
+        "text": "NASM, 184 ",
+        "page_idx": 782
+    },
+    {
+        "type": "text",
+        "text": "NBTI, 480   \nNeed for a Fast Memory System, 508   \nNegative Integers, 65 1\u2019s complement , 65 2\u2019s complement , 67 bias-based representation, 66 sign magnitude representation, 65   \nNetwork Diameter, 625   \nNetwork Layer, 682   \nNetwork-on-Chip, 622 butterfly, 630 chain, 625 fat tree, 626 folded torus, 629 hypercube, 629 mesh, 627 ring, 625 torus, 627   \nNewton-Raphson division, 350   \nNMOS Transistor, 267 channel, 267 drain, 267 source, 267   \nNOC, see Network-on-Chip   \nNon Return to Zero (NRZ) Protocol, 659   \nNon Return to Zero (NRZI) Inverted Protocol, 660   \nNon-restoring division, 338   \nNop, 123, 430   \nNOR Gate, 269   \nNormal Form, 76   \nNorth Bridge, 650   \nNumber Circle, 69   \nNVIDIA Tesla Architecture, 756 computation on a GPU, 760 ROP (Raster Operations Processor), 758 SM, 758 SM (Streaming Multiprocessor), 759 TPC, 758 work distribution, 757   \nO notation, 310   \noldSP, 462   \nOpcode, 125   \nOperand Fetch Unit, 364, 366   \nOperating System, 543   \nOptical Disk, 713 Blu-ray, 713 CD, 713 DVD, 713 layers, 715 physics, 714 reader, 715   \nOptical disk constant linear velocity, 716   \norganization, 14   \nOut-of-order Pipeline, 426, 494   \nOut-of-order Processor, 494 instruction queue, 495 instruction select, 495 instruction wakeup, 495 instruction window, 495 load store queue, 495 register renaming, 495 reorder buffer, 495   \nOverflow, 67   \nOverlap Problem, 548   \nP-N Junction, 266   \nP-type Semiconductor, 265   \nPage, 550   \nPage Fault, 556   \nPage Table, 550 single level, 550 two level, 552   \nParity Bit, 671   \nPartial product, 319   \nPartial sum, 319   \nPATA (Parallel ATA), 693   \nPC, 96   \nPCI Express, 691 expansion slots, 692 lane, 691 striping, 691   \nPerformance, 467   \nPerformance Equation, 469   \nPerformance of a Non-Ideal Pipeline, 472 ",
+        "page_idx": 783
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 783
+    },
+    {
+        "type": "text",
+        "text": "Octal Number System, 60   \noldFlags, 462   \noldPC, 461   \nPerformance of an Ideal Pipeli   \nPeripherals, 643   \nPersistent State, 701   \nPFLOPS, 476   \nPhase Locked Loop (PLL), 665   \nPhysical Address, 549   \nPhysical Address Space, 535   \nPhysical Layer, 652   \nPhysical Memory, 515   \nPhysical View of Memory, 595   \nPipeline, 415   \nexceptions, 457   \ninterrupts, 457   \nPipeline Bubble, 435   \nPipeline Diagram, 422   \nPipeline Flush, 488   \nPipeline Hazards, 422   \nPipeline Interlock, 433   \nPipeline Latch, 417   \nPipeline Register, 417   \nPipeline Stall, 433   \nPipelined Processor, 413, 415   \nPipelining, 413\u2013415   \ninterlocks, 433   \nPLA, 295   \nAND plane, 298   \ncell, 296   \nOR plane, 298   \nPlesiochronous Bus, 662   \nPMOS Transistor, 268   \nPoint-to-Point Bus, 679   \nPolling, 687   \nPort, 367   \nPort-Mapped I/O, 685   \nPositive Integers, 57   \nPower, 479   \ndynamic power, 481   \nPower Wall, 479   \nPrecharging, 288   \nPrecise Exceptions, 459   \nPredicated Instructions, 621   \nPrefetcher, 538   \nPrimary Page Table, 552   \nPriority Encoder, 276   \nPrivate Cache, 595 ",
+        "page_idx": 783
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 784
+    },
+    {
+        "type": "text",
+        "text": "Privileged Instruction, 463   \nProcess, 576   \nprocess, 542   \nProcess Management, 543   \nProcessor, 16 execution unit, 369 instruction fetch, 361 memory access unit, 372 operand fetch unit, 364 register writeback unit, 374   \nProcessor Design, 359   \nProgram counter, 32   \nProgram Order, 491, 586   \nProgram State, 461   \nProgrammable Interrupt Controller (PIC), 688   \nProgrammable Logic Array, see PLA   \nPROM (Programmable ROM) Memories, 294   \nPropagate function, 314   \nProtocol Layer, 686   \nRAID, 709 data striping, 710 distributed parity, 713 RAID 0, 710 RAID 1, 710 RAID 2, 711 RAID 3, 712 RAID 4, 712 RAID 5, 713 RAID 6, 713   \nRAID Arrays, see RAID   \nRead Only Memory (ROM), 293   \nReduce Operation, 578   \nRefresh Rate, 753   \nRegister File, 361   \nRegister Renaming, 427, 495   \nRegister spilling, 117   \nRegister transfer notation, 105   \nRegister Window, 464   \nRegister Writeback Unit, 374   \nRegisters, 285 parallel in\u2013parallel out, 285 serial in\u2013parallel out, 286   \nRenormalization, 346   \nReorder Buffer, 495   \nReplacement Policy SATA (Serial ATA), 693 fifo, 530 Scatter-Gather Operation, 617 lru, 531 SCSI, 693 pseudo lru, 531 LUN, 695 random, 530 SCSI (Small Computer System Interface)   \nRestoring division, 334 SDRAM (synchronous DRAM), 293   \nReturn address, 115 SEC code, 674   \nReturn Address Stack, 739 sec:ioport, 682   \nReturn to Zero(RZ) Protocol, 657 SECDED, 675   \nReverse Bias, 266 Secondary Page Table, 552   \nRipple carry adder, 309 Seek Time, 709   \nRISC, 21 Segment Descriptor Cache, 181   \nRISC-V, 225 Segmented Memory Model, 180 addition and subtraction instructions, 231 Self Clocked Signal, 659 conditional branches, 235 Sense Amplifiers, 288 instruction encoding, 251 Sequential Consistency, 587 integer instructions, 229 Sequential Logic, 277 load and store instructions, 241 Serial Interconnect, 691 logical and shift instructions, 233 Set Associative Cache, 524 machine model, 226 Setup Time, 284 moving values, 229 Shaders, 756 multiplication and division instructions, 232 Shared Cache, 595 registers, 228 Shared Caches, 598 unconditional branches, 239 Shared Microprogram Bus, 402   \nRISC-V branch instructions, 235 read bus, 402   \nRISC-V floating point instructions, 245 write bus, 402 arithmetic, 248 Shift and rotate instructions, 144 comparison, 250 Shift Register, 286 conversion, 249 Sign Extension, 72 flags, 246 Sign Magnitude Representation, 65 loads and stores, 247 Silicon-Based Transistors, 264 registers, 245 SIMD, 580 rounding modes, 246 SIMD Multiprocessors, 614   \nROB, 495 Simple Synchronous Bus, 661   \nRotational Latency, 709 SimpleRisc, 107   \nRounding, 344 arithmetic instructions, 108   \nRouter, 623 call and return instructions, 121   \nRow major, 99 conditional branch instruction, 112 encoding, 125   \nSAS, 694 instruction formats, 131 initiator, 695 load and store instructions, 111 nearline SAS, 695 logical instructions, 110 target, 695 machine model, 108   \nSAS , see also SCSI modifiers, 124   \nSAS (Serially Attached SCSI), see SCSI register transfer instruction, 108 ",
+        "page_idx": 784
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 785
+    },
+    {
+        "type": "text",
+        "text": "Superscalar, 491   \nSwap Space, 554   \nSymmetric Multiprocessing, 569   \nSynchronization Sublayer, 661   \nSynchronous Bus, 661   \ndelay element, 662   \nSyndrome, 673   \nSystem on Chip (SOC), 651   \nSystem Utilities, 543   \nSystolic Array, 615   \nT State, 436   \nTag Array, 520   \nTemperature, 479, 484   \nTemporal Locality, 510   \nTernary Signaling, 656   \nText Section, 545   \nTFLOPS, 476   \nThermal Interface Material (TIM), 480   \nThermal Resistance Matrix, 485   \nThread, 575   \nhardware, 612   \nsoftware, 612   \nTiles, 622   \nTransaction-Oriented Buses, 679   \nTransfer Multiplexer, 402   \nTransfer Time, 709   \nTransmission of Multiple Bits, 656   \nTransmission Sublayer, 652   \nTuring Complete, 28   \nTuring Machine, 23   \nTypes of instructions, 103   \nshift instructions, 110   \nunconditional branch instruction, 1   \nSimultaneous Multithreading, 613   \nSingle Ended Signaling, 654   \nSingle Error Correction (SEC), 672   \nSingle Error Detection, 671   \nSingle instruction ISA, 30   \nSISD, 580   \nSize Problem, 548   \nSizes of Integers, 63   \nSlice, 622   \nSMP, 569   \nSMT, see Simultaneous Multithreading   \nSoft Errors, 710   \nSoftware Solutions to Hazards, 430   \nSource, 267   \nSource Synchronous Bus, 664   \nSouth Bridge, 650   \nSpatial Locality, 510   \nSPEC Benchmarks, 475   \nSpeculative Instructions, 487   \nSplit Transaction Buses, 681   \nSPMD, 580   \nSpreader, 480   \nSquare Root Rule, 539   \nSR Latch, 277   \nSRAM, 286   \nSRAM Cell, 286   \nStack, 118, 546   \nStack Distance, 511   \nStatic Instruction, 469   \nStatic Power, see Leakage Power   \nStatic RAM (SRAM), 286   \nStorage, 701   \nStored Program Concept, 35   \nStrings, 82   \nascii, 82   \nunicode, 82   \nStrip Mining, 619   \nStriping, 691   \nStrobe Signal, 666   \nStrongly Coupled Multiprocessing, 572   \nStructural Hazard, 429   \nSubtract and branch if negative, 30   \nSum, 306 ",
+        "page_idx": 786
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 786
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 786
+    },
+    {
+        "type": "text",
+        "text": "Underflow, 67   \nUnicode format, 82   \nUniversal Machine, 23   \nUniversal Turing Machine, 27   \nUSB end point, 698 hub, 696 pipe, 699 split transaction bus, 698   \nUTF-16, 83   \nUTF-32, 83   \nUTF-8, 82   \nVector Processors, 615 design, 622   \nVectored Interrupt, 688   \nVertical Microprogramming, 404   \nVictim Cache, 538   \nVirtual , 548   \nVirtual Address, 549   \nVirtual Machine, 738   \nVirtual Memory, 541, 544 size problem, 548   \nVLIW, 493   \nVon Neumann Architecture, 34 accumulator, 38 registers, 36 stack, 37   \nWallace tree multiplier, 331   \nWeak Consistency, 587   \nWeak Memory Model, 588   \nWear Leveling, 722, 723   \nWord, 39   \nword line, 286   \nWorking Set, 537   \nWrite Buffer, 539   \nWrite-Invalidate Protocol, 602   \nWrite-Update Protocol, 600   \nWrong Path, 428   \nx86, 175 32-bit, 178 64-bit, 178 addressing modes, 182 eflags, 179 floating point arithmetic instructions, 210 floating point exchange, 209 floating point load, 208 floating point registers, 179 floating point stack, 179 floating point store, 209 machine model, 177 memory operands, 183 nasm, 184 register set, 177 rep instructions, 205 string instructions, 203   \nx86-64, 176, 178 ",
+        "page_idx": 786
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 787
+    },
+    {
+        "type": "text",
+        "text": "XOR Gate, 271   \nZoned-Bit Recording(ZBR), 706 ",
+        "page_idx": 787
+    }
+]

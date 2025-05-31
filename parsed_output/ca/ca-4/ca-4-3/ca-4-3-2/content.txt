@@ -1,0 +1,47 @@
+4.3.2 Functions
+
+Let us now use two sophisticated ARM instructions for spilling and restoring registers in the stack. They can be used to implement both caller-saved and callee-saved functions.
+
+Instructions for Spilling and Restoring Registers
+
+Let us now describe two instructions to use the stack for saving and restoring a set of registers  and stmfd. These registers load and store multiple registers in a memory region such as the stack. For brevity, we do not consider generic memory regions in this book. We limit our discussion to the stack. ldmfd and  instructions take a base register (e.g., stack pointer), and set of registers as arguments. They load or store the set of registers in the memory region pointed to by the base register. Note that the order of the registers does not matter. The registers are always rearranged in ascending order.
+
+Let us consider an example using the store instruction, stmfd.
+
+stmfd sp!, {r2,r3,r1,r4}
+
+The stmfd instruction assumes a downward growing stack, and it also assumes that the stack pointer points to the starting address of the value at the top of the stack. Recall that the top of the stack in a downward growing stack is defined as the starting address of the last value pushed on the stack. In this case the registers are processed in ascending order –  ,  ,  ,  . Secondly memory addresses are also accessed in ascending order. Consequently,  will be saved in  ,  in  ,  in  , and  in  . Alternatively, we can explain this instruction by observing that registers are pushed into the stack in descending order. We use the ‘!’ suffix with the base address register to instruct the processor to update the value of the stack pointer after the execution of the instruction. In this case, we set  equal to  .
+
+There is a variant of this instruction that does not set the stack pointer to the starting address of the memory region used to save registers. An example with this variant is:
+
+stmfd sp, {r2,r3,r1,r4}
+
+Note that this variant is rarely used in practice, especially when the base register is  .
+
+Similarly, the  instruction loads a set of values starting at the stack pointer, and then updates the stack pointer. Akin to the  instruction, we use the ‘!’ suffix to use the base register auto update feature.
+
+ldmfd sp!, {r2,r3,r1,r4}
+
+For example, in this case we set  ,  ,  , and  . In other words, we iteratively pop the stack and assign the values to registers in ascending order. The ldmfd instruction also has a variant that does not update the base register. We simply need to delete the ‘!’ suffix after the base register.
+
+ldmfd sp, {r2,r3,r1,r4}
+
+The semantics of these instructions are shown in Table 4.16.
+
+Let us conclude this section with an example. We show a recursive power function in C that takes two arguments  and  , and computes  .
+
+Example 50
+
+Write a function in  and implement it in ARM assembly to compute  , where  and  are natural numbers. Assume that  is passed through  ,  through r1, and the return value is passed back to the original program via  . Answer:
+
+ int power(int x, int n) { if (n == 0) return 1; int y = x \* power(x, n-1); return y; }
+
+When we compile this function to ARM assembly, we get:
+
+We first compare n with 0. If  is equal to 0, then we need to return 1 (Line 3). We subsequently, return from the function. Note the use of the instruction moveq here.
+
+However, if  , then we need to make a recursive function call to evaluate  . We start out by saving register  , and the return address (lr) on the stack in Line 6 using the stmfd instruction. We save the value of r0 in r4 because it will get overwritten by the recursive call to the power function. Subsequently, we decrement r1 that contains the value of  , and then we call the power function recursively in Line 10. The result of the power function is assumed to be present in r0. We multiply this result with the value of  (stored in r4) in Line 10.
+
+We simultaneously do two operations in Line 11: load the values of r4 and pc from the stack. Next, we read the first operand, r4, which was saved on the stack by the corresponding stmfd instruction in Line 6. The second operand saved on the stack was the return address. We read this value and save it in pc. Effectively, we are executing the instruction mov pc, lr, and we are thus returning from the function. Hence, after executing Line 11, we start executing instructions from the return address of the function.
+
+The ldm and stm instructions can also assume an upward growing stack. The interested reader can refer to the ARM manual [arm, 2000] for a thorough explanation.

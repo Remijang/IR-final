@@ -1,0 +1,124 @@
+# 15.1 The First Law of Thermodynamics
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Define the first law of thermodynamics.   
+• Describe how conservation of energy relates to the first law of thermodynamics.   
+• Identify instances of the first law of thermodynamics working in everyday situations, including biological metabolism.   
+• Calculate changes in the internal energy of a system, after accounting for heat transfer and work done.
+
+If we are interested in how heat transfer is converted into doing work, then the conservation of energy principle is important. The first law of thermodynamics applies the conservation of energy principle to systems where heat transfer and doing work are the methods of transferring energy into and out of the system. The first law of thermodynamics states that the change in internal energy of a system equals the net heat transfer intothe system minus the net work done bythe system. In equation form, the first law of thermodynamics is
+
+$$
+\Delta U = Q - W .
+$$
+
+Here $\Delta U$ is the changeininternalenergy $U$ of the system. $Q$ is the netheattransferedintothesystem—that is, $Q$ is the sum of all heat transfer into and out of the system. $W$ is the networkdonebythesystem—that is, $W$ is the sum of all work done on or by the system. We use the following sign conventions: if $Q$ is positive, then there is a net heat transfer into the system; if $W$ is positive, then there is net work done by the system. So positive $Q$ adds energy to the system and positive $W$ takes energy from the system. Thus $\Delta U = Q - W$ . Note also that if more heat transfer into the system occurs than work done, the difference is stored as internal energy. Heat engines are a good example of this—heat transfer into them takes place so that they can do work. (See Figure 15.3.) We will now examine $Q , W$ , and $\Delta U$ further.
+
+# Making Connections: Law of Thermodynamics and Law of Conservation of Energy
+
+The first law of thermodynamics is actually the law of conservation of energy stated in a form most useful in thermodynamics. The first law gives the relationship between heat transfer, work done, and the change in internal energy of a system.
+
+# Heat $Q$ and Work W
+
+Heat transfer $( Q )$ and doing work $( W )$ are the two everyday means of bringing energy into or taking energy out of a system. The processes are quite different. Heat transfer, a less organized process, is driven by temperature differences. Work, a quite organized process, involves a macroscopic force exerted through a distance. Nevertheless, heat and work can produce identical results.For example, both can cause a temperature increase. Heat transfer into a system, such as when the Sun warms the air in a bicycle tire, can increase its temperature, and so can work done on the system, as when the bicyclist pumps air into the tire. Once the temperature increase has occurred, it is impossible to tell whether it was caused by heat transfer or by doing work. This uncertainty is an important point. Heat transfer and work are both energy in transit—neither is stored as such in a system. However, both can change the internal energy $U$ of a system. Internal energy is a form of energy completely different from either heat or work.
+
+# Internal Energy $U$
+
+We can think about the internal energy of a system in two different but consistent ways. The first is the atomic and molecular view, which examines the system on the atomic and molecular scale. The internal energy $U$ of a system is the sum of the kinetic and potential energies of its atoms and molecules. Recall that kinetic plus potential energy is called mechanical energy. Thus internal energy is the sum of atomic and molecular mechanical energy. Because it is impossible to keep track of all individual atoms and molecules, we must deal with averages and distributions. A second way to view the internal energy of a system is in terms of its macroscopic characteristics, which are very similar to atomic and molecular average values.
+
+Macroscopically, we define the change in internal energy $\Delta U$ to be that given by the first law of thermodynamics:
+
+$$
+\Delta U = Q - W .
+$$
+
+Many detailed experiments have verified that $\Delta U = Q - W$ , where $\Delta U$ is the change in total kinetic and potential energy of all atoms and molecules in a system. It has also been determined experimentally that the internal energy $U$ of a system depends only on the state of the system and nothowitreachedthatstate. More specifically, $U$ is found to be a function of a few macroscopic quantities (pressure, volume, and temperature, for example), independent of past history such as whether there has been heat transfer or work done. This independence means that if we know the state of a system, we can calculate changes in its internal energy $U$ from a few macroscopic variables.
+
+# Making Connections: Macroscopic and Microscopic
+
+In thermodynamics, we often use the macroscopic picture when making calculations of how a system behaves, while the atomic and molecular picture gives underlying explanations in terms of averages and distributions. We shall see this again in later sections of this chapter. For example, in the topic of entropy, calculations will be made using the atomic and molecular view.
+
+To get a better idea of how to think about the internal energy of a system, let us examine a system going from State 1 to State 2. The system has internal energy $U _ { 1 }$ in State 1, and it has internal energy $U _ { 2 }$ in State 2, no matter how it got to either state. So the change in internal energy $\Delta U = U _ { 2 } - U _ { 1 }$ is independent of what caused the change. In other words, $\Delta U$ isindependentofpath. By path, we mean the method of getting from the starting point to the ending point. Why is this independence important? Note that $\Delta U = Q - W$ . Both $Q$ and $W$ dependonpath, but $\Delta U$ does not. This path independence means that internal energy $U$ is easier to consider than either heat transfer or work done.
+
+# EXAMPLE 15.1
+
+# Calculating Change in Internal Energy: The Same Change in $U$ is Produced by Two Different Processes
+
+(a) Suppose there is heat transfer of 40.00 J to a system, while the system does 10.00 J of work. Later, there is heat transfer of 25.00 J out of the system while 4.00 J of work is done on the system. What is the net change in internal energy of the system?
+
+(b) What is the change in internal energy of a system when a total of 150.00 J of heat transfer occurs out of (from) the system and 159.00 J of work is done on the system? (See Figure 15.4).
+
+# Strategy
+
+In part (a), we must first find the net heat transfer and net work done from the given information. Then the first law of thermodynamics $\Delta U = Q - W )$ can be used to find the change in internal energy. In part (b), the net heat transfer and work done are given, so the equation can be used directly.
+
+# Solution for (a)
+
+The net heat transfer is the heat transfer into the system minus the heat transfer out of the system, or
+
+$$
+Q = 4 0 . 0 0 \mathrm { J } - 2 5 . 0 0 \mathrm { J } = 1 5 . 0 0 \mathrm { J } .
+$$
+
+Similarly, the total work is the work done by the system minus the work done on the system, or
+
+$$
+W = 1 0 . 0 0 \mathrm { J } { - 4 . 0 0 \mathrm { J } } = 6 . 0 0 \mathrm { J } .
+$$
+
+Thus the change in internal energy is given by the first law of thermodynamics:
+
+$$
+\Delta U = Q - W = 1 5 . 0 0 \mathrm { J - 6 . 0 0 \mathrm { J } = 9 . 0 0 \mathrm { J } . }
+$$
+
+We can also find the change in internal energy for each of the two steps. First, consider 40.00 J of heat transfer in and 10.00 J of work out, or
+
+$$
+\Delta U _ { 1 } = Q _ { 1 } - W _ { 1 } = 4 0 . 0 0 \mathrm { J } - 1 0 . 0 0 \mathrm { J } = 3 0 . 0 0 \mathrm { J } .
+$$
+
+Now consider 25.00 J of heat transfer out and 4.00 J of work in, or
+
+$$
+\Delta U _ { 2 } = Q _ { 2 } - W _ { 2 } = - 2 5 . 0 0 \mathrm { J } - ( - 4 . 0 0 \mathrm { J } ) = - 2 1 . 0 0 \mathrm { J } .
+$$
+
+The total change is the sum of these two steps, or
+
+$$
+\Delta U = \Delta U _ { 1 } + \Delta U _ { 2 } = 3 0 . 0 0 \mathrm { J } + ( - 2 1 . 0 0 \mathrm { J } ) = 9 . 0 0 \mathrm { J } .
+$$
+
+# Discussion on (a)
+
+No matter whether you look at the overall process or break it into steps, the change in internal energy is the same.
+
+# Solution for (b)
+
+Here the net heat transfer and total work are given directly to be $Q = - 1 5 0 . 0 0 { \mathrm { J } }$ and $W = - 1 5 9 . 0 0 \mathrm { ~ J }$ , so that
+
+$$
+\Delta U = Q \mathrm { - } W = \mathrm { - } 1 5 0 . 0 0 \mathrm { J - ( - 1 5 9 . 0 0 J ) = 9 . 0 0 J } .
+$$
+
+# Discussion on (b)
+
+A very different process in part (b) produces the same 9.00-J change in internal energy as in part (a). Note that the change in the system in both parts is related to $\Delta U$ and not to the individual $\scriptstyle Q \ s$ or $W \mathsf { s }$ involved. The system ends up in the samestate in both (a) and (b). Parts (a) and (b) present two different paths for the system to follow between the same starting and ending points, and the change in internal energy for each is the same—it is independent of path.
+
+# Human Metabolism and the First Law of Thermodynamics
+
+Human metabolism is the conversion of food into heat transfer, work, and stored fat. Metabolism is an interesting example of the first law of thermodynamics in action. We now take another look at these topics via the first law of thermodynamics. Considering the body as the system of interest, we can use the first law to examine heat transfer, doing work, and internal energy in activities ranging from sleep to heavy exercise. What are some of the major characteristics of heat transfer, doing work, and energy in the body? For one, body temperature is normally kept constant by heat transfer to the surroundings. This means $Q$ is negative. Another fact is that the body usually does work on the outside world. This means $W$ is positive. In such situations, then, the body loses internal energy, since $\Delta U = Q - W$ is negative.
+
+Now consider the effects of eating. Eating increases the internal energy of the body by adding chemical potential energy (this is an unromantic view of a good steak). The body metabolizesall the food we consume. Basically, metabolism is an oxidation process in which the chemical potential energy of food is released. This implies that food input is in the form of work. Food energy is reported in a special unit, known as the Calorie. This energy is measured by burning food in a calorimeter, which is how the units are determined.
+
+In chemistry and biochemistry, one calorie (spelled with a lowercasec) is defined as the energy (or heat transfer) required to raise the temperature of one gram of pure water by one degree Celsius. Nutritionists and weightwatchers tend to use the dietarycalorie, which is frequently called a Calorie (spelled with a capitalC). One food Calorie is the energy needed to raise the temperature of one kilogramof water by one degree Celsius. This means that one dietary Calorie is equal to one kilocalorie for the chemist, and one must be careful to avoid confusion between the two.
+
+Again, consider the internal energy the body has lost. There are three places this internal energy can go—to heat transfer, to doing work, and to stored fat (a tiny fraction also goes to cell repair and growth). Heat transfer and doing work take internal energy out of the body, and food puts it back. If you eat just the right amount of food, then your average internal energy remains constant. Whatever you lose to heat transfer and doing work is replaced by food, so that, in the long run, $\Delta U = 0$ . If you overeat repeatedly, then $\Delta U$ is always positive, and your body stores this extra internal energy as fat. The reverse is true if you eat too little. If $\Delta U$ is negative for a few days, then the body metabolizes its own fat to maintain body temperature and do work that takes energy from the body. This process is how dieting produces weight loss.
+
+Life is not always this simple, as any dieter knows. The body stores fat or metabolizes it only if energy intake changes for a period of several days. Once you have been on a major diet, the next one is less successful because your body alters the way it responds to low energy intake. Your basal metabolic rate (BMR) is the rate at which food is converted into heat transfer and work done while the body is at complete rest. The body adjusts its basal metabolic rate to partially compensate for over-eating or under-eating. The body will decrease the metabolic rate rather than eliminate its own fat to replace lost food intake. You will chill more easily and feel less energetic as a result of the lower metabolic rate, and you will not lose weight as fast as before. Exercise helps to lose weight, because it produces both heat transfer from your body and work, and raises your metabolic rate even when you are at rest. Weight loss is also aided by the quite low efficiency of the body in converting internal energy to work, so that the loss of internal energy resulting from doing work is much greater than the work done.It should be noted, however, that living systems are not in thermalequilibrium.
+
+The body provides us with an excellent indication that many thermodynamic processes are ireversible. An irreversible process can go in one direction but not the reverse, under a given set of conditions. For example, although body fat can be converted to do work and produce heat transfer, work done on the body and heat transfer into it cannot be converted to body fat. Otherwise, we could skip lunch by sunning ourselves or by walking down stairs. Another example of an irreversible thermodynamic process is photosynthesis. This process is the intake of one form of energy—light—by plants and its conversion to chemical potential energy. Both applications of the first law of thermodynamics are illustrated in Figure 15.5. One great advantage of conservation laws such as the first law of thermodynamics is that they accurately describe the beginning and ending points of complex processes, such as metabolism and photosynthesis, without regard to the complications in between. Table 15.1 presents a summary of terms relevant to the first law of thermodynamics.

@@ -1,0 +1,339 @@
+[
+    {
+        "type": "text",
+        "text": "10.12.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "The design of high performance pipelines is a prime focus of computer architecture researchers. Researchers mostly look at optimizing performance of pipelines and simultaneously reducing power consumption. The reader can start out with textbooks on advanced computer architecture [Hennessy and Patterson, 2012, Hwang, 2003, Baer, 2010, Sima et al., 1997, Culler et al., 1998]. After getting a basic understanding of the techniques underlying advanced processors such as out-of-order and superscalar execution, the reader should be able to graduate to reading research papers. The first step in this journey should be the book titled, \u201cReadings in Computer Architecture\u201d [Hill et al., 1999]. This book comprises a set of foundational research papers in different areas of computer architecture. Subsequently, the reader can move on to reading research papers for getting a deeper understanding of state-of-the-art techniques in processor design. ",
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "The reader should start with some basic references in the design of out-of-order processors [Brown et al., 2001, Smith and Sohi, 1995, Hwu and Patt, 1987]. After getting a basic understanding, she can move on to read papers that propose important optimizations such as [Brown et al., 2001, Petric et al., 2005, Akkary et al., 2003]. For a thorough understanding of branch prediction schemes and fetch optimization, the reader should definitely look at the work of Yeh and Patt [Yeh and Patt, 1991, Yeh and Patt, 1992, Yeh and Patt, 1993], and the patent on Pentium 4 trace caches [Krick et al., 2000]. ",
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "Simultaneously, the reader can also look at papers describing the complete architecture of processors such as the Intel Pentium 4 [Boggs et al., 2004], Intel ATOM [Halfhill, 2008], Intel Sandybridge [Gwennap, 2010], AMD Opteron [Keltcher et al., 2003], and IBM Power 7 [Ware et al., 2010]. Finally, readers can find descriptions of state-of-the-art processors in the periodical, \u201cMicroprocessor Report\u201d, along with emerging trends in the processor industry. ",
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "Pipeline Stages ",
+        "text_level": 1,
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Show the design of the IF, OF, EX, MA, and RW pipeline stages. Explain their functionality in detail. Ex. 2 \u2014 Why do we need to store the op2 field in the instruction packet? Where is it used? Ex. 3 \u2014 Why is it necessary to have the control field in the instruction packet? Ex. 4 \u2014 Why do we require latches in a pipeline? Why are edge sensitive latches preferred? Ex. 5 \u2014 Why is it necessary to split the work in a data path evenly across the pipeline stages? ",
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 6 \u2014 We know that in an edge sensitive latch, the input signal has to be stable for $t _ { h o l d }$ units of time after the negative edge. Let us consider a pipeline stage between latches $L _ { 1 }$ and $L _ { 2 }$ . Suppose the output of $L _ { 1 }$ is ready immediately after the negative edge, and almost instantaneously reaches the input of $L _ { 2 }$ . In this case, we violate the hold time constraint at $L _ { \\mathrm { 2 } }$ . How can this situation be avoided? ",
+        "page_idx": 499
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Pipeline Design ",
+        "text_level": 1,
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 7 \u2014 Enumerate the rules for constructing a pipeline diagram.   \nEx. 8 \u2014 Describe the different types of hazards in a pipeline.   \nEx. 9 \u2014 In the SimpleRisc pipeline, why don\u2019t we have structural hazards?   \nEx. 10 \u2014 Why does a branch have two delay slots in the SimpleRisc pipeline?   \nEx. 11 \u2014 What are the Data-Lock and Branch-Lock conditions?   \nEx. 12 \u2014 Write pseudo-code for detecting and handling the Branch-Lock condition? (without delayed branches) ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 What is delayed branching? ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 14 \u2014 Let us consider two designs: $D _ { 1 }$ and $D _ { 2 }$ . $D _ { 1 }$ uses a software-based approach for hazards, and assumes delayed branching. $D _ { 2 }$ uses interlocks, and assumes that a branch is not taken till the outcome is decided. Intuitively, which design is faster? ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 15 \u2014 Assume that 20% of the dynamic instructions executed on a computer are branch instructions. We use delayed branching with one delay slot. Estimate the CPI, if the compiler is able to fill 85% of the delay slots. Assume that the base CPI is 1.5. In the base case, we do not use any delay slot. Instead, we stall the pipeline for the total number of delay slots. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 16 \u2014 Describe the role of the forwarding multiplexers in each stage of the pipeline. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 17 \u2014 Why do we not require a forwarding path from $M A$ to $E X$ for the op2 field? ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 18 \u2014 Answer the following questions. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "i) What are the six possible forwarding paths in our SimpleRisc processor? ii) Which four forwarding paths, are required, and why? (Give examples to support your answer). ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 19 \u2014 Assume that we have an instruction immediately after a call instruction that reads ra. We claim that this instruction will get the correct value of $r a$ in a pipeline with forwarding. Is this true? Prove your answer. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 Reorder the following code snippet to minimize the execution time for the following configurations: ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "1.We use software techniques, and have 2 delay slots. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "2.We use interlocks, and predict not taken. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "3.We use forwarding, and predict not taken. ",
+        "page_idx": 500
+    },
+    {
+        "type": "text",
+        "text": "add r1, r2, r3   \nsub r4, r1, r1   \nmul r8, r9, r10   \ncmp r8, r9   \nbeq .foo ",
+        "page_idx": 501
+    },
+    {
+        "type": "text",
+        "text": "Ex. 21 \u2014 Reorder the following code snippet to minimize execution time for the following configurations:   \n1.We use software techniques, and have 2 delay slots.   \n2.We use interlocks, and predict not taken.   \n3.We use forwarding, and predict not taken. ",
+        "page_idx": 501
+    },
+    {
+        "type": "text",
+        "text": "add r4, r3, r3 st r3, 10[r4] ld r2, 10[r4] mul r8, r9, r10 div r8, r9, r10 add r4, r2, r6 ",
+        "page_idx": 501
+    },
+    {
+        "type": "text",
+        "text": "Ex. 22 \u2014 Answer the followin   \nadd r1, r2, r3   \nsub r4, r1, r6   \nld r5, 10[r4]   \nadd r6, r5, r5   \nsub r8, r8, r9   \nmul r10, r10, r11   \ncmp r8, r10   \nbeq .label   \nadd r5, r6, r8   \nst r3, 20[r5]   \nld r6, 20[r5]   \nld r7, 20[r6]   \nlsl r7, r7, r10 i) Assuming a traditional SimpleRisc pipeline, how many cycles will this code take to execute in a pipeline with just interlocks? Assume that time starts when the first instruction reaches the RW stage. This means that if we had just one instruction, then it would have taken exactly 1 cycle to execute (Not 5). Moreover, assume that the branch is not taken. [Assumptions: No forwarding, No delayed branches, No reordering]   \nii) Now, compute the number of cycles with forwarding (no delayed branches, no reordering).   \niii) Compute the minimum number of cycles when we have forwarding, and we allow instruction reordering. We do not have delayed branches, and in the reordered code, the branch instruction cannot be one of the last three instructions.   \niv) Compute the minimum number of cycles when we have forwarding, allow instruction reordering, and have delayed branches. Here, again, we are not allowed to have the branch instruction as one of the last three instructions in the reordered code. ",
+        "page_idx": 501
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 501
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 23 \u2014 We have assumed up till now that each memory access requires one cycle. Now, let us assume that each memory access takes two cycles. How will you modify the data path and the control path of the SimpleRisc processor in this case. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 24 \u2014 Assume you have a pipeline that contains a value predictor for memory. If there is a miss in the L2 cache, then we try to predict the value and supply it to the processor. Later this value is compared with the value obtained from memory. If the value matches, then we are fine, else we need to initiate a process of recovery in the processor and discard all the wrong computation. Design a scheme to do this effectively. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Performance and Power Modeling ",
+        "text_level": 1,
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 25 \u2014 If we increase the average CPI (Cycles per Instruction) by 5%, decrease the instruction count by 20% and double the clock rate, what is the expected speedup, if any, and why? ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 26 \u2014 What should be the ideal number of pipeline stages ( $x$ ) for a processor with $C P I =$ $( 1 + 0 . 2 x )$ and clock cycle time $t _ { c l k } = ( 1 + 5 0 / x ) ^ { \\prime }$ ? ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 27 \u2014 What is the relationship between dependencies in a program, and the optimal number of pipeline stages it requires? ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 28 \u2014 Is a 4 GHz machine faster than a 2 GHz machine? Justify your answer. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 29 \u2014 How do the manufacturing technology, compiler, and architecture determine the performance of a processor? ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 30 \u2014 Define dynamic power and leakage power. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 31 \u2014 We claim that if we increase the frequency, the leakage power increases. Justify this statement. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Ex. 32 \u2014 What is the justification of the $E D ^ { 2 }$ metric? ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 33 \u2014 How do power and temperature considerations limit the number of pipeline stages? Explain your answer in detail. Consider all the relationships between power, temperature, activity, IPC, and frequency that we have introduced in this chapter. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 34 \u2014 Define the term DVFS. ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 35 \u2014 Assume that we wish to estimate the temperature at different points of a processor. We know the dynamic power of different components, and the leakage power as a function of temperature. Furthermore, we divide the surface of the die into a grid as explained in Section 10.10.4. How do we use this information to arrive at a steady state value of temperature for all the grid points? ",
+        "page_idx": 502
+    },
+    {
+        "type": "text",
+        "text": "Interrupts and Exceptions ",
+        "text_level": 1,
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 36 \u2014 What are precise exceptions? How does hardware ensure that every exception is a precise exception? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 37 \u2014 Why do we need the movz and $r e t z$ instructions? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 38 \u2014 List the additional registers that we add to a pipeline to support interrupts and exceptions. ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 39 \u2014 What is the role of the $C P L$ register? How do we set and reset it? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 40 \u2014 How do we locate the correct interrupt handler? What is the structure and role of an interrupt handler? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 41 \u2014 Why do we need the registers oldP C, and oldSP ? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 42 \u2014 Why do we need to add a flags field to the instruction packet? How do we use the oldF lags register? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 43 \u2014 Consider a hypothetical situation where a write back to a register may generate an exception (register-fault exception). Propose a mechanism to handle this exception precisely. ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 44 \u2014 Define the concept of register windows. How can we use register windows to speed up the implementation of functions? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Advanced Topics ",
+        "text_level": 1,
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 45 \u2014 Can you intuitively say why most of the branches in programs are predictable? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 46 \u2014 Is the following code sequence amenable to branch prediction. Why or why not? ",
+        "page_idx": 503
+    },
+    {
+        "type": "table",
+        "img_path": "images/0fc007a503d72ec3b64909edd07aa84f9502acfafebdd2466e8382fabe45a698.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>int status=flip_random_unbiased_coin();</td></tr><tr><td>if (status==Head)</td></tr><tr><td>print(\\head\");</td></tr><tr><td>else</td></tr><tr><td>print(\\tail\");</td></tr></table></body></html>\n\n",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 47 \u2014 We need to design a 2-issue inorder pipeline that accepts a bundle of two instructions every cycle. These bundles are created by the compiler. ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "(a) Given the different instruction types, design an algorithm that tells the compiler the different constraints in designing a bundle. For example, you might decide that you don\u2019t want to have two instructions in a bundle if they are of certain types, or have certain operands. ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "(b) To implement a two-issue pipeline, what kind of additional functionality will you need in the MEM stage? ",
+        "page_idx": 503
+    },
+    {
+        "type": "text",
+        "text": "Ex. 48 \u2014 Describe the main insight behind out-of-order pipelines? What are their major structures? ",
+        "page_idx": 504
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 504
+    },
+    {
+        "type": "text",
+        "text": "Ex. 49 \u2014 Implement a basic pipelined processor with interlocks using Logisim (refer to the design problems in Chapter 9). ",
+        "page_idx": 504
+    },
+    {
+        "type": "text",
+        "text": "Ex. 50 \u2014 Implement a basic pipelined processor in a hardware description language such as Verilog or VHDL. Try to add forwarding paths and interrupt processing logic. ",
+        "page_idx": 504
+    },
+    {
+        "type": "text",
+        "text": "Ex. 51 \u2014 Learn the language SystemC. It is used to model hardware at a high level. Implement the SimpleRisc pipeline in SystemC. ",
+        "page_idx": 504
+    },
+    {
+        "type": "text",
+        "text": "Part III ",
+        "text_level": 1,
+        "page_idx": 505
+    }
+]

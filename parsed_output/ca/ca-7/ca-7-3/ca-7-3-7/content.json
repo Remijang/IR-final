@@ -1,0 +1,32 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.7 Master-slave D Flip-flop ",
+        "text_level": 1,
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Akin to the JK flip-flop we can have a master-slave version of the D flip-flop. ",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.22 shows a master-slave version of the D flip-flop. We connect one D flip-flop to a SR flip-flop. Here, we do not need wires connecting the inputs with Q and $\\overline { { Q } }$ because we are not interested in toggling the state. Secondly, we have avoided race conditions by not having the evil (1,1) input. ",
+        "page_idx": 285
+    },
+    {
+        "type": "image",
+        "img_path": "images/fe1e1f5ecdcf47f47e633a774fa51e678a3021de84096a5043366c77cc45a69f.jpg",
+        "img_caption": [
+            "Figure 7.22: Master-slave D flip-flop "
+        ],
+        "img_footnote": [],
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "A master-slave flip-flop uses 8 NAND gates and 1 inverter for the clock. A master slave D flip-flop requires 34 transistors, and a master-slave JK flip-flop requires 38 transistors. This is a large expenditure for saving just 1 bit! We should be able to do better. We shall see in later sections that we can store a single bit with even 1 transistor. But the circuit will become extremely slow. We can thus conclude that flip-flops are inefficient as far as power and the transistor budget are concerned; however, they are very fast. If we need to save a lot of data, and we are willing to sacrifice on time, then we should opt for SRAM and DRAM memories (described in Section 7.4). ",
+        "page_idx": 286
+    }
+]

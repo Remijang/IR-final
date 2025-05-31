@@ -1,0 +1,27 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.6 D Flip-flop ",
+        "text_level": 1,
+        "page_idx": 285
+    },
+    {
+        "type": "image",
+        "img_path": "images/0340aa25039bbc733647c554916fd31866d6d43af94b5b2c99475284882c7b38.jpg",
+        "img_caption": [
+            "Figure 7.21: D flip-flop "
+        ],
+        "img_footnote": [],
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Instead of having a dedicated S(set) and R (reset) signal, we can make our life easy by making one the complement of the other. However, in this case, we will not have a method of maintaining the value. The input will get reflected at the output at every negative clock edge. In a lot of cases, this is sufficient, and we do not need dedicated logic to either maintain or toggle the values. In this case, we can use the simplistic D flip-flop as shown in Figure 7.21. It is basically a SR flip-flop where $\\mathrm { R } = \\overline { { S } }$ . ",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Note that the second input (to the lower NAND gate) is equal to $\\overline { { D \\land C l k } }$ . When $C l k$ is equal to 1, the second input is equal to $\\overline { { D } }$ . When $C l k$ is 0, the flip-flop maintains the previous values and does not accept new data. ",
+        "page_idx": 285
+    }
+]

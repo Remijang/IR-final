@@ -1,0 +1,24 @@
+2.4.4 Denormal Numbers
+
+We have seen in Example 16 that the smallest positive normal floating point number is  .   
+Let us consider a simple piece of code.   
+f = 2^(-126);   
+   
+if (  ) print ("error");
+
+Sadly, this piece of code will compute  to be 0 as per our current understanding. The reason for this is that  is the smallest possible positive number that can be represented in our format.  can thus not be represented, and most processors will round  to  . However, this leads to a mathematical fallacy. The IEEE 754 protocol designers thus tried to avoid situations like this by proposing the idea of denormal numbers. Denormal numbers have a slightly different form as given by Equation 2.28.
+
+Note the differences with Equation 2.25. The implicit value of  is not there anymore. Instead of (  ), we have  ). Secondly, there is no room to specify any exponent. This is because  . The default exponent is -126. We can view denormal numbers as an extension of normal floating point numbers on both sides (smaller and larger). Refer to Figure 2.9.
+
+Example 18   
+Find the smallest and largest positive denormal numbers. Answer:
+
+The smallest positive denormal number is  . 22 • The largest possible denormal number is  .
+
+• Note that the largest denormal number  is smaller than the smallest positive normal number  . This justifies the choice of  as the default exponent for denormal numbers.
+
+Example 19   
+Find the ranges of denormal numbers. Answer: • For positive denormal numbers, the range is [2−149, 2−126 − 2−149].   
+For negative denormal numbers, the range is  .
+
+By using denormal numbers we will not get a wrong answer if we try to divide  by 2, and then compare it with 0. Denormal numbers can thus be used as a buffer such that our normal arithmetic operations do not give unexpected results. In practice, incorporating denormal numbers in a floating point unit is difficult, and they require a lot of time to process. Consequently, a lot of small embedded processors do not support denormal numbers. However, most modern processors running on laptops and desktops have full support for denormal numbers.

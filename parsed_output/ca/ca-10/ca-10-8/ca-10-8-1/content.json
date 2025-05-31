@@ -1,0 +1,29 @@
+[
+    {
+        "type": "text",
+        "text": "10.8.1 Interrupts ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "The main idea of an interrupt is as follows. Assume that we click a key on a keyboard. The keyboard records the ASCII code of the clicked key, and then sends a message to the processor with the code of the key that was clicked. This message is known as an interrupt. After the processor receives an interrupt, it stops the execution of the currently executing program and jumps to a dedicated program known as the interrupt handler. The interrupt handler reads the value sent by the I/O device (in this case, the keyboard), and sends it to the program that handles the display device (monitor/ laptop screen). This program shows the character typed. For example, if the user clicks the character, \u2019a\u2019, then monitor ultimately shows an \u2019a\u2019 on the screen through a sequence of steps. ",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "Definition 77 ",
+        "text_level": 1,
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "An interrupt is a signal sent by an I/O device to the processor. An interrupt is typically used to draw the attention of the processor to new inputs, or changes in the status of an I/O device. For example, if we click a key on a keyboard, then a new interrupt is generated and sent to the processor. Upon receiving an interrupt, the processor stops the execution of the currently executing program, and jumps to an interrupt handler routine. This routine processes the interrupt, by reading the values sent by the I/O device, and performing any other action if required. ",
+        "page_idx": 458
+    }
+]

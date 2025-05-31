@@ -1,0 +1,49 @@
+[
+    {
+        "type": "text",
+        "text": "4 ARM\u20ddR Assembly Language ",
+        "text_level": 1,
+        "page_idx": 141
+    },
+    {
+        "type": "text",
+        "text": "In this chapter, we will study the ARM instruction set. As of 2012, this instruction set is the most widely used instruction set in smartphones, and tablets. It has more than 90% market share $^ { 1 }$ in this space. ARM processors are also one of the most popular processors in hard disk drives, and set-top boxes for televisions. Hence, for any student of computer architecture it is very important to learn about the ARM instruction set because it will prove to be useful in programming the mobile and handheld devices of the future. ",
+        "page_idx": 141
+    },
+    {
+        "type": "text",
+        "text": "The ARM instruction set is a 32-bit instruction set. This means that the sizes of all registers are 32 bits, and the size of the memory address is equal to 32 bits. It is a RISC instruction set with a very regular structure. Each instruction is encoded into a string of exactly 32 bits like SimpleRisc . All arithmetic and logical operations, use only register operands, and lastly all the communication between registers and memory happens through two data transfer instructions \u2013 load and store. ",
+        "page_idx": 141
+    },
+    {
+        "type": "text",
+        "text": "4.1 The ARM $\\textsuperscript { ( R ) }$ Machine Model ",
+        "text_level": 1,
+        "page_idx": 141
+    },
+    {
+        "type": "text",
+        "text": "ARM assembly language assumes a machine model similar to that explained in Section 3.2.1 for SimpleRisc . For the register file, it assumes that there are 16 registers that are visible to the programmer at any point of time. All the registers in ARM are 32 bits or 4 bytes wide. ",
+        "page_idx": 141
+    },
+    {
+        "type": "text",
+        "text": "The registers are numbered from $r 0$ to $r 1 5$ . Registers $r 1 1 \\ldots r 1 5$ are known by certain mnemonics also as shown in Table 4.1. r11 is the frame-pointer. It points to the top of the activation block. $r 1 2$ is a scratch register that is not meant to be saved by the caller or the callee. $r 1 3$ is the stack pointer. It is important to understand that $r 1 1$ and $r 1 2$ are assigned a special connotation by the GNU compiler collection. They are not assigned special roles by the ARM ISA. ",
+        "page_idx": 141
+    },
+    {
+        "type": "table",
+        "img_path": "images/a732a32b96f7f99b39581f1e847a15b52519ef9e4bc31fdfacc7d650225e78ab.jpg",
+        "table_caption": [
+            "Table 4.1: Registers with special names in ARM "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Register</td><td>Abbrv.</td><td>Name</td></tr><tr><td>r11</td><td>fp</td><td>frame pointer</td></tr><tr><td>r12</td><td>ip</td><td>intra-procedure-call scratch register</td></tr><tr><td>r13</td><td>sp</td><td>stack pointer</td></tr><tr><td>r14</td><td>lr</td><td>link register</td></tr><tr><td>r15</td><td>pc</td><td>program counter</td></tr></table></body></html>\n\n",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "Let us differentiate between generic registers and registers with special roles. Registers $r 0 \\ldots r 1 2$ are generic. The programmer and the compiler can use them in any way they like. However, the registers r13(sp), $r 1 4 ( \\mathrm { { l r } ) }$ and r15(pc) have special roles. $s p$ is the stack pointer, $l r$ is the return address register, and $p c$ is the program counter. In this chapter, we shall use the little endian version of the ARM ISA, and we shall describe the syntax of the assembly language used by the GNU ARM Assembler [arm, 2000]. ",
+        "page_idx": 142
+    }
+]

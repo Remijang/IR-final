@@ -1,0 +1,65 @@
+[
+    {
+        "type": "text",
+        "text": "11.5.1 Summary ",
+        "text_level": 1,
+        "page_idx": 558
+    },
+    {
+        "type": "text",
+        "text": "Summary 11 ",
+        "text_level": 1,
+        "page_idx": 558
+    },
+    {
+        "type": "text",
+        "text": "1. A program perceives the memory system to be one large array of bytes. In practice, we need to design a memory system that preserves this abstraction, and is also fast and power efficient.   \n2. A physical memory system needs to be built out of SRAM and DRAM cells. An SRAM array is faster than a DRAM array. However, it takes much more area and consumes much more power. Building a memory with just DRAM cells will be too slow, and building a memory with just SRAM cells will consume too much power.   \n3. We can use the properties of temporal and spatial locality to design more efficient memory systems. Temporal locality refers to the fact that there is a high likelihood of the same data item being accessed again in the near future. Spatial locality means that there is a high likelihood of adjacent memory locations being accessed in the near future.   \n4. To utilize temporal locality, we build a hierarchical memory system of caches. A cache is a memory structure that contains a subset of all the memory locations. (a) The cache at the highest level is known as the L1 cache. It is small and fast. (b) The L2 cache is at the next level. It is larger and slower. (c) Some recent processors also have a third level of cache known as the L3 cache. (d) The last level in the memory system is known as the main memory. It is a large DRAM array of cells, and contains an entry for all the memory locations in the system. (e) Caches are typically inclusive. This means that a cache at a level i contains a subset of memory locations present at level $( i + 1 )$ .   \n5. To utilize spatial locality we group adjacent memory locations at the granularity of 32-128 byte blocks.   \n6. A cache contains a tag array and a data array. The tag array contains some bits of the address of the block, and the data array contains the contents of the block.   \n7. The basic operations needed to implement a cache are \u2013 lookup, data read, data write, insert, replace, and evict. (a) There are three ways to store data in a cache \u2013 direct mapped, set associative, and fully associative. (b) It is necessary to evict a block in a set if all the ways are non-empty. (c) There are two important write policies: write-through (every write is immediately sent to the lower level), and write-back (writes are sent to the lower level, only upon an eviction). (d) Some prominent replacement policies are Random, FIFO, and LRU. ",
+        "page_idx": 559
+    },
+    {
+        "type": "text",
+        "text": "8. The average memory access time is given by: ",
+        "page_idx": 560
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { A M A T = L 1 _ { h i t t i m e } + L 1 _ { m i s s r a t e } \\times L 1 _ { m i s s p e n a l t y } } \\\\ & { \\qquad = L 1 _ { h i t t i m e } + L 1 _ { m i s s r a t e } \\times ( L 2 _ { h i t t i m e } + L 2 _ { m i s s r a t e } \\times L 2 _ { m i s s p e n a l t y } ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "9. There are three types of cache misses \u2013 compulsory, capacity, and conflict. ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "10. Some of the methods and structures to optimize the memory system are as follows: hardware prefetching, increased associativity/block size, victim cache, compiler techniques, write buffers, early restart and critical word first. ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "11. We need virtual memory to ensure that: ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "(a) Multiple programs do not overwrite each other\u2019s data unintentionally, or maliciously.   \n(b) The memory footprint of a program can be larger than the amount of available main memory. ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "12. To implement virtual memory, we divide a memory address into two parts \u2013 virtual page number, and an offset within a page. The virtual page number gets mapped to a physical frame number. The mapping is stored in a structure called a page table. ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "13. If a page is not found in main memory, then the event is known as a page fault. Servicing a page fault takes millions of cycles. Hence, it is necessary to avoid page faults by using sophisticated page replacement algorithms. ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "14. Some advanced features of the virtual memory system include shared memory, protection, and segmented addressing. ",
+        "page_idx": 560
+    }
+]

@@ -1,0 +1,534 @@
+[
+    {
+        "type": "text",
+        "text": "1.2 Physical Quantities and Units ",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Perform unit conversions both in the SI and English units.   \n\u2022 Explain the most common prefixes in the SI units and be able to write them in scientific notation. ",
+        "page_idx": 32
+    },
+    {
+        "type": "image",
+        "img_path": "images/ece825db916ebd2864314c2002bd372d795ec019abeeece57b02d3b02c7bdc5a.jpg",
+        "img_caption": [
+            "FIGURE 1.15 The distance from Earth to the Moon may seem immense, but it is just a tiny fraction of the distances from Earth to other celestial bodies. (credit: NASA) "
+        ],
+        "img_footnote": [],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "The range of objects and phenomena studied in physics is immense. From the incredibly short lifetime of a nucleus to the age of the Earth, from the tiny sizes of sub-nuclear particles to the vast distance to the edges of the known universe, from the force exerted by a jumping flea to the force between Earth and the Sun, there are enough factors of 10 to challenge the imagination of even the most experienced scientist. Giving numerical values for physical quantities and equations for physical principles allows us to understand nature much more deeply than does qualitative description alone. To comprehend these vast ranges, we must also have accepted units in which to ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "express them. And we shall find that (even in the potentially mundane discussion of meters, kilograms, and seconds) a profound simplicity of nature appears\u2014most physical quantities can be expressed as combinations of only four fundamental physical quantities: length, mass, time, and electric current. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "We define a physical quantity either by specifyinghowitismeasuredor by statinghowitiscalculatedfrom other measurements. For example, we define distance and time by specifying methods for measuring them, whereas we define averagespe dby stating that it is calculated as distance traveled divided by time of travel. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Measurements of physical quantities are expressed in terms of units, which are standardized values. For example, the length of a race, which is a physical quantity, can be expressed in units of meters (for sprinters) or kilometers (for distance runners). Without standardized units, it would be extremely difficult for scientists to express and compare measured values in a meaningful way. (See Figure 1.16.) ",
+        "page_idx": 33
+    },
+    {
+        "type": "image",
+        "img_path": "images/44a05e74bdf797dcbb6188f1fb49ba2a8c45a6cd072f87ff7166e38c083d11b3.jpg",
+        "img_caption": [
+            "FIGURE 1.16 Distances given in unknown units are maddeningly useless. "
+        ],
+        "img_footnote": [],
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "There are two major systems of units used in the world: SI units (also known as the metric system) and English units (also known as the customary or imperial system). English units were historically used in nations once ruled by the British Empire and are still widely used in the United States. Virtually every other country in the world now uses SI units as the standard; the metric system is also the standard system agreed upon by scientists and mathematicians. The acronym \u201cSI\u201d is derived from the French Syst\u00e8meInternational. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "SI Units: Fundamental and Derived Units ",
+        "text_level": 1,
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Table 1.1 gives the fundamental SI units that are used throughout this textbook. This text uses non-SI units in a few applications where they are in very common use, such as the measurement of blood pressure in millimeters of mercury $( \\mathsf { m m } \\mathsf { H } \\mathsf { g } )$ . Whenever non-SI units are discussed, they will be tied to SI units through conversions. ",
+        "page_idx": 33
+    },
+    {
+        "type": "table",
+        "img_path": "images/fc9da57dfc5f4dc7c4afcbd976e0818f28220683320457c7d98380500ba7c528.jpg",
+        "table_caption": [
+            "TABLE 1.1 Fundamental SI Units "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Length</td><td>Mass</td><td>Time</td><td>Electric Current</td></tr><tr><td>meter (m)</td><td>kilogram (kg)</td><td>second (s)</td><td>ampere (A)</td></tr></table></body></html>\n\n",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "It is an intriguing fact that some physical quantities are more fundamental than others and that the most fundamental physical quantities can be defined onlyin terms of the procedure used to measure them. The units in which they are measured are thus called fundamental units. In this textbook, the fundamental physical quantities are taken to be length, mass, time, and electric current. (Note that electric current will not be introduced until much later in this text.) All other physical quantities, such as force and electric charge, can be expressed as algebraic combinations of length, mass, time, and current (for example, speed is length divided by time); these units are called derived units. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Units of Time, Length, and Mass: The Second, Meter, and Kilogram ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "The Second ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "The SI unit for time, the second (abbreviated s), has a long history. For many years it was defined as 1/86,400 of a mean solar day. More recently, a new standard was adopted to gain greater accuracy and to define the second in terms of a non-varying, or constant, physical phenomenon (because the solar day is getting longer due to very gradual slowing of the Earth\u2019s rotation). Cesium atoms can be made to vibrate in a very steady way, and these vibrations can be readily observed and counted. In 1967 the second was redefined as the time required for 9,192,631,770 of these vibrations. (See Figure 1.17.) Accuracy in the fundamental units is essential, because all measurements are ultimately expressed in terms of fundamental units and can be no more accurate than are the fundamental units themselves. ",
+        "page_idx": 34
+    },
+    {
+        "type": "image",
+        "img_path": "images/56f97a7427f46d317a379be56b491f9b401f900058b1cbfda949009324c8f91c.jpg",
+        "img_caption": [
+            "FIGURE 1.17 An atomic clock such as this one uses the vibrations of cesium atoms to keep time to a precision of better than a microsecond per year. The fundamental unit of time, the second, is based on such clocks. This image is looking down from the top of an atomic fountain nearly 30 feet tall! (credit: Steve Jurvetson/Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "The Meter ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "The SI unit for length is the meter (abbreviated m); its definition has also changed over time to become more accurate and precise. The meter was first defined in 1791 as 1/10,000,000 of the distance from the equator to the North Pole. This measurement was improved in 1889 by redefining the meter to be the distance between two engraved lines on a platinum-iridium bar now kept near Paris. By 1960, it had become possible to define the meter even more accurately in terms of the wavelength of light, so it was again redefined as 1,650,763.73 wavelengths of orange light emitted by krypton atoms. In 1983, the meter was given its present definition (partly for greater accuracy) as the distance light travels in a vacuum in 1/299,792,458 of a second. (See Figure 1.18.) This change defines the speed of light to be exactly 299,792,458 meters per second. The length of the meter will change if the speed of light is someday measured with greater accuracy. ",
+        "page_idx": 34
+    },
+    {
+        "type": "image",
+        "img_path": "images/31a8a4a6b07d9a4052885a14545841d58db1fe8d1e28e023cdccba1fc224eaea.jpg",
+        "img_caption": [
+            "FIGURE 1.18 The meter is defined to be the distance light travels in 1/299,792,458 of a second in a vacuum. Distance traveled is speed multiplied by time. "
+        ],
+        "img_footnote": [],
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "The Kilogram ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "The SI unit for mass is the kilogram (abbreviated kg); it was previously defined to be the mass of a platinum-iridium cylinder kept with the old meter standard at the International Bureau of Weights and Measures near Paris. Exact replicas of the previously defined kilogram are also kept at the United States\u2019 National Institute of Standards and Technology, or NIST, located in Gaithersburg, Maryland outside of Washington D.C., and at other locations around the world. The determination of all other masses could be ultimately traced to a comparison with the standard mass. Even though the platinum-iridium cylinder was resistant to corrosion, airborne contaminants were able to adhere to its surface, slightly changing its mass over time. In May 2019, the scientific community adopted a more stable definition of the kilogram. The kilogram is now defined in terms of the second, the meter, and Planck's constant, $h$ (a quantum mechanical value that relates a photon's energy to its frequency). ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Electric current and its accompanying unit, the ampere, will be introduced in Introduction to Electric Current, Resistance, and Ohm's Law when electricity and magnetism are covered. The initial modules in this textbook are concerned with mechanics, fluids, heat, and waves. In these subjects all pertinent physical quantities can be expressed in terms of the fundamental units of length, mass, and time. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Metric Prefixes ",
+        "text_level": 1,
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "SI units are part of the metric system. The metric system is convenient for scientific and engineering calculations because the units are categorized by factors of 10. Table 1.2 gives metric prefixes and symbols used to denote various factors of 10. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Metric systems have the advantage that conversions of units involve only powers of 10. There are 100 centimeters in a meter, 1000 meters in a kilometer, and so on. In nonmetric systems, such as the system of U.S. customary units, the relationships are not as simple\u2014there are 12 inches in a foot, 5280 feet in a mile, and so on. Another advantage of the metric system is that the same unit can be used over extremely large ranges of values simply by using an appropriate metric prefix. For example, distances in meters are suitable in construction, while distances in kilometers are appropriate for air travel, and the tiny measure of nanometers are convenient in optical design. With the metric system there is no need to invent new units for particular applications. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "The term order of magnitude refers to the scale of a value expressed in the metric system. Each power of , and so forth are all different orders of magnitude. All quantities that can be expressed as a product of a specific power of are said to be of the sameorder of magnitude. For example, the number can be written as $8 \\times 1 0 ^ { 2 }$ , and the number can be written as $4 . 5 \\times 1 0 ^ { 2 }$ Thus, the numbers and are of the same order of magnitude: $1 0 ^ { 2 }$ Order of magnitude can be thought of as a ballpark estimate for the scale of a value. The diameter of an atom is on the order of $\\mathrm { 1 0 ^ { - 1 0 } ~ m }$ while the diameter of the Sun is on the order of $1 0 ^ { 9 } \\mathrm { ~ m ~ }$ ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "The Quest for Microscopic Standards for Basic Units ",
+        "text_level": 1,
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "The fundamental units described in this chapter are those that produce the greatest accuracy and precision in measurement. There is a sense among physicists that, because there is an underlying microscopic substructure to matter, it would be most satisfying to base our standards of measurement on microscopic objects and fundamental physical phenomena such as the speed of light. A microscopic standard has been accomplished for the standard of time, which is based on the oscillations of the cesium atom. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "The standard for length was once based on the wavelength of light (a small-scale length) emitted by a certain type of atom, but it has been supplanted by the more precise measurement of the speed of light. If it becomes possible to measure the mass of atoms or a particular arrangement of atoms such as a silicon sphere to greater precision than the kilogram standard, it may become possible to base mass measurements on the small scale. There are also possibilities that electrical phenomena on the small scale may someday allow us to base a unit of charge on the charge of electrons and protons, but at present current and charge are related to large-scale currents and forces between wires. ",
+        "page_idx": 35
+    },
+    {
+        "type": "table",
+        "img_path": "images/53f30c16ea354040ec402b6921b2cb00009db8fe4c7b5a6bcd98bf1b17be58de.jpg",
+        "table_caption": [
+            "TABLE 1.2 Metric Prefixes for Powers of 10 and their Symbols "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Prefix</td><td>Symbol Value</td><td></td><td></td><td></td><td>Example (some are approximate)</td><td></td></tr><tr><td>exa</td><td>E</td><td>1018</td><td>exameter</td><td>Em</td><td>m 1018</td><td>distance light travels in a century</td></tr><tr><td>peta</td><td>P</td><td>1015</td><td>petasecond</td><td>Ps</td><td>S 1015</td><td>30 million years</td></tr><tr><td>tera</td><td>T</td><td>1012</td><td>terawatt</td><td>TW</td><td>1012 w</td><td>powerful laser output</td></tr></table></body></html>\n\n",
+        "page_idx": 35
+    },
+    {
+        "type": "table",
+        "img_path": "images/b626835485230e26cba61516f8a4fd04fa94e5539d54348b71c80aa13f7acfdd.jpg",
+        "table_caption": [
+            "TABLE 1.2 Metric Prefixes for Powers of 10 and their Symbols "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Prefix</td><td>Symbol Value</td><td colspan=\"4\">Example (some are approximate)</td></tr><tr><td>giga</td><td>G</td><td>109</td><td>gigahertz</td><td>GHz</td><td>10 Hz</td><td>a microwave frequency</td></tr><tr><td>mega</td><td>M</td><td>106</td><td>megacurie</td><td>MCi</td><td>106 Ci</td><td>high radioactivity</td></tr><tr><td>kilo</td><td>k</td><td>103</td><td>kilometer</td><td>km</td><td>10m</td><td>about 6/10 mile</td></tr><tr><td>hecto</td><td>h</td><td>10\u00b2</td><td>hectoliter</td><td>hL</td><td>10\u00b2L</td><td>26 gallons</td></tr><tr><td>deka</td><td>da</td><td>101</td><td>dekagram</td><td>dag</td><td>101g</td><td>teaspoon of butter</td></tr><tr><td></td><td>\u4e00</td><td>10\u00b0 (=1)</td><td></td><td></td><td></td><td></td></tr><tr><td>deci</td><td>d</td><td>10-1</td><td>deciliter</td><td>dL</td><td>10-1L</td><td>less than half a soda</td></tr><tr><td>centi</td><td>C</td><td>10-2</td><td>centimeter</td><td>cm</td><td>10-2 m</td><td>fingertip thickness</td></tr><tr><td>milli</td><td>m</td><td>10-3</td><td>millimeter</td><td>mm</td><td>10-3m</td><td>flea at its shoulders</td></tr><tr><td>micro</td><td></td><td>10-6</td><td>micrometer</td><td>\u03bcm</td><td>10-6m</td><td>detail in microscope</td></tr><tr><td>nano</td><td>n</td><td>10-9</td><td>nanogram</td><td>ng</td><td>1019g</td><td> small speck of dust</td></tr><tr><td>pico</td><td>p</td><td>10-12</td><td>picofarad</td><td>pF</td><td>10-12 F</td><td>small capacitor in radio</td></tr><tr><td>femto</td><td>f</td><td>10-15</td><td>femtometer</td><td>fm</td><td>10-15 m</td><td>size of a proton</td></tr><tr><td>atto</td><td>a</td><td>10-18</td><td>attosecond</td><td>as</td><td>10-18s</td><td>time light crosses an atom</td></tr></table></body></html>\n\n",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "Known Ranges of Length, Mass, and Time ",
+        "text_level": 1,
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "The vastness of the universe and the breadth over which physics applies are illustrated by the wide range of examples of known lengths, masses, and times in Table 1.3. Examination of this table will give you some feeling for the range of possible topics and numerical values. (See Figure 1.19 and Figure 1.20.) ",
+        "page_idx": 36
+    },
+    {
+        "type": "image",
+        "img_path": "images/46d56e31efffa0dc8f4fd9ffdee2712df271382b91ee6e8585e036af4df23057.jpg",
+        "img_caption": [
+            "FIGURE 1.19 Tiny phytoplankton swims among crystals of ice in the Antarctic Sea. They range from a few micrometers to as much as 2 millimeters in length. (credit: Prof. Gordon T. Taylor, Stony Brook University; NOAA Corps Collections) "
+        ],
+        "img_footnote": [],
+        "page_idx": 36
+    },
+    {
+        "type": "image",
+        "img_path": "images/f97e37f6cf041c2f4e8cf4d7f2f0c5b872894f2f3c6a079d898db1e9b663dfd3.jpg",
+        "img_caption": [
+            "FIGURE 1.20 Galaxies collide 2.4 billion light years away from Earth. The tremendous range of observable phenomena in nature challenge the imagination. (credit: NASA/CXC/UVic./A. Mahdavi et al. Optical/lensing: CFHT/UVic./H. Hoekstra et al.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Unit Conversion and Dimensional Analysis ",
+        "text_level": 1,
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "It is often necessary to convert from one type of unit to another. For example, if you are reading a European cookbook, some quantities may be expressed in units of liters and you need to convert them to cups. Or, perhaps you are reading walking directions from one location to another and you are interested in how many miles you will be walking. In this case, you will need to convert units of feet to miles. ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a simple example of how to convert units. Let us say that we want to convert 80 meters (m) to kilometers (km). ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "The first thing to do is to list the units that you have and the units that you want to convert to. In this case, we have units in metersand we want to convert to kilometers. ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Next, we need to determine a conversion factor relating meters to kilometers. A conversion factor is a ratio expressing how many of one unit are equal to another unit. For example, there are 12 inches in 1 foot, 100 centimeters in 1 meter, 60 seconds in 1 minute, and so on. In this case, we know that there are 1,000 meters in 1 kilometer. ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Now we can set up our unit conversion. We will write the units that we have and then multiply them by the conversion factor so that the units cancel out, as shown: ",
+        "page_idx": 37
+    },
+    {
+        "type": "equation",
+        "text": "$$\n8 0 \\mathcal { M } \\times \\frac { 1 \\mathrm { k m } } { 1 0 0 0 \\mathcal { M } } = 0 . 0 8 0 \\mathrm { k m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Note that the unwanted m unit cancels, leaving only the desired km unit. You can use this method to convert between any types of unit. ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Click Appendix C for a more complete list of conversion factors. ",
+        "page_idx": 37
+    },
+    {
+        "type": "table",
+        "img_path": "images/06d847105c94dd9ae4808ddd9ad93c2680acaecd21d6f992f92262e5b6d06425.jpg",
+        "table_caption": [
+            "TABLE 1.3 Approximate Values of Length, Mass, and Time "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Lengths in meters</td><td colspan=\"2\">Masses in kilograms (more precise values in parentheses)</td><td colspan=\"2\">Times in seconds (more precise values in parentheses)</td></tr><tr><td>10-18</td><td>Present experimental limit to smallest observable detail</td><td>10-30</td><td>Mass of an electron (9.11 \u00d7 10-31 kg)</td><td>10-23</td><td>Time for light to cross a proton</td></tr><tr><td>10-15</td><td>Diameter of a proton</td><td>10-27</td><td>Mass of a hydrogen atom (1.67 \u00d7 10-27 kg)</td><td>10-22</td><td>Mean life of an extremely unstable nucleus</td></tr></table></body></html>\n\n",
+        "page_idx": 37
+    },
+    {
+        "type": "table",
+        "img_path": "images/2960042d0a22e017da769c2050f61bceb95e0dd766056b93c1be84dcd7aa42d8.jpg",
+        "table_caption": [
+            "TABLE 1.3 Approximate Values of Length, Mass, and Time "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>precise values in parentheses)</td><td colspan=\"3\">Lengths in meters</td><td colspan=\"2\">precise values in parentheses)</td></tr><tr><td>10-14</td><td>Diameter of a uranium nucleus</td><td>10-15</td><td>Mass of a bacterium</td><td>10-15</td><td>Time for one oscillation of visible light</td></tr><tr><td>10-10</td><td>Diameter of a hydrogen atom</td><td>10-5</td><td>Mass of a mosquito</td><td>10-13</td><td>Time for one vibration of an atom in a solid</td></tr><tr><td>10-8</td><td>Thickness of membranes in cells of living organisms</td><td>10-2</td><td>Mass of a hummingbird</td><td>10-8</td><td>Time for one oscillation of an FM radio wave</td></tr><tr><td>10-6</td><td>Wavelength of visible light</td><td>1</td><td>Mass of aliter of water (about a quart)</td><td>10-3</td><td>Duration of a nerve impulse</td></tr><tr><td>10-3</td><td> Size of a grain of sand</td><td>10\u00b2</td><td>Mass of a person</td><td>1</td><td>Time for one heartbeat</td></tr><tr><td>1</td><td>Height of a 4-year-old child</td><td>103</td><td> Mass of a car</td><td>105</td><td>(8.64\u00d7 104 s)</td></tr><tr><td>10\u00b2</td><td>Length of a football field</td><td>108</td><td> Mass of a large ship</td><td>107</td><td>(3.16\u00d7107 s)</td></tr><tr><td>104</td><td>Greatest ocean depth</td><td>1012</td><td>Mass of a large iceberg</td><td>109</td><td>About half the life expectancy of a human</td></tr><tr><td>107</td><td>Diameter of the Earth</td><td>1015</td><td>Mass of the nucleus of a comet</td><td>1011</td><td>Recorded history</td></tr><tr><td>1011</td><td>Distance from the Earth to the Sun</td><td>1023</td><td>Mass of the Moon (7.35 \u00d7 1022 kg)</td><td>1017</td><td>Age of the Earth</td></tr><tr><td>1016</td><td>Distance traveled by light in 1 year (a light year)</td><td>1025</td><td>Mass of the Earth (5.97 \u00d7 1024 kg)</td><td>1018</td><td>Age of the universe</td></tr><tr><td>1021</td><td>Diameter of the Milky Way galaxy</td><td>1030</td><td>Mass of the Sun (1.99 \u00d7 1030 kg)</td><td></td><td></td></tr><tr><td>1022</td><td>Distance from the Earth to the nearest large galaxy (Andromeda)</td><td>1042</td><td>Mass of the Milky Way galaxy (current upper limit)</td><td></td><td></td></tr><tr><td>1026</td><td>Distance from the Earth to the edges of the known universe</td><td>1053</td><td>Mass of the known universe (current upper limit)</td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1.1 ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Unit Conversions: A Short Drive Home ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Suppose that you drive the $1 0 . 0 \\mathsf { k m }$ from your school to home in 20.0 min. Calculate your average speed (a) in kilometers per hour $( \\mathsf { k m / h } )$ and (b) in meters per second $( \\mathsf { m } / \\mathsf { s } )$ . (Note: Average speed is distance traveled divided by time of travel.) ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "First we calculate the average speed using the given units. Then we can get the average speed into the desired units by picking the correct conversion factor and multiplying by it. The correct conversion factor is the one that cancels the unwanted unit and leaves the desired unit in its place. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(1) Calculate average speed. Average speed is distance traveled divided by time of travel. (Take this definition as a given for now\u2014average speed and other motion concepts will be covered in a later module.) In equation form, ",
+        "page_idx": 39
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { a v e r a g e ~ s p e e d } } = { \\frac { \\mathrm { d i s t a n c e } } { \\mathrm { t i m e } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(2) Substitute the given values for distance and time. ",
+        "page_idx": 39
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { a v e r a g e ~ s p e e d } } = { \\frac { 1 0 . 0 \\mathrm { ~ k m } } { 2 0 . 0 \\mathrm { ~ m i n } } } = 0 . 5 0 0 { \\frac { \\mathrm { ~ k m } } { \\mathrm { m i n } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(3) Convert km/min to $\\mathsf { k m / h }$ : multiply by the conversion factor that will cancel minutes and leave hours. That conversion factor is $6 0 \\mathrm { { m i n / h r } }$ ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (a) ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "To check your answer, consider the following: ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(1) Be sure that you have properly cancelled the units in the unit conversion. If you have written the unit conversion factor upside down, the units will not cancel properly in the equation. If you accidentally get the ratio upside down, then the units will not cancel; rather, they will give you the wrong units as follows: ",
+        "page_idx": 39
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\mathrm { k m } } { \\mathrm { m i n } } } \\times { \\frac { 1 { \\mathrm { h r } } } { 6 0 { \\mathrm { m i n } } } } = { \\frac { 1 } { 6 0 } } { \\frac { \\mathrm { k m } \\cdot { \\mathrm { h r } } } { \\mathrm { m i n } ^ { 2 } } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "which are obviously not the desired units of $\\mathsf { k m / h }$ . ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(2) Check that the units of the final answer are the desired units. The problem asked us to solve for average speed in units of $\\mathsf { k m / h }$ and we have indeed obtained these units. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(3) Check the significant figures. Because each of the values given in the problem has three significant figures, the answer should also have three significant figures. The answer $3 0 . 0 ~ \\mathsf { k m / h r }$ does indeed have three significant figures, so this is appropriate. Note that the significant figures in the conversion factor are not relevant because an hour is definedto be 60 minutes, so the precision of the conversion factor is perfect. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(4) Next, check whether the answer is reasonable. Let us consider some information from the problem\u2014if you travel $1 0 \\mathsf { k m }$ in a third of an hour $2 0 \\mathrm { m i n } )$ , you would travel three times that far in an hour. The answer does seem reasonable. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "There are several ways to convert the average speed into meters per second. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(1) Start with the answer to (a) and convert $\\mathsf { k m / h }$ to $\\mathsf { m } / \\mathsf { s }$ . Two conversion factors are needed\u2014one to convert hours to seconds, and another to convert kilometers to meters. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "(2) Multiplying by these yields ",
+        "page_idx": 39
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { A v e r a g e ~ s p e e d } } = 3 0 . 0 { \\frac { \\mathrm { k m } } { \\mathrm { h } } } \\times { \\frac { \\mathrm { 1 ~ h } } { 3 . 6 0 0 \\mathrm { ~ s } } } \\times { \\frac { 1 . 0 0 0 \\mathrm { m } } { \\mathrm { 1 ~ k m } } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 40
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { A v e r a g e ~ s p e e d } = 8 . 3 3 \\frac { \\mathrm { m } } { \\mathrm { s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (b) ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "If we had started with $0 . 5 0 0 ~ \\mathrm { k m / \\min }$ , we would have needed different conversion factors, but the answer would have been the same: $8 . 3 3 ~ \\mathrm { m } / \\mathrm { s }$ . ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "You may have noted that the answers in the worked example just covered were given to three digits. Why? When do you need to be concerned about the number of digits in something you calculate? Why not write down all the digits your calculator produces? The module Accuracy, Precision, and Significant Figures will help you answer these questions. ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Nonstandard Units ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "While there are numerous types of units that we are all familiar with, there are others that are much more obscure. For example, a firkin is a unit of volume that was once used to measure beer. One firkin equals about 34 liters. To learn more about nonstandard units, use a dictionary or encyclopedia to research different \u201cweights and measures.\u201d Take note of any unusual units, such as a barleycorn, that are not listed in the text. Think about how the unit is defined and state its relationship to SI units. ",
+        "page_idx": 40
+    },
+    {
+        "type": "image",
+        "img_path": "images/326fe34629c3850997f894d68acef85f0ddd1c774fbbbbf914b150ed96b84570.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Some hummingbirds beat their wings more than 50 times per second. A scientist is measuring the time it takes for a hummingbird to beat its wings once. Which fundamental unit should the scientist use to describe the measurement? Which factor of 10 is the scientist likely to use to describe the motion precisely? Identify the metric prefix that corresponds to this factor of 10. ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "The scientist will measure the time between each movement using the fundamental unit of seconds. Because the wings beat so fast, the scientist will probably need to measure in milliseconds, or $1 0 ^ { - 3 }$ seconds. (50 beats per second corresponds to 20 milliseconds per beat.) ",
+        "page_idx": 40
+    },
+    {
+        "type": "image",
+        "img_path": "images/d69ce75bd18a29a1adc49d55cacc3bf158036476f9aa80808e2170b12b114fe8.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "One cubic centimeter is equal to one milliliter. What does this tell you about the different units in the SI metric system? ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "The fundamental unit of length (meter) is probably used to create the derived unit of volume (liter). The measure of a milliliter is dependent on the measure of a centimeter. ",
+        "page_idx": 40
+    }
+]

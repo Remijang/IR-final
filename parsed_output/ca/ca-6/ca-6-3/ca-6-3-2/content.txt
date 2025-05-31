@@ -1,0 +1,17 @@
+6.3.2 Unconditional Branches
+
+The unconditional branch/jump instructions of RISC-V are shown in Table 6.10. The most commonly used instruction is jal – it functions both as a function call instruction as well as a regular unconditional jump instruction. In both cases, the control jumps to the PC pointed to by the label. Akin to other ISAs, while encoding the instruction, the label is translated to a PC-relative offset. The jump can take place within a region of  MB. The jal instruction additionally stores the return address  in the first source register (  in the example). Note that if the first source register is equal to   , then the return address is not stored. jal in this case acts as a regular unconditional jump that does not store the return address.
+
+The jalr instruction augments  with one additional register argument. Consider the example: jal x1,  , 20. In this case, we add the offset 20 to the contents of  and jump to the resulting address. The return address is stored in  . Similar to  , we do not store the return address if the first source register is  . The  instruction can be used to implement a function return instruction. All that we have to do is to jump to the PC whose value is  (contents of the register  ).
+
+Example 108
+
+Write a RISC-V assembly program that has a function call.
+
+Answer:
+
+Example 109 Write a RISC-V assembly program to compute  and store the result in a0. x is passed
+
+through a1 and n is passed through a2.
+
+Answer:

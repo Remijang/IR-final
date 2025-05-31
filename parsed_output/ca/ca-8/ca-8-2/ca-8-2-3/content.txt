@@ -1,0 +1,57 @@
+8.2.3 Booth Multiplier
+
+The iterative multiplier is a simple algorithm, yet it is slow. It is definitely not as fast as addition. Let us try to speed it up by making a simple alteration. This trick will not change the asymptotic time complexity of the algorithm. However, in practice the process of multiplication will become significantly faster. This algorithm is known as the Booth multiplication algorithm and has been used for designing fast multipliers in a lot of processors.
+
+We observe that if a bit in the multiplier is 0, then nothing needs to be done other than a shift in the iterative multiplier. The complexity arises when a bit is 1. Let us assume that the multiplier contains a run of 1s. It is of the form - 0000111100. Let the run of 1s be from the  to the  position (  ). The value of the multiplier  is thus:
+
+Now, the iterative multiplier will perform  additions. This is not required as we can see from Equation 8.10. We just need to do one subtraction when we are considering the  bit, and do one addition when we are considering the  bit. We can thus replace  additions with one addition and one subtraction. This insight allows us to reduce the number of additions if there are long runs of 1s in the 2’s complement notation of the multiplier. If the multiplier is a small negative number, then it fits this pattern. It will have a long run of 1s especially in the most significant positions. Even otherwise, most of the numbers that we encounter will at least have some runs of 1s. The worst case arises, when we have a number of the form: 010101... . This is a very rare case.
+
+If we consider our basic insight again, then we observe that we need to consider bit pairs consisting of the previous and the current multiplier bit. Depending on the bit pair we need to perform a certain action. Table 8.4 shows the actions that we need to perform.
+
+If the current and previous bits are (0,0), respectively, then we do not need to do anything. We need to just shift  and continue. Similarly, if the bits are (1,1), nothing needs to be done. However, if the current bit is 1, and the previous bit was 0, then a run of 1s is starting. We thus need to subtract the value of the multiplicand from  . Similarly, if the current bit is 0, and the previous bit was 1, then a run of 1s has just ended. In this case, we need to add the value of the multiplicand to  .
+
+The Booth’s algorithm is shown in Algorithm 2. Here, also, we assume that  is 33 bits wide, and  is 32 bits wide. We iterate for 32 times, and consider bit pairs (current bit, previous bit). For (0,0) and (1,1), we do not need to perform any action, else we need to perform an addition and subtraction.
+
+Proof of Correctness\*
+
+Let us try to prove that the Booth’s algorithm produces the same result as the iterative algorithm for a positive multiplier.
+
+There are two cases. The multiplier (  ) can either be positive or negative. Let us consider the case of the positive multiplier first. The MSB of a positive multiplier is 0. Now, let us divide the multiplier into several sequences of contiguous 0s and 1s. For example, if the number is of the form: 000110010111. The sequences are: 000, 11, 00, 1, 0, and 111. For a run of 0s, both the multipliers (Booth’s and iterative) produce the same result because they simply shift the  register 1 step to the right.
+
+For a sequence of continuous 1s, both the multipliers also produce the same result because the Booth multiplier replaces a sequence of additions with an addition and a subtraction according to Equation 8.10. The only special case arises for the MSB bit, when the iterative multiplier may subtract the multiplicand. In this case, the MSB is 0, and thus no special cases arise. Each run of continuous 0s and 1s in the multiplier is accounted for in the partial product correctly. Therefore, we can conclude that the final result of the Booth multiplier is the same as that of a regular iterative multiplier.
+
+Let us now consider a negative multiplier  . Its MSB is 1. According to Theorem 2.3.4.2,  . Let  . Hence, for a negative multiplier  :
+
+ is a positive number (MSB is 0). Note that till we consider the MSB of the multiplier, the Booth’s algorithm does not know if the multiplier is equal to  or  .
+
+Now, let us split our argument into two cases. Let us consider the MSB bit (  bit), and the  bit. This bit pair can either be 10, or 11.
+
+Case 10: Let us divide the multiplier  into two parts as shown in Equation 8.11. The first part is a positive number  , and the second part is  , where  . Since the two MSB bits of the binary representation of  are 10, we can conclude that the binary representation of  contains 00 as its two MSB bits. Recall that the binary representation of  and  contain the same set of  least significant bits, and the MSB of  is always 0.
+
+Since the Booth multiplier was proven to work correctly for positive multipliers, we can conclude that the Booth multiplier correctly computes the partial product as  in the first  iterations. The proof of this fact is as follows. Till the end of  iterations, we are not sure if the MSB is 0 or 1. Hence, we do not know if we are multiplying  with  or  . The partial product will be the same in both the cases. If we were multiplying  with  , then no action will be taken in the last step because the two MSB bits of  are 00. This means that in the second last step (  iterations), the partial product contains  . We can similarly prove that the partial product computed by the iterative multiplier after  iterations is equal to  because the MSB of  is  .
+
+Hence, till this point, both the algorithms compute the same partial product, or alternatively have the same contents in the  and  registers. In the last step, both the algorithms find out that the MSB is 1. The iterative algorithm subtracts the multiplicand(  ) from  , or alternatively subtracts  from the partial product. The reason that we treat the multiplicand as shifted by  places is because the partial product in the last iteration spans the entire  register and  bits of the  register. Now, when we add or subtract the multiplicand(  ) to  , effectively, we are adding  shifted by  places to the left. Hence, the iterative multiplier correctly computes the product as  (see Equation 8.11). The Booth multiplier also does the same in this case. It sees a  transition. It subtracts  from  , which is exactly the same step as taken by the iterative multiplier. Thus, the operation of the Booth multiplier is correct in this case (same result as the iterative multiplier).
+
+Case 11: Let us again consider the point at the beginning of the  iteration. At this point of time, the partial product computed by the iterative algorithm is  , whereas the partial product computed by the Booth multiplier is different because the two MSB bits of  are 0 and 1, respectively. Let us assume that we were originally multiplying  with  , then the MSB would have been 0, and this fact would have been discovered in the last iteration. The Booth’s algorithm would have then added  to obtain the final result in the last step because of a  transition. Hence, after the  iteration, the partial product of the Booth multiplier is equal to  . Note that till the last iteration, the Booth multiplier does not know whether the multiplier is  or  .
+
+Now, let us take a look at the last iteration. In this iteration both the algorithms find out that the MSB is 1. The iterative multiplier subtracts  from the partial product, and correctly computes the final product as  . The Booth multiplier finds the current and previous bit to be 11, and thus does not take any action. Hence, its final product is equal to the partial product computed at the end of the  iteration, which is equal to  . Therefore, in this case also the outputs of both the multipliers match.
+
+We have thus proved that the Booth multiplier works for both positive and negative multi
+
+pliers.
+
+Important Point 10
+
+Here, we use a 33-bit  register to avoid overflows. Let us show an example of an overflow, if we had used a 32-bit U register. Assume that we are trying to multiply  (multiplicand) with -1(multiplier). We will need to compute  in the first step. The value of  should be equal to  ; however, this number cannot be represented with 32 bits. Hence, we have an overflow. We do not have this issue when we use a 33-bit  register. Moreover, we can prove that with a 33-bit U register, the additions or subtractions in the algorithm will never lead to an overflow (similar to the proof for iterative multiplication).
+
+Example 126
+
+Multiply  using a Booth multiplier. Assume a 4-bit binary 2’s complement number system. Let 3 (00112) be the multiplicand and let 2  be the multiplier. For each iteration show the values of  and V just before and after the right shift.
+
+Answer:
+
+Example 127
+
+Multiply  using a Booth multiplier. Assume a 4-bit binary 2’s complement number system. Let 3 (00112) be the multiplicand and let -2 (11102) be the multiplier. For each iteration show the values of  and V just before and after the right shift.
+
+Answer:

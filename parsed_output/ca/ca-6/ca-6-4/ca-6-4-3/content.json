@@ -1,0 +1,55 @@
+[
+    {
+        "type": "text",
+        "text": "6.4.3 Floating Point Arithmetic Instructions ",
+        "text_level": 1,
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Table 6.15 shows the floating point arithmetic instructions. They are of the form inst .s. The \u201c.s\u201d suffix corresponds to single precision floating point instructions. The \u201c.d\u201d suffix corresponds to double precision floating point instructions. The instructions fadd.s, fsub.s, fmul.s, fdiv.s, fmin.s, $f m a x . s$ and $f s q r t . s$ have their usual meanings. Note that we do not have variants that accept immediates directly as source operands. In the case of floating point instructions, immediates can only be loaded using $f l w$ instructions or converted from integers. Refer to Example 116. ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Example 116 ",
+        "text_level": 1,
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Compute $\\sqrt { \\pi + e + \\pi \\times e }$ , and store the result in f a0. ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "# declare the constants   \npi: . float 3.14   \ne: . float 2.72   \n. main :   \n# load them into floating point registers la a1 , pi flw fs1 , 0( a1) la a2 , e flw fs2 , 0( a2) fadd .s ft1 , fs1 , fs2 # pi + e fmul .s ft2 , fs1 , fs2 # pi \\* e fadd .s ft3 , ft1 , ft2 # pi + e + pi \\* e fsqrt .s fa0 , ft3 # sqrt (pi + e + pi\\*e) ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "To support operations such as dot products, matrix multiplication, and similar operations, ",
+        "page_idx": 250
+    },
+    {
+        "type": "table",
+        "img_path": "images/4a9d7930eb93ed432a20611b7bc7bdd57fbd6430ecba0aa5bd9afef106cadc69.jpg",
+        "table_caption": [
+            "Table 6.16: Fused addition and subtraction instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td colspan=\"5\">Explanation</td></tr><tr><td>fmadd.s rd, rs1, rs2, rs3</td><td>fmadd.s f1, f2, f3, f4</td><td></td><td>f1\u2190f2*f3+f4</td><td></td><td></td><td></td></tr><tr><td>fmsub.s rd, rs1, rs2,rs3</td><td>fmsub.s f1, f2,f3, f4</td><td></td><td>f1\u2190 f2 * f3- f4</td><td></td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "RISC-V supports a few fused arithmetic instructions such as the fused addition and subtraction operations (refer to Table 6.16). The fused add instruction $( f m a d d . s )$ takes three register source operands as arguments. It multiplies the first two and adds the product to the third. On similar lines, the fused subtract instruction subtracts the third source operand from the product of the first two register-based source operands. ",
+        "page_idx": 251
+    }
+]

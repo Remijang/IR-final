@@ -1,0 +1,122 @@
+[
+    {
+        "type": "text",
+        "text": "5.4.1 Data Transfer Instructions Load Instruction ",
+        "text_level": 1,
+        "page_idx": 210
+    },
+    {
+        "type": "table",
+        "img_path": "images/e8ab3c53fe3ff8a7eddae3d3bd9097c3c25544fc2b30dcbf7847b8ed561ce5e2.jpg",
+        "table_caption": [
+            "Table 5.20: Floating point load instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>fld mem</td><td>fld dword [eax]</td><td>Pushes an FP number stored in [eax] to the FP stack</td></tr><tr><td>fd reg</td><td>fld st1</td><td>Pushes the contents of st1 to the top of the stack</td></tr><tr><td>fild mem</td><td>fild dword [eax]</td><td>Pushes an integer stored in [eax] to the FP stack after converting it to a 32-bit floating point number</td></tr></table></body></html>\n\n",
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "Table 5.20 shows the semantics of the floating point load instructions. The most commonly used floating point load instruction is the $f l d$ instruction. The first variant of the f ld instruction can load a 32-bit floating point value from memory, and push it to the FP stack. We can use our standard addressing modes with integer registers as described in Section 5.2.4 for specifying an address in memory. The second variant can push the contents of an existing FP register on the FP stack. We can alternatively use the fild instruction that can read an integer from memory, convert it to floating point, and push it on the FP stack. Let us consider an example. ",
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "Example 85 ",
+        "text_level": 1,
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "Push the constant, 2.392, on the FP stack.   \nAnswer: We need to first define the constant 2.392 in the data section. In NASM, we do this as follows. ",
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "section .data num: dd 2.392 ",
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "We need to embed this code snippet at the beginning of the assembly file. Here, the declaration \u201csection .data\u201d means that we are declaring the data section. In the data section, we further declare a variable, num, that is a double word (32 bits, specified by dd), and its value is 2.392. Let us now push this value to the FP stack. We need to embed the following code snippet in the main assembly function. ",
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "fld dword [num] ",
+        "text_level": 1,
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "The assembler treats num as a memory address. While generating code, it will replace it with its actual address. However, in an assembly program, we can seamlessly treat num as a valid memory address, and its contents can thus be represented as [num]. The fld instruction in this code snippet loads 32 bits (dword) from num to the top of the FP stack. ",
+        "page_idx": 210
+    },
+    {
+        "type": "text",
+        "text": "Exchange Instruction ",
+        "text_level": 1,
+        "page_idx": 211
+    },
+    {
+        "type": "table",
+        "img_path": "images/df510f659c1c28fe8029f4bee30be8f138b770339376fdb81da6d488d73197fe.jpg",
+        "table_caption": [
+            "Table 5.21: Floating point exchange instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>fxch reg</td><td>fxch st3</td><td>Exchange the contents of stO and st3</td></tr><tr><td>fxch</td><td>fxch</td><td>Exchange the contents of stO and st1</td></tr></table></body></html>\n\n",
+        "page_idx": 211
+    },
+    {
+        "type": "text",
+        "text": "Table 5.21 shows the format of the floating point exchange instruction, $f x c h$ . It exchanges the contents of two floating point registers. The 1-address format $f x c h$ instruction exchanges the contents of the register specified as the first operand and $s t 0$ . If we do not specify any operands, then the processor exchanges $s t 0$ and $s t 1$ (the top of the stack, and the entry just below the top of the stack). ",
+        "page_idx": 211
+    },
+    {
+        "type": "text",
+        "text": "Store Instructions ",
+        "text_level": 1,
+        "page_idx": 211
+    },
+    {
+        "type": "table",
+        "img_path": "images/1cae8035083b171b4a70fe6b49bb5bbefdefed10882005461df1adb188ab7a02.jpg",
+        "table_caption": [
+            "Table 5.22: Floating point store instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td></td><td>Explanation</td><td></td></tr><tr><td>fst mem</td><td>fst dword [eax]</td><td></td><td>[eax] \u2190 st0</td><td></td></tr><tr><td>fst reg</td><td>fst st4</td><td></td><td>st4 \u2190 st0</td><td></td></tr><tr><td>fstp mem</td><td>fstp dword [eax]</td><td></td><td></td><td>[eax] \u2190 stO; pop the FP stack</td></tr><tr><td>fist mem</td><td>fist dword [eax]</td><td></td><td>[eax]</td><td>\u2190int(stO)</td></tr><tr><td>fistp mem</td><td>fistp dword [eax]</td><td></td><td>[eax]</td><td>\u2190int(stO);pop the FP stack</td></tr></table></body></html>\n\n",
+        "page_idx": 211
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the store instructions in Table 5.22. The format is similar to the floating point load instructions. We have three variants of the basic $_ { f s t }$ instruction. The first variant requires a single memory operand. It stores the contents of $s t 0$ in the memory location specified by the memory operand. The second variant requires an FP register operand and stores the contents of $s t 0$ in the FP register. ",
+        "page_idx": 211
+    },
+    {
+        "type": "text",
+        "text": "The third variant uses the \u2018p\u2019 suffix which is a generic suffix and is used by many other instructions also. The $f s t p$ instruction initially saves the value contained in $s t 0$ in the memory location specified by the first operand, and then pops the stack. Since the stack size is limited, it is often necessary to pop the stack to create more space. When we are storing $s t 0$ , we are saving a copy of its contents in main memory. Hence, it makes sense to have a variant of the $_ { f s t }$ instruction that can free the entry from the stack by popping it. ",
+        "page_idx": 211
+    },
+    {
+        "type": "text",
+        "text": "x86 has additional support for conversion of floating point values to integers. We can use the $f i s t$ instruction that first converts the contents of $s t 0$ to a signed integer by rounding it and then saves it in the location specified by the memory operand. Note that we always use a modifier (byte/word/dword/qword) for memory operands such that we can specify the number of bytes that need to be transferred. The f ist instruction also supports the \u2018p\u2019 suffix (see the semantics of the $f i s t p$ instruction in Table 5.22). ",
+        "page_idx": 211
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "Example 86   \nTransfer the contents of st0 to eax by converting the save FP number to an integer. Answer: ",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "fist dword[esp] mov eax, [esp] ",
+        "page_idx": 212
+    }
+]

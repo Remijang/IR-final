@@ -1,0 +1,32 @@
+[
+    {
+        "type": "text",
+        "text": "13.3.2 Source Synchronous Bus\\* ",
+        "text_level": 1,
+        "page_idx": 664
+    },
+    {
+        "type": "text",
+        "text": "Sadly, even plesiochronous buses are hard to manufacture. We often have large and unpredictable delays while transmitting signals, and even ensuring tight clock synchronization is difficult. For example, the AMD Hypertransport [Consortium et al., 2006] protocol that is used to provide a fast I/O path between different processors on the same motherboard does not assume synchronized or plesiosynchronized clocks. Secondly, the protocol assumes an additional jitter (unpredictability in the signal propagation time) of up to 1 cycle. ",
+        "page_idx": 664
+    },
+    {
+        "type": "text",
+        "text": "In such cases, we need to use a more complicated strobe signal. In a source synchronous bus, we typically send the sender clock as the strobe signal. The main insight is that if delays are introduced in the signal propagation time, then the signal and the strobe will be equally affected. This is a very realistic assumption, and thus most high performance I/O buses use source synchronous buses as of 2013. The circuit for a source synchronous bus is again not very complicated. We clock in data to the serial in \u2013 parallel out register using the clock of the sender (sent as the strobe). It is referred to as xclk. We read the data out using the clock of the receiver as shown in Figure 13.17. As a rule whenever a signal travels across clock boundaries we need a tunable delay element to keep transitions out of the keep-out region. We thus have a delay calculator circuit that computes the parameters of the delay element depending upon the phase difference between the sender clock received as a strobe $( x c l k )$ , and the receiver clock $( r c l k )$ . ",
+        "page_idx": 664
+    },
+    {
+        "type": "text",
+        "text": "Note that it is possible to have multiple parallel data links such that a set of bits can be sent simultaneously. All the data lines can share the strobe that carries the synchronizing clock signal. ",
+        "page_idx": 664
+    },
+    {
+        "type": "image",
+        "img_path": "images/8ebf446b1e9c7092285175d03bab939941a3cf456065d37688cb698d8c07cf31.jpg",
+        "img_caption": [
+            "Figure 13.17: The receiver of a source synchronous bus "
+        ],
+        "img_footnote": [],
+        "page_idx": 665
+    }
+]

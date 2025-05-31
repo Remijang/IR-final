@@ -1,0 +1,283 @@
+[
+    {
+        "type": "text",
+        "text": "13.4.2 Error Detection and Correction ",
+        "text_level": 1,
+        "page_idx": 670
+    },
+    {
+        "type": "text",
+        "text": "Errors can get introduced in signal transmission for a variety of reasons. We can have external electromagnetic interference due to other electronic gadgets operating nearby. Readers would have noticed a loss in the voice quality of a mobile phone after they switch on an electronic gadget such as a microwave oven. This happens because electromagnetic waves get coupled to the copper wires of the I/O channel and introduce current pulses. We can also have additional interference from nearby wires (known as crosstalk), and changes in the transmission delay of a wire due to temperature. Cumulatively, interference can induce jitter (introduce variabilities in the propagation time of the signal), and introduce distortion (change the shape of the pulses). We can thus wrongly interpret a 0 as a 1, and vice versa. It is thus necessary to add redundant information, such that the correct value can be recovered. ",
+        "page_idx": 670
+    },
+    {
+        "type": "text",
+        "text": "The reader needs to note that the probability of an error is very low in practice. It is typically less than 1 in every million transfers for interconnects on motherboards. However, this is not a very small number either. If we have a million I/O operations per second, which is plausible, then we will typically have 1 error per second. This is actually a very high error rate. Hence, we need to add extra information to bits such that we can detect and recover from errors. This approach is known as forward error correction. In comparison, in backward error correction, we detect an error, discard the message, and request the sender to retransmit. Let us now discuss the prevalent error detection and recovery schemes. ",
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Definition 150 ",
+        "text_level": 1,
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Forward Error Correction In this method, we add additional bits to a frame. These additional bits contain enough information to detect and recover from single or double bit errors if required. ",
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Backward Error Correction In this method also, we add additional bits to a frame, and these bits help us detect single or double bit errors. However, they do not allow us to correct errors. We can discard the message, and ask the transmitter for a retransmission. ",
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Single Error Detection ",
+        "text_level": 1,
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Since single bit errors are fairly improbable, it is extremely unlikely that we shall have two errors in the same frame. Let us thus focus on detecting a single error, and also assume that only one bit flips its state due to an error. ",
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Let us simplify our problem. Let us assume that a frame contains 8 bits, and we wish to detect if there is a single bit error. Let us number the bits in the frame as $D _ { 1 } , D _ { 2 } , \\ldots , D _ { 8 }$ , respectively. Let us now add an additional bit known as the parity bit. The parity bit, $P$ is equal to: ",
+        "page_idx": 671
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = D _ { 1 } \\oplus D _ { 2 } \\oplus . . . \\oplus D _ { 8 }\n$$",
+        "text_format": "latex",
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "Here, the $\\bigoplus$ operation is the XOR operator. In simple terms, the parity bit represents the XOR of all the data bits $( D _ { 1 } \\ldots D _ { 8 } )$ . For every 8 bits, we send an additional bit, which is the parity bit. Thus, we convert an 8-bit message to an equivalent 9 bit message. In this case, we are effectively adding a $1 2 . 5 \\%$ overhead in terms of available bandwidth, at the price of higher reliability. Figure 13.22 shows the structure of a frame or message using our 8-bit parity scheme. Note that we can support larger frame sizes also by associating a separate parity bit with each sequence of 8 data bits. ",
+        "page_idx": 671
+    },
+    {
+        "type": "text",
+        "text": "When the receiver receives the message, it computes the parity by computing the XOR of the 8 data bits. If this value matches the parity bit, then we can conclude that there is no error. However, if the parity bit in the message does not match the value of the computed parity bit, then we can conclude that there is a single bit error. The error can be in any of the data bits in the message, or can even be in the parity bit. In this case, we have no way of knowing. All that we can detect is that there is a single bit error. Let us now try to correct the error also. ",
+        "page_idx": 671
+    },
+    {
+        "type": "image",
+        "img_path": "images/a93a5b0f198ac53abb9fc87d8eb1772c52c07832d1b838aa67b813645d12b5d8.jpg",
+        "img_caption": [
+            "Figure 13.22: An 8-bit message with a parity bit "
+        ],
+        "img_footnote": [],
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "Single Error Correction ",
+        "text_level": 1,
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "To correct a single bit error, we need to know the index of the bit that has been flipped if there is an error. Let us now count the set of possible outcomes. For an $n$ -bit block, we need to know the index of the bit that has an error. We can have $n$ possible indices in this case. We also need to account for the case, in which we do not have an error. Thus, for a single error correction (SEC) circuit there are a total of $n + 1$ possible outcomes ( $n$ outcomes with errors, and one outcome with no error). Thus, from a theoretical point of view, we need $\\lceil l o g ( n + 1 ) \\rceil$ additional bits. For example, for an 8-bit frame, we need $\\lceil l o g ( 8 + 1 ) \\rceil = 4$ bits. Let us design a (8,4) code that has four additional bits for every 8-bit data word. ",
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "Let us start out by extending the parity scheme. Let us assume that each of the four additional bits are parity bits. However, they are not the parity functions of the entire set of data bits. Instead, each bit is the parity of a subset of data bits. Let us name the four parity bits $P _ { 1 }$ , $P _ { 2 }$ , $P _ { 3 }$ , and $P _ { 4 }$ . Moreover, let us arrange the 8 data bits, and the 4 parity bits as shown in Figure 13.23. ",
+        "page_idx": 672
+    },
+    {
+        "type": "image",
+        "img_path": "images/9120693ac4883067b8ea9456e3749cb459906482cd07932c9ab626fd29ab1790.jpg",
+        "img_caption": [
+            "Figure 13.23: Arrangement of data and parity bits "
+        ],
+        "img_footnote": [],
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "We keep the parity bits, $P _ { 1 }$ , $P _ { 2 }$ , $P _ { 3 }$ , and $P _ { 4 }$ in positions 1, 2, 4 and 8, respectively. We arrange the data bits, $D _ { 1 } \\ldots D _ { 8 }$ , in positions 3, 5, 6, 7, 9, 10, 11, and 12, respectively. The next step is to assign a set of data bits to each parity bit. Let us represent the position of each data bit in binary. In this case, we need 4 binary bits because the largest number that we need to represent is 12. Now, let us associate the first parity bit, $P _ { 1 }$ , with all the data bits whose positions (represented in binary) have 1 as their LSB. In this case, the data bits with 1 as their LSB are $D _ { 1 }$ (3), $D _ { 2 }$ (5), $D _ { 4 }$ (7), $D _ { 5 }$ (9), and $D _ { 7 }$ (11). We thus compute the parity bit $P _ { 1 }$ as: ",
+        "page_idx": 672
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { 1 } = D _ { 1 } \\oplus D _ { 2 } \\oplus D _ { 4 } \\oplus D _ { 5 } \\oplus D _ { 7 }\n$$",
+        "text_format": "latex",
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "Similarly, we associate the second parity bit, $P _ { 2 }$ , with all the data bits that have a $^ { 1 }$ in their $2 ^ { n d }$ position (assumption is that the LSB is in the first position). We use similar definitions for ",
+        "page_idx": 672
+    },
+    {
+        "type": "text",
+        "text": "the $3 ^ { r d }$ , and $4 ^ { t h }$ parity bits. ",
+        "page_idx": 673
+    },
+    {
+        "type": "table",
+        "img_path": "images/f7c94b6a68049cfc73f3381836ee135aa0facbe59a9e174660013c34b8c9663e.jpg",
+        "table_caption": [
+            "Table 13.2: Relationship between data and parity bits "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"3\">Parity Bits</td><td colspan=\"8\">Data Bits</td></tr><tr><td>D1</td><td>D2</td><td>D3</td><td>D4</td><td>D5</td><td>D6</td><td>D7</td><td>D8</td></tr><tr><td>0011</td><td>0101</td><td>0110</td><td>0111</td><td>1001</td><td>1010</td><td>1011</td><td>1100</td></tr><tr><td>P1</td><td>X</td><td>X</td><td></td><td>X</td><td>X</td><td></td><td>X</td><td></td></tr><tr><td>P2</td><td>X</td><td></td><td>X</td><td>X</td><td></td><td>X</td><td>X</td><td></td></tr><tr><td>P3</td><td></td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td>X</td></tr><tr><td>P4</td><td></td><td></td><td></td><td></td><td>X</td><td>X</td><td>X</td><td>X</td></tr></table></body></html>\n\n",
+        "page_idx": 673
+    },
+    {
+        "type": "text",
+        "text": "Table 13.2 shows the association between data and parity bits. An \u201cX\u201d indicates that a given parity bit is a function of the data bit. Based, on this table, we arrive at the following equations for computing the parity bits. ",
+        "page_idx": 673
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { P _ { 1 } = D _ { 1 } \\oplus D _ { 2 } \\oplus D _ { 4 } \\oplus D _ { 5 } \\oplus D _ { 7 } } \\\\ { P _ { 2 } = D _ { 1 } \\oplus D _ { 3 } \\oplus D _ { 4 } \\oplus D _ { 6 } \\oplus D _ { 7 } } \\\\ { P _ { 3 } = D _ { 2 } \\oplus D _ { 3 } \\oplus D _ { 4 } \\oplus D _ { 8 } } \\\\ { P _ { 4 } = D _ { 5 } \\oplus D _ { 6 } \\oplus D _ { 7 } \\oplus D _ { 8 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 673
+    },
+    {
+        "type": "text",
+        "text": "The algorithm for message transmission is as follows. We compute the parity bits according to Equations 13.3 \u2013 13.6. Then, we insert the parity bits in the positions 1, 2, 4, and 8, respectively, and form a message according to Figure 13.23 by adding the data bits. Once the data link layer of the receiver gets the message it first extracts the parity bits, and forms a number of the form $P = P _ { 4 } P _ { 3 } P _ { 2 } P _ { 1 }$ , that is composed of the four parity bits. For example, if $P _ { 1 } = 0$ , $P _ { 2 } = 0$ , $P _ { 3 } = 1$ , and $P _ { 4 } = 1$ , then $P = 1 1 0 0$ . Subsequently, the error detection circuit at the receiver computes a new set of parity bits $( P _ { 1 } ^ { \\prime } , P _ { 2 } ^ { \\prime } , P _ { 3 } ^ { \\prime } , P _ { 4 } ^ { \\prime } )$ from the received data bits, and forms another number of the form $P ^ { \\prime } = P _ { 4 } ^ { \\prime } P _ { 3 } ^ { \\prime } P _ { 2 } ^ { \\prime } P _ { 1 } ^ { \\prime }$ . Ideally $P$ should be equal to $P ^ { \\prime }$ . However, if there is an error in the data or parity bits, then this will not be the case. Let us compute $P \\oplus P ^ { \\prime }$ . This value is also known as the syndrome. ",
+        "page_idx": 673
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to correlate the value of the syndrome with the position of the erroneous bit. Let us first assume that there is an error in a parity bit. In this case, the first four entries in Table 13.3 show the position of the erroneous bit in the message, and the value of the syndrome. The value of the syndrome is equal to the position of the erroneous bit in the message. This should come as no surprise to the reader, because we designed our message to explicitly ensure this. The parity bits are at positions 1, 2, 4, and 8, respectively. Consequently, if any parity bit has an error, its corresponding bit in the syndrome gets set to 1, and the rest of the bits remain 0. Consequently, the syndrome matches the position of the erroneous bit. ",
+        "page_idx": 673
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the case of single bit errors in data bits. Again from Table 13.3, we can conclude that the syndrome matches the position of the data bit. This is because once a data bit has an error, all its associated parity bits get flipped. For example, if $D _ { 5 }$ has an error then the parity bits, $P _ { 1 }$ and $P _ { 4 }$ , get flipped. Recall that the reason we associate $P _ { 1 }$ and $P _ { 4 }$ with ",
+        "page_idx": 673
+    },
+    {
+        "type": "table",
+        "img_path": "images/ddaa4d6cea7179f41cb8d88735f5ec89a541fc73241aa20ddac91d06a2d7f69d.jpg",
+        "table_caption": [
+            "Table 13.3: Relationship between the position of an error and the syndrome "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Bit</td><td>Position</td><td>Syndrome</td><td>Bit</td><td>Position</td><td>Syndrome</td><td></td></tr><tr><td>P1</td><td>1</td><td>0001</td><td>D3</td><td>6</td><td>0110</td><td></td></tr><tr><td>P2</td><td>2</td><td>0010</td><td>D4</td><td>7</td><td>0111</td><td></td></tr><tr><td>P3</td><td>4</td><td>0100</td><td>D5</td><td>9</td><td>1001</td><td></td></tr><tr><td>P4</td><td>8</td><td>1000</td><td>D6</td><td>10</td><td>1010</td><td></td></tr><tr><td>D1</td><td>3</td><td>0011</td><td>D7</td><td>11</td><td>1011</td><td></td></tr><tr><td>D2</td><td>5</td><td>0101</td><td>D8</td><td>12</td><td>1100</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "$D _ { 5 }$ is because $D _ { 5 }$ is bit number 9 (1001), and the two 1s in the binary representation of 9 are in positions 1 and 4, respectively. Subsequently, when there is an error in $D _ { 5 }$ , the syndrome is equal to 1001, which is also the index of the bit in the message. Similarly, there is a unique syndrome for every data and parity bit (refer to Table 13.2). ",
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "Thus, we can conclude that if there is an error, then the syndrome points to the index of the erroneous bit (data or parity). Now, if there is no error, then the syndrome is equal to $0$ . We thus have a method to detect and correct a single error. This method of encoding messages with additional parity bits is known as the SEC (single error correction) code. ",
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "Single Error Correction, Double Error Detection (SECDED) ",
+        "text_level": 1,
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to use the SEC code to additionally detect double errors (errors in two bits).   \nLet us show a counterexample, and prove that our method based on syndromes will not work.   \nLet us assume that there are errors in bits $D _ { 2 }$ , and $D _ { 3 }$ . The syndrome will be equal to 0111.   \nHowever, if there is an error in $D _ { 4 }$ , the syndrome will also be equal to 0111. There is thus no way of knowing whether we have a single bit error $( D _ { 4 } )$ , or a double bit error ( $D _ { 2 }$ and $D _ { 3 }$ ). ",
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "Let us slightly augment our algorithm to detect double errors also. Let us add an additional parity bit, $P _ { 5 }$ , that computes the parity of all the data bits $( D _ { 1 } \\ldots D _ { 8 } )$ , and the four parity bits $( P _ { 1 } \\ldots P _ { 4 } )$ used in the SEC code, and then let us add $P _ { 5 }$ to the message. Let us save it in the $1 3 ^ { t h }$ position in our message, and exclude it from the process of calculation of the syndrome. The new algorithm is as follows. We first calculate the syndrome using the same process as used for the SEC (single error correction) code. If the syndrome is $0$ , then there can be no error (single or double). The proof for the case of a single error can be readily verified by taking a look at Table 13.2. For a double error, let us assume that two parity bits have been flipped. In this case, the syndrome will have two 1s. Similarly, if two data bits have been flipped, then the syndrome will have at least one 1 bit, because no two data bits have identical columns in Table 13.2. Now, if a data and a parity bit have been flipped, then also the syndrome will be non-zero, because a data bit is associated with multiple parity bits. The correct parity bits will indicate that there is an error. ",
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "Hence, if the syndrome is non-zero, we suspect an error; otherwise, we assume that there are no errors. If there is an error, we take a look at the bit $P _ { 5 }$ in the message, and also recompute it at the receiver. Let us designate the recomputed parity bit as $P _ { 5 } ^ { \\prime }$ . Now, if $P _ { 5 } = P _ { 5 } ^ { \\prime }$ , then we can conclude that there is a double bit error. Two single bit errors are essentially canceling each other while computing the final parity. Conversely, if $P _ { 5 } \\neq P _ { 5 } ^ { \\prime }$ , then it means that we have a single bit error. We can thus use this check to detect if we have errors in two bits or one bit. If we have a single bit error, then we can also correct it. However, for a double bit error, we can just detect it, and possible ask the source for retransmission. This code is popularly known as the SECDED code . ",
+        "page_idx": 674
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "Hamming Codes ",
+        "text_level": 1,
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "All the codes described up till now are known as Hamming codes. This is because they implicitly rely on the Hamming distance. The Hamming distance is the number of corresponding bits that are different between two sequences of binary bits. For example, the Hamming distance between 0011 and 1010 is 2 (MSB and LSB are different). ",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a 4-bit parity code. If a message is 0001, then the parity bit is equal to 1, and the transmitted message with the parity bit in the MSB position is 10001. Let us refer to the transmitted message as the code word. Note that 00001 is not a valid code word, and the receiver will rely on this fact to adjudge if there is an error or not. In fact, there is no other valid code word within a Hamming distance of 1 of a valid code word. The reader needs to prove this fact. Likewise for a SEC code, the minimum Hamming distance between code words is 2, and for a SECDED code it is 3. Let us now consider a different class of codes that are also very popular. ",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "Cyclic Redundancy Check (CRC) Codes ",
+        "text_level": 1,
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "CRC codes are mostly used for detecting errors, even though they can be used to correct single bit errors in most cases. To motivate the use of CRC codes let us take a look at the patterns of errors in practical I/O systems. Typically, in I/O channels, we have interference for a duration of time that is longer than a bit period. For example, if there is some external electro-magnetic interference, then it might last for several cycles, and it is possible that several bits might get flipped. This pattern of errors is known as a burst error. For example, a 32-bit CRC code can detect burst errors as long as 32 bits. It typically can detect most 2-bit errors, and all single bit errors. ",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "The mathematics behind CRC codes is complicated, and interested readers are referred to texts on coding theory [Neubauer et al., 2007]. Let us show a small example in this section. ",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "Let us assume, that we wish to compute a 4-bit CRC code, for an 8-bit message. Let the message be equal to $1 0 1 1 0 0 1 1 _ { 2 }$ in binary. The first step is to pad the message by 4 bits, which is the length of the CRC code. Thus, the new message is equal to 10110011 0000 (a space has been added for improving readability). The CRC code requires another 5 bit number, which is known as the generator polynomial or the divisor. In principle, we need to divide the number represented by the message with the number represented by the divisor. The remainder is the CRC code. However, this division is different from regular division. It is known as modulo-2 division. In this case, let us assume that the divisor is $1 1 0 0 1 _ { 2 }$ . Note that for an $n$ -bit CRC code, the length of the divisor is $n + 1$ bits. ",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "Let us now show the algorithm. We start out by aligning the MSB of the divisor with the MSB of the message. If the MSB of the message is equal to 1, then we compute a XOR of the first $n + 1$ (5 in this case) bits, and the divisor, and replace the corresponding bits in the message with the result. Otherwise, if the MSB is 0, we do not do anything. In the next step, we shift the divisor one step to the right, treat the bit in the message aligned with the ",
+        "page_idx": 675
+    },
+    {
+        "type": "text",
+        "text": "MSB of the divisor as the MSB of the message, and repeat the same process. We continue this sequence of steps till the LSB of the divisor is aligned with the LSB of the message. We show the sequence of steps in Example 156. At the end, the least significant $n$ (4 bits) contain the CRC code. For sending a message, we append the CRC code with the message. The receiver recomputes the CRC code, and matches it with the code that is appended with the message. ",
+        "page_idx": 676
+    },
+    {
+        "type": "text",
+        "text": "Example 156 ",
+        "text_level": 1,
+        "page_idx": 676
+    },
+    {
+        "type": "text",
+        "text": "Show the steps for computing a 4-bit CRC code, where the message is equal to 101100112, and the divisor is equal to 110012. ",
+        "page_idx": 676
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 676
+    },
+    {
+        "type": "image",
+        "img_path": "images/f298e9beab0d6fbc169ea5a0459deaed6c96b254e8d14c0cf90bbd3421a9bb17.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 676
+    },
+    {
+        "type": "text",
+        "text": "In this figure, we ignore the steps in which the MSB of the relevant part of the message is 0, because in these cases nothing needs to be done. ",
+        "page_idx": 676
+    }
+]

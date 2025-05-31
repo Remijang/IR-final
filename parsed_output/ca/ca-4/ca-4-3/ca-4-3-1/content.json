@@ -1,0 +1,149 @@
+[
+    {
+        "type": "text",
+        "text": "4.3.1 Arrays ",
+        "text_level": 1,
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "Array Specific Features ",
+        "text_level": 1,
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "Note that the starting memory location of entry $i$ is equal to the base address of the array plus $4 i$ in an array with word (4 byte) sized elements. In a high level language, the programmer always specifies the index in an array, and relies on the compiler to multiply the index by 4. ARM assembly provides nice features to multiply $i$ by 4 by using the $l s l$ instruction. This feature can be embedded in load-store instructions. ",
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "ldr r0, [r1, r2, lsl #2] ",
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "In this case the base address is stored in register, r1, and the offset is equal to $r 2 \\ < <$ $2 = 4 * r 2$ . The advantage here is that we do not need a separate instruction to multiply the index by 4. We have already seen this optimization in Section 4.2.2. However, there are other optimizations that can make our life easier. Let us consider array accesses in a loop as shown in Example 48. ",
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "Example 48 Convert the following $C$ program to a program to ARM assembly. Assume that the base address of the array is stored in $r 0$ . ",
+        "page_idx": 160
+    },
+    {
+        "type": "image",
+        "img_path": "images/e08a3550a8f6a76fe956fffc0cc1af4419f491b56232b89cdd50dd99a099f3b3.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 160
+    },
+    {
+        "type": "image",
+        "img_path": "images/9bd56e69576a0358c02156e59f8e4e0124cb1253a74e70f9212c28a658f8f482.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "There is a scope for added efficiency here. We note that Lines 6 and 7 form a standard pattern. Line 6 reads the array entry, and Line 7 increments the index. Almost all sequential array accesses follow a similar pattern. Hence, it makes sense to have one instruction that simplifies this process. ",
+        "page_idx": 160
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "The ARM architecture adds two extra addressing modes for the load and store instructions to achieve this. They are called pre-indexed and post-indexed with auto-update. In the preindexed addressing mode (with auto-update), the base address is updated first, and then the effective memory address is computed. In a post-indexed scheme, the base address is updated after the effective address is computed. ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "The pre-indexed addressing mode with auto-update is implemented by adding a \u2018!\u2019 sign after the address. ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "Examples of the pre-indexed addressing mode ldr r $\\begin{array} { r l r } & { 3 , } & { [ \\mathbf { r } 0 , \\mathbf { \\Psi } \\# \\mathbf { 4 } ] : \\quad \\qquad \\mathbf { \\Psi } / \\ast \\quad \\mathbf { r } 3 ~ = ~ [ \\mathbf { r } 0 + \\mathbf { 4 } ] ; ~ \\mathbf { r } 0 ~ = ~ \\mathbf { r } 0 ~ + ~ \\mathbf { 4 } \\ast / \\mathbf { \\Psi } } \\\\ & { 3 , } & { [ \\mathbf { r } 0 , \\mathbf { \\Psi } \\mathbf { r } 1 , \\mathbf { \\Psi } \\mathbf { 1 } \\mathbf { s } 1 ~ \\# 2 ] : ~ \\mathbf { \\Psi } / \\ast ~ \\mathbf { r } 3 ~ = ~ [ \\mathbf { r } 0 ~ + ~ \\mathbf { r } \\mathbf { 1 } ~ \\ll ~ 2 ] ~ ; \\quad \\qquad \\quad } \\\\ & { } & { \\mathbf { r } 0 ~ = ~ \\mathbf { r } 0 ~ + ~ \\mathbf { r } \\mathbf { 1 } ~ \\ll ~ 2 ; ~ \\mathbf { \\Psi } \\ast / \\quad } \\end{array}$ ldr r ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "The post-indexed addressing mode is implemented by encapsulating the base address within \u2018[\u2019 and \u2018]\u2019, and writing the offset arguments separated by commas after it. ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "Examples of the post-indexed addressing mode ldr r3, $\\begin{array} { r l } & { [ \\mathbf { r } 0 ] , \\ \\# 4 } \\\\ &  [ \\mathbf { r } 0 ] , \\ \\mathbf { r } 1 , \\ \\mathbf { \\lambda } \\mathbf { 1 } \\mathbf { s } 1 \\ \\# 2 \\ \\begin{array} { r l } { / * \\mathbf { \\sigma } \\mathbf { r } 3 } & { = \\ [ \\mathbf { r } 0 ] , \\ \\mathbf { r } 0 } \\\\ { / * \\mathbf { \\sigma } \\mathbf { r } 3 } & { = \\ [ \\mathbf { r } 0 ] , \\ \\mathbf { \\sigma } \\mathbf { r } 0 } \\end{array} = \\mathbf { r } 0 \\ + \\begin{array} { r l } { 4 \\mathbf { \\sigma } * / } \\\\ { \\mathbf { r } 1 } & { \\ll \\ 2 \\ * / } \\end{array} \\end{array}$ ldr r3, ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "Let us now see, how we can slightly make our addNumbers slightly more intuitive. The modified ARM code is shown in Example 49. ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "Example 49   \nConvert the assembly code shown in Example 48 to use the post indexed addressing mode. Answer: ARM assembly   \n/\\* base address of array a in r0 \\*/ mov r1, #0 /\\* sum = 0 \\*/ add r4, r0, #400 /\\* address of a[100]\\*/   \n.loop: ldr r3, [r0], #4 add r1, r1, r3 /\\* sum += a[idx] \\*/ cmp r0, r4 bne .loop ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "We have eliminated the index variable saved in $r 2$ . It is not required anymore. We directly update the base address in Line 5. For the loop exit condition, we compute the first address beyond the end of the array in Line 3. We compare the base address with this illegal address in Line 7, and then if they are unequal we keep iterating. ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "Example 48 contains 5 lines in the loop, whereas the code in Example 49 contains 4 lines in the loop. We have thus shown that it is possible to reduce the code size (of the loop) by $2 0 \\%$ using post-indexed addressing, and increase performance too since most cores do not impose additional time overheads when auto-update addressing modes are used. ",
+        "page_idx": 161
+    },
+    {
+        "type": "text",
+        "text": "Structures ",
+        "text_level": 1,
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "Implementing structures is very similar to implementing arrays. Let us look at a typical structure in C. ",
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "struct Container { int a; int b; char c; short int d; int e;   \n}; ",
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "We can treat each structure as an array. Consequently, a structure will have a base address and each element of the structure will have an offset. Unlike an array, different elements in a structure can have different sizes, and thus they are not constrained to start with offsets that are multiples of the word size. ",
+        "page_idx": 162
+    },
+    {
+        "type": "table",
+        "img_path": "images/3162046786b16e770672e426eec55033a9f9e57f8006ffba3e3dd6269a3534c1.jpg",
+        "table_caption": [
+            "Table 4.15: Elements in the structure and their offsets "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Type</td><td>Element</td><td>Offset</td></tr><tr><td>int</td><td>a</td><td>0</td></tr><tr><td>int</td><td>b</td><td>4</td></tr><tr><td>char</td><td>C</td><td>8</td></tr><tr><td>short int</td><td>d</td><td>10</td></tr><tr><td>int</td><td>e</td><td>12</td></tr></table></body></html>\n\n",
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "Table 4.15 shows the offsets for different elements within a structure (as generated by the GNU ARM compiler). We need to note that compilers for the ARM architecture impose additional constraints. They pad variable addresses, and align them with 2-byte or 4-byte boundaries as shown in Table 4.15 The rules for variable alignment are described in detail in the ARM architecture manual [arm, 2000]. Similarly, it is possible to implement more high level data structures such as unions and classes. The interested reader is referred to a book on compilers[Aho et al., 2006]. ",
+        "page_idx": 162
+    }
+]

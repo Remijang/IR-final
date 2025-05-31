@@ -1,0 +1,356 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.14 Encoding the SimpleRisc Instruction Set ",
+        "text_level": 1,
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to encode each instruction to a 32-bit value. We observe that we have instructions in 0,1,2 and 3 address formats. Secondly, some instructions take immediate values. Hence, we need to divide 32 bits into multiple fields. Let us first try to encode the type of instruction. Since there are 21 instructions, we require 5 bits to encode the instruction type. The code for each instruction is shown in Table 3.10. We can use the five most significant bits in a 32-bit field to specify the instruction type. The code for an instruction is also known as its opcode. ",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "Definition 39 ",
+        "text_level": 1,
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "An opcode is a unique identifier for each machine instruction. ",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "Now, let us try to encode each type of instruction starting from 0-address instructions. ",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "Encoding 0-Address Instructions ",
+        "text_level": 1,
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "The two 0-address instructions that we have are ret, and nop. The opcode is specified by the five most significant bits. In this case it is equal to 10100 for ret and 01101 for nop (refer to Table 3.10). Their encoding is shown in Figure 3.12. We only need to specify the 5 bit opcode in the MSB positions. The rest of the 27 bits are not required. ",
+        "page_idx": 127
+    },
+    {
+        "type": "table",
+        "img_path": "images/fdef2d3297196c06181938fe48552b15317d88cbcfca0ef4f33c6150e7ffd07b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Instruction</td><td>Code</td><td>Instruction</td><td>Code</td><td>Instruction</td><td></td></tr><tr><td>add</td><td>00000</td><td>not</td><td>01000</td><td>beq</td><td>Code 10000</td></tr><tr><td>sub</td><td>00001</td><td></td><td>01001</td><td>bgt</td><td>10001</td></tr><tr><td>mul</td><td>00010</td><td>mov lsl</td><td>01010</td><td>b</td><td>10010</td></tr><tr><td>div</td><td>00011</td><td>lsr</td><td>01011</td><td>call</td><td>10011</td></tr><tr><td>mod</td><td>00100</td><td></td><td>01100</td><td></td><td>10100</td></tr><tr><td>cmp</td><td>00101</td><td>asr nop</td><td>01101</td><td>ret</td><td></td></tr><tr><td>and</td><td>00110</td><td>ld</td><td>01110</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>or</td><td>00111</td><td>st</td><td>01111</td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 128
+    },
+    {
+        "type": "image",
+        "img_path": "images/633e9540c0db67a695a9febe09556d8529239171254612e5ad9058e14ce74281.jpg",
+        "img_caption": [
+            "Table 3.10: List of instruction opcodes ",
+            "Figure 3.12: Encoding the ret instruction "
+        ],
+        "img_footnote": [],
+        "page_idx": 128
+    },
+    {
+        "type": "text",
+        "text": "Encoding 1-Address Instructions ",
+        "text_level": 1,
+        "page_idx": 128
+    },
+    {
+        "type": "text",
+        "text": "The 1-address instructions that we have are call, $b$ , beq, and bgt. In SimpleRisc assembly, they take a label as an argument. While encoding the instruction we need to specify the address of the label as the argument. The address of a label is the same as the address of the instruction that it is pointing to. If the line after the label is empty, then we need to consider the next assembly statement that has an instruction. ",
+        "page_idx": 128
+    },
+    {
+        "type": "text",
+        "text": "These four instructions require 5 bits for their opcode. The remaining 27 bits can be used for the address. Note that a memory address is 32 bits long. Hence, we cannot cover the address space with 27 bits. However, we can make two key optimizations. The first is that we can assume PC-relative addressing. We can assume that the 27 bits specify an offset (both positive and negative) with respect to the current PC. The branch statements in modern programs are generated because of for/while loops or if-statements. For these constructs the branch target is typically within a range of several hundred instructions. If we have 27 bits to specify the offset, and we assume that it is a 2\u2019s complement number, then the maximum offset in any direction (positive or negative) is $2 ^ { 2 6 }$ . This is more than sufficient for almost all programs. ",
+        "page_idx": 128
+    },
+    {
+        "type": "text",
+        "text": "There is another important observation to be made. An instruction takes 4 bytes. If we assume that all instructions are aligned to 4-byte boundaries, then all starting memory addresses of instructions will be a multiple of 4. Hence, the least two significant binary digits of the address will be 00. There is no reason for wasting bits in trying to specify them. We can assume that the 27 bits specify the offset of the address of the memory word (in units of 4-byte memory words) that contains the instruction. With this optimization, the offset from the PC in terms of bytes becomes 29 bits. This number should suffice for even the largest programs. ",
+        "page_idx": 128
+    },
+    {
+        "type": "text",
+        "text": "Just in case, there is a pathological example, in which the branch target is more than $2 ^ { 2 8 }$ bytes away, then the assembler needs to chain the branches such that one branch will call another branch and so on. However, this would be a very rare case. The encoding for these instructions is shown in Figure 3.13. ",
+        "page_idx": 129
+    },
+    {
+        "type": "image",
+        "img_path": "images/c7dc24d430f633ee2d56ce0488bba523652fcfcd2392b728c914e831dbe0c35d.jpg",
+        "img_caption": [
+            "Figure 3.13: Encoding of 1-address instructions(branch format) "
+        ],
+        "img_footnote": [],
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "Note that the 1-address instruction format finds a use for the unused bits in the 0-address format. We can think of the 0-address format for the ret instruction as a special case of the 1-address format. Let us refer to the 1-address format as the branch format. Let us name the fields in this format. Let us call the opcode portion of the format as $\\it { O p }$ , and the offset as offset. The op field contains the bits in positions 28-32, and the offset field contains the bits in positions 1-27. ",
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "Encoding 3-Address Instructions ",
+        "text_level": 1,
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "Let us consider 3-address instructions first, and then look at other types of instructions. The 3-address instructions in SimpleRisc are add, sub, mul, div, mod, and, or, lsl, lsr, and $a s r$ . ",
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a generic 3-address instruction. It has a destination register, one input source register, and a second source operand that can either be a register or an immediate. We need to devote one bit to find out if the second source operand is a register or an immediate. Let us call this the $I$ bit and specify it just after the opcode in the instruction. If $I = 1$ , then the second source operand is an immediate. If $I = 0$ , the second source operand is a register. ",
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the case of 3-address registers that have their second source operand as a register( $I = 0$ ). Since we have 16 registers, we require 4 bits to uniquely specify each register. Register $r i$ can be encoded as the unsigned 4-bit binary equivalent of $i$ . Hence, to specify the destination register and two input source registers, we require 12 bits. The structure is shown in Figure 3.14. Let us call this instruction format as the register format. Like the branch format let us name the different fields \u2013 op (opcode, bits: 28-32), $I$ (immediate present, bits:27), $^ { r d }$ (destination register, bits: 23-26), rs1 (source register 1, bits: 19-22), and $r s 2$ (source register 2, bits:15-18). ",
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "Now, if we assume that the second source operand is an immediate, then we need to set $I$ to 1. Let us calculate the number of bits we have left for specifying the immediate. We have already devoted 5 bits for the opcode, 1 bit for the $I$ bit, 4 bits for the destination register, and 4 bits for the first source register. In all, we have expended 14 bits. Hence, out of 32 bits, we are left with 18 bits, and we can use them to specify the immediate. ",
+        "page_idx": 129
+    },
+    {
+        "type": "text",
+        "text": "We propose to divide the 18 bits into two parts \u2013 2 bits (modifier) $+ ~ 1 6$ bits (constant part of the immediate). The two modifier bits can take three values \u2013 00 (default), 01 (\u2018u\u2019), and 10 (\u2018h\u2019). The remaining 16 bits are used to specify a 16-bit 2\u2019s complement number when we are using default modifiers. For the $u$ and $h$ modifiers, we assume that the 16-bit constant in the immediate field is an unsigned number. In the rest of this book, we assume that the immediate field is 18 bits long with a modifier part, and a constant part. The processor internally expands the immediate to a 32-bit value, in accordance with the modifiers. ",
+        "page_idx": 129
+    },
+    {
+        "type": "image",
+        "img_path": "images/746eb23d6d7327ffd618c27fd5edda3f5aa32490a3207669097c56cf1ce5fe95.jpg",
+        "img_caption": [
+            "Figure 3.14: Encoding 3-address instructions with register operands (register format) "
+        ],
+        "img_footnote": [],
+        "page_idx": 130
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 130
+    },
+    {
+        "type": "text",
+        "text": "This encoding is shown in Figure 3.15. Let us call this instruction format as the immediate format. Like the branch format let us name the different fields \u2013 op (opcode, bits: 28-32), $I$ (immediate present, bits:27), rd (destination register, bits: 23-26), rs1 (source register 1, bits: 19-22), and imm (immediate, bits:1-18). ",
+        "page_idx": 130
+    },
+    {
+        "type": "image",
+        "img_path": "images/c7c4427258139ba7f0f5a88f229a2c5b6ec4cec1e626bab42d8cd3891d46f48e.jpg",
+        "img_caption": [
+            "Figure 3.15: Encoding 3-address instructions with an immediate source operand (immediate format) "
+        ],
+        "img_footnote": [],
+        "page_idx": 130
+    },
+    {
+        "type": "text",
+        "text": "Example 35 Encode the instruction: sub r1, r2, 3. ",
+        "page_idx": 130
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us encode each field of the instruction. We have: ",
+        "page_idx": 130
+    },
+    {
+        "type": "table",
+        "img_path": "images/f4a5c5d5465f3ddb3ea224e8d6e4fae5e7748281b825d7b31563e1f8cf867062.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Field</td><td>Encoding</td><td>Field</td><td>Encoding</td></tr><tr><td>sub I r1</td><td>00001 1</td><td>r2 3</td><td>0010 11</td></tr></table></body></html>\n\n",
+        "page_idx": 130
+    },
+    {
+        "type": "text",
+        "text": "Thus, the binary encoding is (spaces added for readability): 00001 1 0001 0010 00 0000 0000 0000 0011. When we convert to hex, we get: 0x0C480003. ",
+        "page_idx": 131
+    },
+    {
+        "type": "text",
+        "text": "Encoding cmp, not, and mov ",
+        "text_level": 1,
+        "page_idx": 131
+    },
+    {
+        "type": "text",
+        "text": "The cmp instruction has two source operands. The second source operand can be a register or an immediate. We will use the standard 3-address register or immediate formats for encoding the cmp instruction. The destination register field will remain empty. See Figure 3.16. One of our aims in designing the encoding is to keep things as simple and regular as possible such that the processor can decode the instruction very easily. We could have designed a separate encoding for a 2-address instruction such as cmp. However, the gains would have been negligible, and by sticking to a fixed format, the processor\u2019s instruction decode logic becomes more straightforward. ",
+        "page_idx": 131
+    },
+    {
+        "type": "text",
+        "text": "The not and mov instructions have one destination register, and one source operand. This source operand can be either an immediate or a register. Hence, we can treat the source operand of these instructions as the second source operand in the 3-address format, and keep the field for the first source register empty for both of these instructions. The format is shown in Figure 3.16. ",
+        "page_idx": 131
+    },
+    {
+        "type": "image",
+        "img_path": "images/74bb0f376dfe9a385d53bff0356e9c51166f5ac6375e32639755b3178122e388.jpg",
+        "img_caption": [
+            "Figure 3.16: cmp, not, and mov instructions "
+        ],
+        "img_footnote": [],
+        "page_idx": 131
+    },
+    {
+        "type": "text",
+        "text": "Load and Store Instructions ",
+        "text_level": 1,
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "In SimpleRisc the instructions \u2013 ${ \\it l d }$ and $^ { s t }$ \u2013 are 2-address instructions. The second operand points to a memory address. It uses a base-offset addressing mode. There is a base register, and an integer offset. ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "For a load instruction, there are three unique pieces of information that need to be encoded: destination register, base register, and offset. In this case, we propose to use the three address immediate format. The $I$ bit is set to 1, because we need to specify an offset. The first source register represents the base register, and the immediate represents the offset. Note that this encoding follows our principle of regularity and simplicity. Our aim is to reuse the 3-address register and immediate formats for as many instructions as possible. ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "Now, let us look at store instructions. Store instructions are slightly special in the sense that they do not have a destination register. The destination of a store instruction is a memory location. This information cannot be encoded in the immediate format. However, for reasons of simplicity, we still want to stick to the formats that we have defined. We need to take a crucial design decision here by answering Question 5. ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "Question 5 ",
+        "text_level": 1,
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "Should we define a new instruction format for the store instruction? ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "Let us adjudge this case in the favor of not introducing a new format. Let us try to reuse the immediate format. The immediate format has four fields \u2013 op, rd, rs1, and imm. The opcode field (op) need not be touched. We can assume that the format of the store instruction is: st rd, imm[rs1]. In this case, the field $^ { r d }$ represents the register to be stored. Like the load instruction we can keep the base register as $r s 1$ , and use the imm field to specify the offset. We break the pattern we have been following up till now by saving a source register in rd, which is meant to save a destination register. However, we were compelled to do this at the cost of not introducing a new instruction format. Such design trade-offs need to be made continuously. We have to always balance the twin objectives of elegance and efficiency. It is sometimes not possible to choose the best of both worlds. In this case, we have gone for efficiency, because introducing a new instruction format for just one instruction is overkill. ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "To conclude, figure 3.17 shows the encoding for load and store instructions. ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "Example 36 Encode the instruction: st r8, 20[r2]. ",
+        "page_idx": 132
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us encode each field of the instruction. We have: ",
+        "page_idx": 132
+    },
+    {
+        "type": "table",
+        "img_path": "images/e912694cb2e6bfe981c43b633cf25434e901eabbc7c6a144e5d0373c6b78f046.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Field</td><td>Encoding</td></tr><tr><td>I</td><td>st</td><td>01111 1</td></tr><tr><td></td><td>r8 r2</td><td>1000 0010</td></tr><tr><td></td><td>20</td><td>00010100</td></tr></table></body></html>\n\n",
+        "page_idx": 132
+    },
+    {
+        "type": "image",
+        "img_path": "images/49d5c96354a47405985b6c5cab1ba99cadf302c698eb7d6776389bfa9b4bf5ce.jpg",
+        "img_caption": [
+            "Figure 3.17: Encoding of load and store instructions "
+        ],
+        "img_footnote": [],
+        "page_idx": 133
+    },
+    {
+        "type": "text",
+        "text": "Thus, the binary encoding is (spaces added for readability): 01111 1 1000 0010 00 0000 0000 0001 0100. When we convert to hex, we get: 0x7E080014. ",
+        "page_idx": 133
+    },
+    {
+        "type": "text",
+        "text": "Summary of Instruction Formats ",
+        "text_level": 1,
+        "page_idx": 133
+    },
+    {
+        "type": "text",
+        "text": "In the last few subsections, we have described a method to encode an instruction into a sequence of bits (machine code). A compiler can use this method to translate a program written in a high level language to machine code, and thus create an executable program. It is now the job of the processor to execute this program by reading the instructions one by one. We have made our life substantially easy by assuming that each instruction is exactly 4 bytes long. The processor simply needs to start at the starting address of the program in memory and fetch one instruction after the other. If an instruction is a branch, then the processor needs to evaluate the branch condition, and jump to the branch target. The part of the processor that is primarily concerned about the details of the ISA is the decode logic or the decoder . It is the role of the decoder to understand and decode an instruction. While designing an encoding for an ISA, creating a simple and efficient instruction decoder was our prime objective. ",
+        "page_idx": 133
+    },
+    {
+        "type": "table",
+        "img_path": "images/e5c240d96fc2415845dea6b6acbab0c48dcad23ed486ae295fd10005a8856d60.jpg",
+        "table_caption": [
+            "Table 3.11: Summary of instruction formats "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Format</td><td colspan=\"7\">Definition</td></tr><tr><td>branch</td><td>op (28-32)</td><td></td><td colspan=\"3\">offset (1-27)</td><td></td><td></td></tr><tr><td>register</td><td>op (28-32)</td><td>I (27)</td><td>rd (23-26)</td><td></td><td>rs1 (19-22)</td><td>rs2 (15-18)</td><td></td></tr><tr><td>immediate</td><td>op (28-32)</td><td>I (27)</td><td>rd (23-26)</td><td></td><td>rs1 (19-22)</td><td>imm (1-18)</td><td></td></tr><tr><td colspan=\"8\">op\u2192opcode, offset\u2192branch offset,I \u2192immediate bit,rd \u2192destination register</td></tr><tr><td colspan=\"8\">rs1 \u2192 source register 1,rs2 \u2192 source register 2, imm \u2192 immediate operand</td></tr></table></body></html>\n\n",
+        "page_idx": 133
+    },
+    {
+        "type": "text",
+        "text": "To decode a SimpleRisc instruction, the first task is to find the instruction format. We have defined three formats \u2013 branch, immediate, and register. Let us refer to Table 3.10. The six branch format instructions are call, ret, beq, bgt, b, and nop. Recall that we encode both 0 and 1-address format instructions in the branch format. ",
+        "page_idx": 133
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "The opcodes of all the five branch instructions ( $b$ , beq, bgt, call, ret) have 1 as their most significant bit, whereas all other instructions have a 0 in their most significant position. Hence, for a decoder to find out if an instruction is a branch is very easy. It just needs to take a look at the three most significant bit of the opcode. It should be 1. Moreover, to find out if an instruction is a nop, the decoder needs to compare it with 01101, which requires a small circuit. ",
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "If an instruction is not in the branch format, then it must be in the immediate or register format. This can be quickly decided by taking a look at the $I$ bit. If it is 1, then the instruction is in the immediate format, otherwise it is in the register format. The formats are summarized in Table 3.11. ",
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "Lessons Learned ",
+        "text_level": 1,
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "Now that we have designed a small instruction set of our own, looked at sample programs, and encoded our instructions, we are all set to design a processor for our SimpleRisc ISA. It needs to decode every single instruction, and execute it accordingly. Before proceeding further, let us look back at how we designed our ISA, and how should ISAs be designed in general. ",
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "1. The first step in designing an ISA is to study the workload that the ISA is being designed for. In the case of SimpleRisc , we wanted to use it for running general purpose programs. This meant that SimpleRisc needed to be simple, concise, generic, and complete as outlined in Chapter 1. However, for different target workloads, the requirements might be very different.   \n2. After studying the workload, we need to next decide on the number of instructions that we need to have. Unless there are compelling requirements otherwise, it is not advisable to have more than 64-128 instructions. More than 128 instructions will make the instruction decoder very complex. It will also complicate the design of the processor.   \n3. After finalizing the number of instructions, we need to finalize the different types of instructions. If we are designing an ISA for extensive numerical computation, then we should have many arithmetic operations. If we are designing an ISA for processing text, then we should have many instructions that can process strings (pieces of text). In the case of SimpleRisc we devoted 6 instructions to arithmetic operations, 3 instructions to shift operations, 3 instructions to logical operations, 3 instructions to data transfer, 5 instructions to branch operations, and designated 1 instruction as no-op (no operation). We chose this distribution because we expect to run a lot of general purpose programs that will have complex arithmetical and logical constructs. We could have very well gotten rid of an instruction such as mod and replaced it with a sophisticated branch instruction, if we wanted to look at programs that will have a lot of branches. These subtle trade-offs need to be evaluated thoroughly. ",
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "4. Once, we have finalized the broad types of instructions and the distribution of instructions across these types, we come to the actual instructions themselves. In this case also, we want to make the common case fast. For example, there is no point in having a division instruction in programs that do not have divisions operations. Secondly, we need to decide the format of each instruction in terms of the number and type of operands. For example, in SimpleRisc , all our arithmetic operations are in the 3-address format. If there is a requirement from the side of processor designers that they want to reduce the number of registers, then we can opt for the 2-address format. Alternatively, if we want to process a massive amount of information in one go such as add a list of 10 numbers, then we can even have an 11-address format instruction. ",
+        "page_idx": 134
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 135
+    },
+    {
+        "type": "text",
+        "text": "5. Once the format of the instruction is decided, we need to decide on the different addressing modes. This decision has many ramifications. For example, if we allow the register-indirect addressing mode in arithmetic instructions, then we need to add additional hardware to access the memory and fetch the operand values. On the other hand, if we have a register-only addressing mode for arithmetic instructions, then their implementation will be fast. However, the flip side is that we will need more registers, and more dedicated load-store instructions to access memory. This tradeoff needs to be kept in mind. ",
+        "page_idx": 135
+    },
+    {
+        "type": "text",
+        "text": "6. Once we have designed the set of instructions, we need to decide a proper encoding for it. The main aim should be to reduce the work of the instruction decoder. It is best to have a small set of generic instruction formats that the decoder can quickly discern. We need to balance elegance and efficiency such that the decoder can be simple yet efficient. ",
+        "page_idx": 135
+    }
+]

@@ -1,0 +1,7 @@
+2.5.2 UTF-8
+
+UTF (Universal character set Transformation Format - 8 bit) can represent every character in the Unicode character set. The Unicode character set assigns an unsigned binary number to each character of most of the world’s writing systems. UTF-8 encodes 1,112,064 characters defined in the Unicode character set. It uses 1-6 bytes for this purpose.
+
+UTF-8 is compatible with ASCII. The first 128 characters in UTF-8 correspond to the ASCII characters. When using ASCII characters, UTF-8 requires just one byte. It has a leading 0. However, the first byte can contain extra information such as the total number of bytes. This is encoded by having leading ones followed by a zero in the first byte. For example, if the first byte is of the form 11100010, then it means that the character contains 3 bytes. Each continuation byte begins with 10. Most of the languages that use variants of the Roman script such as French, German, and Spanish require 2 bytes in UTF-8. Greek, Russian (Cyrillic), Hebrew, and Arabic, also require 2 bytes.
+
+UTF-8 is a standard for the World Wide Web. Most browsers, applications, and operating systems are required to support it. It is by far the most popular encoding as of 2012.

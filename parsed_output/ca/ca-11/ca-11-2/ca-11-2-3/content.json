@@ -1,0 +1,74 @@
+[
+    {
+        "type": "text",
+        "text": "11.2.3 Data read and data write Operations ",
+        "text_level": 1,
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "The data read Operation ",
+        "text_level": 1,
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Once, we have established that a given block is present in a cache, we use the basic read operation to get the value of the memory location from the data array. We establish the presence of a block in a cache if the lookup operation returns a cache hit. If there is a miss in the cache, then the cache controller needs to raise a read request to the lower level cache, and fetch the block. The data read operation can start as soon as data is available. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "The first step is to read out the block in the data array that corresponds to the matched tag entry. Then, we need to choose the appropriate set of bytes out of all the bytes in the block. We can use a set of multiplexers to achieve this. The exact details of the circuit are left to the reader as an exercise. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Secondly, as described in Section 11.2.2, it is not strictly necessary to start the data read operation after the lookup operation. We can have a significant overlap between the operations. For example, we can read the tag array and data array in parallel. We can subsequently select the right set of values using multiplexers after the matching tag has been computed. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "The data write Operation ",
+        "text_level": 1,
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Before, we can write a value, we need to ensure that the entire block is already present in the cache. This is a very important concept. Note that we cannot make an argument that since we are creating new data, we do not need the previous value of the block. The reason is as follows. We typically write 4 bytes or at the most 8 bytes for a single memory access. However, a block is at least 32 or 64 bytes long. A block is an atomic unit in our cache. Hence, we cannot have different parts of it at different places. For example, we cannot save 4 bytes of a block in the L1 cache, and the rest of the bytes in the L2 cache. Secondly, for doing so, we need to maintain additional state that keeps track of the bytes that have been updated with writes. Hence, in the interest of simplicity, even if we wish to write just 1 byte, we need to populate the cache with the entire block. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "After that we need to write the new values in the data array by enabling the appropriate set of word lines and bit lines. We can design a simple circuit to achieve this using a set of demultiplexers. The details are left to the reader. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "There are two methods of performing a data write \u2013 write-back and write-through. Writethrough is a relatively simpler scheme. In this approach, whenever we write a value into the data array, we also send a write operation to the lower level cache. This approach increases the amount of cache traffic. However, it is simpler to implement the cache because we do not have to keep track of the blocks that have been modified after they were brought into the cache. We can thus seamlessly evict a line from the cache if required. Here cache evictions and replacements are simple, at the cost of writes. We shall also see in Chapter 12 that it is easy to implement caches for mutiprocessors if the L1 caches follow a write-through protocol. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "In the write-back scheme, we explicitly keep track of blocks that have been modified using write operations. We can maintain this information by using an additional bit in the tag array. This bit is typically known as the modified bit. Whenever, we get a block from the lower level of the memory hierarchy, the modified bit is 0. However, when we do a data write and update the data array, we set the modified bit in the tag array to 1. Evicting a line requires us to do extra processing that we shall describe in Section 11.2.6. For a write-back protocol, writes are cheap, and evict operations are more expensive. The tradeoff here is the reverse of that in write-through caches. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "The structure of an entry in the tag array with the additional modified bit is shown in Figure 11.10. ",
+        "page_idx": 529
+    },
+    {
+        "type": "image",
+        "img_path": "images/58ce4e23cee683af5f6bb0f3b1c1e89502a106682a52ab2509fb7d7679f2138f.jpg",
+        "img_caption": [
+            "Figure 11.10: An entry in the tag array with the modified bit "
+        ],
+        "img_footnote": [],
+        "page_idx": 529
+    }
+]

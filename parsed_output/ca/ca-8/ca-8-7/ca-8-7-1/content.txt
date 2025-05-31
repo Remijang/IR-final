@@ -1,0 +1,53 @@
+8.7.1 Summary
+
+Summary 8
+
+1. Adding two 1-bit numbers (a and b) produces a sum bit(s) and a carry bit(c)
+
+(a)    
+(b) c = a.b   
+(c) We can add them using a circuit called  half adder.
+
+2. Adding three 1-bit numbers  , and  ) also produces a sum bit(s) and a carry 
+
+(a) s = a b cin   
+(b)    
+(c) We can add them using a circuit called  full adder. (d)
+
+3. We can create an n-bit adder known as a ripple carry adder by chaining together  full adders, and a half adder.
+
+4. We typically use the notion of asymptotic time complexity to express the time taken by an arithmetic unit such as an adder.
+
+(a)  if  for all  , where c is a positive constant. (b) For example, if the time taken by an adder is given by  , we can say that 
+
+5. We discussed the following types of adders along with their time complexities:
+
+(a) Ripple carry adder –  (b) Carry select adder –  (c) Carry lookahead adder – 
+
+6. Multiplication can be done iteratively in  time using an iterative multiplier. The algorithm is similar to the one we learned in elementary school.
+
+7. We can speed it up by using a Booth multiplier that takes advantage of a continuous run of 1s in the multiplier.
+
+8. The Wallace tree multiplier runs in  time. It uses a tree of carry save adders that express a sum of three numbers, as a sum of two numbers.
+
+9. We introduced two algorithms for division:
+
+(a) Restoring algorithm (b) Non-restoring algorithm
+
+10. Floating point addition and subtraction need not be considered separately. We can have one algorithm that takes care of the generic case.
+
+11. Floating point addition requires us to perform the following steps:
+
+(a) Align the significand of the smaller number with the significand of the larger number.   
+(b) If the signs are different, then take a 2’s complement of the smaller significand.   
+(c) Add the significands.   
+(d) Compute the sign bit of the result.   
+(e) Normalize and round the result using one of four rounding modes.   
+(f) Renormalize the result again if required.
+
+12. We can follow the same steps for floating point multiplication and division. The only difference is that in this case the exponents get added or subtracted, respectively.
+
+13. Floating point division is fundamentally a faster operation than integer division because of the approximate nature of floating point mathematics. The basic operation is to compute the reciprocal of the denominator. It can be done in two ways:
+
+(a) Use the Newton-Raphson method to find the root of the equation  . The solution is the reciprocal of b.   
+(b) Repeatedly multiply the numerator and denominator of a fraction derived from 1/b such that the denominator becomes 1 and the reciprocal is the numerator.

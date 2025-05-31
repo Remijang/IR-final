@@ -1,0 +1,33 @@
+5.4.2 Arithmetic Instructions
+
+Let us now consider arithmetic instructions. The floating point ISA in x86 has rich support for floating point operations, and is thus extensively used in numerical computing. Let us start with the basic floating point add instruction, and take a look at all of its variants.
+
+Add Instruction
+
+The semantics of the floating point add instructions is shown in Table 5.23. The basic fadd instruction has two variants. The first variant uses a single memory operand. Here, we add the value of the floating point number contained in the memory location to the contents of  . The result is also stored in  . The second variant of the fadd instruction uses two floating point registers as arguments. It adds the contents of the second register to the first register.
+
+The  instruction follows the same pattern as the floating point load and store instructions. It accepts the ‘p’ suffix. The faddp instruction typically takes 1 argument, which is a register. We show an example of the instruction faddp st1 in Table 5.23. Here, we add the contents of  to  , and save the result in  . Then, we pop the stack. For working with integers, we can use the fiadd instruction that takes the address of an integer in memory. It adds this integer to  , and saves the results in  .
+
+Subtraction, Multiplication, and Division Instructions
+
+x86 defines subtraction, multiplication, and division instructions that have exactly the same format as the f add instructions, and all of its variants as shown in Table 5.23. Let us just show
+
+the basic form of each instruction that uses a single memory operand in Table 5.24.
+
+Example 87
+
+Compute the arithmetic mean of two integers stored in eax and ebx. Save the result (in 64 bits) in  . Assume that the data section contains the integer, 2, in the memory address two.
+
+Answer:
+
+; load the inputs to the FP stack   
+mov [esp], eax   
+mov [esp+4], ebx   
+fild dword [esp]   
+fild dword[esp + 4]   
+; compute the arithmetic mean   
+fadd st0, st1   
+fdiv dword [two]   
+; save the result (converted to 64 bits) to [esp+4]   
+; use the qword identifier   
+fstp qword [esp + 4]

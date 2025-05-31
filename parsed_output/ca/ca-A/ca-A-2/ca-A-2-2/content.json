@@ -1,0 +1,83 @@
+[
+    {
+        "type": "text",
+        "text": "A.2.2 AMD Bulldozer ",
+        "text_level": 1,
+        "page_idx": 743
+    },
+    {
+        "type": "text",
+        "text": "As the name suggests, the Bulldozer core (original paper [Butler et al., 2011]) is at the other end of the spectrum, and is primarily meant for high-end desktops, workstations, and servers. Along with being an aggressive out-of-order machine, it also has multithreading capabilities. The Bulldozer is actually a combination of a multicore, fine-grained multithreaded processor and an SMT (simultaneous multithreading) processor. The Bulldozer core is a \u201cconjoined core\u201d, which consists of two smaller cores that share functional units. ",
+        "page_idx": 743
+    },
+    {
+        "type": "text",
+        "text": "Overview ",
+        "text_level": 1,
+        "page_idx": 743
+    },
+    {
+        "type": "text",
+        "text": "Both the Bulldozer threads share the fetch engine (refer to Figure A.7), and decode logic. This part of the pipeline (known as the front end) switches between the two threads once every cycle, or few cycles. The integer, load-store, and branch instructions, are then dispatched to one of the two cores. Each core contains an instruction scheduler, register file, integer execution units, L1 caches, and a load-store unit. Both the cores share the floating point unit that runs in SMT mode. It has its dedicated scheduler, and execution units. The Bulldozer processor is designed to run server as well as numerical workloads at 3-4 GHz. The maximum power dissipation is limited to 125-140W. ",
+        "page_idx": 743
+    },
+    {
+        "type": "image",
+        "img_path": "images/4654b1749e75aa6f69215e552b8100ace3c8d5adecd80f362fea39d83a889fce.jpg",
+        "img_caption": [
+            "Figure A.7: Overview of the Bulldozer processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 744
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 744
+    },
+    {
+        "type": "text",
+        "text": "Detailed Design ",
+        "text_level": 1,
+        "page_idx": 744
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a more detailed view of the processor in Figure A.8. ",
+        "page_idx": 744
+    },
+    {
+        "type": "image",
+        "img_path": "images/9339ac7159f0b0a46ad366aa83166daf6f6bb0b72c1d3fd7bb19891972ec07a6.jpg",
+        "img_caption": [
+            "Figure A.8: Detailed view of the Bulldozer processor. $\\circledcirc$ [2011] IEEE. Adapted and reprinted, with permission. Source [Butler et al., 2011] "
+        ],
+        "img_footnote": [],
+        "page_idx": 744
+    },
+    {
+        "type": "text",
+        "text": "The Bulldozer processor has twice the fetch width of the Bobcat processor. It can fetch and decode up to 4 x86 instructions per cycle. Akin to Bobcat, the Bulldozer processor has sophisticated branch prediction logic that predicts whether an instruction is a branch, the branch outcome, and the branch target. It has a multilevel branch target buffer that saves the predicted branch targets of roughly 5500 branch instructions. The decode engine converts x86 instructions into Cops. One Cop in AMD is a CISC instruction albeit sometimes simpler than the original x86 instruction. Most x86 instructions get converted to just one Cop. However, some instructions get translated to more than one Cop, and it is sometimes necessary to use the microcode memory for instruction translation. An interesting aspect of the decode engine is that it can dynamically merge instructions to make a larger instruction. For example, it can merge a compare instruction, and a subsequent branch instruction, into one Cop. This is known as macro-instruction fusion. ",
+        "page_idx": 744
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 745
+    },
+    {
+        "type": "text",
+        "text": "Subsequently, the integer instructions are dispatched to the cores for execution. Each core has a rename engine, instruction scheduler (40 entries), a register file, and a 128 entry ROB. The core\u2019s execution unit consists of 4 separate pipelines. Two pipelines have ALUs, and two other pipelines are dedicated to memory address generation. The load-store unit co-ordinates access to memory, forwards data between stores to loads, and performs aggressive prefetching using stride prefetchers. Recall that stride prefetchers can automatically deduce array accesses, and fetch from array indices that are most likely to be accessed in the future. ",
+        "page_idx": 745
+    },
+    {
+        "type": "text",
+        "text": "Both the cores share a 64 KB instruction cache. However, each core has a 16 KB writethrough L1 cache, where each load access takes 4 cycles. The L1 caches are connected to an L2 cache that comes in various sizes (ranging from 1-2 MB in the design presented in [Butler et al., 2011]). It is shared across the cores and has an 18-cycle latency. ",
+        "page_idx": 745
+    },
+    {
+        "type": "text",
+        "text": "The floating point unit is shared between both the cores. It is more than a mere functional unit. We can think of it as an SMT processor that schedules and executes instructions for two threads simultaneously. It has its own instruction window, register file, rename, and wakeupselect (out of order scheduling) logic. Bulldozer\u2019s floating point unit has 4 pipelines that process SIMD instructions (both integer and floating point), and regular floating point instructions. The first two pipelines have 128-bit floating point ALUs called FMAC units. An FMAC (floating point multiply accumulate) unit can perform an operation of the form ( $a \\gets a + b \\times c$ ), along with regular floating point operations. The last two pipelines have 128-bit integer SIMD units, and additionally the last pipeline is also used to store results to memory. Lastly, the floating point unit has a dedicated load-store unit to access the caches present in the cores. ",
+        "page_idx": 745
+    }
+]

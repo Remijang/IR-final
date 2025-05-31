@@ -1,0 +1,107 @@
+16.3 The Second and Third Laws of Thermodynamics
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• State and explain the second and third laws of thermodynamics • Calculate entropy changes for phase transitions and chemical reactions under standard conditions
+
+The Second Law of Thermodynamics
+
+In the quest to identify a property that may reliably predict the spontaneity of a process, a promising candidate has been identified: entropy. Processes that involve an increase in entropy ofthesystem  are very often spontaneous; however, examples to the contrary are plentiful. By expanding consideration of entropy changes to include thesur oundings, we may reach a significant conclusion regarding the relation between this property and spontaneity. In thermodynamic models, the system and surroundings comprise everything, that is, the universe, and so the following is true:
+
+To illustrate this relation, consider again the process of heat flow between two objects, one identified as the system and the other as the surroundings. There are three possibilities for such a process:
+
+1. The objects are at different temperatures, and heat flows from the hotter to the cooler object. Thisis alwaysobservedtooc urspontaneously.Designating the hotter object as the system and invoking the definition of entropy yields the following:
+
+The magnitudes of  and  are equal, their opposite arithmetic signs denoting loss of heat by the system and gain of heat by the surroundings. Since  in this scenario, the entropy decreaseof the system will be less than the entropy increaseof the surroundings, and so theentropyoftheuniversewil increase:
+
+2. The objects are at different temperatures, and heat flows from the cooler to the hotter object. Thisisnever observedtooc urspontaneously.Again designating the hotter object as the system and invoking the definition of entropy yields the following:
+
+The arithmetic signs of  denote the gain of heat by the system and the loss of heat by the surroundings. The magnitude of the entropy change for the surroundings will again be greater than that for the system, but in this case, the signs of the heat changes (that is, thedirectionoftheheatflow) will yield a negative value for  .Thisproces involvesadecreaseintheentropyoftheuniverse.
+
+3. The objects are at essentially the same temperature,  , and so the magnitudes of the entropy changes are essentially the same for both the system and the surroundings. In this case, the entropy change of the universe is zero, and the system is atequilibrium.
+
+These results lead to a profound statement regarding the relation between entropy and spontaneity known as the second law of thermodynamics: al spontaneouschangescauseanincreaseintheentropyofthe universe.A summary of these three relations is provided in Table 16.1.
+
+The Second Law of Thermodynamics
+
+For many realistic applications, the surroundings are vast in comparison to the system. In such cases, the heat gained or lost by the surroundings as a result of some process represents a very small, nearly infinitesimal, fraction of its total thermal energy. For example, combustion of a fuel in air involves transfer of heat from a system (the fuel and oxygen molecules undergoing reaction) to surroundings that are infinitely more massive (the earth’s atmosphere). As a result,  is a good approximation of  , and the second law may be stated as the following:
+
+We may use this equation to predict the spontaneity of a process as illustrated in Example 16.4.
+
+EXAMPLE 16.4
+
+Will Ice Spontaneously Melt?
+
+The entropy change for the process
+
+is  and requires that the surroundings transfer  of heat to the system. Is the process spontaneous at  Is it spontaneous at 
+
+Solution
+
+We can assess the spontaneity of the process by calculating the entropy change of the universe. If  is positive, then the process is spontaneous. At both temperatures,  and  .
+
+At  (263.15 K), the following is true:
+
+ , so melting is nonspontaneous (notspontaneous) at  .
+
+At  (283.15 K), the following is true:
+
+ , so melting isspontaneous at  .
+
+Check Your Learning
+
+Using this information, determine if liquid water will spontaneously freeze at the same temperatures. What can you say about the values of  ?
+
+Answer:
+
+Entropy is a state function, so  and  . At  spontaneous,  ; at  nonspontaneous,  .
+
+The Third Law of Thermodynamics
+
+The previous section described the various contributions of matter and energy dispersal that contribute to the entropy of a system. With these contributions in mind, consider the entropy of a pure, perfectly crystalline solid possessing no kinetic energy (that is, at a temperature of absolute zero, 0 K). This system may be described by a single microstate, as its purity, perfect crystallinity and complete lack of motion means there is but one possible location for each identical atom or molecule comprising the crystal  ). According to the Boltzmann equation, the entropy of this system is zero.
+
+This limiting condition for a system’s entropy represents the third law of thermodynamics: theentropyofa pure,perfectcrystalinesubstanceat  iszero.
+
+Careful calorimetric measurements can be made to determine the temperature dependence of a substance’s entropy and to derive absolute entropy values under specific conditions. Standard entropies  are for one mole of substance under standard conditions (a pressure of 1 bar and a temperature of  ; see details regarding standard conditions in the thermochemistry chapter of this text). The standard entropy change  for a reaction may be computed using standard entropies as shown below:
+
+where ν represents stoichiometric coefficients in the balanced equation representing the process. For example,  for the following reaction at room temperature
+
+is computed as:
+
+A partial listing of standard entropies is provided in Table 16.2, and additional values are provided in Appendix G. The example exercises that follow demonstrate the use of  values in calculating standard entropy changes for physical and chemical processes.
+
+EXAMPLE 16.5
+
+Determination of 
+
+Calculate the standard entropy change for the following process:
+
+Solution
+
+Calculate the entropy change using standard entropies as shown above:
+
+The value for  is negative, as expected for this phase transition (condensation), which the previous section discussed.
+
+Check Your Learning
+
+Calculate the standard entropy change for the following process:
+
+Answer: 
+
+EXAMPLE 16.6
+
+Determination of 
+
+Calculate the standard entropy change for the combustion of methanol,  :
+
+Solution
+
+Calculate the entropy change using standard entropies as shown above:
+
+Check Your Learning
+
+Calculate the standard entropy change for the following reaction:
+
+Answer:

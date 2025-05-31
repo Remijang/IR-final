@@ -1,0 +1,14 @@
+1 Introduction to Computer Architecture
+
+Welcome to the exciting world of computer architecture. Computer architecture is the study of computers. We shall study the basic design principles of computers in this book including the basic technologies, algorithms, design methodologies and future trends.
+
+The field of computer architecture is a very fast moving field, and every couple of years there are a plethora of new inventions. Fifty years ago, the existence of computers was almost unknown to the common man. Computers were visible only in large financial institutions or in top universities. However, today billions of people all over the world have access to some form of computing device. They use it actively, and have found a place for it in their daily activities.
+
+In this chapter, we shall present an overview of computer architecture from an academic standpoint, and explain the major principles behind today’s computers. We shall observe that there are two perspectives in computer architecture. We can look at computer architecture from the point of view of software applications. This point of view is sometimes referred to as architecture in literature. It is very important for students of computer architecture to study computer architecture from the viewpoint of a software designer because they need to know about the expectations of software writers from hardware. Secondly, it is also important for software writers to know about computer architecture because they can tailor their software appropriately to make it more efficient. In the case of system software such as operating systems and device drivers, it is absolutely essential to know the details of the architecture because the design of such software is very strongly interlinked with low-level hardware details.
+
+The other perspective is the point of view of hardware designers. Given the software interface, they need to design hardware that is compatible with it and also implement algorithms that make the system efficient in terms of performance and power. This perspective is also referred to as organization in literature.
+
+Architecture The view of a computer presented to software designers.   
+organization The actual implementation of a computer in hardware.
+
+Computer architecture is a beautiful amalgam of software concepts and hardware concepts. We design hardware to make software run efficiently. Concomitantly, we also design software keeping in mind the interface and constraints presented by hardware. Both the perspectives run hand in hand. Let us start out by looking at the generic definition of a computer.

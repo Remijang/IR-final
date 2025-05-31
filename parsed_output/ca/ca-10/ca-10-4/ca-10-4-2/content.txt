@@ -1,0 +1,36 @@
+10.4.2 Data Hazards
+
+Let us consider the following code snippet.
+
+[1]: add r1, r2, r3   
+[2]: sub r3, r1, r4
+
+Here, the add instruction is producing the value for register,  , and the  instruction is using it as a source operand. Let us now construct a pipeline diagram for just these instructions as shown in Figure 10.12.
+
+There is a problem. Instruction 1 writes the value of  in the fifth cycle, and instruction 2 needs to read its value in the third cycle. This is clearly not possible. We have added an arrow between the relevant pipeline stages of both the instructions to indicate that there is a dependency. Since the arrow is towards the left (backwards in time), we cannot execute this code sequence in a pipeline. This is known as a data hazard. A hazard is defined as the possibility of erroneous execution of an instruction in a pipeline. This specific case is classified as a data hazard, where it is possible that instruction 2 might get the wrong data unless adequate steps are taken.
+
+Definition 67
+
+A hazard is defined as the possibility of erroneous execution of an instruction in a pipeline. A data hazard represents the possibility of erroneous execution because of the unavailability of correct data.
+
+This specific type of data hazard is known as a RAW (read after write) hazard. Here the subtract instruction is trying to read  , which needs to be written by the add instruction. In this case, a read succeeds a write.
+
+Note that this is not the only kind of data hazard. The two other types of data hazards are WAW (write after write), and WAR (write after read) hazards. These hazards are not an issue in our pipeline because we never change the order of instructions. A preceding instruction is always ahead of a succeeding instruction in the pipeline. This is an example of an in-order pipeline. In comparison, modern processors have out-of-order pipelines that execute instructions in different orders.
+
+Definition 68 In an in-order pipeline (such as ours), a preceding instruction is always ahead of a succeeding instruction in the pipeline. Modern processors use out-of-order pipelines that break this rule; it is thus possible for later instructions to execute before earlier instructions.
+
+Let us take a look at the following assembly code snippet.
+
+[1]: add r1, r2, r3   
+[2]: sub r1, r4, r3
+
+Here, instructions 1 and 2 are writing to register r1. In an in-order pipeline  will be written in the correct order, and thus there is no WAW hazard. However, in an out-of-order pipeline we run the risk of finishing instruction 2 before instruction 1, and thus  can end up with the wrong value. This is an example of a WAW hazard. The reader should note that modern processors ensure that r1 does not get the wrong value by using a technique known as register renaming (see Section 10.11.4).
+
+Let us give an example of a potential WAR hazard.
+
+[1]: add r1, r2, r3   
+[2]: add r2, r5, r6
+
+Here, instruction 2 is trying to write to  , and instruction 1 has  as a source operand. If instruction 2 executes first, then instruction 1 risks getting the wrong value of  . In practice this does not happen in modern processors because of schemes such as register renaming. The reader needs to understand that a hazard is a theoretical risk of something wrong happening. It is not a real risk because adequate steps are taken to ensure that programs are not executed incorrectly.
+
+In this book, we will mostly focus on RAW hazards, because WAW and WAR hazards are relevant only for modern out-of-order processors. Let us outline the nature of the solution. To avoid a RAW hazard it is necessary to ensure that the pipeline is aware of the fact that it contains a pair of instructions, where one instruction writes to a register, and another instruction that comes later in program order reads from the same register. It needs to ensure that the consumer instruction correctly receives the value of the operand (in this case, register) from the producer instruction. We shall look at solutions in both hardware and software.

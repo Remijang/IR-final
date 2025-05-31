@@ -1,0 +1,190 @@
+[
+    {
+        "type": "text",
+        "text": "7.5.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 302
+    },
+    {
+        "type": "text",
+        "text": "Semiconductors and electronic devices are thoroughly studied in advanced courses on semiconductor device physics. Readers can refer to the books by Sze [Sze and Ng, 2006], and Streetman [Streetman and Banerjee, 2005] for a deeper discussion on the physics of semiconductor devices. In advanced courses on semiconductor device physics, students typically study the basics of the operations of diodes, transistors, and other semiconductor devices from the point of view of quantum mechanics. After introducing semiconductor devices, we introduced combinational logic gates and sequential logic elements. The simple structures that we introduced in this chapter, are very commonly used. Students should however take a look at the following books [Lin, 2011, Wakerly, 2000, Dally and Poulton, 1998] for getting a thorough understanding of the devices, including their behavior from the perspective of analog electronics. We lastly talk about memories. The book, \u201cIntroduction to VLSI Systems\u201d, by Ming Bo Lin [Lin, 2011] has a fairly in-depth coverage of memory structures. Memory technology, especially DRAM technology, is advancing very quickly. A host of standards, and design styles have evolved over the last decade. A lot of these trends are discussed in the book on memory systems by Jacob, Ng, and Wang [Jacob et al., 2007]. This book is also very useful for professionals who are looking to build commercial systems with state-of-the-art memory technology. ",
+        "page_idx": 302
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Transistors and Logic Gates ",
+        "text_level": 1,
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Describe the operation of a p-n junction.   \nEx. 2 \u2014 Define drift and diffusion current.   \nEx. 3 \u2014 Describe the operation of a NMOS transistor?   \nEx. 4 \u2014 Draw the circuit of a CMOS inverter, NOR gate, and NAND gate.   \nEx. 5 \u2014 Implement the AND, OR and NOT gates using NAND gates only.   \nEx. 6 \u2014 Implement the AND, OR and NOT gates using NOR gates only.   \nEx. 7 \u2014 Implement XOR and XNOR gates using NAND gates only.   \nEx. 8 \u2014 Implement the following Boolean functions by using only AND, OR and NOT gates. (a) $\\overline { { A } } . B + A . \\overline { { B } } + \\overline { { A } } . \\overline { { B } } . \\overline { { C } }$ (b) $\\overline { { ( A + B + C ) } } . ( \\overline { { A } } . \\overline { { B } } + C )$ (c) ${ \\overline { { ( A + B ) } } } . ( { \\overline { { C } } } + { \\overline { { D } } } )$ (d) $\\overline { { A } } . \\overline { { B } } . \\overline { { C } } + A . B . C + \\overline { { D } }$ ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 Answer Question 8 by using only NAND gates. ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Combinational Logic and Sequential Logic ",
+        "text_level": 1,
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 Draw the circuit diagram of a $3 \\times 8$ decoder. ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 Draw the circuit diagram of a 8-3 bit encoder. ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Ex. 12 \u2014 Draw the circuit diagram of a 8-3 bit priority encoder. ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 Suppose a poll has to be conducted with three entities A, B and C, each of which can either vote a \u2018yes\u2019 (encoded as 1) or a \u2018no\u2019 (encoded as 0). The final output is equal to the majority opinion. Draw a truth table of the system, simplify the function, and implement it using logic gates. ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 14 \u2014 Most circuits in modern computers are built using NAND and NOR gates, because they are easy to build using CMOS technology. Suppose another technology in invented in the near future, which implements a new gate, $X$ , very efficiently. $X$ takes 3 inputs $A$ , $B$ and $C$ and computes: $X ( A , B , C ) = A . B + \\overline { { C } }$ . Using only X gates and NOT gates, how will you implement the following function: $f ( A , B , C ) = A + B + C ^ { \\cdot }$ ? ",
+        "page_idx": 303
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 15 \u2014 Implement the following logic functions using a 4 to 1 multiplexer, and a single NOT gate. ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "(a) $A B + B C + A C$ (b) ${ \\overline { { A } } } + { \\overline { { B } } } + { \\overline { { C } } }$ (c) $A . B + A . B . C$ ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 16 \u2014 Is it possible to implement every 3 variable Boolean function with a 4 to 1 multiplexer, and a single NOT gate? Prove your answer. ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Sequential Logic ",
+        "text_level": 1,
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 17 \u2014 What is the difference between a flip-flop and a latch? ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 18 \u2014 Define the following terms: i)Metastability ii)Keep out region iii)Setup time iv)Hold time ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 19 \u2014 Why do we wish to avoid the indeterminate state in an SR flip-flop? ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 What is the advantage of an edge sensitive flip-flop? ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 21 \u2014 What is the fundamental advantage of a JK flip-flop over a D flip-flop? ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 22 \u2014 Describe the design of registers in your own words. ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 23 \u2014 An edge sensitive toggle flip-flop (or T flip-flop) has a single input $T$ and toggles its state on a negative clock edge if $T = 1$ . If ( $T = 0$ ), then it maintains its state. How will you construct an edge sensitive T flip-flop form an edge sensitive J-K flip-flop? ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 24 \u2014 Can you create a negative edge triggered D flip-flop using 2 multiplexers, and a NOT gate? ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "Ex. 25 \u2014 Design a SR flip-flop with NOR gates. ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 26 \u2014 Using two edge triggered D flip-flops, design a circuit that divides the frequency of the clock signal by 4. ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 27 \u2014 Counters are essential components of any complex digital circuit. They are essentially sequential circuits which loop through a specific set of states. Design a counter which generates a sequence of numbers (in binary form) from 0 to 7 and cycles back again to 0. This is called a MOD 8 counter. ",
+        "page_idx": 304
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 28 \u2014 Using D flip-flops and logic gates, design a circuit, which generates the following sequence of numbers: ",
+        "page_idx": 305
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0 1  1 0 0  0 1 0  1 0 1  1 1 0  1 1 1  0\n$$",
+        "text_format": "latex",
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "Assume that the circuit never generates 000. This circuit can be used to generate pseudorandom numbers. ",
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "Memories ",
+        "text_level": 1,
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "Ex. 29 \u2014 Compare the power, area and time of an SRAM, DRAM, and latch.   \nEx. 30 \u2014 Propose a design for the column mux/demux circuit.   \nEx. 31 \u2014 What is the role of the match line in a CAM array?   \nEx. 32 \u2014 What is the role of the refresh logic in a DRAM array?   \nEx. 33 \u2014 Describe the design of a ROM and PROM cell.   \nEx. 34 \u2014 Design a single PLA array to compute al the following Boolean functions: a $) A . B + B . C + C . A$ b)A.B.C + A.B.C c)A + B ",
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "Ex. 35 \u2014 Design the following circuits using a circuit simulator such as Spice and verify their operation: ",
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "a)NOT gate b)NAND gate c)D flip-flop d)SRAM cell ",
+        "page_idx": 305
+    },
+    {
+        "type": "text",
+        "text": "Ex. 36 \u2014 Prepare a report on novel memory technologies such as phase change memory, Ferro-electric RAM, and magneto-resistive RAM. ",
+        "page_idx": 305
+    }
+]

@@ -1,0 +1,13 @@
+4 ARM⃝R Assembly Language
+
+In this chapter, we will study the ARM instruction set. As of 2012, this instruction set is the most widely used instruction set in smartphones, and tablets. It has more than 90% market share  in this space. ARM processors are also one of the most popular processors in hard disk drives, and set-top boxes for televisions. Hence, for any student of computer architecture it is very important to learn about the ARM instruction set because it will prove to be useful in programming the mobile and handheld devices of the future.
+
+The ARM instruction set is a 32-bit instruction set. This means that the sizes of all registers are 32 bits, and the size of the memory address is equal to 32 bits. It is a RISC instruction set with a very regular structure. Each instruction is encoded into a string of exactly 32 bits like SimpleRisc . All arithmetic and logical operations, use only register operands, and lastly all the communication between registers and memory happens through two data transfer instructions – load and store.
+
+4.1 The ARM  Machine Model
+
+ARM assembly language assumes a machine model similar to that explained in Section 3.2.1 for SimpleRisc . For the register file, it assumes that there are 16 registers that are visible to the programmer at any point of time. All the registers in ARM are 32 bits or 4 bytes wide.
+
+The registers are numbered from  to  . Registers  are known by certain mnemonics also as shown in Table 4.1. r11 is the frame-pointer. It points to the top of the activation block.  is a scratch register that is not meant to be saved by the caller or the callee.  is the stack pointer. It is important to understand that  and  are assigned a special connotation by the GNU compiler collection. They are not assigned special roles by the ARM ISA.
+
+Let us differentiate between generic registers and registers with special roles. Registers  are generic. The programmer and the compiler can use them in any way they like. However, the registers r13(sp),  and r15(pc) have special roles.  is the stack pointer,  is the return address register, and  is the program counter. In this chapter, we shall use the little endian version of the ARM ISA, and we shall describe the syntax of the assembly language used by the GNU ARM Assembler [arm, 2000].

@@ -1,0 +1,57 @@
+# 45.4 Population Dynamics and Regulation
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+Give examples of how the carrying capacity of a habitat may change   
+• Compare and contrast density-dependent growth regulation and density-independent growth regulation, giving examples Give examples of exponential and logistic growth in wild animal populations   
+• Describe how natural selection and environmental adaptation leads to the evolution of particular life-history patterns
+
+The logistic model of population growth, while valid in many natural populations and a useful model, is a simplification of realworld population dynamics. Implicit in the model is that the carrying capacity of the environment does not change, which is not the case. The carrying capacity varies annually: for example, some summers are hot and dry whereas others are cold and wet. In many areas, the carrying capacity during the winter is much lower than it is during the summer. Also, natural events such as earthquakes, volcanoes, and fires can alter an environment and hence its carrying capacity. Additionally, populations do not usually exist in isolation. They engage in interspecific competition: that is, they share the environment with other species competing for the same resources. These factors are also important to understanding how a specific population will grow.
+
+Nature regulates population growth in a variety of ways. These are grouped into density-dependent factors, in which the density of the population at a given time affects growth rate and mortality, and density-independent factors, which influence mortality in a population regardless of population density. Note that in the former, the effect of the factor on the population depends on the density of the population at onset. Conservation biologists want to understand both types because this helps them manage populations and prevent extinction or overpopulation.
+
+# Density-Dependent Regulation
+
+Most density-dependent factors are biological in nature (biotic), and include predation, inter- and intraspecific competition, accumulation of waste, and diseases such as those caused by parasites. Usually, the denser a population is, the greater its mortality rate. For example, during intra- and interspecific competition, the reproductive rates of the individuals will usually be lower, reducing their population’s rate of growth. In addition, low prey density increases the mortality of its predator because it has more difficulty locating its food source.
+
+An example of density-dependent regulation is shown in Figure 45.11 with results from a study focusing on the giant intestinal roundworm (Ascarislumbricoides), a parasite of humans and other mammals.3 Denser populations of the parasite exhibited lower fecundity: they contained fewer eggs. One possible explanation for this is that females would be smaller in more dense populations (due to limited resources) and that smaller females would have fewer eggs. This hypothesis was tested and disproved in a 2009 study which showed that female weight had no influence.4 The actual cause of the density-dependence of fecundity in this organism is still unclear and awaiting further investigation.
+
+# Density-Independent Regulation and Interaction with Density-Dependent Factors
+
+Many factors, typically physical or chemical in nature (abiotic), influence the mortality of a population regardless of its density, including weather, natural disasters, and pollution. An individual deer may be killed in a forest fire regardless of how many deer happen to be in that area. Its chances of survival are the same whether the population density is high or low. The same holds true for cold winter weather.
+
+In real-life situations, population regulation is very complicated and density-dependent and independent factors can interact. A dense population that is reduced in a density-independent manner by some environmental factor(s) will be able to recover differently than a sparse population. For example, a population of deer affected by a harsh winter will recover faster if there are more deer remaining to reproduce.
+
+# EVOLUTION CONNECTION
+
+Why Did the Woolly Mammoth Go Extinct?
+
+It's easy to get lost in the discussion about why dinosaurs went extinct 65 million years ago. Was it due to a meteor slamming into Earth near the coast of modern-day Mexico, or was it from some long-term weather cycle that is not yet understood? Scientists are continually exploring these and other theories.
+
+Woolly mammoths began to go extinct much more recently, when they shared the Earth with humans who were no different anatomically than humans today (Figure 45.12). Mammoths survived in isolated island populations as recently as 1700 BC. We know a lot about these animals from carcasses found frozen in the ice of Siberia and other regions of the north. Scientists have sequenced at least 50 percent of its genome and believe mammoths are between 98 and 99 percent identical to modern elephants.
+
+It is commonly thought that climate change and human hunting led to their extinction. A 2008 study estimated that climate change reduced the mammoth’s range from 3,000,000 square miles 42,000 years ago to 310,000 square miles 6,000 years ago.6 It is also well documented that humans hunted these animals. A 2012 study showed that no single factor was exclusively responsible for the extinction of these magnificent creatures.7 In addition to human hunting, climate change, and reduction of habitat, these scientists demonstrated another important factor in the mammoth’s extinction was the migration of humans across the Bering Strait to North America during the last ice age 20,000 years ago.
+
+
+
+The maintenance of stable populations was and is very complex, with many interacting factors determining the outcome. It is important to remember that humans are also part of nature. We once contributed to a species’ decline using only primitive hunting technology.
+
+# Life Histories of K-selected and r-selected Species
+
+While reproductive strategies play a key role in life histories, they do not account for important factors like limited resources and competition. The regulation of population growth by these factors can be used to introduce a classical concept in population biology, that of $K$ -selected versus $r .$ -selected species.
+
+The concept relates to a species’ reproductive strategies, habitat, and behavior, especially in the way that they obtain resources and care for their young. It includes length of life and survivorship factors as well. Population biologists have grouped species into the two large categories— $K \mathrm { \cdot }$ -selected and $r$ -selected—although the categories are really two ends of a continuum.
+
+K-selected species are species selected by stable, predictable environments. Populations of $K \cdot$ -selected species tend to exist close to their carrying capacity (hence the term $K \cdot$ -selected) where intraspecific competition is high. These species have few, large offspring, a long gestation period, and often give long-term care to their offspring (Table 45.2). While larger in size when born, the offspring are relatively helpless and immature at birth. By the time they reach adulthood, they must develop skills to compete for natural resources. In plants, scientists think of parental care more broadly: how long fruit takes to develop or how long it remains on the plant are determining factors in the time to the next reproductive event. Examples of $K \cdot$ -selected species are primates (including humans), elephants, and plants such as oak trees (Figure 45.13a).
+
+Oak trees grow very slowly and take, on average, 20 years to produce their first seeds, known as acorns. As many as 50,000 acorns can be produced by an individual tree, but the germination rate is low as many of these rot or are eaten by animals such as squirrels. In some years, oaks may produce an exceptionally large number of acorns, and these years may be on a two- or three-year cycle depending on the species of oak (r-selection).
+
+As oak trees grow to a large size and for many years before they begin to produce acorns, they devote a large percentage of their energy budget to growth and maintenance. The tree’s height and size allow it to dominate other plants in the competition for sunlight, the oak’s primary energy resource. Furthermore, when it does reproduce, the oak produces large, energy-rich seeds that use their energy reserve to become quickly established ( $K \cdot$ -selection).
+
+In contrast, $\pmb { r }$ selected species have a large number of small offspring (hence their $r$ designation (Table 45.2)). This strategy is often employed in unpredictable or changing environments. Animals that are $r$ -selected do not give long-term parental care and the offspring are relatively mature and self-sufficient at birth. Examples of $r \mathrm { \Sigma }$ -selected species are marine invertebrates, such as jellyfish, and plants, such as the dandelion (Figure 45.13b). Dandelions have small seeds that are wind dispersed long distances. Many seeds are produced simultaneously to ensure that at least some of them reach a hospitable environment. Seeds that land in inhospitable environments have little chance for survival since their seeds are low in energy content. Note that survival is not necessarily a function of energy stored in the seed itself.
+
+# Characteristics of $K \cdot$ -selected and $r \cdot$ -selected species
+
+# Modern Theories of Life History
+
+By the second half of the twentieth century, the concept of K- and r-selected species was used extensively and successfully to study populations. The $r -$ and $K \cdot$ -selection theory, although accepted for decades and used for much groundbreaking research, has now been reconsidered, and many population biologists have abandoned or modified it. Over the years, several studies attempted to confirm the theory, but these attempts have largely failed. Many species were identified that did not follow the theory’s predictions. Furthermore, the theory ignored the age-specific mortality of the populations which scientists now know is very important. New demographic-based models of life history evolution have been developed which incorporate many ecological concepts included in $r -$ and $K \cdot$ -selection theory as well as population age structure and mortality factors.

@@ -1,0 +1,14 @@
+6.4.5 Floating Point Comparison Instructions
+
+Comparing floating point numbers is not the same as comparing integers. They cannot be directly given as arguments to conditional branch instructions. In this case, the status of the comparison needs to be stored in an integer register. This register can then be compared with the zero register using a regular conditional branch instruction.
+
+Table 6.18 shows the three floating point comparison instructions that store the result in an integer register. Let us explore their usage using an example (Example 118).
+
+Example 118 First, initialize  , then set  if  .
+
+Answer:
+
+pi: . float 3.14   
+e: . float 2.72   
+. main : la a1 , pi # load pi flw fs1 , 0( a1) la a2 , e # load e flw fs2 , 0( a2) add a0 , zero , zero #  flt .s t0 , fs2 , fs1 # compare pi and e beq t0 , zero , .end # if (  ） jump to .end addi a0 , zero , 17 # a0 = 17 because t0 == 1   
+.end:

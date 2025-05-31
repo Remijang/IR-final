@@ -1,0 +1,11 @@
+8.4.4 Addition of Numbers with Opposite Signs
+
+Now let us look at the problem of adding two floating point numbers,  and  , to produce  They have opposite signs. Again let us make the assumption that  .
+
+The first step is to load the register  with the significand of  along with a leading 0. Since the signs are different, in effect we are subtracting the significand of  (shifted by some places) from the significand of  . Hence, we can take the 2’s complement of  that contains  with a leading 0 bit, and then shift it to the right by  places. This value is written back to the register  . Note that the shift needs to be an arithmetic right shift here such that the value is preserved. Secondly, the order of operations (shift and 2’s complement) is not important.
+
+We can now add the significand of  (  ) to  . If the resulting value is negative, then we need to take its 2’s complement, and set the sign of the result accordingly.
+
+Next, we need to normalize the result. It is possible that  . In this case, we need to shift  to the left till  . Most implementations of the floating point standard, use an extra bit called the guard bit, along with the round and sticky bits. They set the MSB of the residue to the guard bit, the next bit to the round bit, and the OR of the rest of the bits to the sticky bits. During the process of shifting a number left, they shift in the guard bit first, and then shift in 0s. At the end of the algorithm, it is necessary to set the round bit equal to the guard bit, and OR the sticky bit with the round bit such that our original semantics is maintained. This added complexity is to optimize for the case of a left shift by 1 position. If we did not have the guard bit, then we needed to shift the round bit into  , and we would thus lose the round bit forever.
+
+Once  is normalized and the exponent  is updated, we need to round the result as per Table 8.6. This process might lead to another round of normalization.

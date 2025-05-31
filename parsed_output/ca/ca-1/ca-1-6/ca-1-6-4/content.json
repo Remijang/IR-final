@@ -1,0 +1,82 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.4 A Modified Universal Turing Machine\\* ",
+        "text_level": 1,
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a variant of a universal Turing machine (see Figure 1.8) that is more amenable to practical implementations. Let it have the following features. Note that such a machine has been proven to be Turing complete. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "1. The tape is semi-infinite (extends to infinity in only one direction).   \n2. The simulated state is a pointer to an entry in the simulated action table.   \n3. There is one unique entry in the simulated action table for each state. While looking up the simulated action table, we do not care about the symbol under the tape head.   \n4. An action directs the tape head to visit a set of locations in the work area, and based on their values computes a new value using a simple arithmetical function. It writes this new value into a new location in the work area. ",
+        "page_idx": 30
+    },
+    {
+        "type": "image",
+        "img_path": "images/54ea413f430a662e4c8f3d789ab861727eb8f817e4ccfde639aab9ef19568a1f.jpg",
+        "img_caption": [
+            "Figure 1.8: A modified universal Turing machine "
+        ],
+        "img_footnote": [],
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "5. The default next state is the succeeding state in the action table. ",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "6. An action can also arbitrarily change the state if a symbol at a certain location on the tape is less than a certain value. Changing the state means that the simulated tape head will start fetching actions from a new area in the simulated action table. ",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "This Turing machine suggests a machine organization of the following form. There is a large array of instructions (action table). This array of instructions is commonly referred to as the program. There is a state register that maintains a pointer to the current instruction in the array. We can refer to this register as the program counter. It is possible to change the program counter to point to a new instruction. There is a large work area, where symbols can be stored, retrieved and modified. This work area is also known as the data area. The instruction table (program) and the work area (data) were saved on the tape in our modified Turing machine. In a practical machine, we call this infinite tape as the memory. The memory is a large array of memory cells, where a memory cell contains a basic symbol. A part of the memory contains the program, and another part of it contains data. ",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Definition 9 ",
+        "text_level": 1,
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "The memory in our conceptual machine is a semi-infinite array of symbols. A part of it contains the program consisting of basic instructions, and the rest of it contains data. Data refers to variables and constants that are used by the program. ",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "Furthermore, each instruction can read a set of locations in the memory, compute a small arithmetic function on them, and write the results back to the memory. It can also jump to any other instruction depending on values in the memory. There is a dedicated unit to compute these arithmetic functions, write to memory, and jump to other instructions. This is called the CPU(Central Processing Unit). Figure 1.9 shows a conceptual organization of this machine. ",
+        "page_idx": 31
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 32
+    },
+    {
+        "type": "image",
+        "img_path": "images/3a3cbb9c5bfecde5cb59cf5831b3d7ad7feeccc3fe3a234db0deb9db292f7e80.jpg",
+        "img_caption": [
+            "Figure 1.9: A basic instruction processing machine "
+        ],
+        "img_footnote": [],
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Interested readers might want to prove the fact that this machine is equivalent to a Turing machine. It is not very difficult to do so. We need to note that we have captured all aspects of a Turing machine: state transition, movement of the tape head, overwriting symbols, and decisions based on the symbol under the tape head. We shall see in Section 1.7.2 that such a machine is very similar to the Von Neumann machine. Von Neumann machines form the basis of today\u2019s computers. Readers can also refer to books on computational complexity. ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Important Point 3 Figure 1.9 represents a universal machine that can be practically designed. ",
+        "page_idx": 32
+    }
+]

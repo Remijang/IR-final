@@ -1,0 +1,101 @@
+6.3 Centripetal Force
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Calculate coefficient of friction on a car tire. • Calculate ideal speed and angle of a car on a turn.
+
+Any force or combination of forces can cause a centripetal or radial acceleration. Just a few examples are the tension in the rope on a tether ball, the force of Earth’s gravity on the Moon, friction between roller skates and a rink floor, a banked roadway’s force on a car, and forces on the tube of a spinning centrifuge.
+
+Any net force causing uniform circular motion is called a centripetal force. The direction of a centripetal force is toward the center of curvature, the same as the direction of centripetal acceleration. According to Newton’s second law of motion, net force is mass times acceleration: net  . For uniform circular motion, the acceleration is the centripetal acceleration—  . Thus, the magnitude of centripetal force  is
+
+By using the expressions for centripetal acceleration  from  , we get two expressions for the centripetal force  in terms of mass, velocity, angular velocity, and radius of curvature:
+
+You may use whichever expression for centripetal force is more convenient. Centripetal force  is always perpendicular to the path and pointing to the center of curvature, because  is perpendicular to the velocity and pointing to the center of curvature.
+
+Note that if you solve the first expression for  , you get
+
+This implies that for a given mass and velocity, a large centripetal force causes a small radius of curvature—that is, a tight curve.
+
+ isparallel to  since 
+
+EXAMPLE 6.4
+
+What Coefficient of Friction Do Car Tires Need on a Flat Curve?
+
+(a) Calculate the centripetal force exerted on a  car that negotiates a  radius curve at  .
+
+(b) Assuming an unbanked curve, find the minimum static coefficient of friction, between the tires and the road, static friction being the reason that keeps the car from slipping (see Figure 6.10).
+
+Strategy and Solution for (a)
+
+We know that  . Thus,
+
+Strategy for (b)
+
+Figure 6.10 shows the forces acting on the car on an unbanked (level ground) curve. Friction is to the left, keeping the car from slipping, and because it is the only horizontal force acting on the car, the friction is the centripetal force in this case. We know that the maximum static friction (at which the tires roll but do not slip) is  , where  is the static coefficient of friction and N is the normal force. The normal force equals the car’s weight on level ground, so that  . Thus the centripetal force in this situation is
+
+Now we have a relationship between centripetal force and the coefficient of friction. Using the first expression for  from the equation
+
+We solve this for  , noting that mass cancels, and obtain
+
+Solution for (b)
+
+Substituting the knowns,
+
+(Because coefficients of friction are approximate, the answer is given to only two digits.)
+
+Discussion
+
+We could also solve part (a) using the first expression in  because  and  are given. The coefficient of friction found in part (b) is much smaller than is typically found between tires and roads. The car will still negotiate the curve if the coefficient is greater than 0.13, because static friction is a responsive force, being able to assume a value less than but no more than  . A higher coefficient would also allow the car to negotiate the curve at a higher speed, but if the coefficient of friction is less, the safe speed would be less than  . Note that mass cancels, implying that in this example, it does not matter how heavily loaded the car is to negotiate the turn. Mass cancels because friction is assumed proportional to the normal force, which in turn is proportional to mass. If the surface of the road were banked, the normal force would be less as will be discussed below.
+
+Let us now consider banked curves, where the slope of the road helps you negotiate the curve. See Figure 6.11. The greater the angle  , the faster you can take the curve. Race tracks for bikes as well as cars, for example, often have steeply banked curves. In an “ideally banked curve,” the angle  is such that you can negotiate the curve at a certain speed without the aid of friction between the tires and the road. We will derive an expression for  for an ideally banked curve and consider an example related to it.
+
+For ideal banking, the net external force equals the horizontal centripetal force in the absence of friction. The components of the normal force N in the horizontal and vertical directions must equal the centripetal force and the weight of the car, respectively. In cases in which forces are not parallel, it is most convenient to consider components along perpendicular axes—in this case, the vertical and horizontal directions.
+
+Figure 6.11 shows a free body diagram for a car on a frictionless banked curve. If the angle  is ideal for the speed and radius, then the net external force will equal the necessary centripetal force. The only two external forces acting on the car are its weight and the normal force of the road . (A frictionless surface can only exert a force perpendicular to the surface—that is, a normal force.) These two forces must add to give a net external force that is horizontal toward the center of curvature and has magnitude  . Because this is the crucial force and it is horizontal, we use a coordinate system with vertical and horizontal axes. Only the normal force has a horizontal component, and so this must equal the centripetal force—that is,
+
+Because the car does not leave the surface of the road, the net vertical force must be zero, meaning that the vertical components of the two external forces must be equal in magnitude and opposite in direction. From the figure, we see that the vertical component of the normal force is  cos  , and the only other vertical force is the car’s weight. These must be equal in magnitude; thus,
+
+Now we can combine the last two equations to eliminate  and get an expression for  , as desired. Solving the second equation for  , and substituting this into the first yields
+
+Taking the inverse tangent gives
+
+This expression can be understood by considering how  depends on  and  . A large  will be obtained for a large  and a small  . That is, roads must be steeply banked for high speeds and sharp curves. Friction helps, because it allows you to take the curve at greater or lower speed than if the curve is frictionless. Note that  does not depend on the mass of the vehicle.
+
+EXAMPLE 6.5
+
+What Is the Ideal Speed to Take a Steeply Banked Tight Curve?
+
+Curves on some test tracks and race courses, such as the Daytona International Speedway in Florida, are very steeply banked. This banking, with the aid of tire friction and very stable car configurations, allows the curves to be taken at very high speed. To illustrate, calculate the speed at which a  radius curve banked at  should be driven if the road is frictionless.
+
+Strategy
+
+We first note that all terms in the expression for the ideal angle of a banked curve except for speed are known; thus, we need only rearrange it so that speed appears on the left-hand side and then substitute known quantities.
+
+Solution
+
+Starting with
+
+we get
+
+Noting that tan  , we obtain
+
+Discussion
+
+This is just about  , consistent with a very steeply banked and rather sharp curve. Tire friction enables a vehicle to take the curve at significantly higher speeds.
+
+Calculations similar to those in the preceding examples can be performed for a host of interesting situations in which centripetal force is involved—a number of these are presented in this chapter’s Problems and Exercises.
+
+Take-Home Experiment
+
+Ask a friend or relative to swing a golf club or a tennis racquet. Take appropriate measurements to estimate the centripetal acceleration of the end of the club or racquet. You may choose to do this in slow motion.
+
+PHET EXPLORATIONS
+
+Gravity and Orbits
+
+Move the sun, earth, moon and space station to see how it affects their gravitational forces and orbital paths. Visualize the sizes and distances between different heavenly bodies, and turn off gravity to see what would happen without it!
+
+Click to view content (https://openstax.org/books/college-physics-2e/pages/6-3-centripetal-force)

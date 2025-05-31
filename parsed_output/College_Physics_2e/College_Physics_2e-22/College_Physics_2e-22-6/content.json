@@ -1,0 +1,176 @@
+[
+    {
+        "type": "text",
+        "text": "22.6 The Hall Effect ",
+        "text_level": 1,
+        "page_idx": 985
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 985
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 985
+    },
+    {
+        "type": "text",
+        "text": "Describe the Hall effect. \u2022 Calculate the Hall emf across a current-carrying conductor. ",
+        "page_idx": 985
+    },
+    {
+        "type": "text",
+        "text": "We have seen effects of a magnetic field on free-moving charges. The magnetic field also affects charges moving in a conductor. One result is the Hall effect, which has important implications and applications. ",
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "Figure 22.26 shows what happens to charges moving through a conductor in a magnetic field. The field is perpendicular to the electron drift velocity and to the width of the conductor. Note that conventional current is to the right in both parts of the figure. In part (a), electrons carry the current and move to the left. In part (b), positive charges carry the current and move to the right. Moving electrons feel a magnetic force toward one side of the conductor, leaving a net positive charge on the other side. This separation of charge createsavoltage $\\varepsilon$ , known as the Hall emf, acros the conductor. The creation of a voltage acros a current-carrying conductor by a magnetic field is known as the Hall effect, after Edwin Hall, the American physicist who discovered it in 1879. ",
+        "page_idx": 986
+    },
+    {
+        "type": "image",
+        "img_path": "images/d43e050988e783ea3f109e89522305ebbba8553b2d37e0cbc98b9266a7536560.jpg",
+        "img_caption": [
+            "FIGURE 22.26 The Hall effect. (a) Electrons move to the left in this flat conductor (conventional current to the right). The magnetic field is directly out of the page, represented by circled dots; it exerts a force on the moving charges, causing a voltage $\\varepsilon$ , the Hall emf, across the conductor. (b) Positive charges moving to the right (conventional current also to the right) are moved to the side, producing a Hall emf of the opposite sign, $- \\varepsilon$ . Thus, if the direction of the field and current are known, the sign of the charge carriers can be determined from the Hall effect. "
+        ],
+        "img_footnote": [],
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "One very important use of the Hall effect is to determine whether positive or negative charges carries the current. Note that in Figure 22.26(b), where positive charges carry the current, the Hall emf has the sign opposite to when negative charges carry the current. Historically, the Hall effect was used to show that electrons carry current in metals and it also shows that positive charges carry current in some semiconductors. The Hall effect is used today as a research tool to probe the movement of charges, their drift velocities and densities, and so on, in materials. In 1980, it was discovered that the Hall effect is quantized, an example of quantum behavior in a macroscopic object. ",
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "The Hall effect has other uses that range from the determination of blood flow rate to precision measurement of magnetic field strength. To examine these quantitatively, we need an expression for the Hall emf, $\\varepsilon$ , across a conductor. Consider the balance of forces on a moving charge in a situation where $B , v$ , and $l$ are mutually perpendicular, such as shown in Figure 22.27. Although the magnetic force moves negative charges to one side, they cannot build up without limit. The electric field caused by their separation opposes the magnetic force, ${ \\boldsymbol { F } } = q v { \\boldsymbol { B } }$ , and the electric force, $F _ { \\mathrm { e } } = q E$ , eventually grows to equal it. That is, ",
+        "page_idx": 986
+    },
+    {
+        "type": "equation",
+        "text": "$$\nq E = q v B\n$$",
+        "text_format": "latex",
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 986
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = v B .\n$$",
+        "text_format": "latex",
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "Note that the electric field $E$ is uniform across the conductor because the magnetic field $B$ is uniform, as is the conductor. For a uniform electric field, the relationship between electric field and voltage is $E = \\varepsilon / l$ , where $l$ is the width of the conductor and $\\varepsilon$ is the Hall emf. Entering this into the last expression gives ",
+        "page_idx": 986
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { \\varepsilon } { l } = v B .\n$$",
+        "text_format": "latex",
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "Solving this for the Hall emf yields ",
+        "page_idx": 986
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\varepsilon = B l v ( B , v , \\mathrm { a n d } l , \\mathrm { m u t u a l l y p e r p e n d i c u l a r } ) ,\n$$",
+        "text_format": "latex",
+        "page_idx": 986
+    },
+    {
+        "type": "text",
+        "text": "where $\\varepsilon$ is the Hall effect voltage across a conductor of width $l$ through which charges move at a speed $v$ . ",
+        "page_idx": 987
+    },
+    {
+        "type": "image",
+        "img_path": "images/a82bb6ff6434097f0df83bd6a2126537a2c27c63df6dfff9bebceb79ba90a765.jpg",
+        "img_caption": [
+            "FIGURE 22.27 The Hall emf $\\varepsilon$ produces an electric force that balances the magnetic force on the moving charges. The magnetic force produces charge separation, which builds up until it is balanced by the electric force, an equilibrium that is quickly reached. "
+        ],
+        "img_footnote": [],
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "One of the most common uses of the Hall effect is in the measurement of magnetic field strength $B$ . Such devices, called Hal probes, can be made very small, allowing fine position mapping. Hall probes can also be made very accurate, usually accomplished by careful calibration. Another application of the Hall effect is to measure fluid flow in any fluid that has free charges (most do). (See Figure 22.28.) A magnetic field applied perpendicular to the flow direction produces a Hall emf $\\varepsilon$ as shown. Note that the sign of $\\varepsilon$ depends not on the sign of the charges, but only on the directions of $B$ and $v$ . The magnitude of the Hall emf is ${ \\varepsilon } = B l v$ , where $l$ is the pipe diameter, so that the average velocity $v$ can be determined from $\\varepsilon$ providing the other factors are known. ",
+        "page_idx": 987
+    },
+    {
+        "type": "image",
+        "img_path": "images/850c91170783e56d85b9711f2e6346f5a6dcaf12db634de5a3461fc7cce057b8.jpg",
+        "img_caption": [
+            "FIGURE 22.28 The Hall effect can be used to measure fluid flow in any fluid having free charges, such as blood. The Hall emf $\\varepsilon$ is measured across the tube perpendicular to the applied magnetic field and is proportional to the average velocity $v$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 22.3 ",
+        "text_level": 1,
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Hall emf: Hall Effect for Blood Flow ",
+        "text_level": 1,
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "A Hall effect flow probe is placed on an artery, applying a $0 . 1 0 0 \\mathrm { - } \\mathsf { T }$ magnetic field across it, in a setup similar to that in Figure 22.28. What is the Hall emf, given the vessel\u2019s inside diameter is $4 . 0 0 \\ : \\mathrm { m m }$ and the average blood velocity is $2 0 . 0 \\mathsf { c m } / \\mathsf { s } ?$ ",
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "Because , $v$ , and $l$ are mutually perpendicular, the equation ${ \\varepsilon = B l v }$ can be used to find $\\varepsilon$ . ",
+        "page_idx": 987
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 988
+    },
+    {
+        "type": "text",
+        "text": "Entering the given values for $B , v$ , and $l$ gives ",
+        "page_idx": 988
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { \\varepsilon } & { = } & { B l v = ( 0 . 1 0 0 \\mathrm { \\ T } ) \\bigl ( 4 . 0 0 \\times 1 0 ^ { - 3 } \\mathrm { \\ m } \\bigr ) ( 0 . 2 0 0 \\mathrm { \\ m / s } ) } \\\\ & { = } & { 8 0 . 0 \\mu \\mathrm { V } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 988
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 988
+    },
+    {
+        "type": "text",
+        "text": "This is the average voltage output. Instantaneous voltage varies with pulsating blood flow. The voltage is small in this type of measurement. $\\varepsilon$ is particularly difficult to measure, because there are voltages associated with heart action (ECG voltages) that are on the order of millivolts. In practice, this difficulty is overcome by applying an AC magnetic field, so that the Hall emf is AC with the same frequency. An amplifier can be very selective in picking out only the appropriate frequency, eliminating signals and noise at other frequencies. ",
+        "page_idx": 988
+    }
+]

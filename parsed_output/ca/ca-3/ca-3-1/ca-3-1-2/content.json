@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "3.1.2 Hardware Designer\u2019s Perspective ",
+        "text_level": 1,
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "The role of hardware designers is to design processors that can implement all the instructions in the ISA. Their main aim is to design an efficient processor that is optimal with regard to area, power efficiency, and design complexity. From their perspective, the ISA is the crucial link between software and hardware. It answers the basic question for them \u2013 \u201cwhat to build?\u201d ",
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "Hence, it is very essential for them to understand the precise semantics of different instruction sets such that they can design processors for them. As mentioned in Section 3.1.1, it is cumbersome to look at instructions as merely a sequence of zeros and ones. They can gain a lot by taking a look at the textual representation of a machine instruction, which is an assembly instruction. ",
+        "page_idx": 98
+    },
+    {
+        "type": "text",
+        "text": "An assembly language is specific to an instruction set and an assembler. In this chapter, we use the assembly language format of the popular GNU assembler [Elsner and Fenlason, 1994] to explain the syntax of a typical assembly language file. Note that other systems have similar formats, and the concepts are broadly the same. ",
+        "page_idx": 98
+    }
+]

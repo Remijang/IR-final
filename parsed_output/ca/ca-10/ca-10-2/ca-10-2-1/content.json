@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "10.2.1 Splitting the Data Path ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "We have five distinct units in our data path, and all instructions traverse the units in the same order. These units are instruction fetch (IF), operand fetch (OF), execute (EX), memory access (MA), and the register write (RW) units. A layout of these five units in a pipelined fashion has already been shown in Figure 10.1. Let us now discuss the issue of splitting a data path in some more detail. ",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "The reader needs to note that pipelining is a general concept, and any circuit can in principle be split into multiple parts and pipelined. There are however some rules that need to be followed. All the subparts of the circuit must preferably be distinct entities that have as few connections between them as possible. This is true in the case of our data path. All our units are distinct entities. The second is that all kinds of data must flow through the units in the same order, and the work done by each unit should roughly be the same. This minimizes the idleness in the circuit. In our case, we have tried to follow all these rules. The reader needs to note that the div and mod operations are exceptions to this rule. They are in general, significantly slower, than add or multiply operations. They thus increase the maximum delay of the EX stage, and the pipeline consequently becomes unbalanced. Hence, most simple pipelined processors either refrain from implementing these instructions, or have specialized logic to deal with them. We shall show one solution for this problem in Section 10.6 that proposes to stall a pipeline till a division operation completes. Let us nevertheless continue to assume that all our pipeline stages are balanced. ",
+        "page_idx": 417
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "type": "text",
+        "text": "6.5.1 Arithmetic and Data Transfer Instructions ",
+        "text_level": 1,
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "RISC-V has four core non-branch instruction formats: R, I, S and U. These are for 32-bit instructions. RISC-V assemblers and compilers further align these instructions to 4-byte (32- bit) boundaries. Figure 6.2 shows a visual representation of these four formats and Table 6.19 shows examples of instructions in each format. ",
+        "page_idx": 253
+    },
+    {
+        "type": "image",
+        "img_path": "images/9c3c37bdc44cbae3b5c33ecc6341ae86c1e7cb130e68d0480d36d5992ade8369.jpg",
+        "img_caption": [
+            "Figure 6.2: RISC-V instruction formats: R, I, S and U formats "
+        ],
+        "img_footnote": [],
+        "page_idx": 253
+    },
+    {
+        "type": "table",
+        "img_path": "images/274fdc2a1e0373d7ac84262a5a394711e73329c3110e6a615b48878b6feacc37.jpg",
+        "table_caption": [
+            "Table 6.19: Instructions belonging to each of the four arithmetic RISC-V formats "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Format</td><td>Structure</td><td>Instructions</td></tr><tr><td>R</td><td>rd, rsl, rs2</td><td>add,sub,mul,div,rem,and,or,xor,sll, srl, sra,slt, sltu</td></tr><tr><td>I</td><td>rd,rs1,imm rd, imm(rs1)</td><td>addi,andi,ori, xori,slli, srli, srai, slti, sltiu lw, jalr</td></tr><tr><td>S</td><td>rs2, imm(rs1)</td><td>SW</td></tr><tr><td>U</td><td>rd, imm</td><td>lui</td></tr></table></body></html>\n\n",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Let us now take a deep look at each of these four instruction formats. The first 7 bits are reserved for the opcodes in all the formats. This means that we can support a maximum of ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "128 instructions in the ISA; moreover, finding the opcode is also quite easy (first 7 bits). The reason that this is important is because minimizing the decoder\u2019s complexity is a key goal of ISA design. Given that all the opcode bits are in the same positions across the formats, finding the opcode and consequently the type of the instruction is easy. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "The next 5 bits are used to store the id of the destination register $^ { r d }$ in the R, I and U formats. S-type instructions do not have a destination register. For example, the $s w$ instruction, which is an S-type instruction, does not have a destination register. It however has two source registers and an immediate. Instead of changing the positions of the source registers in the S-type instruction format, the ISA designers made the right decision to use the bits for the destination register to store a part of the immediate. Hence, the first 5 bits of the immediate are stored at the corresponding positions. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Next, let us consider U-type instructions (such as $l u i$ ). We can use the remaining 20 bits to store the 20-bit immediate. We don\u2019t need to store any more information. Such instructions have only two arguments. The destination register rd and the 20-bit immediate. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "The rest of the three formats (R, I and S) store a 3-bit field f unct3. It is used to hierarchically organize the instructions and to also support more instructions. In RISC-V, a single opcode can correspond to multiple instructions. For example, the opcodes of the add, slt and xor instructions are the same: 0110011. They are differentiated by the values of the funct3 field. We can thus support more instructions than 128. However, that is not the main aim here. We can group similar instructions such that they are processed by the hardware in the same manner. They will still have differences between them such as add and xor. However, most of the processing can remain the same given that both are R-type instructions. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "The next 5 bits store the $r s 1$ field (first source register) in all three formats (R, I and S). Subsequently, differences arise. I-type instructions need to store a 12-bit immediate. They don\u2019t have a second source register $( r s 2 )$ . They thus use the remaining 12 bits to store the immediate. All immediates are sign-extended before being used in hardware unless the instruction has a \u2018u\u2019 suffix (for unsigned). The R and S-type instructions store the second source register $r s 2$ in the next 5 bits. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the last 7 bits in the R and S formats. R-type instructions have another opcode extender called funct7 (in addition to funct3). It serves the same purpose as funct3. The aim is to increase the number of instructions and also create a grouping of instructions based on their similarity. It is possible for two instructions to have the same opcode and f unct3 fields, yet have a different funct7 field. Consider add and sub. They have the same opcode (0110011) and same funct3 (000); however, their funct7 fields are different \u2013 0000000 and 0100000, respectively. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "In contrast, S-type instructions store the remaining 7 immediate bits in the uppermost (most significant) 7 positions. Recall that we had already stored 5 immediate bits in the positions at which other formats store the id of the destination register $( r d )$ . This is a very reasonable decision because the explicit aim is to ensure that the same field is stored at the same set of positions across the formats \u2013 it is very easy for the decoder to extract it. ",
+        "page_idx": 254
+    }
+]

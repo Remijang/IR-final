@@ -1,0 +1,45 @@
+[
+    {
+        "type": "text",
+        "text": "2.3.3 Bias-Based Approach ",
+        "text_level": 1,
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Let us adopt a different approach now. Let us assume that the unsigned representation of a number $( \\mathcal { F } ( u ) )$ is given by: ",
+        "page_idx": 68
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { F } } ( u ) = u + b i a s\n$$",
+        "text_format": "latex",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Here, bias is a constant. ",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Let us consider several examples using a 4-bit number system. The range of unsigned numbers is from 0 to 15. Let the bias be equal to 7. Then, the actual range of the number system is from -7 to $+ 8$ . Note that this method avoids some pitfalls of the sign-magnitude and 1\u2019s complement approach. First, there is only one representation for 0. In this case it is 0111. Second, it is possible to use standard unsigned binary addition to add two numbers with a small modification. ",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Let us try to add 2 and -2. 2 is represented as $+ 9$ or $1 0 0 1 _ { 2 }$ . Likewise, -2, is represented as $+ 5$ , or $0 1 0 1 _ { 2 }$ . If we add 2 and -2, we are in effect adding the unsigned numbers 5 and 9. $5 + 9$ $= 1 4$ . This is not the right answer. The right answer should be 0, and it should be represented as 0111 or $+ 7$ . Nonetheless, we can get the right answer by subtracting the bias, i.e., 7. 14 - 7 $= 7$ . Hence, the algorithm for addition is to perform simple binary unsigned addition, and then subtract the bias. Performing simple binary subtraction is also easy (need to add the bias). Hence, in the case of addition, for two numbers, $u$ and $v$ , we have: ",
+        "page_idx": 68
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { F } } ( u + v ) = { \\mathcal { F } } ( u ) + { \\mathcal { F } } ( v ) - b i a s\n$$",
+        "text_format": "latex",
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "However, performing binary multiplication is difficult. The bias values will create issues. In this case, if the real value of a number is $A$ , we are representing it as $A + b i a s$ . If we multiply $A$ and $B$ naively, we are in effect multiplying $A + b i a s$ and $B + b i a s$ . To recover the correct result, $A B$ , from $( A + b i a s ) \\times ( B + b i a s )$ is difficult. We desire an even simpler representation. ",
+        "page_idx": 68
+    }
+]

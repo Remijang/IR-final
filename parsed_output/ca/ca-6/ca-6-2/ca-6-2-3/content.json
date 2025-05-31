@@ -1,0 +1,107 @@
+[
+    {
+        "type": "text",
+        "text": "Example 95 ",
+        "text_level": 1,
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "Write an assembly program to multiply 3 with -17 and save the result in t3. ",
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "Example 96 ",
+        "text_level": 1,
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "Compute $1 2 ^ { 3 } + \\mathit { 1 }$ and save the result in t4. ",
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "# load the registers with required values addi t1 , zero , 1 # t1 = 1 addi t2 , zero , 12 # t2 = 12 ",
+        "page_idx": 234
+    },
+    {
+        "type": "text",
+        "text": "# perform the arithmetic operations ",
+        "page_idx": 234
+    },
+    {
+        "type": "table",
+        "img_path": "images/adc60e03b41bd841709ba800a6514d8629a69d01f4245d4831eca59bd43f5332.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>mu l</td><td>t3\uff0ct2,</td><td></td><td>t2</td><td></td><td># t3</td><td></td><td>=</td><td>12</td><td>*</td><td>12</td><td></td></tr><tr><td>mu l</td><td></td><td>t3\uff0ct3,</td><td>t2</td><td></td><td>#</td><td>t3</td><td>=</td><td>12</td><td>* 12</td><td>*12</td><td></td></tr><tr><td>add</td><td>t4\uff0c</td><td>t3\uff0c</td><td>t1</td><td></td><td></td><td>12^3</td><td></td><td>+1</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "The division instruction div is comparatively simpler. In the RV32 variant, it requires 32- bit dividends and divisors. The quotient is stored in the destination register. The rounding is towards zero. Let us explain rounding using a few examples. ",
+        "page_idx": 235
+    },
+    {
+        "type": "table",
+        "img_path": "images/d7828453ab5c37d0bf323c50358b4a5f1c2c718c6e8eae75b67bc4e3ddddccbb.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td> Division operation</td><td>Quotient</td><td>Remainder</td></tr><tr><td>4\u00f73</td><td>1</td><td>1</td></tr><tr><td>4\u00f7(-3)</td><td>-1</td><td>1</td></tr><tr><td>(-4)\u00f73</td><td>-1</td><td>-1</td></tr><tr><td>(-4)\u00f7(-3)</td><td>1</td><td>-1</td></tr></table></body></html>\n\n",
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "We see that rounding towards zero also means that the sign of the remainder is the same as the sign of the dividend. The remainder instruction works on similar lines. It computes the remainder of the division operation (rounding towards zero). ",
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "Akin to the multiplication operations, the division and remainder operation work in the same manner. When they are issued back to back, micro-architectures are expected to fuse them. They compute a single division operation and store the results in two registers \u2013 one register for the quotient and one for the remainder, respectively. ",
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "This is an example of a scenario where the ISA has deliberately been under-designed. Instead of having an instruction that stores to two 32-bit registers, the programmer or compiler are expected to invoke these instructions consecutively. It is the job of the hardware to dynamically identify such sequences and fuse them. This transfers the responsibility of ensuring efficiency to hardware at the cost of keeping the ISA simple. ",
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "Example 97 ",
+        "text_level": 1,
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "Write a RISC-V assembly program to divide -50 by 3. Store the quotient in t2 and remainder in t3. ",
+        "page_idx": 235
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 235
+    },
+    {
+        "type": "table",
+        "img_path": "images/7cebc3b62fde9f594149bfa25ea666d2ecdd1d8518811b40fde78ab866db3d2b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>addi t1\uff0czero\uff0c3</td><td>addi tO\uff0czero\uff0c</td><td></td><td>-50</td><td># t0 = -50</td></tr><tr><td></td><td>div t2\uff0ct0\uff0ct1</td><td></td><td># t1=3 # quotient in t2</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>rem t3,</td><td>t0\uff0ct1</td><td></td><td># remainder in t3</td></tr></table></body></html>\n\n",
+        "page_idx": 235
+    }
+]

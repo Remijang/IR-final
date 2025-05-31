@@ -1,0 +1,205 @@
+# 19.3 Adaptive Evolution
+
+# Bytheendofthissection,youwil beabletodothefolowing:
+
+Explain the different ways natural selection can shape populations Describe how these different forces can lead to different outcomes in terms of the population variation
+
+Natural selection acts on the population’s heritable traits: selecting for beneficial alleles that allow for environmental adaptation, and thus increasing their frequency in the population, while selecting against deleterious alleles and thereby decreasing their frequency. Scientists call this process adaptive evolution. Natural selection acts on entire organisms, not on an individual allele within the organism. An individual may carry a very beneficial genotype with a resulting phenotype that, for example, increases the ability to reproduce (fecundity), but if that same individual also carries an allele that results in a fatal childhood disease, that fecundity phenotype will not pass to the next generation because the individual will not live to reach reproductive age. Natural selection acts at the individual's level. It selects for individuals with greater contributions to the gene pool of the next generation. Scientists call this an organism’s evolutionary (Darwinian) fitness.
+
+
+
+Fitness is often quantifiable and is measured by scientists in the field. However, it is not an individual's absolute fitness that counts, but rather how it compares to the other organisms in the population. Scientists call this concept relative fitness, which allows researchers to determine which individuals are contributing additional offspring to the next generation, and thus, how the population might evolve.
+
+There are several ways selection can affect population variation: stabilizing selection, directional selection, diversifying selection, frequency-dependent selection, and sexual selection. As natural selection influences the allele frequencies in a population, individuals can either become more or less genetically similar and the phenotypes can become more similar or more disparate.
+
+# Stabilizing Selection
+
+If natural selection favors an average phenotype, selecting against extreme variation, the population will undergo stabilizing selection (Figure 19.8). In a mouse population that live in the woods, for example, natural selection is likely to favor mice that best blend in with the forest floor and are less likely for predators to spot. Assuming the ground is a fairly consistent shade of brown, those mice whose fur is most closely matched to that color will be most likely to survive and reproduce, passing on their genes for their brown coat. Mice that carry alleles that make them a bit lighter or a bit darker will stand out against the ground and be more likely to fall victim to predation. As a result of this selection, the population’s genetic variance will decrease.
+
+# Directional Selection
+
+When the environment changes, populations will often undergo directional selection (Figure 19.8), which selects for phenotypes at one end of the spectrum of existing variation. A classic example of this type of selection is the evolution of the peppered moth in eighteenth- and nineteenth-century England. Prior to the Industrial Revolution, the moths were predominately light in color, which allowed them to blend in with the light-colored trees and lichens in their environment. However, as soot began spewing from factories, the trees darkened, and the light-colored moths became easier for predatory birds to spot. Over time, the frequency of the moth's melanic form increased because they had a higher survival rate in habitats affected by air pollution because their darker coloration blended with the sooty trees. Similarly, the hypothetical mouse population may evolve to take on a different coloration if something were to cause the forest floor where they live to change color. The result of this type of selection is a shift in the population’s genetic variance toward the new, fit phenotype.
+
+# LINK TO LEARNING
+
+In science, we sometimes believe some things are true, and then new information becomes available that changes our understanding. The peppered moth story is an example: some scientists recently have questioned the facts behind the selection toward darker moths. Read this article (http://openstax.org/l/peppered_moths) to learn more.
+
+# Diversifying Selection
+
+Sometimes two or more distinct phenotypes can each have their advantages for natural selection, while the intermediate phenotypes are, on average, less fit. Scientists call this diversifying selection (Figure 19.8) We see this in many animal populations that have multiple male forms. Large, dominant alpha males use brute force to obtain mates, while small males can sneak in for furtive copulations with the females in an alpha male’s territory. In this case, both the alpha males and the “sneaking” males will be selected for, but medium-sized males, who can’t overtake the alpha males and are too big to sneak copulations, are selected against. Diversifying selection can also occur when environmental changes favor individuals on either end of the phenotypic spectrum. Imagine a mouse population living at the beach where there is light-colored sand interspersed with patches of tall grass. In this scenario, light-colored mice that blend in with the sand would be favored, as well as darkcolored mice that can hide in the grass. Medium-colored mice, alternatively would not blend in with either the grass or the sand, and thus predators would most likely eat them. The result of this type of selection is increased genetic variance as the population becomes more diverse.
+
+In recent years, factories have become cleaner, and release less soot into the environment. What impact do you think this has had on the distribution of moth color in the population?
+
+# Frequency-Dependent Selection
+
+Another type of selection, frequency-dependent selection, favors phenotypes that are either common (positive frequencydependent selection) or rare (negative frequency-dependent selection). We can observe an interesting example of this type of selection in a unique group of Pacific Northwest lizards. Male common side-blotched lizards come in three throat-color patterns: orange, blue, and yellow. Each of these forms has a different reproductive strategy: orange males are the strongest and can fight other males for access to their females. Blue males are medium-sized and form strong pair bonds with their mates. Yellow males (Figure 19.9) are the smallest, and look a bit like females, which allows them to sneak copulations. Like a game of rock-paper-scissors, orange beats blue, blue beats yellow, and yellow beats orange in the competition for females. That is, the big, strong orange males can fight off the blue males to mate with the blue’s pair-bonded females, the blue males are successful at guarding their mates against yellow sneaker males, and the yellow males can sneak copulations from the potential mates of the large, polygynous orange males.
+
+In this scenario, natural selection favors orange males when blue males dominate the population. Blue males will thrive when the population is mostly yellow males, and yellow males will be selected for when orange males are the most populous. As a result, populations of side-blotched lizards cycle in the distribution of these phenotypes—in one generation, orange might predominate, and then yellow males will begin to rise in frequency. Once yellow males comprise a majority of the population, blue males will be selected. Finally, when blue males become common, orange males once again will be favored.
+
+Negative frequency-dependent selection serves to increase the population’s genetic variance by selecting for rare phenotypes;   
+whereas, positive frequency-dependent selection usually decreases genetic variance by selecting for common phenotypes.
+
+# Sexual Selection
+
+Males and females of certain species are often quite different from one another in ways beyond the reproductive organs. Males are often larger, for example, and display many elaborate colors and adornments, like the peacock’s tail, while females tend to be smaller and duller in decoration. We call such differences sexual dimorphisms (Figure 19.10), which arise in many populations, particularly animal populations, where there is more variance in the male's reproductive success than that of the females. That is, some males—often the bigger, stronger, or more decorated males—obtain the vast majority of the total matings, while others receive none. This can occur because the males are better at fighting off other males, or because females will choose to mate with the bigger or more decorated males. In either case, this variation in reproductive success generates a strong selection pressure among males to obtain those matings, resulting in the evolution of bigger body size and elaborate ornaments to attract the females’ attention. Females, however, tend to achieve a handful of selected matings; therefore, they are more likely to select more desirable males.
+
+Sexual dimorphism varies widely among species, and some species are even sex-role reversed. In such cases, females tend to have a greater variance in their reproductive success than males and are correspondingly selected for the bigger body size and elaborate traits usually characteristic of males.
+
+We call the selection pressures on males and females to obtain matings sexual selection. It can result in developing secondary sexual characteristics that do not benefit the individual’s likelihood of survival but help to maximize its reproductive success. Sexual selection can be so strong that it selects traits that are actually detrimental to the individual’s survival. Think, once again, about the peacock’s tail. While it is beautiful and the male with the largest, most colorful tail is more likely to win the female, it is not the most practical appendage. In addition to greater visibility to predators, it makes the males slower in their attempted escapes. There is some evidence that this risk is why females like the big tails in the first place. The speculation is that large tails carry risk, and only the best males survive that risk: the bigger the tail, the more fit the male. We call this the handicap principle.
+
+The good genes hypothesis states that males develop these impressive ornaments to show off their efficient metabolism or their ability to fight disease. Females then choose males with the most impressive traits because it signals their genetic superiority, which they will then pass on to their offspring. Although one may argue that females should not be picky because it will likely reduce their number of offspring, if better males father more fit offspring, it may be beneficial. Fewer, healthier offspring may increase the chances of survival more than many, weaker offspring.
+
+# LINK TO LEARNING
+
+In 1915, biologist Ronald Fisher proposed another model of sexual selection: the Fisherian runaway model (http://openstax.org/l sexual_select) , which suggests that selection of certain traits is a result of sexual preference.
+
+In both the handicap principle and the good genes hypothesis, the trait is an honest signal of the males’ quality, thus giving females a way to find the fittest mates— males that will pass the best genes to their offspring.
+
+# No Perfect Organism
+
+Natural selection is a driving force in evolution and can generate populations that are better adapted to survive and successfully reproduce in their environments. However, natural selection cannot produce the perfect organism. Natural selection can only select on existing variation in the population. It does not create anything from scratch. Thus, it is limited by a population’s existing genetic variance and whatever new alleles arise through mutation and gene flow.
+
+Natural selection is also limited because it works at the individual, not allele level, and some alleles are linked due to their physical proximity in the genome, making them more likely to pass on together (linkage disequilibrium). Any given individual may carry some beneficial and some unfavorable alleles. It is the alleles' net effect, or the organism’s fitness, upon which natural selection can act. As a result, good alleles can be lost if individuals who carry them also have several overwhelmingly bad alleles. Likewise, bad alleles can be kept if individuals who have enough good alleles to result in an overall fitness benefit carry them.
+
+Furthermore, natural selection can be constrained by the relationships between different polymorphisms. One morph may confer a higher fitness than another, but may not increase in frequency because going from the less beneficial to the more beneficial trait would require going through a less beneficial phenotype. Think back to the mice that live at the beach. Some are light-colored and blend in with the sand, while others are dark and blend in with the patches of grass. The dark-colored mice may be, overall, more fit than the light-colored mice, and at first glance, one might expect the light-colored mice to be selected for a darker coloration. However, remember that the intermediate phenotype, a medium-colored coat, is very bad for the mice—they cannot blend in with either the sand or the grass and predators are more likely to eat them. As a result, the lightcolored mice would not be selected for a dark coloration because those individuals who began moving in that direction (began selection for a darker coat) would be less fit than those that stayed light.
+
+
+
+Finally, it is important to understand that not all evolution is adaptive. While natural selection selects the fittest individuals and often results in a more fit population overall, other forces of evolution, including genetic drift and gene flow, often do the opposite: introducing deleterious alleles to the population’s gene pool. Evolution has no purpose—it is not changing a population into a preconceived ideal. It is simply the sum of the various forces that we have described in this chapter and how they influence the population's genetic and phenotypic variance.
+
+# KEY TERMS
+
+adaptive evolution increase in frequency of beneficial alleles and decrease in deleterious alleles due to selection   
+allele frequency (also, gene frequency) rate at which a specific allele appears within a population   
+assortative mating when individuals tend to mate with those who are phenotypically similar to themselves   
+bottleneck effect magnification of genetic drift as a result of natural events or catastrophes   
+cline gradual geographic variation across an ecological gradient   
+directional selection selection that favors phenotypes at one end of the spectrum of existing variation   
+diversifying selection selection that favors two or more distinct phenotypes   
+evolutionary fitness (also, Darwinian fitness) individual’s ability to survive and reproduce   
+founder effect event that initiates an allele frequency change in part of the population, which is not typical of the original population   
+frequency-dependent selection selection that favors phenotypes that are either common (positive frequencydependent selection) or rare (negative frequencydependent selection)   
+gene flow flow of alleles in and out of a population due to the individual or gamete migration   
+gene pool all the alleles that the individuals in the population carry   
+genetic drift effect of chance on a population’s gene pool   
+genetic structure distribution of the different possible genotypes in a population   
+genetic variance diversity of alleles and genotypes in a population   
+geographical variation differences in the phenotypic variation between populations that are separated geographically   
+good genes hypothesis theory of sexual selection that argues individuals develop impressive ornaments to show off their efficient metabolism or ability to fight disease   
+handicap principle theory of sexual selection that argues only the fittest individuals can afford costly traits   
+heritability fraction of population variation that can be attributed to its genetic variance   
+honest signal trait that gives a truthful impression of an individual’s fitness   
+inbreeding mating of closely related individuals   
+inbreeding depression increase in abnormalities and disease in inbreeding populations   
+macroevolution broader scale evolutionary changes that scientists see over paleontological time   
+microevolution changes in a population’s genetic structure   
+modern synthesis overarching evolutionary paradigm that took shape by the 1940s and scientists generally accept today   
+nonrandom mating changes in a population’s gene pool due to mate choice or other forces that cause individuals to mate with certain phenotypes more than others   
+population genetics study of how selective forces change the allele frequencies in a population over time   
+population variation distribution of phenotypes in a population   
+relative fitness individual’s ability to survive and reproduce relative to the rest of the population   
+selective pressure environmental factor that causes one phenotype to be better than another   
+sexual dimorphism phenotypic difference between a population's males and females   
+stabilizing selection selection that favors average phenotypes
+
+
+
+# CHAPTER SUMMARY 19.1 Population Evolution
+
+The modern synthesis of evolutionary theory grew out of the cohesion of Darwin’s, Wallace’s, and Mendel’s thoughts on evolution and heredity, along with the more modern study of population genetics. It describes the evolution of populations and species, from small-scale changes among individuals to large-scale changes over paleontological time periods. To understand how organisms evolve, scientists can track populations’ allele frequencies over time. If they differ from generation to generation, scientists can conclude that the population is not in Hardy-Weinberg equilibrium, and is thus evolving.
+
+# 19.2 Population Genetics
+
+Both genetic and environmental factors can cause phenotypic variation in a population. Different alleles can confer different phenotypes, and different environments can also cause individuals to look or act differently. Only those differences encoded in an individual’s genes, however, can pass to its offspring and, thus, be a target of natural selection. Natural selection works by selecting for alleles that confer beneficial traits or behaviors, while selecting against those for deleterious qualities. Genetic drift stems from the chance occurrence that some individuals in the gene line have more offspring than others. When individuals leave or join the population, allele frequencies can change as a result of gene flow. Mutations to an individual’s DNA may introduce new variation into a population. Allele frequencies can also alter when individuals do not randomly mate with others in the group.
+
+
+
+# 19.3 Adaptive Evolution
+
+Because natural selection acts to increase the frequency of beneficial alleles and traits while decreasing the frequency of deleterious qualities, it is adaptive evolution. Natural selection acts at the individual level, selecting for those that have a higher overall fitness compared to the rest of the population. If the fit phenotypes are those that are similar, natural selection will result in stabilizing selection, and an overall decrease in the population’s variation. Directional selection works to shift a population’s variance toward a new, fit phenotype, as environmental conditions change. In contrast, diversifying selection results in increased genetic variance by selecting for two or more distinct phenotypes.
+
+
+
+Other types of selection include frequency-dependent selection, in which individuals with either common (positive frequency-dependent selection) or rare (negative frequencydependent selection) are selected. Finally, sexual selection results from one sex having more variance in the reproductive success than the other. As a result, males and females experience different selective pressures, which can often lead to the evolution of phenotypic differences, or sexual dimorphisms, between the two.
+
+# VISUAL CONNECTION QUESTIONS
+
+1. Figure 19.2 In plants, violet flower color (V) is dominant over white (v). If $\mathsf { \Psi } \mathsf { p } = . 8$ and $\mathsf { q } = \mathsf { o } . 2$ in a population of 500 plants, how many individuals would you expect to be homozygous dominant (VV), heterozygous $( \mathtt { V v } )$ , and homozygous recessive (vv)? How many plants would you expect to have violet flowers, and how many would have white flowers?
+
+2. Figure 19.4 Do you think genetic drift would happen more quickly on an island or on the mainland?   
+3. Figure 19.8 In recent years, factories have become cleaner, and less soot is released into the environment. What impact do you think this has had on the distribution of moth color in the population?
+
+# REVIEW QUESTIONS
+
+4. What is the difference between micro- and macroevolution?
+
+a. Microevolution describes the evolution of small organisms, such as insects, while macroevolution describes the evolution of large organisms, like people and elephants.   
+b. Microevolution describes the evolution of microscopic entities, such as molecules and proteins, while macroevolution describes the evolution of whole organisms.   
+c. Microevolution describes the evolution of organisms in populations, while macroevolution describes the evolution of species over long periods of time.   
+d. Microevolution describes the evolution of organisms over their lifetimes, while macroevolution describes the evolution of organisms over multiple generations.
+
+5. Population genetics is the study of:
+
+a. how selective forces change the allele frequencies in a population over time b. the genetic basis of population-wide traits c. whether traits have a genetic basis d. the degree of inbreeding in a population
+
+6. Which of the following populations is not in HardyWeinberg equilibrium? a. a population with 12 homozygous recessive individuals (yy), 8 homozygous dominant individuals (YY), and 4 heterozygous individuals (Yy) b. a population in which the allele frequencies do not change over time c. $\mathsf { p } ^ { 2 } + 2 \mathsf { p q } + \mathsf { q } ^ { 2 } = \mathsf { 1 }$ d. a population undergoing natural selection
+
+7. One of the original Amish colonies rose from a ship of colonists that came from Europe. The ship’s captain, who had polydactyly, a rare dominant trait, was one of the original colonists. Today, we see a much higher frequency of polydactyly in the Amish population. This is an example of: a. natural selection b. genetic drift c. founder effect d. b and c
+
+8. When male lions reach sexual maturity, they leave their group in search of a new pride. This can alter the allele frequencies of the population through which of the following mechanisms?
+
+a. natural selection b. genetic drift c. gene flow d. random mating
+
+9. Which of the following evolutionary forces can introduce new genetic variation into a population?
+
+a. natural selection and genetic drift b. mutation and gene flow c. natural selection and nonrandom mating d. mutation and genetic drift
+
+10. What is assortative mating?
+
+a. when individuals mate with those who are similar to themselves   
+b. when individuals mate with those who are dissimilar to themselves   
+c. when individuals mate with those who are the most fit in the population   
+d. when individuals mate with those who are least fit in the population
+
+11. When closely related individuals mate with each other, or inbreed, the offspring are often not as fit as the offspring of two unrelated individuals. Why?
+
+a. Close relatives are genetically incompatible.   
+b. The DNA of close relatives reacts negatively in the offspring.   
+c. Inbreeding can bring together rare, deleterious mutations that lead to harmful phenotypes.   
+d. Inbreeding causes normally silent alleles to be expressed.
+
+12. What is a cline?
+
+a. the slope of a mountain where a population lives   
+b. the degree to which a mutation helps an individual survive   
+c. the number of individuals in the population   
+d. gradual geographic variation across an ecological gradient
+
+13. Which type of selection results in greater genetic variance in a population?
+
+a. stabilizing selection   
+b. directional selection   
+c. diversifying selection   
+d. positive frequency-dependent selection
+
+14. When males and females of a population look or act differently, it is referred to as
+
+a. sexual dimorphism b. sexual selection c. diversifying selection d. a cline
+
+15. The good genes hypothesis is a theory that explains what?
+
+a. why more fit individuals are more likely to have more offspring   
+b. why alleles that confer beneficial traits or behaviors are selected for by natural selection   
+c. why some deleterious mutations are maintained in the population   
+d. why individuals of one sex develop impressive ornamental traits
+
+# CRITICAL THINKING QUESTIONS
+
+16. Solve for the genetic structure of a population with 12 homozygous recessive individuals (yy), 8 homozygous dominant individuals (YY), and 4 heterozygous individuals (Yy).   
+17. Explain the Hardy-Weinberg principle of equilibrium theory.   
+18. Imagine you are trying to test whether a population of flowers is undergoing evolution. You suspect there is selection pressure on the color of the flower: bees seem to cluster around the red flowers more often than the blue flowers. In a separate experiment, you discover blue flower color is dominant to red flower color. In a field, you count 600 blue flowers and 200 red flowers. What would you expect the genetic structure of the flowers to be?   
+19. Describe a situation in which a population would undergo the bottleneck effect and explain what impact that would have on the population’s gene pool.   
+20. Describe natural selection and give an example of natural selection at work in a population.   
+21. Explain what a cline is and provide examples.   
+22. Give an example of a trait that may have evolved as a result of the handicap principle and explain your reasoning.   
+23. List the ways in which evolution can affect population variation and describe how they influence allele frequencies.

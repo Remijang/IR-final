@@ -1,0 +1,29 @@
+# 41.3 Excretion Systems
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+• Explain how vacuoles, present in microorganisms, work to excrete waste   
+• Describe the way in which flame cells and nephridia in worms perform excretory functions and maintain osmotic balance   
+• Explain how insects use Malpighian tubules to excrete wastes and maintain osmotic balance
+
+Microorganisms and invertebrate animals use more primitive and simple mechanisms to get rid of their metabolic wastes than the mammalian system of kidney and urinary function. Three excretory systems evolved in organisms before complex kidneys: vacuoles, flame cells, and Malpighian tubules.
+
+# Contractile Vacuoles in Microorganisms
+
+The most fundamental feature of life is the presence of a cell. In other words, a cell is the simplest functional unit of a life. Bacteria are unicellular, prokaryotic organisms that have some of the least complex life processes in place; however, prokaryotes such as bacteria do not contain membrane-bound vacuoles. The cells of microorganisms like bacteria, protozoa, and fungi are bound by cell membranes and use them to interact with the environment. Some cells, including some leucocytes in humans, are able to engulf food by endocytosis—the formation of vesicles by involution of the cell membrane within the cells. The same vesicles are able to interact and exchange metabolites with the intracellular environment. In some unicellular eukaryotic organisms such as the amoeba, shown in Figure 41.9, cellular wastes and excess water are excreted by exocytosis, when the contractile vacuoles merge with the cell membrane and expel wastes into the environment. Contractile vacuoles (CV) should not be confused with vacuoles, which store food or water.
+
+# Flame Cells of Planaria and Nephridia of Worms
+
+As multicellular systems evolved to have organ systems that divided the metabolic needs of the body, individual organs evolved to perform the excretory function. Planaria are flatworms that live in freshwater. Their excretory system consists of two tubules connected to a highly branched duct system. The cells in the tubules are called flame cells (or protonephridia) because they have a cluster of cilia that looks like a flickering flame when viewed under the microscope, as illustrated in Figure 41.10a. The cilia propel waste matter down the tubules and out of the body through excretory pores that open on the body surface; cilia also draw water from the interstitial fluid, allowing for filtration. Any valuable metabolites are recovered by reabsorption. Flame cells are found in flatworms, including parasitic tapeworms and free-living planaria. They also maintain the organism’s osmotic balance.
+
+Earthworms (annelids) have slightly more evolved excretory structures called nephridia, illustrated in Figure 41.10b. A pair of nephridia is present on each segment of the earthworm. They are similar to flame cells in that they have a tubule with cilia. Excretion occurs through a pore called the nephridiopore. They are more evolved than the flame cells in that they have a system for tubular reabsorption by a capillary network before excretion.
+
+# Malpighian Tubules of Insects
+
+Malpighian tubules are found lining the gut of some species of arthropods, such as the bee illustrated in Figure 41.11. They are usually found in pairs and the number of tubules varies with the species of insect. Malpighian tubules are convoluted, which increases their surface area, and they are lined with microvilli for reabsorption and maintenance of osmotic balance. Malpighian tubules work cooperatively with specialized glands in the wall of the rectum. Body fluids are not filtered as in the case of nephridia; urine is produced by tubular secretion mechanisms by the cells lining the Malpighian tubules that are bathed in hemolymph (a mixture of blood and interstitial fluid that is found in insects and other arthropods as well as most mollusks).
+
+Metabolic wastes like uric acid freely diffuse into the tubules. There are exchange pumps lining the tubules, which actively transport $\mathrm { H ^ { + } }$ ions into the cell and $\mathrm { K ^ { + } }$ or $\mathrm { N a ^ { + } }$ ions out; water passively follows to form urine. The secretion of ions alters the osmotic pressure which draws water, electrolytes, and nitrogenous waste (uric acid) into the tubules. Water and electrolytes are reabsorbed when these organisms are faced with low-water environments, and uric acid is excreted as a thick paste or powder. Not dissolving wastes in water helps these organisms to conserve water; this is especially important for life in dry environments.
+
+# LINK TO LEARNING
+
+See a dissected cockroach, including a close-up look at its Malpighian tubules, in this video (https://openstax.org/l/malpighian)

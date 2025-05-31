@@ -1,0 +1,25 @@
+12.5.3 A Practical Example using SSE Instructions
+
+Let us now consider a practical example using the x86-based SSE instruction set. We shall not use actual assembly instructions. We shall instead use functions provided by the gcc compiler that act as wrappers for the assembly instructions. These functions are called gcc intrinsics.
+
+Let us now solve the problem of adding two arrays of floating point numbers. In this case, we wish to compute  , for all values of  .
+
+The SSE instruction set contains 128-bit registers. Each register can be used to store four 32-bit floating point numbers. Hence, if we have an array of  numbers, we need to have  iterations, because we can add at the most 4 pairs of numbers in each cycle. In each iteration,
+
+we need to load vector registers, add them, and store the result in memory. This process of breaking up a vector computation into a sequence of loop iterations based on the sizes of vector registers is known as strip mining.
+
+Definition 134
+
+The process of breaking up a vector computation into a sequence of loop iterations based on the sizes of vector registers is known as strip mining. For example, if a vector register can hold 16 integers, and we wish to operate on 1024 integer vectors, then we need a loop with 64 iterations.
+
+Example 155
+
+Write a function in  to add the elements in the arrays a and b pairwise, and save the results in the array, c, using the SSE extensions to the x86 ISA. Assume that the number of entries in a and b are the same, and are a multiple of 4.
+
+Answer:
+
+Let us consider the C code snippet in Example 155. We first calculate the number of iterations in Line 4. In each iteration, we consider a block of 4 array elements. In Line 9, we load a set of four floating point numbers into the 128-bit vector variable, val1. val1 is mapped to a vector register by the compiler. We use the function mm load ps to load a set of 4 contiguous floating point values from memory. For example, the function  loads four floating point values in the locations,  ,  ,  , and  into a vector register. Similarly, we load the second vector register, val2, with four floating point values starting from the memory address,  . In Line 13, we perform the vector addition, and save the result in a 128- bit vector register associated with the variable res. We use the intrinsic function, mm add ps, for this purpose. In Line 16, we store the variable,  , in the memory locations namely  ,  ,  , and  .
+
+Before proceeding to the next iteration, we need to update the pointers  ,  , and  . Since we process 4 contiguous array elements every cycle, we update each of the pointer by 4 (4 array elements) in Line 19.
+
+We can quickly conclude that vector instructions facilitate bulk computations such as bulk loads/stores and adding a set of numbers pairwise, in one go. We compared the performance of this function, with a version of the function that does not use vector instructions on a quad core Intel Core i7 machine. The code with SSE instructions ran 2-3 times faster for million-element arrays. If we had wider SSE registers, then we could have gained more speedups. The latest AVX vector ISA on x86 processors supports 256 and 512-bit vector registers. Interested readers can implement the function shown in Example 155 using the AVX vector ISA, and compare the performance.

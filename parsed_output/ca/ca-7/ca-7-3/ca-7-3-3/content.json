@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.3 Clocked SR Latch ",
+        "text_level": 1,
+        "page_idx": 282
+    },
+    {
+        "type": "image",
+        "img_path": "images/7c10e9fc779834ceca6b3ca0180e78ff5e9850cc3448c66e3757af1ac74d1809.jpg",
+        "img_caption": [
+            "Figure 7.18: The Clocked SR latch "
+        ],
+        "img_footnote": [],
+        "page_idx": 282
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.18 shows the SR latch augmented with two NAND gates that have the clock as one of the inputs. The other two inputs are the S and R bits, respectively. If the clock is 0, then both the inputs to the cross-coupled NAND gates are 1. This maintains the previous value. If the clock is 1, then the inputs to the cross-coupled NAND gates are $\\overline { S }$ and $\\overline { { R } }$ , respectively. These are the same inputs as the basic SR latch. The rest of the operation follows Table 7.2. Note that a clocked latch is typically referred to as a flip-flop. ",
+        "page_idx": 282
+    },
+    {
+        "type": "text",
+        "text": "Definition 48 Flip-flop : It is a clocked latch that can save a bit (0 or 1). ",
+        "page_idx": 282
+    },
+    {
+        "type": "text",
+        "text": "By using the clock, we have partially solved the problem of synchronizing inputs and outputs. In this case, when the clock is 0, the outputs are unaffected by the inputs. When the clock is 1, the outputs are affected by the input. Such a latch is also called a level sensitive latch. ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "Definition 49 ",
+        "text_level": 1,
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "A level sensitive latch is dependent on the value of the clock signal \u2013 0 or 1. Typically, it can read in new values, only when the clock is 1. ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "In a level sensitive latch, circuits have half a clock cycle to compute the correct outputs (when the clock is 0). When the clock is 1, the outputs are visible. It would be better to have one full clock cycle to compute the outputs. This would require an edge sensitive latch. An edge sensitive latch reflects the inputs at the output, only at the downward edge of the clock. ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "Definition 50   \nAn edge sensitive latch reflects the inputs at the output only at a fixed clock edge, such as the downward edge (transition from 1 to 0). ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "Let us try to create an edge sensitive SR latch. ",
+        "page_idx": 283
+    }
+]

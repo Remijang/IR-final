@@ -1,0 +1,487 @@
+[
+    {
+        "type": "text",
+        "text": "29.3 Photon Energies and the Electromagnetic Spectrum ",
+        "text_level": 1,
+        "page_idx": 1301
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1301
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1301
+    },
+    {
+        "type": "text",
+        "text": "Explain the relationship between the energy of a photon in joules or electron volts and its wavelength or frequency. \u2022 Calculate the number of photons per second emitted by a monochromatic source of specific wavelength and power. ",
+        "page_idx": 1301
+    },
+    {
+        "type": "text",
+        "text": "Ionizing Radiation ",
+        "text_level": 1,
+        "page_idx": 1302
+    },
+    {
+        "type": "text",
+        "text": "A photon is a quantum of EM radiation. Its energy is given by $E = h f$ and is related to the frequency $f$ and wavelength $\\lambda$ of the radiation by ",
+        "page_idx": 1302
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = h f = { \\frac { h c } { \\lambda } } { \\mathrm { ( e n e r g y ~ o f ~ a ~ p h o t o n ) } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1302
+    },
+    {
+        "type": "text",
+        "text": "where $E$ is the energy of a single photon and $c$ is the speed of light. When working with small systems, energy in eV is often useful. Note that Planck\u2019s constant in these units is ",
+        "page_idx": 1302
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh = 4 . 1 4 \\times 1 0 ^ { - 1 5 } \\ \\mathrm { e V \\cdot s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1302
+    },
+    {
+        "type": "text",
+        "text": "Since many wavelengths are stated in nanometers (nm), it is also useful to know that ",
+        "page_idx": 1302
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh c = 1 2 4 0 \\mathrm { e V } \\cdot \\mathrm { n m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1302
+    },
+    {
+        "type": "text",
+        "text": "These will make many calculations a little easier. ",
+        "page_idx": 1302
+    },
+    {
+        "type": "text",
+        "text": "All EM radiation is composed of photons. Figure 29.9 shows various divisions of the EM spectrum plotted against wavelength, frequency, and photon energy. Previously in this book, photon characteristics were alluded to in the discussion of some of the characteristics of UV, $\\mathsf { x }$ rays, and rays, the first of which start with frequencies just above violet in the visible spectrum. It was noted that these types of EM radiation have characteristics much different than visible light. We can now see that such properties arise because photon energy is larger at high frequencies. ",
+        "page_idx": 1302
+    },
+    {
+        "type": "image",
+        "img_path": "images/127fd343b46077b2c885fc33dad2b9cdd9d70ddeb3cdfe58c1930317aebb5365.jpg",
+        "img_caption": [
+            "FIGURE 29.9 The EM spectrum, showing major categories as a function of photon energy in eV, as well as wavelength and frequency. Certain characteristics of EM radiation are directly attributable to photon energy alone. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1302
+    },
+    {
+        "type": "table",
+        "img_path": "images/5a3f5a8d3a663d7b55a9ae61f31d16dadf08eed83a4b28bf38136407682be7da.jpg",
+        "table_caption": [
+            "TABLE 29.1 Representative Energies for Submicroscopic Effects (Order of Magnitude Only) "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Rotational energies of molecules</td><td>10-5ev</td></tr><tr><td>Vibrational energies of molecules</td><td>0.1 eV</td></tr><tr><td>Energy between outer electron shells in atoms</td><td>1eV</td></tr><tr><td>Binding energy of a weakly bound molecule</td><td>1eV</td></tr><tr><td>Energy of redlight</td><td>2eV</td></tr><tr><td>Binding energy of a tightly bound molecule</td><td>10 eV</td></tr><tr><td>Energy to ionize atom or molecule</td><td>10 to 1000 eV</td></tr></table></body></html>\n\n",
+        "page_idx": 1302
+    },
+    {
+        "type": "text",
+        "text": "Photons act as individual quanta and interact with individual electrons, atoms, molecules, and so on. The energy a photon carries is, thus, crucial to the effects it has. Table 29.1 lists representative submicroscopic energies in eV. When we compare photon energies from the EM spectrum in Figure 29.9 with energies in the table, we can see how effects vary with the type of EM radiation. ",
+        "page_idx": 1303
+    },
+    {
+        "type": "text",
+        "text": "Gamma rays, a form of nuclear and cosmic EM radiation, can have the highest frequencies and, hence, the highest photon energies in the EM spectrum. For example, a -ray photon with $f = 1 0 ^ { 2 1 } ~ \\mathrm { H z }$ has an energy $E = h f = 6 . 6 3 \\times 1 0 ^ { - 1 3 } \\mathrm { J } = 4 . 1 4 \\mathrm { M e V }$ This is sufficient energy to ionize thousands of atoms and molecules, since only 10 to $\\mathsf { 1 0 0 0 ~ e V }$ are needed per ionization. In fact, rays are one type of ionizing radiation, as are x rays and UV, because they produce ionization in materials that absorb them. Because so much ionization can be produced, a single -ray photon can cause significant damage to biological tissue, killing cells or damaging their ability to properly reproduce. When cell reproduction is disrupted, the result can be cancer, one of the known effects of exposure to ionizing radiation. Since cancer cells are rapidly reproducing, they are exceptionally sensitive to the disruption produced by ionizing radiation. This means that ionizing radiation has positive uses in cancer treatment as well as risks in producing cancer. ",
+        "page_idx": 1303
+    },
+    {
+        "type": "image",
+        "img_path": "images/4c07c7975f3f2361fd465171c07bb196a9c3b71b0cd23e9378cc740b4cd55337.jpg",
+        "img_caption": [
+            "FIGURE 29.10 One of the first x-ray images, taken by R\u00f6entgen himself. The hand belongs to Bertha R\u00f6entgen, his wife. (credit: Wilhelm Conrad R\u00f6ntgen, via Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1303
+    },
+    {
+        "type": "text",
+        "text": "High photon energy also enables rays to penetrate materials, since a collision with a single atom or molecule is unlikely to absorb all the ray\u2019s energy. This can make rays useful as a probe, and they are sometimes used in medical imaging. x rays, as you can see in Figure 29.9, overlap with the low-frequency end of the ray range. Since x rays have energies of keV and up, individual x-ray photons also can produce large amounts of ionization. At lower photon energies, x rays are not as penetrating as rays and are slightly less hazardous. X rays are ideal for medical imaging, their most common use, and a fact that was recognized immediately upon their discovery in 1895 by the German physicist W. C. Roentgen (1845\u20131923). (See Figure 29.10.) Within one year of their discovery, x rays (for a time called Roentgen rays) were used for medical diagnostics. Roentgen received the 1901 Nobel Prize for the discovery of x rays. ",
+        "page_idx": 1303
+    },
+    {
+        "type": "text",
+        "text": "Connections: Conservation of Energy ",
+        "text_level": 1,
+        "page_idx": 1303
+    },
+    {
+        "type": "text",
+        "text": "Once again, we find that conservation of energy allows us to consider the initial and final forms that energy takes, without having to make detailed calculations of the intermediate steps. Example 29.2 is solved by ",
+        "page_idx": 1303
+    },
+    {
+        "type": "text",
+        "text": "considering only the initial and final forms of energy. ",
+        "page_idx": 1304
+    },
+    {
+        "type": "image",
+        "img_path": "images/8c07e0eb13e2391afdf3fe23dde9c9faa59b6df558f7fab31c7e9f2fda3eee7d.jpg",
+        "img_caption": [
+            "FIGURE 29.11 X rays are produced when energetic electrons strike the copper anode of this cathode ray tube (CRT). Electrons (shown her as separate particles) interact individually with the material they strike, sometimes producing photons of EM radiation. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "While rays originate in nuclear decay, x rays are produced by the process shown in Figure 29.11. Electrons ejected by thermal agitation from a hot filament in a vacuum tube are accelerated through a high voltage, gaining kinetic energy from the electrical potential energy. When they strike the anode, the electrons convert their kinetic energy to a variety of forms, including thermal energy. But since an accelerated charge radiates EM waves, and since the electrons act individually, photons are also produced. Some of these x-ray photons obtain the kinetic energy of the electron. The accelerated electrons originate at the cathode, so such a tube is called a cathode ray tube (CRT), and various versions of them are found in older TV and computer screens as well as in x-ray machines. ",
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 29.2 ",
+        "text_level": 1,
+        "page_idx": 1304
+    },
+    {
+        "type": "image",
+        "img_path": "images/1027d8ce2788eaee5dec9be2fe50c0ebe20bd22304054aa543b2aa3953f52625.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "$\\pmb { x }$ -ray Photon Energy and X-ray Tube Voltage ",
+        "text_level": 1,
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "Find the maximum energy in eV of an $\\mathsf { x }$ -ray photon produced by electrons accelerated through a potential difference of $5 0 . 0 { \\ k } { \\nu }$ in a CRT like the one in Figure 29.11. ",
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "Electrons can give all of their kinetic energy to a single photon when they strike the anode of a CRT. (This is something like the photoelectric effect in reverse.) The kinetic energy of the electron comes from electrical potential energy. Thus we can simply equate the maximum photon energy to the electrical potential energy\u2014that is, $h f = q V .$ (We do not have to calculate each step from beginning to end if we know that all of the starting energy $q V$ is converted to the final form $h f$ ) ",
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "The maximum photon energy is $h f = q V ,$ where $q$ is the charge of the electron and $V$ is the accelerating voltage. Thus, ",
+        "page_idx": 1304
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh f = ( 1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { { \\ C } ) ( 5 0 . 0 \\times 1 0 ^ { 3 } \\mathrm { { \\ V } ) . } }\n$$",
+        "text_format": "latex",
+        "page_idx": 1304
+    },
+    {
+        "type": "text",
+        "text": "From the definition of the electron volt, we know $1 \\mathrm { e V } = 1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { J }$ , where $\\begin{array} { r } { { 1 } \\mathbf { J } = \\mathbf { 1 } \\mathbf { C } \\cdot \\mathbf { V } } \\end{array}$ Gathering factors and converting energy to eV yields ",
+        "page_idx": 1304
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf = ( 5 0 . 0 \\times 1 0 ^ { 3 } ) ( 1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { ~ C ~ } \\cdot \\mathrm { V } ) \\left( \\frac { 1 \\mathrm { ~ e V } } { 1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { ~ C ~ } \\cdot \\mathrm { V } } \\right) = ( 5 0 . 0 \\times 1 0 ^ { 3 } ) ( 1 \\mathrm { ~ e V } ) = 5 0 . 0 \\mathrm { { k e V } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1305
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1305
+    },
+    {
+        "type": "text",
+        "text": "This example produces a result that can be applied to many similar situations. If you accelerate a single elementary charge, like that of an electron, through a potential given in volts, then its energy in eV has the same numerical value. Thus a $5 0 . 0 \\substack { - \\sf k V }$ potential generates $5 0 . 0 \\mathsf { k e V }$ electrons, which in turn can produce photons with a maximum energy of $5 0 \\mathsf { k e V . }$ Similarly, a $\\mathsf { 1 0 0 - k V }$ potential in an $\\mathsf { x }$ -ray tube can generate up to 100-keV x-ray photons. Many x-ray tubes have adjustable voltages so that various energy x rays with differing energies, and therefore differing abilities to penetrate, can be generated. ",
+        "page_idx": 1305
+    },
+    {
+        "type": "image",
+        "img_path": "images/acbb5b460a5c595a50346f4508c2bbfcdcc7387150ecb7ef308e2c47b10788e4.jpg",
+        "img_caption": [
+            "FIGURE 29.12 X-ray spectrum obtained when energetic electrons strike a material. The smooth part of the spectrum is bremsstrahlung, while the peaks are characteristic of the anode material. Both are atomic processes that produce energetic photons known as x-ray photons. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1305
+    },
+    {
+        "type": "text",
+        "text": "Figure 29.12 shows the spectrum of x rays obtained from an x-ray tube. There are two distinct features to the spectrum. First, the smooth distribution results from electrons being decelerated in the anode material. A curve like this is obtained by detecting many photons, and it is apparent that the maximum energy is unlikely. This decelerating process produces radiation that is called bremsstrahlung (German for brakingradiation). The second feature is the existence of sharp peaks in the spectrum; these are called characteristic x rays, since they are characteristic of the anode material. Characteristic x rays come from atomic excitations unique to a given type of anode material. They are akin to lines in atomic spectra, implying the energy levels of atoms are quantized. Phenomena such as discrete atomic spectra and characteristic x rays are explored further in Atomic Physics. ",
+        "page_idx": 1305
+    },
+    {
+        "type": "text",
+        "text": "Ultraviolet radiation (approximately 4 eV to $3 0 0 \\mathrm { e V } ,$ ) overlaps with the low end of the energy range of x rays, but UV is typically lower in energy. UV comes from the de-excitation of atoms that may be part of a hot solid or gas. These atoms can be given energy that they later release as UV by numerous processes, including electric discharge, nuclear explosion, thermal agitation, and exposure to x rays. A UV photon has sufficient energy to ionize atoms and molecules, which makes its effects different from those of visible light. UV thus has some of the same biological effects as rays and $\\mathsf { x }$ rays. For example, it can cause skin cancer and is used as a sterilizer. The major difference is that several UV photons are required to disrupt cell reproduction or kill a bacterium, whereas single -ray and X-ray photons can do the same damage. But since UV does have the energy to alter molecules, it can do what visible light cannot. One of the beneficial aspects of UV is that it triggers the production of vitamin D in the skin, whereas visible light has insufficient energy per photon to alter the molecules that trigger this production. Infantile jaundice is treated by exposing the baby to UV (with eye protection), called phototherapy, the beneficial effects of which are thought to be related to its ability to help prevent the buildup of potentially toxic bilirubin in the blood. ",
+        "page_idx": 1305
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 29.3 ",
+        "text_level": 1,
+        "page_idx": 1306
+    },
+    {
+        "type": "image",
+        "img_path": "images/bd269ecbebae52f338c26876f7c9bdfa5b1292b4b552f531a905ebe0b6bc3b57.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Photon Energy and Effects for UV ",
+        "text_level": 1,
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Short-wavelength UV is sometimes called vacuum UV, because it is strongly absorbed by air and must be studied in a vacuum. Calculate the photon energy in eV for 100-nm vacuum UV, and estimate the number of molecules it could ionize or break apart. ",
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Using the equation $E = h f$ and appropriate constants, we can find the photon energy and compare it with energy information in Table 29.1. ",
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "The energy of a photon is given by ",
+        "page_idx": 1306
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = h f = { \\frac { h c } { \\lambda } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Using $h c = 1 2 4 0 \\mathrm { e V \\cdot n m }$ we find that ",
+        "page_idx": 1306
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = { \\frac { h c } { \\lambda } } = { \\frac { 1 2 4 0 \\operatorname { e V } \\cdot \\operatorname { n m } } { 1 0 0 \\operatorname { n m } } } = 1 2 . 4 \\operatorname { e V } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "According to Table 29.1, this photon energy might be able to ionize an atom or molecule, and it is about what is needed to break up a tightly bound molecule, since they are bound by approximately $\\mathsf { 1 0 } \\mathsf { e V } .$ This photon energy could destroy about a dozen weakly bound molecules. Because of its high photon energy, UV disrupts atoms and molecules it interacts with. One good consequence is that all but the longest-wavelength UV is strongly absorbed and is easily blocked by sunglasses. In fact, most of the Sun\u2019s UV is absorbed by a thin layer of ozone in the upper atmosphere, protecting sensitive organisms on Earth. Damage to our ozone layer by the addition of such chemicals as CFC\u2019s has reduced this protection for us. ",
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "Visible Light ",
+        "text_level": 1,
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "The range of photon energies for visible light from red to violet is 1.63 to $3 . 2 6 \\ : \\mathrm { e V } ;$ , respectively (left for this chapter\u2019s Problems and Exercises to verify). These energies are on the order of those between outer electron shells in atoms and molecules. This means that these photons can be absorbed by atoms and molecules. A singlephoton can actually stimulate the retina, for example, by altering a receptor molecule that then triggers a nerve impulse. Photons can be absorbed or emitted only by atoms and molecules that have precisely the correct quantized energy step to do so. For example, if a red photon of frequency $f$ encounters a molecule that has an energy step, $\\Delta E$ equal to $h f$ then the photon can be absorbed. Violet flowers absorb red and reflect violet; this implies there is no energy step between levels in the receptor molecule equal to the violet photon\u2019s energy, but there is an energy step for the red. ",
+        "page_idx": 1306
+    },
+    {
+        "type": "text",
+        "text": "There are some noticeable differences in the characteristics of light between the two ends of the visible spectrum that are due to photon energies. Red light has insufficient photon energy to expose most black-and-white film, and it is thus used to illuminate darkrooms where such film is developed. Since violet light has a higher photon energy, dyes that absorb violet tend to fade more quickly than those that do not. (See Figure 29.13.) Take a look at some faded color posters in a storefront some time, and you will notice that the blues and violets are the last to fade. This is because other dyes, such as red and green dyes, absorb blue and violet photons, the higher energies of which break up their weakly bound molecules. (Complex molecules such as those in dyes and DNA tend to be weakly bound.) Blue and violet dyes reflect those colors and, therefore, do not absorb these more energetic photons, thus suffering less molecular damage. ",
+        "page_idx": 1306
+    },
+    {
+        "type": "image",
+        "img_path": "images/d6252a123461b7d778a1a070b9ba332878eb3ec5833565b4e15a1926195ed71d.jpg",
+        "img_caption": [
+            "FIGURE 29.13 Why do the reds, yellows, and greens fade before the blues and violets when exposed to the Sun, as with this poster? The answer is related to photon energy. (credit: Deb Collins, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "Transparent materials, such as some glasses, do not absorb any visible light, because there is no energy step in the atoms or molecules that could absorb the light. Since individual photons interact with individual atoms, it is nearly impossible to have two photons absorbed simultaneously to reach a large energy step. Because of its lower photon energy, visible light can sometimes pass through many kilometers of a substance, while higher frequencies like UV, x ray, and rays are absorbed, because they have sufficient photon energy to ionize the material. ",
+        "page_idx": 1307
+    },
+    {
+        "type": "image",
+        "img_path": "images/9a046fb7964a125f36f06995ad1e57ebb66b5912cc2566399df0624d6d0c20cb.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 29.4 ",
+        "text_level": 1,
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "How Many Photons per Second Does a Typical Light Bulb Produce? ",
+        "text_level": 1,
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "Assuming that $1 0 . 0 \\%$ of a 100-W light bulb\u2019s energy output is in the visible range (typical for incandescent bulbs) with an average wavelength of $5 8 0 ~ \\mathsf { n m }$ , calculate the number of visible photons emitted per second. ",
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "Power is energy per unit time, and so if we can find the energy per photon, we can determine the number of photons per second. This will best be done in joules, since power is given in watts, which are joules per second. ",
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "The power in visible light production is $1 0 . 0 \\%$ of 100 W, or $1 0 . 0 \\mathsf { J } / \\mathsf { s }$ . The energy of the average visible photon is found by substituting the given average wavelength into the formula ",
+        "page_idx": 1307
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = { \\frac { h c } { \\lambda } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "This produces ",
+        "page_idx": 1307
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = { \\frac { ( 6 . 6 3 \\times 1 0 ^ { - 3 4 } { \\mathrm { J } } \\cdot { \\mathrm { s } } ) ( 3 . 0 0 \\times 1 0 ^ { 8 } { \\mathrm { m } } / { \\mathrm { s } } ) } { 5 8 0 \\times 1 0 ^ { - 9 } { \\mathrm { m } } } } = 3 . 4 3 \\times 1 0 ^ { - 1 9 } { \\mathrm { J } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "The number of visible photons per second is thus ",
+        "page_idx": 1307
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { p h o t o n / s } } = { \\frac { 1 0 . 0 ~ { \\mathrm { J / s } } } { 3 . 4 3 \\times 1 0 ^ { - 1 9 } ~ { \\mathrm { J / p h o t o n } } } } = 2 . 9 2 \\times 1 0 ^ { 1 9 } ~ { \\mathrm { p h o t o n / s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1307
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "This incredible number of photons per second is verification that individual photons are insignificant in ordinary human experience. It is also a verification of the correspondence principle\u2014on the macroscopic scale, quantization becomes essentially continuous or classical. Finally, there are so many photons emitted by a 100-W lightbulb that it can be seen by the unaided eye many kilometers away. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Lower-Energy Photons ",
+        "text_level": 1,
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Infrared radiation (IR) has even lower photon energies than visible light and cannot significantly alter atoms and molecules. IR can be absorbed and emitted by atoms and molecules, particularly between closely spaced states. IR is extremely strongly absorbed by water, for example, because water molecules have many states separated by energies on the order of $1 0 ^ { - 5 }$ to $1 0 ^ { - 2 } \\mathrm { e V }$ well within the IR and microwave energy ranges. This is why in the IR range, skin is almost jet black, with an emissivity near 1\u2014there are many states in water molecules in the skin that can absorb a large range of IR photon energies. Not all molecules have this property. Air, for example, is nearly transparent to many IR frequencies. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Microwaves are the highest frequencies that can be produced by electronic circuits, although they are also produced naturally. Thus microwaves are similar to IR but do not extend to as high frequencies. There are states in water and other molecules that have the same frequency and energy as microwaves, typically about $1 0 ^ { - 5 } ~ \\mathrm { e V }$ This is one reason why food absorbs microwaves more strongly than many other materials, making microwave ovens an efficient way of putting energy directly into food. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Photon energies for both IR and microwaves are so low that huge numbers of photons are involved in any significant energy transfer by IR or microwaves (such as warming yourself with a heat lamp or cooking pizza in the microwave). Visible light, IR, microwaves, and all lower frequencies cannot produce ionization with single photons and do not ordinarily have the hazards of higher frequencies. When visible, IR, or microwave radiation ishazardous, such as the inducement of cataracts by microwaves, the hazard is due to huge numbers of photons acting together (not to an accumulation of photons, such as sterilization by weak UV). The negative effects of visible, IR, or microwave radiation can be thermal effects, which could be produced by any heat source. But one difference is that at very high intensity, strong electric and magnetic fields can be produced by photons acting together. Such electromagnetic fields (EMF) can actually ionize materials. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Misconception Alert: High-Voltage Power Lines ",
+        "text_level": 1,
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Although some people think that living near high-voltage power lines is hazardous to one\u2019s health, ongoing studies of the transient field effects produced by these lines show their strengths to be insufficient to cause damage. Demographic studies also fail to show significant correlation of ill effects with high-voltage power lines. The American Physical Society issued a report over 20 years ago on power-line fields, and additional studies since that time show no consistent, significant link between cancer and power-line fields. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "It is virtually impossible to detect individual photons having frequencies below microwave frequencies, because of their low photon energy. But the photons are there. A continuous EM wave can be modeled as photons. At low frequencies, EM waves are generally treated as time- and position-varying electric and magnetic fields with no discernible quantization. This is another example of the correspondence principle in situations involving huge numbers of photons. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "PHET EXPLORATIONS ",
+        "text_level": 1,
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Color Vision ",
+        "text_level": 1,
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Make a whole rainbow by mixing red, green, and blue light. Change the wavelength of a monochromatic beam or filter white light. View the light as a solid beam, or see the individual photons. ",
+        "page_idx": 1308
+    },
+    {
+        "type": "text",
+        "text": "Click to view content (https://openstax.org/books/college-physics-2e/pages/29-3-photon-energies-and-the",
+        "page_idx": 1308
+    }
+]

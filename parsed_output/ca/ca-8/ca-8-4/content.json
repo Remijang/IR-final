@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "8.4 Floating Point Addition and Subtraction ",
+        "text_level": 1,
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "The problems of floating point addition and subtraction are actually different faces of the same problem. $A - B$ can be interpreted in two ways. We can say that we are subtracting $B$ from $A$ , or we can say that we are adding $- B$ to $A$ . Hence, instead of looking at subtraction separately, let us look at it as a special case of addition. We shall first look at the problem of adding two numbers with the same sign in Section 8.4.1, with opposite signs in Section 8.4.4 and then look at the generic problem of adding two numbers in Section 8.4.5. ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "Before going further, let us quickly recapitulate our knowledge of floating point numbers ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "(see Table 8.5). ",
+        "page_idx": 344
+    },
+    {
+        "type": "table",
+        "img_path": "images/e195b1f3b9df9e7cdae8f61d7dffba77762d76248e026f17d1c6087b09c1ecbb.jpg",
+        "table_caption": [
+            "Table 8.5: IEEE 754 format "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Normalized form of a 32-bit (normal) floating point number \uff0c(1\u2264P<2,E\u2208\uff3a,1\u2264E\u2264254) (8.22) A=(-1)$ \u00d7 P\u00d7 2E-bias,</td></tr><tr><td colspan=\"2\">Normalized form of a 32-bit (denormal) floating point number. A=(-1)$\u00d7P\u00d72-126, (0\u2264P<1) (8.23)</td></tr><tr><td colspan=\"2\"></td></tr><tr><td>Symbol</td><td>Meaning</td></tr><tr><td>S</td><td>Sign bit (0(+ve)\uff0c1(-ve))</td></tr><tr><td>P</td><td>Significand (form: 1.xxx(normal) or O.xxx(denormal))</td></tr><tr><td>M</td><td>Mantissa (fractional part of significand)</td></tr><tr><td>E</td><td>(exponent + 127(bias))</td></tr><tr><td>Z</td><td>Set of integers</td></tr></table></body></html>\n\n",
+        "page_idx": 344
+    }
+]

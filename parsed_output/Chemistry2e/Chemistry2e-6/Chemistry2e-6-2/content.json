@@ -1,0 +1,320 @@
+[
+    {
+        "type": "text",
+        "text": "6.2 The Bohr Model ",
+        "text_level": 1,
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Describe the Bohr model of the hydrogen atom \u2022 Use the Rydberg equation to calculate energies of light emitted or absorbed by hydrogen atoms ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "Following the work of Ernest Rutherford and his colleagues in the early twentieth century, the picture of atoms consisting of tiny dense nuclei surrounded by lighter and even tinier electrons continually moving about the nucleus was well established. This picture was called the planetary model, since it pictured the atom as a miniature \u201csolar system\u201d with the electrons orbiting the nucleus like planets orbiting the sun. The simplest atom is hydrogen, consisting of a single proton as the nucleus about which a single electron moves. The electrostatic force attracting the electron to the proton depends only on the distance between the two particles. This classical mechanics description of the atom is incomplete, however, since an electron moving in an elliptical orbit would be accelerating (by changing direction) and, according to classical electromagnetism, it should continuously emit electromagnetic radiation. This loss in orbital energy should result in the electron\u2019s orbit getting continually smaller until it spirals into the nucleus, implying that atoms are inherently unstable. ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "In 1913, Niels Bohr attempted to resolve the atomic paradox by ignoring classical electromagnetism\u2019s prediction that the orbiting electron in hydrogen would continuously emit light. Instead, he incorporated into the classical mechanics description of the atom Planck\u2019s ideas of quantization and Einstein\u2019s finding that light consists of photons whose energy is proportional to their frequency. Bohr assumed that the electron orbiting the nucleus would not normally emit any radiation (the stationary state hypothesis), but it would emit or absorb a photon if it moved to a different orbit. The energy absorbed or emitted would reflect differences in the orbital energies according to this equation: ",
+        "page_idx": 283
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\vert \\Delta E \\vert = \\vert E _ { \\mathrm { f } } - E _ { \\mathrm { i } } \\vert = h \\nu = \\ { \\frac { h c } { \\lambda } }\n$$",
+        "text_format": "latex",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "In this equation, $h$ is Planck\u2019s constant and $E _ { i }$ and $E _ { f }$ are the initial and final orbital energies, respectively. The absolute value of the energy difference is used, since frequencies and wavelengths are always positive. Instead of allowing for continuous values of energy, Bohr assumed the energies of these electron orbitals were quantized: ",
+        "page_idx": 283
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { n } = - { \\frac { k } { n ^ { 2 } } } , n = 1 , 2 , 3 , \\ldots\n$$",
+        "text_format": "latex",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "In this expression, $k$ is a constant comprising fundamental constants such as the electron mass and charge and Planck\u2019s constant. Inserting the expression for the orbit energies into the equation for $\\Delta E$ gives ",
+        "page_idx": 283
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta E = k \\left( { \\frac { 1 } { n _ { 1 } ^ { 2 } } } - { \\frac { 1 } { n _ { 2 } ^ { 2 } } } \\right) = { \\frac { h c } { \\lambda } }\n$$",
+        "text_format": "latex",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 283
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { \\lambda } = \\frac { k } { h c } \\left( \\frac { 1 } { n _ { 1 } ^ { 2 } } - \\frac { 1 } { n _ { 2 } ^ { 2 } } \\right)\n$$",
+        "text_format": "latex",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "which is identical to the Rydberg equation in which $\\begin{array} { r } { { \\cal R } _ { \\infty } = \\frac { k } { h c } } \\end{array}$ When Bohr calculated his theoretical value for the Rydberg constant, $R _ { \\infty }$ and compared it with the experimentally accepted value, he got excellent ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "agreement. Since the Rydberg constant was one of the most precisely measured constants at that time, this level of agreement was astonishing and meant that Bohr\u2019s model was taken seriously, despite the many assumptions that Bohr needed to derive it. ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "The lowest few energy levels are shown in Figure 6.14. One of the fundamental laws of physics is that matter is most stable with the lowest possible energy. Thus, the electron in a hydrogen atom usually moves in the $n = 1$ orbit, the orbit in which it has the lowest energy. When the electron is in this lowest energy orbit, the atom is said to be in its ground electronic state (or simply ground state). If the atom receives energy from an outside source, it is possible for the electron to move to an orbit with a higher $n$ value and the atom is now in an excited electronic state (or simply an excited state) with a higher energy. When an electron transitions from an excited state (higher energy orbit) to a less excited state, or ground state, the difference in energy is emitted as a photon. Similarly, if a photon is absorbed by an atom, the energy of the photon moves an electron from a lower energy orbit up to a more excited one. We can relate the energy of electrons in atoms to what we learned previously about energy. The law of conservation of energy says that we can neither create nor destroy energy. Thus, if a certain amount of external energy is required to excite an electron from one energy level to another, that same amount of energy will be liberated when the electron returns to its initial state (Figure 6.15). ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Since Bohr\u2019s model involved only a single electron, it could also be applied to the single electron ions ${ \\mathrm { H e ^ { + } } }$ , $\\mathrm { L i ^ { 2 + } }$ , $\\mathsf { B e } ^ { 3 + }$ , and so forth, which differ from hydrogen only in their nuclear charges, and so one-electron atoms and ions are collectively referred to as hydrogen-like atoms. The energy expression for hydrogen-like atoms is a generalization of the hydrogen atom energy, in which $Z$ is the nuclear charge $+ 1$ for hydrogen, $+ 2$ for He, $+ 3$ for Li, and so on) and $k$ has a value of $2 . 1 7 9 \\times 1 0 ^ { - 1 8 } \\mathrm { J } .$ ",
+        "page_idx": 284
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { n } = - { \\frac { k Z ^ { 2 } } { n ^ { 2 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "The sizes of the circular orbits for hydrogen-like atoms are given in terms of their radii by the following expression, in which $\\mathbf { a } _ { 0 }$ is a constant called the Bohr radius, with a value of $5 . 2 9 2 \\times 1 0 ^ { - 1 1 } \\mathrm { m }$ : ",
+        "page_idx": 284
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr = { \\frac { n ^ { 2 } } { Z } } a _ { 0 }\n$$",
+        "text_format": "latex",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "The equation also shows us that as the electron\u2019s energy increases (as $n$ increases), the electron is found at greater distances from the nucleus. This is implied by the inverse dependence of electrostatic attraction on distance, since, as the electron moves away from the nucleus, the electrostatic attraction between it and the nucleus decreases and it is held less tightly in the atom. Note that as $n$ gets larger and the orbits get larger, their energies get closer to zero, and so the limits $n \\longrightarrow \\infty$ and $r \\longrightarrow \\infty$ imply that $E = 0$ corresponds to the ionization limit where the electron is completely removed from the nucleus. Thus, for hydrogen in the ground state $n = 1$ , the ionization energy would be: ",
+        "page_idx": 284
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta E = E _ { { } _ { n } } \\longrightarrow _ { \\infty } - E _ { 1 } = 0 + k = k\n$$",
+        "text_format": "latex",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "With three extremely puzzling paradoxes now solved (blackbody radiation, the photoelectric effect, and the hydrogen atom), and all involving Planck\u2019s constant in a fundamental manner, it became clear to most physicists at that time that the classical theories that worked so well in the macroscopic world were fundamentally flawed and could not be extended down into the microscopic domain of atoms and molecules. Unfortunately, despite Bohr\u2019s remarkable achievement in deriving a theoretical expression for the Rydberg constant, he was unable to extend his theory to the next simplest atom, He, which only has two electrons. Bohr\u2019s model was severely flawed, since it was still based on the classical mechanics notion of precise orbits, a concept that was later found to be untenable in the microscopic domain, when a proper model of quantum mechanics was developed to supersede classical mechanics. ",
+        "page_idx": 284
+    },
+    {
+        "type": "image",
+        "img_path": "images/8bdc5f3bfe877cb13a2a572f31cf594d4b20bb6f9c3fd9af4d10143017ef2f54.jpg",
+        "img_caption": [
+            "FIGURE 6.14 Quantum numbers and energy levels in a hydrogen atom. The more negative the calculated value, the lower the energy. "
+        ],
+        "img_footnote": [],
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6.4 ",
+        "text_level": 1,
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Energy of an Electron in a Bohr Orbit ",
+        "text_level": 1,
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Early researchers were very excited when they were able to predict the energy of an electron at a particular distance from the nucleus in a hydrogen atom. If a spark promotes the electron in a hydrogen atom into an orbit with $n = 3$ , what is the calculated energy, in joules, of the electron? ",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "The energy of the electron is given by this equation: ",
+        "page_idx": 285
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = { \\frac { - k Z ^ { 2 } } { n ^ { 2 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "The atomic number, $Z ,$ , of hydrogen is 1; $k = 2 . 1 7 9 \\times 1 0 ^ { - 1 8 } \\mathrm { J }$ ; and the electron is characterized by an $n$ value of 3. Thus, ",
+        "page_idx": 285
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = { \\frac { - ( 2 . 1 7 9 \\times 1 0 ^ { - 1 8 } \\mathrm { J } ) \\times ( 1 ) ^ { 2 } } { ( 3 ) ^ { 2 } } } = - 2 . 4 2 1 \\times 1 0 ^ { - 1 9 } \\mathrm { J }\n$$",
+        "text_format": "latex",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "The electron in Figure 6.15 is promoted even further to an orbit with $n = 6$ . What is its new energy? ",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Answer: $- 6 . 0 5 3 \\times 1 0 ^ { - 2 0 } { \\mathrm { J } }$ ",
+        "page_idx": 285
+    },
+    {
+        "type": "text",
+        "text": "Energy, n ",
+        "page_idx": 286
+    },
+    {
+        "type": "image",
+        "img_path": "images/57581d9b857afbde61097636aecd707f4ef79bfeeb20d38c02462909f95e7a88.jpg",
+        "img_caption": [
+            "FIGURE 6.15 The horizontal lines show the relative energy of orbits in the Bohr model of the hydrogen atom, and the vertical arrows depict the energy of photons absorbed (left) or emitted (right) as electrons move between these orbits. "
+        ],
+        "img_footnote": [],
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6.5 ",
+        "text_level": 1,
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Energy and Wavelength of Electron Transitions in a One\u2013electron (Bohr) System ",
+        "text_level": 1,
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "What is the energy (in joules) and the wavelength (in meters) of the line in the spectrum of hydrogen that represents the movement of an electron from Bohr orbit with $n = 4$ to the orbit with $n = 6 ?$ In what part of the electromagnetic spectrum do we find this radiation? ",
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "In this case, the electron starts out with $n = 4$ , so $n _ { 1 } = 4$ . It comes to rest in the $n = 6$ orbit, so $ { n _ { 2 } } = 6$ . The difference in energy between the two states is given by this expression: ",
+        "page_idx": 286
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { \\Delta E = E _ { 1 } - E _ { 2 } = 2 . 1 7 9 \\times 1 0 ^ { - 1 8 } \\left( \\displaystyle { \\frac { 1 } { n _ { 1 } ^ { 2 } } } - \\displaystyle { \\frac { 1 } { n _ { 2 } ^ { 2 } } } \\right) } } \\\\ { { { } } } \\\\ { { \\Delta E = 2 . 1 7 9 \\times 1 0 ^ { - 1 8 } \\left( \\displaystyle { \\frac { 1 } { 4 ^ { 2 } } } - \\displaystyle { \\frac { 1 } { 6 ^ { 2 } } } \\right) { \\bf J } } } \\\\ { { { } } } \\\\ { { \\Delta E = 2 . 1 7 9 \\times 1 0 ^ { - 1 8 } \\left( \\displaystyle { \\frac { 1 } { 1 6 } } - \\displaystyle { \\frac { 1 } { 3 6 } } \\right) { \\bf J } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 286
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta E = 7 . 5 6 6 \\times 1 0 ^ { - 2 0 } \\mathrm { J }\n$$",
+        "text_format": "latex",
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "This energy difference is positive, indicating a photon enters the system (is absorbed) to excite the electron ",
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "from the $\\scriptstyle n = 4$ orbit up to the $n = 6$ orbit. The wavelength of a photon with this energy is found by the expression $\\begin{array} { r } { E { = } \\frac { h c } { \\lambda } } \\end{array}$ Rearrangement gives: ",
+        "page_idx": 287
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\lambda = { \\frac { h c } { E } }\n$$",
+        "text_format": "latex",
+        "page_idx": 287
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { = ( 6 . 6 2 6 \\times 1 0 ^ { - 3 4 } + \\mathbf { { \\mathcal { F } } } - \\mathbf { { \\mathcal { s } } } ) \\times { \\frac { 2 . 9 9 8 \\times 1 0 ^ { 8 } \\ \\mathbf { m } \\ \\mathbf { \\hat { \\mathbf { \\psi } } } ^ { - 1 } } { 7 . 5 6 6 \\times 1 0 ^ { - 2 0 } \\ \\mathbf { \\hat { \\mathbf { \\psi } } } ^ { + } } } } \\\\ { = 2 . 6 2 6 \\times 1 0 ^ { - 6 } \\ \\mathbf { m } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "From the illustration of the electromagnetic spectrum in Electromagnetic Energy, we can see that this wavelength is found in the infrared portion of the electromagnetic spectrum. ",
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "What is the energy in joules and the wavelength in meters of the photon produced when an electron falls from the $n = 5$ to the $n = 3$ level in a ${ \\mathrm { H e ^ { + } } }$ ion $\\scriptstyle { Z = 2 }$ for ${ \\mathrm { H e ^ { + } } }$ )? ",
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 287
+    },
+    {
+        "type": "equation",
+        "text": "",
+        "text_format": "latex",
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "Bohr\u2019s model of the hydrogen atom provides insight into the behavior of matter at the microscopic level, but it does not account for electron\u2013electron interactions in atoms with more than one electron. It does introduce several important features of all models used to describe the distribution of electrons in an atom. These features include the following: ",
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The energies of electrons (energy levels) in an atom are quantized, described by quantum numbers: integer numbers having only specific allowed value and used to characterize the arrangement of electrons in an atom.   \n\u2022 An electron\u2019s energy increases with increasing distance from the nucleus.   \n\u2022 The discrete energies (lines) in the spectra of the elements result from quantized electronic energies. ",
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "Of these features, the most important is the postulate of quantized energy levels for an electron in an atom. As a consequence, the model laid the foundation for the quantum mechanical model of the atom. Bohr won a Nobel Prize in Physics for his contributions to our understanding of the structure of atoms and how that is related to line spectra emissions. ",
+        "page_idx": 287
+    }
+]

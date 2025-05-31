@@ -1,0 +1,493 @@
+# 15.3 Coupled Equilibria
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Describe examples of systems involving two (or more) coupled chemical equilibria • Calculate reactant and product concentrations for coupled equilibrium systems
+
+As discussed in preceding chapters on equilibrium, coupledequilibriainvolve two or more separate chemical reactions that share one or more reactants or products. This section of this chapter will address solubility equilibria coupled with acid-base and complex-formation reactions.
+
+An environmentally relevant example illustrating the coupling of solubility and acid-base equilibria is the impact of ocean acidification on the health of the ocean’s coral reefs. These reefs are built upon skeletons of sparingly soluble calcium carbonate excreted by colonies of corals (small marine invertebrates). The relevant dissolution equilibrium is
+
+$$
+\mathrm { C a C O } _ { 3 } ( s ) \ : = \ : \mathrm { C a } ^ { 2 + } ( a q ) \ : + \ : \mathrm { C O _ { 3 } } ^ { - 2 } \ : ( a q ) \qquad K _ { \mathrm { s p } } = 8 . 7 \times 1 0 ^ { - 9 }
+$$
+
+Rising concentrations of atmospheric carbon dioxide contribute to an increased acidity of ocean waters due to the dissolution, hydrolysis, and acid ionization of carbon dioxide:
+
+$$
+\mathrm { C O } _ { 2 } ( g )  \mathrm { C O } _ { 2 } ( a q )
+$$
+
+$$
+\mathrm { C O } _ { 2 } ( a q ) + \mathrm { H } _ { 2 } \mathrm { O } ( l )  \mathrm { H } _ { 2 } \mathrm { C O } _ { 3 } ( a q )
+$$
+
+$$
+\begin{array} { l l } { { \mathrm { { \small ~ { \cal { I } } _ { 2 } } } \mathrm { C O } _ { 3 } ( a q ) \ + \ \mathrm { { \small ~ { \cal { H } } } } _ { 2 } \mathrm { O } ( l ) \ = \ \mathrm { { \small ~ { \cal { H } } C O } } _ { 3 } \mathrm { { \tiny { - } } } \ ( a q ) \ + \ \mathrm { { \small ~ { \cal { H } } } } _ { 3 } \mathrm { O } ^ { + } \ ( a q ) \ ~ } } & { { ~ K _ { \mathrm { a l } } \ = \ 4 . 3 \times \ 1 0 ^ { - 7 } } } \\ { { \mathrm { { \small ~ { \cal { I } } C O } } _ { 3 } \mathrm { { \tiny { - } } } \ ( a q ) \ + \ \mathrm { { \small ~ { \cal { H } } } } _ { 2 } \mathrm { O } ( l ) \ \equiv \ { \mathrm { { \small ~ { \cal { C } } O } } _ { 3 } } ^ { 2 - } \ ( a q ) \ + \ \mathrm { { \small ~ { \cal { H } } } } _ { 3 } \mathrm { O } ^ { + } \ ( a q ) \ ~ } } & { { ~ K _ { \mathrm { a 2 } } \ = \ 4 . 7 \times \ 1 0 ^ { - 1 1 } } } \end{array}
+$$
+
+Inspection of these equilibria shows the carbonate ion is involved in the calcium carbonate dissolution and the acid hydrolysis of bicarbonate ion. Combining the dissolution equation with the reverse of the acid hydrolysis equation yields
+
+$$
+\mathrm { \mathrm { z a { C O } _ { 3 } ( } s ) + H _ { 3 } O ^ { + } ( } a q \mathrm { )  C a ^ { 2 + } ( } a q \mathrm { ) + H C O _ { 3 } - } ( a q ) + H _ { 2 } O ( l ) \qquad K = K _ { \mathrm { s p } } / K _ { \mathrm { a 2 } } = 1 8 0
+$$
+
+The equilibrium constant for this net reaction is much greater than the $K _ { s p }$ for calcium carbonate, indicating its solubility is markedly increased in acidic solutions. As rising carbon dioxide levels in the atmosphere increase the acidity of ocean waters, the calcium carbonate skeletons of coral reefs become more prone to dissolution and subsequently less healthy (Figure 15.7).
+
+“prilfish”/Flickr)
+
+# LINK TO LEARNING
+
+Learn more about ocean acidification (http://openstax.org/l/16acidicocean) and how it affects other marine creatures.
+
+This site (http://openstax.org/l/16coralreef) has detailed information about how ocean acidification specificall affects coral reefs.
+
+The dramatic increase in solubility with increasing acidity described above for calcium carbonate is typical of salts containing basic anions (e.g., carbonate, fluoride, hydroxide, sulfide). Another familiar example is the formation of dental cavities in tooth enamel. The major mineral component of enamel is calcium hydroxyapatite (Figure 15.8), a sparingly soluble ionic compound whose dissolution equilibrium is
+
+$$
+\mathrm { C a } _ { 5 } ( \mathrm { P O } _ { 4 } ) _ { 3 } \mathrm { O H } ( s )  5 \mathrm { C a } ^ { 2 + } ( a q ) + 3 \mathrm { P O _ { 4 } } ^ { 3 - } ( a q ) + \mathrm { O H } ^ { - } ( a q )
+$$
+
+This compound dissolved to yield two different basic ions: triprotic phosphate ions
+
+
+
+$$
+\begin{array} { r l } & { \mathrm { P O } _ { 4 } ^ { 3 - } ( a q ) + \mathrm { H } _ { 3 } \mathrm { O } ^ { + } ( a q ) \longrightarrow \mathrm { H } _ { 2 } \mathrm { P O } _ { 4 } ^ { 2 - } ( a q ) + \mathrm { H } _ { 2 } \mathrm { O } ( l ) } \\ & { \mathrm { H } _ { 2 } \mathrm { P O } _ { 4 } ^ { 2 - } ( a q ) + \mathrm { H } _ { 3 } \mathrm { O } ^ { + } ( a q ) \longrightarrow \mathrm { H } _ { 2 } \mathrm { P O } _ { 4 } ^ { - } ( a q ) + \mathrm { H } _ { 2 } \mathrm { O } ( l ) } \\ & { \mathrm { H } _ { 2 } \mathrm { P O } _ { 4 } ^ { - } ( a q ) + \mathrm { H } _ { 3 } \mathrm { O } ^ { + } ( a q ) \longrightarrow \mathrm { H } _ { 3 } \mathrm { P O } _ { 4 } ( a q ) + \mathrm { H } _ { 2 } \mathrm { O } ( l ) } \end{array}
+$$
+
+and monoprotic hydroxide ions:
+
+$$
+\mathrm { O H } ^ { - } ( a q ) + \mathrm { H } _ { 3 } \mathrm { O } ^ { + } \longrightarrow 2 \mathrm { H } _ { 2 } \mathrm { O }
+$$
+
+Of the two basic productions, the hydroxide is, of course, by far the stronger base (it’s the strongest base that can exist in aqueous solution), and so it is the dominant factor providing the compound an acid-dependent solubility. Dental cavities form when the acid waste of bacteria growing on the surface of teeth hastens the dissolution of tooth enamel by reacting completely with the strong base hydroxide, shifting the hydroxyapatite solubility equilibrium to the right. Some toothpastes and mouth rinses contain added NaF or $\mathrm { S n F } _ { 2 }$ that make enamel more acid resistant by replacing the strong base hydroxide with the weak base fluoride:
+
+$$
+\mathrm { N a F } + \mathrm { C a } _ { 5 } ( \mathrm { P O } _ { 4 } ) _ { 3 } \mathrm { O H }  \mathrm { C a } _ { 5 } ( \mathrm { P O } _ { 4 } ) _ { 3 } \mathrm { F } + \mathrm { N a } ^ { + } + \mathrm { O H } ^ { - }
+$$
+
+The weak base fluoride ion reacts only partially with the bacterial acid waste, resulting in a less extensive shift in the solubility equilibrium and an increased resistance to acid dissolution. See the Chemistry in Everyday Life feature on the role of fluoride in preventing tooth decay for more information.
+
+# Chemistry in Everyday Life
+
+# Role of Fluoride in Preventing Tooth Decay
+
+As we saw previously, fluoride ions help protect our teeth by reacting with hydroxylapatite to form fluorapatite, $\mathrm { C a } _ { 5 } ( \mathrm { P O } _ { 4 } ) _ { 3 } \mathrm { F } .$ Since it lacks a hydroxide ion, fluorapatite is more resistant to attacks by acids in our mouths and is thus less soluble, protecting our teeth. Scientists discovered that naturally fluorinated water could be beneficial to your teeth, and so it became common practice to add fluoride to drinking water. Toothpastes and mouthwashes also contain amounts of fluoride (Figure 15.9).
+
+Unfortunately, excess fluoride can negate its advantages. Natural sources of drinking water in various parts of the world have varying concentrations of fluoride, and places where that concentration is high are prone to certain health risks when there is no other source of drinking water. The most serious side effect of excess fluoride is the bone disease, skeletal fluorosis. When excess fluoride is in the body, it can cause the joints to stiffen and the bones to thicken. It can severely impact mobility and can negatively affect the thyroid gland. Skeletal fluorosis is a condition that over 2.7 million people suffer from across the world. So while fluoride can protect our teeth from decay, the US Environmental Protection Agency sets a maximum level of 4 ppm $( 4 \mathrm { m g / L } )$ of fluoride in drinking water in the US. Fluoride levels in water are not regulated in all countries, so fluorosis is a problem in areas with high levels of fluoride in the groundwater.
+
+The solubility of ionic compounds may also be increased when dissolution is coupled to the formation of a complex ion. For example, aluminum hydroxide dissolves in a solution of sodium hydroxide or another strong base because of the formation of the complex ion $\mathrm { \Delta A l ( O H ) _ { 4 } } ^ { - }$
+
+The equations for the dissolution of aluminum hydroxide, the formation of the complex ion, and the combined (net) equation are shown below. As indicated by the relatively large value of K for the net reaction, coupling complex formation with dissolution drastically increases the solubility of $\mathrm { \ A l { ( O H ) _ { 3 } } }$ .
+
+$$
+\begin{array} { l c l } { { \mathrm { A l ( O H ) } _ { 3 } ( s )  \mathrm { A l } ^ { 3 + } ( a q ) + 3 \mathrm { O H } ^ { - } ( a q ) } }  & { { \ } } & { { K _ { \mathrm { s p } } = 2 \times 1 0 ^ { - 3 2 } } } \\ { { \mathrm { A l } ^ { 3 + } ( a q ) + 4 \mathrm { O H } ^ { - } ( a q )  \mathrm { A l ( O H ) } _ { 4 } - ( a q ) } }  & { { \ } } & { { K _ { \mathrm { f } } = 1 . 1 \times 1 0 ^ { 3 3 } } } \\ { { \mathrm { N e t } { : } \mathrm { A l ( O H ) } _ { 3 } ( s ) + \mathrm { O H } ^ { - } ( a q )  \mathrm { A l ( O H ) } _ { 4 } - ( a q ) ~ } }  & { { \ K = K _ { \mathrm { s p } } \ K _ { \mathrm { f } } = 2 2 } } \end{array}
+$$
+
+# EXAMPLE 15.15
+
+# Increased Solubility in Acidic Solutions
+
+Compute and compare the molar solublities for aluminum hydroxide, $\mathrm { \ A l { ( O H ) _ { 3 } } }$ , dissolved in (a) pure water and (b) a buffer containing 0.100 $M$ acetic acid and 0.100 Msodium acetate.
+
+# Solution
+
+(a) The molar solubility of aluminum hydroxide in water is computed considering the dissolution equilibrium only as demonstrated in several previous examples:
+
+$$
+\mathrm { A l ( O H ) } _ { 3 } ( s ) \ : = \ : \mathrm { A l } ^ { 3 + } ( a q ) + 3 \mathrm { O H } ^ { - } ( a q ) \qquad \kappa _ { \mathrm { s p } } = 2 \times 1 0 ^ { - 3 2 }
+$$
+
+$$
+= [ \mathrm { A l } ^ { 3 + } ] = ( 2 \times 1 0 ^ { - 3 2 } / 2 7 ) ^ { 1 / 4 } = 5 \times 1 0 ^ { - 9 } M
+$$
+
+(b) The concentration of hydroxide ion of the buffered solution is conveniently calculated by the HendersonHasselbalch equation:
+
+$$
+\mathrm { \ p H = \ p K _ { a } + \ l o g { \ } [ C H _ { 3 } C O O ^ { - } ] / \ l C H _ { 3 } C O O H ] }
+$$
+
+$$
+\mathrm { p H } = 4 . 7 4 + \log { ( 0 . 1 0 0 / 0 . 1 0 0 ) } = 4 . 7 4
+$$
+
+At this $\mathsf { p H }$ , the concentration of hydroxide ion is
+
+$$
+\begin{array} { l } { \mathrm { p O H } = 1 4 . 0 0 - 4 . 7 4 = 9 . 2 6 } \\ { \mathrm { [ O H ^ { - } ] } = 1 0 ^ { - 9 . 2 6 } = 5 . 5 \times 1 0 ^ { - 1 0 } } \end{array}
+$$
+
+The solubility of $\mathrm { A l ( O H ) _ { 3 } }$ in this buffer is then calculated from its solubility product expressions:
+
+molar solubility in buffer
+
+$$
+{ \begin{array} { c } { K _ { \mathrm { s p } } \ = \ [ { \mathrm { A l } } ^ { 3 + } ] { \mathrm { [ O H ^ { - } ] } } ^ { 3 } } \\ { \cdot = \ [ { \mathrm { A l } } ^ { 3 + } ] \ = \ K _ { \mathrm { s p } } / [ { \mathrm { O H ^ { - } ] } } ^ { 3 } \ = \ ( 2 \times \ 1 0 ^ { - 3 2 } ) / ( 5 . 5 \times \ 1 0 ^ { - 1 0 } ) ^ { 3 } \ = \ 1 . 2 \times \ 1 0 ^ { - 4 } M } \end{array} }
+$$
+
+Compared to pure water, the solubility of aluminum hydroxide in this mildly acidic buffer is approximately ten million times greater (though still relatively low).
+
+# Check Your Learning
+
+What is the solubility of aluminum hydroxide in a buffer comprised of 0.100 Mformic acid and 0.100 M sodium formate?
+
+# EXAMPLE 15.16
+
+# Multiple Equilibria
+
+Unexposed silver halides are removed from photographic film when they react with sodium thiosulfate $\mathrm { ( N a _ { 2 } S _ { 2 } O _ { 3 } }$ , called hypo) to form the complex ion $\mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } { } ^ { 3 - }$ $( K _ { \mathrm { f } } = 4 . 7 \times 1 0 ^ { 1 3 } )$ .
+
+What mass of $\mathrm { N a _ { 2 } S _ { 2 } O _ { 3 } }$ is required to prepare $1 . 0 0 \mathrm { L }$ of a solution that will dissolve $1 . 0 0 { \mathrm { g } }$ of $\operatorname { A g B r }$ by the formation of $\mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } { } ^ { 3 - } ?$
+
+# Solution
+
+Two equilibria are involved when silver bromide dissolves in an aqueous thiosulfate solution containing the $\mathrm { S } _ { 2 } \mathrm { O } _ { 3 } { } ^ { 2 - }$ ion:
+
+$$
+\begin{array} { r l } & { \mathrm { { \lambda g B r } } ( s )  \mathrm { { A g ^ { + } } } ( a q ) + { \mathrm { B r ^ { - } } } ( a q ) \qquad K _ { \mathrm { { s p } } } = 5 . 0 \times 1 0 ^ { - 1 3 } } \\ & { \mathrm { { } } } \\ & { \mathrm { { } } } \\ & { \mathrm { { } } \mathrm { { \lambda : A g ^ { + } } } ( a q ) + 2 \mathrm { { S } } _ { 2 } { \mathrm { O } } _ { 3 } { } ^ { 2 - } ( a q )  \mathrm { { A g } } ( { \mathrm { S } } _ { 2 } { \mathrm { O } } _ { 3 } ) _ { 2 } { } ^ { 3 - } ( a q ) \qquad K _ { \mathrm { { f } } } = 4 . 7 \times 1 0 ^ { 1 3 } } \end{array}
+$$
+
+Combining these two equilibrium equations yields
+
+$$
+\begin{array} { r l r } & { \mathrm { A g B r } ( s ) + 2 \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } { } ^ { 2 - } ( a q ) } & { \mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } { } ^ { 3 - } ( a q ) } \\ & { \frac { K = [ \mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } { } ^ { 3 - } ] [ \mathrm { B r } ^ { - } ] } { [ \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } { } ^ { 2 - } ] ^ { 2 } } = K _ { \mathrm { s p } } K _ { \mathrm { f } } = 2 4 } \end{array}
+$$
+
+The concentration of bromide resulting from dissolution of $\displaystyle 1 . 0 0 \mathrm { g }$ of AgBr in $1 . 0 0 \mathrm { L }$ of solution is
+
+$$
+[ \mathrm { B r ^ { - } } ] = { \frac { 1 . 0 0 ~ \mathrm { { g } ~ A g B r \times { \frac { 1 ~ \ m o l ~ A g B r } { 1 8 7 . 7 7 ~ { \mathrm { g } } / \mathrm { { m o l } } } } \times { \frac { 1 ~ \mathrm { { m o l } } ~ \mathrm { { B r ^ { - } } } } { 1 ~ \mathrm { { m o l } } ~ A g B r } } } } { 1 . 0 0 ~ \mathrm { { L } } } } = 0 . 0 0 5 3 2 ~ M
+$$
+
+The stoichiometry of the dissolution equilibrium indicates the same concentration of aqueous silver ion will result, $0 . 0 0 5 3 2 \mathrm { M }$ , and the very large value of $K _ { \mathrm { f } }$ ensures that essentially all the dissolved silver ion will be complexed by thiosulfate ion:
+
+$$
+[ \mathsf { A g } ( \mathsf { S } _ { 2 } \mathsf { O } _ { 3 } ) _ { 2 } { } ^ { 3 - } ] = 0 . 0 0 5 3 2 M
+$$
+
+Rearranging the K expression for the combined equilibrium equations and solving for the concentration of thiosulfate ion yields
+
+$$
+[ \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } \mathrm { } ^ { 2 - } ] = { \frac { [ \mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } \mathrm { } ^ { 3 - } ] [ \mathrm { B r } ^ { - } ] } { K } } = { \frac { ( 0 . 0 0 5 3 2 M ) ( 0 . 0 0 5 3 2 M ) } { 2 4 } } = 0 . 0 0 1 1 M
+$$
+
+Finally, the total mass of ${ \mathrm { N a } } _ { 2 } { \mathrm { S } } _ { 2 } { \mathrm { O } } _ { 3 }$ required to provide enough thiosulfate to yield the concentrations cited above can be calculated.
+
+Mass of ${ \mathrm { N a } } _ { 2 } { \mathrm { S } } _ { 2 } { \mathrm { O } } _ { 3 }$ required to yield $0 . 0 0 5 3 2 \mathrm { M } \mathrm { A g } \big ( \mathrm { S } _ { 2 } \mathrm { O } _ { 2 } \big ) _ { 2 } { } ^ { 3 - }$
+
+$$
+0 . 0 0 5 3 2 \frac { \mathrm { m o l } \mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } ^ { 3 - } } { 1 . 0 0 \mathrm { L } } \times \frac { 2 \mathrm { m o l } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ^ { 2 - } } { 1 \mathrm { m o l } \mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } ^ { 3 - } } \times \frac { 1 \mathrm { m o l } \mathrm { N a } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } } { 1 \mathrm { m o l } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ^ { 2 - } } \times \frac { 1 5 8 . 1 \mathrm { g } \mathrm { N a } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } } { 1 \mathrm { m o l } \mathrm { N a } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } } = 1 . 6
+$$
+
+Mass of ${ \mathrm { N a } } _ { 2 } { \mathrm { S } } _ { 2 } { \mathrm { O } } _ { 3 }$ required to yield $0 . 0 0 1 1 0 \mathrm { M } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } { } ^ { 2 - }$
+
+$$
+0 . 0 0 1 1 \frac { \mathrm { m o l } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } { } ^ { 2 - } } { 1 . 0 0 \mathrm { L } } \times \frac { 1 \ \mathrm { m o l } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } { } ^ { 2 - } } { 1 \ \mathrm { m o l } \mathrm { N } \mathrm { a } _ { 2 } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } } \times \frac { 1 5 8 . 1 \ \mathrm { g } \mathrm { N } \mathrm { a } _ { 2 } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } } { 1 \ \mathrm { m o l } \mathrm { N } \mathrm { a } _ { 2 } \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } } = 0 . 1 7 \ \mathrm { g }
+$$
+
+The mass of ${ \mathrm { N a } } _ { 2 } { \mathrm { S } } _ { 2 } { \mathrm { O } } _ { 3 }$ required to dissolve $_ { 1 . 0 0 \mathrm { g } }$ of AgBr in $1 . 0 0 \mathrm { L }$ of water is thus $1 . 6 8 { \ : } \mathrm { g } + 0 . 1 7 { \ : } \mathrm { g } = 1 . 8 5 { \ : } \mathrm { g }$
+
+# Check Your Learning
+
+$\mathsf { A g C l } ( s )$ , silver chloride, has a very low solubility: $\operatorname { A g C l } ( s )  \operatorname { A g } ^ { + } ( a q ) + \operatorname { C l } ^ { - } ( a q )$ ， $K _ { \mathrm { s p } } = 1 . 6 \times 1 0 ^ { - 1 0 }$ . Adding ammonia significantly increases the solubility of AgCl because a complex ion is formed: $\mathrm { A g ^ { + } } ( a q ) + 2 \mathrm { N H _ { 3 } } ( a q )  \mathrm { A g ( N H _ { 3 } ) } _ { 2 } ^ { + } ( a q ) .$ ， $K _ { \mathrm { f } } = 1 . 7 \times 1 0 ^ { 7 }$ . What mass of $\mathrm { N H } _ { 3 }$ is required to prepare $1 . 0 0 \mathrm { L }$ of solution that will dissolve $2 . 0 0 { \mathrm { g } }$ of $\tt A g C l$ by formation of $\mathrm { A g ( N H } _ { 3 } ) _ { 2 } + \gimel$
+
+# Answer:
+
+$1 . 0 0 \mathrm { L }$ of a solution prepared with $4 . 8 1 \ : \mathrm { g } \ : \mathrm { N H } _ { 3 }$ dissolves 2.0 g of $\mathrm { A g C l }$ .
+
+# Key Terms
+
+common ion effect effect on equilibrium when a substance with an ion in common with the dissolved species is added to the solution; causes a decrease in the solubility of an ionic species, or a decrease in the ionization of a weak acid or base   
+complex ion ion consisting of a central atom surrounding molecules or ions called ligands via coordinate covalent bonds   
+coordinate covalent bond (also, dative bond) covalent bond in which both electrons originated from the same atom   
+coupled equilibria system characterized the simultaneous establishment of two or more equilibrium reactions sharing one or more reactant or product   
+dissociation constant $( \pmb { K } _ { \mathbf { d } } )$ equilibrium constant for the decomposition of a complex ion into its components   
+formation constant $\mathbf { \Gamma } ( \mathbf { K _ { f } } )$ (also, stability constant) equilibrium constant for the formation of a complex ion from its components   
+Lewis acid any species that can accept a pair of electrons and form a coordinate covalent bond   
+Lewis acid-base adduct compound or ion that contains a coordinate covalent bond between a Lewis acid and a Lewis base   
+Lewis acid-base chemistry reactions involving the formation of coordinate covalent bonds   
+Lewis base any species that can donate a pair of electrons and form a coordinate covalent bond   
+ligand molecule or ion acting as a Lewis base in complex ion formation; bonds to the central atom of the complex   
+molar solubility solubility of a compound expressed in units of moles per liter $\mathrm { ( m o l / L ) }$   
+selective precipitation process in which ions are separated using differences in their solubility with a given precipitating reagent   
+solubility product constant $( K _ { \mathbf { s p } } )$ equilibrium constant for the dissolution of an ionic compound
+
+
+
+# Key Equations
+
+$$
+{ \bf M } _ { p } { \bf X } _ { q } ( s )  p { \bf M } ^ { \mathrm { m + } } ( a q ) + q { \bf X } ^ { \mathrm { n - } } ( a q )
+$$
+
+$$
+K _ { \mathrm { s p } } = [ \mathbf { M } ^ { \mathrm { m + } } ] ^ { p } [ \mathbf { X } ^ { \mathrm { n - } } ] ^ { q }
+$$
+
+# Summary
+
+# 15.1 Precipitation and Dissolution
+
+The equilibrium constant for an equilibrium involving the precipitation or dissolution of a slightly soluble ionic solid is called the solubility product, $K _ { \mathrm { s p } }$ , of the solid. For a heterogeneous equilibrium involving the slightly soluble solid $\mathrm { M } _ { p } \mathrm { X } _ { q }$ and its ions $\mathbf { M } ^ { \mathrm { m + } }$ and ${ \mathrm { X } } ^ { \mathrm { n - } }$ :
+
+$$
+{ \bf M } _ { p } { \bf X } _ { q } ( s )  p { \bf M } ^ { \mathrm { m + } } ( a q ) + q { \bf X } ^ { \mathrm { n - } } ( a q )
+$$
+
+the solubility product expression is:
+
+$$
+K _ { \mathrm { s p } } = [ \mathbf { M } ^ { \mathrm { m + } } ] ^ { p } [ \mathbf { X } ^ { \mathrm { n - } } ] ^ { q }
+$$
+
+The solubility product of a slightly soluble electrolyte can be calculated from its solubility; conversely, its solubility can be calculated from its $K _ { \mathrm { s p } }$ , provided the only significant reaction that occurs when the solid dissolves is the formation of its ions.
+
+A slightly soluble electrolyte begins to precipitate when the magnitude of the reaction quotient for the dissolution reaction exceeds the magnitude of the solubility product. Precipitation continues until the reaction quotient equals the solubility product.
+
+# 15.2 Lewis Acids and Bases
+
+A Lewis acid is a species that can accept an electron pair, whereas a Lewis base has an electron pair available for donation to a Lewis acid. Complex ions are examples of Lewis acid-base adducts and comprise central metal atoms or ions acting as Lewis acids bonded to molecules or ions called ligands that act as Lewis bases. The equilibrium constant for the reaction between a metal ion and ligands produces a complex ion called a formation constant; for the reverse reaction, it is called a dissociation constant.
+
+# 15.3 Coupled Equilibria
+
+Systems involving two or more chemical equilibria that share one or more reactant or product are called coupled equilibria. Common examples of coupled equilibria include the increased solubility of some compounds in acidic solutions (coupled dissolution and neutralization equilibria) and in solutions containing ligands (coupled dissolution and complex formation). The equilibrium tools from other chapters may be applied to describe and perform calculations on these systems.
+
+# Exercises
+
+# 15.1 Precipitation and Dissolution
+
+1. Complete the changes in concentrations for each of the following reactions: (a)
+
+$$
+\mathrm { A g I } ( s ) \longrightarrow \mathrm { A g ^ { + } } ( a q ) + \mathrm { I ^ { - } } ( a q )
+$$
+
+$$
+\begin{array} { l l } { { } } & { { x } } \\ { { { \mathrm { ( b ) } } } } & { { { { \bf C } { \bf a } { \bf C } { \bf O } _ { 3 } { \left( s \right) } } \longrightarrow } } & { { { \bf C } { \bf a } ^ { 2 + } { \left( a q \right) } + { \bf \Delta C } { { \bf O } _ { 3 } } ^ { 2 - } { \left( a q \right) } } } \end{array}
+$$
+
+$$
+\stackrel { \mathrm { ( c ) } } { \mathrm { M g } } ( \mathrm { O H } ) _ { 2 } ( s ) \longrightarrow { } ~ \mathrm { M g } ^ { 2 + } ( a q ) + { } ~ 2 \mathrm { O H } ^ { - } ( a q )
+$$
+
+X
+
+$$
+\begin{array} { l l l } { { { \mathrm { ( d ) } } } } & { { \hfill } } & { { \hfill } } \\ { { { \bf M g } _ { 3 } ( { \bf P O } _ { 4 } ) _ { 2 } ( s ) \hfill } } & { { \longrightarrow } } & { { 3 { \bf M g } ^ { 2 + } ( a q ) + \mathrm {  ~ \ 2 P O } _ { 4 } \mathrm {  ~ ^ 3 - } ( a q ) \hfill } } \end{array}
+$$
+
+$$
+\begin{array} { l l l } { { } } & { { x } } & { { { } } } \\ { { { \displaystyle ( \mathrm { e } ) } } } & { { { } } } & { { { } } } \\ { { \mathrm { C a } _ { 5 } ( \mathrm { P O } _ { 4 } ) _ { 3 } \mathrm { O H } ( s ) \longrightarrow } } & { { 5 \mathrm { C a } ^ { 2 + } ( a q ) + } } & { { { } 3 \mathrm { P O } _ { 4 } { } ^ { 3 - } ( a q ) + } } \end{array} { \mathrm { O H } } ^ { - } ( a q )
+$$
+
+2. Complete the changes in concentrations for each of the following reactions: (a)
+
+$\mathrm { B a S O } _ { 4 } ( s ) \longrightarrow \mathrm { B a } ^ { 2 + } ( a q ) + \mathrm { S O } _ { 4 } \ l ^ { 2 - } ( a q )$ X   
+(b   
+$\begin{array} { l l l } { { \mathrm { A g } _ { 2 } \mathrm { S O } _ { 4 } ( s ) \longrightarrow } } & { { 2 \mathrm { A g } ^ { + } ( a q ) + } } & { { \mathrm { S O } _ { 4 } \mathrm { } ^ { 2 - } ( a q ) } } \end{array}$ X   
+(c)   
+$\stackrel { \mathrm { ( c ) } } { \mathrm { A l } } ( \mathrm { O H } ) _ { 3 } ( s ) \longrightarrow { } ~ \mathrm { A l } ^ { 3 + } ( a q ) + ~ 3 \mathrm { O H } ^ { - } ( a q )$   
+$\begin{array} { l l } { { } } & { { x } } \\ { { { \mathrm { ( d ) } } } } & { { { } } } \\ { { \mathrm { P b ( O H ) C l ( } s \mathrm { ) \longrightarrow } } } & { { { \mathrm { P b } } ^ { 2 + } ( a q ) + { } \ { \mathrm { { O H } } } ^ { - } ( a q ) + { } \ { \mathrm { C l } } ^ { - } ( a q ) } } \end{array}$ X   
+(e) $\stackrel { \left( \Theta \right) } { \mathrm { C a } } _ { 3 } ( \mathrm { A s O } _ { 4 } ) _ { 2 } ( s ) \longrightarrow 3 \mathrm { C a } ^ { 2 + } ( a q ) + 2 \mathrm { A s O } _ { 4 } { } ^ { 3 - } ( a q )$
+
+$3 x$ 3. How do the concentrations of ${ \mathrm { A g } } ^ { + }$ and $\mathrm { C r O } _ { 4 } { } ^ { 2 - }$ in a saturated solution above $1 . 0 { \mathrm { g } }$ of solid $\mathrm { A g _ { 2 } C r O _ { 4 } }$ change when $1 0 0 { \mathrm { g } }$ of solid $\mathrm { A g _ { 2 } C r O _ { 4 } }$ is added to the system? Explain. 4. How do the concentrations of $\mathrm { P b ^ { 2 + } }$ and $\mathrm { S } ^ { 2 - }$ change when $\mathrm { K _ { 2 } S }$ is added to a saturated solution of PbS?
+
+5. What additional information do we need to answer the following question: How is the equilibrium of solid silver bromide with a saturated solution of its ions affected when the temperature is raised?
+
+6. Which of the following slightly soluble compounds has a solubility greater than that calculated from its solubility product because of hydrolysis of the anion present: $\mathrm { C o S O _ { 3 } }$ , CuI, ${ \mathrm { P b } } { \mathrm { C O } } _ { 3 }$ , $\mathrm { P b C l } _ { 2 }$ , $\mathrm { T l } _ { 2 } \mathrm { S }$ , $\mathrm { K C l O } _ { 4 }$ ?
+
+7. Which of the following slightly soluble compounds has a solubility greater than that calculated from its solubility product because of hydrolysis of the anion present: $\tt A g C l$ , $\mathrm { B a S O _ { 4 } }$ , $\mathrm { C a F _ { 2 } }$ , $\mathrm { H g _ { 2 } I _ { 2 } }$ , $\mathsf { M n C O } _ { 3 }$ , and $\mathrm { Z n S ? }$
+
+8. Write the ionic equation for dissolution and the solubility product $( K _ { \mathrm { s p } } )$ expression for each of the following slightly soluble ionic compounds: (a) $\mathrm { P b C l } _ { 2 }$ (b) $\mathrm { A g _ { 2 } S }$ (c) $\mathrm { S r } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 }$ (d) $\mathrm { S r S O } _ { 4 }$
+
+9. Write the ionic equation for the dissolution and the $K _ { \mathrm { s p } }$ expression for each of the following slightly soluble ionic compounds: (a) $\mathrm { L a F _ { 3 } }$ (b) $\mathrm { C a C O _ { 3 } }$ (c) $\mathrm { A g _ { 2 } S O _ { 4 } }$ (d) $\mathrm { P b ( O H ) _ { 2 } }$
+
+10. The Handbo kofChemistryandPhysics(htp:/openstax.org/l/16Handbo k)gives solubilities of the following compounds in grams per $1 0 0 ~ \mathrm { { m L } }$ of water. Because these compounds are only slightly soluble, assume that the volume does not change on dissolution and calculate the solubility product for each. (a) ${ \mathrm { B a S i F } } _ { 6 }$ , $0 . 0 2 6 \ : \mathrm { g } / 1 0 0 \ : \mathrm { m L }$ (contains $\mathrm { S i F } _ { 6 } { ^ { 2 - } }$ ions) (b) $\mathrm { C e ( I O _ { 3 } ) _ { 4 } }$ , $1 . 5 \times 1 0 ^ { - 2 } \ : \mathrm { g } / 1 0 0 \ : \mathrm { m L }$ (c) $\mathrm { G d _ { 2 } ( S O _ { 4 } ) _ { 3 } }$ , $3 . 9 8 ~ \mathrm { g } / 1 0 0 ~ \mathrm { m L }$ (d) $\mathrm { ( N H _ { 4 } ) _ { 2 } P t B r _ { 6 } }$ , $0 . 5 9 \ : \mathrm { g } / 1 0 0 \ : \mathrm { m L }$ (contains $\mathrm { P t B r } _ { 6 } { } ^ { 2 - }$ ions)
+
+11. The Handbo kofChemistryandPhysics(htp:/openstax.org/l/16Handbo k)gives solubilities of the following compounds in grams per $1 0 0 ~ \mathrm { { m L } }$ of water. Because these compounds are only slightly soluble, assume that the volume does not change on dissolution and calculate the solubility product for each. (a) $\mathrm { B a S e O } _ { 4 }$ , $0 . 0 1 1 8 { \bf g } / 1 0 0 { \bf m } { \bf L }$ 4 (b) $\mathrm { B a ( B r O _ { 3 } ) _ { 2 } { \cdot } H _ { 2 } O , }$ $0 . 3 0 { \mathrm { g } } / 1 0 0 { \mathrm { m L } }$ (c) $\mathrm { N H _ { 4 } M g A s O _ { 4 } { \cdot } 6 H _ { 2 } O }$ , $0 . 0 3 8 { \mathrm { g } } / 1 0 0 { \mathrm { m L } }$ (d) $\mathrm { L a _ { 2 } ( M o O _ { 4 } ) _ { 3 } }$ , $0 . 0 0 1 7 9 { \mathrm { g / 1 0 0 ~ m L } }$
+
+12. Use solubility products and predict which of the following salts is the most soluble, in terms of moles per liter, in pure water: $\mathrm { C a F _ { 2 } }$ , $\mathrm { H g _ { 2 } C l _ { 2 } }$ , $\mathrm { P b I _ { 2 } }$ , or $\mathrm { S n ( O H ) _ { 2 } }$ .
+
+13. Assuming that no equilibria other than dissolution are involved, calculate the molar solubility of each of the following from its solubility product: (a) $\mathrm { K H C _ { 4 } H _ { 4 } O _ { 6 } }$ (b) $\mathrm { P b I } _ { 2 }$ (c) $_ { \mathrm { A g _ { 4 } [ F e ( C N ) _ { 6 } ] } }$ , a salt containing the $\mathrm { F e } ( \mathrm { C N } ) _ { 6 } { } ^ { 4 - }$ ion (d) Hg2I2
+
+14. Assuming that no equilibria other than dissolution are involved, calculate the molar solubility of each of the following from its solubility product: (a) $\mathrm { A g _ { 2 } S O _ { 4 } }$ (b) $\mathrm { P b B r } _ { 2 }$ (c) AgI (d) $\mathrm { C a C _ { 2 } O _ { 4 } { \cdot } H _ { 2 } O }$
+
+15. Assuming that no equilibria other than dissolution are involved, calculate the concentration of all solute species in each of the following solutions of salts in contact with a solution containing a common ion. Show that changes in the initial concentrations of the common ions can be neglected. (a) AgCl(s) in 0.025 MNaCl (b) $\mathrm { C a F } _ { 2 } ( s )$ in $0 . 0 0 1 3 3 M$ KF (c) $\mathsf { A g } _ { 2 } \mathsf { S O } _ { 4 } ( s )$ in $0 . 5 0 0 \mathrm { L }$ of a solution containing $1 9 . 5 0 \mathrm { g }$ of $\mathrm { K _ { 2 } S O _ { 4 } }$ (d) $\mathrm { Z n ( O H ) } _ { 2 } ( s )$ in a solution buffered at a pH of 11.45
+
+16. Assuming that no equilibria other than dissolution are involved, calculate the concentration of all solute species in each of the following solutions of salts in contact with a solution containing a common ion. Show that changes in the initial concentrations of the common ions can be neglected. (a) TlCl(s) in 1.250 MHCl (b) $\mathrm { P b I } _ { 2 } ( s )$ in $0 . 0 3 5 5 M { \mathrm { C a l } } _ { 2 }$ (c) $\mathtt { A g _ { 2 } C r O _ { 4 } ( } s )$ in $0 . 2 2 5 \mathrm { L }$ of a solution containing $0 . 8 5 6 \mathrm { g }$ of $\mathrm { K _ { 2 } C r O _ { 4 } }$ (d) $\operatorname { C d } ( \mathrm { O H } ) _ { 2 } ( s )$ in a solution buffered at a pH of 10.995
+
+17. Assuming that no equilibria other than dissolution are involved, calculate the concentration of all solute species in each of the following solutions of salts in contact with a solution containing a common ion. Show that it is not appropriate to neglect the changes in the initial concentrations of the common ions. (a) TlCl(s) in $0 . 0 2 5 \ M \mathrm { T l N O _ { 3 } }$ (b) $\mathrm { B a F } _ { 2 } ( s )$ in $0 . 0 3 1 3 M \mathrm { K F }$ (c) $\mathrm { M g C _ { 2 } O _ { 4 } }$ in $2 . 2 5 0 \mathrm { L }$ of a solution containing $8 . 1 5 6 \ \mathrm { g }$ of $\mathrm { M g ( N O _ { 3 } ) _ { 2 } }$ (d) $\mathrm { C a ( O H ) } _ { 2 } ( s )$ in an unbuffered solution initially with a $\mathsf { p H }$ of 12.700
+
+18. Explain why the changes in concentrations of the common ions in Exercise 15.17 can be neglected.
+
+19. Explain why the changes in concentrations of the common ions in Exercise 15.18 cannot be neglecte
+
+0. Calculate the solubility of aluminum hydroxide, $\mathrm { \ A l { ( O H ) _ { 3 } } }$ , in a solution buffered at $\mathrm { p H } 1 1 . 0 0 \$ .
+
+21. Refer to Appendix J for solubility products for calcium salts. Determine which of the calcium salts listed most soluble in moles per liter and which is most soluble in grams per liter.
+
+22. Most barium compounds are very poisonous; however, barium sulfate is often administered internally as an aid in the X-ray examination of the lower intestinal tract (Figure 15.4). This use of $\mathrm { B a S O } _ { 4 }$ is possible because of its low solubility. Calculate the molar solubility of $\mathrm { B a S O _ { 4 } }$ and the mass of barium present in $1 . 0 0 \mathrm { L }$ of water saturated with $\mathrm { B a S O _ { 4 } }$ .
+
+23. Public Health Service standards for drinking water set a maximum of $\mathrm { 2 5 0 m g / L } \left( \mathrm { 2 } . 6 0 \times \mathrm { 1 0 ^ { - 3 } } M \right)$ of ${ \mathrm { S O } _ { 4 } } ^ { 2 - }$ because of its cathartic action (it is a laxative). Does natural water that is saturated with $\mathrm { C a S O } _ { 4 }$ (“gyp” water) as a result or passing through soil containing gypsum, $\mathrm { C a S O } _ { 4 } { \cdot } 2 \mathrm { H } _ { 2 } 0$ , meet these standards? What is the concentration of ${ \mathrm { S O } _ { 4 } } ^ { 2 - }$ in such water?
+
+24. Perform the following calculations: (a) Calculate $[ \mathrm { A g ^ { + } } ]$ in a saturated aqueous solution of AgBr. (b) What will $[ \mathrm { A g ^ { + } } ]$ be when enough KBr has been added to make $[ \mathrm { B r ^ { - } } ] = 0 . 0 5 0 ~ M ?$ (c) What will $\mathrm { [ B r ^ { - } ] }$ be when enough $\mathrm { \sf A g N O _ { 3 } }$ has been added to make $\left[ \mathrm { A g ^ { + } } \right] = 0 . 0 2 0 ~ M ?$
+
+25. The solubility product of $\mathrm { C a S O } _ { 4 } { \cdot } 2 \mathrm { H } _ { 2 } 0$ is $2 . 4 \times 1 0 ^ { - 5 }$ . What mass of this salt will dissolve in $1 . 0 \mathrm { L }$ of 0.010 M ${ \tt S O } 4 ^ { 2 - } ?$
+
+26. Assuming that no equilibria other than dissolution are involved, calculate the concentrations of ions in a saturated solution of each of the following (see Appendix J for solubility products). (a) TlCl (b) $\mathrm { B a F } _ { 2 }$ (c) $\mathsf { A g _ { 2 } C r O _ { 4 } }$ (d) $\mathrm { C a C _ { 2 } O _ { 4 } { \cdot } H _ { 2 } O }$ (e) the mineral anglesite, $\mathrm { P b S O } _ { 4 }$
+
+27. Assuming that no equilibria other than dissolution are involved, calculate the concentrations of ions in a saturated solution of each of the following (see Appendix J for solubility products): (a) AgI (b) $\mathrm { A g _ { 2 } S O _ { 4 } }$ (c) $\mathrm { M n } ( \mathrm { O H } ) _ { 2 }$ (d) $\mathrm { S r ( O H ) _ { 2 } { \cdot } 8 H _ { 2 } O }$ (e) the mineral brucite, $\mathrm { M g ( O H ) _ { 2 } }$
+
+28. The following concentrations are found in mixtures of ions in equilibrium with slightly soluble solids. From the concentrations given, calculate $K _ { \mathrm { s p } }$ for each of the slightly soluble solids indicated:
+
+$$
+\begin{array} { r l } & { \mathrm { 4 g B r : } \left[ \mathrm { A g ^ { + } } \right] = 5 . 7 \times 1 0 ^ { - 7 } M , \left[ \mathrm { B r ^ { - } } \right] = 5 . 7 \times 1 0 ^ { - 7 } M } \\ & { \mathrm { \simeq a C O _ { 3 } : } \left[ \mathrm { C a ^ { 2 + } } \right] = 5 . 3 \times 1 0 ^ { - 3 } M , \left[ \mathrm { C O _ { 3 } } ^ { 2 - } \right] = 9 . 0 \times 1 0 ^ { - 7 } M } \\ & { \mathrm {  { \mathrm {  ~ \ p } } } \mathrm { F _ { 2 } } \colon \left[ \mathrm { P b } ^ { 2 + } \right] = 2 . 1 \times 1 0 ^ { - 3 } M , \left[ \mathrm { F ^ { - } } \right] = 4 . 2 \times 1 0 ^ { - 3 } M } \\ & { \mathrm {  { \mathrm {  ~ \ A g _ { 2 } C r O _ { 4 } } } } \colon \left[ \mathrm { A g ^ { + } } \right] = 5 . 3 \times 1 0 ^ { - 5 } M , 3 . 2 \times 1 0 ^ { - 3 } M } \\ & { \mathrm {  { \mathrm {  ~ \ n F _ { 3 } } } } \colon \left[ \mathrm { I n ^ { 3 + } } \right] = 2 . 3 \times 1 0 ^ { - 3 } M , \left[ \mathrm { F ^ { - } } \right] = 7 . 0 \times 1 0 ^ { - 3 } M } \end{array}
+$$
+
+29. The following concentrations are found in mixtures of ions in equilibrium with slightly soluble solids. From the concentrations given, calculate $K _ { \mathrm { s p } }$ for each of the slightly soluble solids indicated: (a) TlCl: $[ \mathrm { T } ] ^ { + } ] = 1 . 2 1 \times 1 0 ^ { - 2 } M , [ \mathrm { C l ^ { - } } ] = 1 . 2 \times 1 0 ^ { - 2 } M$ (b) $\mathrm { C e ( I O _ { 3 } ) _ { 4 } }$ : $[ \mathsf { C e } ^ { 4 + } ] = 1 . 8 \times 1 0 ^ { - 4 } M , [ \mathsf { I O } _ { 3 } { } ^ { - } ] = 2 . 6 \times 1 0 ^ { - 1 3 } M$ (c) $\mathrm { G d _ { 2 } ( S O _ { 4 } ) _ { 3 } }$ : $\mathrm { : } \left[ \mathrm { G d ^ { 3 + } } \right] = 0 . 1 3 2 M , \left[ \mathrm { S O _ { 4 } } ^ { 2 - } \right] = 0 . 1 9 8 M$ (d) $\mathrm { A g _ { 2 } S O _ { 4 } }$ ${ } _ { 2 } \mathrm { S O } _ { 4 } \colon [ \mathrm { A g } ^ { + } ] = 2 . 4 0 \times 1 0 ^ { - 2 } M , [ \mathrm { S O } _ { 4 } { } ^ { 2 - } ] = 2 . 0 5 \times$ 10–2 M (e) $\mathrm { B a S O _ { 4 } }$ : $[ \mathrm { B a } ^ { 2 + } ] = 0 . 5 0 0 ~ M _ { ☉ }$ , = 4.6 10−8 M
+
+30. Which of the following compounds precipitates from a solution that has the concentrations indicated? (See Appendix J for $K _ { \mathrm { s p } }$ values.) (a) $\mathrm { K C l O } _ { 4 }$ ${ \bf \therefore } \left[ { \bf K ^ { + } } \right] = 0 . 0 1 ~ M , \left[ { \bf C l O _ { 4 } } ^ { - } \right] = 0 . 0 1 ~ M$ (b) $\operatorname { K } _ { 2 } \mathrm { P t C l } _ { 6 } \colon \lbrack \mathrm { K } ^ { + } ] = 0 . 0 1 M , \lbrack \mathrm { P t C l } _ { 6 } { } ^ { 2 - } \rbrack = 0 . 0 1 M$ (c) $\mathrm { P b I _ { 2 } }$ : $[ \mathrm { P b } ^ { 2 + } ] = 0 . 0 0 3 ~ M , [ \mathrm { I ^ { - } } ] = 1 . 3 \times 1 0 ^ { - 3 } ~ M$ (d) $\mathsf { a g } _ { 2 } \mathsf { S } \colon [ \mathsf { A g } ^ { + } ] = 1 \times 1 0 ^ { - 1 0 } M , [ \mathsf { S } ^ { 2 - } ] = 1 \times 1 0 ^ { - 1 3 } M$
+
+31. Which of the following compounds precipitates from a solution that has the concentrations indicated? (See Appendix J for $K _ { \mathrm { s p } }$ values.) (a) $\mathrm { C a C O _ { 3 } }$ $\mathsf { \Lambda } ^ { \mathsf { \Lambda } } [ \mathsf { C } \mathsf { a } ^ { 2 + } ] = 0 . 0 \dot { 0 } 3 M , [ \mathsf { C O } _ { 3 } { } ^ { 2 - } ] = 0 . 0 0 3 M$ (b) $\mathrm { C o ( O H ) _ { 2 } }$ : $[ \mathsf { C O } ^ { 2 + } ] = 0 . 0 1 M , [ \mathsf { O H } ^ { - } ] = 1 \times 1 0 ^ { - 7 } M$ (c) $\mathrm { C a H P O _ { 4 } }$ : $[ \mathbf { C } \mathbf { a } ^ { 2 + } ] = 0 . 0 1 ~ M , [ \mathbf { H P O } _ { 4 } ^ { 2 - } ] = 2 \times 1 0 ^ { - 6 } ~ M$ (d) $\mathrm { P b } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 } \colon [ \mathrm { P b } ^ { 2 + } ] = 0 . 0 1 M , [ \mathrm { P O } _ { 4 } \mathrm { } ^ { 3 - } ] = 1 \times 1 0 ^ { - 1 3 } M$
+
+32. Calculate the concentration of $\mathrm { T l ^ { + } }$ when TlCl just begins to precipitate from a solution that is 0.0250 Min $\mathrm { C l ^ { - } }$ .
+
+33. Calculate the concentration of sulfate ion when $\mathrm { B a S O _ { 4 } }$ just begins to precipitate from a solution that is $0 . 0 7 5 8 M$ in $\mathtt { B a } ^ { 2 + }$ .
+
+34. Calculate the concentration of $\mathrm { S r ^ { 2 + } }$ when $\mathrm { { S r C r O } _ { 4 } }$ starts to precipitate from a solution that is 0.0025 Min $\mathrm { C r O } _ { 4 } { } ^ { 2 - }$
+
+35. Calculate the concentration of $\mathrm { P O } _ { 4 } { } ^ { 3 - }$ when $\mathrm { \sf A g _ { 3 } P O _ { 4 } }$ starts to precipitate from a solution that is 0.0125 Min ${ \mathrm { A g } } ^ { + }$ .
+
+36. Calculate the concentration of $\mathrm { F } ^ { - }$ required to begin precipitation of $\mathrm { C a F } _ { 2 }$ in a solution that is 0.010 $M$ in Ca2+.
+
+37. Calculate the concentration of ${ \mathrm { A g } } ^ { + }$ required to begin precipitation of $\mathrm { A g _ { 2 } C O _ { 3 } }$ in a solution that is $2 . 5 0 \times$ $1 0 ^ { - 6 } M \mathrm { i n } { \mathrm C O _ { 3 } } ^ { 2 - }$
+
+38. What $[ \mathrm { A g ^ { + } } ]$ is required to reduce $\scriptstyle { [ \mathbf { C O } _ { 3 } { } ^ { 2 - } ] }$ to $8 . 2 \times 1 0 ^ { - 4 } M$ by precipitation of $\mathrm { A g _ { 2 } C O _ { 3 } }$ ?
+
+39. What $[ \mathrm { F ^ { - } } ]$ is required to reduce $\mathrm { [ C a ^ { 2 + } ] }$ to $1 . 0 \times 1 0 ^ { - 4 } M$ by precipitation of $\mathrm { C a F _ { 2 } } \mathrm { : }$ ?
+
+40. A volume of $0 . 8 0 0 \mathrm { L }$ of a $2 \times 1 0 ^ { - 4 } – M \mathrm { B a } ( \mathrm { N O } _ { 3 } ) _ { 2 }$ solution is added to $0 . 2 0 0 \mathrm { L }$ of $5 \times 1 0 ^ { - 4 } M \mathrm { L i _ { 2 } S O _ { 4 } }$ . Does $\mathrm { B a S O } _ { 4 }$ precipitate? Explain your answer.
+
+41. Perform these calculations for nickel(II) carbonate. (a) With what volume of water must a precipitate containing $\mathrm { N i C O _ { 3 } }$ be washed to dissolve $0 . 1 0 0 { \mathrm { g } }$ of this compound? Assume that the wash water becomes saturated with $\mathrm { N i C O _ { 3 } }$ $\mathrm { ' } K _ { \mathrm { s p } } = 1 . 3 6 \times 1 0 ^ { - 7 } )$ . (b) If the $\mathrm { N i C O _ { 3 } }$ were a contaminant in a sample of $\mathrm { C o C O _ { 3 } }$ $( K _ { \mathrm { s p } } = 1 . 0 \times 1 0 ^ { - 1 2 } )$ , what mass of $\mathrm { C o C O _ { 3 } }$ would have been lost? Keep in mind that both $\mathrm { N i C O _ { 3 } }$ and $\mathrm { C o C O _ { 3 } }$ dissolve in the same solution.
+
+42. Iron concentrations greater than $5 . 4 \times 1 0 ^ { - 6 } M$ in water used for laundry purposes can cause staining. What $[ \mathrm { O H ^ { - } } ]$ is required to reduce $[ \mathrm { F e ^ { 2 + } } ]$ to this level by precipitation of $\mathrm { F e ( O H ) _ { 2 } \hat { \it { : } } }$ 0
+
+43. A solution is $0 . 0 1 0 M$ in both $\mathsf { C u ^ { 2 + } }$ and $\mathrm { C d ^ { 2 + } }$ . What percentage of $\operatorname { C d } ^ { 2 + }$ remains in the solution when $9 9 . 9 \%$ of the $\mathsf { C u ^ { 2 + } }$ has been precipitated as CuS by adding sulfide?
+
+44. A solution is $0 . 1 5 M$ in both $\mathrm { P b ^ { 2 + } }$ and ${ \mathrm { A g } } ^ { + }$ . If $\mathrm { C l ^ { - } }$ is added to this solution, what is $[ \mathrm { A g ^ { + } } ]$ when $\mathrm { P b C l } _ { 2 }$ begins to precipitate?
+
+45. What reagent might be used to separate the ions in each of the following mixtures, which are $0 . 1 \ M$ with respect to each ion? In some cases it may be necessary to control the pH. (Hint: Consider the $K _ { \mathrm { s p } }$ values given in Appendix J.)
+
+(a) ${ \mathrm { H g } _ { 2 } } ^ { 2 + }$ and $\mathsf { C u ^ { 2 + } }$ (b) ${ \mathrm { S O } _ { 4 } } ^ { 2 - }$ and $\mathrm { C l ^ { - } }$ (c) $\mathrm { H g ^ { 2 + } }$ and $\mathsf { C o } ^ { 2 + }$ (d) $\scriptstyle { \mathrm { Z n } } ^ { 2 + }$ and $\mathrm { S r ^ { 2 + } }$ (e) $\mathtt { B a } ^ { 2 + }$ and $\mathrm { M g ^ { 2 + } }$ (f ) $\mathrm { C O _ { 3 } } ^ { 2 - }$ and $\mathrm { O H ^ { - } }$
+
+46. A solution contains $1 . 0 \times 1 0 ^ { - 5 } \mathrm { m o l }$ of KBr and $0 . 1 0 \mathrm { m o l }$ of KCl per liter. $\mathrm { \sf A g N O _ { 3 } }$ is gradually added to this solution. Which forms first, solid AgBr or solid $\mathsf { A g C l ? }$
+
+47. A solution contains $1 . 0 \times 1 0 ^ { - 2 } \mathrm { m o l }$ of KI and $0 . 1 0 \mathrm { m o l }$ of KCl per liter. $\mathrm { A g N O _ { 3 } }$ is gradually added to this solution. Which forms first, solid AgI or solid $\mathbf { A g C l } \mathbf { ? }$
+
+48. The calcium ions in human blood serum are necessary for coagulation (Figure 15.5). Potassium oxalate, $\mathrm { K _ { 2 } C _ { 2 } O _ { 4 } }$ , is used as an anticoagulant when a blood sample is drawn for laboratory tests because it removes the calcium as a precipitate of $\mathrm { C a C _ { 2 } O _ { 4 } { \cdot } H _ { 2 } O }$ . It is necessary to remove all but $1 . 0 \%$ of the $\mathrm { C a ^ { 2 + } }$ in serum in order to prevent coagulation. If normal blood serum with a buffered pH of 7.40 contains $9 . 5 \mathrm { m g }$ of $\mathrm { C a ^ { 2 + } }$ per $1 0 0 ~ \mathrm { { m L } }$ of serum, what mass of $\mathrm { K _ { 2 } C _ { 2 } O _ { 4 } }$ is required to prevent the coagulation of a $1 0 ~ \mathrm { m L }$ blood sample that is $5 5 \%$ serum by volume? (All volumes are accurate to two significant figures. Note that the volume of serum in a $_ { \mathrm { 1 0 - m L } }$ blood sample is $5 . 5 \mathrm { m L }$ . Assume that the ${ \mathrm { K } } _ { \mathrm { s p } }$ value for $\mathrm { C a C _ { 2 } O _ { 4 } }$ in serum is the same as in water.)
+
+49. About $5 0 \%$ of urinary calculi (kidney stones) consist of calcium phosphate, $\mathrm { C a } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 }$ . The normal mid range calcium content excreted in the urine is $0 . 1 0 { \mathrm { g } }$ of $\mathrm { C a ^ { 2 + } }$ per day. The normal mid range amount of urine passed may be taken as $1 . 4 \mathrm { L }$ per day. What is the maximum concentration of phosphate ion that urine can contain before a calculus begins to form?
+
+50. The pH of normal urine is 6.30, and the total phosphate concentration $( [ \mathrm { P O _ { 4 } } ^ { 3 - } ] + [ \mathrm { H P O _ { 4 } } ^ { 2 - } ] + [ \mathrm { H } _ { 2 } \mathrm { P O _ { 4 } } ^ { - } ]$ $+ \left[ \mathrm { H } _ { 3 } \mathrm { P O } _ { 4 } \right] )$ is $0 . 0 2 0 M .$ What is the minimum concentration of $\mathrm { C a ^ { 2 + } }$ necessary to induce kidney stone formation? (See Exercise 15.49 for additional information.)
+
+51. Magnesium metal (a component of alloys used in aircraft and a reducing agent used in the production of uranium, titanium, and other active metals) is isolated from sea water by the following sequence of reactions: $\begin{array} { r l } & { \mathbf { M g } ^ { 2 + } ( a q ) + \mathbf { C a } ( \mathrm { O H } ) _ { 2 } ( a q ) \longrightarrow \mathbf { M g } ( \mathrm { O H } ) _ { 2 } ( s ) + \mathbf { C a } ^ { 2 + } ( a q ) } \\ & { \mathbf { M g } ( \mathrm { O H } ) _ { 2 } ( s ) + 2 \mathrm { H C l } ( a q ) \longrightarrow \mathbf { M g C l } _ { 2 } ( s ) + 2 \mathrm { H } _ { 2 } \mathbf { O } ( l ) } \\ & { \mathbf { M g C l } _ { 2 } ( l ) \xrightarrow { \mathrm { e l e c t r o l y s i s } } \mathbf { M g } ( s ) + \mathbf { C l } _ { 2 } ( g ) } \end{array}$ Sea water has a density of $1 . 0 2 6 \ : \mathrm { g } / \mathrm { c m } ^ { 3 }$ and contains 1272 parts per million of magnesium as $\mathrm { M g } ^ { 2 + } ( a q )$ by mass. What mass, in kilograms, of $\mathrm { C a ( O H ) _ { 2 } }$ is required to precipitate $9 9 . 9 \%$ of the magnesium in $1 . 0 0 \times$ $1 0 ^ { 3 } \mathrm { L }$ of sea water?
+
+52. Hydrogen sulfide is bubbled into a solution that is $0 . 1 0 M$ in both $\mathrm { P b ^ { 2 + } }$ and $\mathrm { F e ^ { 2 + } }$ and $0 . 3 0 \ : M$ in HCl. After the solution has come to equilibrium it is saturated with $\mathrm { H _ { 2 } S }$ $\left( \left[ \mathrm { H } _ { 2 } \mathrm { S } \right] = 0 . 1 0 ~ M \right)$ . What concentrations of $\mathrm { P b ^ { 2 + } }$ and $\mathrm { F e ^ { 2 + } }$ remain in the solution? For a saturated solution of $\mathrm { H _ { 2 } S }$ we can use the equilibrium:
+
+$$
+\mathrm { H } _ { 2 } \mathrm { S } ( a q ) + 2 \mathrm { H } _ { 2 } \mathrm { O } ( l )  2 \mathrm { H } _ { 3 } \mathrm { O } ^ { + } ( a q ) + \mathrm { S } ^ { 2 - } ( a q ) \qquad K = 1 . 0 \times 1 0 ^ { - 2 6 }
+$$
+
+(Hint: The $\mathrm { [ H } _ { 3 } \mathrm { O } ^ { + } ]$ changes as metal sulfides precipitate.)
+
+53. Perform the following calculations involving concentrations of iodate ions: (a) The iodate ion concentration of a saturated solution of La $\mathrm { ( I O _ { 3 } ) _ { 3 } }$ was found to be $3 . 1 \times 1 0 ^ { - 3 } \mathrm { m o l / L }$ . Find the Ksp. (b) Find the concentration of iodate ions in a saturated solution of $\mathrm { C u ( I O _ { 3 } ) _ { 2 } }$ $( K _ { \mathrm { s p } } = 7 . 4 \times 1 0 ^ { - 8 } )$ .
+
+54. Calculate the molar solubility of AgBr in 0.035 MNaBr $( K _ { \mathrm { { s p } } } = 5 \times 1 0 ^ { - 1 3 } ,$ ).
+
+55. How many grams of $\mathrm { P b ( O H ) _ { 2 } }$ will dissolve in $5 0 0 ~ \mathrm { m L }$ of a $0 . 0 5 0 { - } M \mathrm { P b } \mathrm { C l _ { 2 } }$ solution $( K _ { \mathrm { s p } } = 1 . 2 \times 1 0 ^ { - 1 5 } ) \ ?$
+
+56. Use the simulation (http://openstax.org/l/16solublesalts) from the earlier Link to Learning to complete the following exercise. Using $0 . 0 1 \mathrm { g } \mathrm { C a F _ { 2 } }$ , give the ${ \mathrm { K } } _ { \mathrm { s p } }$ values found in a $0 . 2 – M$ solution of each of the salts. Discuss why the values change as you change soluble salts.
+
+57. How many grams of Milk of Magnesia, $\mathrm { M g ( O H ) _ { 2 } }$ (s) $\mathrm { ( 5 8 . 3 \ g / m o l ) }$ , would be soluble in $2 0 0 \mathrm { m L }$ of water. $K _ { \mathrm { s p } } =$ $7 . 1 \times 1 0 ^ { - 1 2 }$ . Include the ionic reaction and the expression for $K _ { \mathrm { s p } }$ in your answer. $( K _ { \mathrm { w } } = 1 \times 1 0 ^ { - 1 4 } =$ $\mathrm { [ H _ { 3 } O ^ { + } ] [ O H ^ { - } ] ) }$
+
+58. Two hypothetical salts, $\mathrm { L M } _ { 2 }$ and LQ, have the same molar solubility in $\mathrm { H } _ { 2 } \mathrm { O } .$ If $K _ { \mathrm { s p } }$ for $\mathrm { L M } _ { 2 }$ is $3 . 2 0 \times 1 0 ^ { - 5 }$ , what is the $K _ { \mathrm { s p } }$ value for LQ?
+
+59. The carbonate ion concentration is gradually increased in a solution containing equal concentrations of the divalent cations of magnesium, calcium, strontium, barium, and manganese. Which of the following carbonates will precipitate first? Which will precipitate last? Explain. (a) $\mathrm { M g C O } _ { 3 } \bullet 3 \mathrm { H } _ { 2 } \mathrm { O }$ $\begin{array} { c }   \begin{array} { c } { { \begin{array} { r l } { { } } & { { K _ { \mathrm { s p } } = 1 \times 1 0 ^ { - 5 } } } \\ { { K _ { \mathrm { s p } } = 8 . 7 \times 1 0 ^ { - 9 } } } \\ { { K _ { \mathrm { s p } } = 7 \times 1 0 ^ { - 1 0 } } } \\ { { K _ { \mathrm { s p } } = 1 . 6 \times 1 0 ^ { - 9 } } } \end{array} } } \\ { { \begin{array} { r l } { { K _ { \mathrm { s p } } = 8 . 8 \times 1 0 ^ { - 1 1 } } } & { { } } \\ { { K _ { \mathrm { s p } } = 8 . 8 \times 1 0 ^ { - 1 1 } } } & { { } } \end{array} } } \end{array} \end{array}$ (b) $\mathrm { C a C O } _ { 3 }$ (c) $\mathrm { S r C O } _ { 3 }$ (d) ${ \bf B a C O } _ { 3 }$ (e) $ { \mathbf { M } }  { \mathrm { n C O } _ { 3 } }$
+
+60. How many grams of $\mathrm { Z n ( C N ) } _ { 2 } ( s ) ( 1 1 7 . 4 4 \mathrm { g / m o l } )$ would be soluble in $1 0 0 ~ \mathrm { { m L } }$ of $\mathrm { H _ { 2 } O _ { : } ^ { 2 } }$ Include the balanced reaction and the expression for $K _ { \mathrm { s p } }$ in your answer. The $K _ { \mathrm { s p } }$ value for $\mathrm { Z n } ( \mathrm { C N } ) _ { 2 } ( s )$ is $3 . 0 \times 1 0 ^ { - 1 6 }$ .
+
+# 15.2 Lewis Acids and Bases
+
+61. Even though $\mathrm { C a ( O H ) _ { 2 } }$ is an inexpensive base, its limited solubility restricts its use. What is the pH of a saturated solution of $\mathrm { C a ( O H ) _ { 2 } } ^ { \cdot }$ ?   
+62. Under what circumstances, if any, does a sample of solid $\mathsf { A g C l }$ completely dissolve in pure water?   
+63. Explain why the addition of $\mathrm { N H } _ { 3 }$ or $\mathrm { H N O } _ { 3 }$ to a saturated solution of $\mathrm { A g _ { 2 } C O _ { 3 } }$ in contact with solid $\mathtt { A g } _ { 2 } \mathtt { C O } _ { 3 }$ increases the solubility of the solid.   
+64. Calculate the cadmium ion concentration, $\operatorname { \mathrm { [ { C d } ^ { 2 + } ] } }$ , in a solution prepared by mixing $0 . 1 0 0 \mathrm { L }$ of 0.0100 $M$ $\mathrm { C d } ( \mathrm { N O } _ { 3 } ) _ { 2 }$ with $0 . 1 5 0 \mathrm { L }$ of $0 . 1 0 0 \mathrm { N H _ { 3 } } ( a q )$ .   
+65. Explain why addition of $\mathrm { N H } _ { 3 }$ or $\mathrm { H N O } _ { 3 }$ to a saturated solution of $\mathrm { C u ( O H ) _ { 2 } }$ in contact with solid $\mathrm { C u ( O H ) _ { 2 } }$ increases the solubility of the solid.   
+66. Sometimes equilibria for complex ions are described in terms of dissociation constants, $K _ { \mathrm { d } }$ . For the complex ion ${ \mathrm { A l F } _ { 6 } } ^ { 3 - }$ the dissociation reaction is: AIF³-Al3++6FandKd= $\begin{array} { r } { K _ { \mathrm { d } } = \frac { [ \mathrm { A l } ^ { 3 + } ] [ \mathrm { F ^ { - } } ] ^ { 6 } } { [ \mathrm { A l F } _ { 6 } ^ { 3 - } ] } = 2 \times 1 0 ^ { - 2 4 } } \end{array}$ Calculate the value of the formation constant, $K _ { \mathrm { f } }$ , for ${ \mathrm { A l F } } _ { 6 } { } ^ { 3 - }$   
+67. Using the value of the formation constant for the complex ion $\mathrm { C o } ( \mathrm { N H } _ { 3 } ) _ { 6 } { } ^ { 2 + }$ calculate the dissociation constant.   
+68. Using the dissociation constant, $K _ { \mathrm { d } } = 7 . 8 \times 1 0 ^ { - 1 8 }$ , calculate the equilibrium concentrations of $\operatorname { C d } ^ { 2 + }$ and $\mathsf { C N } ^ { - }$ in a 0.250-Msolution of $\mathrm { C d } ( \mathrm { C N } ) _ { 4 } { } ^ { 2 - }$   
+69. Using the dissociation constant, $K _ { \mathrm { d } } = 3 . 4 \times 1 0 ^ { - 1 5 }$ , calculate the equilibrium concentrations of $\mathrm { Z n ^ { 2 + } }$ and $\mathrm { O H ^ { - } }$ in a 0.0465-Msolution of $\mathrm { Z n ( O H ) _ { 4 } } ^ { 2 - }$   
+70. Using the dissociation constant, $K _ { \mathrm { d } } = 2 . 2 \times 1 0 ^ { - 3 4 }$ , calculate the equilibrium concentrations of ${ \mathrm { C o } } ^ { 3 + }$ and $\mathrm { N H } _ { 3 }$ in a 0.500-Msolution of $\mathrm { C o } ( \mathrm { N H } _ { 3 } ) _ { 6 } { } ^ { 3 + }$   
+71. Using the dissociation constant, $K _ { \mathrm { d } } = 1 \times 1 0 ^ { - 4 4 }$ , calculate the equilibrium concentrations of $\mathrm { F e ^ { 3 + } }$ and $\mathrm { C N ^ { - } }$ in a $0 . 3 3 3 \mathrm { M }$ solution of ${ \mathrm { F e } } ( { \mathrm { C N } } ) _ { 6 } { } ^ { 3 - }$   
+72. Calculate the mass of potassium cyanide ion that must be added to $1 0 0 \mathrm { m L }$ of solution to dissolve $2 . 0 \times$ $1 0 ^ { - 2 } \mathrm { m o l }$ of silver cyanide, $\mathsf { A g C N } .$ .   
+73. Calculate the minimum concentration of ammonia needed in $1 . 0 \mathrm { L }$ of solution to dissolve $3 . 0 \times 1 0 ^ { - 3 } \mathrm { m o l }$ of silver bromide.   
+74. A roll of $3 5 \mathrm { - m m }$ black and white photographic film contains about $\boldsymbol { 0 . 2 7 \mathrm { g } }$ of unexposed AgBr before developing. What mass of $\mathrm { N a _ { 2 } S _ { 2 } O _ { 3 } { \cdot } 5 H _ { 2 } O }$ (sodium thiosulfate pentahydrate or hypo) in $1 . 0 \mathrm { L }$ of developer is required to dissolve the AgBr as $\mathrm { A g } ( \mathrm { S } _ { 2 } \mathrm { O } _ { 3 } ) _ { 2 } { } ^ { 3 - }$ $( K _ { \mathrm { f } } = 4 . 7 \times 1 0 ^ { 1 3 } ) \mathrm { \Omega }$ ?
+
+75. We have seen an introductory definition of an acid: An acid is a compound that reacts with water and increases the amount of hydronium ion present. In the chapter on acids and bases, we saw two more definitions of acids: a compound that donates a proton (a hydrogen ion, $\mathrm { H ^ { + } } .$ ) to another compound is called a Brønsted-Lowry acid, and a Lewis acid is any species that can accept a pair of electrons. Explain why the introductory definition is a macroscopic definition, while the Brønsted-Lowry definition and the Lewis definition are microscopic definitions.
+
+76. Write the Lewis structures of the reactants and product of each of the following equations, and identify the Lewis acid and the Lewis base in each: (a) $\mathrm { C O } _ { 2 } + \mathrm { O H } ^ { - } \longrightarrow \mathrm { H C O } _ { 3 } { ^ - }$ (b) $\mathrm { B } ( \mathrm { O H } ) _ { 3 } + \mathrm { O H } ^ { - } \longrightarrow \mathrm { B ( O H ) _ { 4 } } ^ { - }$ (c) $\mathrm { I } ^ { - } + \mathrm { I } _ { 2 } \longrightarrow \mathrm { I } _ { 3 } { } ^ { - }$ (d) $\mathrm { A l C l } _ { 3 } + \mathrm { C l } ^ { - } \longrightarrow \mathrm { A l C l } _ { 4 } ^ { - }$ (use Al-Cl single bonds) (e) $\mathrm { O } ^ { 2 - } + \mathrm { S O } _ { 3 } \longrightarrow \mathrm { S O } _ { 4 } { } ^ { 2 - }$
+
+77. Write the Lewis structures of the reactants and product of each of the following equations, and identify the Lewis acid and the Lewis base in each: (a) $\mathrm { C S } _ { 2 } + \mathrm { S H ^ { - } } \longrightarrow \mathrm { H C S } _ { 3 } { ^ - }$ (b) $\mathrm { B F } _ { 3 } + \mathrm { F } ^ { - } \longrightarrow \mathrm { B F } _ { 4 } { } ^ { - }$ (c) $\mathrm { I } ^ { - } + \mathrm { S n I } _ { 2 } \longrightarrow \mathrm { S n I } _ { 3 } ^ { - }$ (d) $\mathrm { A l ( O H ) } _ { 3 } + \mathrm { O H ^ { - } } \longrightarrow \mathrm { A l ( O H ) } _ { 4 } -$ (e) $\mathrm { F } ^ { - } + \mathrm { S O } _ { 3 } \longrightarrow \mathrm { S F O } _ { 3 } ^ { - }$
+
+78. Using Lewis structures, write balanced equations for the following reactions: (a) $\mathrm { H C l } ( g ) + \mathrm { P H } _ { 3 } ( g ) \longrightarrow$ (b) $\mathrm { H } _ { 3 } \mathrm { O } ^ { + } + \mathrm { C H } _ { 3 } ^ { - } \longrightarrow$ (c) $\mathrm { C a O } + \mathrm { S O } _ { 3 }$ ↓ (d) $\mathrm { N H _ { 4 } ^ { + } + C _ { 2 } H _ { 5 } O ^ { - } \longrightarrow }$
+
+79. Calculate $\mathrm { [ H g C l _ { 4 } ^ { 2 - } ] }$ in a solution prepared by adding 0.0200 mol of NaCl to 0.250 L of a 0.100-MHgCl2 solution.
+
+80. In a titration of cyanide ion, $2 8 . 7 2 \mathrm { m L }$ of $0 . 0 1 0 0 M { \mathrm { A g N O } } _ { 3 }$ is added before precipitation begins. [The reaction of ${ \mathrm { A g } } ^ { + }$ with $\mathsf { C N } ^ { - }$ goes to completion, producing the $\mathrm { A g } ( \mathrm { C N } ) _ { 2 } { } ^ { - }$ complex.] Precipitation of solid $\mathtt { A g C N }$ takes place when excess ${ \mathrm { A g } } ^ { + }$ is added to the solution, above the amount needed to complete the formation of $\mathrm { A g } ( \mathrm { C N } ) _ { 2 } { } ^ { - }$ How many grams of NaCN were in the original sample?
+
+81. What are the concentrations of ${ \mathrm { A g } } ^ { + }$ , $\mathsf { C N } ^ { - }$ , and $\mathrm { A g } ( \mathrm { C N } ) _ { 2 } { } ^ { - }$ in a saturated solution of $\mathsf { A g C N ? }$   
+82. In dilute aqueous solution HF acts as a weak acid. However, pure liquid HF (boiling point $= 1 9 . 5 \ ^ { \circ } \mathrm { C } )$ is a strong acid. In liquid HF, $\mathrm { H N O } _ { 3 }$ acts like a base and accepts protons. The acidity of liquid HF can be increased by adding one of several inorganic fluorides that are Lewis acids and accept $\mathrm { F } ^ { - }$ ion (for example, $\mathrm { B F } _ { 3 }$ or ${ \mathrm { S b F } } _ { 5 } { \mathrm { . } }$ ). Write balanced chemical equations for the reaction of pure $\mathrm { H N O } _ { 3 }$ with pure HF and of pure HF with $\mathrm { B F } _ { 3 }$ .   
+83. The simplest amino acid is glycine, $\mathrm { H _ { 2 } N C H _ { 2 } C O _ { 2 } H }$ . The common feature of amino acids is that they contain the functional groups: an amine group, $- \mathrm { N } \mathrm { H } _ { 2 }$ , and a carboxylic acid group, $- \mathrm { C O _ { 2 } H }$ . An amino acid can function as either an acid or a base. For glycine, the acid strength of the carboxyl group is about the same as that of acetic acid, $\mathrm { C H _ { 3 } C O _ { 2 } H }$ , and the base strength of the amino group is slightly greater than that of ammonia, $\mathrm { N H } _ { 3 }$ . (a) Write the Lewis structures of the ions that form when glycine is dissolved in 1 MHCl and in 1 MKOH. (b) Write the Lewis structure of glycine when this amino acid is dissolved in water. (Hint: Consider the relative base strengths of the $\mathrm { - N H _ { 2 } }$ and $- \mathrm { C O } _ { 2 } \mathrm { \mathrm { ~ - ~ } }$ groups.)
+
+84. Boric acid, $\mathrm { { H _ { 3 } B O _ { 3 } } }$ , is not a Brønsted-Lowry acid but a Lewis acid.
+
+(a) Write an equation for its reaction with water.   
+(b) Predict the shape of the anion thus formed.   
+(c) What is the hybridization on the boron consistent with the shape you have predicted?   
+15.3 Coupled Equilibria   
+85. A saturated solution of a slightly soluble electrolyte in contact with some of the solid electrolyte is said to be a system in equilibrium. Explain. Why is such a system called a heterogeneous equilibrium?   
+86. Calculate the equilibrium concentration of $\mathrm { N i ^ { 2 + } }$ in a $1 . 0 \ – M$ solution $\mathrm { \small { [ N i ( N H _ { 3 } ) _ { 6 } ] ( N O _ { 3 } ) _ { 2 } } }$ .   
+87. Calculate the equilibrium concentration of $\mathrm { Z n ^ { 2 + } }$ in a 0.30-Msolution of $\mathrm { Z n } ( \mathrm { C N } ) _ { 4 } { } ^ { 2 - }$   
+88. Calculate the equilibrium concentration of $\mathsf { C u ^ { 2 + } }$ in a solution initially with $0 . 0 5 0 M { \mathrm { C u } } ^ { 2 + }$ and $1 . 0 0 M \mathrm { N H _ { 3 } }$ .   
+89. Calculate the equilibrium concentration of $\scriptstyle { \mathrm { Z n } } ^ { 2 + }$ in a solution initially with $0 . 1 5 0 \ : M \mathrm { Z n } ^ { 2 + }$ and $2 . 5 0 \ : M \mathrm { C N } ^ { - }$ .   
+90. Calculate the $\mathrm { F e ^ { 3 + } }$ equilibrium concentration when 0.0888 mole of $\mathrm { K _ { 3 } [ F e ( C N ) _ { 6 } ] }$ is added to a solution with $0 . 0 . 0 0 0 1 0 \ M \mathrm { C N } ^ { - }$ .   
+91. Calculate the $\mathrm { C o ^ { 2 + } }$ equilibrium concentration when 0.010 mole of $\mathrm { [ C o ( N H _ { 3 } ) _ { 6 } ] ( N O _ { 3 } ) _ { 2 } }$ is added to a solution with $0 . 2 5 ~ M \mathrm { N H _ { 3 } }$ . Assume the volume is $1 . 0 0 \mathrm { L }$ .   
+92. Calculate the molar solubility of $\mathrm { S n ( O H ) _ { 2 } }$ in a buffer solution containing equal concentrations of $\mathrm { N H } _ { 3 }$ and $\mathrm { N H _ { 4 } } ^ { + }$   
+93. Calculate the molar solubility of $\mathrm { \ A l { ( O H ) _ { 3 } } }$ in a buffer solution with $0 . 1 0 0 M \mathrm { N H _ { 3 } }$ and $0 . 4 0 0 M \mathrm { N H } _ { 4 } ^ { + }$   
+94. What is the molar solubility of $\mathrm { C a F } _ { 2 }$ in a 0.100-Msolution of HF? $K _ { \mathrm { a } }$ for $\mathrm { H F } = 6 . 4 \times 1 0 ^ { - 4 }$ .   
+95. What is the molar solubility of $\mathrm { B a S O _ { 4 } }$ in a 0.250-Msolution of $\mathrm { N a H S O _ { 4 } ? \ : K _ { a } }$ for $\mathrm { H S O _ { 4 } } ^ { - } = 1 . 2 \times 1 0 ^ { - 2 }$ .   
+96. What is the molar solubility of $\mathrm { T l } ( \mathrm { O H } ) _ { 3 }$ in a 0.10-Msolution of $\mathrm { N H } _ { 3 } \Im$   
+97. What is the molar solubility of $\mathrm { P b ( O H ) _ { 2 } }$ in a 0.138-Msolution of $\mathrm { C H _ { 3 } N H _ { 2 } }$ ?   
+98. A solution of $0 . 0 7 5 \ M \mathrm { C o B r _ { 2 } }$ is saturated with $\mathrm { H _ { 2 } S } \left( \mathrm { [ H _ { 2 } S ] } = 0 . 1 0 \ M \right)$ . What is the minimum $\mathrm { p H }$ at which CoS begins to precipitate? $\begin{array} { r l r } & { \mathrm { C o S } ( s ) \equiv \mathrm { C o } ^ { 2 \cdot } ( a q ) + \mathrm { S } ^ { 2 - } ( a q ) } & { K _ { \mathrm { s p } } = 2 . 3 \times 1 0 ^ { 2 7 } } \\ & { \mathrm { H } _ { 2 } \mathrm { S } ( a q ) + 2 \mathrm { H } _ { 2 } \mathrm { O } ( l )  2 \mathrm { H } _ { 3 } \mathrm { O } ^ { + } ( a q ) + \mathrm { S } ^ { 2 - } ( a q ) } & { K = 8 . 9 \times 1 0 ^ { - 2 7 } } \end{array}$   
+99. A 0.125-Msolution of $\mathrm { { M n } ( N O _ { 3 } ) _ { 2 } }$ is saturated with $\mathrm { H _ { 2 } S \left( \mathrm { [ H _ { 2 } S ] = 0 . 1 0 ~ \it M  } }\right)$ . At what pH does MnS begin to precipitate? $\begin{array} { r l r } & { \mathbf { \dot { M } } \mathbf { \dot { n } S } ( s ) = \mathbf { M } \mathbf { n } ^ { 2 + } ( a q ) + \mathbf { S } ^ { 2 - } ( a q ) } & { K _ { \mathrm { s p } } = 2 . 3 \times 1 0 ^ { - 1 3 } } \\ & { \mathbf { H } _ { 2 } \mathbf { S } ( a q ) + 2 \mathbf { H } _ { 2 } \mathbf { O } ( l )  2 \mathbf { H } _ { 3 } \mathbf { O } ^ { + } ( a q ) + \mathbf { S } ^ { 2 - } ( a q ) } & { K = 1 . 0 \times 1 0 ^ { - 2 6 } } \end{array}$   
+100. Both $\tt A g C l$ and AgI dissolve in $\mathrm { N H } _ { 3 }$ . (a) What mass of AgI dissolves in $1 . 0 \mathrm { L }$ of $1 . 0 \ : M \mathrm { N H _ { 3 } } \ddagger$ (b) What mass of $\mathtt { A g C l }$ dissolves in $1 . 0 \mathrm { L }$ of $1 . 0 \ : M \mathrm { N H _ { 3 } } ?$   
+101. The following question is taken from a Chemistry Advanced Placement Examination and is used with the permission of the Educational Testing Service. Solve the following problem: $\mathbf { M g F } _ { 2 } ( s )  \mathbf { M g } ^ { 2 + } ( a q ) + 2 \mathbf { F } ^ { - } ( a q )$ In a saturated solution of $\mathrm { M g F } _ { 2 }$ at $1 8 ^ { \circ } \mathrm { C }$ , the concentration of $\mathrm { M g ^ { 2 + } }$ is $1 . 2 1 \times 1 0 ^ { - 3 } M .$ . The equilibrium is represented by the preceding equation. (a) Write the expression for the solubility-product constant, $K _ { \mathrm { s p } }$ , and calculate its value at $1 8 ^ { \circ } \mathrm { C }$ . (b) Calculate the equilibrium concentration of $\mathrm { M g ^ { 2 + } }$ in $1 . 0 0 0 \mathrm { L }$ of saturated $\mathrm { M g F } _ { 2 }$ solution at $1 8 ^ { \circ } \mathrm { C }$ to which $0 . 1 0 0 \mathrm { m o l }$ of solid KF has been added. The KF dissolves completely. Assume the volume change is negligible. (c) Predict whether a precipitate of $\mathrm { M g F } _ { 2 }$ will form when $1 0 0 . 0 \mathrm { m L }$ of a $3 . 0 0 \times 1 0 ^ { - 3 } – I$ Msolution of $\mathrm { M g ( N O _ { 3 } ) _ { 2 } }$ is mixed with $2 0 0 . 0 \mathrm { m L }$ of a $2 . 0 0 \times 1 0 ^ { - 3 } \mathrm { . }$ Msolution of NaF at $1 8 ^ { \circ } \mathrm { C }$ . Show the calculations to support your prediction. (d) At $2 7 ^ { \circ } \mathrm { C }$ the concentration of $\mathrm { M g ^ { 2 + } }$ in a saturated solution of $\mathrm { M g F } _ { 2 }$ is $1 . 1 7 \times 1 0 ^ { - 3 } M .$ Is the dissolving of $\mathrm { M g F } _ { 2 }$ in water an endothermic or an exothermic process? Give an explanation to support your conclusion.   
+102. Which of the following compounds, when dissolved in a $0 . 0 1 \AA ^ { - M }$ solution of ${ \mathrm { H C l O } } _ { 4 }$ , has a solubility greater than in pure water: CuCl, $\mathrm { C a C O _ { 3 } }$ , MnS, $\mathrm { P b } { \mathrm { B r } } _ { 2 }$ , $\mathrm { C a F _ { 2 } } \mathrm { \dag }$ Explain your answer.   
+103. Which of the following compounds, when dissolved in a $0 . 0 1 \AA ^ { - M }$ solution of ${ \mathrm { H C l O } } _ { 4 }$ , has a solubility greater than in pure water: AgBr, $\mathrm { B a F } _ { 2 }$ , $\mathrm { C a } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 }$ , ZnS, $\mathrm { P b I _ { 2 } ? }$ Explain your answer.
+
+
+
+104. What is the effect on the amount of solid $\mathrm { M g ( O H ) _ { 2 } }$ that dissolves and the concentrations of $\mathrm { M g ^ { 2 + } }$ and $\mathrm { O H ^ { - } }$ when each of the following are added to a mixture of solid $\mathrm { M g ( O H ) _ { 2 } }$ and water at equilibrium?
+
+(a) $\mathrm { { M g C l } _ { 2 } }$ (b) KOH (c) ${ \mathrm { H C l O } } _ { 4 }$ (d) $\mathsf { N a N O } _ { 3 }$ (e) $\mathrm { M g ( O H ) _ { 2 } }$
+
+105. What is the effect on the amount of $\mathrm { C a H P O _ { 4 } }$ that dissolves and the concentrations of $\mathrm { C a ^ { 2 + } }$ and $\mathrm { H P O } _ { 4 } { } ^ { 2 - }$ when each of the following are added to a mixture of solid $\mathrm { C a H P O _ { 4 } }$ and water at equilibrium?
+
+(a) $\mathrm { C a C l } _ { 2 }$ (b) HCl (c) $\mathrm { K C l O } _ { 4 }$ (d) NaOH (e) $\mathrm { C a H P O _ { 4 } }$
+
+106. Identify all chemical species present in an aqueous solution of $\mathrm { C a } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 }$ and list these species in decreasing order of their concentrations. (Hint: Remember that the $\mathrm { P O } _ { 4 } { } ^ { 3 - }$ ion is a weak base.)

@@ -1,0 +1,19 @@
+10.10.3 Leakage Power
+
+Note that dynamic power is not the only power dissipation mechanism in processors. Static or leakage power is a major component of the power dissipation profile of high-performance processors. It accounts for roughly  of the total processor power budget.
+
+The main insight is as follows. We have been assuming that a transistor does not allow any current to flow through it when it is in the off state. This is not strictly correct. No structure is a perfect insulator in practice. There is a small amount of current flow across its terminals, even in the off state. We can have many other sources of such current leakage across other interfaces that are ideally not supposed to pass current. Such sources of current are together referred to as leakage current, and the associated power dissipation is known as leakage power.
+
+Definition 88
+
+Leakage current is the minimal amount of current that flows across two terminals of a circuit element that are ideally supposed to be completely electrically isolated from each other. For example, we do not expect any current flow between the drain and the source of an NMOS transistor in the off state. However, a small amount of current does flow, and this is known as the sub-threshold leakage current. When leakage current flows across a resistive element, it dissipates leakage power. Leakage power is static in nature and is dissipated all the time irrespective of the level of activity in a circuit.
+
+There are different mechanisms for leakage power dissipation such as sub-threshold leakage, and gate induced drain leakage. Researchers typically use the following equation from the BSIM3 model [Cheng and Hu, 1999] for leakage power (primarily captures sub-threshold leakage):
+
+Table 10.3 defines the variables used in Equation 10.22. Note that the leakage power is dependent on temperature via the variable  . To show the temperature dependence, we can simplify Equation 10.22 to obtain Equation 10.23.
+
+In Equation 10.23,  and  are constants, and can be derived from Equation 10.22. Around 10 years ago (as of 2002), when the transistor threshold voltages used to be higher (around 500 mV), leakage power was exponentially dependent on temperature. Hence, a small increase in temperature would translate to a large increase in leakage power. However, nowadays, the threshold voltages are between  . Consequently, the relationship between temperature and leakage has become approximately linear [Sarangi et al., 2014].
+
+The important point to note here is that leakage power is dissipated all the time by all the transistors in a circuit. The amount of leakage current might be very small; but when we consider the cumulative effect of billions of transistors, the total amount of leakage power dissipation is sizable, and can even become a large fraction of the dynamic power. Consequently, designers try to control temperature to keep leakage power under control.
+
+Hence, the total power,  , is given by:

@@ -1,0 +1,260 @@
+[
+    {
+        "type": "text",
+        "text": "8.3 Conservation of Momentum ",
+        "text_level": 1,
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Describe the principle of conservation of momentum.   \n\u2022 Derive an expression for the conservation of momentum.   \n\u2022 Explain conservation of momentum with examples.   \n\u2022 Explain the principle of conservation of momentum as it relates to atomic and subatomic particles. ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "Momentum is an important quantity because it is conserved. Yet it was not conserved in the examples in Impulse and Linear Momentum and Force, where large changes in momentum were produced by forces acting on the system of interest. Under what circumstances is momentum conserved? ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "The answer to this question entails considering a sufficiently large system. It is always possible to find a larger system in which total momentum is constant, even if momentum changes for components of the system. If a football player runs into the goalpost in the end zone, there will be a force on him that causes him to bounce backward. However, the Earth also recoils \u2014conserving momentum\u2014because of the force applied to it through the goalpost. Because Earth is many orders of magnitude more massive than the player, its recoil is immeasurably small and can be neglected in any practical sense, but it is real nevertheless. ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "Consider what happens if the masses of two colliding objects are more similar than the masses of a football player and Earth\u2014for example, one car bumping into another, as shown in Figure 8.3. Both cars are coasting in the same direction when the lead car (labeled $m _ { 2 }$ is bumped by the trailing car (labeled $m _ { 1 }$ The only unbalanced force on each car is the force of the collision. (Assume that the effects due to friction are negligible.) Car 1 slows down as a result of the collision, losing some momentum, while car 2 speeds up and gains some momentum. We shall now show that the total momentum of the two-car system remains constant. ",
+        "page_idx": 346
+    },
+    {
+        "type": "image",
+        "img_path": "images/ba14957c8a7472c489ec6ab89185d729727ea65d19392751dcb3555ff5535cbb.jpg",
+        "img_caption": [
+            "FIGURE 8.3 A car of mass $m _ { 1 }$ moving with a velocity of $v _ { 1 }$ bumps into another car of mass $m _ { 2 }$ and velocity $v _ { 2 }$ that it is following. As a result, the first car slows down to a velocity of $\\mathbf { v ^ { \\prime } } _ { 1 }$ and the second speeds up to a velocity of $\\mathbf { v } ^ { \\prime } { } _ { 2 }$ . The momentum of each car is changed, but the total momentum $p _ { \\mathrm { t o t } }$ of the two cars is the same before and after the collision (if you assume friction is negligible). "
+        ],
+        "img_footnote": [],
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Using the definition of impulse, the change in momentum of car 1 is given by ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta p _ { 1 } = F _ { 1 } \\Delta t ,\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "where $F _ { 1 }$ is the force on car 1 due to car 2, and $\\Delta t$ is the time the force acts (the duration of the collision). Intuitively, it seems obvious that the collision time is the same for both cars, but it is only true for objects traveling at ordinary speeds. This assumption must be modified for objects travelling near the speed of light, without affecting the result that momentum is conserved. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Similarly, the change in momentum of car 2 is ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta p _ { 2 } = F _ { 2 } \\Delta t ,\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "where $F _ { 2 }$ is the force on car 2 due to car 1, and we assume the duration of the collision $\\Delta t$ is the same for both cars. We know from Newton\u2019s third law that $F _ { 2 } = - F _ { 1 }$ , and so ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta p _ { 2 } = - F _ { 1 } \\Delta t = - \\Delta p _ { 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Thus, the changes in momentum are equal and opposite, and ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta p _ { 1 } + \\Delta p _ { 2 } = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "ecause the changes in momentum add to zero, the total momentum of the two-car system is constant. That is, ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { p _ { 1 } + p _ { 2 } = \\mathrm { c o n s t a n t } , } \\\\ { p _ { 1 } + p _ { 2 } = p ^ { \\prime } _ { 1 } + p ^ { \\prime } _ { 2 } , \\quad } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "where $p ^ { \\prime } { } _ { 1 }$ and $\\boldsymbol { p ^ { \\prime } } _ { 2 }$ are the momenta of cars 1 and 2 after the collision. (We often use primes to denote the final state.) ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "This result\u2014that momentum is conserved\u2014has validity far beyond the preceding one-dimensional case. It can be similarly shown that total momentum is conserved for any isolated system, with any number of objects in it. In equation form, the conservation of momentum principle for an isolated system is written ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { p } _ { \\mathrm { t o t } } = { \\mathrm { c o n s t a n t } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { p } _ { \\mathrm { t o t } } = \\mathbf { p ^ { \\prime } } _ { \\mathrm { t o t } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "where $\\mathbf { p } _ { \\mathrm { t o t } }$ is the total momentum (the sum of the momenta of the individual objects in the system) and $ { \\mathbf { p } } _ { \\mathrm { \\ t o t } } ^ { \\prime }$ is the total momentum some time later. (The total momentum can be shown to be the momentum of the center of mass of the system.) An isolated system is defined to be one for which the net external force is zero $( \\mathbf { F } _ { \\mathrm { n e t } } = 0 ) _ { \\mathrm { , } }$ ). ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Conservation of Momentum Principle ",
+        "text_level": 1,
+        "page_idx": 348
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l c l } { \\mathbf { p } _ { \\mathrm { t o t } } } & { = } & { \\mathrm { c o n s t a n t } } \\\\ { \\mathbf { p } _ { \\mathrm { t o t } } } & { = } & { \\mathbf { p } _ { \\mathrm { ~ t o t } } ^ { \\prime } \\mathrm { ~ ( i s o l a t e d ~ s y s t e m ) } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Isolated System ",
+        "text_level": 1,
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "An isolated system is defined to be one for which the net external force is zero $( \\mathbf { F } _ { \\mathrm { n e t } } = 0 ) ,$ \uff09 ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Perhaps an easier way to see that momentum is conserved for an isolated system is to consider Newton\u2019s second law in terms of momentum, $\\begin{array} { r } { \\mathbf { F } _ { \\mathrm { n e t } } = \\frac { \\Delta \\mathbf { p } _ { \\mathrm { t o t } } } { \\Delta t } } \\end{array}$ . For an isolated system, ; thus, , and is constant. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "We have noted that the three length dimensions in nature\u2014 $x$ , $y$ , and $z$ \u2014are independent, and it is interesting to note that momentum can be conserved in different ways along each dimension. For example, during projectile motion and where air resistance is negligible, momentum is conserved in the horizontal direction because horizontal forces are zero and momentum is unchanged. But along the vertical direction, the net vertical force is not zero and the momentum of the projectile is not conserved. (See Figure 8.4.) However, if the momentum of the projectile-Earth system is considered in the vertical direction, we find that the total momentum is conserved. ",
+        "page_idx": 348
+    },
+    {
+        "type": "image",
+        "img_path": "images/ed0c32a6989be1d1ec0fa035535d5e469cb40e5ebf2734e43360625d707eb8ba.jpg",
+        "img_caption": [
+            "FIGURE 8.4 The horizontal component of a projectile\u2019s momentum is conserved if air resistance is negligible, even in this case where a space probe separates. The forces causing the separation are internal to the system, so that the net external horizontal force $F _ { x - \\mathrm { n e t } }$ is still zero. The vertical component of the momentum is not conserved, because the net vertical force $F _ { y - \\mathrm { n e t } }$ is not zero. In the vertical direction, the space probe-Earth system needs to be considered and we find that the total momentum is conserved. The center of mass of the space probe takes the same path it would if the separation did not occur. "
+        ],
+        "img_footnote": [],
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "The conservation of momentum principle can be applied to systems as different as a comet striking Earth and a gas containing huge numbers of atoms and molecules. Conservation of momentum is violated only when the net external force is not zero. But another larger system can always be considered in which momentum is conserved by simply including the source of the external force. For example, in the collision of two cars considered above, the two-car system conserves momentum while each one-car system does not. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Take-Home Investigation\u2014Drop of Tennis Ball and a Basketball ",
+        "text_level": 1,
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Hold a tennis ball side by side and in contact with a basketball. Drop the balls together. (Be careful!) What happens? Explain your observations. Now hold the tennis ball above and in contact with the basketball. What happened? Explain your observations. What do you think will happen if the basketball ball is held above and in contact with the tennis ball? ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Take-Home Investigation\u2014Two Tennis Balls in a Ballistic Trajectory ",
+        "text_level": 1,
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Tie two tennis balls together with a string about a foot long. Hold one ball and let the other hang down and throw it in a ballistic trajectory. Explain your observations. Now mark the center of the string with bright ink or attach a brightly colored sticker to it and throw again. What happened? Explain your observations. ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Some aquatic animals such as jellyfish move around based on the principles of conservation of momentum. A jellyfish fills its umbrella section with water and then pushes the water out resulting in motion in the opposite direction to that of the jet of water. Squids propel themselves in a similar manner but, in contrast with jellyfish, are able to control the direction in which they move by aiming their nozzle forward or backward. Typical squids can move at speeds of 8 to $1 2 \\mathrm { k m / h }$ . ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "The ballistocardiograph (BCG) was a diagnostic tool used in the second half of the 20th century to study the strength of the heart. About once a second, your heart beats, forcing blood into the aorta. A force in the opposite direction is exerted on the rest of your body (recall Newton\u2019s third law). A ballistocardiograph is a device that can measure this reaction force. This measurement is done by using a sensor (resting on the person) or by using a moving table suspended from the ceiling. This technique can gather information on the strength of the heart beat and the volume of blood passing from the heart. However, the electrocardiogram (ECG or EKG) and the echocardiogram (cardiac ECHO or ECHO; a technique that uses ultrasound to see an image of the heart) are more widely used in the practice of cardiology. ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Conservation of Momentum and Collision ",
+        "text_level": 1,
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Conservation of momentum is quite useful in describing collisions. Momentum is crucial to our understanding of atomic and subatomic particles because much of what we know about these particles comes from collision experiments. ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Subatomic Collisions and Momentum ",
+        "text_level": 1,
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "The conservation of momentum principle not only applies to the macroscopic objects, it is also essential to our explorations of atomic and subatomic particles. Giant machines hurl subatomic particles at one another, and researchers evaluate the results by assuming conservation of momentum (among other things). ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "On the small scale, we find that particles and their properties are invisible to the naked eye but can be measured with our instruments, and models of these subatomic particles can be constructed to describe the results. Momentum is found to be a property of all subatomic particles including massless particles such as photons that compose light. Momentum being a property of particles hints that momentum may have an identity beyond the description of an object\u2019s mass multiplied by the object\u2019s velocity. Indeed, momentum relates to wave properties and plays a fundamental role in what measurements are taken and how we take these measurements. Furthermore, we find that the conservation of momentum principle is valid when considering systems of particles. We use this principle to analyze the masses and other properties of previously undetected particles, such as the nucleus of an atom and the existence of quarks that make up particles of nuclei. Figure 8.5 below illustrates how a particle scattering backward from another implies that its target is massive and dense. Experiments seeking evidence that quarks make up protons (one type of particle that makes up nuclei) scattered high-energy electrons off of protons (nuclei of hydrogen atoms). Electrons occasionally scattered straight backward in a manner that implied a very small and very dense particle makes up the proton\u2014this observation is considered nearly direct evidence of quarks. The analysis was based partly on the same conservation of momentum principle that works so well on the large scale. ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 350
+    },
+    {
+        "type": "image",
+        "img_path": "images/1c1f747a10814ac8e2917ee98df652db48f1142a23befed9eae1728be39e4e8c.jpg",
+        "img_caption": [
+            "FIGURE 8.5 A subatomic particle scatters straight backward from a target particle. In experiments seeking evidence for quarks, electrons were observed to occasionally scatter straight backward from a proton. "
+        ],
+        "img_footnote": [],
+        "page_idx": 350
+    }
+]

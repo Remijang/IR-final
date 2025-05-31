@@ -1,0 +1,39 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.1 Towards a Universal ISA\\* ",
+        "text_level": 1,
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Let us try to answer Question 3. Assume that we are given an ISA that contains the basic instructions add, and multiply. Can we use this ISA to run all possible programs? The answer is no, because we cannot subtract two numbers using the basic instructions that we have. If we add the subtract instruction to our repertoire of instructions, can we compute the square root of a number? Even if we can, is it guaranteed that we can do all types of computations? To answer such vexing questions we need to first define a universal machine. ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Definition 6 ",
+        "text_level": 1,
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "A machine that can execute any program is known as a universal machine. ",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "It is a machine that can execute all programs. We can treat each basic action of this machine as an instruction. Thus, the set of actions of a universal machine is its ISA, and this ISA is complete. Consequently, when we say that an ISA is complete, it is the same as saying that we can build a universal machine exclusively based on the given ISA. Hence, we can solve the problem of completeness of an ISA by solving the problem of designing universal machines. They are dual problems. It is easier to reason in terms of universal machines. Hence, let us delve into this problem. ",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Computer scientists started pondering at the design of universal machines at the beginning of the $2 0 ^ { t h }$ century. They wanted to know what is computable, and what is not, and the power of different classes of machines. Secondly, what is the form of a theoretical machine that can compute the results of all possible programs? These fundamental results in computer science form the basis of today\u2019s modern computer architectures. ",
+        "page_idx": 25
+    },
+    {
+        "type": "text",
+        "text": "Alan Turing was the first to propose a universal machine that was extremely simple and powerful. This machine is aptly named after him, and is known as the Turing machine. This is merely a theoretical entity, and is typically used as a mathematical reasoning tool. It is possible to create a hardware implementation of a Turing machine. However, this would be extremely inefficient, and require a disproportionate amount of resources. Nonetheless, Turing machines form the basis of today\u2019s computers and modern ISAs are derived from the basic actions of a Turing machine. Hence, it is very essential for us to study its design. Note that we provide a very cursory treatment in this book. Interested readers are requested to take a look at the seminal text on the theory of computation by Hopcroft, Motwani and Ulmann [Hopcroft et al., 2006]. ",
+        "page_idx": 25
+    }
+]

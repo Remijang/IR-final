@@ -1,0 +1,361 @@
+[
+    {
+        "type": "text",
+        "text": "16.1 Hooke\u2019s Law: Stress and Strain Revisited ",
+        "text_level": 1,
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "Explain Newton\u2019s third law of motion with respect to stress and deformation.   \n\u2022 Describe the restoration of force and displacement.   \n\u2022 Calculate the energy in Hooke\u2019s Law of deformation, and the stored energy in a spring. ",
+        "page_idx": 695
+    },
+    {
+        "type": "image",
+        "img_path": "images/bc5ae31f13c3c81655af7bfd28c1fc8ec7b5d5e9b41d30dc0cfbd478cb7b62e0.jpg",
+        "img_caption": [
+            "FIGURE 16.2 When displaced from its vertical equilibrium position, this plastic ruler oscillates back and forth because of the restoring force opposing displacement. When the ruler is on the left, there is a force to the right, and vice versa. "
+        ],
+        "img_footnote": [],
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "Newton\u2019s first law implies that an object oscillating back and forth is experiencing forces. Without force, the object would move in a straight line at a constant speed rather than oscillate. Consider, for example, plucking a plastic ruler to the left as shown in Figure 16.2. The deformation of the ruler creates a force in the opposite direction, known as a restoring force. Once released, the restoring force causes the ruler to move back toward its stable equilibrium position, where the net force on it is zero. However, by the time the ruler gets there, it gains momentum and continues to move to the right, producing the opposite deformation. It is then forced to the left, back through equilibrium, and the process is repeated until dissipative forces dampen the motion. These forces remove mechanical energy from the system, gradually reducing the motion until the ruler comes to rest. ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "The simplest oscillations occur when the restoring force is directly proportional to displacement. When stress and strain were covered in Newton\u2019s Third Law of Motion, the name was given to this relationship between force and displacement was Hooke\u2019s law: ",
+        "page_idx": 695
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\boldsymbol { F } = - k \\boldsymbol { x } .\n$$",
+        "text_format": "latex",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "Here, $F$ is the restoring force, $x$ is the displacement from equilibrium or deformation, and $k$ is a constant related to the difficulty in deforming the system. The minus sign indicates the restoring force is in the direction opposite to the displacement. ",
+        "page_idx": 695
+    },
+    {
+        "type": "image",
+        "img_path": "images/63f954e37201fde52018e6c40c4874f773320913fbbb2e7a40601a9b0adcd8e0.jpg",
+        "img_caption": [
+            "FIGURE 16.3 (a) The plastic ruler has been released, and the restoring force is returning the ruler to its equilibrium position. (b) The net force is zero at the equilibrium position, but the ruler has momentum and continues to move to the right. (c) The restoring force is in the opposite direction. It stops the ruler and moves it back toward equilibrium again. (d) Now the ruler has momentum to the left. (e) In the absence of damping (caused by frictional forces), the ruler reaches its original position. From there, the motion will repeat itself. "
+        ],
+        "img_footnote": [],
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "The force constant $k$ is related to the rigidity (or stiffness) of a system\u2014the larger the force constant, the greater the restoring force, and the stiffer the system. The units of $k$ are newtons per meter $\\left( \\mathsf { N / m } \\right)$ . For example, $k$ is directly related to Young\u2019s modulus when we stretch a string. Figure 16.4 shows a graph of the absolute value of the restoring force versus the displacement for a system that can be described by Hooke\u2019s law\u2014a simple spring in this case. The slope of the graph equals the force constant $k$ in newtons per meter. A common physics laboratory exercise is to measure restoring forces created by springs, determine if they follow Hooke\u2019s law, and calculate their force constants if they do. ",
+        "page_idx": 696
+    },
+    {
+        "type": "image",
+        "img_path": "images/da663f8057d595abb6cb361cf2c4df3524d11251b3106eefe9b37430e0d115ae.jpg",
+        "img_caption": [
+            "FIGURE 16.4 (a) A graph of absolute value of the restoring force versus displacement is displayed. The fact that the graph is a straight line means that the system obeys Hooke\u2019s law. The slope of the graph is the force constant $k$ . (b) The data in the graph were generated by measuring the displacement of a spring from equilibrium while supporting various weights. The restoring force equals the weight supported, if the mass is stationary. "
+        ],
+        "img_footnote": [],
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 16.1 ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "How Stiff Are Car Springs? ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "image",
+        "img_path": "images/ea4dbe9d3fb2cfe350967bd576fa324ef90d9246e5d8086c5d78d89e8f9e5978.jpg",
+        "img_caption": [
+            "FIGURE 16.5 The mass of a car increases due to the introduction of a passenger. This affects the displacement of the car on its suspensio system. (credit: exfordy on Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "What is the force constant for the suspension system of a car that settles $\\pm . 2 0 \\mathsf { c m }$ when an $8 0 . 0 \\mathrm { - } \\mathsf { k g }$ person gets in? ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Consider the car to be in its equilibrium position $x = 0$ before the person gets in. The car then settles down $\\mathtt { 1 . 2 0 c m }$ , which means it is displaced to a position $\\begin{array} { r } { x = - 1 . 2 0 \\times 1 0 ^ { - 2 } ~ \\mathrm { m } . } \\end{array}$ . At that point, the springs supply a restoring force $F$ equal to the person\u2019s weight $w = m g = ( 8 0 . 0 \\mathrm { k g } ) \\big ( 9 . 8 0 \\mathrm { m / s ^ { 2 } } \\big ) = 7 8 4 \\mathrm { N } .$ We take this force to be $F$ in Hooke\u2019s law. Knowing $F$ and $x$ , we can then solve the force constant $k$ . ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "1. Solve Hooke\u2019s law, $F = - k x$ , for $k$ : ",
+        "page_idx": 697
+    },
+    {
+        "type": "equation",
+        "text": "$$\nk = - { \\frac { F } { x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Substitute known values and solve $k$ : ",
+        "page_idx": 697
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { k } & { = } & { - { \\frac { 7 8 4 \\ \\mathrm { N } } { - 1 . 2 0 \\times 1 0 ^ { - 2 } \\ \\mathrm { m } } } } \\\\ & { = } & { 6 . 5 3 \\times 1 0 ^ { 4 } \\ \\mathrm { N / m } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Note that $F$ and $x$ have opposite signs because they are in opposite directions\u2014the restoring force is up, and the displacement is down. Also, note that the car would oscillate up and down when the person got in if it were not for damping (due to frictional forces) provided by shock absorbers. Bouncing cars are a sure sign of bad shock absorbers. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Energy in Hooke\u2019s Law of Deformation ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "In order to produce a deformation, work must be done. That is, a force must be exerted through a distance, whether you pluck a guitar string or compress a car spring. If the only result is deformation, and no work goes into thermal, sound, or kinetic energy, then all the work is initially stored in the deformed object as some form of potential energy. The potential energy stored in a spring is $\\begin{array} { r } { \\mathrm { P E } _ { \\mathrm { e l } } = \\frac { 1 } { 2 } k x ^ { 2 } } \\end{array}$ . Here, we generalize the idea to elastic potential energy for a deformation of any system that can be described by Hooke\u2019s law. Hence, ",
+        "page_idx": 697
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { P E } _ { \\mathrm { e l } } = { \\frac { 1 } { 2 } } k x ^ { 2 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "where $\\mathrm { P E _ { \\mathrm { e l } } }$ is the elastic potential energy stored in any deformed system that obeys Hooke\u2019s law and has a displacement $x$ from equilibrium and a force constant $k$ . ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "It is possible to find the work done in deforming a system in order to find the energy stored. This work is performed by an applied force $F _ { \\mathrm { a p p } }$ . The applied force is exactly opposite to the restoring force (action-reaction), and so $F _ { \\mathrm { a p p } } = k x$ . Figure 16.6 shows a graph of the applied force versus deformation $x$ for a system that can be described by Hooke\u2019s law. Work done on the system is force multiplied by distance, which equals the area under the curve or $( 1 / 2 ) k x ^ { 2 }$ (Method A in the figure). Another way to determine the work is to note that the force increases linearly from 0 to $k x$ , so that the average force is $( 1 / 2 ) k x$ , the distance moved is $x$ , and thus   \n$W = F _ { \\mathrm { a p p } } d = [ ( 1 / 2 ) k x ] ( x ) = ( 1 / 2 ) k x ^ { 2 }$ (Method B in the figure). ",
+        "page_idx": 698
+    },
+    {
+        "type": "image",
+        "img_path": "images/094cba0b4d0a0e9608479eee3af2ed63237acf3cee4f549d204b76fb4407fe01.jpg",
+        "img_caption": [
+            "FIGURE 16.6 A graph of applied force versus distance for the deformation of a system that can be described by Hooke\u2019s law is displayed. The work done on the system equals the area under the graph or the area of the triangle, which is half its base multiplied by its height, or $W = ( 1 / 2 ) k x ^ { 2 }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 16.2 ",
+        "text_level": 1,
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "Calculating Stored Energy: A Toy Gun Spring ",
+        "text_level": 1,
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "We can use a toy gun\u2019s spring mechanism to ask and answer two simple questions: (a) How much energy is stored in the spring of a toy gun that has a force constant of $5 0 . 0 ~ \\mathsf { N } / \\mathsf { m }$ and is compressed $0 . 1 5 0 ~ \\mathrm { m ? }$ (b) If you neglect friction and the mass of the spring, at what speed will a $2 . 0 0 \\mathrm { - g }$ projectile be ejected from the gun? ",
+        "page_idx": 698
+    },
+    {
+        "type": "image",
+        "img_path": "images/6e66084e22733f5da2c0f22bf704f1d363549a97bf861580640fcc2aebaccdec.jpg",
+        "img_caption": [
+            "FIGURE 16.7 (a) In this image of the gun, the spring is uncompressed before being cocked. (b) The spring has been compressed a distance "
+        ],
+        "img_footnote": [],
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "$x$ , and the projectile is in place. (c) When released, the spring converts elastic potential energy $\\mathrm { P E _ { \\mathrm { e l } } }$ into kinetic energy. ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Strategy for a ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "(a): The energy stored in the spring can be found directly from elastic potential energy equation, because $k$ and $x$ are given. ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Solution for a ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Entering the given values for $k$ and $x$ yields ",
+        "page_idx": 699
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { \\operatorname { P E } _ { \\mathrm { e l } } } & { = } & { { \\frac { 1 } { 2 } } k x ^ { 2 } = { \\frac { 1 } { 2 } } ( 5 0 . 0 \\operatorname { N } / \\mathrm { m } ) ( 0 . 1 5 0 \\mathrm { ~ m } ) ^ { 2 } = 0 . 5 6 3 \\mathrm { ~ N } \\cdot \\mathrm { m } } \\\\ & { = } & { 0 . 5 6 3 \\mathrm { ~ J } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Strategy for b ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Because there is no friction, the potential energy is converted entirely into kinetic energy. The expression for kinetic energy can be solved for the projectile\u2019s speed. ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Solution for b ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "1. Identify known quantities: ",
+        "page_idx": 699
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E _ { f } } = \\mathrm { P E _ { e l } } \\mathrm { o r } 1 / 2 m v ^ { 2 } = ( 1 / 2 ) k x ^ { 2 } = \\mathrm { P E _ { e l } } = 0 . 5 6 3 \\mathrm { J }\n$$",
+        "text_format": "latex",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "2. Solve for $v$ : ",
+        "page_idx": 699
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = \\left[ { \\frac { 2 \\mathrm { P E } _ { \\mathrm { e l } } } { m } } \\right] ^ { 1 / 2 } = \\left[ { \\frac { 2 ( 0 . 5 6 3 \\mathrm { J } ) } { 0 . 0 0 2 \\mathrm { k g } } } \\right] ^ { 1 / 2 } = 2 3 . 7 ( \\mathrm { J / k g } ) ^ { 1 / 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "3. Convert units: $2 3 . 7 \\mathrm { m / s }$ ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "(a) and (b): This projectile speed is impressive for a toy gun (more than $8 0 ~ \\mathrm { { k m / h } ; }$ ). The numbers in this problem seem reasonable. The force needed to compress the spring is small enough for an adult to manage, and the energy imparted to the dart is small enough to limit the damage it might do, especially because the darts in many of these guns are made of soft material with a rubber tip. Yet, the speed of the dart is great enough for it to travel an acceptable distance. ",
+        "page_idx": 699
+    },
+    {
+        "type": "image",
+        "img_path": "images/84ea647b918b81d210b85e353bc854215d1e92904a9463e9498bcf57b8eee434.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Envision holding the end of a ruler with one hand and deforming it with the other. When you let go, you can see the oscillations of the ruler. In what way could you modify this simple experiment to increase the rigidity of the system? ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "You could hold the ruler at its midpoint so that the part of the ruler that oscillates is half as long as in the original experiment. ",
+        "page_idx": 699
+    },
+    {
+        "type": "image",
+        "img_path": "images/545a3c0ece9c0164fbd85bc965717ab03e00b78e7511c2fc4574a2532f87352b.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "If you apply a deforming force on an object and let it come to equilibrium, what happened to the work you did on the system? ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "It was stored in the object as potential energy. ",
+        "page_idx": 699
+    }
+]

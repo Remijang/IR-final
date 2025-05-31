@@ -1,0 +1,11 @@
+8.1.2 Addition of Three 1-bit Numbers
+
+The aim is to be ultimately able to add 32-bit numbers. To add the two least significant bits, we can use a half adder. However, for adding the second bit pair, we cannot use a half adder because there might be an output carry from the first half adder. In this case, we need to add three 1-bit numbers. Hence, we need to implement a full adder that can add 3 bits. One of these bits is a carry out of another adder, and we call it the input carry. We represent the input carry as  , and the two other input bits as  and  .
+
+Definition 54 An adder than can add 3 bits is known as a full adder.
+
+Table 8.2 shows the truth table for the full adder. We have three inputs –  ,  , and  There are two output bits – the sum (s), and the carry out  .
+
+From the truth table, we can deduce the following relationships:
+
+The circuit diagram of a full adder is shown in Figure 8.2. This is far more complicated than the circuit of a half adder. We have used 12 logic gates to build this circuit. Furthermore, some of these logic gates use three inputs. However, this degree of complexity is required because all our practical adders will use full adders as their basic element. We face the need of adding 3 bits in all of our arithmetic algorithms.

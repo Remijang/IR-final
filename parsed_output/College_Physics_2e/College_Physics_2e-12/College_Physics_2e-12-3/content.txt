@@ -1,0 +1,79 @@
+12.3 The Most General Applications of Bernoulli’s Equation
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Calculate using Torricelli’s theorem. • Calculate power in fluid flow.
+
+Torricelli’s Theorem
+
+Figure 12.8 shows water gushing from a large tube through a dam. What is its speed as it emerges? Interestingly, if resistance is negligible, the speed is just what it would be if the water fell a distance  from the surface of the reservoir; the water’s speed is independent of the size of the opening. Let us check this out. Bernoulli’s equation must be used since the depth is not constant. We consider water flowing from the surface (point 1) to the tube’s outlet (point 2). Bernoulli’s equation as stated in previously is
+
+Both  and  equal atmospheric pressure  is atmospheric pressure because it is the pressure at the top of the reservoir.  must be atmospheric pressure, since the emerging water is surrounded by the atmosphere and cannot have a pressure different from atmospheric pressure.) and subtract out of the equation, leaving
+
+Solving this equation for  , noting that the density  cancels (because the fluid is incompressible), yields
+
+We let  ; the equation then becomes
+
+where  is the height dropped by the water. This is simply a kinematic equation for any object falling a distance  with negligible resistance. In fluids, this last equation is called Toriceli’stheorem. Note that the result is independent of the velocity’s direction, just as we found when applying conservation of energy to falling objects.
+
+All preceding applications of Bernoulli’s equation involved simplifying conditions, such as constant height or constant pressure. The next example is a more general application of Bernoulli’s equation in which pressure,
+
+velocity, and height all change. (See Figure 12.9.)
+
+EXAMPLE 12.5
+
+Calculating Pressure: A Fire Hose Nozzle
+
+Fire hoses used in major structure fires have inside diameters of  . Suppose such a hose carries a flow of  starting at a gauge pressure of  . The hose goes  up a ladder to a nozzle having an inside diameter of  . Assuming negligible resistance, what is the pressure in the nozzle?
+
+Strategy
+
+Here we must use Bernoulli’s equation to solve for the pressure, since depth is not constant.
+
+Solution
+
+Bernoulli’s equation states
+
+where the subscripts 1 and 2 refer to the initial conditions at ground level and the final conditions inside the nozzle, respectively. We must first find the speeds  and  . Since  , we get
+
+Similarly, we find
+
+(This rather large speed is helpful in reaching the fire.) Now, taking  to be zero, we solve Bernoulli’s equation for  :
+
+Substituting known values yields
+
+Discussion
+
+This value is a gauge pressure, since the initial pressure was given as a gauge pressure. Thus the nozzle pressure is very close to atmospheric pressure, as it must because the water exits into the atmosphere without changes in its conditions.
+
+Power in Fluid Flow
+
+Power is the rateat which work is done or energy in any form is used or supplied. To see the relationship of power to fluid flow, consider Bernoulli’s equation:
+
+All three terms have units of energy per unit volume, as discussed in the previous section. Now, considering units, if we multiply energy per unit volume by flow rate (volume per unit time), we get units of power. That is,  . This means that if we multiply Bernoulli’s equation by flow rate  , we get power. In equation form, this is
+
+Each term has a clear physical meaning. For example,  is the power supplied to a fluid, perhaps by a pump, to give it its pressure  . Similarly,  is the power supplied to a fluid to give it its kinetic energy. And  is the power going to gravitational potential energy.
+
+Making Connections: Power
+
+Power is defined as the rate of energy transferred, or  . Fluid flow involves several types of power. Each type of power is identified with a specific type of energy being expended or changed in form.
+
+EXAMPLE 12.6
+
+Calculating Power in a Moving Fluid
+
+Suppose the fire hose in the previous example is fed by a pump that receives water through a hose with a  diameter coming from a hydrant with a pressure of  . What power does the pump supply to the water?
+
+Strategy
+
+Here we must consider energy forms as well as how they relate to fluid flow. Since the input and output hoses have the same diameters and are at the same height, the pump does not change the speed of the water nor its height, and so the water’s kinetic energy and gravitational potential energy are unchanged. That means the pump only supplies power to increase water pressure by  (from  to  ).
+
+Solution
+
+As discussed above, the power associated with pressure is
+
+Discussion
+
+Such a substantial amount of power requires a large pump, such as is found on some fire trucks. (This kilowatt value converts to about 50 hp.) The pump in this example increases only the water’s pressure. If a pump—such as the heart—directly increases velocity and height as well as pressure, we would have to calculate all three terms to find the power it supplies.

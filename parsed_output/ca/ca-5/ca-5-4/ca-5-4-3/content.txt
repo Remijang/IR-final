@@ -1,0 +1,21 @@
+5.4.3 Instructions for Special Functions
+
+The richness of the x86 ISA is that it supports trigonometric functions, and complex mathematical operations such as the square root and log operations (not covered in this book). Table 5.25 shows the x86 instructions for computing the values of special functions. The  function computes the absolute value of  , the fsqrt function computes the square root, the  and  functions compute the sine and cosine of the value stored in  , respectively. All of these instructions use  as their default operand, and also write the result back to  .
+
+Example 88
+
+Compute the geometric mean of two integers stored in eax and ebx. Save the result (in 64 bits) in  .
+
+Answer:
+
+; load the inputs to the FP stack   
+mov [esp], eax   
+mov [esp+4], ebx   
+fild dword [esp]   
+fild dword[esp + 4]   
+; compute the geometric mean   
+fmul st0, st1   
+fsqrt   
+; save the result (converted to 64 bits) to [esp+4]   
+; use the qword identifier   
+fstp qword [esp + 4]

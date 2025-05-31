@@ -1,0 +1,38 @@
+[
+    {
+        "type": "text",
+        "text": "13.4.1 Framing and Buffering ",
+        "text_level": 1,
+        "page_idx": 669
+    },
+    {
+        "type": "text",
+        "text": "The processing in the data link layer begins by reading sets of bits from the physical layer. We can either have one serial link, or multiple serial links that transmit bits simultaneously. A set of multiple serial links is known as a parallel link. In both cases, we read in data, save them in serial in \u2013 parallel out shift registers, and send chunks of bits to the data link layer. The role of the data link layer is to create frames of bits from the values that it gets from the physical layer. A frame might be one byte for links that transfer data from the keyboard and mouse, and might be as high as 128 bytes for links that transfer data between the processor and the main memory, or the main memory and the graphics card. In any case, the data link layer for each bus controller is aware of the frame size. The main problem is to demarcate the boundaries of a frame. ",
+        "page_idx": 669
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 670
+    },
+    {
+        "type": "text",
+        "text": "Demarcation by Inserting Long Pauses Between two consecutive frames, the bus controller can insert long pauses. By examining, the duration of these pauses, the receiver can infer frame boundaries. However, because of jitter in the I/O channel, the duration of these pauses can change, and new pauses can be introduced. This is not a very reliable method, and it also wastes valuable bandwidth. ",
+        "page_idx": 670
+    },
+    {
+        "type": "text",
+        "text": "Bit Count We can fix the number of bits in a frame a priori. We can simply count the number of bits that are sent, and declare a frame to be over once the required number of bits have reached the receiver. However, the main issue is that sometimes pulses can get deleted because of signal distortion, and it is very easy to go out of synchronization. ",
+        "page_idx": 670
+    },
+    {
+        "type": "text",
+        "text": "Bit/Byte Stuffing This is the most flexible approach and is used in most commercial implementations of I/O buses. Here, we use a pre-specified sequence of bits to designate the start and end of a frame. For example, we can use the pattern 0xDEADBEEF to indicate the start of a frame, and 0x12345678 to indicate the end of a frame. The probability that any 32-bit sequence in the frame will match the special sequences at the start and end is very small. The probability is equal to $2 ^ { - 3 2 }$ , or $2 . 5 e \\mathrm { ~ - ~ } 1 0$ . Sadly, the probability is still non zero. Hence, we can adopt a simple solution to solve this problem. If the sequence, 0xDEADBEEF appears in the content of the frame, then we add 32 more dummy bits and repeat this pattern. For example, the bit pattern 0xDEADBEEF gets replaced with 0xDEADBEEFDEADBEEF. The link layer of the receiver can find out that the pattern repeats an even number of times. Half of the bits in the pattern are a part of the frame, and the rest are dummy bits. The receiver can then proceed to remove the dummy bits. This method is flexible because it can be made very resilient to jitter and reliability problems. These sequences are also known as commas. ",
+        "page_idx": 670
+    },
+    {
+        "type": "text",
+        "text": "Once, the data link layer creates a frame, it sends it to the error checking module, and also buffers it. ",
+        "page_idx": 670
+    }
+]

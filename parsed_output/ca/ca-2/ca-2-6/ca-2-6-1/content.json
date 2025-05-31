@@ -1,0 +1,116 @@
+[
+    {
+        "type": "text",
+        "text": "2.6.1 Summary ",
+        "text_level": 1,
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "Summary 2 ",
+        "text_level": 1,
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "1. In computer architecture, we represent information using the language of bits. A bit can either take the value of 0 or 1. A sequence of 8 bits is called a byte. ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "2. A variable representing a bit is also called a Boolean variable, and an algebra on such Boolean variables is known as Boolean algebra. ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "3. (a) The basic operators in Boolean algebra are logical OR, AND, and NOT. (b) Some derived operators are NAND, NOR, and XOR. (c) We typically use the De Morgan\u2019s laws (see Section 2.1.4) to simplify Boolean expressions. ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "4. Any Boolean expression can be represented in a canonical form as a logical OR of minterms. It can then be minimized using Karnaugh Maps. ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "5. We can represent positive integers in a binary representation by using a sequence of bits. In this case, we represent a number, $A$ , as $x _ { n } x _ { n - 1 } \\ldots x _ { 1 }$ , where $\\textstyle A = \\sum _ { i = 1 } ^ { n } x _ { i } 2 ^ { i - 1 }$ . ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "6. The four methods to represent a negative integer are as follows: ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "(a) Sign-magnitude-based method (b) The 1\u2019s complement method (c) Bias-based method (d) The 2\u2019s complement method ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "7. The 2\u2019s complement method is the most common. Its main properties are as follows: ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "(a) The representation of a positive integer is the same as its unsigned representation with a leading 0 bit.   \n(b) The representation of a negative integer $( - u )$ is equal to $2 ^ { n } - u$ , in an $n$ -bit number system.   \n(c) To convert an m-bit 2\u2019s complement number to an n-bit 2\u2019s complement number, where $n > m$ , we need to extend its sign by $n - m$ places.   \n(d) We can quickly compute the 2\u2019s complement of a negative number of the form $- u$ $( u \\geq 0 ,$ ), by computing the 1\u2019s complement of u (flip every bit), and then adding 1.   \n(e) Addition, subtraction, and multiplication (ignoring overflows) of integers in the 2\u2019s complement representation can be done by assuming that the respective binary representations represent unsigned numbers. ",
+        "page_idx": 86
+    },
+    {
+        "type": "text",
+        "text": "8. Floating point numbers in the IEEE 754 format are always represented in their normal form. ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "(a) A floating point number, $A$ , is equal to ",
+        "page_idx": 87
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\boldsymbol { A } = ( - 1 ) ^ { S } \\times \\boldsymbol { P } \\times 2 ^ { X }\n$$",
+        "text_format": "latex",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "S is the sign bit, $P$ is the significand, and $X$ is the exponent. ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "(b) We assume that the significand is of the form $1 + M$ , where $0 \\leq M < 1$ . $M$ is known as the mantissa. ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "9. The salient points of the IEEE 754 format are as follows: ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "(a) The MSB is the sign bit.   \n(b) We have an 8-bit exponent that is represented using the biased notation (bias equal to 127).   \n(c) We do not represent the leading bit (equal to 1) in the significand. Furthermore, we represent the mantissa using 23 bits.   \n(d) The exponents, 0 and 255, are reserved for special numbers \u2013 denormal numbers, NAN, zero, and \u00b1\u221e. ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "10. Denormal numbers are a special class of floating point numbers, that have a slightly different normal form. ",
+        "page_idx": 87
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = ( - 1 ) ^ { S } \\times P \\times 2 ^ { - 1 2 6 } , ( 0 \\leq P < 1 , P = 0 + M )\n$$",
+        "text_format": "latex",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "11. Floating point arithmetic is always approximate; hence, arithmetic operations can lead to mathematical contradictions. ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "12. We represent pieces of text as a contiguous sequence of characters. A character can either be encoded in the 7-bit ASCII format, or in the Unicode formats that use 1-4 bytes per character. ",
+        "page_idx": 87
+    }
+]

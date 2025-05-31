@@ -1,0 +1,7 @@
+7.3 Sequential Logic
+
+We have looked at combinational logic circuits that compute different functions on bits. In this section, we shall look at saving bits for later use. These structures are known as sequential logic elements because the output is dependent on past inputs, which came earlier in the sequence of events. The basic idea in a logic gate was to modify the input values to get the desired outputs. In a combinational logic circuit, if the inputs are set to 0, then the outputs also get reset. To ensure that a circuit stores a value and maintains it for as long as the processor is powered on, we need to design a different type of circuit that has some kind of ”built-in memory”. Let us start with formulating a set of requirements.
+
+1. The circuit should be self-sustaining, and should maintain its values after the external inputs are reset. It should not rely on external signals to maintain its stored elements. 2. There should be a method to read the stored value without destroying it. 3. There should be a method to set the stored value to either 0 or 1.
+
+The best way to ensure that a circuit maintains its value is to create a feedback path, and connect the output back to the input. Let us take a look at the simplest logic circuit in this space: an SR latch.

@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "7.2.5 Encoder",
+        "text_level": 1,
+        "page_idx": 276
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a circuit with the reverse logic as that of a decoder. Its block diagram is shown in Figure 7.13. The circuit has $n$ inputs, and ${ l o g ( n ) }$ outputs. One of the $n$ inputs is assumed to be 1, and the rest are assumed to be 0. The output bits provide the binary encoding of the input that is equal to 1. For example in an 8-input, 3-output encoder, if the fifth line is equal to 1, then the output is equal to 100 (count starts from 0). ",
+        "page_idx": 276
+    },
+    {
+        "type": "image",
+        "img_path": "images/1ef0ba0ab1894923025df7351f06cd84df8423f88a9355165d227c1673530c67.jpg",
+        "img_caption": [
+            "Figure 7.13: Block diagram of an $n$ bit encoder "
+        ],
+        "img_footnote": [],
+        "page_idx": 277
+    },
+    {
+        "type": "text",
+        "text": "Let us construct a simple 4-2 encoder (4 inputs, 2 output bits). Let us number the bits $X _ { 0 }$ , $X _ { 1 } , X _ { 2 }$ , and $X _ { 3 }$ . If bit $X _ { A }$ is equal to 1, then the output should be equal to the binary encoding of $A$ . Let us designate the output as $Y$ , with two bits $Y _ { 0 }$ , and $Y _ { 1 }$ . We have the following equations for $Y _ { 0 }$ , and $Y _ { 1 }$ . ",
+        "page_idx": 277
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { Y _ { 0 } = X _ { 1 } + X _ { 3 } } \\\\ { Y _ { 1 } = X _ { 2 } + X _ { 3 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 277
+    },
+    {
+        "type": "text",
+        "text": "The intuition behind these equations is that the LSB of a 2-bit number is equal to 1, when it is equal to 01(1), or 11(3). The MSB is equal to 1, when it is equal to 10(2), or $1 1 ( 3 )$ . We can extend this logic to create a generic (n log(n))-bit encoder. The circuit diagram of a 4-2-bit encoder is shown in Figure 7.14. ",
+        "page_idx": 277
+    },
+    {
+        "type": "image",
+        "img_path": "images/627f3990deff7f026e2902d0c2063e50f3d7f2a7913428ad31ed9cef026fa882.jpg",
+        "img_caption": [
+            "Figure 7.14: Circuit diagram of a 4-2-bit encoder "
+        ],
+        "img_footnote": [],
+        "page_idx": 277
+    },
+    {
+        "type": "text",
+        "text": "Example 119   \nWrite the equations for an 8-3-bit encoder. Assume that the inputs are $X _ { 0 } \\ldots X _ { 7 }$ , and the outputs are $Y _ { 0 }$ , $Y _ { 1 }$ , and $Y _ { 2 }$ . ",
+        "page_idx": 277
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 278
+    }
+]

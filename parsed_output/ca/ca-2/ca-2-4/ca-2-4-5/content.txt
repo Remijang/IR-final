@@ -1,0 +1,7 @@
+2.4.5 Double Precision Numbers
+
+We observe that by using 32 bits, the largest number that we can represent is roughly  , which is approximately  . We might need to represent larger numbers, especially while studying cosmology. Secondly, there are only 23 bits of precision (mantissa is 23 bits long). If we are doing highly sensitive calculations, then we might need more bits of precision. Consequently, there is an IEEE 754 standard for double precision numbers. These numbers require 64 bits of storage. They are represented by the double datatype in C or Java.
+
+64 bits are apportioned as follows:
+
+The mantissa is now 52 bits long. We have 11 bits for representing the exponent. The bias is equal to 1023, and the range of the exponent is from -1022 to 1023. We can thus represent many more numbers that are much larger, and we have more bits in the mantissa for added precision. The format and semantics of  , zero, NAN, and denormal numbers remains the same as the case for 32 bits.

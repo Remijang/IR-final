@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "13.6.2 Interrupts ",
+        "text_level": 1,
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "There are several shortcomings of the polling-based approach. It keeps the processor busy, wastes power, and increases I/O traffic. We can use interrupts instead. Here, the idea is to send a message to the printer to notify the processor when it becomes free. After the printer becomes free, or if it is already free, the printer sends an interrupt to the processor. The I/O system typically treats the interrupt as a regular message. It then delivers the interrupt to the processor, or a dedicated interrupt controller. These entities realize that an interrupt has come from the I/O system. Subsequently, the processor stops executing the current program as described in Section 10.8, and jumps to the interrupt handler. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "Note that every interrupt needs to identify itself, or the device that has generated it. Every device that is on the motherboard typically has a unique code. This code is a part of the interrupt. In some cases, when we connect devices to generic ports such as the USB port, the interrupt code contains two parts. One part is the address of the port on the motherboard that is connected to the external device. The other part is an id that is assigned to the device by the I/O port on the motherboard. Such interrupts that contain a unique code are known as vectored interrupts. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "In some systems such as x86 machines, the first stage of interrupt processing is done by a programmable interrupt controller (PIC). These interrupt controllers are called APICs (advanced programmable interrupt controllers) in x86 processors. The role of these interrupt controllers is to buffer interrupt messages, and send them to the processor according to a set of rules. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at the set of rules that PICs follow. Most processors disable interrupt processing during some critical stages of computation. For example, when an interrupt handler is saving the state of the original program, we cannot allow the processor to get interrupted. After the state is successfully saved, interrupt handlers might re-enable interrupts. In some systems, interrupts are completely disabled whenever an interrupt handler is running. A closely related concept is interrupt masking that selectively enables some interrupts, and disables some other interrupts. For example, we might allow high priority interrupts from the temperature controller during the processing of an interrupt handler, and choose to temporarily ignore low priority interrupts from the hard disk. The PIC typically has a vector that has one entry per interrupt type. It is known as the interrupt mask vector. For an interrupt, if the corresponding bit in the interrupt mask vector is 1, then the interrupt is enabled, otherwise it is disabled. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "Lastly, PICs need to respect the priority of interrupts if we have multiple interrupts arriving in the same window of time. For example, interrupts from a device with real time constraints such as an attached high speed communication device have a high priority, whereas keyboard and mouse interrupts have lower priority. The PIC orders interrupts using heuristics that take into account their priority and time of arrival, and presents them to the processor in that order. Subsequently, the processor processes the interrupt according to the methods explained in Section 10.8. ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "Definition 158   \nVectored Interrupt An interrupt that contains the id of the device that generated it, or the I/O port address that is connected to the external device.   \nProgrammable Interrupt Controller(PIC) A dedicated module called the programmable interrupt controller (PIC) buffers, filters, and manages the interrupts sent to a processor.   \nInterrupt Masking The user, or operating system can choose to selectively disable a set of interrupts at some critical phases of programs such as while running device drivers and interrupt handlers. This mechanism is known as interrupt masking. The interrupt mask vector in the PIC is typically a bit vector (one bit for each interrupt type). If a bit is set to 1, then the interrupt is enabled, otherwise it is disabled, and the interrupt will either be ignored, or buffered in the PIC and processed later. ",
+        "page_idx": 689
+    }
+]

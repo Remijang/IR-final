@@ -1,0 +1,154 @@
+[
+    {
+        "type": "text",
+        "text": "13.7.4 USB ",
+        "text_level": 1,
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "Overview ",
+        "text_level": 1,
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the USB protocol, which was primarily designed for connecting external devices to a laptop or desktop computer such as keyboards, mice, speakers, web cameras, and printers. In the mid-nineties vendors realized that there are many kinds of I/O bus protocols and connectors. Consequently, motherboard designers, and device driver writers were finding it hard to support a large range of devices. There was thus a need for standardization. Hence, a consortium of companies (DEC, IBM, Intel, Nortel, NEC, and Microsoft) conceived the USB protocol (Universal Serial Bus). ",
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "The main aim of the USB protocol was to define a standard interface for all kinds of devices. The designers started out by classifying devices into three types namely low speed (keyboards, mice), full speed (high definition audio), and high speed (scanners, and video cameras). Three versions of the USB protocol have been proposed till 2012 namely versions 1.0, 2.0, and 3.0. The basic USB protocol is more or less the same. The protocols are backward compatible. This means that a modern computer that has a USB 3.0 port supports USB 1.0 devices. Unlike the SAS or SATA protocols that are designed for a specific set of hardware, and can thus make a lot of assumptions regarding the behavior of the target device, the USB protocol was designed to be very generic. Consequently, designers needed to provide extensive support for the operating system to discover the type of the device, its requirements, and configure it appropriately. Secondly, a lot of USB devices do not have their power source such as keyboards and mice. It is thus necessary to include a power line for running connected devices in the USB cable. The designers of the USB protocol kept all of these requirements in mind. ",
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "From the outset, the designers wanted USB to be a fast protocol that could support high speed devices such as high definition video in the future. They thus decided to use a point-topoint serial bus (similar to PCI Express, SATA, and SAS). Every laptop, desktop, and mid-sized server, has an array of USB ports on the front or back panels. Each USB port, is considered a host that can connect with a set of USB devices. Since we are using serial links, we can create a tree of USB devices similar to trees of PCI Express and SAS devices. Most of the time we connect only one device to a USB port. However, this is not the only configuration. We can alternatively connect a USB hub, which acts like an internal node of the tree. A USB hub is in principle similar to a SATA multiplier and SAS expander. ",
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "A USB hub is most of the time a passive device, and typically has four ports to connect to other devices and hubs downstream. The most common configuration for a hub consists of one upstream port (connection to the parent), and four downstream ports. We can in this manner create a tree of USB hubs, and connect multiple devices to a single USB host on the motherboard. The USB protocol supports 127 devices per host, and we can connect at most 5 hubs serially. Hubs can either be powered by the host, or be self powered. If a hub is self powered it can connect more devices. This is because, the USB protocol has a limit on the amount of current that it can deliver to any single device. At the moment, it is limited to 500 mA, and power is allocated in blocks of $1 0 0 ~ \\mathrm { { m A } }$ . Hence, a hub that is powered by the host can have at the most 4 ports because it can give each device 100 mA, and keep 100 mA for itself. Occasionally, a hub needs to become an active device. Whenever, a USB device is disconnected from a hub, the hub detects this event, and sends a message to the processor. ",
+        "page_idx": 696
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Layers of the USB Protocol ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Physical Layer ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Let us now discuss the protocol in some more detail, and start with the physical layer. The standard USB connector has 4 pins. The first pin is a power line that provides a fixed 5V DC voltage. It is typically referred to as $V _ { c c }$ or $V _ { b u s }$ . We shall use $V _ { c c }$ . There are two pins namely $D ^ { + }$ and $D ^ { - }$ for differential signaling. Their default voltage is set to 3.3V. The fourth pin is the ground pin $( G N D )$ . The mini and micro USB connectors have an additional pin called $I D$ that helps differentiate between a connection to the host, and to a device. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "The USB protocol uses differential signaling. It uses a variant of the NRZI protocol. For encoding logical bits, it assumes that a logical 0 is represented by a transition in physical bits, whereas a logical 1 is represented by no transitions (reverse of the traditional NRZI protocol). A USB bus is an asynchronous bus that recovers the clock. To aid in clock recovery, the synchronization sublayer introduces dummy transitions if there are no transitions in the data. For example, if we have a continuous run of 1s, then there will be no transitions in the transmitted signal. In this case, the USB protocol introduces a 0 bit after every run of six 1s. This strategy ensures that we have some guaranteed transitions in the signal, and the receiver can recover the clock of the transmitter without falling out of synchrony. The USB connectors have only one pair of wires for differential signaling. Hence, full duplex signaling is not possible. Instead, USB links use half duplex signaling. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Data Link Layer ",
+        "text_level": 1,
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "For the data link layer, the USB protocol uses CRC-based error checking, and variable frame lengths. It uses bit stuffing (dedicated frame begin and end symbols) to demarcate frame boundaries. Arbitration is a rather complex issue in USB hubs. This is because, we have many kinds of traffic and many kinds of devices. The USB protocol defines four kinds of traffic. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Control Control messages that are used to configure devices. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Interrupt A small amount of data that needs to be sent to a device urgently. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Bulk A large amount of data without any guarantees of latency and bandwidth. E.g., image data in scanners. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Isochronous A fixed rate data transfer with latency and bandwidth guarantees. E.g., audio/video in web cameras. ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "Along with the different kinds of traffic, we have different categories of USB devices namely low speed devices (192 KB/s), full speed devices (1.5 MB/s), and high speed devices (60 MB/s). The latest USB 3.0 protocol has also introduced super speed devices that require up to 384 ",
+        "page_idx": 697
+    },
+    {
+        "type": "text",
+        "text": "MB/s. However, this category is still not very popular (as of 2012); hence, we shall refrain from discussing it. ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "Now, it is possible to have a high-speed and a low-speed device connected to the same hub. Let us assume that the high speed device is doing a bulk transfer, and the low speed device is sending an interrupt. In this case, we need to prioritize the access to the upstream link of the hub. Arbitration is difficult because we need to conform to the specifications of each class of traffic and each class of devices. We have a dilemma between performing the bulk transfer, and sending the interrupt. We would ideally like to strike a balance between conflicting requirements by having different heuristics for traffic prioritization. A detailed explanation of the arbitration mechanisms can be found in the USB specification [usb, ]. ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the issue of transactions. Let us assume that a high speed hub is connected to the host. The high speed hub is also connected to full and low speed devices downstream. In this case, if the host starts a transaction to a low speed device through the high speed hub, then it will have to wait to get the reply from the device. This is because the link between the high speed hub and the device is slow. There is no reason to lock up the bus between the host, and the hub in this case. We can instead implement a split transaction. The first part of the split transaction sends the command to the low speed device. The second part of the split transaction consists of a message from the low speed device to the host. In the interval between the split transactions, the host can communicate with other devices. A USB bus implements similar split transactions for many other kinds of scenarios (refer to the USB Specification [usb, ]). ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "Network Layer ",
+        "text_level": 1,
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the network layer. Each USB device including the hubs is assigned a unique ID by the host. Since we can support up to 127 devices per host, we need a 7-bit device id. Secondly, each device has multiple I/O ports. Each such I/O port is known as an end point. We can either have data end points (interrupt, bulk, or isochronous), or control end points. Additionally, we can classify end points as IN or OUT. The IN end point represents an I/O port that can only send data to the processor, and the OUT end point accepts data from the processor. Every USB device can have at the most 16 IN end points, and 16 OUT end points. Any USB request clearly specifies the type of end point that it needs to access (IN or OUT). Given that the type of the end point is fixed by the request, we need only 4 bits to specify the address of the end point. ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "All USB devices have a default set of IN and OUT end points whose id is equal to 0. These end points are used for activating the device, and establishing communication with it. Subsequently, each device defines its custom set of end points. Simple devices such as a mouse or keyboard that typically send data to the processor define just one IN end point. However, more complicated devices such as web cameras define multiple end points. One end point is for the video feed, one end point is for the audio feed, and there can be multiple end points for exchanging control and status data. ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "The responsibility of routing messages to the correct USB device lies with the hubs. The hubs maintain routing tables that associate USB devices with local port ids. Once a message reaches the device, it routes it to the correct end point. ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "Protocol Layer ",
+        "page_idx": 698
+    },
+    {
+        "type": "text",
+        "text": "The USB protocol layer is fairly elaborate. It starts out by defining two kinds of connections between end points known as pipes. It defines a stream pipe to be a stream of data without any specific message structure. In comparison, message pipes are more structured and define a message sequence that the sender and receiver must both follow. A typical message in the message pipe consists of three kinds of packets. The communication starts with a token packet that contains the device id, id of the end point, nature of communication, and additional information regarding the connection. The hubs on the path route the token packet to the destination, and a connection is thus set up. Then depending upon the direction of the transfer (host to device or device to host), the host or the device sends a sequence of data packets. Finally, at the end of the sequence of data packets, the receiver of the packets sends a handshake packet to indicate the successful completion of the I/O request. ",
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Summary ",
+        "text_level": 1,
+        "page_idx": 699
+    },
+    {
+        "type": "text",
+        "text": "Table 13.7 summarizes our discussion on USB up till now. The reader can refer to the specifications of the USB protocol [usb, ] for additional information. ",
+        "page_idx": 699
+    }
+]

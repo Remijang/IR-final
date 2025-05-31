@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "13 I/O and Storage Devices ",
+        "text_level": 1,
+        "page_idx": 643
+    },
+    {
+        "type": "text",
+        "text": "We have now arrived at a very interesting point in our study of processors. We have learned how to design a full processor and its accompanying memory system using basic transistors. This processor can execute the entire SimpleRisc instruction set, and can run very complicated programs ranging from chess games to weather simulations. However, there is a vital aspect missing in our design. There is no way for us to communicate with our computer. To render our computer usable, we need to have a method to write input data, and display the outputs. ",
+        "page_idx": 643
+    },
+    {
+        "type": "image",
+        "img_path": "images/588ac674d13cf9fee304004ee3c19b5b8b066b6788cfc8d15c82f8cefe071545.jpg",
+        "img_caption": [
+            "Figure 13.1: A typical computer system "
+        ],
+        "img_footnote": [],
+        "page_idx": 643
+    },
+    {
+        "type": "text",
+        "text": "We thus need an I/O (Input/Output) system in our computer. Let us look at the structure of a typical computer in Figure 13.1. The processor is the core of the computer. It is connected to a host of I/O devices for processing user inputs, and for displaying results. These I/O devices are known as peripherals. The most common user input devices are the keyboard and the mouse. Likewise, the most common display devices, are the monitor, and the printer. The computer can also communicate with a host of other devices such as cameras, scanners, mp3 players, camcorders, microphones, and speakers through a set of generic I/O ports. An I/O port consists of: (1) a set of metallic pins that help the processor to connect with external devices, and (2) a port controller that manages the connection with the peripheral device. The computer can also communicate with the outside world through a special peripheral device called a network card. The network card contains the circuits to communicate with other computers via wired or wireless connections. ",
+        "page_idx": 643
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 644
+    },
+    {
+        "type": "text",
+        "text": "Definition 140 ",
+        "text_level": 1,
+        "page_idx": 644
+    },
+    {
+        "type": "text",
+        "text": "An I/O port consists of a set of metallic pins that are used to attach to connectors provided by external devices. Every port is associated with a port controller that co-ordinates the exchange of data on the communication link. ",
+        "page_idx": 644
+    },
+    {
+        "type": "text",
+        "text": "We give a special preference to a particular class of devices in this chapter known as storage devices. Storage devices such as the hard disk, and flash drives help us permanently store data even when the system is powered off. We looked at them briefly in Chapter 11 while discussing swap space. In this chapter, we shall study them in more detail, and look at the methods of data storage, and retrieval. The reason we stress on storage devices in this chapter is because they are integral to computer architecture. The nature of peripherals across computers varies. For example, a given computer might have a microphone, whereas another computer might not have a monitor because it is accessed remotely over the network. However, invariably all computers from small handheld phones to large servers have some form of permanent storage. This storage is used to save files, system configuration data, and the swap space during the operation of a program. Hence, architects pay special attention to the design and optimization of storage systems, and no book in computer architecture is complete without discussing this vital aspect of computer architecture. ",
+        "page_idx": 644
+    }
+]

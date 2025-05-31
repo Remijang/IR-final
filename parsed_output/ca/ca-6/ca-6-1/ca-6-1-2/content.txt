@@ -1,0 +1,7 @@
+6.1.2 View of Registers
+
+RV32I contains 32 registers that are each 32-bits wide. The registers are named  to  .  is hardwired to zero (refer to Table 6.2). There is a dedicated  register that exposes the program counter. The architecture per se does not define a fixed calling convention. However, over time a convention has emerged and developers are mostly using the calling convention shown in Table 6.2. Note that saved registers are preserved across function calls (callee saved), whereas temporary registers (caller saved) are not preserved.
+
+RISC-V uses a standard memory addressing model (similar to other RISC machines). It started out being a little-endian ISA, but now big-endian and bi-endian modes are also supported.
+
+Given the machine model, let us now explain the instructions supported by the RV32I ISA. Note that this is our fourth chapter on low-level assembly languages. Hence, the treatment will be brief.

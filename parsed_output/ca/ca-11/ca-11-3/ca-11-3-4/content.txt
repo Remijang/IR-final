@@ -1,0 +1,5 @@
+11.3.4 Summary of Memory System Optimization Techniques
+
+Table 11.2 shows a summary of the different techniques that we have introduced to optimize the memory system. Note that every technique has some negative side effects. If a technique improves the memory system in one aspect, then it is detrimental in some other aspect. For example, by increasing the cache size we reduce the number of capacity misses. However, we also increase the area, latency, and power.
+
+To summarize, we can conclude that it is necessary to design the memory system very carefully. The requirements of the target workload have to be carefully balanced with the constraints placed by the designers, and the limits of manufacturing technology. We need to maximize performance, and at the same time be mindful of power, area, and complexity constraints.

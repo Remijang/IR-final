@@ -1,0 +1,99 @@
+[
+    {
+        "type": "text",
+        "text": "6.1.1 RISC-V Base ISAs and Extensions ",
+        "text_level": 1,
+        "page_idx": 228
+    },
+    {
+        "type": "text",
+        "text": "RISC-V is not actually one instruction set, but it is a collection of instruction sets that incrementally build on top of each other. There are a set of baseline versions (common cores). Developers build on top of a common core by adding extensions. Given that the philosophy of RISC-V is to run on all kinds of machines, the notion of having different core ISAs and extensions aligns with it well. Let us look at the common base ISAs and extensions in Table 6.1. ",
+        "page_idx": 228
+    },
+    {
+        "type": "table",
+        "img_path": "images/7c69f2464619f832c3deb9ca6ef451553c3ae52ab8845b45b38a4cd3d0061a3a.jpg",
+        "table_caption": [
+            "Table 6.1: RISC-V base versions and extensions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Name</td><td>Description</td></tr><tr><td colspan=\"2\">ISA base versions 32-bit ISA</td></tr><tr><td>RV32 RV32E RV64 RV64E RV128</td><td>32-bit ISA (embedded version) 64-bit ISA 64-bit ISA (embedded version) 128-bit ISA</td></tr><tr><td>embedded version</td><td>Extensions</td></tr><tr><td>E I M A F D V</td><td>base integer ISA integer multiplication/division instructions atomic instructions single-precision floating point double-precision floating point vector instructions</td></tr></table></body></html>\n\n",
+        "page_idx": 228
+    },
+    {
+        "type": "text",
+        "text": "RISC-V has three base versions: RV32, RV64 and RV128. The term \u201cRV\u201d is a short form of RISC-V. The numbers 32, 64 and 128 indicate the bit width, respectively. The \u2018E\u2019 suffix has a special place. It indicates the embedded version that uses a reduced number of registers. For example, RV32E assumes only 16 integer registers as opposed to 32 integer registers in the regular version. It is important to note that unlike other ISAs (such as ARM Thumb), the instruction sizes remain the same. This simplifies compiler and processor design. ",
+        "page_idx": 228
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "Let us now focus on the extensions. Most versions of the ISAs support basic integer instructions. They are thus named RV32I, RV64I and RV128I, respectively. Then, there are a bunch of extensions that can be added based on users\u2019 requirements. The list of extensions has become quite large as of 2024 (around 20-30). Most of the common ones correspond to floating point instructions, atomic operations, cryptographic primitives, memory barriers, etc. For example, RV32IMA means that integer instructions (I), multiplication/ division instructions (M) and atomic instructions (A) are supported. ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "These extensions themselves can have version numbers: a major version number and a minor version number. This is because the specifications keep changing as the ISAs are under development. For example, RV32I1p3 means that the major version number is 1 and the minor version is 3. The separator \u2018p\u2019 is used to separate the major and minor version numbers. ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "The extensions can be grouped into packages the same way we bundle together add-ons in flight or hotel deals. The \u2018G\u2019 suffix that represents general-purpose computing, combines the base integer instruction set, additional integer instructions, floating point instructions and basic synchronization primitives. This is considered to be an essential set of instructions in a multi-core setup. RV32G is thus a general-purpose RISC-V ISA. It is so happening that the number of extensions is continuously increasing, and we are running out of letters !!! ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "This is why the \u2018Z\u2019 series was introduced, where the extension name (suffix) should start with \u2018Z\u2019 and be followed by a word that describes the extension. For example, \u2018Zfa\u2019 refers to additional floating point instructions. ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "Let us now recall the fact that the embedded version of RISC-V does not reduce the instruction width; it instead reduces the number of available registers by $5 0 \\%$ . On the lines of ARM Thumb, RISC-V does have a compressed format. In this case, the ISA specifier is \u2018C\u2019. In such contexts, most often we use the ISA RV32GC (general-purpose and compressed). The compressed instructions have the following limitations. ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "The width of the instructions is 16 bits.   \nEvery compressed 16-bit instruction corresponds to a 32-bit RV32 instruction.   \n\u2022 They access a limited number of registers (typically limited to 8 registers in the 16-bit version).   \nLimited opcode support.   \nImmediate values that can be encoded are also commensurately smaller. ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "Akin to any other compressed ISA, they lead to reduced code size, better usage of the i-cache and lower power consumption in terms of fetching and decoding instructions. ",
+        "page_idx": 229
+    },
+    {
+        "type": "text",
+        "text": "32, 64 and 128-bit Formats ",
+        "text_level": 1,
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "The greatness of RISC-V is that regardless of the width of the data path, the instruction size (or width) remains the same, i.e., 32 bits. This makes the process of compilation and decoding the instructions easy. The only thing that varies across the three different ISA formats is the set of supported instructions, the register width and the size of the memory address. ",
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "However, there are some exceptions to this general rule. There are some RISC-V instructions whose size can be more than 32 bits. The restriction here is that the size needs to be a multiple of 16 bits \u2013 it cannot be an arbitrary size. We have already seen the C-format instructions that are 16 bits in length. However, we can have longer formats: 48 or 64 bits. Such instructions (at the moment) are not a part of the standard set of instructions, but there are extensions that require these longer instructions. Some of these extensions are vector instructions, bitmanipulation instructions and cryptographic extensions. The instruction format has bits to indicate if the instruction is longer than 32 bits or not. The current version of the standard (v20240411) [ris, ] can theoretically support instruction lengths up to 176 bits. ",
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "We need to note that at the moment (in 2024) such extensions are in different stages of ratification. For example, there is discussion of ratifying a more general set of 48-bit and 64-bit instructions. Similarly, the 128-bit format of the ISA is also not fully finalized yet. In other words, the standards are not fully frozen yet. ",
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "Such debates during the course of ISA design are very common. There is always a pull between the RISC and CISC sides. The RISC side wants regularity and elegance, whereas the CISC side wants more instructions and more complexity. ",
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "Important Point 7 The RISC-V ISA is a RISC ISA. It is however not small and simple like SimpleRisc . Instead, it has a base set of instructions, a set of extensions, 48 and 64-bit instruction lengths (may get fully frozen in the future) and different ISA variants including a compressed 16-bit form. This sounds more like \u201cCISC\u201d. However, there is still a lot of regularity in the ISA: there are a few instructions formats, instructions are mostly 32 bits in length and the base ISA is very \u201cRISC like\u201d. Such trade-offs are inevitable in designing any modern ISA that needs to support a wide range of devices: embedded processors to supercomputers. ",
+        "page_idx": 230
+    }
+]

@@ -1,0 +1,7 @@
+8.2.4 An  Time Algorithm
+
+Let us make our life slightly easier now. Let us multiply two  -bit numbers, and save the product also as an  -bit number. We shall ignore overflows, and concentrate only on performance. The issue of detecting overflows in a high performance multiplier is fairly complex, and is beyond the scope of this book. Using our results from Section 2.3.4, we use simple unsigned multiplication to compute the product of signed numbers. If there are no overflows then the result is correct.
+
+Let us take a look at the problem of multiplication again. We basically consider each bit of the multiplier in turn, and multiply it with a shifted version of the multiplicand. We obtain  such partial sums. The product is the sum of the  partial sums. Generating each partial sum is independent of the other. This process can be performed in parallel in hardware. To generate the  partial sum, we need to simply compute an AND operation between the  bit of the multiplier and each bit of the multiplicand. This takes  time.
+
+Now, we can add the  partial sums  in parallel using a tree of adders as shown in Figure 8.12. There are  levels. In each level we are adding two  bit numbers; hence, each level takes  time. The total time requirement is thus  . By exploiting the inherent parallelism, we have significantly improved the time from  to  . It turns out that we can do even better, and get an  time algorithm.

@@ -1,0 +1,31 @@
+6.2.4 Logical and Shift Instructions
+
+Table 6.7 shows a list of some prominent logical and shift instructions. The primary logical instructions are and, or and xor. We can attach an ‘i’ suffix to these instructions to accept an
+
+immediate value as the second source operand. The format is otherwise the same as the add and sub instructions.
+
+Example 98   
+Write a RISC-V assembly program to compute the bitwise OR of A and  . Let  and  .
+
+Answer:
+
+Akin to other ISAs, RISC-V has three shift instructions: shift left logical  , shift right logical  and shift right arithmetic (sra). They have their variants where the second source is an immediate. They are slli, srli and srai, respectively.
+
+Example 99 Write RISC-V assembly code to compute 50/4.
+
+Answer:
+
+Example 100
+
+Write RISC-V assembly code to compute  .
+
+Answer:
+
+addi t3 , zero , 5   
+addi t2 , zero , 7   
+slli t4 , t3 , 2   
+add t1 , t2 , t4   
+# t3 = 5   
+# t2 = 7   
+# t4 = t3 \* 4   
+# t1 = t2 + t3 \* 4

@@ -1,0 +1,155 @@
+[
+    {
+        "type": "text",
+        "text": "8.3.2 Restoring Division ",
+        "text_level": 1,
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a similar setup as the iterative multiplier to divide two positive 32-bit numbers. The divisor is stored in a 32-bit register called $D$ . We have a 33 bit register $U$ , and a 32-bit ",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "register $V$ . If we left shift $U$ and $V$ , then the value shifted out of $V$ , is shifted in to $U$ . $U$ is initialized to 0, and $V$ is initialized to hold the dividend (see Figure 8.15). Note that the size of $U$ is equal to 33 bits to avoid overflows (similar to the case of the iterative multiplier). ",
+        "page_idx": 337
+    },
+    {
+        "type": "table",
+        "img_path": "images/7d511003955276fa8e3118786484745b84c681ed28ac63f1e992212d74db0739.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Algorithm 3:Restoring algorithm to divide two 32-bit numbers</td></tr><tr><td colspan=\"2\">Data:Divisor in D,Dividend in V,U = 0 Result: U contains the remainder (lower 32 bits),and V contains the quotient</td></tr><tr><td colspan=\"2\">1i\u21900 2 fori<32do i\u2190i+1</td></tr><tr><td colspan=\"2\">3 4</td></tr><tr><td colspan=\"2\">/* Left shift UV by 1 position */ UV\u2190UV<<1</td></tr><tr><td colspan=\"2\"></td></tr><tr><td colspan=\"2\" rowspan=\"2\">5 U\u2190U-D if U \u2265 0 then</td></tr><tr><td colspan=\"2\"></td></tr><tr><td>6</td><td></td></tr><tr><td>8</td><td>end q\u21901</td></tr><tr><td>9</td><td>else</td></tr><tr><td>10</td><td>U\u2190U+D</td></tr><tr><td>11</td><td>q\u21900</td></tr><tr><td>12</td><td>end</td></tr><tr><td colspan=\"2\">/* Set the quotient bit */ 13 LSB of V \u2190 q</td></tr><tr><td colspan=\"2\">14 end</td></tr><tr><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td></tr></table></body></html>\n\n",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "Algorithm 3 follows the discussion that we had in Section 8.3.1. We shall see that each iteration of the algorithm reduces the problem according to Equation 8.16. Let us prove its correctness. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "Proof of Correctness\\* ",
+        "text_level": 1,
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "To start out we iterate 32 times for each bit of the dividend (Lines 2 to 14). Let us consider the first iteration. At the beginning, the value in the combined register $U V$ is equal to the value of the dividend $N$ . The first step is to shift $U V$ to the left by 1 position in Line 4. Since the dividend is originally loaded into register $V$ , we are shifting the dividend to the left by 1 position. The next step is to subtract the divisor from register $U$ in Line 5. If $U - D \\geq 0$ , then we set the MSB of the quotient to 1 (Line 7), otherwise we add $D$ back to $U$ in Line 10, and set the MSB of the quotient to 0. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "We wish to use Equation 8.16 to reduce the problem in every iteration. Equation 8.16 states that the new dividend $( N ^ { \\prime } )$ is equal to: ",
+        "page_idx": 337
+    },
+    {
+        "type": "equation",
+        "text": "$$\nN ^ { \\prime } = N - 2 ^ { n - 1 } D Q _ { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "$Q _ { n }$ is the MSB of the quotient here. The divisor and remainder stay the same. The last $n - 1$ bits of the new quotient match those of the old quotient. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "We wish to prove that the value of $U V$ at the end of the first iteration is equal to ( $2 N ^ { \\prime }$ )(ignoring quotient bits) such that we can reduce the problem according to Equation 8.16. Let us consider the value stored in $U V$ . Just after executing Line 4, it contains twice the dividend \u2013 $2 N \\textrm { -- }$ ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "because we shifted $U V$ by 1 position to the left. Now, we are subtracting $D$ from the upper $n$ bits of $U V$ . In effect, we are subtracting $2 ^ { n } D$ . Hence, after Line 5, $U V$ contains $U V - 2 ^ { n } D$ . We have: ",
+        "page_idx": 338
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU V - 2 ^ { n } D = 2 N - 2 ^ { n } D = 2 \\times ( N - 2 ^ { n - 1 } D )\n$$",
+        "text_format": "latex",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Subsequently, we test the sign of $U - D$ in Line 6. If $U - D$ is positive or zero, then it means that $U V$ is greater than $2 ^ { n } D$ because $V \\geq 0$ . If $U - D$ is negative, then let $U + \\Delta = D$ , where $\\Delta \\geq 1$ . We have: ",
+        "page_idx": 338
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { U V - 2 ^ { n } D = 2 ^ { n } U + V - 2 ^ { n } D } } \\\\ { { = ( U - D ) 2 ^ { n } + V } } \\\\ { { = V - \\Delta \\times 2 ^ { n } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Now, $V < 2 ^ { n }$ . Hence, $V < \\Delta \\times 2 ^ { n }$ , and thus $U V - 2 ^ { n } D$ is negative. We thus observe that the sign of $U - D$ is the same as the sign of $U V - 2 ^ { n } D$ , which is same as the sign of $( N - 2 ^ { n - 1 } D )$ . ",
+        "page_idx": 338
+    },
+    {
+        "type": "equation",
+        "text": "$$\ns i g n ( U - D ) = s i g n ( N - 2 ^ { n - 1 } D )\n$$",
+        "text_format": "latex",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Now, for reducing the problem, if we observe that $U - D \\geq 0$ , then $N - 2 ^ { n - 1 } D \\geq 0$ . Hence, we can set $Q _ { n }$ to $^ 1$ , and set the new dividend to $N ^ { \\prime } = N - 2 ^ { n - 1 } D Q _ { n }$ , and also conclude that at the end of the iteration $U V$ contains $2 N ^ { \\prime } ( \\mathrm { L i n e } \\ 5 \\ \\mathrm { a n d } \\ 7 )$ . If $U - D < 0$ , then we cannot set $Q _ { n }$ to $^ 1$ . $N ^ { \\prime }$ will become negative. Hence, the algorithm sets $Q _ { n }$ to $0$ in Line 11 and adds $D$ back to $U$ . The value of $U V$ is thus equal to $2 N$ . Since $Q _ { n } = 0$ , we have $N = N ^ { \\prime } ( \\mathrm { E q u a t i o n ~ 8 . 1 7 } )$ . In both the cases, the value of $U V$ at the end of the iteration is $2 N ^ { \\prime }$ . We thus conclude that in the first iteration, the MSB of the quotient is computed correctly, and the value of $U V$ ignoring the quotient bit is equal to $2 N ^ { \\prime }$ . ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "In the next iteration, we can use exactly the same procedure to prove that the value of $U V$ (ignoring quotient bits) is equal to $4 N ^ { \\prime \\prime }$ . Ultimately, after 32 iterations, $V$ will contain the entire quotient. The value of $U V$ (ignoring quotient bits) at that point will be $2 ^ { n } \\times N ^ { 3 2 }$ . Here $N ^ { i }$ is the reduced dividend after the $i ^ { t h }$ iteration. We have the following relation according to Equation 8.17: ",
+        "page_idx": 338
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { N ^ { 3 1 } = D Q _ { 1 } + R } \\\\ { \\Rightarrow \\underbrace { N ^ { 3 1 } - D Q _ { 1 } } _ { N ^ { 3 2 } } = R } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Hence, $U$ will contain the value of the remainder and $V$ will contain the quotient. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Important Point 11 Let us now try to prove that the restoring algorithm does not suffer from overflows while performing a left shift, and adding or subtracting the divisor. Let us first prove that just before the shift operation in Line 4, $U < D$ . Let us assume positive divisors $\\mathit { \\Omega } ^ { \\mathcal { N } } > 0$ ) and non-negative dividends $N \\geq 0$ ) for division. For the base case, $\\mathit { \\Delta } U = 0$ ), the proposition holds. Let us consider the $n ^ { t h }$ iteration. Let the value of $U$ before the shift operation be $\\hat { U }$ . From the induction hypothesis, we can conclude that $\\hat { U } < D$ , or alternatively, $\\hat { U } \\le D - 1$ After the shift operation, we have $U \\leq 2 \\hat { U } + 1$ because we are performing a left shift by 1 position, and shifting in the MSB of $V$ . If $U < D$ , then the induction hypothesis holds for the $( n + 1 ) ^ { t h }$ iteration. Otherwise, we subtract $D$ from $U$ . We have, $U = U - D \\leq$ $2 \\hat { U } + 1 - D \\le 2 ( D - 1 ) + 1 - D = D - 1$ . Therefore, $U < D$ . Thus, for the $( n + 1 ) ^ { t h }$ iteration, the induction hypothesis holds. Now that we have proved that $U < D$ , let us prove that the largest value contained in register $U$ is less than or equal to $2 D - 1$ . ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "After the shift operation, the largest value that $U$ can contain is $( 2 ( D - 1 ) + 1 ) = 2 D - 1$ . Henceforth, the value of $U$ can only decrease. Since $D$ is a 32-bit number, we require at the most 33 bits to store $( 2 D - 1 )$ . Consequently, having a 33-bit $U$ register avoids overflows. ",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Time Complexity ",
+        "text_level": 1,
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "There are $n$ iterations of the for loop. Each iteration does one subtraction in Line 5 and maybe one addition in Line 10. The rest of the operations can be done in $O ( 1 )$ time. Thus, per iteration it takes $O ( l o g ( n ) )$ time. Hence, the total time complexity is $O ( n l o g ( n ) )$ . ",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Example 128 Divide two 4-bit numbers: 7 (0111) / 3(0011) using restoring division. Answer: ",
+        "page_idx": 340
+    },
+    {
+        "type": "image",
+        "img_path": "images/62176a493e20de6de12a7694a6fbd11a86edfcd02fc91b17cd68b16c7006a1e5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 340
+    }
+]

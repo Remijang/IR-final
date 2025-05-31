@@ -1,0 +1,33 @@
+8.3.3 Non-Restoring Division
+
+We observe that there can be a maximum of two add/subtract operations per iteration. It is possible to circumvent it by using another temporary register to store the result of the subtract operation  . We can move it to  only if  . However, this also involves additional circuitry. The  register will get complicated and slower too.
+
+The non-restoring algorithm does either one addition or one subtraction per iteration. Hence, it is more efficient even though the asymptotic time complexity is the same. The hardware setup (  and  registers, dividend (  ), divisor  ) is the same as that for the
+
+restoring algorithm.
+
+We see that the non-restoring algorithm is very similar to the restoring algorithm with some minor differences. The non-restoring algorithm shifts  as the first step in an iteration. Then, if the value of  is negative, it adds  to  . Otherwise, it subtracts  from  . If the addition or subtraction has resulted in a value that is greater than or equal to zero, the non-restoring algorithm sets the appropriate quotient bit to 1, else it sets it to 0.
+
+Finally, at the end  contains the entire quotient. If  is negative, then we need to add the divisor (  ) to  .  will contain the remainder.
+
+Proof of Correctness\*
+
+Like the restoring algorithm, let us assume that when we refer to the value of  , we assume that all the quotient bits are equal to 0. As long as  remains positive or 0, the state of  and  is equal to that produced by the restoring algorithm. Let us assume that in the  iteration,  becomes negative for the first time. Let us consider the value represented by the register  just after it is shifted to the left by 1 position, and call it  (  stands for the iteration number).
+
+At the end of the  iteration,  , where  . We shift  by  places to the left because we always add or subtract  from  , which is the upper half of  .
+
+According to our assumption  is negative. In this case the restoring algorithm would not have subtracted  , and it would have written 0 to the quotient. The non-restoring algorithm sets the quotient bit correctly since it finds  to be negative (Line 15). Let us now move to the  iteration.
+
+ . At the end of the  iteration,   . If  is not negative, then the non-restoring algorithm will save 1 in the quotient. Let us now see at this point what the restoring algorithm would have done (assuming  is non-negative). In the  iteration, the restoring algorithm would have started the iteration with  . It would have then performed a shift and subtracted  to set  , and written 1 to the quotient. We thus observe that at this point the state of the registers  and  matches exactly for both the algorithms.
+
+However, if  is negative then the restoring and non-restoring algorithms will have a different state. Nonetheless, the quotient bits will be set correctly.  . Since a negative number multiplied by 2 (left shifted by 1 position) is still negative, the non-restoring algorithm will add  to  . Hence, the value of  at the end of the  iteration will be  . If this is non-negative, then the restoring algorithm would also have exactly the same state at this point.
+
+We can continue this argument to observe that the quotient bits are always set correctly and the state of  and  exactly matches that of the restoring algorithm when  at the end of an iteration. Consequently, for dividing the same pair of numbers the states of the restoring and non-restoring algorithms will start as the same, then diverge and converge several times. If the last iteration leads to a non-negative  then the algorithm is correct because the state exactly matches that produced by the restoring algorithm.
+
+However, if the last iteration leaves us with  as negative, then we observe that   , where  is the iteration number at which the states had converged for the last time. If we add  to  , then the states of both the algorithms match, and thus the results are correct (achieved in Line 20).
+
+Important Point 12
+
+Let us now try to prove that the non-restoring algorithm does not suffer from overflows while performing a left shift, and adding or subtracting the divisor. Similar to the proof for the restoring algorithm, let us first prove that just before the shift operation,  . For the base case,  ), the proposition holds. Let us consider the  iteration, and let the value of  just before the shift operation be  . Let us first assume that  . In this case, we can use the same logic as the restoring algorithm, and prove that  at the beginning of the  iteration. Let us now assume that  . From the induction hypothesis,  . Now, if we shift  by  position, and shift in a  or  , we compute  (for  , shifting in a  reduces the absolute value). After the shift operation, we add  to  . We thus have,  . Thus, in this case also  , just before the shift, and after the shift we have  . We thus need to allocate an extra bit to register  to correctly store all the possible intermediate values of  . Hence, the  register is 33 bits wide. We are thus guaranteed to not have overflows during the operation of the non-restoring algorithm.
+
+Example 129 Divide two 4-bit numbers: 7 (0111) / 3(0011) using non-restoring division. Answer:

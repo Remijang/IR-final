@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.4 Edge Sensitive SR Flip-flop ",
+        "text_level": 1,
+        "page_idx": 283
+    },
+    {
+        "type": "image",
+        "img_path": "images/35a7de2bb48f4759896c4d626932d2db41fbbf271a3a5298f4e167f70985d7d4.jpg",
+        "img_caption": [
+            "Figure 7.19: The clocked edge sensitive SR flip-flop "
+        ],
+        "img_footnote": [],
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.19 shows a clocked edge sensitive SR flip-flop. We connect two clocked SR flip-flops together. The only difference is that the second SR flip-flop uses the complement of the clock signal, $\\boldsymbol { C } \\boldsymbol { L } \\boldsymbol { K }$ . The first flip-flop is known as the master, and the second flip-flop is known as the slave. This flip-flop is also known as a master-slave SR flip-flop. Here, is how this circuit works. ",
+        "page_idx": 283
+    },
+    {
+        "type": "text",
+        "text": "Definition 51 ",
+        "text_level": 1,
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "A master-slave flip-flop contains two flip-flops that are connected to each other. The master\u2019s output is the slave\u2019s input. Typically, the slave uses a clock signal that is the logical complement of the master\u2019s clock. ",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Whenever the clock signal is high (1), the inputs (S and R) are read into the first SR flipflop. When the clock signal becomes low (0), then the first flip-flop stops accepting new data; however, the second flip-flop takes the output of the first flip-flop and sets its output accordingly. Thus, new data arrives at the output terminals Q and $\\overline { { Q } }$ when the clock transitions from 1 to 0 (downward clock edge). We thus have created a flip-flop that is edge sensitive. ",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "However, some problems still remain. If both S and R are 1, then there might be a race condition, and the output can be unpredictable. This problem needs to be fixed. Let us first try to look at a complex solution that augments the clocked edge sensitive SR flip-flop, and then look at simpler solutions. ",
+        "page_idx": 284
+    }
+]

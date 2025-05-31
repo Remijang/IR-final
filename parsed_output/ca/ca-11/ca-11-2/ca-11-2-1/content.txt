@@ -1,0 +1,19 @@
+11.2.1 Overview of a Basic Cache
+
+Let us consider a cache as a black box as shown in Figure 11.4. In the case of a load operation, the input is the memory address, and the output is the value of the memory location if there is a cache hit. We envision the cache having a status line that indicates if the request suffered a hit or miss. If the operation is a store, then the cache takes two inputs – memory address, and value. The cache stores the value in the entry corresponding to the memory location if there is a cache hit. Otherwise, it indicates that there is a cache miss.
+
+Let us now look at methods to practically implement this black box. We shall use an SRAM array as the building block (see Section 7.4). The reader might wish to revisit that section to recapitulate her knowledge on memory structures.
+
+To motivate a design, let us consider an example. Let us consider a 32-bit machine with a block size of 64 bytes. In this machine, we thus have  blocks. Let the size of the L1 cache be 8 KB. It contains  or 128 blocks. We can thus visualize the L1 cache at any point of time as a very small subset of the entire memory address space. It contains at the most 128 out of  blocks. To find out if a given block is there in the L1 cache, we need to see if any of the 128 entries contains it.
+
+We assume that our L1 cache, is a part of a memory hierarchy. The memory hierarchy as a whole supports two basic requests – read and write. However, we shall see that at the level of a cache, we require many basic operations to implement these two high level operations.
+
+Basic Cache Operations
+
+Akin to a memory address, let us define a block address as the 26 MSB bits of the memory address. The first problem is to find if a block with the given block address is present in the cache. We need to perform a lookup operation that returns a pointer to the block if it is present in the cache. If the block is present in the cache then we can declare a cache hit and service the request. For a cache hit, we need two basic operations to service the request namely data read, and data write. They read or write the contents of the block, and require the pointer to the block as an argument.
+
+If there is a cache miss, then we need to fetch the block from the lower levels of the memory hierarchy and insert it in the cache. The procedure of fetching a block from the lower levels of the memory hierarchy, and inserting it into a cache, is known as a fill operation. The fill operation is a complex operation, and uses many atomic sub-operations. We need to first send a load request to the lower level cache to fetch the block, and then we need to insert in into the L1 cache.
+
+The process of insertion is also a complex process. We need to first check, if we have space to insert a new block in a given set of blocks. If we have sufficient space in a set, then we can populate one of the entries using an insert operation. However, if all the locations at which we want to insert a block in the cache are already busy, then we need to evict an already existing block from the cache. We thus need to invoke a replace operation to find the cache block that needs to be evicted. Once, we have found an appropriate candidate block for replacement, we need to evict it from the cache using an evict operation.
+
+Thus, to summarize the discussion up till now, we can conclude that we broadly need these basic operations to implement a cache – lookup, data read, data write, insert, replace, and evict. The fill operation is just a sequence of lookup, insert, and replace operations at different levels of the memory hierarchy. Likewise, the read operation is either primarily a lookup operation, or the combination of a lookup and fill operation.

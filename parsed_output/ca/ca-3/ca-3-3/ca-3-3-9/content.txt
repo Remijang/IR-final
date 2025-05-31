@@ -1,0 +1,33 @@
+3.3.9 Conditional Branch Instructions
+
+SimpleRisc has two conditional branch instructions – beq and bgt. Real world instruction sets typically have more branch instructions. Nonetheless, at the cost of code size, these two instructions are sufficient for implementing all types of branches.
+
+The beq instruction stands for “branch if equal”. This means that if any preceding cmp instruction has set the  flag, then the PC will branch to the label specified in this instruction. Otherwise, the branch is said to fail, and the processor will proceed to execute the instruction after the branch. Similarly, the bgt instruction stands for “branch if greater than”. This branch instruction bases its outcome on the value of the  flag. If it is set to 1, then it branches to the label specified in the branch instruction, otherwise the processor executes the next instruction after the branch. Refer to Table 3.8.
+
+Example 29   
+Write an iterative program to compute the factorial of a number stored in r0. Assume that the number is greater than 2. Save the result in r1.   
+Answer: Let us first take a look at a small  program to compute the factorial of the variable num.   
+C   
+int prod = 1;   
+int idx;   
+for(idx = num; idx > 1; idx --) {   
+prod = prod \* idx   
+}
+
+Let us now try to convert this program to SimpleRisc .
+
+SimpleRisc   
+mov r1, 1 /\* prod = 1 \*/   
+mov r2, r0 /\* idx = num \*/   
+.loop: mul r1, r1, r2 /\* prod = prod \* idx \*/ sub r2, r2, 1 /\* idx = idx - 1 \*/ cmp r2, 1 /\* compare (idx, 1) \*/ bgt .loop /\* if (idx > 1) goto .loop\*/
+
+Example 30 Write an assembly program to find out if the number stored in r1 is a prime number. Assume that it is greater than 3. Save the Boolean result in r0.
+
+Answer:
+
+SimpleRisc
+
+mov r2, 2 .loop: mod r3, r1, r2 @ divide number by r2 cmp r3, 0 @ compare the result with 0 beq .notprime @ if the result is 0, not prime add r2, r2, 1 @ increment r2 cmp r1, r2 @ compare r2 with the number
+
+Example 31 Write an assembly program to find the least common multiple (LCM) of two positive numbers stored in r1 and r2. Save the result in r0.   
+Answer:

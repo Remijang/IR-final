@@ -1,0 +1,98 @@
+[
+    {
+        "type": "text",
+        "text": "5.2.4 Addressing Modes ",
+        "text_level": 1,
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Addressing Modes for Specifying Immediates ",
+        "text_level": 1,
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "The best thing about x86 is that there are no size restrictions on immediates. Immediates can be as large as the size of the register. For example, in a 32-bit system, the size of the immediate can be as large as 32 bits. Depending upon the assembly language, we can specify immediates in the hex format (0x...), binary format (e.g., 10101b), or in decimal. Most of the time programmers prefer the hex or decimal formats. For hexadecimal numbers most assemblers allow us to specify the number with the standard 0x prefix. Additionally, we can specify a number with the h/H suffix. For example, $2 1 H$ is the same as $0 x 2 1$ . For negative numbers, we need to simply put a \u2018-\u2019 before the number. ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Addressing Modes for Specifying Registers ",
+        "text_level": 1,
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "All registers in x86 are addressed by their names. For example, the general purpose registers on a 32-bit machine are addressed as eax, ebx . . . edi, according to the rules mentioned in ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Section 5.2.1. We can use 16-bit register names in 32-bit mode, and we can use 16 and 32-bit register addressing in 64-bit mode. Note that we cannot do the reverse. For example, we cannot use 64-bit register names in 32-bit mode. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Addressing Modes for Memory Operands ",
+        "text_level": 1,
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "x86 supports a variety of addressing modes for main memory. In specific, it supports the register-indirect, base-offset, base-index, and base-index-offset addressing modes as mentioned in Section 3.2.5. In addition, it also supports a new addressing mode called the base-scaledindex-offset addressing mode that scales the index by a constant factor. Let us elaborate. ",
+        "page_idx": 185
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{c} \\begin{array}{c} \\begin{array}{c} \\begin{array}{c} \\begin{array} { r } { a d d r e s s = [ \\begin{array} { c } { [ e a x ] } \\\\ { [ e s : [ \\begin{array} { c } { [ e b x ] } \\\\ { e b x } \\\\ { [ e c x ] } \\\\ { [ e d x ] } \\\\ { [ e b x ] } \\\\ { [ e s : [ \\begin{array} { c } { [ e b x ] } \\\\ { e b ] } \\\\ { [ e b p ] } \\\\ { [ e b p ] } \\\\ { [ e b i ] } \\end{array} ] } \\end{array} ] [ \\begin{array} { c } { e a x } \\\\ { e b x } \\\\ { e c x } \\\\ { e d x } \\\\ { e d x } \\\\ { e b p } \\\\ { e b \\cdot [ \\begin{array} { c } { [ \\begin{array} { c } { [ \\begin{array} { c } { [ 1 } \\\\ { 4 } \\\\ { \\Delta } \\end{array} ] } \\\\ { [ 4 } \\\\ { \\Delta } \\end{array} ] } \\\\ { [ 8 \\end{array} ] } \\\\ { [ \\begin{array} { c } { [ 4 } \\\\ { \\Delta } \\end{array} ] } \\\\ { [ 8 \\end{array} ] } \\\\ { [ \\begin{array} { c } { [ \\begin{array} { c } { [ \\begin{array} { c } { d } { [ 4 } \\\\ { \\Delta } \\end{array} ] } \\\\ { [ 4 } \\\\ { \\Delta } \\end{array} ] } \\\\ { [ 8 \\end{array} ] } \\\\ { [ \\begin{array} { c } { [ \\begin{array} { c } { [ 1 } \\\\ { e b c } \\end{array} ] } \\\\ { [ 6 } \\end{array} ] } \\end{array} ] } \\end{array} ] } \\end{array} ] } \\end{array} ] ] } \\\\ { \\underbrace { [ \\begin{array} { c } { f _ { 1 } } \\\\ { g _ { 1 } } \\\\ { e \\Delta } \\end{array} ] } _ { e c h } ] [ \\begin{array} { c } { e a x } \\\\ { [ 6 m ] } \\\\ { [ e d h ] } \\\\ { [ e \\Delta } \\end{array} ] } \\end{array} ]  \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Equation 5.1 shows the generic format of a memory address in the 32-bit version of x86. The interesting aspect of x86 memory addressing is that all of these fields are optional. Hence, it is possible to have numerous addressing modes. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Let us first consider the addressing modes that require a base register. With the base register, we can optionally specify a segment register. If we do not specify a segment register, then the hardware assumes default segments ( $d s$ for data, ss for stack, and cs for code). We can subsequently specify an index. The index is contained in another register (excluding $e s p$ ). We can optionally multiply the index with a power of 2 (1, 2, 4, or 8). Lastly, we can specify a 32-bit offset known as the displacement. The memory address is computed using Equation 5.1. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Now, let us look at addressing modes that do not require a base register. We can just use an index register and optionally scale it by 1, 2, 4, or 8. For example, we can specify that we want to access the memory address equal to $2 \\times e c x$ . This approach uses the scaled-index addressing mode. We can optionally add a fixed offset (known as the displacement) to the address. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Lastly, it is possible to specify the entire 32-bit address in the displacement field, and not specify any register at all. This approach is typically used in the operating system code to directly operate on memory addresses. Regular assembly programmers need to strictly avoid such direct memory addressing because most of the time we are not aware of the exact memory addresses. For example, the starting address of the stack pointer is typically allocated at run time in modern systems, and tends to vary across runs. Secondly, this is not a portable and elegant approach. It is only meant for operating system writers. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Let us explain with examples (see Table 5.2). ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Definition 42 ",
+        "text_level": 1,
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "In the x86 ISA, the fixed offset used while specifying the effective address of a memory operand, is known as the displacement. ",
+        "page_idx": 186
+    },
+    {
+        "type": "table",
+        "img_path": "images/e97b80074e04ccdcb46b91d463149fde36af38284f5cd13abb83f3b7413a0b3b.jpg",
+        "table_caption": [
+            "Table 5.2: Example of memory operands "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Memory operand</td><td>Value of the address</td><td>(in register transfer notation)</td><td>Addressing mode</td></tr><tr><td></td><td>[eax]</td><td>eax</td><td>register-indirect</td></tr><tr><td></td><td>[eax + ecx*2]</td><td>eax +2*ecx</td><td>base-scaled-index</td></tr><tr><td></td><td>[eax + ecx*2 - 32]</td><td>eax + 2*ecx -32</td><td>base-scaled-index-offset</td></tr><tr><td></td><td>[edx - 12]</td><td>edx - 12</td><td>base-offset</td></tr><tr><td></td><td>[edx*2]</td><td>edx * 2</td><td>scaled-index</td></tr><tr><td></td><td>[0xFFE13342]</td><td>OxFFE13342</td><td>memory-direct</td></tr></table></body></html>\n\n",
+        "page_idx": 186
+    }
+]

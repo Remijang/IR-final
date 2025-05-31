@@ -1,0 +1,266 @@
+[
+    {
+        "type": "text",
+        "text": "8.1.5 Carry Lookahead Adder ",
+        "text_level": 1,
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "We have improved the time complexity from $O ( n )$ for a ripple carry adder to $O ( { \\sqrt { n } } )$ for a carry select adder. The question is, \u201cCan we do better?\u201d In this section, we shall present the carry lookahead adder that can perform addition in $O ( l o g ( n ) )$ time. $O ( l o g ( n ) )$ has been proved as the theoretical lower bound for adding two $n$ -bit numbers. Note that the log operation in this book typically has a base equal to 2, unless explicitly mentioned otherwise. Secondly, since logarithms to different bases differ by constant multiplicative factors, the base is immaterial in the big-O notation. ",
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "Generate and Propagate Functions ",
+        "text_level": 1,
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "Before introducing the adder, we need to introduce a little bit of theory and terminology. Let us again consider the addition of two numbers \u2013 $A$ and $B$ \u2013 represented as $A _ { 3 2 } \\ldots A _ { 1 }$ and $B _ { 3 2 } \\ldots B _ { 1 }$ , respectively. Let us consider a bit pair \u2013 $A _ { i }$ and $B _ { i }$ . If it is equal to (0,0), then irrespective of the carry in, the carry out is 0. In this case, the carry is absorbed. ",
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "However, if the bit pair is equal to (0,1) or (1,0) then the value of the carry out is equal to the value of the carry in. If the carry in is $0$ , then the sum is 1, and the carry out is 0. If the carry in is 1, then the sum is 0, and the carry out is 1. In this case, the carry is propagated. ",
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "Lastly, if the bit pair is equal to (1,1), then the carry out is always equal to 1, irrespective of the carry in. In this case, a carry is generated. ",
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "We can thus define a $g e n e r a t e ( g _ { i } )$ and propagate ${ \\bf \\nabla } _ { : } ^ { } ( p _ { i } )$ function as follows: ",
+        "page_idx": 316
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { g _ { i } = A _ { i } . B _ { i } } \\\\ { p _ { i } = A _ { i } \\oplus B _ { i } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "The generate function captures the fact that both the bits are 1. The propagate function captures the fact that only one of the bits is 1. We can now compute the carry out $C _ { o u t }$ in terms of the carry in $C _ { i n }$ , $g _ { i }$ , and $p _ { i }$ . Note that by our case by case analysis, we can conclude that the carry out is equal to $^ { 1 }$ , only if a carry is either generated, or it is propagated. Thus, we have: ",
+        "page_idx": 316
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC _ { o u t } = g _ { i } + p _ { i } . C _ { i n }\n$$",
+        "text_format": "latex",
+        "page_idx": 316
+    },
+    {
+        "type": "text",
+        "text": "Example 123 ",
+        "text_level": 1,
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "$A _ { i } = 0$ , $B _ { i } = 1$ . Let the input carry be $C _ { i n }$ . Compute $g _ { i }$ , $p _ { i }$ and $C _ { o u t }$ . ",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 317
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { g _ { i } = A _ { i } . B _ { i } = 0 . 1 = 0 } \\\\ { p _ { i } = A _ { i } \\oplus B _ { i } = 0 \\oplus 1 = 1 } \\\\ { C _ { o u t } = g _ { i } + p _ { i } . C _ { i n } = C _ { i n } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to generalize the notion of generate and propagate functions to multiple bits. Let us consider a two-bit system that has an input carry, and an output carry. The bit pairs are numbered 1 and 2 (resp.), where 2 represents the most significant bit. Let $C _ { o u t } ^ { i }$ represent the output carry obtained after adding the $i ^ { t h }$ bit pair. Likewise, $C _ { i n } ^ { i }$ is the input carry for the $i ^ { t h }$ bit pair. The output carry of the two-bit system is thus equal to $C _ { o u t } ^ { 2 }$ . We have: ",
+        "page_idx": 317
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { C _ { o u t } ^ { 2 } = g _ { 2 } + p _ { 2 } . C _ { o u t } ^ { 1 } } \\\\ & { \\qquad = g _ { 2 } + p _ { 2 } . ( g _ { 1 } + p _ { 1 } . C _ { i n } ^ { 1 } ) } \\\\ & { \\qquad = ( g _ { 2 } + p _ { 2 } . g _ { 1 } ) + p _ { 2 } . p _ { 1 } . C _ { i n } ^ { 1 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "Similarly, for a 3-bit system, we have: ",
+        "page_idx": 317
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { C _ { o u t } ^ { 3 } = g _ { 3 } + p _ { 3 } . C _ { o u t } ^ { 2 } } \\\\ & { \\qquad = g _ { 3 } + p _ { 3 } . ( ( g _ { 2 } + p _ { 2 } . g _ { 1 } ) + p _ { 2 } . p _ { 1 } . C _ { i n } ^ { 1 } ) } \\\\ & { \\qquad = ( g _ { 3 } + p _ { 3 } . g _ { 2 } + p _ { 3 } . p _ { 2 } . g _ { 1 } ) + p _ { 3 } . p _ { 2 } . p _ { 1 } . C _ { i n } ^ { 1 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "For a 4-bit system, we have: ",
+        "page_idx": 317
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { C _ { o u t } ^ { 4 } = g _ { 4 } + p _ { 4 } . C _ { o u t } ^ { 3 } } } \\\\ { { \\ = g _ { 4 } + p _ { 4 } . ( ( g _ { 3 } + p _ { 3 } . g _ { 2 } + p _ { 3 } . p _ { 2 } . g _ { 1 } ) + p _ { 3 } . p _ { 2 } . p _ { 1 } . C _ { i n } ^ { 1 } ) } } \\\\ { { \\ = ( g _ { 4 } + p _ { 4 } . g _ { 3 } + p _ { 4 } . p _ { 3 } . g _ { 2 } + p _ { 4 } . p _ { 3 } . p _ { 2 } . g _ { 1 } ) + p _ { 4 } . p _ { 3 } . p _ { 2 } . p _ { 1 } . C _ { i n } ^ { 1 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to derive a pattern, in these results (see Table 8.3). ",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "We observe that for a system of $n$ bits, it is possible to define a generate function $\\left( G _ { n } \\right)$ and a propagate function $( P _ { n } )$ . If we are able to somehow precompute these functions, then we can generate $C _ { o u t }$ from $C _ { i n }$ in a single step. However, as we can see from the example of the 4-bit system, the functions are fairly difficult to compute for large values of $n$ . Let us now derive an interesting property of the generate and propagate functions. ",
+        "page_idx": 317
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a sequence of $n$ bits. We divide it into two parts $1 \\ldots m$ and $( m { + } 1 ) \\ldots n$ . Let the generate and propagate functions for both the parts be $\\left( G _ { 1 , m } , P _ { 1 , m } \\right)$ and $\\left( G _ { m + 1 , n } , P _ { m + 1 , n } \\right)$ , respectively. Furthermore, let the generate and propagate functions for the entire block be $G _ { 1 , n }$ and $P _ { 1 , n }$ . We wish to find a relationship between the generate and propagate functions for the whole block with $n$ bits and the functions for the sub blocks. ",
+        "page_idx": 317
+    },
+    {
+        "type": "table",
+        "img_path": "images/ce9bba0004b597bb629de373f04f352244f49365fa9e21fac0d8a1c141a32ccf.jpg",
+        "table_caption": [
+            "Table 8.3: Generate and propagate functions for multi-bit systems "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>1 bit</td><td>Cout = 91 \u5341 p1 Cin</td></tr><tr><td>2 bit</td><td>G1 P1 Cut =\uff082+ p2.91\uff09+ p2\u00b7D1.Cin</td></tr><tr><td>3bit</td><td></td></tr><tr><td>4bit</td><td>G3 P3</td></tr><tr><td></td><td>+\uff09 G4 P4</td></tr><tr><td>nbit Cout</td><td>t =Gn+Pn.Cin</td></tr></table></body></html>\n\n",
+        "page_idx": 318
+    },
+    {
+        "type": "image",
+        "img_path": "images/39e0efff612d4e9f10c5dcaa6eeb932ed479512c4cf4dafdebdc364ad6fea913.jpg",
+        "img_caption": [
+            "Figure 8.7: A block of $n$ bits divided into two parts "
+        ],
+        "img_footnote": [],
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "Let the carry out and carry in of the $n$ -bit block be $C _ { o u t }$ and $C _ { i n }$ , respectively. Let the carry between the two sub-blocks be $C _ { s u b }$ . See Figure 8.7. We have: ",
+        "page_idx": 318
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\mathrm { ~ } } & { C _ { o u t } = G _ { m + 1 , n } + P _ { m + 1 , n } . C _ { s u b } } \\\\ { } & { \\qquad = G _ { m + 1 , n } + P _ { m + 1 , n } . ( G _ { 1 , m } + P _ { 1 , m } . C _ { i n } ) } \\\\ { } & { \\qquad = \\underbrace { G _ { m + 1 , n } + P _ { m + 1 , n } . G _ { 1 , m } } _ { G _ { 1 , n } } + \\underbrace { P _ { m + 1 , n } . P _ { 1 , m } } _ { P _ { 1 , n } } . C _ { i n } } \\\\ { } & { \\qquad = G _ { 1 , n } + P _ { 1 , n } . C _ { i n } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "Thus, for a block of $n$ bits, we can easily compute $G _ { 1 , n }$ and $P _ { 1 , n }$ from the corresponding functions of its sub blocks. This is a very powerful property and is the basis of the carry lookahead adder. ",
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "Carry Lookahead Adder \u2013 Stage I ",
+        "text_level": 1,
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "The carry lookahead adder\u2019s operation is divided into two stages. In the first stage, we compute the generate and propagate functions for different subsequences of bits. In the next stage, we use these functions to generate the result. ",
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "The diagram for the first stage is shown in Figure 8.8. Like the carry select adder, we divide bit pairs into blocks. In this diagram, we have considered a block size equal to 2. In the first level, we compute the generate and propagate functions for each block. We build a tree of (G,P) circuits(blocks) as follows. Each (G,P) block in level $n$ takes as input the generate and propagate functions of two blocks in level $n - 1$ . Thus, at each level the number of (G,P) blocks decreases by a factor of 2. For example, the first (G,P) block in level 1 processes the bit pairs $( 1 , 2 )$ . Its parent processes the bit pairs $( 1 \\ldots 4 )$ , and so on. The ranges are shown in Figure 8.8. We create a tree of (G,P) blocks in this fashion. ",
+        "page_idx": 318
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 319
+    },
+    {
+        "type": "image",
+        "img_path": "images/0bfb96e2333c8a7cefc17719702be7fc9702cbce80316749bf9f6a9b0bfcc80d.jpg",
+        "img_caption": [
+            "Figure 8.8: Carry Lookahead Adder \u2013 Stage I "
+        ],
+        "img_footnote": [],
+        "page_idx": 319
+    },
+    {
+        "type": "text",
+        "text": "For an $n$ -bit input, there are $O ( l o g ( n ) )$ levels. In each level, we are doing a constant amount of work since each (G,P) block is only processing the inputs from two other blocks. Hence, the time complexity of this stage is equal to $O ( l o g ( n ) )$ . ",
+        "page_idx": 319
+    },
+    {
+        "type": "text",
+        "text": "Carry Lookahead Adder \u2013 Stage II ",
+        "text_level": 1,
+        "page_idx": 319
+    },
+    {
+        "type": "text",
+        "text": "In this stage, we use the information generated in Stage I to compute the final sum bits, and the carry out. The block diagram for the second stage is shown in Figure 8.9. ",
+        "page_idx": 319
+    },
+    {
+        "type": "text",
+        "text": "Let us first focus at the rightmost (G,P) blocks in each level. The ranges for each of these blocks start at 1. They take the input carry, $C _ { i n } ^ { 1 }$ , as input, and then calculate the output carry for the range of bit pairs that they represent as $C _ { o u t } = G + P . C _ { i n } ^ { 1 }$ . When we are adding two numbers, the input carry at the first bit is typically 0. However, some special instructions ( $A D C$ in ARM) can consider a non-zero value of $C _ { i n } ^ { 1 }$ also. ",
+        "page_idx": 319
+    },
+    {
+        "type": "text",
+        "text": "Each (G,P) block with a range $( r 2 , r 1 )$ $( r 2 > r 1$ ), is connected to all (G,P) blocks that have a range of the form $( r 3 , r 2 + 1 )$ . The output carry of the block is equal to the input carry of those blocks. To avoid excessive clutter in the diagram (Figure 8.9), we show the connections for only the (G,P) block with range (16-1) using solid lines. Each block is connected to the block to its left in the same level and to one (G,P) block in every lower level. ",
+        "page_idx": 319
+    },
+    {
+        "type": "text",
+        "text": "The arrangement of (G,P) blocks represents a tree like computation where the correct carry values propagate from different levels to the leaves. The leaves at level 0, contain a set of 2-bit ripple carry(RC) adders that compute the result bits by considering the correct value of the input carry. We show an example in Figure 8.9 of the correct carry in value propagating from the block with range (16-1) to the 2-bit adder representing the bits 31 and 32. The path is shown using dotted lines. ",
+        "page_idx": 319
+    },
+    {
+        "type": "image",
+        "img_path": "images/ce77f5cbb01df74e0a7d93b8780b8bb3dd967bcb4bc2f14b9deea14f89eda26a.jpg",
+        "img_caption": [
+            "Figure 8.9: Carry Lookahead Adder \u2013 Stage II "
+        ],
+        "img_footnote": [],
+        "page_idx": 320
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 320
+    },
+    {
+        "type": "text",
+        "text": "Similarly, carry values propagate to every single ripple carry adder at the zeroth level. The operation completes once all the result bits and the output carry have been computed. ",
+        "page_idx": 320
+    },
+    {
+        "type": "text",
+        "text": "The time complexity of this stage is also $O ( l o g ( n ) )$ because there are $O ( l o g ( n ) )$ levels in the diagram and there is a constant amount of work done per level. This work comprises computing $C _ { o u t }$ and propagating it to (G,P) blocks at lower levels. ",
+        "page_idx": 320
+    },
+    {
+        "type": "text",
+        "text": "Hence, the total time complexity of the carry lookahead adder is $\\vert O ( l o g ( n ) )$ ",
+        "page_idx": 320
+    },
+    {
+        "type": "text",
+        "text": "Way Point 5 Time complexities of different adders: ",
+        "page_idx": 320
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Ripple Carry Adder: $O ( n )$ Carry Select Adder: $O ( { \\sqrt { n } } )$ \u2022 Carry Lookahead Adder: $O ( l o g ( n ) )$ ",
+        "page_idx": 320
+    }
+]

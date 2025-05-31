@@ -1,0 +1,5 @@
+10.3.4 MA Stage
+
+The MA stage is shown in Figure 10.7. The only operand that the load instruction uses is the result of the ALU, which contains the effective memory address. This is saved in the aluResult field of the EX-MA register. The data to be stored resides in the rd register. This value was read from the register file in the OF stage, and was stored in the op2 field of the instruction packet. In this stage, the op2 field is connected to the  (memory data register) register. The relevant control signals – isLd and isSt – are also a part of the instruction packet, and they are routed to the memory unit.
+
+The only output of this stage is the result of the load instruction. This is saved in the ldResult field of the MA-RW register.

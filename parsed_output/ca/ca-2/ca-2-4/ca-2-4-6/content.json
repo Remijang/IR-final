@@ -1,0 +1,45 @@
+[
+    {
+        "type": "text",
+        "text": "2.4.6 Floating Point Mathematics ",
+        "text_level": 1,
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "Because of limited precision, floating point formats do not represent most numbers accurately. This is because, we are artificially constraining ourselves to expressing a generic real number as a sum of powers of 2, and restricting the number of mantissa bits to 23. It is possible that some numbers such as $1 / 7$ can be easily represented in one base (base 7), and can have inexact representations in other bases (base 2). Furthermore, there are a large set of numbers that cannot be exactly represented in any base. These are irrational numbers such as $\\sqrt { 2 }$ or $\\pi$ . This is because a floating point representation is a rational number that is formed out of repeatedly adding fractions. It is a known fact that rational numbers cannot be used to represent numbers such as $\\sqrt { 2 }$ . Leaving theoretical details aside, if we have a large number of mantissa bits, then we can get arbitrarily close to the actual number. We need to be willing to sacrifice a tiny amount of accuracy for the ease of representation. ",
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "Floating point math has some interesting and unusual properties. Let us consider the mathematical expression involving two positive numbers $A$ and $B$ : $A + B - A$ . We would ideally expect the answer to be non-zero. However, this need not be the case. Let us consider the following code snippet. ",
+        "page_idx": 83
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\tt A } } & { { = } } & { { 2 \\hat { \\tt ering } \\left( 5 0 \\right) ; } } \\\\ { { \\tt B } } & { { = } } & { { 2 \\hat { \\tt ering } \\left( 1 0 \\right) ; } } \\\\ { { \\tt C } } & { { = } } & { { \\left( \\tt B \\mathrm { \\mathrm { ering } + \\mathrm { \\AA } } \\right) \\mathrm { \\mathrm { \\Omega - \\mathrm { \\Large ~ A } } ; } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "Due to the limited number of mantissa bits (23), there is no way to represent $2 ^ { 5 0 } + 2 ^ { 1 0 }$ . If the dominant term is $2 ^ { 5 0 }$ , then our flexibility is only limited to numbers in the range $2 ^ { 5 0 \\pm 2 3 }$ . Hence, a processor will compute $A + B$ equal to $A$ , and thus $C$ will be 0. However, if we slightly change the code snippet to look like: ",
+        "page_idx": 83
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\tt { A \\phi = 2 \\hat { \\phi } ( 5 0 ) ; } } \\\\ & { \\tt { B \\phi = 2 \\hat { \\phi } ( 1 0 ) ; } } \\\\ & { \\tt { C \\phi = B \\phi + \\phi ( A \\phi - \\phi A ) ; } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "$C$ is computed correctly in this case. We thus observe that the order of floating point operations is very important. The programmer has to be either smart enough to figure out the right order, or we need a smart compiler to figure out the right order of operations for us. As we see, floating point operations are clearly not associative. The proper placement of brackets is crucial. However, floating point operations are commutative ( $A + B = B + A$ ). ",
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "Due to the inexact nature of floating point mathematics, programmers and compilers need to pay special attention while dealing with very large or very small numbers. As we have also seen, if one expression contains both small and large numbers, then the proper placement of brackets is very important. ",
+        "page_idx": 84
+    }
+]

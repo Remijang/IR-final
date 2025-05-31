@@ -1,0 +1,37 @@
+4.2.9 Load-Store Instructions
+
+Simple Load-Store Instructions
+
+The simplest load and store instructions are ldr and str, respectively. Here, is an example.
+
+ldr r1, [r0]
+
+This instruction directs the processor to load the value in register  , from the memory location stored in  , as shown in Figure 4.2.
+
+Note that in this case,  , contains the starting address of the data in memory. The ldr instructions loads 4 bytes in a register. If the value contained in  is  , then we need to fetch the bytes from  to  . These 32 bits (4 bytes), are brought from memory and saved in register  .
+
+The str instruction performs the reverse process. It reads the value in a register and saves it in a memory location. An example is shown in Figure 4.3. Here  is known as the base register.
+
+str r1, [r0]
+
+Load-Store Instructions with an Offset
+
+We can specify load and store instructions with a base register, and an optional offset. Let us consider:
+
+ldr r1, [r0, #4]
+
+Here, the memory address is equal to the value in  plus 4. It is possible to specify a register in place of an immediate operand.
+
+ldr r1, [r0, r2]
+
+The memory address is equal to  . In this expression,  and  refer to the values stored in them. We can alternatively state the operation in this program as:  (see the register transfer notation defined in Section 3.2.5).
+
+Table 4.13 shows the semantics of different types of load store instructions. The third column shows the addressing mode. The register  in this case is known as the index register because it contains a value that is added to the base register, and this value can be used as the index of an array (see Section 4.3.1). Note that some authors call the base-offset mode as also the displacement addressing mode.
+
+Load-Store instructions for Bytes and Half-Words
+
+The ldr and str instructions load/store 4 bytes of data. However, it is possible to also load and store 1 and 2 bytes of data. 2 bytes is also known as a half-word, where a word is equal to 4 bytes.
+
+Table 4.14: Load and store instructions for bytes and half-words in the base-offset addressing mode
+
+Table 4.14 shows the load and store instructions for bytes and half words using the baseoffset addressing mode. ldrb loads an unsigned byte to a register. It places the byte in the least significant 8 bits. The rest of the 24 bits are set to 0. ldrh similarly loads an unsigned half-word (16 bits). ldrsb, and ldrsh load a signed byte and half-word, respectively. They extend the sign of the operand (see Section 2.3.4) to make it fit in 32 bits. This is done by replicating the MSB. strb and strh store an unsigned byte in memory. Note that unlike loads, there are no ARM instructions to extend the sign of the operand while saving it in memory.

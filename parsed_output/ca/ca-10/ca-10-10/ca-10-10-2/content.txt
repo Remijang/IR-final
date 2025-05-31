@@ -1,0 +1,27 @@
+10.10.2 Dynamic Power
+
+Let us consider a chip’s package as a closed black box. We have electrical energy flowing in, and heat coming out. Over a sufficiently long period of time, the amount of electrical energy flowing in to the chip is exactly equal to the amount of energy dissipated as heat according to the law of conservation of energy. Note that we disregard the energy spent in sending electrical signals along I/O links. In any case, this energy is negligible as compared to the power dissipation of the entire chip.
+
+Any circuit consisting of transistors, and copper wires can be modeled as an equivalent circuit with resistors, capacitors, and inductors. Capacitors and inductors do not dissipate heat. However, resistors convert a part of the electrical energy that flows through them to heat. This is the only mechanism through which electrical energy can get converted to thermal energy in our equivalent circuit.
+
+Let us now consider a small circuit that has a single resistor and a single capacitor as shown in Figure 10.37. The resistor represents the resistance of the wires in the circuit. The capacitor represents the equivalent capacitance of transistors in the circuit. We need to note that different parts of a circuit such as the gates of transistors have a certain potential at a given point in time. This means that the gate of a transistor is functioning as a capacitor, and hence storing charge. Similarly, the drain and source of a transistor have an equivalent drain and source capacitance. We typically do not consider equivalent inductance in a simplistic analysis, because most wires are typically short, and they do not function as inductors.
+
+If we analyze this simple circuit, then we can conclude that the total energy required to charge the capacitor is  .  is dissipated by the resistor while charging the capacitor, and the remaining energy is stored in the capacitor. Now, if the capacitor gets discharged, then the remaining  gets dissipated via the resistor.
+
+Now, let us generalize this result. In a large circuit with billions of transistors, we essentially have billions of subcircuits with resistive and capacitive elements. Each cycle, we can either have a transition in a bit (  or  ), or we might have no transitions at all. If there is a transition in the value of a bit, then either a capacitor gets charged or gets discharged. However, if there are no transitions, then there is no current flow, and thus there is no heat dissipation.
+
+Let us assume that we have  subcircuits. Let,  be known as the activity factor. It is 1 if there is a transition, and 0 if there is no transition in subcircuit  . Let  be the energy dissipated by all the  subcircuits. We thus have:
+
+The total energy dissipated is equal to  . Let us now group the small subcircuits into functional units, and assume that the capacitance values across all the subcircuits in a functional unit are roughly similar. Thus, for a given functional unit  , we can say that:
+
+Here,  is a representative value of capacitance for the entire functional unit, and  is the activity factor for the entire functional unit. 0 represents no activity, and 1 represents  activity.  . Note that we have also replaced the equality by a proportional sign because we are interested in the nature of power dissipation rather than the exact values.
+
+We can thus express the total energy consumption of a circuit having  functional units as:
+
+This equation represents the energy consumed per cycle. Power is equal to energy divide by time. In this case the time is equal to the clock cycle time, or the reciprocal of the chip’s frequency  . Thus, the total power  is equal to:
+
+The power dissipated is thus proportional to the frequency, and the square of the supply voltage. Note that this power dissipation represents the resistive loss due to the transitions in the inputs and outputs. Hence, it is known as the dynamic power,  . Thus, we have:
+
+Definition 87
+
+Dynamic power is the cumulative power dissipated due to the transitions of inputs and outputs across all the transistors in a circuit.

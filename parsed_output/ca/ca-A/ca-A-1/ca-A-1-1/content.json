@@ -1,0 +1,88 @@
+[
+    {
+        "type": "text",
+        "text": "A.1.1 ARM Cortex-M3 ",
+        "text_level": 1,
+        "page_idx": 734
+    },
+    {
+        "type": "text",
+        "text": "System Design ",
+        "text_level": 1,
+        "page_idx": 734
+    },
+    {
+        "type": "text",
+        "text": "Let us begin with the ARM $\\textsuperscript { \\textregistered }$ Cortex $\\textsuperscript { \\textregistered }$ -M series processors that have been designed primarily for the embedded processor market. For such embedded processors, energy efficiency and cost are more important than raw performance. Consequently, ARM engineers designed a 3 issue pipeline devoid of very complicated features. ",
+        "page_idx": 734
+    },
+    {
+        "type": "text",
+        "text": "The Cortex-M3 supports a basic version of the ARMv7-M instruction set as described in Chapter 4. It is typically attached to other components using the ARM $\\textsuperscript { \\textregistered }$ AMBA $\\textsuperscript { \\textregistered }$ bus as shown in Figure A.1. ",
+        "page_idx": 734
+    },
+    {
+        "type": "image",
+        "img_path": "images/f6ceb884de6236e8249c8b00774833a116ff47356272fe5bcd665c75fffe979d.jpg",
+        "img_caption": [
+            "Figure A.1: The ARM Cortex-M3 connected to the AMBA bus along with other components , source [arm, b]. Reproduced with permission from ARM Limited. Copyright $\\circledcirc$ ARM Limited (or its affiliates) "
+        ],
+        "img_footnote": [],
+        "page_idx": 734
+    },
+    {
+        "type": "text",
+        "text": "AMBA (Advanced Microcontroller Bus Architecture) is a bus architecture designed by ARM. It is used to connect an ARM core with other components in SOC-based systems. For example, most of the processors in smartphones and mobile devices use the AMBA bus to connect to high speed memory devices, DMA engines, and other external buses through bridge devices. One such external bus is the APB bus (Advanced Peripheral Bus) that is used to connect to peripherals such as the keyboard, UART controller (Universal Asynchronous Receiver/Transmitter Protocol), timer, and the PIO (parallel input output) interface. ",
+        "page_idx": 734
+    },
+    {
+        "type": "image",
+        "img_path": "images/07effe68bbb3570d7c1d5a81fd877331948dd94a0f5bbead2957f7796906b54f.jpg",
+        "img_caption": [
+            "Figure A.2: The pipeline of the ARM Cortex-M3 , source [arm, b]. Reproduced with permission from ARM Limited. Copyright $\\textcircled{\\mathrm { c } }$ ARM Limited (or its affiliates). "
+        ],
+        "img_footnote": [],
+        "page_idx": 735
+    },
+    {
+        "type": "text",
+        "text": "Pipeline Design ",
+        "text_level": 1,
+        "page_idx": 735
+    },
+    {
+        "type": "text",
+        "text": "Figure A.2 shows the pipeline of the ARM Cortex-M3. It has three stages namely fetch ( $F ^ { ' }$ ), decode $( D )$ , and execute ( $E$ ). The fetch stage fetches the instruction from memory, and is the smallest stage of all the three stages. ",
+        "page_idx": 735
+    },
+    {
+        "type": "text",
+        "text": "The decode stage( $D$ stage) has three different sub-units as shown in Figure A.2. The $D$ stage has an instruction decode and register read unit, which is similar to the operand fetch unit in SimpleRisc . It decodes the instruction, and forms the instruction packet. Simultaneously, it reads the values of the operands that are embedded in the instruction, and also reads values from the register file. The AGU (address generation unit) extracts all the fields in the instruction, and schedules the execution of the load or store instruction in the next stage of the pipeline. It plays a special role while processing the ldm (load multiple) and stm (store multiple) instructions. Recall from our discussion in Section 4.3.2 that these instructions can read or write to multiple registers at the same time. The AGU creates multiple operations out of a single ldm or stm instruction in the pipeline. The branch unit is used for branch prediction. It predicts both the branch outcome, and the branch target. ",
+        "page_idx": 735
+    },
+    {
+        "type": "text",
+        "text": "The execute stage is fairly heavy in terms of functionality, and some instructions take 2 cycles to execute. Let us look at the regular ALU and branch instructions first. Recall from our discussion in Section 4.2.2 that ARM instructions can have one shifter operand. Secondly, computing the value of the 32-bit immediate from its 12-bit encoding is essentially a shift (rotate is a type of shift) operation. Both of these operations are executed by the shift unit that has a hardware structure known as a barrel shifter. Once the operands are ready, they are passed to the ALU and branch unit that computes the branch outcome/target, and the ALU result. ",
+        "page_idx": 735
+    },
+    {
+        "type": "text",
+        "text": "The ARM ISA has two kinds of branches \u2013 direct and indirect. For direct branches, the offset of the branch target from the current PC is embedded in the instruction. For example, a branch to a label is an example of a direct branch. It is possible to compute the branch target of a direct branch in the decode stage. ARM also supports indirect branches, where the branch target is the result of an ALU or memory instruction. For example, the instruction ldr pc, [r1, #10] is an example of an indirect branch. Here, the value of the branch target is equal to the value loaded from memory by the load instruction. It is in general difficult to predict the target of indirect branches. In the Cortex-M3 processor, whenever there is a branch misprediction (either target or outcome), the two instructions fetched after the branch are canceled. The processor starts fetching instructions from the correct branch target. ",
+        "page_idx": 735
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 736
+    },
+    {
+        "type": "text",
+        "text": "Along with the basic ALU, the Cortex-M3 has a multiply and divide unit that can perform both signed and unsigned, multiplication and division. The Cortex-M3 supports two instructions, sdiv, and udiv for signed and unsigned division, respectively. Along with these instructions it has support for multiply, and multiply-accumulate operations as described in Section 4.2.1. ",
+        "page_idx": 736
+    },
+    {
+        "type": "text",
+        "text": "The load and store instructions typically take two cycles. They have an address generation phase, and a memory access phase. The load instructions take 2 cycles to execute. Note that in the second cycle, it is not possible for other instructions to execute in the $E$ stage. The pipeline is thus stalled for one cycle. This specific feature reduces the performance of the pipeline. ARM removed this restriction in its high performance processors. The store instruction also takes 2 cycles to execute. However, the second cycle that accesses memory does not stall the pipeline. The processor writes the value to a store buffer (similar to a write buffer as discussed in Section 11.3.3), and proceeds with its execution. It is further possible to issue back to back (consecutive cycles) store and load instructions, where the load reads the value written by the store. The pipeline does not need to stall for the load instruction because it reads the value written by the store from the store buffer. ",
+        "page_idx": 736
+    }
+]

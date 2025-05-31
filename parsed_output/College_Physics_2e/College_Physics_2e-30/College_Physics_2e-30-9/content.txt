@@ -1,0 +1,405 @@
+30.9 The Pauli Exclusion Principle
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Define the composition of an atom along with its electrons, neutrons, and protons. Explain the Pauli exclusion principle and its application to the atom.   
+Specify the shell and subshell symbols and their positions.   
+• Define the position of electrons in different shells of an atom.   
+• State the position of each element in the periodic table according to shell filling.
+
+Multiple-Electron Atoms
+
+All atoms except hydrogen are multiple-electron atoms. The physical and chemical properties of elements are directly related to the number of electrons a neutral atom has. The periodic table of the elements groups elements with similar properties into columns. This systematic organization is related to the number of electrons in a neutral atom, called the atomic number,  . We shall see in this section that the exclusion principle is key to the underlying explanations, and that it applies far beyond the realm of atomic physics.
+
+In 1925, the Austrian physicist Wolfgang Pauli (see Figure 30.54) proposed the following rule: No two electrons can have the same set of quantum numbers. That is, no two electrons can be in the same state. This statement is known as the Pauli exclusion principle, because it excludes electrons from being in the same state. The Pauli exclusion principle is extremely powerful and very broadly applicable. It applies to any identical particles with half-integral intrinsic spin—that is, having  Thus no two electrons can have the same set of quantum numbers.
+
+Pauli Exclusion Principle
+
+No two electrons can have the same set of quantum numbers. That is, no two electrons can be in the same state.
+
+Let us examine how the exclusion principle applies to electrons in atoms. The quantum numbers involved were defined in Quantum Numbers and Rules as  l,  , and  . Since  is always for electrons, it is redundant to list , and so we omit it and specify the state of an electron by a set of four numbers  . For example, the quantum numbers  completely specify the state of an electron in an atom.
+
+Since no two electrons can have the same set of quantum numbers, there are limits to how many of them can be in the same energy state. Note that  determines the energy state in the absence of a magnetic field. So we first choose  , and then we see how many electrons can be in this energy state or energy level. Consider the  level, for example. The only value can have is 0 (see Table 30.1 for a list of possible values once  is known), and thus  can only be 0. The spin projection  can be either  or  , and so there can be two electrons in the  state. One has quantum numbers  , and the other has  . Figure 30.55 illustrates that there can be one or two electrons having  , but not three.
+
+Shells and Subshells
+
+Because of the Pauli exclusion principle, only hydrogen and helium can have all of their electrons in the  state. Lithium (see the periodic table) has three electrons, and so one must be in the  level. This leads to the concept of shells and shell filling. As we progress up in the number of electrons, we go from hydrogen to helium, lithium, beryllium, boron, and so on, and we see that there are limits to the number of electrons for each value of . Higher values of the shell  correspond to higher energies, and they can allow more electrons because of the various combinations of  ，  , and  that are possible. Each value of the principal quantum number  thus corresponds to an atomic shell into which a limited number of electrons can go. Shells and the number of electrons in them determine the physical and chemical properties of atoms, since it is the outermost electrons that interact most with anything outside the atom.
+
+The probability clouds of electrons with the lowest value of  are closest to the nucleus and, thus, more tightly bound. Thus when shells fill, they start with  , progress to  , and so on. Each value of  thus corresponds to a subshell.
+
+The table given below lists symbols traditionally used to denote shells and subshells.
+
+To denote shells and subshells, we write with a number for  and a letter for  . For example, an electron in the  state must have  , and it is denoted as a electron. Two electrons in the  state is denoted as  . Another example is an electron in the  state with  , written as  . The case of three electrons with these quantum numbers is written  . This notation, called spectroscopic notation, is generalized as shown in Figure 30.56.
+
+Counting the number of possible combinations of quantum numbers allowed by the exclusion principle, we can determine how many electrons it takes to fill each subshell and shell.
+
+EXAMPLE 30.4
+
+How Many Electrons Can Be in This Shell?
+
+List all the possible sets of quantum numbers for the  shell, and determine the number of electrons that can be in the shell and each of its subshells.
+
+Strategy
+
+Given  for the shell, the rules for quantum numbers limit  to be 0 or 1. The shell therefore has two subshells, labeled  and  . Since the lowest  subshell fills first, we start with the  subshell possibilities and then proceed with the  subshell.
+
+Solution
+
+It is convenient to list the possible quantum numbers in a table, as shown below.
+
+Discussion
+
+It is laborious to make a table like this every time we want to know how many electrons can be in a shell or subshell.   
+There exist general rules that are easy to apply, as we shall now see.
+
+The number of electrons that can be in a subshell depends entirely on the value of  . Once  is known, there are a fixed number of values of  , each of which can have two values for  First, since  goes from  to lin steps of 1, there are  possibilities. This number is multiplied by 2, since each electron can be spin up or spin down. Thus themaximumnumberofelectronsthatcanbeinasubshel is  .
+
+For example, the  subshell in Example 30.4 has a maximum of 2 electrons in it, since  for this subshell. Similarly, the  subshell has a maximum of 6 electrons, since  . For a shell, the maximum number is the sum of what can fit in the subshells. Some algebra shows that the maximumnumberof electronsthatcanbeinashel is  .
+
+For example, for the first shell  , and so  . We have already seen that only two electrons can be in the  shell. Similarly, for the second shell,  , and so  . As found in Example 30.4, the total number of electrons in the  shell is 8.
+
+EXAMPLE 30.5
+
+Subshells and Totals for 
+
+How many subshells are in the  shell? Identify each subshell, calculate the maximum number of electrons that will fit into each, and verify that the total is  .
+
+Strategy
+
+Subshells are determined by the value of  ; thus, we first determine which values of  are allowed, and then we apply the equation “maximum number of electrons that can be in a subshell  to find the number of electrons in each subshell.
+
+Solution
+
+Since  , we know that can be , or ; thus, there are three possible subshells. In standard notation, they are labeled the ,  , and  subshells. We have already seen that 2 electrons can be in an  state, and 6 in a  state, but let us use the equation “maximum number of electrons that can be in a subshel  to calculate the maximum number in each:
+
+The equation “maximum number of electrons that can be in a shell  ” gives the maximum number in the  shell to be
+
+Discussion
+
+The total number of electrons in the three possible subshells is thus the same as the formula  . In standard (spectroscopic) notation, a filled  shell is denoted as  . Shells do not fill in a simple manner. Before the  shell is completely filled, for example, we begin to find electrons in the  shell.
+
+Shell Filling and the Periodic Table
+
+Table 30.3 shows electron configurations for the first 20 elements in the periodic table, starting with hydrogen and its single electron and ending with calcium. The Pauli exclusion principle determines the maximum number of electrons allowed in each shell and subshell. But the order in which the shells and subshells are filled is complicated because of the large numbers of interactions between electrons.
+
+Examining the above table, you can see that as the number of electrons in an atom increases from 1 in hydrogen to 2 in helium and so on, the lowest-energy shell gets filled first—that is, the  shell fills first, and then the  shell begins to fill. Within a shell, the subshells fill starting with the lowest  , or with the  subshell, then the  , and so on, usually until all subshells are filled. The first exception to this occurs for potassium, where the  subshell begins to fill before any electrons go into the  subshell. The next exception is not shown in Table 30.3; it occurs for rubidium, where the subshell starts to fill before the  subshell. The reason for these exceptions is that  electrons have probability clouds that penetrate closer to the nucleus and, thus, are more tightly bound (lower in energy).
+
+Figure 30.58 shows the periodic table of the elements, through element 118. Of special interest are elements in the main groups, namely, those in the columns numbered 1, 2, 13, 14, 15, 16, 17, and 18.
+
+The number of electrons in the outermost subshell determines the atom’s chemical properties, since it is these electrons that are farthest from the nucleus and thus interact most with other atoms. If the outermost subshell can accept or give up an electron easily, then the atom will be highly reactive chemically. Each group in the periodic table is characterized by its outermost electron configuration. Perhaps the most familiar is Group 18 (Group VIII), the noble gases (helium, neon, argon, etc.). These gases are all characterized by a filled outer subshell that is particularly stable. This means that they have large ionization energies and do not readily give up an electron. Furthermore, if they were to accept an extra electron, it would be in a significantly higher level and thus loosely bound. Chemical reactions often involve sharing electrons. Noble gases can be forced into unstable chemical compounds only under high pressure and temperature.
+
+Group 17 (Group VII) contains the halogens, such as fluorine, chlorine, iodine and bromine, each of which has one less electron than a neighboring noble gas. Each halogen has  electrons (a  configuration), while the  subshell can hold 6 electrons. This means the halogens have one vacancy in their outermost subshell. They thus readily accept an extra electron (it becomes tightly bound, closing the shell as in noble gases) and are highly reactive chemically. The halogens are also likely to form singly negative ions, such as  , fitting an extra electron into the vacancy in the outer subshell. In contrast, alkali metals, such as sodium and potassium, all have a single electron in their outermost subshell (an  configuration) and are members of Group 1 (Group I). These elements easily give up their extra electron and are thus highly reactive chemically. As you might expect, they also tend to form singly positive ions, such as  , by losing their loosely bound outermost electron. They are metals (conductors), because the loosely bound outer electron can move freely.
+
+Of course, other groups are also of interest. Carbon, silicon, and germanium, for example, have similar chemistries and are in Group 4 (Group IV). Carbon, in particular, is extraordinary in its ability to form many types of bonds and to be part of long chains, such as inorganic molecules. The large group of what are called transitional elements is characterized by the filling of the  subshells and crossing of energy levels. Heavier groups, such as the lanthanide series, are more complex—their shells do not fill in simple order. But the groups recognized by chemists such as Mendeleev have an explanation in the substructure of atoms.
+
+Glossary   
+angular momentum quantum number a quantum number associated with the angular momentum of electrons   
+atom basic unit of matter, which consists of a central, positively charged nucleus surrounded by negatively charged electrons   
+atomic de-excitation process by which an atom transfers from an excited electronic state back to the ground state electronic configuration; often occurs by emission of a photon   
+atomic excitation a state in which an atom or ion acquires the necessary energy to promote one or more of its electrons to electronic states higher in energy than their ground state   
+atomic number the number of protons in the nucleus of an atom   
+Bohr radius the mean radius of the orbit of an electron around the nucleus of a hydrogen atom in its ground state   
+Brownian motion the continuous random movement of particles of matter suspended in a liquid or gas   
+cathode-ray tube a vacuum tube containing a source of electrons and a screen to view images   
+double-slit interference an experiment in which waves or particles from a single source impinge upon two slits so that the resulting interference pattern may be observed   
+energies of hydrogen-like atoms Bohr formula for energies of electron states in hydrogen-like atoms:    
+energy-level diagram a diagram used to analyze the energy level of electrons in the orbits of an atom   
+fine structure the splitting of spectral lines of the hydrogen spectrum when the spectral lines are examined at very high resolution   
+fluorescence any process in which an atom or molecule, excited by a photon of a given energy, deexcites by emission of a lower-energy photon   
+hologram means entirepicture(from the Greek word holo, as in holistic), because the image produced is three dimensional   
+holography the process of producing holograms   
+hydrogen spectrum wavelengths the wavelengths of visible light from hydrogen; can be calculated by    
+hydrogen-like atom any atom with only a single electron   
+intrinsic magnetic field the magnetic field generated due to the intrinsic spin of electrons   
+intrinsic spin the internal or intrinsic angular momentum of electrons   
+laser acronym for light amplification by stimulated emission of radiation   
+magnitude of the intrinsic (internal) spin angular   
+momentum given by  lerof magnitude longer than the most short-lived states   
+orbital angular momentum an angular momentum that corresponds to the quantum analog of classical angular momentum   
+orbital magnetic field the magnetic field generated due to the orbital motion of electrons   
+Pauli exclusion principle a principle that states that no two electrons can have the same set of quantum numbers; that is, no two electrons can be in the same state   
+phosphorescence the de-excitation of a metastable state   
+planetary model of the atom the most familiar model or illustration of the structure of the atom   
+population inversion the condition in which the majority of atoms in a sample are in a metastable state   
+quantum numbers the values of quantized entities, such as energy and angular momentum   
+Rydberg constant a physical constant related to the atomic spectra with an established value of    
+shell a probability cloud for electrons that has a single principal quantum number   
+space quantization the fact that the orbital angular momentum can have only certain directions   
+spin projection quantum number quantum number that can be used to calculate the intrinsic electron angular momentum along the  -axis   
+spin quantum number the quantum number that parameterizes the intrinsic angular momentum (or spin angular momentum, or simply spin) of a given particle   
+stimulated emission emission by atom or molecule in which an excited state is stimulated to decay, most readily caused by a photon of the same energy that is necessary to excite the state   
+subshell the probability cloud for electrons that has a single angular momentum quantum number   
+ rays a form of electromagnetic radiation   
+ -ray diffraction a technique that provides the detailed information about crystallographic structure of natural and manufactured materials   
+z-component of spin angular momentum component of intrinsic electron spin along the 
+
+-axis z-component of the angular momentum component of orbital angular momentum of electron along the 
+
+Section Summary
+
+30.1 Discovery of the Atom
+
+• Atoms are the smallest unit of elements; atoms combine to form molecules, the smallest unit of compounds.   
+• The first direct observation of atoms was in Brownian motion.   
+• Analysis of Brownian motion gave accurate sizes for atoms  on average) and a precise value for Avogadro’s number.
+
+30.2 Discovery of the Parts of the Atom: Electrons and Nuclei
+
+• Atoms are composed of negatively charged electrons, first proved to exist in cathode-ray-tube experiments, and a positively charged nucleus.   
+• All electrons are identical and have a charge-tomass ratio of    
+• The positive charge in the nuclei is carried by particles called protons, which have a charge-tomass ratio of    
+• Mass of electron,    
+• Mass of proton,    
+• The planetary model of the atom pictures electrons orbiting the nucleus in the same way that planets orbit the sun.
+
+30.3 Bohr’s Theory of the Hydrogen Atom
+
+• The planetary model of the atom pictures electrons orbiting the nucleus in the way that planets orbit the sun. Bohr used the planetary model to develop the first reasonable theory of hydrogen, the simplest atom. Atomic and molecular spectra are quantized, with hydrogen spectrum wavelengths given by the formula  where  is the wavelength of the emitted EM radiation and  is the Rydberg constant, which has the value R= 1.097 × 107 m-1.   
+The constants  and  are positive integers, and
+
+-axis Zeeman effect the effect of external magnetic fields on spectral lines
+
+ must be greater than  .   
+• Bohr correctly proposed that the energy and radii of the orbits of electrons in atoms are quantized, with energy for transitions between orbits given by  where  is the change in energy between the initial and final orbits and  is the energy of an absorbed or emitted photon. It is useful to plot orbital energies on a vertical graph called an energy-level diagram.   
+• Bohr proposed that the allowed orbits are circular and must have quantized orbital angular momentum given by  where  is the angular momentum,  is the radius of the orbit, and  is Planck’s constant. For all one-electron (hydrogen-like) atoms, the radius of an orbit is given by   is the atomic number of an element (the number of electrons is has when neutral) and  is defined to be the Bohr radius, which is    
+• Furthermore, the energies of hydrogen-like atoms are given by  where  is the ground-state energy and is given by  Thus, for hydrogen,    
+• The Bohr Theory gives accurate values for the energy levels in hydrogen-like atoms, but it has been improved upon in several respects.
+
+30.4 X Rays: Atomic Origins and Applications
+
+• X rays are relatively high-frequency EM radiation. They are produced by transitions between innershell electron levels, which produce x rays characteristic of the atomic element, or by decelerating electrons.
+
+• X rays have many uses, including medical diagnostics and x-ray diffraction.
+
+30.5 Applications of Atomic Excitations and De-Excitations
+
+• An important atomic process is fluorescence, defined to be any process in which an atom or molecule is excited by absorbing a photon of a given energy and de-excited by emitting a photon of a lower energy. Some states live much longer than others and are termed metastable.   
+• Phosphorescence is the de-excitation of a metastable state.   
+• Lasers produce coherent single-wavelength EM radiation by stimulated emission, in which a metastable state is stimulated to decay.   
+Lasing requires a population inversion, in which a majority of the atoms or molecules are in their metastable state.
+
+30.6 The Wave Nature of Matter Causes Quantization
+
+Quantization of orbital energy is caused by the wave nature of matter. Allowed orbits in atoms occur for constructive interference of electrons in the orbit, requiring an integral number of wavelengths to fit in an orbit’s circumference; that is,  ， where  is the electron’s de Broglie wavelength.   
+• Owing to the wave nature of electrons and the Heisenberg uncertainty principle, there are no well-defined orbits; rather, there are clouds of probability.   
+• Bohr correctly proposed that the energy and radii of the orbits of electrons in atoms are quantized, with energy for transitions between orbits given by  where  is the change in energy between the initial and final orbits and  is the energy of an absorbed or emitted photon.   
+• It is useful to plot orbit energies on a vertical graph called an energy-level diagram.   
+• The allowed orbits are circular, Bohr proposed, and must have quantized orbital angular momentum given by  where  is the angular momentum,  is the radius of orbit  , and  is Planck’s constant.
+
+30.7 Patterns in Spectra Reveal More Quantization
+
+• The Zeeman effect—the splitting of lines when a magnetic field is applied—is caused by other quantized entities in atoms.   
+• Both the magnitude and direction of orbital angular momentum are quantized.   
+• The same is true for the magnitude and direction of the intrinsic spin of electrons.
+
+30.8 Quantum Numbers and Rules
+
+• Quantum numbers are used to express the allowed values of quantized entities. The principal quantum number  labels the basic states of a system and is given by    
+• The magnitude of angular momentum is given by  where  is the angular momentum quantum number. The direction of angular momentum is quantized, in that its component along an axis defined by a magnetic field, called the  -axis is given by    is the  -component of the angular momentum and  is the angular momentum projection quantum number. Similarly, the electron’s intrinsic spin angular momentum  is given by   is defined to be the spin quantum number. Finally, the direction of the electron’s spin along the  -axis is given by  where  is the  -component of spin angular momentum and  is the spin projection quantum number. Spin projection  is referred to as spin up, whereas  is called spin down. Table 30.1 summarizes the atomic quantum numbers and their allowed values.   
+30.9 The Pauli Exclusion Principle   
+• The state of a system is completely described by a complete set of quantum numbers. This set is written as  .   
+• The Pauli exclusion principle says that no two electrons can have the same set of quantum numbers; that is, no two electrons can be in the same state.
+
+• This exclusion limits the number of electrons in atomic shells and subshells. Each value of  corresponds to a shell, and each value of corresponds to a subshell.
+
+Conceptual Questions
+
+30.1 Discovery of the Atom
+
+1. Name three different types of evidence for the existence of atoms.   
+2. Explain why patterns observed in the periodic table of the elements are evidence for the existence of atoms, and why Brownian motion is a more direct type of evidence for their existence.   
+3. If atoms exist, why can’t we see them with visible light?
+
+30.2 Discovery of the Parts of the Atom: Electrons and Nuclei
+
+4. What two pieces of evidence allowed the first calculation of  , the mass of the electron? (a) The ratios  and  . (b) The values of  and  . (c) The ratio  and  . Justify your response.   
+5. How do the allowed orbits for electrons in atoms differ from the allowed orbits for planets around the sun? Explain how the correspondence principle applies here.
+
+30.3 Bohr’s Theory of the Hydrogen Atom
+
+6. How do the allowed orbits for electrons in atoms differ from the allowed orbits for planets around the sun? Explain how the correspondence principle applies here.   
+7. Explain how Bohr’s rule for the quantization of electron orbital angular momentum differs from the actual rule.   
+8. What is a hydrogen-like atom, and how are the energies and radii of its electron orbits related to those in hydrogen?
+
+30.4 X Rays: Atomic Origins and Applications
+
+9. Explain why characteristic x rays are the most energetic in the EM emission spectrum of a given element.   
+10. Why does the energy of characteristic x rays become increasingly greater for heavier atoms?   
+• The maximum number of electrons that can be in a subshell is  .   
+• The maximum number of electrons that can be in a shell is  .   
+11. Observers at a safe distance from an atmospheric test of a nuclear bomb feel its heat but receive none of its copious x rays. Why is air opaque to x rays but transparent to infrared?   
+12. Lasers are used to burn and read CDs. Explain why a laser that emits blue light would be capable of burning and reading more information than one that emits infrared.   
+13. Crystal lattices can be examined with x rays but not UV. Why?   
+14. CT scanners do not detect details smaller than about  . Is this limitation due to the wavelength of x rays? Explain.
+
+30.5 Applications of Atomic Excitations and De-Excitations
+
+15. How do the allowed orbits for electrons in atoms differ from the allowed orbits for planets around the sun? Explain how the correspondence principle applies here.   
+16. Atomic and molecular spectra are discrete. What does discrete mean, and how are discrete spectra related to the quantization of energy and electron orbits in atoms and molecules?   
+17. Hydrogen gas can only absorb EM radiation that has an energy corresponding to a transition in the atom, just as it can only emit these discrete energies. When a spectrum is taken of the solar corona, in which a broad range of EM wavelengths are passed through very hot hydrogen gas, the absorption spectrum shows all the features of the emission spectrum. But when such EM radiation passes through room-temperature hydrogen gas, only the Lyman series is absorbed. Explain the difference.   
+18. Lasers are used to burn and read CDs. Explain why a laser that emits blue light would be capable of burning and reading more information than one that emits infrared.   
+19. The coating on the inside of fluorescent light tubes absorbs ultraviolet light and subsequently emits visible light. An inventor claims that he is able to do the reverse process. Is the inventor’s claim possible?   
+20. What is the difference between fluorescence and phosphorescence?
+
+21. How can you tell that a hologram is a true threedimensional image and that those in 3-D movies are not?
+
+30.6 The Wave Nature of Matter Causes Quantization
+
+22. How is the de Broglie wavelength of electrons related to the quantization of their orbits in atoms and molecules?
+
+30.7 Patterns in Spectra Reveal More Quantization
+
+23. What is the Zeeman effect, and what type of quantization was discovered because of this effect?
+
+30.8 Quantum Numbers and Rules
+
+24. Define the quantum numbers  , and  .
+
+Problems & Exercises
+
+30.1 Discovery of the Atom
+
+1. Using the given charge-to-mass ratios for electrons and protons, and knowing the magnitudes of their charges are equal, what is the ratio of the proton’s mass to the electron’s? (Note that since the chargeto-mass ratios are given to only three-digit accuracy, your answer may differ from the accepted ratio in the fourth digit.)   
+2. (a) Calculate the mass of a proton using the chargeto-mass ratio given for it in this chapter and its known charge. (b) How does your result compare with the proton mass given in this chapter?   
+3. If someone wanted to build a scale model of the atom with a nucleus  in diameter, how far away would the nearest electron need to be?
+
+30.2 Discovery of the Parts of the Atom: Electrons and Nuclei
+
+4. Rutherford found the size of the nucleus to be about  . This implied a huge density. What would this density be for gold?   
+5. In Millikan’s oil-drop experiment, one looks at a small oil drop held motionless between two plates. Take the voltage between the plates to be  and the plate separation to be  . The oil drop (of density  ) has a diameter of  . Find the charge on the drop, in terms of electron units.   
+25. For a given value of  , what are the allowed values of ?   
+26. For a given value of  , what are the allowed values of  ? What are the allowed values of  for a given value of  Give an example in each case.   
+27. List all the possible values of  and  for an electron. Are there particles for which these values are different? The same?
+
+30.9 The Pauli Exclusion Principle
+
+28. Identify the shell, subshell, and number of electrons for the following: (a)  . (b)  . (c)  . (d)  .   
+29. Which of the following are not allowed? State which rule is violated for any that are not allowed. (a)  (b)  (d) 
+
+6. (a) An aspiring physicist wants to build a scale model of a hydrogen atom for her science fair project. If the atom is  in diameter, how big should she try to make the nucleus? (b) How easy will this be to do?
+
+30.3 Bohr’s Theory of the Hydrogen Atom
+
+7. By calculating its wavelength, show that the first line in the Lyman series is UV radiation.   
+8. Find the wavelength of the third line in the Lyman series, and identify the type of EM radiation.   
+9. Look up the values of the quantities in  , and verify that the Bohr radius  is  .   
+10. Verify that the ground state energy  is 13.6 eV by using    
+11. If a hydrogen atom has its electron in the  state, how much energy in eV is needed to ionize it?   
+12. A hydrogen atom in an excited state can be ionized with less energy than when it is in its ground state. What is  for a hydrogen atom if  of energy can ionize it?   
+13. Find the radius of a hydrogen atom in the  state according to Bohr’s theory.   
+14. Show that  (Rydberg’s constant), as discussed in the text.   
+15. What is the smallest-wavelength line in the Balmer series? Is it in the visible part of the spectrum?   
+16. Show that the entire Paschen series is in the infrared part of the spectrum. To do this, you only need to calculate the shortest wavelength in the series.   
+17. Do the Balmer and Lyman series overlap? To answer this, calculate the shortest-wavelength Balmer line and the longest-wavelength Lyman line.   
+18. (a) Which line in the Balmer series is the first one in the UV part of the spectrum? (b) How many Balmer series lines are in the visible part of the spectrum? (c) How many are in the UV?   
+19. A wavelength of  is observed in a hydrogen spectrum for a transition that ends in the  level. What was  for the initial level of the electron?   
+20. A singly ionized helium ion has only one electron and is denoted  . What is the ion’s radius in the ground state compared to the Bohr radius of hydrogen atom?   
+21. A beryllium ion with a single electron (denoted  ) is in an excited state with radius the same as that of the ground state of hydrogen. (a) What is  for the  ion? (b) How much energy in  is needed to ionize the ion from this excited state?   
+22. Atoms can be ionized by thermal collisions, such as at the high temperatures found in the solar corona. One such ion is  , a carbon atom with only a single electron.
+
+(a) By what factor are the energies of its hydrogenlike levels greater than those of hydrogen? (b) What is the wavelength of the first line in this ion’s Paschen series? (c) What type of EM radiation is this?
+
+23. Verify Equations  and  using the approach stated in the text. That is, equate the Coulomb and centripetal forces and then insert an expression for velocity from the condition for angular momentum quantization.
+
+24. The wavelength of the four Balmer series lines for hydrogen are found to be 410.3, 434.2, 486.3, and  . What average percentage difference is found between these wavelength numbers and those predicted by  It is amazing how well a simple formula (disconnected originally from theory) could duplicate this phenomenon.
+
+30.4 X Rays: Atomic Origins and Applications
+
+25. (a) What is the shortest-wavelength x-ray radiation that can be generated in an x-ray tube with an applied voltage of  (b) Calculate the photon energy in eV. (c) Explain the relationship of the photon energy to the applied voltage.   
+26. A color television tube also generates some x rays when its electron beam strikes the screen. What is the shortest wavelength of these x rays, if a  potential is used to accelerate the electrons? (Note that TVs have shielding to prevent these x rays from exposing viewers.)   
+27. An x ray tube has an applied voltage of  (a) What is the most energetic x-ray photon it can produce? Express your answer in electron volts and joules. (b) Find the wavelength of such an X–ray.   
+28. The maximum characteristic x-ray photon energy comes from the capture of a free electron into a  shell vacancy. What is this photon energy in keV for tungsten, assuming the free electron has no initial kinetic energy?   
+29. What are the approximate energies of the  and  rays for copper?
+
+30.5 Applications of Atomic Excitations and De-Excitations
+
+30. Figure 30.37 shows the energy-level diagram for neon. (a) Verify that the energy of the photon emitted when neon goes from its metastable state to the one immediately below is equal to  . (b) Show that the wavelength of this radiation is  . (c) What wavelength is emitted when the neon makes a direct transition to its ground state?   
+31. A helium-neon laser is pumped by electric discharge. What wavelength electromagnetic radiation would be needed to pump it? See Figure 30.37 for energy-level information.
+
+32. Ruby lasers have chromium atoms doped in an aluminum oxide crystal. The energy level diagram for chromium in a ruby is shown in Figure 30.59. What wavelength is emitted by a ruby laser?
+
+33. (a) What energy photons can pump chromium atoms in a ruby laser from the ground state to its second and third excited states? (b) What are the wavelengths of these photons? Verify that they are in the visible part of the spectrum.   
+34. Some of the most powerful lasers are based on the energy levels of neodymium in solids, such as glass, as shown in Figure 30.60. (a) What average wavelength light can pump the neodymium into the levels above its metastable state? (b) Verify that the  transition produces  radiation.
+
+30.8 Quantum Numbers and Rules
+
+35. If an atom has an electron in the  state with  , what are the possible values of 
+
+36. An atom has an electron with  . What is the smallest value of  for this electron?   
+37. What are the possible values of  for an electron in the  state?   
+38. What, if any, constraints does a value of  place on the other quantum numbers for an electron in an atom?   
+39. (a) Calculate the magnitude of the angular momentum for an  electron. (b) Compare your answer to the value Bohr proposed for the  state.   
+40. (a) What is the magnitude of the angular momentum for an  electron? (b) Calculate the magnitude of the electron’s spin angular momentum. (c) What is the ratio of these angular momenta?   
+41. Repeat the previous exercise for  .   
+42. (a) How many angles can  make with the  -axis for an  electron? (b) Calculate the value of the smallest angle.   
+43. What angles can the spin  of an electron make with the  -axis?
+
+30.9 The Pauli Exclusion Principle
+
+44. (a) How many electrons can be in the  shell? (b) What are its subshells, and how many electrons can be in each?   
+45. (a) What is the minimum value of 1 for a subshell that has 11 electrons in it? (b) If this subshell is in the  shell, what is the spectroscopic notation for this atom?   
+46. (a) If one subshell of an atom has 9 electrons in it, what is the minimum value of  (b) What is the spectroscopic notation for this atom, if this subshell is part of the  shell?   
+47. (a) List all possible sets of quantum numbers  for the  shell, and determine the number of electrons that can be in the shell and each of its subshells. (b) Show that the number of electrons in the shell equals  and that the number in each subshell is  .   
+48. Which of the following spectroscopic notations are not allowed? (a)  (b)  (c)  (d)  (e)  . State which rule is violated for each that is not allowed.   
+49. Which of the following spectroscopic notations are allowed (that is, which violate none of the rules regarding values of quantum numbers)? (a)  (b)  (d) 
+
+50. (a) Using the Pauli exclusion principle and the rules relating the allowed values of the quantum numbers  , prove that the maximum number of electrons in a subshell is . (b) In a similar manner, prove that the maximum number of electrons in a shell is  .
+
+51. Integrated Concepts Estimate the density of a nucleus by calculating the density of a proton, taking it to be a sphere 1.2 fm in diameter. Compare your result with the value estimated in this chapter.
+
+52. Integrated Concepts The electric and magnetic forces on an electron in the CRT in Figure 30.7 are supposed to be in opposite directions. Verify this by determining the direction of each force for the situation shown. Explain how you obtain the directions (that is, identify the rules used).
+
+53. (a) What is the distance between the slits of a diffraction grating that produces a first-order maximum for the first Balmer line at an angle of  (b) At what angle will the fourth line of the Balmer series appear in first order? (c) At what angle will the second-order maximum be for the first line?
+
+54. Integrated Concepts A galaxy moving away from the earth has a speed of . What wavelength do we observe for an  to  transition for hydrogen in that galaxy?
+
+55. Integrated Concepts Calculate the velocity of a star moving relative to the earth if you observe a wavelength of  for ionized hydrogen capturing an electron directly into the lowest orbital (that is, a  to  , or a Lyman series transition).
+
+56. Integrated Concepts In a Millikan oil-drop experiment using a setup like that in Figure 30.9, a 500-V potential difference is applied to plates separated by  . (a) What is the mass of an oil drop having two extra electrons that is suspended motionless by the field between the plates? (b) What is the diameter of the drop, assuming it is a sphere with the density of olive oil?
+
+57. Integrated Concepts What double-slit separation would produce a firstorder maximum at  for  rays? The small answer indicates that the wave character of  rays is best determined by having them interact with very small objects such as atoms and molecules.
+
+58. Integrated Concepts
+
+In a laboratory experiment designed to duplicate Thomson’s determination of  , a beam of electrons having a velocity of  enters a  magnetic field. The beam moves perpendicular to the field in a path having a 6.80-cm radius of curvature. Determine  from these observations, and compare the result with the known value.
+
+59. Integrated Concepts Find the value of  , the orbital angular momentum quantum number, for the moon around the earth. The extremely large value obtained implies that it is impossible to tell the difference between adjacent quantized orbits for macroscopic objects.   
+60. Integrated Concepts Particles called muons exist in cosmic rays and can be created in particle accelerators. Muons are very similar to electrons, having the same charge and spin, but they have a mass 207 times greater. When muons are captured by an atom, they orbit just like an electron but with a smaller radius, since the mass in  (a) Calculate the radius of the  orbit for a muon in a uranium ion  ). (b) Compare this with the 7.5-fm radius of a uranium nucleus. Note that since the muon orbits inside the electron, it falls into a hydrogen-like orbit. Since your answer is less than the radius of the nucleus, you can see that the photons emitted as the muon falls into its lowest orbit can give information about the nucleus.   
+61. Integrated Concepts Calculate the minimum amount of energy in joules needed to create a population inversion in a helium-neon laser containing  moles of neon.   
+62. Integrated Concepts A carbon dioxide laser used in surgery emits infrared radiation with a wavelength of  . In  , this laser raised the temperature of  of flesh to  and evaporated it. (a) How many photons were required? You may assume flesh has the same heat of vaporization as water. (b) What was the minimum power output during the flash?
+
+63. Integrated Concepts
+
+Suppose an MRI scanner uses 100-MHz radio waves.   
+(a) Calculate the photon energy.   
+(b) How does this compare to typical molecular binding energies?
+
+64. Integrated Concepts
+
+(a) An excimer laser used for vision correction emits 193-nm UV. Calculate the photon energy in eV.   
+(b) These photons are used to evaporate corneal tissue, which is very similar to water in its   
+properties. Calculate the amount of energy   
+needed per molecule of water to make the phase change from liquid to gas. That is, divide the heat of vaporization in  by the number of water molecules in a kilogram.   
+(c) Convert this to eV and compare to the photon energy. Discuss the implications.
+
+65. Integrated Concepts A neighboring galaxy rotates on its axis so that stars on one side move toward us as fast as 200  , while those on the other side move away as fast as  . This causes the EM radiation we receive to be Doppler shifted by velocities over the entire range of  . What range of wavelengths will we observe for the  line in the Balmer series of hydrogen emitted by stars in this galaxy. (This is called line broadening.)
+
+66. Integrated Concepts
+
+A pulsar is a rapidly spinning remnant of a supernova. It rotates on its axis, sweeping hydrogen along with it so that hydrogen on one side moves toward us as fast as  , while that on the other side moves away as fast as 50.0  . This means that the EM radiation we receive will be Doppler shifted over a range of  . What range of wavelengths will we observe for the  line in the Lyman series of hydrogen? (Such line broadening is observed and actually provides part of the evidence for rapid rotation.)
+
+67. Integrated Concepts Prove that the velocity of charged particles moving along a straight path through perpendicular electric and magnetic fields is  . Thus crossed electric and magnetic fields can be used as a velocity selector independent of the charge and mass of the particle involved.
+
+68. Unreasonable Results
+
+(a) What voltage must be applied to an X-ray tube to obtain 0.0100-fm-wavelength X-rays for use in exploring the details of nuclei? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent?
+
+69. Unreasonable Results A student in a physics laboratory observes a hydrogen spectrum with a diffraction grating for the purpose of measuring the wavelengths of the emitted radiation. In the spectrum, she observes a yellow line and finds its wavelength to be  . (a) Assuming this is part of the Balmer series, determine  , the principal quantum number of the initial state. (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent?
+
+70. Construct Your Own Problem The solar corona is so hot that most atoms in it are ionized. Consider a hydrogen-like atom in the corona that has only a single electron. Construct a problem in which you calculate selected spectral energies and wavelengths of the Lyman, Balmer, or other series of this atom that could be used to identify its presence in a very hot gas. You will need to choose the atomic number of the atom, identify the element, and choose which spectral lines to consider.
+
+71. Construct Your Own Problem Consider the Doppler-shifted hydrogen spectrum received from a rapidly receding galaxy. Construct a problem in which you calculate the energies of selected spectral lines in the Balmer series and examine whether they can be described with a formula like that in the equation  but with a different constant  .
+
+72. Critical Thinking (a) For carbon, calculate the energy when an electron falls from  to  , then from  to  . Then add these for the total energy released in the process. (b) Calculate the energy released when the electron falls directly from  to  . (c) Are the energies in part a and in part b the same?

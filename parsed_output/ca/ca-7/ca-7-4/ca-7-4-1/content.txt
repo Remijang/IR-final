@@ -1,0 +1,27 @@
+7.4.1 Static RAM (SRAM)
+
+SRAM Cell
+
+SRAM refers to static random access memory. A basic SRAM cell contains two cross-coupled inverters as shown in Figure 7.26. In comparison, a basic SR flip-flop or a D flip-flop contains cross-coupled NAND gates. The design is shown in Figure 7.26.
+
+The core of the SRAM cell contains 4 transistors (2 in each inverter). This cross-coupled arrangement is sufficient to save a single bit (0 or 1). However, we need some additional circuitry to read and write values. At this point, the reader might be wondering if it is a bad idea to have cross-coupled inverters in a latch. They after all require fewer transistors. We shall see that the overheads of implementing the circuitry for reading and writing an SRAM cell are non-trivial. The overheads do not justify making a latch with an SRAM cell as its core.
+
+The cross coupled inverters are connected to transistors on each side (W1, W2). The gates of W1 and W2 are connected to the same signal, known as the word line. The four transistors in the two inverters, W1, and W2, comprise the SRAM cell. It has six transistors in total. Now, if the voltage on the word line is low, then W1 and W2 are off. It is not possible to read or write the SRAM cell. However, if the signal on the word line is high, then W1 and W2 are on. It is possible to access the SRAM cell.
+
+Now, the transistors,  , and  , are connected to copper wires on either side known as the bit lines. The bit lines are designed to carry complementary values. One of them is BL and the other is  . To write a value into the cell it is necessary to set the values of BL and  to A and  , respectively, where  is the value that we intend to write. To read a value, we need to turn the word line on and read the voltages of the bit lines.
+
+Let us now delve slightly deeper into the operation of the SRAM cells. Note that SRAM cells are not solitary units like latches. They exist as a part of an array of SRAM cells. We need to consider the array of SRAM cells in entirety.
+
+Array of SRAM Cells
+
+Figure 7.27 shows a typical SRAM array. SRAM cells are laid out as a two dimensional matrix. All the SRAM cells in a row share the word line, and all SRAM cells in a column share a pair of bit lines. To activate a certain SRAM cell it is necessary to turn its associated word line on. This is done by a decoder. It takes a subset of address bits, and turns the appropriate word line on. A single row of SRAM cells might contain 100+ SRAM cells. Typically, we will be interested in the values of 32 SRAM cells (on a 32-bit machine). In this case the column mux/demux selects the bit lines belonging to the SRAM cells of interest. It uses a subset of the bits in the address as the column select bits. This design methodology is also known as 2.5D memory organization.
+
+As the size of the array grows it may become more asymmetric. This needs to be avoided, otherwise the capacitive loading on the word lines or bit lines will become prohibitive. Hence, columns need to become wider and the column mux/demux structure needs to be driven by a large column decoder.
+
+The process of writing is easy. The strong write drivers need to set the values of BL and  . To write 1, BL needs to be driven to 1, and  needs to be driven to 0. However, reading a value is slightly more difficult. The reason is that an SRAM cell needs to charge an entire bit line to the stored value such that it can be read. Since hundreds of SRAM cells are typically connected to a bit line, the bit line has a very high capacitance. Consequently, it will take a long time to charge/discharge the bit line to logical 0 or 1.
+
+Hence, something smarter needs to be done. The read operation is divided into two phases. In the first phase, BL and  are precharged to  volts. If the supply voltage is equal to 1 volt, then the bit lines are charged to 0.5 volts. This step is known as pre-charging. Subsequently, the SRAM cells of interest are accessed by setting the corresponding word line. The sense amplifiers simply monitor the difference in voltage between BL and  . The moment the absolute value of the difference exceeds a threshold, the result can be inferred. For example, if we are reading a logical 1, we need not wait for BL to reach 1, and  to reach 0. If the voltage difference between BL and  exceeds a threshold, then we can declare the result to be 1.
+
+This method is very fast because of the following reasons. Pre-charging bit lines is very fast because there are dedicated pre-charge circuits that can pump a large amount of current into the bit lines to enable faster charging or discharging. After pre-charging inferring the stored value from the voltage swing between BL and  is also very fast. This is because the threshold for the voltage swing is much lower than the supply voltage. Given the high capacitance of bit lines, the time to charge/discharge bit lines is very crucial. Hence, if we reduce the amount of the voltage swing that is required to infer the value stored in the SRAM cell, it makes a significant difference.
+
+We can justify the overhead of pre-charge circuits, write drivers, and sense amplifiers, if we have a large number of SRAM cells. Hence, SRAMs are suitable for structures such as register files and on-chip memories. They should not be used for storing a few bits; flip-flops are better choices.

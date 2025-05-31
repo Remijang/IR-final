@@ -1,0 +1,81 @@
+[
+    {
+        "type": "text",
+        "text": "8.2.5 Wallace Tree Multiplier ",
+        "text_level": 1,
+        "page_idx": 333
+    },
+    {
+        "type": "text",
+        "text": "Before, we introduce the Wallace tree multiplier, let us introduce the carry save adder. A carry save adder adds three numbers, $A$ , $B$ , $C$ , and produces two numbers $D$ , and $E$ such that: $A + B + C = D + E$ (see Figure 8.13). We will extensively use carry save adders in constructing the Wallace tree multiplier that runs in $O ( l o g ( n ) )$ time. ",
+        "page_idx": 333
+    },
+    {
+        "type": "text",
+        "text": "Carry Save Adder ",
+        "text_level": 1,
+        "page_idx": 334
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the problem of adding three bits $a$ , $b$ , and $c$ . The sum can range from $0$ to 3. We can express all numbers between 0-3 in the form $2 d + e$ , where $( d , e ) \\in [ 0 , 1 ]$ . Using this relationship, we can express the sum of three numbers as the sum of two numbers as follows: ",
+        "page_idx": 334
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { A + B + C = \\displaystyle \\sum _ { i = 1 } ^ { \\infty } A _ { i } 2 ^ { i - 1 } + \\displaystyle \\sum _ { i = 1 } ^ { \\infty } B _ { i } 2 ^ { i - 1 } + \\displaystyle \\sum _ { i = 1 } ^ { \\infty } C _ { i } 2 ^ { i - 1 } } } \\\\ { { { } } } \\\\ { { { } = \\displaystyle \\sum _ { i = 1 } ^ { \\infty } ( A _ { i } + B _ { i } + C _ { i } ) 2 ^ { i - 1 } } } \\\\ { { { } } } \\\\ { { { } = \\displaystyle \\sum _ { i = 1 } ^ { \\infty } ( 2 D _ { i } + E _ { i } ) 2 ^ { i - 1 } } } \\\\ { { { } } } \\\\ { { { } = \\displaystyle \\sum _ { i = 1 } ^ { \\infty } D _ { i } 2 ^ { i } + \\displaystyle \\sum _ { i = 1 } ^ { n } E _ { i } 2 ^ { i - 1 } } } \\\\ { { { } \\underbrace { { } \\tan { ( 2 D + 1 ) } } _ { \\ge 0 } ~ \\displaystyle \\sum _ { i = 1 } ^ { \\infty } E _ { i } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 334
+    },
+    {
+        "type": "text",
+        "text": "Thus, we have $A + B + C = 2 D + E$ . The question is how to compute the bits $D _ { i }$ , and $E _ { i }$ such that $A _ { i } + B _ { i } + C _ { i } = 2 D _ { i } + E _ { i }$ . This is very simple. We note that if we add $A _ { i }$ , $B _ { i }$ , and $C _ { i }$ , we get a two-bit result, where $s$ is the sum bit and $c$ is the carry bit. The result of the addition can be written as $2 \\times c + s$ . We thus have two equations as follows: ",
+        "page_idx": 334
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l } { { A _ { i } + B _ { i } + C _ { i } } } & { { = 2 D _ { i } + E _ { i } } } \\\\ { { A _ { i } + B _ { i } + C _ { i } } } & { { = 2 c + s } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 334
+    },
+    {
+        "type": "text",
+        "text": "If we set $D _ { i }$ to the carry bit and $E _ { i }$ to the sum bit, then we are done! Now, $E$ is equal to $\\scriptstyle \\sum _ { i = 1 } ^ { n } E _ { i } 2 ^ { i - 1 }$ . We can thus obtain $E$ by concatenating all the $E _ { i }$ bits. Similarly, $D ^ { \\prime } = 2 D$ is equal to $\\scriptstyle \\sum _ { i = 1 } ^ { n } D _ { i } 2 ^ { i }$ . $D ^ { \\prime }$ can be computed by concatenating all the $D _ { i }$ bits and shifting the number to the left by 1 position. ",
+        "page_idx": 334
+    },
+    {
+        "type": "text",
+        "text": "The hardware complexity of a carry save adder is not much. We need $n$ full adders to compute all the sum and carry bits. Then, we need to route the wires appropriately to produce $D ^ { \\prime }$ and $E$ . The asymptotic time complexity of a carry save adder is $O ( 1 )$ (constant time). The key takeaway point is that we can replace a sum of three numbers with a sum of two numbers. $A + B + C = D ^ { \\prime } + E$ . ",
+        "page_idx": 334
+    },
+    {
+        "type": "text",
+        "text": "Addition of $n$ Numbers with Carry Save Adders ",
+        "text_level": 1,
+        "page_idx": 334
+    },
+    {
+        "type": "text",
+        "text": "We can use carry save adders to add $n$ partial sums (see Figure 8.14). In the first level, we can use a set of $n / 3$ carry save adders to reduce the sum of $n$ partial sums to a sum of $2 n / 3$ numbers in the second level. If we use $2 n / 9$ carry save adders in the second level, then we will have $4 n / 9$ numbers in the third level, and so on. In every level the set of numbers gets reduced by a factor of $2 / 3$ . Thus, after $O ( l o g _ { 3 / 2 } ( n ) )$ levels, there will only be two numbers left. Note that $O ( l o g _ { 3 / 2 } ( n )$ is equivalent to $O ( l o g ( n ) )$ . Since each stage takes $O ( 1 )$ time because all the carry save adders are working in parallel, the total time taken up till now is $O ( l o g ( n ) )$ . ",
+        "page_idx": 334
+    },
+    {
+        "type": "image",
+        "img_path": "images/21f898d00844a9146a22cacf4e3d8b2346d1cd53e2cb59667f216ee8e364fb2f.jpg",
+        "img_caption": [
+            "Figure 8.14: Wallace Tree Multiplier "
+        ],
+        "img_footnote": [],
+        "page_idx": 335
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 335
+    },
+    {
+        "type": "text",
+        "text": "In the last stage, when we have just two numbers left, we cannot use a carry save adder anymore. We can use a regular carry lookahead adder to add the two numbers. This will take $O ( l o g ( n ) )$ time. Hence, the total time taken by the Wallace tree multiplier is $O ( l o g ( n ) +$ ${ \\mathit { l o g } } ( n ) ) ~ = ~ O ( { \\mathit { l o g } } ( n ) )$ . In terms of asymptotic time complexity, this is the fastest possible multiplier. It is possible to reduce the number of full adders by slightly modifying the design. This is known as the Dadda multiplier. The reader can refer to [Wikipedia, ] for further information on this topic. ",
+        "page_idx": 335
+    }
+]

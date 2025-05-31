@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "5.2.5 x86 Assembly Language ",
+        "text_level": 1,
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "There are various x86 assemblers such as MASM [mas, ], NASM [nas, ], and the GNU assembler [gx8, ]. In this book, we shall present code snippets that have been tested with the NASM assembler. The popular NASM assembler is freely available at [nas, ], and is known to work on a variety of platforms including Windows $\\textsuperscript { \\textregistered }$ , Mac OS X, and different flavors of Linux. Note that we shall mostly avoid using NASM specific features, and we shall keep the presentation of assembly code very generic. Our assembly codes should be compatible with any assembler that supports the Intel format for x86 assembly. The only major feature of NASM that we shall use is that comments begin with a \u2018;\u2019 character. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Let us now describe the structure of an assembly language statement in the Intel format. Its generic structure is as follows. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Structure of an Assembly Language Statement <label>: <assembly instruction> ; <comment> ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "For an assembly instruction, the label and the comment are optional. Alternatively, we can just have a label or a comment, or a combination of both in a single line. In our code, we shall use labels starting with a \u2019.\u2019. However, labels can start with regular alphabets and other special characters also. For a detailed description readers can refer to the NASM documentation. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Each x86 assembly instruction has an opcode followed by a set of operands. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "x86 Assembly Instruction <opcode> <opcode> <operand1> <opcode> <operand1>, <operand2> ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "An overwhelming majority of x86 instructions are in the 0, 1 and 2-address formats. 0- address format instructions like nop instructions in SimpleRisc do not require any operands. 1-address format instructions have a single source operand. In this case the destination operand is equal to the source operand. For example, the instruction not eax computes the bitwise complement of $e a x$ , and saves the result in eax. In two operand instructions, the first operand is the first source operand and also the destination operand. The second operand is the second source operand. For example, add eax, ebx, adds the contents of $e a x$ and $e b x$ , and subsequently saves the result in $e a x$ . ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "The source operands can be registers, memory, or immediate operands. However, both the sources cannot be memory operands. Needless to say the destination operand cannot be an immediate operand. When a single operand is both the source and destination, both the rules apply. ",
+        "page_idx": 187
+    }
+]

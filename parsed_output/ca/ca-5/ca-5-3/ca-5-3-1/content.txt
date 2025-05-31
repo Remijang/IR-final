@@ -1,0 +1,77 @@
+5.3.1 Data Transfer Instructions
+
+The mov Instruction
+
+The mov instruction is a very simple yet versatile instruction in the x86 ISA. It moves the contents of the second operand, into the first operand. The second operand can be a register, a memory location, or an immediate. The first operand can be a register or a memory location (Table 5.3 shows the semantics). The reader needs to note that both the operands cannot be memory locations.
+
+We thus do not need any dedicated load/store instructions in x86. The mov instruction can achieve the function of loading and storing memory values because it accepts memory operands. The mov instruction can also transfer values between registers (similar to SimpleRisc and ARM). Thus, we have fused the functionality of three RISC instructions into one CISC instruction. Let us consider some examples.
+
+Example 55   
+Write an x86 assembly instruction to set the value of ebx to -17. Answer:   
+mov ebx, -17 Example 56   
+Write an x86 assembly instruction to load ebx with the contents of (esp - eax\*4 -12). Answer:
+
+mov ebx, [esp - eax\*4 -12]
+
+Example 57   
+Write an x86 assembly instruction to store the contents of edx in (esp - eax\*4 -12). An  
+swer:
+
+mov [esp - eax\*4 -12], edx movsx, and movzx Instructions
+
+The simple mov instruction assumes that the sizes of the operands are the same (16, or 32, or 64 bits). However, sometimes we face the need for saving a smaller register or memory operand in a larger register. For example, if we save the 16 bit register  in  then we need to have two options. We can either extend the sign of the input operand, or pad it with 0s. The movsx instruction (see Table 5.4) copies a smaller register or memory operand to a larger register and extends its sign. For example, the following code snippet extends the sign of  (from 16 to 32 bits), and saves the results in eax.
+
+movsx eax, bx eax  sign_extend(bx)
+
+The movzx instruction is defined on the same lines. However, instead of performing a sign extension, it pads the MSB bits with 0s.
+
+movzx eax, bx eax  bx (unsigned)
+
+The Atomic Exchange (xchg) Instruction
+
+The xchg instruction swaps the contents of the first and second operands. Here, also we cannot have two memory operands. This instruction ensures that before the operation is done, no other operation can read temporary values. For example, if we are swapping the values of  , and the memory operand  , there might be an intermediate point in the execution where the contents of  are updated, but the contents of  are not updated. The x86 processor does not allow other threads (sub-programs that share the address space) to read the contents of  at this point. It makes other conflicting instructions in other execution threads wait till the xchg instruction completes. This property is known as atomicity. An instruction is atomic if it appears to execute instantaneously. Most of the time, atomic instructions such as xchg are used for implementing data structures that are shared across multiple threads. The reader should read Chapter 12 for a detailed discussion on parallel software that uses multiple threads.
+
+Definition 43
+
+An instruction is atomic if it appears to execute instantaneously.
+
+Example 58
+
+Write a function to swap the contents of eax, and [esp].
+
+Answer:
+
+xchg eax, [esp]
+
+push and pop Instructions
+
+The  architecture is explicitly aware of the stack. It has two dedicated instructions for saving and retrieving operands off the stack. The push instruction pushes data on the stack. In specific, the push instruction can push the contents of a register, memory location, or immediate on the stack. It has just one source operand. Its operation is shown in Table 5.6. Conceptually, it first saves the value of the first operand as a temporary value temp. Then, it decrements the stack pointer, and transfers the temporary value to the top of the stack. In a 32-bit system, we decrement the stack pointer by 4. When we are pushing a register, the processor knows its size based on the name of the register. For example, if the name of the register is  , its size is 16 bits, and if the name of the register is eax, its size is 32 bits. However, if we are pushing a memory operand or a constant, the assembler cannot determine the size of the operand. We might be intending to push 2 bytes, 4 bytes, or 8 bytes on the stack. In this case, it is necessary to indicate the size of the operand to the assembler such that it can generate appropriate binary code. In the NASM assembler, we specify this information as follows:
+
+push dword [esp]
+
+The modifier dword (double word) represents the fact that we need to push 4 bytes on the stack. The starting address of the 4 bytes is stored in esp. Table 5.7 shows the list of modifiers for different sized data types.
+
+For pushing in the value of immediate values, NASM assumes they are by default 32 bits long (if we are running NASM in 32-bit mode). We can override this setting by specifying a size modifier (word,dword,...) in the instruction.
+
+On the same lines we can define a pop instruction as shown in Table 5.6. Conceptually, the pop instruction saves the top of the stack in a temporary location. It then proceeds to increment the stack pointer by 4 (in the case of 32 bits), and then it saves the temporary value in the destination. The destination can either be a register or a memory location. The push and pop instructions thus make working with the stack very easy in x86 assembly programs.
+
+Example 59 What is the final value of ebx?
+
+mov eax, 10 push eax mov ebx, [esp]
+
+Answer:
+
+Example 60 What is the final value of ebx?
+
+mov ebp, esp mov eax, 10 mov [esp], eax push dword [esp] mov ebx, [ebp-4]
+
+Answer: Note that ebp and esp are initially the same. After we push a value to the stack, esp gets decremented by 4. Hence, the new location of the top of the stack is equal to ebp 4. Since we push the value of eax (10) to the top of the stack using the push instruction, the value of ebx is equal to 10.
+
+Example 61 What is the final value of ebx?
+
+mov eax, 17   
+push eax   
+pop dword [esp]   
+mov dword ebx, [esp]
+
+Answer:

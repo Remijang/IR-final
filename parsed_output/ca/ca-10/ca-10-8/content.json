@@ -1,0 +1,13 @@
+[
+    {
+        "type": "text",
+        "text": "10.8 Support for Interrupts/ Exceptions\\* ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "The process of building our pipelined processor is almost done. We just need to put the final piece together. We have up till now focused on building a fast pipeline that has interlocks for correctness and has forwarding for enhancing performance. We shall now discuss the interaction of our processor with external devices such as I/O devices and with specialized programs such as the operating system. The operating system is a master program that controls the behavior of other programs, the processor, and I/O devices. The standard mechanism for supporting the operating system, and other I/O devices, is through a mechanism called an interrupt. We shall have ample opportunities to discuss interrupts in Chapter 13. In this section, we discuss the implementation of an interrupt from the point of view of a pipeline. ",
+        "page_idx": 457
+    }
+]

@@ -1,0 +1,317 @@
+# 35.5 Nervous System Disorders
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+• Describe the symptoms, potential causes, and treatment of several examples of nervous system disorders A nervous system that functions correctly is a fantastically complex, well-oiled machine—synapses fire appropriately, muscles move when needed, memories are formed and stored, and emotions are well regulated. Unfortunately, each year millions of people in the United States deal with some sort of nervous system disorder. While scientists have discovered potential causes of many of these diseases, and viable treatments for some, ongoing research seeks to find ways to better prevent and treat all of these disorders.
+
+
+
+# Neurodegenerative Disorders
+
+Neurodegenerative disorders are illnesses characterized by a loss of nervous system functioning that are usually caused by neuronal death. These diseases generally worsen over time as more and more neurons die. The symptoms of a particular neurodegenerative disease are related to where in the nervous system the death of neurons occurs. Spinocerebellar ataxia, for example, leads to neuronal death in the cerebellum. The death of these neurons causes problems in balance and walking. Neurodegenerative disorders include Huntington’s disease, amyotrophic lateral sclerosis, Alzheimer’s disease and other types of dementia disorders, and Parkinson’s disease. Here, Alzheimer’s and Parkinson’s disease will be discussed in more depth.
+
+# Alzheimer’s Disease
+
+Alzheimer’s disease is the most common cause of dementia in the elderly. In 2012, an estimated 5.4 million Americans suffered from Alzheimer’s disease, and payments for their care are estimated at $\$ 200$ billion. Roughly one in every eight people age 65 or older has the disease. Due to the aging of the baby-boomer generation, there are projected to be as many as 13 million Alzheimer’s patients in the United States in the year 2050.
+
+Symptoms of Alzheimer’s disease include disruptive memory loss, confusion about time or place, difficulty planning or executing tasks, poor judgment, and personality changes. Problems smelling certain scents can also be indicative of Alzheimer’s disease and may serve as an early warning sign. Many of these symptoms are also common in people who are aging normally, so it is the severity and longevity of the symptoms that determine whether a person is suffering from Alzheimer’s.
+
+Alzheimer’s disease was named for Alois Alzheimer, a German psychiatrist who published a report in 1911 about a woman who showed severe dementia symptoms. Along with his colleagues, he examined the woman’s brain following her death and reported the presence of abnormal clumps, which are now called amyloid plaques, along with tangled brain fibers called neurofibrillary tangles. Amyloid plaques, neurofibrillary tangles, and an overall shrinking of brain volume are commonly seen in the brains of Alzheimer’s patients. Loss of neurons in the hippocampus is especially severe in advanced Alzheimer’s patients. Figure 35.30 compares a normal brain to the brain of an Alzheimer’s patient. Many research groups are examining the causes of these hallmarks of the disease.
+
+One form of the disease is usually caused by mutations in one of three known genes. This rare form of early onset Alzheimer’s disease affects fewer than five percent of patients with the disease and causes dementia beginning between the ages of 30 and 60. The more prevalent, late-onset form of the disease likely also has a genetic component. One particular gene, apolipoprotein E (APOE) has a variant (E4) that increases a carrier’s likelihood of getting the disease. Many other genes have been identified that might be involved in the pathology.
+
+# LINK TO LEARNING
+
+Visit this website (http://openstax.org/l/alzheimers) for video links discussing genetics and Alzheimer’s disease.
+
+Unfortunately, there is no cure for Alzheimer’s disease. Current treatments focus on managing the symptoms of the disease. Because decrease in the activity of cholinergic neurons (neurons that use the neurotransmitter acetylcholine) is common in Alzheimer’s disease, several drugs used to treat the disease work by increasing acetylcholine neurotransmission, often by inhibiting the enzyme that breaks down acetylcholine in the synaptic cleft. Other clinical interventions focus on behavioral therapies like psychotherapy, sensory therapy, and cognitive exercises. Since Alzheimer’s disease appears to hijack the normal aging process, research into prevention is prevalent. Smoking, obesity, and cardiovascular problems may be risk factors for the disease, so treatments for those may also help to prevent Alzheimer’s disease. Some studies have shown that people who remain intellectually active by playing games, reading, playing musical instruments, and being socially active in later life have a reduced risk of developing the disease.
+
+# Parkinson’s Disease
+
+Like Alzheimer’s disease, Parkinson’s disease is a neurodegenerative disease. It was first characterized by James Parkinson in 1817. Each year, 50,000-60,000 people in the United States are diagnosed with the disease. Parkinson’s disease causes the loss of dopamine neurons in the substantia nigra, a midbrain structure that regulates movement. Loss of these neurons causes many symptoms including tremor (shaking of fingers or a limb), slowed movement, speech changes, balance and posture problems, and rigid muscles. The combination of these symptoms often causes a characteristic slow hunched shuffling walk, illustrated in Figure 35.31. Patients with Parkinson’s disease can also exhibit psychological symptoms, such as dementia or emotional problems.
+
+Although some patients have a form of the disease known to be caused by a single mutation, for most patients the exact causes of Parkinson’s disease remain unknown: the disease likely results from a combination of genetic and environmental factors (similar to Alzheimer’s disease). Post-mortem analysis of brains from Parkinson’s patients shows the presence of Lewy bodies—abnormal protein clumps—in dopaminergic neurons. The prevalence of these Lewy bodies often correlates with the severity of the disease.
+
+There is no cure for Parkinson’s disease, and treatment is focused on easing symptoms. One of the most commonly prescribed drugs for Parkinson’s is L-DOPA, which is a chemical that is converted into dopamine by neurons in the brain. This conversion increases the overall level of dopamine neurotransmission and can help compensate for the loss of dopaminergic neurons in the substantia nigra. Other drugs work by inhibiting the enzyme that breaks down dopamine.
+
+# Neurodevelopmental Disorders
+
+Neurodevelopmental disorders occur when the development of the nervous system is disturbed. There are several different classes of neurodevelopmental disorders. Some, like Down Syndrome, cause intellectual deficits. Others specifically affect communication, learning, or the motor system. Some disorders like autism spectrum disorder and attention deficit/ hyperactivity disorder have complex symptoms.
+
+# Autism
+
+Autism spectrum disorder (ASD) is a neurodevelopmental disorder. Its severity differs from person to person. Estimates for the prevalence of the disorder have changed rapidly in the past few decades. Current estimates suggest that one in 88 children will develop the disorder. ASD is four times more prevalent in males than females.
+
+# LINK TO LEARNING
+
+This video (http://openstax.org/l/autism) discusses possible reasons why there has been a recent increase in the number of people diagnosed with autism.
+
+A characteristic symptom of ASD is impaired social skills. Children with autism may have difficulty making and maintaining eye contact and reading social cues. They also may have problems feeling empathy for others. Other symptoms of ASD include repetitive motor behaviors (such as rocking back and forth), preoccupation with specific subjects, strict adherence to certain rituals, and unusual language use. Up to 30 percent of patients with ASD develop epilepsy, and patients with some forms of the disorder (like Fragile X) also have intellectual disability. Because it is a spectrum disorder, other ASD patients are very functional and have good-to-excellent language skills. Many of these patients do not feel that they suffer from a disorder and instead think
+
+that their brains just process information differently.
+
+Except for some well-characterized, clearly genetic forms of autism (like Fragile X and Rett’s Syndrome), the causes of ASD are largely unknown. Variants of several genes correlate with the presence of ASD, but for any given patient, many different mutations in different genes may be required for the disease to develop. At a general level, ASD is thought to be a disease of “incorrect” wiring. Accordingly, brains of some ASD patients lack the same level of synaptic pruning that occurs in non-affected people. In the 1990s, a research paper linked autism to a common vaccine given to children. This paper was retracted when it was discovered that the author falsified data, and follow-up studies showed no connection between vaccines and autism.
+
+Treatment for autism usually combines behavioral therapies and interventions, along with medications to treat other disorders common to people with autism (depression, anxiety, obsessive compulsive disorder). Although early interventions can help mitigate the effects of the disease, there is currently no cure for ASD.
+
+# Attention Deficit Hyperactivity Disorder (ADHD)
+
+Approximately three to five percent of children and adults are affected by attention deficit/hyperactivity disorder (ADHD). Like ASD, ADHD is more prevalent in males than females. Symptoms of the disorder include inattention (lack of focus), executive functioning difficulties, impulsivity, and hyperactivity beyond what is characteristic of the normal developmental stage. Some patients do not have the hyperactive component of symptoms and are diagnosed with a subtype of ADHD: attention deficit disorder (ADD). Many people with ADHD also show comorbitity, in that they develop secondary disorders in addition to ADHD. Examples include depression or obsessive compulsive disorder (OCD). Figure 35.32 provides some statistics concerning comorbidity with ADHD.
+
+The cause of ADHD is unknown, although research points to a delay and dysfunction in the development of the prefrontal cortex and disturbances in neurotransmission. According to studies of twins, the disorder has a strong genetic component. There are several candidate genes that may contribute to the disorder, but no definitive links have been discovered. Environmental factors, including exposure to certain pesticides, may also contribute to the development of ADHD in some patients. Treatment for ADHD often involves behavioral therapies and the prescription of stimulant medications, which paradoxically cause a calming effect in these patients.
+
+# CAREER CONNECTION
+
+# Neurologist
+
+Neurologists are physicians who specialize in disorders of the nervous system. They diagnose and treat disorders such as epilepsy, stroke, dementia, nervous system injuries, Parkinson’s disease, sleep disorders, and multiple sclerosis. Neurologists are medical doctors who have attended college, medical school, and completed three to four years of neurology residency.
+
+When examining a new patient, a neurologist takes a full medical history and performs a complete physical exam. The physical exam contains specific tasks that are used to determine what areas of the brain, spinal cord, or peripheral nervous system may be damaged. For example, to check whether the hypoglossal nerve is functioning correctly, the neurologist will ask the patient to move his or her tongue in different ways. If the patient does not have full control over tongue movements, then the hypoglossal nerve may be damaged or there may be a lesion in the brainstem where the cell bodies of these neurons reside (or there could be damage to the tongue muscle itself).
+
+
+
+Neurologists have other tools besides a physical exam they can use to diagnose particular problems in the nervous system. If the patient has had a seizure, for example, the neurologist can use electroencephalography (EEG), which involves taping electrodes to the scalp to record brain activity, to try to determine which brain regions are involved in the seizure. In suspected stroke patients, a neurologist can use a computerized tomography (CT) scan, which is a type of X-ray, to look for bleeding in the brain or a possible brain tumor. To treat patients with neurological problems, neurologists can prescribe medications or refer the patient to a neurosurgeon for surgery.
+
+# LINK TO LEARNING
+
+This website (http://openstax.org/l/neurologic_exam) allows you to see the different tests a neurologist might use to see what regions of the nervous system may be damaged in a patient.
+
+# Mental Illnesses
+
+Mental illnesses are nervous system disorders that result in problems with thinking, mood, or relating with other people. These disorders are severe enough to affect a person’s quality of life and often make it difficult for people to perform the routine tasks of daily living. Debilitating mental disorders plague approximately 12.5 million Americans (about 1 in 17 people) at an annual cost of more than $\$ 300$ billion. There are several types of mental disorders including schizophrenia, major depression, bipolar disorder, anxiety disorders and phobias, post-traumatic stress disorders, and obsessive-compulsive disorder (OCD), among others. The American Psychiatric Association publishes the Diagnostic and Statistical Manual of Mental Disorders (or DSM), which describes the symptoms required for a patient to be diagnosed with a particular mental disorder. Each newly released version of the DSM contains different symptoms and classifications as scientists learn more about these disorders, their causes, and how they relate to each other. A more detailed discussion of two mental illnesses—schizophrenia and major depression—is given below.
+
+# Schizophrenia
+
+Schizophrenia is a serious and often debilitating mental illness affecting one percent of people in the United States. Symptoms of the disease include the inability to differentiate between reality and imagination, inappropriate and unregulated emotional responses, difficulty thinking, and problems with social situations. People with schizophrenia can suffer from hallucinations and hear voices; they may also suffer from delusions. Patients also have so-called “negative” symptoms like a flattened emotional state, loss of pleasure, and loss of basic drives. Many schizophrenic patients are diagnosed in their late adolescence or early 20s. The development of schizophrenia is thought to involve malfunctioning dopaminergic neurons and may also involve problems with glutamate signaling. Treatment for the disease usually requires antipsychotic medications that work by blocking dopamine receptors and decreasing dopamine neurotransmission in the brain. This decrease in dopamine can cause Parkinson’s diseaselike symptoms in some patients. While some classes of antipsychotics can be quite effective at treating the disease, they are not a cure, and most patients must remain medicated for the rest of their lives.
+
+# Depression
+
+Major depression affects approximately 6.7 percent of the adults in the United States each year and is one of the most common mental disorders. To be diagnosed with major depressive disorder, a person must have experienced a severely depressed mood lasting longer than two weeks along with other symptoms including a loss of enjoyment in activities that were previously enjoyed, changes in appetite and sleep schedules, difficulty concentrating, feelings of worthlessness, and suicidal thoughts. The exact causes of major depression are unknown and likely include both genetic and environmental risk factors. Some research supports the “classic monoamine hypothesis,” which suggests that depression is caused by a decrease in norepinephrine and serotonin neurotransmission. One argument against this hypothesis is the fact that some antidepressant medications cause an increase in norepinephrine and serotonin release within a few hours of beginning treatment—but clinical results of these medications are not seen until weeks later. This has led to alternative hypotheses: for example, dopamine may also be decreased in depressed patients, or it may actually be an increase in norepinephrine and serotonin that causes the disease, and antidepressants force a feedback loop that decreases this release. Treatments for depression include psychotherapy, electroconvulsive therapy, deep-brain stimulation, and prescription medications. There are several classes of antidepressant medications that work through different mechanisms. For example, monoamine oxidase inhibitors (MAO inhibitors) block the enzyme that degrades many neurotransmitters (including dopamine, serotonin, norepinephrine), resulting in increased
+
+neurotransmitter in the synaptic cleft. Selective serotonin reuptake inhibitors (SSRIs) block the reuptake of serotonin into the presynaptic neuron. This blockage results in an increase in serotonin in the synaptic cleft. Other types of drugs such as norepinephrine-dopamine reuptake inhibitors and norepinephrine-serotonin reuptake inhibitors are also used to treat depression.
+
+# Other Neurological Disorders
+
+There are several other neurological disorders that cannot be easily placed in the above categories. These include chronic pain conditions, cancers of the nervous system, epilepsy disorders, and stroke. Epilepsy and stroke are discussed below.
+
+# Epilepsy
+
+Estimates suggest that up to three percent of people in the United States will be diagnosed with epilepsy in their lifetime. While there are several different types of epilepsy, all are characterized by recurrent seizures. Epilepsy itself can be a symptom of a brain injury, disease, or other illness. For example, people who have intellectual disability or ASD can experience seizures, presumably because the developmental wiring malfunctions that caused their disorders also put them at risk for epilepsy. For many patients, however, the cause of their epilepsy is never identified and is likely to be a combination of genetic and environmental factors. Often, seizures can be controlled with anticonvulsant medications. However, for very severe cases, patients may undergo brain surgery to remove the brain area where seizures originate.
+
+# Stroke
+
+A stroke results when blood fails to reach a portion of the brain for a long enough time to cause damage. Without the oxygen supplied by blood flow, neurons in this brain region die. This neuronal death can cause many different symptoms—depending on the brain area affected— including headache, muscle weakness or paralysis, speech disturbances, sensory problems, memory loss, and confusion. Stroke is often caused by blood clots and can also be caused by the bursting of a weak blood vessel. Strokes are extremely common and are the third most common cause of death in the United States. On average one person experiences a stroke every 40 seconds in the United States. Approximately 75 percent of strokes occur in people older than 65. Risk factors for stroke include high blood pressure, diabetes, high cholesterol, and a family history of stroke. Smoking doubles the risk of stroke. Because a stroke is a medical emergency, patients with symptoms of a stroke should immediately go to the emergency room, where they can receive drugs that will dissolve any clot that may have formed. These drugs will not work if the stroke was caused by a burst blood vessel or if the stroke occurred more than three hours before arriving at the hospital. Treatment following a stroke can include blood pressure medication (to prevent future strokes) and (sometimes intense) physical therapy.
+
+KEY TERMS   
+acetylcholine neurotransmitter released by neurons in the central nervous system and peripheral nervous system   
+action potential self-propagating momentary change in the electrical potential of a neuron (or muscle) membrane   
+Alzheimer’s disease neurodegenerative disorder characterized by problems with memory and thinking   
+amygdala structure within the limbic system that processes fear   
+arachnoid mater spiderweb-like middle layer of the meninges that cover the central nervous system   
+astrocyte glial cell in the central nervous system that provide nutrients, extracellular buffering, and structural support for neurons; also makes up the blood-brain barrier   
+attention deficit hyperactivity disorder (ADHD) neurodevelopmental disorder characterized by difficulty maintaining attention and controlling impulses   
+autism spectrum disorder (ASD) neurodevelopmental disorder characterized by impaired social interaction and communication abilities   
+autonomic nervous system part of the peripheral nervous system that controls bodily functions   
+axon tube-like structure that propagates a signal from a neuron’s cell body to axon terminals   
+axon hillock electrically sensitive structure on the cell body of a neuron that integrates signals from multiple neuronal connections   
+axon terminal structure on the end of an axon that can form a synapse with another neuron   
+basal ganglia interconnected collections of cells in the brain that are involved in movement and motivation; also known as basal nuclei   
+basal nuclei see basal ganglia   
+brainstem portion of the brain that connects with the spinal cord; controls basic nervous system functions like breathing, heart rate, and swallowing   
+cerebellum brain structure involved in posture, motor coordination, and learning new motor actions   
+cerebral cortex outermost sheet of brain tissue; involved in many higher-order functions   
+cerebrospinal fluid (CSF) clear liquid that surrounds the brain and spinal cord and fills the ventricles and central canal; acts as a shock absorber and circulates material throughout the brain and spinal cord   
+choroid plexus spongy tissue within ventricles that produces cerebrospinal fluid   
+cingulate gyrus helps regulate emotions and pain; thought to directly drive the body’s conscious response to unpleasant experiences   
+corpus callosum thick fiber bundle that connects the cerebral hemispheres   
+cranial nerve sensory and/or motor nerve that emanates
+
+from the brain dendrite structure that extends away from the cell body to receive messages from other neurons depolarization change in the membrane potential to a less negative value dura mater tough outermost layer that covers the central nervous system ependymal cell that lines fluid-filled ventricles of the brain and the central canal of the spinal cord; involved in production of cerebrospinal fluid epilepsy neurological disorder characterized by recurrent seizures excitatory postsynaptic potential (EPSP) depolarization of a postsynaptic membrane caused by neurotransmitter molecules released from a presynaptic cell frontal lobe part of the cerebral cortex that contains the motor cortex and areas involved in planning, attention, and language glia (also, glial cells) cells that provide support functions for neurons gyrus (plural: gyri) ridged protrusions in the cortex hippocampus brain structure in the temporal lobe involved in processing memories hyperpolarization change in the membrane potential to a more negative value hypothalamus brain structure that controls hormone release and body homeostasis inhibitory postsynaptic potential (IPSP) hyperpolarization of a postsynaptic membrane caused by neurotransmitter molecules released from a presynaptic cell limbic system connected brain areas that process emotion and motivation long-term depression (LTD) prolonged decrease in synaptic coupling between a pre- and postsynaptic cell long-term potentiation (LTP) prolonged increase in synaptic coupling between a pre-and postsynaptic cell major depression mental illness characterized by prolonged periods of sadness membrane potential difference in electrical potential between the inside and outside of a cell meninge membrane that covers and protects the central nervous system microglia glia that scavenge and degrade dead cells and protect the brain from invading microorganisms myelin fatty substance produced by glia that insulates axons neurodegenerative disorder nervous system disorder characterized by the progressive loss of neurological functioning, usually caused by neuron death neuron specialized cell that can receive and transmit electrical and chemical signals nodes of Ranvier gaps in the myelin sheath where the
+
+signal is recharged   
+norepinephrine neurotransmitter and hormone released by activation of the sympathetic nervous system   
+occipital lobe part of the cerebral cortex that contains visual cortex and processes visual stimuli   
+oligodendrocyte glial cell that myelinates central nervous system neuron axons   
+parasympathetic nervous system division of autonomic nervous system that regulates visceral functions during rest and digestion   
+parietal lobe part of the cerebral cortex involved in processing touch and the sense of the body in space   
+Parkinson’s disease neurodegenerative disorder that affects the control of movement   
+pia mater thin membrane layer directly covering the brain and spinal cord   
+proprioception sense about how parts of the body are oriented in space   
+radial glia glia that serve as scaffolds for developing neurons as they migrate to their final destinations   
+refractory period period after an action potential when it is more difficult or impossible for an action potential to be fired; caused by inactivation of sodium channels and activation of additional potassium channels of the membrane   
+saltatory conduction “jumping” of an action potential along an axon from one node of Ranvier to the next   
+satellite glia glial cell that provides nutrients and structura support for neurons in the peripheral nervous system   
+schizophrenia mental disorder characterized by the inability to accurately perceive reality; patients often have difficulty thinking clearly and can suffer from delusions   
+Schwann cell glial cell that creates myelin sheath around a peripheral nervous system neuron axon   
+sensory-somatic nervous system system of sensory and motor nerves   
+somatosensation sense of touch   
+spinal cord thick fiber bundle that connects the brain with peripheral nerves; transmits sensory and motor information; contains neurons that control motor reflexes   
+spinal nerve nerve projecting between skin or muscle and spinal cord   
+sulcus (plural: sulci) indents or “valleys” in the cortex   
+summation process of multiple presynaptic inputs creating EPSPs around the same time for the postsynaptic neuron to be sufficiently depolarized to fire an action potential   
+sympathetic nervous system division of autonomic nervous system activated during stressful “fight or flight” situations   
+synapse junction between two neurons where neuronal signals are communicated   
+synaptic cleft space between the presynaptic and postsynaptic membranes   
+synaptic vesicle spherical structure that contains a neurotransmitter   
+temporal lobe part of the cerebral cortex that processes auditory input; parts of the temporal lobe are involved in speech, memory, and emotion processing   
+thalamus brain area that relays sensory information to the cortex   
+threshold of excitation level of depolarization needed for an action potential to fire   
+ventricle cavity within brain that contains cerebrospinal fluid
+
+
+
+# CHAPTER SUMMARY 35.1 Neurons and Glial Cells
+
+The nervous system is made up of neurons and glia. Neurons are specialized cells that are capable of sending electrical as well as chemical signals. Most neurons contain dendrites, which receive these signals, and axons that send signals to other neurons or tissues. There are four main types of neurons: unipolar, bipolar, multipolar, and pseudounipolar neurons. Glia are non-neuronal cells in the nervous system that support neuronal development and signaling. There are several types of glia that serve different functions.
+
+# 35.2 How Neurons Communicate
+
+Neurons have charged membranes because there are different concentrations of ions inside and outside of the cell. Voltage-gated ion channels control the movement of ions into and out of a neuron. When a neuronal membrane is depolarized to at least the threshold of excitation, an action potential is fired. The action potential is then propagated along a myelinated axon to the axon terminals. In a chemical synapse, the action potential causes release of neurotransmitter molecules into the synaptic cleft. Through binding to postsynaptic receptors, the neurotransmitter can cause excitatory or inhibitory postsynaptic potentials by depolarizing or hyperpolarizing, respectively, the postsynaptic membrane. In electrical synapses, the action potential is directly communicated to the postsynaptic cell through gap junctions—large channel proteins that connect the pre-and postsynaptic membranes. Synapses are not static structures and can be strengthened and weakened. Two mechanisms of synaptic plasticity are long-term potentiation and long-term depression.
+
+
+
+# 35.3 The Central Nervous System
+
+The vertebrate central nervous system contains the brain and the spinal cord, which are covered and protected by three
+
+meninges. The brain contains structurally and functionally defined regions. In mammals, these include the cortex (which can be broken down into four primary functional lobes: frontal, temporal, occipital, and parietal), basal ganglia, thalamus, hypothalamus, limbic system, cerebellum, and brainstem—although structures in some of these designations overlap. While functions may be primarily localized to one structure in the brain, most complex functions, like language and sleep, involve neurons in multiple brain regions. The spinal cord is the information superhighway that connects the brain with the rest of the body through its connections with peripheral nerves. It transmits sensory and motor input and also controls motor reflexes.
+
+# 35.4 The Peripheral Nervous System
+
+The peripheral nervous system contains both the autonomic and sensory-somatic nervous systems. The autonomic
+
+nervous system provides unconscious control over visceral functions and has two divisions: the sympathetic and parasympathetic nervous systems. The sympathetic nervous system is activated in stressful situations to prepare the animal for a “fight or flight” response. The parasympathetic nervous system is active during restful periods. The sensorysomatic nervous system is made of cranial and spinal nerves that transmit sensory information from skin and muscle to the CNS and motor commands from the CNS to the muscles.
+
+# 35.5 Nervous System Disorders
+
+Some general themes emerge from the sampling of nervous system disorders presented above. The causes for most disorders are not fully understood—at least not for all patients—and likely involve a combination of nature (genetic mutations that become risk factors) and nurture (emotional trauma, stress, hazardous chemical exposure). Because the causes have yet to be fully determined, treatment options are often lacking and only address symptoms.
+
+# VISUAL CONNECTION QUESTIONS
+
+1. Figure 35.3 Which of the following statements is false?
+
+a. The soma is the cell body of a nerve cell.   
+b. Myelin sheath provides an insulating layer to the dendrites.   
+c. Axons carry the signal from the soma to the target.   
+d. Dendrites carry the signal to the soma.
+
+2. Figure 35.11 Potassium channel blockers, such as amiodarone and procainamide, which are used to treat abnormal electrical activity in the heart, called cardiac dysrhythmia, impede the movement of $\operatorname { K } +$ through voltage-gated $\mathrm { K } +$ channels. Which part of the action potential would you expect potassium channels to affect?
+
+3. Figure 35.26 Which of the following statements is false?
+
+a. The parasympathetic pathway is responsible for relaxing the body, while the sympathetic pathway is responsible for preparing for an emergency.   
+b. Most preganglionic neurons in the sympathetic pathway originate in the spinal cord.   
+c. Slowing of the heartbeat is a parasympathetic response.   
+d. Parasympathetic neurons are responsible for releasing norepinephrine on the target organ, while sympathetic neurons are responsible for releasing acetylcholine.
+
+# REVIEW QUESTIONS
+
+4. Neurons contain , which can receive signals from other neurons.
+
+a. axons b. mitochondria c. dendrites d. Golgi bodies
+
+5. A(n) neuron has one axon and one dendrite extending directly from the cell body.
+
+a. unipolar b. bipolar c. multipolar d. pseudounipolar
+
+6. Glia that provide myelin for neurons in the brain are called
+
+a. Schwann cells b. oligodendrocytes c. microglia d. astrocytes
+
+7. Meningitis is a viral or bacterial infection of the brain. Which cell type is the first to have its function disrupted during meningitis?
+
+a. astrocytes b. microglia c. neurons d. satellite glia
+
+8. For a neuron to fire an action potential, its membrane must reach
+
+a. hyperpolarization b. the threshold of excitation c. the refractory period d. inhibitory postsynaptic potential
+
+9. After an action potential, the opening of additional voltage-gated channels and the inactivation of sodium channels, cause the membrane to return to its resting membrane potential.
+
+a. sodium b. potassium c. calcium d. chloride
+
+10. What is the term for protein channels that connect two neurons at an electrical synapse?
+
+a. synaptic vesicles   
+b. voltage-gated ion channels   
+c. gap junction protein   
+d. sodium-potassium exchange pumps
+
+11. Which of the following molecules is not involved in the maintenance of the resting membrane potential?
+
+a. potassium cations b. ATP c. voltage-gated ion channels d. calcium cations
+
+12. The lobe contains the visual cortex.
+
+a. frontal b. parietal c. temporal d. occipital
+
+13. The connects the two cerebral hemispheres.
+
+a. limbic system b. corpus callosum c. cerebellum d. pituitary
+
+14. Neurons in the control motor reflexes.
+
+a. thalamus b. spinal cord c. parietal lobe d. hippocampus
+
+15. Phineas Gage was a 19th century railroad worker who survived an accident that drove a large iron rod through his head. If the injury resulted in him becoming temperamental and capricious what part of his brain was damaged?
+
+a. frontal lobe b. hippocampus c. parietal lobe d. temporal lobe
+
+16. Activation of the sympathetic nervous system causes:
+
+a. increased blood flow into the skin b. a decreased heart rate c. an increased heart rate d. increased digestion
+
+17. Where are parasympathetic preganglionic cell bodies located?
+
+a. cerebellum b. brainstem c. dorsal root ganglia d. skin
+
+18. is released by motor nerve endings onto muscle.
+
+a. Acetylcholine b. Norepinephrine c. Dopamine d. Serotonin
+
+19. Parkinson’s disease is a caused by the degeneration of neurons that release
+
+a. serotonin b. dopamine c. glutamate d. norepinephrine
+
+20. medications are often used to treat patients with ADHD.
+
+a. Tranquilizer b. Antibiotic c. Stimulant d. Anti-seizure
+
+21. Strokes are often caused by
+
+a. neurodegeneration   
+b. blood clots or burst blood vessels   
+c. seizures   
+d. viruses
+
+22. Why is it difficult to identify the cause of many nervous system disorders?
+
+a. The genes associated with the diseases are not known.   
+b. There are no obvious defects in brain structure.   
+c. The onset and display of symptoms varies between patients.   
+d. all of the above
+
+23. Why do many patients with neurodevelopmental disorders develop secondary disorders?
+
+a. Their genes predispose them to schizophrenia.   
+b. Stimulant medications cause new behavioral disorders.   
+c. Behavioral therapies only improve neurodevelopmental disorders.   
+d. Dysfunction in the brain can affect many aspects of the body.
+
+# CRITICAL THINKING QUESTIONS
+
+24. How are neurons similar to other cells? How are they unique?   
+25. Multiple sclerosis causes demyelination of axons in the brain and spinal cord. Why is this problematic?   
+26. Many neurons have only a single axon, but many terminals at the end of the axon. How does this end structure of the axon support its function?   
+27. How does myelin aid propagation of an action potential along an axon? How do the nodes of Ranvier help this process?   
+28. What are the main steps in chemical neurotransmission?   
+29. Describe how long-term potentiation can lead to a nicotine addiction.   
+30. What methods can be used to determine the function of a particular brain region?   
+31. What are the main functions of the spinal cord?   
+32. Alzheimer’s disease involves three of the four lobes of the brain. Identify one of the involved lobes and describe the lobe’s symptoms associated with the disease.   
+33. What are the main differences between the sympathetic and parasympathetic branches of the autonomic nervous system?   
+34. What are the main functions of the sensory-somatic nervous system?   
+35. Describe how the sensory-somatic nervous system reacts by reflex to a person touching something hot. How does this allow for rapid responses in potentially dangerous situations?   
+36. Scientists have suggested that the autonomic nervous system is not well-adapted to modern human life. How is the sympathetic nervous system an ineffective response to the everyday challenges faced by modern humans?   
+37. What are the main symptoms of Alzheimer’s disease?   
+38. What are possible treatments for patients with major depression?

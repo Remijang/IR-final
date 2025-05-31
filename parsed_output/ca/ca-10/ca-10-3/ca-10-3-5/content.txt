@@ -1,0 +1,3 @@
+10.3.5 RW Stage
+
+We need to finally take a look at the RW stage in Figure 10.8. The inputs that it requires from the previous stages are the values of the ALU and load operations stored in the aluResult and ldResult fields, respectively. These inputs along with the default next PC (current PC + 4) are connected to a multiplexer that chooses the value to be written back. The rest of the circuit is the same as that of the single-cycle processor. Note that there is no pipeline register at the end of the RW stage because it is the last stage in the pipeline.

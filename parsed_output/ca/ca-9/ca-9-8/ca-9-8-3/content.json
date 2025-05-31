@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "9.8.3 Trade-offs between Horizontal and Vertical Microprogramming ",
+        "text_level": 1,
+        "page_idx": 408
+    },
+    {
+        "type": "text",
+        "text": "The trade-offs between horizontal and vertical microprogramming are the following: ",
+        "page_idx": 408
+    },
+    {
+        "type": "text",
+        "text": "1. Horizontal microprogramming requires more storage. However, this is not an issue in a microprogrammed processor. The additional storage is minimal.   \n2. Horizontal microprogramming eliminates the need for dedicated signal generation logic in the \u00b5control unit.   \n3. To program a horizontally microprogrammed processor, it is necessary to expose the control signals to the programmer and the microassembler. This makes the microassembler very specific to a given processor. However, in vertical microprogramming, as long as the internal register set remains the same, we do not need different microassemblers. ",
+        "page_idx": 408
+    },
+    {
+        "type": "text",
+        "text": "To summarize, microprogramming is a very potent method to implement an instruction set. We can design very expressive instruction sets using this method. However, this is not a preferable approach for implementing all the instructions (especially the common ones) in a high performance processor. ",
+        "page_idx": 408
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 409
+    }
+]

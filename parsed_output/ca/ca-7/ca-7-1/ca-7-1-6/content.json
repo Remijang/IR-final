@@ -1,0 +1,61 @@
+[
+    {
+        "type": "text",
+        "text": "7.1.6 NAND and NOR Gates ",
+        "text_level": 1,
+        "page_idx": 271
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.6 shows how to construct a NAND gate in CMOS technology. The two inputs, $A$ and $B$ , are connected to the gates of each NMOS-PMOS pair. If both $A$ and $B$ are equal to 1, then the PMOS transistors will switch off, and both the NMOS transistors will conduct. This will set the output to a logical 0. However, if one of the inputs is equal to 0, then one of the NMOS transistors will turn off and one of the PMOS transistors will turn on. The output will thus get set to a logical 1. ",
+        "page_idx": 271
+    },
+    {
+        "type": "text",
+        "text": "Note that we use the \u2018.\u2019 operator for the AND operation. This notation is very widely used in representing Boolean formulae. Likewise for the OR operation, we use the $^ +$ \u2019 sign. ",
+        "page_idx": 271
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.7 shows how to construct a NOR gate. In this case, the two inputs, $A$ and $B$ , are also connected to the gates of each NMOS-PMOS pair. However, as compared to the NAND gate, the topology is different. If one of the inputs is a logical 1, then one of the NMOS transistors will turn on and one of the PMOS transistors will turn off. The output will thus get set to 0. If both the inputs are equal to 0, then both the NMOS transistors will shut off, and both the PMOS transistors will turn on. The output in this case will be equal to a logical 1. ",
+        "page_idx": 271
+    },
+    {
+        "type": "image",
+        "img_path": "images/e61bae0077fb5893506f9f8fd08a4b417b1d19765630ed730e1b0be3540fed6e.jpg",
+        "img_caption": [
+            "Figure 7.6: CMOS NAND gate "
+        ],
+        "img_footnote": [],
+        "page_idx": 272
+    },
+    {
+        "type": "image",
+        "img_path": "images/4d83d6131f112ac1c5efc257590f9a666dfb0a5e06b5f18241e3cbaf1e3d59d9.jpg",
+        "img_caption": [
+            "Figure 7.7: CMOS NOR gate "
+        ],
+        "img_footnote": [],
+        "page_idx": 272
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 272
+    },
+    {
+        "type": "text",
+        "text": "Now, that we have constructed a basic inverter, a NAND, and NOR gate using CMOS logic; we have the tools to construct any type of logic gate. This is because NAND and NOR gates are known as universal gates (see [Kohavi and Jha, 2009]). They can be used to construct any kind of logic gate and implement any logic function. In our circuits, we shall implement complex logic gates using AND, OR, NAND, NOR, XOR, and NOT gates. Other than AND and OR gates, we have described the construction of the rest of the four gates in this section. We can construct an AND gate by connecting the output of a NAND gate to a NOT gate. Similarly, we can construct an OR gate by connecting the output of a NOR gate to a NOT gate. ",
+        "page_idx": 272
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 273
+    },
+    {
+        "type": "text",
+        "text": "In the next section, we shall look at structures that compute complex functions on a set of Boolean input bits. We call such structures combinational logic structures because they decide if a certain set of input boolean bits belong to a set containing restricted combinations of bits. For example, a XOR gate produces 1 if the input bits are either 01 or 10. In this case the set $\\boldsymbol { S }$ contains the combinations: $\\{ 0 1 , 1 0 \\}$ . A XOR logic structure decides if the two input bits are in the set $\\boldsymbol { S }$ . If they are in the set, then it produces an output equal to 1, otherwise it produces $0$ . ",
+        "page_idx": 273
+    }
+]

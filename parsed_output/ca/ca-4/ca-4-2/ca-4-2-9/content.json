@@ -1,0 +1,137 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.9 Load-Store Instructions ",
+        "text_level": 1,
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "Simple Load-Store Instructions ",
+        "text_level": 1,
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "The simplest load and store instructions are ldr and str, respectively. Here, is an example. ",
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "ldr r1, [r0] ",
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "This instruction directs the processor to load the value in register $r 1$ , from the memory location stored in $r 0$ , as shown in Figure 4.2. ",
+        "page_idx": 157
+    },
+    {
+        "type": "image",
+        "img_path": "images/5ddf409988c4cb6595d83396a49c666bddf33c18a2af7c875f796a6821d88f14.jpg",
+        "img_caption": [
+            "Figure 4.2: The ldr instruction "
+        ],
+        "img_footnote": [],
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "Note that in this case, $r 0$ , contains the starting address of the data in memory. The ldr instructions loads 4 bytes in a register. If the value contained in $r 0$ is $v$ , then we need to fetch the bytes from $v$ to $v + 3$ . These 32 bits (4 bytes), are brought from memory and saved in register $r 1$ . ",
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "The str instruction performs the reverse process. It reads the value in a register and saves it in a memory location. An example is shown in Figure 4.3. Here $r 0$ is known as the base register. ",
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "str r1, [r0] ",
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "Load-Store Instructions with an Offset ",
+        "text_level": 1,
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "We can specify load and store instructions with a base register, and an optional offset. Let us consider: ",
+        "page_idx": 157
+    },
+    {
+        "type": "text",
+        "text": "ldr r1, [r0, #4] ",
+        "page_idx": 157
+    },
+    {
+        "type": "image",
+        "img_path": "images/71ac73274865ab64546948c32fcbab67b4113ed17ad46ca5fbeb974cd6476c6a.jpg",
+        "img_caption": [
+            "Figure 4.3: The str instruction "
+        ],
+        "img_footnote": [],
+        "page_idx": 158
+    },
+    {
+        "type": "text",
+        "text": "Here, the memory address is equal to the value in $r 0$ plus 4. It is possible to specify a register in place of an immediate operand. ",
+        "page_idx": 158
+    },
+    {
+        "type": "text",
+        "text": "ldr r1, [r0, r2] ",
+        "page_idx": 158
+    },
+    {
+        "type": "text",
+        "text": "The memory address is equal to $r 0 + r 2$ . In this expression, $r 0$ and $r 2$ refer to the values stored in them. We can alternatively state the operation in this program as: $r 1 \\gets [ r 0 + r 2 ]$ (see the register transfer notation defined in Section 3.2.5). ",
+        "page_idx": 158
+    },
+    {
+        "type": "table",
+        "img_path": "images/c7d4f2789ec9dcc499f68dd76080bbafe60946783a142153edb0a2b13d04d6d2.jpg",
+        "table_caption": [
+            "Table 4.13: Load and store instruction semantics "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td colspan=\"2\">Semantics</td><td colspan=\"2\">Example</td><td colspan=\"2\">Explanation</td><td>Addressing Mode</td></tr><tr><td></td><td>ldr reg, [reg]</td><td></td><td>ldr r1, [rO]</td><td></td><td>r1\u2190[r0]</td><td></td><td>register-indirect</td></tr><tr><td></td><td>ldr reg,</td><td>reg,imm]</td><td></td><td>ldr r1, [r0,#4]</td><td>r1\u2190[r0+4]</td><td></td><td>base-offset</td></tr><tr><td></td><td>ldrreg,</td><td>reg,reg]</td><td>ldr r1,</td><td>[r0,r2]</td><td>rl\u2190</td><td>[r0+r2]</td><td>base-index</td></tr><tr><td></td><td>ldr reg, [reg,</td><td>reg, shift imm]</td><td>ldr r1,</td><td>[r0,r2,lsl #2]</td><td>r1\u2191</td><td>[r0+r2<2]</td><td>base-scaled-index</td></tr><tr><td></td><td>str reg,</td><td>[reg]</td><td>str r1,</td><td>[r0]</td><td colspan=\"2\">[r0] \u4e2a r1</td><td>register-indirect</td></tr><tr><td></td><td>str reg,</td><td>[reg,imm]</td><td>str rl,</td><td>[r0,#4]</td><td>[r0+4]\u2190r1</td><td></td><td>base-offset</td></tr><tr><td></td><td>str reg,</td><td>[reg, reg]</td><td>str r1,</td><td>[r0, r2]</td><td>[r0+r2]\u2190rl</td><td></td><td>base-index</td></tr><tr><td></td><td>str reg,</td><td>[reg, reg, shift imm]</td><td>str rl,</td><td>[r0, r2, lsl #2]</td><td></td><td>[r0+r2<2]\u2190r1</td><td>base-scaled-index</td></tr></table></body></html>\n\n",
+        "page_idx": 158
+    },
+    {
+        "type": "text",
+        "text": "Table 4.13 shows the semantics of different types of load store instructions. The third column shows the addressing mode. The register $r 2$ in this case is known as the index register because it contains a value that is added to the base register, and this value can be used as the index of an array (see Section 4.3.1). Note that some authors call the base-offset mode as also the displacement addressing mode. ",
+        "page_idx": 158
+    },
+    {
+        "type": "text",
+        "text": "Load-Store instructions for Bytes and Half-Words ",
+        "text_level": 1,
+        "page_idx": 159
+    },
+    {
+        "type": "text",
+        "text": "The ldr and str instructions load/store 4 bytes of data. However, it is possible to also load and store 1 and 2 bytes of data. 2 bytes is also known as a half-word, where a word is equal to 4 bytes. ",
+        "page_idx": 159
+    },
+    {
+        "type": "table",
+        "img_path": "images/ae75099a2da75c1c3b187698aaea01877101a44e4eee7af3493a70af2a579b5d.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Semantics</td><td colspan=\"2\">Example</td><td colspan=\"4\">Explanation</td></tr><tr><td></td><td>ldrb reg, [reg,imm]</td><td></td><td>ldrb r1, [r0, #2]</td><td></td><td>r1\u2190</td><td></td><td>[r0 + 2] (1 unsigned byte)</td></tr><tr><td></td><td>ldrh reg, [reg, imm]</td><td></td><td>ldrh r1, [r0, #2]</td><td></td><td>r1\u2190</td><td>[r0+2]</td><td>(2 unsigned bytes)</td></tr><tr><td></td><td>ldrsb reg, [reg, imm]</td><td></td><td>ldrsb r1,</td><td>[r0,#2]</td><td>r1\u2190</td><td>[r0+2]</td><td>(1 signed byte)</td></tr><tr><td></td><td>ldrsh reg, [reg, imm]</td><td></td><td>ldrsh r1,</td><td>[r0\uff0c#2]</td><td>r1\u2190</td><td>[r0+2]</td><td>(2 signed bytes)</td></tr><tr><td></td><td>strb reg,[reg,imm]</td><td></td><td>strb r1, [r0,#2]</td><td></td><td>[r0+2]</td><td>\u2190r1</td><td>(1 unsigned byte)</td></tr><tr><td></td><td>strh reg, [reg, imm]</td><td></td><td>strh r1,</td><td>[r0\uff0c#2]</td><td>[r0+ 2]</td><td></td><td>\u2190 r1 (2 unsigned bytes)</td></tr></table></body></html>\n\n",
+        "page_idx": 159
+    },
+    {
+        "type": "text",
+        "text": "Table 4.14: Load and store instructions for bytes and half-words in the base-offset addressing mode ",
+        "page_idx": 159
+    },
+    {
+        "type": "text",
+        "text": "Table 4.14 shows the load and store instructions for bytes and half words using the baseoffset addressing mode. ldrb loads an unsigned byte to a register. It places the byte in the least significant 8 bits. The rest of the 24 bits are set to 0. ldrh similarly loads an unsigned half-word (16 bits). ldrsb, and ldrsh load a signed byte and half-word, respectively. They extend the sign of the operand (see Section 2.3.4) to make it fit in 32 bits. This is done by replicating the MSB. strb and strh store an unsigned byte in memory. Note that unlike loads, there are no ARM instructions to extend the sign of the operand while saving it in memory. ",
+        "page_idx": 159
+    }
+]

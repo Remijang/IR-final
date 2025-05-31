@@ -1,0 +1,38 @@
+[
+    {
+        "type": "text",
+        "text": "11.4.4 Swap Space ",
+        "text_level": 1,
+        "page_idx": 554
+    },
+    {
+        "type": "text",
+        "text": "We have solved the first problem, i.e., ensuring that processes do not overwrite each other\u2019s data. Now, we need to solve the second problem, which is to ensure that our system can run even when the memory footprint of a program is more than the amount of physical memory. For example, we might need to run a program with a memory footprint of 3 GB on a machine with only $\\mathrm { 5 1 2 ~ M B }$ of main memory. Even on regular desktop machines it is possible that the combined memory footprint of all the processes is more than the size of main memory. ",
+        "page_idx": 554
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 555
+    },
+    {
+        "type": "text",
+        "text": "To support this requirement, we first need to find a location to save all the data that does not fit in main memory. Most processors typically have peripheral devices connected to the processor such as the hard disk, or USB flash drives that have a large amount of storage capacity. We shall study about storage devices in detail in Chapter 13. In this section, we only need to appreciate the following aspects of such connected storage devices. ",
+        "page_idx": 555
+    },
+    {
+        "type": "text",
+        "text": "1. Connected storage devices are very slow as compared to main memory. The access time to main memory is about 100-300 ns; whereas, the access time to a hard disk is of the order of milliseconds.   \n2. Storage devices typically have several orders of magnitude more storage than main memory. A hard disk contains about 500 GB of storage in a system with 4 GB of main memory.   \n3. They are conceptually treated as a large array of bytes similar to the way we treat the memory system. However, an address in the memory system is unrelated to the address in a hard disk. The storage device is not a part of the memory system.   \n4. It is not necessary to have a storage device physically close to the processor. It can be accessible over the network, and be in another part of the world. ",
+        "page_idx": 555
+    },
+    {
+        "type": "text",
+        "text": "A storage device can define an area known as the swap space that has space to contain all the frames that cannot be saved in main memory. Furthermore, this storage region need not be a superset of the main memory. If it is an extension of main memory, then we can define a larger physical memory. For example, if we have 2 GB of main memory, and 3 GB of swap space, then the total amount of physical memory can be 5 GB. In this case, if we need to displace a frame from main memory, then we need to allocate a location for it in swap space. Alternatively, the swap space can be inclusive. In the above example, we will effectively have 3 GB of physical memory, and the main memory acts like a cache for the swap space. In either case, the role of the swap space is to increase the amount of available physical memory. ",
+        "page_idx": 555
+    },
+    {
+        "type": "text",
+        "text": "Now, the obvious question that arises is, \u201cHow does the memory system know if a frame is present in main memory or the swap space? \u201d We can augment each entry in the page table with an extra bit. If this bit is 1, then the frame is in main memory, else it is in the swap space. Note that this system can be made more complicated also. Instead of one swap space, we can have multiple swap spaces, and use multiple bits in a page table entry to indicate the corresponding swap space. ",
+        "page_idx": 555
+    }
+]

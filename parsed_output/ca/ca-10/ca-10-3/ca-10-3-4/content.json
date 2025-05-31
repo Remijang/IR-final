@@ -1,0 +1,27 @@
+[
+    {
+        "type": "text",
+        "text": "10.3.4 MA Stage ",
+        "text_level": 1,
+        "page_idx": 421
+    },
+    {
+        "type": "image",
+        "img_path": "images/89df98509eb3f1747bca3016e8c6750785b17212b1ff1c194501df914de4b75d.jpg",
+        "img_caption": [
+            "Figure 10.7: The MA stage in a pipelined processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 421
+    },
+    {
+        "type": "text",
+        "text": "The MA stage is shown in Figure 10.7. The only operand that the load instruction uses is the result of the ALU, which contains the effective memory address. This is saved in the aluResult field of the EX-MA register. The data to be stored resides in the rd register. This value was read from the register file in the OF stage, and was stored in the op2 field of the instruction packet. In this stage, the op2 field is connected to the $M D R$ (memory data register) register. The relevant control signals \u2013 isLd and isSt \u2013 are also a part of the instruction packet, and they are routed to the memory unit. ",
+        "page_idx": 421
+    },
+    {
+        "type": "text",
+        "text": "The only output of this stage is the result of the load instruction. This is saved in the ldResult field of the MA-RW register. ",
+        "page_idx": 421
+    }
+]

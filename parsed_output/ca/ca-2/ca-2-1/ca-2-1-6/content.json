@@ -1,0 +1,152 @@
+[
+    {
+        "type": "text",
+        "text": "2.1.6 Implementing Boolean Functions ",
+        "text_level": 1,
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a generic boolean function $f ( A , B , C \\ldots )$ . To implement it we need to create a circuit out of logic gates. Our aim should be to minimize the number of gates to save area, power, and time. Let us first look at a brute force method of implementing any Boolean function. ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "Simple Method ",
+        "text_level": 1,
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "We can construct the truth table of the function, and then try to realize it with an optimal number of logic gates. The reason we start from a truth table is as follows. In some cases, the Boolean function that we are trying to implement might not be specified in a concise form. It might be possible to simplify it significantly. Secondly, using truth tables ensures that the process can be automated. For example, let us consider the following truth table of some function, $f$ . We show only those lines that evaluate to 1. ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 56
+    },
+    {
+        "type": "table",
+        "img_path": "images/2a2ac6686a0732e4fc8e7d2ac107861938fc3908ff4b47e78d1945bfb5da3f24.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>A</td><td>B</td><td>C</td><td>Result</td></tr><tr><td></td><td>1</td><td>1</td><td>0</td><td>1</td></tr><tr><td></td><td>1 \uff11</td><td>1 0</td><td>1 1</td><td>1 1</td></tr></table></body></html>\n\n",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the first line. It can be represented by the Boolean function $A . B . { \\overline { { C } } }$ . Similarly, the second and third lines can be represented as $A . B . C$ and $A . { \\overline { { B } } } . C$ , respectively. Thus, the function can be represented as: ",
+        "page_idx": 56
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( A , B , C ) = A . B . { \\overline { { C } } } + A . B . C + A . { \\overline { { B } } } . C\n$$",
+        "text_format": "latex",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "We see that we have represented the function as an OR function of several terms. This representation is known as a sum-of-products representation, or a representation in the canonical form. Each such term is known as a minterm. Note that in a minterm, each variable appears only once. It is either in its original form or in its complemented form. ",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "Definition 17 Let us consider a Boolean function $f$ with n arguments. ",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "minterm A minterm is an AND function on all n Boolean variables, where each variable appears only once (either in its original form or in its complemented form). A minterm corresponds to one line in the truth table, whose result is 1. ",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "Canonical representation It is a Boolean formula, which is equivalent to the function $f$ . It computes an OR operation of a set of minterms. ",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "To summarize, to implement a truth table, we first get a list of minterms that might evaluate to a logical 1 (true), then create a canonical representation, and then realize it with logic gates. To realize the canonical representation using logic gates, we need to realize each minterm separately, and then compute an OR operation. ",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "This process works, but is inefficient. The formula: $A . B . { \\overline { { C } } } + A . B . C + A . { \\overline { { B } } } . C$ , can be simplified as $A . B \\mathrm { ~ + ~ } A . \\overline { { B } } . C$ . Our simple approach is not powerful enough to simplify this formula. ",
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "Karnaugh Maps ",
+        "text_level": 1,
+        "page_idx": 56
+    },
+    {
+        "type": "text",
+        "text": "Instead of directly converting the canonical representation into a circuit, let us build a structure called a Karnaugh map. This is a rectangular grid of cells, where each cell represents one minterm. To construct a Karnaugh map, let us first devise a method of numbering each minterm. Let us first represent all minterms such that the order of variables in them is the same (original or complemented). Second, if a variable is not complemented, then let us represent it by 1, otherwise, let us represent it by 0. Table 2.7 shows the representation of all the possible 8 minterms in a three variable function. ",
+        "page_idx": 56
+    },
+    {
+        "type": "table",
+        "img_path": "images/efe37a6a5958cc1b6a632416562b13446afd755f744c6814c48e81333e910c01.jpg",
+        "table_caption": [
+            "Table 2.7: Representation of minterms "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Minterm</td><td>Representation</td></tr><tr><td>A.B.C</td><td>000</td></tr><tr><td>A.B.C</td><td>001</td></tr><tr><td>A.B.C</td><td>010</td></tr><tr><td>A.B.C</td><td>100</td></tr><tr><td>A.B.C</td><td>011</td></tr><tr><td>A.B.C</td><td>101</td></tr><tr><td>A.B.C</td><td>110</td></tr><tr><td>A.B.C</td><td>111</td></tr></table></body></html>\n\n",
+        "page_idx": 57
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 57
+    },
+    {
+        "type": "text",
+        "text": "Now, given the representation of a minterm we use some bits to specify the row in the Karnaugh map, and the rest of the bits to specify the column. We number the rows and columns such that adjacent rows or columns differ in the value of only one variable. We treat the last row, and the first row as adjacent, and likewise, treat the first and last columns as adjacent. This method of numbering ensures that the difference in representation across any two adjacent cells (same row, or same column) in the Karnaugh map is in only one bit. Moreover, this also means that the corresponding minterms differ in the value of only one variable. One minterm contains the variable in its original form, and the other contains it in its complemented form. ",
+        "page_idx": 57
+    },
+    {
+        "type": "image",
+        "img_path": "images/04fcb41cc0fdcaa6cb13fa39d033da0b5f7a2f1c1d065a0d942733a441c46654.jpg",
+        "img_caption": [
+            "Figure 2.2: Karnaugh Map for $f ( A , B , C ) = A . B . { \\overline { { C } } } ( 1 1 0 ) + A . B . C ( 1 1 1 ) + A . { \\overline { { B } } } . C ( 1 0 1 )$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 57
+    },
+    {
+        "type": "text",
+        "text": "Now, let us proceed to simplify or minimize the function. We construct the Karnaugh map as shown in Figure 2.2 for our simple function $f ( A , B , C ) = A . B . { \\overline { { C } } } + A . B . C + A . { \\overline { { B } } } . C$ . We mark all the cells(minterms) that are 1 using a dark color. Let us consider the first minterm, $A . B . { \\overline { { C } } }$ . Its associated index is 110. We thus, locate the cell 110 in the Karnaugh map, and mark it. Similarly, we mark the cells for the other minterms \u2013 $A . B . C ( 1 1 1 )$ , and $A . { \\overline { { B } } } . C ( 1 0 1 )$ . ",
+        "page_idx": 57
+    },
+    {
+        "type": "text",
+        "text": "We see that we have three marked cells. Furthermore, since adjacent cells differ in the value of only one variable, we can combine them to a single Boolean expression. In Figure 2.2, we try to combine the cells with indices 110, and 111. They differ in the value of the Boolean variable, $C$ . After combining them, we have the boolean expression: $A . B . { \\overline { { C } } } + A . B . C = A . B$ . We have thus replaced two minterms by a smaller yet equivalent Boolean expression. We were able to combine the two adjacent cells, because they represented a logical OR of the Boolean expressions, which had the variable $C$ in both its original and complemented form. Hence, the function $f$ gets minimized to $A . B + A . { \\overline { { B } } } . C$ . ",
+        "page_idx": 58
+    },
+    {
+        "type": "image",
+        "img_path": "images/65967b0a832d069ddfcdf101e18f4e0ef8a501ba05eb5b4a9572d14f72cf6996.jpg",
+        "img_caption": [
+            "Figure 2.3: Karnaugh Map for $f ( A , B , C ) = A . B . { \\overline { { C } } } ( 1 1 0 ) + A . B . C ( 1 1 1 ) + A . { \\overline { { B } } } . C ( 1 0 1 )$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 58
+    },
+    {
+        "type": "text",
+        "text": "Instead of combining, two cells in the same column, let us try to combine two cells in the same row as shown in Figure 2.3. In this case, we combine the minterms, $A . B . C$ , and $A . { \\overline { { B } } } . C$ . Since the variable $B$ is present in both its original and complemented forms, we can eliminate it. Thus, the Boolean expression denoting the combination of the cells is $A . C$ . Hence, function $f$ is equal to $A . C + A . B . C$ . We can readily verify that both the representations for $f$ $- \\ ( A . C + A . B . { \\overline { { C } } } )$ and $( A . B + A . { \\overline { { B } } } . C )$ , are equivalent and optimal in terms of the number of Boolean terms. ",
+        "page_idx": 58
+    },
+    {
+        "type": "text",
+        "text": "Note that we cannot arbitrarily draw rectangles in the Karnaugh map. They cannot include any minterm that evaluates to 0 in the truth table. Secondly, the size of each rectangle needs to be a power of 2. This is because to remove $n$ variables from a set of $m$ minterms, we need to have all combinations of the $n$ variables in the rectangle. It thus needs to have $2 ^ { n }$ minterms. ",
+        "page_idx": 58
+    },
+    {
+        "type": "text",
+        "text": "To minimize a function, we need to draw rectangles that are as large as possible. It is possible that two rectangles might have an overlap. However, one rectangle should not be a strict subset of the other. ",
+        "page_idx": 58
+    }
+]

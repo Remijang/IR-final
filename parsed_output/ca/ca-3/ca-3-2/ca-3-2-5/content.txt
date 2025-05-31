@@ -1,0 +1,65 @@
+3.2.5 Types of Operands
+
+Let us now look at the different types of operands. The method of specifying and accessing an operand in an assembly statement is known as the addressing mode.
+
+Definition 32
+
+The method of specifying and accessing an operand in an assembly statement is known as the addressing mode.
+
+The simplest way of specifying an operand is by embedding its value in the instruction. Most assembly languages allow the user to specify the values of integer constants as an operand. This addressing mode is known as the immediate addressing mode. This method is very useful for initializing registers or memory locations, or for performing arithmetic operations.
+
+Once the requisite set of constants have been loaded into registers and memory locations, the program needs to proceed by operating on registers and memory locations. There are several addressing modes in this space. Before introducing them, let us introduce some extra terminology in the form of the register transfer notation.
+
+Register Transfer Notation
+
+This notation allows us to specify the semantics of instructions and operands. Let us look at the various methods to represent the basic actions of instructions.
+
+This expression has two register operands  , and  .  is the destination register, and  is the source register. We are transferring the contents of register  to register  .
+
+We can specify an add operation with a constant as follows:
+
+We can also specify operations on registers using this notation. In this case, we are adding the contents of  and  and saving the result in  .
+
+It is also possible to represent memory accesses using this notation.
+
+In this case the memory address is saved in  . The processor hardware fetches the memory address in  , accesses the location, fetches the contents of the memory location, and saves the data item in  . Let us assume that the value in  is 100. In this case the processor accesses memory with address 100, fetches the integer saved in locations (100-103), and saves it in  . By default, we assume that we are loading and saving integers.
+
+We can also specify a more complicated memory address of the form:
+
+Here, the memory address is equal to the contents of the register  plus 4. We fetch the integer starting at the contents of this memory address, and save it in the register  .
+
+Generic Addressing Modes for Operands
+
+Let us represent the value of an operand as  . In the subsequent discussion, we use expressions such as  . This does not mean that we have a new storage location called  . It basically means that the value of an operand is specified by the RHS (right-hand side). Let us briefly take a look at some of the most commonly used addressing modes with examples.
+
+immediate 
+
+Uses the constant imm as the value of the operand.
+
+register 
+
+In this addressing mode, the processor uses the value contained in a register as the operand.
+
+register-indirect  The register saves the address of the memory location that contains the value.
+
+base-offset  offset is a constant. The processor fetches the base memory address from  , adds the constant offset to it, and accesses the new memory location to fetch the value of the operand. The offset is also known as the displacement.
+
+base-index   is the base register, and  is the index register. The memory address is equal to  .
+
+base-index-offset  The memory address that contains the value is  , where offset is a constant.
+
+memory-direct 
+
+The value is contained in memory starting from address addr. addr is a constant. In this case the memory address is directly embedded in the instruction.
+
+memory-indirect  The value is present in a memory location, whose address is contained in the memory location,  . Furthermore, the address of  is contained in the register,  .
+
+PC-relative 
+
+Here,  is a constant. The memory address is computed to be  , where PC represents the value contained in the PC. This addressing mode is useful for branch instructions.
+
+Let us introduce a new term called the effective memory address, which is relevant to the base-offset addressing mode. The memory address is equal to the contents of the base register plus the offset. The computed memory address is known as the effective memory address. We can similarly define the effective address for other addressing modes in the case of memory operands. .
+
+Definition 33
+
+The memory address specified by an operand is known as the effective memory address.

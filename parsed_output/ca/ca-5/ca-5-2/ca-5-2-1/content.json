@@ -1,0 +1,63 @@
+[
+    {
+        "type": "text",
+        "text": "5.2.1 Integer Registers ",
+        "text_level": 1,
+        "page_idx": 179
+    },
+    {
+        "type": "image",
+        "img_path": "images/ebffd95cf9df262aaaf9ccaaa0b365bfdd6cae39e5a0aeccf8365d7f3df6e586.jpg",
+        "img_caption": [
+            "Figure 5.1: The x86 register set "
+        ],
+        "img_footnote": [],
+        "page_idx": 179
+    },
+    {
+        "type": "text",
+        "text": "Figure 5.1 shows the x86 register set. The 16 and 32-bit x86 ISAs have 8 general purpose registers. These registers have an interesting history. The original 8080 microprocessor designed forty years ago had seven 8-bit general purpose registers namely $a$ , $b$ , $c$ , $d$ , $e$ , $f$ and $g$ . In the late seventies, x86 designers decided to create a 16-bit processor called 8086. They decided to keep four registers ( $a$ , b, c, and $d$ ), and suffixed them with the \u2019x\u2019 tag (\u2019x\u2019 for extended). Thus, the four general purpose registers got renamed to $a x$ , $b x$ , $c x$ , and $d x$ . Additionally, the designers of the 8086 machine decided to retain some 16-bit registers namely the stack pointer $( s p )$ , and the register to save the PC $( i p )$ . The designers also introduced three extra registers in their design \u2013 bp (base pointer), $s i$ (starting index), and di (destination index). The intention of adding the bp register was to save the value of the stack pointer at the beginning of a function. Compilers are expected to set $s p$ equal to $b p$ at the end of the function. This operation destroys the stack frame of the callee function. The registers $^ { s i }$ , and $d i$ are used by the rep instruction that repeats a certain operation. Typically, a single rep instruction is equivalent to a simple for loop. Thus, the 8086 processor had eight 16-bit general purpose registers \u2013 $a x$ , $b x$ , cx, dx, $s p$ , bp, si, and $d i$ . It was further possible to access the two bytes (lower and upper) in the registers $a x - d x$ . For example, the lower byte in the $a x$ register can be addressed as $a l$ , and the upper byte can be addressed as $a h$ . 16-bit x86 instructions can use combinations of 8-bit and 16-bit operands. ",
+        "page_idx": 180
+    },
+    {
+        "type": "text",
+        "text": "The 8086 processor had two special purpose registers. The first register called $i p$ contained the PC. The PC is typically not accessible to programmers on x86 machines (unlike the ARM ISA). The second special purpose register is the f lags register that saves the results of the last comparison (similar to the f lags register in ARM and SimpleRisc ). The f lags register is used by subsequent conditional branch instructions to compute the outcome of the branch. ",
+        "page_idx": 180
+    },
+    {
+        "type": "text",
+        "text": "In the mid-eighties, when Intel decided to extend the 8086 design to support 32-bit registers, it decided to keep the same set of registers (8 general purpose $\\mathbf { \\xi } + i p \\mathbf { \\xi } + f l a g s )$ , and similar nomenclature. However, it extended their names by adding an \u2019e\u2019 prefix. Thus, in a 32-bit machine, register eax is the 32-bit version of $a x$ . To maintain backward compatibility with the 8086, the lower 16 bits of eax can be addressed as $a x$ (if we wish to use 16-bit operands). Furthermore, the two bytes in $a x$ can be addressed as ah and al (similar to 8086). As shown in Figure 5.1, the names were changed for all the other registers also. Notably, in a 32-bit machine, the stack pointer is stored in $e s p$ , the PC is stored in $e i p$ , and the flags are stored in the ef lags register. ",
+        "page_idx": 180
+    },
+    {
+        "type": "text",
+        "text": "There are many advantages to this strategy. The first is that 8086 code can run on a 32-bit x86 processor seamlessly. All of its registers are defined in the 32-bit ISA. This is because each 16-bit register is represented by the lower 16 bits of a 32-bit register. Hence, there are no issues with backward compatibility. Secondly, we do not need to add new registers, because we simply extend each 16-bit register with 16 additional bits. We refer to the new register with a new name (16-bit name prefixed with \u2019e\u2019). ",
+        "page_idx": 180
+    },
+    {
+        "type": "text",
+        "text": "Exactly the same pattern was followed while extending the x86 ISA to create the 64-bit x86-64 ISA. The first letter was replaced from \u2019e\u2019 to \u2019r\u2019 to convert a 32-bit register to a 64-bit register. For example, the register rax is the 64-bit version of $e a x$ . Its lower 32 bits can be addressed as eax. The connotation of ax, ah, and al remains the same as before. Additionally, the x86-64 ISA introduced 8 more general purpose registers namely $r 8 \\mathrm { ~ - ~ } r 1 5$ . However, their subfields cannot be addressed directly. The 64-bit PC is saved in the rip register, and the flags are stored in the rf lags register. ",
+        "page_idx": 180
+    },
+    {
+        "type": "text",
+        "text": "The eflags register ",
+        "text_level": 1,
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "Let us now quickly discuss the structure of the eflags register. Like ARM and x86, the flags register contains a set of fields, where each field or bit indicates the status of the execution of the instruction that last set it. It is called ef lags in 32-bit x86. Table 5.1 lists some of the most commonly used fields in the eflags register, along with their semantics. ",
+        "page_idx": 181
+    },
+    {
+        "type": "table",
+        "img_path": "images/49eab1f0e4ddeb22b2686a07754d0f7ead4059a5d1f7c831281bec76774319f8.jpg",
+        "table_caption": [
+            "Table 5.1: Fields in the eflags register "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Field</td><td>Condition</td><td>Semantics</td></tr><tr><td>OF</td><td>Overflow</td><td>Set on an overflow</td></tr><tr><td>CF</td><td>Carry flag</td><td>Set on a carry or borrow</td></tr><tr><td>ZF</td><td>Zero fag</td><td>Set when the result is a O, or the comparison leads to an equality</td></tr><tr><td>SF</td><td>Sign flag</td><td>Sign bit of the result</td></tr></table></body></html>\n\n",
+        "page_idx": 181
+    }
+]

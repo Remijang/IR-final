@@ -1,0 +1,60 @@
+[
+    {
+        "type": "text",
+        "text": "6.4.4 Floating Point Conversion Instructions ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "table",
+        "img_path": "images/2baad4aa6c128270a4eced724756396ef360e5db95b9fe29cf0d25736a2271d2.jpg",
+        "table_caption": [
+            "Table 6.17: Floating point $$ integer conversion instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>fcvt.s.w rd,rsl</td><td>fcvt.s.w f1, x5</td><td>fl\u2190(foat\uff09 x5</td></tr><tr><td>fcvt.w.s rd, rs1</td><td>fcvt.w.s x5, f1</td><td>x5\u2190(int\uff09 fl</td></tr></table></body></html>\n\n",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Example 117 ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Compute $\\pi \\times e + 4$ , and store the result in f a0. Convert the result to an integer and store the result in a0. ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "pi: . float 3.14   \ne: . float 2.72   \n. main : la a1 , pi # load pi flw fs1 , 0( a1) la a2 , e # load e flw fs2 , 0( a2) addi t1 , zero , 4 # load 4.0 in a register fcvt .s.w ft1 , t1 fmadd .s fa0 , fs1 , fs2 , ft1 # pi \\* e + 4 fcvt .w.s a0 , fa0 # convert to int ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Table 6.17 shows the floating point to integer conversion (and vice versa) instructions. The $f c v t . s . w$ instruction proves to be very helpful. It can be used to convert integer immediates to floating point numbers, whenever we wish to multiply a floating point number with a multiplier of the form 2.0 or 3.0. ",
+        "page_idx": 251
+    },
+    {
+        "type": "table",
+        "img_path": "images/17fde6c4a308b5e16041af40be09ff251fb1e8a3886dc808ae8908fe157c00a3.jpg",
+        "table_caption": [
+            "Table 6.18: Floating point comparison instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>flt.s rd,rsl, rs2</td><td>flt.s s1, f2, f3</td><td>if (f2 < f3) set sl to 1</td></tr><tr><td>fle.s rd, rs1, rs2</td><td>fle.s s1, f2, f3</td><td>if (f2 \u2264 f3) set sl to 1</td></tr><tr><td>feq.s rd, rs1, rs2</td><td>feq.s s1, f2, f3</td><td>if (f2 == f3) set sl to 1</td></tr></table></body></html>\n\n",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 252
+    }
+]

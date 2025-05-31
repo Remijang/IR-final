@@ -1,0 +1,12 @@
+13.1.2 Requirements of the I/O System
+
+Let us now try to design the architecture of the I/O system. Let us start out by listing out all the devices that we want to support, and their bandwidth requirements in Table 13.1. The component that requires the maximum amount of bandwidth is the display device (monitor, projector, TV). It is attached to a graphics card. The graphics card contains the graphics processor that processes image and video data.
+
+Note that we shall use the term card often in the discussion of I/O devices. A card is a printed circuit board(PCB), which can be attached to the  system of a computer to implement a specific functionality. For example, a graphics card helps us process images and videos, a sound card helps us process high definition audio, and a network card helps us connect to the network. The picture of a network card is shown in Figure 13.3. We can see a set of chips interconnected on a printed circuit board. There are a set of ports that are used to connect external devices to the card.
+
+Definition 141   
+ card is a printed circuit board(PCB), which can be attached to the I/O system of a computer to implement a specific functionality.
+
+Along with the graphics card, the other high bandwidth device that needs to be connected to the CPU is the main memory. The main memory bandwidth is of the order of  . Hence, we need to design an I/O system that gives special treatment to the main memory and the graphics card.
+
+The rest of the devices have a relatively lower bandwidth. The bandwidth requirement of the hard disk, USB devices, and the network card is limited to 500-600 MB/s. The keyboard, mouse, CD-DVD drives, and audio peripherals have an extremely minimal bandwidth requirement (< 3 4 MB/s).

@@ -1,0 +1,46 @@
+[
+    {
+        "type": "text",
+        "text": "13.6.1 Polling ",
+        "text_level": 1,
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Let us assume that there is a dedicated register called the status register in the printer that maintains the status of the printer. Whenever there is a change in the status of the printer, it updates the value of the status register. Let us assume that the status register can contain two values namely 0 $( f r e e )$ and 1 $( b u s y )$ . When the printer is printing a document, the value of the status register is 1 $( b u s y )$ . Subsequently, when the printer completes printing the document, it sets the value of the status register to 0 $( f r e e )$ . ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Now, let us assume that the printer driver wishes to read the value of the status register of the printer. It sends a message to the printer asking it for the value of the status register. The first step in sending a message is to send a sequence of bytes to the relevant I/O ports of the USB port controller. The port controller in turn sends the bytes to the printer. If it uses a split transaction bus, then it waits for the response to arrive. Meanwhile, the printer interprets the message, and sends the value of the status register as the response, which the USB port controller forwards to the processor through the I/O system. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "If the printer is free, then the device driver can proceed to print the next document. Otherwise, it needs to wait for the printer to finish. It can keep on requesting the printer for its status till it is free. This method of repeatedly querying a device for its state till its state has a certain value is called polling. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Definition 157   \nPolling is a method for waiting till an I/O device reaches a given state. It is implemented by repeatedly querying the device for its state in a loop. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Let us show a snippet of SimpleRisc code that implements polling in a hypothetical system. We assume that the message for getting the status of the printer is 0xDEADBEEF. We need to first send the message to the I/O port 0xFF00, and then subsequently read the response from the $\\mathrm { I } / \\mathrm { O }$ port 0xFF04. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 688
+    },
+    {
+        "type": "table",
+        "img_path": "images/7aba7407cf30f46fb1ae714b89452222c268017e9556ceba3c55cdc4a92a3fd8.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Assembly Code for Polling</td></tr><tr><td>/* load DEADBEEF in rO */ movh rO\uff0cOxDEAD</td><td></td></tr><tr><td>addu rO\uff0cr0\uff0cOxBEEF</td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td>/* polling loop */</td><td></td></tr><tr><td>.loop:</td><td></td></tr><tr><td>out rO\uff0cOxFF00</td><td></td></tr><tr><td>inr1\uff0cOxFF04</td><td></td></tr><tr><td>cmp r1\uff0c1</td><td></td></tr><tr><td>beq .loop /* keep looping till status = 1 */</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 688
+    }
+]

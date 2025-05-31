@@ -1,0 +1,364 @@
+11.4 Colligative Properties
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Express concentrations of solution components using mole fraction and molality • Describe the effect of solute concentration on various solution properties (vapor pressure, boiling point, freezing point, and osmotic pressure) • Perform calculations using the mathematical equations that describe these various colligative effects • Describe the process of distillation and its practical applications • Explain the process of osmosis and describe how it is applied industrially and in nature
+
+The properties of a solution are different from those of either the pure solute(s) or solvent. Many solution properties are dependent upon the chemical identity of the solute. Compared to pure water, a solution of hydrogen chloride is more acidic, a solution of ammonia is more basic, a solution of sodium chloride is more dense, and a solution of sucrose is more viscous. There are a few solution properties, however, that depend onlyupon the total concentration of solute species, regardless of their identities. These colligative properties include vapor pressure lowering, boiling point elevation, freezing point depression, and osmotic pressure. This small set of properties is of central importance to many natural phenomena and technological applications, as will be described in this module.
+
+Mole Fraction and Molality
+
+Several units commonly used to express the concentrations of solution components were introduced in an earlier chapter of this text, each providing certain benefits for use in different applications. For example, molarity  is a convenient unit for use in stoichiometric calculations, since it is defined in terms of the molar amounts of solute species:
+
+Because solution volumes vary with temperature, molar concentrations will likewise vary. When expressed as molarity, the concentration of a solution with identical numbers of solute and solvent species will be different
+
+at different temperatures, due to the contraction/expansion of the solution. More appropriate for calculations involving many colligative properties are mole-based concentration units whose values are not dependent on temperature. Two such units are molefraction(introduced in the previous chapter on gases) and molality.
+
+The mole fraction,  of a component is the ratio of its molar amount to the total number of moles of all solution components:
+
+By this definition, the sum of mole fractions for all solution components (the solvent and all solutes) is equal to one.
+
+Molality is a concentration unit defined as the ratio of the numbers of moles of solute to the mass of the solvent in kilograms:
+
+Since these units are computed using only masses and molar amounts, they do not vary with temperature and, thus, are better suited for applications requiring temperature-independent concentrations, including several colligative properties, as will be described in this chapter module.
+
+EXAMPLE 11.3
+
+Calculating Mole Fraction and Molality
+
+The antifreeze in most automobile radiators is a mixture of equal volumes of ethylene glycol and water, with minor amounts of other additives that prevent corrosion. What are the (a) mole fraction and (b) molality of ethylene glycol,  , in a solution prepared from  of ethylene glycol and  of water (approximately  of glycol and  of water)?
+
+Solution
+
+(a) The mole fraction of ethylene glycol may be computed by first deriving molar amounts of both solution components and then substituting these amounts into the definition of mole fraction.
+
+Notice that mole fraction is a dimensionless property, being the ratio of properties with identical units (moles).
+
+(b) Derive moles of solute and mass of solvent  .
+
+First, use the given mass of ethylene glycol and its molar mass to find the moles of solute:
+
+Then, convert the mass of the water from grams to kilograms:
+
+Finally, calculate molality per its definition:
+
+Check Your Learning
+
+What are the mole fraction and molality of a solution that contains  of ammonia,  , dissolved in 125 g of water?
+
+Answer:  ; 
+
+EXAMPLE 11.4
+
+Converting Mole Fraction and Molal Concentrations
+
+Calculate the mole fraction of solute and solvent in a  solution of sodium chloride.
+
+Solution
+
+Converting from one concentration unit to another is accomplished by first comparing the two unit definitions. In this case, both units have the same numerator (moles of solute) but different denominators. The provided molal concentration may be written as:
+
+The numerator for this solution’s mole fraction is, therefore, 3.0 mol NaCl. The denominator may be computed by deriving the molar amount of water corresponding to 
+
+and then substituting these molar amounts into the definition for mole fraction.
+
+Check Your Learning
+
+The mole fraction of iodine,  , dissolved in dichloromethane,  , is 0.115. What is the molal concentration,  , of iodine in this solution?
+
+EXAMPLE 11.5
+
+Molality and Molarity Conversions
+
+Intravenous infusion of a  aqueous solution of glucose (density of  is part of some postoperative recovery therapies. What is the molal concentration of glucose in this solution?
+
+Solution
+
+The provided molal concentration may be explicitly written as:
+
+Consider the definition of molality:
+
+The amount of glucose in 1-L of this solution is  , so the mass of water in this volume of solution is needed.
+
+First, compute the mass of  of the solution:
+
+This is the mass of both the water and its solute, glucose, and so the mass of glucose must be subtracted. Compute the mass of glucose from its molar amount:
+
+Subtracting the mass of glucose yields the mass of water in the solution:
+
+Finally, the molality of glucose in this solution is computed as:
+
+Check Your Learning
+
+Nitric acid,  , is commercially available as a  aqueous solution (density  ). What is the molarity of this solution?
+
+Vapor Pressure Lowering
+
+As described in the chapter on liquids and solids, the equilibrium vapor pressure of a liquid is the pressure exerted by its gaseous phase when vaporization and condensation are occurring at equal rates:
+
+Dissolving a nonvolatile substance in a volatile liquid results in a lowering of the liquid’s vapor pressure. This phenomenon can be rationalized by considering the effect of added solute molecules on the liquid's vaporization and condensation processes. To vaporize, solvent molecules must be present at the surface of the solution. The presence of solute decreases the surface area available to solvent molecules and thereby reduces the rate of solvent vaporization. Since the rate of condensation is unaffected by the presence of solute, the net result is that the vaporization-condensation equilibrium is achieved with fewer solvent molecules in the vapor phase (i.e., at a lower vapor pressure) (Figure 11.18). While this interpretation is useful, it does not account for several important aspects of the colligative nature of vapor pressure lowering. A more rigorous explanation involves the property of entropy, a topic of discussion in a later text chapter on thermodynamics. For purposes of understanding the lowering of a liquid's vapor pressure, it is adequate to note that the more dispersed nature of matter in a solution, compared to separate solvent and solute phases, serves to effectively stabilize the solvent molecules and hinder their vaporization. A lower vapor pressure results, and a correspondingly
+
+higher boiling point as described in the next section of this module.
+
+The relationship between the vapor pressures of solution components and the concentrations of those components is described by Raoult’s law: Thepartialpres ureexertedbyanycomponentofanidealsolution isequaltothevaporpres ureofthepurecomponentmultipliedbyitsmolefractioninthesolution.
+
+where  is the partial pressure exerted by component A in the solution,  is the vapor pressure of pure A, and  is the mole fraction of A in the solution.
+
+Recalling that the total pressure of a gaseous mixture is equal to the sum of partial pressures for all its components (Dalton’s law of partial pressures), the total vapor pressure exerted by a solution containing i components is
+
+A nonvolatile substance is one whose vapor pressure is negligible  , and so the vapor pressure above a solution containing only nonvolatile solutes is due only to the solvent:
+
+EXAMPLE 11.6
+
+Calculation of a Vapor Pressure
+
+Compute the vapor pressure of an ideal solution containing  of glycerin,  , and  of
+
+ethanol,  , at  . The vapor pressure of pure ethanol is 0.178 atm at  . Glycerin is essentially nonvolatile at this temperature.
+
+Solution
+
+Since the solvent is the only volatile component of this solution, its vapor pressure may be computed per Raoult’s law as:
+
+First, calculate the molar amounts of each solution component using the provided mass data.
+
+Next, calculate the mole fraction of the solvent (ethanol) and use Raoult’s law to compute the solution’s vapor pressure.
+
+Check Your Learning
+
+A solution contains  of urea,  (a nonvolatile solute) and  of water. If the vapor pressure of pure water at  is 23.7 torr, what is the vapor pressure of the solution assuming ideal behavior?
+
+Answer: 23.4 torr
+
+Distillation of Solutions
+
+Solutions whose components have significantly different vapor pressures may be separated by a selective vaporization process known as distillation. Consider the simple case of a mixture of two volatile liquids, A and B, with A being the more volatile liquid. Raoult’s law can be used to show that the vapor above the solution is enriched in component A, that is, the mole fraction of A in the vapor is greater than the mole fraction of A in the liquid (see end-of-chapter Exercise 65). By appropriately heating the mixture, component A may be vaporized, condensed, and collected—effectively separating it from component B.
+
+Distillation is widely applied in both laboratory and industrial settings, being used to refine petroleum, to isolate fermentation products, and to purify water. A typical apparatus for laboratory-scale distillations is shown in Figure 11.19.
+
+Oil refineries use large-scale fractionaldistilationto separate the components of crude oil. The crude oil is heated to high temperatures at the base of a tall fractionatingcolumn, vaporizing many of the components that rise within the column. As vaporized components reach adequately cool zones during their ascent, they condense and are collected. The collected liquids are simpler mixtures of hydrocarbons and other petroleum compounds that are of appropriate composition for various applications (e.g., diesel fuel, kerosene, gasoline), as depicted in Figure 11.20.
+
+Boiling Point Elevation
+
+As described in the chapter on liquids and solids, the boilingpointof a liquid is the temperature at which its vapor pressure is equal to ambient atmospheric pressure. Since the vapor pressure of a solution is lowered due to the presence of nonvolatile solutes, it stands to reason that the solution’s boiling point will subsequently be increased. Vapor pressure increases with temperature, and so a solution will require a higher temperature than will pure solvent to achieve any given vapor pressure, including one equivalent to that of the surrounding atmosphere. The increase in boiling point observed when nonvolatile solute is dissolved in a solvent,  , is called boiling point elevation and is directly proportional to the molal concentration of solute species:
+
+where  is the boiling point elevation constant, or the ebulioscopicconstantand mis the molal concentration (molality) of all solute species.
+
+Boiling point elevation constants are characteristic properties that depend on the identity of the solvent.   
+Values of  for several solvents are listed in Table 11.2.
+
+The extent to which the vapor pressure of a solvent is lowered and the boiling point is elevated depends on the total number of solute particles present in a given amount of solvent, not on the mass or size or chemical identities of the particles. A 1 maqueous solution of sucrose  ) and a  aqueous solution of ethylene glycol  will exhibit the same boiling point because each solution has one mole of solute particles (molecules) per kilogram of solvent.
+
+EXAMPLE 11.7
+
+Calculating the Boiling Point of a Solution
+
+Assuming ideal solution behavior, what is the boiling point of a  solution of a nonvolatile solute in benzene?
+
+Solution
+
+Use the equation relating boiling point elevation to solute molality to solve this problem in two steps.
+
+Step 1. Calculatethechangeinboilingpoint.
+
+Step 2. Ad theboilingpointelevationtothepuresolvent’sboilingpoint. Boiling temperature 
+
+Check Your Learning
+
+Assuming ideal solution behavior, what is the boiling point of the antifreeze described in Example 11.3?
+
+EXAMPLE 11.8
+
+The Boiling Point of an Iodine Solution
+
+Find the boiling point of a solution of  of iodine,  , in  of chloroform,  , assuming that the iodine is nonvolatile and that the solution is ideal.
+
+Solution
+
+A four-step approach to solving this problem is outlined below.
+
+Step 1. Convertfromgramstomolesof I2 usingthemolarmas of I2 intheunitconversionfactor. Result:    
+Step 2.Determinethemolalityofthesolutionfromthenumberofmolesofsoluteandthemas ofsolvent, inkilograms.   
+Result:    
+Step 3.Usethedirectproportionalitybetwe nthechangeinboilingpointandmolalconcentrationto determinehowmuchtheboilingpointchanges.   
+Result:    
+Step 4.Determinethenewboilingpointfromtheboilingpointofthepuresolventandthechange. Result:    
+Check each result as a self-assessment.
+
+Check Your Learning
+
+What is the boiling point of a solution of  of glycerin,  , in  of water? Assume an ideal solution.
+
+Freezing Point Depression
+
+Solutions freeze at lower temperatures than pure liquids. This phenomenon is exploited in “de-icing” schemes that use salt (Figure 11.21), calcium chloride, or urea to melt ice on roads and sidewalks, and in the use of ethylene glycol as an “antifreeze” in automobile radiators. Seawater freezes at a lower temperature than fresh water, and so the Arctic and Antarctic oceans remain unfrozen even at temperatures below  (as do the body fluids of fish and other cold-blooded sea animals that live in these oceans).
+
+The decrease in freezing point of a dilute solution compared to that of the pure solvent,  is called the freezing point depression and is directly proportional to the molal concentration of the solute
+
+where  is the molal concentration of the solute and  is called the freezing point depression constant (or cryoscopicconstant). Just as for boiling point elevation constants, these are characteristic properties whose
+
+values depend on the chemical identity of the solvent. Values of  for several solvents are listed in Table 11.2.
+
+EXAMPLE 11.9
+
+Calculation of the Freezing Point of a Solution
+
+Assuming ideal solution behavior, what is the freezing point of the  solution of a nonvolatile nonelectrolyte solute in benzene described in Example 11.4?
+
+Solution
+
+Use the equation relating freezing point depression to solute molality to solve this problem in two steps.
+
+Step 1. Calculatethechangeinfre zingpoint.
+
+Step 2.Subtractthefre zingpointchangeobservedfromthepuresolvent’sfre zingpoint. Freezing Temperature 
+
+Check Your Learning
+
+Assuming ideal solution behavior, what is the freezing point of a  solution of a nonvolatile nonelectrolyte solute in nitrobenzene?
+
+Chemistry in Everyday Life
+
+Colligative Properties and De-Icing
+
+Sodium chloride and its group 2 analogs calcium and magnesium chloride are often used to de-ice roadways and sidewalks, due to the fact that a solution of any one of these salts will have a freezing point lower than  , the freezing point of pure water. The group 2 metal salts are frequently mixed with the cheaper and more readily available sodium chloride (“rock salt”) for use on roads, since they tend to be somewhat less corrosive than the NaCl, and they provide a larger depression of the freezing point, since they dissociate to yield three particles per formula unit, rather than two particles like the sodium chloride.
+
+Because these ionic compounds tend to hasten the corrosion of metal, they would not be a wise choice to use in antifreeze for the radiator in your car or to de-ice a plane prior to takeoff. For these applications, covalent compounds, such as ethylene or propylene glycol, are often used. The glycols used in radiator fluid not only lower the freezing point of the liquid, but they elevate the boiling point, making the fluid useful in both winter and summer. Heated glycols are often sprayed onto the surface of airplanes prior to takeoff in inclement weather in the winter to remove ice that has already formed and prevent the formation of more ice, which would be particularly dangerous if formed on the control surfaces of the aircraft (Figure 11.22).
+
+Phase Diagram for a Solution
+
+The colligative effects on vapor pressure, boiling point, and freezing point described in the previous section are conveniently summarized by comparing the phase diagrams for a pure liquid and a solution derived from that liquid (Figure 11.23).
+
+The liquid-vapor curve for the solution is located beneaththe corresponding curve for the solvent, depicting the vapor pressure lowering,  , that results from the dissolution of nonvolatile solute. Consequently, at any given pressure, the solution’s boiling point is observed at a higher temperature than that for the pure solvent, reflecting the boiling point elevation,  , associated with the presence of nonvolatile solute. The solid-liquid curve for the solution is displaced left of that for the pure solvent, representing the freezing point depression,  , that accompanies solution formation. Finally, notice that the solid-gas curves for the solvent and its solution are identical. This is the case for many solutions comprising liquid solvents and nonvolatile solutes. Just as for vaporization, when a solution of this sort is frozen, it is actually just the solventmolecules that
+
+undergo the liquid-to-solid transition, forming pure solid solvent that excludes solute species. The solid and gaseous phases, therefore, are composed of solvent only, and so transitions between these phases are not subject to colligative effects.
+
+Osmosis and Osmotic Pressure of Solutions
+
+A number of natural and synthetic materials exhibit selectivepermeation, meaning that only molecules or ions of a certain size, shape, polarity, charge, and so forth, are capable of passing through (permeating) the material. Biological cell membranes provide elegant examples of selective permeation in nature, while dialysis tubing used to remove metabolic wastes from blood is a more simplistic technological example. Regardless of how they may be fabricated, these materials are generally referred to as semipermeable membranes.
+
+Consider the apparatus illustrated in Figure 11.24, in which samples of pure solvent and a solution are separated by a membrane that only solvent molecules may permeate. Solvent molecules will diffuse across the membrane in both directions. Since the concentration of solventis greater in the pure solvent than the solution, these molecules will diffuse from the solvent side of the membrane to the solution side at a faster rate than they will in the reverse direction. The result is a net transfer of solvent molecules from the pure solvent to the solution. Diffusion-driven transfer of solvent molecules through a semipermeable membrane is a process known as osmosis.
+
+When osmosis is carried out in an apparatus like that shown in Figure 11.24, the volume of the solution increases as it becomes diluted by accumulation of solvent. This causes the level of the solution to rise, increasing its hydrostatic pressure (due to the weight of the column of solution in the tube) and resulting in a faster transfer of solvent molecules back to the pure solvent side. When the pressure reaches a value that yields a reverse solvent transfer rate equal to the osmosis rate, bulk transfer of solvent ceases. This pressure is called the osmotic pressure  of the solution. The osmotic pressure of a dilute solution is related to its solute molarity,  and absolute temperature,  , according to the equation
+
+where  is the universal gas constant.
+
+Calculation of Osmotic Pressure
+
+Assuming ideal solution behavior, what is the osmotic pressure (atm) of a  solution of glucose in water that is used for intravenous infusion at body temperature, 
+
+Solution
+
+Find the osmotic pressure,  , using the formula  , where  is on the Kelvin scale (310 K) and the value of  is expressed in appropriate units  .
+
+Check Your Learning
+
+Assuming ideal solution behavior, what is the osmotic pressure (atm) a solution with a volume of  that contains  of methanol,  , in water at 
+
+Answer:
+
+5.3 atm
+
+If a solution is placed in an apparatus like the one shown in Figure 11.25, applying pressure greater than the osmotic pressure of the solution reverses the osmosis and pushes solvent molecules from the solution into the pure solvent. This technique of reverse osmosis is used for large-scale desalination of seawater and on smaller scales to produce high-purity tap water for drinking.
+
+Chemistry in Everyday Life
+
+Reverse Osmosis Water Purification
+
+In the process of osmosis, diffusion serves to move water through a semipermeable membrane from a less concentrated solution to a more concentrated solution. Osmotic pressure is the amount of pressure that must be applied to the more concentrated solution to cause osmosis to stop. If greater pressure is applied, the water will go from the more concentrated solution to a less concentrated (more pure) solution. This is called reverse osmosis. Reverse osmosis (RO) is used to purify water in many applications, from desalination plants in coastal cities, to water-purifying machines in grocery stores (Figure 11.26), and smaller reverse-osmosis household units. With a hand-operated pump, small RO units can be used in third-world countries, disaster areas, and in lifeboats. Our military forces have a variety of generatoroperated RO units that can be transported in vehicles to remote locations.
+
+Examples of osmosis are evident in many biological systems because cells are surrounded by semipermeable membranes. Carrots and celery that have become limp because they have lost water can be made crisp again by placing them in water. Water moves into the carrot or celery cells by osmosis. A cucumber placed in a concentrated salt solution loses water by osmosis and absorbs some salt to become a pickle. Osmosis can also affect animal cells. Solute concentrations are particularly important when solutions are injected into the body. Solutes in body cell fluids and blood serum give these solutions an osmotic pressure of approximately 7.7 atm. Solutions injected into the body must have the same osmotic pressure as blood serum; that is, they should be isotonic with blood serum. If a less concentrated solution, a hypotonic solution, is injected in sufficient quantity to dilute the blood serum, water from the diluted serum passes into the blood cells by osmosis, causing the cells to expand and rupture. This process is called hemolysis. When a more concentrated solution, a hypertonic solution, is injected, the cells lose water to the more concentrated solution, shrivel, and possibly die in a process called crenation. These effects are illustrated in Figure 11.27.
+
+Determination of Molar Masses
+
+Osmotic pressure and changes in freezing point, boiling point, and vapor pressure are directly proportional to the number of solute species present in a given amount of solution. Consequently, measuring one of these properties for a solution prepared using a known mass of solute permits determination of the solute’s molar mass.
+
+EXAMPLE 11.11
+
+Determination of a Molar Mass from a Freezing Point Depression
+
+A solution of  of a nonelectrolyte dissolved in  of benzene is found to freeze at  . Assuming ideal solution behavior, what is the molar mass of this compound?
+
+Solution
+
+Solve this problem using the following steps.
+
+Step 1.Determinethechangeinfre zingpointfromtheobservedfre zingpointandthefre zingpointof purebenzene(Table 11.2).
+
+Step 2. Determinethemolalconcentrationfrom  thefre zingpointdepres ionconstantforbenzene (Table 11.2), and  .
+
+Step 3.Determinethenumberofmolesofcompoundinthesolutionfromthemolalconcentrationandthe mas ofsolventusedtomakethesolution.
+
+Step 4.Determinethemolarmas fromthemas ofthesoluteandthenumberofmolesinthatmas .
+
+Check Your Learning
+
+A solution of  of a nonelectrolyte in  of chloroform has a boiling point of  . Assuming ideal solution behavior, what is the molar mass of this compound?
+
+Answer:
+
+EXAMPLE 11.12
+
+Determination of a Molar Mass from Osmotic Pressure
+
+ sample of an aqueous solution containing  of hemoglobin has an osmotic pressure of 5.9 torr at  Assuming ideal solution behavior, what is the molar mass of hemoglobin?
+
+Solution
+
+Here is one set of steps that can be used to solve the problem:
+
+Step 1.Converttheosmoticpres uretoatmospheres,thendeterminethemolarconcentrationfromthe osmoticpres ure.
+
+Step 2.Determinethenumberofmolesofhemoglobininthesolutionfromtheconcentrationandthe volumeofthesolution.
+
+Step 3.Determinethemolarmas fromthemas ofhemoglobinandthenumberofmolesinthatmas . 
+
+Check Your Learning
+
+Assuming ideal solution behavior, what is the molar mass of a protein if a solution of  of the protein in  of solution has an osmotic pressure of 0.56 torr at 
+
+Answer: 
+
+Colligative Properties of Electrolytes
+
+As noted previously in this module, the colligative properties of a solution depend only on the number, not on the identity, of solute species dissolved. The concentration terms in the equations for various colligative properties (freezing point depression, boiling point elevation, osmotic pressure) pertain to al solutespecies presentinthesolution. For the solutions considered thus far in this chapter, the solutes have been nonelectrolytes that dissolve physically without dissociation or any other accompanying process. Each molecule that dissolves yields one dissolved solute molecule. The dissolution of an electroyte, however, is not this simple, as illustrated by the two common examples below:
+
+Considering the first of these examples, and assuming complete dissociation, a  aqueous solution of NaCl contains 2.0 mole of ions (  and  ) per each kilogram of water, and its freezing point depression is expected to be
+
+When this solution is actually prepared and its freezing point depression measured, however, a value of  is obtained. Similar discrepancies are observed for other ionic compounds, and the differences between the measured and expected colligative property values typically become more significant as solute concentrations increase. These observations suggest that the ions of sodium chloride (and other strong electrolytes) are not completely dissociated in solution.
+
+To account for this and avoid the errors accompanying the assumption of total dissociation, an experimentally measured parameter named in honor of Nobel Prize-winning German chemist Jacobus Henricus van’t Hoff is used. The van’t Hoff factor  is defined as the ratio of solute particles in solution to the number of formula units dissolved:
+
+Values for measured van’t Hoff factors for several solutes, along with predicted values assuming complete dissociation, are shown in Table 11.3.
+
+In 1923, the chemists Peter Debye and Erich Hückel proposed a theory to explain the apparent incomplete ionization of strong electrolytes. They suggested that although interionic attraction in an aqueous solution is very greatly reduced by solvation of the ions and the insulating action of the polar solvent, it is not completely nullified. The residual attractions prevent the ions from behaving as totally independent particles (Figure 11.28). In some cases, a positive and negative ion may actually touch, giving a solvated unit called an ion pair. Thus, the activity, or the effective concentration, of any particular kind of ion is less than that indicated by the actual concentration. Ions become more and more widely separated the more dilute the solution, and the residual interionic attractions become less and less. Thus, in extremely dilute solutions, the effective concentrations of the ions (their activities) are essentially equal to the actual concentrations. Note that the van’t Hoff factors for the electrolytes in Table 11.3 are for  solutions, at which concentration the value of ifor NaCl is 1.9, as opposed to an ideal value of 2.
+
+EXAMPLE 11.13
+
+The Freezing Point of a Solution of an Electrolyte
+
+The concentration of ions in seawater is approximately the same as that in a solution containing  of NaCl dissolved in  of water. Use this information and a predicted value for the van’t Hoff factor (Table 11.3) to
+
+determine the freezing temperature the solution (assume ideal solution behavior).
+
+Solution
+
+Solve this problem using the following series of steps.
+
+Step 1.ConvertfromgramstomolesofNaClusingthemolarmas ofNaClintheunitconversionfactor. Result: 0.072 mol NaCl   
+Step 2.Determinethenumberofmolesofionspresentinthesolutionusingthenumberofmolesofions in1moleofNaClastheconversionfactor(2molions/1molNaCl).   
+Result:  ions   
+Step 3.Determinethemolalityoftheionsinthesolutionfromthenumberofmolesofionsandthemas of solvent,inkilograms.   
+Result:    
+Step 4.Usethedirectproportionalitybetwe nthechangeinfre zingpointandmolalconcentrationto determinehowmuchthefre zingpointchanges.   
+Result:    
+Step 5.Determinethenewfre zingpointfromthefre zingpointofthepuresolventandthechange. Result:    
+Check each result as a self-assessment, taking care to avoid rounding errors by retaining guard digits in each step’s result for computing the next step’s result.
+
+Check Your Learning
+
+Assuming complete dissociation and ideal solution behavior, calculate the freezing point of a solution of 0.724 g of  in  of water.
+
+Answer:

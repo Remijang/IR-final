@@ -1,0 +1,42 @@
+2.2.2 Binary Number System
+
+What if we consider a special case? Let us try to represent numbers in base 2. The number  can be represented as  , and  is equal to  . There is something interesting about this number system. Every digit is either 0 or 1. As we shall see in Chapters 7 and 8, computers are best suited to process values that are either 0 or 1. They find it difficult to process values from a larger set. Hence, representing numbers in base 2 should be a natural fit for computers. We call this a binary number system (see Definition 18). Likewise, a number system that uses a base of 10, is known as a decimal number system.
+
+Definition 18
+
+A number system based on Indian numerals that uses a base equal to 2, is known as a binary number system.   
+A number system based on Indian numerals that uses a base equal to 10, is known as a decimal number system.
+
+Formally, any number  can be represented as a sequence of  binary digits:
+
+Here,  are binary digits (  or 1). We represent a number as a sum of the powers of 2, as shown in Equation 2.6. The coefficients of the equation, are the binary digits. For example, the decimal number 23 is equal to  . Thus, its binary representation is 10111.
+
+Let us consider some more examples, as shown in Table 2.8.
+
+Example 8 Convert the decimal number 27 to binary.
+
+Answer: 
+
+Let us now define two more terms, the most significant bit (MSB), and the least significant bit (LSB). The LSB is the rightmost bit, and the MSB is the leftmost bit.
+
+Definition 19
+
+MSB (Most Significant Bit) : The leftmost bit of a binary number. For example the MSB of 1110 is 1.   
+• LSB (Least Significant Bit) : The rightmost bit of a binary number. For example the LSB of 1110 is 0.
+
+Hexadecimal and Octal Numbers
+
+If we have a 32-bit number, then representing each number in binary will take 32 binary digits  . For the purposes of explanation, this representation is unwieldy. We can thus make our representation more elegant by representing numbers in base 8 or base 16. We shall see that there is a very easy method of converting numbers in base 8, or base 16, to base 2.
+
+Numbers represented in base 8 are known as octal numbers. They are traditionally represented by adding a prefix, ’0’. The more popular representation is the hexadecimal number system. It uses a base equal to 16. We shall use the hexadecimal representation extensively in this book. Numbers in this format are prefixed by ‘0x’. Secondly, the word ‘hexadecimal’ is popularly abbreviated as ‘hex’. Note that we require 16 hex digits. We can use the digits 0-9 for the first ten digits. The next six digits require special characters. These six characters are typically – A (10), B(11), C(12), D(13), E(14), and F(15). We can use the lower case versions of ABCDEF also.
+
+To convert a binary number (  ) to a hexadecimal number, or do the reverse, we can use the following relationship:
+
+We can thus represent the number (  ) in base 16 (hexadecimal notation) by creating groups of four consecutive binary digits. The first group comprises the binary digits  , the second group comprises  , and so on. We need to convert each group of 4 binary digits, to represent a hexadecimal digit  . Similarly, for converting a number from hex to binary, we need to replace each hex digit with a sequence of 4 binary digits. Likewise, for converting numbers from binary to octal and back, we need to consider sequences of 3 binary digits.
+
+Example 9   
+Convert 1100010102 to the octal format.   
+Answer: 110 001 010 0612 6 1 2   
+Example 10   
+Convert 110000101011 to the hexadecimal format.   
+Answer: 1100 0010 1011 0xC2B  2

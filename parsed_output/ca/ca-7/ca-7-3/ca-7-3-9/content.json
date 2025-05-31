@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.9 Registers ",
+        "text_level": 1,
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "Parallel In\u2013Parallel Out ",
+        "text_level": 1,
+        "page_idx": 287
+    },
+    {
+        "type": "text",
+        "text": "We can store $n$ bit data by using a set of $n$ master slave D flip flops. Each $D$ flip flop is connected to an input line, and its output terminal is connected to an output line. Such an $n$ bit structure is known as an $n$ bit register. Here, we can load $n$ bits in parallel, and also read out $n$ bits in parallel at every negative clock edge. Hence, this structure is known as a parallel in\u2013parallel out register. Its structure is shown in Figure 7.24. ",
+        "page_idx": 287
+    },
+    {
+        "type": "image",
+        "img_path": "images/721c41cfc05dff05ed79e370de6251f06d2396e7025c5d32f1aadbd6960a1038.jpg",
+        "img_caption": [
+            "Figure 7.24: A parallel in\u2013parallel out register "
+        ],
+        "img_footnote": [],
+        "page_idx": 287
+    },
+    {
+        "type": "image",
+        "img_path": "images/bbc61b0573f1ff51d7e984dc93cc2ac0f582aa38caedb3e1e2328daff83f7dae.jpg",
+        "img_caption": [
+            "Figure 7.25: A serial in\u2013parallel out register "
+        ],
+        "img_footnote": [],
+        "page_idx": 288
+    },
+    {
+        "type": "text",
+        "text": "Serial In \u2013 Parallel Out ",
+        "text_level": 1,
+        "page_idx": 288
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a serial in\u2013parallel out register as shown in Figure 7.25. Here, we have a single input that is fed into the leftmost D flip flop. Every cycle, the input moves to the adjacent flip flop on the right. Thus, to load $n$ bits it will take $n$ cycles. The first bit will get loaded into the leftmost flip flop in the first cycle, and it will take $n$ cycles for it to reach the last flip flop. By that time, the rest of the $n - 1$ flip flops will get loaded with the rest of the $n - 1$ bits. We can then read out all the $n$ bits in parallel (similar to the parallel in\u2013parallel out register). This register is also known as a shift register and is used for implementing circuits used in high speed I/O buses. ",
+        "page_idx": 288
+    }
+]

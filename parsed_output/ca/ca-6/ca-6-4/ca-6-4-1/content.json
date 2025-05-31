@@ -1,0 +1,97 @@
+[
+    {
+        "type": "text",
+        "text": "6.4.1 View of Registers ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "The RISC-V floating point model has 32 floating point registers. Their names range from $f 0$ to $f 3 1$ . Unlike integer registers, no register is hardwired to 0. There is however a register usage convention (akin to integer registers). ",
+        "page_idx": 247
+    },
+    {
+        "type": "table",
+        "img_path": "images/b2dc7cca558ac5be3f95bdc230355a5cdc30d2939b5567381bc8d651889c9f54.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Register</td><td>Mnemonic</td><td>Description</td></tr><tr><td>f0-7</td><td>ft0-7</td><td>Temporary registers</td></tr><tr><td>f8-9</td><td>fs0-1</td><td>Saved registers</td></tr><tr><td>f10-11</td><td>fa0-1</td><td>Arguments/return values</td></tr><tr><td>f12-17</td><td>fa2-7</td><td>Function arguments</td></tr><tr><td>f18-27</td><td>fs2-11</td><td>Saved registers</td></tr><tr><td>f28-31</td><td>ft8-11</td><td>Temporary registers</td></tr></table></body></html>\n\n",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "It is not possible to directly load an immediate into a floating point register. Like x86, floating point registers can only be initialized by loading values from memory. ",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Floating Point Control and Status Register ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "There is an additional special register called the floating point control and status register $( f c s r )$ , whose structure is shown in Figure 6.1. Its lower 8 bits encode important information. The first 5 bits starting from the LSB store exceptional conditions encountered since these bits were last reset. This is known as the f f lags field. The rest of the 3 bits store the rounding mode. ",
+        "page_idx": 247
+    },
+    {
+        "type": "image",
+        "img_path": "images/330ca35ddc4b34a301b758d7a6a65e01686b127be44212a6439e03061a355579.jpg",
+        "img_caption": [
+            "Figure 6.1: RISC-V fcsr register "
+        ],
+        "img_footnote": [],
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Accrued Exception Flags (fflags) ",
+        "page_idx": 248
+    },
+    {
+        "type": "table",
+        "img_path": "images/093dd102ce4cf5826a6ac8dac7369c99563c58b9af52383690bca3c3fb2ee781.jpg",
+        "table_caption": [
+            "Table 6.12: Accrued exception flags "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Mnemonic</td><td>Explanation</td></tr><tr><td>NV</td><td>Invalid operation</td></tr><tr><td>DZ</td><td>Divide by zero</td></tr><tr><td>OF</td><td>Overflow</td></tr><tr><td>UF</td><td>Underflow</td></tr><tr><td>NX</td><td>Inexact</td></tr></table></body></html>\n\n",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "The fflags field stores five flags, which are also known as the accrued exception flags. The first four flags \u2013 invalid operation, divide by zero, overflow and underflow \u2013 have their standard meanings. Let us discuss the fifth flag (inexact) that we have not encountered before. This is set when the result cannot exactly be stored in a floating point register and some rounding was required. Next, let us discuss the different rounding modes. They are stored in bits 6-8 of the fcsr. ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Rounding Modes ",
+        "text_level": 1,
+        "page_idx": 248
+    },
+    {
+        "type": "table",
+        "img_path": "images/1f60954ba7c2c6f853bcd07b92ebf15ec3963d29f2e8a39f99809f2b1e911731.jpg",
+        "table_caption": [
+            "Table 6.13: Encoding the rounding mode "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Rounding Mode</td><td>Mnemonic</td><td>Meaning</td></tr><tr><td>000</td><td>RNE</td><td>Round to nearest, prefer even LSBs</td></tr><tr><td>001</td><td>RTZ</td><td>Round towards zero.</td></tr><tr><td>010</td><td>RDN</td><td>Round down (towards -0o).</td></tr><tr><td>011</td><td>RUP</td><td>Round up (towards +oo).</td></tr><tr><td>100</td><td>RMM</td><td>Round to nearest,prefer the number with the max-</td></tr><tr><td>101</td><td></td><td>imum magnitude Invalid. Reserved for future use.</td></tr><tr><td>110</td><td></td><td>Invalid. Reserved for future use.</td></tr><tr><td>111</td><td>DYN</td><td>Selects a rounding mode dynamically (stored in the frm field of the fcsr)</td></tr></table></body></html>\n\n",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "RISC-V instructions can use a static rounding mode (encoded in the instruction) or a dynamic rounding mode (encoded in the $f$ csr\u2019s $f r m$ field). The default rounding mode is RNE. We round the result to the nearest value that can be represented in the IEEE 754 format. If the real value is between two representable values, then the result is rounded to the value that has an even LSB. The next rounding mode is RTZ, which is round towards zero. It is equivalent to truncation where the bits that cannot be fit in the format are simply removed. The next two rounding modes are self-evident: RDN (round towards $- \\infty$ or the floor function) and RUP (round towards $+ \\infty$ or the ceiling function). ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "The RMM rounding mode is similar to RNE. However, if the result is between two representable values, then we round towards the number that has the higher magnitude (away from zero). The next two values are not used at the moment. Finally, the DYN mode selects a rounding mode dynamically (stored in the $f r m$ field of the f csr). ",
+        "page_idx": 249
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "type": "text",
+        "text": "8.3.1 Overview ",
+        "text_level": 1,
+        "page_idx": 335
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at integer division. Unfortunately, unlike addition, subtraction, and multiplication, division is a significantly slower process. Any division operation can be represented as follows: ",
+        "page_idx": 335
+    },
+    {
+        "type": "equation",
+        "text": "$$\nN = D Q + R\n$$",
+        "text_format": "latex",
+        "page_idx": 335
+    },
+    {
+        "type": "text",
+        "text": "Here, $N$ is the dividend, $D$ is the divisor, $Q$ is the quotient, and $R$ is the remainder. Division algorithms assume that the divisor and dividend are positive. The process of division needs to satisfy the following properties. ",
+        "page_idx": 335
+    },
+    {
+        "type": "text",
+        "text": "Property 1 $R < D$ , and $R \\geq 0$ . ",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "Property 2 $Q$ is the largest positive integer that satisfies Equation 8.15. ",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "If we wish to divide negative numbers, then we need to first convert them to positive numbers, perform the division, and then adjust the sign of the quotient and remainder. Some architectures try to ensure that the remainder is always positive. In this case, it is necessary to decrement the quotient by 1, and add the divisor to the remainder to make it positive. ",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "Let us focus on the core problem, which is to divide two $n$ bit positive numbers. The MSB is the sign bit, which is 0. Now, $\\textstyle D Q = \\sum _ { i = 1 } ^ { n } D Q _ { i } 2 ^ { i - 1 }$ . We can thus write: ",
+        "page_idx": 336
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { N = D Q + R } \\\\ { = D Q _ { 1 . . . n - 1 } + D Q _ { n } 2 ^ { n - 1 } + R } \\\\ { \\underbrace { ( N - D Q _ { n } 2 ^ { n - 1 } ) } _ { N ^ { \\prime } } = D \\underbrace { Q _ { 1 . . . n - 1 } } _ { Q ^ { \\prime } } + R } \\\\ { N ^ { \\prime } = D Q ^ { \\prime } + R } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "We have thus reduced the original problem of division into a smaller problem. The original problem was to divide $N$ by $D$ . The reduced problem is to divide $N ^ { \\prime } = N - D Q _ { n } 2 ^ { n - 1 }$ by $D$ . The remainder for both the problems is the same. The quotient, $Q ^ { \\prime }$ , for the reduced problem has the same least significant $n - 1$ bits as the original quotient, $Q$ . The $n ^ { t h }$ bit of $Q ^ { \\prime }$ is $0$ . ",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "To create the reduced problem it is necessary to find $Q _ { n }$ . We can try out both the choices $\\mathbf { \\varepsilon } - 0$ and 1. We first try 1. If $N - D 2 ^ { n - 1 } \\geq 0$ , then $Q _ { n } = 1$ (Property 1 and 2). Otherwise, it is 0. ",
+        "page_idx": 336
+    },
+    {
+        "type": "text",
+        "text": "Once, we have created the reduced problem, we can proceed to further reduce the problem till we have computed all the quotient bits. Ultimately, the dividend will be equal to the remainder, $R$ , and we will be done. Let us now illustrate an algorithm that precisely follows the procedure that we have just outlined. ",
+        "page_idx": 336
+    },
+    {
+        "type": "image",
+        "img_path": "images/0cfa8960b567705425385d4a108013b0251be2b6e065fae298f26c21c4f06555.jpg",
+        "img_caption": [
+            "Figure 8.15: Iterative divider "
+        ],
+        "img_footnote": [],
+        "page_idx": 336
+    }
+]

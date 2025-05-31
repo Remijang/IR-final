@@ -1,0 +1,183 @@
+[
+    {
+        "type": "text",
+        "text": "6.3.3 Load and Store Instructions ",
+        "text_level": 1,
+        "page_idx": 243
+    },
+    {
+        "type": "table",
+        "img_path": "images/a4509480a425ad2ee2d2dc3fe506af0ac5248a57cb6573ffee1dc6abd47242d9.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>lw rd, imm(rs1)</td><td>lw x1, 32(sp)</td><td>x1 \u2190 mem[sp + 32]</td></tr><tr><td>sw rs2, imm(rs1)</td><td>sw x1, 32(sp)</td><td>mem[sp+32] \u2190 x1</td></tr><tr><td>la rd, label</td><td>la x1, pi</td><td>x1 \u2190 address(pi)</td></tr></table></body></html>\n\n",
+        "page_idx": 243
+    },
+    {
+        "type": "text",
+        "text": "Table 6.11: Load and store instructions. Note that $l a$ is an assembler directive. ",
+        "page_idx": 243
+    },
+    {
+        "type": "text",
+        "text": "Table 6.11 shows the load and store instructions in RISC-V. We only show the 32-bit versions of these instructions. The $l w$ instruction loads 32-bit values from memory that is specified in the base-offset format. On similar lines, the $s w$ instruction stores the value of a register to memory. Note that the store instruction takes two register source operands, and it has its separate format. The store operation has always been an exception in such respects. RISCV defines a special format for it, which accepts two register-based source operands and an immediate. ",
+        "page_idx": 243
+    },
+    {
+        "type": "text",
+        "text": "Example 110 Write an assembly program to load a0 with the contents of the memory address ",
+        "page_idx": 243
+    },
+    {
+        "type": "text",
+        "text": "sp s0 4 12. ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": ". main : ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "slli s0 , s0 , 2 # s0 = s0 \\* 4   \nadd s0 , s0 , 12 # s0 = s0 + 12   \nsub t0 , sp , s0 # t0 = sp - s0   \nlw a0 , 0( t0) # load the value of mem [t0] in a0 ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Example 111 ",
+        "text_level": 1,
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Write an assembly program to create a copy of a 10-element array. Assume the starting address of the original array is stored in a1 and that of destination array is stored in a2. ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": ". main : addi t1 , zero , 0 # counter (t1) = 0 addi t2 , zero , 10 # number of iterations   \n. loop : lw t0 , 0( a1) # load an element from the source array sw t0 , 0( a2) # store an element in the destination array addi a1 , a1 , 4 # get the address of the next element : src array addi a2 , a2 , 4 # destination array addi t1 , t1 , 1 # increment the counter bne t1 , t2 , . loop # loop back ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Example 112 ",
+        "text_level": 1,
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Write a RISC-V assembly program to compute the sum of the elements in a 10-element array. Assume that the base address of the array is stored in a1. Store the result in a0. ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "Listing 6.3: C code ",
+        "text_level": 1,
+        "page_idx": 244
+    },
+    {
+        "type": "text",
+        "text": "void addNumbers (int a [10]) { int idx ; int sum = 0; for (idx = 0; idx < 10; idx ++){ ",
+        "page_idx": 244
+    },
+    {
+        "type": "image",
+        "img_path": "images/2455a7d3fa552b1e04932a9a0d4de665b05aa758181c34495538410443305635.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "Example 113 ",
+        "text_level": 1,
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "Write a RISC-V assembly program to compute the factorial of a number (stored in a1) using recursion. Store the result in a0. ",
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": ". fact : # check if n (in a1) is 0 or 1 addi t1 , zero , 1 # t1 = 1 bge t1 , a1 , . ltone # if (a1 <= 1) jump to . ltone # need to make a recursive call add s0 , a1 , zero # s0 = a1 (=n) addi a1 , a1 , -1 # a1 = n 1 # store the state addi sp , sp , -8 $\\begin{array} { l } { \\# \\quad s p \\ = \\ s p \\ - \\ S } \\\\ { \\# \\ s t o r e \\ r a \\quad a n d \\ s O } \\\\ { \\# \\quad o n \\quad t h e \\ s t a c k } \\end{array}$ sw ra , 0( sp) sw s0 , 4( sp) # recursive call jal ra , . fact # restore the state of the stack ",
+        "page_idx": 245
+    },
+    {
+        "type": "image",
+        "img_path": "images/db7dd5b002ac709f2576b51386b162a4d94f240a289298aca2b156ecbe6fec1c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "The la Assembler Directive ",
+        "text_level": 1,
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "There is often a need to load values to memory before a program starts to execute. A need arises when we use built-in constants and initialize global or static variables. Using the $l i$ instruction, it is always possible to load 32-bits to a given memory address. However, it is possible to design a more elegant solution that in practice will translate to multiple assembly instructions. It will nevertheless make the job of the assembly programmer much easier. The la directive achieves this. ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "Let us consider an example. A constant val needs to be defined as a label. The specific way of defining it is as follows: val: .word 17. A 32-bit integer constant requires the .word directive and a floating point constant requires the .float directive. It is then succeeded by the value of the constant. ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "The la directive can be used to load the address of a constant into a register. Subsequently, a regular load instruction can be used to read the value of the constant (refer to Example 114). ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "Example 114 ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Define a constant val that is initialized to 17. Store its value in register s0 after loading it from memory. ",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "table",
+        "img_path": "images/80c53203c3a90fdf53a00286cc1e347e2a70839b71aa9be1cc5fb0e7092a88cd.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>val: .word 17</td><td></td></tr><tr><td>a t1\uff0cval</td><td></td></tr><tr><td>w s0,</td><td>0(t1)</td></tr></table></body></html>\n\n",
+        "page_idx": 247
+    }
+]

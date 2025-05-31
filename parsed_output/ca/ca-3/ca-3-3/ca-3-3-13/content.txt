@@ -1,0 +1,23 @@
+3.3.13 Modifiers
+
+Let us now consider the problem of loading a 32-bit constant into a register. The following code snippet shows us how to load the constant  .
+
+/\* load the upper two bytes \*/   
+mov r0, 0xFB12   
+lsl r0, r0, 16 /\* load the lower two bytes with 0x CD EF \*/ mov r1, 0xCDEF   
+lsl r1, r1, 16   
+lsr r1, r1, 16 /\* top 16 bits are zeros \*/
+
+/\* load all the four bytes \*/ add r0, r0, r1
+
+This problem requires 6 instructions. The reader needs to note that loading constants is a common operation in programs. Hence, let us devise a mechanism to speed up the process, and load a constant in a register in two operations. Most assemblers provide directives to directly load constants. Nevertheless, these directives need to get translated into a basic sequence of assembly instructions. Thus, directives do not fundamentally solve of our problem of loading constants into registers of memory locations efficiently.
+
+We shall achieve this by using modifiers. Let us assign a modifier, ‘u’, or ‘h’, to an ALU instruction other than shift instructions. By default, we assume that when we load a 16-bit immediate into a 32-bit register, the processor automatically performs sign extension. This means that it sets each of the 16 MSB bits to the sign of the immediate. This preserves the value of the immediate. For example, if our immediate is equal to -2, then its hexadecimal representation is 0x FF FE. If we try to store it in a register, then in effect, we are storing – 0x FF FF FF FE.
+
+Let us have two additional modes. Let us add the suffix ‘u’ to an instruction to make it interpret the immediate as an unsigned number. For example, the instruction movu r0, 0x  , will load 0x 00 00 FE AB into register r0. This suffix allows us to specify 16-bit unsigned immediate values. Secondly, let us add the suffix ‘h’ to an instruction to instruct it to load the 16-bit immediate into the upper half of a register. For example, movh r0, 0x FEAB, effectively loads 0x FE AB 00 00, into  . We can use modifiers with all ALU instructions except shift instructions.
+
+Let us now consider the previous example of loading a 32-bit constant into a register. We can implement it with two instructions as follows:
+
+movh r0, 0xFB12  addu r0, r0, 0xCDEF
+
+By using modifiers, we can load constants in 2 instructions, rather than 6 instructions. Furthermore, it is possible to create generic routines using modifiers that can set the value of any single byte in a 4 byte register. These routines will require a lesser number of instructions due to the use of modifiers.

@@ -1,0 +1,9 @@
+12.5 SIMD Multiprocessors
+
+Let us now discuss SIMD multiprocessors. SIMD processors are typically used for scientific applications, high intensity gaming, and graphics. They do not have a significant amount of general purpose utility. However, for a limited class of applications, SIMD processors tend to
+
+outperform their MIMD counterparts.
+
+SIMD processors have a rich history. In the good old days we had processors arranged as arrays. Data typically entered through the first row, and first column of processors. Each processor acted on input messages, generated an output message, and sent the message to its neighbors. Such processors were known as systolic arrays. Systolic arrays were used for matrix multiplication, and other linear algebra operations. Subsequently, several vendors notably, Cray, incorporated SIMD instructions in their processors to design faster and more power efficient supercomputers. Nowadays, most of these early efforts have subsided. However, some aspects of classical SIMD computers where a single instruction operates on several streams of data, have crept into the design of modern processors.
+
+We shall discuss an important development in the area of modern processor design, which is the incorporation of SIMD functional units, and instructions, in high-performance processors.

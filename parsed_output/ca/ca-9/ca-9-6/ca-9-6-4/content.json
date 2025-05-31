@@ -1,0 +1,91 @@
+[
+    {
+        "type": "text",
+        "text": "9.6.4 3-Address Format ALU Instructions ",
+        "text_level": 1,
+        "page_idx": 393
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at implementing 3-address format ALU instructions. These instructions are: add, sub, mul, div, mod, and, or, lsl, lsr, and $a s r$ . ",
+        "page_idx": 393
+    },
+    {
+        "type": "text",
+        "text": "First, we need to read the value of the first operand stored in $r s 1$ from the register file, and send it to the ALU. The microcode snippet to achieve this is as follows: ",
+        "page_idx": 393
+    },
+    {
+        "type": "table",
+        "img_path": "images/b89c6fd12567cf8192b626f3cb543b6f66d1379c4c82d0c544bee2f07c0cedac.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>mmov regSrc\uff0crs1\uff0c<read> mmov A\uff0cregVal</td></tr></table></body></html>\n\n",
+        "page_idx": 393
+    },
+    {
+        "type": "text",
+        "text": "Note, that we are combining a functional unit operation, and a register transfer in the same cycle. This can be confusing at the beginning. Hence, the reader should read this example several times and ensure that she has a clear understanding. The reason that we fuse both the operations is because microcode registers are typically very small, and thus they can be accessed very quickly. Hence, it is not a good idea to use a complete cycle for transferring data between micro registers. It is a better idea to fuse a register transfer with a functional unit operation, such that we can ensure that we are roughly doing a similar amount of work every cycle. ",
+        "page_idx": 393
+    },
+    {
+        "type": "text",
+        "text": "Let us proceed. Subsequently, we need to check if the second operand is a register or an immediate. This can be achieved by comparing the $I$ register with 1. If it is 1, then the second operand is an immediate, else it is a register. The following piece of code first checks this condition, and then performs data transfers accordingly. ",
+        "page_idx": 393
+    },
+    {
+        "type": "text",
+        "text": "1 mbeq I, 1, .imm /\\* second operand is a register \\*/   \n3 mmov regSrc, rs2, <read>   \n4 mmov B, regVal, <aluop>   \n5 mb .rw /\\* second operand is an immediate \\*/ .imm:   \n8 mmov B, immx, <aluop> ",
+        "page_idx": 393
+    },
+    {
+        "type": "text",
+        "text": "/\\* write the ALU result to the register file\\*/ 10 .rw: ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "Here, we first check if the value stored in the $I$ register is equal to 1, using the mbeq instruction. If it is not 1, then the second operand is a register, and we start executing the subsequent microinstruction. We move the contents of the register, $r s 2$ , to the regSrc register that contains the index of the register that we need to read from the register file. Then we move the value of the operand read from the register file $( r e g V a l )$ to the ALU (register $B$ ). Since the value in register $A$ is already present, we can directly start the ALU operation. This is indicated to the ALU by sending an extra argument $( \\langle a l u o p \\rangle )$ that encodes the ALU operation. $\\langle a l u o p \\rangle$ corresponds to one of the following operations: add, sub, mul, div, mod, and, or, lsl, ${ \\mathit { l s r } }$ , and asr. ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "However, if the value of the $I$ register is 1, then we need to branch to .imm. The value of the immediate embedded in the instruction is already available with appropriate sign extensions in the register immx. We need to simply transfer the value of immx to $B$ (second ALU register), and the arguments $( \\langle a l u o p \\rangle )$ to the ALU. Similar to the case with the second operand being a register, $\\langle a l u o p \\rangle$ encodes the ALU operation. Once, we are done, we need to start execution at the label, . $r w$ . ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "The label . $r w$ needs to point to code that writes the value of the computed result to the register file, and then proceeds to execute the next instruction. The code for these two operations is shown below. ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": ".rw: ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "mmov regSrc, rd   \nmmov regData, aluResult, <write>   \nmb .begin ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "We write the result of the ALU into the register file, and then branch to the beginning, where we proceed to execute the next instruction. To summarize, here is the code for any 3-address format ALU instruction (other than the preamble). ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "/\\* transfer the first operand to the ALU \\*/   \n2 mmov regSrc, rs1, <read>   \n3 mmov A, regVal   \n4   \n5 /\\* check the value of the immediate register \\*/   \n6 mbeq I, 1, .imm   \n/\\* second operand is a register \\*/   \n8 mmov regSrc, rs2, <read>   \n9 mmov B, regVal, <aluop>   \n10 mb .rw   \n11 /\\* second operand is an immediate \\*/   \n12 .imm:   \n13 mmov B, immx, <aluop>   \n14   \n15 /\\* write the ALU result to the register file\\*/   \n16 .rw:   \n17 mmov regSrc, rd   \n18 mmov regData, aluResult, <write>   \n19 mb .begin ",
+        "page_idx": 394
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 395
+    },
+    {
+        "type": "text",
+        "text": "This code snippet has 10 microinstructions. Recall that we also need to execute 4 more microinstructions as a part of the preamble before this. They read the PC, decode the instruction, set the next PC, and jump to the beginning of the appropriate set of microinstructions. Executing 14 microinstructions for 1 program instruction is clearly a lot of effort. However, the reader must recall that we are not really after performance here. We wanted to design a very clean and flexible means of accessing different units. ",
+        "page_idx": 395
+    }
+]

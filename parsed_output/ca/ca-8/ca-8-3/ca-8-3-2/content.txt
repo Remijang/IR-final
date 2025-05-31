@@ -1,0 +1,39 @@
+8.3.2 Restoring Division
+
+Let us consider a similar setup as the iterative multiplier to divide two positive 32-bit numbers. The divisor is stored in a 32-bit register called  . We have a 33 bit register  , and a 32-bit
+
+register  . If we left shift  and  , then the value shifted out of  , is shifted in to  .  is initialized to 0, and  is initialized to hold the dividend (see Figure 8.15). Note that the size of  is equal to 33 bits to avoid overflows (similar to the case of the iterative multiplier).
+
+Algorithm 3 follows the discussion that we had in Section 8.3.1. We shall see that each iteration of the algorithm reduces the problem according to Equation 8.16. Let us prove its correctness.
+
+Proof of Correctness\*
+
+To start out we iterate 32 times for each bit of the dividend (Lines 2 to 14). Let us consider the first iteration. At the beginning, the value in the combined register  is equal to the value of the dividend  . The first step is to shift  to the left by 1 position in Line 4. Since the dividend is originally loaded into register  , we are shifting the dividend to the left by 1 position. The next step is to subtract the divisor from register  in Line 5. If  , then we set the MSB of the quotient to 1 (Line 7), otherwise we add  back to  in Line 10, and set the MSB of the quotient to 0.
+
+We wish to use Equation 8.16 to reduce the problem in every iteration. Equation 8.16 states that the new dividend  is equal to:
+
+ is the MSB of the quotient here. The divisor and remainder stay the same. The last  bits of the new quotient match those of the old quotient.
+
+We wish to prove that the value of  at the end of the first iteration is equal to (  )(ignoring quotient bits) such that we can reduce the problem according to Equation 8.16. Let us consider the value stored in  . Just after executing Line 4, it contains twice the dividend – 
+
+because we shifted  by 1 position to the left. Now, we are subtracting  from the upper  bits of  . In effect, we are subtracting  . Hence, after Line 5,  contains  . We have:
+
+Subsequently, we test the sign of  in Line 6. If  is positive or zero, then it means that  is greater than  because  . If  is negative, then let  , where  . We have:
+
+Now,  . Hence,  , and thus  is negative. We thus observe that the sign of  is the same as the sign of  , which is same as the sign of  .
+
+Now, for reducing the problem, if we observe that  , then  . Hence, we can set  to  , and set the new dividend to  , and also conclude that at the end of the iteration  contains  . If  , then we cannot set  to  .  will become negative. Hence, the algorithm sets  to  in Line 11 and adds  back to  . The value of  is thus equal to  . Since  , we have  . In both the cases, the value of  at the end of the iteration is  . We thus conclude that in the first iteration, the MSB of the quotient is computed correctly, and the value of  ignoring the quotient bit is equal to  .
+
+In the next iteration, we can use exactly the same procedure to prove that the value of  (ignoring quotient bits) is equal to  . Ultimately, after 32 iterations,  will contain the entire quotient. The value of  (ignoring quotient bits) at that point will be  . Here  is the reduced dividend after the  iteration. We have the following relation according to Equation 8.17:
+
+Hence,  will contain the value of the remainder and  will contain the quotient.
+
+Important Point 11 Let us now try to prove that the restoring algorithm does not suffer from overflows while performing a left shift, and adding or subtracting the divisor. Let us first prove that just before the shift operation in Line 4,  . Let us assume positive divisors  ) and non-negative dividends  ) for division. For the base case,  ), the proposition holds. Let us consider the  iteration. Let the value of  before the shift operation be  . From the induction hypothesis, we can conclude that  , or alternatively,  After the shift operation, we have  because we are performing a left shift by 1 position, and shifting in the MSB of  . If  , then the induction hypothesis holds for the  iteration. Otherwise, we subtract  from  . We have,   . Therefore,  . Thus, for the  iteration, the induction hypothesis holds. Now that we have proved that  , let us prove that the largest value contained in register  is less than or equal to  .
+
+After the shift operation, the largest value that  can contain is  . Henceforth, the value of  can only decrease. Since  is a 32-bit number, we require at the most 33 bits to store  . Consequently, having a 33-bit  register avoids overflows.
+
+Time Complexity
+
+There are  iterations of the for loop. Each iteration does one subtraction in Line 5 and maybe one addition in Line 10. The rest of the operations can be done in  time. Thus, per iteration it takes  time. Hence, the total time complexity is  .
+
+Example 128 Divide two 4-bit numbers: 7 (0111) / 3(0011) using restoring division. Answer:

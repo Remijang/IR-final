@@ -1,0 +1,283 @@
+[
+    {
+        "type": "text",
+        "text": "27.4 Multiple Slit Diffraction ",
+        "text_level": 1,
+        "page_idx": 1212
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1212
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1212
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Discuss the pattern obtained from diffraction grating.   \n\u2022 Explain diffraction grating effects. ",
+        "page_idx": 1212
+    },
+    {
+        "type": "text",
+        "text": "An interesting thing happens if you pass light through a large number of evenly spaced parallel slits, called a diffraction grating. An interference pattern is created that is very similar to the one formed by a double slit (see Figure 27.16). A diffraction grating can be manufactured by scratching glass with a sharp tool in a number of precisely positioned parallel lines, with the untouched regions acting like slits. These can be photographically mass produced rather cheaply. Diffraction gratings work both for transmission of light, as in Figure 27.16, and for reflection of light, as on butterfly wings and the Australian opal in Figure 27.17 or the CD pictured in the opening photograph of this chapter. In addition to their use as novelty items, diffraction gratings are commonly used for spectroscopic dispersion and analysis of light. What makes them particularly useful is the fact that they form a sharper pattern than double slits do. That is, their bright regions are narrower and brighter, while their dark regions are darker. Figure 27.18 shows idealized graphs demonstrating the sharper pattern. Natural diffraction gratings occur in the feathers of certain birds. Tiny, finger-like structures in regular patterns act as reflection gratings, producing constructive interference that gives the feathers colors not solely due to their pigmentation. This is called iridescence. ",
+        "page_idx": 1212
+    },
+    {
+        "type": "image",
+        "img_path": "images/e58c6119421e055d0a61af638974575413968783b70ec763e79fdfe1620ebc22.jpg",
+        "img_caption": [
+            "FIGURE 27.16 A diffraction grating is a large number of evenly spaced parallel slits. (a) Light passing through is diffracted in a pattern similar to a double slit, with bright regions at various angles. (b) The pattern obtained for white light incident on a grating. The central maximum is white, and the higher-order maxima disperse white light into a rainbow of colors. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1212
+    },
+    {
+        "type": "image",
+        "img_path": "images/c016f13d99635ed262344300c1da963d96ae780290bf4ef4754426dbc5c9c94b.jpg",
+        "img_caption": [
+            "FIGURE 27.17 (a) This Australian opal and (b) the butterfly wings have rows of reflectors that act like reflection gratings, reflecting differen "
+        ],
+        "img_footnote": [],
+        "page_idx": 1212
+    },
+    {
+        "type": "text",
+        "text": "colors at different angles. (credits: (a) Opals-On-Black.com, via Flickr (b) whologwhy, Flickr) ",
+        "page_idx": 1213
+    },
+    {
+        "type": "image",
+        "img_path": "images/9b479af750ad9bea812279613958fe22841e143792d53afc56e6ecc39dbbead1.jpg",
+        "img_caption": [
+            "FIGURE 27.18 Idealized graphs of the intensity of light passing through a double slit (a) and a diffraction grating (b) for monochromatic light. Maxima can be produced at the same angles, but those for the diffraction grating are narrower and hence sharper. The maxima become narrower and the regions between darker as the number of slits is increased. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1213
+    },
+    {
+        "type": "text",
+        "text": "The analysis of a diffraction grating is very similar to that for a double slit (see Figure 27.19). As we know from our discussion of double slits in Young's Double Slit Experiment, light is diffracted by each slit and spreads out after passing through. Rays traveling in the same direction (at an angle $\\theta$ relative to the incident direction) are shown in the figure. Each of these rays travels a different distance to a common point on a screen far away. The rays start in phase, and they can be in or out of phase when they reach a screen, depending on the difference in the path lengths traveled. As seen in the figure, each ray travels a distance $d$ sin $\\theta$ different from that of its neighbor, where $d$ is the distance between slits. If this distance equals an integral number of wavelengths, the rays all arrive in phase, and constructive interference (a maximum) is obtained. Thus, the condition necessary to obtain constructive interference for a diffraction grating is ",
+        "page_idx": 1213
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd \\ \\sin \\theta = m \\lambda , { \\mathrm { ~ f o r ~ } } m = 0 , 1 , - 1 , 2 , - 2 , \\ldots\n$$",
+        "text_format": "latex",
+        "page_idx": 1213
+    },
+    {
+        "type": "text",
+        "text": "where $d$ is the distance between slits in the grating, $\\lambda$ is the wavelength of light, and $m$ is the order of the maximum. Note that this is exactly the same equation as for double slits separated by $d$ . However, the slits are usually closer in diffraction gratings than in double slits, producing fewer maxima at larger angles. ",
+        "page_idx": 1213
+    },
+    {
+        "type": "image",
+        "img_path": "images/9054992594e5bdaf2fecbcf21f1df68da47e2522f12dbf5e68d1cdec4179eda6.jpg",
+        "img_caption": [
+            "FIGURE 27.19 Diffraction grating showing light rays from each slit traveling in the same direction. Each ray travels a different distance to "
+        ],
+        "img_footnote": [],
+        "page_idx": 1213
+    },
+    {
+        "type": "text",
+        "text": "reach a common point on a screen (not shown). Each ray travels a distance $d$ sin $\\theta$ different from that of its neighbor. ",
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "Where are diffraction gratings used? Diffraction gratings are key components of monochromators used, for example, in optical imaging of particular wavelengths from biological or medical samples. A diffraction grating can be chosen to specifically analyze a wavelength emitted by molecules in diseased cells in a biopsy sample or to help excite strategic molecules in the sample with a selected frequency of light. Another vital use is in optical fiber technologies where fibers are designed to provide optimum performance at specific wavelengths. A range of diffraction gratings are available for selecting specific wavelengths for such use. ",
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: Rainbows on a CD ",
+        "text_level": 1,
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "The spacing $d$ of the grooves in a CD or DVD can be well determined by using a laser and the equation $d$ sin $\\theta = m \\lambda$ \uff0cfor $m = 0 , 1 , - 1 , 2 , - 2 , . . .$ . However, we can still make a good estimate of this spacing by using white light and the rainbow of colors that comes from the interference. Reflect sunlight from a CD onto a wall and use your best judgment of the location of a strongly diffracted color to find the separation $d$ . ",
+        "page_idx": 1214
+    },
+    {
+        "type": "image",
+        "img_path": "images/591477132e6bfb63d9030067b312ab519aede23f88e3299d2d498342e90ee858.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 27.3 ",
+        "text_level": 1,
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "Calculating Typical Diffraction Grating Effects ",
+        "text_level": 1,
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "Diffraction gratings with 10,000 lines per centimeter are readily available. Suppose you have one, and you send a beam of white light through it to a screen $2 . 0 0 \\mathrm { m }$ away. (a) Find the angles for the first-order diffraction of the shortest and longest wavelengths of visible light (380 and $7 6 0 \\ : \\mathsf { n m }$ ). (b) What is the distance between the ends of the rainbow of visible light produced on the screen for first-order interference? (See Figure 27.20.) ",
+        "page_idx": 1214
+    },
+    {
+        "type": "image",
+        "img_path": "images/5d09fb3b3fb6a0676388a46a9c7449f7a93011865334145e147a8848f5eda973.jpg",
+        "img_caption": [
+            "FIGURE 27.20 The diffraction grating considered in this example produces a rainbow of colors on a screen a distance $x = 2 . 0 0 \\mathrm { m }$ from the grating. The distances along the screen are measured perpendicular to the $x$ -direction. In other words, the rainbow pattern extends out of the page. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "The angles can be found using the equation ",
+        "page_idx": 1214
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd \\ \\sin \\theta = m \\lambda ( \\mathrm { f o r } \\ m = 0 , 1 , - 1 , 2 , - 2 , \\dots )\n$$",
+        "text_format": "latex",
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "once a value for the slit spacing $d$ has been determined. Since there are 10,000 lines per centimeter, each line is ",
+        "page_idx": 1214
+    },
+    {
+        "type": "text",
+        "text": "separated by of a centimeter. Once the angles are found, the distances along the screen can be found using simple trigonometry. ",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "The distance between slits is $d = ( 1 ~ \\mathrm { c m } ) / 1 0 , 0 0 0 = 1 . 0 0 \\times 1 0 ^ { - 4 }$ or $1 . 0 0 \\times 1 0 ^ { - 6 } \\mathrm { ~ m ~ }$ . Let us call the two angles $\\theta _ {  \\mathrm { V } }$ for violet $( 3 8 0 \\mathsf { n m } )$ and $\\theta _ { \\textup R }$ for red $( 7 6 0 \\mathsf { n m } )$ . Solving the equation $d$ sin $\\theta _ { \\mathrm { V } } = m \\lambda$ for $\\theta _ {  \\mathrm { V } }$ , ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sin \\theta _ { \\mathrm { V } } = { \\frac { m \\lambda _ { \\mathrm { V } } } { d } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "where $m = 1$ for first order and $\\lambda _ { \\mathrm { V } } = 3 8 0 \\mathrm { n m } = 3 . 8 0 \\times 1 0 ^ { - 7 } \\mathrm { m }$ . Substituting these values gives ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sin \\theta _ { \\mathrm { V } } = { \\frac { 3 . 8 0 \\times 1 0 ^ { - 7 } { \\mathrm { ~ m } } } { 1 . 0 0 \\times 1 0 ^ { - 6 } { \\mathrm { ~ m } } } } = 0 . 3 8 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Thus the angle $\\theta _ {  \\mathrm { V } }$ is ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta _ { \\mathrm { V } } = \\sin ^ { - 1 } ~ 0 . 3 8 0 = 2 2 . 3 3 ^ { \\circ } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Similarly, ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sin \\theta _ { \\mathrm { R } } = \\frac { 7 . 6 0 \\times 1 0 ^ { - 7 } \\mathrm { ~ m } } { 1 . 0 0 \\times 1 0 ^ { - 6 } \\mathrm { ~ m } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Thus the angle $\\theta _ { \\textup R }$ is ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta _ { \\mathrm { R } } = \\sin ^ { - 1 } \\ 0 . 7 6 0 = 4 9 . 4 6 ^ { \\circ } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Notice that in both equations, we reported the results of these intermediate calculations to four significant figures to use with the calculation in part (b). ",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "The distances on the screen are labeled and $y _ { \\mathrm { R } }$ in Figure 27.20. Noting that $\\theta = y / x$ , we can solve for and $y _ { \\mathrm { R } }$ . That is, ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { \\mathrm { V } } = x \\tan \\theta _ { \\mathrm { V } } = ( 2 . 0 0 \\mathrm { m } ) ( \\tan 2 2 . 3 3 ^ { \\circ } ) = 0 . 8 1 5 \\mathrm { m }\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "and ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { \\mathrm { R } } = x \\tan \\theta _ { \\mathrm { R } } = ( 2 . 0 0 \\mathrm { m } ) ( \\tan 4 9 . 4 6 ^ { \\circ } ) = 2 . 3 3 8 \\mathrm { m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "The distance between them is therefore ",
+        "page_idx": 1215
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { \\mathrm { R } } - y _ { \\mathrm { V } } = 1 . 5 2 \\ : \\mathrm { m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1215
+    },
+    {
+        "type": "text",
+        "text": "The large distance between the red and violet ends of the rainbow produced from the white light indicates the potential this diffraction grating has as a spectroscopic tool. The more it can spread out the wavelengths (greater dispersion), the more detail can be seen in a spectrum. This depends on the quality of the diffraction grating\u2014it must be very precisely made in addition to having closely spaced lines. ",
+        "page_idx": 1215
+    }
+]

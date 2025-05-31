@@ -1,0 +1,203 @@
+[
+    {
+        "type": "text",
+        "text": "3.2.5 Types of Operands ",
+        "text_level": 1,
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the different types of operands. The method of specifying and accessing an operand in an assembly statement is known as the addressing mode. ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "Definition 32 ",
+        "text_level": 1,
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "The method of specifying and accessing an operand in an assembly statement is known as the addressing mode. ",
+        "page_idx": 106
+    },
+    {
+        "type": "text",
+        "text": "The simplest way of specifying an operand is by embedding its value in the instruction. Most assembly languages allow the user to specify the values of integer constants as an operand. This addressing mode is known as the immediate addressing mode. This method is very useful for initializing registers or memory locations, or for performing arithmetic operations. ",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "Once the requisite set of constants have been loaded into registers and memory locations, the program needs to proceed by operating on registers and memory locations. There are several addressing modes in this space. Before introducing them, let us introduce some extra terminology in the form of the register transfer notation. ",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "Register Transfer Notation ",
+        "text_level": 1,
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "This notation allows us to specify the semantics of instructions and operands. Let us look at the various methods to represent the basic actions of instructions. ",
+        "page_idx": 107
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr 1  r 2\n$$",
+        "text_format": "latex",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "This expression has two register operands $r 1$ , and $r 2$ . $r 1$ is the destination register, and $r 2$ is the source register. We are transferring the contents of register $r 2$ to register $r 1$ . ",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "We can specify an add operation with a constant as follows: ",
+        "page_idx": 107
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr 1  r 2 + 4\n$$",
+        "text_format": "latex",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "We can also specify operations on registers using this notation. In this case, we are adding the contents of $r 2$ and $r 3$ and saving the result in $r 1$ . ",
+        "page_idx": 107
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr 1 \\gets r 2 + r 3\n$$",
+        "text_format": "latex",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "It is also possible to represent memory accesses using this notation. ",
+        "page_idx": 107
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr 1 \\gets [ r 2 ]\n$$",
+        "text_format": "latex",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "In this case the memory address is saved in $r 2$ . The processor hardware fetches the memory address in $r 2$ , accesses the location, fetches the contents of the memory location, and saves the data item in $r 1$ . Let us assume that the value in $r 2$ is 100. In this case the processor accesses memory with address 100, fetches the integer saved in locations (100-103), and saves it in $r 1$ . By default, we assume that we are loading and saving integers. ",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "We can also specify a more complicated memory address of the form: ",
+        "page_idx": 107
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr 1 \\gets [ r 2 + 4 ]\n$$",
+        "text_format": "latex",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "Here, the memory address is equal to the contents of the register $r 2$ plus 4. We fetch the integer starting at the contents of this memory address, and save it in the register $r 1$ . ",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "Generic Addressing Modes for Operands ",
+        "text_level": 1,
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "Let us represent the value of an operand as $V$ . In the subsequent discussion, we use expressions such as $V  r 1$ . This does not mean that we have a new storage location called $V$ . It basically means that the value of an operand is specified by the RHS (right-hand side). Let us briefly take a look at some of the most commonly used addressing modes with examples. ",
+        "page_idx": 107
+    },
+    {
+        "type": "text",
+        "text": "immediate $V  i m m$ ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "Uses the constant imm as the value of the operand. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "register $V  r 1$ ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "In this addressing mode, the processor uses the value contained in a register as the operand. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "register-indirect $V  [ r 1 ]$ The register saves the address of the memory location that contains the value. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "base-offset $V \\gets [ r 1 + o f f s e t ]$ offset is a constant. The processor fetches the base memory address from $r 1$ , adds the constant offset to it, and accesses the new memory location to fetch the value of the operand. The offset is also known as the displacement. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "base-index $V  [ r 1 + r 2 ]$ $r 1$ is the base register, and $r 2$ is the index register. The memory address is equal to $( r 1 + r 2 )$ . ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "base-index-offset $V  [ r 1 + r 2 + o f f s e t ]$ The memory address that contains the value is $( r 1 + r 2 + o f f s e t )$ , where offset is a constant. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "memory-direct $V  a d d r$ ",
+        "text_level": 1,
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "The value is contained in memory starting from address addr. addr is a constant. In this case the memory address is directly embedded in the instruction. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "memory-indirect $V  [ [ r { 1 } ] ]$ The value is present in a memory location, whose address is contained in the memory location, $M$ . Furthermore, the address of $M$ is contained in the register, $r 1$ . ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "PC-relative $V \\gets [ P C + o f f s e t ]$ ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "Here, $o f f s e t$ is a constant. The memory address is computed to be $P C + o f f s e t$ , where PC represents the value contained in the PC. This addressing mode is useful for branch instructions. ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "Let us introduce a new term called the effective memory address, which is relevant to the base-offset addressing mode. The memory address is equal to the contents of the base register plus the offset. The computed memory address is known as the effective memory address. We can similarly define the effective address for other addressing modes in the case of memory operands. . ",
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "Definition 33 ",
+        "text_level": 1,
+        "page_idx": 108
+    },
+    {
+        "type": "text",
+        "text": "The memory address specified by an operand is known as the effective memory address. ",
+        "page_idx": 108
+    }
+]

@@ -1,0 +1,11 @@
+9.5 Microprogrammed Data Path
+
+Let us design the data path for a microprogrammed processor. Let us not design it from scratch. Let us rather modify the data path for the processor as shown in Section 9.2.7. Recall that it had some major units such as the fetch unit, register file, ALU, branch unit, and memory unit. These units were connected with wires, and whenever there was a possibility of multiple source operands, we added a multiplexer in the data path. The role of the control unit was to generate all the control signals for the multiplexers.
+
+The issue is that the connections to the multiplexers are hardwired. It is not possible to establish arbitrary connections. For example, it is not possible to send the output of the memory unit to the input of the execute unit. Hence, we wish to have a design that is free of fixed interconnections between components. It should be theoretically possible for any unit to send data to any other unit.
+
+The most flexible interconnect is a bus-based structure. A bus is a set of common copper wires that connect all the units. It supports one writer, and multiple readers at any point of time. For example, unit  can write to the bus at a certain point of time, and all the other units can get the value that unit  writes. It is possible to send data from one unit to another unit, or from one unit to a set of other units if required. The control unit needs to ensure that at any point of time, only one unit writes to the bus, and the unit that needs to process the value that is being written, reads the value from the bus.
+
+Definition 62 A bus is a set of common wires that connect all the functional units in  processor. It supports one writer, and multiple readers at any point of time.
+
+Let us now proceed to design simplified versions of all the units that we introduced for our hardwired processor. These simplified versions can aptly be used in the data path of our microprogrammed processor.

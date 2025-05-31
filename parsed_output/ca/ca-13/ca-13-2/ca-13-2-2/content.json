@@ -1,0 +1,27 @@
+[
+    {
+        "type": "text",
+        "text": "13.2.2 Low Voltage Differential Signaling (LVDS) ",
+        "text_level": 1,
+        "page_idx": 655
+    },
+    {
+        "type": "text",
+        "text": "LVDS uses two wires to transmit a single signal. The difference between the voltages of these wires is monitored. The value transferred is inferred from the sign of the voltage difference. ",
+        "page_idx": 655
+    },
+    {
+        "type": "text",
+        "text": "The basic LVDS circuit is shown in Figure 13.8. There is a fixed current source of $3 . 5 \\ \\mathrm { m A }$ . Depending on the value of the input $A$ , the current flows to the destination through either line 1 or line 2. For example, if $A$ is 1, then the current flows through line 1 since transistor $T 1$ starts conducting, whereas $T _ { 2 }$ is off. In this case, the current reaches the destination, passes through the resistor $R _ { d }$ , and then flows back through line 2. Typically, the voltage of both the lines when no current is flowing is maintained at 1.2 V. When current flows through them, there is a voltage swing. The voltage swing is equal to 3.5 mA times $R _ { d }$ . $R _ { d }$ is typically 100 Ohms. Hence, the total differential voltage swing is 350 mV. The role of the detector is to sense the sign of the voltage difference. If it is positive, it can declare a logical 1. Otherwise, it can declare a logical 0. Because of the low swing voltage (350 mV), LVDS is a very fast physical layer protocol. ",
+        "page_idx": 655
+    },
+    {
+        "type": "image",
+        "img_path": "images/913a60bbceccb1f01804c6a303e1985c7282064f8bb4b667e3a05122e3b52148.jpg",
+        "img_caption": [
+            "Figure 13.8: LVDS Circuit "
+        ],
+        "img_footnote": [],
+        "page_idx": 656
+    }
+]

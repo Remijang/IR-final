@@ -1,0 +1,247 @@
+[
+    {
+        "type": "text",
+        "text": "10.9.3 Performance of a Non-Ideal Pipeline ",
+        "text_level": 1,
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "Mathematical Characterization ",
+        "text_level": 1,
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "We need to incorporate the effect of stalls in the CPI equation. Let us assume that the number of instructions ( $_ { n }$ ) is very large. Let the ideal CPI be $C P I _ { i d e a l }$ . In our case, $C P I _ { i d e a l } = 1$ . We have: ",
+        "page_idx": 472
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC P I = C P I _ { i d e a l } + s t a l l _ { - } r a t e \\times s t a l l _ { - } p e n a l t y\n$$",
+        "text_format": "latex",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "Example 140 ",
+        "text_level": 1,
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "Assume that the ideal CPI is 1. Assume that $10 \\%$ of the instructions suffer a load-use hazard, and $2 0 \\%$ of the instructions are taken branches. Find the CPI of the program. Answer: We need to insert 1 bubble for a load-use hazard, and 2 bubbles for a taken branch. Thus, the average number of bubbles that we need to insert per instruction is equal to: $0 . 1 \\ ^ { * } \\ 1 \\ + \\ 0 . 2 \\ ^ { * } \\ 2 \\ = \\ 0 . 5$ . Thus, ",
+        "page_idx": 472
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC P I _ { n e w } = C P I _ { i d e a l } + 0 . 5 = 1 + 0 . 5 = 1 . 5\n$$",
+        "text_format": "latex",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "Example 141 ",
+        "text_level": 1,
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "Compare the performance of two programs, $P _ { 1 }$ and $P _ { 2 }$ . Assume that the ideal CPI for both of them is 1. For $P _ { 1 }$ , $10 \\%$ of the instructions have a load-use hazard, and $1 5 \\%$ of its instructions are taken branches. For $P _ { 2 }$ , $20 \\%$ of the instructions have a load-use hazard, and $5 \\%$ of its instructions are taken branches. ",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 472
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC P I _ { P _ { 1 } } = 1 + 0 . 1 * 1 + 0 . 1 5 * 2 = 1 . 4\n$$",
+        "text_format": "latex",
+        "page_idx": 472
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC P I _ { P _ { 2 } } = 1 + 0 . 2 * 1 + 0 . 0 5 * 2 = 1 . 3\n$$",
+        "text_format": "latex",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "The CPI of $P _ { 2 }$ is less than the CPI of $P _ { 1 }$ . Hence, $P _ { 2 }$ is faster. ",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "The final CPI is equal to the sum of the ideal CPI and number of mean stall cycles per instruction. The mean stall cycles per instruction is equal to the product of the average stall rate per instruction multiplied by the average number of bubbles that we need to insert per stall (stall penalty). The stall rate term is typically a function of the nature of dependencies across instructions in a program. The stall penalty term is also typically dependent on the design of the pipeline, and its forwarding paths. In our case, we need to stall for at most one cycle for RAW hazards, and for 2 cycles for taken branches. However, pipelines with more stages might have different behaviors. Let us now try to model this pipeline mathematically. ",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "We assume that the stall rate is only dependent on the program, and the stall penalty is proportional to the number of stages in a pipeline. This assumption is again not completely correct. However, it is good enough for developing a coarse mathematical model. The reason, we assume that stall penalty is proportional to the number of stages is because, we assume that we create deeper pipelines by essentially splitting the stages of our simple pipeline further. For example, we can pipeline the functional units. Let us assume that we divide each stage, into two sub-stages. Then, we need to stall for 2 cycles on a load-use hazard, and stall for 4 cycles for a taken branch. ",
+        "page_idx": 472
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 473
+    },
+    {
+        "type": "text",
+        "text": "Let us thus assume that $\\mathrm { C P I } = ( n + k - 1 ) / n + r c k$ , where $r$ and $c$ are constants, and $k$ is the number of pipeline stages. $r$ is equal to the average number of stalls per instruction (stall rate). We assume that the stall penalty $\\propto k$ , or alternatively, stall penalty = ck, where $c$ is the constant of proportionality. ",
+        "page_idx": 473
+    },
+    {
+        "type": "text",
+        "text": "We thus have: ",
+        "page_idx": 473
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { P = \\displaystyle \\frac { f } { C P I } } \\\\ { = \\frac { \\frac { 1 } { t _ { m a x } / k + l } } { ( n + k - 1 ) / n + r c k } } \\\\ { = \\frac { n } { ( ( n - 1 ) t _ { m a x } / k + ( r c n t _ { m a x } + t _ { m a x } + l n - l ) + l k ( 1 + r c n ) } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 473
+    },
+    {
+        "type": "text",
+        "text": "To maximize performance, we need to minimize the denominator. We get: ",
+        "page_idx": 473
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { \\frac { \\displaystyle \\partial \\left( ( n - 1 ) t _ { m a x } / k + ( r c n t _ { m a x } + t _ { m a x } + l n - l ) + l k ( 1 + r c n ) \\right) } { \\displaystyle \\partial k } = 0 } } \\\\ { { \\Rightarrow - \\frac { ( n - 1 ) t _ { m a x } } { k ^ { 2 } } + l ( 1 + r c n ) = 0 } } \\\\ { { \\Rightarrow k = \\sqrt { \\displaystyle \\frac { ( n - 1 ) t _ { m a x } } { l ( 1 + r c n ) } } \\approx \\sqrt { \\displaystyle \\frac { t _ { m a x } } { l r c } } \\quad ( a s \\ n \\to \\infty ) } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 473
+    },
+    {
+        "type": "text",
+        "text": "Equation 10.11 is more realistic than Equation 10.8. It is independent of the number of instructions. The implicit assumption is that the number of instructions tends to infinity, because in most programs, we execute billions of instructions. Akin to Equation 10.8, the optimal number of pipeline stages is proportional to $\\sqrt { t _ { m a x } }$ , and inversely proportional to $\\sqrt { l }$ . Additionally, $k \\propto 1 / \\sqrt { r c }$ . This means that as the penalty for a stall increases, or the number of stall events per instruction increase, we need to use less pipeline stages. ",
+        "page_idx": 473
+    },
+    {
+        "type": "text",
+        "text": "Let us now find the performance for the optimal number of pipeline stages. In Equation 10.10, we assume that $n \\to \\infty$ . Thus, $( n + k - 1 ) / n \\to 1$ . Hence, we have: ",
+        "page_idx": 473
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { P _ { s l e a l } = \\frac { 1 } { \\left( t _ { m a x } / k + l \\right) \\times \\left( 1 + r c \\bar { k } \\right) } } \\\\ & { \\quad = \\frac { 1 } { t _ { m a x } / k + l + r c d r a u x + l e c \\bar { k } } } \\\\ & { \\quad = \\frac { 1 } { t _ { m a x } \\times \\sqrt { \\left( \\frac { i \\mathrm { e x c } } { i \\mathrm { e x c } } \\right) } + l + r c t _ { m a x } + l r c \\times \\sqrt { \\left( \\frac { i \\mathrm { e x c } } { i \\mathrm { e x c } } \\right) } } } \\\\ & { \\quad = \\frac { 1 } { r c t _ { m a x } + 2 \\sqrt { | t _ { r e a x } + l | } } } \\\\ & { \\quad = \\frac { 1 } { \\left( \\sqrt { r c d _ { m a x } } + \\sqrt { 1 } \\right) ^ { 2 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Implications of Equation 10.11 and Equation 10.12 ",
+        "text_level": 1,
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Let us now study the different implications of the result regarding the optimal number of pipeline stages. ",
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Implication 1 ",
+        "text_level": 1,
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "The crucial implication of these results is that for programs with a lot of dependencies, we should use processors with a fewer pipeline stages. Inversely, for programs that have high IPC (fewer dependencies across instructions), we should use processors that have deeper pipelines. ",
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Implication 2 ",
+        "text_level": 1,
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Let us compare two versions of our pipeline. One version uses interlocks for all dependencies, and the other uses forwarding. For the pipeline with forwarding, the stall penalty is much lower. Consequently, the value of the constant, $c$ , is smaller in the case of the pipeline with forwarding turned on. This means that a pipeline with forwarding ideally requires more pipeline stages for optimal performance. As a general rule, we can conclude that as we increase the amount of forwarding in a pipeline, we should make it deeper. ",
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Implication 3 ",
+        "text_level": 1,
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "The optimal number of pipeline stages is directly proportional to $\\sqrt { ( { t _ { m a x } } / { l } ) }$ . If we have faster latches, we can support deeper pipelines. Secondly, with the progress of technology, $t _ { m a x } / l$ is not changing significantly [ITRS, 2011], because both logic gates, and latches are getting faster (roughly equally). Hence, the optimal number of pipeline stages for a processor has remained almost the same for at least the last 5 years. ",
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Implication 4 ",
+        "text_level": 1,
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "As we increase $l$ , $r$ , $c$ , and $t _ { m a x }$ the ideal performance goes down as per Equation 10.12. The latch delay can be a very sensitive parameter, especially, for processors that are designed to run workloads with few dependencies. In this case, $r$ , and $c$ , will have relatively small values, and Equation 10.12 will be dominated by the value of the latch delay. ",
+        "page_idx": 474
+    },
+    {
+        "type": "text",
+        "text": "Example 142 ",
+        "text_level": 1,
+        "page_idx": 475
+    },
+    {
+        "type": "text",
+        "text": "Find the optimal number of pipeline stages for the following configuration. $t _ { m a x } / l = \\mathcal { Z } \\theta$ , $r$ $\\it { \\Delta } = 0 . 2$ , $c = 0 . 6$ . ",
+        "page_idx": 475
+    },
+    {
+        "type": "text",
+        "text": "Answer: We have: ",
+        "page_idx": 475
+    },
+    {
+        "type": "equation",
+        "text": "$$\nk = \\sqrt { \\frac { t _ { m a x } } { l r c } } = \\sqrt { 2 0 / ( 0 . 2 * 0 . 6 ) } = 1 2 . 9 \\approx 1 3\n$$",
+        "text_format": "latex",
+        "page_idx": 475
+    },
+    {
+        "type": "table",
+        "img_path": "images/9439bafe0c3986076f2cfe3448711b21117f1bd1f62832ad56382d84f451bb49.jpg",
+        "table_caption": [
+            "Example 143 Consider two programs that have the following characteristics. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Program1</td><td colspan=\"2\">Program 2</td></tr><tr><td>Instruction Type</td><td>Fraction</td><td>Instruction Type</td><td>Fraction</td></tr><tr><td>loads</td><td>0.4</td><td>loads</td><td>0.3</td></tr><tr><td>branches</td><td>0.2</td><td>branches</td><td>0.1</td></tr><tr><td>ratio(taken branches)</td><td>0.5</td><td>ratio(taken branches)</td><td>0.4</td></tr></table></body></html>\n\n",
+        "page_idx": 475
+    },
+    {
+        "type": "text",
+        "text": "The ideal CPI is 1 for both the programs. Let $50 \\%$ of the load instructions suffer from a load-use hazard. Assume that the frequency of $P _ { 1 }$ is $^ { 1 }$ , and the frequency of $P _ { 2 }$ is 1.5. Here, the units of the frequency are not relevant. Compare the performance of $P _ { 1 }$ and $P _ { 2 }$ . Answer: ",
+        "page_idx": 475
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { C P I _ { n e w } = C P I _ { i d e a l } + 0 . 5 \\times ( r a t i o ( l o a d s ) ) \\times 1 } \\\\ & { \\qquad + r a t i o ( b r a n c h e s ) \\times r a t i o ( t a k e n b r a n c h e s ) \\times 2 } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 475
+    },
+    {
+        "type": "text",
+        "text": "We thus have: ",
+        "page_idx": 475
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { C P I _ { P _ { 1 } } = 1 + 0 . 5 \\times 0 . 4 + 0 . 2 \\times 0 . 5 \\times 2 = 1 + 0 . 2 + 0 . 2 = 1 . 4 } } \\\\ { { C P I _ { P _ { 2 } } = 1 + 0 . 5 \\times 0 . 3 + 0 . 1 \\times 0 . 4 \\times 2 = 1 + 0 . 1 5 + 0 . 0 8 = 1 . 2 3 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 475
+    },
+    {
+        "type": "text",
+        "text": "The performance of $P _ { 1 }$ can be expressed as $f / C P I = 1 / \\ : / \\ : 1 . 4 = 0 . 7 1$ (arbitrary units). Similarly, the performance of $P _ { 2 }$ is equal to $f / C P I = 1 . 5 / 1 . 2 3 = 1 . 2 2$ (arbitrary units). Hence, $P _ { 2 }$ is faster than $P _ { 1 }$ . We shall often use the term, arbitrary units, a.u., when the choice of units is irrelevant. ",
+        "page_idx": 475
+    }
+]

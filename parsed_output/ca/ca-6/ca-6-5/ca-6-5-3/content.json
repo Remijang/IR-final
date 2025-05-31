@@ -1,0 +1,65 @@
+[
+    {
+        "type": "text",
+        "text": "6.5.3 Floating Point Instructions ",
+        "text_level": 1,
+        "page_idx": 256
+    },
+    {
+        "type": "image",
+        "img_path": "images/3977e0b7c3aef918860af27c62ea94c86c0606cc1b2102be0a5069b602e47a38.jpg",
+        "img_caption": [
+            "Figure 6.4: Encoding the $f l w$ and $f s w$ instructions "
+        ],
+        "img_footnote": [],
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Figure 6.4 shows the encoding of the $f l w$ and $f s w$ instructions. $f l w$ instructions are encoded in the I format. The funct3 instruction is replaced with the width field (amount of data that is loaded). Similarly, the $f s w$ instruction is encoded using the S format. The only change is that the funct3 field is replaced with the $w i d t h$ . ",
+        "page_idx": 256
+    },
+    {
+        "type": "image",
+        "img_path": "images/f3ea133756c7df066ccd7e3e712fe73349b9ce62282cca51fe28d1bcb97ff3c5.jpg",
+        "img_caption": [
+            "Figure 6.5: Encoding of floating point arithmetic instructions "
+        ],
+        "img_footnote": [],
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Figure 6.5 shows the encoding format of floating point arithmetic instructions (variation of the R format). All such instructions take one floating point destination register and one or two source registers as inputs. The format is the same for all variants. The rm field encodes the rounding mode and the f mt field represents the precision (32-bit, 64-bit, 16-bit, 128-bit). ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "The opcode field is typically the same for all common floating point arithmetic instructions. The funct5 field stores the code for the specific type of instruction. For instructions like fqrt that do not have the second source register, the $r s 2$ field is set to 0. ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "The same format is also used by the floating point conversion instructions (fcvt.w.s and $f c v t . s . w )$ . ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "This format is also used by floating point comparison instructions. The rm field in this case stores the following comparison conditions: $E Q$ , $L T$ and $L E$ . The funct5 field stores a code for floating point comparison $( F C M P )$ . ",
+        "page_idx": 256
+    },
+    {
+        "type": "image",
+        "img_path": "images/06bc8605dbe57528fe8ddff8115593abfc94b3bcf2396d5820a81e2e3807ee4a.jpg",
+        "img_caption": [
+            "Figure 6.6: Encoding of fused multiply and add instructions "
+        ],
+        "img_footnote": [],
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Figure 6.6 shows the encoding format of the fmadd and fmsub instructions. Instead of the f unct5 field, the third source register rs3 is stored in its place. The rest remains the same. ",
+        "page_idx": 257
+    }
+]

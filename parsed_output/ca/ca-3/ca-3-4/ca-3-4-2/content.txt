@@ -1,0 +1,65 @@
+3.4.2 Further Reading
+
+Instruction set design and the study of assembly languages are very old fields. Readers should refer to classic computer architecture textbooks by Henessey and Patterson [Henessey and Patterson, 2010], Morris Mano [Mano, 2007], and William Stallings [Stallings, 2010] to get a different perspective. For other simple instruction sets such as SimpleRisc , readers can read about the MIPS [Farquhar and Bunce, 2012], and Sparc [Paul, 1993] instruction sets. Their early variants are simple RISC instruction sets with up to 64 instructions, and a very regular structure. Along with the references that we provide, there are a lot of excellently written tutorials and guides on the web for different ISAs.
+
+Since the last 10 years, a trend has started to move towards virtual instruction sets. Programs compiled for these instruction sets need to be compiled once again on a real machine such that the virtual instruction set can be translated to a real instruction set. The reasons for doing so shall be described in later chapters. The Java language uses a virtual instruction set. Details can be found in the book by Meyer et al. [Downing and Meyer, 1997]. Readers can also refer to a highly cited research paper that proposes the LLVA [Adve et al., 2003] virtual instruction set.
+
+Exercises
+
+Assembly Language Concepts
+
+Ex. 1 — What is the advantage of the register-indirect addressing mode over the memorydirect addressing mode?   
+Ex. 2 — When is the base-offset addressing mode useful?   
+Ex. 3 — Consider the base-scaled-offset addressing mode, which directs the hardware to automatically multiply the offset by 4. When is this addressing mode useful?   
+Ex. 4 — Which addressing modes are preferable in a machine with a large number of registers?   
+Ex. 5 — Which addressing modes are preferable in a machine with very few registers? Ex. 6 — Assume that we are constrained to have at the most two operands per instruction. Design a format for arithmetic instructions such as add and multiply in this setting.
+
+Assembly Programming
+
+Ex. 7 — Write simple assembly code snippets in SimpleRisc to compute the following:
+
+i)    
+ii)    
+iii)    
+iv)    
+v)  ((  (left shift logical),  (left shift arithmetic))
+
+Ex. 8 — Write a program to load the value  into  . Try to minimize the number of instructions.
+
+Ex. 9 — Write an assembly program to set the  bit of register  to the value of the  bit of  . Keep the rest of the contents of  the same. The convention is that the LSB is the first bit, and the MSB is the  bit. (Use less than or equal to 5 SimpleRisc assembly statements)
+
+Ex. 10 — Write a program in SimpleRisc assembly to convert an integer stored in memory from the little endian to the big endian format.
+
+Ex. 11 — Write a program in SimpleRisc assembly to compute the factorial of a positive number using an iterative algorithm.
+
+Ex. 12 — Write a program in SimpleRisc assembly to find if a number is prime.
+
+Ex. 13 — Write a program in SimpleRisc assembly to test if a number is a perfect square.
+
+Ex. 14 — Given a 32-bit integer in  , write a SimpleRisc assembly program to count the number of  to 0 transitions in it.
+
+\* Ex. 15 — Write a program in SimpleRisc assembly to find the smallest number that is a sum of two different pairs of cubes. [Note: 1729 is the Hardy-Ramanujan number.   ].
+
+Ex. 16 — Write a SimpleRisc assembly program that checks if a 32-bit number is a palindrome. Assume that the input is available in  . The program should set  to  if it is a palindrome, otherwise  should contain a 0. A palindrome is a number which is the same when read from both sides. For example, 1001 is a 4-bit palindrome.
+
+Ex. 17 — Design a SimpleRisc program that examines a 32-bit value stored in  and counts the number of contiguous sequences of 1s. For example, the value:
+
+contains six sequences of 1s. Write the result in  .
+
+\*\* Ex. 18 — Write a program in SimpleRisc assembly to subtract two 64-bit numbers, where each number is stored in two registers.
+
+\*\* Ex. 19 — In some cases, we can rotate an integer to the right by  positions (less than or equal to 31) so that we obtain the same number. For example: A 8-bit number 11011011 can be right rotated by 3 or 6 places to obtain the same number. Write an assembly program to efficiently count the number of ways we can rotate a number to the right such that the result is equal to the original number.
+
+ Ex. 20 — A number is known as a cubic Armstrong number if the sum of the cubes of the decimal digits is equal to the number itself. For example, 153 is a cubic Armstrong number  ). You are given a number in register,  , and it is known to be between 1 and 1 million. Can you write a piece of assembly code in SimpleRisc to find out if this number is a cubic Armstrong number. Save 1 in  if it is a cubic Armstrong number; otherwise, save 0.
+
+\*\*\* Ex. 21 — Write a SimpleRisc assembly language program to find the greatest common divisor of two binary numbers  and  . Assume the two inputs (positive integers) to be available in  and  . Store the result in  . [HINT: The gcd of two even numbers  and  is  
+
+Instruction Set Encoding
+
+Ex. 22 — Encode the following SimpleRisc instructions:
+
+i) sub sp, sp, 4 ii) mov r4, r5 iii) addu r4, r4, 3 iv) ret v) ld r0, [sp] vi) st r4, 8[r9]
+
+Design Problems
+
+Ex. 23 — Design an emulator for the SimpleRisc ISA. The emulator reads an assembly program line by line, checks each assembly statement for errors, and executes it. Furthermore, define two assembler directives namely .print, and .encode to print data on the screen. The .print directive takes a register or memory location as input. When the emulator encounters the .print directive, it prints the value in the register or memory location to the screen. Similarly, when the emulator encounters the .encode directive it prints the 32-bit encoding of the instruction on the screen. Additionally, it needs to also execute the instruction.

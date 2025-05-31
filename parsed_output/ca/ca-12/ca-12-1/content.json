@@ -1,0 +1,44 @@
+[
+    {
+        "type": "text",
+        "text": "12.1 Background ",
+        "text_level": 1,
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "In the 60s and 70s large computers were primarily used by banks and financial institutions. They had a growing base of consumers, and consequently they needed computers that could perform more and more transactions per second. Typically, just one processor proved to be insufficient in providing the computing throughput that was required. Hence, early computer designers decided to put multiple processors in a computer. The processors could share the computing load, and thus increase the computing throughput of the entire system. ",
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "One of the earliest multiprocessors was the Burroughs 5000, which had two processors \u2013 $A$ and $B$ . $A$ was the main processor, and $B$ was an auxiliary processor. When the load was high, processor $A$ gave processor $B$ some work to do. Almost all the other major vendors at that time also had multiprocessor offerings such as the IBM 370, PDP 11/74, VAX-11/782, and Univac 1108-II. These computers supported a second CPU chip. This was connected to the main processor. In all of these early machines, the second CPU was on a second chip that was physically connected to the first with wires or cables. They came in two flavors: symmetric and asymmetric. A symmetric multiprocessor consists of multiple processors, where each processor is of the same type, and has access to the services offered by the operating system, and peripherals; whereas, an asymmetric multiprocessor assigns different roles to different processors. There is typically a distinguished processor that controls the operating system, and the peripherals. The rest of the processors are slaves. They take work from the main processor, and return the results. ",
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "Definition 117 ",
+        "text_level": 1,
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "Symmetric Multiprocessing This paradigm treats all the constituent processors in a multiprocessor system as the same. Each processor has equal access to the operating system, and the I/O peripherals. These are also known as SMP systems. ",
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "Asymmetric Multiprocessing This paradigm does not treat all the constituent processors in a multiprocessor system as the same. There is typically one master processor that has exclusive control of the operating system and I/O devices. It assigns work to the rest of the processors. ",
+        "page_idx": 570
+    },
+    {
+        "type": "text",
+        "text": "In the early days, the slave processors were connected to the main processor using a set of cables. It was typically housed in a different area of the main computer. Note that in those days, computers used to be the size of a room. With increased miniaturization, all the processors started coming closer. In the late eighties and early nineties, companies started putting multiple processors on the same motherboard. A motherboard is a printed circuit board that contains all the chips that a computer uses. The reader can take the lid off her laptop or desktop. The large green board with chips and metallic lines is the motherboard. By the late nineties, it was possible to have four or eight processors on a single motherboard. They were connected to each other using dedicated high speed buses. ",
+        "page_idx": 570
+    },
+    {
+        "type": "text",
+        "text": "Gradually, the era of multicore processors commenced. It was now possible to have multiple processors in the same chip. IBM was the first to announce a dual core (2 cores) multicore processor called the Power 4 in 2001. Intel and AMD followed with similar offerings in 2005. As of 2012, 8 core, and 10 core versions of multicore processors are available. ",
+        "page_idx": 570
+    }
+]

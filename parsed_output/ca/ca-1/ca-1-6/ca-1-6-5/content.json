@@ -1,0 +1,49 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.5 Single Instruction ISA\\* ",
+        "text_level": 1,
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to design an ISA for our modified Turing machine. We shall see that it is possible to have a complete ISA that contains just a single instruction. Let us consider an instruction that is compatible with the modified Turing machine and has been proven to be Turing complete. ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "sbn a, b, c ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "sbn stands for subtract and branch if negative. Here, $a$ , and $b$ are memory locations. This instruction subtracts $b$ from $a$ , saves the results in $a$ , and if $a < 0$ , it jumps to the instruction at location $c$ in the instruction table. Otherwise, the control transfers to the next instruction. For example, we can use this instruction to add two numbers saved in locations $a$ and $b$ . Note that exit is a special location at the end of the program. ",
+        "page_idx": 32
+    },
+    {
+        "type": "text",
+        "text": "1: sbn temp, b, 2   \n2: sbn a, temp, exit ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Here, we assume that the memory location temp already contains the value 0. The first instruction saves $- b$ in temp. Irrespective of the value of the result it jumps to the next instruction. Note that the identifier (number :) is a sequence number for the instruction. In the second instruction we compute $a = a + b = a - ( - b )$ . Thus, we have successfully added two numbers. We can now use this basic piece of code to add the numbers from 1 to 10. Assume that the variable counter is initialized to 9, index is initialized to 10, one is initialized to 1, and sum is initialized to 0. ",
+        "page_idx": 33
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathrm { 1 : ~ \\ s b n ~ \\ t e m p , ~ \\ t e m p , ~ \\ 2 ~ { \\it ~ \\beta } ~ / / { \\it ~ \\ t e m p ~ = ~ 0 } } } \\\\ & { \\mathrm { 2 : ~ \\ s b n ~ \\ t e m p , ~ \\ t n d e x , ~ \\ 3 ~ { \\it ~ \\beta } ~ / / { \\it ~ \\ t e m p ~ = ~ - ~ 1 ~ * ~ \\ i n d e x } } } \\\\ & { \\mathrm { 3 : ~ \\ s b n ~ \\ s u m , ~ \\ t e m p , ~ \\ 4 ~ { \\it ~ \\beta } ~ / { \\it ~ \\beta } ~ \\ u n m ~ + ~ \\ i n d e x } } \\\\ & { \\mathrm { 4 : ~ \\ s b n ~ \\ i n d e x , ~ \\ o n e , ~ \\ ~ 5 ~ { \\it ~ \\beta } ~ / / { \\it ~ \\beta } ~ i n d e x ~ - ~ 1 ~ } } \\\\ & { \\mathrm { 5 : ~ \\ s b n ~ \\ c o u n t e r , ~ \\ o n e , ~ \\ e x i t ~ { \\it ~ \\beta } ~ / / { \\it ~ \\tau } ~ \\ l o o p ~ \\ i ~ \\ e ~ f i n i s h e d , ~ \\ e x i t } } \\\\ & { \\mathrm { 6 : ~ \\ s b n ~ \\ t e m p , ~ \\ t e m p , ~ \\tau 7 ~ { \\it ~ \\ t } ~ / { \\it ~ \\ t e m p ~ = ~ 0 } ~ } } \\\\ & { \\mathrm { 7 : ~ \\ s b n ~ \\ t e m p , ~ \\ o n e , ~ \\ 1 ~ { \\it ~ \\beta } ~ / / { \\it ~ \\tau } ~ ( 0 ~ - ~ 1 ~ < ~ 0 ) , ~ \\ h e n c e ~ \\ g o t o ~ 1 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "We observe that this small sequence of operations runs a for loop. The exit condition is in line 5, and the loop back happens in line 7. In each iteration it computes \u2013 $s u m + = i n d e x$ . ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "There are many more similar single instruction ISAs that have been proven to be complete such as subtract and branch if less than equal to, reverse subtract and skip if borrow, and a computer that has generic memory move operations. The interested reader can refer to the book by Gilreath and Laplante [Gilreath and Laplante, 2003]. ",
+        "page_idx": 33
+    }
+]

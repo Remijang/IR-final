@@ -1,0 +1,153 @@
+[
+    {
+        "type": "text",
+        "text": "4.3.2 Functions ",
+        "text_level": 1,
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "Let us now use two sophisticated ARM instructions for spilling and restoring registers in the stack. They can be used to implement both caller-saved and callee-saved functions. ",
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "Instructions for Spilling and Restoring Registers ",
+        "text_level": 1,
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "Let us now describe two instructions to use the stack for saving and restoring a set of registers $- \\ l d m f d$ and stmfd. These registers load and store multiple registers in a memory region such as the stack. For brevity, we do not consider generic memory regions in this book. We limit our discussion to the stack. ldmfd and $s t m f d$ instructions take a base register (e.g., stack pointer), and set of registers as arguments. They load or store the set of registers in the memory region pointed to by the base register. Note that the order of the registers does not matter. The registers are always rearranged in ascending order. ",
+        "page_idx": 162
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "Let us consider an example using the store instruction, stmfd. ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "stmfd sp!, {r2,r3,r1,r4} ",
+        "page_idx": 163
+    },
+    {
+        "type": "table",
+        "img_path": "images/a32282666f7d806a5bd20879e9503c75b21a8ca83c663aa808b14d5eceaf8f23.jpg",
+        "table_caption": [
+            "Table 4.16: Semantics of the ldmfd and $s t m f d$ instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Instruction</td><td>Semantics</td></tr><tr><td>ldmfd sp!, {list of registers }</td><td>Pop the stack and assign values to registers in ascending order. Update the value of sp.</td></tr><tr><td>stmfd sp!, {list of registers}</td><td>Push the registers on the stack in descending order.Update the value of sp.</td></tr></table></body></html>\n\n",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "The stmfd instruction assumes a downward growing stack, and it also assumes that the stack pointer points to the starting address of the value at the top of the stack. Recall that the top of the stack in a downward growing stack is defined as the starting address of the last value pushed on the stack. In this case the registers are processed in ascending order \u2013 $r 1$ , $r 2$ , $r 3$ , $r 4$ . Secondly memory addresses are also accessed in ascending order. Consequently, $r 1$ will be saved in $s p - 1 6$ , $r 2$ in $s p - 1 2$ , $r 3$ in $s p - 8$ , and $r 4$ in $s p - 4$ . Alternatively, we can explain this instruction by observing that registers are pushed into the stack in descending order. We use the \u2018!\u2019 suffix with the base address register to instruct the processor to update the value of the stack pointer after the execution of the instruction. In this case, we set $s p$ equal to $s p - 1 6$ . ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "There is a variant of this instruction that does not set the stack pointer to the starting address of the memory region used to save registers. An example with this variant is: ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "stmfd sp, {r2,r3,r1,r4} ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "Note that this variant is rarely used in practice, especially when the base register is $s p$ . ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "Similarly, the $l d m f d$ instruction loads a set of values starting at the stack pointer, and then updates the stack pointer. Akin to the $s t m f d$ instruction, we use the \u2018!\u2019 suffix to use the base register auto update feature. ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "ldmfd sp!, {r2,r3,r1,r4} ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "For example, in this case we set $r 1 = [ s p ]$ , $r 2 = \\lfloor s p + 4 \\rfloor$ , $r 3 = [ s p + 8 ]$ , and $r 4 = \\lfloor s p + 1 2 \\rfloor$ . In other words, we iteratively pop the stack and assign the values to registers in ascending order. The ldmfd instruction also has a variant that does not update the base register. We simply need to delete the \u2018!\u2019 suffix after the base register. ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "ldmfd sp, {r2,r3,r1,r4} ",
+        "page_idx": 163
+    },
+    {
+        "type": "text",
+        "text": "The semantics of these instructions are shown in Table 4.16. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "Let us conclude this section with an example. We show a recursive power function in C that takes two arguments $x$ and $n$ , and computes $x ^ { n }$ . ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "Example 50 ",
+        "text_level": 1,
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "Write a function in $C$ and implement it in ARM assembly to compute $x ^ { n }$ , where $x$ and $n$ are natural numbers. Assume that $x$ is passed through $r 0$ , $n$ through r1, and the return value is passed back to the original program via $r 0$ . Answer: ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "$c$ int power(int x, int n) { if (n == 0) return 1; int y = x \\* power(x, n-1); return y; } ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "When we compile this function to ARM assembly, we get: ",
+        "page_idx": 164
+    },
+    {
+        "type": "table",
+        "img_path": "images/ca146ec806f071992cabed0cf66dab3d22f7ca4fead14e72e285cae050526692.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\"></td><td>ARM assembly</td></tr><tr><td>power:</td><td></td><td></td></tr><tr><td>2 cmp r1\uff0c#0</td><td></td><td>/* compare n with O */</td></tr><tr><td>3 moveq r0\uff0c#1</td><td>/* return 1 */</td><td></td></tr><tr><td>4 bxeq pc\uff0clr</td><td>/* return */</td><td></td></tr><tr><td>5 6 stmfd sp!\uff0c{r4\uff0clr}</td><td></td><td></td></tr><tr><td>7 mov r4,r0</td><td></td><td>/* save r4 and lr */ /* save x in r4 */</td></tr><tr><td>sub r1\uff0cr1\uff0c#1</td><td></td><td></td></tr><tr><td>8 bl power</td><td></td><td>/* n=n - 1 */</td></tr><tr><td>9 mul r0\uff0cr4\uff0cr0</td><td></td><td>/* recursively call power */</td></tr><tr><td>0 ldmfd sp!\uff0c{r4\uff0cpc}</td><td></td><td>/* power(x,n) = x * power(x,n-1) */ /* restore r4 and return */</td></tr></table></body></html>\n\n",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "We first compare n with 0. If $n$ is equal to 0, then we need to return 1 (Line 3). We subsequently, return from the function. Note the use of the instruction moveq here. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "However, if $n \\neq 0$ , then we need to make a recursive function call to evaluate $x ^ { n - 1 }$ . We start out by saving register $r 4$ , and the return address (lr) on the stack in Line 6 using the stmfd instruction. We save the value of r0 in r4 because it will get overwritten by the recursive call to the power function. Subsequently, we decrement r1 that contains the value of $n$ , and then we call the power function recursively in Line 10. The result of the power function is assumed to be present in r0. We multiply this result with the value of $x$ (stored in r4) in Line 10. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "We simultaneously do two operations in Line 11: load the values of r4 and pc from the stack. Next, we read the first operand, r4, which was saved on the stack by the corresponding stmfd instruction in Line 6. The second operand saved on the stack was the return address. We read this value and save it in pc. Effectively, we are executing the instruction mov pc, lr, and we are thus returning from the function. Hence, after executing Line 11, we start executing instructions from the return address of the function. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "The ldm and stm instructions can also assume an upward growing stack. The interested reader can refer to the ARM manual [arm, 2000] for a thorough explanation. ",
+        "page_idx": 165
+    }
+]

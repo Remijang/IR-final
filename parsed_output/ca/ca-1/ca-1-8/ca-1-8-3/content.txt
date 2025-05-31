@@ -1,0 +1,9 @@
+1.8.3 Processing More Information
+
+By this point, the reader would have obtained a fair understanding of how simple processors are designed. We shall proceed to optimize the design, add extra components, and make a full system that can support all the programs that users typically want to run. We shall describe three subsystems –
+
+Memory System We shall see in Chapter 11 that it is necessary to build a fast and efficient memory system, because it is a prime driver of performance. To build a fast memory system, we need to introduce many new structures and algorithms.
+
+Multiprocessors Nowadays, vendors are incorporating multiple processors on a single chip. The future belongs to multiprocessors. The field of multiprocessors is very extensive and typically forms the core of an advanced architecture course. In this book, we shall provide a short overview of multiprocessors in Chapter 12.
+
+I/O and Storage In Chapter 13, we shall look at methods to interface with different I/O devices, especially storage devices such as the hard disk. The hard disk saves all our programs and data when the computer is powered off, and it also plays a crucial role in supplying data to our programs during their operations. Hence, it is necessary to study the structure of the hard disk, and optimize it for performance and reliability.

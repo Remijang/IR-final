@@ -1,0 +1,544 @@
+[
+    {
+        "type": "text",
+        "text": "31.7 Tunneling ",
+        "text_level": 1,
+        "page_idx": 1427
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1427
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1427
+    },
+    {
+        "type": "text",
+        "text": "Define and discuss tunneling.   \n\u2022 Define potential barrier.   \n\u2022 Explain quantum tunneling. ",
+        "page_idx": 1427
+    },
+    {
+        "type": "text",
+        "text": "Protons and neutrons are boundinside nuclei, that means energy must be supplied to break them away. The situation is analogous to a marble in a bowl that can roll around but lacks the energy to get over the rim. It is bound inside the bowl (see Figure 31.26). If the marble could get over the rim, it would gain kinetic energy by rolling down outside. However classically, if the marble does not have enough kinetic energy to get over the rim, it remains forever trapped in its well. ",
+        "page_idx": 1427
+    },
+    {
+        "type": "image",
+        "img_path": "images/23fff91fbc3d93052c65cbac41b751f141bdf40ff5570842d50b70af3d1f2a09.jpg",
+        "img_caption": [
+            "FIGURE 31.26 The marble in this semicircular bowl at the top of a volcano has enough kinetic energy to get to the altitude of the dashed line, but not enough to get over the rim, so that it is trapped forever. If it could find a tunnel through the barrier, it would escape, roll downhill, and gain kinetic energy. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1427
+    },
+    {
+        "type": "text",
+        "text": "In a nucleus, the attractive nuclear potential is analogous to the bowl at the top of a volcano (where the \u201cvolcano\u201d refers only to the shape). Protons and neutrons have kinetic energy, but it is about 8 MeV less than that needed to get out (see Figure 31.27). That is, they are bound by an average of 8 MeV per nucleon. The slope of the hill outside the bowl is analogous to the repulsive Coulomb potential for a nucleus, such as for an $\\alpha$ particle outside a positive nucleus. In $\\alpha$ decay, two protons and two neutrons spontaneously break away as a $^ 4 \\mathrm { H e }$ unit. Yet the protons and neutrons do not have enough kinetic energy to get over the rim. So how does the $\\alpha$ particle get out? ",
+        "page_idx": 1427
+    },
+    {
+        "type": "image",
+        "img_path": "images/c05aa8b51f8dfa49157dfeba36086dfc0b6bfc0a1e27227e594473d2c31ebc09.jpg",
+        "img_caption": [
+            "FIGURE 31.27 Nucleons within an atomic nucleus are bound or trapped by the attractive nuclear force, as shown in this simplified potential energy curve. An $\\alpha$ particle outside the range of the nuclear force feels the repulsive Coulomb force. The $\\alpha$ particle inside the nucleus does not have enough kinetic energy to get over the rim, yet it does manage to get out by quantum mechanical tunneling. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1428
+    },
+    {
+        "type": "text",
+        "text": "The answer was supplied in 1928 by the Russian physicist George Gamow (1904\u20131968). The $\\alpha$ particle tunnels through a region of space it is forbidden to be in, and it comes out of the side of the nucleus. Like an electron making a transition between orbits around an atom, it travels from one point to another without ever having been in between. Figure 31.28 indicates how this works. The wave function of a quantum mechanical particle varies smoothly, going from within an atomic nucleus (on one side of a potential energy barrier) to outside the nucleus (on the other side of the potential energy barrier). Inside the barrier, the wave function does not become zero but decreases exponentially, and we do not observe the particle inside the barrier. The probability of finding a particle is related to the square of its wave function, and so there is a small probability of finding the particle outside the barrier, which implies that the particle can tunnel through the barrier. This process is called barrier penetration or quantum mechanical tunneling. This concept was developed in theory by J. Robert Oppenheimer (who led the development of the first nuclear bombs during World War II) and was used by Gamow and others to describe $\\alpha$ decay. ",
+        "page_idx": 1428
+    },
+    {
+        "type": "image",
+        "img_path": "images/4da99d6f18db989b3afc68814ae08a5b4763477df9aaa1dc5649b7a3c97c366f.jpg",
+        "img_caption": [
+            "FIGURE 31.28 The wave function representing a quantum mechanical particle must vary smoothly, going from within the nucleus (to the left of the barrier) to outside the nucleus (to the right of the barrier). Inside the barrier, the wave function does not abruptly become zero; rather, it decreases exponentially. Outside the barrier, the wave function is small but finite, and there it smoothly becomes sinusoidal. Owing to the fact that there is a small probability of finding the particle outside the barrier, the particle can tunnel through the barrier. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1428
+    },
+    {
+        "type": "text",
+        "text": "Good ideas explain more than one thing. In addition to qualitatively explaining how the four nucleons in an $\\alpha$ particle can get out of the nucleus, the detailed theory also explains quantitatively the half-life of various nuclei that undergo $\\alpha$ decay. This description is what Gamow and others devised, and it works for $\\alpha$ decay half-lives that vary by 17 orders of magnitude. Experiments have shown that the more energetic the $\\alpha$ decay of a particular nuclide is, the shorter is its half-life. Tunneling explains this in the following manner: For the decay to be more energetic, the nucleons must have more energy in the nucleus and should be able to ascend a little closer to the rim. The barrier is therefore not as thick for more energetic decay, and the exponential decrease of the wave function inside the barrier is not as great. Thus the probability of finding the particle outside the barrier is greater, and the half-life is shorter. ",
+        "page_idx": 1428
+    },
+    {
+        "type": "text",
+        "text": "Tunneling as an effect also occurs in quantum mechanical systems other than nuclei. Electrons trapped in solids can tunnel from one object to another if the barrier between the objects is thin enough. The process is the same in principle as described for $\\alpha$ decay. It is far more likely for a thin barrier than a thick one. Scanning tunneling electron microscopes function on this principle. The current of electrons that travels between a probe and a sample tunnels through a barrier and is very sensitive to its thickness, allowing detection of individual atoms as shown in Figure ",
+        "page_idx": 1428
+    },
+    {
+        "type": "image",
+        "img_path": "images/c49315979745620fd73e623b30611bf5dbf7fbd2cc1a0efc33435783c48b739c.jpg",
+        "img_caption": [
+            "FIGURE 31.29 (a) A scanning tunneling electron microscope can detect extremely small variations in dimensions, such as individual atoms. Electrons tunnel quantum mechanically between the probe and the sample. The probability of tunneling is extremely sensitive to barrier thickness, so that the electron current is a sensitive indicator of surface features. (b) Head and mouthparts of ColeopteraChrysomelideaas seen through an electron microscope (credit: Louisa Howard, Dartmouth College) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1429
+    },
+    {
+        "type": "text",
+        "text": "PHET EXPLORATIONS ",
+        "text_level": 1,
+        "page_idx": 1429
+    },
+    {
+        "type": "text",
+        "text": "Quantum Tunneling and Wave Packets ",
+        "text_level": 1,
+        "page_idx": 1429
+    },
+    {
+        "type": "text",
+        "text": "Watch quantum \"particles\" tunnel through barriers. Explore the properties of the wave functions that describe these particles. ",
+        "page_idx": 1429
+    },
+    {
+        "type": "text",
+        "text": "Glossary   \nactivity the rate of decay for radioactive nuclides   \nalpha decay type of radioactive decay in which an atomic nucleus emits an alpha particle   \nalpha rays one of the types of rays emitted from the nucleus of an atom   \nantielectron another term for positron   \nantimatter composed of antiparticles   \natomic mass the total mass of the protons, neutrons, and electrons in a single atom   \natomic number number of protons in a nucleus   \nbarrier penetration quantum mechanical effect whereby a particle has a nonzero probability to cross through a potential energy barrier despite not having sufficient energy to pass over the barrier; also called quantum mechanical tunneling   \nbecquerel SI unit for rate of decay of a radioactive material   \nbeta decay type of radioactive decay in which an atomic nucleus emits a beta particle   \nbeta rays one of the types of rays emitted from the nucleus of an atom   \nbinding energy the energy needed to separate nucleus into individual protons and neutrons   \nbinding energy per nucleon the binding energy calculated per nucleon; it reveals the details of the nuclear force\u2014larger the , the more stable the nucleus   \ncarbon-14 dating a radioactive dating technique based on the radioactivity of carbon-14   \nchart of the nuclides a table comprising stable and unstable nuclei   \ncurie the activity of 1g of $^ { 2 2 6 } \\mathrm { { R a } }$ , equal to $3 . 7 0 \\times 1 0 ^ { 1 0 } ~ \\mathrm { B q }$   \ndaughter the nucleus obtained when parent nucleus decays and produces another nucleus following the rules and the conservation laws   \ndecay the process by which an atomic nucleus of an unstable atom loses mass and energy by emitting ionizing particles   \ndecay constant quantity that is inversely proportional to the half-life and that is used in equation for number of nuclei as a function of time   \ndecay equation the equation to find out how much of a radioactive material is left after a given period of time   \ndecay series process whereby subsequent nuclides decay until a stable nuclide is produced   \nelectron capture the process in which a proton-rich nuclide absorbs an inner atomic electron and simultaneously emits a neutrino   \nelectron capture equation equation representing the electron capture   \nelectron\u2019s antineutrino antiparticle of electron\u2019s neutrino   \nelectron\u2019s neutrino a subatomic elementary particle which has no net electric charge   \ngamma decay type of radioactive decay in which an atomic nucleus emits a gamma particle   \ngamma rays one of the types of rays emitted from the nucleus of an atom   \nGeiger tube a very common radiation detector that usually gives an audio output   \nhalf-life the time in which there is a $50 \\%$ chance that a nucleus will decay   \nionizing radiation radiation (whether nuclear in origin or not) that produces ionization whether nuclear in origin or not   \nisotopes nuclei having the same $Z$ and different s   \nmagic numbers a number that indicates a shell structure for the nucleus in which closed shells are more stable   \nmass number number of nucleons in a nucleus   \nneutrino an electrically neutral, weakly interacting elementary subatomic particle   \nneutron a neutral particle that is found in a nucleus   \nnuclear radiation rays that originate in the nuclei of atoms, the first examples of which were discovered by Becquerel   \nnuclear reaction energy the energy created in a nuclear reaction   \nnucleons the particles found inside nuclei   \nnucleus a region consisting of protons and neutrons at the center of an atom   \nnuclide a type of atom whose nucleus has specific numbers of protons and neutrons   \nparent the original state of nucleus before decay   \nphotomultiplier a device that converts light into electrical signals   \npositron the particle that results from positive beta decay; also known as an antielectron   \npositron decay type of beta decay in which a proton is converted to a neutron, releasing a positron and a neutrino   \nprotons the positively charged nucleons found in a nucleus   \nquantum mechanical tunneling quantum mechanical effect whereby a particle has a nonzero probability to cross through a potential energy barrier despite not having sufficient energy to pass over the barrier; also called barrier penetration   \nradiation detector a device that is used to detect and track the radiation from a radioactive reaction   \nradioactive a substance or object that emits nuclear radiation   \nradioactive dating an application of radioactive decay in which the age of a material is determined by the amount of radioactivity of a particular type that occurs   \nradioactivity the emission of rays from the nuclei of atoms   \nradius of a nucleus the radius of a nucleus is $r = r _ { 0 } A ^ { 1 / 3 }$   \nrange of radiation the distance that the radiation can travel through a material   \nrate of decay the number of radioactive events per unit time   \nscintillators a radiation detection method that records light produced when radiation interacts with materials   \nsolid-state radiation detectors semiconductors fabricated to directly convert incident radiation into electrical current   \ntunneling a quantum mechanical process of potential energy barrier penetration ",
+        "page_idx": 1430
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1430
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "Section Summary ",
+        "text_level": 1,
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "31.1 Nuclear Radioactivity ",
+        "text_level": 1,
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Some nuclei are radioactive\u2014they spontaneously decay destroying some part of their mass and emitting energetic rays, a process called nuclear radioactivity.   \n\u2022 Nuclear radiation, like x rays, is ionizing radiation, because energy sufficient to ionize matter is emitted in each decay.   \n\u2022 The range (or distance traveled in a material) of ionizing radiation is directly related to the charge of the emitted particle and its energy, with greatercharge and lower-energy particles having the shortest ranges.   \nRadiation detectors are based directly or indirectly upon the ionization created by radiation, as are the effects of radiation on living and inert materials. ",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "31.2 Radiation Detection and Detectors ",
+        "text_level": 1,
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Radiation detectors are based directly or indirectly upon the ionization created by radiation, as are the effects of radiation on living and inert materials. ",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "31.3 Substructure of the Nucleus ",
+        "text_level": 1,
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Two particles, both called nucleons, are found inside nuclei. The two types of nucleons are protons and neutrons; they are very similar, except that the proton is positively charged while the neutron is neutral. Some of their characteristics are given in Table 31.2 and compared with those of the electron. A mass unit convenient to atomic and nuclear processes is the unified atomic mass unit (u), defined to be $1 \\ \\mathrm { u } = 1 . 6 6 0 5 \\times 1 0 ^ { - 2 7 } \\ \\mathrm { k g } = 9 3 1 . 4 6 \\ \\mathrm { M e V } / c ^ { 2 }$   \n\u2022 A nuclide is a specific combination of protons and neutrons, denoted by $^ A _ { Z } \\mathrm { X } _ { N }$ or simply $^ A { \\cal X }$ $Z$ is the number of protons or atomic number, X is the symbol for the element, $N$ is the number of neutrons, and $A$ is the mass number or the total number of protons and neutrons, $A = N + Z .$   \n\u2022 Nuclides having the same $Z$ but different $N$ are isotopes of the same element.   \n\u2022 The radius of a nucleus, $r$ , is approximately r = roA1/3, where $r _ { 0 } = 1 . 2$ . Nuclear volumes are proportional to $A$ . There are two nuclear forces, the weak and the strong. Systematics in nuclear stability seen on the chart of the nuclides indicate that there are shell closures in nuclei for values of $Z$ and $N$ equal to the magic numbers, which correspond to highly stable nuclei. ",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "31.4 Nuclear Decay and Conservation Laws ",
+        "text_level": 1,
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "\u2022 When a parent nucleus decays, it produces a daughter nucleus following rules and conservation laws. There are three major types of nuclear decay, called alpha $( \\alpha )$ beta $( \\beta )$ and gamma . The $\\alpha$ decay equation is $\\mathsf { \\Pi } _ { Z } ^ { A } \\mathrm { X } _ { N } \\to \\mathsf { \\Pi } _ { Z - 2 } ^ { A - 4 } \\mathrm { Y } _ { N - 2 } + \\mathsf { \\Pi } _ { 2 } ^ { 4 } \\mathrm { H e } _ { 2 } .$   \nNuclear decay releases an amount of energy $E$ related to the mass destroyed by $\\scriptstyle { E = } ( \\Delta m ) c ^ { 2 }$   \n\u2022 There are three forms of beta decay. The $\\beta ^ { - }$ decay equation is $\\mathsf { \\Pi } _ { Z } ^ { A } \\mathrm { X } _ { N } \\to \\mathsf { \\Pi } _ { Z + 1 } ^ { A } \\mathrm { Y } _ { N - 1 } + \\beta ^ { - } + \\bar { \\nu } _ { e } .$ The $\\beta ^ { + }$ decay equation is ${ \\bf \\Gamma } _ { Z } ^ { A } \\mathrm { X } _ { N }  { \\bf \\Gamma } _ { Z - 1 } ^ { A } \\mathrm { Y } _ { N + 1 } + \\beta ^ { + } + \\nu _ { e } .$   \nThe electron capture equation is ${ \\bf \\Gamma } _ { Z } ^ { A } { \\bf X } _ { N } + e ^ { - }  { \\bf \\Gamma } _ { Z - 1 } ^ { A } { \\bf Y } _ { N + 1 } + \\nu _ { e } .$ $\\beta ^ { - }$ is an electron, $\\beta ^ { + }$ is an antielectron or positron, $\\nu _ { e }$ represents an electron\u2019s neutrino, and $\\overline { { \\nu } } _ { e }$ is an electron\u2019s antineutrino. In addition to all previously known conservation laws, two new ones arise\u2014 conservation of electron family number and conservation of the total number of nucleons. The decay equation is ${ \\bf \\Gamma } _ { Z } ^ { A } { \\bf X } _ { N } ^ { \\ast }  { \\bf \\Gamma } _ { Z } ^ { A } { \\bf X } _ { N } + \\gamma _ { 1 } + \\gamma _ { 2 } + \\cdots$ is a high-energy photon originating in a nucleus. ",
+        "page_idx": 1431
+    },
+    {
+        "type": "text",
+        "text": "31.5 Half-Life and Activity ",
+        "text_level": 1,
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Half-life $t _ { 1 / 2 }$ is the time in which there is a $50 \\%$ chance that a nucleus will decay. The number of nuclei $N$ as a function of time is N = Noe-\u03bbt, where $N _ { 0 }$ is the number present at $t = 0$ , and $\\lambda$ is the decay constant, related to the half-life by $\\lambda = \\frac { 0 . 6 \\dot { 9 } 3 } { t _ { 1 / 2 } } .$ One of the applications of radioactive decay is radioactive dating, in which the age of a material is determined by the amount of radioactive decay that occurs. The rate of decay is called the activity $R$ : $R = { \\frac { \\Delta N } { \\Delta t } } .$ The SI unit for $R$ is the becquerel (Bq), defined by $1 \\mathrm { B q } = 1$ decay/s.   \n\u2022 $R$ is also expressed in terms of curies (Ci), where $1 { \\mathrm { C i } } = 3 . 7 0 \\times 1 0 ^ { 1 0 } { \\mathrm { B } }$ q. The activity $R$ of a source is related to $N$ and $t _ { 1 / 2 }$ by $R = \\frac { 0 . 6 9 3 N } { t _ { 1 / 2 } } .$   \nSince $N$ has an exponential behavior as in the ",
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "equation $N = N _ { 0 } e ^ { - \\lambda t }$ , the activity also has an exponential behavior, given by R=Roe-\u03bbt, where $R _ { 0 }$ is the activity at $t = 0$ . ",
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "31.6 Binding Energy ",
+        "text_level": 1,
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "Conceptual Questions ",
+        "text_level": 1,
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The binding energy (BE) of a nucleus is the energy needed to separate it into individual protons and neutrons. In terms of atomic masses, $\\mathrm { B E } = \\{ [ Z m ( ^ { 1 } \\mathrm { H } ) + N m _ { n } ] - m ( ^ { A } \\mathrm { X } ) \\} c ^ { 2 } .$ \uff0c where $m \\big ( \\mathrm { ^ 1 H } \\big )$ is the mass of a hydrogen atom, $m \\big ( \\mathrm { } ^ { A } \\mathrm { X } \\big )$ is the atomic mass of the nuclide, and $m _ { n }$ is the mass of a neutron. Patterns in the binding energy per nucleon, $\\boldsymbol { \\mathrm { B E } } / A$ , reveal details of the nuclear force. The larger the , the more stable the nucleus. ",
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "31.7 Tunneling ",
+        "text_level": 1,
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Tunneling is a quantum mechanical process of potential energy barrier penetration. The concept was first applied to explain $\\alpha$ decay, but tunneling is found to occur in other quantum mechanical systems. ",
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "31.1 Nuclear Radioactivity ",
+        "text_level": 1,
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "1. Suppose the range for $5 . 0 \\mathrm { M e V } \\alpha$ ray is known to be $2 . 0 \\mathsf { m m }$ in a certain material. Does this mean that every $5 . 0 \\mathrm { M e V } \\alpha$ a ray that strikes this material travels $2 . 0 \\mathsf { m m }$ , or does the range have an average value with some statistical fluctuations in the distances traveled? Explain.   \n2. What is the difference between rays and characteristic x rays? Is either necessarily more energetic than the other? Which can be the most energetic?   \n3. Ionizing radiation interacts with matter by scattering from electrons and nuclei in the substance. Based on the law of conservation of momentum and energy, explain why electrons tend to absorb more energy than nuclei in these interactions.   \n4. What characteristics of radioactivity show it to be nuclear in origin and not atomic?   \n5. What is the source of the energy emitted in radioactive decay? Identify an earlier conservation law, and describe how it was modified to take such processes into account.   \n6. Consider Figure 31.3. If an electric field is substituted for the magnetic field with positive charge instead of the north pole and negative charge instead of the south pole, in which directions will the $\\alpha$ , $\\beta$ , and rays bend?   \n7. Explain how an $\\alpha$ particle can have a larger range in air than a $\\beta$ particle with the same energy in lead.   \n8. Arrange the following according to their ability to act as radiation shields, with the best first and worst last. Explain your ordering in terms of how radiation loses its energy in matter. (a) A solid material with low density composed of low-mass atoms. (b) A gas composed of high-mass atoms. (c) A gas composed of low-mass atoms. (d) A solid with high density composed of highmass atoms.   \n9. Often, when people have to work around radioactive materials spills, we see them wearing white coveralls (usually a plastic material). What types of radiation (if any) do you think these suits protect the worker from, and how? ",
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1432
+    },
+    {
+        "type": "text",
+        "text": "31.2 Radiation Detection and Detectors ",
+        "text_level": 1,
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "10. Is it possible for light emitted by a scintillator to be too low in frequency to be used in a photomultiplier tube? Explain. ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "31.3 Substructure of the Nucleus ",
+        "text_level": 1,
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "11. The weak and strong nuclear forces are basic to the structure of matter. Why we do not experience them directly?   \n12. Define and make clear distinctions between the terms neutron, nucleon, nucleus, nuclide, and neutrino.   \n13. What are isotopes? Why do different isotopes of the same element have similar chemistries? ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "31.4 Nuclear Decay and Conservation Laws ",
+        "text_level": 1,
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "14. Star Trek fans have often heard the term \u201cantimatter drive.\u201d Describe how you could use a magnetic field to trap antimatter, such as produced by nuclear decay, and later combine it with matter to produce energy. Be specific about the type of antimatter, the need for vacuum storage, and the fraction of matter converted into energy.   \n15. What conservation law requires an electron\u2019s neutrino to be produced in electron capture? Note that the electron no longer exists after it is captured by the nucleus.   \n16. Neutrinos are experimentally determined to have an extremely small mass. Huge numbers of neutrinos are created in a supernova at the same time as massive amounts of light are first produced. When the 1987A supernova occurred in the Large Magellanic Cloud, visible primarily in the Southern Hemisphere and some 100,000 lightyears away from Earth, neutrinos from the explosion were observed at about the same time as the light from the blast. How could the relative arrival times of neutrinos and light be used to place limits on the mass of neutrinos?   \n17. What do the three types of beta decay have in common that is distinctly different from alpha ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "decay? ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "31.5 Half-Life and Activity ",
+        "text_level": 1,
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "18. In a $3 \\times 1 0 ^ { 9 }$ -year-old rock that originally contained some $^ { 2 3 8 } \\mathrm { U }$ , which has a half-life of $4 . 5 \\times 1 0 ^ { 9 }$ years, we expect to find some $^ { 2 3 8 } \\mathrm { U }$ remaining in it. Why are $^ { 2 2 6 } \\mathrm { { R a } }$ , $^ { 2 2 2 } \\mathrm { R n }$ , and $^ { 2 1 0 } \\mathrm { { P o } }$ also found in such a rock, even though they have much shorter half-lives (1600 years, 3.8 days, and 138 days, respectively)?   \n19. Does the number of radioactive nuclei in a sample decrease to exactlyhalf its original value in one half-life? Explain in terms of the statistical nature of radioactive decay.   \n20. Radioactivity depends on the nucleus and not the atom or its chemical state. Why, then, is one kilogram of uranium more radioactive than one kilogram of uranium hexafluoride?   \n21. Explain how a bound system can have less mass than its components. Why is this not observed classically, say for a building made of bricks?   \n22. Spontaneous radioactive decay occurs only when the decay products have less mass than the parent, and it tends to produce a daughter that is more stable than the parent. Explain how this is related to the fact that more tightly bound nuclei are more stable. (Consider the binding energy per nucleon.)   \n23. To obtain the most precise value of BE from the equation $\\mathrm { B E } { = } \\big [ Z M \\big ( ^ { 1 } \\mathrm { H } \\big ) { + } N m _ { n } \\big ] c ^ { 2 } - m \\big ( ^ { A } \\mathrm { X } \\big ) c ^ { 2 }$ , we should take into account the binding energy of the electrons in the neutral atoms. Will doing this produce a larger or smaller value for BE? Why is this effect usually negligible?   \n24. How does the finite range of the nuclear force relate to the fact that is greatest for $A$ near 60? ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "31.6 Binding Energy ",
+        "text_level": 1,
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "25. Why is the number of neutrons greater than the number of protons in stable nuclei having greater than about 40, and why is this effect more pronounced for the heaviest nuclei? ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "31.7 Tunneling ",
+        "text_level": 1,
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "26. A physics student caught breaking conservation laws is imprisoned. She leans against the cell wall hoping to tunnel out quantum mechanically. Explain why her chances are negligible. (This is so in any classical situation.) ",
+        "page_idx": 1433
+    },
+    {
+        "type": "text",
+        "text": "27. When a nucleus $\\alpha$ decays, does the $\\alpha$ particle move continuously from inside the nucleus to outside? That is, does it travel each point along an imaginary line from inside to out? Explain. ",
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "Problems & Exercises ",
+        "text_level": 1,
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "31.2 Radiation Detection and Detectors ",
+        "text_level": 1,
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "1. The energy of $3 0 . 0 \\mathrm { e V }$ is required to ionize a molecule of the gas inside a Geiger tube, thereby producing an ion pair. Suppose a particle of ionizing radiation deposits $0 . 5 0 0 \\mathsf { M e V }$ of energy in this Geiger tube. What maximum number of ion pairs can it create?   \n2. A particle of ionizing radiation creates 4000 ion pairs in the gas inside a Geiger tube as it passes through. What minimum energy was deposited, if $3 0 . 0 \\mathrm { e V }$ is required to create each ion pair?   \n3. (a) Repeat the previous exercise, and convert the energy to joules or calories. (b) If all of this energy is converted to thermal energy in the gas, what is its temperature increase, assuming $5 0 . 0 \\mathrm { c m } ^ { 3 }$ of ideal gas at 0.250-atm pressure? (The small answer is consistent with the fact that the energy is large on a quantum mechanical scale but small on a macroscopic scale.)   \n4. Suppose a particle of ionizing radiation deposits 1.0 MeV in the gas of a Geiger tube, all of which goes to creating ion pairs. Each ion pair requires $3 0 . 0 \\mathsf { e V }$ of energy. (a) The applied voltage sweeps the ions out of the gas in $1 . 0 0 \\mu \\mathrm { s }$ . What is the current? (b) This current is smaller than the actual current since the applied voltage in the Geiger tube accelerates the separated ions, which then create other ion pairs in subsequent collisions. What is the current if this last effect multiplies the number of ion pairs by 900? ",
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "31.3 Substructure of the Nucleus ",
+        "text_level": 1,
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "5. Verify that a $2 . 3 \\times 1 0 ^ { 1 7 }$ mass of water at normal density would make a cube $6 0 ~ \\mathsf { k m }$ on a side, as claimed in Example 31.1. (This mass at nuclear density would make a cube $1 . 0 \\mathsf { m }$ on a side.)   \n6. Find the length of a side of a cube having a mass of $1 . 0 \\mathsf { k g }$ and the density of nuclear matter, taking this to be $2 . 3 \\times 1 0 ^ { 1 7 } \\mathrm { k g } / \\mathrm { m } ^ { 3 }$ .   \n7. What is the radius of an $\\alpha$ particle?   \n8. Find the radius of a $^ { 2 3 8 } \\mathrm { { P u } }$ nucleus. $^ { 2 3 8 } \\mathrm { { P u } }$ is a manufactured nuclide that is used as a power source on some space probes.   \n9. (a) Calculate the radius of $^ { 5 8 } \\mathrm { N i }$ , one of the most tightly bound stable nuclei. (b) What is the ratio of the radius of $^ { 5 8 } \\mathrm { N i }$ to that of $^ { 2 5 8 } \\mathrm { H a }$ , one of the largest nuclei ever made? Note that the radius of the largest nucleus is still much smaller than the size of an atom.   \n10. The unified atomic mass unit is defined to be $1 \\mathrm { u } = 1 . 6 6 0 5 \\times 1 0 ^ { - 2 7 } \\mathrm { k g } .$ . Verify that this amount of mass converted to energy yields $9 3 1 . 5 \\mathsf { M e V } .$ . Note that you must use four-digit or better values for $c$ and $\\left| q _ { e } \\right|$ .   \n11. What is the ratio of the velocity of a $\\beta$ particle to that of an $\\alpha$ particle, if they have the same nonrelativistic kinetic energy?   \n12. If a 1.50-cm-thick piece of lead can absorb $9 0 . 0 \\%$ of the rays from a radioactive source, how many centimeters of lead are needed to absorb all but $0 . 1 0 0 \\%$ of the rays?   \n13. The detail observable using a probe is limited by its wavelength. Calculate the energy of a -ray photon that has a wavelength of $1 \\times 1 0 ^ { - 1 6 } \\mathrm { m }$ , small enough to detect details about one-tenth the size of a nucleon. Note that a photon having this energy is difficult to produce and interacts poorly with the nucleus, limiting the practicability of this probe.   \n14. (a) Show that if you assume the average nucleus is spherical with a radius $r = r _ { 0 } A ^ { 1 / 3 }$ , and with a mass of $\\boldsymbol { A } \\ : \\mathrm { u }$ , then its density is independent of $A$ . (b) Calculate that density in $\\mathrm { u } / \\mathrm { f m } ^ { 3 }$ and $\\mathrm { k g / m } ^ { 3 }$ , and compare your results with those found in Example 31.1 for $^ { 5 6 } \\mathrm { F e }$ .   \n15. What is the ratio of the velocity of a 5.00-MeV $\\beta$ ray to that of an $\\alpha$ particle with the same kinetic energy? This should confirm that $\\beta \\mathsf { s }$ travel much faster than s even when relativity is taken into consideration. (See also Exercise 31.11.)   \n16. (a) What is the kinetic energy in MeV of a $\\beta$ ray that is traveling at $0 . 9 9 8 c ?$ This gives some idea of how energetic a $\\beta$ ray must be to travel at nearly the same speed as a ray. (b) What is the velocity of the ray relative to the $\\beta$ ray?   \n31.4 Nuclear Decay and Conservation Laws   \nIn the following eight problems, write the complete ",
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "decay equation for the given nuclide in the complete ",
+        "page_idx": 1434
+    },
+    {
+        "type": "text",
+        "text": "$^ A _ { Z } \\mathrm { X } _ { N }$ notation. Refer to the periodic table for values of   \n$Z$ .   \n17. $\\beta ^ { - }$ decay of $^ 3 \\mathrm { H }$ (tritium), a manufactured isotope of hydrogen used in some digital watch displays, and manufactured primarily for use in hydrogen bombs.   \n18. $\\beta ^ { - }$ decay of $^ { 4 0 } \\mathrm { K }$ , a naturally occurring rare isotope of potassium responsible for some of our exposure to background radiation.   \n19. $\\beta ^ { + }$ decay of $^ { 5 0 } \\mathrm { M n }$ .   \n20. $\\beta ^ { + }$ decay of $^ { 5 2 } \\mathrm { F e }$ .   \n21. Electron capture by $^ 7 \\mathrm { B e }$ .   \n22. Electron capture by $^ { 1 0 6 } \\mathrm { { I n } }$ .   \n23. $\\alpha$ decay of $^ { 2 1 0 } \\mathrm { { P o } }$ , the isotope of polonium in the decay series of $^ { 2 3 8 } \\mathrm { U }$ that was discovered by the Curies. A favorite isotope in physics labs, since it has a short half-life and decays to a stable nuclide.   \n24. $\\alpha$ decay of $^ { 2 2 6 } \\mathrm { { R a } }$ , another isotope in the decay series of $^ { 2 3 8 } \\mathrm { U }$ , first recognized as a new element by the Curies. Poses special problems because its daughter is a radioactive noble gas.   \nIn the following four problems, identify the parent   \nnuclide and write the complete decay equation in the   \n$^ A _ { Z } \\mathrm { X } _ { N }$ notation. Refer to the periodic table for values of   \n$Z$ .   \n25. $\\beta ^ { - }$ decay producing $^ { 1 3 7 } \\mathrm { B a } .$ . The parent nuclide is a major waste product of reactors and has chemistry similar to potassium and sodium, resulting in its concentration in your cells if ingested.   \n26. $\\beta ^ { - }$ decay producing $^ { 9 0 } \\mathrm { Y }$ . The parent nuclide is a major waste product of reactors and has chemistry similar to calcium, so that it is concentrated in bones if ingested ( $^ { 9 0 } \\mathrm { Y }$ is also radioactive.)   \n27. $\\alpha$ decay producing $^ { 2 2 8 } \\mathrm { { R a } }$ . The parent nuclide is nearly $1 0 0 \\%$ of the natural element and is found in gas lantern mantles and in metal alloys used in jets ( $^ { 2 2 8 } \\mathrm { R a }$ is also radioactive).   \n28. $\\alpha$ decay producing $^ { 2 0 8 } \\mathrm { { P b } }$ . The parent nuclide is in the decay series produced by $^ { 2 3 2 } \\mathrm { T h }$ , the only naturally occurring isotope of thorium. ",
+        "page_idx": 1435
+    },
+    {
+        "type": "text",
+        "text": "29. When an electron and positron annihilate, both their masses are destroyed, creating two equal energy photons to preserve momentum. (a) Confirm that the annihilation equation $e ^ { + } + e ^ { - }  \\gamma + \\gamma$ conserves charge, electron family number, and total number of nucleons. To do this, identify the values of each before and after the annihilation. (b) Find the energy of each ray, assuming the electron and positron are initially nearly at rest. (c) Explain why the two rays travel in exactly opposite directions if the center of mass of the electron-positron system is initially at rest. ",
+        "page_idx": 1435
+    },
+    {
+        "type": "text",
+        "text": "30. Confirm that charge, electron family number, and the total number of nucleons are all conserved by the rule for $\\alpha$ decay given in the equation ${ } _ { Z } ^ { A } \\mathrm { X } _ { N }  { } _ { Z - 2 } ^ { A - 4 } \\mathrm { Y } _ { N - 2 } + { } _ { 2 } ^ { 4 } \\mathrm { H e } _ { 2 }$ . To do this, identify the values of each before and after the decay.   \n31. Confirm that charge, electron family number, and the total number of nucleons are all conserved by the rule for $\\beta ^ { - }$ decay given in the equation $\\mathsf { \\Pi } _ { Z } ^ { A } \\mathbf { X } _ { N } \\to \\mathsf { \\Pi } _ { Z + 1 } ^ { A } \\mathbf { Y } _ { N - 1 } + \\beta ^ { - } + \\bar { \\nu } _ { e } .$ . To do this, identify the values of each before and after the decay.   \n32. Confirm that charge, electron family number, and the total number of nucleons are all conserved by the rule for $\\beta ^ { - }$ decay given in the equation $_ { Z } ^ { A } \\mathrm { X } _ { N }  _ { Z - 1 } ^ { A } \\mathrm { Y } _ { N - 1 } + \\beta ^ { - } + \\nu _ { e }$ . To do this, identify the values of each before and after the decay.   \n33. Confirm that charge, electron family number, and the total number of nucleons are all conserved by the rule for electron capture given in the equation ${ \\bf \\Gamma } _ { Z } ^ { A } { \\bf X } _ { N } + e ^ { - }  { \\bf \\Gamma } _ { Z - 1 } ^ { A } { \\bf Y } _ { N + 1 } + \\nu _ { e }$ . To do this, identify the values of each before and after the capture.   \n34. A rare decay mode has been observed in which emits a $^ { 1 4 } \\mathrm { C }$ nucleus. (a) The decay equation is ${ } ^ { 2 2 2 } \\mathrm { R a }  ^ { A } \\mathrm { X } + { } ^ { 1 4 } \\mathrm { C } .$ . Identify the nuclide $^ { A } \\mathrm { X } .$ . (b) Find the energy emitted in the decay. The mass of $^ { 2 2 2 } \\mathrm { { R a } }$ is $2 2 2 . 0 1 5 3 5 3 \\mathrm { u }$ .   \n35. (a) Write the complete $\\alpha$ decay equation for 226Ra. (b) Find the energy released in the decay.   \n36. (a) Write the complete $\\alpha$ decay equation for $^ { 2 4 9 } \\mathrm { C f }$ . (b) Find the energy released in the decay.   \n37. (a) Write the complete $\\beta ^ { - }$ decay equation for the neutron. (b) Find the energy released in the decay.   \n38. (a) Write the complete $\\beta ^ { - }$ decay equation for , a major waste product of nuclear reactors. (b) Find the energy released in the decay.   \n39. Calculate the energy released in the $\\beta ^ { + }$ decay of , the equation for which is given in the text. The masses of $^ { 2 2 } \\mathrm { N a }$ and $^ { 2 2 } \\mathrm { N e }$ are 21.994434 and 21.991383 u, respectively.   \n40. (a) Write the complete $\\beta ^ { + }$ decay equation for ${ } ^ { 1 1 } \\mathrm { C } .$ . (b) Calculate the energy released in the decay. The masses of $^ { 1 1 } \\mathrm { C }$ and $^ { 1 1 } { \\bf B }$ are 11.011433 and $\\boldsymbol { 1 1 . 0 0 9 3 0 5 \\mathrm { u } }$ , respectively.   \n41. (a) Calculate the energy released in the $\\alpha$ decay of . (b) What fraction of the mass of a single $^ { 2 3 8 } \\mathrm { U }$ is destroyed in the decay? The mass of $^ { 2 3 4 } \\mathrm { T h }$ is $2 3 4 . 0 4 3 5 9 3 \\mathrm { ~ u ~ }$ . (c) Although the fractional mass loss is large for a single nucleus, it is difficult to observe for an entire macroscopic sample of uranium. Why is this?   \n42. (a) Write the complete reaction equation for electron capture by $^ 7 \\mathrm { B e }$ (b) Calculate the energy released.   \n43. (a) Write the complete reaction equation for electron capture by $^ { 1 5 } \\mathrm { O }$ . (b) Calculate the energy released. ",
+        "page_idx": 1435
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1436
+    },
+    {
+        "type": "text",
+        "text": "31.5 Half-Life and Activity ",
+        "text_level": 1,
+        "page_idx": 1436
+    },
+    {
+        "type": "text",
+        "text": "Data from the appendices and the periodic table may be needed for these problems. ",
+        "page_idx": 1436
+    },
+    {
+        "type": "text",
+        "text": "44. An old campfire is uncovered during an archaeological dig. Its charcoal is found to contain less than 1/1000 the normal amount of $^ { 1 4 } \\mathrm { C }$ . Estimate the minimum age of the charcoal, noting that $2 ^ { 1 0 } = 1 0 2 4$ .   \n45. A $^ { 6 0 } \\mathrm { C o }$ source is labeled $4 . 0 0 \\ : \\mathsf { m C i }$ , but its present activity is found to be $1 . 8 5 \\times 1 0 ^ { 7 }$ Bq. (a) What is the present activity in mCi? (b) How long ago did it actually have a $4 . 0 0 - \\mathsf { m C l }$ activity?   \n46. (a) Calculate the activity $R$ in curies of $\\displaystyle 1 . 0 0 { \\mathrm { ~ g ~ } }$ of . (b) Discuss why your answer is not exactly 1.00 Ci, given that the curie was originally supposed to be exactly the activity of a gram of radium.   \n47. Show that the activity of the $^ { 1 4 } \\mathrm { C }$ in $\\displaystyle 1 . 0 0 \\ \\mathrm { g }$ of $^ { 1 2 } \\mathrm { C }$ found in living tissue is 0.250 Bq.   \n48. Mantles for gas lanterns contain thorium, because it forms an oxide that can survive being heated to incandescence for long periods of time. Natural thorium is almost $1 0 0 \\% ^ { 2 3 2 } \\mathrm { T h }$ , with a half-life of $1 . 4 0 5 \\times 1 0 ^ { 1 0 }$ . If an average lantern mantle contains $3 0 0 ~ { \\mathsf { m g } }$ of thorium, what is its activity? ",
+        "page_idx": 1436
+    },
+    {
+        "type": "text",
+        "text": "49. Cow\u2019s milk produced near nuclear reactors can be tested for as little as $1 . 0 0 \\mathsf { p c i }$ of $^ { 1 3 1 } \\mathrm { I }$ per liter, to check for possible reactor leakage. What mass of has this activity? ",
+        "page_idx": 1436
+    },
+    {
+        "type": "text",
+        "text": "50. (a) Natural potassium contains $^ { 4 0 } \\mathrm { K }$ , which has a half-life of $1 . 2 7 7 \\times 1 0 ^ { 9 }$ y. What mass of $^ { 4 0 } \\mathrm { K }$ in a person would have a decay rate of 4140 Bq? (b) What is the fraction of $^ { 4 0 } \\mathrm { K }$ in natural potassium, given that the person has $\\mathtt { 1 4 0 ~ g }$ in his body? (These numbers are typical for a $7 0 - 1 \\tt { k g }$ adult.)   \n51. There is more than one isotope of natural uranium. If a researcher isolates $\\boldsymbol { 1 . 0 0 } \\mathrm { m g }$ of the relatively scarce $^ { 2 3 5 } \\mathrm { U }$ and finds this mass to have an activity of $8 0 . 0 ~ \\mathsf { B q }$ , what is its half-life in years?   \n52. $^ { 5 0 } \\mathrm { V }$ has one of the longest known radioactive half-lives. In a difficult experiment, a researcher found that the activity of $1 . 0 0 \\mathrm { k g }$ of $^ { 5 0 } \\mathrm { V }$ is 1.75 Bq. What is the half-life in years?   \n53. You can sometimes find deep red crystal vases in antique stores, called uranium glass because their color was produced by doping the glass with uranium. Look up the natural isotopes of uranium and their half-lives, and calculate the activity of such a vase assuming it has $2 . 0 0 { \\tt g }$ of uranium in it. Neglect the activity of any daughter nuclides.   \n54. A tree falls in a forest. How many years must pass before the $^ { 1 4 } \\mathrm { C }$ activity in $\\displaystyle \\boldsymbol { 1 . 0 0 \\mathrm { g } }$ of the tree\u2019s carbon drops to 1.00 decay per hour?   \n55. What fraction of the $^ { 4 0 } \\mathrm { K }$ that was on Earth when it formed $4 . 5 \\times 1 0 ^ { 9 }$ years ago is left today?   \n56. A 5000-Ci $^ { 6 0 } \\mathrm { C o }$ source used for cancer therapy is considered too weak to be useful when its activity falls to 3500 Ci. How long after its manufacture does this happen?   \n57. Natural uranium is $0 . 7 2 0 0 \\% ^ { 2 3 5 } \\mathrm { U }$ and $9 9 . 2 7 \\%$ $^ { 2 3 8 } \\mathrm { U }$ . What were the percentages of $^ { 2 3 5 } \\mathrm { U }$ and in natural uranium when Earth formed $4 . 5 \\times 1 0 ^ { 9 }$ years ago?   \n58. The $\\beta ^ { - }$ particles emitted in the decay of $^ 3 \\mathrm { H }$ (tritium) interact with matter to create light in a glow-in-the-dark exit sign. At the time of manufacture, such a sign contains 15.0 Ci of $^ 3 \\mathrm { H } .$ . (a) What is the mass of the tritium? (b) What is its activity 5.00 y after manufacture?   \n59. World War II aircraft had instruments with glowing radium-painted dials (see Figure 31.2). The activity of one such instrument was $1 . 0 \\times 1 0 ^ { 5 }$ Bq when new. (a) What mass of $^ { 2 2 6 } \\mathrm { { R a } }$ was present? (b) After some years, the phosphors on the dials deteriorated chemically, but the radium did not escape. What is the activity of this instrument 57.0 years after it was made? ",
+        "page_idx": 1436
+    },
+    {
+        "type": "text",
+        "text": "60. (a) The $^ { 2 1 0 } \\mathrm { { P o } }$ source used in a physics laboratory is labeled as having an activity of $1 . 0 \\mu \\mathrm { C i }$ on the date it was prepared. A student measures the radioactivity of this source with a Geiger counter and observes 1500 counts per minute. She notices that the source was prepared 120 days before her lab. What fraction of the decays is she observing with her apparatus? (b) Identify some of the reasons that only a fraction of the $\\alpha$ s emitted are observed by the detector. ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "61. Armor-piercing shells with depleted uranium cores are fired by aircraft at tanks. (The high density of the uranium makes them effective.) The uranium is called depleted because it has had its removed for reactor use and is nearly pure . Depleted uranium has been erroneously called non-radioactive. To demonstrate that this is wrong: (a) Calculate the activity of $6 0 . 0 \\mathsf { g }$ of pure . (b) Calculate the activity of 60.0 g of natural uranium, neglecting the $^ { 2 3 4 } \\mathrm { U }$ and all daughter nuclides. ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "62. The ceramic glaze on a red-orange Fiestaware plate is $\\mathrm { U } _ { 2 } \\mathrm { O } _ { 3 }$ and contains 50.0 grams of $^ { 2 3 8 } \\mathrm { U }$ , but very little $^ { 2 3 5 } \\mathrm { U }$ . (a) What is the activity of the plate? (b) Calculate the total energy that will be released by the $^ { 2 3 8 } \\mathrm { U }$ decay. (c) If energy is worth 12.0 cents per $\\mathrm { k W \\cdot h }$ , what is the monetary value of the energy emitted? (These plates went out of production some 30 years ago, but are still available as collectibles.) ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "63. Large amounts of depleted uranium $( ^ { 2 3 8 } \\mathrm { U } )$ are available as a by-product of uranium processing for reactor fuel and weapons. Uranium is very dense and makes good counter weights for aircraft. Suppose you have a 4000-kg block of . (a) Find its activity. (b) How many calories per day are generated by thermalization of the decay energy? (c) Do you think you could detect this as heat? Explain. ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "64. The Galileospace probe was launched on its long journey past several planets in 1989, with an ultimate goal of Jupiter. Its power source is 11.0 kg of $^ { 2 3 8 } \\mathrm { { P u } }$ , a by-product of nuclear weapons plutonium production. Electrical energy is generated thermoelectrically from the heat produced when the 5.59-MeV $\\alpha$ particles emitted in each decay crash to a halt inside the plutonium and its shielding. The half-life of $^ { 2 3 8 } \\mathrm { { P u } }$ is 87.7 years. (a) What was the original activity of the in becquerel? (b) What power was emitted in kilowatts? (c) What power was emitted 12.0 y after launch? You may neglect any extra energy from daughter nuclides and any losses from escaping rays. ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "65. Construct Your Own Problem Consider the generation of electricity by a radioactive isotope in a space probe, such as described in the previous exercise. Construct a problem in which you calculate the mass of a radioactive isotope you need in order to supply power for a long space flight. Among the things to consider are the isotope chosen, its half-life and decay energy, the power needs of the probe and the length of the flight. ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "66. Unreasonable Results A nuclear physicist finds $1 . 0 ~ \\mu \\mathrm { g }$ of $^ { 2 3 6 } \\mathrm { U }$ in a piece of uranium ore and assumes it is primordial since its half-life is $2 . 3 \\times 1 0 ^ { 7 }$ . (a) Calculate the amount of that would had to have been on Earth when it formed $4 . 5 \\times 1 0 ^ { 9 }$ ago for $1 . 0 \\mu \\mathrm { g }$ to be left today. (b) What is unreasonable about this result? (c) What assumption is responsible? ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "67. Unreasonable Results (a) Repeat Exercise 31.57 but include the $0 . 0 0 5 5 \\%$ natural abundance of $^ { 2 3 4 } \\mathrm { U }$ with its $2 . 4 5 \\times 1 0 ^ { 5 }$ half-life. (b) What is unreasonable about this result? (c) What assumption is responsible? (d) Where does the $^ { 2 3 4 } \\mathrm { U }$ come from if it is not primordial? ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "68. Unreasonable Results The manufacturer of a smoke alarm decides that the smallest current of $\\alpha$ radiation he can detect is $1 . 0 0 \\mu \\mathrm { A }$ . (a) Find the activity in curies of an $\\alpha$ emitter that produces a $1 . 0 0 \\mu \\mathrm { A }$ current of $\\alpha$ particles. (b) What is unreasonable about this result? (c) What assumption is responsible? ",
+        "page_idx": 1437
+    },
+    {
+        "type": "text",
+        "text": "31.6 Binding Energy ",
+        "text_level": 1,
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "69. $^ 2 \\mathrm { H }$ is a loosely bound isotope of hydrogen. Called deuterium or heavy hydrogen, it is stable but relatively rare\u2014it is $0 . 0 1 5 \\%$ of natural hydrogen. Note that deuterium has $Z = N$ , which should tend to make it more tightly bound, but both are odd numbers. Calculate , the binding energy per nucleon, for $^ 2 \\mathrm { H }$ and compare it with the approximate value obtained from the graph in Figure 31.24. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "70. $^ { 5 6 } \\mathrm { F e }$ is among the most tightly bound of all nuclides. It is more than $90 \\%$ of natural iron. Note that $^ { 5 6 } \\mathrm { F e }$ has even numbers of both protons and neutrons. Calculate , the binding energy per nucleon, for $^ { 5 6 } \\mathrm { F e }$ and compare it with the approximate value obtained from the graph in Figure 31.24. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "71. $^ { 2 0 9 } \\mathrm { { B i } }$ is the heaviest stable nuclide, and its is low compared with medium-mass nuclides. Calculate , the binding energy per nucleon, for and compare it with the approximate value obtained from the graph in Figure 31.24. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "72. (a) Calculate for $^ { 2 3 5 } \\mathrm { U }$ , the rarer of the two most common uranium isotopes. (b) Calculate for $^ { 2 3 8 } \\mathrm { U }$ . (Most of uranium is $^ { 2 3 8 } \\mathrm { U } .$ ) Note that $^ { 2 3 8 } \\mathrm { U }$ has even numbers of both protons and neutrons. Is the of $^ { 2 3 8 } \\mathrm { U }$ significantly different from that of $^ { 2 3 5 } \\mathrm { { U ? } }$ ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "73. (a) Calculate for $^ { 1 2 } \\mathrm { C }$ . Stable and relatively tightly bound, this nuclide is most of natural carbon. (b) Calculate for $^ { 1 4 } \\mathrm { C }$ Is the difference in between and significant? One is stable and common, and the other is unstable and rare. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "74. The fact that $\\boldsymbol { \\mathrm { B E } } / A$ is greatest for $A$ near 60 implies that the range of the nuclear force is about the diameter of such nuclides. (a) Calculate the diameter of an $A = 6 0$ nucleus. (b) Compare for $^ { 5 8 } \\mathrm { N i }$ and $^ { 9 0 } \\mathrm { S r }$ . The first is one of the most tightly bound nuclides, while the second is larger and less tightly bound. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "75. The purpose of this problem is to show in three ways that the binding energy of the electron in a hydrogen atom is negligible compared with the masses of the proton and electron. (a) Calculate the mass equivalent in u of the $\\mathtt { 1 3 . 6 - e V }$ binding energy of an electron in a hydrogen atom, and compare this with the mass of the hydrogen atom obtained from Appendix A. (b) Subtract the mass of the proton given in Table 31.2 from the mass of the hydrogen atom given in Appendix A. You will find the difference is equal to the electron\u2019s mass to three digits, implying the binding energy is small in comparison. (c) Take the ratio of the binding energy of the electron $( 1 3 . 6 \\mathsf { e V } )$ to the energy equivalent of the electron\u2019s mass (0.511 MeV). (d) Discuss how your answers confirm the stated purpose of this problem. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "76. Unreasonable Results A particle physicist discovers a neutral particle with a mass of $2 . 0 2 7 3 3 \\mathrm { u }$ that he assumes is two neutrons bound together. (a) Find the binding energy. (b) What is unreasonable about this result? (c) What assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "31.7 Tunneling ",
+        "text_level": 1,
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "77. Derive an approximate relationship between the energy of $\\alpha$ decay and half-life using the following data. It may be useful to graph the log of $t _ { 1 / 2 }$ against $E _ { \\alpha }$ to find some straight-line relationship. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "table",
+        "img_path": "images/09f06020fac34bf59e225c09dcae76b2c935974a40f71a818d3459b5e9a7f5ef.jpg",
+        "table_caption": [
+            "TABLE 31.3 Energy and Half-Life for $\\alpha$ Decay "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Nuclide</td><td>E\u03b1 (MeV)</td><td>t1/2</td></tr><tr><td>216Ra</td><td>9.5</td><td>0.18 \u03bcs</td></tr><tr><td>194P0</td><td>7.0</td><td>0.7 s</td></tr><tr><td>240Cm</td><td>6.4</td><td>27 d</td></tr><tr><td>226Ra</td><td>4.91</td><td>1600 y</td></tr><tr><td>232Th</td><td>4.1</td><td>1.4 \u00d7 1010 y</td></tr></table></body></html>\n\n",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "78. Integrated Concepts A 2.00-T magnetic field is applied perpendicular to the path of charged particles in a bubble chamber. What is the radius of curvature of the path of a $. 1 0 \\mathsf { M e V }$ proton in this field? Neglect any slowing along its path. ",
+        "page_idx": 1438
+    },
+    {
+        "type": "text",
+        "text": "79. (a) Write the decay equation for the $\\alpha$ decay of . (b) What energy is released in this decay? The mass of the daughter nuclide is 231.036298 u. (c) Assuming the residual nucleus is formed in its ground state, how much energy goes to the $\\alpha$ particle? ",
+        "page_idx": 1439
+    },
+    {
+        "type": "text",
+        "text": "80. Unreasonable Results The relatively scarce naturally occurring calcium isotope $^ { 4 8 } \\mathrm { C a }$ has a half-life of about $2 \\times 1 0 ^ { 1 6 }$ . (a) A small sample of this isotope is labeled as having an activity of 1.0 Ci. What is the mass of the $^ { 4 8 } \\mathrm { C a }$ in the sample? (b) What is unreasonable about this result? (c) What assumption is responsible? ",
+        "page_idx": 1439
+    },
+    {
+        "type": "text",
+        "text": "81. Unreasonable Results A physicist scatters rays from a substance and sees evidence of a nucleus $7 . 5 \\times 1 0 ^ { - 1 3 }$ in radius. (a) Find the atomic mass of such a nucleus. (b) What is unreasonable about this result? (c) What is unreasonable about the assumption? ",
+        "page_idx": 1439
+    },
+    {
+        "type": "text",
+        "text": "82. Unreasonable Results ",
+        "page_idx": 1439
+    },
+    {
+        "type": "text",
+        "text": "A frazzled theoretical physicist reckons that all conservation laws are obeyed in the decay of a proton into a neutron, positron, and neutrino (as in $\\beta ^ { + }$ decay of a nucleus) and sends a paper to a journal to announce the reaction as a possible end of the universe due to the spontaneous decay of protons. (a) What energy is released in this decay? (b) What is unreasonable about this result? (c) What assumption is responsible? ",
+        "page_idx": 1439
+    },
+    {
+        "type": "text",
+        "text": "83. Construct Your Own Problem Consider the decay of radioactive substances in the Earth\u2019s interior. The energy emitted is converted to thermal energy that reaches the earth\u2019s surface and is radiated away into cold dark space. Construct a problem in which you estimate the activity in a cubic meter of earth rock? And then calculate the power generated. Calculate how much power must cross each square meter of the Earth\u2019s surface if the power is dissipated at the same rate as it is generated. Among the things to consider are the activity per cubic meter, the energy per decay, and the size of the Earth.   \n84. Critical Thinking (a) What is the density of $^ { 2 3 5 } \\mathrm { U }$ in $\\mathrm { u } / \\mathrm { f m } ^ { 3 } \\colon$ (b) $\\mathrm { I f } ^ { 2 3 5 } \\mathrm { U }$ splits into $^ { 1 4 1 } \\mathrm { { B a } }$ and $^ { 9 2 } \\mathrm { K r } + 3$ neutrons, how does the density of $^ { 2 3 5 } \\mathrm { U }$ compare with the density of each element it splits into? ",
+        "page_idx": 1439
+    }
+]

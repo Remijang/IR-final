@@ -1,0 +1,41 @@
+4.5.1 Summary
+
+Summary 4
+
+1. The ARM ISA is a simple 32-bit RISC ISA.
+
+(a) It uses 16 registers r0 . . . r15.   
+(b) The return address register is known as lr (link register), and it is r14.   
+(c) The PC is visible to the programmer. It is register r15.   
+(d) All the instructions are encoded using 32 bits.
+
+2. Data processing instructions accept register operands, and at most one immediate operand. They are 3-address instructions.
+
+3. ARM has a set of compare instructions that can set flags in the CPSR register. Additionally, it is possible to instruct a standard data processing instruction to set the CPSR flags by adding the suffix ‘s’ to it.
+
+4. ARM supports conditional instructions that either execute or not depending upon the values of the CPSR flags. They can be created by appending a condition code to a regular data processing or branch instruction. There are 15 such condition codes. Examples of some condition codes are: gt (greater than), and eq (equal).
+
+5. ARM has two variants of branch instructions.
+
+(a) It has simple branch instructions that branch to another instruction. (b) It has branch-and-link instructions that additionally save the return address in the link register lr.
+
+6. ARM supports both the base-index and base-offset addressing modes for load and store instructions. It has additional support for shifting the index register by treating it as a shifter operand.
+
+7. ARM supports complex addressing modes such as pre-indexed and post-indexed addressing. These addressing modes update the base register.
+
+8. ARM also has support for loading and storing bytes and half-words (2 bytes).
+
+9. The instruction set encoding for data processing instructions is as follows:
+
+(a) Condition code (4 bits)   
+(b) Instruction type (2 bits)   
+(c) Second operand: immediate or register (1 bit)   
+(d) Opcode (4 bits)   
+(e) S bit (should the CPSR flags be set) (1 bit)   
+(f) Source register1 (4 bits)   
+(g) Destination register (4 bits)   
+(h) Immediate or shifter operand (12 bits)
+
+10. The data transfer instructions do not have the S bit. They instead have extra bits to encode the type of load/store instructions, and the addressing mode.
+
+11. The branch instructions have an L bit to specify if the return address needs to be saved or not. They use PC-relative addressing and have a 24-bit signed offset. Like SimpleRisc , the hardware assumes that instructions are aligned to 4 byte boundaries, and treats this offset as a distance in terms of memory words. It thus left shifts the offset by 2 positions.

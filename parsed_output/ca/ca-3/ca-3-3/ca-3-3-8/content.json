@@ -1,0 +1,49 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.8 Unconditional Branch Instructions ",
+        "text_level": 1,
+        "page_idx": 113
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has one unconditional branch instruction, $b$ , which makes the program counter jump to the address corresponding to a label in the code. It takes a single operand, which is a label in the program. Its semantics is shown in Table 3.7. ",
+        "page_idx": 113
+    },
+    {
+        "type": "table",
+        "img_path": "images/f5760a255e596b2ae82991eace01c335423d4672d169a3b3b4299c110b8f5cb2.jpg",
+        "table_caption": [
+            "Table 3.7: Semantics of unconditional branch instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>b label</td><td>b .foo</td><td>branch to .foo</td></tr></table></body></html>\n\n",
+        "page_idx": 113
+    },
+    {
+        "type": "text",
+        "text": "Let us explain its operation with the help of a simple example, as shown below. ",
+        "page_idx": 113
+    },
+    {
+        "type": "image",
+        "img_path": "images/e4808ca0c2763e317987d13be73521b09dc0818aa11b447d424cd0c4a788e110.jpg",
+        "img_caption": [
+            "Figure 3.7: Load and store operations in SimpleRisc "
+        ],
+        "img_footnote": [],
+        "page_idx": 114
+    },
+    {
+        "type": "image",
+        "img_path": "images/4f2c77377045219f9148d4de0b366a61236513a07d31b8b3967f8e391ed1f841.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 114
+    },
+    {
+        "type": "text",
+        "text": "In this example, we add the values of $r 2$ , and $r 3$ , and then save the result in $r 1$ . After that, the processor jumps to the code pointed to by the label, . $f o o$ . It proceeds to execute the code after the label, .f oo. It starts out by executing the instruction add $r 3 , r 1 , r 4$ . It then proceeds to execute subsequent instructions. ",
+        "page_idx": 114
+    }
+]

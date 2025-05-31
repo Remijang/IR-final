@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "1.5.4 Simple \u2013 Instructions should be Simple ",
+        "text_level": 1,
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Let us assume that we have a lot of programs that add a sequence of numbers. To design a processor especially tailored towards such programs, we have several options with regard to the add instruction. We can implement an instruction that adds two numbers, or we can also implement an instruction that can take a list of operands, and produce the sum of the list. There is clearly a difference in complexity here, and we cannot say which implementation is faster. The former approach requires the compiler to generate more instructions; however, each add operation executes quickly. The latter approach generates a fewer number of instructions; but, each instruction takes longer to execute. The former type of ISA is called a Reduced Instruction Set, and the latter ISA type is called a Complex Instruction Set. Let us give two important definitions here. ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Definition 4   \nA reduced instruction set computer (RISC) implements simple instructions that have $a$ simple and regular structure. The number of instructions is typically a small number (64 to 128). Examples: ARM, IBM PowerPC, HP PA-RISC ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Definition 5 A complex instruction set computer (CISC) implements complex instructions that are highly irregular, take multiple operands, and implement complex functionalities. Secondly, the number of instructions is large (typically 500+). Examples: Intel x86, VAX ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "The RISC vs CISC debate used to be a very contentious issue till the late nineties. However, since then designers, programmers, and processor vendors have been tilting towards the RISC design style. The consensus seems to go for a few relatively simple instructions that have a regular structure and format. It is important to note that this point is still debatable as CISC instructions are sometimes preferable for certain types of applications. Modern processors typically use a hybrid approach where they have simple, as well as some complicated instructions. However, under the hood CISC instructions are translated into RISC instructions. Hence, we believe that the scale tilts slightly more towards RISC instructions. We shall thus consider it a desirable property to have simple instructions. ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Important Point 1 An ISA needs to be complete, concise, generic, and simple. It is necessary to be complete, whereas the rest of the properties are desirable (and sometimes debatable). ",
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Way Point 1 We have currently considered the following concepts. ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Computers are dumb yet ultra-fast machines.   \nInstructions are basic rudimentary commands used to communicate with the processor. A computer can execute billions of instructions per second.   \n\u2022 The compiler transforms a user program written in a high level language such as C to a program consisting of basic machine instructions.   \nThe instruction set architecture(ISA) refers to the semantics of all the instructions supported by a processor.   \n\u2022 The instruction set needs to be complete. It is desirable if it is also concise, generic, and simple. ",
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Let us subsequently look at the conditions that ensure the completeness of an ISA. We will then try to create a concise, simple, and generic ISA in Chapter 3. ",
+        "page_idx": 24
+    }
+]

@@ -1,0 +1,85 @@
+16.5 Energy and the Simple Harmonic Oscillator
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Determine the maximum speed of an oscillating system.
+
+To study the energy of a simple harmonic oscillator, we first consider all the forms of energy it can have We know from Hooke’s Law: Stress and Strain Revisited that the energy stored in the deformation of a simple harmonic oscillator is a form of potential energy given by:
+
+Because a simple harmonic oscillator has no dissipative forces, the other important form of energy is kinetic energy . Conservation of energy for these two forms is:
+
+or
+
+This statement of conservation of energy is valid for al simple harmonic oscillators, including ones where the gravitational force plays a role
+
+Namely, for a simple pendulum we replace the velocity with  , the spring constant with  , and the displacement term with  . Thus
+
+In the case of undamped simple harmonic motion, the energy oscillates back and forth between kinetic and potential, going completely from one to the other as the system oscillates. So for the simple example of an object on a frictionless surface attached to a spring, as shown again in Figure 16.14, the motion starts with all of the energy stored in the spring. As the object starts to move, the elastic potential energy is converted to kinetic energy, becoming entirely kinetic energy at the equilibrium position. It is then converted back into elastic potential energy by the spring, the velocity becomes zero when the kinetic energy is completely converted, and so on. This concept provides extra insight here and in later applications of simple harmonic motion, such as alternating current circuits.
+
+The conservation of energy principle can be used to derive an expression for velocity  . If we start our simple harmonic motion with zero velocity and maximum displacement  , then the total energy is
+
+This total energy is constant and is shifted back and forth between kinetic energy and potential energy, at most
+
+times being shared by each. The conservation of energy for this system in equation form is thus:
+
+Solving this equation for  yields:
+
+Manipulating this expression algebraically gives:
+
+and so
+
+where
+
+From this expression, we see that the velocity is a maximum  at  , as stated earlier in  sin  .Notice that the maximum velocity depends on three factors. Maximum velocity is directly proportional to amplitude. As you might guess, the greater the maximum displacement the greater the maximum velocity. Maximum velocity is also greater for stiffer systems, because they exert greater force for the same displacement. This observation is seen in the expression for  it is proportional to the square root of the force constant  . Finally, the maximum velocity is smaller for objects that have larger masses, because the maximum velocity is inversely proportional to the square root of  . For a given force, objects that have large masses accelerate more slowly.
+
+A similar calculation for the simple pendulum produces a similar result, namely:
+
+EXAMPLE 16.6
+
+Determine the Maximum Speed of an Oscillating System: A Bumpy Road
+
+Suppose that a car is  and has a suspension system that has a force constant  . The car hits a bump and bounces with an amplitude of  . What is its maximum vertical velocity if you assume no damping occurs?
+
+Strategy
+
+We can use the expression for  given in  to determine the maximum vertical velocity. The variables  and  are given in the problem statement, and the maximum displacement  is  .
+
+Solution
+
+1. Identify known.   
+2. Substitute known values into 
+
+3. Calculate to find  ·
+
+Discussion
+
+This answer seems reasonable for a bouncing car. There are other ways to use conservation of energy to find  .   
+We could use it directly, as was done in the example featured in Hooke’s Law: Stress and Strain Revisited.
+
+The small vertical displacement  of an oscillating simple pendulum, starting from its equilibrium position, is given as
+
+where  is the amplitude,  is the angular velocity and  is the time taken. Substituting  , we have
+
+Thus, the displacement of pendulum is a function of time as shown above.
+
+Also the velocity of the pendulum is given by
+
+so the motion of the pendulum is a function of time.
+
+CHECK YOUR UNDERSTANDING
+
+Why does it hurt more if your hand is snapped with a ruler than with a loose spring, even if the displacement of each system is equal?
+
+Solution
+
+The ruler is a stiffer system, which carries greater force for the same amount of displacement. The ruler snaps your hand with greater force, which hurts more.
+
+CHECK YOUR UNDERSTANDING
+
+You are observing a simple harmonic oscillator. Identify one way you could decrease the maximum velocity of the system.
+
+Solution
+
+You could increase the mass of the object that is oscillating.

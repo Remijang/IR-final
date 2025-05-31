@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "2.3 Negative Integers ",
+        "text_level": 1,
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "We represent a negative decimal number by adding a \u2018-\u2019 sign before it. We can in principle do the same with a binary number, or devise a better representation. ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the generic problem first. For a number system consisting of a set of numbers, $\\boldsymbol { S }$ (both positive and negative), we wish to create a mapping between each number in $\\boldsymbol { S }$ , and a sequence of zeros and ones. A sequence of zeros and ones can alternatively be represented as an unsigned integer. Thus, putting it formally, we propose to devise a method for representing both positive and negative integers as a function $\\mathcal { F } : \\mathcal { S }  \\mathcal { N }$ that maps a set of numbers, $\\boldsymbol { S }$ , to a set of unsigned integers, $\\mathcal { N }$ . Let us define the function $S g n B i t ( u )$ of a number, $u$ . It is equal to 1 when $u$ is negative, and equal to 0 when $u$ is positive or zero. Secondly, unless specified otherwise, we assume that all our numbers require $n$ bits per storage in the next few subsections. ",
+        "page_idx": 67
+    }
+]

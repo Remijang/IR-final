@@ -1,0 +1,59 @@
+[
+    {
+        "type": "text",
+        "text": "9.9.1 Summary ",
+        "text_level": 1,
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "Summary 9 ",
+        "text_level": 1,
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "1. We design a processor by dividing it into multiple stages, where the stages are mostly independent of each other. We divide our basic SimpleRisc processor into five stages: instruction fetch(IF), operand fetch(OF), execute (EX), memory access (MA), and register writeback (RW). ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "2. The roles of these stages are as follows: ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "(a) The IF stage computes the next PC, and fetches the contents of the instruction, whose address is stored in the PC.   \n(b) In the OF stage, we decode the instruction, and read its operands from the register file. Specifically, we compute the branch target, and expand the embedded immediate in the instruction according to the modifiers.   \n(c) In the EX stage, we compute the branch outcome, branch target, and perform the ALU operations.   \n(d) In the MA stage, we perform loads and stores.   \n(e) Lastly, in the RW stage, we write back the values computed by ALU or load instructions, and the return address for a call instruction to the register file. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "3. The data path consists of all the elements for storing, retrieving, and processing information such as the registers, memory elements, and the ALU. In contrast, the control path generates all the signals for controlling the movement of instructions and data. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "4. We can use a hardwired control unit that generates all the signals for the control path. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "5. For additional flexibility, and portability, we presented the design of a microprogrammed processor. This processor replaces every program instruction by a sequence of microinstructions. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "6. We defined 8 microinstructions, and created a microprogrammed data path that connected all the units on a shared bus. Each unit in a microprogrammed data path exposes its input and output ports through registers. We use 19 registers in our design. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "7. We subsequently showed implementations in microcode for all the instructions in the SimpleRisc ISA. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "8. We designed a shared bus for such processors by interconnecting two physical buses (write bus, and read bus) with a multiplexer. The multiplexer (known as the transfer multiplexer) chooses between the output of the write bus, the output of the \u00b5adder, and the micro immediate.   \n9. We showed the design of a \u00b5control unit for both vertical and horizontal microprogramming. Vertical microprogramming requires a decode stage for generating all the control signals. In comparison, horizontal microprogramming requires all the control signals to be embedded in the microinstruction. ",
+        "page_idx": 410
+    }
+]

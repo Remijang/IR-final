@@ -1,0 +1,3 @@
+3.3.3 Register Transfer Instruction – mov
+
+The mov instruction is a 2-address format instruction that can transfer values from one register to another, or can load a register with a constant. Our convention is to always have the destination register at the beginning. Refer to Table 3.2. The size of the signed immediate operand is limited to 16 bits. Hence, its range is between  to  .

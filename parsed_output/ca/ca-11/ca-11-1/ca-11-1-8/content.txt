@@ -1,0 +1,27 @@
+11.1.8 Exploiting Spatial Locality – Cache Blocks
+
+Let us now consider spatial locality. We observe in Figure 11.2 that a majority of accesses have an address distance within  bytes. Recall that the address distance is defined as the difference in memory addresses between the current address and the closest address among the last  addresses. The address distance distribution suggests that if we group a set of memory locations into one block, and fetch it at one go from the lower level, then we can increase the number of cache hits because there is a high degree of spatial locality in accesses. This approach is similar to the way we decided to fetch all the architecture books at the same time from the shelf in Section 11.1.2.
+
+Consequently, almost all processors create blocks of contiguous addresses, and the cache treats each block as an atomic unit. The entire block is fetched at once from the lower level, and also an entire block is evicted from the cache if required. A cache block is also known as a cache line. A typical cache block or a line is 32-128 bytes long. For ease of addressing, its size needs to be a strict power of 2.
+
+Definition 102
+
+A cache block or a line is a contiguous set of memory locations. It is treated as an atomic unit of data in a cache.
+
+Thus, we need to slightly redefine the notion of a cache entry. Instead of having an entry for each memory address, we have a separate entry for each cache line. Note that in this book, we shall use the terms cache line and block synonymously. Also note that it is not necessary to have the same cache line size in the L1 cache and the L2 cache. They can be different. However, for maintaining the property of inclusiveness of caches, and minimizing additional memory accesses, it is typically necessary to use an equal or larger block size in the L2 cache as compared to the L1 cache.
+
+Way Point 9
+
+Here is what we have learned up till now.
+
+1. Temporal and spatial locality are properties inherent to most human actions. They apply equally well to reading books and writing computer programs.
+
+2. Temporal locality can be quantified by the stack distance, and spatial locality can be quantified by the address distance.
+
+3. We need to design memory systems to take advantage of temporal and spatial locality.
+
+4. To take advantage of temporal locality, we use a hierarchical memory system consisting of a set of caches. The L1 cache is typically a small and fast structure that is meant to satisfy most of the memory accesses quickly. The lower level of the caches store larger amounts of data, are accessed infrequently, and have larger access times.
+
+5. To take advantage of spatial locality, we group sets of contiguous memory locations into blocks (also known as lines). A block is treated as an atomic unit of data in a cache.
+
+Given that we have studied the requirements of a cache qualitatively, we shall proceed to discuss the design of caches.

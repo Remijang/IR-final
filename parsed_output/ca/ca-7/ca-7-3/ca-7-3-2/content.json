@@ -1,0 +1,68 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.2 The Clock ",
+        "text_level": 1,
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "A typical processor contains millions or possibly billions of logic gates and thousands of latches. Different circuits take different amounts of time. For example, a multiplexer might take 1 ns, and a decoder might take 0.5 ns. Now, a circuit is ready to forward its outputs when it has finished computing them. If we do not have a notion of global time, it is difficult to synchronize the communication across different units, especially those that have variable latencies. Under such a scenario it is difficult to design, operate, and verify a processor. We need a notion of time. For example, we should be able to say that an adder takes two units of time. At the end of the two units, the data is expected to be found in latch X. Other units can then pick up the value from latch X after two units of time and proceed with their computation. ",
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the example of a processor that needs to send some data to the printer. Let us further assume that to communicate data, the processor sends a series of bits over a set of copper wires, the printer reads them, and then prints the data. The question is, when does the processor send the data? It needs to send the data, when it is done with the computation. The next question that we can ask is, \u201cHow does the processor know, when the computation is over?\u201d It needs to know the exact delays of different units, and once the total duration of the computation has elapsed, it can write the output data to a latch and also set the voltages of the copper wires used for communication. Consequently, the processor does need a notion of time. Secondly, the designers need to tell the processor the time that different sub-units take. Instead of dealing with numbers like 2.34 ns, and 1.92 ns, it is much simpler to deal with integers such as 1, 2, and 3. Here, 1, 2, and 3, represent units of time. A unit of time can be any number such as 0.9333 ns. ",
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "Definition 47 ",
+        "text_level": 1,
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "clock signal A periodic square wave that is sent to every part of a large circuit or processor. ",
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "clock cycle The period of a clock signal. ",
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "clock frequency The inverse of the clock cycle period. ",
+        "page_idx": 281
+    },
+    {
+        "type": "image",
+        "img_path": "images/3a60b76ed534291f364a9a2f9975eeb981381ffdff8b47757a783a3377c7f095.jpg",
+        "img_caption": [
+            "Figure 7.17: A Clock Signal "
+        ],
+        "img_footnote": [],
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "Hence, most digital circuits synchronize themselves with a clock signal that sends a periodic pulse to every part of the processor at exactly the same time. A clock signal is a square wave as shown in Figure 7.17; most of the time the clock signal is generated externally by a dedicated unit on the motherboard. Let us consider the point at which the clock signal transitions from 1 to 0 (downward/negative edge) as the beginning of a clock cycle. A clock cycle is measured from one downward edge of the clock to the next downward edge. The duration of a clock cycle is also known as a clock period. The inverse of a clock period is known as the clock frequency. ",
+        "page_idx": 281
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 282
+    },
+    {
+        "type": "text",
+        "text": "Important Point 8   \nA computer, laptop, tablet, or mobile phone typically has a line listing the frequency in its specifications. For example, the specifications might say that a processor runs at 3 $G H z$ . Now we know that this number refers to the clock frequency. ",
+        "page_idx": 282
+    },
+    {
+        "type": "text",
+        "text": "The typical model of computation is as follows. The time required to perform all basic actions in a circuit is measured in terms of clock cycles. If a producer unit takes $n$ clock cycles, then at the end of $n$ clock cycles, it writes its value to a latch. Other consumer units are aware of this delay, and at the beginning of the $( n + 1 ) ^ { t h }$ clock cycle, they read the value from the latch. Since all the units explicitly synchronize with the clock, and the processor is aware of the delays of every unit, it is very easy to sequence the computation, communicate with I/O devices, avoid race conditions, debug and verify circuits. We can see that our simple example in which we wanted to send data to a printer can be easily solved by using a clock. ",
+        "page_idx": 282
+    }
+]

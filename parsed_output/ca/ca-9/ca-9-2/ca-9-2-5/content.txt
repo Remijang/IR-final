@@ -1,0 +1,13 @@
+9.2.5 Memory Access Unit
+
+Figure 9.13 shows the memory access unit. It has two inputs – data and address. The address is calculated by the ALU. It is equal to the result of the ALU (aluResult). Both the load and store instructions use this address. The address is saved in a register traditionally known as  (memory address register).
+
+Let us now consider the case of a load instruction. In SimpleRisc , the format of the load instruction is ld rd, imm[rs1]. The memory address is equal to the immediate value plus the contents of register, rs1. This is the value of aluResult. The memory unit does not require any other inputs. It can proceed to fetch the value of the memory address from the data memory. The memory unit reads 4 bytes starting from the memory address. The result (ldResult) is now ready to be written to the destination register.
+
+The format of the store instruction is : st rd, imm[rs1]. The address is computed using the ALU similar to the way the address is calculated for the load instruction. For the store instruction,  is a source register. The contents of register  are read by the operand fetch unit (see Section 9.2.3). This value is termed as op2 in Figure 9.6. op2 contains the contents of register  , and represents the data of the store instruction. The memory unit writes the value of op2 to the  (memory data register) register. In parallel, it proceeds to write the data to data memory. The store instruction does not have an output.
+
+Note that here also we follow the same naming scheme as we had followed for PC and pc. MAR is an acronym for (memory address register), whereas mar refers specifically to the mar register in the data path.
+
+Now, the memory unit takes two control signals as inputs – isLd, and  . For obvious reasons, at most one of these signals can be true at any one time. If none of these signals is true, then the instruction is not a memory instruction, and the memory unit is disabled.
+
+A subtle point needs to be discussed here.  and  are traditionally referred to as registers. However, they are not conventional edge triggered registers. They are used like temporary buffers that buffer the address and the store values till the memory request completes.

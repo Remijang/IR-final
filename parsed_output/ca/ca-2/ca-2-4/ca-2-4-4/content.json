@@ -1,0 +1,73 @@
+[
+    {
+        "type": "text",
+        "text": "2.4.4 Denormal Numbers ",
+        "text_level": 1,
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "We have seen in Example 16 that the smallest positive normal floating point number is $2 ^ { - 1 2 6 }$ .   \nLet us consider a simple piece of code.   \nf = 2^(-126);   \n$\\mathrm { ~ g ~ } = \\mathrm { ~ f ~ } / \\ 2 ;$   \nif ( $\\mathit { \\Pi } _ { \\mathbf { g } } \\ = = \\ 0$ ) print (\"error\"); ",
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "Sadly, this piece of code will compute $g$ to be 0 as per our current understanding. The reason for this is that $f$ is the smallest possible positive number that can be represented in our format. $g$ can thus not be represented, and most processors will round $g$ to $0$ . However, this leads to a mathematical fallacy. The IEEE 754 protocol designers thus tried to avoid situations like this by proposing the idea of denormal numbers. Denormal numbers have a slightly different form as given by Equation 2.28. ",
+        "page_idx": 81
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = ( - 1 ) ^ { S } \\times P \\times 2 ^ { - 1 2 6 } , \\quad ( P = 0 + M , 0 \\le M < 1 )\n$$",
+        "text_format": "latex",
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "Note the differences with Equation 2.25. The implicit value of $1$ is not there anymore. Instead of ( $P = 1 + M$ ), we have $P = 0 + M$ ). Secondly, there is no room to specify any exponent. This is because $E { = } 0$ . The default exponent is -126. We can view denormal numbers as an extension of normal floating point numbers on both sides (smaller and larger). Refer to Figure 2.9. ",
+        "page_idx": 81
+    },
+    {
+        "type": "image",
+        "img_path": "images/1c821d3e5d8acd8da9dfa96258c3dcfa785ba323d7873d579c0d8a5aa5b00c11.jpg",
+        "img_caption": [
+            "Figure 2.9: Denormal numbers on a conceptual number line (not drawn to scale) "
+        ],
+        "img_footnote": [],
+        "page_idx": 81
+    },
+    {
+        "type": "text",
+        "text": "Example 18   \nFind the smallest and largest positive denormal numbers. Answer: ",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "The smallest positive denormal number is $0 . 0 0 \\dots 0 . 1 \\times 2 ^ { - 1 2 6 } = 2 ^ { - 1 4 9 }$ . 22 \u2022 The largest possible denormal number is $\\begin{array} { r } { 0 . \\underbrace { 1 1 \\ldots 1 } _ { 2 3 } \\times 2 ^ { - 1 2 6 } = 2 ^ { - 1 2 6 } - 2 ^ { - 1 4 9 } } \\end{array}$ . ",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Note that the largest denormal number $( 2 ^ { - 1 2 6 } - 2 ^ { - 1 4 9 } )$ is smaller than the smallest positive normal number $( 2 ^ { - 1 2 6 } )$ . This justifies the choice of $2 ^ { - 1 2 6 }$ as the default exponent for denormal numbers. ",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "Example 19   \nFind the ranges of denormal numbers. Answer: \u2022 For positive denormal numbers, the range is [2\u2212149, 2\u2212126 \u2212 2\u2212149].   \nFor negative denormal numbers, the range is $[ - ( 2 ^ { - 1 2 6 } - 2 ^ { - 1 4 9 } ) , - 2 ^ { - 1 4 9 } ]$ . ",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "By using denormal numbers we will not get a wrong answer if we try to divide $2 ^ { - 1 2 6 }$ by 2, and then compare it with 0. Denormal numbers can thus be used as a buffer such that our normal arithmetic operations do not give unexpected results. In practice, incorporating denormal numbers in a floating point unit is difficult, and they require a lot of time to process. Consequently, a lot of small embedded processors do not support denormal numbers. However, most modern processors running on laptops and desktops have full support for denormal numbers. ",
+        "page_idx": 82
+    }
+]

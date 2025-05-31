@@ -1,0 +1,227 @@
+[
+    {
+        "type": "text",
+        "text": "4.5.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 172
+    },
+    {
+        "type": "text",
+        "text": "We have presented an overview of the major features of ARM\u2019s assembly language. The reader can refer to ARM\u2019s assembly language manual [arm, 2000] for more details. ",
+        "page_idx": 172
+    },
+    {
+        "type": "text",
+        "text": "We have deliberately left out some advanced features. A subset of ARM cores support Thumb-1 and Thumb-2 instructions. These instructions are based on a subset of general purpose instructions and have implicit operands. They are used to decrease the size of compiled code. Some ARM processors have extensive support for floating point instructions (VFP instruction set), and SIMD instructions (execute an instruction on multiple integers/floating point numbers in one go). However, we have not discussed these extensions for the sake of brevity. Some other sophisticated features of ARM processors are security extensions that prevent malicious programs or users from stealing data. Since 2013 ARM processors (conforming to the ARMv8- A architecture) have started using a new 64-bit ARM ISA called A64. The reader can refer to the books by Joseph Yiu [Yiu, 2011, Yiu, 2009], William Hohl [Hohl, 2009], and J. R. Gibson [Gibson, 2011] for a detailed discussion on the ARM instruction set and its latest extensions. Needless to say the reader can always find up-to-date documentation at ARM\u2019s website http://www.arm.com. ",
+        "page_idx": 172
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 172
+    },
+    {
+        "type": "text",
+        "text": "Basic ARM Instructions ",
+        "text_level": 1,
+        "page_idx": 172
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Translate the following code in C to the ARM instruction set using a minimum number of instructions. Assume the variables $a$ , $b$ , $c$ , $d$ and $e$ are 32-bit integers and stored in $r 0$ , $r 1$ , $r 2$ , $r 3$ and $r 4$ , respectively. ",
+        "page_idx": 172
+    },
+    {
+        "type": "text",
+        "text": "(a) $a { = } a { + } b { + } c { + } d { + } e$ ;   \n(b) $a = b + c$ ; d=a+b;   \n(c) $a = b + c + d$ ; $a = a + a$ ;   \n(d) $a { = } 2 { \\ast } a { + } b { + } c { + } d$ ;   \n(e) $a = b + c + d$ ; $mathtt { a } = 3 * { \\mathtt { a } }$ ; ",
+        "page_idx": 173
+    },
+    {
+        "type": "table",
+        "img_path": "images/d8a1e90baa967d1080b006aa593c60c7acc295c2f2af4436e6ca1f40b3962a14.jpg",
+        "table_caption": [
+            "Ex. 2 \u2014 Translate the following pieces of code from the ARM assembly language to a high level language. Assume that the variables $a$ , $b$ , $c$ , $d$ and $e$ (containing integers) are stored in the registers $r 0$ , $r 1$ , $r 2$ , $r 3$ and $r 4$ , respectively. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>(a)</td><td>add r0\uff0cr0\uff0cr1 add r0\uff0cr0\uff0cr2</td></tr><tr><td>(b)</td><td>add r0\uff0cr0\uff0cr3 orr r0\uff0cr0\uff0cr1\uff0clsl #1 and r1\uff0cr0\uff0cr1\uff0clsr #1</td></tr><tr><td>(c)</td><td>add r0\uff0cr1\uff0cr2 rsb r1\uff0cr0\uff0cr2</td></tr><tr><td>(d)</td><td>add r0\uff0cr1\uff0cr2 add r0\uff0cr3\uff0cr4 add r0\uff0cr0\uff0cr1</td></tr><tr><td>(e)</td><td>mov r0 #1\uff0c1sl #3 mov r0\uff0cr0\uff0clsr #1</td></tr></table></body></html>\n\n",
+        "page_idx": 173
+    },
+    {
+        "type": "text",
+        "text": "Ex. 3 \u2014 Answer the following: ",
+        "page_idx": 173
+    },
+    {
+        "type": "text",
+        "text": "(a) Write the smallest possible ARM assembly program to load the constant 0xEFFFFFF2 into register $r 0$ . $( { } ^ { * } \\mathrm { b } )$ Write the smallest possible ARM assembly program to load the constant 0xFFFD67FF into register $r 0$ . ",
+        "page_idx": 173
+    },
+    {
+        "type": "text",
+        "text": "$\\mathbf { \\nabla } ^ { * } \\mathbf { E x }$ . 4 \u2014 Using valid ARM assembly instructions, load the constant, 0xFE0D9FFF, into register $r 0$ . Try to do to it with a minimum number of instructions. DO NOT use pseudoinstructions or assembler directives. ",
+        "page_idx": 173
+    },
+    {
+        "type": "text",
+        "text": "Ex. 5 \u2014 Can you give a generic set of ARM instructions or a methodology using which you can load any 32-bit immediate value into a register? Try to minimize the number of instructions. ",
+        "page_idx": 173
+    },
+    {
+        "type": "text",
+        "text": "Ex. 6 \u2014 Convert the following C program to ARM assembly. Store the integer, $i$ , in register $r 0$ . Assume that the starting address of array $a$ is saved in register $r 1$ , and the starting address of array $b$ is saved in register $r 2$ . ",
+        "page_idx": 173
+    },
+    {
+        "type": "table",
+        "img_path": "images/07dba806ff44c41cc38407635a0a98a932e3e457e2c0a76a6cdf642c83a5aac7.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>inti;</td></tr><tr><td>int b[500];</td></tr><tr><td>int a[500];</td></tr><tr><td>for(i=0\uff1bi < 500\uff1bi++){</td></tr><tr><td>b[i]=a[a[i]];</td></tr><tr><td>}</td></tr></table></body></html>\n\n",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 7 \u2014 Consider the instruction, mov lr, pc. Why does this instruction add 8 to the PC, and use that value to set the value of $l r$ ? When is this behavior helpful? ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Assembly Language Programming ",
+        "text_level": 1,
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "For all the questions below, assume that two specialized functions, $ _ { - d i v }$ and $_ { -- } m o d$ , are available. The $ _ { - } d i v$ function divides the contents of $r 1$ by the contents of $r 2$ , and saves the result in $r 0$ . Similarly, the $_ { -- } m o d$ function is used to divide $r 1$ by $r 2$ , and save the remainder in $r 0$ . Note that in this case both the functions perform integer division. ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Ex. 8 \u2014 Write an ARM assembly language program to compute the 2\u2019s complement of a number stored in $r 0$ . ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 Write an ARM assembly language program that subtracts two 64-bit integers stored in four registers. ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Assumptions: ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Assume that you are subtracting $A - B$   \n$\\bullet A$ is stored in register, $r 4$ and $r 5$ . The MSB is in $r 4$ , and the LSB is in $r 5$ . $\\bullet B$ is stored in register, $r 6$ and $r 7$ . The MSB is in $r 6$ , and the LSB is in $r 7$ . \u2022Place the final result in $r 8 ( \\mathrm { M S B } )$ , and $r 9 ( \\mathrm { L S B } )$ . ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 Write an assembly program to add two 96-bit numbers $A$ and $B$ using the minimum number of instructions. $A$ is stored in three registers $r 2$ , $r 3$ and $r 4$ with the higher byte in $r 2$ and the lower byte in $r 4$ . $B$ is stored in registers $r 5$ , $r 6$ and $r 7$ with the higher byte in $r 5$ and the lower byte in $r 7$ . Place the final result in $r$ 8(higher byte), $r 9$ and $r$ 10(lower byte). ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 Write an ARM assembly instruction code to count the number of 1\u2019s in a 32-bit number. ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "Ex. 12 \u2014 Given a 32-bit integer in $r 3$ , write an ARM assembly program to count the number of 1 to 0 transitions in it. ",
+        "page_idx": 174
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 13 \u2014 Write an ARM assembly program that checks if a 32-bit number is a palindrome. Assume that the input is available in $r 3$ . The program should set $r 4$ to 1 if it is a palindrome, otherwise $r 4$ should have 0. A palindrome is a number which is the same when read from both sides. For example, 1001 is a 4-bit palindrome. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "Ex. 14 \u2014 Design an ARM Assembly Language program that will examine a 32-bit value stored in $r 1$ and count the number of contiguous sequences of 1s. For example, the value: ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "01110001000111101100011100011111 ",
+        "text_level": 1,
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "contains six sequences of 1s. Write the final value in register $r 2$ . Use conditional instructions as much as possible. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 15 \u2014 In some cases, we can rotate an integer to the right by positions (less than $n$ or equal to 31) so that we obtain the same number. For example: an 8-bit number 01010101 can be right rotated by 2, 4, or 6 places to obtain the same number. Write an ARM assembly program to efficiently count the number of ways we can rotate a number to the right such that the result is equal to the original number. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "Ex. 16 \u2014 Write an ARM assembly program to load and store an integer from memory, where the memory saves it in the big endian format. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "Ex. 17 \u2014 Write an ARM assembly program to find out if a number is prime using a recursive algorithm. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 18 \u2014 Suppose you decide to take your ARM device to some place with a high amount of radiation, which can cause some bits to flip, and consequently corrupt data. Hence, you decide to store a single bit checksum, which stores the parity of all the other bits, at the least significant position of the number (essentially you can now store only 31 bits of data in a register). Write an ARM assembly program, which adds two numbers taking care of the checksum. Assume that no bits flip while the program is running. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "$\\mathbf { \\nabla } ^ { * } \\mathbf { E x }$ . 19 \u2014 Let us encode a 16-bit number by using 2 bits to represent 1 bit. We shall represent logical 0 by 01, and logical 1 by 10. Now let us assume that a 16-bit number is encoded and stored in a 32-bit register $r 3$ . Write a program in ARM assembly to convert it back into a 16-bit number, and save the result in $r 4$ . Note that 00 and 11 are invalid inputs and indicate an error. The program should set $r 5$ to 1 in case of an error; otherwise, $r 5$ should be 0. ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 20 \u2014 Write an ARM assembly program to convert a 32-bit number to its 12 bit immediate form, if possible, with first 4 bits for rotation and next 8 bits for the payload. If the conversion is possible, set $r 4$ to 1 and store the result in $r 5$ , otherwise, $r 4$ should be set to 0. Assume that the input number is available in register $r 3$ . ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 21 \u2014 Suppose you are given a 32-bit binary number. You are told that the number has exactly one bit equal to 1; the rest of the bits are 0. Provide a fast algorithm to find the location of that bit. Implement the algorithm in ARM assembly. Assume the input to be available in $r 9$ . Store the result in $r 1 0$ . ",
+        "page_idx": 175
+    },
+    {
+        "type": "text",
+        "text": "\\*\\*\\* Ex. 22 \u2014 Write an ARM assembly language program to find the greatest common divisor of two binary numbers $u$ and $v$ . Assume the two inputs (positive integers) to be available in $r 3$ and $r 4$ . Store the result in $r 5$ . [HINT: The gcd of two even numbers $u$ and $v$ is $2 * g c d ( u / 2 , v / 2 ) ]$ ",
+        "page_idx": 176
+    },
+    {
+        "type": "text",
+        "text": "ARM Instruction Encoding ",
+        "text_level": 1,
+        "page_idx": 176
+    },
+    {
+        "type": "text",
+        "text": "Ex. 23 \u2014 How are immediate values encoded in the ARM ISA? ",
+        "page_idx": 176
+    },
+    {
+        "type": "text",
+        "text": "Ex. 24 \u2014 Encode the following ARM instructions. Find the opcodes for instructions from the ARM architecture manual [arm, 2000]. ",
+        "page_idx": 176
+    },
+    {
+        "type": "text",
+        "text": "i) add r3, r1, r2 ii) ldr r1, [r0, r2] iii) str r0, [r1, r2, lsl #2] ",
+        "page_idx": 176
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 176
+    },
+    {
+        "type": "text",
+        "text": "Ex. 25 \u2014 Run your ARM programs on an ARM emulator such as the QEMU (www.qemu.org) emulator, or arm-elf-run (available at www.gnuarm.com). ",
+        "page_idx": 176
+    }
+]

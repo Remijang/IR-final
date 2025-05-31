@@ -1,0 +1,414 @@
+# 38.4 Muscle Contraction and Locomotion
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+Classify the different types of muscle tissue • Explain the role of muscles in locomotion
+
+Muscle cells are specialized for contraction. Muscles allow for motions such as walking, and they also facilitate bodily processes such as respiration and digestion. The body contains three types of muscle tissue: skeletal muscle, cardiac muscle, and smooth muscle (Figure 38.33).
+
+Skeletal muscle tissue forms skeletal muscles, which attach to bones or skin and control locomotion and any movement that can be consciously controlled. Because it can be controlled by thought, skeletal muscle is also called voluntary muscle. Skeletal muscles are long and cylindrical in appearance; when viewed under a microscope, skeletal muscle tissue has a striped or striated appearance. The striations are caused by the regular arrangement of contractile proteins (actin and myosin). Actin is a globular contractile protein that interacts with myosin for muscle contraction. Skeletal muscle also has multiple nuclei present in a single cell.
+
+
+
+Smooth muscle tissue occurs in the walls of hollow organs such as the intestines, stomach, and urinary bladder, and around passages such as the respiratory tract and blood vessels. Smooth muscle has no striations, is not under voluntary control, has only one nucleus per cell, is tapered at both ends, and is called involuntary muscle.
+
+Cardiac muscle tissue is only found in the heart, and cardiac contractions pump blood throughout the body and maintain blood pressure. Like skeletal muscle, cardiac muscle is striated, but unlike skeletal muscle, cardiac muscle cannot be consciously controlled and is called involuntary muscle. It has one nucleus per cell, is branched, and is distinguished by the presence of intercalated disks.
+
+# Skeletal Muscle Fiber Structure
+
+Each skeletal muscle fiber is a skeletal muscle cell. These cells are incredibly large, with diameters of up to $1 0 0 \mu \mathrm { m }$ and lengths of up to $3 0 \mathrm { c m }$ . The plasma membrane of a skeletal muscle fiber is called the sarcolemma. The sarcolemma is the site of action potential conduction, which triggers muscle contraction. Within each muscle fiber are myofibrils—long cylindrical structures that lie parallel to the muscle fiber. Myofibrils run the entire length of the muscle fiber, and because they are only approximately $1 . 2 \mu \mathrm { m }$ in diameter, hundreds to thousands can be found inside one muscle fiber. They attach to the sarcolemma at their ends, so that as myofibrils shorten, the entire muscle cell contracts (Figure 38.34).
+
+The striated appearance of skeletal muscle tissue is a result of repeating bands of the proteins actin and myosin that are present along the length of myofibrils. Dark A bands and light I bands repeat along myofibrils, and the alignment of myofibrils in the cell causes the entire cell to appear striated or banded.
+
+Each I band has a dense line running vertically through the middle called a Z disc or Z line. The Z discs mark the border of units called sarcomeres, which are the functional units of skeletal muscle. One sarcomere is the space between two consecutive Z discs and contains one entire A band and two halves of an I band, one on either side of the A band. A myofibril is composed of many sarcomeres running along its length, and as the sarcomeres individually contract, the myofibrils and muscle cells shorten (Figure 38.35).
+
+Myofibrils are composed of smaller structures called myofilaments. There are two main types of filaments: thick filaments and thin filaments; each has different compositions and locations. Thick filaments occur only in the A band of a myofibril. Thin filaments attach to a protein in the Z disc called alpha-actinin and occur across the entire length of the I band and partway into the A band. The region at which thick and thin filaments overlap has a dense appearance, as there is little space between the filaments. Thin filaments do not extend all the way into the A bands, leaving a central region of the A band that only contains thick filaments. This central region of the A band looks slightly lighter than the rest of the A band and is called the H zone. The middle of the H zone has a vertical line called the M line, at which accessory proteins hold together thick filaments. Both the Z disc and the M line hold myofilaments in place to maintain the structural arrangement and layering of the myofibril. Myofibrils are connected to each other by intermediate, or desmin, filaments that attach to the Z disc.
+
+Thick and thin filaments are themselves composed of proteins. Thick filaments are composed of the protein myosin. The tail of a myosin molecule connects with other myosin molecules to form the central region of a thick filament near the M line, whereas the heads align on either side of the thick filament where the thin filaments overlap. The primary component of thin filaments is the actin protein. Two other components of the thin filament are tropomyosin and troponin. Actin has binding sites for myosin attachment. Strands of tropomyosin block the binding sites and prevent actin–myosin interactions when the muscles are at rest. Troponin consists of three globular subunits. One subunit binds to tropomyosin, one subunit binds to actin, and one subunit binds ${ \mathsf { C a } } ^ { 2 + }$ ions.
+
+# LINK TO LEARNING
+
+View this animation showing the organization of muscle fibers.
+
+Click to view content (https://www.openstax.org/l/skeletal_muscle)
+
+# Sliding Filament Model of Contraction
+
+For a muscle cell to contract, the sarcomere must shorten. However, thick and thin filaments—the components of sarcomeres—do not shorten. Instead, they slide by one another, causing the sarcomere to shorten while the filaments remain the same length. The sliding filament theory of muscle contraction was developed to fit the differences observed in the named bands on the sarcomere at different degrees of muscle contraction and relaxation. The mechanism of contraction is the binding of myosin to actin, forming cross-bridges that generate filament movement (Figure 38.36).
+
+When a sarcomere shortens, some regions shorten whereas others stay the same length. A sarcomere is defined as the distance between two consecutive Z discs or Z lines; when a muscle contracts, the distance between the Z discs is reduced. The H zone—the central region of the A zone—contains only thick filaments and is shortened during contraction. The I band contains only thin filaments and also shortens. The A band does not shorten—it remains the same length—but A bands of different sarcomeres move closer together during contraction, eventually disappearing. Thin filaments are pulled by the thick filaments toward the center of the sarcomere until the Z discs approach the thick filaments. The zone of overlap, in which thin filaments and thick filaments occupy the same area, increases as the thin filaments move inward.
+
+# ATP and Muscle Contraction
+
+The motion of muscle shortening occurs as myosin heads bind to actin and pull the actin inwards. This action requires energy, which is provided by ATP. Myosin binds to actin at a binding site on the globular actin protein. Myosin has another binding site for ATP at which enzymatic activity hydrolyzes ATP to ADP, releasing an inorganic phosphate molecule and energy.
+
+ATP binding causes myosin to release actin, allowing actin and myosin to detach from each other. After this happens, the newly bound ATP is converted to ADP and inorganic phosphate, $\mathrm { \Delta P _ { i } }$ . The enzyme at the binding site on myosin is called ATPase. The energy released during ATP hydrolysis changes the angle of the myosin head into a “cocked” position. The myosin head is then in a position for further movement, possessing potential energy, but ADP and $\mathrm { \Delta P _ { i } }$ are still attached. If actin binding sites are covered and unavailable, the myosin will remain in the high energy configuration with ATP hydrolyzed, but still attached.
+
+If the actin binding sites are uncovered, a cross-bridge will form; that is, the myosin head spans the distance between the actin and myosin molecules. $\mathrm { \Delta P _ { i } }$ is then released, allowing myosin to expend the stored energy as a conformational change. The myosin head moves toward the M line, pulling the actin along with it. As the actin is pulled, the filaments move approximately 10 nm toward the M line. This movement is called the power stroke, as it is the step at which force is produced. As the actin is pulled toward the M line, the sarcomere shortens and the muscle contracts.
+
+
+
+When the myosin head is “cocked,” it contains energy and is in a high-energy configuration. This energy is expended as the myosin head moves through the power stroke; at the end of the power stroke, the myosin head is in a low-energy position. After the power stroke, ADP is released; however, the cross-bridge formed is still in place, and actin and myosin are bound together. ATP can then attach to myosin, which allows the cross-bridge cycle to start again and further muscle contraction can occur (Figure 38.37).
+
+# LINK TO LEARNING
+
+Watch this video explaining how a muscle contraction is signaled.
+
+Click to view content (https://www.openstax.org/l/contract_muscle)
+
+# VISUAL CONNECTION
+
+Which of the following statements about muscle contraction is true?
+
+a. The power stroke occurs when ATP is hydrolyzed to ADP and phosphate.   
+b. The power stroke occurs when ADP and phosphate dissociate from the myosin head. c. The power stroke occurs when ADP and phosphate dissociate from the actin active site.   
+d. The power stroke occurs when ${ \mathsf { C a } } ^ { 2 + }$ binds the calcium head.
+
+
+
+# LINK TO LEARNING
+
+View this animation (http://openstax.org/l/muscle_contract) of the cross-bridge muscle contraction.
+
+# Regulatory Proteins
+
+When a muscle is in a resting state, actin and myosin are separated. To keep actin from binding to the active site on myosin, regulatory proteins block the molecular binding sites. Tropomyosin blocks myosin binding sites on actin molecules, preventing cross-bridge formation and preventing contraction in a muscle without nervous input. Troponin binds to tropomyosin and helps to position it on the actin molecule; it also binds calcium ions.
+
+To enable a muscle contraction, tropomyosin must change conformation, uncovering the myosin-binding site on an actin molecule and allowing cross-bridge formation. This can only happen in the presence of calcium, which is kept at extremely low concentrations in the sarcoplasm. If present, calcium ions bind to troponin, causing conformational changes in troponin that allow tropomyosin to move away from the myosin binding sites on actin. Once the tropomyosin is removed, a cross-bridge can form between actin and myosin, triggering contraction. Cross-bridge cycling continues until ${ \mathsf { C a } } ^ { 2 + }$ ions and ATP are no longer available and tropomyosin again covers the binding sites on actin.
+
+# Excitation–Contraction Coupling
+
+Excitation–contraction coupling is the link (transduction) between the action potential generated in the sarcolemma and the start of a muscle contraction. The trigger for calcium release from the sarcoplasmic reticulum into the sarcoplasm is a neural signal. Each skeletal muscle fiber is controlled by a motor neuron, which conducts signals from the brain or spinal cord to the muscle. The area of the sarcolemma on the muscle fiber that interacts with the neuron is called the motor end plate. The end of the neuron’s axon is called the synaptic terminal, and it does not actually contact the motor end plate. A small space called the synaptic cleft separates the synaptic terminal from the motor end plate. Electrical signals travel along the neuron’s axon, which branches through the muscle and connects to individual muscle fibers at a neuromuscular junction.
+
+The ability of cells to communicate electrically requires that the cells expend energy to create an electrical gradient across their cell membranes. This charge gradient is carried by ions, which are differentially distributed across the membrane. Each ion exerts an electrical influence and a concentration influence. Just as milk will eventually mix with coffee without the need to stir, ions also distribute themselves evenly, if they are permitted to do so. In this case, they are not permitted to return to an evenly mixed state.
+
+The sodium–potassium ATPase uses cellular energy to move $\mathrm { K ^ { + } }$ ions inside the cell and $\mathrm { N a ^ { + } }$ ions outside. This alone accumulates a small electrical charge, but a big concentration gradient. There is lots of $\mathrm { K ^ { + } }$ in the cell and lots of $\mathrm { N a ^ { + } }$ outside the cell. Potassium is able to leave the cell through $\mathrm { K ^ { + } }$ channels that are open $90 \%$ of the time, and it does. However, $\mathrm { N a ^ { + } }$ channels are rarely open, so $\mathrm { N a ^ { + } }$ remains outside the cell. When $\mathrm { K ^ { + } }$ leaves the cell, obeying its concentration gradient, that effectively leaves a negative charge behind. So at rest, there is a large concentration gradient for $\mathrm { N a ^ { + } }$ to enter the cell, and there is an accumulation of negative charges left behind in the cell. This is the resting membrane potential. Potential in this context means a separation of electrical charge that is capable of doing work. It is measured in volts, just like a battery. However, the transmembrane potential is considerably smaller $_ { ( \circ . \circ 7 \ : \forall ) }$ ; therefore, the small value is expressed as millivolts $( \mathrm { m V } )$ or $7 0 \mathrm { m V } .$ . Because the inside of a cell is negative compared with the outside, a minus sign signifies the excess of negative charges inside the cell, $- 7 0 \mathrm { m V } .$
+
+If an event changes the permeability of the membrane to ${ \mathrm { N a } ^ { + } }$ ions, they will enter the cell. That will change the voltage. This is an electrical event, called an action potential, that can be used as a cellular signal. Communication occurs between nerves and muscles through neurotransmitters. Neuron action potentials cause the release of neurotransmitters from the synaptic terminal into the synaptic cleft, where they can then diffuse across the synaptic cleft and bind to a receptor molecule on the motor end plate. The motor end plate possesses junctional folds—folds in the sarcolemma that create a large surface area for the neurotransmitter to bind to receptors. The receptors are actually sodium channels that open to allow the passage of $\mathrm { N a ^ { + } }$ into the cell when they receive a neurotransmitter signal.
+
+Acetylcholine (ACh) is a neurotransmitter released by motor neurons that binds to receptors in the motor end plate.
+
+Neurotransmitter release occurs when an action potential travels down the motor neuron’s axon, resulting in altered permeability of the synaptic terminal membrane and an influx of calcium. The ${ \mathrm { C a } } ^ { 2 + }$ ions allow synaptic vesicles to move to and bind with the presynaptic membrane (on the neuron), and release neurotransmitter from the vesicles into the synaptic cleft. Once released by the synaptic terminal, ACh diffuses across the synaptic cleft to the motor end plate, where it binds with ACh receptors. As a neurotransmitter binds, these ion channels open, and $\mathrm { N a ^ { + } }$ ions cross the membrane into the muscle cell. This reduces the voltage difference between the inside and outside of the cell, which is called depolarization. As ACh binds at the motor end plate, this depolarization is called an end-plate potential. The depolarization then spreads along the sarcolemma, creating an action potential as sodium channels adjacent to the initial depolarization site sense the change in voltage and open. The action potential moves across the entire cell, creating a wave of depolarization.
+
+ACh is broken down by the enzyme acetylcholinesterase (AChE) into acetyl and choline. AChE resides in the synaptic cleft, breaking down ACh so that it does not remain bound to ACh receptors, which would cause unwanted extended muscle contraction (Figure 38.38).
+
+# VISUAL CONNECTION
+
+1.Acetylcholine released from theaxon terminal binds to receptors on the sarcolemma.   
+2.Anaction potential is generated and travels down the T tubule.   
+3. ${ \mathsf { C a } } ^ { 2 + }$ is released from the sarcoplasmic reticulum in response to the change in voltage.   
+4. $\mathsf { C a } ^ { 2 + }$ binds troponin; Cross-bridges form between actin and myosin.   
+5.Acetylcholinesterase removesacetylcholine from the synaptic cleft.   
+6. $\mathsf { C a } ^ { 2 + }$ is transported back into the sarcoplasmic reticulum.   
+7.Tropomyosin binds active sites on actin causing the cross-bridge to detach.
+
+
+
+The deadly nerve gas Sarin irreversibly inhibits Acetylcholinesterase. What effect would Sarin have on muscle contraction?
+
+After depolarization, the membrane returns to its resting state. This is called repolarization, during which voltage-gated sodium channels close. Potassium channels continue at $90 \%$ conductance. Because the plasma membrane sodium–potassium ATPase always transports ions, the resting state (negatively charged inside relative to the outside) is restored. The period
+
+immediately following the transmission of an impulse in a nerve or muscle, in which a neuron or muscle cell regains its ability to transmit another impulse, is called the refractory period. During the refractory period, the membrane cannot generate another action potential. The refractory period allows the voltage-sensitive ion channels to return to their resting configurations. The sodium potassium ATPase continually moves $\mathrm { N a ^ { + } }$ back out of the cell and $\mathrm { K ^ { + } }$ back into the cell, and the $\mathrm { K ^ { + } }$ leaks out leaving negative charge behind. Very quickly, the membrane repolarizes, so that it can again be depolarized.
+
+# Control of Muscle Tension
+
+Neural control initiates the formation of actin–myosin cross-bridges, leading to the sarcomere shortening involved in muscle contraction. These contractions extend from the muscle fiber through connective tissue to pull on bones, causing skeletal movement. The pull exerted by a muscle is called tension, and the amount of force created by this tension can vary. This enables the same muscles to move very light objects and very heavy objects. In individual muscle fibers, the amount of tension produced depends on the cross-sectional area of the muscle fiber and the frequency of neural stimulation.
+
+The number of cross-bridges formed between actin and myosin determine the amount of tension that a muscle fiber can produce. Cross-bridges can only form where thick and thin filaments overlap, allowing myosin to bind to actin. If more crossbridges are formed, more myosin will pull on actin, and more tension will be produced.
+
+The ideal length of a sarcomere during production of maximal tension occurs when thick and thin filaments overlap to the greatest degree. If a sarcomere at rest is stretched past an ideal resting length, thick and thin filaments do not overlap to the greatest degree, and fewer cross-bridges can form. This results in fewer myosin heads pulling on actin, and less tension is produced. As a sarcomere is shortened, the zone of overlap is reduced as the thin filaments reach the H zone, which is composed of myosin tails. Because it is myosin heads that form cross-bridges, actin will not bind to myosin in this zone, reducing the tension produced by this myofiber. If the sarcomere is shortened even more, thin filaments begin to overlap with each other—reducing cross-bridge formation even further, and producing even less tension. Conversely, if the sarcomere is stretched to the point at which thick and thin filaments do not overlap at all, no cross-bridges are formed and no tension is produced. This amount of stretching does not usually occur because accessory proteins, internal sensory nerves, and connective tissue oppose extreme stretching.
+
+The primary variable determining force production is the number of myofibers within the muscle that receive an action potential from the neuron that controls that fiber. When using the biceps to pick up a pencil, the motor cortex of the brain only signals a few neurons of the biceps, and only a few myofibers respond. In vertebrates, each myofiber responds fully if stimulated. When picking up a piano, the motor cortex signals all of the neurons in the biceps and every myofiber participates. This is close to the maximum force the muscle can produce. As mentioned above, increasing the frequency of action potentials (the number of signals per second) can increase the force a bit more, because the tropomyosin is flooded with calcium.
+
+# KEY TERMS
+
+abduction when a bone moves away from the midline of the body   
+acetylcholinesterase (AChE) enzyme that breaks down ACh into acetyl and choline   
+actin globular contractile protein that interacts with myosin for muscle contraction   
+adduction movement of the limbs inward after abduction   
+amphiarthrosis joint that allows slight movement; includes syndesmoses and symphyses   
+angular movement produced when the angle between the bones of a joint changes   
+appendicular skeleton composed of the bones of the upper limbs, which function to grasp and manipulate objects, and the lower limbs, which permit locomotion   
+appositional growth increase in the diameter of bones by the addition of bone tissue at the surface of bones   
+articulation any place where two bones are joined   
+auditory ossicle (also, middle ear) transduces sounds from the air into vibrations in the fluid-filled cochlea   
+axial skeleton forms the central axis of the body and includes the bones of the skull, the ossicles of the middle ear, the hyoid bone of the throat, the vertebral column, and the thoracic cage (ribcage)   
+ball-and-socket joint joint with a rounded, ball-like end of one bone fitting into a cuplike socket of another bone   
+bone (also, osseous tissue) connective tissue that constitutes the endoskeleton   
+bone remodeling replacement of old bone tissue by new bone tissue   
+calcification process of deposition of mineral salts in the collagen fiber matrix that crystallizes and hardens the tissue   
+cardiac muscle tissue muscle tissue found only in the heart; cardiac contractions pump blood throughout the body and maintain blood pressure   
+carpus eight bones that comprise the wrist   
+cartilaginous joint joint in which the bones are connected by cartilage   
+circumduction movement of a limb in a circular motion   
+clavicle S-shaped bone that positions the arms laterally   
+compact bone forms the hard external layer of all bones   
+condyloid joint oval-shaped end of one bone fitting into a similarly oval-shaped hollow of another bone   
+coxal bone hip bone   
+cranial bone one of eight bones that form the cranial cavity that encloses the brain and serves as an attachment site for the muscles of the head and neck   
+depression movement downward of a bone, such as after the shoulders are shrugged and the scapulae return to their normal position from an elevated position; opposite of elevation   
+diaphysis central shaft of bone, contains bone marrow in a marrow cavity   
+diarthrosis joint that allows for free movement of the joint; found in synovial joints   
+dorsiflexion bending at the ankle such that the toes are lifted toward the knee   
+elevation movement of a bone upward, such as when the shoulders are shrugged, lifting the scapulae   
+endochondral ossification process of bone development from hyaline cartilage   
+endoskeleton skeleton of living cells that produces a hard, mineralized tissue located within the soft tissue of organisms   
+epiphyseal plate region between the diaphysis and epiphysis that is responsible for the lengthwise growth of long bones   
+epiphysis rounded end of bone, covered with articular cartilage and filled with red bone marrow, which produces blood cells   
+eversion movement of the sole of the foot outward, away from the midline of the body; opposite of inversion   
+exoskeleton a secreted cellular product external skeleton that consists of a hard encasement on the surface of an organism   
+extension movement in which the angle between the bones of a joint increases; opposite of flexion   
+facial bone one of the 14 bones that form the face; provides cavities for the sense organs (eyes, mouth, and nose) and attachment points for facial muscles   
+femur (also, thighbone) longest, heaviest, and strongest bone in the body   
+fibrous joint joint held together by fibrous connective tissue   
+fibula (also, calf bone) parallels and articulates with the tibia   
+flat bone thin and relatively broad bone found where extensive protection of organs is required or where broad surfaces of muscle attachment are required   
+flexion movement in which the angle between the bones decreases; opposite of extension   
+forearm extends from the elbow to the wrist and consists of two bones: the ulna and the radius   
+gliding movement when relatively flat bone surfaces move past each other   
+gomphosis the joint in which the tooth fits into the socket like a peg   
+Haversian canal contains the bone’s blood vessels and nerve fibers   
+hinge joint slightly rounded end of one bone fits into the slightly hollow end of the other bone   
+humerus only bone of the arm   
+hydrostatic skeleton skeleton that consists of aqueous fluid held under pressure in a closed body compartment   
+hyoid bone lies below the mandible in the front of the neck   
+hyperextension extension past the regular anatomical position   
+intervertebral disc composed of fibrous cartilage; lies between adjacent vertebrae from the second cervical vertebra to the sacrum   
+intramembranous ossification process of bone development from fibrous membranes   
+inversion soles of the feet moving inward, toward the midline of the body   
+irregular bone bone with complex shapes; examples include vertebrae and hip bones   
+joint point at which two or more bones meet   
+lamella layer of compact tissue that surrounds a central canal called the Haversian canal   
+lateral rotation rotation away from the midline of the body   
+long bone bone that is longer than wide, and has a shaft and two ends   
+lower limb consists of the thigh, the leg, and the foot   
+medial rotation rotation toward the midline of the body   
+metacarpus five bones that comprise the palm   
+metatarsal one of the five bones of the foot   
+motor end plate sarcolemma of the muscle fiber that interacts with the neuron   
+myofibril long cylindrical structures that lie parallel to the muscle fiber   
+myofilament small structures that make up myofibrils   
+myosin contractile protein that interacts with actin for muscle contraction   
+opposition movement of the thumb toward the fingers of the same hand, making it possible to grasp and hold objects   
+osseous tissue connective tissue that constitutes the endoskeleton   
+ossification (also, osteogenesis) process of bone formation by osteoblasts   
+osteoblast bone cell responsible for bone formation   
+osteoclast large bone cells with up to 50 nuclei, responsible for bone remodeling   
+osteocyte mature bone cells and the main cell in bone tissue   
+osteon cylindrical structure aligned parallel to the long axis of the bone   
+patella (also, kneecap) triangular bone that lies anterior to the knee joint   
+pectoral girdle bones that transmit the force generated by the upper limbs to the axial skeleton   
+pelvic girdle bones that transmit the force generated by the lower limbs to the axial skeleton   
+phalange one of the bones of the fingers or toes   
+pivot joint joint with the rounded end of one bone fitting into a ring formed by the other bone   
+planar joint joint with bones whose articulating surfaces   
+plantar flexion bending at the ankle such that the heel is lifted, such as when standing on the toes   
+pronation movement in which the palm faces backward   
+protraction anterior movement of a bone in the horizontal plane   
+radius bone located along the lateral (thumb) side of the forearm; articulates with the humerus at the elbow   
+resorption process by which osteoclasts release minerals stored in bones   
+retraction movement in which a joint moves back into position after protraction   
+rib one of 12 pairs of long, curved bones that attach to the thoracic vertebrae and curve toward the front of the body to form the ribcage   
+rotational movement movement of a bone as it rotates around its own longitudinal axis   
+saddle joint joint with concave and convex portions that fit together; named because the ends of each bone resemble a saddle   
+sarcolemma plasma membrane of a skeletal muscle fiber   
+sarcomere functional unit of skeletal muscle   
+scapula flat, triangular bone located at the posterior pectoral girdle   
+sesamoid bone small, flat bone shaped like a sesame seed; develops inside tendons   
+short bone bone that has the same width and length, giving it a cube-like shape   
+skeletal muscle tissue forms skeletal muscles, which attach to bones and control locomotion and any movement that can be consciously controlled   
+skull bone that supports the structures of the face and protects the brain   
+smooth muscle tissue occurs in the walls of hollow organs such as the intestines, stomach, and urinary bladder, and around passages such as the respiratory tract and blood vessels   
+spongy bone tissue forms the inner layer of all bones   
+sternum (also, breastbone) long, flat bone located at the front of the chest   
+supination movement of the radius and ulna bones of the forearm so that the palm faces forward   
+sutural bone small, flat, irregularly shaped bone that forms between the flat bones of the cranium   
+suture short fiber of connective tissue that holds the skull bones tightly in place; found only in the skull   
+symphysis hyaline cartilage covers the end of the bone, but the connection between bones occurs through fibrocartilage; symphyses are found at the joints between vertebrae   
+synarthrosis joint that is immovable   
+synchondrosis bones joined by hyaline cartilage; synchondroses are found in the epiphyseal plates of growing bones in children   
+syndesmosis joint in which the bones are connected by a band of connective tissue, allowing for more movement than in a suture   
+synovial joint only joint that has a space between the adjoining bones   
+tarsal one of the seven bones of the ankle   
+thick filament a group of myosin molecules   
+thin filament two polymers of actin wound together along with tropomyosin and troponin   
+thoracic cage (also, ribcage) skeleton of the chest, which consists of the ribs, thoracic vertebrae, sternum, and costal cartilages   
+tibia (also, shinbone) large bone of the leg that is located directly below the knee   
+trabeculae lamellae that are arranged as rods or plates   
+tropomyosin acts to block myosin binding sites on actin molecules, preventing cross-bridge formation and preventing contraction until a muscle receives a neuron signal   
+troponin binds to tropomyosin and helps to position it on the actin molecule, and also binds calcium ions   
+ulna bone located on the medial aspect (pinky-finger side) of the forearm   
+vertebral column (also, spine) surrounds and protects the spinal cord, supports the head, and acts as an attachment point for ribs and muscles of the back and neck
+
+
+
+
+
+
+
+
+
+
+
+# CHAPTER SUMMARY
+
+# 38.1 Types of Skeletal Systems
+
+The three types of skeleton designs are hydrostatic skeletons, exoskeletons, and endoskeletons. A hydrostatic skeleton is formed by a fluid-filled compartment held under hydrostatic pressure; movement is created by the muscles producing pressure on the fluid. An exoskeleton is a hard external skeleton that protects the outer surface of an organism and enables movement through muscles attached on the inside. An endoskeleton is an internal skeleton composed of hard, mineralized tissue that also enables movement by attachment to muscles. The human skeleton is an endoskeleton that is composed of the axial and appendicular skeleton. The axial skeleton is composed of the bones of the skull, ossicles of the ear, hyoid bone, vertebral column, and ribcage. The skull consists of eight cranial bones and 14 facial bones. Six bones make up the ossicles of the middle ear, while the hyoid bone is located in the neck under the mandible. The vertebral column contains 26 bones, and it surrounds and protects the spinal cord. The thoracic cage consists of the sternum, ribs, thoracic vertebrae, and costal cartilages. The appendicular skeleton is made up of the limbs of the upper and lower limbs. The pectoral girdle is composed of the clavicles and the scapulae. The upper limb contains 30 bones in the arm, the forearm, and the hand. The pelvic girdle attaches the lower limbs to the axial skeleton. The lower limb includes the bones of the thigh, the leg, and the foot.
+
+# 38.2 Bone
+
+Bone, or osseous tissue, is connective tissue that includes specialized cells, mineral salts, and collagen fibers. The human skeleton can be divided into long bones, short bones, flat bones, and irregular bones. Compact bone tissue is composed of osteons and forms the external layer of all bones. Spongy bone tissue is composed of trabeculae and forms the inner part of all bones. Four types of cells compose bony tissue: osteocytes, osteoclasts, osteoprogenitor cells, and osteoblasts. Ossification is the process of bone formation by osteoblasts. Intramembranous ossification is the process of bone development from fibrous membranes. Endochondral ossification is the process of bone development from hyaline cartilage. Long bones lengthen as chondrocytes divide and secrete hyaline cartilage. Osteoblasts replace cartilage with bone. Appositional growth is the increase in the diameter of bones by the addition of bone tissue at the surface of bones. Bone remodeling involves the processes of bone deposition by osteoblasts and bone resorption by osteoclasts. Bone repair occurs in four stages and can take several months.
+
+
+
+# 38.3 Joints and Skeletal Movement
+
+The structural classification of joints divides them into bony, fibrous, cartilaginous, and synovial joints. The bones of fibrous joints are held together by fibrous connective tissue; the three types of fibrous joints are sutures, syndesomes, and gomphoses. Cartilaginous joints are joints in which the bones are connected by cartilage; the two types of cartilaginous joints are synchondroses and symphyses. Synovial joints are joints that have a space between the adjoining bones. The functional classification divides joints into three categories: synarthroses, amphiarthroses, and diarthroses. The movement of synovial joints can be classified as one of four different types: gliding, angular, rotational, or special movement. Gliding movements occur as relatively flat bone surfaces move past each other. Angular movements are produced when the angle between the bones of a joint changes. Rotational movement is the movement of a bone as it rotates around its own longitudinal axis. Special movements include inversion, eversion, protraction, retraction, elevation, depression, dorsiflexion, plantar flexion, supination, pronation, and opposition. Synovial joints are also classified into six different categories on the basis of the shape and structure of the joint: planar, hinge, pivot, condyloid, saddle, and ball-and-socket.
+
+
+
+# 38.4 Muscle Contraction and Locomotion
+
+The body contains three types of muscle tissue: skeletal muscle, cardiac muscle, and smooth muscle. Skeleton muscle tissue is composed of sarcomeres, the functional units of muscle tissue. Muscle contraction occurs when sarcomeres shorten, as thick and thin filaments slide past each other, which is called the sliding filament model of muscle contraction. ATP provides the energy for crossbridge formation and filament sliding. Regulatory proteins, such as troponin and tropomyosin, control cross-bridge formation. Excitation–contraction coupling transduces the electrical signal of the neuron, via acetylcholine, to an electrical signal on the muscle membrane, which initiates force production. The number of muscle fibers contracting determines how much force the whole muscle produces.
+
+
+
+# VISUAL CONNECTION QUESTIONS
+
+1. Figure 38.19 Which of the following statements about bone tissue is false?
+
+a. Compact bone tissue is made of cylindrical osteons that are aligned such that they travel the length of the bone.   
+b. Haversian canals contain blood vessels only.   
+c. Haversian canals contain blood vessels and nerve fibers.   
+d. Spongy tissue is found on the interior of the bone, and compact bone tissue is found on the exterior.
+
+2. Figure 38.37 Which of the following statements about muscle contraction is true?
+
+a. The power stroke occurs when ATP is hydrolyzed to ADP and phosphate.   
+b. The power stroke occurs when ADP and phosphate dissociate from the myosin head.   
+c. The power stroke occurs when ADP and phosphate dissociate from the actin active site.   
+d. The power stroke occurs when $\mathsf { C a } ^ { 2 + }$ binds the calcium head.
+
+3. Figure 38.38 The deadly nerve gas Sarin irreversibly inhibits Acetylcholinesterase. What effect would Sarin have on muscle contraction?
+
+# REVIEW QUESTIONS
+
+4. The forearm consists of the:
+
+a. radius and ulna b. radius and humerus c. ulna and humerus d. humerus and carpus
+
+5. The pectoral girdle consists of the:
+
+a. clavicle and sternum b. sternum and scapula c. clavicle and scapula d. clavicle and coccyx
+
+6. All of the following are groups of vertebrae except _, which is a curvature.
+
+a. thoracic b. cervical c. lumbar d. pelvic
+
+7. Which of these is a facial bone?
+
+a. frontal b. occipital c. lacrimal d. temporal
+
+8. Which of the following is not a true statement comparing exoskeletons and endoskeletons?
+
+a. Endoskeletons can support larger organisms.   
+b. Only endoskeletons can grow as an organism grows.   
+c. Exoskeletons provide greater protection of the internal organs.   
+d. Exoskeletons provide less mechanical leverage.
+
+9. The Haversian canal:
+
+a. is arranged as rods or plates   
+b. contains the bone’s blood vessels and nerve fibers   
+c. is responsible for the lengthwise growth of long bones   
+d. synthesizes and secretes matrix
+
+10. The epiphyseal plate:
+
+a. is arranged as rods or plates   
+b. contains the bone’s blood vessels and nerve fibers   
+c. is responsible for the lengthwise growth of long bones   
+d. synthesizes and secretes bone matrix
+
+11. The cells responsible for bone resorption are
+
+a. osteoclasts b. osteoblasts c. fibroblasts d. osteocytes
+
+12. Compact bone is composed of
+
+a. trabeculae   
+b. compacted collagen   
+c. osteons   
+d. calcium phosphate only
+
+13. Osteoporosis is a condition where bones become weak and brittle. It is caused by an imbalance in the activity of which cells?
+
+a. osteoclasts and osteoblasts b. osteoclasts and osteocytes c. osteoblasts and chondrocytes d. osteocytes and chondrocytes
+
+14. While assembling a skeleton of a new species, a scientist points to one of the bones and observes that it looks like the most likely site of leg muscle attachment. What kind of bone did she indicate?
+
+a. sesamoid bone b. long bone c. trabecular bone d. flat bone
+
+15. Synchondroses and symphyses are:
+
+a. synovial joints b. cartilaginous joints c. fibrous joints d. condyloid joints
+
+16. The movement of bone away from the midline of the body is called
+
+a. circumduction b. extension c. adduction d. abduction
+
+17. Which of the following is not a characteristic of the synovial fluid?
+
+a. lubrication   
+b. shock absorption   
+c. regulation of water balance in the joint   
+d. protection of articular cartilage
+
+18. The elbow is an example of which type of joint?
+
+a. hinge b. pivot c. saddle d. gliding
+
+19. A high ankle sprain is an injury caused by overstretching the ligaments connecting the tibia and fibula. What type of joint is involved in this sprain?
+
+a. ball and socket b. gomphosis c. syndesmosis d. symphysis
+
+20. In relaxed muscle, the myosin-binding site on actin is blocked by
+
+a. titin b. troponin c. myoglobin d. tropomyosin
+
+21. The cell membrane of a muscle fiber is called a
+
+a. myofibril b. sarcolemma c. sarcoplasm d. myofilament
+
+22. The muscle relaxes if no new nerve signal arrives. However the neurotransmitter from the previous stimulation is still present in the synapse. The activity of helps to remove this neurotransmitter.
+
+a. myosin b. action potential c. tropomyosin d. acetylcholinesterase
+
+23. The ability of a muscle to generate tension immediately after stimulation is dependent on:
+
+a. myosin interaction with the M line b. overlap of myosin and actin c. actin attachments to the Z line d. none of the above
+
+24. Botulinum toxin causes flaccid paralysis of the muscles, and is used for cosmetic purposes under the name Botox. Which of the following is the most likely mechanism of action of Botox?
+
+a. Botox decreases the production of acetylcholinesterase.   
+b. Botox increases calcium release from the sarcoplasmic reticulum.   
+c. Botox blocks the ATP binding site in actin.   
+d. Botox decreases the release of acetylcholine from motor neurons.
+
+# CRITICAL THINKING QUESTIONS
+
+25. What are the major differences between the male pelvis and female pelvis that permit childbirth in females?   
+26. What are the major differences between the pelvic girdl and the pectoral girdle that allow the pelvic girdle to bear the weight of the body?   
+27. Both hydrostatic and exoskeletons can protect internal organs from harm. Contrast the ways the skeletons perform these functions.   
+28. Scoliosis is a medical condition where the spine develops a sideways curvature. How would this change interfere with the normal function of the spine?   
+29. What are the major differences between spongy bone and compact bone?   
+30. What are the roles of osteoblasts, osteocytes, and osteoclasts?   
+31. Thalidomide was a morning sickness drug given to women that caused babies to be born without arm bones. If recent studies have shown that thalidomide prevents the formation of new blood vessels, describe the type of bone development inhibited by the drug and what stage of ossification was affected.   
+32. What movements occur at the hip joint and knees as you bend down to touch your toes?   
+33. What movement(s) occur(s) at the scapulae when you shrug your shoulders?   
+34. Describe the joints and motions involved in taking a step forward if a person is initially standing still. Assume the person holds his foot at the same angle throughout the motion.   
+35. How would muscle contractions be affected if ATP was completely depleted in a muscle fiber?   
+36. What factors contribute to the amount of tension produced in an individual muscle fiber?   
+37. What effect will low blood calcium have on neurons? What effect will low blood calcium have on skeletal muscles?   
+38. Skeletal muscles can only produce a mechanical force as they are contracted, but a leg flexes and extends while walking. How can muscles perform this task?

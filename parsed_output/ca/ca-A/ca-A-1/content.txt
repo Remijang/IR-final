@@ -1,0 +1,9 @@
+A.1 ARM Processors
+
+Let us now describe the design of ARM  processors. The most important point to note about the ARM processors (popularly referred as ARM cores) is that ARM designs the processors, and then licenses the design to customers. Unlike other vendors such as Intel or IBM, ARM does not manufacture silicon chips. Instead, vendors such as Texas Instruments and Qualcomm buy the license to use the design of ARM cores, and add additional components. They then give a contract to semiconductor manufacturing companies, or use their own manufacturing facilities to manufacture an entire SOC(System on Chip) in silicon.
+
+ARM has three processor lines for its latest (as of 2012) ARMv8 architecture. The first line of processors is known as the ARM  Cortex  -M series. These processors are mainly designed to be used as micro-controllers in embedded applications such as medical devices, automobiles, and industrial electronics. The main focus behind the design of such processors is power efficiency, and cost. In this section, we shall describe the ARM Cortex-M3 processor that has a three stage pipeline.
+
+The second line of processors is known as the ARM  Cortex  -R series. These processors are designed for real time applications. The main focus here is reliability, high speed and real time response. They are not meant to be used by consumer electronics devices such as smartphones. The Cortex-R series processors do not have support for running operating systems that use virtual memory.
+
+The ARM  Cortex  -A series processors are designed to run regular user applications on smartphones, tablets, and a host of high end embedded devices. These ARM cores typically have complex pipelines, support for vector operations, and can run complex operating systems that require hardware support for virtual memory. We shall study the Cortex-A8 and CortexA15 processors in this section.

@@ -1,0 +1,671 @@
+[
+    {
+        "type": "text",
+        "text": "27.9 \\*Extended Topic\\* Microscopy Enhanced by the Wave Characteristics of Light ",
+        "text_level": 1,
+        "page_idx": 1238
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1238
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1238
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Discuss the different types of microscopes. ",
+        "page_idx": 1238
+    },
+    {
+        "type": "text",
+        "text": "Physics research underpins the advancement of developments in microscopy. As we gain knowledge of the wave nature of electromagnetic waves and methods to analyze and interpret signals, new microscopes that enable us to \u201csee\u201d more are being developed. It is the evolution and newer generation of microscopes that are described in this section. ",
+        "page_idx": 1238
+    },
+    {
+        "type": "text",
+        "text": "The use of microscopes (microscopy) to observe small details is limited by the wave nature of light. Owing to the fact that light diffracts significantly around small objects, it becomes impossible to observe details significantly smaller than the wavelength of light. One rule of thumb has it that all details smaller than about $\\lambda$ are difficult to observe. Radar, for example, can detect the size of an aircraft, but not its individual rivets, since the wavelength of most radar is several centimeters or greater. Similarly, visible light cannot detect individual atoms, since atoms are about 0.1 nm in size and visible wavelengths range from 380 to $7 6 0 \\mathsf { n m }$ . Ironically, special techniques used to obtain the best possible resolution with microscopes take advantage of the same wave characteristics of light that ultimately limit the detail. ",
+        "page_idx": 1238
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1239
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Waves ",
+        "text_level": 1,
+        "page_idx": 1239
+    },
+    {
+        "type": "text",
+        "text": "All attempts to observe the size and shape of objects are limited by the wavelength of the probe. Sonar and medical ultrasound are limited by the wavelength of sound they employ. We shall see that this is also true in electron microscopy, since electrons have a wavelength. Heisenberg\u2019s uncertainty principle asserts that this limit is fundamental and inescapable, as we shall see in quantum mechanics. ",
+        "page_idx": 1239
+    },
+    {
+        "type": "text",
+        "text": "The most obvious method of obtaining better detail is to utilize shorter wavelengths. Ultraviolet (UV) microscopes have been constructed with special lenses that transmit UV rays and utilize photographic or electronic techniques to record images. The shorter UV wavelengths allow somewhat greater detail to be observed, but drawbacks, such as the hazard of UV to living tissue and the need for special detection devices and lenses (which tend to be dispersive in the UV), severely limit the use of UV microscopes. Elsewhere, we will explore practical uses of very short wavelength EM waves, such as x rays, and other short-wavelength probes, such as electrons in electron microscopes, to detect small details. ",
+        "page_idx": 1239
+    },
+    {
+        "type": "text",
+        "text": "Another difficulty in microscopy is the fact that many microscopic objects do not absorb much of the light passing through them. The lack of contrast makes image interpretation very difficult. Contrast is the difference in intensity between objects and the background on which they are observed. Stains (such as dyes, fluorophores, etc.) are commonly employed to enhance contrast, but these tend to be application specific. More general wave interference techniques can be used to produce contrast. Figure 27.51 shows the passage of light through a sample. Since the indices of refraction differ, the number of wavelengths in the paths differs. Light emerging from the object is thus out of phase with light from the background and will interfere differently, producing enhanced contrast, especially if the light is coherent and monochromatic\u2014as in laser light. ",
+        "page_idx": 1239
+    },
+    {
+        "type": "image",
+        "img_path": "images/6dc4ed0f5aa7a2f1f9a389d012d1a1ca0d1b0cf337c9fe76d66cb86a62ad631b.jpg",
+        "img_caption": [
+            "FIGURE 27.51 Light rays passing through a sample under a microscope will emerge with different phases depending on their paths. The object shown has a greater index of refraction than the background, and so the wavelength decreases as the ray passes through it. Superimposing these rays produces interference that varies with path, enhancing contrast between the object and background. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1239
+    },
+    {
+        "type": "text",
+        "text": "Interference microscopes enhance contrast between objects and background by superimposing a reference beam of light upon the light emerging from the sample. Since light from the background and objects differ in phase, there will be different amounts of constructive and destructive interference, producing the desired contrast in final intensity. Figure 27.52 shows schematically how this is done. Parallel rays of light from a source are split into two beams by a half-silvered mirror. These beams are called the object and reference beams. Each beam passes through identical optical elements, except that the object beam passes through the object we wish to observe microscopically. The light beams are recombined by another half-silvered mirror and interfere. Since the light rays passing through different parts of the object have different phases, interference will be significantly different and, hence, have greater contrast between them. ",
+        "page_idx": 1239
+    },
+    {
+        "type": "image",
+        "img_path": "images/2177f5ec64f1ba5c4472e757dfb7656b9500ea8185428f1fbb74693deff75ccc.jpg",
+        "img_caption": [
+            "FIGURE 27.52 An interference microscope utilizes interference between the reference and object beam to enhance contrast. The two beams are split by a half-silvered mirror; the object beam is sent through the object, and the reference beam is sent through otherwise identical optical elements. The beams are recombined by another half-silvered mirror, and the interference depends on the various phases emerging from different parts of the object, enhancing contrast. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1240
+    },
+    {
+        "type": "text",
+        "text": "Another type of microscope utilizing wave interference and differences in phases to enhance contrast is called the phase-contrast microscope. While its principle is the same as the interference microscope, the phase-contrast microscope is simpler to use and construct. Its impact (and the principle upon which it is based) was so important that its developer, the Dutch physicist Frits Zernike (1888\u20131966), was awarded the Nobel Prize in 1953. Figure 27.53 shows the basic construction of a phase-contrast microscope. Phase differences between light passing through the object and background are produced by passing the rays through different parts of a phase plate (so called because it shifts the phase of the light passing through it). These two light rays are superimposed in the image plane, producing contrast due to their interference. ",
+        "page_idx": 1240
+    },
+    {
+        "type": "image",
+        "img_path": "images/99e4ba70fcee9d5dc31324b955c142662c847b7c3e67a3892a80aa018444ea83.jpg",
+        "img_caption": [
+            "FIGURE 27.53 Simplified construction of a phase-contrast microscope. Phase differences between light passing through the object and background are produced by passing the rays through different parts of a phase plate. The light rays are superimposed in the image plane, producing contrast due to their interference. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1240
+    },
+    {
+        "type": "text",
+        "text": "A polarization microscope also enhances contrast by utilizing a wave characteristic of light. Polarization microscopes are useful for objects that are optically active or birefringent, particularly if those characteristics vary from place to place in the object. Polarized light is sent through the object and then observed through a polarizing filter that is perpendicular to the original polarization direction. Nearly transparent objects can then appear with strong color and in high contrast. Many polarization effects are wavelength dependent, producing color in the processed image. Contrast results from the action of the polarizing filter in passing only components parallel to its axis. ",
+        "page_idx": 1240
+    },
+    {
+        "type": "text",
+        "text": "Apart from the UV microscope, the variations of microscopy discussed so far in this section are available as attachments to fairly standard microscopes or as slight variations. The next level of sophistication is provided by commercial confocal microscopes, which use the extended focal region shown in Figure 27.31(b) to obtain threedimensional images rather than two-dimensional images. Here, only a single plane or region of focus is identified; out-of-focus regions above and below this plane are subtracted out by a computer so the image quality is much better. This type of microscope makes use of fluorescence, where a laser provides the excitation light. Laser light passing through a tiny aperture called a pinhole forms an extended focal region within the specimen. The reflected light passes through the objective lens to a second pinhole and the photomultiplier detector, see Figure 27.54. The second pinhole is the key here and serves to block much of the light from points that are not at the focal point of the objective lens. The pinhole is conjugate (coupled) to the focal point of the lens. The second pinhole and detector are scanned, allowing reflected light from a small region or section of the extended focal region to be imaged at any one time. The out-of-focus light is excluded. Each image is stored in a computer, and a full scanned image is generated in a short time. Live cell processes can also be imaged at adequate scanning speeds allowing the imaging of threedimensional microscopic movement. Confocal microscopy enhances images over conventional optical microscopy, especially for thicker specimens, and so has become quite popular. ",
+        "page_idx": 1241
+    },
+    {
+        "type": "text",
+        "text": "The next level of sophistication is provided by microscopes attached to instruments that isolate and detect only a small wavelength band of light\u2014monochromators and spectral analyzers. Here, the monochromatic light from a laser is scattered from the specimen. This scattered light shifts up or down as it excites particular energy levels in the sample. The uniqueness of the observed scattered light can give detailed information about the chemical composition of a given spot on the sample with high contrast\u2014like molecular fingerprints. Applications are in materials science, nanotechnology, and the biomedical field. Fine details in biochemical processes over time can even be detected. The ultimate in microscopy is the electron microscope\u2014to be discussed later. Research is being conducted into the development of new prototype microscopes that can become commercially available, providing better diagnostic and research capacities. ",
+        "page_idx": 1241
+    },
+    {
+        "type": "image",
+        "img_path": "images/0ed48b0521fb6b7a87b2f771b680fc3486f36bfba40b91b38e6382e2d1b6eaee.jpg",
+        "img_caption": [
+            "FIGURE 27.54 A confocal microscope provides three-dimensional images using pinholes and the extended depth of focus as described by wave optics. The right pinhole illuminates a tiny region of the sample in the focal plane. In-focus light rays from this tiny region pass through the dichroic mirror and the second pinhole to a detector and a computer. Out-of-focus light rays are blocked. The pinhole is scanned sideways to form an image of the entire focal plane. The pinhole can then be scanned up and down to gather images from different focal planes. The result is a three-dimensional image of the specimen. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1241
+    },
+    {
+        "type": "text",
+        "text": "Glossary ",
+        "text_level": 1,
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "along which the filter passes the electric field of an EM wave birefringent crystals that split an unpolarized beam of light into two beams Brewster\u2019s angle $\\theta _ { \\mathrm { b } } = \\tan ^ { - 1 } \\left( \\frac { n _ { 2 } } { n _ { 1 } } \\right)$ where $n _ { 2 }$ is the index of refraction of the medium from which the light is reflected and $n _ { 1 }$ is the index of refraction of the medium in which the reflected light travels Brewster\u2019s law $\\begin{array} { r } { \\theta _ { \\mathrm { b } } = \\frac { n _ { 2 } } { n _ { 1 } } } \\end{array}$ , where is the medium in which the incident and reflected light travel and $n _ { 2 }$ is the index of refraction of the medium that forms the interface that reflects the light coherent waves are in phase or have a definite phase relationship confocal microscopes microscopes that use the extended focal region to obtain three-dimensional images rather than two-dimensional images constructive interference for a diffraction grating occurs when the condition $d$ sin $\\theta = m \\lambda$ (for $m = 0 , 1 , - 1 , 2 , - 2 , \\ldots )$ is satisfied, where $d$ is the distance between slits in the grating, $\\lambda$ is the wavelength of light, and $m$ is the order of the maximum constructive interference for a double slit the path length difference must be an integral multiple of the wavelength contrast the difference in intensity between objects and the background on which they are observed destructive interference for a double slit the path length difference must be a half-integral multiple of the wavelength destructive interference for a single slit occurs when $D$ sin $\\theta = m \\lambda$ \uff0c(for $m = 1 , - 1 , 2 , - 2 , 3 , . . . )$ , where $D$ is the slit width, $\\lambda$ is the light\u2019s wavelength, $\\theta$ is the angle relative to the original direction of the light, and $m$ is the order of the minimum diffraction the bending of a wave around the edges of an opening or an obstacle diffraction grating a large number of evenly spaced parallel slits direction of polarization the direction parallel to the electric field for EM waves horizontally polarized the oscillations are in a ",
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "horizontal plane   \nHuygens\u2019s principle every point on a wavefront is a source of wavelets that spread out in the forward direction at the same speed as the wave itself. The new wavefront is a line tangent to all of the wavelets   \nincoherent waves have random phase relationships   \ninterference microscopes microscopes that enhance contrast between objects and background by superimposing a reference beam of light upon the light emerging from the sample   \noptically active substances that rotate the plane of polarization of light passing through them   \norder the integer used in the equations for constructive and destructive interference for a double slit   \nphase-contrast microscope microscope utilizing wave interference and differences in phases to enhance contrast   \npolarization the attribute that wave oscillations have a definite direction relative to the direction of propagation of the wave   \npolarization microscope microscope that enhances contrast by utilizing a wave characteristic of light, useful for objects that are optically active   \npolarized waves having the electric and magnetic field oscillations in a definite direction   \nRayleigh criterion two images are just resolvable when the center of the diffraction pattern of one is directly over the first minimum of the diffraction pattern of the other   \nreflected light that is completely polarized light reflected at the angle of reflection $\\theta _ { \\mathrm { b } }$ , known as Brewster\u2019s angle   \nthin film interference interference between light reflected from different surfaces of a thin film   \nultraviolet (UV) microscopes microscopes constructed with special lenses that transmit UV rays and utilize photographic or electronic techniques to record images   \nunpolarized waves that are randomly polarized   \nvertically polarized the oscillations are in a vertical plane   \nwavelength in a medium $\\lambda _ { \\mathfrak { n } } = \\lambda / n$ , where $\\lambda$ is the wavelength in vacuum, and $n$ is the index of refraction of the medium ",
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "Section Summary ",
+        "text_level": 1,
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "27.1 The Wave Aspect of Light: Interference ",
+        "text_level": 1,
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Wave optics is the branch of optics that must be used when light interacts with small objects or whenever the wave characteristics of light are ",
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "considered. Wave characteristics are those associated with interference and diffraction. \u2022 Visible light is the type of electromagnetic wave to which our eyes respond and has a wavelength in ",
+        "page_idx": 1242
+    },
+    {
+        "type": "text",
+        "text": "the range of 380 to $7 6 0 \\mathsf { n m }$ .   \n\u2022 Like all EM waves, the following relationship is valid in vacuum: $c = f \\lambda$ , where $c = 3 \\times 1 0 ^ { 8 } ~ \\mathrm { m / s }$ is the speed of light, $f$ is the frequency of the electromagnetic wave, and $\\lambda$ is its wavelength in vacuum.   \nThe wavelength $\\lambda _ { \\mathfrak { n } }$ of light in a medium with index of refraction $n$ is $\\lambda _ { \\mathfrak { n } } = \\lambda / n$ . Its frequency is the same as in vacuum. ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.2 Huygens's Principle: Diffraction ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 An accurate technique for determining how and where waves propagate is given by Huygens\u2019s principle: Every point on a wavefront is a source of wavelets that spread out in the forward direction at the same speed as the wave itself. The new wavefront is a line tangent to all of the wavelets.   \n\u2022 Diffraction is the bending of a wave around the edges of an opening or other obstacle. ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.3 Young\u2019s Double Slit Experiment ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Young\u2019s double slit experiment gave definitive proof of the wave character of light.   \n\u2022 An interference pattern is obtained by the superposition of light from two slits.   \n\u2022 There is constructive interference when d sin $\\theta = m \\lambda$ (for $m = 0 , 1 , - 1 , 2 , - 2 , . . . )$ , where $d$ is the distance between the slits, $\\theta$ is the angle relative to the incident direction, and $m$ is the order of the interference.   \nThere is destructive interference when $\\begin{array} { r } { d \\sin \\theta = \\left( m + \\frac { 1 } { 2 } \\right) \\lambda } \\end{array}$ (for $m = 0 , 1 , - 1 , 2 , - 2 , . . . )$ ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.4 Multiple Slit Diffraction ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 A diffraction grating is a large collection of evenly spaced parallel slits that produces an interference pattern similar to but sharper than that of a double slit.   \n\u2022 There is constructive interference for a diffraction grating when $d$ sin $\\theta = m \\lambda$ (for $m = 0 , 1 , - 1 , 2 , - 2 , \\ldots )$ , where $d$ is the distance between slits in the grating, $\\lambda$ is the wavelength of light, and $m$ is the order of the maximum. ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.5 Single Slit Diffraction ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 A single slit produces an interference pattern characterized by a broad central maximum with narrower and dimmer maxima to the sides. \u2022 There is destructive interference for a single slit when $D$ sin $\\theta = m \\lambda$ \uff0c(for $m = 1 , - 1 , 2 , - 2 , 3 , . . . )$ , where $D$ is the slit width, $\\lambda$ is the light\u2019s ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "wavelength, $\\theta$ is the angle relative to the original direction of the light, and $m$ is the order of the minimum. Note that there is no $m = 0$ minimum. ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.6 Limits of Resolution: The Rayleigh Criterion ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Diffraction limits resolution.   \n\u2022 For a circular aperture, lens, or mirror, the Rayleigh criterion states that two images are just resolvable when the center of the diffraction pattern of one is directly over the first minimum of the diffraction pattern of the other.   \nThis occurs for two point objects separated by the angle $\\begin{array} { r } { \\theta = 1 . 2 2 \\frac { \\lambda } { D } } \\end{array}$ , where $\\lambda$ is the wavelength of light (or other electromagnetic radiation) and $D$ is the diameter of the aperture, lens, mirror, etc. This equation also gives the angular spreading of a source of light having a diameter $D$ . ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.7 Thin Film Interference ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Thin film interference occurs between the light reflected from the top and bottom surfaces of a film. In addition to the path length difference, there can be a phase change.   \n\u2022 When light reflects from a medium having an index of refraction greater than that of the medium in which it is traveling, a $1 8 0 ^ { \\circ }$ phase change (or a shift) occurs. ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "27.8 Polarization ",
+        "text_level": 1,
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Polarization is the attribute that wave oscillations have a definite direction relative to the direction of propagation of the wave.   \n\u2022 EM waves are transverse waves that may be polarized.   \n\u2022 The direction of polarization is defined to be the direction parallel to the electric field of the EM wave.   \n\u2022 Unpolarized light is composed of many rays having random polarization directions.   \n\u2022 Light can be polarized by passing it through a polarizing filter or other polarizing material. The intensity $I$ of polarized light after passing through a polarizing filter is $I = I _ { 0 } \\cos ^ { 2 } \\theta$ where $I _ { 0 }$ is the original intensity and $\\theta$ is the angle between the direction of polarization and the axis of the filter.   \n\u2022 Polarization is also produced by reflection.   \n\u2022 Brewster\u2019s law states that reflected light will be completely polarized at the angle of reflection $\\theta _ { \\mathrm { b } }$ , known as Brewster\u2019s angle, given by a statement $\\begin{array} { r } { \\theta _ { \\mathrm { b } } = \\frac { n _ { 2 } } { n _ { 1 } } } \\end{array}$ $n _ { 1 }$ is the medium in which the incident and reflected light travel and $n _ { 2 }$ is the index of refraction of the medium that forms the interface that reflects the light.   \n\u2022 Polarization can also be produced by scattering.   \n\u2022 There are a number of types of optically active substances that rotate the direction of polarization of light passing through them. ",
+        "page_idx": 1243
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "Conceptual Questions ",
+        "text_level": 1,
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "27.1 The Wave Aspect of Light: Interference ",
+        "text_level": 1,
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "1. What type of experimental evidence indicates that light is a wave?   \n2. Give an example of a wave characteristic of light that is easily observed outside the laboratory. ",
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "27.2 Huygens's Principle: Diffraction ",
+        "text_level": 1,
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "3. How do wave effects depend on the size of the object with which the wave interacts? For example, why does sound bend around the corner of a building while light does not?   \n4. Under what conditions can light be modeled like a ray? Like a wave?   \n5. Go outside in the sunlight and observe your shadow. It has fuzzy edges even if you do not. Is this a diffraction effect? Explain.   \n6. Why does the wavelength of light decrease when it passes from vacuum into a medium? State which attributes change and which stay the same and, thus, require the wavelength to decrease.   \n7. Does Huygens\u2019s principle apply to all types of waves? ",
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "27.3 Young\u2019s Double Slit Experiment ",
+        "text_level": 1,
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "8. Young\u2019s double slit experiment breaks a single light beam into two sources. Would the same pattern be obtained for two independent sources of light, such as the headlights of a distant car? Explain.   \n9. Suppose you use the same double slit to perform Young\u2019s double slit experiment in air and then repeat the experiment in water. Do the angles to the same parts of the interference pattern get larger or smaller? Does the color of the light change? Explain.   \n10. Is it possible to create a situation in which there is only destructive interference? Explain. ",
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "27.9 \\*Extended Topic\\* Microscopy Enhanced by the Wave Characteristics of Light ",
+        "text_level": 1,
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "\u2022 To improve microscope images, various techniques utilizing the wave characteristics of light have been developed. Many of these enhance contrast with interference effects. ",
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "11. Figure 27.55 shows the central part of the interference pattern for a pure wavelength of red light projected onto a double slit. The pattern is actually a combination of single slit and double slit interference. Note that the bright spots are evenly spaced. Is this a double slit or single slit characteristic? Note that some of the bright spots are dim on either side of the center. Is this a single slit or double slit characteristic? Which is smaller, the slit width or the separation between slits? Explain your responses. ",
+        "page_idx": 1244
+    },
+    {
+        "type": "image",
+        "img_path": "images/c93730b65040e63ef2346351a8388a20af7f7be58771b4f1cc408a7206ed10d6.jpg",
+        "img_caption": [
+            "FIGURE 27.55 This double slit interference pattern also shows signs of single slit interference. (credit: PASCO) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "27.4 Multiple Slit Diffraction ",
+        "text_level": 1,
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "12. What is the advantage of a diffraction grating over a double slit in dispersing light into a spectrum?   \n13. What are the advantages of a diffraction grating over a prism in dispersing light for spectral analysis?   \n14. Can the lines in a diffraction grating be too close together to be useful as a spectroscopic tool for visible light? If so, what type of EM radiation would the grating be suitable for? Explain.   \n15. If a beam of white light passes through a diffraction grating with vertical lines, the light is dispersed into rainbow colors on the right and left. If a glass prism disperses white light to the right into a rainbow, how does the sequence of colors compare with that produced on the right by a diffraction grating?   \n16. Suppose pure-wavelength light falls on a diffraction grating. What happens to the interference pattern if the same light falls on a grating that has more lines per centimeter? What happens to the interference pattern if a longerwavelength light falls on the same grating? Explain how these two effects are consistent in terms of the relationship of wavelength to the distance between slits.   \n17. Suppose a feather appears green but has no green pigment. Explain in terms of diffraction.   \n18. It is possible that there is no minimum in the interference pattern of a single slit. Explain why. Is the same true of double slits and diffraction gratings? ",
+        "page_idx": 1244
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "27.5 Single Slit Diffraction ",
+        "text_level": 1,
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "19. As the width of the slit producing a single-slit diffraction pattern is reduced, how will the diffraction pattern produced change? ",
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "27.6 Limits of Resolution: The Rayleigh Criterion ",
+        "text_level": 1,
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "20. A beam of light always spreads out. Why can a beam not be created with parallel rays to prevent spreading? Why can lenses, mirrors, or apertures not be used to correct the spreading? ",
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "27.7 Thin Film Interference ",
+        "text_level": 1,
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "21. What effect does increasing the wedge angle have on the spacing of interference fringes? If the wedge angle is too large, fringes are not observed. Why?   \n22. How is the difference in paths taken by two originally in-phase light waves related to whether they interfere constructively or destructively? How can this be affected by reflection? By refraction?   \n23. Is there a phase change in the light reflected from either surface of a contact lens floating on a person\u2019s tear layer? The index of refraction of the lens is about 1.5, and its top surface is dry.   \n24. In placing a sample on a microscope slide, a glass cover is placed over a water drop on the glass slide. Light incident from above can reflect from the top and bottom of the glass cover and from the glass slide below the water drop. At which surfaces will there be a phase change in the reflected light?   \n25. Answer the above question if the fluid between the two pieces of crown glass is carbon disulfide.   \n26. While contemplating the food value of a slice of ham, you notice a rainbow of color reflected from its moist surface. Explain its origin.   \n27. An inventor notices that a soap bubble is dark at its thinnest and realizes that destructive interference is taking place for all wavelengths. How could she use this knowledge to make a nonreflective coating for lenses that is effective at all wavelengths? That is, what limits would there be on the index of refraction and thickness of the coating? How might this be impractical?   \n28. A non-reflective coating like the one described in Example 27.6 works ideally for a single wavelength and for perpendicular incidence. What happens for other wavelengths and other incident directions? Be specific.   \n29. Why is it much more difficult to see interference fringes for light reflected from a thick piece of glass than from a thin film? Would it be easier if monochromatic light were used? ",
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "27.8 Polarization ",
+        "text_level": 1,
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "30. Under what circumstances is the phase of light changed by reflection? Is the phase related to polarization?   \n31. Can a sound wave in air be polarized? Explain.   \n32. No light passes through two perfect polarizing filters with perpendicular axes. However, if a third polarizing filter is placed between the original two, some light can pass. Why is this? Under what circumstances does most of the light pass?   \n33. Explain what happens to the energy carried by light that it is dimmed by passing it through two crossed polarizing filters.   \n34. When particles scattering light are much smaller than its wavelength, the amount of scattering is proportional to $1 / \\lambda ^ { 4 }$ . Does this mean there is more scattering for small $\\lambda$ than large ? How does this relate to the fact that the sky is blue?   \n35. Using the information given in the preceding question, explain why sunsets are red.   \n36. When light is reflected at Brewster\u2019s angle from a smooth surface, it is $100 \\%$ polarized parallel to the surface. Part of the light will be refracted into the surface. Describe how you would do an experiment to determine the polarization of the refracted light. What direction would you expect the polarization to have and would you expect it to be $1 0 0 \\% ?$ ",
+        "page_idx": 1245
+    },
+    {
+        "type": "text",
+        "text": "27.9 \\*Extended Topic\\* Microscopy Enhanced by the Wave Characteristics of Light ",
+        "text_level": 1,
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "37. Explain how microscopes can use wave optics to improve contrast and why this is important. ",
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "Problems & Exercises ",
+        "text_level": 1,
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "27.1 The Wave Aspect of Light: Interference ",
+        "text_level": 1,
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "1. Show that when light passes from air to water, its wavelength decreases to 0.750 times its original value.   \n2. Find the range of visible wavelengths of light in crown glass.   \n3. What is the index of refraction of a material for which the wavelength of light is 0.671 times its value in a vacuum? Identify the likely substance.   \n4. Analysis of an interference effect in a clear solid shows that the wavelength of light in the solid is 329 nm. Knowing this light comes from a He-Ne laser and has a wavelength of 633 nm in air, is the substance zircon or diamond?   \n5. What is the ratio of thicknesses of crown glass and water that would contain the same number of wavelengths of light? ",
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "27.3 Young\u2019s Double Slit Experiment ",
+        "text_level": 1,
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "6. At what angle is the first-order maximum for 450-nm wavelength blue light falling on double slits separated by $0 . 0 5 0 0 \\mathsf { m m ? }$   \n7. Calculate the angle for the third-order maximum of 580-nm wavelength yellow light falling on double slits separated by $0 . 1 0 0 \\mathrm { m m }$ .   \n8. What is the separation between two slits for which $6 1 0 \\cdot \\mathsf { n m }$ orange light has its first maximum at an angle of $3 0 . 0 ^ { \\circ } ?$   \n9. Find the distance between two slits that produces the first minimum for 410-nm violet light at an angle of $4 5 . 0 ^ { \\circ }$ .   \n10. Calculate the wavelength of light that has its third minimum at an angle of $3 0 . 0 ^ { \\circ }$ when falling on double slits separated by $3 . 0 0 \\mu \\mathrm { m }$ . Explicitly, show how you follow the steps in Problem-Solving Strategies for Wave Optics.   \n11. What is the wavelength of light falling on double slits separated by $2 . 0 0 \\mu \\mathrm { m }$ if the third-order maximum is at an angle of $6 0 . 0 ^ { \\circ } ?$   \n12. At what angle is the fourth-order maximum for the situation in Exercise 27.6?   \n13. What is the highest-order maximum for 400-nm light falling on double slits separated by $2 5 . 0 \\mu \\mathrm { m } ?$ ",
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "38. A bright white light under water is collimated and directed upon a prism. What range of colors does one see emerging? ",
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "14. Find the largest wavelength of light falling on double slits separated by $1 . 2 0 \\mu \\mathrm { m }$ for which there is a first-order maximum. Is this in the visible part of the spectrum?   \n15. What is the smallest separation between two slits that will produce a second-order maximum for 720-nm red light?   \n16. (a) What is the smallest separation between two slits that will produce a second-order maximum for any visible light? (b) For all visible light?   \n17. (a) If the first-order maximum for purewavelength light falling on a double slit is at an angle of $1 0 . 0 ^ { \\circ }$ , at what angle is the second-order maximum? (b) What is the angle of the first minimum? (c) What is the highest-order maximum possible here?   \n18. Figure 27.56 shows a double slit located a distance $x$ from a screen, with the distance from the center of the screen given by . When the distance $d$ between the slits is relatively large, there will be numerous bright spots, called fringes. Show that, for small angles (where $\\theta \\approx \\theta$ , with $\\theta$ in radians), the distance between fringes is given by $\\Delta y = x \\lambda / d$ . ",
+        "page_idx": 1246
+    },
+    {
+        "type": "image",
+        "img_path": "images/90c0e67272f7f44033857c8cbf0eef30919b7ee8c479024765b5d28fcc80aca6.jpg",
+        "img_caption": [
+            "FIGURE 27.56 The distance between adjacent fringes is $\\Delta y = x \\lambda / d$ , assuming the slit separation $d$ is large compared with $\\lambda$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "19. Using the result of the problem above, calculate the distance between fringes for $6 3 3 \\cdot \\mathsf { n m }$ light falling on double slits separated by $0 . 0 8 0 0 \\mathrm { m m }$ , located $3 . 0 0 \\mathrm { m }$ from a screen as in Figure 27.56. ",
+        "page_idx": 1246
+    },
+    {
+        "type": "text",
+        "text": "20. Using the result of the problem two problems prior, find the wavelength of light that produces fringes $7 . 5 0 \\ : \\mathrm { m m }$ apart on a screen $2 . 0 0 \\mathrm { m }$ from double slits separated by $0 . 1 2 0 \\mathrm { m m }$ (see Figure 27.56). ",
+        "page_idx": 1247
+    },
+    {
+        "type": "text",
+        "text": "27.4 Multiple Slit Diffraction   \n21. A diffraction grating has 2000 lines per centimeter. At what angle will the first-order maximum be for 520-nm-wavelength green light?   \n22. Find the angle for the third-order maximum for 580-nm-wavelength yellow light falling on a diffraction grating having 1500 lines per centimeter.   \n23. How many lines per centimeter are there on a diffraction grating that gives a first-order maximum for 470-nm blue light at an angle of $2 5 . 0 ^ { \\circ } ?$   \n24. What is the distance between lines on a diffraction grating that produces a second-order maximum for 760-nm red light at an angle of $6 0 . 0 ^ { \\circ } ?$   \n25. Calculate the wavelength of light that has its second-order maximum at $4 5 . 0 ^ { \\circ }$ when falling on a diffraction grating that has 5000 lines per centimeter.   \n26. An electric current through hydrogen gas produces several distinct wavelengths of visible light. What are the wavelengths of the hydrogen spectrum, if they form first-order maxima at angles of $2 4 . 2 ^ { \\circ }$ , $2 5 . 7 ^ { \\circ }$ , , and $4 1 . 0 ^ { \\circ }$ when projected on a diffraction grating having 10,000 lines per centimeter? Explicitly show how you follow the steps in Problem-Solving Strategies for Wave Optics   \n27. (a) What do the four angles in the above problem become if a 5000-line-per-centimeter diffraction grating is used? (b) Using this grating, what would the angles be for the second-order maxima? (c) Discuss the relationship between integral reductions in lines per centimeter and the new angles of various order maxima.   \n28. What is the maximum number of lines per centimeter a diffraction grating can have and produce a complete first-order spectrum for visible light?   \n29. The yellow light from a sodium vapor lamp se ms to be of pure wavelength, but it produces two firstorder maxima at $3 6 . 0 9 3 ^ { \\mathrm { o } }$ and $3 6 . 1 2 9 ^ { \\mathrm { o } }$ when projected on a 10,000 line per centimeter diffraction grating. What are the two wavelengths to an accuracy of $0 . 1 \\mathsf { n m ? }$   \n30. What is the spacing between structures in a feather that acts as a reflection grating, given that they produce a first-order maximum for 525-nm light at a $3 0 . 0 ^ { \\circ }$ angle?   \n31. Structures on a bird feather act like a reflection grating having 8000 lines per centimeter. What is the angle of the first-order maximum for 600-nm light?   \n32. An opal such as that shown in Figure 27.17 acts like a reflection grating with rows separated by about $8 \\mu \\mathrm { m }$ . If the opal is illuminated normally, (a) at what angle will red light be seen and (b) at what angle will blue light be seen?   \n33. At what angle does a diffraction grating produces a second-order maximum for light having a firstorder maximum at $2 0 . 0 ^ { \\circ } ?$   \n34. Show that a diffraction grating cannot produce a second-order maximum for a given wavelength of light unless the first-order maximum is at an angle less than $3 0 . 0 ^ { \\circ }$ .   \n35. If a diffraction grating produces a first-order maximum for the shortest wavelength of visible light at $3 0 . 0 ^ { \\circ }$ , at what angle will the first-order maximum be for the longest wavelength of visible light?   \n36. (a) Find the maximum number of lines per centimeter a diffraction grating can have and produce a maximum for the smallest wavelength of visible light. (b) Would such a grating be useful for ultraviolet spectra? (c) For infrared spectra?   \n37. (a) Show that a 30,000-line-per-centimeter grating will not produce a maximum for visible light. (b) What is the longest wavelength for which it does produce a first-order maximum? (c) What is the greatest number of lines per centimeter a diffraction grating can have and produce a complete second-order spectrum for visible light?   \n38. A He\u2013Ne laser beam is reflected from the surface of a CD onto a wall. The brightest spot is the reflected beam at an angle equal to the angle of incidence. However, fringes are also observed. If the wall is $1 . 5 0 \\mathrm { m }$ from the CD, and the first fringe is $0 . 6 0 0 \\mathrm { ~ m ~ }$ from the central maximum, what is the spacing of grooves on the CD? ",
+        "page_idx": 1247
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1247
+    },
+    {
+        "type": "text",
+        "text": "39. The analysis shown in the figure below also applies to diffraction gratings with lines separated by a distance . What is the distance between fringes produced by a diffraction grating having 125 lines per centimeter for 600-nm light, if the screen is $1 . 5 0 \\mathrm { m }$ away? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "image",
+        "img_path": "images/a3abd5025d19dbdd0de190be315571896d935b2851908d97b09ca6ed002840df.jpg",
+        "img_caption": [
+            "FIGURE 27.57 The distance between adjacent fringes is $\\Delta y = x \\lambda / d$ , assuming the slit separation $d$ is large compared with $\\lambda$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "40. Unreasonable Results ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "Red light of wavelength of $7 0 0 \\mathsf { n m }$ falls on a double slit separated by $4 0 0 \\mathsf { n m }$ . (a) At what angle is the first-order maximum in the diffraction pattern? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "41. Unreasonable Results (a) What visible wavelength has its fourth-order maximum at an angle of $2 5 . 0 ^ { \\circ }$ when projected on a 25,000-line-per-centimeter diffraction grating? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "42. Construct Your Own Problem Consider a spectrometer based on a diffraction grating. Construct a problem in which you calculate the distance between two wavelengths of electromagnetic radiation in your spectrometer. Among the things to be considered are the wavelengths you wish to be able to distinguish, the number of lines per meter on the diffraction grating, and the distance from the grating to the screen or detector. Discuss the practicality of the device in terms of being able to discern between wavelengths of interest. ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "27.5 Single Slit Diffraction ",
+        "text_level": 1,
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "43. (a) At what angle is the first minimum for 550-nm light falling on a single slit of width $1 . 0 0 \\mu \\mathrm { m } ?$ (b) Will there be a second minimum? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "44. (a) Calculate the angle at which a $2 . 0 0 \\mathrm { - } \\mu \\mathrm { m }$ -wide slit produces its first minimum for 410-nm violet light. (b) Where is the first minimum for 700-nm red light? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "45. (a) How wide is a single slit that produces its first minimum for 633-nm light at an angle of $2 8 . 0 ^ { \\circ } ?$ (b) At what angle will the second minimum be? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "46. (a) What is the width of a single slit that produces its first minimum at $6 0 . 0 ^ { \\circ }$ for 600-nm light? (b) Find the wavelength of light that has its first minimum at $6 2 . 0 ^ { \\circ }$ . ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "47. Find the wavelength of light that has its third minimum at an angle of $4 8 . 6 ^ { \\circ }$ when it falls on a single slit of width $3 . 0 0 \\mu \\mathrm { m }$ . ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "48. Calculate the wavelength of light that produces its first minimum at an angle of $3 6 . 9 ^ { \\circ }$ when falling on a single slit of width $1 . 0 0 \\mu \\mathrm { m }$ . ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "49. (a) Sodium vapor light averaging $5 8 9 \\mathsf { n m }$ in wavelength falls on a single slit of width $7 . 5 0 \\mu \\mathrm { m }$ . At what angle does it produces its second minimum? (b) What is the highest-order minimum produced? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "50. (a) Find the angle of the third diffraction minimum for 633-nm light falling on a slit of width $2 0 . 0 \\mu \\mathrm { m }$ . (b) What slit width would place this minimum at $8 5 . 0 ^ { \\circ } ?$ Explicitly show how you follow the steps in Problem-Solving Strategies for Wave Optics ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "51. (a) Find the angle between the first minima for the two sodium vapor lines, which have wavelengths of 589.1 and $5 8 9 . 6 \\mathsf { n m }$ , when they fall upon a single slit of width $2 . 0 0 \\mu \\mathrm { m }$ . (b) What is the distance between these minima if the diffraction pattern falls on a screen $1 . 0 0 \\mathrm { m }$ from the slit? (c) Discuss the ease or difficulty of measuring such a distance. ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "52. (a) What is the minimum width of a single slit (in multiples of $\\lambda$ ) that will produce a first minimum for a wavelength $\\lambda ?$ (b) What is its minimum width if it produces 50 minima? (c) 1000 minima? ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "53. (a) If a single slit produces a first minimum at $1 4 . 5 ^ { \\circ }$ , at what angle is the second-order minimum? (b) What is the angle of the third-order minimum? (c) Is there a fourth-order minimum? (d) Use your answers to illustrate how the angular width of the central maximum is about twice the angular width of the next maximum (which is the angle between the first and second minima). ",
+        "page_idx": 1248
+    },
+    {
+        "type": "text",
+        "text": "54. A double slit produces a diffraction pattern that is a combination of single and double slit interference. Find the ratio of the width of the slits to the separation between them, if the first minimum of the single slit pattern falls on the fifth maximum of the double slit pattern. (This will greatly reduce the intensity of the fifth maximum.)   \n55. Integrated Concepts A water break at the entrance to a harbor consists of a rock barrier with a $5 0 . 0 \\cdot 0 \\cdot \\mathrm { m }$ -wide opening. Ocean waves of $2 0 . 0 \\cdot \\mathsf { m }$ wavelength approach the opening straight on. At what angle to the incident direction are the boats inside the harbor most protected against wave action?   \n56. Integrated Concepts An aircraft maintenance technician walks past a tall hangar door that acts like a single slit for sound entering the hangar. Outside the door, on a line perpendicular to the opening in the door, a jet engine makes a $6 0 0 - H z$ sound. At what angle with the door will the technician observe the first minimum in sound intensity if the vertical opening is $0 . 8 0 0 \\mathrm { { m } }$ wide and the speed of sound is $3 4 0 ~ \\mathsf { m } /$ s? ",
+        "page_idx": 1249
+    },
+    {
+        "type": "text",
+        "text": "27.6 Limits of Resolution: The Rayleigh Criterion ",
+        "text_level": 1,
+        "page_idx": 1249
+    },
+    {
+        "type": "text",
+        "text": "57. The $3 0 0 - \\mathsf { m }$ -diameter Arecibo radio telescope pictured in Figure 27.28 detects radio waves with a 4.00 cm average wavelength. (a) What is the angle between two just-resolvable point sources for this telescope? (b) How close together could these point sources be at the 2 million light year distance of the Andromeda galaxy?   \n58. Assuming the angular resolution found for the Hubble Telescope in Example 27.5, what is the smallest detail that could be observed on the Moon?   \n59. Diffraction spreading for a flashlight is insignificant compared with other limitations in its optics, such as spherical aberrations in its mirror. To show this, calculate the minimum angular spreading of a flashlight beam that is originally 5.00 cm in diameter with an average wavelength of $6 0 0 \\mathsf { n m }$ . ",
+        "page_idx": 1249
+    },
+    {
+        "type": "text",
+        "text": "60. (a) What is the minimum angular spread of a 633-nm wavelength He-Ne laser beam that is originally $\\pm . 0 0 \\mathsf { m m }$ in diameter? (b) If this laser is aimed at a mountain cliff 15.0 km away, how big will the illuminated spot be? (c) How big a spot would be illuminated on the Moon, neglecting atmospheric effects? (This might be done to hit a corner reflector to measure the round-trip time and, hence, distance.) Explicitly show how you follow the steps in Problem-Solving Strategies for Wave Optics. ",
+        "page_idx": 1249
+    },
+    {
+        "type": "text",
+        "text": "61. A telescope can be used to enlarge the diameter of a laser beam and limit diffraction spreading. The laser beam is sent through the telescope in opposite the normal direction and can then be projected onto a satellite or the Moon. (a) If this is done with the Mount Wilson telescope, producing a $2 . 5 4 \\cdot \\mathsf { m }$ -diameter beam of 633-nm light, what is the minimum angular spread of the beam (the angle between the beam's maximum and its first zero)? (b) Neglecting atmospheric effects, what is the size of the spot this beam would make on the Moon, assuming a lunar distance of $3 . 8 4 \\times 1 0 ^ { 8 } ~ \\mathrm { m } ?$ ",
+        "page_idx": 1249
+    },
+    {
+        "type": "text",
+        "text": "62. The limit to the eye\u2019s acuity is actually related to diffraction by the pupil. (a) What is the angle between two just-resolvable points of light for a $3 . 0 0 \\mathrm { - m m }$ -diameter pupil, assuming an average wavelength of $5 5 0 \\mathsf { n m ? }$ (b) Take your result to be the practical limit for the eye. What is the greatest possible distance a car can be from you if you can resolve its two headlights, given they are $1 . 3 0 \\mathrm { m }$ apart? (c) What is the distance between two justresolvable points held at an arm\u2019s length (0.800 m) from your eye? (d) How does your answer to (c) compare to details you normally observe in everyday circumstances?   \n63. What is the minimum diameter mirror on a telescope that would allow you to see details as small as $5 . 0 0 \\mathsf { k m }$ on the Moon some $3 8 4 , 0 0 0 { \\mathrm { k m } }$ away? Assume an average wavelength of $5 5 0 \\mathsf { n m }$ for the light received.   \n64. You are told not to shoot until you see the whites of their eyes. If the eyes are separated by $6 . 5 \\mathsf { c m }$ and the diameter of your pupil is $5 . 0 ~ \\mathsf { m m }$ , at what distance can you resolve the two eyes using light of wavelength $5 5 5 \\mathsf { n m ? }$   \n65. (a) The planet Pluto and its Moon Charon are separated by ${ 1 9 , 6 0 0 \\mathrm { k m } }$ . Neglecting atmospheric effects, should the $5 . 0 8 \u2013 m$ -diameter Mount Palomar telescope be able to resolve these bodies when they are $4 . 5 0 \\times 1 0 ^ { 9 }$ from Earth? Assume an average wavelength of $5 5 0 \\mathsf { n m }$ . (b) In actuality, it is just barely possible to discern that Pluto and Charon are separate bodies using an Earth-based telescope. What are the reasons for this?   \n66. The headlights of a car are $1 . 3 { \\mathsf { m } }$ apart. What is the maximum distance at which the eye can resolve these two headlights? Take the pupil diameter to be $0 . 4 0 \\mathsf { c m }$ .   \n67. When dots are placed on a page from a laser printer, they must be close enough so that you do not see the individual dots of ink. To do this, the separation of the dots must be less than Raleigh\u2019s criterion. Take the pupil of the eye to be $3 . 0 \\mathsf { m m }$ and the distance from the paper to the eye of 35 cm; find the minimum separation of two dots such that they cannot be resolved. How many dots per inch (dpi) does this correspond to?   \n68. Unreasonable Results An amateur astronomer wants to build a telescope with a diffraction limit that will allow him to see if there are people on the moons of Jupiter. (a) What diameter mirror is needed to be able to see $1 . 0 0 \\mathrm { m }$ detail on a Jovian Moon at a distance of $7 . 5 0 \\times 1 0 ^ { 8 }$ from Earth? The wavelength of light averages $6 0 0 \\mathsf { n m }$ . (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent?   \n69. Construct Your Own Problem ",
+        "page_idx": 1249
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1250
+    },
+    {
+        "type": "text",
+        "text": "Consider diffraction limits for an electromagnetic wave interacting with a circular object. Construct a problem in which you calculate the limit of angular resolution with a device, using this circular object (such as a lens, mirror, or antenna) to make observations. Also calculate the limit to spatial resolution (such as the size of features observable on the Moon) for observations at a specific distance from the device. Among the things to be considered are the wavelength of electromagnetic radiation used, the size of the circular object, and the distance to the system or phenomenon being observed. ",
+        "page_idx": 1250
+    },
+    {
+        "type": "text",
+        "text": "27.7 Thin Film Interference ",
+        "text_level": 1,
+        "page_idx": 1250
+    },
+    {
+        "type": "text",
+        "text": "70. A soap bubble is $1 0 0 \\mathsf { n m }$ thick and illuminated by white light incident perpendicular to its surface. What wavelength and color of visible light is most constructively reflected, assuming the same index of refraction as water?   \n71. An oil slick on water is ${ \\boldsymbol { 1 2 0 } } { \\mathsf { n m } }$ thick and illuminated by white light incident perpendicular to its surface. What color does the oil appear (what is the most constructively reflected wavelength), given its index of refraction is 1.40?   \n72. Calculate the minimum thickness of an oil slick on water that appears blue when illuminated by white light perpendicular to its surface. Take the blue wavelength to be 470 nm and the index of refraction of oil to be 1.40.   \n73. Find the minimum thickness of a soap bubble that appears red when illuminated by white light perpendicular to its surface. Take the wavelength to be $6 8 0 \\mathsf { n m }$ , and assume the same index of refraction as water.   \n74. A film of soapy water $( n = 1 . 3 3 )$ on top of a plastic cutting board has a thickness of $2 3 3 ~ \\mathsf { n m }$ . What color is most strongly reflected if it is illuminated perpendicular to its surface?   \n75. What are the three smallest non-zero thicknesses of soapy water $( n = 1 . 3 3 )$ ) on Plexiglas if it appears green (constructively reflecting 520-nm light) when illuminated perpendicularly by white light? Explicitly show how you follow the steps in Problem Solving Strategies for Wave Optics.   \n76. Suppose you have a lens system that is to be used primarily for 700-nm red light. What is the second thinnest coating of fluorite (magnesium fluoride) that would be non-reflective for this wavelength?   \n77. (a) As a soap bubble thins it becomes dark, because the path length difference becomes small compared with the wavelength of light and there is a phase shift at the top surface. If it becomes dark when the path length difference is less than onefourth the wavelength, what is the thickest the bubble can be and appear dark at all visible wavelengths? Assume the same index of refraction as water. (b) Discuss the fragility of the film considering the thickness found. ",
+        "page_idx": 1250
+    },
+    {
+        "type": "text",
+        "text": "78. A film of oil on water will appear dark when it is very thin, because the path length difference becomes small compared with the wavelength of light and there is a phase shift at the top surface. If it becomes dark when the path length difference is less than one-fourth the wavelength, what is the thickest the oil can be and appear dark at all visible wavelengths? Oil has an index of refraction of 1.40. ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "79. Figure 27.34 shows two glass slides illuminated by pure-wavelength light incident perpendicularly. The top slide touches the bottom slide at one end and rests on a 0.100-mm-diameter hair at the other end, forming a wedge of air. (a) How far apart are the dark bands, if the slides are $7 . 5 0 \\mathsf { c m }$ long and 589-nm light is used? (b) Is there any difference if the slides are made from crown or flint glass? Explain. ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "80. Figure 27.34 shows two 7.50-cm-long glass slides illuminated by pure 589-nm wavelength light incident perpendicularly. The top slide touches the bottom slide at one end and rests on some debris at the other end, forming a wedge of air. How thick is the debris, if the dark bands are $\\phantom { - } 1 . 0 0 \\mathsf { m m }$ apart? ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "81. Repeat Exercise 27.70, but take the light to be incident at a $4 5 ^ { \\circ }$ angle. ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "82. Repeat Exercise 27.71, but take the light to be incident at a $4 5 ^ { \\circ }$ angle. ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "83. Unreasonable Results To save money on making military aircraft invisible to radar, an inventor decides to coat them with a non-reflective material having an index of refraction of 1.20, which is between that of air and the surface of the plane. This, he reasons, should be much cheaper than designing Stealth bombers. (a) What thickness should the coating be to inhibit the reflection of 4.00-cm wavelength radar? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "27.8 Polarization ",
+        "text_level": 1,
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "84. What angle is needed between the direction of polarized light and the axis of a polarizing filter to cut its intensity in half?   \n85. The angle between the axes of two polarizing filters is $4 5 . 0 ^ { \\circ }$ . By how much does the second filter reduce the intensity of the light coming through the first?   \n86. If you have completely polarized light of intensity $1 5 0 \\mathrm { W } / \\mathrm { m } ^ { 2 }$ , what will its intensity be after passing through a polarizing filter with its axis at an $8 9 . 0 ^ { \\circ }$ angle to the light\u2019s polarization direction? ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "87. What angle would the axis of a polarizing filter need to make with the direction of polarized light of intensity $1 . 0 0 \\mathrm { k W } / \\mathrm { m } ^ { 2 }$ to reduce the intensity to $1 0 . 0 \\mathrm { W } / \\mathrm { m } ^ { 2 } ?$ ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "88. At the end of Example 27.8, it was stated that the intensity of polarized light is reduced to $9 0 . 0 \\%$ of its original value by passing through a polarizing filter with its axis at an angle of $1 8 . 4 ^ { \\circ }$ to the direction of polarization. Verify this statement.   \n89. Show that if you have three polarizing filters, with the second at an angle of $4 5 ^ { \\circ }$ to the first and the third at an angle of $9 0 . 0 ^ { \\circ }$ to the first, the intensity of light passed by the first will be reduced to $2 5 . 0 \\%$ of its value. (This is in contrast to having only the first and third, which reduces the intensity to zero, so that placing the second between them increases the intensity of the transmitted light.)   \n90. Prove that, if $I$ is the intensity of light transmitted by two polarizing filters with axes at an angle $\\theta$ and $I ^ { \\prime }$ is the intensity when the axes are at an angle $9 0 . 0 ^ { \\circ } - \\theta$ then $I + I ^ { \\prime } = I _ { 0 }$ the original intensity. (Hint: Use the trigonometric identities cos $( 9 0 . 0 ^ { \\circ } - \\theta ) { = } \\sin \\theta$ and $\\cos ^ { 2 } \\theta + \\sin ^ { 2 } \\theta = 1 .$ )   \n91. At what angle will light reflected from diamond be completely polarized?   \n92. What is Brewster\u2019s angle for light traveling in water that is reflected from crown glass?   \n93. A scuba diver sees light reflected from the water\u2019s surface. At what angle will this light be completely polarized?   \n94. At what angle is light inside crown glass completely polarized when reflected from water, as in a fish tank?   \n95. Light reflected at $5 5 . 6 ^ { \\circ }$ from a window is completely polarized. What is the window\u2019s index of refraction and the likely substance of which it is made?   \n96. (a) Light reflected at $6 2 . 5 ^ { \\circ }$ from a gemstone in a ring is completely polarized. Can the gem be a diamond? (b) At what angle would the light be completely polarized if the gem was in water?   \n97. If $\\theta _ { \\mathrm { b } }$ is Brewster\u2019s angle for light reflected from the top of an interface between two substances, and $\\theta _ { \\textup { b } } ^ { \\prime }$ is Brewster\u2019s angle for light reflected from below, prove that $\\theta _ { \\mathrm { b } } + \\theta _ { \\mathrm { ~ b ~ } } ^ { \\prime } = 9 0 . 0 ^ { \\circ }$   \n98. Integrated Concepts If a polarizing filter reduces the intensity of polarized light to $5 0 . 0 \\%$ of its original value, by how much are the electric and magnetic fields reduced? ",
+        "page_idx": 1251
+    },
+    {
+        "type": "text",
+        "text": "99. Integrated Concepts Suppose you put on two pairs of Polaroid sunglasses with their axes at an angle of $1 5 . 0 ^ { \\circ }$ . How much longer will it take the light to deposit a given amount of energy in your eye compared with a single pair of sunglasses? Assume the lenses are clear except for their polarizing characteristics. ",
+        "page_idx": 1252
+    },
+    {
+        "type": "text",
+        "text": "100. Integrated Concepts (a) On a day when the intensity of sunlight is $1 . 0 0 \\mathrm { k W } / \\mathrm { m } ^ { 2 }$ , a circular lens $0 . 2 0 0 \\mathrm { ~ m ~ }$ in diameter focuses light onto water in a black aluminum beaker. Two polarizing sheets of plastic are placed in front of the lens with their axes at an angle of $2 0 . 0 ^ { \\circ }$ Assuming the sunlight is unpolarized and the polarizers are $100 \\%$ efficient, what is the initial rate of heating of the water in $^ { \\mathrm { { o } } } \\mathrm { { C } / \\mathrm { { s } } }$ , assuming it is $8 0 . 0 \\%$ absorbed? The aluminum beaker has a mass of 30.0 grams and contains 250 grams of water. (b) Do the polarizing filters get hot? Explain. ",
+        "page_idx": 1252
+    },
+    {
+        "type": "text",
+        "text": "101. Critical Thinking A semiconductor laser emits light at $4 0 0 . 0 \\ : \\mathsf { n m }$ . The light is passed through a grating where 1,000 lines are etched covering a space of $1 0 . 0 0 \\mathrm { m m }$ . The light is directed directly at the grating. (a) What is the angle the light beam diffracts for first order diffraction? (b) What is the angle the light beam diffracts for second order diffraction? (c) The laser is changed out. The first order angle of diffraction is now $2 3 . 9 ^ { \\circ }$ . What wavelength of light does it produce? (d) If a new grating with the spacing between the lines doubled were to replace the one above, what would the new angle be for part a? (e) Would the magnitude of the angle of diffraction be different going left from going right? ",
+        "page_idx": 1252
+    }
+]

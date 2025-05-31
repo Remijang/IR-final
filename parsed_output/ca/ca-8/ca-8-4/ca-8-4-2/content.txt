@@ -1,0 +1,27 @@
+8.4.2 Rounding
+
+In Example 131, let us assume that we were allowed only two mantissa bits. Then, there would have been a need to discard all the mantissa bits other than the two most significant ones. The result would have been 1.00. To incorporate the effect of the discarded bits, it might have been necessary to round the result. For example, let us consider decimal numbers. If we wish to round 9.99 to the nearest integer, then we should round it to 10. Similarly, if we wish to round 9.05 to the nearest integer, then we should round it to 9. Likewise, it is necessary to introduce rounding schemes while doing floating point operations such that the final result can properly reflect the value contained in the discarded bits.
+
+Let us first introduce some terminology. Let us consider the sum of the significands after we have normalized the result. Let us divide the sum into two parts:  . Here,  is the significand of the temporary result in  multiplied by  .bIt is an integer, which migh bneed to be further rounded.  is a residue (beyond 23 bits) that will be discarded. It is less than 1. The aim is to modify  appropriately to take into account the value of  . Now, there are two ways in which  ca be modified because of rounding. Either we can leave  as it is, or we can increment  by 1. Leaving  as it is also known as truncation. This is be abuse we are truncating or disc bding the residu
+
+The IEEE 754 format supports four rounding modes as shown in Table 8.6. An empty entry corresponds to truncating the result. We only show the conditions in which we need to increment  .
+
+We gi bexamples in decimal (base 10) in the next few subsections for the ease of understanding. Exactly the same operations can be performed on binary numbers. Our aim is to round  to an integer. There are four possible ways of doing this in the IEEE 754 format.
+
+Truncation
+
+This is the simplest rounding mode. This rounding mode simply truncates the residue. For example, in truncation-based rounding, if  , then we will discard 0.5, and we are left with 1. Likewise, truncating -1.5 will giv bus -1. This is the easiest to implement in hardware, and is the least accurate out of the four methods.
+
+Round to 
+
+In this rounding mode, we always round a number to the larger integer. For example, if  , we round it to 2. If  , we round it to -1. The idea here is to check the sbign bit and the residue. If the nbumber is positive, and the residue is non-zero, then we need to increment  , or alternatively the LSB of the significand. Otherwise, in all the other cases (either  obr the number is negative), it is sufficient to truncate the residue.
+
+Round to 
+
+This is the reverse of rounding to  . In this case, we round 1.2 to 1, and -1.2 to -2.
+
+Round to Nearest
+
+This rounding mode is the most complicated, and is also the most common. Most processors use this rounding mode as the default. In this case, we try to minimize the error by rounding  to the nearest possible value. If  , then the nearest integer is  . For example, wbe need to round 3.6 to 4, and -3.6 to -4. Similarly, if  , then w nbeed to truncate the residue. For example, we need to round 3.2 to 3, and -3.2 to -3.
+
+The special case arises when  . In this case, we would like to round  to the nearest even integer. For example, we will round 3.5 to 4, and 4.5 to also 4. This is mo bof a convention than a profound mathematical concept. To translate this requirement in our terms, we need to take a look at the LSB of  . If it is  , then  is even, and we do not need to do anything more. However, if  , then  is odd, bnd we need to increment it by 1.

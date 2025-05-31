@@ -1,0 +1,12 @@
+13.2.3 Transmission of Multiple Bits
+
+Let us now consider the problem of transmitting multiple bits in sequence. Most I/O channels are not busy all the time. They are busy only when data is being transmitted, and thus their duty cycle (percentage of time that a device is in operation) tends to be highly variable, and most of the time it is not very high. However, detectors are on almost all the time, and they keep sensing the voltage of the bus. This can have implications on both power consumption and correctness. Power is an issue because the detectors keep sensing either a logical 1 or 0 every cycle, and it thus becomes necessary for the higher level layers to process the data. To avoid this, most systems typically have an additional line that indicates if the data bits are valid or invalid. This line is traditionally known as the strobe. The sender can indicate the period of the validity of data to the receiver by setting the value of the strobe. Again, it becomes necessary to synchronize the data lines and the strobe. This is getting increasingly difficult for high speed I/O buses, because it is possible that signals on the data lines, and the strobe can suffer from different amounts of delay. Hence, there is a possibility that both the lines might move out of synchronization. It is thus a better idea to define three types of signals – zero, one, and idle. Zero and one refer to the transmission of a logical 0 and 1 on the bus. However, the idle state refers to the fact that no signal is being transmitted. This mode of signaling is also known as ternary signaling because we are using three states.
+
+Definition 146   
+Ternary signaling refers to a convention that uses three states for the transmission of signals – one (logical one), zero (logical zero), and idle (no signal).
+
+We can easily implement ternary signaling with LVDS. Let us refer to the wires in LVDS, as
+
+ and  , respectively. Let  be the voltage of line  . Likewise, let us define the term,  . If  , where  is the detection threshold, then we infer that the lines are idle, and we are not transmitting anything. However, if  , we conclude that we are transmitting a logical 1. Similarly, if  , we conclude that we are transmitting a logical 0. We thus do not need to make any changes to our basic LVDS protocol.
+
+Let us now describe a set of techniques that are optimized for transmitting multiple bits in the physical layer. We present examples that use ternary signaling (three physical states).

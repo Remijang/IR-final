@@ -1,0 +1,99 @@
+[
+    {
+        "type": "text",
+        "text": "10.11.4 Out-of-Order Pipelines ",
+        "text_level": 1,
+        "page_idx": 494
+    },
+    {
+        "type": "text",
+        "text": "We have up till now been considering primarily in-order pipelines. These pipelines execute instructions in the order that they appear in the program. This is not strictly necessary. Let us consider the following code snippet. ",
+        "page_idx": 494
+    },
+    {
+        "type": "text",
+        "text": "[1]: add r1, r2, r3   \n[2]: add r4, r1, r1   \n[3]: add r5, r4, r2   \n[4]: mul r6, r5, r2   \n[5]: div r8, r9, r10   \n[6]: sub r11, r12, r13 ",
+        "page_idx": 494
+    },
+    {
+        "type": "text",
+        "text": "Here, we are constrained to execute instructions 1 to 4 in sequence because of data dependencies. However, we can execute instructions, 5 and 6 in parallel, because they are not dependent on instructions 1-4. We will not be sacrificing on correctness if we execute instructions 5 and 6 out-of-order. For example, if we can issue two instructions in one cycle, then we can issue (1,5) together, then (2,6), and finally, instructions 3, and 4. In this case, we can execute the sequence of 6 instructions in 4 cycles by executing 2 instructions for the first two cycles. Recall that such a processor that can potentially execute multiple instructions per cycle is known as a superscalar processor (see Definition 92). ",
+        "page_idx": 494
+    },
+    {
+        "type": "text",
+        "text": "Definition 95 ",
+        "text_level": 1,
+        "page_idx": 494
+    },
+    {
+        "type": "text",
+        "text": "A processor that can execute instructions in an order that is not consistent with their program order is known as an out-of-order(OOO) processor. ",
+        "page_idx": 494
+    },
+    {
+        "type": "text",
+        "text": "An out-of-order(OOO) processor fetches instructions in-order. After the fetch stage, it proceeds to decode the instructions. Most real-world instructions require more than one cycle for decoding. These instructions are simultaneously added to a queue called the reorder buffer (ROB) in program order. After decoding the instruction, we need to perform a step called register renaming. The broad idea is as follows. Since we are executing instructions out of order, we can have WAR and WAW hazards. Let us consider the following code snippet. ",
+        "page_idx": 495
+    },
+    {
+        "type": "text",
+        "text": "[1]: add r1, r2, r3   \n[2]: sub r4, r1, r2   \n[3]: add r1, r5, r6   \n[4]: add r9, r1, r7 ",
+        "page_idx": 495
+    },
+    {
+        "type": "text",
+        "text": "If we execute instructions [3] and [4] before instruction [1], then we have a potential WAW hazard. This is because instruction [1] might overwrite the value of $r 1$ written by instruction [3]. This will lead to an incorrect execution. Thus, we try to rename the registers such that these hazards can be removed. Most modern processors define a set of architectural registers, which are the same as the registers exposed to software (assembly programs). Additionally, they have a set of physical registers that are only visible internally. The renaming stage converts architectural register names to physical register names. This is done to remove WAR and WAW hazards. The only hazards that remain at this stage are RAW hazards, which indicate a genuine data dependency. The code snippet will thus look as follows after renaming. Let us assume that the physical registers range from $p 1 \\ldots p 1 2 8$ . ",
+        "page_idx": 495
+    },
+    {
+        "type": "text",
+        "text": "[1]: add p1, p2, p3 /\\* p1 contains r1 \\*/   \n[2]: sub p4, p1, p2   \n[3]: add p100, p5, p6 /\\* r1 is now begin saved in p100 \\*/   \n[4]: add p9, p100, p7 ",
+        "page_idx": 495
+    },
+    {
+        "type": "text",
+        "text": "We have removed the WAW hazard by mapping r1 in instruction 3, to $p 1 0 0$ . The only dependencies that exist are RAW dependencies between instructions [1] \u2192 [2], and [3] \u2192 [4]. The instructions after renaming enter an instruction window. Note that up till now instructions have been proceeding in-order. ",
+        "page_idx": 495
+    },
+    {
+        "type": "text",
+        "text": "The instruction window or instruction queue typically contains 64-128 entries (refer to Figure 10.40). For each instruction, it monitors its source operands. Whenever all the source operands of an instruction are ready, the instruction is ready to be issued to its corresponding functional unit. It is not necessary for instructions to access the physical register file all the time. They can also get values from forwarding paths. After the instructions finish their execution, they broadcast the value of their result to the waiting instructions in the instruction window. Instructions waiting for the result, mark their corresponding source operand as ready. This process is known as instruction wakeup. Now, it is possible that multiple instructions are ready in the same cycle. To avoid structural hazards, an instruction select unit chooses a set of instructions for execution. ",
+        "page_idx": 495
+    },
+    {
+        "type": "text",
+        "text": "We need another structure for load and store instructions known as the load-store queue. It saves the list of loads and stores in program order. It allows loads to get their values through an internal forwarding mechanism if there is an earlier store to the same address. ",
+        "page_idx": 495
+    },
+    {
+        "type": "image",
+        "img_path": "images/51e8a76c24e30d96c9167ef2f4d9fdbe0597e1e6257dd9d192cf72111d3cf69d.jpg",
+        "img_caption": [
+            "Figure 10.40: An out-of-order pipeline "
+        ],
+        "img_footnote": [],
+        "page_idx": 496
+    },
+    {
+        "type": "text",
+        "text": "After an instruction finishes its execution, we mark its entry in the reorder buffer. Instructions leave the reorder buffer in program order. If an instruction does not finish quickly for some reason, then all the instructions after it in the reorder buffer need to stall. Recall that instruction entries in the reorder buffer are ordered in program order. Instructions need to leave the reorder buffer in program order such that we can ensure precise exceptions. ",
+        "page_idx": 496
+    },
+    {
+        "type": "text",
+        "text": "To summarize, the main advantage of an out-of-order processor(OOO) is that it can execute instructions that do not have any RAW dependencies between them, in parallel. Most programs typically have such sets of instructions at most points of time. This property is known as instruction level parallelism (abbreviated as $I L P$ ). Modern OOO processors are designed to exploit as much of ILP as possible. ",
+        "page_idx": 496
+    },
+    {
+        "type": "text",
+        "text": "Definition 96 ",
+        "text_level": 1,
+        "page_idx": 496
+    },
+    {
+        "type": "text",
+        "text": "Typically, most programs have multiple instructions in a pipeline that can be executed in parallel. This is because they do not have any RAW dependencies between them. Modern superscalar processors exploit this fact to increase their IPC by executing multiple instructions in the same cycle. This property of a program is known as instruction level parallelism (abbreviated as ILP). ",
+        "page_idx": 496
+    }
+]

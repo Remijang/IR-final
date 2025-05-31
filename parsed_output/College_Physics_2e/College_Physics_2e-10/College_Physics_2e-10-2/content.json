@@ -1,0 +1,600 @@
+[
+    {
+        "type": "text",
+        "text": "10.2 Kinematics of Rotational Motion ",
+        "text_level": 1,
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Observe the kinematics of rotational motion.   \n\u2022 Derive rotational kinematic equations.   \n\u2022 Evaluate problem solving strategies for rotational kinematics. ",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Just by using our intuition, we can begin to see how rotational quantities like $\\theta$ , $\\omega$ , and $\\alpha$ are related to one another. For example, if a motorcycle wheel has a large angular acceleration for a fairly long time, it ends up spinning rapidly and rotates through many revolutions. In more technical terms, if the wheel\u2019s angular acceleration $\\alpha$ is large for a long period of time , then the final angular velocity $\\omega$ and angle of rotation $\\theta$ are large. The wheel\u2019s rotational motion is exactly analogous to the fact that the motorcycle\u2019s large translational acceleration produces a large final velocity, and the distance traveled will also be large. ",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Kinematics is the description of motion. The kinematics of rotational motion describes the relationships among rotation angle, angular velocity, angular acceleration, and time. Let us start by finding an equation relating $\\omega , \\alpha$ , and . To determine this equation, we recall a familiar kinematic equation for translational, or straight-line, motion: ",
+        "page_idx": 414
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ v = v _ { 0 } + a t \\quad \\ ( \\mathrm { c o n s t a n t } a )\n$$",
+        "text_format": "latex",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Note that in rotational motion $a = a _ { \\mathrm { t } }$ , and we shall use the symbol $a$ for tangential or linear acceleration from now on. As in linear kinematics, we assume $a$ is constant, which means that angular acceleration $\\alpha$ is also a constant, because $a = r \\alpha$ . Now, let us substitute $v = r \\omega$ and $a = r \\alpha$ into the linear equation above: ",
+        "page_idx": 414
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { r \\omega = r \\omega _ { 0 } + r \\alpha t . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "The radius $r$ cancels in the equation, yielding ",
+        "page_idx": 414
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = \\omega _ { 0 } + \\alpha t \\quad ( \\mathrm { c o n s t a n t } \\alpha ) ,\n$$",
+        "text_format": "latex",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "where $\\omega _ { 0 }$ is the initial angular velocity. This last equation is a kinematicrelationshipamong $\\omega , \\alpha$ , and $t$ \u2014that is, it describes their relationship without reference to forces or masses that may affect rotation. It is also precisely analogous in form to its translational counterpart. ",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Making Connections ",
+        "text_level": 1,
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Kinematics for rotational motion is completely analogous to translational kinematics, first presented in OneDimensional Kinematics. Kinematics is concerned with the description of motion without regard to force or mass. We will find that translational kinematic quantities, such as displacement, velocity, and acceleration have direct analogs in rotational motion. ",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "Starting with the four kinematic equations we developed in One-Dimensional Kinematics, we can derive the following four rotational kinematic equations (presented together with their translational counterparts): ",
+        "page_idx": 414
+    },
+    {
+        "type": "table",
+        "img_path": "images/6bcd6cf60aeb9e4c4752bb836cb0fcac67c5166df1374db8e8f05b9eb3199068.jpg",
+        "table_caption": [
+            "TABLE 10.2 Rotational Kinematic Equations "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Rotational</td><td>Translational</td><td></td></tr><tr><td>0=@t</td><td>x=Ut</td><td></td></tr><tr><td>\u03c9= \u03c9o +\u03b1t</td><td>U = vo +at</td><td>(constant \u03b1, a)</td></tr><tr><td>1 0=@ot+</td><td>1 x = vot +</td><td>(constant \u03b1, a)</td></tr><tr><td>+2\u03b10 m\u00b2 \u00b2=\u221e\u00b2</td><td>v\u00b2 = v0\u00b2 + 2ax</td><td>(constant \u03b1, a)</td></tr></table></body></html>\n\n",
+        "page_idx": 414
+    },
+    {
+        "type": "text",
+        "text": "In these equations, the subscript 0 denotes initial values $( \\theta _ { 0 } , x _ { 0 }$ , and $t _ { 0 }$ are initial values), and the average angular velocity $\\overline { { \\omega } }$ and average velocity $\\overline { { v } }$ are defined as follows: ",
+        "page_idx": 415
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { \\varpi } } } = { \\frac { \\omega _ { 0 } + \\omega } { 2 } } \\operatorname { a n d } { \\overline { { v } } } = { \\frac { v _ { 0 } + v } { 2 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "The equations given above in Table 10.2 can be used to solve any rotational or translational kinematics problem in which $a$ and $\\alpha$ are constant. ",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategy for Rotational Kinematics ",
+        "text_level": 1,
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "1. Examinethesituationtodeterminethatrotationalkinematics(rotationalmotion)isinvolved. Rotation mu be involved, but without the need to consider forces or masses that affect the motion.   \n2. Identifyexactlywhatne dstobedeterminedintheproblem(identifytheunknowns). A sketch of the situation is useful.   \n3. Makealistofwhatisgivenorcanbeinferedfromtheproblemasstated(identifytheknowns).   \n4. Solvetheap ropriateequationorequationsforthequantitytobedetermined(theunknown). It can be useful to think in terms of a translational analog because by now you are familiar with such motion.   \n5. Substitutetheknownvaluesalongwiththeirunitsintotheap ropriateequation,andobtainnumerical solutionscompletewithunits. Be sure to use units of radians for angles.   \n6. Checkyouranswertose ifitisreasonable:Doesyouranswermakesense? ",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.3 ",
+        "text_level": 1,
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Acceleration of a Fishing Reel ",
+        "text_level": 1,
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "A deep-sea fisherman hooks a big fish that swims away from the boat pulling the fishing line from his fishing reel. The whole system is initially at rest and the fishing line unwinds from the reel at a radius of 4.50 cm from its axis of rotation. The reel is given an angular acceleration of $1 1 0 \\mathrm { r a d } / \\mathrm { s } ^ { 2 }$ for $2 . 0 0 \\mathsf { s }$ as seen in Figure 10.7. ",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "(a) What is the final angular velocity of the reel? (b) At what speed is fishing line leaving the reel after 2.00 s elapses? (c) How many revolutions does the reel make? (d) How many meters of fishing line come off the reel in this time? ",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "In each part of this example, the strategy is the same as it was for solving problems in linear kinematics. In particular, known values are identified and a relationship is then sought that can be used to solve for the unknown. ",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Here $\\alpha$ and $t$ are given and $\\omega$ needs to be determined. The most straightforward equation to use is $\\omega = \\omega _ { 0 } + \\alpha t$ because the unknown is already on one side and all other terms are known. That equation states that ",
+        "page_idx": 415
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = \\omega _ { 0 } + \\alpha t .\n$$",
+        "text_format": "latex",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "We are also given that $\\omega _ { 0 } = 0$ (it starts from rest), so that ",
+        "page_idx": 415
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = 0 + \\left( 1 1 0 \\mathrm { r a d / s } ^ { 2 } \\right) ( 2 . 0 0 \\mathrm { s } ) { = 2 2 0 \\mathrm { r a d / s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "Now that $\\omega$ is known, the speed $v$ can most easily be found using the relationship ",
+        "page_idx": 415
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = r \\omega ,\n$$",
+        "text_format": "latex",
+        "page_idx": 415
+    },
+    {
+        "type": "text",
+        "text": "where the radius $r$ of the reel is given to be $4 . 5 0 \\mathsf { c m }$ ; thus, ",
+        "page_idx": 415
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = ( 0 . 0 4 5 0 ~ \\mathrm { m } ) ( 2 2 0 ~ \\mathrm { r a d / s } ) = 9 . 9 0 ~ \\mathrm { m / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Note again that radians must always be used in any calculation relating linear and angular quantities. Also, because radians are dimensionless, we have $\\mathrm { m } \\times \\mathrm { r a d } = \\mathrm { m }$ . ",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Solution for (c) ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Here, we are asked to find the number of revolutions. Because $1 { \\mathrm { ~ r e v } } = 2 \\pi$ , we can find the number of revolutions by finding $\\theta$ in radians. We are given $\\alpha$ and $t$ , and we know $\\omega _ { 0 }$ is zero, so that $\\theta$ can be obtained using $\\textstyle \\theta = \\omega _ { 0 } t + { \\frac { 1 } { 2 } } \\alpha t ^ { 2 }$ . ",
+        "page_idx": 416
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { \\theta \\ = \\ \\omega _ { 0 } t + { \\frac { 1 } { 2 } } \\alpha t ^ { 2 } } \\\\ { \\ = \\ 0 + ( 0 . 5 0 0 ) { \\bigl ( } 1 1 0 \\operatorname { r a d / s } ^ { 2 } { \\bigr ) } ( 2 . 0 0 \\ \\mathrm { s } ) ^ { 2 } = 2 2 0 \\operatorname { r a d } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Converting radians to revolutions gives ",
+        "page_idx": 416
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = ( 2 2 0 \\mathrm { r a d } ) \\frac { 1 \\mathrm { r e v } } { 2 \\pi \\mathrm { r a d } } = 3 5 . 0 \\mathrm { r e v } .\n$$",
+        "text_format": "latex",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Solution for (d) ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "The number of meters of fishing line is $x$ , which can be obtained through its relationship with $\\theta$ : ",
+        "page_idx": 416
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = r \\theta = ( 0 . 0 4 5 0 \\ \\mathrm { m } ) ( 2 2 0 \\ \\mathrm { r a d } ) = 9 . 9 0 \\ \\mathrm { m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "This example illustrates that relationships among rotational quantities are highly analogous to those among linear quantities. We also see in this example how linear and rotational quantities are connected. The answers to the questions are realistic. After unwinding for two seconds, the reel is found to spin at $2 2 0 \\ r { \\mathsf { a d / s } }$ , which is 2100 rpm. (No wonder reels sometimes make high-pitched sounds.) The amount of fishing line played out is $9 . 9 0 ~ \\mathrm { m }$ , about right for when the big fish bites. ",
+        "page_idx": 416
+    },
+    {
+        "type": "image",
+        "img_path": "images/c5cc187ea7d9d022297a2dbb9b5684e5ed11e84e4fe4f652f608b25549ea5450.jpg",
+        "img_caption": [
+            "FIGURE 10.7 Fishing line coming off a rotating reel moves linearly. Example $\\underline { { 1 0 . 3 } }$ and Example 10.4 consider relationships between rotational and linear quantities associated with a fishing reel. "
+        ],
+        "img_footnote": [],
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.4 ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Duration When the Fishing Reel Slows Down and Stops ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Now let us consider what happens if the fisherman applies a brake to the spinning reel, achieving an angular acceleration of $- 3 0 0 \\mathrm { r a d } / \\mathrm { s } ^ { 2 }$ . How long does it take the reel to come to a stop? ",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "We are asked to find the time $t$ for the reel to come to a stop. The initial and final conditions are different from those in the previous problem, which involved the same fishing reel. Now we see that the initial angular velocity is $\\omega _ { 0 } = 2 2 0 \\mathrm { r a d / s }$ and the final angular velocity $\\omega$ is zero. The angular acceleration is given to be $\\alpha = - 3 0 0 \\mathrm { r a d / s } ^ { 2 }$ . ",
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Examining the available equations, we see all quantities but tare known in $\\omega = \\omega _ { 0 } + \\alpha t$ making it easiest to use this equation. ",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "The equation states ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = \\omega _ { 0 } + \\alpha t .\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "We solve the equation algebraically for $t _ { i }$ , and then substitute the known values as usual, yielding ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\nt = { \\frac { \\omega - \\omega _ { 0 } } { \\alpha } } = { \\frac { 0 - 2 2 0 \\mathrm { r a d / s } } { - 3 0 0 \\mathrm { r a d / s } ^ { 2 } } } = 0 . 7 3 3 \\mathrm { s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Note that care must be taken with the signs that indicate the directions of various quantities. Also, note that the time to stop the reel is fairly small because the acceleration is rather large. Fishing lines sometimes snap because of the accelerations involved, and fishermen often let the fish swim for a while before applying brakes on the reel. A tired fish will be slower, requiring a smaller acceleration. ",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.5 ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "image",
+        "img_path": "images/e97d1734d21b883e089c44d8f33b2913749a931b848957026ec1c8d1af2b4557.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Slow Acceleration of Trains and Their Wheels ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Large freight trains accelerate very slowly. Suppose one such train accelerates from rest, giving its $0 . 3 5 0 \u2013 \\mathsf { m }$ -radius wheels an angular acceleration of $0 . 2 5 0 \\mathrm { r a d } / \\mathrm { s } ^ { 2 }$ . After the wheels have made 200 revolutions (assume no slippage): (a) How far has the train moved down the track? (b) What are the final angular velocity of the wheels and the linear velocity of the train? ",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "In part (a), we are asked to find $x$ , and in (b) we are asked to find $\\omega$ and $v$ . We are given the number of revolutions $\\theta$ , the radius of the wheels $r$ , and the angular acceleration $\\alpha$ . ",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "The distance $x$ is very easily found from the relationship between distance and rotation angle: ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = { \\frac { x } { r } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Solving this equation for $x$ yields ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = r \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Before using this equation, we must convert the number of revolutions into radians, because we are dealing with a relationship between linear and rotational quantities: ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = ( 2 0 0 \\mathrm { r e v } ) \\frac { 2 \\pi \\mathrm { r a d } } { 1 \\mathrm { r e v } } = 1 2 5 7 \\mathrm { r a d } .\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Now we can substitute the known values into $x = r \\theta$ to find the distance the train moved down the track: ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { x = r \\theta = ( 0 . 3 5 0 \\mathrm { m } ) ( 1 2 5 7 \\mathrm { r a d } ) = 4 4 0 \\mathrm { m } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "We cannot use any equation that incorporates $t$ to find $\\omega$ , because the equation would have at least two unknown values. The equation $\\omega ^ { 2 } = { \\omega _ { 0 } } ^ { 2 } + 2 \\alpha \\theta$ will work, because we know the values for all variables except $\\omega$ : ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega ^ { 2 } = { \\omega _ { 0 } } ^ { 2 } + 2 \\alpha \\theta\n$$",
+        "text_format": "latex",
+        "page_idx": 417
+    },
+    {
+        "type": "text",
+        "text": "Taking the square root of this equation and entering the known values gives ",
+        "page_idx": 417
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { \\omega } & { = } & { \\left[ 0 + 2 ( 0 . 2 5 0 \\mathrm { r a d / s } ^ { 2 } ) ( 1 2 5 7 \\mathrm { r a d } ) \\right] ^ { 1 / 2 } } \\\\ & { = } & { 2 5 . 1 \\mathrm { r a d / s } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "We can find the linear velocity of the train, $v$ , through its relationship to $\\omega$ : ",
+        "page_idx": 418
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = r \\omega = ( 0 . 3 5 0 \\mathrm { m } ) ( 2 5 . 1 \\mathrm { r a d / s } ) = 8 . 7 7 \\mathrm { m / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "The distance traveled is fairly large and the final velocity is fairly slow (just under $3 2 \\mathrm { ~ k m / h } ;$ ). ",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "There is translational motion even for something spinning in place, as the following example illustrates. Figure 10.8 shows a fly on the edge of a rotating microwave oven plate. The example below calculates the total distance it travels. ",
+        "page_idx": 418
+    },
+    {
+        "type": "image",
+        "img_path": "images/e50a7e9f7faad97a26619cc0d667b9b67606ecefabed7acfcfbfd76cf807f0c8.jpg",
+        "img_caption": [
+            "FIGURE 10.8 The image shows a microwave plate. The fly makes revolutions while the food is heated (along with the fly). "
+        ],
+        "img_footnote": [],
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.6 ",
+        "text_level": 1,
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Distance Traveled by a Fly on the Edge of a Microwave Oven Plate ",
+        "text_level": 1,
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "A person decides to use a microwave oven to reheat some lunch. In the process, a fly accidentally flies into the microwave and lands on the outer edge of the rotating plate and remains there. If the plate has a radius of $0 . 1 5 ~ \\mathsf { m }$ and rotates at 6.0 rpm, calculate the total distance traveled by the fly during a 2.0-min cooking period. (Ignore the start-up and slow-down times.) ",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "First, find the total number of revolutions $\\theta$ , and then the linear distance $x$ traveled. $\\theta = { \\overline { { \\omega } } } t$ can be used to find $\\theta$ because $\\overline { { \\omega } }$ is given to be 6.0 rpm. ",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Entering known values into $\\theta = { \\overline { { \\omega } } } t$ gives ",
+        "page_idx": 418
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = \\overline { { \\omega } } t = ( 6 . 0 \\mathrm { r p m } ) ( 2 . 0 \\mathrm { m i n } ) = 1 2 \\mathrm { r e v } .\n$$",
+        "text_format": "latex",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "As always, it is necessary to convert revolutions to radians before calculating a linear quantity like $x$ from an angula quantity like $\\theta$ : ",
+        "page_idx": 418
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = ( 1 2 \\mathrm { r e v } ) \\biggl ( { \\frac { 2 \\pi \\mathrm { r a d } } { 1 \\mathrm { r e v } } } \\biggr ) = 7 5 . 4 \\mathrm { r a d } .\n$$",
+        "text_format": "latex",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Now, using the relationship between $x$ and $\\theta$ , we can determine the distance traveled: ",
+        "page_idx": 418
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\scriptstyle x = r \\theta = ( 0 . 1 5 { \\mathrm { ~ m } } ) ( 7 5 . 4 { \\mathrm { ~ r a d } } ) = 1 1 { \\mathrm { ~ m } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 419
+    },
+    {
+        "type": "text",
+        "text": "Quite a trip (if it survives)! Note that this distance is the total distance traveled by the fly. Displacement is actually zero for complete revolutions because they bring the fly back to its original position. The distinction between total distance traveled and displacement was first noted in One-Dimensional Kinematics. ",
+        "page_idx": 419
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 419
+    },
+    {
+        "type": "text",
+        "text": "Rotational kinematics has many useful relationships, often expressed in equation form. Are these relationships laws of physics or are they simply descriptive? (Hint: the same question applies to linear kinematics.) ",
+        "page_idx": 419
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 419
+    },
+    {
+        "type": "text",
+        "text": "Rotational kinematics (just like linear kinematics) is descriptive and does not represent laws of nature. With kinematics, we can describe many things to great precision but kinematics does not consider causes. For example, a large angular acceleration describes a very rapid change in angular velocity without any consideration of its cause. ",
+        "page_idx": 419
+    }
+]

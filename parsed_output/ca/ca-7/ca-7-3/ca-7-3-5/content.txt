@@ -1,0 +1,11 @@
+7.3.5 JK Flip-flop
+
+Figure 7.20 shows a JK flip-flop. There are two minor differences as compared to the masterslave SR flip-flop. The first is that the inputs are now J and K, instead of S and R. The second is that Q and  are now inputs to the input NAND gates (  and  ).
+
+Let us do a case by case analysis. Assume that the clock is high. If J and K are both 0, then the outputs of  and  are both 1 and the case is same as that for the master-slave SR flip-flop. The outputs are maintained. If J=1 and K=0, then we need to consider the value of  . If  , then  , and the output of NAND gate N1 (see Figure 7.20) is 0. The outputs of the master flip-flop are therefore 1 and 0, respectively. The output of the slave after the downward/ negative clock edge will therefore be:  .
+
+Now, assume that  , and Q=1. In this case, the outputs of both N1 and N2 are 1 and thus all the values are maintained. Hence, after the negative clock edge we have: Q=1, and  . We can thus conclude, that if J=1 and K=0, Q=1, and  =0.
+
+Similarly, if J=0 and K=1, we can prove that Q=0, and  =1.
+
+Let us now consider the case when both J and K are 1. In this case the output of N1 is Q and the output of N2 is  . The output of the master flip-flop is equal to  and Q, respectively. After the negative clock edge the outputs will be:  and  . Thus, the outputs will get toggled. We will not have a race condition anymore. Table 7.3 shows the state transition table for the JK flip-flop.

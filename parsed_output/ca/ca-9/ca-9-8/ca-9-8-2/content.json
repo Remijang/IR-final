@@ -1,0 +1,51 @@
+[
+    {
+        "type": "text",
+        "text": "9.8.2 Horizontal Microprogramming ",
+        "text_level": 1,
+        "page_idx": 407
+    },
+    {
+        "type": "text",
+        "text": "We can further simplify the design of the \u00b5control unit. We do not need three steps (fetch, decode, execute) to execute a microinstruction. The decode step is not required. We can embed all the control signals in the microinstruction itself. It is thus not required to have a dedicated signal generator to generate all the control signals. By doing so, we will increase the size of the encoding of an instruction. Since the number of microinstructions is small, and we do not have any significant constraints on the size of the encoding of a microinstruction, adding additional bits in the encoding is not an issue. This paradigm is known as horizontal microprogramming. The encoding of a microinstruction is shown in Figure 9.26. ",
+        "page_idx": 407
+    },
+    {
+        "type": "image",
+        "img_path": "images/10a2863f395fd7f79efd4fcffb770efcb8cf2ac1b52a2612048fee97716503c0.jpg",
+        "img_caption": [
+            "Figure 9.26: Encoding of a microinstruction (horizontal microprogramming) "
+        ],
+        "img_footnote": [],
+        "page_idx": 407
+    },
+    {
+        "type": "text",
+        "text": "We need the following fields \u2013 control signals (saved as a bit vector whose size is 33 bits), immediate (12 bits), branch target (10 bits), and args (10 bits). The reason we require 33 control signals is as follows. We have 19 registers (see Table 9.7) visible to microcode. Out of these register, the following 9 registers are exclusively connected to either the read bus or the write bus: ir, flags.E, flags.GT , I, rd, rs1, rs2, branchT arget, and immx. Hence, these registers require just one control signal. The rest of the registers have read-write functionality. Hence, these registers require two control signals. Thus, the total number of register enabling control signals are 29. We need 2 more signals each to control the transfer multiplexer, and the \u00b5fetch multiplexer. We thus have a total of 33 control signals, and we require 65 bits to encode the instruction. Recall that with vertical microprogramming, we needed 45 bits. ",
+        "page_idx": 407
+    },
+    {
+        "type": "text",
+        "text": "Now, with additional storage we can completely eliminate the signal generator in the decode stage, and thus significantly simplify the \u00b5control unit as shown in Figure 9.27 ",
+        "page_idx": 407
+    },
+    {
+        "type": "text",
+        "text": "Here, we have eliminated the decode stage. All the signals are embedded in the instruction, and they are thus used to orchestrate a computation in the data path. The execute unit generates the isMBranch signal (by comparing the \u00b5imm and the value on the read bus), which is used to choose between the next \u00b5pc, and the branch target using multiplexer, $M 1$ . Here, we slightly complicate the \u00b5fetch multiplexer, and add a little bit of redundancy in the interest of simplicity. We make it a 4 input structure, and choose between the value from the switch unit, the branch target, the output of $M 1$ , and the next \u00b5pc. The 2-bit control signals for controlling the \u00b5fetch multiplexer are embedded in the instruction in accordance with the rules given in Table 9.9. The rest of the operation of the circuit is the same as the circuit for vertical microprogramming as shown in Figure 9.25. ",
+        "page_idx": 407
+    },
+    {
+        "type": "image",
+        "img_path": "images/ae38f8a657b8cfd98d6c103fc04dac5f2b34afe5d4e0839a9733eff23513b1da.jpg",
+        "img_caption": [
+            "Figure 9.27: The $\\mu$ control unit (horizontal microprogramming) "
+        ],
+        "img_footnote": [],
+        "page_idx": 408
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 408
+    }
+]

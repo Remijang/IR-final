@@ -1,0 +1,7 @@
+9.7.1 Control Signals
+
+Each register that writes to the write bus needs a control signal. If it is asserted (equal to 1), then the value of the register appears on the write bus. Otherwise, the value of the register does not get reflected on the write bus. For example, the register, aluResult, contains the result of an ALU operation, and it is sometimes necessary to transfer its value to the write bus. The signal  controls the behavior of the aluResult register. We associate similar signals with the subscript, out with all the registers that need to access the write bus.
+
+Likewise, we associate a set of signals with the registers that are connected to the read bus. For example, the register mar is connected to the read bus. We associate the signal  with it. If it is 1, then the value of the data on the read bus is transferred to mar. If  , the mar register is effectively disconnected from the read bus.
+
+The PC has two signals associated with it:  and  . The µcontrol unit ensures that at one point of time only one register can write to the write bus. However, it is theoretically possible for multiple registers to read from the read bus concurrently.

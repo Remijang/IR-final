@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.6 Shift Instructions \u2013 lsl, lsr, asr ",
+        "text_level": 1,
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has three types of shift instructions lsl (logical shift left), lsr (logical shift right), and $a s r$ (arithmetic shift right). Each of these instructions are in the 3-address format. The first source operand points to the source register, and the second source operand contains the shift amount. The second operand can either be a register or an immediate value. ",
+        "page_idx": 112
+    },
+    {
+        "type": "text",
+        "text": "The $\\it l s l$ instruction shifts the value in the first source register to the left Similarly, lsr, shifts the value in the first source register to the right. Note that it is a logical right shift. This means that it fills all the MSB positions with zeros. In comparison, asr, performs an arithmetic right shift. It fills up all the MSB positions with the value of the previous sign bit. Semantics of shift instructions are shown in Table 3.5. ",
+        "page_idx": 112
+    },
+    {
+        "type": "table",
+        "img_path": "images/06d007df0efd98c9fd59fecc51dd2b3c8116cf7e306a2cf7a44e468422dc851a.jpg",
+        "table_caption": [
+            "Table 3.5: Semantics of shift instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td rowspan=\"2\">lsl reg, reg, (reg/imm)</td><td>lsl r3,r1, r2</td><td>r3\u2190r1<r2 (shift left)</td></tr><tr><td>lsl r3, r1, 4</td><td>r3 r1<4 (shift left)</td></tr><tr><td rowspan=\"2\">lsr reg, reg, (reg/imm)</td><td>lsr r3, r1,r2</td><td>r3\u2190r1 >r2 (shift right logical)</td></tr><tr><td>lsr r3, r1, 4</td><td>r3\u2190r1 \u22654 (shift right logical)</td></tr><tr><td rowspan=\"2\">asr reg,reg, (reg/imm)</td><td>asr r3, r1,r2</td><td>r3\u2190 r1 r2 arithmetic shift right)</td></tr><tr><td>asr r3, r1, 4</td><td>r3\u2190r1 V4 (arithmetic shift right)</td></tr></table></body></html>\n\n",
+        "page_idx": 113
+    }
+]

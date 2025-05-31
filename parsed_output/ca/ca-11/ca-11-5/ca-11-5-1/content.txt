@@ -1,0 +1,28 @@
+11.5.1 Summary
+
+Summary 11
+
+1. A program perceives the memory system to be one large array of bytes. In practice, we need to design a memory system that preserves this abstraction, and is also fast and power efficient.   
+2. A physical memory system needs to be built out of SRAM and DRAM cells. An SRAM array is faster than a DRAM array. However, it takes much more area and consumes much more power. Building a memory with just DRAM cells will be too slow, and building a memory with just SRAM cells will consume too much power.   
+3. We can use the properties of temporal and spatial locality to design more efficient memory systems. Temporal locality refers to the fact that there is a high likelihood of the same data item being accessed again in the near future. Spatial locality means that there is a high likelihood of adjacent memory locations being accessed in the near future.   
+4. To utilize temporal locality, we build a hierarchical memory system of caches. A cache is a memory structure that contains a subset of all the memory locations. (a) The cache at the highest level is known as the L1 cache. It is small and fast. (b) The L2 cache is at the next level. It is larger and slower. (c) Some recent processors also have a third level of cache known as the L3 cache. (d) The last level in the memory system is known as the main memory. It is a large DRAM array of cells, and contains an entry for all the memory locations in the system. (e) Caches are typically inclusive. This means that a cache at a level i contains a subset of memory locations present at level  .   
+5. To utilize spatial locality we group adjacent memory locations at the granularity of 32-128 byte blocks.   
+6. A cache contains a tag array and a data array. The tag array contains some bits of the address of the block, and the data array contains the contents of the block.   
+7. The basic operations needed to implement a cache are – lookup, data read, data write, insert, replace, and evict. (a) There are three ways to store data in a cache – direct mapped, set associative, and fully associative. (b) It is necessary to evict a block in a set if all the ways are non-empty. (c) There are two important write policies: write-through (every write is immediately sent to the lower level), and write-back (writes are sent to the lower level, only upon an eviction). (d) Some prominent replacement policies are Random, FIFO, and LRU.
+
+8. The average memory access time is given by:
+
+9. There are three types of cache misses – compulsory, capacity, and conflict.
+
+10. Some of the methods and structures to optimize the memory system are as follows: hardware prefetching, increased associativity/block size, victim cache, compiler techniques, write buffers, early restart and critical word first.
+
+11. We need virtual memory to ensure that:
+
+(a) Multiple programs do not overwrite each other’s data unintentionally, or maliciously.   
+(b) The memory footprint of a program can be larger than the amount of available main memory.
+
+12. To implement virtual memory, we divide a memory address into two parts – virtual page number, and an offset within a page. The virtual page number gets mapped to a physical frame number. The mapping is stored in a structure called a page table.
+
+13. If a page is not found in main memory, then the event is known as a page fault. Servicing a page fault takes millions of cycles. Hence, it is necessary to avoid page faults by using sophisticated page replacement algorithms.
+
+14. Some advanced features of the virtual memory system include shared memory, protection, and segmented addressing.

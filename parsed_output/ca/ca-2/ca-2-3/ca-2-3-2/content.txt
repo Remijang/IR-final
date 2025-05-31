@@ -1,0 +1,13 @@
+2.3.2 The 1’s Complement Approach
+
+For positive numbers, let us use the same basic scheme that assigns the MSB to a dedicated sign bit, which is 0 in this case. Moreover, let the rest of the  bits represent the number’s magnitude. For a negative number,  , let us simply flip all the bits of  . If a bit is 0, we replace it by 1, and vice versa. Note that this operation flips the sign bit also, effectively negating the number. The number system can represent numbers between  like the sign-magnitude system.
+
+Formally, the mapping function  is defined as:
+
+Note that a bitwise complement  is the same as subtracting the number from   .
+
+Let us consider some examples with a 4-bit number system. We represent the number 2 as 0010. Here the sign bit is 0, signifying that it is a positive number. To compute -2, we need to flip each bit. This process yields 1101. Note that the sign bit is 1 now.
+
+The 1’s complement approach also suffers from similar deficiencies as the sign magnitude scheme. First, there are two representations for zero. There is a positive zero - 0000, and a negative zero - 1111.
+
+Second, adding two numbers is difficult. Let us try to add 2 and -2.  1101. Using simple binary addition, we get 1111, which is equal to 0(negative zero). Hence, in this case simple binary addition works. However, now let us try to add 1 to -0. We have: -   . This leads to a mathematical contradiction. If we add one to zero, the result should be one. However, in this case, it is still zero! This means that we need to make the process of addition more sophisticated. This will slow down the process of addition and make it more complex.

@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "4.4 Encoding the Instruction Set ",
+        "text_level": 1,
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "Let us now see how to convert ARM assembly instructions to a sequence of 0s and 1s. Each ARM instruction is represented using 32 bits. We need to encode the instruction type, values of conditional fields, register numbers, and immediate operands using these 32 bits only. ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at the generic format of ARM instructions. For every instruction we need to initially encode at least two pieces of information \u2013 condition codes (see Table 4.12), and the format of the instruction (data processing, branch, load/store, or others). Table 4.12 defines 15 conditions on each instruction. It will take 4 bits to represent this information. ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "Important Point 6 ",
+        "text_level": 1,
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "To uniquely encode a set of $n$ elements, we need at least $\\lceil l o g _ { 2 } ( n ) \\rceil$ bits. We can assign each element a number between 0 and $n - 1$ . We can represent these numbers in the binary format. The number of bits required is equal to the number of bits needed to represent the largest number, $n - 1$ . If we have $l o g _ { 2 } ( n )$ bits, then the largest number that we can represent is $2 ^ { l o g _ { 2 } ( n ) } - 1 = n - 1$ . However, $l o g _ { 2 } ( n )$ might be a fraction. Hence, we need to use $\\lceil l o g _ { 2 } ( n ) \\rceil$ bits. ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "ARM has four types of instructions \u2013 data processing (add/ subtract/ multiply/ compare), load/store, branch, and miscellaneous. We need 2 bits to represent this information. These bits determine the type of the instruction. Figure 4.4 shows the generic format for instructions in ARM. ",
+        "page_idx": 165
+    },
+    {
+        "type": "image",
+        "img_path": "images/2065317195180ea047cd7cb620429fa5b88177c617ea807250be20a867f6e75c.jpg",
+        "img_caption": [
+            "Figure 4.4: Generic format of an ARM instruction "
+        ],
+        "img_footnote": [],
+        "page_idx": 165
+    }
+]

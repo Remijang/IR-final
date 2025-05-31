@@ -1,0 +1,18 @@
+# 23.6 Back Emf
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Explain what back emf is and how it is induced.
+
+It has been noted that motors and generators are very similar. Generators convert mechanical energy into electrical energy, whereas motors convert electrical energy into mechanical energy. Furthermore, motors and generators have the same construction. When the coil of a motor is turned, magnetic flux changes, and an emf (consistent with Faraday’s law of induction) is induced. The motor thus acts as a generator whenever its coil rotates. This will happen whether the shaft is turned by an external input, like a belt drive, or by the action of the motor itself. That is, when a motor is doing work and its shaft is turning, an emf is generated. Lenz’s law tells us the emf opposes any change, so that the input emf that powers the motor will be opposed by the motor’s self-generated emf, called the back emf of the motor. (See Figure 23.24.)
+
+
+
+Back emf is the generator output of a motor, and so it is proportional to the motor’s angular velocity $\omega$ . It is zero when the motor is first turned on, meaning that the coil receives the full driving voltage and the motor draws maximum current when it is on but not turning. As the motor turns faster and faster, the back emf grows, always opposing the driving emf, and reduces the voltage across the coil and the amount of current it draws. This effect is noticeable in a number of situations. When a vacuum cleaner, refrigerator, or washing machine is first turned on, lights in the same circuit dim briefly due to the $I R$ drop produced in feeder lines by the large current drawn by the motor. When a motor first comes on, it draws more current than when it runs at its normal operating speed. When a mechanical load is placed on the motor, like an electric wheelchair going up a hill, the motor slows, the back emf drops, more current flows, and more work can be done. If the motor runs at too low a speed, the larger current can overheat it (via resistive power in the coil, $P = I ^ { 2 } R )$ , perhaps even burning it out. On the other hand, if there is no mechanical load on the motor, it will increase its angular velocity $\omega$ until the back emf is nearly equal to the driving emf. Then the motor uses only enough energy to overcome friction.
+
+Consider, for example, the motor coils represented in Figure 23.24. The coils have a $0 . 4 0 0 \Omega$ equivalent resistance and are driven by a $4 8 . 0 \mathrm { V }$ emf. Shortly after being turned on, they draw a current   
+$I = V / R = ( 4 8 . 0 \mathrm { ~ V ~ } ) / \left( 0 . 4 0 0 \Omega \right) = 1 2 0 \mathrm { ~ A ~ }$ and, thus, dissipate $P = I ^ { 2 } R = 5 . 7 6 \mathrm { k W }$ of energy as heat transfer. Under normal operating conditions for this motor, suppose the back emf is $4 0 . 0 \mathsf { V } .$ Then at operating speed, the total voltage across the coils is $8 . 0 \vee$ $_ { \cdot 4 8 . 0 \vee }$ minus the $4 0 . 0 \mathrm { V }$ back emf), and the current drawn is   
+$I = V / R = ( 8 . 0 \ : \mathrm { V } )$ $/ ( \ 0 . 4 0 0 \Omega ) = 2 0$ . Under normal load, then, the power dissipated is   
+$P = I V { = } ( 2 0 \mathrm { \ A } ) / ( 8 . 0 \mathrm { \ V } ) { = } 1 6 0 \mathrm { \ W } .$ . The latter will not cause a problem for this motor, whereas the former 5.76 kW would burn out the coils if sustained.

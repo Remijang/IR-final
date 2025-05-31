@@ -1,0 +1,5 @@
+3.3.6 Shift Instructions – lsl, lsr, asr
+
+SimpleRisc has three types of shift instructions lsl (logical shift left), lsr (logical shift right), and  (arithmetic shift right). Each of these instructions are in the 3-address format. The first source operand points to the source register, and the second source operand contains the shift amount. The second operand can either be a register or an immediate value.
+
+The  instruction shifts the value in the first source register to the left Similarly, lsr, shifts the value in the first source register to the right. Note that it is a logical right shift. This means that it fills all the MSB positions with zeros. In comparison, asr, performs an arithmetic right shift. It fills up all the MSB positions with the value of the previous sign bit. Semantics of shift instructions are shown in Table 3.5.

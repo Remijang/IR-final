@@ -1,0 +1,217 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.1 Simple Data Processing Instructions ",
+        "text_level": 1,
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "Register Transfer Instructions ",
+        "text_level": 1,
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "The simplest type of assembly instructions transfer the value of one register into another, or store a constant in a register. There are two instructions in this class \u2013 mov and mvn. Their semantics are shown in Table 4.2. Note that we always prefix an immediate with \u2018#\u2019 in ARM assembly. ",
+        "page_idx": 142
+    },
+    {
+        "type": "table",
+        "img_path": "images/68bdda9c387fc33752351a3e7a460494c30ae3b937b5d52c4fab32a92bf67125.jpg",
+        "table_caption": [
+            "Table 4.2: Semantics of the move instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td rowspan=\"2\">mov reg, (reg/imm)</td><td>mov r1,r2</td><td>rl\u2190r2</td></tr><tr><td>mov r1,#3</td><td>r1\u21903</td></tr><tr><td rowspan=\"2\">mvn reg, (reg/imm)</td><td>mvn rl, r2</td><td>r1\u2190~r2</td></tr><tr><td>mvn r1, #3</td><td>r1\u2190~3</td></tr></table></body></html>\n\n",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "The register-based mov instruction simply moves the contents of $r 2$ to register $r 1$ . Alternatively, it can store an immediate in a register. In Table 4.2, the mvn instruction flips every bit in the 32-bit register $r 2$ , and then transfers the contents of the result to $r 1$ . The $\\sim$ symbol represents logical complement. For example, the complement of the 4-bit binary value, 0110, is 1001. The mov and mvn instructions take two inputs. These instructions are examples of 2-address format instructions in ARM. ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "Arithmetic Instructions ",
+        "text_level": 1,
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "The simplest instructions in this class are add, sub, rsb (reverse subtract). Their semantics are given in Table 4.3. The second operand can also be an immediate. ",
+        "page_idx": 143
+    },
+    {
+        "type": "table",
+        "img_path": "images/aa74d7fa12c4cbb537ea872abf726a984b380e064b005ba857d0f9891b430674.jpg",
+        "table_caption": [
+            "Table 4.3: Semantics of add and subtract instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>add reg, reg, (reg/imm)</td><td>add rl,r2,r3</td><td>r1\u2190r2+r3</td></tr><tr><td>sub reg,reg,(reg/imm)</td><td>sub r1,r2, r3</td><td>rl\u2190r2-r3</td></tr><tr><td>rsb reg, reg, (reg/imm)</td><td>rsb rl,r2, r3</td><td>rl \u2190r3- r2</td></tr></table></body></html>\n\n",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Example 37 ",
+        "text_level": 1,
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Write an ARM assembly program to compute: $4 + 5 - 1 9$ . Save the result in r1. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Answer: Simple yet suboptimal solution. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "mov r1, #4   \nmov r2, #5   \nadd r3, r1, r2   \nmov r4, #19   \nsub r1, r3, r4 ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Optimal solution. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "mov r1, #4   \nadd r1, r1, #5   \nsub r1, r1, #19 ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Logical Instructions ",
+        "text_level": 1,
+        "page_idx": 143
+    },
+    {
+        "type": "table",
+        "img_path": "images/089ce9c80f6130cf1515464d757d84ea035f57f35cb58da9db1136df8a95a897.jpg",
+        "table_caption": [
+            "Table 4.4: Semantics of logical instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>and reg, reg, (reg/imm)</td><td>and rl, r2, r3</td><td>rl \u2190r2 AND r3</td></tr><tr><td>eor reg,reg, (reg/imm)</td><td>eor rl, r2, r3</td><td>r1 \u2190 r2 XOR r3</td></tr><tr><td>orr reg,reg,(reg/imm)</td><td>orr rl, r2, r3</td><td>rl \u2190r2 OR r3</td></tr><tr><td>bic reg, reg, (reg/imm)</td><td>bic rl, r2, r3</td><td>r1 \u2190 r2 AND (~ r3)</td></tr></table></body></html>\n\n",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "ARM\u2019s bitwise logical instructions are shown in Table 4.4. and computes a bit-wise AND, eor computes an exclusive OR, orr computes a regular bit-wise OR, and the bic(bit-clear) instruction clears off the bits in $r 2$ that are specified in $r 3$ . Like arithmetic instructions, the second operand can be an immediate. ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "Example 38 ",
+        "text_level": 1,
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "Write an ARM assembly program to compute: $\\overline { { A \\vee B } }$ , where $A$ and $B$ are 1 bit Boolean values. Assume that $A = 0$ and $B = 1$ . Save the result in $r 0$ . ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "mov r0, #0x0   \norr r0, r0, #0x1   \nmvn r0, r0 ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "Multiplication Instructions ",
+        "text_level": 1,
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "We shall introduce four multiply instructions with varying degrees of complexity. The fundamental issue with multiplication is that if we are multiplying two 32-bit numbers, then the result will require 64 bits. The reason is that the largest unsigned 32-bit number is $2 ^ { 3 2 } - 1$ . Consequently, when we try to square this number, our result is approximately $2 ^ { 6 4 }$ . We would thus need a maximum of 64 bits. ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "ARM has two 32-bit multiplication instructions that truncate the result to 32 bits \u2013 mul and mla. They ignore the rest of the bits. mul multiplies the values in two registers and stores the result in a third register. mla (multiply and accumulate) is in the 4-address format. It multiplies the values of two registers, and adds the result to the value stored in a third register (see Table 4.5). The advantage of the $m l a$ instruction is that it makes it possible to represent code sequences of the form ( $d = a + b * c$ ) with one instruction. Such instructions are extremely useful when it comes to implementing linear algebra kernels such as matrix multiplication. ",
+        "page_idx": 144
+    },
+    {
+        "type": "table",
+        "img_path": "images/31cce1d466d88d5a0610190c4a94c7c570e274cd3130751c55b6a167dd4961ab.jpg",
+        "table_caption": [
+            "Table 4.5: Semantics of multiply instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>mul reg, reg, reg</td><td>mul rl,r2,r3</td><td>rl \u2190r2 \u00d7 r3</td></tr><tr><td>mla reg, reg, reg, reg</td><td>mla rl,r2,r3, r4</td><td>rl\u2190r2 \u00d7 r3+ r4</td></tr><tr><td>smull reg, reg, reg, reg</td><td>smull r0, rl, r2, r3</td><td>rl r0 \u2190 r2 \u00d7signed r3 64</td></tr><tr><td>umull reg,reg,reg, reg</td><td>umull r0,rl,r2,r3</td><td>r1 r0 \u2190 r2 Xunsigned r3 64</td></tr></table></body></html>\n\n",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "In this chapter, we shall introduce two instructions that store the entire 64-bit result in two registers. The smull and umull instructions perform signed and unsigned multiplication, respectively, on two 32-bit values to produce a 64-bit result. Their semantics is shown in Table 4.5. r0 contains the lower 32 bits, and $r 1$ contains the upper 32 bits. ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "For all the multiply instructions that we have introduced, all the operands need to be registers. Secondly, the first source register, should not be the same as the destination register. ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Example 39 ",
+        "text_level": 1,
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Compute $1 2 ^ { 3 } + 1$ , and save the result in r3. ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "/\\* load test values \\*/   \nmov $r o$ , #12   \nmov r1, #1 ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "/\\* perform the logical computation \\*/ mul r4, r0, r0 @ 12\\*12 mla r3, r4, r0, r1 @ 12\\*12\\*12 + 1 ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Division Instructions ",
+        "text_level": 1,
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Newer versions of the ARM ISA have introduced two integer division instructions, sdiv and udiv. The former is used for signed division and the latter is used for unsigned division (see Table 4.6). Both of them compute the quotient. The remainder can be computed by subtracting the product of the divisor and the quotient from the dividend. ",
+        "page_idx": 145
+    },
+    {
+        "type": "table",
+        "img_path": "images/832f8123d22681096c23f8e8f7037f8a95c7f1cff3a022e8a829223aeb4c312b.jpg",
+        "table_caption": [
+            "Table 4.6: Semantics of divide instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>sdiv reg, reg, reg</td><td>sdiv r1, r2, r3</td><td>rl \u2190 r2 \u00f7 r3 (signed)</td></tr><tr><td>udiv reg, reg, reg</td><td>udiv r1,r2, r3</td><td>rl\u2190r2\u00f7r3 (unsigned)</td></tr></table></body></html>\n\n",
+        "page_idx": 145
+    }
+]

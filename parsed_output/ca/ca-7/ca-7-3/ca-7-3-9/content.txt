@@ -1,0 +1,9 @@
+7.3.9 Registers
+
+Parallel In–Parallel Out
+
+We can store  bit data by using a set of  master slave D flip flops. Each  flip flop is connected to an input line, and its output terminal is connected to an output line. Such an  bit structure is known as an  bit register. Here, we can load  bits in parallel, and also read out  bits in parallel at every negative clock edge. Hence, this structure is known as a parallel in–parallel out register. Its structure is shown in Figure 7.24.
+
+Serial In – Parallel Out
+
+Let us now consider a serial in–parallel out register as shown in Figure 7.25. Here, we have a single input that is fed into the leftmost D flip flop. Every cycle, the input moves to the adjacent flip flop on the right. Thus, to load  bits it will take  cycles. The first bit will get loaded into the leftmost flip flop in the first cycle, and it will take  cycles for it to reach the last flip flop. By that time, the rest of the  flip flops will get loaded with the rest of the  bits. We can then read out all the  bits in parallel (similar to the parallel in–parallel out register). This register is also known as a shift register and is used for implementing circuits used in high speed I/O buses.

@@ -1,0 +1,21 @@
+10.10.5 The  Metric
+
+Now, let us try to integrate performance, and energy into one model. The performance of a program is given by the performance equation (Equation 10.3). Let us simplistically assume that the time a program takes, or its delay (  ) is inversely proportional to the frequency. Again, this is not strictly correct because the IPC is dependent on the frequency. We cannot appreciate the relationship between IPC and frequency right now, because we do not have adequate background. However, we shall touch this topic in Section 11.3, and see that there are components to the IPC that are frequency dependent such as the latency of main memory. In any case, let us move ahead with the approximation that  .
+
+Let us compare two processor designs for the same program. One design dissipates  Joules for the execution of the entire program, and it takes  units of time. The second design dissipates  Joules, and takes  units of time. How do we say, which design is better? It is possible that the second design is slightly faster but dissipates 3 times more energy per cycle. There has to be a common metric.
+
+To derive a common metric, we need to either make the performance the same (  ), and then compare the energy, or make the energy the same (  ), and compare the performance. To ensure that  we need to either speed up one design or slowdown the other one. To achieve this, we can use a standard technique called dynamic voltage-frequency scaling (DVFS).
+
+According to the DVFS technique, to scale up the frequency by a factor of  , we scale the voltage by a factor of  . Typically, we assume that  . For example, to double the frequency, we double the voltage also. Note that with a higher frequency and consequent lower clock cycle time, we need to ensure that signals can rise and fall quickly. To ensure quicker signal transition, we increase the voltage such that it takes less time for a signal to rise and fall by  volts. This fact can be proved by considering the basic capacitor charging and discharging equations. From our point of view, we need to appreciate the fact that the voltage and frequency need to be scaled together.
+
+Definition 89
+
+DVFS is a technique that is used to adjust the voltage and frequency of a processor at run time. If we scale the frequency by a factor of  , then we need to scale the voltage by a factor of κ2. In most cases, we assume that  .
+
+Now, let us try to equalize the execution time of designs 1 and 2, and compare the energy. We have made the following assumptions:  , and  . Thus,  . To make the delays equal we need to scale the delay of design 2 by  , or alternatively we need to scale its voltage and frequency by  . After equalizing the delay, let the energy dissipation of design 2 be  . Since  , we have:
+
+Now, let us compare  and  .
+
+In this case, we observe that comparing  and  is tantamount to comparing  , and  . Since  ,  . Here,  is a constant that arises out of the different constants of proportionality. It is thus a property that is independent of the voltage and frequency of the system. It is related to the activity factor, and the capacitance of the circuits, and is inherent to the design. Consequently, the  metric is used as an effective baseline metric to compare two designs.
+
+Designers aim to reduce the  metric of a design as much as possible. This ensures that irrespective of the DVFS settings, a design with a lower value of  is a much better design than other designs that have a higher  metric. Note that a lot of performance enhancing schemes do not prove to be effective because they do not show any benefit with regard to the  metric. They do increase performance, but also disproportionately increase the energy dissipation. Likewise, a lot of power reduction schemes are impractical because they increase the delay, and the  metric increases. Consequently, whenever we need to jointly optimize energy/power and performance we use the  metric to evaluate candidate designs.

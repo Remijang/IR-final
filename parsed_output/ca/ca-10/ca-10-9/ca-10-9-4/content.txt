@@ -1,0 +1,23 @@
+10.9.4 Performance of a Suite of Programs
+
+Most of the time, we do not measure the performance of a processor with respect to one program. We consider a set of known benchmark programs and measure the performance of our processor with respect to all the programs to get a consolidated figure. Most processor vendors typically summarize the performance of their processor with respect to the SPEC (http://www.spec.org) benchmarks. SPEC stands for “Standard Performance Evaluation
+
+Corporation”. They distribute suites of benchmarks for measuring, summarizing, and reporting the performance of processors, and software systems.
+
+Computer architects typically use the SPEC CPU benchmark suite to measure the performance of a processor. The SPEC CPU 2006 benchmarks have two types of programs – integer arithmetic benchmarks (SPECint), and floating point benchmarks (SPECfp). There are 12 SPECint benchmarks that are written in C/C++. The benchmarks contain parts of C compilers, gene sequencers, AI engines, discrete event simulators, and XML processors. On similar lines, the SPECfp suite contains 17 programs. These programs solve different problems in the domains of physics, chemistry, and biology.
+
+Most processor vendors typically compute a SPEC score, which is representative of the performance of the processor. The recommended procedure is to take the ratio of the time taken by a benchmark on a reference processor, and the time taken by the benchmark on the given processor. The SPEC score is equal to the geometric mean of all the ratios. In computer architecture, when we report the mean relative performance (as in the case of SPEC scores), we typically use the geometric mean. For just reporting the average time of execution (absolute time), we can use the arithmetic mean.
+
+Sometimes, instead of reporting SPEC scores, we report the average number of instructions that we execute per second, and in the case of scientific programs, the average number of floating point operations per second. These metrics give us an indication of the speed of a processor, or a system of processors. We typically use the following terms:
+
+KIPS  instructions per second
+
+MIPS Million(  ) instructions per second
+
+MFLOPS Million(106) floating point operations per second
+
+GFLOPS Giga(109) floating point operations per second
+
+TFLOPS Tera(1012) floating point operations per second
+
+PFLOPS Peta(1015) floating point operations per second

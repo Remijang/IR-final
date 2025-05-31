@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "12.3 Design Space of Multiprocessors ",
+        "text_level": 1,
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "Michael J. Flynn proposed the famous Flynn\u2019s classification of multiprocessors in 1966. He started out by observing that an ensemble of different processors might either share code, data, or both. There are four possible choices \u2013 SISD (single instruction single data), SIMD (single instruction multiple data), MISD (multiple instruction single data), and MIMD (multiple instruction multiple data). ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "Let us describe each of these types of multiprocessors in some more detail. ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "SISD This is a standard uniprocessor with a single pipeline as described in Chapter 9 and Chapter 10. A SISD processor can be thought of as a special case of the set of multiprocessors with just a single processor. ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "SIMD A SIMD processor can process multiple streams of data in a single instruction. For example, a SIMD instruction can add 4 sets of numbers with a single instruction. Modern processors incorporate SIMD instructions in their instruction set, and have special SIMD execution units also. Examples include x86 processors that contain the SSE set of SIMD instruction sets. Graphics processors, and vector processors are special examples of highly successful SIMD processors. ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "MISD MISD systems are very rare in practice. They are mostly used in systems that have very high reliability requirements. For example, large commercial aircraft typically have multiple processors running different versions of the same program. The final outcome is decided by voting. For example, a plane might have a MIPS processor, an ARM processor, and an x86 processor, each running different versions of the same program such as an autopilot system. Here, we have multiple instruction streams, yet a single source of data. A dedicated voting circuit computes a majority vote of the three outputs. For example, it is possible that because of a bug in the program or the processor, one of the systems can erroneously take a decision to turn left. However, both of the other systems might take the correct decision to turn right. In this case, the voting circuit will decide to turn right. Since MISD systems are hardly ever used in practice other than such specialized examples, we shall not discuss them anymore in this book. ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "MIMD MIMD systems are by far the most prevalent multiprocessor systems today. They have multiple instruction streams and multiple data streams. Multicore processors, and large servers are all MIMD systems. Examples 149 and 150 pertained to MIMD systems. We need to carefully explain the meaning of multiple instruction streams. This means that instructions come from multiple sources. Each source has its unique location, and associated program counter. Two important branches of the MIMD paradigm have formed over the last few years. ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "The first is SPMD (single program multiple data), and the second is MPMD (multiple program multiple data). Most parallel programs are written in the SPMD style (Example 149 and 150). Here, multiple copies of the same program run on different cores, or separate processors. However, each individual processing unit has a separate program counter, and thus perceives a different instruction stream. Sometimes SPMD programs are written in such a way that they perform different actions depending on their thread ids. We saw a method in Example 149 on how to achieve this using OpenMP functions. The advantage of SPMD is that we do not have to write different programs for different processors. Parts of the same program can run on all the processors, though their behavior might be different. ",
+        "page_idx": 580
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 581
+    },
+    {
+        "type": "text",
+        "text": "A contrasting paradigm is MPMD. Here, the programs running on different processors are actually different. They are more useful for specialized processors that have heterogeneous processing units. There is typically a single master program that assigns work to slave programs. The slave programs complete the quanta of work assigned to them, and then return the results to the master program. The nature of work of both the programs is actually very different, and it is often not possible to seamlessly combine them into one program. ",
+        "page_idx": 581
+    },
+    {
+        "type": "text",
+        "text": "From the above description, it is clear that the systems that we need to focus on are SIMD and MIMD. MISD systems are very rarely used, and thus will not be discussed anymore. Let us first discuss MIMD multiprocessing. Note that we shall only describe the SPMD variant of MIMD multiprocessing because it is the most common approach. ",
+        "page_idx": 581
+    }
+]

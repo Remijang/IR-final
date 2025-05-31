@@ -1,0 +1,415 @@
+[
+    {
+        "type": "text",
+        "text": "26.6 Aberrations ",
+        "text_level": 1,
+        "page_idx": 1192
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1192
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1192
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Describe optical aberration. ",
+        "page_idx": 1192
+    },
+    {
+        "type": "text",
+        "text": "Real lenses behave somewhat differently from how they are modeled using the thin lens equations, producing aberrations. An aberration is a distortion in an image. There are a variety of aberrations due to a lens size, material, thickness, and position of the object. One common type of aberration is chromatic aberration, which is related to color. Since the index of refraction of lenses depends on color or wavelength, images are produced at different places and with different magnifications for different colors. (The law of reflection is independent of wavelength, and so mirrors do not have this problem. This is another advantage for mirrors in optical systems such as telescopes.) Figure 26.28(a) shows chromatic aberration for a single convex lens and its partial correction with a two-lens system. Violet rays are bent more than red, since they have a higher index of refraction and are thus focused closer to the lens. The diverging lens partially corrects this, although it is usually not possible to do so completely. Lenses of different materials and having different dispersions may be used. For example an achromatic doublet consisting of a converging lens made of crown glass and a diverging lens made of flint glass in contact can dramatically reduce chromatic aberration (see Figure 26.28(b)). ",
+        "page_idx": 1192
+    },
+    {
+        "type": "text",
+        "text": "Quite often in an imaging system the object is off-center. Consequently, different parts of a lens or mirror do not refract or reflect the image to the same point. This type of aberration is called a coma and is shown in Figure 26.29. The image in this case often appears pear-shaped. Another common aberration is spherical aberration where rays converging from the outer edges of a lens converge to a focus closer to the lens and rays closer to the axis focus further (see Figure 26.30). Aberrations due to astigmatism in the lenses of the eyes are discussed in Vision Correction, and a chart used to detect astigmatism is shown in Figure 26.8. Such aberrations and can also be an issue with manufactured lenses. ",
+        "page_idx": 1192
+    },
+    {
+        "type": "image",
+        "img_path": "images/2cbed3cbb4ba1c8b3930df311b79838e2bbba9b9334f3505f7e88ca10f2c1a26.jpg",
+        "img_caption": [
+            "FIGURE 26.28 (a) Chromatic aberration is caused by the dependence of a lens\u2019s index of refraction on color (wavelength). The lens is more powerful for violet (V) than for red (R), producing images with different locations and magnifications. (b) Multiple-lens systems can partially correct chromatic aberrations, but they may require lenses of different materials and add to the expense of optical systems such as cameras. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1193
+    },
+    {
+        "type": "image",
+        "img_path": "images/c460294d8b2820f07a0e59592eec221e071231a5575212b3982eeed3d948d19b.jpg",
+        "img_caption": [
+            "FIGURE 26.30 Spherical aberration is caused by rays focusing at different distances from the lens. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1193
+    },
+    {
+        "type": "image",
+        "img_path": "images/07622f3d3cc9e8dad38f51c21485a5afbdbdadca0abb8416a97a917aad804306.jpg",
+        "img_caption": [
+            "FIGURE 26.29 A coma is an aberration caused by an object that is off-center, often resulting in a pear-shaped image. The rays originate from points that are not on the optical axis and they do not converge at one common focal point. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1193
+    },
+    {
+        "type": "text",
+        "text": "The image produced by an optical system needs to be bright enough to be discerned. It is often a challenge to obtain a sufficiently bright image. The brightness is determined by the amount of light passing through the optical system. The optical components determining the brightness are the diameter of the lens and the diameter of pupils, diaphragms or aperture stops placed in front of lenses. Optical systems often have entrance and exit pupils to specifically reduce aberrations but they inevitably reduce brightness as well. Consequently, optical systems need to strike a balance between the various components used. The iris in the eye dilates and constricts, acting as an entrance pupil. You can see objects more clearly by looking through a small hole made with your hand in the shape of a fist. Squinting, or using a small hole in a piece of paper, also will make the object sharper. ",
+        "page_idx": 1193
+    },
+    {
+        "type": "text",
+        "text": "So how are aberrations corrected? The lenses may also have specially shaped surfaces, as opposed to the simple spherical shape that is relatively easy to produce. Expensive camera lenses are large in diameter, so that they can gather more light, and need several elements to correct for various aberrations. Further, advances in materials science have resulted in lenses with a range of refractive indices\u2014technically referred to as graded index (GRIN) lenses. Spectacles often have the ability to provide a range of focusing ability using similar techniques. GRIN lenses are particularly important at the end of optical fibers in endoscopes. Advanced computing techniques allow for a range of corrections on images after the image has been collected and certain characteristics of the optical system are known. Some of these techniques are sophisticated versions of what are available on commercial packages like Adobe Photoshop. ",
+        "page_idx": 1194
+    },
+    {
+        "type": "text",
+        "text": "Glossary ",
+        "text_level": 1,
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "aberration failure of rays to converge at one focus because of limitations or defects in a lens or mirror   \naccommodation the ability of the eye to adjust its focal length is known as accommodation   \nadaptive optics optical technology in which computers adjust the lenses and mirrors in a device to correct for image distortions   \nangular magnification a ratio related to the focal lengths of the objective and eyepiece and given as $\\begin{array} { r } { M = - \\frac { f _ { 0 } } { f _ { \\mathrm { e } } } } \\end{array}$   \nastigmatism the result of an inability of the cornea to properly focus an image onto the retina   \ncolor constancy a part of the visual perception system that allows people to perceive color in a variety of conditions and to see some consistency in the color   \ncompound microscope a microscope constructed from two convex lenses, the first serving as the ocular lens(close to the eye) and the second serving as the objective lens   \neyepiece the lens or combination of lenses in an optical instrument nearest to the eye of the observer   \nfar point the object point imaged by the eye onto the retina in an unaccommodated eye   \nfarsightedness another term for hyperopia, the condition of an eye where incoming rays of light reach the retina before they converge into a focused image   \nhues identity of a color as it relates specifically to the spectrum   \nhyperopia the condition of an eye where incoming rays of light reach the retina before they converge into a focused image   \nlaser vision correction a medical procedure used to correct astigmatism and eyesight deficiencies such as myopia and hyperopia   \nmyopia a visual defect in which distant objects appear blurred because their images are focused in front of the retina rather than being focused on the retina   \nnear point the point nearest the eye at which an object is accurately focused on the retina at full accommodation   \nnearsightedness another term for myopia, a visual defect in which distant objects appear blurred because their images are focused in front of the retina rather than being focused on the retina   \nnumerical aperture a number or measure that expresses the ability of a lens to resolve fine detail in an object being observed. Derived by mathematical formula $N A = n$ sin $\\alpha$   \nwhere $n$ is the refractive index of the medium between the lens and the specimen and $\\alpha = \\theta / 2$   \nobjective lens the lens nearest to the object being examined   \npresbyopia a condition in which the lens of the eye becomes progressively unable to focus on objects close to the viewer   \nretinex a theory proposed to explain color and brightness perception and constancies; is a combination of the words retina and cortex, which are the two areas responsible for the processing of visual information   \nretinex theory of color vision the ability to perceive color in an ambient-colored environment   \nrods and cones two types of photoreceptors in the human retina; rods are responsible for vision at low light levels, while cones are active at higher light levels   \nsimplified theory of color vision a theory that states that there are three primary colors, which correspond to the three types of cones ",
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "Section Summary ",
+        "text_level": 1,
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "26.1 Physics of the Eye ",
+        "text_level": 1,
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Image formation by the eye is adequately described by the thin lens equations: $P = { \\frac { 1 } { d _ { \\mathrm { { o } } } } } + { \\frac { 1 } { d _ { \\mathrm { { i } } } } }$ -and ${ \\frac { h _ { \\mathrm { i } } } { h _ { \\mathrm { 0 } } } } = - { \\frac { d _ { \\mathrm { i } } } { d _ { \\mathrm { 0 } } } } = m .$   \nThe eye produces a real image on the retina by adjusting its focal length and power in a process called accommodation.   \n\u2022 For close vision, the eye is fully accommodated and has its greatest power, whereas for distant vision, it is totally relaxed and has its smallest power. ",
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The loss of the ability to accommodate with age is called presbyopia, which is corrected by the use of a converging lens to add power for close vision. ",
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "26.2 Vision Correction ",
+        "text_level": 1,
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Nearsightedness, or myopia, is the inability to see distant objects and is corrected with a diverging lens to reduce power.   \n\u2022 Farsightedness, or hyperopia, is the inability to see close objects and is corrected with a converging lens to increase power.   \n\u2022 In myopia and hyperopia, the corrective lenses ",
+        "page_idx": 1195
+    },
+    {
+        "type": "text",
+        "text": "produce images at a distance that the person can see clearly\u2014the far point and near point, respectively. ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "26.3 Color and Color Vision ",
+        "text_level": 1,
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The eye has four types of light receptors\u2014rods and three types of color-sensitive cones.   \n\u2022 The rods are good for night vision, peripheral vision, and motion changes, while the cones are responsible for central vision and color.   \n\u2022 We perceive many hues, from light having mixtures of wavelengths.   \n\u2022 A simplified theory of color vision states that there are three primary colors, which correspond to the three types of cones, and that various combinations of the primary colors produce all the hues.   \n\u2022 The true color of an object is related to its relative absorption of various wavelengths of light. The color of a light source is related to the wavelengths it produces.   \n\u2022 Color constancy is the ability of the eye-brain system to discern the true color of an object illuminated by various light sources.   \n\u2022 The retinex theory of color vision explains color constancy by postulating the existence of three retinexes or image systems, associated with the three types of cones that are compared to obtain sophisticated information. ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "26.4 Microscopes ",
+        "text_level": 1,
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The microscope is a multiple-element system having more than a single lens or mirror.   \n\u2022 Many optical devices contain more than a single lens or mirror. These are analysed by considering each element sequentially. The image formed by the first is the object for the second, and so on. The same ray tracing and thin lens techniques apply to each lens element.   \n\u2022 The overall magnification of a multiple-element system is the product of the magnifications of its individual elements. For a two-element system with an objective and an eyepiece, this is $m = m _ { \\mathrm { { o } } } m _ { \\mathrm { { e } } }$ where $m _ { 0 }$ is the magnification of the objective and $m _ { \\mathrm { e } }$ is the magnification of the eyepiece, such as for a microscope.   \n\u2022 Microscopes are instruments for allowing us to see detail we would not be able to see with the unaided eye and consist of a range of components.   \nThe eyepiece and objective contribute to the magnification. The numerical aperture $( N A )$ of an objective is given by $N A = n$ sin $\\alpha$ where $n$ is the refractive index and $\\alpha$ the angle of acceptance.   \n\u2022 Immersion techniques are often used to improve the light gathering ability of microscopes. The specimen is illuminated by transmitted, scattered or reflected light though a condenser.   \n\u2022 The $f$ describes the light gathering ability of a lens. It is given by $f / \\# = { \\frac { f } { D } } \\approx { \\frac { 1 } { 2 N A } } .$ ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "26.5 Telescopes ",
+        "text_level": 1,
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Simple telescopes can be made with two lenses. They are used for viewing objects at large distances and utilize the entire range of the electromagnetic spectrum.   \n\u2022 The angular magnification M for a telescope is given by $M = { \\frac { \\dot { \\theta } ^ { \\prime } } { \\theta } } = - { \\frac { f _ { 0 } } { f _ { \\mathrm { e } } } } ,$ where $\\theta$ is the angle subtended by an object viewed by the unaided eye, $\\theta ^ { \\prime }$ is the angle subtended by a magnified image, and $f _ { 0 }$ and $f _ { \\mathrm { e } }$ are the focal lengths of the objective and the eyepiece. ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "26.6 Aberrations ",
+        "text_level": 1,
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Aberrations or image distortions can arise due to the finite thickness of optical instruments, imperfections in the optical components, and limitations on the ways in which the components are used.   \n\u2022 The means for correcting aberrations range from better components to computational techniques. ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "Conceptual Questions ",
+        "text_level": 1,
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "26.1 Physics of the Eye ",
+        "text_level": 1,
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "1. If the lens of a person\u2019s eye is removed because of cataracts (as has been done since ancient times), why would you expect a spectacle lens of about 16 D to be prescribed? ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "2. A cataract is cloudiness in the lens of the eye. Is light dispersed or diffused by it?   \n3. When laser light is shone into a relaxed normalvision eye to repair a tear by spot-welding the retina to the back of the eye, the rays entering the eye must be parallel. Why?   \n4. How does the power of a dry contact lens compare with its power when resting on the tear layer of the eye? Explain.   \n5. Why is your vision so blurry when you open your eyes while swimming under water? How does a face mask enable clear vision? ",
+        "page_idx": 1196
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "26.2 Vision Correction ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "6. It has become common to replace the cataractclouded lens of the eye with an internal lens. This intraocular lens can be chosen so that the person has perfect distant vision. Will the person be able to read without glasses? If the person was nearsighted, is the power of the intraocular lens greater or less than the removed lens?   \n7. If the cornea is to be reshaped (this can be done surgically or with contact lenses) to correct myopia, should its curvature be made greater or smaller? Explain. Also explain how hyperopia can be corrected.   \n8. If there is a fixed percent uncertainty in LASIK reshaping of the cornea, why would you expect those people with the greatest correction to have a poorer chance of normal distant vision after the procedure?   \n9. A person with presbyopia has lost some or all of the ability to accommodate the power of the eye. If such a person\u2019s distant vision is corrected with LASIK, will she still need reading glasses? Explain. ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "26.3 Color and Color Vision ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "10. A pure red object on a black background seems to disappear when illuminated with pure green light. Explain why.   \n11. What is color constancy, and what are its limitations?   \n12. There are different types of color blindness related to the malfunction of different types of cones. Why would it be particularly useful to study those rare individuals who are color blind only in one eye or who have a different type of color blindness in each eye?   \n13. Propose a way to study the function of the rods alone, given they can sense light about 1000 times dimmer than the cones. ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "26.4 Microscopes ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "14. Geometric optics describes the interaction of light with macroscopic objects. Why, then, is it correct to use geometric optics to analyse a microscope\u2019s image?   \n15. The image produced by the microscope in Figure 26.16 cannot be projected. Could extra lenses or mirrors project it? Explain.   \n16. Why not have the objective of a microscope form a case 2 image with a large magnification? (Hint: Consider the location of that image and the difficulty that would pose for using the eyepiece as a magnifier.)   \n17. What advantages do oil immersion objectives offer?   \n18. How does the of a microscope compare with the of an optical fiber? ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "26.5 Telescopes ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "19. If you want your microscope or telescope to project a real image onto a screen, how would you change the placement of the eyepiece relative to the objective? ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "26.6 Aberrations ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "20. List the various types of aberrations. What causes them and how can each be reduced? ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "Problems & Exercises ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "26.1 Physics of the Eye ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "Unless otherwise stated, the lens-to-retina distance is 2.00 cm. ",
+        "text_level": 1,
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "1. What is the power of the eye when viewing an object 50.0 cm away?   \n2. Calculate the power of the eye when viewing an object $3 . 0 0 \\mathrm { m }$ away. ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "3. (a) The print in many books averages $3 . 5 0 \\mathsf { m m }$ in height. How high is the image of the print on the retina when the book is held $3 0 . 0 \\mathsf { c m }$ from the eye? (b) Compare the size of the print to the sizes of rods and cones in the fovea and discuss the possible details observable in the letters. (The eye-brain system can perform better because of interconnections and higher order image processing.) ",
+        "page_idx": 1197
+    },
+    {
+        "type": "text",
+        "text": "4. Suppose a certain person\u2019s visual acuity is such that he can see objects clearly that form an image $4 . 0 0 \\mu \\mathrm { m }$ high on his retina. What is the maximum distance at which he can read the 75.0 cm high letters on the side of an airplane?   \n5. People who do very detailed work close up, such as jewellers, often can see objects clearly at much closer distance than the normal $2 5 \\mathsf { c m }$ . (a) What is the power of the eyes of a woman who can see an object clearly at a distance of only 8.00 cm? (b) What is the size of an image of a $1 . 0 0 ~ \\mathsf { m m }$ object, such as lettering inside a ring, held at this distance? (c) What would the size of the image be if the object were held at the normal 25.0 cm distance? ",
+        "page_idx": 1198
+    },
+    {
+        "type": "text",
+        "text": "26.2 Vision Correction ",
+        "text_level": 1,
+        "page_idx": 1198
+    },
+    {
+        "type": "text",
+        "text": "6. What is the far point of a person whose eyes have a relaxed power of 50.5 D?   \n7. What is the near point of a person whose eyes have an accommodated power of 53.5 D?   \n8. (a) A laser vision correction reshaping the cornea of a myopic patient reduces the power of his eye by 9.00 D, with a $\\pm 5 . 0 \\%$ uncertainty in the final correction. What is the range of diopters for spectacle lenses that this person might need after LASIK procedure? (b) Was the person nearsighted or farsighted before the procedure? How do you know?   \n9. In a LASIK vision correction, the power of a patient\u2019s eye is increased by 3.00 D. Assuming this produces normal close vision, what was the patient\u2019s near point before the procedure?   \n10. What was the previous far point of a patient who had laser vision correction that reduced the power of her eye by 7.00 D, producing normal distant vision for her?   \n11. A severely myopic patient has a far point of 5.00 cm. By how many diopters should the power of his eye be reduced in laser vision correction to obtain normal distant vision for him?   \n12. A student\u2019s eyes, while reading the blackboard, have a power of 51.0 D. How far is the board from his eyes?   \n13. The power of a physician\u2019s eyes is ${ 5 3 . 0 \\ 0 }$ while examining a patient. How far from her eyes is the feature being examined?   \n14. A young woman with normal distant vision has a $1 0 . 0 \\%$ ability to accommodate (that is, increase) the power of her eyes. What is the closest object she can see clearly?   \n15. The far point of a myopic administrator is $5 0 . 0 \\mathsf { c m }$ . (a) What is the relaxed power of their eyes? (b) If they have the normal $8 . 0 0 \\%$ ability to accommodate, what is the closest object they can see clearly?   \n16. A very myopic man has a far point of $2 0 . 0 \\mathsf { c m }$ . What power contact lens (when on the eye) will correct his distant vision?   \n17. Repeat the previous problem for eyeglasses held $\\mathtt { 1 . 5 0 \\mathtt { c m } }$ from the eyes.   \n18. A myopic person sees that their contact lens prescription is . What is their far point?   \n19. Repeat the previous problem for glasses that are 1.75 cm from the eyes.   \n20. The contact lens prescription for a mildly farsighted person is 0.750 D, and the person has a near point of $2 9 . 0 \\mathsf { c m }$ . What is the power of the tear layer between the cornea and the lens if the correction is ideal, taking the tear layer into account?   \n21. A nearsighted man cannot see objects clearly beyond 20 cm from his eyes. How close must he stand to a mirror in order to see what he is doing when he shaves?   \n22. A teacher sees that a child\u2019s contact lens prescription is 0.750 D. What is the child\u2019s near point?   \n23. Repeat the previous problem for glasses that are $2 . 2 0 \\mathsf { c m }$ from the eyes.   \n24. The contact lens prescription for a nearsighted person is $- 4 . 0 0 \\mathrm { D }$ and the person has a far point of $2 2 . 5 \\mathsf { c m }$ . What is the power of the tear layer between the cornea and the lens if the correction is ideal, taking the tear layer into account?   \n25. Unreasonable Results A boy has a near point of $5 0 \\mathsf { c m }$ and a far point of $5 0 0 \\mathsf { c m }$ . Will a $- 4 . 0 0 \\mathrm { D }$ lens correct his far point to infinity? ",
+        "page_idx": 1198
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1198
+    },
+    {
+        "type": "text",
+        "text": "26.4 Microscopes ",
+        "text_level": 1,
+        "page_idx": 1198
+    },
+    {
+        "type": "text",
+        "text": "26. A microscope with an overall magnification of 800 has an objective that magnifies by 200. (a) What is the magnification of the eyepiece? (b) If there are two other objectives that can be used, having magnifications of 100 and 400, what other total magnifications are possible?   \n27. (a) What magnification is produced by a 0.150 cm focal length microscope objective that is $0 . 1 5 5 c m$ from the object being viewed? (b) What is the overall magnification if an $8 \\times$ eyepiece (one that produces a magnification of 8.00) is used? ",
+        "page_idx": 1198
+    },
+    {
+        "type": "text",
+        "text": "28. (a) Where does an object need to be placed relative to a microscope for its $0 . 5 0 0 { \\mathsf { c m } }$ focal length objective to produce a magnification of ? (b) Where should the 5.00 cm focal length eyepiece be placed to produce a further fourfold (4.00) magnification? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "29. You switch from a $1 . 4 0 N A 6 0 \\times$ oil immersion objective to a $1 . 4 0 N A 6 0 \\times$ oil immersion objective. What are the acceptance angles for each? Compare and comment on the values. Which would you use first to locate the target area on your specimen? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "30. An amoeba is 0.305 cm away from the 0.300 cm focal length objective lens of a microscope. (a) Where is the image formed by the objective lens? (b) What is this image\u2019s magnification? (c) An eyepiece with a $2 . 0 0 \\mathsf { c m }$ focal length is placed $2 0 . 0 \\mathsf { c m }$ from the objective. Where is the final image? (d) What magnification is produced by the eyepiece? (e) What is the overall magnification? (See Figure 26.16.) ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "31. You are using a standard microscope with a $0 . 1 0 N A 4 \\times$ objective and switch to a $0 . 6 5 N A 4 0 \\times$ objective. What are the acceptance angles for each? Compare and comment on the values. Which would you use first to locate the target area on of your specimen? (See Figure 26.17.) ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "32. Unreasonable Results Your friends show you an image through a microscope. They tell you that the microscope has an objective with a 0.500 cm focal length and an eyepiece with a $5 . 0 0 \\mathsf { c m }$ focal length. The resulting overall magnification is 250,000. Are these viable values for a microscope? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "26.5 Telescopes ",
+        "text_level": 1,
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "Unless otherwise stated, the lens-to-retina distance is $2 . 0 0 c m$ . ",
+        "text_level": 1,
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "33. What is the angular magnification of a telescope that has a 100 cm focal length objective and a $2 . 5 0 \\mathsf { c m }$ focal length eyepiece?   \n34. Find the distance between the objective and eyepiece lenses in the telescope in the above problem needed to produce a final image very far from the observer, where vision is most relaxed. Note that a telescope is normally used to view very distant objects.   \n35. A large reflecting telescope has an objective mirror with a $1 0 . 0 \\mathrm { m }$ radius of curvature. What angular magnification does it produce when a 3.00 cm focal length eyepiece is used? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "36. A small telescope has a concave mirror with a $2 . 0 0 \\mathsf { m }$ radius of curvature for its objective. Its eyepiece is a $4 . 0 0 \\mathsf { c m }$ focal length lens. (a) What is the telescope\u2019s angular magnification? (b) What angle is subtended by a $2 5 , 0 0 0 \\mathrm { k m }$ diameter sunspot? (c) What is the angle of its telescopic image? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "37. A $7 . 5 \\times$ binocular produces an angular magnification of $- 7 . 5 0$ , acting like a telescope. (Mirrors are used to make the image upright.) If the binoculars have objective lenses with a 75.0 cm focal length, what is the focal length of the eyepiece lenses? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "38. Construct Your Own Problem Consider a telescope of the type used by Galileo, having a convex objective and a concave eyepiece as illustrated in Figure 26.23(a). Construct a problem in which you calculate the location and size of the image produced. Among the things to be considered are the focal lengths of the lenses and their relative placements as well as the size and location of the object. Verify that the angular magnification is greater than one. That is, the angle subtended at the eye by the image is greater than the angle subtended by the object. ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "26.6 Aberrations ",
+        "text_level": 1,
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "39. Integrated Concepts ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "(a) During laser vision correction, a brief burst of $1 9 3 \\ : \\mathsf { n m }$ ultraviolet light is projected onto the cornea of the patient. It makes a spot $\\phantom { - } 1 . 0 0 \\mathsf { m m }$ in diameter and deposits $0 . 5 0 0 \\mathrm { m J }$ of energy. Calculate the depth of the layer ablated, assuming the corneal tissue has the same properties as water and is initially at $3 4 . 0 ^ { \\circ } \\mathrm { C }$ . The tissue\u2019s temperature is increased to $1 0 0 ^ { \\circ } \\mathrm { C }$ and evaporated without further temperature increase. (b) Does your answer imply that the shape of the cornea can be finely controlled? ",
+        "page_idx": 1199
+    },
+    {
+        "type": "text",
+        "text": "40. Critical Thinking A microscope has the objective lens $6 . 0 0 \\mathrm { m m }$ from an object. The focal length of the objective lens is $4 . 0 0 \\ : \\mathrm { m m }$ . The eyepiece has a focal length of $5 0 . 0 \\mathsf { m m }$ and is initially $2 5 . 0 \\mathsf { m m }$ from the objective lens. (a) The objective lens is moved to $5 . 0 0 \\mathsf { m m }$ from the objective, effectively lengthening the microscope. How does this affect the magnification of the microscope? (b) Does moving the objective increase closer to the object increase or decrease the magnification, or does it remain the same? (c) Do you think moving the objective from 6 mm to $7 ~ \\mathsf { m m }$ from the object will increase or decrease the magnification of the microscope, or will it likely remain the same? (d) What indicates whether the image is upright or inverted? ",
+        "page_idx": 1200
+    },
+    {
+        "type": "image",
+        "img_path": "images/76906d2af9485bd19598647363c59a783df25f0d87905731a9f8ecd624c94c88.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1202
+    },
+    {
+        "type": "image",
+        "img_path": "images/68eea1901f536024c7f55dc0c9e57c264e9a81911235eca3991ae462a02beb10.jpg",
+        "img_caption": [
+            "FIGURE 27.1 Katharine Burr Blodgett (1898\u20131979) was a physicist and chemist who made significant advancements in the study of surfaces and thin films. The trough she developed is still used in thousands of labs around the world, and her invention of non-reflective glass has had massive impact in cinema, medical, and scientific research arenas. (credit: Smithsonian Institution) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1202
+    }
+]

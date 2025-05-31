@@ -1,0 +1,12 @@
+[
+    {
+        "type": "text",
+        "text": "Assembly language can broadly be defined as a textual representation of machine instructions. Before building a processor, we need to know about the semantics of different machine instructions, and a rigorous study of assembly language will be of benefit in this regard. An assembly language is specific to an ISA and compiler framework; hence, there are many flavors of assembly languages. In this chapter we shall describe the broad principles underlying different variants of assembly languages, some generic concepts and terms. We will subsequently design our own assembly language, SimpleRisc . It is a simple RISC ISA with a few instructions. Subsequently, in Chapter 9, we will design a processor that fully implements this ISA. Thus, the plan for this chapter is as follows. We shall first convince ourselves of the need for assembly language in Section 3.1 from the point of view of both software developers and hardware designers. Then we shall proceed to discuss the generic semantics of assembly languages in Section 3.2. Once, we have a basic understanding of assembly languages, we shall design our own assembly language, SimpleRisc , in Section 3.3, and then design a method to encode it using a sequence of 32 bits in Section 3.3.14. ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Subsequently, in Chapter 4 we shall describe the ARM assembly language that is meant for ARM-based processors, and in Chapter 5, we shall describe the x86 assembly language meant for Intel/AMD processors. In these two chapters, these machine specific assembly languages will be covered in great detail. This chapter is introductory, and creates the framework for a more serious study of different instruction sets and assembly languages. ",
+        "page_idx": 93
+    }
+]

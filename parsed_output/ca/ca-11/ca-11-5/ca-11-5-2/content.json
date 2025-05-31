@@ -1,0 +1,276 @@
+[
+    {
+        "type": "text",
+        "text": "11.5.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "The reader can refer to advanced text books on computer architecture by Henessey and Patterson [Hennessy and Patterson, 2012], Kai Hwang [Hwang, 2003], and Jean Loup Baer [Baer, 2010] for a discussion on advanced memory systems. Specifically, the books discuss advanced techniques for prefetching, miss rate reduction, miss penalty reduction, and compiler directed approaches. The reader can also refer to the book on memory systems by Bruce Jacob [Jacob, 2009]. This book gives a comprehensive survey of most of the major techniques employed in designing state-of-the-art memory systems till 2009. The book by Balasubramaniam, Jouppi, and Muralimanohar on cache hierarchies also discusses some of the more advanced topics on the management of caches [Balasubramonian et al., 2011]. Managing the MMU is mostly studied in courses on operating systems [Tanenbaum, 2007, Silberschatz et al., 2008]. Research in DRAM memories [Mitra, 1999], and systems using advanced memory technologies is a hot topic of current research. A lot of research work is now focusing on phase change memories that do not require costly refresh cycles like DRAM. Readers can refer to the book by Qureshi, Gurumurthi, and Rajendran [Qureshi et al., 2011] for a thorough explanation of memory systems using phase ",
+        "page_idx": 560
+    },
+    {
+        "type": "text",
+        "text": "change memories. ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Overview ",
+        "text_level": 1,
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Define temporal locality, and spatial locality. ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 2 \u2014 Experimentally verify that the log-normal distribution is a heavy-tailed distribution. What is the implication of a heavy tailed distribution in the context of the stack distance and temporal locality? ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 3 \u2014 Define the term, address distance. Why do we find the nearest match in the last $K$ accesses? ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 4 \u2014 How do we take advantage of temporal locality in the memory system? ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 5 \u2014 How do we take advantage of spatial locality in the memory system? ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Caches and the Memory System ",
+        "text_level": 1,
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 6 \u2014 Consider a fully associative cache following the LRU replacement scheme and consisting of only 8 words. Consider the following sequence of memory accesses (the numbers denote the word address):   \n20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 22, 30, 21, 23, 31 ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Assume that we begin when the cache is empty. What are the contents of the cache after the end of the sequence of memory accesses. ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 7 \u2014 Answer Exercise 6 assuming a FIFO replacement scheme. ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Ex. 8 \u2014 Consider a two-level cache using a write back policy. The L1 cache can store 2 words, and the L2 cache can store 4 words. Assume the caches to be fully associative (block $\\mathrm { s i z e } = 1$ word); they follow the LRU replacement scheme. Consider the following sequence of memory accesses. The format of a write access is write <address> <value>, and the format of a read access is $r e a d < a d d r e s s >$ . ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "write 20 200   \nwrite 21 300   \nwrite 22 400   \nwrite 23 500   \nwrite 20 201   \nwrite 21 301   \nread 22   \nread 23 ",
+        "page_idx": 561
+    },
+    {
+        "type": "table",
+        "img_path": "images/ec37b0c65ea206db9fac2f1e7feca360b5b32d23ca0ea90b497467a1622930f5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>write 22 401</td></tr><tr><td>write 23 501</td></tr><tr><td></td></tr><tr><td></td></tr></table></body></html>\n\n",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "What are the contents of the caches at the end of the sequence of memory accesses? What are the contents of the caches, if we assume a write through policy ? ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 What is the total size (in bytes) of a direct mapped cache with the following configuration in a 32-bit system? It has a 10 bit index, and a block size of 64 bytes. Each block has 1 valid bit and 1 dirty bit. ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 Which sorting algorithm will have a better cache performance \u2013 bubble sort or selection sort? Explain your answer. ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 You have a cache with the following parameters: size : $n$ bytes associativity : $k$ block size : $b$ bytes ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Assuming a 32-bit address space, answer the following: ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "(a) What is the size of the tag in bits? (b) What is the size of the set index in bits? ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 12 \u2014 Consider a direct mapped cache with 16 cache lines, indexed 0 to 15, where each cache line contains 32 integers (block size : 128 bytes).   \nConsider a two-dimensional, $3 2 \\times 3 2$ array of integers $a$ . This array is laid out in memory such that $a [ 0 , 0 ]$ is next to $a [ 0 , 1 ]$ , and so on. Assume the cache is initially empty, and $a [ 0 , 0 ]$ maps to the first word of cache line 0. ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Consider the following column-first traversal: ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "int sum = 0;   \nfor (int i = 0; i < 32; i++) { for( int j=0; j < 32; j++) { sum += a[i,j]; }   \n} ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "and the following row-first traversal: ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "int sum = 0;   \nfor (int $\\dot { \\textbf { i } } = 0$ ; i < 32; i++) { for( int j=0; j < 32; j++) { sum $+ =$ a[j,i]; }   \n} ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Compare the number of cache misses produced by the two traversals, assuming the oldest cache line is evicted first. Assume that $i$ , $j$ , and sum are stored in registers, and that no part of array $a$ is saved in registers. It is always stored in the cache. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 A processor has a baseline IPC of 1.5, an L1 miss rate of 5%, and an L2 miss rate of $5 0 \\%$ . The hit time of the L1 cache is 1 cycle (part of the baseline IPC computation), the L2 hit time is 10 cycles, and the L2 miss penalty is 100 cycles. Compute the final IPC. Assume that all the miss rates are local miss rates. ",
+        "page_idx": 563
+    },
+    {
+        "type": "table",
+        "img_path": "images/4bd7ea5595e989cc3fad1b2d0f14cc9baeca0cb19ec9dc5e149814dbb5da31a1.jpg",
+        "table_caption": [
+            "Ex. 14 \u2014 Consider the designs shown below "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Design</td><td>Base CPI</td><td>L1 local miss rate (%)</td><td>L2 local miss rate (%\uff09</td><td>L1 hit time (cycles)</td><td>L2hit time (cycles)</td><td>L2miss penalty (cycles)</td></tr><tr><td>D1</td><td>1</td><td>5</td><td>20</td><td>1</td><td>10</td><td>200</td></tr><tr><td>D2</td><td>1.5</td><td>10</td><td>25</td><td>1</td><td>20</td><td>150</td></tr><tr><td>D3</td><td>2</td><td>15</td><td>20</td><td>1</td><td>5</td><td>300</td></tr></table></body></html>\n\n",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "The base CPI assumes that all the instructions hit in the L1 cache. Furthermore, assume that a third of the instructions are memory instructions. Write the formula for the average memory access time. What is the CPI of $\\mathcal { D } _ { 1 }$ , $\\mathcal { D } _ { 2 }$ and $\\mathcal { D } _ { 3 }$ ? ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "$\\mathbf { \\mu } ^ { * } \\mathbf { \\mu } _ { \\mathbf { E x } }$ . 15 \u2014 Assume a cache that has $n$ levels. For each level, the hit time is $x$ cycles, and the local miss rate is $y$ per cycle. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "(a) What is the recursive formula for the average memory access time? (b) What is the average memory access time as $n$ tends to $\\infty$ ? ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 16 \u2014 Assume that you are given a machine with an unknown configuration. You need to find out a host of cache parameters by measuring the time it takes to execute different programs. These programs will be tailor-made in such a way that they will reveal something about the underlying system. For answering the set of questions, you need to broadly describe the approach. Assume that the cache follows the LRU scheme for replacement. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "(a) How will you estimate the size of the L1 cache? (b) How will you estimate the L1 block size? (c) How will you estimate the L1 cache associativity? ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Virtual Memory ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Ex. 17 \u2014 In a 32-bit machine with a 4 KB page size, how many entries are there in a single level page table? What is the size of each entry in the page table in bits? ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Ex. 18 \u2014 Consider a 32-bit machine with a 4 KB page size, and a two level page table. If we address the primary page table with 12 bits of the page address, then how many entries are there in each secondary page table? ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Ex. 19 \u2014 In a two level page table, should we index the primary page table with the most significant bits of the page address, or the least significant bits? Explain your answer. ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 We have a producer-consumer interaction between processes $A$ and $B$ . $A$ writes data that $B$ reads in a shared space. However, B should never be allowed to write anything into that shared space. How can we implement this using paging? How do we ensure that B will never be able to write into the shared space? ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Ex. 21 \u2014 Assume a process $A$ , forks a process $B$ . Forking a process means that $B$ inherits a copy of $A$ \u2019s entire address space. However, after the fork call, the address spaces are separate. How can we implement this using our paging mechanism? ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Ex. 22 \u2014 How is creating a new thread different from a fork() operation in terms of memory addressing? ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Ex. 23 \u2014 Most of the time, the new process generated by a fork call does not attempt to change or modify the data inherited from the parent process. So is it really necessary to copy all the frames of the parent process to the child process? Can you propose an optimization? ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Ex. 24 \u2014 Explain the design of an inverted page table. ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 25 \u2014 Calculate the expected value of the final CPI: ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Baseline CPI: 1   \nPercentage of memory accesses: $3 0 \\%$   \nTLB lookup time: 1 cycle (part of the baseline CPI)   \nTLB miss rate: $2 0 \\%$   \n\u2022Page table lookup time: 20 cycles (do not assume any page faults). Assume we can instantaneously insert entries into the TLB.   \nL1 cache hit time: 1 cycle (Part of the baseline CPI)   \nL1 local miss rate: $1 0 \\%$   \nL2 cache hit time: 20 cycles   \nL2 local miss rate: 50%   \nL2 miss penalty: 100 cycles ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 26 \u2014 Most of the time, programmers use libraries of functions in their programs. These libraries contain functions for standard mathematical operations, for supporting I/O operations, and for interacting with the operating system. The machine instructions of these functions are a part of the final executable. Occasionally, programmers prefer to use dynamically linked libraries (DLLs). DLLs contain the machine code of specific functions. However, they are invoked at run time, and their machine code is not a part of the program executable. Propose a method to implement a method to load and unload DLLs with the help of virtual memory. ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Ex. 27 \u2014 You need to learn to use the CACTI tool (http://www.hpl.hp.com/research/ cacti/) to estimate the area, latency, and power of different cache designs. Assume a 4-way associative 512 KB cache with 64 byte blocks. The baseline design has 1 read port, and 1 write port. You need to assume the baseline design, vary one parameter as mentioned below, and plot its relationship with the area, latency, or power consumption of a cache. ",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "a)Plot the area versus the number of read ports.   \nb)Plot the energy per read access versus the number of read ports.   \nc)Plot the cache latency versus the associativity.   \nd)Vary the size of the cache from 256 KB to 4 MB (powers of 2), and plot its relationship with area, latency, and power. ",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Ex. 28 \u2014 Write a cache simulator that accepts memory read/write requests and simulates the execution of a hierarchical system of caches. ",
+        "page_idx": 565
+    }
+]

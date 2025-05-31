@@ -1,0 +1,90 @@
+[
+    {
+        "type": "text",
+        "text": "10.7.1 Basic Concepts ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "We have now implemented a pipeline with interlocks. Interlocks ensure that a pipeline executes correctly irrespective of the nature of dependencies across instructions. For the Data-Lock condition we proposed to add interlocks in the pipeline that do not allow an instruction to leave the operand fetch stage until the correct values are available in the register file. However, we shall see in this section that we do not need to add interlocks always. In fact, in a lot of instances, the correct data is already present in pipeline registers, albeit not in the register file. We can design a method to properly pass data from the internal pipeline registers to the appropriate functional unit. Let us consider a small example by considering this SimpleRisc code snippet. ",
+        "page_idx": 440
+    },
+    {
+        "type": "image",
+        "img_path": "images/4205236aae3579e512b428ac260ebb87815895021e2ff47b78d895d4af148945.jpg",
+        "img_caption": [
+            "Figure 10.17: Data path of a pipeline with interlocks (implements both the Data-Lock and Branch-Lock conditions) "
+        ],
+        "img_footnote": [],
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "[1]: add r1, r2, r3   \n[2]: sub r4, r1, r2 ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at the pipeline diagram with just these two instructions in Figure 10.18. Figure 10.18(a) shows the pipeline diagram with interlocks. Figure 10.18(b) shows a pipeline diagram without interlocks and bubbles. Let us now try to argue that we do not need to insert a bubble between the instructions. ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Let us take a deeper look at Figure 10.18(b). Instruction 1 produces its result at the end of the EX stage, or alternatively at the end of cycle 3, and writes to the register file in cycle 5. Instruction 2 needs the value of $r 1$ in the register file at the beginning of cycle 3. This is clearly not possible, and thus we had proposed to add pipeline interlocks to resolve this issue. However, let us try an alternative solution instead. Let us allow the instructions to execute. Then in cycle 3, [2] will get the wrong value. We allow it to proceed to the EX stage in cycle 4. At this point of time, instruction [1] is in the MA stage, and its instruction packet contains the correct value of $r 1$ . This value of $r 1$ was computed in the previous cycle, and is present in the aluResult field of the instruction packet. [1]\u2019s instruction packet is in the EX-MA register in cycle 4. Now, if we add a connection between the aluResult field of the EX-MA register and an input of the ALU, then we can successfully transfer the correct value of $r 1$ to the ALU. There will be no error in our computation, because the operands to the ALU are correct, and thus the result of the ALU operation will also be computed correctly. Figure 10.19 shows the result of our actions in the pipeline diagram. We add a line from the MA stage of instruction [1] to the EX stage of instruction [2]. Since the arrow does not go backwards in time, it is possible to forward the data (value of $^ { r _ { \\bot } }$ ) from one stage to the other. ",
+        "page_idx": 441
+    },
+    {
+        "type": "image",
+        "img_path": "images/6be5ae88ef97ceda5f9776c1466c18ccc4f6a5ff87c2b4d7f0752f766d6ebb52.jpg",
+        "img_caption": [
+            "Figure 10.18: (a) Pipeline diagram with interlocks and bubbles (b) Pipeline diagram without bubbles "
+        ],
+        "img_footnote": [],
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 442
+    },
+    {
+        "type": "image",
+        "img_path": "images/846e88d05bc6575a2b4aadd8f2c3405715933dd8061cd228549cdfaf5e58e631.jpg",
+        "img_caption": [
+            "Figure 10.19: Example of forwarding in a pipeline "
+        ],
+        "img_footnote": [],
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Definition 75 Forwarding is a method to transfer values of operands between instructions in different pipeline stages through direct connections between the stages. We do not use the register file for transferring the values of operands across instructions. Forwarding allows us to avoid costly pipeline interlocks. ",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 443
+    },
+    {
+        "type": "text",
+        "text": "We have just looked at an extremely powerful technique for avoiding stalls in pipelines. This technique is known as forwarding. Essentially, we allow the values of operands to flow between instructions by directly transferring them across stages. We do not use the register file to transfer values across instructions. The notion of forwarding has allowed us to execute instructions [1] and [2] back to back (in consecutive cycles). We do not need to add any stall cycles. Hence, it is not necessary to reorder code, or insert nops. ",
+        "page_idx": 443
+    },
+    {
+        "type": "text",
+        "text": "Before, we proceed to the implementation of forwarding, let us discuss forwarding conceptually using pipeline diagrams. To forward the value of $r 1$ between instructions [1] and [2], we added a connection between the MA stage and the EX stage. We showed this connection in Figure 10.19 by drawing an arrow between the corresponding stages of instructions [1] and [2]. The direction of this arrow was vertically upwards. Since it did not go backwards in time, we concluded that it is possible to forward the value. Otherwise, it would not have been possible. ",
+        "page_idx": 443
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to answer a general question. Can we forward values between all pairs of instructions? Note that these need not be consecutive instructions. Even if there is one instruction between a producer and a consumer ALU instruction, we still need to forward values. Let us now try to think of all possible forwarding paths between stages in a pipeline. ",
+        "page_idx": 443
+    }
+]

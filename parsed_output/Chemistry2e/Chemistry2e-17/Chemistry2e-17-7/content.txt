@@ -1,0 +1,296 @@
+17.7 Electrolysis
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Describe the process of electrolysis • Compare the operation of electrolytic cells with that of galvanic cells • Perform stoichiometric calculations for electrolytic processes
+
+Electrochemical cells in which spontaneous redox reactions take place (galvaniccels) have been the topic of discussion so far in this chapter. In these cells, electricalworkisdonebyaredoxsystemonitssur oundingsas electrons produced by the redox reaction are transferred through an external circuit. This final section of the chapter will address an alternative scenario in which anexternalcircuitdoesworkonaredoxsystemby imposing a voltage sufficient to drive an otherwise nonspontaneous reaction, a process known as electrolysis. A familiar example of electrolysis is recharging a battery, which involves use of an external power source to drive the spontaneous (discharge) cell reaction in the reverse direction, restoring to some extent the composition of the half-cells and the voltage of the battery. Perhaps less familiar is the use of electrolysis in the refinement of metallic ores, the manufacture of commodity chemicals, and the electroplatingof metallic coatings on various products (e.g., jewelry, utensils, auto parts). To illustrate the essential concepts of electrolysis, a few specific processes will be considered.
+
+The Electrolysis of Molten Sodium Chloride
+
+Metallic sodium, Na, and chlorine gas,  , are used in numerous applications, and their industrial production relies on the large-scale electrolysis of molten sodium chloride,  . The industrial process typically uses a Downscel similar to the simplified illustration shown in Figure 17.18. The reactions associated with this process are:
+
+The cell potential for the above process is negative, indicating the reaction as written (decomposition of liquid NaCl) is not spontaneous. To force this reaction, apositivepotentialofmagnitudegreaterthanthenegativecel potentialmust be applied to the cell.
+
+The Electrolysis of Water
+
+Water may be electrolytically decomposed in a cell similar to the one illustrated in Figure 17.19. To improve electrical conductivity without introducing a different redox species, the hydrogen ion concentration of the water is typically increased by addition of a strong acid. The redox processes associated with this cell are
+
+Again, the cell potential as written is negative, indicating a nonspontaneous cell reaction that must be driven by imposing a cell voltage greater than  . Keep in mind that standardelectrode potentials are used to inform thermodynamic predictions here, though the cell is notoperating under standard state conditions. Therefore, at best, calculated cell potentials should be considered ballpark estimates.
+
+The Electrolysis of Aqueous Sodium Chloride
+
+When aqueous solutions of ionic compounds are electrolyzed, the anode and cathode half-reactions may involve the electrolysis of either water species  H-) or solute species (the cations and anions of the compound). As an example, the electrolysis of aqueous sodium chloride could involve either of these two anode reactions:
+
+The standard electrode (reduction) potentials of these two half-reactions indicate water may be oxidizedat a less negative/more positive potential (–1.229 V) than chloride ion (–1.358 V). Thermodynamics thus predicts that water would be more readily oxidized, though in practice it is observed that both water and chloride ion are oxidized under typical conditions, producing a mixture of oxygen and chlorine gas.
+
+Turning attention to the cathode, the possibilities for reduction are:
+
+Comparison of these standardhalf-reaction potentials suggests the reduction of hydrogen ion is
+
+thermodynamically favored. However, in a neutral aqueous sodium chloride solution, the concentration of hydrogen ion is far below the standard state value of 1  (approximately  , and so the observed cathode reaction is actually reduction of water. The net cell reaction in this case is then
+
+This electrolysis reaction is part of the chlor-alkaliproces used by industry to produce chlorine and sodium hydroxide (lye).
+
+Chemistry in Everyday Life
+
+Electroplating
+
+An important use for electrolytic cells is in electroplating. Electroplating results in a thin coating of one metal on top of a conducting surface. Reasons for electroplating include making the object more corrosion resistant, strengthening the surface, producing a more attractive finish, or for purifying metal. The metals commonly used in electroplating include cadmium, chromium, copper, gold, nickel, silver, and tin. Common consumer products include silver-plated or gold-plated tableware, chrome-plated automobile parts, and jewelry. The silver plating of eating utensils is used here to illustrate the process. (Figure 17.20).
+
+In the figure, the anode consists of a silver electrode, shown on the left. The cathode is located on the right and is the spoon, which is made from inexpensive metal. Both electrodes are immersed in a solution of silver nitrate. Applying a sufficient potential results in the oxidation of the silver anode
+
+and reduction of silver ion at the (spoon) cathode:
+
+The net result is the transfer of silver metal from the anode to the cathode. Several experimental factors must be carefully controlled to obtain high-quality silver coatings, including the exact composition of the electrolyte solution, the cell voltage applied, and the rate of the electrolysis reaction (electrical current).
+
+Quantitative Aspects of Electrolysis
+
+Electrical current is defined as the rate of flow for any charged species. Most relevant to this discussion is the flow of electrons. Current is measured in a composite unit called an ampere, defined as one coulomb per second  ). The charge transferred,  by passage of a constant current,  over a specified time interval,  is then given by the simple mathematical product
+
+When electrons are transferred during a redox process, the stoichiometry of the reaction may be used to derive the total amount of (electronic) charge involved. For example, the generic reduction process
+
+involves the transfer of  mole of electrons. The charge transferred is, therefore,
+
+where  is Faraday’s constant, the charge in coulombs for one mole of electrons. If the reaction takes place in an electrochemical cell, the current flow is conveniently measured, and it may be used to assist in stoichiometric calculations related to the cell reaction.
+
+EXAMPLE 17.9
+
+Converting Current to Moles of Electrons
+
+In one process used for electroplating silver, a current of 10.23 A was passed through an electrolytic cell for exactly 1 hour. How many moles of electrons passed through the cell? What mass of silver was deposited at the cathode from the silver nitrate solution?
+
+Solution
+
+Faraday’s constant can be used to convert the charge  into moles of electrons  . The charge is the current  multiplied by the time
+
+From the problem, the solution contains  , so the reaction at the cathode involves 1 mole of electrons for each mole of silver
+
+The atomic mass of silver is  , so
+
+Check Your Learning
+
+Aluminum metal can be made from aluminum(III) ions by electrolysis. What is the half-reaction at the cathode? What mass of aluminum metal would be recovered if a current of 25.0 A passed through the solution for 15.0 minutes?
+
+Answer: 
+
+EXAMPLE 17.10
+
+Time Required for Deposition
+
+In one application, a  layer of chromium must be deposited on a part with a total surface area of 3.3  from a solution of containing chromium(III) ions. How long would it take to deposit the layer of chromium if the current was 33.46 A? The density of chromium (metal) is  .
+
+Solution
+
+First, compute the volume of chromium that must be produced (equal to the product of surface area and thickness):
+
+Use the computed volume and the provided density to calculate the molar amount of chromium required:
+
+The stoichiometry of the chromium(III) reduction process requires three moles of electrons for each mole of chromium(0) produced, and so the total charge required is:
+
+Finally, if this charge is passed at a rate of  , the required time is:
+
+Check Your Learning
+
+What mass of zinc is required to galvanize the top of a  sheet of iron to a thickness of 0.100 mm of zinc? If the zinc comes from a solution of  and the current is  , how long will it take to galvanize the top of the iron? The density of zinc is  .
+
+Answer:
+
+11.8 kg Zn requires 382 hours.
+
+Key Terms
+
+active electrode electrode that participates as a reactant or product in the oxidation-reduction reaction of an electrochemical cell; the mass of an active electrode changes during the oxidationreduction reaction   
+alkaline battery primary battery similar to a dry cel that uses an alkaline (often potassium hydroxide) electrolyte; designed to be an improved replacement for the dry cell, but with more energy storage and less electrolyte leakage than typical dry cell   
+anode electrode in an electrochemical cell at which oxidation occurs   
+battery single or series of galvanic cells designed for use as a source of electrical power   
+cathode electrode in an electrochemical cell at which reduction occurs   
+cathodic protection approach to preventing corrosion of a metal object by connecting it to a sacrificialanodecomposed of a more readily oxidized metal   
+cell notation (schematic) symbolic representation of the components and reactions in an electrochemical cell   
+cell potential  difference in potential of the cathode and anode half-cells   
+concentration cell galvanic cell comprising halfcells of identical composition but for the concentration of one redox reactant or product   
+corrosion degradation of metal via a natural electrochemical process   
+dry cell primary battery, also called a zinc-carbon battery, based on the spontaneous oxidation of zinc by manganese(IV)   
+electrode potential  the potential of a cell in which the half-cell of interest acts as a cathode when connected to the standard hydrogen electrode   
+electrolysis process using electrical energy to cause a nonspontaneous process to occur   
+electrolytic cell electrochemical cell in which an external source of electrical power is used to drive an otherwise nonspontaneous process   
+Faraday’s constant (F) charge on 1 mol of electrons;    
+fuel cell devices similar to galvanic cells that require a continuous feed of redox reactants; also called a flowbatery   
+galvanic (voltaic) cell electrochemical cell in which a spontaneous redox reaction takes place; also called a voltaiccel   
+galvanization method of protecting iron or similar metals from corrosion by coating with a thin layer of more easily oxidized zinc.   
+half cell component of a cell that contains the redox conjugate pair (“couple”) of a single reactant   
+inert electrode electrode that conducts electrons to and from the reactants in a half-cell but that is not itself oxidized or reduced   
+lead acid battery rechargeable battery commonly used in automobiles; it typically comprises six galvanic cells based on Pb half-reactions in acidic solution   
+lithium ion battery widely used rechargeable battery commonly used in portable electronic devices, based on lithium ion transfer between the anode and cathode   
+Nernst equation relating the potential of a redox system to its composition   
+nickel-cadmium battery rechargeable battery based on Ni/Cd half-cells with applications similar to those of lithium ion batteries   
+primary cell nonrechargeable battery, suitable for single use only   
+sacrificial anode electrode constructed from an easily oxidized metal, often magnesium or zinc, used to prevent corrosion of metal objects via cathodic protection   
+salt bridge tube filled with inert electrolyte solution   
+secondary cell battery designed to allow recharging   
+standard cell potential  the cell potential when all reactants and products are in their standard states (1 bar or 1 atm or gases; 1 Mfor solutes), usually at    
+standard electrode potential  electrode potential measured under standard conditions (1 bar or 1 atm for gases; 1  for solutes) usually at    
+standard hydrogen electrode (SHE) half-cell based on hydrogen ion production, assigned a potential of exactly  under standard state conditions, used as the universal reference for measuring electrode potential
+
+Key Equations
+
+ (at 298.15 K) Nernst equation) (at 298.15 K)
+
+Summary
+
+17.1 Review of Redox Chemistry
+
+Redox reactions are defined by changes in reactant oxidation numbers, and those most relevant to electrochemistry involve actual transfer of electrons. Aqueous phase redox processes often involve water or its characteristic ions,  and  , as reactants in addition to the oxidant and reductant, and equations representing these reactions can be challenging to balance. The half-reaction method is a systematic approach to balancing such equations that involves separate treatment of the oxidation and reduction half-reactions.
+
+17.2 Galvanic Cells
+
+Galvanic cells are devices in which a spontaneous redox reaction occurs indirectly, with the oxidant and reductant redox couples contained in separate half-cells. Electrons are transferred from the reductant (in the anode half-cell) to the oxidant (in the cathode half-cell) through an external circuit, and inert solution phase ions are transferred between half-cells, through a salt bridge, to maintain charge neutrality. The construction and composition of a galvanic cell may be succinctly represented using chemical formulas and others symbols in the form of a cell schematic (cell notation).
+
+17.3 Electrode and Cell Potentials
+
+The property of potential,  , is the energy associated with the separation/transfer of charge. In electrochemistry, the potentials of cells and halfcells are thermodynamic quantities that reflect the driving force or the spontaneity of their redox processes. The cell potential of an electrochemical cell is the difference in between its cathode and anode. To permit easy sharing of half-cell potential data, the standard hydrogen electrode (SHE) is
+
+assigned a potential of exactly  and used to define a single electrode potential for any given half-cell. The electrode potential of a half-cell,  is the cell potential of said half-cell acting as a cathode when connected to a SHE acting as an anode. When the half-cell is operating under standard state conditions, its potential is the standard electrode potential,  . Standard electrode potentials reflect the relative oxidizing strength of the half-reaction’s reactant, with stronger oxidants exhibiting larger (more positive)  values. Tabulations of standard electrode potentials may be used to compute standard cell potentials,  for many redox reactions. The arithmetic sign of a cell potential indicates the spontaneity of the cell reaction, with positive values for spontaneous reactions and negative values for nonspontaneous reactions (spontaneous in the reverse direction).
+
+17.4 Potential, Free Energy, and Equilibrium
+
+Potential is a thermodynamic quantity reflecting the intrinsic driving force of a redox process, and it is directly related to the free energy change and equilibrium constant for the process. For redox processes taking place in electrochemical cells, the maximum (electrical) work done by the system is easily computed from the cell potential and the reaction stoichiometry and is equal to the free energy change for the process. The equilibrium constant for a redox reaction is logarithmically related to the reaction’s cell potential, with larger (more positive) potentials indicating reactions with greater driving force that equilibrate when the reaction has proceeded far towards completion (large value of  . Finally, the potential of a redox process varies with the composition of the reaction mixture, being related to the reactions standard potential and the value of its reaction quotient,  as described by the Nernst equation.
+
+17.5 Batteries and Fuel Cells
+
+Galvanic cells designed specifically to function as electrical power supplies are called batteries. A variety of both single-use batteries (primary cells) and rechargeable batteries (secondary cells) are commercially available to serve a variety of applications, with important specifications including voltage, size, and lifetime. Fuel cells, sometimes called flow batteries, are devices that harness the energy of spontaneous redox reactions normally associated with combustion processes. Like batteries, fuel cells enable the reaction’s electron transfer via an external circuit, but they require continuous input of the redox reactants (fue and oxidant) from an external reservoir. Fuel cells are typically much more efficient in converting the energy released by the reaction to useful work in comparison to internal combustion engines.
+
+17.6 Corrosion
+
+Spontaneous oxidation of metals by natural electrochemical processes is called corrosion, familiar examples including the rusting of iron and the tarnishing of silver. Corrosion process involve the creation of a galvanic cell in which different sites on the metal object function as anode and cathode, with the corrosion taking place at the anodic site. Approaches to preventing corrosion of metals include use of a protective coating of zinc (galvanization) and the use of sacrificial anodes connected to the metal object (cathodic protection).
+
+17.7 Electrolysis
+
+Nonspontaneous redox processes may be forced to occur in electrochemical cells by the application of an appropriate potential using an external power source—a process known as electrolysis. Electrolysis is the basis for certain ore refining processes, the industrial production of many chemical commodities, and the electroplating of metal coatings on various products. Measurement of the current flow during electrolysis permits stoichiometric calculations.
+
+Exercises
+
+17.1 Review of Redox Chemistry
+
+1. Identify each half-reaction below as either oxidation or reduction.
+
+(a)  (  (c)  (d) 
+
+2. Identify each half-reaction below as either oxidation or reduction. (  ( ( (
+
+3. Assuming each pair of half-reactions below takes place in an acidic solution, write a balanced equation for the overall reaction.
+
+(a)    
+(b)  ，    
+(c)    
+(d)  ， 
+
+4. Balance the equations below assuming they occur in an acidic solution. (a)  (b)  (c) 
+
+5. Identify the oxidant and reductant of each reaction of the previous exercise.
+
+6. Balance the equations below assuming they occur in a basic solution.
+
+(a)  (b)  (c)  (d) 
+
+7. Identify the oxidant and reductant of each reaction of the previous exercise.
+
+8. Why don’t hydroxide ions appear in equations for half-reactions occurring in acidic solution?
+
+9. Why don’t hydrogen ions appear in equations for half-reactions occurring in basic solution?
+
+10. Why must the charge balance in oxidation-reduction reactions?
+
+17.2 Galvanic Cells
+
+11. Write cell schematics for the following cell reactions, using platinum as an inert electrode as needed. (a)  (b)  (c)  (d) 
+
+12. Assuming the schematics below represent galvanic cells as written, identify the half-cell reactions occurring in each. (a)  (b)
+
+13. Write a balanced equation for the cell reaction of each cell in the previous exercise.
+
+14. Balance each reaction below, and write a cell schematic representing the reaction as it would occur in a galvanic cell. (a)  (b)  (acidic solution) (c)  (basic solution) (d)  (basic solution)
+
+15. Identify the oxidant and reductant in each reaction of the previous exercise.
+
+16. From the information provided, use cell notation to describe the following systems: (a) In one half-cell, a solution of  forms  metal, while in the other half-cell, Cu metal goes into a  solution with all solute concentrations  . (b) The cathode consists of a gold electrode in a  solution and the anode is a magnesium electrode in  solution. (c) One half-cell consists of a silver electrode in a  solution, and in the other half-cell, a copper electrode in  is oxidized.
+
+17. Why is a salt bridge necessary in galvanic cells like the one in Figure 17.3?
+
+18. An active (metal) electrode was found to gain mass as the oxidation-reduction reaction was allowed to proceed. Was the electrode an anode or a cathode? Explain.   
+19. An active (metal) electrode was found to lose mass as the oxidation-reduction reaction was allowed to proceed. Was the electrode an anode or a cathode? Explain.   
+20. The masses of three electrodes (A, B, and C), each from three different galvanic cells, were measured before and after the cells were allowed to pass current for a while. The mass of electrode A increased, that of electrode B was unchanged, and that of electrode C decreased. Identify each electrode as active or inert, and note (if possible) whether it functioned as anode or cathode.
+
+17.3 Electrode and Cell Potentials
+
+21. Calculate the standard cell potential for each reaction below, and note whether the reaction is spontaneous under standard state conditions. (a)  (b)  (c)  (d) 
+
+22. Calculate the standard cell potential for each reaction below, and note whether the reaction is spontaneous under standard state conditions. (a)  (b)  (c)  (d) 
+
+23. Write the balanced cell reaction for the cell schematic below, calculate the standard cell potential, and note whether the reaction is spontaneous under standard state conditions. 
+
+24. Determine the cell reaction and standard cell potential at  for a cell made from a cathode half-cell consisting of a silver electrode in  silver nitrate solution and an anode half-cell consisting of a zinc electrode in  zinc nitrate. Is the reaction spontaneous at standard conditions?   
+25. Determine the cell reaction and standard cell potential at  for a cell made from an anode half-cell containing a cadmium electrode in  cadmium nitrate and a cathode half-cell consisting of an aluminum electrode in 1 Maluminum nitrate solution. Is the reaction spontaneous at standard conditions?   
+26. Write the balanced cell reaction for the cell schematic below, calculate the standard cell potential, and note whether the reaction is spontaneous under standard state conditions. 
+
+17.4 Potential, Free Energy, and Equilibrium
+
+27. For each pair of standard cell potential and electron stoichiometry values below, calculate a corresponding standard free energy change (kJ). (a) 0.000 V,  (b)  ,  (c) −2.439 V, 
+
+28. For each pair of standard free energy change and electron stoichiometry values below, calculate a corresponding standard cell potential. (a)  ,  (b)  , 
+
+29. Determine the standard cell potential and the cell potential under the stated conditions for the electrochemical reactions described here. State whether each is spontaneous or nonspontaneous under each set of conditions at  . (a)  (b) The cell made from an anode half-cell consisting of an aluminum electrode in  aluminum nitrate solution and a cathode half-cell consisting of a nickel electrode in  nickel(II) nitrate solution (c) The cell comprised of a half-cell in which aqueous bromine  is being oxidized to bromide ion  and a half-cell in which  is being reduced to aluminum metal.
+
+30. Determine  and  for each of the reactions in the previous problem.
+
+31. Use the data in Appendix L to calculate equilibrium constants for the following reactions. Assume 298.15 K if no temperature is given. (a)  (b)  at 377 K (c)  (d)  at 
+
+17.5 Batteries and Fuel Cells
+
+32. Consider a battery made from one half-cell that consists of a copper electrode in  solution and another half-cell that consists of a lead electrode in  solution.
+
+(a) What is the standard cell potential for the battery?   
+(b) What are the reactions at the anode, cathode, and the overall reaction?   
+(c) Most devices designed to use dry-cell batteries can operate between 1.0 and 1.5 V. Could this cell be used to make a battery that could replace a dry-cell battery? Why or why not.   
+(d) Suppose sulfuric acid is added to the half-cell with the lead electrode and some  forms. Would the cell potential increase, decrease, or remain the same?
+
+33. Consider a battery with the overall reaction: 
+
+(a) What is the reaction at the anode and cathode? (b) A battery is “dead” when its cell potential is zero. What is the value of  when this battery is dead? (c) If a particular dead battery was found to have  what was the concentration of silver ion
+
+34. Why do batteries go dead, but fuel cells do not?
+
+35. Use the Nernst equation to explain the drop in voltage observed for some batteries as they discharge. 36. Using the information thus far in this chapter, explain why battery-powered electronics perform poorly in low temperatures.
+
+17.6 Corrosion
+
+37. Which member of each pair of metals is more likely to corrode (oxidize)?
+
+(a) Mg or Ca (b) Au or  (c) Fe or Zn (d) Ag or Pt
+
+38. Consider the following metals: Ag, Au, Mg, Ni, and Zn. Which of these metals could be used as a sacrificial anode in the cathodic protection of an underground steel storage tank? Steel is an alloy composed mostly of iron, so use  as the standard reduction potential for steel.   
+39. Aluminum is more easily oxidized than iron  and yet when both are exposed to the environment, untreated aluminum has very good corrosion resistance while the corrosion resistance of untreated iron is poor. What might explain this observation?   
+40. If a sample of iron and a sample of zinc come into contact, the zinc corrodes but the iron does not. If a sample of iron comes into contact with a sample of copper, the iron corrodes but the copper does not. Explain this phenomenon.   
+41. Suppose you have three different metals, A, B, and C. When metals A and B come into contact, B corrodes and A does not corrode. When metals A and C come into contact, A corrodes and C does not corrode. Based on this information, which metal corrodes and which metal does not corrode when B and C come into contact?
+
+42. Why would a sacrificial anode made of lithium metal be a bad choice
+
+17.7 Electrolysis
+
+43. If a 2.5 A current flows through a circuit for 35 minutes, how many coulombs of charge moved through the circuit?
+
+44. For the scenario in the previous question, how many electrons moved through the circuit?
+
+45. Write the half-reactions and cell reaction occurring during electrolysis of each molten salt below. (a)  (b) LiH (c)  (d) 
+
+46. What mass of each product is produced in each of the electrolytic cells of the previous problem if a total charge of  passes through each cell?
+
+47. How long would it take to reduce 1 mole of each of the following ions using the current indicated?
+
+(a)  , 1.234 A (b)  , 22.2 A (c)  , 37.45 A (d)  , 3.57 A
+
+48. A current of 2.345 A passes through the cell shown in Figure 17.19 for 45 minutes. What is the volume of the hydrogen collected at room temperature if the pressure is exactly 1 atm? (Hint: Is hydrogen the only gas present above the water?)
+
+49. An irregularly shaped metal part made from a particular alloy was galvanized with zinc using a  solution. When a current of 2.599 A was used, it took exactly 1 hour to deposit a 0.01123-mm layer of zinc on the part. What was the total surface area of the part? The density of zinc is  .

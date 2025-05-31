@@ -1,0 +1,216 @@
+[
+    {
+        "type": "text",
+        "text": "16.6 Uniform Circular Motion and Simple Harmonic Motion ",
+        "text_level": 1,
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Compare simple harmonic motion with uniform circular motion. ",
+        "page_idx": 711
+    },
+    {
+        "type": "image",
+        "img_path": "images/e4eccc4bf263c5eba3d3ce125edbd95399bfc979dd9626ca18892f31d03f1db0.jpg",
+        "img_caption": [
+            "FIGURE 16.15 The horses on this merry-go-round exhibit uniform circular motion. (credit: Wonderlane, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "There is an easy way to produce simple harmonic motion by using uniform circular motion. Figure 16.16 shows one way of using this method. A ball is attached to a uniformly rotating vertical turntable, and its shadow is projected on the floor as shown. The shadow undergoes simple harmonic motion. Hooke\u2019s law usually describes uniform circular motions ( $\\omega$ constant) rather than systems that have large visible displacements. So observing the projection of uniform circular motion, as in Figure 16.16, is often easier than observing a precise large-scale simple harmonic oscillator. If studied in sufficient depth, simple harmonic motion produced in this manner can give considerable insight into many aspects of oscillations and waves and is very useful mathematically. In our brief treatment, we shall indicate some of the major features of this relationship and how they might be useful. ",
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "Shadow undergoessimple harmonicoscillation ",
+        "page_idx": 712
+    },
+    {
+        "type": "image",
+        "img_path": "images/3693a17f10b6d69627c02ca19110a4c23164125c527fc7859c98f335fbd45fe3.jpg",
+        "img_caption": [
+            "FIGURE 16.16 The shadow of a ball rotating at constant angular velocity $\\omega$ on a turntable goes back and forth in precise simple harmonic motion. "
+        ],
+        "img_footnote": [],
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "Figure 16.17 shows the basic relationship between uniform circular motion and simple harmonic motion. The point P travels around the circle at constant angular velocity $\\omega$ . The point P is analogous to an object on the merry-goround. The projection of the position of P onto a fixed axis undergoes simple harmonic motion and is analogous to the shadow of the object. At the time shown in the figure, the projection has position $x$ and moves to the left with velocity $v$ . The velocity of the point P around the circle equals $\\overline { { v } } _ { \\mathrm { m a x } }$ .The projection of $\\overline { { v } } _ { \\mathrm { m a x } }$ on the $x$ -axis is the velocity $v$ of the simple harmonic motion along the $x$ -axis. ",
+        "page_idx": 712
+    },
+    {
+        "type": "image",
+        "img_path": "images/6736eba595be8de2cca420be1c5b185f92de26a118c7d65b4a03576d1fd15f63.jpg",
+        "img_caption": [
+            "FIGURE 16.17 A point P moving on a circular path with a constant angular velocity $\\omega$ is undergoing uniform circular motion. Its projection on the $\\mathsf { x }$ -axis undergoes simple harmonic motion. Also shown is the velocity of this point around the circle, $\\overline { { v } } _ { \\mathrm { m a x } }$ , and its projection, which is $v$ . Note that these velocities form a similar triangle to the displacement triangle. "
+        ],
+        "img_footnote": [],
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "To see that the projection undergoes simple harmonic motion, note that its position $x$ is given by ",
+        "page_idx": 713
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = X \\cos \\theta ,\n$$",
+        "text_format": "latex",
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "where $\\theta = \\omega t$ , $\\omega$ is the constant angular velocity, and $X$ is the radius of the circular path. Thus, ",
+        "page_idx": 713
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = X \\cos \\omega t .\n$$",
+        "text_format": "latex",
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "The angular velocity $\\omega$ is in radians per unit time; in this case $2 \\pi$ radians is the time for one revolution $T$ . That is, $\\omega = 2 \\pi / T$ . Substituting this expression for $\\omega$ , we see that the position $x$ is given by: ",
+        "page_idx": 713
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx ( t ) { = } \\cos \\left( { \\frac { 2 \\pi t } { T } } \\right) .\n$$",
+        "text_format": "latex",
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "This expression is the same one we had for the position of a simple harmonic oscillator in Simple Harmonic Motion: A Special Periodic Motion. If we make a graph of position versus time as in Figure 16.18, we see again the wavelike character (typical of simple harmonic motion) of the projection of uniform circular motion onto the $x$ -axis. ",
+        "page_idx": 713
+    },
+    {
+        "type": "image",
+        "img_path": "images/b96460fc60d5c7e717f8d2fa65bf51eeb2bf228fd0a4422e71002f408569aa49.jpg",
+        "img_caption": [
+            "FIGURE 16.18 The position of the projection of uniform circular motion performs simple harmonic motion, as this wavelike graph of $x$ versus indicates. "
+        ],
+        "img_footnote": [],
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "Now let us use Figure 16.17 to do some further analysis of uniform circular motion as it relates to simple harmonic motion. The triangle formed by the velocities in the figure and the triangle formed by the displacements $( X , x ,$ and $\\sqrt { X ^ { 2 } - x ^ { 2 } } )$ are similar right triangles. Taking ratios of similar sides, we see that ",
+        "page_idx": 713
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { v } { v _ { \\mathrm { m a x } } } } = { \\frac { \\sqrt { X ^ { 2 } - x ^ { 2 } } } { X } } = { \\sqrt { 1 - { \\frac { x ^ { 2 } } { X ^ { 2 } } } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "We can solve this equation for the speed $v$ or ",
+        "page_idx": 714
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = v _ { \\mathrm { { m a x } } } { \\sqrt { 1 - { \\frac { x ^ { 2 } } { X ^ { 2 } } } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "This expression for the speed of a simple harmonic oscillator is exactly the same as the equation obtained from conservation of energy considerations in Energy and the Simple Harmonic Oscillator.You can begin to see that it is possible to get all of the characteristics of simple harmonic motion from an analysis of the projection of uniform circular motion. ",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Finally, let us consider the period $T$ of the motion of the projection. This period is the time it takes the point P to complete one revolution. That time is the circumference of the circle $2 \\pi X$ divided by the velocity around the circle, $v _ { \\mathrm { m a x } }$ . Thus, the period $T$ is ",
+        "page_idx": 714
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT = \\frac { 2 \\pi X } { v _ { \\mathrm { { m a x } } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "We know from conservation of energy considerations that ",
+        "page_idx": 714
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv _ { \\mathrm { m a x } } = \\sqrt { \\frac { k } { m } } X .\n$$",
+        "text_format": "latex",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Solving this equation for $X / v _ { \\mathrm { m a x } }$ gives ",
+        "page_idx": 714
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { X } { v _ { \\mathrm { { m a x } } } } } = { \\sqrt { \\frac { m } { k } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Substituting this expression into the equation for $T$ yields ",
+        "page_idx": 714
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT = 2 \\pi { \\sqrt { \\frac { m } { k } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Thus, the period of the motion is the same as for a simple harmonic oscillator. We have determined the period for any simple harmonic oscillator using the relationship between uniform circular motion and simple harmonic motion. ",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Some modules occasionally refer to the connection between uniform circular motion and simple harmonic motion. Moreover, if you carry your study of physics and its applications to greater depths, you will find this relationship useful. It can, for example, help to analyze how waves add when they are superimposed. ",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Identify an object that undergoes uniform circular motion. Describe how you could trace the simple harmonic motion of this object as a wave. ",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "A record player undergoes uniform circular motion. You could attach dowel rod to one point on the outside edge of the turntable and attach a pen to the other end of the dowel. As the record player turns, the pen will move. You can drag a long piece of paper under the pen, capturing its motion as a wave. ",
+        "page_idx": 714
+    }
+]

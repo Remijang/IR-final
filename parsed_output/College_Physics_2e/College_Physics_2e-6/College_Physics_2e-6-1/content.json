@@ -1,0 +1,326 @@
+[
+    {
+        "type": "text",
+        "text": "6.1 Rotation Angle and Angular Velocity ",
+        "text_level": 1,
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Define arc length, rotation angle, radius of curvature and angular velocity.   \n\u2022 Calculate the angular velocity of a car wheel spin. ",
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "In Kinematics, we studied motion along a straight line and introduced such concepts as displacement, velocity, and acceleration. Two-Dimensional Kinematics dealt with motion in two dimensions. Projectile motion is a special case of two-dimensional kinematics in which the object is projected into the air, while being subject to the gravitational force, and lands a distance away. In this chapter, we consider situations where the object does not land but moves in a curve. We begin the study of uniform circular motion by defining two angular quantities needed to describe rotational motion. ",
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "Rotation Angle ",
+        "text_level": 1,
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "When objects rotate about some axis\u2014for example, when the CD (compact disc) in Figure 6.2 rotates about its center\u2014each point in the object follows a circular arc. Consider a line from the center of the CD to its edge. Each pit used to record sound along this line moves through the same angle in the same amount of time. The rotation angle is the amount of rotation and is analogous to linear distance. We define the rotation angle $\\Delta \\theta$ to be the ratio of the arc length to the radius of curvature: ",
+        "page_idx": 245
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta \\theta = \\frac { \\Delta s } { r } .\n$$",
+        "text_format": "latex",
+        "page_idx": 245
+    },
+    {
+        "type": "image",
+        "img_path": "images/cbae712c7e1a766195b8f4b5ab168a541fbf1d8b99078e5a5699d292d4ee9747.jpg",
+        "img_caption": [
+            "FIGURE 6.2 All points on a CD travel in circular arcs. The pits along a line from the center to the edge all move through the same angle in a time $\\Delta t$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 245
+    },
+    {
+        "type": "image",
+        "img_path": "images/76eb22a5340d9dd3c92b37d1fe52a720c61cba08106ae60b20ae23837e38965a.jpg",
+        "img_caption": [
+            "FIGURE 6.3 The radius of a circle is rotated through an angle $\\Delta \\theta$ . The arc length $\\Delta \\mathrm { s }$ is described on the circumference. "
+        ],
+        "img_footnote": [],
+        "page_idx": 245
+    },
+    {
+        "type": "text",
+        "text": "The arc length $\\Delta s$ is the distance traveled along a circular path as shown in Figure 6.3 Note that $r$ is the radius of curvature of the circular path. ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "We know that for one complete revolution, the arc length is the circumference of a circle of radius $r$ . The circumference of a circle is $2 \\pi r$ . Thus for one complete revolution the rotation angle is ",
+        "page_idx": 246
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta \\theta = \\frac { 2 \\pi r } { r } = 2 \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "This result is the basis for defining the units used to measure rotation angles, $\\Delta \\theta$ to be radians (rad), defined so that ",
+        "page_idx": 246
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\pi \\mathrm { r a d } = 1 \\mathrm { r e v o l u t i o n } .\n$$",
+        "text_format": "latex",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "A comparison of some useful angles expressed in both degrees and radians is shown in Table 6.1. ",
+        "page_idx": 246
+    },
+    {
+        "type": "table",
+        "img_path": "images/b9c267b77ce21d4ee647c69044a9289278bb8014881c20aa2c16e7515e7c0e9c.jpg",
+        "table_caption": [
+            "TABLE 6.1 Comparison of Angular Units "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Degree Measures</td><td>Radian Measure</td></tr><tr><td>30\u00b0</td><td>\u53396</td></tr><tr><td>60\u00b0</td><td>\u53393</td></tr><tr><td>90\u00b0</td><td>\u53392</td></tr><tr><td>120\u00b0</td><td>23</td></tr><tr><td>135\u00b0</td><td>\u53394</td></tr><tr><td>180\u00b0</td><td>\u03c0</td></tr></table></body></html>\n\n",
+        "page_idx": 246
+    },
+    {
+        "type": "image",
+        "img_path": "images/8a1f0dc72165e79ce112ba24b0cb5b29c85586be791f202b86b4f298d341ca3b.jpg",
+        "img_caption": [
+            "FIGURE 6.4 Points 1 and 2 rotate through the same angle $( \\Delta \\theta )$ , but point 2 moves through a greater arc length $( \\Delta s )$ because it is at a greater distance from the center of rotation $( r )$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "If $\\Delta \\theta = 2 \\pi$ rad, then the CD has made one complete revolution, and every point on the CD is back at its original position. Because there are $3 6 0 ^ { \\circ }$ in a circle or one revolution, the relationship between radians and degrees is thus ",
+        "page_idx": 246
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\pi \\mathrm { \\ r a d } = 3 6 0 ^ { \\circ }\n$$",
+        "text_format": "latex",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "so that ",
+        "page_idx": 246
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 { \\mathrm { ~ r a d } } = { \\frac { 3 6 0 ^ { \\circ } } { 2 \\pi } } \\approx 5 7 . 3 ^ { \\circ } .\n$$",
+        "text_format": "latex",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "Angular Velocity ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "How fast is an object rotating? We define angular velocity $\\omega$ as the rate of change of an angle. In symbols, this is ",
+        "page_idx": 247
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = { \\frac { \\Delta \\theta } { \\Delta t } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "where an angular rotation $\\Delta \\theta$ takes place in a time $\\Delta t$ . The greater the rotation angle in a given amount of time, the greater the angular velocity. The units for angular velocity are radians per second (rad/s). ",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Angular velocity $\\omega$ is analogous to linear velocity $v$ . To get the precise relationship between angular and linear velocity, we again consider a pit on the rotating CD. This pit moves an arc length $\\Delta s$ in a time $\\Delta t$ , and so it has a linear velocity ",
+        "page_idx": 247
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = \\frac { \\Delta s } { \\Delta t } .\n$$",
+        "text_format": "latex",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "From $\\begin{array} { r } { \\Delta \\theta = \\frac { \\Delta s } { r } } \\end{array}$ we see that $\\Delta s = r \\Delta \\theta$ . Substituting this into the expression for $v$ gives ",
+        "page_idx": 247
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = \\frac { r \\Delta \\theta } { \\Delta t } = r \\omega .\n$$",
+        "text_format": "latex",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "We write this relationship in two different ways and gain two different insights: ",
+        "page_idx": 247
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = r \\omega \\ \\mathrm { o r } \\omega = { \\frac { v } { r } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "The first relationship in $v = r \\omega$ or $\\begin{array} { r } { \\omega = \\frac { v } { r } } \\end{array}$ states that the linear velocity $v$ is proportional to the distance from the center of rotation, thus, it is largest for a point on the rim (largest $r$ ), as you might expect. We can also call this linear speed $v$ of a point on the rim the tangentialspe d. The second relationship in $v = r \\omega$ or $\\begin{array} { r } { \\omega = \\frac { v } { r } } \\end{array}$ can be illustrated by considering the tire of a moving car. Note that the speed of a point on the rim of the tire is the same as the speed $v$ of the car. See Figure 6.5. So the faster the car moves, the faster the tire spins\u2014large $v$ means a large $\\omega$ , because $v = r \\omega$ . Similarly, a larger-radius tire rotating at the same angular velocity $( \\omega )$ will produce a greater linear speed $( v )$ for the car. ",
+        "page_idx": 247
+    },
+    {
+        "type": "image",
+        "img_path": "images/7326c35129a57e3c7b915a8ddd83a27103a512ac368d82490577f7566f6b2092.jpg",
+        "img_caption": [
+            "FIGURE 6.5 A car moving at a velocity $v$ to the right has a tire rotating with an angular velocity $\\omega$ .The speed of the tread of the tire relative to the axle is $v$ , the same as if the car were jacked up. Thus the car moves forward at linear velocity $v = r \\omega$ , where $r$ is the tire radius. A larger angular velocity for the tire means a greater velocity for the car. "
+        ],
+        "img_footnote": [],
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6.1 ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "How Fast Does a Car Tire Spin? ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Calculate the angular velocity of a $0 . 3 0 0 \\mathsf { m }$ radius car tire when the car travels at $1 5 . 0 \\mathrm { m / s }$ (about $5 4 \\mathrm { k m / h } ,$ ). See ",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Figure 6.5. ",
+        "text_level": 1,
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Because the linear speed of the tire rim is the same as the speed of the car, we have $v = 1 5 . 0 \\mathrm { m / s }$ The radius of the tire is given to be $r = 0 . 3 0 0 \\mathrm { m }$ Knowing $v$ and $r$ , we can use the second relationship in $v = r \\omega$ \uff0c $\\begin{array} { r } { \\omega = \\frac { v } { r } } \\end{array}$ to calculate the angular velocity. ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "To calculate the angular velocity, we will use the following relationship: ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = { \\frac { v } { r } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Substituting the knowns, ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = { \\frac { 1 5 . 0 ~ { \\mathrm { m / s } } } { 0 . 3 0 0 ~ { \\mathrm { m } } } } = 5 0 . 0 ~ { \\mathrm { r a d / s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "When we cancel units in the above calculation, we get $5 0 . 0 / \\mathsf { s }$ . But the angular velocity must have units of $\\mathsf { r a d } / \\mathsf { s }$ . Because radians are actually unitless (radians are defined as a ratio of distance), we can simply insert them into the answer for the angular velocity. Also note that if an earth mover with much larger tires, say $ { 1 . 2 0 \\mathrm { m } }$ in radius, were moving at the same speed of $1 5 . 0 \\ : \\mathrm { m } / \\mathsf { s }$ , its tires would rotate more slowly. They would have an angular velocity ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega { = } ( 1 5 . 0 \\mathrm { m / s } ) / ( 1 . 2 0 \\mathrm { m } ) { = } 1 2 . 5 \\mathrm { r a d / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Both $\\omega$ and $v$ have directions (hence they are angular and linear velocities, respectively). Angular velocity has only two directions with respect to the axis of rotation\u2014it is either clockwise or counterclockwise. Linear velocity is tangent to the path, as illustrated in Figure 6.6. ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment ",
+        "text_level": 1,
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Tie an object to the end of a string and swing it around in a horizontal circle above your head (swing at your wrist). Maintain uniform speed as the object swings and measure the angular velocity of the motion. What is the approximate speed of the object? Identify a point close to your hand and take appropriate measurements to calculate the linear speed at this point. Identify other circular motions and measure their angular velocities. ",
+        "page_idx": 248
+    },
+    {
+        "type": "image",
+        "img_path": "images/4ec47717ed1a128bcfeed1696ed6b0f167b0d7809ab6a2160bd94dd2df89d478.jpg",
+        "img_caption": [
+            "FIGURE 6.6 As an object moves in a circle, here a fly on the edge of an old-fashioned vinyl record, its instantaneous velocity is always tangent to the circle. The direction of the angular velocity is clockwise in this case. "
+        ],
+        "img_footnote": [],
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Ladybug Revolution ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Join the ladybug in an exploration of rotational motion. Rotate the merry-go-round to change its angle, or choose a constant angular velocity or angular acceleration. Explore how circular motion relates to the bug's x,y position, velocity, and acceleration using vectors or graphs. ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Click to view content (https://openstax.org/l/28ladybugrevolutionrotation). ",
+        "page_idx": 249
+    }
+]

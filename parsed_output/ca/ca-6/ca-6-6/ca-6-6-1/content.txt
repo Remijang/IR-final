@@ -1,0 +1,30 @@
+6.6.1 Summary
+
+Summary 6
+
+1. The RISC-V ISA refers to a family of instruction sets. The basic ISA is RV32 (32- bit). There are 64-bit and 128-bit variants as well that are currently under different stages of development. They are named RV64 and RV128, respectively.   
+2. The ISA has a modular structure. Different sets of instructions can be added to it depending upon the use case. Each such module is known as an “extension”.   
+3. Some popular extensions are as follows: integer (default), embedded, atomic instructions, single and double-precision floating point arithmetic, and vector arithmetic.   
+4. There is a compressed instruction set (suffix ‘C’) that is similar in principle to ARM Thumb.   
+5. There are 32 integer registers. The zeroth integer register (x0 or zero) is hardwired to 0. There is an elaborate usage convention that most assembly programmers are expected to follow.   
+6. The usage convention distinguishes between temporary registers (caller saved), callee saved registers and function arguments/return values.   
+7. The integer registers are named  . They additionally can be addressed using their mnemonics t0 6 (temporary),  (callee saved), a0 7 (arguments and return values), ra (return address), sp (stack pointer), gp (global pointer) and zero. Addressing registers by their mnemonics is preferred.   
+8. For example, the integer register t3 is the third temporary register that is the same as  .
+
+9. The RISC-V ISA is a RISC ISA that accepts 12-bit immediates in arithmetic instructions and 20-bit immediates in branch instructions and the load-upper-immediate instruction.
+
+10. There is no dedicated move-immediate instruction in the ISA. Instead, the way to load an immediate is to use the addi instruction to add the 12-bit immediate to the register zero. The upper 20 bits can then be set by the lui (load upper immediate) instruction.   
+11. Akin to other RISC ISAs, RISC-V supports all the standard arithmetic and logical instructions including some unsigned variants.   
+12. There is no dedicated flags register that stores the result of the last comparison. Instead, branch instructions take two register arguments. They directly compare them and depending upon the branch condition, jump to the label specified in the instruction.   
+13. The jal and jalr instructions are used to jump to a different location and store the return address in the first source register. If the register is zero, then the return address is not saved. The jal instruction can be used to implement the classical call instruction while the jalr instruction can be used to implement the return instruction.   
+14. There are two important assembler directives that translate to multiple RISC-V instructions at runtime. They are li (load 32-bit immediate) and la (load the address of a constant defined in the assembly file into a register).   
+15. RISC-V has 32 floating point registers numbered  . No floating point register is hardwired to 0. They also have a usage convention and are also known by their mnemonics. These mnemonics have a similar pattern:  ,  and  .   
+16. The floating point control status register (fcsr) is used to control the behavior of floating point instructions. It stores the rounding mode and floating point exceptions seen after the last time this register was reset (divide-by-zero, overflow, etc.).   
+17. There is no direct way of loading a floating point immediate into a register in RISC-V. In RISC-V, an immediate is associated with a label, and it is assumed to be stored in memory before the execution of the code starts. The address of the label (or the immediate) can be loaded to a register using the assembler directive la. Subsequently, the flw instruction can be used to load the corresponding floating point value. The fsw instruction can be used to store floating point values.   
+18. All single-precision floating point arithmetic instructions operate in a manner that is more or less similar to their integer counterparts. They have the “.s” suffix. For example, the floating point add instruction is named fadd.s.   
+19. Another way of loading or storing immediate values is using the floating point conversion instructions: f cvt.w.s and f cvt.s.w.   
+20. Floating point comparison instructions have an integer destination register and two floating point source registers. The hardware compares the source registers based on the type of the comparison that needs to be performed, and then the Boolean result is stored in the destination register.   
+21. RISC-V has six different instruction formats: 4 integer formats (R, I, S and U) and 2 branch formats (B and J).   
+22. Most arithmetic instructions that do not have immediates use the R format. The I format is used for instructions that use an immediate such as the addi instruction or the lw (load) instruction. Store instructions are encoded using the S format and the lui instruction uses the U format.   
+23. All the conditional branch instructions use the B format. The B format admits a 12-bit immediate with an additional and implicit LSB bit that is hardwired to 0. jal is a J-type instruction that has a single destination register and a 20-bit immediate (the LSB is not specified because it is 0). Effectively, the B format has a 13-bit immediate and the J format has a 21-bit immediate.   
+24. Floating point instructions use the I format for f lw and S format for f sw instructions, respectively. The rest of the instructions primarily rely on minor variations of the R format.

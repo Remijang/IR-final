@@ -1,0 +1,5 @@
+2.4 Floating Point Numbers
+
+Floating Point Numbers are numbers that contain a decimal point. Examples are: 3.923, -4.93, 10.23e-7 (  . Note that the set of integers are a subset of the set of floating point numbers. An integer such as 7 can be represented as 7.0000000. We shall describe a method to represent floating point numbers in the binary format in this section.
+
+In specific, we shall describe the IEEE 754 [Kahan, 1996] standard for representing floating point numbers. We shall further observe that representing different kinds of floating point numbers is slightly complicated, and requires us to consider many special cases. To make our life easy, let us first slightly simplify the problem and consider representing a set of numbers known as fixed point numbers.

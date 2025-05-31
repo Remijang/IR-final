@@ -1,0 +1,11 @@
+# CHAPTER 10 Cell Reproduction
+
+INTRODUCTION A human, like every sexually reproducing organism, begins life as a fertilized egg (embryo) or zygote. In our species, billions of cell divisions subsequently must occur in a controlled manner in order to produce a complex, multicellular human comprising trillions of cells. Thus, the original single-celled zygote is literally the ancestor of all cells in the body. However, once a human is fully grown, cell reproduction is still necessary to repair and regenerate tissues, and sometimes to increase our size! In fact, all multicellular organisms use cell division for growth and the maintenance and repair of cells and tissues. Cell division is closely regulated, and the occasional failure of this regulation can have life-threatening consequences. Single-celled organisms may also use cell division as their method of reproduction.
+
+Chapter Outline
+
+10.1 Cell Division   
+10.2 The Cell Cycle   
+10.3 Control of the Cell Cycle   
+10.4 Cancer and the Cell Cycle   
+10.5 Prokaryotic Cell Division

@@ -1,0 +1,421 @@
+14.7 Acid-Base Titrations
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Interpret titration curves for strong and weak acid-base systems • Compute sample pH at important stages of a titration • Explain the function of acid-base indicators
+
+As seen in the chapter on the stoichiometry of chemical reactions, titrations can be used to quantitatively analyze solutions for their acid or base concentrations. In this section, we will explore the underlying chemical equilibria that make acid-base titrimetry a useful analytical technique.
+
+Titration Curves
+
+A titration curve is a plot of some solution property versus the amount of added titrant. For acid-base titrations, solution pH is a useful property to monitor because it varies predictably with the solution composition and, therefore, may be used to monitor the titration’s progress and detect its end point. The following example exercise demonstrates the computation of pH for a titration solution after additions of several specified titrant volumes. The first example involves a strong acid titration that requires only stoichiometric calculations to derive the solution pH. The second example addresses a weak acid titration requiring equilibrium calculations.
+
+EXAMPLE 14.21
+
+Calculating pH for Titration Solutions: Strong Acid/Strong Base
+
+A titration is carried out for  of 0.100 MHCl (strong acid) with  of a strong base NaOH (the titration curve is shown in Figure 14.18). Calculate the pH at these volumes of added base solution:
+
+(a) 0.00 mL (b) 12.50 mL (c) 25.00 mL (d) 
+
+Solution
+
+(a) Titrant volume  . The solution  is due to the acid ionization of HCl. Because this is a strong acid, the ionization is complete and the hydronium ion molarity is  . The pH of the solution is then
+
+(b) Titrant volume  . Since the acid sample and the base titrant are both monoprotic and equally concentrated, this titrant addition involves less than a stoichiometric amount of base, and so it is completely consumed by reaction with the excess acid in the sample. The concentration of acid remaining is computed by subtracting the consumed amount from the intial amount and then dividing by the solution volume:
+
+(c) Titrant volume  . This titrant addition involves a stoichiometric amount of base (the equivalence point), and so only products of the neutralization reaction are in solution (water and NaCl). Neither the cation nor the anion of this salt undergo acid-base ionization; the only process generating hydronium ions is the autoprotolysis of water. The solution is neutral, having a  .
+
+(d) Titrant volume  . This involves the addition of titrant in excess of the equivalence point. The solution  is then calculated using the concentration of hydroxide ion:
+
+Check Your Learning
+
+Calculate the  for the strong acid/strong base titration between  of  and 0.200 M NaOH (titrant) at the listed volumes of added base:  ,  ,  , and  .
+
+Answer:
+
+0.00: 1.000; 15.0: 1.5111; 25.0: 7; 40.0: 12.523
+
+EXAMPLE 14.22
+
+Titration of a Weak Acid with a Strong Base
+
+Consider the titration of  of 0.100  with 0.100 MNaOH. The reaction can be represented as:
+
+Calculate the pH of the titration solution after the addition of the following volumes of NaOH titrant:
+
+(a) 0.00 mL (b) 25.00 mL (c) 12.50 mL
+
+(d) 37.50 mL
+
+Solution
+
+(a) The initial pH is computed for the acetic acid solution in the usual ICE approach:
+
+(b) The acid and titrant are both monoprotic and the sample and titrant solutions are equally concentrated; thus, this volume of titrant represents the equivalence point. Unlike the strong-acid example above, however, the reaction mixture in this case contains a weak conjugate base (acetate ion). The solution  is computed considering the base ionization of acetate, which is present at a concentration of
+
+Base ionization of acetate is represented by the equation
+
+Assuming  , the  may be calculated via the usual ICE approach: 
+
+Note that the  at the equivalence point of this titration is significantly greater than 7, as expected when titrating a weak acid with a strong base.
+
+(c) Titrant volume  . This volume represents one-half of the stoichiometric amount of titrant, and so one-half of the acetic acid has been neutralized to yield an equivalent amount of acetate ion. The concentrations of these conjugate acid-base partners, therefore, are equal. A convenient approach to computing the pH is use of the Henderson-Hasselbalch equation:
+
+ at the half-equivalence point in a titration of a weak acid)
+
+(d) Titrant volume  . This volume represents a stoichiometric excess of titrant, and a reaction solution containing both the titration product, acetate ion, and the excess strong titrant. In such solutions, the solution pH is determined primarily by the amount of excess strong base:
+
+Check Your Learning
+
+Calculate the pH for the weak acid/strong base titration between  of 0.100 MHCOOH(aq) (formic acid) and  (titrant) at the listed volumes of added base:  ,  ,  , and  .
+
+Answer:
+
+Performing additional calculations similar to those in the preceding example permits a more full assessment of titration curves. A summary of pH/volume data pairs for the strong and weak acid titrations is provided in Table 14.2 and plotted as titration curves in Figure 14.18. A comparison of these two curves illustrates several important concepts that are best addressed by identifying the four stages of a titration:
+
+initial state (added titrant volume  ): pH is determined by the acid being titrated; because the two acid samples are equally concentrated, the weak acid will exhibit a greater initial pH
+
+pre-equivalence point  ): solution pH increases gradually and the acid is consumed by reaction with added titrant; composition includes unreacted acid and the reaction product, its conjugate base equivalence point  ): a drastic rise in pH is observed as the solution composition transitions from acidic to either neutral (for the strong acid sample) or basic (for the weak acid sample), with pH determined by ionization of the conjugate base of the acid
+
+postequivalence point  ): pH is determined by the amount of excess strong base titrant added; since both samples are titrated with the same titrant, both titration curves appear similar at this stage.
+
+Acid-Base Indicators
+
+Certain organic substances change color in dilute solution when the hydronium ion concentration reaches a particular value. For example, phenolphthalein is a colorless substance in any aqueous solution with a hydronium ion concentration greater than  . In more basic solutions where the hydronium ion concentration is less than  , it is red or pink. Substances such as phenolphthalein, which can be used to determine the  of a solution, are called acid-base indicators. Acidbase indicators are either weak organic acids or weak organic bases.
+
+The equilibrium in a solution of the acid-base indicator methyl orange, a weak acid, can be represented by an equation in which we use HIn as a simple representation for the complex methyl orange molecule:
+
+The anion of methyl orange,  , is yellow, and the nonionized form, HIn, is red. When we add acid to a solution of methyl orange, the increased hydronium ion concentration shifts the equilibrium toward the nonionized red form, in accordance with Le Châtelier’s principle. If we add base, we shift the equilibrium towards the yellow form. This behavior is completely analogous to the action of buffers.
+
+The perceived color of an indicator solution is determined by the ratio of the concentrations of the two species  and HIn. If most of the indicator (typically about  or more) is present as  , the perceived color of the solution is yellow. If most is present as HIn, then the solution color appears red. The HendersonHasselbalch equation is useful for understanding the relationship between the pH of an indicator solution and its composition (thus, perceived color):
+
+In solutions where  , the logarithmic term must be positive, indicating an excess of the conjugate base form of the indicator (yellow solution). When  , the log term must be negative, indicating an excess of the conjugate acid (red solution). When the solution pH is close to the indicator pKa, appreciable amounts of both conjugate partners are present, and the solution color is that of an additive combination of each (yellow and red, yielding orange). The color change interval (or pHinterval) for an acid-base indicator is defined as the range of pH values over which a change in color is observed, and for most indicators this range is approximately  .
+
+There are many different acid-base indicators that cover a wide range of pH values and can be used to determine the approximate  of an unknown solution by a process of elimination. Universal indicators and pH paper contain a mixture of indicators and exhibit different colors at different pHs. Figure 14.19 presents several indicators, their colors, and their color-change intervals.
+
+The titration curves shown in Figure 14.20 illustrate the choice of a suitable indicator for specific titrations. In the strong acid titration, use of any of the three indicators should yield reasonably sharp color changes and accurate end point determinations. For this titration, the solution pH reaches the lower limit of the methyl orange color change interval after addition of  of titrant, at which point the initially red solution would begin to appear orange. When  of titrant has been added (the equivalence point), the pH is well above the upper limit and the solution will appear yellow. The titration's end point may then be estimated as the volume of titrant that yields a distinct orange-to-yellow color change. This color change would be challenging for most human eyes to precisely discern. More-accurate estimates of the titration end point are possible using either litmus or phenolphthalein, both of which exhibit color change intervals that are encompassed by the steep rise in pH that occurs around the  equivalence point.
+
+The weak acid titration curve in Figure 14.20 shows that only one of the three indicators is suitable for end point detection. If methyl orange is used in this titration, the solution will undergo a gradual red-to-orange-toyellow color change over a relatively large volume interval  ), completing the color change well before the equivalence point  ) has been reached. Use of litmus would show a color change that begins after adding  of titrant and ends just before the equivalence point. Phenolphthalein, on the other hand, exhibits a color change interval that nicely brackets the abrupt change in pH occurring at the titration's equivalence point. A sharp color change from colorless to pink will be observed within a very small volume interval around the equivalence point.
+
+Key Terms
+
+acid ionization reaction involving the transfer of a proton from an acid to water, yielding hydronium ions and the conjugate base of the acid   
+acid ionization constant  equilibrium constant for an acid ionization reaction   
+acid-base indicator weak acid or base whose conjugate partner imparts a different solution color; used in visual assessments of solution pH   
+acidic a solution in which    
+amphiprotic species that may either donate or accept a proton in a Bronsted-Lowry acid-base reaction   
+amphoteric species that can act as either an acid or a base   
+autoionization reaction between identical species yielding ionic products; for water, this reaction involves transfer of protons to yield hydronium and hydroxide ions   
+base ionization reaction involving the transfer of a proton from water to a base, yielding hydroxide ions and the conjugate acid of the base   
+base ionization constant  equilibrium constant for a base ionization reaction   
+basic a solution in which    
+Brønsted-Lowry acid proton donor   
+Brønsted-Lowry base proton acceptor   
+buffer mixture of appreciable amounts of a weak acid-base pair the  of a buffer resists change when small amounts of acid or base are added   
+buffer capacity amount of an acid or base that can be added to a volume of a buffer solution before its pH changes significantly (usually by one pH unit)   
+color-change interval range in pH over which the color change of an indicator is observed   
+conjugate acid substance formed when a base gains a proton   
+conjugate base substance formed when an acid loses a proton   
+diprotic acid acid containing two ionizable hydrogen atoms per molecule   
+diprotic base base capable of accepting two protons   
+Henderson-Hasselbalch equation logarithmic version of the acid ionization constant expression, conveniently formatted for calculating the pH of buffer solutions   
+ion-product constant for water  equilibrium constant for the autoionization of water   
+leveling effect observation that acid-base strength of solutes in a given solvent is limited to that of the solvent’s characteristic acid and base species (in water, hydronium and hydroxide ions, respectively)   
+monoprotic acid acid containing one ionizable hydrogen atom per molecule   
+neutral describes a solution in which     
+oxyacid ternary compound with acidic properties, molecules of which contain a central nonmetallic atom bonded to one or more O atoms, at least one of which is bonded to an ionizable H atom   
+percent ionization ratio of the concentration of ionized acid to initial acid concentration expressed as a percentage   
+pH logarithmic measure of the concentration of hydronium ions in a solution   
+pOH logarithmic measure of the concentration of hydroxide ions in a solution   
+stepwise ionization process in which a polyprotic acid is ionized by losing protons sequentially   
+titration curve plot of some sample property (such as pH) versus volume of added titrant   
+triprotic acid acid that contains three ionizable hydrogen atoms per molecule
+
+Key Equations
+
+ (at  )   
+   
+   
+[H3O+] = 10−pH   
+[OH−] = 10−pOH   
+ at    
+
+
+Summary
+
+14.1 Brønsted-Lowry Acids and Bases
+
+A compound that can donate a proton (a hydrogen ion) to another compound is called a BrønstedLowry acid. The compound that accepts the proton is called a Brønsted-Lowry base. The species remaining after a Brønsted-Lowry acid has lost a proton is the conjugate base of the acid. The species formed when a Brønsted-Lowry base gains a proton is the conjugate acid of the base. Thus, an acid-base reaction occurs when a proton is transferred from an acid to a base, with formation of the conjugate base of the reactant acid and formation of the conjugate acid of the reactant base. Amphiprotic species can act as both proton donors and proton acceptors. Water is the most important amphiprotic species. It can form both the hydronium ion,  , and the hydroxide ion,  when it undergoes autoionization:
+
+The ion product of water,  is the equilibrium constant for the autoionization reaction:
+
+14.2 pH and pOH
+
+Concentrations of hydronium and hydroxide ions in aqueous media are often represented as logarithmic pH and pOH values, respectively. At  , the autoprotolysis equilibrium for water requires the sum of pH and pOH to equal 14 for any aqueous solution. The relative concentrations of hydronium and hydroxide ion in a solution define its status as acidic  , basic  , or neutral  . At  , a  indicates an acidic solution, a  a basic solution, and a  a neutral solution.
+
+14.3 Relative Strengths of Acids and Bases
+
+The relative strengths of acids and bases are reflected in the magnitudes of their ionization constants; the stronger the acid or base, the larger its ionization constant. A reciprocal relation exists between the strengths of a conjugate acid-base pair: the stronger the acid, the weaker its conjugate base. Water exerts a leveling effect on dissolved acids or bases, reacting completely to generate its characteristic hydronium and hydroxide ions (the strongest acid and base that may exist in water). The strengths of the binary acids increase from left to right across a period of the periodic table   , and they increase down a group   ). The strengths of oxyacids that contain the same central element increase as the oxidation number of the element increases   ). The strengths of oxyacids also increase as the electronegativity of the central element increases  .
+
+14.4 Hydrolysis of Salts
+
+The ions composing salts may possess acidic or basic character, ionizing when dissolved in water to yield acidic or basic solutions. Acidic cations are typically the conjugate partners of weak bases, and basic anions are the conjugate partners of weak acids. Many metal ions bond to water molecules when dissolved to yield complex ions that may function as acids.
+
+14.5 Polyprotic Acids
+
+An acid that contains more than one ionizable proton is a polyprotic acid. These acids undergo stepwise ionization reactions involving the transfer of single protons. The ionization constants for polyprotic acids decrease with each subsequent step; these decreases typically are large enough to permit simple equilibrium calculations that treat each step separately.
+
+14.6 Buffers
+
+Solutions that contain appreciable amounts of a weak conjugate acid-base pair are called buffers. A buffered solution will experience only slight changes in pH when small amounts of acid or base are added. Addition of large amounts of acid or base can exceed the buffer capacity, consuming most of one
+
+conjugate partner and preventing further buffering action.
+
+14.7 Acid-Base Titrations
+
+The titration curve for an acid-base titration is typically a plot of pH versus volume of added titrant. These curves are useful in selecting appropriate acid-base indicators that will permit accurate determinations of titration end points.
+
+Exercises
+
+14.1 Brønsted-Lowry Acids and Bases
+
+1. Write equations that show  as both a conjugate acid and a conjugate base.
+
+2. Write equations that show  acting both as an acid and as a base.
+
+3. Show by suitable net ionic equations that each of the following species can act as a Brønsted-Lowry acid:
+
+(a)    
+(b) HCl   
+(c)    
+(d)  (e)   
+(f ) 
+
+4. Show by suitable net ionic equations that each of the following species can act as a Brønsted-Lowry acid:
+
+(a)    
+(b)    
+(c)    
+(d)    
+(e)    
+(f ) 
+
+5. Show by suitable net ionic equations that each of the following species can act as a Brønsted-Lowry base:
+
+(a)  (b)  (c)  (d)  (e)  (f ) 
+
+6. Show by suitable net ionic equations that each of the following species can act as a Brønsted-Lowry base:
+
+(a)    
+(b) (c)    
+(d)  (e)    
+(f ) 
+
+7. What is the conjugate acid of each of the following? What is the conjugate base of each?
+
+(a)  (b)  (c)  (d)  (e)  (f )  (g)  (h) 
+
+8. What is the conjugate acid of each of the following? What is the conjugate base of each?
+
+(a)    
+(b)  (c)    
+(d)    
+(e)    
+(f )    
+(g)    
+(h) 
+
+9. Identify and label the Brønsted-Lowry acid, its conjugate base, the Brønsted-Lowry base, and its conjugate acid in each of the following equations:
+
+(a)    
+(b)    
+(c)    
+(d)    
+(e)    
+(f )    
+(g)
+
+10. Identify and label the Brønsted-Lowry acid, its conjugate base, the Brønsted-Lowry base, and its conjugate acid in each of the following equations: (a)  (b) (c) (d) (e) (f ) (g)
+
+11. What are amphiprotic species? Illustrate with suitable equations.
+
+12. State which of the following species are amphiprotic and write chemical equations illustrating the amphiprotic character of these species: (a)  (b)  (c)  (d)  (e) 
+
+13. State which of the following species are amphiprotic and write chemical equations illustrating the amphiprotic character of these species. (a)  (b)  (c)  (d)  (e)
+
+14. Is the self-ionization of water endothermic or exothermic? The ionization constant for water  is   at  and  at  .
+
+14.2 pH and pOH
+
+15. Explain why a sample of pure water at  is neutral even though  .  is  at  .   
+16. The ionization constant for water  is  at  . Calculate  H, and pOH for pure water at  .   
+17. The ionization constant for water  is  at  Calculate  ,  , pH, and pOH for pure water at  .
+
+19. Calculate the pH and the pOH of each of the following solutions at  for which the substances ionize completely: (a)  (b) 0.21 MNaOH (c) 0.000071 MBa(OH)2 (d) 2.5 MKOH
+
+20. What are the pH and pOH of a solution of  , which ionizes completely?
+
+21. What are the hydronium and hydroxide ion concentrations in a solution whose pH is 6.52?
+
+22. Calculate the hydrogen ion concentration and the hydroxide ion concentration in wine from its pH. See Figure 14.2 for useful information.   
+23. Calculate the hydronium ion concentration and the hydroxide ion concentration in lime juice from its pH. See Figure 14.2 for useful information.   
+24. The hydronium ion concentration in a sample of rainwater is found to be  at  . What is the concentration of hydroxide ions in the rainwater?   
+25. The hydroxide ion concentration in household ammonia is  at  . What is the concentration of hydronium ions in the solution?
+
+14.3 Relative Strengths of Acids and Bases
+
+26. Explain why the neutralization reaction of a strong acid and a weak base gives a weakly acidic solution.
+
+27. Explain why the neutralization reaction of a weak acid and a strong base gives a weakly basic solution.   
+28. Use this list of important industrial compounds (and Figure 14.8) to answer the following questions regarding:  ,  , HCl,  , HF,  ,  ,  ,  ,  , NaOH,  . (a) Identify the strong Brønsted-Lowry acids and strong Brønsted-Lowry bases. (b) Identify the compounds that can behave as Brønsted-Lowry acids with strengths lying between those of  and  . (c) Identify the compounds that can behave as Brønsted-Lowry bases with strengths lying between those of  and  .   
+29. The odor of vinegar is due to the presence of acetic acid,  , a weak acid. List, in order of descending concentration, all of the ionic and molecular species present in a 1-Maqueous solution of this acid.   
+30. Household ammonia is a solution of the weak base  in water. List, in order of descending concentration, all of the ionic and molecular species present in a  aqueous solution of this base.   
+31. Explain why the ionization constant,  , for  is larger than the ionization constant for  .   
+32. Explain why the ionization constant,  , for HI is larger than the ionization constant for HF.   
+33. Gastric juice, the digestive fluid produced in the stomach, contains hydrochloric acid, HCl. Milk of Magnesia, a suspension of solid  in an aqueous medium, is sometimes used to neutralize excess stomach acid. Write a complete balanced equation for the neutralization reaction, and identify the conjugate acid-base pairs.   
+34. Nitric acid reacts with insoluble copper(II) oxide to form soluble copper(II) nitrate,  , a compound that has been used to prevent the growth of algae in swimming pools. Write the balanced chemical equation for the reaction of an aqueous solution of  with CuO.   
+35. What is the ionization constant at  for the weak acid  the conjugate acid of the weak base  ,  .   
+36. What is the ionization constant at  for the weak acid  the conjugate acid of the weak base  ,    
+37. Which base,  or  , is the stronger base? Which conjugate acid,  or  , is the stronger acid?
+
+38. Which is the stronger acid,  or HBrO?
+
+39. Which is the stronger base,  or 
+
+40. Predict which acid in each of the following pairs is the stronger and explain your reasoning for each. (a)  or HF (b)  or  (c)  or  (d)  or  (e)  or 
+
+41. Predict which compound in each of the following pairs of compounds is more acidic and explain your reasoning for each. (a)  or  (b)  or  (c)  or HI (d)  or  (e)  or HBr
+
+42. Rank the compounds in each of the following groups in order of increasing acidity or basicity, as indicated, and explain the order you assign. (a) acidity: HCl, HBr, HI (b) basicity:  ,  ,  ,  (c) basicity:  ,  ,  (Hint: Formula could also be written as  .) (d) acidity: HF,  ,  , 
+
+43. Rank the compounds in each of the following groups in order of increasing acidity or basicity, as indicated, and explain the order you assign. (a) acidity:  ,  ,  (b) basicity:  ，  ，  (c) acidity: HOCl, HOBr, HOI (d) acidity: HOCl, HOClO,  ,  (e) basicity:   ,  ,  (f ) basicity:  ,  ，  ， 
+
+44. Both HF and HCN ionize in water to a limited extent. Which of the conjugate bases,  or  , is the stronger base?
+
+45. The active ingredient formed by aspirin in the body is salicylic acid,  . The carboxyl group  acts as a weak acid. The phenol group (an OH group bonded to an aromatic ring) also acts as an acid but a much weaker acid. List, in order of descending concentration, all of the ionic and molecular species present in a 0.001-Maqueous solution of  .
+
+46. Are the concentrations of hydronium ion and hydroxide ion in a solution of an acid or a base in water directly proportional or inversely proportional? Explain your answer.
+
+47. What two common assumptions can simplify calculation of equilibrium concentrations in a solution of a weak acid or base?
+
+48. Which of the following will increase the percent of  that is converted to the ammonium ion in water? (a) addition of NaOH (b) addition of HCl (c) addition of 
+
+49. Which of the following will increase the percentage of HF that is converted to the fluoride ion in water? (a) addition of NaOH (b) addition of HCl (c) addition of NaF
+
+50. What is the effect on the concentrations of  ，  , and  when the following are added to a solution of  in water:
+
+(a) HCl (b)  (c) NaOH (d) NaCl (e) KNO
+
+51. What is the effect on the concentration of hydrofluoric acid, hydronium ion, and fluoride ion when the following are added to separate solutions of hydrofluoric acid? (a) HCl (b) KF (c) NaCl (d) KOH (e) HF
+
+52. Why is the hydronium ion concentration in a solution that is 0.10  in HCl and 0.10 Min HCOOH determined by the concentration of HCl?
+
+53. From the equilibrium concentrations given, calculate  for each of the weak acids and  for each of the weak bases. (a)  :    (b  ：   
+
+54. From the equilibrium concentrations given, calculate  for each of the weak acids and  for each of the weak bases. (a)  : [OH−] = 3.1 10−3 M;   (b)    (c)    (d)   
+
+55. Determine  for the nitrite ion,  In a 0.10-Msolution this base is  ionized.
+
+56. Determine  for hydrogen sulfate ion,  In a 0.10-Msolution the acid is  ionized.
+
+57. Calculate the ionization constant for each of the following acids or bases from the ionization constant of its conjugate base or conjugate acid:
+
+(a)    
+(b)   
+(c)   
+(d)    
+(e)    
+(f )  (as a base)
+
+58. Calculate the ionization constant for each of the following acids or bases from the ionization constant of its conjugate base or conjugate acid: (a)  (as a base) (b)  (c)  (as a base) (d)  (as a base) (e)  (f )  (as a base)
+
+59. Using the  value of  , place  in the correct location in Figure 14.7.
+
+60. Calculate the concentration of all solute species in each of the following solutions of acids or bases. Assume that the ionization of water can be neglected, and show that the change in the initial concentrations can be neglected. (a) 0.0092 MHClO, a weak acid (b)  , a weak base (c)  , a weak acid (d)  , a weak base (e)  a weak acid, 
+
+61. Propionic acid,   , is used in the manufacture of calcium propionate, a food preservative. What is the pH of a  solution of 
+
+62. White vinegar is a  by mass solution of acetic acid in water. If the density of white vinegar is   , what is the pH?
+
+63. The ionization constant of lactic acid,  , an acid found in the blood after strenuous exercise, is  . If  of lactic acid is used to make a solution with a volume of  , what is the concentration of hydronium ion in the solution?
+
+64. Nicotine,  , is a base that will accept two protons  ,  . What is the concentration of each species present in a 0.050-Msolution of nicotine?
+
+65. The pH of a 0.23-Msolution of HF is 1.92. Determine  for HF from these data.
+
+66. The pH of a 0.15-Msolution of  is 1.43. Determine  for  from these data.
+
+67. The pH of a 0.10-Msolution of caffeine is 11.70. Determine  for caffeine from these data: 
+
+68. The pH of a solution of household ammonia, a 0.950 M solution of  , is 11.612. Determine  for  from these data.
+
+14.4 Hydrolysis of Salts
+
+69. Determine whether aqueous solutions of the following salts are acidic, basic, or neutral: (a)  (b) RbI (c)  (d) 
+
+70. Determine whether aqueous solutions of the following salts are acidic, basic, or neutral:
+
+(a)  (b)  (c)  (d) 
+
+71. Novocaine,  , is the salt of the base procaine and hydrochloric acid. The ionization constant for procaine is  . Is a solution of novocaine acidic or basic? What are  ,  , and pH of a  solution by mass of novocaine, assuming that the density of the solution is  .
+
+14.5 Polyprotic Acids
+
+72. Which of the following concentrations would be practically equal in a calculation of the equilibrium concentrations in a 0.134-Msolution of  , a diprotic acid:  ，  ,  ,   No calculations are needed to answer this question.
+
+73. Calculate the concentration of each species present in a  solution of  .
+
+74. Calculate the concentration of each species present in a 0.010-  solution of phthalic acid, 
+
+75. Salicylic acid,  , and its derivatives have been used as pain relievers for a long time. Salicylic acid occurs in small amounts in the leaves, bark, and roots of some vegetation (most notably historically in the bark of the willow tree). Extracts of these plants have been used as medications for centuries. The acid was first isolated in the laboratory in 1838. (a) Both functional groups of salicylic acid ionize in water, with  for the—  group and  for the  group. What is the pH of a saturated solution of the acid (solubility  . (b) Aspirin was discovered as a result of efforts to produce a derivative of salicylic acid that would not be irritating to the stomach lining. Aspirin is acetylsalicylic acid,  . The  functional group is still present, but its acidity is reduced,  . What is the pH of a solution of aspirin with the same concentration as a saturated solution of salicylic acid (See Part a).
+
+76. The ion  is an amphiprotic species; it can act as either an acid or a base. (a) What is  for the acid reaction of  with  (b) What is  for the reaction in which  functions as a base in water? (c) Demonstrate whether or not the second ionization of  Te can be neglected in the calculation of [HTe−] in a  solution of  .
+
+14.6 Buffers
+
+77. Explain why a buffer can be prepared from a mixture of  and NaOH but not from  and NaOH.
+
+78. Explain why the pH does not change significantly when a small amount of an acid or a base is added to a solution that contains equal amounts of the acid  and a salt of its conjugate base  .
+
+79. Explain why the pH does not change significantly when a small amount of an acid or a base is added to a solution that contains equal amounts of the base  and a salt of its conjugate acid  .
+
+80. What is  in a solution of  and   Ka = 1.8 × 10-5   
+81. What is  in a solution of  and  ?  Ka = 4.5 × 10-5   
+82. What is  in a solution of  and   Kb = 4.4 × 10-4   
+83. What is  in a solution of  and 
+
+ Kb = 1.8 × 10-5
+
+84. What is the effect on the concentration of acetic acid, hydronium ion, and acetate ion when the following are added to an acidic buffer solution of equal concentrations of acetic acid and sodium acetate: (a) HCl (b)  (c) NaCl (d) KOH (e) 
+
+85. What is the effect on the concentration of ammonia, hydroxide ion, and ammonium ion when the following are added to a basic buffer solution of equal concentrations of ammonia and ammonium nitrate:
+
+(a) KI   
+(b)    
+(c) HI   
+(d) NaOH (e) 
+
+86. What will be the pH of a buffer solution prepared from 0.20 mol  , 0.40 mol  , and just enough water to give  of solution?
+
+87. Calculate the  of a buffer solution prepared from  of phosphoric acid, 0.250 mole of  , and enough water to make  of solution.
+
+88. How much solid  must be added to  of a 0.50-Macetic acid solution to give a buffe with a pH of 5.00? (Hint: Assume a negligible change in volume as the solid is added.)
+
+89. What mass of  must be added to  of a 0.100-Msolution of  to give a buffer solution with a pH of 9.26? (Hint: Assume a negligible change in volume as the solid is added.)
+
+90. A buffer solution is prepared from equal volumes of 0.200  acetic acid and 0.600  sodium acetate. Use  as  for acetic acid. (a) What is the pH of the solution? (b) Is the solution acidic or basic? (c) What is the pH of a solution that results when  of 0.034 MHCl is added to  of the original buffer?
+
+91. A  sample of  was added to  of 1.00 MNaOH and the resulting solution diluted to  . (a) What is the pH of this buffer solution? (b) Is the solution acidic or basic? (c) What is the pH of a solution that results when  of 0.034 MHCl is added to the solution
+
+14.7 Acid-Base Titrations
+
+92. Explain how to choose the appropriate acid-base indicator for the titration of a weak base with a strong acid.
+
+93. Explain why an acid-base indicator changes color over a range of pH values rather than at a specific pH.
+
+94. Calculate the pH at the following points in a titration of  (0.040 L) of  barbituric acid   with  . (a) no KOH added (b)  of KOH solution added (c)  of KOH solution added (d)  of KOH solution added (e)  of KOH solution added
+
+95. The indicator dinitrophenol is an acid with a  of  . In a  solution, it is colorless in acid and yellow in base. Calculate the pH range over which it goes from  ionized (colorless) to  ionized (yellow).

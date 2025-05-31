@@ -1,0 +1,123 @@
+[
+    {
+        "type": "text",
+        "text": "2.2.2 Binary Number System ",
+        "text_level": 1,
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "What if we consider a special case? Let us try to represent numbers in base 2. The number $7 _ { 1 0 }$ can be represented as $1 1 1 _ { 2 }$ , and $1 2 _ { 1 0 }$ is equal to $1 1 0 0 _ { 2 }$ . There is something interesting about this number system. Every digit is either 0 or 1. As we shall see in Chapters 7 and 8, computers are best suited to process values that are either 0 or 1. They find it difficult to process values from a larger set. Hence, representing numbers in base 2 should be a natural fit for computers. We call this a binary number system (see Definition 18). Likewise, a number system that uses a base of 10, is known as a decimal number system. ",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Definition 18 ",
+        "text_level": 1,
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "A number system based on Indian numerals that uses a base equal to 2, is known as a binary number system.   \nA number system based on Indian numerals that uses a base equal to 10, is known as a decimal number system. ",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Formally, any number $A$ can be represented as a sequence of $n$ binary digits: ",
+        "page_idx": 61
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = \\sum _ { i = 1 } ^ { n } x _ { i } 2 ^ { i - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Here, $x _ { 1 } \\ldots x _ { n }$ are binary digits ( $0$ or 1). We represent a number as a sum of the powers of 2, as shown in Equation 2.6. The coefficients of the equation, are the binary digits. For example, the decimal number 23 is equal to $( 1 6 + 4 + 2 + 1 ) = 1 \\times 2 ^ { 4 } + 0 \\times 2 ^ { 3 } + 1 \\times 2 ^ { 2 } + 1 \\times 2 + 1$ . Thus, its binary representation is 10111. ",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Let us consider some more examples, as shown in Table 2.8. ",
+        "page_idx": 61
+    },
+    {
+        "type": "table",
+        "img_path": "images/c7b33cb549683257b3e2cfb846a7df15b288c5a67148e414903e9958cdee18f7.jpg",
+        "table_caption": [
+            "Table 2.8: Examples of binary numbers "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Number in decimal</td><td>Number in binary</td></tr><tr><td>5</td><td>101</td></tr><tr><td>100</td><td>1100100</td></tr><tr><td>500</td><td>111110100</td></tr><tr><td>1024</td><td>10000000000</td></tr></table></body></html>\n\n",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Example 8 Convert the decimal number 27 to binary. ",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Answer: $2 7 = \\underbrace { 1 6 } _ { 1 } + \\underbrace { 8 } _ { 1 } + \\underbrace { 0 } _ { 0 } + \\underbrace { 2 } _ { 1 } + \\underbrace { 1 } _ { 1 } = 1 1 0 1 1 2$ ",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Let us now define two more terms, the most significant bit (MSB), and the least significant bit (LSB). The LSB is the rightmost bit, and the MSB is the leftmost bit. ",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Definition 19 ",
+        "text_level": 1,
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "MSB (Most Significant Bit) : The leftmost bit of a binary number. For example the MSB of 1110 is 1.   \n\u2022 LSB (Least Significant Bit) : The rightmost bit of a binary number. For example the LSB of 1110 is 0. ",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Hexadecimal and Octal Numbers ",
+        "text_level": 1,
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "If we have a 32-bit number, then representing each number in binary will take 32 binary digits $( 0 / 1 )$ . For the purposes of explanation, this representation is unwieldy. We can thus make our representation more elegant by representing numbers in base 8 or base 16. We shall see that there is a very easy method of converting numbers in base 8, or base 16, to base 2. ",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "Numbers represented in base 8 are known as octal numbers. They are traditionally represented by adding a prefix, \u20190\u2019. The more popular representation is the hexadecimal number system. It uses a base equal to 16. We shall use the hexadecimal representation extensively in this book. Numbers in this format are prefixed by \u20180x\u2019. Secondly, the word \u2018hexadecimal\u2019 is popularly abbreviated as \u2018hex\u2019. Note that we require 16 hex digits. We can use the digits 0-9 for the first ten digits. The next six digits require special characters. These six characters are typically \u2013 A (10), B(11), C(12), D(13), E(14), and F(15). We can use the lower case versions of ABCDEF also. ",
+        "page_idx": 62
+    },
+    {
+        "type": "text",
+        "text": "To convert a binary number ( $A$ ) to a hexadecimal number, or do the reverse, we can use the following relationship: ",
+        "page_idx": 63
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { A = \\displaystyle \\sum _ { i = 1 } ^ { n } x _ { i } 2 ^ { i - 1 } } } \\\\ { { \\displaystyle = \\sum _ { j = 1 } ^ { n / 4 } ( 2 ^ { 8 } \\times x _ { 4 ( j - 1 ) + 4 } + 2 ^ { 2 } \\times x _ { 4 ( j - 1 ) + 3 } + 2 ^ { 1 } \\times x _ { 4 ( j - 1 ) + 2 } + x _ { 4 ( j - 1 ) + 1 } ) \\times 2 ^ { 4 ( j - 1 ) } } } \\\\ { { \\displaystyle = \\sum _ { j = 1 } ^ { n / 4 } ( 2 ^ { 3 } \\times x _ { 4 ( j - 1 ) + 4 } + 2 ^ { 2 } \\times x _ { 4 ( j - 1 ) + 3 } + 2 ^ { 1 } \\times x _ { 4 ( j - 1 ) + 2 } + x _ { 4 ( j - 1 ) + 1 } ) \\times 2 ^ { 4 ( j - 1 ) } } } \\\\ { { \\displaystyle = \\sum _ { j = 1 } ^ { n / 4 } y _ { 1 } \\mathrm { t e } ^ { ( j - 1 ) } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 63
+    },
+    {
+        "type": "text",
+        "text": "We can thus represent the number ( $A$ ) in base 16 (hexadecimal notation) by creating groups of four consecutive binary digits. The first group comprises the binary digits $x _ { 4 } x _ { 3 } x _ { 2 } x _ { 1 }$ , the second group comprises $x _ { 8 } x _ { 7 } x _ { 6 } x _ { 5 }$ , and so on. We need to convert each group of 4 binary digits, to represent a hexadecimal digit $( y _ { j } )$ . Similarly, for converting a number from hex to binary, we need to replace each hex digit with a sequence of 4 binary digits. Likewise, for converting numbers from binary to octal and back, we need to consider sequences of 3 binary digits. ",
+        "page_idx": 63
+    },
+    {
+        "type": "text",
+        "text": "Example 9   \nConvert 1100010102 to the octal format.   \nAnswer: 110 001 010 0612 6 1 2   \nExample 10   \nConvert 110000101011 to the hexadecimal format.   \nAnswer: 1100 0010 1011 0xC2B $C$ 2 $B$ ",
+        "page_idx": 63
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 63
+    }
+]

@@ -1,0 +1,89 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.7 Branch and Link Instruction ",
+        "text_level": 1,
+        "page_idx": 152
+    },
+    {
+        "type": "text",
+        "text": "We can use the simple branch instructions to implement for loops and if statements. However, we need a stronger variant of the branch instruction to implement function calls. Function calls are different from regular branches because we need to remember the point in the program that the function needs to return to. ARM provides the bl (branch-and-link) instruction for this purpose. The semantics of this instruction is shown in Table 4.10. ",
+        "page_idx": 152
+    },
+    {
+        "type": "table",
+        "img_path": "images/0674aad627fae39817480449de6fae09db74d8a736d2798357d9e14a8bdafb53.jpg",
+        "table_caption": [
+            "Table 4.10: Semantics of the branch and link instruction "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>bllabel</td><td>bl .foo</td><td>(1\uff09Jump unconditionally to the function at .foo (2) Save the next PC (PC + 4) in the lr register</td></tr></table></body></html>\n\n",
+        "page_idx": 153
+    },
+    {
+        "type": "text",
+        "text": "The $b l$ instruction jumps to the function that begins at the specified label. Note that in the ARM ISA, there is no special way for designating the start of a function. Any instruction can in principle be the start of a function. In ARM assembly, the starting instruction of a function needs to have a label assigned to it. Along with branching to the given label, the $b l$ instruction also saves the value of the return address, which is equal to the current PC plus 4, into the $l r$ register ( $r$ 14). We need to add 4 over here because the size of an instruction in ARM is exactly equal to 4 bytes. ",
+        "page_idx": 153
+    },
+    {
+        "type": "text",
+        "text": "Once a function starts executing, it is expected that it will preserve the value of the return address saved in the lr register unless it invokes other functions. If a function invokes other functions, it needs to spill and restore registers as mentioned in Section 3.3.10. When we wish to return from a function, we need to move the value in the lr register to the pc register ( $r$ 15). The PC will point to the instruction at the return address and execution will proceed from that point. ",
+        "page_idx": 153
+    },
+    {
+        "type": "text",
+        "text": "Example 46 ",
+        "text_level": 1,
+        "page_idx": 153
+    },
+    {
+        "type": "text",
+        "text": "Example of an assembly program with a function call. ",
+        "page_idx": 153
+    },
+    {
+        "type": "image",
+        "img_path": "images/2d3dcab81e926da8e1c4eeaee12eb731b78f5f64a9ce64ffcc3e85c48d3901b1.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 153
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at Example 46. In this example, we consider a simple piece of C code that calls a function $f o o$ that returns a constant value of 2. It adds the return value to the variable $x$ to produce $y$ . ",
+        "page_idx": 154
+    },
+    {
+        "type": "text",
+        "text": "In the equivalent ARM code, we define two labels \u2013 foo and main. We assume that execution starts from the main label. We map $x$ to $r 1$ , and set its value equal to 3. Then, we call the function $f o o$ . Subsequently, we set the value of register $r 0$ to 2, and return by moving the value in the $l r$ register to the PC. When the program returns, it begins execution at the subsequent line in the main function. The register $r 0$ maintains its value equal to 2 across functions. We add the value in $r 1$ to the value in $r 0$ to produce the value for $y$ . It is saved in $r 2$ . ",
+        "page_idx": 154
+    },
+    {
+        "type": "text",
+        "text": "Nowadays, a simpler method is used to return from a function. We can use the $b x$ instruction that jumps to an address contained in a register (semantics shown in Figure 4.11). ",
+        "page_idx": 154
+    },
+    {
+        "type": "table",
+        "img_path": "images/39220b11b8b1e12bff03f65179baee4d908c84082345dc54af4241634d223206.jpg",
+        "table_caption": [
+            "Table 4.11: Semantics of the bx instruction "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>bx reg</td><td>bx r2</td><td>(1) Jump unconditionally to the ad- dress contained in register,r2</td></tr></table></body></html>\n\n",
+        "page_idx": 154
+    },
+    {
+        "type": "text",
+        "text": "We can simplify the assembly code in Example 46 as follows. ",
+        "page_idx": 154
+    },
+    {
+        "type": "table",
+        "img_path": "images/cd292e790fc27a33e3bc02987b8a0d96fde5ccb1a72a94f96bf20a5eff270be5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>ARM assembly</td></tr><tr><td>foo:</td></tr><tr><td>mov r0\uff0c#2</td></tr><tr><td>bx lr</td></tr><tr><td></td></tr><tr><td></td></tr><tr><td>main:</td></tr><tr><td>mov r1\uff0c#3 /* x=3*/</td></tr><tr><td>bl foo /* invoke foo */</td></tr><tr><td>/* y = x + foo() */</td></tr></table></body></html>\n\n",
+        "page_idx": 154
+    }
+]

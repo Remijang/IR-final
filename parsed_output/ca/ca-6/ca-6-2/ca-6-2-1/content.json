@@ -1,0 +1,92 @@
+[
+    {
+        "type": "text",
+        "text": "6.2.1 Moving Values to Registers ",
+        "text_level": 1,
+        "page_idx": 231
+    },
+    {
+        "type": "table",
+        "img_path": "images/e6335237f12b9094d50efb894ece117dfcd127b69168229fdbb141df11aa03fe.jpg",
+        "table_caption": [
+            "Table 6.3: Loading values into registers "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>addi rd, rs1,imm</td><td>addi x1, x0, 5</td><td>xl\u21900+5</td></tr><tr><td>add rd, rs1, rs2</td><td>add x1, x2, x3</td><td>x1 \u2190 x2 + x3</td></tr></table></body></html>\n\n",
+        "page_idx": 231
+    },
+    {
+        "type": "text",
+        "text": "The most basic operation in any assembly language is to load a value into a register. We typically transfer the contents from another register or from the immediate field of an instruction. We need a counterpart of the mov instruction in RISC-V. The relevant instructions are shown in Table 6.3. RISC-V does not have a dedicated mov instruction; instead, we add an immediate to the zero register and store the result in the destination register. ",
+        "page_idx": 231
+    },
+    {
+        "type": "text",
+        "text": "Specifically, the addi instruction can be used to load a signed 12-bit immediate to the destination register. In this case, its usage is somewhat unconventional. As the example shows, the immediate is added to the contents of $x 0$ (zero register), which is hardwired to 0. Effectively, the immediate gets transferred to the destination register. An advantage of such a mechanism is that we need not have a dedicated mov instruction. The add instruction and its variants can be used to load immediates. Similarly, we can set the immediate to 0 and transfer the contents of the source register to the destination register. This simulates a regular register mov instruction. We can alternatively use the regular add instruction to achieve this. We can set the second register operand to zero. The net effect is that the contents are transferred to the destination register. The add instruction otherwise does the same as its counterparts in ARM and SimpleRisc . ",
+        "page_idx": 231
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 232
+    },
+    {
+        "type": "text",
+        "text": "Loading Values Directly into Registers ",
+        "text_level": 1,
+        "page_idx": 232
+    },
+    {
+        "type": "text",
+        "text": "A major issue with the addi instruction is that the immediate is limited to 12 bits. Loading a full 32-bit value thus requires several instructions. RISC-V therefore provides the lui instruction that loads a 20-bit immediate into the upper 20 bits of a register \u2013 the immediate is effectively left-shifted by 12 positions. The semantics of this instruction is shown in Table 6.4 (also refer to Example 91). ",
+        "page_idx": 232
+    },
+    {
+        "type": "table",
+        "img_path": "images/ee4fbc264a5e61ba823e956973d2d9b1fb8901192949b14be937da27021be883.jpg",
+        "table_caption": [
+            "Table 6.4: Loading values directly into registers "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>lui rd, imm</td><td>lui x1, 5</td><td>xl\u21905<<12</td></tr><tr><td>li rd, imm</td><td>li x1,0xABCD1234</td><td>x1 \u2190 0xABCD1234</td></tr></table></body></html>\n\n",
+        "page_idx": 232
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 232
+    },
+    {
+        "type": "table",
+        "img_path": "images/5ba6416db88c652984b3640abf3f958df8753eae6afb4a3b79dab838972530f1.jpg",
+        "table_caption": [
+            "Example 91 Write a RISC-V assembly program to add 409932 $^ +$ 409823. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>.main: lui t0\uff0c100 # to = 4096 * 100 = 409600</td></tr></table></body></html>\n\n",
+        "page_idx": 232
+    },
+    {
+        "type": "text",
+        "text": "It is evident from Example 91 that loading a 32-bit value into a register requires two instructions. Even though the ISA has this limitation, most RISC-V assemblers support the assembler directive $l i$ that directly loads a 32-bit value into a register. The assembler replaces the directive with two assembly instructions: addi and lui. The code in Example 91 can be compressed using the $l i$ assembler directive (refer to Example 92). ",
+        "page_idx": 232
+    },
+    {
+        "type": "text",
+        "text": "Example 92 Write a RISC-V assembly program to add 409932 $^ +$ 409823 using the li assembler directive. ",
+        "page_idx": 233
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 233
+    },
+    {
+        "type": "table",
+        "img_path": "images/f24526a5015e79336f1ab9c298dfaea31d8033a88cff474744315e7bc9365346.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"3\">.main:</td><td></td><td></td><td></td></tr><tr><td>li</td><td></td><td>t0\uff0c409932</td><td></td><td></td><td># t0 = 409932</td></tr><tr><td>li</td><td></td><td>t1\uff0c409823</td><td></td><td></td><td># t1 = 409823</td></tr><tr><td>add</td><td></td><td>t2\uff0ct0\uff0ct1</td><td></td><td># t2</td><td>= t0 + t1</td></tr></table></body></html>\n\n",
+        "page_idx": 233
+    }
+]

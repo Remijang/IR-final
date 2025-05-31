@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "13.3 Physical Layer \u2013 Synchronization Sublayer ",
+        "text_level": 1,
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "The transmission sublayer ensures that a sequence of pulses is successfully sent from the transmitter to either one receiver, or to a set of receivers. However, this is not enough. The receiver needs to read the signal at the right time, and needs to assume the correct bit period. If it reads the signal too early or too late, then it risks getting the wrong value of the signal. Secondly, if it assumes the wrong values of the bit period, then the NRZ protocol might not work. Hence, there is a need to maintain a notion of time between the source and destination. The destination needs to know exactly when to transfer the value into a latch. Let us consider solutions for a single source and destination. Extending the methods to a set of destinations is left as an exercise to the reader. ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "To summarize, the synchronization sublayer receives a sequence of logical bits from the transmission sublayer without any timing guarantees. It needs to figure out the values of the bit periods, and read in an entire frame (a fixed size chunk) of data sent by the sender, and send it to the data link layer. Note that the actual job of finding out the frame boundaries, and putting sets of bits in a frame is done by data link layer. ",
+        "page_idx": 661
+    }
+]

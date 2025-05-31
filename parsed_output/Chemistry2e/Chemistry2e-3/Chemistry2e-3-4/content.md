@@ -1,0 +1,377 @@
+# 3.4 Other Units for Solution Concentrations
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Define the concentration units of mass percentage, volume percentage, mass-volume percentage, parts-permillion (ppm), and parts-per-billion (ppb)   
+• Perform computations relating a solution’s concentration and its components’ volumes and/or masses using these units
+
+The previous section introduced molarity, a very useful measurement unit for evaluating the concentration of solutions. However, molarity is only one measure of concentration. This section will describe some other units of concentration that are commonly used in various applications, either for convenience or by convention.
+
+# Mass Percentage
+
+Earlier in this chapter, percent composition was introduced as a measure of the relative amount of a given element in a compound. Percentages are also commonly used to express the composition of mixtures, including solutions. The mass percentage of a solution component is defined as the ratio of the component’s mass to the solution’s mass, expressed as a percentage:
+
+$$
+{ \mathrm { m a s s p e r c e n t a g e } } = { \frac { \mathrm { m a s s ~ o f ~ c o m p o n e n t } } { \mathrm { m a s s ~ o f ~ s o l u t i o n } } } \times 1 0 0 \%
+$$
+
+Mass percentage is also referred to by similar names such as percentmas ,percentweight,weight/weight percent, and other variations on this theme. The most common symbol for mass percentage is simply the percent sign, $\%$ , although more detailed symbols are often used including $\%$ mass, $\%$ weight, and $( \mathrm { w } / \mathrm { w } ) \%$ . Use of these more detailed symbols can prevent confusion of mass percentages with other types of percentages, such as volume percentages (to be discussed later in this section).
+
+Mass percentages are popular concentration units for consumer products. The label of a typical liquid bleach bottle (Figure 3.17) cites the concentration of its active ingredient, sodium hypochlorite (NaOCl), as being $7 . 4 \%$ . A $_ { 1 0 0 . 0 - \mathrm { g } }$ sample of bleach would therefore contain $\boldsymbol { 7 . 4 } \ : \mathrm { g }$ of NaOCl.
+
+# Calculation of Percent by Mass
+
+A $5 . 0 \mathrm { - g }$ sample of spinal fluid contains $3 . 7 5 \mathrm { m g }$ (0.00375 g) of glucose. What is the percent by mass of glucose in spinal fluid?
+
+# Solution
+
+The spinal fluid sample contains roughly $4 \mathrm { m g }$ of glucose in $5 0 0 0 \mathrm { m g }$ of fluid, so the mass fraction of glucose should be a bit less than one part in 1000, or about $0 . 1 \%$ . Substituting the given masses into the equation defining mass percentage yields:
+
+$$
+\% { \mathrm { ~ g l u c o s e } } = { \frac { 3 . 7 5 { \mathrm { m g ~ g l u c o s e } } \times { \frac { 1 \mathrm { ~ g } } { 1 0 0 0 { \mathrm { m g } } } } } { 5 . 0 { \mathrm { g ~ s p i n a l ~ f l u i d } } } } = 0 . 0 7 5 \%
+$$
+
+The computed mass percentage agrees with our rough estimate (it’s a bit less than $0 . 1 \%$ ).
+
+Note that while any mass unit may be used to compute a mass percentage (mg, g, kg, oz, and so on), the same unit must be used for both the solute and the solution so that the mass units cancel, yielding a dimensionless ratio. In this case, the solute mass unit in the numerator was converted from mg to g to match the units in the denominator. Alternatively, the spinal fluid mass unit in the denominator could have been converted from g to mg instead. As long as identical mass units are used for both solute and solution, the computed mass percentage will be correct.
+
+# Check Your Learning
+
+A bottle of a tile cleanser contains $\boldsymbol { 1 3 5 } \mathrm { g }$ of HCl and $7 7 5 \mathrm { g }$ of water. What is the percent by mass of HCl in this cleanser?
+
+# EXAMPLE 3.23
+
+# Calculations using Mass Percentage
+
+“Concentrated” hydrochloric acid is an aqueous solution of $3 7 . 2 \%$ HCl that is commonly used as a laboratory reagent. The density of this solution is $1 . 1 9 \mathrm { g / m L }$ . What mass of HCl is contained in $0 . 5 0 0 \mathrm { L }$ of this solution?
+
+# Solution
+
+The HCl concentration is near $40 \%$ , so a $_ { 1 0 0 - \mathrm { g } }$ portion of this solution would contain about $4 0 \mathrm { g }$ of HCl. Since the solution density isn’t greatly different from that of water $( 1 \ \mathrm { g / m L } )$ , a reasonable estimate of the HCl mass in $5 0 0 \mathrm { g } \left( 0 . 5 \mathrm { L } \right)$ of the solution is about five times greater than that in a $_ { 1 0 0 \mathrm { g } }$ portion, or $5 \times 4 0 = 2 0 0 ~ \mathrm { g }$ . In order to derive the mass of solute in a solution from its mass percentage, the mass of the solution must be known. Using the solution density given, convert the solution’s volume to mass, and then use the given mass percentage to calculate the solute mass. This mathematical approach is outlined in this flowchart:
+
+For proper unit cancellation, the $0 . 5 0 0 \mathrm { - L }$ volume is converted into $5 0 0 ~ \mathrm { m L }$ , and the mass percentage is expressed as a ratio, $3 7 . 2 \mathrm { g H C l / g }$ solution:
+
+$$
+5 0 0 \mathrm { m L } \mathrm { s o l u t i o n } \left( { \frac { 1 . 1 9 \mathrm { g } \mathrm { s o l u t i o n } } { \mathrm { m L } \mathrm { s o l u t i o n } } } \right) \left( { \frac { 3 7 . 2 \mathrm { g } \mathrm { H C l } } { 1 0 0 \mathrm { g } \mathrm { s o l u t i o n } } } \right) = 2 2 1 \mathrm { g } \mathrm { H C l }
+$$
+
+This mass of HCl is consistent with our rough estimate of approximately $2 0 0 \mathrm { g }$ .
+
+# Check Your Learning
+
+What volume of concentrated HCl solution contains $\boldsymbol { 1 2 5 \mathrm { g } }$ of HCl?
+
+Answer: 282 mL
+
+# Volume Percentage
+
+Liquid volumes over a wide range of magnitudes are conveniently measured using common and relatively inexpensive laboratory equipment. The concentration of a solution formed by dissolving a liquid solute in a liquid solvent is therefore often expressed as a volume percentage, $\%$ vol or $( \mathrm { v } / \mathrm { v } ) \%$ :
+
+# EXAMPLE 3.24
+
+# Calculations using Volume Percentage
+
+Rubbing alcohol (isopropanol) is usually sold as a $7 0 \% \mathrm { v o l }$ aqueous solution. If the density of isopropyl alcohol is $0 . 7 8 5 \ : \mathrm { g / m L }$ , how many grams of isopropyl alcohol are present in a $3 5 5 \mathrm { m L }$ bottle of rubbing alcohol?
+
+# Solution
+
+Per the definition of volume percentage, the isopropanol volume is $70 \%$ of the total solution volume. Multiplying the isopropanol volume by its density yields the requested mass:
+
+$$
+( 3 5 5 \mathrm { { m L } \ s o l u t i o n ) \left( \frac { 7 0 \mathrm { { m L } \ s o p r o p y { l } \ a l c o h o l } } { 1 0 0 \mathrm { { m L } \ s o l u t i o n } } \right) \left( \frac { 0 . 7 8 5 \mathrm { { g } \ i s o p r o p y { l } \ a l c o h o l } } { 1 \mathrm { { m L } \ i s o p r o p y { l } \ a l c o h o l } } \right) = 1 9 5 \mathrm { { g } \ i s o - \ \ \qquad } }
+$$
+
+# Check Your Learning
+
+Wine is approximately $12 \%$ ethanol $\mathrm { ( C H _ { 3 } C H _ { 2 } O H ) }$ ) by volume. Ethanol has a molar mass of $4 6 . 0 6 \mathrm { g / m o l }$ and a density $0 . 7 8 9 \mathrm { g / m L }$ . How many moles of ethanol are present in a $7 5 0 – \mathrm { m L }$ bottle of wine?
+
+# Answer:
+
+$1 . 5 \mathrm { m o l }$ ethanol
+
+# Mass-Volume Percentage
+
+“Mixed” percentage units, derived from the mass of solute and the volume of solution, are popular for certain biochemical and medical applications. A mass-volume percent is a ratio of a solute’s mass to the solution’s volume expressed as a percentage. The specific units used for solute mass and solution volume may vary, depending on the solution. For example, physiological saline solution, used to prepare intravenous fluids, has a concentration of $0 . 9 \%$ mass/volume $\operatorname { \Pi } ( \mathrm { m } / \mathrm { v } )$ , indicating that the composition is $0 . 9 \ : \mathrm { g }$ of solute per $1 0 0 ~ \mathrm { { m L } }$ of solution. The concentration of glucose in blood (commonly referred to as “blood sugar”) is also typically expressed in terms of a mass-volume ratio. Though not expressed explicitly as a percentage, its concentration is usually given in milligrams of glucose per deciliter $\mathrm { \Omega } _ { \mathrm { 1 0 0 } \mathrm { m L } }$ ) of blood (Figure 3.18).
+
+# Parts per Million and Parts per Billion
+
+Very low solute concentrations are often expressed using appropriately small units such as parts per million (ppm) or parts per billion (ppb). Like percentage (“part per hundred”) units, ppm and ppb may be defined in terms of masses, volumes, or mixed mass-volume units. There are also ppm and ppb units defined with respect to numbers of atoms and molecules.
+
+The mass-based definitions of ppm and ppb are given here:
+
+$$
+{ \begin{array} { r l } & { { \mathrm { p p m } } = { \frac { \mathrm { m a s s ~ s o l u t e } } { \mathrm { m a s s ~ s o l u t i o n } } } \times 1 0 ^ { 6 } { \mathrm { p p m } } } \\ & { { \mathrm { p p b } } = { \frac { { \mathrm { m a s s ~ s o l u t e } } } { \mathrm { m a s s ~ s o l u t i o n } } } \times 1 0 ^ { 9 } { \mathrm { p p b } } } \end{array} }
+$$
+
+Both ppm and ppb are convenient units for reporting the concentrations of pollutants and other trace contaminants in water. Concentrations of these contaminants are typically very low in treated and natural waters, and their levels cannot exceed relatively low concentration thresholds without causing adverse effects on health and wildlife. For example, the EPA has identified the maximum safe level of fluoride ion in tap water to be 4 ppm. Inline water filters are designed to reduce the concentration of fluoride and several other tracelevel contaminants in tap water (Figure 3.19).
+
+# EXAMPLE 3.25
+
+# Calculation of Parts per Million and Parts per Billion Concentrations
+
+According to the EPA, when the concentration of lead in tap water reaches 15 ppb, certain remedial actions must be taken. What is this concentration in ppm? At this concentration, what mass of lead (μg) would be contained in a typical glass of water $\left( 3 0 0 \mathrm { m L } \right)$ )?
+
+# Solution
+
+The definitions of the ppm and ppb units may be used to convert the given concentration from ppb to ppm. Comparing these two unit definitions shows that ppm is 1000 times greater than ppb $( 1 \mathrm { p p m } = 1 0 ^ { 3 } \mathrm { p p b } )$ . Thus:
+
+$$
+1 5 \mathrm { p p b } \times { \frac { 1 \mathrm { p p m } } { 1 0 ^ { 3 } \mathrm { p p b } } } = 0 . 0 1 5 \mathrm { p p m }
+$$
+
+The definition of the ppb unit may be used to calculate the requested mass if the mass of the solution is provided. Since the volume of solution $\begin{array} { r } { ( 3 0 0 \mathrm { m L } ) } \end{array}$ ) is given, its density must be used to derive the corresponding mass. Assume the density of tap water to be roughly the same as that of pure water $( - 1 . 0 0 \ : \mathrm { g / m L ) }$ , since the concentrations of any dissolved substances should not be very large. Rearranging the equation defining the ppb unit and substituting the given quantities yields:
+
+$$
+\mathrm { \ p p b = \frac { \ m a s s \ s o l u t e } { \ m a s s \ s o l u t i o n } \times 1 0 ^ { 9 } \ p p b }
+$$
+
+$$
+{ \mathrm { m a s s ~ s o l u t e } } = { \frac { { \mathrm { p p b } } \times { \mathrm { m a s s ~ s o l u t i o n } } } { 1 0 ^ { 9 } { \mathrm { ~ p p b } } } }
+$$
+
+$$
+{ \mathrm { m a s s ~ s o l u t e } } = { \frac { 1 5 { \mathrm { p p b } } \times 3 0 0 { \mathrm { m L } } \times { \frac { 1 . 0 0 \mathrm { g } } { \mathrm { m L } } } } { 1 0 ^ { 9 } { \mathrm { p p b } } } } = 4 . 5 \times 1 0 ^ { - 6 } { \mathrm { g } }
+$$
+
+Finally, convert this mass to the requested unit of micrograms:
+
+$$
+4 . 5 \times 1 0 ^ { - 6 } \mathrm { ~ g ~ } \times \frac { 1 \mu \mathrm { g } } { 1 0 ^ { - 6 } \mathrm { ~ g ~ } } = 4 . 5 \mu \mathrm { g }
+$$
+
+# Check Your Learning
+
+A 50.0-g sample of industrial wastewater was determined to contain $0 . 4 8 \mathrm { m g }$ of mercury. Express the mercury concentration of the wastewater in ppm and ppb units.
+
+Answer: 9.6 ppm, 9600 ppb
+
+# Key Terms
+
+aqueous solution solution for which water is the solvent   
+Avogadro’s number $( \pmb { N } _ { A } )$ experimentally determined value of the number of entities comprising 1 mole of substance, equal to $6 . 0 2 2 \times$ $1 0 ^ { 2 3 } \mathrm { m o l } ^ { - 1 }$   
+concentrated qualitative term for a solution containing solute at a relatively high concentration   
+concentration quantitative measure of the relative amounts of solute and solvent present in a solution   
+dilute qualitative term for a solution containing solute at a relatively low concentration   
+dilution process of adding solvent to a solution in order to lower the concentration of solutes   
+dissolved describes the process by which solute components are dispersed in a solvent   
+empirical formula mass sum of average atomic masses for all atoms represented in an empirical formula   
+formula mass sum of the average masses for all atoms represented in a chemical formula; for covalent compounds, this is also the molecular mass   
+mass percentage ratio of solute-to-solution mass expressed as a percentage   
+mass-volume percent ratio of solute mass to solution volume, expressed as a percentage   
+molar mass mass in grams of 1 mole of a substance   
+molarity $( M )$ unit of concentration, defined as the number of moles of solute dissolved in 1 liter of solution   
+mole amount of substance containing the same number of atoms, molecules, ions, or other entities as the number of atoms in exactly 12 grams of $^ { 1 2 } \mathrm { C }$   
+parts per billion (ppb) ratio of solute-to-solution mass multiplied by $1 0 ^ { 9 }$   
+parts per million (ppm) ratio of solute-to-solution mass multiplied by $1 0 ^ { 6 }$   
+percent composition percentage by mass of the various elements in a compound   
+solute solution component present in a concentration less than that of the solvent   
+solvent solution component present in a concentration that is higher relative to other components   
+volume percentage ratio of solute-to-solution volume expressed as a percentage
+
+
+
+# Key Equations
+
+%X= mass X × 100% mass compound   
+%X= mass X × 100% mass compound   
+molecular or molar mass amu or g mol :nformulaunits/molecule g empirical formula mass amu or mol   
+$\begin{array} { r l } & { ( \mathrm { A } _ { \mathrm { x } } \mathrm { B } _ { \mathrm { y } } ) _ { \mathrm { n } } = \mathrm { A } _ { \mathrm { n x } } \mathrm { B } _ { \mathrm { n y } } } \\ & { M = \mathrm { ~ \frac { m o l ~ s o l u t e } { L ~ s o l u t i o n } ~ } } \\ & { C _ { 1 } V _ { 1 } = C _ { 2 } V _ { 2 } } \end{array}$   
+Percent by mass $\mathbf { \Sigma } = \mathbf { \Sigma }$ mas of souton × 100   
+${ \begin{array} { r l } & { { \mathrm { p p m } } = { \frac { \mathrm { m a s s ~ s o l u t e } } { \mathrm { m a s s ~ s o l u t i o n } } } \times 1 0 ^ { 6 } { \mathrm { p p m } } } \\ & { { \mathrm { p p b } } = { \frac { { \mathrm { m a s s ~ s o l u t e } } } { \mathrm { m a s s ~ s o l u t i o n } } } \times 1 0 ^ { 9 } { \mathrm { p p b } } } \end{array} }$
+
+# Summary
+
+# 3.1 Formula Mass and the Mole Concept
+
+The formula mass of a substance is the sum of the average atomic masses of each atom represented in the chemical formula and is expressed in atomic mass units. The formula mass of a covalent compound is also called the molecular mass. A
+
+convenient amount unit for expressing very large numbers of atoms or molecules is the mole. Experimental measurements have determined the number of entities composing 1 mole of substance to be $6 . 0 2 2 \times 1 0 ^ { 2 3 }$ , a quantity called Avogadro’s number. The mass in grams of 1 mole of substance is its molar mass. Due to the use of the same
+
+reference substance in defining the atomic mass unit and the mole, the formula mass (amu) and molar mass $\scriptstyle ( { \mathrm { g } } / { \mathrm { m o l } } )$ for any substance are numerically equivalent (for example, one $\mathrm { H } _ { 2 } \mathrm { O }$ molecule weighs approximately18 amu and 1 mole of $\mathrm { H } _ { 2 } \mathrm { O }$ molecules weighs approximately $\boldsymbol { 1 8 } \mathrm { g } )$ ).
+
+# 3.2 Determining Empirical and Molecular Formulas
+
+The chemical identity of a substance is defined by the types and relative numbers of atoms composing its fundamental entities (molecules in the case of covalent compounds, ions in the case of ionic compounds). A compound’s percent composition provides the mass percentage of each element in the compound, and it is often experimentally determined and used to derive the compound’s empirical formula. The empirical formula mass of a covalent compound may be compared to the compound’s molecular or molar mass to derive a molecular formula.
+
+# 3.3 Molarity
+
+Solutions are homogeneous mixtures. Many solutions contain one component, called the solvent, in which other components, called solutes, are dissolved. An aqueous solution is one for which the solvent is water. The concentration of a solution is a measure of the relative amount of solute in a given amount of solution. Concentrations may be measured using various units, with one very useful unit being molarity, defined as the number of moles of solute per liter of solution. The solute concentration of a solution may be decreased by adding solvent, a process referred to as dilution. The dilution equation is a simple relation between concentrations and volumes of a solution before and after dilution.
+
+
+
+# 3.4 Other Units for Solution Concentrations
+
+In addition to molarity, a number of other solution concentration units are used in various applications. Percentage concentrations based on the solution components’ masses, volumes, or both are useful for expressing relatively high concentrations, whereas lower concentrations are conveniently expressed using ppm or ppb units. These units are popular in environmental, medical, and other fields where mole-based units such as molarity are not as commonly used.
+
+# Exercises
+
+# 3.1 Formula Mass and the Mole Concept
+
+1. What is the total mass (amu) of carbon in each of the following molecules?
+
+(a) $\mathrm { C H } _ { 4 }$   
+(b) $\mathrm { C H C l } _ { 3 }$   
+(c) $\mathrm { C _ { 1 2 } H _ { 1 0 } O _ { 6 } }$   
+(d) $\mathrm { C H _ { 3 } C H _ { 2 } C H _ { 2 } C H _ { 2 } C H _ { 3 } }$
+
+2. What is the total mass of hydrogen in each of the molecules? (a) $\mathrm { C H } _ { 4 }$ (b) $\mathrm { C H C l } _ { 3 }$ (c) $\mathrm { C _ { 1 2 } H _ { 1 0 } O _ { 6 } }$ (d) $\mathrm { C H _ { 3 } C H _ { 2 } C H _ { 2 } C H _ { 2 } C H _ { 3 } }$
+
+3. Calculate the molecular or formula mass of each of the following: (a) $\mathrm { P } _ { 4 }$ (b) $\mathrm { H } _ { 2 } \mathrm { O }$ (c) $\mathrm { C a } ( \mathrm { N O } _ { 3 } ) _ { 2 }$ (d) $\mathrm { C H _ { 3 } C O _ { 2 } H }$ (acetic acid) (e) $\mathrm { C _ { 1 2 } H _ { 2 2 } O _ { 1 1 } }$ (sucrose, cane sugar)
+
+4. Determine the molecular mass of the following compounds: (a)
+
+5. Determine the molecular mass of the following compounds:
+
+(a)
+
+6. Which molecule has a molecular mass of 28.05 amu? (a)
+
+(c)
+
+7. Write a sentence that describes how to determine the number of moles of a compound in a known mass of the compound using its molecular formula.
+
+8. Compare 1 mole of $\mathrm { H } _ { 2 }$ , 1 mole of $\mathrm { O _ { 2 } }$ , and 1 mole of $\mathrm { F } _ { 2 }$ . (a) Which has the largest number of molecules? Explain why. (b) Which has the greatest mass? Explain why.
+
+9. Which contains the greatest mass of oxygen: $0 . 7 5 \mathrm { m o l }$ of ethanol $\mathrm { ( C _ { 2 } H _ { 5 } O H ) }$ ), $0 . 6 0 \mathrm { m o l }$ of formic acid $\mathrm { ( H C O _ { 2 } H ) }$ , or $1 . 0 \mathrm { m o l }$ of water $\mathrm { ( H _ { 2 } O ) ? }$ Explain why.
+
+10. Which contains the greatest number of moles of oxygen atoms: 1 mol of ethanol $\mathrm { \ C _ { 2 } H _ { 5 } O H ) }$ , 1 mol of formic acid $\mathrm { ( H C O _ { 2 } H ) }$ , or 1 mol of water $\mathrm { ( H _ { 2 } O ) ? }$ Explain why.
+
+11. How are the molecular mass and the molar mass of a compound similar and how are they different?
+
+12. Calculate the molar mass of each of the following compounds: (a) hydrogen fluoride, HF (b) ammonia, $\mathrm { N H } _ { 3 }$ (c) nitric acid, $\mathrm { H N O } _ { 3 }$ (d) silver sulfate, $\mathrm { A g _ { 2 } S O _ { 4 } }$ (e) boric acid, $\mathrm { B } ( \mathrm { O H } ) _ { 3 }$
+
+13. Calculate the molar mass of each of the following: (a) ${ \sf S } _ { 8 }$ (b) $\mathrm { C } _ { 5 } \mathrm { H } _ { 1 2 }$ (c) $\mathrm { S c _ { 2 } ( S O _ { 4 } ) _ { 3 } }$ (d) $\mathrm { C H _ { 3 } C O C H _ { 3 } }$ (acetone) (e) ${ \mathrm { C } } _ { 6 } { \mathrm { H } } _ { 1 2 } { \mathrm { O } } _ { 6 }$ (glucose)
+
+14. Calculate the empirical or molecular formula mass and the molar mass of each of the following minerals: (a) limestone, $\mathrm { C a C O _ { 3 } }$ (b) halite, NaCl (c) beryl, $\mathrm { B e _ { 3 } A l _ { 2 } S i _ { 6 } O _ { 1 8 } }$ (d) malachite, $\mathrm { C u _ { 2 } ( O H ) _ { 2 } C O _ { 3 } }$ (e) turquoise, $\mathrm { C u A l _ { 6 } ( P O _ { 4 } ) _ { 4 } ( O H ) _ { 8 } ( H _ { 2 } O ) _ { 4 } }$
+
+15. Calculate the molar mass of each of the following: (a) the anesthetic halothane, $\mathrm { C _ { 2 } H B r C l F _ { 3 } }$ (b) the herbicide paraquat, $\mathrm { C _ { 1 2 } H _ { 1 4 } N _ { 2 } C l _ { 2 } }$ (c) caffeine, $\mathrm { C _ { 8 } H _ { 1 0 } N _ { 4 } O _ { 2 } }$ (d) urea, $\mathrm { C O } ( \mathrm { N H } _ { 2 } ) _ { 2 }$ (e) a typical soap, $\mathrm { C _ { 1 7 } H _ { 3 5 } C O _ { 2 } N a }$
+
+16. Determine the number of moles of compound and the number of moles of each type of atom in each of the following: (a) $2 5 . 0 \mathrm { g }$ of propylene, ${ \mathrm { C } } _ { 3 } { \mathrm { H } } _ { 6 }$ (b) $3 . 0 6 \times 1 0 ^ { - 3 } \mathrm { g }$ of the amino acid glycine, $\mathrm { C _ { 2 } H _ { 5 } N O _ { 2 } }$ (c) 25 lb of the herbicide Treflan, $\mathrm { C _ { 1 3 } H _ { 1 6 } N _ { 2 } O _ { 4 } F }$ $\mathrm { 1 1 b = 4 5 4 g }$ ) (d) $0 . 1 2 5 \mathrm { k g }$ of the insecticide Paris Green, $\mathrm { C u } _ { 4 } ( \mathrm { A s O } _ { 3 } ) _ { 2 } ( \mathrm { C H } _ { 3 } \mathrm { C O } _ { 2 } ) _ { 2 }$ (e) $3 2 5 \mathrm { m g }$ of aspirin, $\mathrm { C _ { 6 } H _ { 4 } ( C O _ { 2 } H ) ( C O _ { 2 } C H _ { 3 } ) }$
+
+17. Determine the mass of each of the following: (a) 0.0146 mol KOH (b) $1 0 . 2 \mathrm { m o l }$ ethane, ${ \mathrm { C } } _ { 2 } { \mathrm { H } } _ { 6 }$ (c) $1 . 6 \times 1 0 ^ { - 3 } \mathrm { m o l } \mathrm { N a _ { 2 } } \mathrm { S O _ { 4 } }$ (d) $6 . 8 5 4 \times 1 0 ^ { 3 } \mathrm { m }$ ol glucose, ${ \mathrm { C } } _ { 6 } { \mathrm { H } } _ { 1 2 } { \mathrm { O } } _ { 6 }$ (e) $2 . 8 6 \ \mathrm { m o l } \mathrm { C o ( N H _ { 3 } ) _ { 6 } C l _ { 3 } }$
+
+18. Determine the number of moles of the compound and determine the number of moles of each type of atom in each of the following: (a) $2 . 1 2 { \mathrm { ~ g ~ } }$ of potassium bromide, KBr (b) $0 . 1 4 8 8 { \mathrm { g } }$ of phosphoric acid, $\mathrm { H _ { 3 } P O _ { 4 } }$ (c) $2 3 \mathrm { k g }$ of calcium carbonate, $\mathrm { C a C O _ { 3 } }$ (d) $7 8 . 4 5 2 \mathrm { g }$ of aluminum sulfate, $\mathrm { { A l } _ { 2 } ( S O _ { 4 } ) _ { 3 } }$ (e) $0 . 1 2 5 0 \mathrm { m g }$ of caffeine, $\mathrm { C _ { 8 } H _ { 1 0 } N _ { 4 } O _ { 2 } }$
+
+19. Determine the mass of each of the following:
+
+(a) 2.345 mol LiCl (b) $0 . 0 8 7 2 \mathrm { m o l }$ acetylene, $\mathrm { C _ { 2 } H _ { 2 } }$ (c) $\mathrm { 3 . 3 \times 1 0 ^ { - 2 } m o l ~ N a _ { 2 } C O _ { 3 } }$ (d) $1 . 2 3 \times 1 0 ^ { 3 } \mathrm { m o l }$ fructose, ${ \mathrm { C } } _ { 6 } { \mathrm { H } } _ { 1 2 } { \mathrm { O } } _ { 6 }$ (e) $\mathrm { 0 . 5 7 5 8 \ m o l \ F e S O _ { 4 } ( H _ { 2 } O ) _ { 7 } }$
+
+20. The approximate minimum daily dietary requirement of the amino acid leucine, $\mathrm { C _ { 6 } H _ { 1 3 } N O _ { 2 } }$ , is 1.1 g. What is this requirement in moles?
+
+21. Determine the mass in grams of each of the following: (a) $0 . 6 0 0 \mathrm { m o l }$ of oxygen atoms (b) $0 . 6 0 0 \mathrm { m o l }$ of oxygen molecules, $\mathrm { O } _ { 2 }$ (c) $0 . 6 0 0 \mathrm { m o l }$ of ozone molecules, ${ { \mathrm O } _ { 3 } }$
+
+22. A 55-kg woman has $7 . 5 \times 1 0 ^ { - 3 }$ mol of hemoglobin (molar mass $= 6 4 , 4 5 6 \mathrm { g / m o l } )$ in her blood. How many hemoglobin molecules is this? What is this quantity in grams?
+
+23. Determine the number of atoms and the mass of zirconium, silicon, and oxygen found in 0.3384 mol of zircon, $\mathrm { Z r S i O _ { 4 } }$ , a semiprecious stone.
+
+24. Determine which of the following contains the greatest mass of hydrogen: 1 mol of $\mathrm { C H } _ { 4 }$ , $0 . 6 \mathrm { m o l }$ of ${ \mathrm { C } } _ { 6 } { \mathrm { H } } _ { 6 }$ , o $0 . 4 \mathrm { m o l }$ of $\mathrm { C _ { 3 } H _ { 8 } }$ .
+
+25. Determine which of the following contains the greatest mass of aluminum: $\mathtt { 1 2 2 g }$ of ${ \mathrm { A l P O } } _ { 4 }$ , $2 6 6 \mathrm { g }$ of ${ \mathrm { A l } } _ { 2 } { \mathrm { C l } } _ { 6 }$ , or $2 2 5 { \mathrm { g } }$ of $\mathrm { { A l } _ { 2 } \mathrm { { S } _ { 3 } } }$ .
+
+26. Diamond is one form of elemental carbon. An engagement ring contains a diamond weighing 1.25 carats $( 1 \mathrm { c a r a t } = 2 0 0 \mathrm { m g } )$ ). How many atoms are present in the diamond?
+
+27. The Cullinan diamond was the largest natural diamond ever found (January 25, 1905). It weighed 3104 carats $\mathrm { 1 c a r a t = 2 0 0 m g }$ ). How many carbon atoms were present in the stone?
+
+28. One 55-gram serving of a particular cereal supplies $2 7 0 \mathrm { m g }$ of sodium, $1 1 \%$ of the recommended daily allowance. How many moles and atoms of sodium are in the recommended daily allowance?
+
+29. A certain nut crunch cereal contains 11.0 grams of sugar (sucrose, $\mathrm { C _ { 1 2 } H _ { 2 2 } O _ { 1 1 } } )$ per serving size of 60.0 grams. How many servings of this cereal must be eaten to consume 0.0278 moles of sugar?
+
+30. A tube of toothpaste contains $0 . 7 6 \mathrm { g }$ of sodium monofluorophosphate $\left( \mathrm { N a } _ { 2 } \mathrm { P O } _ { 3 } \mathrm { F } \right)$ in $1 0 0 \mathrm { m L }$ . (a) What mass of fluorine atoms in mg was present? (b) How many fluorine atoms were present?
+
+31. Which of the following represents the least number of molecules? (a) $2 0 . 0 \mathrm { g }$ of $\mathrm { H } _ { 2 } \mathrm { O }$ $( 1 8 . 0 2 \mathrm { g / m o l } )$ (b) $7 7 . 0 \mathrm { g }$ of $\mathrm { C H } _ { 4 }$ $\left( 1 6 . 0 6 \mathrm { g / m o l } \right)$ (c) $6 8 . 0 \mathrm { g }$ of $\mathrm { C _ { 3 } H _ { 6 } }$ $\left( 4 2 . 0 8 \mathrm { g } / \mathrm { m o l } \right)$ (d) $1 0 0 . 0 { \mathrm { g } }$ of $\mathrm { N } _ { 2 } \mathrm { O }$ $\left( 4 4 . 0 2 \mathrm { g } / \mathrm { m o l } \right)$ (e) $8 4 . 0 \mathrm { g }$ of HF $\left( 2 0 . 0 1 \mathrm { g / m o l } \right)$ )
+
+# 3.2 Determining Empirical and Molecular Formulas
+
+32. What information is needed to determine the molecular formula of a compound from the empirical formula?
+
+33. Calculate the following to four significant figures: (a) the percent composition of ammonia, $\mathrm { N H } _ { 3 }$ (b) the percent composition of photographic fixer solution (“hypo”), $\mathrm { N a _ { 2 } S _ { 2 } O _ { 3 } }$ (c) the percent of calcium ion in $\mathrm { C a } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 }$
+
+34. Determine the following to four significant figures: (a) the percent composition of hydrazoic acid, $\mathrm { H N } _ { 3 }$ (b) the percent composition of TNT, $\mathrm { C _ { 6 } H _ { 2 } ( C H _ { 3 } ) ( N O _ { 2 } ) _ { 3 } }$ (c) the percent of $\mathrm { S O _ { 4 } } ^ { 2 - }$ in $\mathrm { { A l } _ { 2 } ( S O _ { 4 } ) _ { 3 } }$
+
+35. Determine the percent ammonia, $\mathrm { N H } _ { 3 }$ , in $\mathrm { C o ( N H _ { 3 } ) _ { 6 } C l _ { 3 } }$ , to three significant figures.
+
+36. Determine the percent water in $\mathrm { C u S O } _ { 4 } { \bullet } \mathrm { 5 H } _ { 2 } \mathrm { O }$ to three significant figures.
+
+37. Determine the empirical formulas for compounds with the following percent compositions: (a) $1 5 . 8 \%$ carbon and $8 4 . 2 \%$ sulfur (b) $4 0 . 0 \%$ carbon, $6 . 7 \%$ hydrogen, and $5 3 . 3 \%$ oxygen
+
+38. Determine the empirical formulas for compounds with the following percent compositions: (a) $4 3 . 6 \%$ phosphorus and $5 6 . 4 \%$ oxygen (b) $2 8 . 7 \% \mathrm { ~ K ~ }$ , $1 . 5 \% \mathrm { ~ F ~ }$ , $2 2 . 8 \% \mathrm { P }$ , and $4 7 . 0 \%$ O
+
+39. A compound of carbon and hydrogen contains $9 2 . 3 \%$ C and has a molar mass of $7 8 . 1 \mathrm { g / m o l }$ . What is its molecular formula?
+
+40. Dichloroethane, a compound that is often used for dry cleaning, contains carbon, hydrogen, and chlorine It has a molar mass of $9 9 \mathrm { g / m o l }$ . Analysis of a sample shows that it contains $2 4 . 3 \%$ carbon and $4 . 1 \%$ hydrogen. What is its molecular formula?
+
+41. Determine the empirical and molecular formula for chrysotile asbestos. Chrysotile has the following percent composition: $2 8 . 0 3 \%$ Mg, $2 1 . 6 0 \%$ Si, $1 . 1 6 \% \mathrm { H }$ , and $4 9 . 2 1 \%$ O. The molar mass for chrysotile is $5 2 0 . 8 \mathrm { g / m o l }$ .
+
+42. Polymers are large molecules composed of simple units repeated many times. Thus, they often have relatively simple empirical formulas. Calculate the empirical formulas of the following polymers: (a) Lucite (Plexiglas); $5 9 . 9 \%$ C, $8 . 0 6 \%$ H, $3 2 . 0 \%$ O (b) Saran; $2 4 . 8 \%$ C, $2 . 0 \%$ H, $7 3 . 1 \%$ Cl (c) polyethylene; $8 6 \%$ C, $1 4 \%$ H (d) polystyrene; $9 2 . 3 \%$ C, $7 . 7 \%$ H (e) Orlon; $6 7 . 9 \%$ C, $5 . 7 0 \%$ H, $2 6 . 4 \%$ N
+
+43. A major textile dye manufacturer developed a new yellow dye. The dye has a percent composition of $7 5 . 9 5 \%$ C, $1 7 . 7 2 \%$ N, and $6 . 3 3 \%$ H by mass with a molar mass of about $2 4 0 ~ \mathrm { g / m o l }$ . Determine the molecular formula of the dye.
+
+# 3.3 Molarity
+
+44. Explain what changes and what stays the same when $1 . 0 0 \mathrm { L }$ of a solution of NaCl is diluted to $1 . 8 0 \mathrm { L }$
+
+5. What information is needed to calculate the molarity of a sulfuric acid solution?
+
+46. A $2 0 0 \mathrm { - m L }$ sample and a $4 0 0 \mathrm { - m L }$ sample of a solution of salt have the same molarity. In what ways are the two samples identical? In what ways are these two samples different?
+
+47. Determine the molarity for each of the following solutions: (a) $0 . 4 4 4 \mathrm { m o l }$ of $\mathrm { C o C l } _ { 2 }$ in $0 . 6 5 4 \mathrm { L }$ of solution (b) $9 8 . 0 \mathrm { g }$ of phosphoric acid, $\mathrm { H _ { 3 } P O _ { 4 } }$ , in $1 . 0 0 \mathrm { L }$ of solution (c) $0 . 2 0 7 4 \mathrm { g }$ of calcium hydroxide, $\mathrm { C a ( O H ) _ { 2 } }$ , in $4 0 . 0 0 \mathrm { m L }$ of solution (d) $1 0 . 5 \mathrm { k g }$ of $\mathrm { N a _ { 2 } S O _ { 4 } { \cdot } 1 0 H _ { 2 } O }$ in $1 8 . 6 0 \mathrm { L }$ of solution (e) $7 . 0 \times 1 0 ^ { - 3 }$ mol of $\mathrm { I } _ { 2 }$ in $1 0 0 . 0 \mathrm { m L }$ of solution (f ) $1 . 8 \times 1 0 ^ { 4 } \mathrm { m g }$ of HCl in $0 . 0 7 5 \mathrm { L }$ of solution
+
+48. Determine the molarity of each of the following solutions: (a) 1.457 mol KCl in $1 . 5 0 0 \mathrm { L }$ of solution (b) $_ { 0 . 5 1 5 \mathrm { g } }$ of $\mathrm { H _ { 2 } S O _ { 4 } }$ in $1 . 0 0 \mathrm { L }$ of solution (c) $2 0 . 5 4 \mathrm { g }$ of $\mathsf { A l } ( \mathsf { N O } _ { 3 } ) _ { 3 }$ in $1 5 7 5 \mathrm { m L }$ of solution (d) $2 . 7 6 \mathrm { k g }$ of $\mathrm { C u S O } _ { 4 } { \cdot } 5 \mathrm { H } _ { 2 } 0$ in $1 . 4 5 \mathrm { L }$ of solution (e) $0 . 0 0 5 6 5 3 \mathrm { m o l }$ of $\mathrm { B r } _ { 2 }$ in $1 0 . 0 0 \mathrm { m L }$ of solution (f ) $0 . 0 0 0 8 8 9 { \mathrm { ~ g ~ } }$ of glycine, $\mathrm { C _ { 2 } H _ { 5 } N O _ { 2 } }$ , in $1 . 0 5 \mathrm { m L }$ of solution
+
+49. Consider this question: What is the mass of the solute in $0 . 5 0 0 \mathrm { L }$ of 0.30 $M$ glucose, $\mathrm { C _ { 6 } H _ { 1 2 } O _ { 6 } }$ , used for intravenous injection? (a) Outline the steps necessary to answer the question. (b) Answer the question.
+
+50. Consider this question: What is the mass of solute in $2 0 0 . 0 \mathrm { L }$ of a 1.556-Msolution of KBr? (a) Outline the steps necessary to answer the question. (b) Answer the question.
+
+51. Calculate the number of moles and the mass of the solute in each of the following solutions:
+
+(a) $2 . 0 0 \mathrm { L }$ of $1 8 . 5 \ : M \mathrm { H } _ { 2 } \mathrm { S O } _ { 4 }$ , concentrated sulfuric acid   
+(b) $1 0 0 . 0 \mathrm { m L }$ of $3 . 8 \times 1 0 ^ { - 6 } M \mathrm { { N a C N } } ,$ , the minimum lethal concentration of sodium cyanide in blood serum   
+(c) $5 . 5 0 \mathrm { L }$ of $1 3 . 3 \ : M \mathrm { H } _ { 2 } \mathrm { C O }$ , the formaldehyde used to “fix” tissue samples   
+(d) $3 2 5 \mathrm { m L }$ of $1 . 8 \times 1 0 ^ { - 6 } M \mathrm { F e S O } _ { 4 }$ , the minimum concentration of iron sulfate detectable by taste in   
+drinking water
+
+52. Calculate the number of moles and the mass of the solute in each of the following solutions: (a) $3 2 5 \mathrm { m L }$ of $8 . 2 3 \times 1 0 ^ { - 5 } M \mathrm { K I }$ , a source of iodine in the diet (b) $7 5 . 0 \mathrm { m L }$ of $2 . 2 \times 1 0 ^ { - 5 } M \mathrm { H } _ { 2 } \mathrm { S O } _ { 4 }$ , a sample of acid rain (c) $0 . 2 5 0 0 \mathrm { L }$ of $0 . 1 1 3 5 M \mathrm { K } _ { 2 } \mathrm { C r } 0 _ { 4 }$ , an analytical reagent used in iron assays (d) $1 0 . 5 \mathrm { L }$ of $3 . 7 1 6 \ M ( \mathrm { N H } _ { 4 } ) _ { 2 } \mathrm { S O } _ { 4 } ,$ , a liquid fertilizer
+
+53. Consider this question: What is the molarity of $\mathrm { K M n O } _ { 4 }$ in a solution of 0.0908 g of $\mathrm { K M n O } _ { 4 }$ in $0 . 5 0 0 \mathrm { L }$ of solution? (a) Outline the steps necessary to answer the question. (b) Answer the question.
+
+54. Consider this question: What is the molarity of HCl if $3 5 . 2 3 \mathrm { m L }$ of a solution of HCl contain 0.3366 g of HCl? (a) Outline the steps necessary to answer the question. (b) Answer the question.
+
+55. Calculate the molarity of each of the following solutions: (a) $0 . 1 9 5 { \mathrm { g } }$ of cholesterol, $\mathrm { C _ { 2 7 } H _ { 4 6 } O _ { : } }$ , in $0 . 1 0 0 \mathrm { L }$ of serum, the average concentration of cholesterol in human serum (b) $4 . 2 5 \ : \mathrm { g }$ of $\mathrm { N H } _ { 3 }$ in $0 . 5 0 0 \mathrm { L }$ of solution, the concentration of $\mathrm { N H } _ { 3 }$ in household ammonia (c) $1 . 4 9 \mathrm { k g }$ of isopropyl alcohol, $\mathrm { C _ { 3 } H _ { 7 } O H }$ , in $2 . 5 0 \mathrm { L }$ of solution, the concentration of isopropyl alcohol in rubbing alcohol (d) $0 . 0 2 9 \mathrm { g }$ of $\mathrm { I } _ { 2 }$ in $0 . 1 0 0 \mathrm { L }$ of solution, the solubility of $\mathrm { I } _ { 2 }$ in water at $2 0 { } ^ { \circ } \mathrm { C }$
+
+56. Calculate the molarity of each of the following solutions: (a) $2 9 3 \ : \mathrm { g \ : H C l }$ in $6 6 6 ~ \mathrm { m L }$ of solution, a concentrated HCl solution (b) $2 . 0 2 6 \mathrm { g } \mathrm { F e C l _ { 3 } }$ in $0 . 1 2 5 0 \mathrm { L }$ of a solution used as an unknown in general chemistry laboratories (c) $0 . 0 0 1 \mathrm { m g C d ^ { 2 + } }$ in $0 . 1 0 0 \mathrm { L }$ , the maximum permissible concentration of cadmium in drinking water (d) $0 . 0 0 7 9 \ : \mathrm { g } \mathrm { C } _ { 7 } \mathrm { H } _ { 5 } \mathrm { S N O } _ { 3 }$ in one ounce $( 2 9 . 6 \mathrm { m L } ,$ ), the concentration of saccharin in a diet soft drink.
+
+57. There is about $1 . 0 \mathrm { g }$ of calcium, as $\mathrm { C a ^ { 2 + } }$ , in $1 . 0 \mathrm { L }$ of milk. What is the molarity of $\mathrm { C a ^ { 2 + } }$ in milk?
+
+58. What volume of a $1 . 0 0 { - } M \mathrm { F e } ( \mathrm { N O } _ { 3 } ) _ { 3 }$ solution can be diluted to prepare $1 . 0 0 \mathrm { L }$ of a solution with a concentration of $0 . 2 5 0 M ?$   
+59. If $0 . 1 7 1 8 \mathrm { L }$ of a $0 . 3 5 5 6 \ – M \mathrm { C _ { 3 } H _ { 7 } O H }$ solution is diluted to a concentration of 0.1222 M, what is the volume of the resulting solution?   
+60. If $4 . 1 2 \mathrm { L }$ of a $0 . 8 5 0 ~ M { \cdot } \mathrm { H _ { 3 } P O _ { 4 } }$ solution is be diluted to a volume of $1 0 . 0 0 \mathrm { L }$ , what is the concentration of the resulting solution?   
+61. What volume of a $0 . 3 3 \ – M \mathrm { C } _ { 1 2 } \mathrm { H } _ { 2 2 } \mathrm { O } _ { 1 1 }$ solution can be diluted to prepare $2 5 \mathrm { m L }$ of a solution with a concentration of $0 . 0 2 5 ~ M ?$
+
+62. What is the concentration of the NaCl solution that results when $0 . 1 5 0 \mathrm { L }$ of a 0.556-Msolution is allowed to evaporate until the volume is reduced to 0.105 L?
+
+63. What is the molarity of the diluted solution when each of the following solutions is diluted to the given final volume? (a) $1 . 0 0 \mathrm { L }$ of a 0.250-Msolution of $\mathrm { F e } ( \mathrm { N O } _ { 3 } ) _ { 3 }$ is diluted to a final volume of $2 . 0 0 \mathrm { L }$ (b) $0 . 5 0 0 0 \mathrm { L }$ of a 0.1222-Msolution of $\mathrm { C _ { 3 } H _ { 7 } O H }$ is diluted to a final volume of 1.250 L (c) $2 . 3 5 \mathrm { L }$ of a 0.350-Msolution of $\mathrm { H _ { 3 } P O _ { 4 } }$ is diluted to a final volume of $4 . 0 0 \mathrm { { L } }$ (d) $2 2 . 5 0 \mathrm { m L }$ of a 0.025-Msolution of $\mathrm { C _ { 1 2 } H _ { 2 2 } O _ { 1 1 } }$ is diluted to $1 0 0 . 0 \mathrm { m L }$
+
+64. What is the final concentration of the solution produced when $2 2 5 . 5 \mathrm { m L }$ of a 0.09988-Msolution of $\mathrm { N a _ { 2 } C O _ { 3 } }$ is allowed to evaporate until the solution volume is reduced to $4 5 . 0 0 \mathrm { { m L ? } }$
+
+65. A 2.00-L bottle of a solution of concentrated HCl was purchased for the general chemistry laboratory. The solution contained $8 6 8 . 8 \mathrm { g }$ of HCl. What is the molarity of the solution?
+
+66. An experiment in a general chemistry laboratory calls for a 2.00-Msolution of HCl. How many mL of 11.9 MHCl would be required to make $2 5 0 \mathrm { m L }$ of $2 . 0 0 M$ HCl?   
+67. What volume of a $0 . 2 0 { - } M \mathrm { K _ { 2 } S O _ { 4 } }$ solution contains $5 7 \mathrm { g }$ of $\mathrm { K _ { 2 } S O _ { 4 } }$ ?   
+68. The US Environmental Protection Agency (EPA) places limits on the quantities of toxic substances that may be discharged into the sewer system. Limits have been established for a variety of substances, including hexavalent chromium, which is limited to $0 . 5 0 \mathrm { m g / L }$ . If an industry is discharging hexavalent chromium as potassium dichromate $\mathrm { ( K _ { 2 } C r _ { 2 } O _ { 7 } ) }$ , what is the maximum permissible molarity of that substance?
+
+# 3.4 Other Units for Solution Concentrations
+
+69. Consider this question: What mass of a concentrated solution of nitric acid ( $6 8 . 0 \%$ $\mathrm { H N O } _ { 3 }$ by mass) is needed to prepare $4 0 0 . 0 \mathrm { g }$ of a $1 0 . 0 \%$ solution of $\mathrm { H N O } _ { 3 }$ by mass? (a) Outline the steps necessary to answer the question. (b) Answer the question.   
+70. What mass of a $4 . 0 0 \%$ NaOH solution by mass contains $1 5 . 0 \mathrm { g }$ of NaOH?   
+71. What mass of solid NaOH ( $9 7 . 0 \%$ NaOH by mass) is required to prepare $1 . 0 0 \mathrm { L }$ of a $1 0 . 0 \%$ solution of NaOH by mass? The density of the $1 0 . 0 \%$ solution is $\mathrm { 1 . 1 0 9 \ : g / m L }$ .   
+72. What mass of HCl is contained in $4 5 . 0 \mathrm { m L }$ of an aqueous HCl solution that has a density of $1 . 1 9 \mathrm { g c m } ^ { - 3 }$ and contains $3 7 . 2 1 \%$ HCl by mass?   
+73. The hardness of water (hardness count) is usually expressed in parts per million (by mass) of $\mathrm { C a C O _ { 3 } }$ , which is equivalent to milligrams of $\mathrm { C a C O _ { 3 } }$ per liter of water. What is the molar concentration of $\mathrm { C a ^ { 2 + } }$ ions in a water sample with a hardness count of $1 7 5 \mathrm { { m g } C a C O _ { 3 } / L ? }$   
+74. The level of mercury in a stream was suspected to be above the minimum considered safe (1 part per billion by weight). An analysis indicated that the concentration was 0.68 parts per billion. Assume a density of $1 . 0 \ : \mathrm { g / m L }$ and calculate the molarity of mercury in the stream.   
+75. In Canada and the United Kingdom, devices that measure blood glucose levels provide a reading in millimoles per liter. If a measurement of $5 . 3 \mathrm { m } M$ is observed, what is the concentration of glucose $\mathrm { ( C _ { 6 } H _ { 1 2 } O _ { 6 } ) }$ in mg/dL?   
+76. A throat spray is $1 . 4 0 \%$ by mass phenol, $\mathrm { C _ { 6 } H _ { 5 } O H }$ , in water. If the solution has a density of $0 . 9 9 5 6 \ : \mathrm { g / m L }$ , calculate the molarity of the solution.   
+77. Copper(I) iodide (CuI) is often added to table salt as a dietary source of iodine. How many moles of CuI are contained in 1.00 lb (454 g) of table salt containing $0 . 0 1 0 0 \%$ CuI by mass?   
+78. A cough syrup contains $5 . 0 \%$ ethyl alcohol, $\mathrm { C _ { 2 } H _ { 5 } O H }$ , by mass. If the density of the solution is $0 . 9 9 2 8 { \mathrm { g / m L } }$ , determine the molarity of the alcohol in the cough syrup.   
+79. $\mathsf { D } 5 \mathsf { W }$ is a solution used as an intravenous fluid. It is a $5 . 0 \%$ by mass solution of dextrose $\mathrm { ( C _ { 6 } H _ { 1 2 } O _ { 6 } ) }$ in water. If the density of $\mathsf { D } 5 \mathsf { W }$ is $1 . 0 2 9 \mathrm { g / m L }$ , calculate the molarity of dextrose in the solution.   
+80. Find the molarity of a $4 0 . 0 \%$ by mass aqueous solution of sulfuric acid, $\mathrm { H _ { 2 } S O _ { 4 } }$ , for which the density is $1 . 3 0 5 7 \mathrm { g / m L }$ .

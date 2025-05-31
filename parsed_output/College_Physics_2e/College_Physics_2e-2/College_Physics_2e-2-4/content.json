@@ -1,0 +1,816 @@
+[
+    {
+        "type": "text",
+        "text": "2.4 Acceleration ",
+        "text_level": 1,
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Define and distinguish between instantaneous acceleration, average acceleration, and deceleration.   \n\u2022 Calculate acceleration given initial time, initial velocity, final time, and final velocity. ",
+        "page_idx": 64
+    },
+    {
+        "type": "image",
+        "img_path": "images/c6645aa699430511ad26cb20b79b17cbb935bd31e5c8cacddacb37195e6f2b77.jpg",
+        "img_caption": [
+            "FIGURE 2.12 A plane decelerates, or slows down, as it comes in for landing in St. Maarten. Its acceleration is opposite in direction to its velocity. (credit: Steve Conry, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "In everyday conversation, to accelerate means to speed up. The accelerator in a car can in fact cause it to speed up. The greater the acceleration, the greater the change in velocity over a given time. The formal definition of acceleration is consistent with these notions, but more inclusive. ",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Average Acceleration ",
+        "text_level": 1,
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Average Acceleration is therateatwhichvelocitychanges, ",
+        "page_idx": 64
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { a } } } = { \\frac { \\Delta v } { \\Delta t } } = { \\frac { v _ { \\mathrm { f } } - v _ { 0 } } { t _ { \\mathrm { f } } - t _ { 0 } } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "where $\\boldsymbol { \\overline { { a } } }$ is average acceleration, $v$ is velocity, and $t$ is time. (The bar over the $a$ means averageacceleration.) ",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Because acceleration is velocity in $\\mathsf { m } / \\mathsf { s }$ divided by time in s, the SI units for acceleration are $\\mathrm { m } / \\mathrm { s } ^ { 2 }$ , meters per second squared or meters per second per second, which literally means by how many meters per second the velocity changes every second. ",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Recall that velocity is a vector\u2014it has both magnitude and direction. This means that a change in velocity can be a change in magnitude (or speed), but it can also be a change in direction. For example, if a car turns a corner at constant speed, it is accelerating because its direction is changing. The quicker you turn, the greater the acceleration. So there is an acceleration when velocity changes either in magnitude (an increase or decrease in speed) or in direction, or both. ",
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Acceleration as a Vector ",
+        "text_level": 1,
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Acceleration is a vector in the same direction as the changein velocity, $\\Delta v$ . Since velocity is a vector, it can change either in magnitude or in direction. Acceleration is therefore a change in either speed or direction, or both. ",
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Keep in mind that although acceleration is in the direction of the changein velocity, it is not always in the direction of motion. When an object slows down, its acceleration is opposite to the direction of its motion. This is known as deceleration. ",
+        "page_idx": 65
+    },
+    {
+        "type": "image",
+        "img_path": "images/16f6f61ce92c602053621a4188f7750ab07fd57c68a86b533185205a6d49c406.jpg",
+        "img_caption": [
+            "FIGURE 2.13 A subway train in Sao Paulo, Brazil, decelerates as it comes into a station. It is accelerating in a direction opposite to its irection of motion. (credit: Yusuke Kawasaki, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Misconception Alert: Deceleration vs. Negative Acceleration ",
+        "text_level": 1,
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Deceleration always refers to acceleration in the direction opposite to the direction of the velocity. Deceleration always reduces speed. Negative acceleration, however, is acceleration inthenegativedirectioninthechosen co rdinatesystem. Negative acceleration may or may not be deceleration, and deceleration may or may not be considered negative acceleration. For example, consider Figure 2.14. ",
+        "page_idx": 65
+    },
+    {
+        "type": "image",
+        "img_path": "images/62b895e83b16748b50cb3a1c04af1daf8b153e02e3940fa9df74863bdb573e31.jpg",
+        "img_caption": [
+            "FIGURE 2.14 (a) This car is speeding up as it moves toward the right. It therefore has positive acceleration in our coordinate system. (b) This car is slowing down as it moves toward the right. Therefore, it has negative acceleration in our coordinate system, because its acceleration is toward the left. The car is also decelerating: the direction of its acceleration is opposite to its direction of motion. (c) This car is moving toward the left, but slowing down over time. Therefore, its acceleration is positive in our coordinate system because it is toward the right. However, the car is decelerating because its acceleration is opposite to its motion. (d) This car is speeding up as it moves toward the left. It has negative acceleration because it is accelerating toward the left. However, because its acceleration is in the same direction as its motion, it is speeding up (notdecelerating). "
+        ],
+        "img_footnote": [],
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.1 ",
+        "text_level": 1,
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "Calculating Acceleration: A Racehorse Leaves the Gate ",
+        "text_level": 1,
+        "page_idx": 66
+    },
+    {
+        "type": "text",
+        "text": "A racehorse coming out of the gate accelerates from rest to a velocity of $1 5 . 0 \\ : \\mathrm { m } / \\mathsf { s }$ due west in 1.80 s. What is its average acceleration? ",
+        "page_idx": 66
+    },
+    {
+        "type": "image",
+        "img_path": "images/c00b85c64ad22a54ad99e2eb976ca699f8f30202a96c6a3642a82352dcff9305.jpg",
+        "img_caption": [
+            "FIGURE 2.15 (credit: Jon Sullivan, PD Photo.org) "
+        ],
+        "img_footnote": [],
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "First we draw a sketch and assign a coordinate system to the problem. This is a simple problem, but it always helps to visualize it. Notice that we assign east as positive and west as negative. Thus, in this case, we have negative velocity. ",
+        "page_idx": 67
+    },
+    {
+        "type": "image",
+        "img_path": "images/f9163918f34837ecaaa729f3c3b1eeccac6fb866fad18fa66a18fd565f14b5ee.jpg",
+        "img_caption": [
+            "FIGURE 2.16 "
+        ],
+        "img_footnote": [],
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "We can solve this problem by identifying $\\Delta v$ and $\\Delta t$ from the given information and then calculating the average acceleration directly from the equation $\\begin{array} { r } { \\overline { { a } } = \\frac { \\Delta v } { \\Delta t } = \\frac { v _ { \\mathrm { f } } - v _ { 0 } } { t _ { \\mathrm { f } } - t _ { 0 } } } \\end{array}$ ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $v _ { 0 } = 0$ , $v _ { \\mathrm { f } } = - 1 5 . 0 \\ : \\mathrm { m / s }$ (the negative sign indicates direction toward the west), $\\Delta t = 1 . 8 0 \\mathrm { s }$ . ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "2. Find the change in velocity. Since the horse is going from zero to $- 1 5 . 0 \\mathrm { m / s }$ , its change in velocity equals its final velocity: $\\Delta v = v _ { \\mathrm { f } } = - 1 5 . 0 \\mathrm { m / s }$ . ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "3. Plug in the known values $\\boldsymbol { \\Delta v }$ and $\\Delta t$ ) and solve for the unknown $\\boldsymbol { \\overline { { a } } }$ . ",
+        "page_idx": 67
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { a } } = \\frac { \\Delta v } { \\Delta t } = \\frac { - 1 5 . 0 \\mathrm { m / s } } { 1 . 8 0 \\mathrm { s } } = - 8 . 3 3 \\mathrm { m / s } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "The negative sign for acceleration indicates that acceleration is toward the west. An acceleration of $8 . 3 3 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ due west means that the horse increases its velocity by $8 . 3 3 ~ \\mathrm { m } / \\mathrm { s }$ due west each second, that is, 8.33 meters per second per second, which we write as $8 . 3 3 ~ \\mathrm { m } / \\mathrm { s } ^ { 2 }$ . This is truly an average acceleration, because the ride is not smooth. We shall see later that an acceleration of this magnitude would require the rider to hang on with a force nearly equal to his weight. ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "Instantaneous Acceleration ",
+        "text_level": 1,
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "Instantaneous acceleration $a$ , or the ac elerationataspecificinstantintime, is obtained by the same process as discussed for instantaneous velocity in Time, Velocity, and Speed\u2014that is, by considering an infinitesimally small interval of time. How do we find instantaneous acceleration using only algebra? The answer is that we choose an average acceleration that is representative of the motion. Figure 2.17 shows graphs of instantaneous acceleration versus time for two very different motions. In Figure 2.17(a), the acceleration varies slightly and the average over the entire interval is nearly the same as the instantaneous acceleration at any time. In this case, we should treat this motion as if it had a constant acceleration equal to the average (in this case about $1 . 8 ~ \\mathrm { m } / \\mathrm { s } ^ { 2 }$ ). In Figure 2.17(b), the acceleration varies drastically over time. In such situations it is best to consider smaller time intervals and choose an average acceleration for each. For example, we could consider motion over the time intervals from 0 to 1.0 s and from 1.0 to 3.0 s as separate motions with accelerations of $+ 3 . 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ and $- 2 . 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ , respectively. ",
+        "page_idx": 68
+    },
+    {
+        "type": "image",
+        "img_path": "images/26951dcf6b94d138bdfeef674addc7a389561d95ec0fa592d319f2693135c545.jpg",
+        "img_caption": [
+            "FIGURE 2.17 Graphs of instantaneous acceleration versus time for two different one-dimensional motions. (a) Here acceleration varies only slightly and is always in the same direction, since it is positive. The average over the interval is nearly the same as the acceleration at any given time. (b) Here the acceleration varies greatly, perhaps representing a package on a post office conveyor belt that is accelerated forward and backward as it bumps along. It is necessary to consider small time intervals (such as from 0 to $\\mathsf { 1 . 0 s } ,$ ) with constant or nearly constant acceleration in such a situation. "
+        ],
+        "img_footnote": [],
+        "page_idx": 68
+    },
+    {
+        "type": "text",
+        "text": "The next several examples consider the motion of the subway train shown in Figure 2.18. In (a) the shuttle moves to the right, and in (b) it moves to the left. The examples are designed to further illustrate aspects of motion and to illustrate some of the reasoning that goes into solving problems. ",
+        "page_idx": 68
+    },
+    {
+        "type": "image",
+        "img_path": "images/e8cc8cee5008fa06d95a65b1ebefc0a4e102badf2584125a7895726008e82330.jpg",
+        "img_caption": [
+            "FIGURE 2.18 One-dimensional motion of a subway train considered in Example 2.2, Example 2.3, Example 2.4, Example 2.5, Example 2.6, and Example 2.7. Here we have chosen the $x$ -axis so that $^ +$ means to the right and means to the left for displacements, velocities, and accelerations. (a) The subway train moves to the right from $x _ { 0 }$ to $x _ { \\mathrm { f } }$ . Its displacement $\\Delta x$ is $+ 2 . 0 k m$ . (b) The train moves to the left from $\\boldsymbol { x ^ { \\prime } } _ { 0 }$ to $x _ { \\mathrm { ~ f ~ } } ^ { \\prime }$ . Its displacement $\\Delta x ^ { \\prime }$ is $- 1 . 5 \\mathrm { k m }$ . (Note that the prime symbol (\u2032) is used simply to distinguish between displacement in the two different situations. The distances of travel and the size of the cars are on different scales to fit everything into the diagram.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.2 ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Calculating Displacement: A Subway Train ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "What are the magnitude and sign of displacements for the motions of the subway train shown in parts (a) and (b) of Figure 2.18? ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "A drawing with a coordinate system is already provided, so we don\u2019t need to make a sketch, but we should analyze it to make sure we understand what it is showing. Pay particular attention to the coordinate system. To find displacement, we use the equation $\\Delta x = x _ { \\mathrm { f } } - x _ { 0 }$ . This is straightforward since the initial and final positions are given. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. In the figure we see that $x _ { \\mathrm { f } } = 6 . 7 0 \\mathrm { k m }$ and $x _ { 0 } = 4 . 7 0 \\mathrm { k m }$ for part (a), and $x _ { \\textrm { f } } ^ { \\prime } = 3 . 7 5 \\mathrm { k m }$ and $x ^ { \\prime } 0 = 5 . 2 5 \\mathrm { k m }$ for part (b). ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "2. Solve for displacement in part (a). ",
+        "page_idx": 69
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta x = x _ { \\mathrm { f } } - x _ { 0 } = 6 . 7 0 \\mathrm { k m } - 4 . 7 0 \\mathrm { k m } = + 2 . 0 0 \\mathrm { k m }\n$$",
+        "text_format": "latex",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "3. Solve for displacement in part (b). ",
+        "page_idx": 69
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta x ^ { \\prime } = { x ^ { \\prime } } _ { \\mathrm { f } } - { x ^ { \\prime } } _ { \\mathrm { 0 } } = 3 . 7 5 \\mathrm { k m } - 5 . 2 5 \\mathrm { k m } = - 1 . 5 0 \\mathrm { k m }\n$$",
+        "text_format": "latex",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "The direction of the motion in (a) is to the right and therefore its displacement has a positive sign, whereas motion in (b) is to the left and thus has a negative sign. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.3 ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "image",
+        "img_path": "images/142eba64d5c55ac8b9c4c4ce6735a537c99c97efbda1f06234d6c12d29b55765.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Comparing Distance Traveled with Displacement: A Subway Train ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "What are the distances traveled for the motions shown in parts (a) and (b) of the subway train in Figure 2.18? ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "To answer this question, think about the definitions of distance and distance traveled, and how they are related to displacement. Distance between two positions is defined to be the magnitude of displacement, which was found in Example 2.2. Distance traveled is the total length of the path traveled between the two positions. (See Displacement.) In the case of the subway train shown in Figure 2.18, the distance traveled is the same as the distance between the initial and final positions of the train. ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "1. The displacement for part (a) was $+ 2 . 0 0$ km. Therefore, the distance between the initial and final positions was $2 . 0 0 { \\mathsf { k m } }$ , and the distance traveled was $2 . 0 0 { \\mathsf { k m } }$ .   \n2. The displacement for part (b) was $- 1 . 5 \\mathrm { k m }$ Therefore, the distance between the initial and final positions was $1 . 5 0 \\mathsf { k m }$ , and the distance traveled was $1 . 5 0 { \\sf k m }$ . ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Distance is a scalar. It has magnitude but no sign to indicate direction. ",
+        "page_idx": 70
+    },
+    {
+        "type": "image",
+        "img_path": "images/cff08bb670f54c89b9ef83b4c61f8126c7e7d57171f94bda2f9aca34e2c4f3e5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.4 ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Calculating Acceleration: A Subway Train Speeding Up ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Suppose the train in Figure 2.18(a) accelerates from rest to $3 0 . 0 \\mathrm { k m / h }$ in the first 20.0 s of its motion. What is its average acceleration during that time interval? ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "It is worth it at this point to make a simple sketch: ",
+        "page_idx": 70
+    },
+    {
+        "type": "image",
+        "img_path": "images/81f67bd7a30365e21701976c5339ec2ac3ba64b4898fde8c82498c41cfa8aa59.jpg",
+        "img_caption": [
+            "FIGURE 2.19 "
+        ],
+        "img_footnote": [],
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "This problem involves three steps. First we must determine the change in velocity, then we must determine the change in time, and finally we use these values to calculate the acceleration. ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $v _ { 0 } = 0$ (the trains starts at rest), $v _ { \\mathrm { f } } = 3 0 . 0 \\mathrm { k m / h }$ , and $\\Delta t = 2 0 . 0 \\mathrm { s }$ .   \n2. Calculate $\\Delta v$ . Since the train starts from rest, its change in velocity is $\\Delta v { = } + 3 0 . 0 \\mathrm { k m / h }$ , where the plus sign means velocity to the right.   \n3. Plug in known values and solve for the unknown, $\\boldsymbol { \\overline { { a } } }$ . ",
+        "page_idx": 70
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { a } } = \\frac { \\Delta v } { \\Delta t } = \\frac { + 3 0 . 0 \\mathrm { k m / h } } { 2 0 . 0 \\mathrm { s } }\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "4. Since the units are mixed (we have both hours and seconds for time), we need to convert everything into SI units of meters and seconds. (See Physical Quantities and Units for more guidance.) ",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { a } } } = \\left( { \\frac { + 3 0 \\mathrm { k m / h } } { 2 0 . 0 \\mathrm { s } } } \\right) \\left( { \\frac { 1 0 ^ { 3 } \\mathrm { ~ m } } { 1 \\mathrm { k m } } } \\right) \\left( { \\frac { 1 \\mathrm { ~ h } } { 3 6 0 0 \\mathrm { ~ s } } } \\right) = 0 . 4 1 7 \\mathrm { m / s ^ { 2 } }\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "The plus sign means that acceleration is to the right. This is reasonable because the train starts from rest and ends up with a velocity to the right (also positive). So acceleration is in the same direction as the changein velocity, as is always the case. ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.5 ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "image",
+        "img_path": "images/d3c0e8aed05d70d5fba04c2d23a74a741c8589f6467cf1f32bf1466956d60a08.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Calculate Acceleration: A Subway Train Slowing Down ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Now suppose that at the end of its trip, the train in Figure 2.18(a) slows to a stop from a speed of $3 0 . 0 \\mathrm { k m / h }$ in 8.00 s. What is its average acceleration while stopping? ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "image",
+        "img_path": "images/8aca1b7720170b7f9c25bc12f11a5cbe4a7629502e13c7be31db13c2f705360e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "In this case, the train is decelerating and its acceleration is negative because it is toward the left. As in the previous example, we must find the change in velocity and the change in time and then solve for acceleration. ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $v _ { 0 } = 3 0 . 0 \\mathrm { k m / h }$ , $v _ { \\mathrm { f } } = 0 \\mathrm { k m / h }$ (the train is stopped, so its velocity is 0), and $\\Delta t = 8 . 0 0 \\mathrm { s }$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "2. Solve for the change in velocity, $\\Delta v$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta v = v _ { \\mathrm { f } } - v _ { \\mathrm { 0 } } = 0 - 3 0 . 0 \\mathrm { k m / h } = - 3 0 . 0 \\mathrm { k m / h }\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "3. Plug in the knowns, $\\Delta v$ and $\\Delta t$ , and solve for $\\boldsymbol { \\overline { { a } } }$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { a } } = \\frac { \\Delta v } { \\Delta t } = \\frac { - 3 0 . 0 \\mathrm { k m / h } } { 8 . 0 0 \\mathrm { s } }\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "4. Convert the units to meters and seconds. ",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { a } } } = { \\frac { \\Delta v } { \\Delta t } } = \\left( { \\frac { - 3 0 . 0 \\mathrm { k m / h } } { 8 . 0 0 \\mathrm { s } } } \\right) \\left( { \\frac { 1 0 ^ { 3 } \\mathrm { m } } { 1 \\mathrm { k m } } } \\right) \\left( { \\frac { 1 \\mathrm { h } } { 3 6 0 0 \\mathrm { s } } } \\right) = - 1 . 0 4 \\mathrm { m / s ^ { 2 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "The minus sign indicates that acceleration is to the left. This sign is reasonable because the train initially has a positive velocity in this problem, and a negative acceleration would oppose the motion. Again, acceleration is in the same direction as the changein velocity, which is negative here. This acceleration can be called a deceleration because it has a direction opposite to the velocity. ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "The graphs of position, velocity, and acceleration vs. time for the trains in Example 2.4 and Example 2.5 are displayed in Figure 2.21. (We have taken the velocity to remain constant from 20 to 40 s, after which the train decelerates.) ",
+        "page_idx": 72
+    },
+    {
+        "type": "image",
+        "img_path": "images/cd2c88db78e55c97acf38af6a5b5fe2b787b729b53adeda20c079c9c27949284.jpg",
+        "img_caption": [
+            "FIGURE 2.21 (a) Position of the train over time. Notice that the train\u2019s position changes slowly at the beginning of the journey, then more and more quickly as it picks up speed. Its position then changes more slowly as it slows down at the end of the journey. In the middle of the journey, while the velocity remains constant, the position changes at a constant rate. (b) Velocity of the train over time. The train\u2019s velocity increases as it accelerates at the beginning of the journey. It remains the same in the middle of the journey (where there is no acceleration). It decreases as the train decelerates at the end of the journey. (c) The acceleration of the train over time. The train has positive acceleration as it speeds up at the beginning of the journey. It has no acceleration as it travels at constant velocity in the middle of the journey. Its acceleration is negative as it slows down at the end of the journey. "
+        ],
+        "img_footnote": [],
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.6 ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Calculating Average Velocity: The Subway Train ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "What is the average velocity of the train in part b of Example 2.2, and shown again below, if it takes 5.00 min to make its trip? ",
+        "page_idx": 73
+    },
+    {
+        "type": "image",
+        "img_path": "images/f497e08317d0572501ad60d41aa66c08e13a916a354bde2211099667a06a3831.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Average velocity is displacement divided by time. It will be negative here, since the train moves to the left and has a negative displacement. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $x _ { \\textrm { f } } ^ { \\prime } = 3 . 7 5 \\mathrm { k m }$ , $x ^ { \\prime } 0 = 5 . 2 5 \\mathrm { k m }$ , $\\Delta t = 5 . 0 0 \\mathrm { m i n } .$ ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "2. Determine displacement, $\\Delta x ^ { \\prime }$ . We found $\\Delta x ^ { \\prime }$ to be $- 1 . 5 \\mathrm { k m }$ in Example 2.2. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "3. Solve for average velocity. ",
+        "page_idx": 73
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { v } } = \\frac { \\Delta x ^ { \\prime } } { \\Delta t } = \\frac { - 1 . 5 0 \\mathrm { k m } } { 5 . 0 0 \\mathrm { m i n } }\n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "4. Convert units. ",
+        "page_idx": 73
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { v } } } = { \\frac { \\Delta x ^ { \\prime } } { \\Delta t } } = \\left( { \\frac { - 1 . 5 0 \\mathrm { k m } } { 5 . 0 0 \\mathrm { m i n } } } \\right) \\left( { \\frac { 6 0 \\mathrm { m i n } } { 1 \\mathrm { h } } } \\right) = - 1 8 . 0 \\mathrm { k m / h }\n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "The negative velocity indicates motion to the left. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.7 ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "image",
+        "img_path": "images/a30e909829cfbf2120d6aef1f062552750da21a432affec36c695db16d21ca0d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Calculating Deceleration: The Subway Train ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Finally, suppose the train in Figure 2.22 slows to a stop from a velocity of $2 0 . 0 ~ \\mathsf { k m / h }$ in 10.0 s. What is its average acceleration? ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Once again, let\u2019s draw a sketch: ",
+        "page_idx": 73
+    },
+    {
+        "type": "image",
+        "img_path": "images/ad723c65257b76292268db2a0eb0b38da1a5939b726f60c68fb4a80d8dc88271.jpg",
+        "img_caption": [
+            "FIGURE 2.23 "
+        ],
+        "img_footnote": [],
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "As before, we must find the change in velocity and the change in time to calculate average acceleration. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $v _ { 0 } = - 2 0 \\mathrm { k m } / \\mathrm { h }$ , $v _ { \\mathrm { f } } = 0 \\mathrm { k m / h }$ , $\\Delta t = 1 0 . 0 \\mathrm { s }$ ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "2. Calculate $\\Delta v$ . The change in velocity here is actually positive, since ",
+        "page_idx": 74
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta v = v _ { \\mathrm { f } } - v _ { 0 } = 0 - ( - 2 0 \\mathrm { k m / h } ) = + 2 0 \\mathrm { k m / h } .\n$$",
+        "text_format": "latex",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "3. Solve for $\\boldsymbol { \\overline { { a } } }$ . ",
+        "page_idx": 74
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { a } } = \\frac { \\Delta v } { \\Delta t } = \\frac { + 2 0 . 0 \\mathrm { k m / h } } { 1 0 . 0 \\mathrm { s } }\n$$",
+        "text_format": "latex",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "4. Convert units. ",
+        "page_idx": 74
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { a } } } = \\left( { \\frac { + 2 0 . 0 \\ { \\mathrm { k m / h } } } { 1 0 . 0 \\ { \\mathrm { s } } } } \\right) \\left( { \\frac { 1 0 ^ { 3 } \\ { \\mathrm { m } } } { 1 \\ { \\mathrm { k m } } } } \\right) \\left( { \\frac { 1 \\ { \\mathrm { h } } } { 3 6 0 0 \\ { \\mathrm { s } } } } \\right) = + 0 . 5 5 6 \\ { \\mathrm { m / s ^ { 2 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "The plus sign means that acceleration is to the right. This is reasonable because the train initially has a negative velocity (to the left) in this problem and a positive acceleration opposes the motion (and so it is to the right). Again, acceleration is in the same direction as the changein velocity, which is positive here. As in Example 2.5, this acceleration can be called a deceleration since it is in the direction opposite to the velocity. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Sign and Direction ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Perhaps the most important thing to note about these examples is the signs of the answers. In our chosen coordinate system, plus means the quantity is to the right and minus means it is to the left. This is easy to imagine for displacement and velocity. But it is a little less obvious for acceleration. Most people interpret negative acceleration as the slowing of an object. This was not the case in Example 2.7, where a positive acceleration slowed a negative velocity. The crucial distinction was that the acceleration was in the opposite direction from the velocity. In fact, a negative acceleration will increasea negative velocity. For example, the train moving to the left in Figure 2.22 is sped up by an acceleration to the left. In that case, both $v$ and are negative. The plus and minus signs give the directions of the accelerations. If acceleration has the same sign as the velocity, the object is speeding up. If acceleration has the opposite sign as the velocity, the object is slowing down. ",
+        "page_idx": 74
+    },
+    {
+        "type": "image",
+        "img_path": "images/4a4a95132692d48b9e5f8f3ebd2416ca9ae0eba7446b28f5093672436be0ebad.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "An airplane lands on a runway traveling east. Describe its acceleration. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "If we take east to be positive, then the airplane has negative acceleration, as it is accelerating toward the west. It is also decelerating: its acceleration is opposite in direction to its velocity. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "PHET EXPLORATIONS ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Moving Man Simulation ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Learn about position, velocity, and acceleration graphs. Move the little man back and forth with the mouse and plot his motion. Set the position, velocity, or acceleration and let the simulation move the man for you. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Click to view content (https://openstax.org/l/02moving_man). ",
+        "page_idx": 75
+    }
+]

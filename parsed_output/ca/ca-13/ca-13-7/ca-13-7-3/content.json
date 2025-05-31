@@ -1,0 +1,85 @@
+[
+    {
+        "type": "text",
+        "text": "13.7.3 SCSI and SAS ",
+        "text_level": 1,
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "Overview of SCSI ",
+        "text_level": 1,
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "Let us now discuss another I/O protocol also meant for peripheral devices known as the SCSI protocol (pronounced as \u201cscuzzy\u201d). It stands for \u201cSmall Computer System Interface\u201d. SCSI was originally meant to be a competitor of PCI. However, over time the SCSI protocol metamorphosed to a protocol for connecting storage devices. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "The original SCSI bus was a multidrop parallel bus that could have 8 to 16 connections. The SCSI protocol differentiates between a host and a peripheral device. For example, the South Bridge chip is a host, whereas the controller of a CD drive is a peripheral. Any pair of nodes (host or peripheral) can communicate between each other. The original SCSI bus was synchronous and ran at a relatively low frequency as compared to today\u2019s high speed buses. SCSI has still survived till date and state-of-the-art SCSI buses use an 80-160 MHz clock to transmit 16 bits in parallel. They thus have a theoretical maximum bandwidth of 320-640 MB/s. Note that serial buses can go up till 1 GHz, are more versatile, and can support larger bandwidths. ",
+        "page_idx": 693
+    },
+    {
+        "type": "table",
+        "img_path": "images/6c9b135bf0c73c566d26a20015925bfe5896e6de0fbede229cd5accb2bf6d714.jpg",
+        "table_caption": [
+            "Table 13.6: The SATA Protocol "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">SATA (Serial ATA)</td></tr><tr><td>Usage</td><td>Used to connect storage devices such as hard disks</td></tr><tr><td>Source</td><td>[sat,]</td></tr><tr><td colspan=\"2\">Topology</td></tr><tr><td>Connection</td><td>Point-to-point,half duplex</td></tr><tr><td>Topology</td><td>Tree-based, internal nodes known as multipliers</td></tr><tr><td colspan=\"2\">Physical Layer</td></tr><tr><td>Signaling</td><td>LVDS-based differential signaling</td></tr><tr><td>Number of parallel links</td><td>4</td></tr><tr><td>Encoding</td><td>8 bit/10 bit</td></tr><tr><td>Timing</td><td>Asynchronous (clock recovery + comma symbols)</td></tr><tr><td colspan=\"2\">Data Link Layer</td></tr><tr><td>Frame Size</td><td>variable</td></tr><tr><td>Error Correction</td><td>CRC</td></tr><tr><td>Transactions</td><td>Split transaction bus, command driven</td></tr><tr><td>Bandwidth</td><td>150-600 MB/s</td></tr><tr><td colspan=\"2\">Network Layer</td></tr><tr><td>Routing Nodes</td><td>Multipliers</td></tr><tr><td colspan=\"2\">Protocol Layer</td></tr><tr><td colspan=\"2\">Each SATA node has dedicated support for processing commands,and their responses.Examples of commands can be DMA reads,or I/O transfers</td></tr></table></body></html>\n\n",
+        "page_idx": 694
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 694
+    },
+    {
+        "type": "text",
+        "text": "Given the fact that there are issues with multidrop parallel buses, designers started retargeting the SCSI protocol for point-to-point serial buses. Recall that PCI Express and SATA buses were also created for the same reason. Consequently, designers proposed a host of buses that extended the original SCSI protocols, but were essentially point-to-point serial buses. Two such important technologies are the SAS (Serially Attached SCSI), and FC (fiber channel) buses. FC buses are mainly used for high-end systems such as supercomputers. The SAS bus is more commonly used for enterprise and scientific applications. ",
+        "page_idx": 694
+    },
+    {
+        "type": "text",
+        "text": "Let us thus primarily focus on the SAS protocol, because it is the most popular variant of the SCSI protocol in use today. SAS is a serial point-to-point technology that is also compatible with previous versions of SATA-based devices, and its specification is very close to the specification of SATA. ",
+        "page_idx": 694
+    },
+    {
+        "type": "text",
+        "text": "Overview of SAS ",
+        "text_level": 1,
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "SAS was designed to be backward compatible with SATA. Hence, both the protocols are not very different in the physical and data link layers. However, there are still some differences. The biggest difference is that SAS allows full duplex transmission, whereas SATA allows only half duplex transmission. Secondly, SAS can in general support larger frame sizes, and it supports a larger cable length between the end points as compared to SATA (8 meters for SAS, as compared to 1 meter for SATA). ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "The network layer is different from SATA. Instead of using a multiplier (used in SATA), SAS uses a much more sophisticated structure known as an expander for connecting to multiple SAS targets. Traditionally, the bus master of a SAS bus is known as the initiator, and the other node is known as the target. There are two kinds of expanders \u2013 edge expander, and fanout expander. An edge expander can be used to connect up to 255 SAS devices, and a fanout expander can be used to connect up to 255 edge expanders. We can add a large number of devices in a tree-based topology using a root node, and a set of expanders. Each device at boot-up time is assigned a unique SCSI id. A device might further be subdivided into several logical partitions. For example, your author at this moment is working on a storage system that is split into two logical partitions. Each partition has a logical unit number (LUN). The routing algorithm is as follows. The initiator sends a command to either a device directly if there is a direct connection or to an expander. The expander has a detailed routing table that maintains the location of the device as a function of its SCSI id. It looks up this routing table and forwards the packet to either the device, or to an edge expander. This edge expander has another routing table, which it uses to forward the command to the appropriate SCSI device. The SCSI device then forwards the command to the corresponding LUN. For sending a message to another SCSI device, or to the processor, a request follows the reverse path. ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "Lastly, the protocol layer is very flexible for SAS buses. It supports three kinds of protocols. We can either use SATA commands, SCSI commands, or SMP (SAS Management Protocol) commands. SMP commands are specialized commands for configuring and maintaining the network of SAS devices. The SCSI command set is very extensive, and is designed to control a host of devices (mostly storage devices). Note that a device has to be compatible with the SCSI protocol layer before we can send SCSI commands to it. If a device does not understand a certain command, then there is a possibility that something catastrophic might happen. For example, if we wish to read a CD, and the CD driver does not understand the command, then it might eject the CD. Even worse, it is possible that it might never eject the CD because it does not understand the eject command. The same argument holds true for the case of SATA also. We need to have SATA compatible devices such as SATA compatible hard drives and SATA compatible optical drives, if we wish to use SATA commands. SAS buses are by design compatible with both SATA devices and SAS/SCSI devices because of the flexibility of the protocol layer. For the protocol layer, SAS initiators send SCSI commands to SAS/SCSI devices, and SATA commands to SATA devices. ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "Nearline SAS (NL-SAS) drives are essentially SATA drives, but have a SCSI interface that translates SCSI commands to SATA commands. NL-SAS drives can thus be seamlessly used on SAS buses. Since the SCSI command set is more expressive and more efficient, NL-SAS drives are $1 0 { - } 2 0 \\%$ faster than pure SATA drives. ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "Let us now very briefly describe the SCSI command set in exactly 4 sentences. The initiator begins by sending a command to the target. Each command has a 1-byte header, and it has a variable length payload. The target then sends a reply with the execution status of the command. The SCSI specifications defines at least 60 different commands for device control, and transferring data. For additional information, the readers can look up the SCSI specification at [scs, ]. ",
+        "page_idx": 695
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 696
+    }
+]

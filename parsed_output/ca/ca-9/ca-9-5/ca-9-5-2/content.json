@@ -1,0 +1,47 @@
+[
+    {
+        "type": "text",
+        "text": "9.5.2 Decode Unit ",
+        "text_level": 1,
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "This unit is similar in function to the operand fetch unit as described in Section 9.2.3. However, we do not include the register file in this unit. We treat it as a separate unit in the microprogrammed processor. Figure 9.18 shows the design of the operand fetch unit. ",
+        "page_idx": 384
+    },
+    {
+        "type": "image",
+        "img_path": "images/1aaff8d1a9546c9624cd32bc74bb3230ff76dc2607c50581ab3f47852d5c4836.jpg",
+        "img_caption": [
+            "Figure 9.18: The decode unit in a microprogrammed processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "The job of the decode unit is to break down the contents of the instruction into multiple fields, and export them as registers. In specific, the following registers are made available to the bus, $I$ (immediate bit), rd (destination register), rs1 (source register 1), rs2 (source register 2), immx (after processing the modifiers), and branchT arget (branch target). To compute the branch target we calculate the offset from the current PC by extracting bits [1:27] from $_ { i r }$ , and shifting it to the left by 2 places. This is added to the current value of the PC. Table 9.6 shows the range of bits extracted from ir for each output register. ",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 385
+    },
+    {
+        "type": "table",
+        "img_path": "images/ed805e3fe52c37e5d1c59a140d4da71ed643ce80688cf3a20c5fc1128cecf79b.jpg",
+        "table_caption": [
+            "Table 9.6: List of bits in ir corresponding to each register in the decode unit "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Register</td><td>Bits in ir</td></tr><tr><td>I</td><td>27</td></tr><tr><td>rd</td><td>23-26</td></tr><tr><td>rs1</td><td>19-22</td></tr><tr><td>rs2</td><td>15-18</td></tr><tr><td>immx</td><td>1-18 (processmodifiers)</td></tr><tr><td>branchTarget</td><td>PC + (ir[1:27]<2)</td></tr></table></body></html>\n\n",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "It is possible that a given program execution might not have values for all the registers. For example, an instruction in the register format will not have an embedded immediate value. Hence, in this case the immx register will have junk data. However, it does not hurt to extract all possible fields from the instruction, and store them in registers. We can use only those registers that contain valid data, and ignore those registers that are not relevant to the instruction. This ensures that our data path remains simple, and we do not need costly multiplexers in the decode unit. ",
+        "page_idx": 385
+    }
+]

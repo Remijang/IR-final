@@ -1,0 +1,37 @@
+[
+    {
+        "type": "text",
+        "text": "13.2.1 Single Ended Signaling ",
+        "text_level": 1,
+        "page_idx": 654
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a naive approach, where we send a sequence of 1s and 0s, by sending a sequence of pulses from the source to the destination. This method of signaling is known as single ended signaling, and it is the simplest approach. ",
+        "page_idx": 654
+    },
+    {
+        "type": "text",
+        "text": "In specific, we can associate a high voltage pulse with a 1, and a low voltage pulse with a 0. This convention is known as active high. Alternatively, we can associate a low voltage pulse with a logical 1, and a high voltage pulse with a logical 0. Conversely, this convention is known as active low. Both of these conventions are shown in Figure 13.7. ",
+        "page_idx": 654
+    },
+    {
+        "type": "text",
+        "text": "Sadly, both of these methods are extremely slow and outdated. Recall from our discussion of SRAM cells in Section 7.4.1 that a fast I/O bus needs to reduce the voltage difference between a logical 0, and 1 to as low a value as possible. This is because the voltage difference is detected after it has charged the detector that has an internal capacitance. The higher the voltage required, the longer it takes to charge the capacitors. If the voltage difference is 1 Volt, then it will take a long time to detect a transition from 0 to 1. This will limit the speed of the bus. However, if the voltage difference is 30 mV, then we can detect the transition in voltage much sooner, and we can thus increase the speed of the bus. ",
+        "page_idx": 654
+    },
+    {
+        "type": "text",
+        "text": "Hence, modern bus technologies try to minimize the voltage difference between a logical 0 and 1 to as low a value as possible. Note that we cannot arbitrarily reduce the voltage difference between a logical 0 and 1, in the quest for increasing bus speed. For example, we cannot make the required voltage difference $0 . 0 0 1 \\mathrm { m V }$ . This is because there is a certain amount of electrical noise in the system that is introduced due to several factors. Readers might have noticed that if a cell phone starts ringing when the speakers of a car or computer are on, then there is some amount of noise in the speakers also. If we take a cell phone close to a microwave oven while it is running, then there is a decrease in the sound quality of the cell phone. This happens because of electromagnetic interference. Likewise, there can be electromagnetic interference in processors also, and voltage spikes can be introduced. Let us assume that the maximum amplitude of such voltage spikes is 20 mV. Then the voltage difference between a 0 and 1, needs to be more than 20 mV. Otherwise, a voltage spike due to interference can flip the value of a signal leading to an error. Let us take a brief look at one of the most common technologies for on-chip signaling namely LVDS. ",
+        "page_idx": 654
+    },
+    {
+        "type": "image",
+        "img_path": "images/f5846b4e009f9623930282624ccd30e24205237e4d8b0709b50899ad73db5602.jpg",
+        "img_caption": [
+            "Figure 13.7: Active High and Active Low Signaling Methods "
+        ],
+        "img_footnote": [],
+        "page_idx": 655
+    }
+]

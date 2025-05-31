@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "1.5.1 Complete - The ISA should be able to Implement all User Programs ",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "This is an absolutely necessary requirement. We want an ISA to be able to represent all programs that users are going to write for it. For example, if we have an ISA with just an ADD instruction, then we will not be able to subtract two numbers. To implement loops, the ISA should have some method to re-execute the same piece of code over and over again. Without this support for and while loops in C programs will not work. Note that for general purpose processors, we are looking at all possible programs. However, a lot of processors for embedded devices have limited functionality. For example, a simple processor that does string processing does not require support for floating point numbers (numbers with a decimal point). We need to note that different processors are designed to do different things, and hence their ISAs can be different. However, the bottom line is that any ISA should be complete in the sense that it should be able to express all the programs in machine code that a user intends to write for it. ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Let us now explore the desirable properties of an instruction set. ",
+        "page_idx": 22
+    }
+]

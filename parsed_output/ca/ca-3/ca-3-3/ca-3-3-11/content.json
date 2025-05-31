@@ -1,0 +1,116 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.11 Function Call/Return Instructions ",
+        "text_level": 1,
+        "page_idx": 123
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has two instructions for functions \u2013 call and ret. The call instruction takes a single argument \u2013 the label of the first instruction of the function. It transfers control to the label and saves the return address in register $r a$ . The ret instruction transfers the contents of $r a$ to the PC. It is a 0-address instruction because it does not require any operands. Table 3.9 shows the semantics of these instructions. In Table 3.9, we assume that the address method provides the address of the first instruction of the f oo function. Secondly, the return address is equal to $P C + 4$ because we assume that each instruction is 4 bytes long. call and ret can be thought of as branch instructions because they change the value of the PC. However, they are not dependent on any condition such as the value stored in a register. Hence, these instructions are conceptually unconditional branch instructions. ",
+        "page_idx": 123
+    },
+    {
+        "type": "table",
+        "img_path": "images/b581cac233e8950612d2ed0ac586008a8197137c86ad3da254e2e426b2043d4e.jpg",
+        "table_caption": [
+            "Table 3.9: Semantics of function call/return instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>call label</td><td>call .foo</td><td>ra \u2190 PC +4 \uff1b PC \u2190 address(.f00);</td></tr><tr><td>ret</td><td>ret</td><td>PC\u2190ra</td></tr></table></body></html>\n\n",
+        "page_idx": 123
+    },
+    {
+        "type": "text",
+        "text": "Example 32 ",
+        "text_level": 1,
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Write a function in SimpleRisc that adds the values in registers r0, and $r 1$ , and saves the result in r2. ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc .foo: add r2, r0, r1 ret ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Example 33 ",
+        "text_level": 1,
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Write a function, f oo, in SimpleRisc that adds the values in registers r0, and $r 1$ , and saves the result in $r 2$ . Then write another function that invokes this function. The invoking function needs to first set r0 to 3, r1 to 5, and then invoke foo. After foo returns, it needs to add 10 to the result of foo, and finally save the sum in r3. ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": ".foo: add r2, r0, r1 ret   \n.main: mov r0, 3 mov r1, 5 call .foo add r3, r2, 10 ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Example 34 ",
+        "text_level": 1,
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Write a recursive function to compute the factorial of 10 that is initially stored in r0. Save the result in r1. ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us first take a look at a small $C$ program to compute the factorial of the variable num. ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "C ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "int factorial(int num) { if (num <= 1) return 1; return num \\* factorial(num - 1);   \n}   \nvoid main() { ",
+        "page_idx": 124
+    },
+    {
+        "type": "text",
+        "text": "int result $\\mathbf { \\sigma } = \\mathbf { \\sigma }$ factorial(10); ",
+        "page_idx": 125
+    },
+    {
+        "type": "text",
+        "text": "} ",
+        "page_idx": 125
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to convert this program to SimpleRisc . SimpleRisc   \n.factorial: cmp r0, 1 /\\* compare (1,num) \\*/ beq .return bgt .continue b .return   \n.continue: sub sp, sp, 8 /\\* create space on the stack \\*/ st r0, [sp] /\\* push r0 on the stack \\*/ st ra, 4[sp] /\\* push the return address register \\*/ sub r0, r0, 1 $/ * n u m \\ = n u m \\ - \\ 1 * /$ call .factorial /\\* result will be in r1 \\*/ ld r0, [sp] /\\* pop r0 from the stack \\*/ ld ra, 4[sp] /\\* restore the return address \\*/ mul r1, r0, r1 /\\* factorial(n) = n \\* factorial(n-1) \\*/ add sp, sp, 8 /\\* delete the activation block \\*/ ret   \n.return: mov r1, 1 ret   \n.main: mov r0, 10 call .factorial ",
+        "page_idx": 125
+    },
+    {
+        "type": "text",
+        "text": "This example uses the stack to save and restore the value of $r 0$ . In this case, the caller saves and restores its registers. ",
+        "page_idx": 125
+    }
+]

@@ -1,0 +1,19 @@
+6.2.2 Add and Subtract Instructions
+
+Table 6.5 shows the general form of the add and  instructions in RISC-V. They have the same general format as SimpleRisc add and  instructions, respectively. The generic format is inst rd, rs1, rs2/imm.
+
+Example 93
+
+Write a RISC-V assembly program to compute  .
+
+Answer:
+
+Example 94
+
+Write an assembly program to swap two numbers stored in x1 and x2.
+
+Answer:
+
+Table 6.6 shows the multiplication and division instructions. They are a part of the ‘M’ extension. The reason for including them in an extension is to enable the creation of really low-end and low-power implementations that do not require such instructions.
+
+The multiplication instruction has some complications. The product requires 64 bits, which means that it will not fit in a single register. The default implementation thus places the lower 32 bits in the destination register. However, sometimes there is a need to store the full 64-bit product – this will require two registers. The default mul instruction computes the lower 32 bits. The mulh and mulhu instructions can next be used to store the upper 32 bits for signed  signed and unsigned  unsigned multiplication, respectively. Even though we require two separate instructions now, micro-architectures can fuse them dynamically. They can identify two consecutive multiplication instructions where one instruction computes the lower 32 bits and the next instruction computes the upper 32 bits. This sequence can be identified dynamically, and a single multiplication will only be required.

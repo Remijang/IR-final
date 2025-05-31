@@ -1,0 +1,54 @@
+# 24.4 Fungal Parasites and Pathogens
+
+# Bytheendofthissection,youwil beabletodothefolowing:
+
+• Describe some fungal parasites and pathogens of plants   
+• Describe the different types of fungal infections in humans   
+• Explain why antifungal therapy is hampered by the similarity between fungal and animal cells
+
+Parasitism describes a symbiotic relationship in which one member of the association benefits at the expense of the other. Both parasites and pathogens harm the host; however, pathogens cause disease, damage to host tissues or physiology, whereas parasites usually do not, but can cause serious damage and death by competition for nutrients or other resources. Commensalism occurs when one member benefits without affecting the other.
+
+# Plant Parasites and Pathogens
+
+The production of sufficient high-quality crops is essential to human existence. Unfortunately, plant diseases have ruined many crops throughout human agricultural history, sometimes creating widespread famine. Many plant pathogens are fungi that cause tissue decay and the eventual death of the host (Figure 24.26). In addition to destroying plant tissue directly, some plant pathogens spoil crops by producing potent toxins that can further damage and kill the host plant. Fungi are also responsible for food spoilage and the rotting of stored crops. For example, the fungus Clavicepspurpureacauses ergot, a disease of cereal crops (especially of rye). Although the fungus reduces the yield of cereals, the effects of the ergot's alkaloid toxins on humans and animals are of much greater significance. In animals, the disease is referred to as ergotism. The most common signs and symptoms are convulsions, hallucination, gangrene, and loss of milk in cattle. The active ingredient of ergot is lysergicacid, which is a precursor of the drug LSD. Smuts, rusts, and powdery or downy mildew are other examples of common fungal pathogens that affect crops.
+
+Aflatoxins are toxic, carcinogenic compounds released by fungi of the genus Aspergilus. Periodically, harvests of nuts and grains are tainted by aflatoxins, leading to massive recall of produce. This sometimes ruins producers and causes food shortages in developing countries.
+
+# Animal and Human Parasites and Pathogens
+
+Fungi can affect animals, including humans, in several ways. A mycosis is a fungal disease that results from infection and direct damage due to the growth and infiltration of the fungus. Fungi attack animals directly by colonizing and destroying tissues. Mycotoxicosis is the poisoning of humans (and other animals) by foods contaminated by fungal toxins (mycotoxins). Mycetismus specifically describes the ingestion of preformed toxins in poisonous mushrooms. In addition, individuals who display hypersensitivity to molds and spores may develop strong and dangerous allergic reactions. Fungal infections are generally very difficult to treat because, unlike bacteria, fungi are eukaryotes. Antibiotics only target prokaryotic cells, whereas compounds that kill fungi also harm the eukaryotic animal host.
+
+Many fungal infections are superficial; that is, they occur on the animal’s skin. Termed cutaneous(“skin”) mycoses, they can have devastating effects. For example, the decline of the world’s frog population in recent years is caused (in part) by the chytrid fungus Batrachochytriumdendrobatidis. This deadly fungus infects the skin of frogs and presumably interferes with cutaneous gaseous exchange, which is essential for amphibian survival. Similarly, more than a million bats in the United States have been killed by white-nose syndrome, which appears as a white ring around the mouth of the bat. It is caused by the cold-loving fungus Pseudogymnoascusdestructans, which disseminates its deadly spores in caves where bats hibernate. Mycologists are researching the transmission, mechanism, and control of P.destructansto stop its spread.
+
+Fungi that cause the superficial mycoses of the epidermis, hair, and nails rarely spread to the underlying tissue (Figure 24.27). These fungi are often misnamed “dermatophytes”, from the Greek words dermismeaning skin and phytemeaning plant, although they are not plants. Dermatophytes are also called “ringworms”because of the red ring they cause on skin. They secrete extracellular enzymes that break down keratin(a protein found in hair, skin, and nails), causing conditions such as athlete’s foot and jock itch. These conditions are usually treated with over-the-counter topical creams and powders, and are easily cleared. More persistent superficial mycoses may require prescription oral medications.
+
+
+
+Systemicmycosesspread to internal organs, most commonly entering the body through the respiratory system. For example, coc idioidomycosis(often called valley fever) is commonly found in the southwestern United States, but as far north as Washington, where the fungus resides in the dust. Once inhaled, the spores develop in the lungs and cause symptoms similar to those of tuberculosis. Histoplasmosisis caused by the dimorphic fungus Histoplasmacapsulatum.In its human host, Histoplasmagrows as a yeast, causing pulmonary infections, and in rarer cases, swelling of the membranes of the brain and spinal cord. Treatment of these and many other fungal diseases requires the use of antifungal medications that have serious side effects.
+
+Opportunistic mycoses are fungal infections that are either common in all environments, or part of the normal biota. They mainly affect individuals who have a compromised immune system. Patients in the late stages of AIDS suffer from opportunistic mycoses that can be life threatening. The yeast Candidasp., a common member of the natural biota, can grow unchecked and infect the vagina or mouth (oral thrush) if the pH of the surrounding environment, the person’s immune defenses, or the normal population of bacteria are altered.
+
+Mycetismuscan occur when poisonous mushrooms are eaten. It causes a number of human fatalities during mushroompicking season. Many edible fruiting bodies of fungi resemble highly poisonous relatives, and amateur mushroom hunters are cautioned to carefully inspect their harvest and avoid eating mushrooms of doubtful origin. The adage “there are bold mushroom pickers and old mushroom pickers, but are there no old, bold mushroom pickers” is unfortunately true.
+
+# SCIENTIFIC METHOD CONNECTION
+
+# Dutch Elm Disease
+
+Question: Do trees resistant to Dutch elm disease secrete antifungal compounds?
+
+Hypothesis: Construct a hypothesis that addresses this question.
+
+Background: Dutch elm disease is a fungal infestation that affects many species of elm (Ulmus) in North America. The fungus infects the vascular system of the tree, which blocks water flow within the plant and mimics drought stress. Accidently introduced to the United States in the early 1930s, it decimated American elm shade trees across the continent. It is caused by the fungus Ophiostomaulmi. The elm bark beetle acts as a vector and transmits the disease from tree to tree. Many European and Asiatic elms are less susceptible to the disease than are American elms.
+
+Test the hypothesis: A researcher testing this hypothesis might do the following. Inoculate several Petri plates containing a medium that supports the growth of fungi with fragments of Ophiostomamycelium. Cut (with a metal punch) several disks from the vascular tissue of susceptible varieties of American elms and resistant European and Asiatic elms. Include control Petri plates inoculated with mycelia without plant tissue to verify that the medium and incubation conditions do not interfere with fungal growth. As a positive control, add paper disks impregnated with a known fungicide to Petri plates inoculated with the mycelium.
+
+
+
+Incubate the plates for a set number of days to allow fungal growth and spreading of the mycelium over the surface of the plate.   
+Record the diameter of the zone of clearing, if any, around the tissue samples and the fungicide control disk.
+
+Record your observations in the following table.
+
+Analyze the data and report the results. Compare the effect of distilled water to the fungicide. These are negative and positive controls that validate the experimental setup. The fungicide should be surrounded by a clear zone where the fungus growth was inhibited. Is there a difference among different species of elm?
+
+Draw a conclusion: Was there antifungal activity as expected from the fungicide? Did the results support the hypothesis? If not, how can this be explained? There are several possible explanations.

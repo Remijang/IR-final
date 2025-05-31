@@ -1,0 +1,104 @@
+[
+    {
+        "type": "text",
+        "text": "11.3.1 Mathematical Model of the Memory System ",
+        "text_level": 1,
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "Performance ",
+        "text_level": 1,
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "The memory system can be thought of as a black box that just services read and write requests. The time a request takes is variable. It depends on the level of the memory system at which the request hits. The pipeline is attached to the memory system in the memory access $( M A )$ stage, and issues requests to it. If the reply does not come within a single cycle, then additional pipeline bubbles need to be introduced in our 5 stage SimpleRisc in-order pipeline. ",
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "Let the average memory access time be $A M A T$ (measured in cycles), and the fraction of load/store instructions be $f _ { m e m }$ . Then the CPI can be expressed as: ",
+        "page_idx": 535
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { C P I = C P I _ { i d e a l } + s t a l l _ { - } r a t e * s t a l l _ { - } c y c l e s } } \\\\ { { = C P I _ { i d e a l } + f _ { m e m } \\times ( A M A T - 1 ) } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "$C P I _ { i d e a l }$ is the CPI assuming a perfect memory system having a 1 cycle latency for all accesses. Note that in our 5 stage in-order pipeline the ideal instruction throughput is 1 instruction per cycle, and the memory stage is allotted 1 cycle. In practice, if a memory access takes $n$ cycles, then we have $n - 1$ stall cycles, and they need to be accounted for by Equation 11.1. In this equation, we implicitly assume that every memory access suffers a stall for $A M A T - 1$ cycles. Practically, this is not the case since most of the instructions will hit in the i-cache, and it typically has a 1-cycle latency. Hence, accesses that hit in the i-cache or d-cache will not stall. However, long stall cycles will be introduced by accesses that miss in the L1 and L2 caches. ",
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "The reason that Equation 11.1 still holds is because we are interested in the average CPI of a large number of instructions. We can thus derive this equation by adding all the memory stall cycles and computing the average number of cycles per instruction. ",
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "Average Memory Access Time ",
+        "text_level": 1,
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "In Equation 11.1, $C P I _ { i d e a l }$ is determined by the nature of the program and the nature of the other stages (other than $M A$ ) of the pipeline. $f _ { m e m }$ is also an inherent property of the program running on the processor. We need a formula to compute $A M A T$ . We can compute it in a way similar to Equation 11.1. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "Assuming, a memory system with an L1 and an L2 cache, we have: ",
+        "page_idx": 536
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { A M A T = L 1 _ { h i t t i m e } + L 1 _ { m i s s r a t e } \\times L 1 _ { m i s s p e n a l t y } } \\\\ & { \\qquad = L 1 _ { h i t t i m e } + L 1 _ { m i s s r a t e } \\times ( L 2 _ { h i t t i m e } + L 2 _ { m i s s r a t e } \\times L 2 _ { m i s s p e n a l t y } ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "All the memory accesses need to access the L1 cache (instruction or data) irrespective of a hit or a miss. Hence, they need to incur a delay equal to $L 1 _ { h i t t i m e }$ . A fraction of accesses, $L 1 _ { m i s s r a t e }$ , will miss in the L1 cache, and move to the L2 cache. Here also, irrespective of a hit or a miss, we need to incur a delay of $L 2 _ { h i t t i m e }$ cycles. If a fraction of accesses $\\left( L 2 _ { m i s s r a t e } \\right)$ miss in the L2 cache, then they need to proceed to main memory. We have assumed that all the accesses hit in the main memory. Hence, the $L 2 _ { m i s s p e n a l t y }$ is equal to the main memory access time. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "Now, if we assume that we have an $n$ -level memory system where the first level is the L1 cache, and the last level is the main memory, then we can use a similar equation. ",
+        "page_idx": 536
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { A M A T = L 1 _ { h i t t i m e } + L 1 _ { m i s s r a t e } \\times L 1 _ { m i s s p e n a l t y } } \\\\ { L 1 _ { m i s s p e n a l t y } = L 2 _ { h i t t i m e } + L 2 _ { m i s s r a t e } \\times L 2 _ { m i s s p e n a l t y } } \\\\ { L 2 _ { m i s s p e n a l t y } = L 3 _ { h i t t i m e } + L 3 _ { m i s s r a t e } \\times L 3 _ { m i s s p e n a l t y } } \\\\ { . . . = . . . } \\\\ { L ( n - 1 ) _ { m i s s p e n a l t y } = L n _ { h i t t i m e } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "We need to note that the miss rate used in these equations for a certain level $i$ is equal to the number of accesses that miss at that level divided by the total number of accesses to that level. This is known as the local miss rate. In comparison, we can define a global miss rate for level $i$ , which is equal to the number of misses at level $i$ divided by the total number of memory accesses. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "Definition 106 ",
+        "text_level": 1,
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "local miss rate It is equal to the number of misses in a cache at level i divided by the total number of accesses at level i. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "global miss rate It is equal to the number of misses in a cache at level i divided by the total number of memory accesses. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "Let us take a deeper look at Equation 11.1. We observe that we can increase the performance of a system by either reducing the miss rate, the miss penalty or by decreasing the hit time. Let us first look at the miss rate. ",
+        "page_idx": 537
+    }
+]

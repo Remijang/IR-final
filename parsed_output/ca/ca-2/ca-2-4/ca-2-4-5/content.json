@@ -1,0 +1,36 @@
+[
+    {
+        "type": "text",
+        "text": "2.4.5 Double Precision Numbers ",
+        "text_level": 1,
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "We observe that by using 32 bits, the largest number that we can represent is roughly $2 ^ { 1 2 8 }$ , which is approximately $1 0 ^ { 3 8 }$ . We might need to represent larger numbers, especially while studying cosmology. Secondly, there are only 23 bits of precision (mantissa is 23 bits long). If we are doing highly sensitive calculations, then we might need more bits of precision. Consequently, there is an IEEE 754 standard for double precision numbers. These numbers require 64 bits of storage. They are represented by the double datatype in C or Java. ",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "64 bits are apportioned as follows: ",
+        "page_idx": 82
+    },
+    {
+        "type": "text",
+        "text": "The mantissa is now 52 bits long. We have 11 bits for representing the exponent. The bias is equal to 1023, and the range of the exponent is from -1022 to 1023. We can thus represent many more numbers that are much larger, and we have more bits in the mantissa for added precision. The format and semantics of $\\pm \\infty$ , zero, NAN, and denormal numbers remains the same as the case for 32 bits. ",
+        "page_idx": 82
+    },
+    {
+        "type": "table",
+        "img_path": "images/ddc7e58f79578be9291f7732a134aa297c07ea38dca7aa35b9be3462f60b1c54.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Field</td><td>Size(bits)</td></tr><tr><td></td><td>S</td><td>1</td></tr><tr><td></td><td>E</td><td>11</td></tr><tr><td></td><td>M</td><td>52</td></tr></table></body></html>\n\n",
+        "page_idx": 83
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 83
+    }
+]

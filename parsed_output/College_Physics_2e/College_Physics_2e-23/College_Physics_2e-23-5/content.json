@@ -1,0 +1,349 @@
+[
+    {
+        "type": "text",
+        "text": "23.5 Electric Generators ",
+        "text_level": 1,
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Calculate the emf induced in a generator.   \n\u2022 Calculate the peak emf which can be induced in a particular generator system. ",
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "Electric generators induce an emf by rotating a coil in a magnetic field, as briefly discussed in Induced Emf and Magnetic Flux. We will now explore generators in more detail. Consider the following example. ",
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 23.3 ",
+        "text_level": 1,
+        "page_idx": 1034
+    },
+    {
+        "type": "image",
+        "img_path": "images/df63dc07c7a6603f75f15d4e142a648bfa8135d4110bc0e79f70f365774cae31.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Emf Induced in a Generator Coil ",
+        "text_level": 1,
+        "page_idx": 1034
+    },
+    {
+        "type": "text",
+        "text": "The generator coil shown in Figure 23.19 is rotated through one-fourth of a revolution (from $\\theta = 0 ^ { \\circ }$ to $\\theta = 9 0 ^ { \\circ }$ ) in $1 5 . 0 \\mathsf { m s }$ . The 200-turn circular coil has a $5 . 0 0 \\mathsf { c m }$ radius and is in a uniform $\\pm . 2 5 \\intercal$ magnetic field. What is the average emf induced? ",
+        "page_idx": 1034
+    },
+    {
+        "type": "image",
+        "img_path": "images/7a3263072cdd70e71229a98170211115f29d2f73013c625b4460e0f3e4ee483e.jpg",
+        "img_caption": [
+            "FIGURE 23.19 When this generator coil is rotated through one-fourth of a revolution, the magnetic flux $\\Phi$ changes from its maximum to zero, inducing an emf. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "We use Faraday\u2019s law of induction to find the average emf induced over a time $\\Delta t$ : ",
+        "page_idx": 1035
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { e m f } = - N \\frac { \\Delta \\phi } { \\Delta t } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "We know that $N = 2 0 0$ and $\\Delta t = 1 5 . 0 \\mathrm { m s }$ , and so we must determine the change in flux $\\Delta \\phi$ to find emf. ",
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "Since the area of the loop and the magnetic field strength are constant, we see that ",
+        "page_idx": 1035
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta \\phi = \\Delta ( B A \\cos \\theta ) = A B \\Delta ( \\cos \\theta ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "Now, $\\Delta ( \\cos \\theta ) { = - 1 . 0 }$ , since it was given that $\\theta$ goes from $0 ^ { \\circ }$ to $9 0 ^ { \\circ }$ . Thus $\\Delta \\phi = - A B$ , and ",
+        "page_idx": 1035
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { e m f } } = N { \\frac { A B } { \\Delta t } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "The area of the loop is $A = \\pi r ^ { 2 } = ( 3 . 1 4 . . . ) ( 0 . 0 5 0 0 ~ \\mathrm { m } ) ^ { 2 } = 7 . 8 5 \\times 1 0 ^ { - 3 } ~ \\mathrm { m } ^ { 2 } .$ . Entering this value gives ",
+        "page_idx": 1035
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { e m f } = 2 0 0 { \\frac { ( 7 . 8 5 \\times 1 0 ^ { - 3 } \\ \\mathrm { m } ^ { 2 } ) ( 1 . 2 5 \\ \\mathrm { T } ) } { 1 5 . 0 \\times 1 0 ^ { - 3 } \\ \\mathrm { s } } } = 1 3 1 \\ \\mathrm { V } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "This is a practical average value, similar to the $\\textstyle 1 2 0 \\vee$ used in household power. ",
+        "page_idx": 1035
+    },
+    {
+        "type": "text",
+        "text": "The emf calculated in Example 23.3 is the average over one-fourth of a revolution. What is the emf at any given instant? It varies with the angle between the magnetic field and a perpendicular to the coil. We can get an expression for emf as a function of time by considering the motional emf on a rotating rectangular coil of width $w$ and height $\\ell$ in a uniform magnetic field, as illustrated in Figure 23.20. ",
+        "page_idx": 1035
+    },
+    {
+        "type": "image",
+        "img_path": "images/91ab0c7f9456ceb692a0922d7044376db5a7a062151dcd2a957f85c17fa7f7a6.jpg",
+        "img_caption": [
+            "FIGURE 23.20 A generator with a single rectangular coil rotated at constant angular velocity in a uniform magnetic field produces an emf that varies sinusoidally in time. Note the generator is similar to a motor, except the shaft is rotated to produce a current rather than the other way around. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "Charges in the wires of the loop experience the magnetic force, because they are moving in a magnetic field. Charges in the vertical wires experience forces parallel to the wire, causing currents. But those in the top and bottom segments feel a force perpendicular to the wire, which does not cause a current. We can thus find the induced emf by considering only the side wires. Motional emf is given to be $\\mathbf { \\nabla } = B \\ell \\boldsymbol { v }$ , where the velocity vis perpendicular to the magnetic field $B$ . Here the velocity is at an angle $\\theta$ with $B$ , so that its component perpendicular to $B$ is $v$ sin $\\theta$ (see Figure 23.20). Thus in this case the emf induced on each side is $\\mathbf { \\nabla } = B \\ell \\boldsymbol { v }$ sin $\\theta$ , and they are in the same direction. The total emf around the loop is then ",
+        "page_idx": 1036
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { e m f } = 2 B \\ell v \\sin \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "This expression is valid, but it does not give emf as a function of time. To find the time dependence of emf, we assume the coil rotates at a constant angular velocity $\\omega$ . The angle $\\theta$ is related to angular velocity by $\\theta = \\omega t$ , so that ",
+        "page_idx": 1036
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { e m f } = 2 B \\ell v \\sin \\omega t .\n$$",
+        "text_format": "latex",
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "Now, linear velocity $v$ is related to angular velocity $\\omega$ by $v = r \\omega$ . Here $r = w / 2$ , so that $\\scriptstyle v = ( w / 2 ) \\omega$ , and ",
+        "page_idx": 1036
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { e m f } = 2 B \\ell \\frac { w } { 2 } \\omega \\sin \\omega t = ( \\ell w ) B \\omega \\sin \\omega t .\n$$",
+        "text_format": "latex",
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "Noting that the area of the loop is $A = \\ell w$ , and allowing for $N$ loops, we find that ",
+        "page_idx": 1036
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { e m f } } = N A B \\omega \\sin \\omega t\n$$",
+        "text_format": "latex",
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "is the emf induced in a generator coil of $N$ turns and area $A$ rotating at a constant angular velocity $\\omega$ in a uniform magnetic field $B$ . This can also be expressed as ",
+        "page_idx": 1036
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { e m f } = \\mathrm { e m f _ { 0 } } \\ \\sin \\omega t ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "where ",
+        "page_idx": 1036
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { e m f } } _ { 0 } = N A B \\omega\n$$",
+        "text_format": "latex",
+        "page_idx": 1036
+    },
+    {
+        "type": "text",
+        "text": "is the maximum (peak) emf. Note that the frequency of the oscillation is $f = \\omega / 2 \\pi$ , and the period is $T = 1 / f = 2 \\pi / \\omega .$ .Figure 23.21 shows a graph of emf as a function of time, and it now seems reasonable that AC voltage is sinusoidal. ",
+        "page_idx": 1036
+    },
+    {
+        "type": "image",
+        "img_path": "images/e3d2788dae5b873d2644485b27963483568917fcdf31d1b2e0bc2f95509bc5d7.jpg",
+        "img_caption": [
+            "FIGURE 23.21 The emf of a generator is sent to a light bulb with the system of rings and brushes shown. The graph gives the emf of the generator as a function of time. $\\mathrm { e m f } _ { 0 }$ is the peak emf. The period is $T = 1 / f = 2 \\pi / \\omega$ , where $f$ is the frequency. Note that the script E stands for emf. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "The fact that the peak emf, ${ \\mathrm { e m f } } _ { 0 } = N A B \\omega$ , makes good sense. The greater the number of coils, the larger their area, and the stronger the field, the greater the output voltage. It is interesting that the faster the generator is spun (greater $\\omega ,$ ), the greater the emf. This is noticeable on bicycle generators\u2014at least the cheaper varieties. One of the authors as a juvenile found it amusing to ride his bicycle fast enough to burn out his lights, until he had to ride home lightless one dark night. ",
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "Figure 23.22 shows a scheme by which a generator can be made to produce pulsed DC. More elaborate arrangements of multiple coils and split rings can produce smoother DC, although electronic rather than mechanical means are usually used to make ripple-free DC. ",
+        "page_idx": 1037
+    },
+    {
+        "type": "image",
+        "img_path": "images/8bacabc89f7ea3623527915bcef4614af9af073ee92392dea225afc94adb99cc.jpg",
+        "img_caption": [
+            "FIGURE 23.22 Split rings, called commutators, produce a pulsed DC emf output in this configuration. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 23.4 ",
+        "text_level": 1,
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Maximum Emf of a Generator ",
+        "text_level": 1,
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "Calculate the maximum emf, $\\mathrm { e m f _ { 0 } }$ , of the generator that was the subject of Example 23.3. ",
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "Once $\\omega$ , the angular velocity, is determined, ${ \\mathrm { e m f } } _ { 0 } = N A B \\omega$ can be used to find $\\mathrm { e m f } _ { 0 }$ . All other quantities are ",
+        "page_idx": 1037
+    },
+    {
+        "type": "text",
+        "text": "known. ",
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "Angular velocity is defined to be the change in angle per unit time: ",
+        "page_idx": 1038
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = { \\frac { \\Delta \\theta } { \\Delta t } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "One-fourth of a revolution is $\\pi / 2$ radians, and the time is $0 . 0 1 5 0 \\mathsf s$ ; thus, ",
+        "page_idx": 1038
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { \\omega } & { = } & { \\frac { \\pi / 2 \\ \\mathrm { r a d } } { 0 . 0 1 5 0 \\ \\mathrm { s } } } \\\\ & { = } & { 1 0 4 . 7 \\ \\mathrm { r a d / s } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "$1 0 4 . 7 \\ r { \\mathsf { a d } } / { \\mathsf { s } }$ is exactly 1000 rpm. We substitute this value for $\\omega$ and the information from the previous example into ${ \\mathrm { e m f } } _ { 0 } = N A B \\omega$ , yielding ",
+        "page_idx": 1038
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { \\operatorname { e m f } _ { 0 } } & { = } & { N A B \\omega } \\\\ & { = } & { 2 0 0 ( 7 . 8 5 \\times 1 0 ^ { - 3 } \\ \\mathrm { m } ^ { 2 } ) ( 1 . 2 5 \\ \\mathrm { T } ) ( 1 0 4 . 7 \\ \\mathrm { r a d } / \\mathrm { s } ) . } \\\\ & { = } & { 2 0 6 \\ \\mathrm { V } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "The maximum emf is greater than the average emf of $\\boldsymbol { \\mathsf { 1 3 1 V } }$ found in the previous example, as it should be. ",
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "In real life, electric generators look a lot different than the figures in this section, but the principles are the same. The source of mechanical energy that turns the coil can be falling water (hydropower), steam produced by the burning of fossil fuels, or the kinetic energy of wind. Figure 23.23 shows a cutaway view of a steam turbine; steam moves over the blades connected to the shaft, which rotates the coil within the generator. ",
+        "page_idx": 1038
+    },
+    {
+        "type": "image",
+        "img_path": "images/5a541b75f6a930368e5283748f44318bcfcdc17321621147dc7b137314c2af23.jpg",
+        "img_caption": [
+            "IGURE 23.23 Steam turbine/generator. The steam produced by burning coal impacts the turbine blades, turning the shaft which is onnected to the generator. (credit: Nabonaco, Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1038
+    },
+    {
+        "type": "text",
+        "text": "Generators illustrated in this section look very much like the motors illustrated previously. This is not coincidental. In fact, a motor becomes a generator when its shaft rotates. Certain early automobiles used their starter motor as a generator. In Back Emf, we shall further explore the action of a motor as a generator. ",
+        "page_idx": 1038
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "11.3.4 Summary of Memory System Optimization Techniques ",
+        "text_level": 1,
+        "page_idx": 540
+    },
+    {
+        "type": "text",
+        "text": "Table 11.2 shows a summary of the different techniques that we have introduced to optimize the memory system. Note that every technique has some negative side effects. If a technique improves the memory system in one aspect, then it is detrimental in some other aspect. For example, by increasing the cache size we reduce the number of capacity misses. However, we also increase the area, latency, and power. ",
+        "page_idx": 540
+    },
+    {
+        "type": "text",
+        "text": "To summarize, we can conclude that it is necessary to design the memory system very carefully. The requirements of the target workload have to be carefully balanced with the constraints placed by the designers, and the limits of manufacturing technology. We need to maximize performance, and at the same time be mindful of power, area, and complexity constraints. ",
+        "page_idx": 540
+    },
+    {
+        "type": "table",
+        "img_path": "images/c8d2a224a048b0252852857089bd5502737b56f3917b01bbfb3a1a5d00afd45e.jpg",
+        "table_caption": [
+            "Table 11.2: Summary of different memory system optimization techniques "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Technique</td><td>Application</td><td>Disadvantages</td></tr><tr><td>large block size</td><td>compulsory misses</td><td>reduces the number of blocks in the cache</td></tr><tr><td>prefetching</td><td>compulsory misses\uff0ccapacity</td><td>extra complexity and the risk of displacing useful data from the cache</td></tr><tr><td>large cache size</td><td>misses capacity misses</td><td>high latency\uff0chigh power, more area</td></tr><tr><td>increased associativity</td><td>conflict misses</td><td>high latency, high power</td></tr><tr><td>victim cache</td><td>conflict misses</td><td>extra complexity</td></tr><tr><td>compiler-based techniques</td><td>all types of misses</td><td>not very generic</td></tr><tr><td>small and simple cache</td><td>hit time</td><td>high miss rate</td></tr><tr><td>write buffer</td><td>miss penalty</td><td>extra complexity</td></tr><tr><td>critical word first</td><td>miss penalty</td><td>extra complexity and state</td></tr><tr><td>early restart</td><td>miss penalty</td><td>extra complexity</td></tr></table></body></html>\n\n",
+        "page_idx": 541
+    }
+]

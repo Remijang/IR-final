@@ -1,0 +1,47 @@
+14.1 Heat   
+14.2 Temperature Change and Heat Capacity   
+14.3 Phase Change and Latent Heat   
+14.4 Heat Transfer Methods   
+14.5 Conduction   
+14.6 Convection   
+14.7 Radiation
+
+INTRODUCTION TO HEAT AND HEAT TRANSFER METHODS Energy can exist in many forms and heat is one of the most intriguing. Heat is often hidden, as it only exists when in transit, and is transferred by a number of distinctly different methods. Heat transfer touches every aspect of our lives and helps us understand how the universe functions. It explains the chill we feel on a clear breezy night, or why Earth’s core has yet to cool. This chapter defines and explores heat transfer, its effects, and the methods by which heat is transferred. These topics are fundamental, as well as practical, and will often be referred to in the chapters ahead.
+
+# 14.1 Heat
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Define heat as transfer of energy.
+
+In Work, Energy, and Energy Resources, we defined work as force times distance and learned that work done on an object changes its kinetic energy. We also saw in Temperature, Kinetic Theory, and the Gas Laws that temperature is proportional to the (average) kinetic energy of atoms and molecules. We say that a thermal system has a certain
+
+internal energy: its internal energy is higher if the temperature is higher. If two objects at different temperatures are brought in contact with each other, energy is transferred from the hotter to the colder object until equilibrium is reached and the bodies reach thermal equilibrium (i.e., they are at the same temperature). No work is done by either object, because no force acts through a distance. The transfer of energy is caused by the temperature difference, and ceases once the temperatures are equal. These observations lead to the following definition of heat: Heat is the spontaneous transfer of energy due to a temperature difference.
+
+As noted in Temperature, Kinetic Theory, and the Gas Laws, heat is often confused with temperature. For example, we may say the heat was unbearable, when we actually mean that the temperature was high. Heat is a form of energy, whereas temperature is not. The misconception arises because we are sensitive to the flow of heat, rather than the temperature.
+
+Owing to the fact that heat is a form of energy, it has the SI unit of joule(J). The calorie(cal) is a common unit of energy, defined as the energy needed to change the temperature of $\displaystyle \boldsymbol { 1 . 0 0 \mathrm { g } }$ of water by $1 . 0 0 ^ { \circ } \mathrm { C }$ —specifically, between $1 4 . 5 ^ { \circ } \mathrm { C }$ and $1 5 . 5 ^ { \circ } \mathrm { C }$ , since there is a slight temperature dependence. Perhaps the most common unit of heat is the kilocalorie (kcal), which is the energy needed to change the temperature of $1 . 0 0 \mathsf { k g }$ of water by $1 . 0 0 ^ { \circ } \mathrm { C } .$ . Since mass is most often specified in kilograms, kilocalorie is commonly used. Food calories (given the notation Cal, and sometimes called “big calorie”) are actually kilocalories ( $= 1 0 0 0$ ), a fact not easily determined from package labeling.
+
+# Mechanical Equivalent of Heat
+
+It is also possible to change the temperature of a substance by doing work. Work can transfer energy into or out of a system. This realization helped establish the fact that heat is a form of energy. James Prescott Joule (1818–1889) performed many experiments to establish the mechanical equivalent of heat—theworkne dedtoproducethe sameefectsasheattransfer. In terms of the units used for these two terms, the best modern value for this equivalence is
+
+$$
+1 . 0 0 0 \mathrm { k c a l } = 4 1 8 6 \mathrm { J } .
+$$
+
+We consider this equation as the conversion between two different units of energy.
+
+The figure above shows one of Joule’s most famous experimental setups for demonstrating the mechanical equivalent of heat. It demonstrated that work and heat can produce the same effects, and helped establish the principle of conservation of energy. Gravitational potential energy (PE) (work done by the gravitational force) is converted into kinetic energy (KE), and then randomized by viscosity and turbulence into increased average kinetic energy of atoms and molecules in the system, producing a temperature increase. His contributions to the field of thermodynamics were so significant that the SI unit of energy was named after him.
+
+Heat added or removed from a system changes its internal energy and thus its temperature. Such a temperature increase is observed while cooking. However, adding heat does not necessarily increase the temperature. An example is melting of ice; that is, when a substance changes from one phase to another. Work done on the system or by the system can also change the internal energy of the system. Joule demonstrated that the temperature of a system can be increased by stirring. If an ice cube is rubbed against a rough surface, work is done by the frictional force. A system has a well-defined internal energy, but we cannot say that it has a certain “heat content” or “work content”. We use the phrase “heat transfer” to emphasize its nature.
+
+# CHECK YOUR UNDERSTANDING
+
+Two samples (A and B) of the same substance are kept in a lab. Someone adds 10 kilojoules (kJ) of heat to one sample, while $1 0 \kappa \mathsfit { ] }$ of work is done on the other sample. How can you tell to which sample the heat was added?
+
+# Solution
+
+Heat and work both change the internal energy of the substance. However, the properties of the sample only depend on the internal energy so that it is impossible to tell whether heat was added to sample A or B.

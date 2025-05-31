@@ -1,0 +1,57 @@
+[
+    {
+        "type": "text",
+        "text": "4.4.2 Load-Store Instructions ",
+        "text_level": 1,
+        "page_idx": 169
+    },
+    {
+        "type": "text",
+        "text": "A simple load or store instruction can be represented as : (ldr str) rd, [rs, (immediate/shifter operand)]. We require additional syntax for pre- and post-indexed addressing (see Section 4.3.1). The format for the encoding of load and store instructions is shown in Figure 4.8. ",
+        "page_idx": 169
+    },
+    {
+        "type": "image",
+        "img_path": "images/7a6f97b699e9469d75d722cb74851c9ee188e2517e321636ccea038f6a947aab.jpg",
+        "img_caption": [
+            "Figure 4.8: Format of the load/store instructions "
+        ],
+        "img_footnote": [],
+        "page_idx": 169
+    },
+    {
+        "type": "text",
+        "text": "The semantics of the bits I, P, U, B, W, and L is shown in Table 4.17. In this case, the I bit has reverse semantics as compared to the case of data processing instructions. If it is 1, then the last 12 bits represent a shifter operand, otherwise they represent an immediate value. $\\mathrm { P }$ represents the advanced addressing mode \u2013 pre or post, and W determines if the advanced addressing mode is used or a simple addressing mode is used. We can either add the offset from the base register or we can subtract it from the base register. This is specified by the U bit. The B bit determines the granularity of the transfer \u2013 byte level or word level. Lastly, the L bit determines if the instruction is a load or a store. ",
+        "page_idx": 169
+    },
+    {
+        "type": "table",
+        "img_path": "images/ab5524654d37eb4713871d03a9553853698aa3c77357e4fb1c67c4b349f1cacc.jpg",
+        "table_caption": [
+            "Table 4.17: Semantics of I, P, U, B, W, and L bits "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Bit</td><td>Value</td><td>Semantics</td><td></td></tr><tr><td>I</td><td>0\uff11</td><td>last 12bits representaiteade</td><td></td></tr><tr><td>P</td><td>0 1</td><td>post-indexed addressing pre-indexed addressing</td><td></td></tr><tr><td>U</td><td>0 1</td><td>subtract offset from base add offset to base</td><td></td></tr><tr><td>B</td><td>0</td><td>transfer word</td><td></td></tr><tr><td>W</td><td>1 0</td><td>transfer byte do not use pre or post indexed addressing</td><td></td></tr><tr><td>L</td><td>1 0\uff11</td><td>use pre or post indexed addressing Stor romememryry</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 169
+    },
+    {
+        "type": "text",
+        "text": "These six bits $I P U B W L$ capture all the different variants of the load and store instructions. The rest of the format is the same as the data processing instruction other than the encoding of immediates. Immediates in memory instructions do not follow the (rot $^ +$ payload) format. The 12-bit immediate field represents an unsigned number between 0 and 4095. ",
+        "page_idx": 169
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 170
+    },
+    {
+        "type": "text",
+        "text": "We thus observe that like SimpleRisc , the designers of the ARM instruction set have tried to stick to the same instruction format with minor variations. ",
+        "page_idx": 170
+    },
+    {
+        "type": "text",
+        "text": "Question 6 What is the necessity for having the U bit? Answer: Negative numbers such as -4 or -8 cannot be represented in ARM\u2019s 12-bit format for specifying offsets in memory instructions. However, we might need to use addresses with a negative displacement, especially when they are relative to the frame pointer or the stack pointer. The U bit allows us to represent an immediate such as -4 as +4. It additionally instructs the processor to subtract the displacement from the base register. ",
+        "page_idx": 170
+    }
+]

@@ -1,0 +1,411 @@
+# 6.6 Satellites and Kepler’s Laws: An Argument for Simplicity
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+State Kepler’s laws of planetary motion.   
+• Derive the third Kepler’s law for circular orbits.   
+• Discuss the Ptolemaic model of the universe.
+
+Examples of gravitational orbits abound. Hundreds of artificial satellites orbit Earth together with thousands of pieces of debris. The Moon’s orbit about Earth has intrigued humans from time immemorial. The orbits of planets, asteroids, meteors, and comets about the Sun are no less interesting. If we look further, we see almost unimaginable numbers of stars, galaxies, and other celestial objects orbiting one another and interacting through gravity.
+
+All these motions are governed by gravitational force, and it is possible to describe them to various degrees of precision. Precise descriptions of complex systems must be made with large computers. However, we can describe an important class of orbits without the use of computers, and we shall find it instructive to study them. These orbits have the following characteristics:
+
+1. Asmal mas orbitsamuchlargerma s . This allows us to view the motion as if $M$ were stationary—in fact, as if from an inertial frame of reference placed on $M$ —without significant error. Mass $m$ is the satellite of , if the orbit is gravitationally bound.   
+2. Thesystemisisolatedfromothermas es. This allows us to neglect any small effects due to outside masses.
+
+The conditions are satisfied, to good approximation, by Earth’s satellites (including the Moon), by objects orbiting the Sun, and by the satellites of other planets. Historically, planets were studied first, and there is a classical set of three laws, called Kepler’s laws of planetary motion, that describe the orbits of all bodies satisfying the two previous conditions (not just planets in our solar system). These descriptive laws are named for the German astronomer Johannes Kepler (1571–1630), who devised them after careful study (over some 20 years) of a large amount of meticulously recorded observations of planetary motion done by Tycho Brahe (1546–1601). Such careful collection and detailed recording of methods and data are hallmarks of good science. Data constitute the evidence from which new interpretations and meanings can be constructed.
+
+# Kepler’s Laws of Planetary Motion
+
+# Kepler’s First Law
+
+The orbit of each planet about the Sun is an ellipse with the Sun at one focus.
+
+# Kepler’s Second Law
+
+Each planet moves so that an imaginary line drawn from the Sun to the planet sweeps out equal areas in equal times (see Figure 6.27).
+
+# Kepler’s Third Law
+
+The ratio of the squares of the periods of any two planets about the Sun is equal to the ratio of the cubes of their average distances from the Sun. In equation form, this is
+
+$$
+{ \frac { { T _ { 1 } } ^ { 2 } } { { T _ { 2 } } ^ { 2 } } } = { \frac { r _ { 1 } ^ { 3 } } { r _ { 2 } ^ { 3 } } } ,
+$$
+
+where $T$ is the period (time for one orbit) and $r$ is the average radius. This equation is valid only for comparing two small masses orbiting the same large one. Most importantly, this is a descriptive equation only, giving no information as to the cause of the equality.
+
+Note again that while, for historical reasons, Kepler’s laws are stated for planets orbiting the Sun, they are actually valid for all bodies satisfying the two previously stated conditions.
+
+# EXAMPLE 6.7
+
+# Find the Time for One Orbit of an Earth Satellite
+
+Given that the Moon orbits Earth each 27.3 d and that it is an average distance of $3 . 8 4 \times 1 0 ^ { 8 }$ from the center of Earth, calculate the period of an artificial satellite orbiting at an average altitude of $1 5 0 0 { \mathsf { k m } }$ above Earth’s surface.
+
+# Strategy
+
+The period, or time for one orbit, is related to the radius of the orbit by Kepler’s third law, given in mathematical form in ${ \frac { { T _ { 1 } } ^ { 2 } } { { T _ { 2 } } ^ { 2 } } } = { \frac { r _ { 1 } ^ { 3 } } { r _ { 2 } ^ { 3 } } }$ Let us use the subscript 1 for the Moon and the subscript 2 for the satellite. We are asked to find $T _ { 2 }$ . The given information tells us that the orbital radius of the Moon is $r _ { 1 } = 3 . 8 4 \times 1 0 ^ { 8 } \ \mathrm { m } ,$ , and that the period of the Moon is $T _ { 1 } = 2 7 . 3 \ : \mathrm { d }$ . The height of the artificial satellite above Earth’s surface is given, and so we must add the radius of Earth $( 6 3 8 0 \mathsf { k m } )$ to get $r _ { 2 } = ( 1 5 0 0 + 6 3 8 0 ) \mathrm { k m } = 7 8 8 0 \mathrm { k m }$ . Now all quantities are known, and so $T _ { 2 }$ can be found.
+
+# Solution
+
+Kepler’s third law is
+
+$$
+{ \frac { { T _ { 1 } } ^ { 2 } } { { T _ { 2 } } ^ { 2 } } } = { \frac { r _ { 1 } ^ { 3 } } { r _ { 2 } ^ { 3 } } } .
+$$
+
+To solve for $T _ { 2 }$ , we cross-multiply and take the square root, yielding
+
+$$
+\begin{array} { c } { { { T _ { 2 } } ^ { 2 } = { T _ { 1 } } ^ { 2 } \bigg ( \frac { r _ { 2 } } { r _ { 1 } } \bigg ) ^ { 3 } } } \\ { { { } } } \\ { { { T _ { 2 } } = T _ { 1 } \left( \frac { r _ { 2 } } { r _ { 1 } } \right) ^ { 3 / 2 } . } } \end{array}
+$$
+
+Substituting known values yields
+
+$$
+\begin{array} { r c l } { T _ { 2 } } & { = } & { 2 7 . 3 \mathrm { d } \times \frac { 2 4 . 0 \mathrm { h } } { \mathrm { d } } \times \left( \frac { 7 8 8 0 \mathrm { k m } } { 3 . 8 4 \times 1 0 ^ { 5 } \mathrm { k m } } \right) ^ { 3 / 2 } } \\ & { = } & { 1 . 9 3 \mathrm { h } . } \end{array}
+$$
+
+# Discussion
+
+This is a reasonable period for a satellite in a fairly low orbit. It is interesting that any satellite at this altitude will orbit in the same amount of time. This fact is related to the condition that the satellite’s mass is small compared with that of Earth.
+
+People immediately search for deeper meaning when broadly applicable laws, like Kepler’s, are discovered. It was Newton who took the next giant step when he proposed the law of universal gravitation. While Kepler was able to discover whatwas happening, Newton discovered that gravitational force was the cause.
+
+# Derivation of Kepler’s Third Law for Circular Orbits
+
+We shall derive Kepler’s third law, starting with Newton’s laws of motion and his universal law of gravitation. The point is to demonstrate that the force of gravity is the cause for Kepler’s laws (although we will only derive the third one).
+
+Let us consider a circular orbit of a small mass $m$ around a large mass $M$ , satisfying the two conditions stated at the beginning of this section. Gravity supplies the centripetal force to mass $m$ . Starting with Newton’s second law applied to circular motion,
+
+$$
+F _ { \mathrm { n e t } } = m a _ { \mathrm { c } } = m { \frac { v ^ { 2 } } { r } } .
+$$
+
+The net external force on mass $m$ is gravity, and so we substitute the force of gravity for $F _ { \mathrm { n e t } }$ :
+
+$$
+G { \frac { m M } { r ^ { 2 } } } = m { \frac { v ^ { 2 } } { r } } .
+$$
+
+The mass cancels, yielding
+
+$$
+G { \frac { M } { r } } = v ^ { 2 } .
+$$
+
+The fact that cancels out is another aspect of the oft-noted fact that at a given location all masses fall with the same acceleration. Here we see that at a given orbital radius $r$ , all masses orbit at the same speed. (This was implied by the result of the preceding worked example.) Now, to get at Kepler’s third law, we must get the period $T$ into the equation. By definition, period $T$ is the time for one complete orbit. Now the average speed $v$ is the circumference divided by the period—that is,
+
+$$
+v = { \frac { 2 \pi r } { T } } .
+$$
+
+Substituting this into the previous equation gives
+
+$$
+G { \frac { M } { r } } = { \frac { 4 \pi ^ { 2 } r ^ { 2 } } { T ^ { 2 } } } .
+$$
+
+Solving for $T ^ { 2 }$ yields
+
+$$
+T ^ { 2 } = \frac { 4 \pi ^ { 2 } } { G M } r ^ { 3 } .
+$$
+
+Using subscripts 1 and 2 to denote two different satellites, and taking the ratio of the last equation for satellite 1 to satellite 2 yields
+
+$$
+{ \frac { { T _ { 1 } } ^ { 2 } } { { T _ { 2 } } ^ { 2 } } } = { \frac { r _ { 1 } ^ { 3 } } { r _ { 2 } ^ { 3 } } } .
+$$
+
+This is Kepler’s third law. Note that Kepler’s third law is valid only for comparing satellites of the same parent body, because only then does the mass of the parent body $M$ cancel.
+
+Now consider what we get if we solve $\begin{array} { r } { T ^ { 2 } = \frac { 4 \pi ^ { 2 } } { G M } r ^ { 3 } } \end{array}$ for the ratio $r ^ { 3 } / T ^ { 2 }$ . We obtain a relationship that can be used to determine the mass $M$ of a parent body from the orbits of its satellites:
+
+$$
+{ \frac { r ^ { 3 } } { T ^ { 2 } } } = { \frac { G } { 4 \pi ^ { 2 } } } M .
+$$
+
+If $r$ and $T$ are known for a satellite, then the mass $M$ of the parent can be calculated. This principle has been used extensively to find the masses of heavenly bodies that have satellites. Furthermore, the ratio $r ^ { 3 } / T ^ { 2 }$ should be a constant for all satellites of the same parent body (because $r ^ { 3 } / T ^ { 2 } = G M / 4 \pi ^ { 2 } ;$ . (See Table 6.2).
+
+It is clear from Table 6.2 that the ratio of $r ^ { 3 } / T ^ { 2 }$ is constant, at least to the third digit, for all listed satellites of the Sun, and for those of Jupiter. Small variations in that ratio have two causes—uncertainties in the $r$ and $T$ data, and perturbations of the orbits due to other bodies. Interestingly, those perturbations can be—and have been—used to predict the location of new planets and moons. This is another verification of Newton’s universal law of gravitation.
+
+# Making Connections
+
+Newton’s universal law of gravitation is modified by Einstein’s general theory of relativity, as we shall see in Particle Physics. Newton’s gravity is not seriously in error—it was and still is an extremely good approximation for most situations. Einstein’s modification is most noticeable in extremely large gravitational fields, such as near black holes. However, general relativity also explains such phenomena as small but long-known deviations of the orbit of the planet Mercury from classical predictions.
+
+# The Case for Simplicity
+
+The development of the universal law of gravitation by Newton played a pivotal role in the history of ideas. While it is beyond the scope of this text to cover that history in any detail, we note some important points. The definition of planet set in 2006 by the International Astronomical Union (IAU) states that in the solar system, a planet is a celestial body that:
+
+1. is in orbit around the Sun,   
+2. has sufficient mass to assume hydrostatic equilibrium and   
+3. has cleared the neighborhood around its orbit.
+
+A non-satellite body fulfilling only the first two of the above criteria is classified as “dwarf planet.”
+
+In 2006, Pluto was demoted to a ‘dwarf planet’ after scientists revised their definition of what constitutes a “true” planet.
+
+The universal law of gravitation is a good example of a physical principle that is very broadly applicable. That single equation for the gravitational force describes all situations in which gravity acts. It gives a cause for a vast number of effects, such as the orbits of the planets and moons in the solar system. It epitomizes the underlying unity and simplicity of physics.
+
+Before the discoveries of Kepler, Copernicus, Galileo, Newton, and others, the solar system was thought to revolve around Earth as shown in Figure 6.28(a). This is called the Ptolemaic view, for the Greek philosopher who lived in the second century AD. This model is characterized by a list of facts for the motions of planets with no cause and effect explanation. There tended to be a different rule for each heavenly body and a general lack of simplicity.
+
+Figure 6.28(b) represents the modern or Copernican model. In this model, a small set of rules and a single underlying force explain not only all motions in the solar system, but all other situations involving gravity. The breadth and simplicity of the laws of physics are compelling. As our knowledge of nature has grown, the basic simplicity of its laws has become ever more evident.
+
+# Glossary
+
+angular velocity $\omega$ , the rate of change of the angle with which an object moves on a circular path   
+arc length $\Delta s$ , the distance traveled by an object along a circular path   
+banked curve the curve in a road that is sloping in a manner that helps a vehicle negotiate the curve   
+center of mass the point where the entire mass of an object can be thought to be concentrated   
+centrifugal force a fictitious force that tends to throw an object off when the object is rotating in a noninertial frame of reference   
+centripetal acceleration the acceleration of an object moving in a circle, directed toward the center   
+centripetal force any net force causing uniform circular motion   
+Coriolis force the fictitious force causing the apparent deflection of moving objects when viewed in a rotating frame of reference   
+fictitious force a force having no physical origin   
+gravitational constant, G a proportionality factor used in the equation for Newton’s universal law of gravitation; it is a universal constant—that is, it is thought to be the same everywhere in the universe   
+ideal angle the angle at which a car can turn safely on a steep curve, which is in proportion to the ideal speed   
+ideal banking the sloping of a curve in a road, where the angle of the slope allows the vehicle to negotiate the curve at a certain speed without the aid of friction between the tires and the road; the net external force on the vehicle equals the horizontal centripetal force in the absence of friction   
+ideal speed the maximum safe speed at which a vehicle can turn on a curve without the aid of friction between the tire and the road   
+microgravity an environment in which the apparent net acceleration of a body is small compared with that produced by Earth at its surface   
+Newton’s universal law of gravitation every particle in the universe attracts every other particle with a force along a line joining them; the force is directly proportional to the product of their masses and inversely proportional to the square of the distance between them   
+non-inertial frame of reference an accelerated frame of reference   
+pit a tiny indentation on the spiral track moulded into the top of the polycarbonate layer of CD   
+radians a unit of angle measurement   
+radius of curvature radius of a circular path   
+rotation angle the ratio of the arc length to the radius of curvature on a circular path:   
+ultracentrifuge a centrifuge optimized for spinning a rotor at very high speeds   
+uniform circular motion the motion of an object in a circular path at constant speed
+
+
+
+# Section Summary
+
+# 6.1 Rotation Angle and Angular Velocity
+
+• Uniform circular motion is motion in a circle at constant speed. The rotation angle $\Delta \theta$ is defined as the ratio of the arc length to the radius of curvature: $\Delta \theta = \frac { \Delta s } { r } ,$ where arc length $\Delta s$ is distance traveled along a circular path and $r$ is the radius of curvature of the circular path. The quantity $\Delta \theta$ is measured in units of radians (rad), for which $2 \pi \mathrm { r a d } = 3 6 0 ^ { \circ } = 1$ revolution.   
+The conversion between radians and degrees is $1 { \mathrm { ~ r a d } } = 5 7 . 3 ^ { \circ }$ .   
+• Angular velocity $\omega$ is the rate of change of an angle, $\omega = { \frac { \Delta \theta } { \Delta t } } ,$ where a rotation $\Delta \theta$ takes place in a time $\Delta t$ . The units of angular velocity are radians per second   
+$( \mathsf { r a d } / \mathsf { s } )$ . Linear velocity $v$ and angular velocity $\omega$ are   
+related by   
+$v = r \omega \mathrm { o r } \omega = { \frac { v } { r } } .$
+
+
+
+# 6.2 Centripetal Acceleration
+
+• Centripetal acceleration $\textstyle { a _ { \mathrm { c } } }$ is the acceleration experienced while in uniform circular motion. It always points toward the center of rotation. It is perpendicular to the linear velocity $v$ and has the magnitude $a _ { \mathrm { c } } = { \frac { v ^ { 2 } } { r } } ; a _ { \mathrm { c } } = r \omega ^ { 2 } .$   
+The unit of centripetal acceleration is $\mathrm { m } / \mathrm { s } ^ { 2 }$ .
+
+# 6.3 Centripetal Force
+
+• Centripetal force $\mathrm { F _ { c } }$ is any force causing uniform circular motion. It is a “center-seeking” force that always points toward the center of rotation. It is perpendicular to linear velocity $v$ and has
+
+magnitude   
+$F _ { \mathrm { c } } = m a _ { \mathrm { c } } ,$   
+which can also be expressed as   
+$\left. \begin{array} { c } { { F _ { \mathrm { c } } = m \frac { v ^ { 2 } } { r } } } \\ { { \mathrm { o r } } } \\ { { F _ { \mathrm { c } } = m r \omega ^ { 2 } } } \end{array} \right\}$
+
+# 6.4 Fictitious Forces and Non-inertial Frames: The Coriolis Force
+
+• Rotating and accelerated frames of reference are non-inertial.   
+• Fictitious forces, such as the Coriolis force, are needed to explain motion in such frames.
+
+# 6.5 Newton’s Universal Law of Gravitation
+
+• Newton’s universal law of gravitation: Every particle in the universe attracts every other particle with a force along a line joining them. The force is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. In equation form, this is $F = G { \frac { m M } { r ^ { 2 } } } ,$ where F is the magnitude of the gravitational force. $G$ is the gravitational constant, given by $G = 6 . 6 7 4 \times 1 0 ^ { - 1 1 } \mathrm { N } \cdot \mathrm { m } ^ { 2 } / \mathrm { k g } ^ { 2 }$ .   
+• Newton’s law of gravitation applies universally.
+
+# 6.6 Satellites and Kepler’s Laws: An Argument for Simplicity
+
+• Kepler’s laws are stated for a small mass
+
+# Conceptual Questions
+
+# 6.1 Rotation Angle and Angular Velocity
+
+1. There is an analogy between rotational and linear physical quantities. What rotational quantities are analogous to distance and velocity?
+
+# 6.2 Centripetal Acceleration
+
+2. Can centripetal acceleration change the speed of circular motion? Explain.
+
+# 6.3 Centripetal Force
+
+3. If you wish to reduce the stress (which is related to centripetal force) on high-speed tires, would you use large- or small-diameter tires? Explain.
+
+orbiting a larger mass in near-isolation. Kepler’s laws of planetary motion are then as follows:   
+Kepler’s first law
+
+The orbit of each planet about the Sun is an ellipse with the Sun at one focus.
+
+Kepler’s second law
+
+Each planet moves so that an imaginary line drawn from the Sun to the planet sweeps out equal areas in equal times.
+
+Kepler’s third law
+
+The ratio of the squares of the periods of any two planets about the Sun is equal to the ratio of the cubes of their average distances from the Sun:
+
+${ \frac { { T _ { 1 } } ^ { 2 } } { { T _ { 2 } } ^ { 2 } } } = { \frac { r _ { 1 } ^ { 3 } } { r _ { 2 } ^ { 3 } } } ,$   
+where $T$ is the period (time for one orbit) and $r$ is the average radius of the orbit.   
+The period and radius of a satellite’s orbit about a larger body $M$ are related by   
+$T ^ { 2 } = { \frac { 4 \pi ^ { 2 } } { G M } } r ^ { 3 }$   
+or   
+${ \frac { r ^ { 3 } } { T ^ { 2 } } } = { \frac { G } { 4 \pi ^ { 2 } } } M .$   
+4. Define centripetal force. Can any type of force (for example, tension, gravitational force, friction, and so on) be a centripetal force? Can any combination of forces be a centripetal force?   
+5. If centripetal force is directed toward the center, why do you feel that you are ‘thrown’ away from the center as a car goes around a curve? Explain.
+
+
+
+6. Race car drivers routinely cut corners as shown in Figure 6.29. Explain how this allows the curve to be taken at the greatest speed.
+
+8. What is the direction of the force exerted by the car on the passenger as the car goes over the top of the amusement ride pictured in Figure 6.30 under the following circumstances: (a) The car goes over the top at such a speed that the gravitational force is the only force acting? (b) The car goes over the top faster than this speed? (c) The car goes over the top slower than this speed?
+
+9. As a skater forms a circle, what force is responsible for making her turn? Use a free body diagram in your answer.
+
+10. Suppose a child is riding on a merry-go-round at a distance about halfway between its center and edge. She has a lunch box resting on wax paper, so that there is very little friction between it and the merry-goround. Which path shown in Figure 6.31 will the lunch box take when she lets go? The lunch box leaves a trail in the dust on the merry-go-round. Is that trail straight, curved to the left, or curved to the right? Explain your answer.
+
+7. A number of amusement parks have rides that make vertical loops like the one shown in Figure 6.30. For safety, the cars are attached to the rails in such a way that they cannot fall off. If the car goes over the top at just the right speed, gravity alone will supply the centripetal force. What other force acts and what is its direction if:
+
+(a) The car goes over the top at faster than this speed? (b)The car goes over the top at slower than this speed?
+
+# Merry-go-round'srotating frameofreference
+
+11. Do you feel yourself thrown to either side when you negotiate a curve that is ideally banked for your car’s speed? What is the direction of the force exerted on you by the car seat?
+
+12. Suppose a mass is moving in a circular path on a frictionless table as shown in figure. In the Earth’s frame of reference, there is no centrifugal force pulling the mass away from the centre of rotation, yet there is a very real force stretching the string attaching the mass to the nail. Using concepts related to centripetal force and Newton’s third law, explain what force stretches the string, identifying its physical origin.
+
+# 6.4 Fictitious Forces and Non-inertial Frames: The Coriolis Force
+
+13. When a toilet is flushed or a sink is drained, the water (and other material) begins to rotate about the drain on the way down. Assuming no initial rotation and a flow initially directly straight toward the drain, explain what causes the rotation and which direction it has in the northern hemisphere. (Note that this is a small effect and in most toilets the rotation is caused by directional water jets.) Would the direction of rotation reverse if water were forced up the drain?
+
+14. Is there a real force that throws water from clothes during the spin cycle of a washing machine? Explain how the water is removed.
+
+15. In one amusement park ride, riders enter a large vertical barrel and stand against the wall on its horizontal floor. The barrel is spun up and the floor drops away. Riders feel as if they are pinned to the wall by a force something like the gravitational force. This is a fictitious force sensed and used by the riders to explain events in the rotating frame of reference of the barrel. Explain in an inertial frame of reference (Earth is nearly one) what pins the riders to the wall, and identify all of the real forces acting on them.   
+16. Action at a distance, such as is the case for gravity, was once thought to be illogical and therefore untrue. What is the ultimate determinant of the truth in physics, and why was this action ultimately accepted?   
+17. Two friends are having a conversation. Anna says a satellite in orbit is in freefall because the satellite keeps falling toward Earth. Tom says a satellite in orbit is not in freefall because the acceleration due to gravity is not $9 . 8 0 \mathrm { m } / \mathrm { s } ^ { 2 }$ . Who do you agree with and why?   
+18. A non-rotating frame of reference placed at the center of the Sun is very nearly an inertial one. Why is it not exactly an inertial frame?
+
+# 6.5 Newton’s Universal Law of Gravitation
+
+19. Action at a distance, such as is the case for gravity, was once thought to be illogical and therefore untrue. What is the ultimate determinant of the truth in physics, and why was this action ultimately accepted?   
+20. Two friends are having a conversation. Anna says a satellite in orbit is in freefall because the satellite keeps falling toward Earth. Tom says a satellite in orbit is not in freefall because the acceleration due to gravity is not $9 . 8 0 \mathrm { m } / \mathrm { s } ^ { 2 }$ . Who do you agree with and why?   
+21. Draw a free body diagram for a satellite in an elliptical orbit showing why its speed increases as it approaches its parent body and decreases as it moves away.   
+22. Newton’s laws of motion and gravity were among the first to convincingly demonstrate the underlying simplicity and unity in nature. Many other examples have since been discovered, and we now expect to find such underlying order in complex situations. Is there proof that such order will always be found in new explorations?
+
+# 6.6 Satellites and Kepler’s Laws: An Argument for Simplicity
+
+23. In what frame(s) of reference are Kepler’s laws valid? Are Kepler’s laws purely descriptive, or do they contain causal information?
+
+# Problems & Exercises
+
+# 6.1 Rotation Angle and Angular Velocity
+
+1. Semi-trailer trucks have an odometer on one hub of a trailer wheel. The hub is weighted so that it does not rotate, but it contains gears to count the number of wheel revolutions—it then calculates the distance traveled. If the wheel has a $\mathtt { 1 . 1 5 m }$ diameter and goes through 200,000 rotations, how many kilometers should the odometer read?   
+2. Microwave ovens rotate at a rate of about 6 rev/ min. What is this in revolutions per second? What is the angular velocity in radians per second?   
+3. An automobile with $0 . 2 6 0 \mathrm { m }$ radius tires travels $8 0 , 0 0 0 \mathrm { k m }$ before wearing them out. How many revolutions do the tires make, neglecting any backing up and any change in radius due to wear?   
+4. (a) What is the period of rotation of Earth in seconds? (b) What is the angular velocity of Earth? (c) Given that Earth has a radius of $6 . 4 \times 1 0 ^ { 6 }$ at its equator, what is the linear velocity at Earth’s surface?   
+5. A baseball pitcher brings his arm forward during a pitch, rotating the forearm about the elbow. If the velocity of the ball in the pitcher’s hand is $3 5 . 0 ~ \mathsf { m } / \mathsf { s }$ and the ball is $0 . 3 0 0 \mathrm { ~ m ~ }$ from the elbow joint, what is the angular velocity of the forearm?   
+6. In lacrosse, a ball is thrown from a net on the end of a stick by rotating the stick and forearm about the elbow. If the angular velocity of the ball about the elbow joint is $3 0 . 0 \ r { \mathsf { a d / s } }$ and the ball is $\mathtt { 1 . 3 0 m }$ from the elbow joint, what is the velocity of the ball?   
+7. A truck with 0.420-m-radius tires travels at $3 2 . 0 \mathrm { m } /$ s. What is the angular velocity of the rotating tires in radians per second? What is this in rev/min?   
+8. Integrated Concepts When kicking a football, the kicker rotates his leg about the hip joint. (a) If the velocity of the tip of the kicker’s shoe is $3 5 . 0 \mathsf { m } / \mathsf { s }$ and the hip joint is $\mathtt { 1 . 0 5 m }$ from the tip of the shoe, what is the shoe tip’s angular velocity? (b) The shoe is in contact with the initially stationary $0 . 5 0 0 \mathsf { k g }$ football for $2 0 . 0 \mathsf { m s }$ . What average force is exerted on the football to give it a velocity of $2 0 . 0 \ : \mathrm { m } / \mathsf { s } ?$ (c) Find the maximum range of the football, neglecting air resistance.
+
+9. Construct Your Own Problem Consider an amusement park ride in which participants are rotated about a vertical axis in a cylinder with vertical walls. Once the angular velocity reaches its full value, the floor drops away and friction between the walls and the riders prevents them from sliding down. Construct a problem in which you calculate the necessary angular velocity that assures the riders will not slide down the wall. Include a free body diagram of a single rider. Among the variables to consider are the radius of the cylinder and the coefficients of friction between the riders’ clothing and the wall.
+
+# 6.2 Centripetal Acceleration
+
+10. A fairground ride spins its occupants inside a flying saucer-shaped container. If the horizontal circular path the riders follow has an $8 . 0 0 \mathrm { ~ m ~ }$ radius, at how many revolutions per minute will the riders be subjected to a centripetal acceleration whose magnitude is 1.50 times that due to gravity?   
+11. A runner taking part in the $2 0 0 \mathrm { m }$ dash must run around the end of a track that has a circular arc with a radius of curvature of $3 0 ~ \mathsf { m }$ . If the runner completes the $2 0 0 \mathrm { m }$ dash in $2 3 . 2 \mathsf { s }$ and runs at constant speed throughout the race, what is the magnitude of their centripetal acceleration as they run the curved portion of the track?   
+12. Taking the age of Earth to be about $4 \times 1 0 ^ { 9 }$ years and assuming its orbital radius of $1 . 5 \times 1 0 ^ { 1 1 }$ m has not changed and is circular, calculate the approximate total distance Earth has traveled since its birth (in a frame of reference stationary with respect to the Sun).   
+13. The propeller of a World War II fighter plane is $2 . 3 0 \mathsf { m }$ in diameter. (a) What is its angular velocity in radians per second if it spins at 1200 rev/min? (b) What is the linear speed of its tip at this   
+angular velocity if the plane is stationary on the tarmac?   
+(c) What is the centripetal acceleration of the propeller tip under these conditions? Calculate it in meters per second squared and convert to multiples of $g$ .
+
+
+
+14. An ordinary workshop grindstone has a radius of 7.50 cm and rotates at 6500 rev/min. (a) Calculate the magnitude of the centripetal acceleration at its edge in meters per second squared and convert it to multiples of $g$ . (b) What is the linear speed of a point on its edge?
+
+15. Helicopter blades withstand tremendous stresses. In addition to supporting the weight of a helicopter, they are spun at rapid rates and experience large centripetal accelerations, especially at the tip. (a) Calculate the magnitude of the centripetal acceleration at the tip of a $4 . 0 0 \mathrm { m }$ long helicopter blade that rotates at $3 0 0 \mathrm { \ r e v / \mathsf { m i n } }$ . (b) Compare the linear speed of the tip with the speed of sound (taken to be $3 4 0 ~ \mathsf { m } / \mathsf { s } )$ .
+
+16. Olympic ice skaters are able to spin at about 5 rev/ s. (a) What is their angular velocity in radians per second? (b) What is the centripetal acceleration of the skater’s nose if it is $0 . 1 2 0 \mathrm { m }$ from the axis of rotation? (c) An exceptional skater named Dick Button was able to spin much faster in the 1950s than anyone since—at about 9 rev/s. What was the centripetal acceleration of the tip of his nose, assuming it is at 0.120 m radius? (d) Comment on the magnitudes of the accelerations found. It is reputed that Button ruptured small blood vessels during his spins.   
+17. What percentage of the acceleration at Earth’s surface is the acceleration due to gravity at the position of a satellite located $3 0 0 ~ \mathsf { k m }$ above Earth?   
+18. Verify that the linear speed of an ultracentrifuge is about $0 . 5 0 \mathrm { k m / s }$ , and Earth in its orbit is about 30 $k \mathsf { m } / \mathsf { s }$ by calculating: (a) The linear speed of a point on an ultracentrifuge $0 . 1 0 0 \mathsf { m }$ from its center, rotating at 50,000 rev/min. (b) The linear speed of Earth in its orbit about the Sun (use data from the text on the radius of Earth’s orbit and approximate it as being circular).
+
+19. A rotating space station is said to create “artificial gravity”—a loosely-defined term used for an acceleration that would be crudely similar to gravity. The outer wall of the rotating space station would become a floor for the astronauts, and centripetal acceleration supplied by the floor would allow astronauts to exercise and maintain muscle and bone strength more naturally than in non-rotating space environments. If the space station is $2 0 0 \mathrm { m }$ in diameter, what angular velocity would produce an “artificial gravity” of $9 . 8 0 \mathrm { m } / \mathrm { s } ^ { 2 }$ at the rim?
+
+20. At takeoff, a commercial jet has a $6 0 . 0 ~ \mathsf { m } / \mathsf { s }$ speed. Its tires have a diameter of $0 . 8 5 0 \mathsf { m }$ . (a) At how many rev/min are the tires rotating? (b) What is the centripetal acceleration at the edge of the tire? (c) With what force must a determined $1 . 0 0 \times 1 0 ^ { - 1 5 } \ ]$ bacterium cling to the rim? (d) Take the ratio of this force to the bacterium’s weight.
+
+21. Integrated Concepts Riders in an amusement park ride shaped like a Viking ship hung from a large pivot are rotated back and forth like a rigid pendulum. Sometime near the middle of the ride, the ship is momentarily motionless at the top of its circular arc. The ship then swings down under the influence of gravity. The speed at the bottom of the arc is $2 3 . 4 ~ \mathrm { m } / \mathsf { s }$ . (a) What is the centripetal acceleration at the bottom of the arc? (b) Draw a free body diagram of the forces acting on a rider at the bottom of the arc. (c) Find the force exerted by the ride on a $6 0 . 0 \mathsf { k g }$ rider and compare it to her weight. (d) Discuss whether the answer seems reasonable.
+
+22. Unreasonable Results A mother pushes her child on a swing so that his speed is $9 . 0 0 ~ \mathrm { m } / \mathsf { s }$ at the lowest point of his path. The swing is suspended $2 . 0 0 \mathrm { m }$ above the child’s center of mass. (a) What is the magnitude of the centripetal acceleration of the child at the low point? (b) What is the magnitude of the force the child exerts on the seat if his mass is $\boldsymbol { 1 8 . 0 \mathsf { k g ? } }$ (c) What is unreasonable about these results? (d) Which premises are unreasonable or inconsistent?
+
+# 6.3 Centripetal Force
+
+23. (a) $\mathsf { A } 2 2 . 0 \mathsf { k g }$ child is riding a playground merry-goround that is rotating at 40.0 rev/min. What centripetal force must she exert to stay on if she is $\mathtt { 1 . 2 5 m }$ from its center? (b) What centripetal force does she need to stay on an amusement park merry-go-round that rotates at 3.00 rev/min if she is $8 . 0 0 \mathrm { ~ m ~ }$ from its center? (c) Compare each force with her weight.   
+24. Calculate the centripetal force on the end of a 100 m (radius) wind turbine blade that is rotating at $0 . 5 \mathsf { r e v } / \mathsf { s }$ . Assume the mass is $4 \kappa \varrho$ .   
+25. What is the ideal banking angle for a gentle turn of $1 . 2 0 \mathsf { k m }$ radius on a highway with a $1 0 5 \mathrm { k m / h }$ speed limit (about $6 5 \mathrm { { m i / h } ) }$ , assuming everyone travels at the limit?   
+26. What is the ideal speed to take a ${ \displaystyle 1 0 0 ~ } \mathsf { m }$ radius curve banked at a $2 0 . 0 ^ { \circ }$ angle?   
+27. (a) What is the radius of a bobsled turn banked at $7 5 . 0 ^ { \circ }$ and taken at $3 0 . 0 \mathsf { m } / \mathsf { s }$ , assuming it is ideally banked? (b) Calculate the centripetal acceleration. (c) Does this acceleration seem large to you?
+
+28. Part of riding a bicycle involves leaning at the correct angle when making a turn, as seen in Figure 6.33. To be stable, the force exerted by the ground must be on a line going through the center of gravity. The force on the bicycle wheel can be resolved into two perpendicular components—friction parallel to the road (this must supply the centripetal force), and the vertical normal force (which must equal the system’s weight). (a) Show that $\theta$ (as defined in the figure) is related to the speed $v$ and radius of curvature $r$ of the turn in the same way as for an ideally banked roadway—that is, $\theta = \tan ^ { - 1 } v ^ { 2 } / r g$ (b) Calculate $\theta$ for a $1 2 . 0 ~ \mathsf { m } / \mathsf { s }$ turn of radius 30.0 $\mathsf { m }$ (as in a race).
+
+29. A large centrifuge, like the one shown in Figure 6.34(a), is used to expose aspiring astronauts to accelerations similar to those experienced in rocket launches and atmospheric reentries. (a) At what angular velocity is the centripetal acceleration $1 0 \ : g$ if the rider is $1 5 . 0 \mathrm { m }$ from the center of rotation? (b) The rider’s cage hangs on a pivot at the end of the arm, allowing it to swing outward during rotation as shown in Figure 6.34(b). At what angle $\theta$ below the horizontal will the cage hang when the centripetal acceleration is $1 0 \ g \ ?$ (Hint: The arm supplies centripetal force and supports the weight of the cage. Draw a free body diagram of the forces to see what the angle $\theta$ should be.)
+
+0. Integrated Concepts
+
+If a car takes a banked curve at less than the ideal speed, friction is needed to keep it from sliding toward the inside of the curve (a real problem on icy mountain roads). (a) Calculate the ideal speed to take a $1 0 0 \mathrm { m }$ radius curve banked at $1 5 . 0 ^ { \circ }$ . (b) What is the minimum coefficient of friction needed for a frightened driver to take the same curve at $2 0 . 0 \mathsf { k m / h? }$
+
+31. Modern roller coasters have vertical loops like the one shown in Figure 6.35. The radius of curvature is smaller at the top than on the sides so that the downward centripetal acceleration at the top will be greater than the acceleration due to gravity, keeping the passengers pressed firmly into their seats. What is the speed of the roller coaster at the top of the loop if the radius of curvature there is ${ \displaystyle 1 5 . 0 ~ } \mathsf { m }$ and the downward acceleration of the car is $\displaystyle \phantom { \frac { 1 . 5 0 } { 0 . 5 0 } }$
+
+32. Unreasonable Results (a) Calculate the minimum coefficient of friction needed for a car to negotiate an unbanked $5 0 . 0 \mathrm { m }$ radius curve at $3 0 . 0 ~ \mathrm { m / s }$ . (b) What is unreasonable about the result? (c) Which premises are unreasonable or inconsistent?
+
+# 6.5 Newton’s Universal Law of Gravitation
+
+33. (a) Calculate Earth’s mass given the acceleration due to gravity at the North Pole is $9 . 8 3 0 \mathrm { m } / \mathrm { s } ^ { 2 }$ and the radius of the Earth is $6 3 7 1 \mathsf { k m }$ from center to pole. (b) Compare this with the accepted value of $5 . 9 7 9 \times 1 0 ^ { 2 4 } \mathrm { k g } .$ .
+
+34. (a) Calculate the magnitude of the acceleration due to gravity on the surface of Earth due to the Moon. (b) Calculate the magnitude of the acceleration due to gravity at Earth due to the Sun. (c) Take the ratio of the Moon’s acceleration to the Sun’s and comment on why the tides are predominantly due to the Moon in spite of this number.
+
+35. (a) What is the acceleration due to gravity on the surface of the Moon? (b) On the surface of Mars? The mass of Mars is $6 . 4 1 8 \times 1 0 ^ { 2 3 } ~ \mathrm { k g }$ and its radius is $3 . 3 8 \times 1 0 ^ { 6 } \mathrm { ~ m ~ }$ .
+
+36. (a) Calculate the acceleration due to gravity on the surface of the Sun. (b) By what factor would your weight increase if you could stand on the Sun? (Never mind that you cannot.)
+
+37. The Moon and Earth rotate about their common center of mass, which is located about $4 7 0 0 ~ \mathsf { k m }$ from the center of Earth. (This is $1 6 9 0 \mathsf { k m }$ below the surface.) (a) Calculate the magnitude of the acceleration due to the Moon’s gravity at that point. (b) Calculate the magnitude of the centripetal acceleration of the center of Earth as it rotates about that point once each lunar month (about 27.3 d) and compare it with the acceleration found in part (a). Comment on whether or not they are equal and why they should or should not be.
+
+38. Solve part (b) of Example 6.6 using $a _ { c } = v ^ { 2 } / r$ .
+
+39. (a) Calculate the magnitude of the gravitational force exerted on a $4 . 2 0 \mathsf { k g }$ baby by a $1 0 0 \mathsf { k g }$ father $0 . 2 0 0 \mathsf { m }$ away at birth (he is assisting, so he is close to the child). (b) Calculate the magnitude of the force on the baby due to Jupiter if it is at its closest distance to Earth, some $6 . 2 9 \times 1 0 ^ { 1 1 }$ away. How does the force of Jupiter on the baby compare to the force of the father on the baby? Other objects in the room and the hospital building also exert similar gravitational forces. (Of course, there could be an unknown force acting, but scientists first need to be convinced that there is even an effect, much less that an unknown force causes it.)
+
+40. The existence of the dwarf planet Pluto was proposed based on irregularities in Neptune’s orbit. Pluto was subsequently discovered near its predicted position. But it now appears that the discovery was fortuitous, because Pluto is small and the irregularities in Neptune’s orbit were not well known. To illustrate that Pluto has a minor effect on the orbit of Neptune compared with the closest planet to Neptune: (a) Calculate the acceleration due to gravity at Neptune due to Pluto when they are $4 . 5 0 \times 1 0 ^ { 1 2 }$ apart, as they are at present. The mass of Pluto is $1 . 4 \times 1 0 ^ { 2 2 } \mathrm { k g }$ . (b) Calculate the acceleration due to gravity at Neptune due to Uranus, presently about $2 . 5 0 \times 1 0 ^ { 1 2 }$ apart, and compare it with that due to Pluto. The mass of Uranus is $8 . 6 2 \times 1 0 ^ { 2 5 } ~ \mathrm { k g }$ .
+
+41. (a) The Sun orbits the Milky Way galaxy once each $2 . 6 0 \mathrm { ~ x ~ } 1 0 ^ { 8 }$ , with a roughly circular orbit averaging $3 . 0 0 \mathrm { ~ x ~ } 1 0 ^ { 4 }$ light years in radius. (A light year is the distance traveled by light in $\mathsf { 1 } \mathsf { y } .$ ) Calculate the centripetal acceleration of the Sun in its galactic orbit. Does your result support the contention that a nearly inertial frame of reference can be located at the Sun? (b) Calculate the average speed of the Sun in its galactic orbit. Does the answer surprise you?
+
+# 42. Unreasonable Result
+
+A mountain $1 0 . 0 \mathsf { k m }$ from a person exerts a   
+gravitational force on him equal to $2 . 0 0 \%$ of his weight.   
+(a) Calculate the mass of the mountain.   
+(b) Compare the mountain’s mass with that of Earth.   
+(c) What is unreasonable about these results? (d) Which premises are unreasonable or   
+inconsistent? (Note that accurate gravitational measurements can easily detect the effect of nearby mountains and variations in local geology.)
+
+# 6.6 Satellites and Kepler’s Laws: An Argument for Simplicity
+
+43. A geosynchronous Earth satellite is one that has an orbital period of precisely 1 day. Such orbits are useful for communication and weather observation because the satellite remains above the same point on Earth (provided it orbits in the equatorial plane in the same direction as Earth’s rotation). Calculate the radius of such an orbit based on the data for the moon in Table 6.2.
+
+44. Calculate the mass of the Sun based on data for Earth’s orbit and compare the value obtained with the Sun’s actual mass.   
+45. Find the mass of Jupiter based on data for the orbit of one of its moons, and compare your result with its actual mass.   
+46. Find the ratio of the mass of Jupiter to that of Earth based on data in Table 6.2.   
+47. Astronomical observations of our Milky Way galaxy indicate that it has a mass of about $8 . 0 \times 1 0 ^ { 1 1 }$ solar masses. A star orbiting on the galaxy’s periphery is about $6 . 0 \times 1 0 ^ { 4 }$ light years from its center. (a) What should the orbital period of that star be? (b) If its period is $6 . 0 \times 1 0 ^ { 7 }$ years instead, what is the mass of the galaxy? Such calculations are used to imply the existence of “dark matter” in the universe and have indicated, for example, the existence of very massive black holes at the centers of some galaxies.
+
+48. Integrated Concepts Space debris left from old satellites and their launchers is becoming a hazard to other satellites. (a) Calculate the speed of a satellite in an orbit $9 0 0 \mathrm { k m }$ above Earth’s surface. (b) Suppose a loose rivet is in an orbit of the same radius that intersects the satellite’s orbit at an angle of $9 0 ^ { \circ }$ relative to Earth. What is the velocity of the rivet relative to the satellite just before striking it? (c) Given the rivet is $3 . 0 0 ~ \mathsf { m m }$ in size, how long will its collision with the satellite last? (d) If its mass is $0 . 5 0 0 { \mathfrak { g } } ,$ what is the average force it exerts on the satellite? (e) How much energy in joules is generated by the collision? (The satellite’s velocity does not change appreciably, because its mass is much greater than the rivet’s.)
+
+49. Unreasonable Results
+
+(a) Based on Kepler’s laws and information on the orbital characteristics of the Moon, calculate the orbital radius for an Earth satellite having a period of $1 . 0 0 \mathfrak { h }$ . (b) What is unreasonable about this result? (c) What is unreasonable or inconsistent about the premise of a $1 . 0 0 \mathsf { h }$ orbit?
+
+50. Construct Your Own Problem On February 14, 2000, the NEAR spacecraft was successfully inserted into orbit around Eros, becoming the first artificial satellite of an asteroid. Construct a problem in which you determine the orbital speed for a satellite near Eros. You will need to find the mass of the asteroid and consider such things as a safe distance for the orbit. Although Eros is not spherical, calculate the acceleration due to gravity on its surface at a point an average distance from its center of mass. Your instructor may also wish to have you calculate the escape velocity from this point on Eros.   
+51. Critical Thinking A car travels around a loop with negligible friction at a constant speed and never loses contact with the loop. The top of the loop is labeled A and the bottom of the loop is labeled B. (a) At what point would the normal force be greatest? Briefly explain your reasoning. (b) Based on experimental data, an equation that fits the data is suggested for the normal force, $F N$ , which may not be correct: $F _ { N } = K r ^ { 1 / 2 }$ , where $\boldsymbol { K }$ is a constant with appropriate units and $r$ is the radius of the loop. Is this equation consistent with your answer from part a? Explain why or why not. Does this equation make sense? Explain why or why not. (c) Now the car travels around loops of various radii and the speed at which the car barely makes it around the loop is measured. Graph that speed vs. the radius of the loop.

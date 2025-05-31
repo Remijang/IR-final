@@ -1,0 +1,111 @@
+# 7.7 Power
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Calculate power by calculating changes in energy over time.   
+• Examine power consumption and calculations of the cost of energy consumed.
+
+# What is Power?
+
+Power—the word conjures up many images: a professional football player muscling aside his opponent, a dragster roaring away from the starting line, a volcano blowing its lava into the atmosphere, or a rocket blasting off, as in Figure 7.20.
+
+These images of power have in common the rapid performance of work, consistent with the scientific definition of power $( P )$ as the rate at which work is done.
+
+# Power
+
+Power is the rate at which work is done.
+
+$$
+P = { \frac { W } { t } }
+$$
+
+The SI unit for power is the watt ( ), where 1 watt equals 1 joule/second $\mathrm { { 1 \ W = 1 \ : J / s ) } }$ ).
+
+Because work is energy transfer, power is also the rate at which energy is expended. A 60-W light bulb, for example, expends 60 J of energy per second. Great power means a large amount of work or energy developed in a short time. For example, when a powerful car accelerates rapidly, it does a large amount of work and consumes a large amount of fuel in a short time.
+
+# Calculating Power from Energy
+
+# EXAMPLE 7.11
+
+# Calculating the Power to Climb Stairs
+
+What is the power output for a $6 0 . 0 \mathrm { - } \mathsf { k g }$ woman who runs up a $3 . 0 0 \mathrm { ~ m ~ }$ high flight of stairs in 3.50 s, starting from rest but having a final speed of $2 . 0 0 ~ \mathsf { m } / \mathsf { s } ?$ (See Figure 7.21.)
+
+# Strategy and Concept
+
+The work going into mechanical energy is $W { = } \mathrm { K E } + \mathrm { P E }$ . At the bottom of the stairs, we take both and $\mathrm { P E _ { g } }$ as initially zero; thus, $\begin{array} { r } { W = \mathrm { K E _ { f } } + \mathrm { P E _ { g } } = \frac { 1 } { 2 } m { v _ { \mathrm { f } } } ^ { 2 } + m g h } \end{array}$ , where $h$ is the vertical height of the stairs. Because all terms are given, we can calculate $W$ and then divide it by time to get power.
+
+# Solution
+
+Substituting the expression for $W$ into the definition of power given in the previous equation, $P = W / t$ yields
+
+$$
+P = { \frac { W } { t } } = { \frac { { \frac { 1 } { 2 } } m v _ { \mathrm { f } } ^ { 2 } + m g h } { t } } .
+$$
+
+Entering known values yields
+
+$$
+{ \begin{array} { l l l } { P } & { = } & { { \frac { 0 . 5 ( 6 0 . 0 \ \mathrm { k g } ) ( 2 . 0 0 \ \mathrm { m / s } ) ^ { 2 } + ( 6 0 . 0 \ \mathrm { k g } ) { \left( 9 . 8 0 \ \mathrm { m / s } ^ { 2 } \right) } ( 3 . 0 0 \ \mathrm { m } ) } { 3 . 5 0 \ \mathrm { s } } } } \\ & { = } & { { \frac { 1 2 0 \ J + 1 7 6 4 \ J } { 3 . 5 0 \ \mathrm { s } } } } \\ & { = } & { 5 3 8 \ \mathrm { W } . } \end{array} }
+$$
+
+# Discussion
+
+The woman does 1764 J of work to move up the stairs compared with only 120 J to increase her kinetic energy;   
+thus, most of her power output is required for climbing rather than accelerating.
+
+It is impressive that this woman’s useful power output is slightly less than 1 horsepower $\mathrm { 1 h p = 7 4 6 W }$ ! People can generate more than a horsepower with their leg muscles for short periods of time by rapidly converting available blood sugar and oxygen into work output. (A horse can put out 1 hp for hours on end.) Once oxygen is depleted, power output decreases and the person begins to breathe rapidly to obtain oxygen to metabolize more food—this is known as the aerobicstage of exercise. If the woman climbed the stairs slowly, then her power output would be much less, although the amount of work done would be the same.
+
+# Making Connections: Take-Home Investigation—Measure Your Power Rating
+
+Determine your own power rating by measuring the time it takes you to climb a flight of stairs. We will ignore the gain in kinetic energy, as the above example showed that it was a small portion of the energy gain. Don’t expect
+
+that your output will be more than about 0.5 hp.
+
+# Examples of Power
+
+Examples of power are limited only by the imagination, because there are as many types as there are forms of work and energy. (See Table 7.3 for some examples.) Sunlight reaching Earth’s surface carries a maximum power of about 1.3 kilowatts per square meter $( \mathrm { k W } / \mathrm { m } ^ { 2 } )$ A tiny fraction of this is retained by Earth over the long term. Our consumption rate of fossil fuels is far greater than the rate at which they are stored, so it is inevitable that they will be depleted. Power implies that energy is transferred, perhaps changing form. It is never possible to change one form completely into another without losing some of it as thermal energy. For example, a 60-W incandescent bulb converts only 5 W of electrical power to light, with 55 W dissipating into thermal energy. Furthermore, the typical electric power plant converts only 35 to $40 \%$ of its fuel into electricity. The remainder becomes a huge amount of thermal energy that must be dispersed as heat transfer, as rapidly as it is created. A coal-fired power plant may produce 1000 megawatts; 1 megawatt (MW) is $1 0 ^ { 6 }$ of electric power. But the power plant consumes chemical energy at a rate of about 2500 MW, creating heat transfer to the surroundings at a rate of 1500 MW. (See Figure 7.22.)
+
+# Power and Energy Consumption
+
+We usually have to pay for the energy we use. It is interesting and easy to estimate the cost of energy for an electrical appliance if its power consumption rate and time used are known. The higher the power consumption rate and the longer the appliance is used, the greater the cost of that appliance. The power consumption rate is $P = W / t = E / t$ , where $E$ is the energy supplied by the electricity company. So the energy consumed over a time $t$ is
+
+$$
+E = P t .
+$$
+
+Electricity bills state the energy used in units of kilowatt-hours $( \mathrm { k W \cdot h } )$ which is the product of power in kilowatts and time in hours. This unit is convenient because electrical power consumption at the kilowatt level for hours at a time is typical.
+
+# EXAMPLE 7.12
+
+# Calculating Energy Costs
+
+What is the cost of running a 0.200-kW computer $6 . 0 0 \mathrm { ~ h ~ }$ per day for 30.0 d if the cost of electricity is $\$ 0.120$ per $\mathbf { k W } \cdot \mathbf { h ? }$
+
+# Strategy
+
+Cost is based on energy consumed; thus, we must find $E$ from $E = P t$ and then calculate the cost. Because electrical energy is expressed in $\mathrm { k W \cdot h }$ , at the start of a problem such as this it is convenient to convert the units into and hours.
+
+# Solution
+
+The energy consumed in $\mathrm { k W \cdot h }$ is
+
+$$
+\begin{array} { r c l } { { E } } & { { = } } & { { P t = \displaystyle ( 0 . 2 0 0 \mathrm { k W } ) ( 6 . 0 0 \mathrm { h / d } ) ( 3 0 . 0 \mathrm { d } ) } } \\ { { } } & { { = } } & { { 3 6 . 0 \mathrm { k W } \cdot \mathrm { h } , } } \end{array}
+$$
+
+and the cost is simply given by
+
+$$
+\mathrm { c o s t } = ( 3 6 . 0 \mathrm { k W } \cdot \mathrm { h } ) ( \ S 0 . 1 2 0 \mathrm { p e r } \mathrm { k W } \cdot \mathrm { h } ) = \ S 4 . 3 2
+$$
+
+# Discussion
+
+The cost of using the computer in this example is neither exorbitant nor negligible. It is clear that the cost is a combination of power and time. When both are high, such as for an air conditioner in the summer, the cost is high.
+
+The motivation to save energy has become more compelling with its ever-increasing price. Armed with the knowledge that energy consumed is the product of power and time, you can estimate costs for yourself and make the necessary value judgments about where to save energy. Either power or time must be reduced. It is most costeffective to limit the use of high-power devices that normally operate for long periods of time, such as water heaters and air conditioners. This would not include relatively high power devices like toasters, because they are on only a few minutes per day. It would also not include electric clocks, in spite of their 24-hour-per-day usage, because they are very low power devices. It is sometimes possible to use devices that have greater efficiencies—that is, devices that consume less power to accomplish the same task. One example is the compact fluorescent light bulb, which produces over four times more light per watt of power consumed than its incandescent cousin.
+
+Modern civilization depends on energy, but current levels of energy consumption and production are not sustainable. The likelihood of a link between global warming and fossil fuel use (with its concomitant production of carbon dioxide), has made reduction in energy use as well as a shift to non-fossil fuels of the utmost importance. Even though energy in an isolated system is a conserved quantity, the final result of most energy transformations is waste heat transfer to the environment, which is no longer useful for doing work. As we will discuss in more detail in Thermodynamics, the potential for energy to produce useful work has been “degraded” in the energy transformation.

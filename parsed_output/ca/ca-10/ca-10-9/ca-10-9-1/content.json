@@ -1,0 +1,119 @@
+[
+    {
+        "type": "text",
+        "text": "10.9.1 The Performance Equation ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Let us now discuss the performance of our pipelined processor. We need to first define the meaning of \u201cperformance\u201d in the context of processors. Most of the time, when we look up the specifications of a laptop or smartphone, we are inundated with a lot of terms such as the clock frequency, RAM, and hard disk size. Sadly, none of these terms are directly indicative of the performance of a processor. The reason that the performance is never explicitly mentioned on the label of a computer, is because the term \u201cperformance\u201d is rather vague. The term performance of a processor is always with respect to a given program or set of programs. This is because processors perform differently with respect to different programs. ",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Given a program, $P$ , let us try to quantify the performance of a given processor. We say that processor $A$ performs better than processor $B$ , if it takes less time for $P$ to execute $P$ on $A$ than on $B$ . Thus, quantifying performance with respect to a given program is very simple. We measure the time it takes to run the program, and then compute its reciprocal. This number can be interpreted to be proportional to the performance of the processor with respect to the program. ",
+        "page_idx": 465
+    },
+    {
+        "type": "image",
+        "img_path": "images/126bffa1d2d7ab6419fffc74b6dbb87d4fca5c62338f66ea94e87eadb6237f6e.jpg",
+        "img_caption": [
+            "Figure 10.32: SimpleRisc assembly code for saving the context "
+        ],
+        "img_footnote": [],
+        "page_idx": 466
+    },
+    {
+        "type": "image",
+        "img_path": "images/10d2002d2c1481568b8f39e5f9d3c5743049eb5744c0e04b0c85a53dc8e6df11.jpg",
+        "img_caption": [
+            "Figure 10.33: SimpleRisc assembly code for restoring the context "
+        ],
+        "img_footnote": [],
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "Let us first compute the time $( \\tau )$ it takes to run program $P$ . ",
+        "page_idx": 467
+    },
+    {
+        "type": "image",
+        "img_path": "images/ff7feba45a908635f86ba3c29ddaeb8f5fc9bdc7702c0d503c6263dbeba71285.jpg",
+        "img_caption": [
+            "Figure 10.34: Pipelined data path with support for exceptions "
+        ],
+        "img_footnote": [],
+        "page_idx": 468
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\tau = \\frac { \\# s e c o n d s } { \\# c o n d s } } \\\\ & { \\quad = \\frac { \\# s e c o n d s } { \\# c y c l e s } \\times \\frac { \\# c y c l e s } { \\# i n s t r u c t i o n s } \\times ( \\# i n s t r u c t i o n s ) } \\\\ & { \\quad = \\underbrace { \\# s e c o n d s } _ { \\# c y c l e s } \\times \\underbrace { \\# c y c l e s } _ { \\# i n s t r u c t i o n s } \\times ( \\# i n s t r u c t i o n s ) } \\\\ & { \\quad = \\underbrace { C P I \\times \\# i n s t s } _ { f } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 468
+    },
+    {
+        "type": "text",
+        "text": "The number of cycles per second is the processor\u2019s clock frequency $( f )$ . The average number of cycles per instruction is known as the $C P I$ , and its inverse (number of instructions per cycle) is known as the $I P C$ . The last term is the number of instructions (abbreviated to #insts). Note that this is the number of dynamic instructions, or, alternatively, the number of instructions that the processor actually executes. Note that it is NOT the number of instructions in the program\u2019s executable file. ",
+        "page_idx": 468
+    },
+    {
+        "type": "text",
+        "text": "Definition 85 ",
+        "text_level": 1,
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "Static Instruction The binary or executable of a program contains a list of instructions. Each such instruction is a static instruction. ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "Dynamic Instruction A dynamic instruction is the instance of a static instruction, which is created by the processor when an instruction enters the pipeline. ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "Definition 86 ",
+        "text_level": 1,
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "CPI Cycles per instruction ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "IPC Instructions per cycle ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "We can now define the performance $P$ as a quantity that is inversely proportional to the time, $\\tau$ . Equation 10.3 is known as the Performance Equation. ",
+        "page_idx": 469
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP \\propto \\frac { I P C \\times f } { \\# i n s t s }\n$$",
+        "text_format": "latex",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "We can thus quickly conclude that the performance of a processor with respect to a program is proportional to the IPC, and frequency, and inversely proportional to the number of instructions. ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the performance of a single cycle processor. Its CPI is equal to 1 for all instructions. The performance is thus proportional to $f / \\# i n s t s$ . This is a rather trivial result. It says that as we increase the frequency, a single cycle processor keeps getting faster proportionally. Likewise, if we are able to reduce the number of instructions in our program by a factor of $X$ , then the performance also increases by a factor of $X$ . Let us consider the performance of a pipelined processor. The analysis is more complicated, and the insights are very profound. ",
+        "page_idx": 469
+    }
+]

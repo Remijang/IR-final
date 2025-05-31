@@ -1,0 +1,32 @@
+[
+    {
+        "type": "text",
+        "text": "7.1.5 A Basic CMOS-Based Inverter ",
+        "text_level": 1,
+        "page_idx": 270
+    },
+    {
+        "type": "text",
+        "text": "Now, let us construct some basic circuits using NMOS and a PMOS transistors. When a circuit uses both these types of transistors, we say that it uses CMOS (Combined MOS) logic. The circuit diagram of an inverter using CMOS logic is shown in Figure 7.5. In this circuit, an NMOS transistor is connected between the ground and the output, and a PMOS transistor is connected between $V _ { d d }$ and the output. The input is fed to the gates of both the transistors. ",
+        "page_idx": 270
+    },
+    {
+        "type": "image",
+        "img_path": "images/72bbb890c6be56a38bf0bf0307dd4157cfb89e8574cfaa0d3952b2e1375f0788.jpg",
+        "img_caption": [
+            "Figure 7.5: CMOS inverter "
+        ],
+        "img_footnote": [],
+        "page_idx": 271
+    },
+    {
+        "type": "text",
+        "text": "If the input is a logical 0, then the PMOS transistor is switched on, and the NMOS transistor is switched off. In this case, the output is equal to 1. Likewise, if the input is a logical 1, then the NMOS transistor is switched on and the PMOS transistor is switched off. In this case the output is a logical 0. We thus see that this simple circuit inverts the value at the input. It can thus be used to implement the NOT operation. ",
+        "page_idx": 271
+    },
+    {
+        "type": "text",
+        "text": "The benefits of CMOS technology are manifold. Note that during steady state one of the transistors is in the off state. It thus does not conduct any current. A little amount of current can still leak through the transistors or flow through the output terminal. However, this is minimal. Hence, we can conclude that the power dissipation of a CMOS inverter at steady state is vanishingly small since power is equal to current multiplied by voltage. However, some power is dissipated, when the transistor switches its input value. In this case, both the transistors are on for a small amount of time. There is some current flow from $V _ { d d }$ to ground. Nonetheless, as compared to competing technologies, the power dissipated by a CMOS inverter is significantly lower and is thus amenable for use by today\u2019s processors that have more than a billion transistors. ",
+        "page_idx": 271
+    }
+]

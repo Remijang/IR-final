@@ -1,0 +1,13 @@
+# CHAPTER 14 Acid-Base Equilibria
+
+# CHAPTER OUTLINE
+
+14.1 Brønsted-Lowry Acids and Bases   
+14.2 pH and pOH   
+14.3 Relative Strengths of Acids and Bases   
+14.4 Hydrolysis of Salts   
+14.5 Polyprotic Acids   
+14.6 Buffers   
+14.7 Acid-Base Titrations
+
+INTRODUCTION Liquid water is essential to life on our planet, and chemistry involving the characteristic ions of water, $\mathrm { H ^ { + } }$ and $\mathrm { O H ^ { - } }$ , is widely encountered in nature and society. As introduced in another chapter of this text, acid-base chemistry involves the transfer of hydrogen ions from donors (acids) to acceptors (bases). These $\mathrm { H } +$ transfer reactions are reversible, and the equilibria established by acid-base systems are essential aspects of phenomena ranging from sinkhole formation (Figure 14.1) to oxygen transport in the human body. This chapter will further explore acid-base chemistry with an emphasis on the equilibrium aspects of this important reaction class.

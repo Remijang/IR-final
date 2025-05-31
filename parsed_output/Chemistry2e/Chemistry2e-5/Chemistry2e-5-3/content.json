@@ -1,0 +1,1695 @@
+[
+    {
+        "type": "text",
+        "text": "5.3 Enthalpy ",
+        "text_level": 1,
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "State the first law of thermodynamics Define enthalpy and explain its classification as a state function \u2022 Write and balance thermochemical equations Calculate enthalpy changes for various chemical reactions Explain Hess\u2019s law and use it to compute reaction enthalpies ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "Thermochemistry is a branch of chemical thermodynamics, the science that deals with the relationships between heat, work, and other forms of energy in the context of chemical and physical processes. As we concentrate on thermochemistry in this chapter, we need to consider some widely used concepts of thermodynamics. ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "Substances act as reservoirs of energy, meaning that energy can be added to them or removed from them. Energy is stored in a substance when the kinetic energy of its atoms or molecules is raised. The greater kinetic energy may be in the form of increased translations (travel or straight-line motions), vibrations, or rotations of the atoms or molecules. When thermal energy is lost, the intensities of these motions decrease and the kinetic energy falls. The total of all possible kinds of energy present in a substance is called the internal energy (U), sometimes symbolized as $E$ . ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "As a system undergoes a change, its internal energy can change, and energy can be transferred from the system to the surroundings, or from the surroundings to the system. Energy is transferred into a system when it absorbs heat $( q )$ from the surroundings or when the surroundings do work (w) on the system. For example, energy is transferred into room-temperature metal wire if it is immersed in hot water (the wire absorbs heat from the water), or if you rapidly bend the wire back and forth (the wire becomes warmer because of the work done on it). Both processes increase the internal energy of the wire, which is reflected in an increase in the wire\u2019s temperature. Conversely, energy is transferred out of a system when heat is lost from the system, or when the system does work on the surroundings. ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "The relationship between internal energy, heat, and work can be represented by the equation: ",
+        "page_idx": 246
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta U = q + w\n$$",
+        "text_format": "latex",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "as shown in Figure 5.19. This is one version of the first law of thermodynamics, and it shows that the internal energy of a system changes through heat flow into or out of the system (positive $q$ is heat flow in; negative $q$ is heat flow out) or work done on or by the system. The work, w, is positive if it is done on the system and negative if it is done by the system. ",
+        "page_idx": 246
+    },
+    {
+        "type": "image",
+        "img_path": "images/b8b3d58df2bc87921b73a63048eeaf2a882594a0c92d59124bdbe3afd7eac2df.jpg",
+        "img_caption": [
+            "FIGURE 5.19 The internal energy, $U _ { \u2609 }$ , of a system can be changed by heat flow and work. If heat flows into the system, $\\scriptstyle q _ { \\mathrm { i n } }$ , or work is done on the system, $w _ { \\mathsf { o n } } .$ , its internal energy increases, $\\Delta U > 0$ . If heat flows out of the system, $q _ { \\mathrm { o u t } } ,$ , or work is done by the system, $w _ { \\mathrm { b y } } ,$ its internal energy decreases, $\\Delta U < 0$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "A type of work called expansion work (or pressure-volume work) occurs when a system pushes back the surroundings against a restraining pressure, or when the surroundings compress the system. An example of this occurs during the operation of an internal combustion engine. The reaction of gasoline and oxygen is exothermic. Some of this energy is given off as heat, and some does work pushing the piston in the cylinder. The substances involved in the reaction are the system, and the engine and the rest of the universe are the surroundings. The system loses energy by both heating and doing work on the surroundings, and its internal energy decreases. (The engine is able to keep the car moving because this process is repeated many times per second while the engine is running.) We will consider how to determine the amount of work involved in a chemical or physical change in the chapter on thermodynamics. ",
+        "page_idx": 246
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "LINK TO LEARNING ",
+        "text_level": 1,
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "This view of an internal combustion engine (http://openstax.org/l/16combustion) illustrates the conversion of energy produced by the exothermic combustion reaction of a fuel such as gasoline into energy of motion. ",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "As discussed, the relationship between internal energy, heat, and work can be represented as $\\Delta U = q + w$ . Internal energy is an example of a state function (or state variable), whereas heat and work are not state functions. The value of a state function depends only on the state that a system is in, and not on how that state is reached. If a quantity is not a state function, then its value doesdepend on how the state is reached. An example of a state function is altitude or elevation. If you stand on the summit of Mt. Kilimanjaro, you are at an altitude of $5 8 9 5 \\mathrm { m }$ , and it does not matter whether you hiked there or parachuted there. The distance you traveled to the top of Kilimanjaro, however, is not a state function. You could climb to the summit by a direct route or by a more roundabout, circuitous path (Figure 5.20). The distances traveled would differ (distance is not a state function) but the elevation reached would be the same (altitude is a state function). ",
+        "page_idx": 247
+    },
+    {
+        "type": "image",
+        "img_path": "images/f9293a2a02848ea66a3f81a635406f5adaffc746f290f99b86dad93a3e129081.jpg",
+        "img_caption": [
+            "FIGURE 5.20 Paths X and Y represent two different routes to the summit of Mt. Kilimanjaro. Both have the same change in elevation (altitude or elevation on a mountain is a state function; it does not depend on path), but they have very different distances traveled (distance walked is not a state function; it depends on the path). (credit: modification of work by Paul Shaffner) "
+        ],
+        "img_footnote": [],
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Chemists ordinarily use a property known as enthalpy $( H )$ to describe the thermodynamics of chemical and physical processes. Enthalpy is defined as the sum of a system\u2019s internal energy $( U )$ and the mathematical product of its pressure $( P )$ and volume $( \\hat { V } )$ : ",
+        "page_idx": 247
+    },
+    {
+        "type": "equation",
+        "text": "$$\nH = U + P V\n$$",
+        "text_format": "latex",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "Enthalpy is also a state function. Enthalpy values for specific substances cannot be measured directly; only enthalpy changesfor chemical or physical processes can be determined. For processes that take place at constant pressure (a common condition for many chemical and physical changes), the enthalpy change $( \\Delta H )$ is: ",
+        "page_idx": 247
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H = \\Delta U + P \\Delta V\n$$",
+        "text_format": "latex",
+        "page_idx": 247
+    },
+    {
+        "type": "text",
+        "text": "The mathematical product $P \\Delta V$ represents work (w), namely, expansion or pressure-volume work as noted. By their definitions, the arithmetic signs of $\\Delta V$ and wwill always be opposite: ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP \\Delta V = - w\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "Substituting this equation and the definition of internal energy into the enthalpy-change equation yields: ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { \\Delta H = \\Delta U + P \\Delta V } \\\\ { = q _ { \\mathrm { p } } + w - w } \\\\ { = q _ { \\mathrm { p } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "where $q _ { p }$ is the heat of reaction under conditions of constant pressure. ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "And so, if a chemical or physical process is carried out at constant pressure with the only work done caused by expansion or contraction, then the heat flow $( q _ { p } )$ and enthalpy change $( \\Delta H )$ for the process are equal. ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "The heat given off when you operate a Bunsen burner is equal to the enthalpy change of the methane combustion reaction that takes place, since it occurs at the essentially constant pressure of the atmosphere. On the other hand, the heat produced by a reaction measured in a bomb calorimeter (Figure 5.17) is not equal to $\\Delta H$ because the closed, constant-volume metal container prevents the pressure from remaining constant (it may increase or decrease if the reaction yields increased or decreased amounts of gaseous species). Chemists usually perform experiments under normal atmospheric conditions, at constant external pressure with $q =$ $\\Delta H ,$ which makes enthalpy the most convenient choice for determining heat changes for chemical reactions. ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "The following conventions apply when using $\\Delta H \\colon$ ",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "\u2022 A negative value of an enthalpy change, $\\Delta H < 0$ , indicates an exothermic reaction; a positive value, $\\Delta H > 0$ , indicates an endothermic reaction. If the direction of a chemical equation is reversed, the arithmetic sign of its $\\Delta H$ is changed (a process that is endothermic in one direction is exothermic in the opposite direction).   \n\u2022 Chemists use a thermochemical equation to represent the changes in both matter and energy. In a thermochemical equation, the enthalpy change of a reaction is shown as a $\\Delta H$ value following the equation for the reaction. This $\\Delta H$ value indicates the amount of heat associated with the reaction involving the number of moles of reactants and products asshowninthechemicalequation. For example, consider this equation: ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } ( g ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) \\qquad \\Delta H = - 2 8 6 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "This equation indicates that when 1 mole of hydrogen gas and $\\frac { 1 } { 2 }$ mole of oxygen gas at some temperature and pressure change to 1 mole of liquid water at the same temperature and pressure, $2 8 6 \\mathrm { k J }$ of heat are released to the surroundings. If the coefficients of the chemical equation are multiplied by some factor, the enthalpy change must be multiplied by that same factor ( $\\Delta H$ is an extensive property): ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H = 2 \\times ( - 2 8 6 \\mathrm { k J } ) = - 5 7 2 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\textstyle \\frac { 1 } { 2 } } \\mathrm { H } _ { 2 } ( g ) + { \\textstyle \\frac { 1 } { 4 } } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow { \\textstyle \\frac { 1 } { 2 } } \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) \\qquad \\Delta H = { \\textstyle \\frac { 1 } { 2 } } \\times ( - 2 8 6 \\mathrm { k J } ) = - 1 4 3 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The enthalpy change of a reaction depends on the physical states of the reactants and products, so these must be shown. For example, when 1 mole of hydrogen gas and $\\frac { 1 } { 2 }$ mole of oxygen gas change to 1 mole of liquid water at the same temperature and pressure, $2 8 6 \\mathrm { k J }$ of heat are released. If gaseous water forms, only $2 4 2 \\mathrm { k J }$ of heat are released. ",
+        "page_idx": 248
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } ( g ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { H } _ { 2 } \\mathrm { O } ( g ) \\qquad \\Delta H = - 2 4 2 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 248
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.8 ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Writing Thermochemical Equations ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "When $0 . 0 5 0 0 \\mathrm { m o l }$ of HCl(aq) reacts with $0 . 0 5 0 0 \\mathrm { m o l }$ of ${ \\mathrm { N a O H } } ( a q )$ to form $0 . 0 5 0 0 \\mathrm { m o l }$ of NaCl(aq), $2 . 9 \\mathrm { k J }$ of heat are produced. Write a balanced thermochemical equation for the reaction of one mole of HCl. ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H C l } ( a q ) + \\mathrm { N a O H } ( a q ) \\longrightarrow \\mathrm { N a C l } ( a q ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( l )\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "For the reaction of $0 . 0 5 0 0 \\mathrm { m o l }$ acid (HCl), $q = - 2 . 9 \\mathrm { k J }$ . The reactants are provided in stoichiometric amounts (same molar ratio as in the balanced equation), and so the amount of acid may be used to calculate a molar enthalpy change. Since $\\Delta H$ is an extensive property, it is proportional to the amount of acid neutralized: ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H = 1 \\mathrm { \\ m o l { H H G } } + \\times \\mathrm { \\frac { - 2 . 9 k J } { 0 . 0 5 0 0 \\mathrm { - m o l { H G } } + } } = - 5 8 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "The thermochemical equation is then ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H C l } ( a q ) + \\mathrm { N a O H } ( a q ) \\longrightarrow \\mathrm { N a C l } ( a q ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) \\qquad \\Delta H = - 5 8 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "When $1 . 3 4 \\ : \\mathrm { g } \\ : \\mathrm { Z n } ( s )$ reacts with $6 0 . 0 \\mathrm { m L }$ of $0 . 7 5 0 \\mathrm { M } \\mathrm { H C l } ( a q ) , 3 . 1 4 \\mathrm { k J }$ of heat are produced. Determine the enthalpy change per mole of zinc reacting for the reaction: ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { Z n } ( s ) + 2 \\mathrm { H C l } ( a q ) \\longrightarrow \\mathrm { Z n C l } _ { 2 } ( a q ) + \\mathrm { H } _ { 2 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "$\\Delta H = - 1 5 3 \\mathrm { k J }$ ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Be sure to take both stoichiometry and limiting reactants into account when determining the $\\Delta H$ for a chemical reaction. ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.9 ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Writing Thermochemical Equations ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "A gummy bear contains $ { 2 . 6 7 \\mathrm { g } }$ sucrose, $\\mathrm { C _ { 1 2 } H _ { 2 2 } O _ { 1 1 } }$ . When it reacts with $7 . 1 9 \\mathrm { g }$ potassium chlorate, $\\mathrm { K C l O _ { 3 } }$ , 43.7 $\\mathrm { k J }$ of heat are produced. Write a thermochemical equation for the reaction of one mole of sucrose: ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C } _ { 1 2 } \\mathrm { H } _ { 2 2 } \\mathrm { O } _ { 1 1 } ( a q ) + 8 \\mathrm { K C l } { \\mathrm { O } } _ { 3 } ( a q ) \\longrightarrow 1 2 \\mathrm { C O } _ { 2 } ( g ) + 1 1 \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) + 8 \\mathrm { K C l } ( a q ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Unlike the previous example exercise, this one does not involve the reaction of stoichiometric amounts of reactants, and so the limitingreactantmust be identified (it limits the yield of the reaction and the amount of thermal energy produced or consumed). ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "The provided amounts of the two reactants are ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { ( 2 . 6 7 \\mathrm { g } ) ( 1 \\mathrm { m o l } / 3 4 2 . 3 \\mathrm { g } ) = 0 . 0 0 7 8 0 \\mathrm { m o l } \\mathrm { C } _ { 1 2 } \\mathrm { H } _ { 2 2 } \\mathrm { O } _ { 1 1 } } \\\\ & { ( 7 . 1 9 \\mathrm { g } ) ( 1 \\mathrm { m o l } / 1 2 2 . 5 \\mathrm { g } ) = 0 . 0 5 8 7 \\mathrm { m o l } \\mathrm { K C I O } _ { 3 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "The provided molar ratio of perchlorate-to-sucrose is then ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0 . 0 5 8 7 \\mathrm { m o l } \\mathrm { K C I O } _ { 3 } / 0 . 0 0 7 8 0 \\mathrm { m o l } \\mathrm { C } _ { 1 2 } \\mathrm { H } _ { 2 2 } \\mathrm { O } _ { 1 1 } = 7 . 5 2\n$$",
+        "text_format": "latex",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "The balanced equation indicates 8 mol $\\mathrm { K C l O _ { 3 } }$ are required for reaction with 1 mol $\\mathrm { C _ { 1 2 } H _ { 2 2 } O _ { 1 1 } }$ . Since the provided amount of $\\mathrm { K C l O _ { 3 } }$ is less than the stoichiometric amount, it is the limiting reactant and may be used to compute the enthalpy change: ",
+        "page_idx": 249
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\triangle \\mathrm { H } = - 4 3 . 7 \\quad \\mathrm { k J } / 0 . 0 5 8 7 \\mathrm { m o l } \\mathrm { K C I O } _ { 3 } = 7 4 4 \\mathrm { k J } / \\mathrm { m o l } \\mathrm { K C I O } _ { 3 }\n$$",
+        "text_format": "latex",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Because the equation, as written, represents the reaction of $8 \\mathrm { m o l } \\mathrm { K C l } 0 _ { 3 }$ , the enthalpy change is ",
+        "page_idx": 250
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left( 7 4 4 \\mathrm { k J / m o l } \\mathrm { K C I O _ { 3 } } \\right) \\left( 8 \\mathrm { m o l } \\mathrm { K C I O _ { 3 } } \\right) = 5 9 6 0 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "The enthalpy change for this reaction is $- 5 9 6 0 \\mathrm { k J }$ , and the thermochemical equation is: ",
+        "page_idx": 250
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C _ { 1 2 } H _ { 2 2 } O _ { 1 1 } } + 8 \\mathrm { K C l O _ { 3 } } \\longrightarrow 1 2 \\mathrm { C O } _ { 2 } + 1 1 \\mathrm { H } _ { 2 } \\mathrm { O } + 8 \\mathrm { K C l } \\Delta H = - 5 9 6 0 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "When $ { 1 . 4 2 \\mathrm { g } }$ of iron reacts with $1 . 8 0 \\mathrm { g }$ of chlorine, $3 . 2 2 { \\mathrm { ~ g ~ } }$ of $\\mathrm { F e C l _ { 2 } } ( s )$ and $8 . 6 0 \\mathrm { k J }$ of heat is produced. What is the enthalpy change for the reaction when 1 mole of $\\mathrm { F e C l _ { 2 } } ( s )$ is produced? ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Answer: $\\Delta H = - 3 3 8 \\mathrm { k J }$ ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Enthalpy changes are typically tabulated for reactions in which both the reactants and products are at the same conditions. A standard state is a commonly accepted set of conditions used as a reference point for the determination of properties under other different conditions. For chemists, the IUPAC standard state refers to materials under a pressure of 1 bar and solutions at $1 \\mathsf { M }$ , and does not specify a temperature. Many thermochemical tables list values with a standard state of 1 atm. Because the $\\Delta H$ of a reaction changes very little with such small changes in pressure $( 1 \\mathrm { b a r } = 0 . 9 8 7$ atm), $\\Delta H$ values (except for the most precisely measured values) are essentially the same under both sets of standard conditions. We will include a superscripted \u201co\u201d in the enthalpy change symbol to designate standard state. Since the usual (but not technically standard) temperature is $2 9 8 . 1 5 \\mathrm { K }$ , this temperature will be assumed unless some other temperature is specified. Thus, the symbol $( \\Delta H ^ { \\circ } )$ is used to indicate an enthalpy change for a process occurring under these conditions. (The symbol $\\Delta H$ is used to indicate an enthalpy change for a reaction occurring under nonstandard conditions.) ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "The enthalpy changes for many types of chemical and physical processes are available in the reference literature, including those for combustion reactions, phase transitions, and formation reactions. As we discuss these quantities, it is important to pay attention to the extensivenature of enthalpy and enthalpy changes. Since the enthalpy change for a given reaction is proportional to the amounts of substances involved, it may be reported on that basis (i.e., as the $\\Delta H$ for specific amounts of reactants). However, we often find it more useful to divide one extensive property $( \\Delta H )$ by another (amount of substance), and report a per-amount intensive value of $\\Delta H ,$ often \u201cnormalized\u201d to a per-mole basis. (Note that this is similar to determining the intensive property specific heat from the extensive property heat capacity, as seen previously.) ",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Standard Enthalpy of Combustion ",
+        "text_level": 1,
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Standard enthalpy of combustion $( \\Delta H _ { C } ^ { \\circ } )$ is the enthalpy change when 1 mole of a substance burns (combines vigorously with oxygen) under standard state conditions; it is sometimes called \u201cheat of combustion.\u201d For example, the enthalpy of combustion of ethanol, $- 1 3 6 6 . 8 \\mathrm { k J / m o l }$ , is the amount of heat produced when one mole of ethanol undergoes complete combustion at $2 5 ^ { \\circ } \\mathrm { C }$ and 1 atmosphere pressure, yielding products also at $2 5 ^ { \\circ } \\mathrm { C }$ and 1 atm. ",
+        "page_idx": 250
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C } _ { 2 } \\mathrm { H } _ { 5 } \\mathrm { O H } ( l ) + 3 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { C O } _ { 2 } + 3 \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) \\qquad \\Delta H ^ { \\circ } = - 1 3 6 6 . 8 \\mathrm { ~ k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 250
+    },
+    {
+        "type": "text",
+        "text": "Enthalpies of combustion for many substances have been measured; a few of these are listed in Table 5.2. Many readily available substances with large enthalpies of combustion are used as fuels, including hydrogen, carbon (as coal or charcoal), and hydrocarbons (compounds containing only hydrogen and carbon), such as methane, propane, and the major components of gasoline. ",
+        "page_idx": 250
+    },
+    {
+        "type": "table",
+        "img_path": "images/a1453e73d16c3d5002dc4213ea8689df4b13024f34c8687e56cbf3188f2d86d5.jpg",
+        "table_caption": [
+            "TABLE 5.2 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Substance</td><td>Combustion Reaction</td><td>Enthalpy of Combustion,\u25b3H mol \uff08at25\u2103)</td></tr><tr><td>carbon</td><td>C(s)+O(g)\u2192CO2(g)</td><td>-393.5</td></tr><tr><td>hydrogen</td><td>H(g)+ \u00b9O(g) \u2192 HO(l)</td><td>-285.8</td></tr><tr><td>magnesium</td><td>Mg(s)+ \u2193O2(g) -\u2192 MgO(s)</td><td>-601.6</td></tr><tr><td>sulfur</td><td>S(s)+O2(g)-\u2192 SO2(g)</td><td>-296.8</td></tr><tr><td>carbon monoxide</td><td>CO(g)+ O2(g) \u2192 CO2(g)</td><td>-283.0</td></tr><tr><td>methane</td><td>CH4(g)+ 2O2(g) -\u2192 CO2(g)+ 2H2O(l)</td><td>-890.8</td></tr><tr><td>acetylene</td><td>C2H2(g)+ O2(g) -\u2192 2CO2(g)+HO(l)</td><td>-1301.1</td></tr><tr><td>ethanol</td><td>C2H5OH(l)+3O2(g) -\u2192 2CO2(g)+3HO(l)</td><td>-1366.8</td></tr><tr><td>methanol</td><td>CHOH(l) + \u00b3O2(g) -\u2192 CO2(g)+ 2HO(l)</td><td>-726.1</td></tr><tr><td>isooctane</td><td>C8H18(l) + O2(g) -\u2192 8CO2(g) + 9H2O(l)</td><td>-5461</td></tr></table></body></html>\n\n",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.10 ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Using Enthalpy of Combustion ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "As Figure 5.21 suggests, the combustion of gasoline is a highly exothermic process. Let us determine the approximate amount of heat produced by burning $1 . 0 0 \\mathrm { L }$ of gasoline, assuming the enthalpy of combustion of gasoline is the same as that of isooctane, a common component of gasoline. The density of isooctane is 0.692 $\\mathrm { g / m L }$ . ",
+        "page_idx": 251
+    },
+    {
+        "type": "image",
+        "img_path": "images/2511945f074b085860d2100f66a8b3c8074a8e04c856cf2a4db7eed2ab2ab2f4.jpg",
+        "img_caption": [
+            "FIGURE 5.21 The combustion of gasoline is very exothermic. (credit: modification of work by \u201cAlexEagle\u201d/Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Starting with a known amount $( 1 . 0 0 \\mathrm { L }$ of isooctane), we can perform conversions between units until we arrive at the desired amount of heat or energy. The enthalpy of combustion of isooctane provides one of the ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "necessary conversions. Table 5.2 gives this value as $- 5 4 6 0 \\mathrm { k J }$ per 1 mole of isooctane $( \\mathrm { C } _ { 8 } \\mathrm { H } _ { 1 8 } )$ . Using these data, ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "1.00 LCgI $\\mathrm { 4 _ { 1 8 } \\times \\frac { 1 0 0 0 \\mathrm { - } n \\mathrm { 4 _ { 2 } C _ { 8 } H _ { 1 8 } } } { 1 \\mathrm { 4 _ { 2 } C _ { 8 } H _ { 1 8 } } } \\times \\frac { 0 . 6 9 2 \\mathrm { - } \\frac { \\alpha } { 8 } C _ { 8 } H _ { 1 8 } } { 1 \\mathrm { 4 _ { 1 8 } L e _ { 8 } H _ { 1 8 } } } \\times \\frac { 1 \\mathrm {  \\alpha h e l e _ { 8 } H _ { 1 8 } } } { 1 1 \\mathrm { 4 _ { 8 } C _ { 8 } H _ { 1 8 } } } \\times \\frac { - 5 4 6 0 \\mathrm { \\mathrm { ~ k J } } } { 1 \\mathrm {  \\alpha h e l e _ { 8 } H _ { 1 8 } } } } = - 3 . 3 1 \\mathrm { \\Omega } \\mathrm { 5 } \\mathrm { \\Omega }  $ \u00d7 104kJ The combustion of $1 . 0 0 \\mathrm { L }$ of isooctane produces 33,100 kJ of heat. (This amount of energy is enough to melt $9 9 . 2 \\mathrm { k g }$ , or about 218 lbs, of ice.) ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Note: If you do this calculation one step at a time, you would find: ",
+        "page_idx": 252
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { 1 . 0 0 \\mathrm { L C } _ { 8 } \\mathrm { H } _ { 1 8 } \\longrightarrow 1 . 0 0 \\times 1 0 ^ { 3 } \\mathrm { m L C } _ { 8 } \\mathrm { H } _ { 1 8 } } \\\\ & { 1 . 0 0 \\times 1 0 ^ { 3 } \\mathrm { m L C } _ { 8 } \\mathrm { H } _ { 1 8 } \\longrightarrow 6 9 2 \\mathrm { g C } _ { 8 } \\mathrm { H } _ { 1 8 } } \\\\ & { 6 9 2 \\mathrm { g C } _ { 8 } \\mathrm { H } _ { 1 8 } \\longrightarrow 6 . 0 7 \\mathrm { m o l C } _ { 8 } \\mathrm { H } _ { 1 8 } } \\\\ & { 6 . 0 7 \\mathrm { m o l C } _ { 8 } \\mathrm { H } _ { 1 8 } \\longrightarrow - 3 . 3 1 \\times 1 0 ^ { 4 } \\mathrm { k J } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "How much heat is produced by the combustion of $\\boldsymbol { 1 2 5 } \\mathrm { g }$ of acetylene? ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Answer: $6 . 2 5 \\times 1 0 ^ { 3 } \\mathrm { k J }$ ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Chemistry in Everyday Life ",
+        "text_level": 1,
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Emerging Algae-Based Energy Technologies (Biofuels) ",
+        "text_level": 1,
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "As reserves of fossil fuels diminish and become more costly to extract, the search is ongoing for replacement fuel sources for the future. Among the most promising biofuels are those derived from algae (Figure 5.22). The species of algae used are nontoxic, biodegradable, and among the world\u2019s fastest growing organisms. About $50 \\%$ of algal weight is oil, which can be readily converted into fuel such as biodiesel. Algae can yield 26,000 gallons of biofuel per hectare\u2014much more energy per acre than other crops. Some strains of algae can flourish in brackish water that is not usable for growing other crops. Algae can produce biodiesel, biogasoline, ethanol, butanol, methane, and even jet fuel. ",
+        "page_idx": 252
+    },
+    {
+        "type": "image",
+        "img_path": "images/6ccdb0c4e9160433fbe63e5112a010f385db292bd20d3248889971992a0cf7ca.jpg",
+        "img_caption": [
+            "FIGURE 5.22 (a) Tiny algal organisms can be (b) grown in large quantities and eventually (c) turned into a useful fuel such as biodiesel. (credit a: modification of work by Micah Sittig; credit b: modification of work by Robert Kerton; credit c: modification of work by John F. Williams) "
+        ],
+        "img_footnote": [],
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "According to the US Department of Energy, only 39,000 square kilometers (about $0 . 4 \\%$ of the land mass of the US or less than $\\textstyle { \\frac { 1 } { 7 } }$ of the area used to grow corn) can produce enough algal fuel to replace all the petroleum-based fuel used in the US. The cost of algal fuels is becoming more competitive\u2014for instance, the US Air Force is producing jet fuel from algae at a total cost of under $\\$ 5$ per gallon. The process used to produce algal fuel is as follows: grow the algae (which use sunlight as their energy source and $\\mathrm { C O _ { 2 } }$ as a raw material); harvest the algae; extract the fuel compounds (or precursor compounds); process as necessary (e.g., perform a transesterification reaction to make biodiesel); purify; and distribute (Figure 5.23). ",
+        "page_idx": 253
+    },
+    {
+        "type": "image",
+        "img_path": "images/64585b30a2dba32ce94c38a1e70e8ab63259e027d55d8ece422b9fd9b41225a1.jpg",
+        "img_caption": [
+            "FIGURE 5.23 Algae convert sunlight and carbon dioxide into oil that is harvested, extracted, purified, and transformed into a variety of renewable fuels. "
+        ],
+        "img_footnote": [],
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "LINK TO LEARNING ",
+        "text_level": 1,
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Click here (http://openstax.org/l/16biofuel) to learn more about the process of creating algae biofuel. ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Standard Enthalpy of Formation ",
+        "text_level": 1,
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "A standard enthalpy of formation $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ is an enthalpy change for a reaction in which exactly 1 mole of a pure substance is formed from free elements in their most stable states under standard state conditions. These values are especially useful for computing or predicting enthalpy changes for chemical reactions that are impractical or dangerous to carry out, or for processes for which it is difficult to make measurements. If we have values for the appropriate standard enthalpies of formation, we can determine the enthalpy change for any reaction, which we will practice in the next section on Hess\u2019s law. ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "The standard enthalpy of formation of $\\mathrm { C O _ { 2 } } ( g )$ is $- 3 9 3 . 5 \\mathrm { k J } / \\mathrm { m o l }$ . This is the enthalpy change for the exothermic reaction: ",
+        "page_idx": 253
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C } ( s ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C O } _ { 2 } ( g ) \\qquad \\Delta H _ { \\mathrm { f } } ^ { \\circ } = \\Delta H ^ { \\circ } = - 3 9 3 . 5 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "starting with the reactants at a pressure of 1 atm and $2 5 ^ { \\circ } \\mathrm { C }$ (with the carbon present as graphite, the most stable form of carbon under these conditions) and ending with one mole of $\\mathrm { C O _ { 2 } }$ , also at 1 atm and $2 5 ^ { \\circ } \\mathrm { C }$ . For nitrogen dioxide, $\\mathrm { N O } _ { 2 } ( g ) , \\Delta H _ { \\mathrm { f } } ^ { \\circ }$ is $3 3 . 2 \\mathrm { k J / m o l }$ . This is the enthalpy change for the reaction: ",
+        "page_idx": 253
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { 2 } \\mathrm { N } _ { 2 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { N O } _ { 2 } ( g ) \\qquad \\quad \\Delta H _ { \\mathrm { f } } ^ { \\circ } = \\Delta H ^ { \\circ } = + 3 3 . 2 \\mathrm { \\ k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "A reaction equation with $\\frac { 1 } { 2 }$ mole of $\\Nu _ { 2 }$ and 1 mole of $\\mathrm { O } _ { 2 }$ is correct in this case because the standard enthalpy of formation always refers to 1 mole of product, $\\mathsf { N O } _ { 2 } ( g )$ . ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "You will find a table of standard enthalpies of formation of many common substances in Appendix G. These values indicate that formation reactions range from highly exothermic (such as $- 2 9 8 4 \\mathrm { k J / m o l }$ for the formation of $\\mathrm { P } _ { 4 } \\mathrm { O } _ { 1 0 } \\mathrm { , }$ ) to strongly endothermic (such as $+ 2 2 6 . 7 \\mathrm { k J / m o l }$ for the formation of acetylene, $\\mathrm { C _ { 2 } H _ { 2 } } )$ . By definition, the standard enthalpy of formation of an element in its most stable form is equal to zero under ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "standard conditions, which is 1 atm for gases and 1 M for solutions. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.11 ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Evaluating an Enthalpy of Formation ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Ozone, $\\mathrm { O } _ { 3 } ( g )$ , forms from oxygen, $\\mathrm { O } _ { 2 } ( g )$ , by an endothermic process. Ultraviolet radiation is the source of the energy that drives this reaction in the upper atmosphere. Assuming that both the reactants and products of the reaction are in their standard states, determine the standard enthalpy of formation, $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of ozone from the following information: ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\n3 0 _ { 2 } ( g ) \\longrightarrow 2 0 _ { 3 } ( g ) \\qquad \\Delta H ^ { \\circ } = + 2 8 6 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "$\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ is the enthalpy change for the formation of one mole of a substance in its standard state from the elements in their standard states. Thus, $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ for $\\mathrm { O } _ { 3 } ( g )$ is the enthalpy change for the reaction: ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 3 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { O } _ { 3 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "For the formation of $2 \\mathrm { m o l }$ of $\\mathrm { O } _ { 3 } ( g ) , \\Delta H ^ { \\circ } = + 2 8 6 \\mathrm { k J } .$ This ratio, $\\left( \\frac { 2 8 6 \\mathrm { k J } } { 2 \\mathrm { m o l } \\mathrm { O } _ { 3 } } \\right)$ can be used as a conversion factor to find the heat produced when 1 mole of $\\mathrm { O } _ { 3 } ( g )$ is formed, which is the enthalpy of formation for $\\mathrm { O } _ { 3 } ( g )$ : ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H ^ { \\circ } \\mathrm { f o r 1 m o l e \\ o f O _ { 3 } ( } g ) = 1 \\mathrm { \\ m o l { \\Theta } _ { 3 } \\times } \\frac { 2 8 6 \\mathrm { k J } } { 2 \\mathrm { \\ m o l { \\Theta } _ { 3 } } } = 1 4 3 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Therefore, $\\Delta H _ { \\mathrm { f } } ^ { \\circ } \\left[ \\mathrm { O } _ { 3 } ( g ) \\right] = + 1 4 3 \\mathrm { ~ k J / m o l } .$ ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Hydrogen gas, $\\mathrm { H } _ { 2 }$ , reacts explosively with gaseous chlorine, $\\mathrm { C l } _ { 2 }$ , to form hydrogen chloride, ${ \\mathrm { H C l } } ( g )$ . What is the enthalpy change for the reaction of 1 mole of $\\mathrm { H } _ { 2 } ( g )$ with 1 mole of $\\mathrm { C l _ { 2 } } ( g )$ if both the reactants and products are at standard state conditions? The standard enthalpy of formation of $\\mathrm { H C l } ( g )$ is $- 9 2 . 3 \\mathrm { k J / m o l }$ . ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "For the reaction $\\mathrm { H } _ { 2 } ( g ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { H C l } ( g )$ $\\Delta H ^ { \\circ } = - 1 8 4 . 6 \\mathrm { k J }$ ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.12 ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Writing Reaction Equations for $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Write the heat of formation reaction equations for: ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "(a) $\\mathrm { C _ { 2 } H _ { 5 } O H } ( I )$ (b) $\\mathrm { C a } _ { 3 } ( \\mathrm { P O } _ { 4 } ) _ { 2 } ( s )$ ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Remembering that $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ reaction equations are for forming 1 mole of the compound from its constituent elements under standard conditions, we have: ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { 2 \\mathrm { C } ( s , \\mathrm { g r a p h i t e } ) + 3 \\mathrm { H } _ { 2 } ( g ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C } _ { 2 } \\mathrm { H } _ { 5 } \\mathrm { O H } ( l ) } \\\\ & { 3 \\mathrm { C a } ( s ) + \\frac { 1 } { 2 } \\mathrm { P } _ { 4 } ( s ) + 4 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C a } _ { 3 } ( \\mathrm { P O } _ { 4 } ) _ { 2 } ( s ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Note: The standard state of carbon is graphite, and phosphorus exists as $\\mathrm { P } _ { 4 }$ . ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Write the heat of formation reaction equations for: ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "(a) $\\mathrm { C _ { 2 } H _ { 5 } O C _ { 2 } H _ { 5 } } ( I )$ (b) $\\mathrm { N a _ { 2 } C O _ { 3 } } ( s )$ ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathrm { ( a ) } 4 \\mathrm { C } ( s , \\mathrm { g r a p h i t e } ) + 5 \\mathrm { H } _ { 2 } ( g ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C } _ { 2 } \\mathrm { H } _ { 5 } \\mathrm { O C } _ { 2 } \\mathrm { H } _ { 5 } ( l ) ; \\mathrm { ( b ) } } \\\\ & { \\mathrm { 2 N a } ( s ) + \\mathrm { C } ( s , \\mathrm { g r a p h i t e } ) + \\frac { 3 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { N a } _ { 2 } \\mathrm { C O } _ { 3 } ( s ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Hess\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "There are two ways to determine the amount of heat involved in a chemical change: measure it experimentally, or calculate it from other experimentally determined enthalpy changes. Some reactions are difficult, if not impossible, to investigate and make accurate measurements for experimentally. And even when a reaction is not hard to perform or measure, it is convenient to be able to determine the heat involved in a reaction without having to perform an experiment. ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "This type of calculation usually involves the use of Hess\u2019s law, which states: Ifaproces canbewritenasthe sumofseveralstepwiseproces es,theenthalpychangeofthetotalproces equalsthesumoftheenthalpy changesofthevarioussteps. Hess\u2019s law is valid because enthalpy is a state function: Enthalpy changes depend only on where a chemical process starts and ends, but not on the path it takes from start to finish. For example, we can think of the reaction of carbon with oxygen to form carbon dioxide as occurring either directly or by a two-step process. The direct process is written: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C } ( s ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C O } _ { 2 } ( g ) \\qquad \\Delta H ^ { \\circ } = - 3 9 4 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "In the two-step process, first carbon monoxide is formed: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\bf C } ( s ) + \\frac { 1 } { 2 } { \\bf O } _ { 2 } ( g ) \\longrightarrow { \\bf C O } ( g ) \\quad \\quad \\quad \\Delta H ^ { \\circ } = - 1 1 1 { \\bf k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Then, carbon monoxide reacts further to form carbon dioxide: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C O } ( g ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C O } _ { 2 } ( g ) \\qquad \\Delta H ^ { \\circ } = - 2 8 3 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "The equation describing the overall reaction is the sum of these two chemical changes: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } & { { \\mathrm { S t e p ~ 1 : C } } ( s ) + { \\frac { 1 } { 2 } } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow { \\mathrm { C O } } ( g ) } \\\\ & { { \\mathrm { S t e p ~ 2 : C O } } ( g ) + { \\frac { 1 } { 2 } } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow { \\mathrm { C O } } _ { 2 } ( g ) } \\\\ & { { \\mathrm { S u m : ~ C } } ( s ) + { \\frac { 1 } { 2 } } \\mathrm { O } _ { 2 } ( g ) + { \\mathrm { C O } } ( g ) + { \\frac { 1 } { 2 } } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow { \\mathrm { C O } } ( g ) + \\mathrm { C O } _ { 2 } ( g ) } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Because the CO produced in Step 1 is consumed in Step 2, the net change is: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C } ( s ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C O } _ { 2 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "According to Hess\u2019s law, the enthalpy change of the reaction will equal the sum of the enthalpy changes of the steps. ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l } { { { \\mathrm C } ( s ) + { \\frac { 1 } { 2 } } { \\mathrm O } _ { 2 } ( g ) \\longrightarrow { \\mathrm C O } ( g ) } } & { { \\Delta H ^ { \\circ } = - 1 1 1 \\mathrm { ~ k J } } } \\\\ { { \\frac { { \\mathrm C O } ( g ) + { \\frac { 1 } { 2 } } { \\mathrm O } _ { 2 } ( g ) \\longrightarrow { \\mathrm C O } _ { 2 } ( g ) } { { \\mathrm C } ( s ) + { \\mathrm O } _ { 2 } ( g ) \\longrightarrow { \\mathrm C O } _ { 2 } ( g ) } } } & { { \\frac { \\Delta H ^ { \\circ } = - 2 8 3 \\mathrm { ~ k J } } { \\Delta H ^ { \\circ } = - 3 9 4 \\mathrm { ~ k J } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "The result is shown in Figure 5.24. We see that $\\Delta H$ of the overall reaction is the same whether it occurs in one step or two. This finding (overall $\\Delta H$ for the reaction $\\mathbf { \\tau } = \\mathbf { \\tau }$ sum of $\\Delta H$ values for reaction \u201csteps\u201d in the overall reaction) is true in general for chemical and physical processes. ",
+        "page_idx": 255
+    },
+    {
+        "type": "image",
+        "img_path": "images/d66cfbe28ad084262a007c919b319094a75d132bb7657ce55140e3648205857a.jpg",
+        "img_caption": [
+            "FIGURE 5.24 The formation of $\\mathsf { C O } _ { 2 } ( \\mathsf { g } )$ from its elements can be thought of as occurring in two steps, which sum to the overall reaction, as described by Hess\u2019s law. The horizontal blue lines represent enthalpies. For an exothermic process, the products are at lower enthalpy than are the reactants. "
+        ],
+        "img_footnote": [],
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Before we further practice using Hess\u2019s law, let us recall two important features of $\\Delta H$ . ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "1. $\\Delta H$ is directly proportional to the quantities of reactants or products. For example, the enthalpy change for the reaction forming 1 mole of $\\mathrm { N O _ { 2 } } ( g )$ is $+ 3 3 . 2 \\mathrm { k J }$ : ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { 2 } \\mathrm { N } _ { 2 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { N O } _ { 2 } ( g ) \\qquad \\Delta H = + 3 3 . 2 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "When 2 moles of $\\Nu { 0 _ { 2 } }$ (twice as much) are formed, the $\\Delta H$ will be twice as large: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { N } _ { 2 } ( g ) + 2 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { N O } _ { 2 } ( g ) \\qquad \\Delta H = + 6 6 . 4 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "In general, if we multiply or divide an equation by a number, then the enthalpy change should also be multiplied or divided by the same number. ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "2. \u0394Hfor a reaction in one direction is equal in magnitude and opposite in sign to $\\Delta H$ for the reaction in the reverse direction. For example, given that: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } ( g ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { H C l } ( g ) \\qquad \\Delta H = - 1 8 4 . 6 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Then, for the \u201creverse\u201d reaction, the enthalpy change is also \u201creversed\u201d: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { H C l } ( g ) \\longrightarrow \\mathrm { H } _ { 2 } ( g ) + \\mathrm { C l } _ { 2 } ( g ) \\qquad \\Delta H = + 1 8 4 . 6 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.13 ",
+        "text_level": 1,
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Stepwise Calculation of $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ Using Hess\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Determine the enthalpy of formation, $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of $\\mathrm { F e C l } _ { 3 } ( s )$ from the enthalpy changes of the following two-step process that occurs under standard state conditions: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { F e } ( s ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { F e C l } _ { 2 } ( s ) \\qquad \\Delta H ^ { \\circ } = - 3 4 1 . 8 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { F e C l } _ { 2 } ( s ) + \\frac { 1 } { 2 } \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { F e C l } _ { 3 } ( s ) \\qquad \\Delta H ^ { \\circ } = - 5 7 . 7 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "We are trying to find the standard enthalpy of formation of $\\mathrm { F e C l _ { 3 } } ( s )$ , which is equal to $\\Delta H ^ { \\circ }$ for the reaction: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { F e } ( s ) + \\frac { 3 } { 2 } \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { F e C l } _ { 3 } ( s ) \\qquad \\Delta H _ { \\mathrm { f } } ^ { \\circ } = ?\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Looking at the reactions, we see that the reaction for which we want to find $\\Delta H ^ { \\circ }$ is the sum of the two reactions with known $\\Delta H$ values, so we must sum their $\\Delta H \\mathbf { s }$ : ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\mathrm { F e } ( s ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { F e C l } _ { 2 } ( s ) } & { \\quad \\Delta H ^ { \\circ } = - 3 4 1 . 8 \\mathrm { k J } } \\\\ { \\frac { \\mathrm { F e C l } _ { 2 } ( s ) + \\frac 1 2 \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { F e C l } _ { 3 } ( s ) } { \\mathrm { F e } ( s ) + \\frac 3 2 \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { F e C l } _ { 3 } ( s ) } } & { \\quad \\frac { \\Delta H ^ { \\circ } = - 5 7 . 7 \\mathrm { k J } } { \\Delta H ^ { \\circ } = - 3 9 9 . 5 \\mathrm { k J } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "The enthalpy of formation, $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of $\\mathrm { F e C l } _ { 3 } ( s )$ is $- 3 9 9 . 5 \\mathrm { k J / m o l } .$ . ",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Calculate $\\Delta H$ for the process: ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { ~ N } _ { 2 } ( g ) + 2 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { N O } _ { 2 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "from the following information: ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c } { { { \\bf N } _ { 2 } ( g ) + { \\bf O } _ { 2 } ( g ) \\longrightarrow 2 { \\bf N O } ( g ) } } & { { \\quad \\quad \\Delta H = 1 8 0 . 5 { \\bf k J } } } \\\\ { { \\mathrm { N O } ( g ) + \\displaystyle \\frac { 1 } { 2 } { \\bf O } _ { 2 } ( g ) \\longrightarrow { \\bf N O } _ { 2 } ( g ) } } & { { \\quad \\quad \\Delta H = - 5 7 . 0 6 { \\bf k J } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Answer: 66.4 kJ ",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Here is a less straightforward example that illustrates the thought process involved in solving many Hess\u2019s law problems. It shows how we can find many standard enthalpies of formation (and other values of $\\Delta H )$ if they are difficult to determine experimentally. ",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.14 ",
+        "text_level": 1,
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "A More Challenging Problem Using Hess\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Chlorine monofluoride can react with fluorine to form chlorine trifluoride: ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( i ) \\mathrm { C l F } ( g ) + \\mathrm { F } _ { 2 } ( g ) \\longrightarrow \\mathrm { C l F } _ { 3 } ( g ) \\qquad \\Delta H ^ { \\circ } = ?\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Use the reactions here to determine the $\\Delta H ^ { \\circ }$ for reaction $( i )$ : ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { O F } _ { 2 } ( g ) \\longrightarrow \\mathrm { O } _ { 2 } ( g ) + 2 \\mathrm { F } _ { 2 } ( g ) \\qquad \\Delta H _ { ( i i ) } ^ { \\circ } = - 4 9 . 4 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\quad _ { i i i } ) 2 C \\mathrm { l F } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C l } _ { 2 } \\mathrm { O } ( g ) + \\mathrm { O F } _ { 2 } ( g ) \\qquad \\quad \\Delta H _ { ( i i i ) } ^ { \\circ } = + 2 1 4 . 0 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( i v ) \\ : { \\mathrm { C l } } \\mathrm { F } _ { 3 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\frac { 1 } { 2 } \\mathrm { C l } _ { 2 } \\mathrm { O } ( g ) + \\textstyle \\frac { 3 } { 2 } \\mathrm { O F } _ { 2 } ( g ) \\Delta { H } _ { ( i v ) } ^ { \\circ } = + 2 3 6 . 2 \\mathrm { ~ k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Our goal is to manipulate and combine reactions (i), (ii), and (iv)such that they add up to reaction $( i )$ . Going from left to right in $( i )$ , we first see that $\\mathrm { C l F } ( g )$ is needed as a reactant. This can be obtained by multiplying reaction (ii)by $\\frac { 1 } { 2 }$ which means that the $\\Delta H ^ { \\circ }$ change is also multiplied by $\\frac { 1 } { 2 }$ ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C l F } ( g ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\frac { 1 } { 2 } \\mathrm { C l } _ { 2 } \\mathrm { O } ( g ) + \\frac { 1 } { 2 } \\mathrm { O F } _ { 2 } ( g ) \\qquad \\Delta H ^ { \\circ } = \\frac { 1 } { 2 } ( 2 1 4 . 0 ) = + 1 0 7 . 0 \\mathrm { \\ : k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Next, we see that $\\mathrm { F } _ { 2 }$ is also needed as a reactant. To get this, reverse and halve reaction $( i i )$ , which means that the $\\Delta H ^ { \\circ }$ changes sign and is halved: ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) + \\mathrm { F } _ { 2 } ( g ) \\longrightarrow \\mathrm { O F } _ { 2 } ( g ) \\qquad \\Delta H ^ { \\circ } = + 2 4 . 7 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "To get $\\mathrm { C l F } _ { 3 }$ as a product, reverse (iv), changing the sign of $\\Delta H ^ { \\circ }$ : ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { 2 } } \\mathrm { C l } _ { 2 } \\mathrm { O } ( g ) + { \\frac { 3 } { 2 } } \\mathrm { O F } _ { 2 } ( g ) \\longrightarrow \\mathrm { C l F } _ { 3 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\qquad \\Delta H ^ { \\circ } = - 2 3 6 . 2 \\mathrm { \\ k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Now check to make sure that these reactions add up to the reaction we want: ",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l } { \\operatorname { C l F } ( g ) + { \\frac { 1 } { 2 } } \\mathbf { O } _ { 2 } ( g ) \\longrightarrow { \\frac { 1 } { 2 } } \\mathbf { C l } _ { 2 } \\mathbf { O } ( g ) + { \\frac { 1 } { 2 } } \\mathbf { O F } _ { 2 } ( g ) } & { \\quad \\Delta H ^ { \\circ } = + 1 0 7 . 0 \\operatorname { k J } } \\\\ { { \\frac { 1 } { 2 } } \\mathbf { O } _ { 2 } ( g ) + \\mathbf { F } _ { 2 } ( g ) \\longrightarrow \\mathbf { O F } _ { 2 } ( g ) } & { \\quad \\Delta H ^ { \\circ } = + 2 4 . 7 \\operatorname { k J } } \\\\ { \\qquad { \\frac { 1 } { 2 } } \\mathbf { C l } _ { 2 } \\mathbf { O } ( g ) + { \\frac { 3 } { 2 } } \\mathbf { O F } _ { 2 } ( g ) \\longrightarrow \\mathbf { C l F } _ { 3 } ( g ) + \\mathbf { O } _ { 2 } ( g ) } & { \\quad { \\frac { \\Delta H ^ { \\circ } = - 2 3 6 . 2 \\operatorname { k J } } { \\Delta H ^ { \\circ } = - 1 0 4 . 5 \\operatorname { k J } } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Reactants $\\scriptstyle { \\frac { 1 } { 2 } } \\mathrm { O } _ { 2 }$ and $\\scriptstyle { \\frac { 1 } { 2 } } \\mathrm { O } _ { 2 }$ cancel out product $\\mathrm { O _ { 2 } }$ ; product ${ \\scriptstyle { \\frac { 1 } { 2 } } } \\mathbf { C l } _ { 2 } \\mathbf { O }$ cancels reactant ${ \\textstyle \\frac { 1 } { 2 } } \\mathbf { C l } _ { 2 } \\mathbf { O }$ and reactant ${ \\textstyle \\frac { 3 } { 2 } } \\mathrm { O F } _ { 2 }$ is cancelled by products ${ \\textstyle \\frac { 1 } { 2 } } \\mathrm { O F } _ { 2 }$ and $\\mathrm { O F } _ { 2 }$ . This leaves only reactants $\\mathrm { C l F } ( g )$ and $\\mathrm { F } _ { 2 } ( g )$ and product $\\mathrm { C l F } _ { 3 } ( g )$ , which are what we want. Since summing these three modified reactions yields the reaction of interest, summing the three modified $\\Delta H ^ { \\circ }$ values will give the desired $\\Delta H ^ { \\circ }$ : ",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H ^ { \\circ } = ( + 1 0 7 . 0 \\mathrm { k J } ) + ( 2 4 . 7 \\mathrm { k J } ) + ( - 2 3 6 . 2 \\mathrm { k J } ) = - 1 0 4 . 5 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Aluminum chloride can be formed from its elements: ",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( i ) 2 \\mathrm { A l } ( s ) + 3 \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { A l C l } _ { 3 } ( s ) \\qquad \\Delta H ^ { \\circ } = ?\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Use the reactions here to determine the $\\Delta H ^ { \\circ }$ for reaction $( i )$ : ",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( i i ) \\mathrm { H C l } ( g ) \\longrightarrow \\mathrm { H C l } ( a q ) \\qquad \\Delta H _ { ( i i ) } ^ { \\circ } = - 7 4 . 8 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\ni i i ) \\mathrm { H } _ { 2 } ( g ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { H C l } ( g ) \\qquad \\Delta H _ { ( i i i ) } ^ { \\circ } = - 1 8 5 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( i v ) \\mathrm { A l C l } _ { 3 } ( a q ) \\longrightarrow \\mathrm { A l C l } _ { 3 } ( s ) \\qquad \\Delta H _ { ( i v ) } ^ { \\circ } = + 3 2 3 \\mathrm { k J / m o l }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( v ) 2 \\mathrm { A l } ( s ) + 6 \\mathrm { H C l } ( a q ) \\longrightarrow 2 \\mathrm { A l C l } _ { 3 } ( a q ) + 3 \\mathrm { H } _ { 2 } ( g ) \\qquad \\Delta H _ { ( v ) } ^ { \\circ } = - 1 0 4 9 \\mathrm { k J }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Answer: \u22121407 kJ ",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "We also can use Hess\u2019s law to determine the enthalpy change of any reaction if the corresponding enthalpies of formation of the reactants and products are available. The stepwise reactions we consider are: (i) decompositions of the reactants into their component elements (for which the enthalpy changes are proportional to the negative of the enthalpies of formation of the reactants), followed by (ii) re-combinations of the elements to give the products (with the enthalpy changes proportional to the enthalpies of formation of the products). The standard enthalpy change of the overall reaction is therefore equal to: (ii) the sum of the standard enthalpies of formation of all the products plus (i) the sum of the negatives of the standard enthalpies of formation of the reactants. This is usually rearranged slightly to be written as follows, with $\\sum$ representing \u201cthe sum of\u201d and $n$ standing for the stoichiometric coefficients: ",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H _ { \\mathrm { r e a c t i o n } } ^ { \\circ } = \\sum n \\times \\Delta H _ { \\mathrm { f } } ^ { \\circ } ( \\mathrm { p r o d u c t s } ) - \\sum n \\times \\Delta H _ { \\mathrm { f } } ^ { \\circ } ( \\mathrm { r e a c t a n t s } )\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "The following example shows in detail why this equation is valid, and how to use it to calculate the enthalpy change for a reaction of interest. ",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5.15 ",
+        "text_level": 1,
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Using Hess\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "What is the standard enthalpy change for the reaction: ",
+        "page_idx": 258
+    },
+    {
+        "type": "equation",
+        "text": "$$\n3 \\mathrm { N O } _ { 2 } ( g ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) \\longrightarrow 2 \\mathrm { H N O } _ { 3 } ( a q ) + \\mathrm { N O } ( g ) \\qquad \\Delta H ^ { \\circ } = \\mathfrak { T }\n$$",
+        "text_format": "latex",
+        "page_idx": 258
+    },
+    {
+        "type": "text",
+        "text": "Solution: Using the Equation ",
+        "text_level": 1,
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Use the special form of Hess\u2019s law given previously, and values from Appendix G: ",
+        "page_idx": 259
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta H _ { \\mathrm { r e a c t i o n } } ^ { \\circ } = \\sum n \\times \\Delta H _ { \\mathrm { f } } ^ { \\circ } ( \\mathrm { p r o d u c t s } ) - \\sum n \\times \\Delta H _ { \\mathrm { f } } ^ { \\circ } ( \\mathrm { r e a c t a n t s } )\n$$",
+        "text_format": "latex",
+        "page_idx": 259
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { = \\Big [ 2 \\mathrm { - } \\mathrm { m e l } { \\mathrm { H N } } \\Theta _ { 3 } ( { a } { q } ) \\times \\frac { - 2 0 7 . 4 \\mathrm { k J } } { - \\mathrm { m e l } { \\mathrm { H N } } \\Theta _ { 3 } ( { a q } ) } + 1 \\mathrm { - } \\mathrm { m e l } { \\mathrm { N } } \\Theta ( { g } ) \\times \\times \\frac { + 9 0 . 2 \\mathrm { k J } } { - \\mathrm { m e l } { \\mathrm { H N } } \\Theta ( { g } ) } \\Big ] } \\\\ & { - \\left[ 3 \\mathrm { m e l } { \\mathrm { N } } \\Theta _ { 2 } ( { g } ) \\times \\frac { + 3 3 . 2 \\mathrm { k J } } { - \\mathrm { m e l } { \\mathrm { N } } \\Theta _ { 2 } ( { g } ) } + 1 \\mathrm { - } \\mathrm { m e l } { \\mathrm { H } } _ { 2 } \\Theta ( { q } ) \\times \\frac { - 2 8 5 . 8 \\mathrm { k J } } { - \\mathrm { m e l } { \\mathrm { H } } _ { 2 } \\Theta ( { q } ) } \\right] } \\\\ & { = [ 2 \\times ( - 2 0 6 . 6 4 ) + 9 0 . 2 5 ] - [ 3 \\times 3 3 . 2 + - ( - 2 8 5 . 8 3 ) ] } \\\\ & { = - 3 2 3 . 0 3 + 1 8 6 . 2 3 } \\\\ & { = - 1 3 6 . 8 0 \\mathrm { k J } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Solution: Supporting Why the General Equation Is Valid ",
+        "text_level": 1,
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Alternatively, we can write this reaction as the sum of the decompositions of $3 \\mathsf { N O } _ { 2 } ( g )$ and $\\mathrm { 1 H _ { 2 } O } ( I )$ into their constituent elements, and the formation of $2 \\mathrm { H N O } _ { 3 } ( a q )$ and $1 \\ N \\mathsf { O } ( g )$ from their constituent elements. Writing out these reactions, and noting their relationships to the $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ values for these compounds (from Appendix G ), we have: ",
+        "page_idx": 259
+    },
+    {
+        "type": "equation",
+        "text": "",
+        "text_format": "latex",
+        "page_idx": 259
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c } { { { } } } & { { { { 3 \\mathrm { N O } _ { 2 } } ( g ) \\longrightarrow { 3 / 2 \\mathrm { N } _ { 2 } } ( g ) + 3 \\mathrm { O } _ { 2 } ( g ) } } } & { { { \\Delta H _ { 1 } ^ { \\circ } = - 9 9 . 6 ~ \\mathrm { k J } } } } \\\\ { { { } } } & { { { } } } \\\\ { { { \\mathrm { H } _ { 2 } O ( l ) \\longrightarrow \\mathrm { H } _ { 2 } ( g ) + \\displaystyle { \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) } \\qquad \\Delta H _ { 2 } ^ { \\circ } = + 2 8 5 . 8 ~ \\mathrm { k J } \\left[ - 1 ~ \\times ~ \\Delta H _ { f } ^ { \\circ } ( \\mathrm { H } _ { 2 } O ) \\right] } } } \\\\ { { { } } } & { { { } } } \\\\ { { { \\mathrm { H } _ { 2 } ( g ) + \\mathrm { N } _ { 2 } ( g ) + 3 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow { 2 \\mathrm { H N O } _ { 3 } } ( a q ) } } } & { { { \\Delta H _ { 3 } ^ { \\circ } = - 4 1 4 . 8 ~ \\mathrm { k J } \\left[ 2 ~ \\times ~ \\Delta H _ { f } ^ { \\circ } ( \\mathrm { H N O } _ { 3 } ) \\right] } } } \\\\ { { { } } } & { { { } } } \\\\  { { \\displaystyle { \\frac { 1 } { 2 } \\mathrm { N } _ { 2 } ( g ) + \\displaystyle { \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow { \\mathrm { N O } ( g ) } } \\qquad \\Delta H _ { 4 } ^ { \\circ } = + 9 0 . 2 ~ \\mathrm { k J } \\left[ 1 ~ \\times ~ ( \\mathrm { N O } ) \\right] } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Summing these reaction equations gives the reaction we are interested in: ",
+        "page_idx": 259
+    },
+    {
+        "type": "equation",
+        "text": "$$\n3 \\mathrm { N O } _ { 2 } ( g ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) \\longrightarrow 2 \\mathrm { H N O } _ { 3 } ( a q ) + \\mathrm { N O } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Summing their enthalpy changes gives the value we want to determine: ",
+        "page_idx": 259
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\Delta H _ { \\mathrm { r x n } } ^ { \\circ } } & { = \\Delta H _ { 1 } ^ { \\circ } + \\Delta H _ { 2 } ^ { \\circ } + \\Delta H _ { 3 } ^ { \\circ } + \\Delta H _ { 4 } ^ { \\circ } = ( - 9 9 . 6 \\mathrm { k J } ) + ( + 2 8 5 . 8 \\mathrm { k J } ) + ( - 4 1 4 . 8 \\mathrm { k J } ) + ( + 9 0 . 2 \\mathrm { k J } ) } \\\\ & { = - 1 3 8 . 4 \\mathrm { k J } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "So the standard enthalpy change for this reaction is $\\Delta H ^ { \\circ } = - 1 3 8 . 4 \\mathrm { k J }$ . ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Note that this result was obtained by (1) multiplying the $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of each product by its stoichiometric coefficient and summing those values, (2) multiplying the $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of each reactant by its stoichiometric coefficient and summing those values, and then (3) subtracting the result found in (2) from the result found in (1). This is also the procedure in using the general equation, as shown. ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Calculate the heat of combustion of 1 mole of ethanol, $\\mathrm { C _ { 2 } H _ { 5 } O H } ( I )$ , when $\\mathrm { H } _ { 2 } \\mathsf { O } ( I )$ and $\\mathrm { C O _ { 2 } } ( g )$ are formed. Use the following enthalpies of formation: $\\mathrm { C } _ { 2 } \\mathrm { H } _ { 5 } \\mathrm { O H } ( \\varLambda ) , - 2 7 8 \\mathrm { k J } / \\mathrm { m o l }$ $\\mathrm { H } _ { 2 } \\mathrm { O } (  { I _ { \\mathrm { } } } ) , - 2 8 6 \\mathrm { k J } / \\mathrm { m o l }$ ; and $\\mathrm { C O _ { 2 } } ( g ) , - 3 9 4 \\mathrm { k J / m o l }$ . ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Answer: \u22121368 kJ/mol ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Key Terms ",
+        "text_level": 1,
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "bomb calorimeter device designed to measure the energy change for processes occurring under conditions of constant volume; commonly used for reactions involving solid and gaseous reactants or products   \ncalorie (cal) unit of heat or other energy; the amount of energy required to raise 1 gram of water by 1 degree Celsius; 1 cal is defined as 4.184 J   \ncalorimeter device used to measure the amount of heat absorbed or released in a chemical or physical process   \ncalorimetry process of measuring the amount of heat involved in a chemical or physical process   \nchemical thermodynamics area of science that deals with the relationships between heat, work, and all forms of energy associated with chemical and physical processes   \nendothermic process chemical reaction or physical change that absorbs heat   \nenergy capacity to supply heat or do work   \nenthalpy (H) sum of a system\u2019s internal energy and the mathematical product of its pressure and volume   \nenthalpy change (\u0394H) heat released or absorbed by a system under constant pressure during a chemical or physical process   \nexothermic process chemical reaction or physical change that releases heat   \nexpansion work (pressure-volume work) work done as a system expands or contracts against external pressure   \nfirst law of thermodynamics internal energy of a system changes due to heat flow in or out of the system or work done on or by the system   \nheat (q) transfer of thermal energy between two bodies   \nheat capacity (C) extensive property of a body of matter that represents the quantity of heat required to increase its temperature by 1 degree Celsius (or 1 kelvin)   \nHess\u2019s law if a process can be represented as the sum of several steps, the enthalpy change of the process equals the sum of the enthalpy changes of the steps   \nhydrocarbon compound composed only of hydrogen and carbon; the major component of fossil fuels   \ninternal energy (U) total of all possible kinds of energy present in a substance or substances   \njoule (J) SI unit of energy; 1 joule is the kinetic energy of an object with a mass of 2 kilograms moving with a velocity of 1 meter per second, 1 J $= 1 \\mathrm { k g } \\mathrm { m } ^ { 2 } / \\mathrm { s }$ and $4 . 1 8 4 \\mathrm { J } = 1$ cal   \nkinetic energy energy of a moving body, in joules, equal to $\\scriptstyle { \\frac { 1 } { 2 } } m v ^ { 2 }$ (where $m = { \\mathrm { m a s s } }$ and $\\scriptstyle V =$ velocity)   \nnutritional calorie (Calorie) unit used for quantifying energy provided by digestion of foods, defined as 1000 cal or 1 kcal   \npotential energy energy of a particle or system of particles derived from relative position, composition, or condition   \nspecific heat capacity $\\mathbf { \\eta } ( \\pmb { c } )$ intensive property of a substance that represents the quantity of heat required to raise the temperature of 1 gram of the substance by 1 degree Celsius (or 1 kelvin)   \nstandard enthalpy of combustion $( \\Delta H _ { \\mathrm { c } } ^ { \\circ } )$ heat released when one mole of a compound undergoes complete combustion under standard conditions   \nstandard enthalpy of formation $( \\Delta H _ { \\mathrm { f } } ^ { \\circ } )$ enthalpy change of a chemical reaction in which 1 mole of a pure substance is formed from its elements in their most stable states under standard state conditions   \nstandard state set of physical conditions as accepted as common reference conditions for reporting thermodynamic properties; 1 bar of pressure, and solutions at 1 molar concentrations, usually at a temperature of 298.15 K   \nstate function property depending only on the state of a system, and not the path taken to reach that state   \nsurroundings all matter other than the system being studied   \nsystem portion of matter undergoing a chemical or physical change being studied   \ntemperature intensive property of matter that is a quantitative measure of \u201chotness\u201d and \u201ccoldness\u201d   \nthermal energy kinetic energy associated with the random motion of atoms and molecules   \nthermochemistry study of measuring the amount of heat absorbed or released during a chemical reaction or a physical change   \nwork (w) energy transfer due to changes in external, macroscopic variables such as pressure and volume; or causing matter to move against an opposing force ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Key Equations ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { q = c \\times m \\times \\Delta T = c \\times m \\times ( T _ { \\mathrm { f i n a l } } - T _ { \\mathrm { i n i t i a l } } ) } \\\\ { \\Delta U = q + w } \\\\ { \\Delta H _ { \\mathrm { r e a c t i o n } } ^ { \\circ } = \\displaystyle \\sum n \\times \\Delta H _ { \\mathrm { f } } ^ { \\circ } ( \\mathrm { p r o d u c t s } ) - \\displaystyle \\sum n \\times \\Delta H _ { \\mathrm { f } } ^ { \\circ } ( \\mathrm { r e a } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Summary ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "5.1 Energy Basics ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Energy is the capacity to supply heat or do work (applying a force to move matter). Kinetic energy (KE) is the energy of motion; potential energy is energy due to relative position, composition, or condition. When energy is converted from one form into another, energy is neither created nor destroyed (law of conservation of energy or first law of thermodynamics). ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "The thermal energy of matter is due to the kinetic energies of its constituent atoms or molecules. Temperature is an intensive property of matter reflecting hotness or coldness that increases as the average kinetic energy increases. Heat is the transfer of thermal energy between objects at different temperatures. Chemical and physical processes can absorb heat (endothermic) or release heat (exothermic). The SI unit of energy, heat, and work is the joule (J). ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Specific heat and heat capacity are measures of the energy needed to change the temperature of a substance or object. The amount of heat absorbed or released by a substance depends directly on the type of substance, its mass, and the temperature change it undergoes. ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "5.2 Calorimetry ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Calorimetry is used to measure the amount of thermal energy transferred in a chemical or physical process. This requires careful measurement of the temperature change that occurs during the process and the masses of the system and surroundings. These measured quantities are then used to compute the amount of heat produced or consumed in the process using known mathematical relations. ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Calorimeters are designed to minimize energy exchange between their contents and the external environment. They range from simple coffee cup calorimeters used by introductory chemistry students to sophisticated bomb calorimeters used to determine the energy content of food. ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "5.3 Enthalpy ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "If a chemical change is carried out at constant pressure and the only work done is caused by expansion or contraction, $q$ for the change is called the enthalpy change with the symbol $\\Delta H ,$ or $\\Delta H ^ { \\circ }$ for reactions occurring under standard state conditions at $2 9 8 \\mathrm { K }$ . The value of $\\Delta H$ for a reaction in one direction is equal in magnitude, but opposite in sign, to $\\Delta H$ for the reaction in the opposite direction, and $\\Delta H$ is directly proportional to the quantity of reactants and products. The standard enthalpy of formation, $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ is the enthalpy change accompanying the formation of 1 mole of a substance from the elements in their most stable states at 1 bar and $2 9 8 . 1 5 \\mathrm { K }$ . If the enthalpies of formation are available for the reactants and products of a reaction, the enthalpy change can be calculated using Hess\u2019s law: If a process can be written as the sum of several stepwise processes, the enthalpy change of the total process equals the sum of the enthalpy changes of the various steps. ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "5.1 Energy Basics ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "1. A burning match and a bonfire may have the same temperature, yet you would not sit around a burning match on a fall evening to stay warm. Why not?   \n2. Prepare a table identifying several energy transitions that take place during the typical operation of an automobile.   \n3. Explain the difference between heat capacity and specific heat of a substance.   \n4. Calculate the heat capacity, in joules and in calories per degree, of the following: (a) $2 8 . 4 \\mathrm { g }$ of water (b) 1.00 oz of lead ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "5. Calculate the heat capacity, in joules and in calories per degree, of the following: ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "(a) $4 5 . 8 \\mathrm { g }$ of nitrogen gas (b) 1.00 pound of aluminum metal ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "6. How much heat, in joules and in calories, must be added to a $7 5 . 0 \\mathrm { - g }$ iron block with a specific heat of $0 . 4 4 9 \\mathrm { J / g ^ { \\circ } C }$ to increase its temperature from $2 5 ^ { \\circ } \\mathrm { C }$ to its melting temperature of $1 5 3 5 ^ { \\circ } \\mathrm { C } ?$ ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "7. How much heat, in joules and in calories, is required to heat a 28.4-g (1-oz) ice cube from $- 2 3 . 0 ^ { \\circ } \\mathrm { C }$ to $- 1 . 0$ $^ \\circ { \\mathsf { C } } ?$ ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "8. How much would the temperature of $2 7 5 { \\mathrm { g } }$ of water increase if $3 6 . 5 \\mathrm { k J }$ of heat were added? ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "9. If $1 4 . 5 \\mathrm { k J }$ of heat were added to $4 8 5 { \\mathrm { g } }$ of liquid water, how much would its temperature increase? ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "10. A piece of unknown substance weighs $4 4 . 7 \\mathrm { g }$ and requires 2110 J to increase its temperature from $2 3 . 2 ^ { \\circ } \\mathrm { C }$ to $8 9 . 6 ^ { \\circ } \\mathrm { C }$ . (a) What is the specific heat of the substance? (b) If it is one of the substances found in Table 5.1, what is its likely identity? ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "11. A piece of unknown solid substance weighs $4 3 7 . 2 \\mathrm { g }$ , and requires 8460 J to increase its temperature from $1 9 . 3 ^ { \\circ } \\mathrm { C }$ to $6 8 . 9 ^ { \\circ } \\mathrm { C }$ . (a) What is the specific heat of the substance? (b) If it is one of the substances found in Table 5.1, what is its likely identity? ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "12. An aluminum kettle weighs $1 . 0 5 \\mathrm { k g }$ . (a) What is the heat capacity of the kettle? (b) How much heat is required to increase the temperature of this kettle from $2 3 . 0 ^ { \\circ } \\mathrm { C }$ to $9 9 . 0 \\ ^ { \\circ } \\mathrm { C ? }$ (c) How much heat is required to heat this kettle from $2 3 . 0 ^ { \\circ } \\mathrm { C }$ to $9 9 . 0 ^ { \\circ } \\mathrm { C }$ if it contains $1 . 2 5 \\mathrm { L }$ of water (density of $0 . 9 9 7 { \\mathrm { ~ g / m L } }$ and a specific heat of $4 . 1 8 4 \\ : \\mathrm { J / g ^ { \\circ } C ) ^ { \\cdot } }$ ? ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "13. Most people find waterbeds uncomfortable unless the water temperature is maintained at about $8 5 ^ { \\circ } \\mathrm { F } .$ Unless it is heated, a waterbed that contains $8 9 2 \\mathrm { L }$ of water cools from $8 5 ^ { \\circ } \\mathrm { F }$ to $7 2 ^ { \\circ } \\mathrm { F }$ in 24 hours. Estimate the amount of electrical energy required over 24 hours, in kWh, to keep the bed from cooling. Note that 1 kilowatt-hour $( \\mathrm { k W h } ) = 3 . 6 \\times 1 0 ^ { 6 } \\mathrm { J }$ , and assume that the density of water is $1 . 0 \\ : \\mathrm { g / m L }$ (independent of temperature). What other assumptions did you make? How did they affect your calculated result (i.e., were they likely to yield \u201cpositive\u201d or \u201cnegative\u201d errors)? ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "5.2 Calorimetry ",
+        "text_level": 1,
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "14. A ${ 5 0 0 } \\mathrm { - m L }$ bottle of water at room temperature and a 2-L bottle of water at the same temperature were placed in a refrigerator. After 30 minutes, the $\\scriptstyle 5 0 0 - { \\mathrm { m L } }$ bottle of water had cooled to the temperature of the refrigerator. An hour later, the 2-L of water had cooled to the same temperature. When asked which sample of water lost the most heat, one student replied that both bottles lost the same amount of heat because they started at the same temperature and finished at the same temperature. A second student thought that the 2-L bottle of water lost more heat because there was more water. A third student believed that the ${ 5 0 0 } \\mathrm { - m L }$ bottle of water lost more heat because it cooled more quickly. A fourth student thought that it was not possible to tell because we do not know the initial temperature and the final temperature of the water. Indicate which of these answers is correct and describe the error in each of the other answers. ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "15. Would the amount of heat measured for the reaction in Example 5.5 be greater, lesser, or remain the same if we used a calorimeter that was a poorer insulator than a coffee cup calorimeter? Explain your answer. ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "16. Would the amount of heat absorbed by the dissolution in Example $5 . 6$ appear greater, lesser, or remain the same if the experimenter used a calorimeter that was a poorer insulator than a coffee cup calorimeter? Explain your answer. ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "17. Would the amount of heat absorbed by the dissolution in Example $5 . 6$ appear greater, lesser, or remain the same if the heat capacity of the calorimeter were taken into account? Explain your answer. ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "18. How many milliliters of water at $2 3 ^ { \\circ } \\mathrm { C }$ with a density of $1 . 0 0 \\mathrm { g / m L }$ must be mixed with $\\boldsymbol { 1 8 0 } \\mathrm { m L }$ (about 6 oz) of coffee at $9 5 ^ { \\circ } \\mathrm { C }$ so that the resulting combination will have a temperature of $6 0 ~ ^ { \\circ } \\mathrm { C ? }$ Assume that coffee and water have the same density and the same specific heat. ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "19. How much will the temperature of a cup (180 g) of coffee at $9 5 ^ { \\circ } \\mathrm { C }$ be reduced when a $4 5 { \\mathrm { g } }$ silver spoon (specific heat $0 . 2 4 ~ \\mathrm { J / g } ^ { \\circ } \\mathrm { C } )$ at $2 5 ^ { \\circ } \\mathrm { C }$ is placed in the coffee and the two are allowed to reach the same temperature? Assume that the coffee has the same density and specific heat as water. ",
+        "page_idx": 262
+    },
+    {
+        "type": "text",
+        "text": "20. A $4 5 \\mathrm { - g }$ aluminum spoon (specific heat $0 . 8 8 \\mathrm { J } / \\mathrm { g } ^ { \\circ } \\mathrm { C } )$ at $2 4 ^ { \\circ } \\mathrm { C }$ is placed in $1 8 0 ~ \\mathrm { m L }$ $( 1 8 0 \\ \\mathrm { g ) }$ of coffee at $8 5 ~ ^ { \\circ } \\mathrm { C }$ and the temperature of the two become equal. (a) What is the final temperature when the two become equal? Assume that coffee has the same specific heat as water. (b) The first time a student solved this problem she got an answer of $8 8 ^ { \\circ } \\mathrm { C } .$ . Explain why this is clearly an incorrect answer. ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "21. The temperature of the cooling water as it leaves the hot engine of an automobile is $2 4 0 ^ { \\circ } \\mathrm { F } .$ . After it passes through the radiator it has a temperature of ${ 1 7 5 } ^ { \\circ } \\mathrm { F } .$ Calculate the amount of heat transferred from the engine to the surroundings by one gallon of water with a specific heat of $4 . 1 8 4 \\mathrm { J / g ^ { \\circ } C }$ . ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "22. A $7 0 . 0 \\mathrm { - g }$ piece of metal at $8 0 . 0 ^ { \\circ } \\mathrm { C }$ is placed in $_ { 1 0 0 \\mathrm { g } }$ of water at $2 2 . 0 ^ { \\circ } \\mathrm { C }$ contained in a calorimeter like that shown in Figure 5.12. The metal and water come to the same temperature at $2 4 . 6 ^ { \\circ } \\mathrm { C } .$ . How much heat did the metal give up to the water? What is the specific heat of the metal? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "23. If a reaction produces $1 . 5 0 6 \\mathrm { k J }$ of heat, which is trapped in $3 0 . 0 \\mathrm { g }$ of water initially at $2 6 . 5 ^ { \\circ } \\mathrm { C }$ in a calorimeter like that in Figure 5.12, what is the resulting temperature of the water? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "24. A $0 . 5 0 0 \\mathrm { - g }$ sample of KCl is added to $5 0 . 0 \\mathrm { g }$ of water in a calorimeter (Figure 5.12). If the temperature decreases by $1 . 0 5 ^ { \\circ } \\mathrm { C }$ , what is the approximate amount of heat involved in the dissolution of the KCl, assuming the specific heat of the resulting solution is $4 . 1 8 \\mathrm { J / g ^ { \\circ } C ? }$ Is the reaction exothermic or endothermic? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "25. Dissolving $3 . 0 \\mathrm { g }$ of $\\mathrm { C a C l } _ { 2 } ( s )$ in $1 5 0 . 0 { \\mathrm { g } }$ of water in a calorimeter (Figure 5.12) at $2 2 . 4 ^ { \\circ } \\mathrm { C }$ causes the temperature to rise to $2 5 . 8 { } ^ { \\circ } \\mathrm { C } .$ . What is the approximate amount of heat involved in the dissolution, assuming the specific heat of the resulting solution is $4 . 1 8 \\mathrm { J / g ^ { \\circ } C ? }$ Is the reaction exothermic or endothermic? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "26. When $5 0 . 0 \\mathrm { g }$ of 0.200 M NaCl(aq) at $2 4 . 1 ^ { \\circ } \\mathrm { C }$ is added to $1 0 0 . 0 { \\mathrm { g } }$ of $0 . 1 0 0 \\mathrm { M } \\mathrm { A g N O } _ { 3 } ( a q )$ at $2 4 . 1 ^ { \\circ } \\mathrm { C }$ in a calorimeter, the temperature increases to $2 5 . 2 ^ { \\circ } \\mathrm { C }$ as AgCl(s) forms. Assuming the specific heat of the solution and products is $4 . 2 0 \\mathrm { J / g ^ { \\circ } C } _ { ; }$ , calculate the approximate amount of heat in joules produced. ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "27. The addition of $3 . 1 5 \\mathrm { g }$ of $\\mathrm { B a ( O H ) _ { 2 } { \\cdot } 8 H _ { 2 } O }$ to a solution of $\\boldsymbol { 1 . 5 2 \\mathrm { g } }$ of $\\mathrm { N H } _ { 4 } \\mathrm { S C N }$ in $_ { 1 0 0 \\mathrm { g } }$ of water in a calorimeter caused the temperature to fall by $3 . 1 ^ { \\circ } \\mathrm { C }$ . Assuming the specific heat of the solution and products is 4.20 $\\mathrm { { J / g ^ { \\circ } C } }$ , calculate the approximate amount of heat absorbed by the reaction, which can be represented by the following equation: $\\mathrm { B a ( O H ) } _ { 2 } \\cdot \\mathrm { B H } _ { 2 } O ( s ) + 2 \\mathrm { N H } _ { 4 } \\mathrm { S C N } ( a q ) \\longrightarrow \\mathrm { B a ( S C N ) } _ { 2 } ($ $\\mathrm { S C N } ( a q ) \\longrightarrow \\mathrm { B a } ( \\mathrm { S C N } ) _ { 2 } ( a q ) + 2 \\mathrm { N H } _ { 3 } ( a q ) + 1 0 \\mathrm { H } _ { 2 } \\mathrm { O } ( I )$ ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "28. The reaction of $5 0 ~ \\mathrm { m L }$ of acid and $5 0 ~ \\mathrm { m L }$ of base described in Example 5.5 increased the temperature of the solution by $6 . 9 ^ { \\circ } \\mathrm { C } .$ . How much would the temperature have increased if $1 0 0 ~ \\mathrm { { m L } }$ of acid and $1 0 0 ~ \\mathrm { { m L } }$ of base had been used in the same calorimeter starting at the same temperature of $2 2 . 0 ^ { \\mathrm { { o } } } \\mathrm { { C } ? }$ Explain your answer. ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "29. If the $3 . 2 1 \\mathrm { g }$ of $\\mathrm { N H } _ { 4 } \\mathrm { N O } _ { 3 }$ in Example 5.6 were dissolved in $1 0 0 . 0 { \\mathrm { g } }$ of water under the same conditions, how much would the temperature change? Explain your answer. ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "30. When $1 . 0 \\ : \\mathrm { g }$ of fructose, $\\mathrm { C } _ { 6 } \\mathrm { H } _ { 1 2 } \\mathrm { O } _ { 6 } ( s )$ , a sugar commonly found in fruits, is burned in oxygen in a bomb calorimeter, the temperature of the calorimeter increases by $1 . 5 8 ^ { \\circ } \\mathrm { C } .$ . If the heat capacity of the calorimeter and its contents is $9 . 9 0 \\mathrm { k J / ^ { \\circ } C }$ , what is $q$ for this combustion? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "31. When a $\\phantom { - } 0 . 7 4 0 \\ \u2013 \\mathrm { g }$ sample of trinitrotoluene (TNT), $\\mathrm { C _ { 7 } H _ { 5 } N _ { 2 } O _ { 6 } }$ , is burned in a bomb calorimeter, the temperature increases from $2 3 . 4 ^ { \\circ } \\mathrm { C }$ to $2 6 . 9 ^ { \\circ } \\mathrm { C }$ . The heat capacity of the calorimeter is ${ 5 3 4 } \\mathrm { J / { ^ { \\circ } C } } ,$ , and it contains $6 7 5 \\mathrm { m L }$ of water. How much heat was produced by the combustion of the TNT sample? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "32. One method of generating electricity is by burning coal to heat water, which produces steam that drives an electric generator. To determine the rate at which coal is to be fed into the burner in this type of plant, the heat of combustion per ton of coal must be determined using a bomb calorimeter. When $1 . 0 0 { \\mathrm { g } }$ of coal is burned in a bomb calorimeter (Figure 5.17), the temperature increases by $1 . 4 8 { ^ \\circ } \\mathrm { C } .$ If the heat capacity of the calorimeter is $2 1 . 6 \\mathrm { k J } / { } ^ { \\circ } \\mathrm { C }$ , determine the heat produced by combustion of a ton of coal $( 2 . 0 0 0 \\times 1 0 ^ { 3 }$ pounds). ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "33. The amount of fat recommended for someone with a daily diet of 2000 Calories is $6 5 { \\mathrm { g } }$ . What percent of the calories in this diet would be supplied by this amount of fat if the average number of Calories for fat is 9.1 Calories/g? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "34. A teaspoon of the carbohydrate sucrose (common sugar) contains 16 Calories (16 kcal). What is the mass of one teaspoon of sucrose if the average number of Calories for carbohydrates is 4.1 Calories/g? ",
+        "page_idx": 263
+    },
+    {
+        "type": "text",
+        "text": "35. What is the maximum mass of carbohydrate in a 6-oz serving of diet soda that contains less than 1 Calorie per can if the average number of Calories for carbohydrates is 4.1 Calories/g? ",
+        "page_idx": 264
+    },
+    {
+        "type": "text",
+        "text": "36. A pint of premium ice cream can contain 1100 Calories. What mass of fat, in grams and pounds, must be produced in the body to store an extra $1 . 1 \\times 1 0 ^ { 3 }$ Calories if the average number of Calories for fat is 9.1 Calories/g?   \n37. A serving of a breakfast cereal contains $\\boldsymbol { 3 } \\mathrm { g }$ of protein, $\\boldsymbol { 1 8 } \\mathrm { g }$ of carbohydrates, and $6 \\mathrm { g }$ of fat. What is the Calorie content of a serving of this cereal if the average number of Calories for fat is 9.1 Calories/g, for carbohydrates is 4.1 Calories/g, and for protein is 4.1 Calories/g?   \n38. Which is the least expensive source of energy in kilojoules per dollar: a box of breakfast cereal that weighs 32 ounces and costs $\\$ 4.23$ , or a liter of isooctane (density, $0 . 6 9 1 9 \\mathrm { g / m L ) }$ ) that costs $\\$ 0.45?$ Compare the nutritional value of the cereal with the heat produced by combustion of the isooctane under standard conditions. A 1.0-ounce serving of the cereal provides 130 Calories. ",
+        "page_idx": 264
+    },
+    {
+        "type": "text",
+        "text": "5.3 Enthalpy ",
+        "text_level": 1,
+        "page_idx": 264
+    },
+    {
+        "type": "text",
+        "text": "39. Explain how the heat measured in Example 5.5 differs from the enthalpy change for the exothermic reaction described by the following equation: $\\mathrm { H C l } ( a q ) + \\mathrm { N a O H } ( a q ) \\longrightarrow \\mathrm { N a C l } ( a q ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( l )$   \n40. Using the data in the check your learning section of Example 5.5, calculate $\\Delta H$ in $\\mathrm { k J / m o l }$ of $\\mathsf { A g N O _ { 3 } } ( a q )$ for the reaction: $\\mathrm { N a C l } ( a q ) + \\mathrm { A g N O } _ { 3 } ( a q ) \\longrightarrow \\mathrm { A g C l } ( s ) + \\mathrm { N a N O } _ { 3 } ( a q )$   \n41. Calculate the enthalpy of solution $\\cdot \\Delta H$ for the dissolution) per mole of $\\mathrm { N H } _ { 4 } \\mathrm { N O } _ { 3 }$ under the conditions described in Example $5 . 6$ .   \n42. Calculate $\\Delta H$ for the reaction described by the equation. (Hint: Use the value for the approximate amount of heat absorbed by the reaction that you calculated in a previous exercise.) $\\mathrm { B a } ( \\mathrm { O H } ) _ { 2 } \\cdot \\mathrm { 8 H } _ { 2 } \\mathrm { O } ( s ) + 2 \\mathrm { N H } _ { 4 } \\mathrm { S C N } ( a q ) \\longrightarrow \\mathrm { B a } ( \\mathrm { S C N } ) _ { 2 } ( a q ) + 2 \\mathrm { N H } _ { 3 } ( a q ) + 1 0 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right)$   \n43. Calculate the enthalpy of solution ( $\\cdot \\Delta H$ for the dissolution) per mole of $\\mathrm { C a C l } _ { 2 }$ (refer to Exercise 5.25).   \n44. Although the gas used in an oxyacetylene torch (Figure 5.7) is essentially pure acetylene, the heat produced by combustion of one mole of acetylene in such a torch is likely not equal to the enthalpy of combustion of acetylene listed in Table 5.2. Considering the conditions for which the tabulated data are reported, suggest an explanation.   \n45. How much heat is produced by burning 4.00 moles of acetylene under standard state conditions?   \n46. How much heat is produced by combustion of $\\boldsymbol { 1 2 5 \\mathrm { g } }$ of methanol under standard state conditions?   \n47. How many moles of isooctane must be burned to produce $1 0 0 \\mathrm { k J }$ of heat under standard state conditions?   \n48. What mass of carbon monoxide must be burned to produce $1 7 5 \\mathrm { k J }$ of heat under standard state conditions?   \n49. When $2 . 5 0 \\mathrm { g }$ of methane burns in oxygen, $1 2 5 \\mathrm { k J }$ of heat is produced. What is the enthalpy of combustion per mole of methane under these conditions?   \n50. How much heat is produced when $1 0 0 ~ \\mathrm { { m L } }$ of 0.250 M HCl (density, $1 . 0 0 \\ : \\mathrm { g / m L }$ ) and $2 0 0 \\mathrm { m L }$ of 0.150 M NaOH (density, $1 . 0 0 \\ : \\mathrm { g / m L ) }$ are mixed? H $\\mathrm { I C l } \\left( a q \\right) + \\mathrm { N a O H } \\left( a q \\right) \\longrightarrow \\mathrm { N a C l } \\left( a q \\right) + \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right)$ $\\Delta H ^ { \\circ } = - 5 8 \\mathrm { { k J } }$ If both solutions are at the same temperature and the specific heat of the products is $4 . 1 9 \\mathrm { J / g ^ { \\circ } C }$ , how much will the temperature increase? What assumption did you make in your calculation?   \n51. A sample of $0 . 5 6 2 \\ \\mathrm { g }$ of carbon is burned in oxygen in a bomb calorimeter, producing carbon dioxide. Assume both the reactants and products are under standard state conditions, and that the heat released is directly proportional to the enthalpy of combustion of graphite. The temperature of the calorimeter increases from $2 6 . 7 4 ^ { \\circ } \\mathrm { C }$ to $2 7 . 9 3 ^ { \\circ } \\mathrm { C } .$ . What is the heat capacity of the calorimeter and its contents?   \n52. Before the introduction of chlorofluorocarbons, sulfur dioxide (enthalpy of vaporization, $6 . 0 0 \\mathrm { k c a l / m o l ) }$ was used in household refrigerators. What mass of $\\mathrm { S O _ { 2 } }$ must be evaporated to remove as much heat as evaporation of $1 . 0 0 \\mathrm { k g }$ of $\\mathrm { C C l } _ { 2 } \\mathrm { F } _ { 2 }$ (enthalpy of vaporization is $1 7 . 4 \\mathrm { k J / m o l } ) \\cdot$ ? The vaporization reactions for $\\mathrm { S O _ { 2 } }$ and $\\mathrm { C C l _ { 2 } F _ { 2 } }$ are $\\mathrm { S O } _ { 2 } ( l ) \\longrightarrow \\mathrm { S O } _ { 2 } ( g )$ and $\\mathrm { C C l } _ { 2 } \\mathrm { F } ( l ) \\longrightarrow \\mathrm { C C l } _ { 2 } \\mathrm { F } _ { 2 } ( g ) ,$ \uff0c respectively.   \n53. Homes may be heated by pumping hot water through radiators. What mass of water will provide the same amount of heat when cooled from 95.0 to $3 5 . 0 ^ { \\circ } \\mathrm { C }$ , as the heat provided when $_ { 1 0 0 \\mathrm { g } }$ of steam is cooled from $1 1 0 ^ { \\circ } \\mathrm { C }$ to $1 0 0 ^ { \\circ } \\mathrm { C }$ . ",
+        "page_idx": 264
+    },
+    {
+        "type": "text",
+        "text": "54. Which of the enthalpies of combustion in Table 5.2 the table are also standard enthalpies of formation? ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "55. Does the standard enthalpy of formation of $\\mathrm { H } _ { 2 } \\mathrm { O } ( g )$ differ from $\\Delta H ^ { \\circ }$ for the reaction $2 \\mathrm { H } _ { 2 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { H } _ { 2 } \\mathrm { O } ( g ) \\mathring { \\Omega }$ ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "56. Joseph Priestly prepared oxygen in 1774 by heating red mercury(II) oxide with sunlight focused through a lens. How much heat is required to decompose exactly 1 mole of red $\\mathrm { H g } { \\mathsf { O } } ( s )$ to $\\mathrm { H g } ( \\boldsymbol { I } )$ and $\\mathrm { O } _ { 2 } ( g )$ under standard conditions? ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "57. How many kilojoules of heat will be released when exactly 1 mole of manganese, Mn, is burned to form $\\mathrm { M n } _ { 3 } \\mathrm { O } _ { 4 } ( s )$ at standard state conditions? ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "58. How many kilojoules of heat will be released when exactly 1 mole of iron, Fe, is burned to form $\\mathrm { F e _ { 2 } O _ { 3 } } ( s )$ at standard state conditions? ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "59. The following sequence of reactions occurs in the commercial production of aqueous nitric acid: $\\begin{array} { r l r } & { 4 \\mathrm { N H } _ { 3 } ( g ) + \\bar { 5 0 } _ { 2 } ( \\hat { g } ) \\longrightarrow 4 \\mathrm { N O } \\left( g \\right) + 6 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right) } & { \\Delta H = - \\hat { 9 0 } 7 \\mathrm { k J } } \\\\ & { 2 \\mathrm { N O } \\left( g \\right) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { N O } _ { 2 } ( g ) } & { \\Delta H = - 1 1 3 \\mathrm { k J } } \\\\ & { 3 \\mathrm { N O } _ { 2 } + \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right) \\longrightarrow 2 \\mathrm { H N O } _ { 3 } ( a q ) + \\mathrm { N O } ( g ) } & { \\Delta H = - 1 3 9 \\mathrm { k J } } \\end{array}$ Determine the total energy change for the production of one mole of aqueous nitric acid by this process. ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "60. Both graphite and diamond burn. C (s,diamond) $+ \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C O } _ { 2 } ( g )$ For the conversion of graphite to diamond: C(s,graphite) $\\longrightarrow \\mathrm { { C } }$ (s,diamond) $\\Delta H ^ { \\circ } = 1 . 9 0 \\mathrm { k J }$ Which produces more heat, the combustion of graphite or the combustion of diamond? ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "61. From the molar heats of formation in Appendix G, determine how much heat is required to evaporate one mole of water: $\\mathrm { H } _ { 2 } \\mathbf { O } \\left( l \\right) \\longrightarrow \\mathrm { H } _ { 2 } \\mathbf { O } \\left( g \\right)$ ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "62. Which produces more heat? $\\mathrm { O s } ( s ) \\longrightarrow 2 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { O s O } _ { 4 } ( s )$ or $\\mathrm { O s } ( s ) \\longrightarrow 2 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { O s O } _ { 4 } ( g )$ for the phase change $\\mathrm { O s O } _ { 4 } ( s ) \\longrightarrow \\mathrm { O s O } _ { 4 } ( g ) \\qquad \\Delta H = 5 6 . 4 \\mathrm { k J }$ ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "63. Calculate $\\Delta H ^ { \\circ }$ for the process $\\mathrm { S b } \\left( s \\right) + \\frac { 5 } { 2 } \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { S b C l } _ { 5 } ( s )$ from the following information: ",
+        "page_idx": 265
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l r } { { \\mathrm { S b } \\left( s \\right) + \\frac { 3 } { 2 } \\mathrm { C l } _ { 2 } \\left( g \\right) \\longrightarrow \\mathrm { S b C l } _ { 3 } \\left( s \\right) \\qquad } } & { { \\Delta H ^ { \\circ } = - 3 1 4 \\mathrm { k J } } } \\\\ { { \\mathrm { S b C l } _ { 3 } \\left( s \\right) + \\mathrm { C l } _ { 2 } \\left( g \\right) \\longrightarrow \\mathrm { S b C l } _ { 5 } \\left( s \\right) \\qquad } } & { { \\Delta H ^ { \\circ } = - 8 0 \\mathrm { k J } } } \\\\ { { \\mathrm { C a l c u l a t e } \\Delta H ^ { \\circ } \\mathrm { f o r t h e p r o c e s s } Z \\mathrm { n } \\left( s \\right) + \\mathrm { S } \\left( s \\right) + 2 \\mathrm { O } _ { 2 } \\left( g \\right) \\longrightarrow \\mathrm { Z n S O } _ { 4 } \\left( s \\right) } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "64. from the following information: $\\mathrm { Z n } ( s ) + \\mathrm { S } ( s ) \\longrightarrow \\mathrm { Z n S } ( s ) \\qquad \\Delta H ^ { \\circ } = - 2 0 6 . 0 \\mathrm { k J }$ $\\mathrm { Z n S } ( s ) + 2 { \\mathrm O } _ { 2 } ( g ) \\longrightarrow \\mathrm { Z n S O } _ { 4 } ( s ) \\qquad \\Delta H ^ { \\circ } = - 7 7 6 . 8 \\mathrm { k J }$ ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "65. Calculate $\\Delta H$ for the process $\\mathrm { H g } _ { 2 } \\mathrm { C l } _ { 2 } ( s ) \\longrightarrow 2 \\mathrm { H g } \\left( l \\right) + \\mathrm { C l } _ { 2 } ( g )$ from the following information: $\\mathrm { H g } ( l ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { H g } \\mathrm { C l } _ { 2 } ( s ) \\qquad \\Delta H = - 2 2 4 \\mathrm { k J }$ $\\mathrm { H g } ( l ) + \\mathrm { H g C l } _ { 2 } ( s ) \\longrightarrow \\mathrm { H g } _ { 2 } \\mathrm { C l } _ { 2 } ( s )$ \u25b3H= -41.2kJ ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "66. Calculate $\\Delta H ^ { \\circ }$ for the process $\\mathrm { C o } _ { 3 } \\mathrm { O } _ { 4 } ( s ) \\longrightarrow 3 \\mathrm { C o } ( s ) + 2 \\mathrm { O } _ { 2 } ( g )$ from the following information: ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "$\\begin{array} { c c } { { \\mathrm { C o } ( s ) + \\frac { 1 } { 2 } \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C o O } ( s ) } } & { { ~ \\Delta H ^ { \\circ } = - 2 3 7 . 9 \\mathrm { k J } } } \\end{array}$ $\\begin{array} { r } { 3 \\mathrm { C o O } ( s ) + \\frac 1 2 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C o } _ { 3 } \\mathrm { O } _ { 4 } ( s ) \\qquad \\Delta H ^ { \\circ } = - 1 7 7 . 5 \\mathrm { k J } } \\end{array}$ ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "67. Calculate the standard molar enthalpy of formation of $\\mathsf { N O } ( g )$ from the following data: ",
+        "page_idx": 265
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c } { { { \\bf N } _ { 2 } ( g ) + 2 { \\bf O } _ { 2 } \\longrightarrow 2 { \\bf N O } _ { 2 } ( g ) } } & { { \\qquad \\Delta H ^ { \\circ } = 6 6 . 4 { \\bf k J } } } \\\\ { { 2 { \\bf N O } ( g ) + { \\bf O } _ { 2 } \\longrightarrow 2 { \\bf N O } _ { 2 } ( g ) } } & { { \\qquad \\Delta H ^ { \\circ } = - 1 1 4 . 1 { \\bf k J } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "68. Using the data in Appendix G, calculate the standard enthalpy change for each of the following reactions: (a) $\\mathrm { N } _ { 2 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { N O } \\left( g \\right)$ (b) $\\mathrm { S i } ( s ) + 2 \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { S i C l } _ { 4 } ( g )$ (c) $\\mathrm { F e } _ { 2 } \\mathrm { O } _ { 3 } \\left( s \\right) + 3 \\mathrm { H } _ { 2 } \\left( g \\right) \\longrightarrow 2 \\mathrm { F e } \\left( s \\right) + 3 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right)$ (d) $2 \\mathrm { L i O H } ( s ) + \\mathrm { C O } _ { 2 } ( g ) \\longrightarrow \\mathrm { L i } _ { 2 } \\mathrm { C O } _ { 3 } ( s ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( g )$ ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "69. Using the data in Appendix G, calculate the standard enthalpy change for each of the following reactions: (a) $\\mathrm { S i } \\left( s \\right) + 2 \\mathrm { F } _ { 2 } \\left( g \\right) \\longrightarrow \\mathrm { S i F } _ { 4 } \\left( g \\right)$ (b) $2 \\mathrm { C } \\left( s \\right) + 2 \\mathrm { H } _ { 2 } ( g ) + \\mathrm { O } _ { 2 } ( g ) \\longrightarrow \\mathrm { C H } _ { 3 } \\mathrm { C O } _ { 2 } \\mathrm { H } \\left( l \\right)$ (c) $\\mathrm { C H } _ { 4 } ( g ) + \\mathrm { N } _ { 2 } ( g ) \\longrightarrow \\mathrm { H C N } ( g ) + \\mathrm { N H } _ { 3 } ( g ) ;$ (d) $\\mathrm { C S } _ { 2 } ( g ) + 3 \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow \\mathrm { C C l } _ { 4 } ( g ) + \\mathrm { S } _ { 2 } \\mathrm { C l } _ { 2 } ( g )$   \n70. The following reactions can be used to prepare samples of metals. Determine the enthalpy change under standard state conditions for each. (a) $2 \\mathrm { A g } _ { 2 } \\mathrm { O } \\left( s \\right) \\longrightarrow 4 \\mathrm { A g } \\left( s \\right) + \\mathrm { O } _ { 2 } \\left( g \\right)$ (b) $\\mathrm { S n O } \\left( s \\right) + \\mathrm { C O } \\left( g \\right) \\longrightarrow \\mathrm { S n } \\left( s \\right) + \\mathrm { C O } _ { 2 } \\left( g \\right)$ (c) $\\mathrm { C r } _ { 2 } \\mathrm { O } _ { 3 } ( s ) + 3 \\mathrm { H } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { C r } ( s ) + 3 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right)$ (d) $2 \\mathrm { A l } \\left( s \\right) + \\mathrm { F e } _ { 2 } \\mathrm { O } _ { 3 } ( s ) \\longrightarrow \\mathrm { A l } _ { 2 } \\mathrm { O } _ { 3 } ( s ) + 2 \\mathrm { F e } \\left( s \\right)$   \n71. The decomposition of hydrogen peroxide, $\\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 }$ , has been used to provide thrust in the control jets of various space vehicles. Using the data in Appendix G, determine how much heat is produced by the decomposition of exactly 1 mole of $\\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 }$ under standard conditions. $2 \\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 } ( l ) \\longrightarrow 2 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( g \\right) + \\mathrm { O } _ { 2 } ( g )$   \n72. Calculate the enthalpy of combustion of propane, $\\mathrm { C _ { 3 } H _ { 8 } } ( g )$ , for the formation of $\\operatorname { H } _ { 2 } \\operatorname { O } ( g )$ and $\\mathrm { C O } _ { 2 } ( g )$ . The enthalpy of formation of propane is $- 1 0 4 \\mathrm { k J / m o l }$ .   \n73. Calculate the enthalpy of combustion of butane, $\\mathrm { C } _ { 4 } \\mathrm { H } _ { 1 0 } ( g )$ for the formation of $\\operatorname { H } _ { 2 } \\operatorname { O } ( g )$ and $\\mathrm { C O } _ { 2 } ( g )$ . The enthalpy of formation of butane is $- 1 2 6 \\mathrm { k J / m o l }$ .   \n74. Both propane and butane are used as gaseous fuels. Which compound produces more heat per gram when burned?   \n75. The white pigment $\\mathrm { T i O } _ { 2 }$ is prepared by the reaction of titanium tetrachloride, $\\mathrm { T i C l } _ { 4 }$ , with water vapor in the gas phase: $\\mathrm { T i C l } _ { 4 } ( g ) + 2 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( g \\right) \\longrightarrow \\mathrm { T i O } _ { 2 } ( s ) + 4 \\mathrm { H C l } \\left( g \\right)$ How much heat is evolved in the production of exactly 1 mole of $\\mathrm { T i O } _ { 2 } ( s )$ under standard state conditions?   \n76. Water gas, a mixture of $\\mathrm { H } _ { 2 }$ and CO, is an important industrial fuel produced by the reaction of steam with red hot coke, essentially pure carbon: $\\mathrm { C } \\left( s \\right) + \\mathrm { H } _ { 2 } \\mathrm { O } \\left( g \\right) \\longrightarrow \\mathrm { C O } \\left( g \\right) + \\mathrm { H } _ { 2 } \\left( g \\right)$ (a) Assuming that coke has the same enthalpy of formation as graphite, calculate $\\Delta H ^ { \\circ }$ for this reaction. (b) Methanol, a liquid fuel that could possibly replace gasoline, can be prepared from water gas and additional hydrogen at high temperature and pressure in the presence of a suitable catalyst: $2 \\mathrm { H } _ { 2 } ( g ) + \\mathrm { C O } ( g ) \\longrightarrow \\mathrm { C H } _ { 3 } \\mathrm { O H } ( g )$ Under the conditions of the reaction, methanol forms as a gas. Calculate $\\Delta H ^ { \\circ }$ for this reaction and for the condensation of gaseous methanol to liquid methanol. (c) Calculate the heat of combustion of 1 mole of liquid methanol to $\\mathsf { H } _ { 2 } \\mathsf { O } ( g )$ and $\\mathrm { C O _ { 2 } } ( g )$ .   \n77. In the early days of automobiles, illumination at night was provided by burning acetylene, $\\mathrm { C _ { 2 } H _ { 2 } }$ . Though no longer used as auto headlamps, acetylene is still used as a source of light by some cave explorers. The acetylene is (was) prepared in the lamp by the reaction of water with calcium carbide, $\\mathrm { C a C _ { 2 } }$ : $\\mathrm { C a C } _ { 2 } ( s ) + 2 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right) \\longrightarrow \\mathrm { C a ( O H ) } _ { 2 } ( s ) + \\mathrm { C } _ { 2 } \\mathrm { H } _ { 2 } ( g )$ Calculate the standard enthalpy of the reaction. The $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of $\\mathrm { C a C _ { 2 } }$ is $- 1 5 . 1 4 \\mathrm { k c a l / m o l } .$ .   \n78. From the data in Table 5.2, determine which of the following fuels produces the greatest amount of heat per gram when burned under standard conditions: $\\operatorname { C O } ( g )$ , $\\mathrm { C H } _ { 4 } ( g )$ , or $\\mathrm { C _ { 2 } H _ { 2 } } ( g )$ . ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "79. The enthalpy of combustion of hard coal averages $- 3 5 \\mathrm { k J / g }$ , that of gasoline, $1 . 2 8 \\times 1 0 ^ { 5 } \\mathrm { k J / g a l }$ . How many kilograms of hard coal provide the same amount of heat as is available from 1.0 gallon of gasoline? Assume that the density of gasoline is $0 . 6 9 2 \\mathrm { g / m L }$ (the same as the density of isooctane). ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "80. Ethanol, $\\mathrm { C _ { 2 } H _ { 5 } O H }$ , is used as a fuel for motor vehicles, particularly in Brazil. (a) Write the balanced equation for the combustion of ethanol to $\\mathrm { C O _ { 2 } } ( g )$ and $\\mathrm { H } _ { 2 } \\mathrm { O } ( g )$ , and, using the data in Appendix G, calculate the enthalpy of combustion of 1 mole of ethanol. (b) The density of ethanol is $0 . 7 8 9 3 { \\mathrm { ~ g / m L } }$ . Calculate the enthalpy of combustion of exactly $1 \\mathrm { L }$ of ethanol. (c) Assuming that an automobile\u2019s mileage is directly proportional to the heat of combustion of the fuel, calculate how much farther an automobile could be expected to travel on $1 \\mathrm { L }$ of gasoline than on $1 \\mathrm { L }$ of ethanol. Assume that gasoline has the heat of combustion and the density of n\u2013octane, $\\mathrm { C _ { 8 } H _ { 1 8 } }$ $( \\Delta H _ { \\mathrm { f } } ^ { \\circ } = - 2 0 8 . 4 \\mathrm { k J / m o l }$ density $= 0 . 7 0 2 5 \\mathrm { g / m L } \\mathrm { , }$ ).   \n81. Among the substances that react with oxygen and that have been considered as potential rocket fuels are diborane $\\mathrm { [ B _ { 2 } H _ { 6 } }$ , produces $\\mathtt { B } _ { 2 } \\mathtt { O } _ { 3 } ( s )$ and $\\mathrm { H } _ { 2 } \\mathrm { O } ( g ) ]$ , methane $\\mathrm { [ C H _ { 4 } }$ , produces $\\mathrm { C O _ { 2 } } ( g )$ and $\\mathrm { H } _ { 2 } \\mathrm { O } ( g ) ]$ , and hydrazine $\\mathrm { [ N _ { 2 } H _ { 4 } }$ , produces $\\mathrm { N } _ { 2 } ( g )$ and $\\mathrm { H } _ { 2 } \\mathrm { O } ( g ) ]$ . On the basis of the heat released by $1 . 0 0 \\mathrm { g }$ of each substance in its reaction with oxygen, which of these compounds offers the best possibility as a rocket fuel? The $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of $\\mathrm { B _ { 2 } H _ { 6 } } ( g )$ , $\\mathrm { C H } _ { 4 } ( g )$ , and $\\mathrm { N _ { 2 } H _ { 4 } } ( I )$ may be found in Appendix G.   \n82. How much heat is produced when $\\boldsymbol { 1 . 2 5 \\mathrm { g } }$ of chromium metal reacts with oxygen gas under standard conditions?   \n83. Ethylene, $\\mathrm { C _ { 2 } H _ { 4 } }$ , a byproduct from the fractional distillation of petroleum, is fourth among the 50 chemical compounds produced commercially in the largest quantities. About $80 \\%$ of synthetic ethanol is manufactured from ethylene by its reaction with water in the presence of a suitable catalyst. $\\mathrm { C } _ { 2 } \\mathrm { H } _ { 4 } ( g ) + \\mathrm { H } _ { 2 } \\mathrm { O } \\left( g \\right) \\longrightarrow \\mathrm { C } _ { 2 } \\mathrm { H } _ { 5 } \\mathrm { O H } \\left( l \\right)$ Using the data in the table in Appendix G, calculate $\\Delta H ^ { \\circ }$ for the reaction.   \n84. The oxidation of the sugar glucose, $\\mathrm { C _ { 6 } H _ { 1 2 } O _ { 6 } }$ , is described by the following equation: $\\mathrm { C } _ { 6 } \\mathrm { H } _ { 1 2 } \\mathrm { O } _ { 6 } ( s ) + 6 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 6 \\mathrm { C O } _ { 2 } ( g ) + 6 \\mathrm { H } _ { 2 } \\mathrm { O } \\left( l \\right)$ $\\Delta H = - 2 8 1 6 \\mathrm { k J }$ The metabolism of glucose gives the same products, although the glucose reacts with oxygen in a series of steps in the body. (a) How much heat in kilojoules can be produced by the metabolism of $1 . 0 \\mathrm { g }$ of glucose? (b) How many Calories can be produced by the metabolism of $1 . 0 \\mathrm { g }$ of glucose?   \n85. Propane, $\\mathrm { C _ { 3 } H _ { 8 } }$ , is a hydrocarbon that is commonly used as a fuel. (a) Write a balanced equation for the complete combustion of propane gas. (b) Calculate the volume of air at $2 5 ^ { \\circ } \\mathrm { C }$ and 1.00 atmosphere that is needed to completely combust 25.0 grams of propane. Assume that air is 21.0 percent $\\mathrm { O } _ { 2 }$ by volume. (Hint: We will see how to do this calculation in a later chapter on gases\u2014for now use the information that $1 . 0 0 \\mathrm { L }$ of air at $2 5 ^ { \\circ } \\mathrm { C }$ and 1.00 atm contains $0 . 2 7 5 \\mathrm { g } \\mathrm { o f } \\mathrm { O } _ { 2 }$ .) (c) The heat of combustion of propane is $- 2 , 2 1 9 . 2 \\mathrm { k J / m o l } .$ . Calculate the heat of formation, $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of propane given that $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of $\\mathrm { H } _ { 2 } \\mathrm { O } ( l ) = - 2 8 5 . 8 \\mathrm { k J } / \\mathrm { m o l }$ and $\\Delta H _ { \\mathrm { f } } ^ { \\circ }$ of $\\mathrm { C O _ { 2 } } ( g ) = - 3 9 3 . 5 \\mathrm { k J / m o l } .$ . (d) Assuming that all of the heat released in burning 25.0 grams of propane is transferred to 4.00 kilograms of water, calculate the increase in temperature of the water. ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "86. During a recent winter month in Sheboygan, Wisconsin, it was necessary to obtain 3500 kWh of heat provided by a natural gas furnace with $89 \\%$ efficiency to keep a small house warm (the efficiency of a gas furnace is the percent of the heat produced by combustion that is transferred into the house). (a) Assume that natural gas is pure methane and determine the volume of natural gas in cubic feet that was required to heat the house. The average temperature of the natural gas was $5 6 ^ { \\circ } \\mathrm { F }$ ; at this temperature and a pressure of 1 atm, natural gas has a density of $0 . 6 8 1 \\mathrm { g / L }$ . (b) How many gallons of LPG (liquefied petroleum gas) would be required to replace the natural gas used? Assume the LPG is liquid propane $\\mathrm { [ C _ { 3 } H _ { 8 } }$ : density, $0 . 5 3 1 8 { \\mathrm { g / m L } }$ ; enthalpy of combustion, $2 2 1 9 \\mathrm { k J / m o l }$ for the formation of $\\mathrm { C O _ { 2 } } ( g )$ and $\\mathrm { H } _ { 2 } \\mathrm { O } ( I ) ]$ and the furnace used to burn the LPG has the same efficiency as the gas furnace. (c) What mass of carbon dioxide is produced by combustion of the methane used to heat the house? (d) What mass of water is produced by combustion of the methane used to heat the house? (e) What volume of air is required to provide the oxygen for the combustion of the methane used to heat the house? Air contains $23 \\%$ oxygen by mass. The average density of air during the month was $1 . 2 2 \\ : \\mathrm { g / L }$ . (f) How many kilowatt\u2013hours $( 1 ~ { \\mathrm { k W h } } = 3 . 6 \\times 1 0 ^ { 6 } { \\mathrm { J } } )$ ) of electricity would be required to provide the heat necessary to heat the house? Note electricity is $100 \\%$ efficient in producing heat inside a house. (g) Although electricity is $100 \\%$ efficient in producing heat inside a house, production and distribution of electricity is not $100 \\%$ efficient. The efficiency of production and distribution of electricity produced in a coal-fired power plant is about $40 \\%$ . A certain type of coal provides $2 . 2 6 \\mathrm { k W h }$ per pound upon combustion. What mass of this coal in kilograms will be required to produce the electrical energy necessary to heat the house if the efficiency of generation and distribution is $4 0 \\% ?$ \u00b7 ",
+        "page_idx": 268
+    }
+]

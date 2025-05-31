@@ -1,0 +1,395 @@
+[
+    {
+        "type": "text",
+        "text": "11.4 Variation of Pressure with Depth in a Fluid ",
+        "text_level": 1,
+        "page_idx": 463
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 463
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 463
+    },
+    {
+        "type": "text",
+        "text": "Define pressure in terms of weight. \u2022 Explain the variation of pressure with depth in a fluid. \u2022 Calculate density given pressure and altitude. ",
+        "page_idx": 463
+    },
+    {
+        "type": "text",
+        "text": "If your ears have ever popped on a plane flight or ached during a deep dive in a swimming pool, you have experienced the effect of depth on pressure in a fluid. At the Earth\u2019s surface, the air pressure exerted on you is a result of the weight of air above you. This pressure is reduced as you climb up in altitude and the weight of air above you decreases. Under water, the pressure exerted on you increases with increasing depth. In this case, the pressure being exerted upon you is a result of both the weight of water above you andthat of the atmosphere above you. You may notice an air pressure change on an elevator ride that transports you many stories, but you need only dive a ",
+        "page_idx": 463
+    },
+    {
+        "type": "text",
+        "text": "meter or so below the surface of a pool to feel a pressure increase. The difference is that water is much denser than air, about 775 times as dense. ",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "Consider the container in Figure 11.8. Its bottom supports the weight of the fluid in it. Let us calculate the pressure exerted on the bottom by the weight of the fluid. That pressure is the weight of the fluid divided by the area supporting it (the area of the bottom of the container): ",
+        "page_idx": 464
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = { \\frac { m g } { A } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "We can find the mass of the fluid from its volume and density: ",
+        "page_idx": 464
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm = \\rho V .\n$$",
+        "text_format": "latex",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "The volume of the fluid $V$ is related to the dimensions of the container. It is ",
+        "page_idx": 464
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = A h ,\n$$",
+        "text_format": "latex",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "where $A$ is the cross-sectional area and $h$ is the depth. Combining the last two equations gives ",
+        "page_idx": 464
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm = \\rho A h .\n$$",
+        "text_format": "latex",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "If we enter this into the expression for pressure, we obtain ",
+        "page_idx": 464
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = { \\frac { ( \\rho A h ) g } { A } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "The area cancels, and rearranging the variables yields ",
+        "page_idx": 464
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = h \\rho g .\n$$",
+        "text_format": "latex",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "This value is the pres ureduetotheweightofafluid. The equation has general validity beyond the special conditions under which it is derived here. Even if the container were not there, the surrounding fluid would still exert this pressure, keeping the fluid static. Thus the equation $P = h \\rho g$ represents the pressure due to the weight of any fluid of averagedensity $\\rho$ at any depth $h$ below its surface. For liquids, which are nearly incompressible, this equation holds to great depths. For gases, which are quite compressible, one can apply this equation as long as the density changes are small over the depth considered. Example 11.4 illustrates this situation. ",
+        "page_idx": 464
+    },
+    {
+        "type": "image",
+        "img_path": "images/75ea322b2a6c251183b8eddb983b4430813f58d365c6608dd50083d2a4b2c92f.jpg",
+        "img_caption": [
+            "FIGURE 11.8 The bottom of this container supports the entire weight of the fluid in it. The vertical sides cannot exert an upward force on the fluid (since it cannot withstand a shearing force), and so the bottom must support it all. "
+        ],
+        "img_footnote": [],
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 11.3 ",
+        "text_level": 1,
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Average Pressure and Force Exerted: What Force Must a Dam Withstand? ",
+        "text_level": 1,
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "In Example 11.1, we calculated the mass of water in a large reservoir. We will now consider the pressure and force acting on the dam retaining water. (See Figure 11.9.) The dam is $5 0 0 \\mathrm { m }$ wide, and the water is $8 0 . 0 \\mathsf { m }$ deep at the dam. (a) What is the average pressure on the dam due to the water? (b) Calculate the force exerted against the dam and compare it with the weight of water in the dam (previously found to be $1 . 9 6 \\times 1 0 ^ { 1 3 } \\mathrm { ~ N } )$ . ",
+        "page_idx": 464
+    },
+    {
+        "type": "text",
+        "text": "Strategy for (a) ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "The average pressure $\\overline { { P } }$ due to the weight of the water is the pressure at the average depth $\\overline { { h } }$ of $4 0 . 0 \\mathrm { m }$ , since pressure increases linearly with depth. ",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "The average pressure due to the weight of a fluid is ",
+        "page_idx": 465
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { P } } } = { \\overline { { h } } } \\mathrm { p g . }\n$$",
+        "text_format": "latex",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Entering the density of water from Table 11.1 and taking $\\overline { { h } }$ to be the average depth of $4 0 . 0 \\mathrm { m }$ , we obtain ",
+        "page_idx": 465
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { { \\overline { { P } } } } & { = } & { ( 4 0 . 0 ~ \\mathrm { m } ) \\left( 1 0 ^ { 3 } ~ { \\frac { \\mathrm { k g } } { \\mathrm { m } ^ { 3 } } } \\right) \\left( 9 . 8 0 ~ { \\frac { \\mathrm { m } } { \\mathrm { s } ^ { 2 } } } \\right) } \\\\ { } & { = } & { 3 . 9 2 \\times 1 0 ^ { 5 } ~ { \\frac { \\mathrm { N } } { \\mathrm { m } ^ { 2 } } } = 3 9 2 ~ \\mathrm { k P a } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Strategy for (b) ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "The force exerted on the dam by the water is the average pressure times the area of contact: ",
+        "page_idx": 465
+    },
+    {
+        "type": "equation",
+        "text": "$$\nF = { \\overline { { P } } } A .\n$$",
+        "text_format": "latex",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "We have already found the value for $\\overline { { P } }$ . The area of the dam is $A = 8 0 . 0 \\ \\mathrm { m } \\times 5 0 0 \\ \\mathrm { m } = 4 . 0 0 \\times 1 0 ^ { 4 } \\ \\mathrm { m } ^ { 2 }$ , so that ",
+        "page_idx": 465
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { F } & { = } & { ( 3 . 9 2 \\times 1 0 ^ { 5 } ~ { \\mathrm { N } } / { \\mathrm { m } } ^ { 2 } ) ( 4 . 0 0 \\times 1 0 ^ { 4 } ~ { \\mathrm { m } } ^ { 2 } ) } \\\\ & { = } & { 1 . 5 7 \\times 1 0 ^ { 1 0 } ~ { \\mathrm { N } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Although this force seems large, it is small compared with the $1 . 9 6 \\times 1 0 ^ { 1 3 } \\mathrm { ~ N ~ }$ weight of the water in the reservoir\u2014in fact, it is only $0 . 0 8 0 0 \\%$ of the weight. Note that the pressure found in part (a) is completely independent of the width and length of the lake\u2014it depends only on its average depth at the dam. Thus the force depends only on the water\u2019s average depth and the dimensions of the dam, noton the horizontal extent of the reservoir. In the diagram, the thickness of the dam increases with depth to balance the increasing force due to the increasing pressure.epth to balance the increasing force due to the increasing pressure. ",
+        "page_idx": 465
+    },
+    {
+        "type": "image",
+        "img_path": "images/48f07e6a60b14ff0cf3d414bab38a2e0b32c4dd95facf7c54e21f4b884e3bb87.jpg",
+        "img_caption": [
+            "FIGURE 11.9 The dam must withstand the force exerted against it by the water it retains. This force is small compared with the weight of the water behind the dam. "
+        ],
+        "img_footnote": [],
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Atmosphericpres ureis another example of pressure due to the weight of a fluid, in this case due to the weight of airabove a given height. The atmospheric pressure at the Earth\u2019s surface varies a little due to the large-scale flow of the atmosphere induced by the Earth\u2019s rotation (this creates weather \u201chighs\u201d and \u201clows\u201d). However, the average pressure at sea level is given by the standardatmosphericpres ure $P _ { \\mathrm { a t m } }$ , measured to be ",
+        "page_idx": 465
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { 1 o s p h e r e ~ ( a t m ) } } = P _ { \\mathrm { a t m } } = 1 . 0 1 \\times 1 0 ^ { 5 } { \\mathrm { ~ N / m } } ^ { 2 } = 1 0 1 { \\mathrm { ~ k P a } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "This relationship means that, on average, at sea level, a column of air above $1 . 0 0 \\mathrm { m } ^ { 2 }$ of the Earth\u2019s surface has a weight of $1 . 0 1 \\times 1 0 ^ { 5 } \\mathrm { ~ N ~ }$ , equivalent to . (See Figure 11.10.) ",
+        "page_idx": 466
+    },
+    {
+        "type": "image",
+        "img_path": "images/6327441373fa266599a20645d8e425b89f50afab098ae97b7e1cd760cb694c75.jpg",
+        "img_caption": [
+            "FIGURE 11.10 Atmospheric pressure at sea level averages $1 . 0 1 \\times 1 0 ^ { 5 }$ (equivalent to 1 atm), since the column of air over this $1 ~ \\mathrm { m } ^ { 2 }$ , extending to the top of the atmosphere, weighs $1 . 0 1 \\times \\mathrm { i } 0 ^ { 5 } \\mathrm { ~ N ~ }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 11.4 ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Calculating Average Density: How Dense Is the Air? ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Calculate the average density of the atmosphere, given that it extends to an altitude of ${ \\mathsf { 1 2 0 } } { \\mathsf { k m } }$ . Compare this density with that of air listed in Table 11.1. ",
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "If we solve $P = h \\rho g$ for density, we see that ",
+        "page_idx": 466
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { \\rho } } } = { \\frac { P } { h g } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "We then take $P$ to be atmospheric pressure, $h$ is given, and $g$ is known, and so we can use this to calculate $\\overline { { \\rho } }$ . ",
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Entering known values into the expression for $\\overline { { \\rho } }$ yields ",
+        "page_idx": 466
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { \\rho } } } = { \\frac { 1 . 0 1 \\times 1 0 ^ { 5 } \\ \\mathrm { N / m ^ { 2 } } } { ( 1 2 0 \\times 1 0 ^ { 3 } \\ \\mathrm { m } ) ( 9 . 8 0 \\ \\mathrm { m / s ^ { 2 } } ) } } = 8 . 5 9 \\times 1 0 ^ { - 2 } \\ \\mathrm { k g / m ^ { 3 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "This result is the average density of air between the Earth\u2019s surface and the top of the Earth\u2019s atmosphere, which essentially ends at ${ \\mathsf { 1 2 0 } } { \\mathsf { k m } }$ . The density of air at sea level is given in Table 11.1 as $1 . 2 9 \\mathrm { k g } / \\mathrm { m } ^ { 3 }$ \u2014about 15 times its average value. Because air is so compressible, its density has its highest value near the Earth\u2019s surface and declines rapidly with altitude. ",
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 11.5 ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "image",
+        "img_path": "images/0d9fd60734efc1c39bb19d3f395c7d7de242daf035c96fc8d5eddc9854d17d30.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Calculating Depth Below the Surface of Water: What Depth of Water Creates the Same Pressure as the Entire Atmosphere? ",
+        "text_level": 1,
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Calculate the depth below the surface of water at which the pressure due to the weight of the water equals 1.00 atm. ",
+        "page_idx": 466
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "We begin by solving the equation $P = h \\rho g$ for depth $h$ : ",
+        "page_idx": 467
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh = { \\frac { P } { \\rho g } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "Then we take $P$ to be 1.00 atm and $\\rho$ to be the density of the water that creates the pressure. ",
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "Entering the known values into the expression for $h$ gives ",
+        "page_idx": 467
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh = { \\frac { 1 . 0 1 \\times 1 0 ^ { 5 } \\ \\mathrm { N / m ^ { 2 } } } { ( 1 . 0 0 \\times 1 0 ^ { 3 } \\ \\mathrm { k g / m ^ { 3 } } ) ( 9 . 8 0 \\ \\mathrm { m / s ^ { 2 } } ) } } = 1 0 . 3 \\ \\mathrm { m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "Just $1 0 . 3 ~ \\mathsf { m }$ of water creates the same pressure as $1 2 0 { \\mathsf { k m } }$ of air. Since water is nearly incompressible, we can neglect any change in its density over this depth. ",
+        "page_idx": 467
+    },
+    {
+        "type": "text",
+        "text": "What do you suppose is the totalpressure at a depth of $1 0 . 3 ~ \\mathrm { m }$ in a swimming pool? Does the atmospheric pressure on the water\u2019s surface affect the pressure below? The answer is yes. This seems only logical, since both the water\u2019s weight and the atmosphere\u2019s weight must be supported. So the totalpressure at a depth of $1 0 . 3 ~ \\mathsf { m }$ is 2 atm\u2014half from the water above and half from the air above. We shall see in Pascal\u2019s Principle that fluid pressures always add in this way. ",
+        "page_idx": 467
+    }
+]

@@ -1,0 +1,89 @@
+19.2 Electric Potential in a Uniform Electric Field
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Describe the relationship between voltage and electric field.   
+• Derive an expression for the electric potential and electric field.   
+• Calculate electric field strength given distance and voltage.
+
+In the previous section, we explored the relationship between voltage and energy. In this section, we will explore the relationship between voltage and electric field. For example, a uniform electric field is produced by placing a potential difference (or voltage)  across two parallel metal plates, labeled A and B. (See Figure 19.5.) Examining this will tell us what voltage is needed to produce a certain electric field strength; it will also reveal a more fundamental relationship between electric potential and electric field. From a physicist’s point of view, either  or  can be used to describe any charge distribution.  is most closely tied to energy, whereas  is most closely related to force.  is a scalar quantity and has no direction, while  is a vector quantity, having both magnitude and direction. (Note that the magnitude of the electric field strength, a scalar quantity, is represented by  below.) The relationship between  and is revealed by calculating the work done by the force in moving a charge from point A to point B. But, as noted in Electric Potential Energy: Potential Difference, this is complex for arbitrary charge distributions, requiring calculus. We therefore look at a uniform electric field as an interesting special case.
+
+The work done by the electric field in Figure 19.5 to move a positive charge  from A, the positive plate, higher potential, to B, the negative plate, lower potential, is
+
+The potential difference between points A and B is
+
+Entering this into the expression for work yields
+
+Work is  ; here  , since the path is parallel to the field, and so  . Since  , we see that  . Substituting this expression for work into the previous equation gives
+
+The charge cancels, and so the voltage between points A and B is seen to be
+
+where  is the distance from A to B, or the distance between the plates in Figure 19.5. Note that the above equation implies the units for electric field are volts per meter. We already know the units for electric field are newtons per coulomb; thus the following relation among units is valid:
+
+Voltage between Points A and B
+
+where  is the distance from A to B, or the distance between the plates.
+
+EXAMPLE 19.4
+
+What Is the Highest Voltage Possible between Two Plates?
+
+Dry air will support a maximum electric field strength of about  . Above that value, the field creates enough ionization in the air to make the air a conductor. This allows a discharge or spark that reduces the field. What, then, is the maximum voltage between two parallel conducting plates separated by  of dry air?
+
+Strategy
+
+We are given the maximum electric field  between the plates and the distance  between them. The equation  can thus be used to calculate the maximum voltage.
+
+Solution
+
+The potential difference or voltage between the plates is
+
+Entering the given values for  and  gives
+
+or
+
+(The answer is quoted to only two digits, since the maximum field strength is approximate.)
+
+Discussion
+
+One of the implications of this result is that it takes about  to make a spark jump across a  (1 in.) gap, or  for a 5 cm spark. This limits the voltages that can exist between conductors, perhaps on a power transmission line. A smaller voltage will cause a spark if there are points on the surface, since points create greater fields than smooth surfaces. Humid air breaks down at a lower field strength, meaning that a smaller voltage will make a spark jump through humid air. The largest voltages can be built up, say with static electricity, on dry days.
+
+EXAMPLE 19.5
+
+Field and Force inside an Electron Gun
+
+(a) An electron gun has parallel plates separated by  and gives electrons  of energy. What is the electric field strength between the plates? (b) What force would this field exert on a piece of plastic with a  charge that gets between the plates?
+
+Strategy
+
+Since the voltage and plate separation are given, the electric field strength can be calculated directly from the expression  . Once the electric field strength is known, the force on a charge is found using  . Since the electric field is in only one direction, we can write this equation in terms of the magnitudes,  .
+
+Solution for (a)
+
+The expression for the magnitude of the electric field between two uniform metal plates is
+
+Since the electron is a single charge and is given  of energy, the potential difference must be  Entering this value for  and the plate separation of  , we obtain
+
+Solution for (b)
+
+The magnitude of the force on a charge in an electric field is obtained from the equation
+
+Substituting known values gives
+
+Discussion
+
+Note that the units are newtons, since  . The force on the charge is the same no matter where the charge is located between the plates. This is because the electric field is uniform between the plates.
+
+In more general situations, regardless of whether the electric field is uniform, it points in the direction of decreasing potential, because the force on a positive charge is in the direction of  and also in the direction of lower potential  . Furthermore, the magnitude of  equals the rate of decrease of  with distance. The faster  decreases over distance, the greater the electric field. In equation form, the general relationship between voltage and electric field is
+
+where  is the distance over which the change in potential,  , takes place. The minus sign tells us that  points in the direction of decreasing potential. The electric field is said to be the gradient(as in grade or slope) of the electric potential.
+
+Relationship between Voltage and Electric Field
+
+In equation form, the general relationship between voltage and electric field is
+
+where  is the distance over which the change in potential,  , takes place. The minus sign tells us that points in the direction of decreasing potential. The electric field is said to be the gradient(as in grade or slope) of the electric potential.
+
+For continually changing potentials,  and  become infinitesimals and differential calculus must be employed to determine the electric field.

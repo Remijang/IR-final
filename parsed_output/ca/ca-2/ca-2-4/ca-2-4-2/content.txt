@@ -1,0 +1,42 @@
+2.4.2 Generic Form of Floating Point Numbers
+
+Unlike fixed point numbers, there can potentially be many more digits after the decimal point in floating point numbers. We need a more generic representation. Let us first look at how we represent floating point numbers in a regular base-10 number system. For simplicity, let us limit ourselves to positive floating point numbers in this section.
+
+Representing Floating Point Numbers in Base-10
+
+Examples of positive floating point numbers in base 10 are: 1.344, 10.329, and 2.338. Alternatively, a floating point number,  , can be expanded according to Equation 2.22.
+
+For example,  . The coefficient  can vary from 0 to 9. Let us try to use the basic idea in this equation to create a similar representation for floating point numbers in base 2.
+
+Representing Floating Point Numbers in Binary
+
+Let us take inspiration from Equation 2.22 and create a method for representing positive floating point numbers in base 2. Let  be a positive floating point number. We can try to expand  as:
+
+Here,  is either 0 or 1. Note that the form of Equation 2.23 is exactly the same as Equation 2.22. However, we have changed the base from 10 to 2.
+
+We have negative exponents from -1 to  , and non-negative exponents from 0 to  . The negative exponents represent the fractional part of the number, and the non-negative exponents represent the integer part of the number. Let us show a set of examples in Table 2.12. We show only non-zero co-coefficients for the sake of brevity.
+
+We observe that using Equation 2.23, we can represent a lot of floating point numbers exactly. However, there are a lot of numbers such as 1.11, which will potentially require an infinite number of terms with negative exponents. It is not possible to find an exact representation for it using Equation 2.23. However, if  is large enough, we can reduce the error between the actual number and the represented number to a large extent.
+
+Let us now try to represent a positive floating point number in a binary format using Equation 2.23. There are two parts in a positive floating point number – integer part and fractional part. We represent the integer part using a standard binary representation. We
+
+represent the fractional part also with a binary representation of the form:  .   
+Lastly, we put a ’.’ between the integer and fractional parts.
+
+Table 2.13 shows the binary representation of numbers originally shown in Table 2.12.
+
+Normal Form
+
+Let us take a look at Table 2.13 again. We observe that there are a variable number of binary bits before and after the decimal point. We can limit the number of bits before and after the decimal point to  and  , respectively. By doing so, we can have a binary representation for a floating point number that requires  bits –  bits for the integer part, and  bits for the fractional part. The fractional part is traditionally known as the mantissa, whereas the entire number (both integer and fraction) is known as the significand. If we wish to devote 32 bits for representing a floating point number, then the largest number that we can represent is approximately  (if  ), which is actually a very small number for most practical purposes. We cannot represent large numbers such as  .
+
+Let us thus, slightly modify our generic form to expand the range of numbers that we can represent. We start out by observing that 101110 in binary can be represented as  . The number 1.01110 is the significand. As a convention, we can assume that the first binary digit in the significand is 1, and the decimal point is right after it. Using this notation, we can represent all floating point numbers as:
+
+Definition 23
+
+Significand It is the part of the floating point number that just contains its digits. The decimal point is somewhere within the significand. The significand of  is 1.3829.
+
+Mantissa It represents the fractional part of the significand. The mantissa of  is 0.3829.
+
+ is the set of integers,  is the significand,  is the mantissa, and  is known as the exponent. This representation is slightly more flexible. It allows us to specify large exponents, both positive and negative. Lastly, let us try to create a generic form for both positive and floating point numbers by introducing a sign bit,  . We show the resulting form in Equation 2.25 and refer to it as the normal form henceforth.
+
+If  , the number is positive. If  , the number is negative.

@@ -1,0 +1,217 @@
+[
+    {
+        "type": "text",
+        "text": "11.4.1 Process \u2013 A Running Instance of a Program ",
+        "text_level": 1,
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "Up till now, we have assumed the existence of only one program in the system. We assumed that it was in complete control of the memory system, and the processor pipeline. However, this is not the case in practice. ",
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "Let us first start out by accurately defining the notion of a process and differentiating it from a program. Up till now we have been loosely using the term \u2013 program \u2013 and sometimes using it in place of a process. A program is an array of bytes and is saved as a file in the file system. The file is typically known as a binary or as an executable. The executable contains some metadata about the program such that its name and type, the constants used by the program, and the set of instructions. In comparison, a process is a running instance of a program. If we run one program several times, we create multiple processes. A process has access to the processor, peripheral devices, and the memory system. There is a dedicated area in the memory system that contains the data and code of the process. The program counter of the processor points to a location in the code region of the process in memory. Memory values required by the process are obtained from its data region in the memory system. Finally, note that the operating system starts and ends a process, and manages it throughout its lifetime. ",
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "Definition 109 ",
+        "text_level": 1,
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "A process is a running instance of a program. ",
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "Operating System ",
+        "text_level": 1,
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "Most people view an operating system such as Windows, Linux, or Mac OS X from the point of view of its user interface. However, this is a minor aspect of the operating system. It does many more things invisibly. Let us look at some of its important functions. ",
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "The operating system consists of a set of dedicated programs that manage the machine, peripheral devices, and all the processes running on the machine. Furthermore, the operating system facilitates efficient transfer of information between the hardware and software components of a computer system. The core component of an operating system is known as the kernel. Its main role is to manage the execution of processes, and manage memory. We shall look at the memory management aspect in Section 11.4.5. Let us now look at the process management aspect. ",
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "To run a program, a user needs to compile the program, and then either double click the program, or write the name of the program in the command line, and click the \u201center\u201d button. Once, this is done, the control passes to the operating system kernel. A component of the kernel known as the loader reads the content of the program, and copies it to a region in the memory system. Notably, it copies all the instructions in the text section, allocates space for all the data, and initializes memory with all the constants that a program will require during its execution. Subsequently, it initializes the values of registers, copies command line arguments to the stack, possibly initializes the stack pointer, and jumps to the entry point of the program. The user program can then begin to execute, in the context of a running process. Every process has a unique number associated with it. It is known as the pid (process id). After completion, it is the kernel\u2019s job to tear down the process, and reclaim all of its memory. ",
+        "page_idx": 542
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 543
+    },
+    {
+        "type": "text",
+        "text": "The other important aspect of process management is scheduling. A dedicated component of the kernel manages all the processes, including the kernel itself, which is a special process. It typically runs each process for a certain amount of time, and then switches to another process. As a user, we typically do not perceive this because every second, the kernel switches between processes hundreds of times. The time interval is too small for us to detect. However, behind the scenes, the kernel is busy at work. For example, it might be running a game for some time, running a program to fetch data from the network for some time, and then running some of its own tasks for some time. The kernel also manages aspects of the file system, inter-process communication, and security. The discussion of such topics is beyond the scope of this book. The reader is referred to textbooks on operating systems such as the book by Tanenbaum [Tanenbaum, 2007] or Silbserchatz and Galvin [Silberschatz et al., 2008]. ",
+        "page_idx": 543
+    },
+    {
+        "type": "text",
+        "text": "The other important components in an operating system are device drivers, and system utilities. Device drivers are dedicated programs that communicate with dedicated devices and ensure the seamless flow of information between them and user processes. For example, a printer and scanner have dedicated device drivers that make it possible to print and scan documents, respectively. Network interfaces have dedicated device drivers that allow us to exchange messages over the internet. Lastly, system utilities provide generic services to all the processes such as file management, device management (Control Panel in Windows), and security. ",
+        "page_idx": 543
+    },
+    {
+        "type": "text",
+        "text": "Definition 110 ",
+        "text_level": 1,
+        "page_idx": 543
+    },
+    {
+        "type": "text",
+        "text": "Operating System The operating system consists of a set of dedicated programs that manage the machine, peripheral devices, and the processes running on it. It facilitates the transfer of information between the hardware and software components of a computer system.   \nKernel The kernel is a program that is the core of the operating system. It has complete control over the rest of the processes in the operating system, the user processes, the processor, and all external devices. It mainly performs the task of managing multiple processes, devices, and file systems.   \nProcess Management The two important components in the kernel to perform process management are the loader, and the scheduler. The loader creates a process out of a program by transferring its contents to memory, and setting up the appropriate execution environment. The scheduler schedules the execution of multiple processes including that of the kernel itself.   \nDevice Drivers These dedicated programs help the kernel and user processes communicate with devices.   \nSystem Utilities These are generic services provided by the operating system such as the print queue manager and file manager. They can be used by all the processes in the system. ",
+        "page_idx": 543
+    },
+    {
+        "type": "text",
+        "text": "Virtual \u2018View\u2019 of Memory ",
+        "text_level": 1,
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "Since multiple processes are live at the same point of time, it is necessary to partition the memory between processes. If this is not done, then it is possible that processes might end up modifying each other\u2019s values. At the same time, we do not want the programmer or the compiler to be aware of the existence of multiple processes. This introduces unwanted complexity. Secondly, if a given program is compiled with a certain memory map, it might not run on another machine that has a process with an overlapping memory map. Even worse, it will not be possible to run two copies of the same program. Hence, it is essential that each program sees a virtual view of memory, in which it assumes that it owns the entire memory system. ",
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "As we can observe, there are two conflicting requirements. The memory system and the operating system want different processes to access different memory addresses, whereas, the programmer and the compiler do not want to be aware of this requirement. When a program is compiled, it is not possible to constrain its addresses such that they do not overlap with the addresses accessed by any other process. It turns out that there is a method to make both the programmer and the operating system happy. ",
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "We need to define a virtual and a physical view of memory. In the physical view of memory, different processes operate in non-overlapping regions of the memory space. However, in the virtual view, every process accesses any address that it wishes to access, and the virtual views of different processes can overlap. The solution is obtained through a method called paging that we shall explain in Section 11.4.3. However, before proceeding to the solution, let us discuss the virtual view of memory that a process typically sees. The virtual view of memory, is also referred to as virtual memory. It is defined as a hypothetical memory system, in which a process assumes that it owns the entire memory space, and there is no interference from any other process. ",
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "Definition 111 ",
+        "text_level": 1,
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "The virtual memory system is defined as a hypothetical memory system, in which a process assumes that it owns the entire memory space, and there is no interference from any other process. The size of the memory is as large as the total addressable memory of the system. For example, in a 32-bit system, the size of virtual memory is $2 ^ { 3 2 }$ bytes $( 4 ~ G B )$ . The set of all memory locations in virtual memory is known as the virtual address space. ",
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "In the virtual memory space, the operating system lays out the code and data in different regions. This arrangement of code, data, constants, and other information pertaining to a process is known as the memory map. ",
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "Definition 112 ",
+        "text_level": 1,
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "The memory map of a process refers to the way an operating system lays out the code and data in memory. ",
+        "page_idx": 544
+    },
+    {
+        "type": "text",
+        "text": "Memory Map of a Process ",
+        "text_level": 1,
+        "page_idx": 545
+    },
+    {
+        "type": "image",
+        "img_path": "images/ef7aa66c957b9751a4b29ce11696177ab8f654e695e6c521809822034b1a223d.jpg",
+        "img_caption": [
+            "Figure 11.17: Memory map of a process in the Linux operating system (32 bits) "
+        ],
+        "img_footnote": [],
+        "page_idx": 545
+    },
+    {
+        "type": "text",
+        "text": "Figure 11.17 shows a simplified view of the memory map of a process in the 32-bit Linux operating system. Let us start from the bottom (lowest address). The first section contains the header. It starts out with details about the process, its format, and the target machine. Subsequently, the header contains the details of each section in the memory map. For example, it contains the details of the text section that contains the code of the program including its size, starting address, and additional attributes. The text section starts after the header. The operating system sets the program counter to the start of the text section while loading a program. All the instructions in a program are typically contained within the text section. The text section is followed by two more sections that are meant to contain static and global variables. Optionally some operating systems, also have an additional area to contain read-only data such as constants. ",
+        "page_idx": 545
+    },
+    {
+        "type": "text",
+        "text": "The text section is typically followed by the data section. It contains all the static/global variables that have been initialized by the programmer. Let us consider a declaration of the form (in C or C++): ",
+        "page_idx": 545
+    },
+    {
+        "type": "text",
+        "text": "static int val = 5; ",
+        "page_idx": 545
+    },
+    {
+        "type": "text",
+        "text": "Here the 4 bytes corresponding to the variable \u2013 val \u2013 are saved in the data section. The data section is followed by the bss section. The bss section saves static and global variables that have not been explicitly initialized by the programmer. Most operating systems, fill the memory area corresponding to the bss section with zeros. This needs to be done in the interest of security. Let us assume that program $A$ runs and writes its values in the bss section. Subsequently, program $B$ runs. Before, writing to a variable in the bss section, $B$ can always try to read its value. In this case, it will get the value written by program $A$ . However, this is not a desirable behavior. Program $A$ might have saved some sensitive data in the bss section such as a password or a credit card number. Program $B$ can thus gain access to this sensitive data without program $A$ \u2019s knowledge, and possibly misuse the data. Hence, it is necessary to fill up the bss section with zeros such that such security lapses do not happen. ",
+        "page_idx": 545
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 546
+    },
+    {
+        "type": "text",
+        "text": "The bss section is followed by a memory area known as the heap. The heap area is used to save dynamically allocated variables in a program. C programs typically allocate new data with the malloc call. Java and $\\mathrm { C } { + } { + }$ use the new operator. Let us look at some examples. ",
+        "page_idx": 546
+    },
+    {
+        "type": "text",
+        "text": "int \\*intarray $\\mathbf { \\tau } = \\mathbf { \\tau }$ (int \\*)malloc(10 \\* sizeof(int)); [C] int \\*intarray $\\mathbf { \\tau } = \\mathbf { \\tau }$ new int[10]; [C++] int[] intarray $\\mathbf { \\tau } = \\mathbf { \\tau }$ new int[10]; [Java] ",
+        "page_idx": 546
+    },
+    {
+        "type": "text",
+        "text": "Note that in these languages, dynamically allocating arrays is very useful because their sizes are not known at compile time. The other advantage of having data in the heap is that they survive across function calls. The data in the stack remains valid for only the duration of the function call. After that it gets deleted. However, data in the heap stays for the entire life of the program. It can be used by all the functions in the program, and pointers to different data structures in the heap can be shared across functions. Note that the heap grows upward (towards higher addresses). Secondly, managing the memory in a heap is a fairly difficult task. This is because dynamically, regions of the heap are allocated with malloc/new calls and freed with the free/delete calls in high level languages. Once an allocated memory region is freed, a hole gets created in the memory map. It is possible to allocate some other data structure in the hole if its size is less than the size of the hole. In this case, another smaller hole gets created in the memory map. Over time as more and more data structures are allocated and deallocated, the number of holes tend to increase. This is known as fragmentation. Hence, it is necessary to have an efficient memory manager that can reduce the number of holes in the heap. A view of the heap with holes, and allocated memory is shown in Figure 11.18. ",
+        "page_idx": 546
+    },
+    {
+        "type": "text",
+        "text": "The next segment is reserved for storing data corresponding to memory-mapped files, and dynamically linked libraries. Most of the time, operating systems transfer the contents of a file (such as a music, text, or video file) to a memory region, and treat the contents of the file as a regular array. This memory region is referred to as a memory-mapped file. Secondly, programs might occasionally read the contents of other programs (referred to as libraries) dynamically, and transfer the contents of their text sections to their memory map. Such libraries are known as dynamically linked libraries, or DLLs. The contents of such memory-mapped structures are stored in a dedicated section in the process\u2019s memory map. ",
+        "page_idx": 546
+    },
+    {
+        "type": "text",
+        "text": "The next section is the stack, which starts from the top of the memory map and grows downwards (towards smaller addresses) as discussed in Section 3.3.10. The stack continuously grows and shrinks depending on the behavior of the program. Note that Figure 11.17 is not drawn to scale. If we consider a 32-bit memory system, then the total amount of virtual memory is 4 GB. However, the total amount of memory that a program might use is typically limited to hundreds of megabytes. Hence, there is a massive empty region in the map between the start of the heap and stack sections. ",
+        "page_idx": 546
+    },
+    {
+        "type": "image",
+        "img_path": "images/d004547fa2ab2abda2f0b65a6bdb4348286565afb99027fbdc888a6f7f435f95.jpg",
+        "img_caption": [
+            "Figure 11.18: The memory map of a heap "
+        ],
+        "img_footnote": [],
+        "page_idx": 547
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 547
+    },
+    {
+        "type": "text",
+        "text": "Note that the operating system needs to run very frequently. It needs to service device requests, and perform process management. As we shall see in Section 11.4.3 changing the virtual view of memory from process to process is slightly expensive. Hence, most operating systems partition the virtual memory between a user process and the kernel. For example, Linux gives the lower 3 GB to a user process, and keeps the upper 1 GB for the kernel. Similarly, Windows keeps the upper 2 GB for the kernel, and the lower 2 GB for user processes. Hence, it is not necessary to change the view of memory as the processor transitions from the user process to the kernel. Secondly, this small modification does not greatly impair the performance of a program because 2 GB or 3 GB is much more than the typical memory footprint of a program. Moreover, this trick does not also conflict with our notion of virtual memory. A program just needs to assume that it has a reduced memory space (reduced from 4 GB to 3 GB in the case of Linux). Refer to Figure 11.19. ",
+        "page_idx": 547
+    },
+    {
+        "type": "image",
+        "img_path": "images/6dcfb5610b256dd02fcbcfd5bfe3637c95f976fbdac01b0cefde045d09bb7dbd.jpg",
+        "img_caption": [
+            "Figure 11.19: The memory map \u2013 user and kernel "
+        ],
+        "img_footnote": [],
+        "page_idx": 547
+    }
+]

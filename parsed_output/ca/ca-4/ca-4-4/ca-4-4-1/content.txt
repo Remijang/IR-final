@@ -1,0 +1,51 @@
+4.4.1 Data Processing Instructions
+
+The type field is equal to 00 for data processing instructions. The rest of the 26 bits need to contain the instruction type, special conditions, and registers. Figure 4.5 shows the format for
+
+data processing instructions.
+
+The  bit is called the I (immediate) bit. It is similar to the  bit in SimpleRisc . If it is set to 1, then the second operand is an immediate, otherwise, it is a register. Since ARM has 16 data processing instructions, we require 4 bits to represent them. This information is saved in bits 22-25. The  bit saves the S bit. If it is turned on, then the instruction will set the CPSR (see Section 4.2.4).
+
+The rest of the 20 bits save the input and output operands. Since ARM has 16 registers, we require 4 bits to encode a register. Bits 17-20 save the identifier of the first input operand  , which needs to be a register. Bits 13-16 save the identifier of the destination register  .
+
+Bits 1-12 are used to save the immediate value or the shifter operand. Let us see how to make the best use of these 12 bits.
+
+Encoding Immediate Values
+
+ARM supports 32-bit immediate values. However, we observe that we have only 12 bits to encode them. Hence, we cannot possibly encode all the  possible values. We need to choose a meaningful subset of them. The idea is to encode a subset of 32-bit values using 12 bits. The hardware is expected to decode these 12 bits, and expand them to 32 bits while processing the instruction.
+
+Now, 12 bits is a rather unwieldy value. Neither is it 1 byte nor is it 2 bytes. Hence, it was necessary to come up with a very ingenious solution. The idea is to split the 12 bits into two parts – a 4-bit constant  , and an 8-bit payload (payload) (see Figure 4.6).
+
+Let the actual number that is encoded in these 12 bits be  . We have:
+
+The actual number  is obtained by right rotating the payload by 2 times the value in the rot field. Let us now try to understand the logic of doing so.
+
+The final number  is a 32-bit value. A naive solution would have been to use the 12 bits to specify the least significant bits of  . The higher order bits could be 0. However, programmers tend to access data and memory in terms of bytes. Hence, 1.5 bytes is of no use to us. A better solution is to have a 1 byte payload and place it in any location in the 32-bit field. The rest of the 4 bits are used for this purpose. They can encode a number from 0 to 15. The ARM processor doubles this value to consider all even numbers between 0 and 30. It right rotates the payload by this amount. The advantage of doing so is that it is possible to encode a wider set of numbers. For all of these numbers, there are 8 bits that correspond to the payload, and the rest of the 24 bits are all zeros. The rot bits just determine which 8 bits in a 32-bit field are occupied by the payload.
+
+Let us consider a set of examples.
+
+Example 51   
+Encode the decimal number 42.   
+Answer: 42 in the hex format is 0x2A, or alternatively 0x00 00 00 2A. There is no right rotation involved. Hence, the immediate field is 0x02A. Example 52   
+Encode the number 0x2A 00 00 00.   
+Answer: This number is obtained by right rotating 0x2A by 8 places. Note that we need to right rotate by 4 places to move a hex digit by one position. We need to now divide 8 by 2, to get 4. Thus, the encoded format for this number is 0x42A.
+
+Example 53 Encode 0x 00 00 2A 00.
+
+Answer: The first step is to count the number of right rotations. We observe that the number 0x2A has been rotated to the right by 24 positions. We now proceed to divide 24 by 2 to obtain 12. Thus, the encoded format of the number is 0xC2A.
+
+Example 54   
+Encode the number 0x 00 02 DC 00 as an ARM immediate.   
+Answer: The first part is to figure out the payload. The payload is – 10 1101 11 – in binary. This is equal to 0xB7. The next step is to figure out the rotation. Let us simplify the task by observing that right rotating by n places is the same as left rotating by  places. Let us concentrate on 0xC00. This is equal to 110000000000 in binary. The rightmost 1 is
+
+now at the  position. It has moved 10 places from the  position. Thus, the number has been rotated to the left by 10 places. It has been rotated to the right by 22 places.  . Hence, the encoded number is 0xBB7.
+
+The reader needs to understand that this encoding is supposed to be done by the assembler or the compiler. The user simply needs to use those values in her assembly code that can be encoded as an ARM immediate. For example, a number like -1 cannot be encoded as an ARM immediate. It is 0xFF FF FF FF. The payload is greater than 8 bits. Ideally, an instruction of the form: ad  is wrong. Some assemblers will try to fix the problem by changing the instruction to  . However, all assemblers are not smart enough to figure this out. If the user wishes to use a value that cannot be encoded in ARM’s 12-bit format, then the user (or the program loader) needs to load it byte by byte in a register, and use the register as an operand.
+
+Encoding the Shifter Operand
+
+We have 12 bits to encode the shifter operand. Figure 4.7 shows the scheme for encoding it. A shifter operand is of the form: rt  (shift reg/ shift imm.)
+
+The first four bits (1-4) encode the id of the register  . The next bit determines the nature of the shift argument (immediate or register). If it is 0 then the argument is an immediate, otherwise it is a register. Bits 6 and 7 specify the type of the shift (also see Figure 4.7(c)). For example, the type can be lsl (logical shift left). It can also be lsr (logic shift right), asr (arithmetic shift right), or ror (right rotate). If we are shifting by an immediate value, then bits 8-12 specify a 32-bit value called a shift immediate. Otherwise, if we are shifting by a value in a register, then bits 9-12 specify the id of the register.
+
+Let us consider an instruction of the form: add  . In this case, the second operand is  . We can think of  as actually a shifter operand where it is being left shifted by 0. Hence, to encode we need to set the shift type to lsl (00), set the argument to immediate (0), and set the shift immediate to 00000. We thus see that specifying a register as the second argument is easy. It is a special case of a shifter operand, and we just need to set bits 5-12 as 0.

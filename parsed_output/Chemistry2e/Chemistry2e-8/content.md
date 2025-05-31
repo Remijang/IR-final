@@ -1,0 +1,12 @@
+# CHAPTER 8 Advanced Theories of Covalent Bonding
+
+# CHAPTER OUTLINE
+
+8.1 Valence Bond Theory   
+8.2 Hybrid Atomic Orbitals   
+8.3 Multiple Bonds   
+8.4 Molecular Orbital Theory
+
+INTRODUCTION We have examined the basic ideas of bonding, showing that atoms share electrons to form molecules with stable Lewis structures and that we can predict the shapes of those molecules by valence shell electron pair repulsion (VSEPR) theory. These ideas provide an important starting point for understanding chemical bonding. But these models sometimes fall short in their abilities to predict the behavior of real substances. How can we reconcile the geometries of s,p,and $d$ atomic orbitals with molecular shapes that show angles like $1 2 0 ^ { \circ }$ and $1 0 9 . 5 ^ { \circ } ?$ Furthermore, we know that electrons and magnetic behavior are related through electromagnetic fields. Both $\Nu _ { 2 }$ and $\mathrm { O _ { 2 } }$ have fairly similar Lewis structures that contain lone pairs of electrons.
+
+$\mathsf { \Omega } : \mathsf { N } \equiv \mathsf { N } : \mathsf { \Omega } : \mathsf { \Omega } \{ \mathsf { \Omega } \} = \ddot { \mathsf { o } } :$ Yet oxygen demonstrates very different magnetic behavior than nitrogen. We can pour liquid nitrogen through a magnetic field with no visible interactions, while liquid oxygen (shown in Figure 8.1) is attracted to the magnet and floats in the magnetic field. We need to understand the additional concepts of valence bond theory, orbital hybridization, and molecular orbital theory to understand these observations.

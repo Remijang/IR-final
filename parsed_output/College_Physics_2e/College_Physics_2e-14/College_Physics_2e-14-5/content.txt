@@ -1,0 +1,89 @@
+14.5 Conduction
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Calculate thermal conductivity. Observe conduction of heat in collisions. • Study thermal conductivities of common substances.
+
+Your feet feel cold as you walk barefoot across the living room carpet in your cold house and then step onto the kitchen tile floor. This result is intriguing, since the carpet and tile floor are both at the same temperature. The different sensation you feel is explained by the different rates of heat transfer: the heat loss during the same time interval is greater for skin in contact with the tiles than with the carpet, so the temperature drop is greater on the tiles.
+
+Some materials conduct thermal energy faster than others. In general, good conductors of electricity (metals like copper, aluminum, gold, and silver) are also good heat conductors, whereas insulators of electricity (wood, plastic, and rubber) are poor heat conductors. Figure 14.14 shows molecules in two bodies at different temperatures. The (average) kinetic energy of a molecule in the hot body is higher than in the colder body. If two molecules collide, an energy transfer from the molecule with greater kinetic energy to the molecule with less kinetic energy occurs. The cumulative effect from all collisions results in a net flux of heat from the hot body to the colder body. The heat flux thus depends on the temperature difference  . Therefore, you will get a more severe burn from boiling water than from hot tap water. Conversely, if the temperatures are the same, the net heat transfer rate falls to zero, and equilibrium is achieved. Owing to the fact that the number of collisions increases with increasing area, heat conduction depends on the cross-sectional area. If you touch a cold wall with your palm, your hand cools faster than if you just touch it with your fingertip.
+
+with the contact surface.
+
+A third factor in the mechanism of conduction is the thickness of the material through which heat transfers. The figure below shows a slab of material with different temperatures on either side. Suppose that  is greater than  , so that heat is transferred from left to right. Heat transfer from the left side to the right side is accomplished by a series of molecular collisions. The thicker the material, the more time it takes to transfer the same amount of heat. This model explains why thick clothing is warmer than thin clothing in winters, and why Arctic mammals protect themselves with thick blubber.
+
+Lastly, the heat transfer rate depends on the material properties described by the coefficient of thermal conductivity. All four factors are included in a simple equation that was deduced from and is confirmed by experiments. The rate of conductive heat transfer through a slab of material, such as the one in Figure 14.15, is given by
+
+where  is the rate of heat transfer in watts or kilocalories per second,  is the thermal conductivity of the material,  and  are its surface area and thickness, as shown in Figure 14.15, and  is the temperature difference across the slab. Table 14.3 gives representative values of thermal conductivity.
+
+EXAMPLE 14.5
+
+Calculating Heat Transfer Through Conduction: Conduction Rate Through an Ice Box
+
+A Styrofoam ice box has a total area of  and walls with an average thickness of  . The box contains ice, water, and canned beverages at  . The inside of the box is kept cold by melting ice. How much ice melts in one day if the ice box is kept in the trunk of a car at 
+
+Strategy
+
+This question involves both heat for a phase change (melting of ice) and the transfer of heat by conduction. To find the amount of ice melted, we must find the net heat transferred. This value can be obtained by calculating the rate of heat transfer by conduction and multiplying by time.
+
+Solution
+
+1. Identify the knowns.
+
+2. Identify the unknowns. We need to solve for the mass of the ice,  . We will also need to solve for the net heat transferred to melt the ice,  .
+
+. Determine which equations to use. The rate of heat transfer by conduction is given by
+
+4. The heat is used to melt the ice:  -
+
+5. Insert the known values:
+
+6. Multiply the rate of heat transfer by the time  :
+
+7. Set this equal to the heat transferred to melt the ice:  . Solve for the mass  :
+
+Discussion
+
+The result of  , or about 7.6 lbs, seems about right, based on experience. You might expect to use about a 4  bag of ice per day. A little extra ice is required if you add any warm food or beverages.
+
+Inspecting the conductivities in Table 14.3 shows that Styrofoam is a very poor conductor and thus a good insulator. Other good insulators include fiberglass, wool, and goose-down feathers. Like Styrofoam, these all incorporate many small pockets of air, taking advantage of air’s poor thermal conductivity.
+
+A combination of material and thickness is often manipulated to develop good insulators—the smaller the conductivity  and the larger the thickness  , the better. The ratio of will thus be large for a good insulator. The ratio  is called the  factor. The rate of conductive heat transfer is inversely proportional to  . The larger the value of  , the better the insulation.  factors are most commonly quoted for household insulation, refrigerators, and the like—unfortunately, it is still in non-metric units of ft2·°F·h/Btu, although the unit usually goes unstated (1 British thermal unit [Btu] is the amount of energy needed to change the temperature of 1.0 lb of water by  ). A couple of representative values are an  factor of 11 for 3.5-in-thick fiberglass batts (pieces) of insulation and an  factor of 19 for 6.5-in-thick fiberglass batts. Walls are usually insulated with 3.5-in batts, while ceilings are usually insulated with 6.5-in batts. In cold climates, thicker batts may be used in ceilings and walls.
+
+Note that in Table 14.3, the best thermal conductors—silver, copper, gold, and aluminum—are also the best electrical conductors, again related to the density of free electrons in them. Cooking utensils are typically made from good conductors.
+
+EXAMPLE 14.6
+
+Calculating the Temperature Difference Maintained by a Heat Transfer: Conduction Through an Aluminum Pan
+
+Water is boiling in an aluminum pan placed on an electrical element on a stovetop. The sauce pan has a bottom that is  thick and  in diameter. The boiling water is evaporating at the rate of  . What is the temperature difference across (through) the bottom of the pan?
+
+Strategy
+
+Conduction through the aluminum is the primary method of heat transfer here, and so we use the equation for the rate of heat transfer and solve for the temperature difference.
+
+Solution
+
+1. Identify the knowns and convert them to the SI units. The thickness of the pan,  the area of the pan,  , and the thermal conductivity, 
+
+2. Calculate the necessary heat of vaporization of  of water:
+
+3. Calculate the rate of heat transfer given that  of water melts in one second:  or 2.26 kW.
+
+4. Insert the knowns into the equation and solve for the temperature difference:
+
+Discussion
+
+The value for the heat transfer  or  is typical for an electric stove. This value gives a remarkably small temperature difference between the stove and the pan. Consider that the stove burner is red hot while the inside of the pan is nearly  because of its contact with boiling water. This contact effectively cools the bottom of the pan in spite of its proximity to the very hot stove burner. Aluminum is such a good conductor that it only takes this small temperature difference to produce a heat transfer of  into the pan.
+
+Conduction is caused by the random motion of atoms and molecules. As such, it is an ineffective mechanism for heat transport over macroscopic distances and short time distances. Take, for example, the temperature on the Earth, which would be unbearably cold during the night and extremely hot during the day if heat transport in the atmosphere was to be only through conduction. In another example, car engines would overheat unless there was a more efficient way to remove excess heat from the pistons.
+
+CHECK YOUR UNDERSTANDING
+
+How does the rate of heat transfer by conduction change when all spatial dimensions are doubled?
+
+Solution
+
+Because area is the product of two spatial dimensions, it increases by a factor of four when each dimension is doubled  . The distance, however, simply doubles. Because the temperature difference and the coefficient of thermal conductivity are independent of the spatial dimensions, the rate of heat transfer by conduction increases by a factor of four divided by two, or two:

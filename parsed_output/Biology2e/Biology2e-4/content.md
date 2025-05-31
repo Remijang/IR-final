@@ -1,0 +1,14 @@
+# CHAPTER Cell Structure
+
+INTRODUCTION Close your eyes and picture a brick wall. What is the wall's basic building block? It is a single brick. Like a brick wall, cells are the building blocks that make up your body.
+
+Your body has many kinds of cells, each specialized for a specific purpose. Just as we use a variety of materials to build a home, the human body is constructed from many cell types. For example, epithelial cells protect the body's surface and cover the organs and body cavities within. Bone cells help to support and protect the body. Immune system cells fight invading bacteria. Additionally, blood and blood cells carry nutrients and oxygen throughout the body while removing carbon dioxide. Each of these cell types plays a vital role during the body's growth, development, and day-to-day maintenance. In spite of their enormous variety, however, cells from all organisms—even ones as diverse as bacteria, onion, and human—share certain fundamental characteristics.
+
+# Chapter Outline
+
+4.1 Studying Cells   
+4.2 Prokaryotic Cells   
+4.3 Eukaryotic Cells   
+4.4 The Endomembrane System and Proteins   
+4.5 The Cytoskeleton   
+4.6 Connections between Cells and Cellular Activities

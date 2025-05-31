@@ -1,0 +1,5 @@
+1.5.3 Generic – Instructions should Capture the Common Case
+
+Most of the common instructions in programs are simple arithmetic instructions such as add, subtract, multiply, divide. The most common logical instructions are logical and, or, exclusiveor, and not. Hence, it makes sense to dedicate an instruction to each of these common operations.
+
+It is not a good idea to have instructions that implement a very rarely used computation. For example, it might not make sense to implement an instruction that computes  . It is possible to provide dedicated library functions that compute  using existing mathematical techniques such as Taylor series expansion. Since this function is rarely used by most programs, they will not be adversely affected if this function takes a relatively long time to execute.

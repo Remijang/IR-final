@@ -1,0 +1,166 @@
+[
+    {
+        "type": "text",
+        "text": "10.7.5 Forwarding Conditions ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "After designing the data path for supporting forwarding, let us design the control path. The only extra addition to the control path is the forwarding unit. This unit computes the values of the signals to control the forwarding multiplexers. Let us now discuss the design of the forwarding unit. ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "The Forwarding Unit ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "As shown in Figure 10.31 the forwarding unit receives inputs from all the four pipeline registers. They provide the contents of the instructions resident in the OF, EX, MA, and RW stages, respectively. Based on the contents of the instructions, the forwarding unit computes the values of the control signals. ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Salient Points ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the four forwarding paths in our architecture \u2013 $R W  O F$ , $R W \\to E X$ , $M A \\to E X$ , and $R W \\to M A$ . We note that the distance between the producer and consumer stages for these four paths are 3, 2, 1, and 1, respectively. Alternatively, we can say that instruction number $i$ , can get its inputs from instructions $i - 1$ , $i - 2$ , and $i - 3$ . The reader needs to note that there are two forwarding paths between adjacent stages (distance equal to 1). ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Forwarding Paths with Distance Equal to 1 ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "These forwarding paths are $M A \\to E X$ , and $R W  M A$ . We actually need both these forwarding paths. The reason is as follows. The $M A \\to E X$ path is required for forwarding results between consecutive ALU instructions. The $R W  M A$ path is required when the value of the input is generated in the MA stage, and it is also required in the MA stage. The only instruction that generates a value in the MA stage is the load instruction, and the only instruction that requires register operands in the MA stage, is the store instruction. Thus, we need to use the $R W \\to M A$ forwarding path between a load instruction, and an immediately succeeding store instruction, when there is a register dependence. The following code snippet gives an example. ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "ld r1, 10[r2] st r1, 20[r4] ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Note that sometimes we might have a choice of forwarding paths ( $M A \\to E X$ , or $R W $ MA). The following code snippet shows an example. ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "[1]: add r1, r2, r3 [2]: st r1, 20[r4] ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Here, instruction [1] is ready to forward the value of $r 1$ when it reaches the MA stage. However, instruction [2] requires the value of $r 1$ when instruction [1] reaches the RW stage. We can thus use either forwarding path ( $M A \\to E X$ , or $R W \\to M A$ ). Let us choose to use $R W \\to M A$ forwarding in this case (also see Section 10.7.4). This optimization allows us to reduce a forwarding path between $M A$ to $E X$ for op2. This is also in accordance with tenet 2 mentioned in Section 10.7.2 that says that we should forward as late as possible. ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Case of the mov Instruction ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "The other special case arises for the mov instruction. Since the EX stage does not produce its output value, we can theoretically use $R W \\to M A$ forwarding for it. Ideally, if the consumer instruction in a load-use hazard, is a mov instruction, we should not have the necessity to stall the pipeline. However, for the purpose of simplicity, let us choose to treat a mov instruction as a regular ALU instruction, and choose to disregard any optimizations in this case. ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Conflicts with Multiple Instructions ",
+        "text_level": 1,
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "Let us look at our four forwarding paths: $R W  O F$ , $R W \\to E X$ , $M A \\to E X$ , and $R W $ $M A$ , again. We notice that the EX stage gets forwarded inputs from two stages \u2013 MA and RW. It is possible that the instruction in the EX stage has a conflict (RAW register dependence) with the instructions in both the MA and RW stages for the same input. In this case, we need to choose the input from the MA stage because it is an earlier instruction. Let us show an example. ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "[1]:add r1, r2, r3   \n[2]:sub r1, r4, r5   \n[3]:mul r8, r9, r1 ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "In this case, when instruction [3] is in the EX stage, instruction [2] is in the MA stage, and instruction [1] is in the RW stage. The second source operand (value of register $_ { r \\bot }$ ) needs to be forwarded. We need to get the value from the MA stage because instruction [2] will overwrite the value written by instruction [1]. We can design a simple circuit to give a higher priority to the MA stage than the RW stage while forwarding results to the EX stage. We leave this as an exercise for the interested reader. ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "Algorithms for Forwarding Conditions ",
+        "text_level": 1,
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "We show the pseudo codes for the forwarding conditions. We need to first detect if a conflict exists for the first operand, which is typically the $r s 1$ field of the instruction packet. In the case of a ret instruction, the first operand is the $r a$ (return address) register. If a conflict exists, then we can potentially forward a value. For reasons of brevity, we do not show the code that disregards the case of forwarding if one of the instructions is a pipeline bubble. ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "Algorithm 6 shows the algorithm for detecting a conflict on the first operand. We first rule out the trivial cases in which instruction [A] does not read from any register, and [B] does not write to any register. Then, we set the first operand. It is equal to the $r s 1$ field in the instruction packet. The only exception is the ret instruction whose first operand is the $r a$ register. Similarly, the destination operand is always $^ { r d }$ , with the call instruction being the only exception. Its destination operand is the return address register, $r a$ . Then we detect a conflict in Line 15, and we return true if a conflict (RAW dependence) exists, otherwise we return false. We can use the output of Algorithm 6 to set the input of the forwarding multiplexers for the first operand. ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "Algorithm 7 shows the pseudo code of the algorithm for detecting conflicts for the second operand. We first rule out the trivial cases, in which [A] does not read any register and [B] does not write to any register. Then, we need to see if the second operand of [A] is an immediate. In this case, forwarding is not required. The second operand is typically equal to the $r s 2$ field of the instruction packet. However, in the case of a store instruction, it is equal to the $^ { r d }$ field of the instruction packet. Similarly, we find the destination register of instruction [B], and take care of the special case of the call instruction. We finally detect a conflict in Line 20. Note that we do not consider the load-use hazard, or Branch-Lock conditions in the forwarding logic, because we always assume that interlocks have higher priority over forwarding. Secondly, whenever we do not have a forwarding path, the forwarding conditions do not apply. Finally, in the case of multiple conflicting instructions, the forwarding unit needs to ensure that the correct value is forwarded. ",
+        "page_idx": 454
+    },
+    {
+        "type": "table",
+        "img_path": "images/052197ab3d2038806a168aef239a93f93e0d3d1361b334992db7aab965e463c7.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Algorithm 6: Conflict on the first operand (rsl/ra)</td></tr><tr><td>Data: Instructions: [A] and [B] (possible forwarding: [B] \u2192 [A]) Result: Conflict exists on rsl/ra (true),no conflict (false) 1 if [A].opcode \u2208 (nop,b,beq,bgt,call,not,mov) then</td></tr><tr><td>/* Does not read from the rs1 register */ return false</td></tr><tr><td>2 3 end</td></tr><tr><td>4 if [B].opcode \u2208 (nop,cmp,st,b,beq,bgt,ret) then</td></tr><tr><td>/* Does not write to any register */ 5 return false</td></tr><tr><td>6 end</td></tr><tr><td>/* Set the sources */ 7 srcl \u2190 [A].rs1</td></tr><tr><td>8 if [A].opcode = ret then</td></tr><tr><td>9 srcl\u2190ra 10 end</td></tr><tr><td>/* Set the destination */ 11 dest \u2190 [B].rd</td></tr><tr><td>12 if [B].opcode = call then 13 dest \u2190ra</td></tr></table></body></html>\n\n",
+        "page_idx": 455
+    },
+    {
+        "type": "table",
+        "img_path": "images/98805dc0a5198bf59dfea09fb3205596b740f4b888873196b010037533e127fa.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Algorithm 7: Conflict on the second operand (rs2/rd)</td></tr><tr><td>Data: Instructions: [A] and [B] (possible forwarding: [B] \u2192 [A]) Result: Conflict exists on second operand (rs2/rd) (true),no conflict (false)</td></tr><tr><td>1 if [A].opcode \u2208 (nop,b,beq,bgt,call) then /* Does not read from any register */</td></tr><tr><td>2 return false</td></tr><tr><td>3 end 4 if [B].opcode \u2208 (nop,cmp,st,b,beq,bgt,ret) then</td></tr><tr><td>/* Does not write to any register */</td></tr><tr><td>5 return false 6 end</td></tr><tr><td>/* Check the second operand to see if it is a register */ 7 if [A].opcode \u2260\uff08st) then</td></tr><tr><td>8 if[A].I =1 then</td></tr><tr><td>9 return false</td></tr><tr><td>10 end 11 end</td></tr><tr><td>/* Set the sources */ 12 src2 \u2190 [A].rs2 13 if [A].opcode = st then</td></tr></table></body></html>\n\n",
+        "page_idx": 456
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Special Case of Forwarding from the Call Instruction ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the following code snippet. ",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "call .function .function: ret ",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Here, we call a function and immediately return. In this case, the call instruction will still be in the pipeline, when the ret instruction enters the pipeline. Recall that the call instruction writes to register $r a$ and the ret instruction reads from register $r a$ . Moreover, the call instruction computes the value of $r a$ , and writes it to the register file in the RW stage. We shall prove that this does not cause any correctness issues. ",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "A call instruction is a taken branch. This means that when it enters the EX stage, the Branch-Lock circuitry will detect that it is a taken branch, and convert the instructions in the IF and OF stages to bubbles. Any instruction that requires the value of the ra register will at least be three stages behind the call instruction. This means that when the call instruction will reach the RW stage, the next valid instruction in the pipeline will be in the OF stage. If this is a ret instruction, or any other instruction that needs the value of the ra register, then it can simply get its value through the $R W  O F$ forwarding path. Hence, the special case of forwarding from the call instruction is handled correctly. ",
+        "page_idx": 457
+    }
+]

@@ -1,0 +1,618 @@
+[
+    {
+        "type": "text",
+        "text": "2.7 Falling Objects ",
+        "text_level": 1,
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Describe the effects of gravity on objects in motion.   \n\u2022 Describe the motion of objects that are in free fall.   \n\u2022 Calculate the position and velocity of objects in free fall. ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Falling objects form an interesting class of motion problems. For example, we can estimate the depth of a vertical mine shaft by dropping a rock into it and listening for the rock to hit the bottom. By applying the kinematics developed so far to falling objects, we can examine some interesting situations and learn much about gravity in the process. ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Gravity ",
+        "text_level": 1,
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "The most remarkable and unexpected fact about falling objects is that, if air resistance and friction are negligible, then in a given location all objects fall toward the center of Earth with the sameconstantac eleration, independent oftheirmas . This experimentally determined fact is unexpected, because we are so accustomed to the effects of air resistance and friction that we expect light objects to fall slower than heavy ones. ",
+        "page_idx": 88
+    },
+    {
+        "type": "image",
+        "img_path": "images/88687e73bf364232ecab867011e4abcb7a64bcc6e386361a16ac6dd73a5dbe70.jpg",
+        "img_caption": [
+            "FIGURE 2.37 A hammer and a feather will fall with the same constant acceleration if air resistance is considered negligible. This is a general characteristic of gravity not unique to Earth, as astronaut David R. Scott demonstrated on the Moon in 1971, where the acceleration due to gravity is only . "
+        ],
+        "img_footnote": [],
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "In the real world, air resistance can cause a lighter object to fall slower than a heavier object of the same size. A tennis ball will reach the ground after a hard baseball dropped at the same time. (It might be difficult to observe the difference if the height is not large.) Air resistance opposes the motion of an object through the air, while friction between objects\u2014such as between clothes and a laundry chute or between a stone and a pool into which it is dropped\u2014also opposes motion between them. For the ideal situations of these first few chapters, an object faling withoutairresistanceorfrictionis defined to be in free-fall. ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "The force of gravity causes objects to fall toward the center of Earth. The acceleration of free-falling objects is therefore called the acceleration due to gravity. The acceleration due to gravity is constant, which means we can apply the kinematics equations to any falling object where air resistance and friction are negligible. This opens a broad class of interesting situations to us. The acceleration due to gravity is so important that its magnitude is given its own symbol, . It is constant at any given location on Earth and has the average value ",
+        "page_idx": 89
+    },
+    {
+        "type": "equation",
+        "text": "$$\ng = 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Although $g$ varies from $9 . 7 8 ~ \\mathrm { m } / \\mathrm { s } ^ { 2 }$ to $9 . 8 3 ~ \\mathrm { m } / \\mathrm { s } ^ { 2 }$ , depending on latitude, altitude, underlying geological formations, and local topography, the average value of $9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ will be used in this text unless otherwise specified. The direction of the acceleration due to gravity is downward(towardsthecenterofEarth). In fact, its direction defines what we call vertical. Note that whether the acceleration $a$ in the kinematic equations has the value $+ g$ or $- g$ depends on how we define our coordinate system. If we define the upward direction as positive, then $a = - g = - 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ , and if we define the downward direction as positive, then $a = g = 9 . 8 0 ~ \\mathrm { m / s ^ { 2 } }$ . ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "One-Dimensional Motion Involving Gravity ",
+        "text_level": 1,
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "The best way to see the basic features of motion involving gravity is to start with the simplest situations and then progress toward more complex ones. So we start by considering straight up and down motion with no air resistance or friction. These assumptions mean that the velocity (if there is any) is vertical. If the object is dropped, we know the initial velocity is zero. Once the object has left contact with whatever held or threw it, the object is in free-fall. Under these circumstances, the motion is one-dimensional and has constant acceleration of magnitude $g$ . We will also represent vertical displacement with the symbol $y$ and use $x$ for horizontal displacement. ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Kinematic Equations for Objects in Free-Fall where Acceleration $= - g$ ",
+        "text_level": 1,
+        "page_idx": 89
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = v _ { 0 } - g t\n$$",
+        "text_format": "latex",
+        "page_idx": 89
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = y _ { 0 } + v _ { 0 } t - { \\frac { 1 } { 2 } } g t ^ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 89
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv ^ { 2 } = v _ { 0 } ^ { 2 } - 2 g ( y - y _ { 0 } )\n$$",
+        "text_format": "latex",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.14 ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Calculating Position and Velocity of a Falling Object: A Rock Thrown Upward ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "A person standing on the edge of a high cliff throws a rock straight up with an initial velocity of $1 3 . 0 ~ \\mathsf { m } / \\mathsf { s }$ .The rock misses the edge of the cliff as it falls back to earth. Calculate the position and velocity of the rock 1.00 s, $2 . 0 0 \\mathsf { s }$ , and 3.00 s after it is thrown, neglecting the effects of air resistance. ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Draw a sketch. ",
+        "page_idx": 90
+    },
+    {
+        "type": "image",
+        "img_path": "images/362915654daaff723aad1323c371adb017940d3473b9e1b444566a763dece6bd.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "We are asked to determine the position $y$ at various times. It is reasonable to take the initial position $y _ { 0 }$ to be zero. This problem involves one-dimensional motion in the vertical direction. We use plus and minus signs to indicate direction, with up being positive and down negative. Since up is positive, and the rock is thrown upward, the initial velocity must be positive too. The acceleration due to gravity is downward, so $a$ is negative. It is crucial that the initial velocity and the acceleration due to gravity have opposite signs. Opposite signs indicate that the acceleration due to gravity opposes the initial motion and will slow and eventually reverse it. ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Since we are asked for values of position and velocity at three times, we will refer to these as $y _ { 1 }$ and $v _ { 1 } ; y _ { 2 }$ and $v _ { 2 }$ ;   \nand $y _ { 3 }$ and $v _ { 3 }$ . ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Solution for Position ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "$y _ { 1 }$ ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. We know that $y _ { 0 } = 0$ ; $v _ { \\mathrm { 0 } } = 1 3 . 0 \\mathrm { m / s }$ ; $a = - g = - 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ ; and $t = 1 . 0 0 \\mathrm { s }$ .   \n2. Identify the best equation to use. We will use $\\begin{array} { r } { y = y _ { 0 } + v _ { 0 } t + \\frac { 1 } { 2 } a t ^ { 2 } } \\end{array}$ because it includes only one unknown, $y$ (or $y _ { 1 }$ , here), which is the value we want to find.   \n3. Plug in the known values and solve for $y _ { 1 }$ . ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 90
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { 1 } = 0 + ( 1 3 . 0 ~ \\mathrm { m / s } ) ( 1 . 0 0 ~ \\mathrm { s } ) + \\frac { 1 } { 2 } \\left( - 9 . 8 0 ~ \\mathrm { m / s ^ { 2 } } \\right) ( 1 . 0 0 ~ \\mathrm { s } ) ^ { 2 } = 8 . 1 0 ~ \\mathrm { m }\n$$",
+        "text_format": "latex",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "The rock is $8 . 1 0 \\mathrm { m }$ above its starting point at $t = 1 . 0 0 \\mathsf { s }$ , since $y _ { 1 } > y _ { 0 }$ . It could be movingup or down; the only way to tell is to calculate $v _ { 1 }$ and find out if it is positive or negative. ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Solution for Velocity ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "$v _ { 1 }$ ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. We know that $y _ { 0 } = 0$ ; $v _ { 0 } = 1 3 . 0 \\mathrm { m / s }$ ; $a = - g = - 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ ; and $t = 1 . 0 0$ . We also know from the solution above that $y _ { 1 } = 8 . 1 0 \\mathrm { m }$ . ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "2. Identify the best equation to use. The most straightforward is $v = v _ { 0 } - g t$ (from $v = v _ { 0 } + a t$ , where $a =$ gravitational acceleration $= - g )$ . ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "3. Plug in the knowns and solve. ",
+        "page_idx": 90
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv _ { 1 } = v _ { 0 } - g t = 1 3 . 0 ~ \\mathrm { m / s } - \\left( 9 . 8 0 ~ \\mathrm { m / s ^ { 2 } } \\right) ( 1 . 0 0 ~ \\mathrm { s } ) = 3 . 2 0 ~ \\mathrm { m / s }\n$$",
+        "text_format": "latex",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "The positive value for $v _ { 1 }$ means that the rock is still heading upward at $t = 1 . 0 0 :$ . However, it has slowed from its original $\\mathsf { 1 3 . 0 } \\mathsf { m } / \\mathsf { s }$ , as expected. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Solution for Remaining Times ",
+        "text_level": 1,
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "The procedures for calculating the position and velocity at $t = 2 . 0 0 \\mathrm { s }$ and are the same as those above. The results are summarized in Table 2.1 and illustrated in Figure 2.39. ",
+        "page_idx": 91
+    },
+    {
+        "type": "table",
+        "img_path": "images/f7cd6b51dbf2b8f363b0a896c1e180b7d638b031f6068a53b25b6995ff6fef82.jpg",
+        "table_caption": [
+            "TABLE 2.1 Results "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Time, t</td><td>Position, y</td><td>Velocity, v</td><td>Acceleration, a</td></tr><tr><td>1.00 s</td><td>8.10 m</td><td>3.20 m/s</td><td>-9.80 m/s2</td></tr><tr><td>2.00 s</td><td>6.40 m</td><td>-6.60 m/s</td><td>-9.80 m/s2</td></tr><tr><td>3.00 s</td><td>-5.10 m</td><td>-16.4 m/s</td><td>-9.80 m/s2</td></tr></table></body></html>\n\n",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Graphing the data helps us understand it more clearly. ",
+        "page_idx": 91
+    },
+    {
+        "type": "image",
+        "img_path": "images/ed22bdb2acea5db21fcbe4570b384728c7a87c605cf92a97f8035b34ac0bfaad.jpg",
+        "img_caption": [
+            "FIGURE 2.39 Vertical position, vertical velocity, and vertical acceleration vs. time for a rock thrown vertically up at the edge of a cliff. Notice that velocity changes linearly with time and that acceleration is constant. MisconceptionAlert!Notice that the position vs. time graph shows vertical position only. It is easy to get the impression that the graph shows some horizontal motion\u2014the shape of the graph looks like the path of a projectile. But this is not the case; the horizontal axis is time, not space. The actual path of the rock in space is straight up, and straight down. "
+        ],
+        "img_footnote": [],
+        "page_idx": 92
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 92
+    },
+    {
+        "type": "text",
+        "text": "The interpretation of these results is important. At 1.00 s the rock is above its starting point and heading upward, since $y _ { 1 }$ and $v _ { 1 }$ are both positive. At 2.00 s, the rock is still above its starting point, but the negative velocity means it is moving downward. At $3 . 0 0 \\mathsf { s }$ , both $y _ { 3 }$ and $v _ { 3 }$ are negative, meaning the rock is below its starting point and continuing to move downward. Notice that when the rock is at its highest point (at 1.5 s), its velocity is zero, but its acceleration is still $- 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ . Its acceleration is $- 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ for the whole trip\u2014while it is moving up and while it is moving down. Note that the values for $y$ are the positions (or displacements) of the rock, not the total distances traveled. Finally, note that free-fall applies to upward motion as well as downward. Both have the same acceleration\u2014the acceleration due to gravity, which remains constant the entire time. Astronauts training in the famous Vomit Comet, for example, experience free-fall while arcing up as well as down, as we will discuss in more detail later. ",
+        "page_idx": 92
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Take-Home Experiment\u2014Reaction Time ",
+        "text_level": 1,
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "A simple experiment can be done to determine your reaction time. Have a friend hold a ruler between your thumb and index finger, separated by about 1 cm. Note the mark on the ruler that is right between your fingers. Have your friend drop the ruler unexpectedly, and try to catch it between your two fingers. Note the new reading on the ruler. Assuming acceleration is that due to gravity, calculate your reaction time. How far would you travel in a car (moving at $3 0 ~ \\mathrm { m / s } ,$ ) if the time it took your foot to go from the gas pedal to the brake was twice this reaction time? ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.15 ",
+        "text_level": 1,
+        "page_idx": 93
+    },
+    {
+        "type": "image",
+        "img_path": "images/3865d5743d25b99ec096aed98cba9c371dd2afd8276392aecf44e0f6ee0bc1e3.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Calculating Velocity of a Falling Object: A Rock Thrown Down ",
+        "text_level": 1,
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "What happens if the person on the cliff throws the rock straight down, instead of straight up? To explore this question, calculate the velocity of the rock when it is $5 . 1 0 \\mathrm { m }$ below the starting point, and has been thrown downward with an initial speed of $1 3 . 0 \\ : \\mathrm { m } / \\mathsf { s }$ . ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Draw a sketch. ",
+        "page_idx": 93
+    },
+    {
+        "type": "image",
+        "img_path": "images/e11f01276e6df0b6eabe2aaacd7ede1041419c2b7e27edcddf1c6f0eead684e6.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Since up is positive, the final position of the rock will be negative because it finishes below the starting point at $y _ { 0 } = 0$ . Similarly, the initial velocity is downward and therefore negative, as is the acceleration due to gravity. We expect the final velocity to be negative since the rock will continue to move downward. ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns $\\begin{array} { r } { \\cdot y _ { 0 } = 0 ; y _ { 1 } = - 5 . 1 0 \\mathrm { m } ; v _ { 0 } = - 1 3 . 0 \\mathrm { m } / \\mathrm { s } ; a = - g = - 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 } . } \\end{array}$ ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "2. Choose the kinematic equation that makes it easiest to solve the problem. The equation $v ^ { 2 } = v _ { 0 } ^ { 2 } + 2 a ( y - y _ { 0 } )$ works well because the only unknown in it is $v$ . (We will plug $y _ { 1 }$ in for $y$ .) ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "3. Enter the known values ",
+        "page_idx": 93
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv ^ { 2 } = ( - 1 3 . 0 ~ \\mathrm { m / s } ) ^ { 2 } + 2 \\left( - 9 . 8 0 ~ \\mathrm { m / s } ^ { 2 } \\right) ( - 5 . 1 0 ~ \\mathrm { m } - 0 ~ \\mathrm { m } ) = 2 6 8 . 9 6 ~ \\mathrm { m } ^ { 2 } / \\mathrm { s } ^ { 2 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "where we have retained extra significant figures because this is an intermediate result. ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Taking the square root, and noting that a square root can be positive or negative, gives ",
+        "page_idx": 93
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = \\pm 1 6 . 4 \\mathrm { m / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "The negative root is chosen to indicate that the rock is still heading down. Thus, ",
+        "page_idx": 93
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = - 1 6 . 4 \\mathrm { m / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "Note thatthisisexactlythesamevelocitytherockhadatthispositionwhenitwasthrownstraightupwardwiththe sameinitialspe d. (See Example 2.14 and Figure 2.41(a).) This is not a coincidental result. Because we only consider the acceleration due to gravity in this problem, the spe dof a falling object depends only on its initial ",
+        "page_idx": 93
+    },
+    {
+        "type": "text",
+        "text": "speed and its vertical position relative to the starting point. For example, if the velocity of the rock is calculated at a height of $8 . 1 0 \\mathrm { m }$ above the starting point (using the method from Example 2.14) when the initial velocity is $1 3 . 0 \\mathsf { m } / \\mathsf { s }$ straight up, a result of $\\pm 3 . 2 0 \\mathrm { m } / \\mathrm { s }$ is obtained. Here both signs are meaningful; the positive value occurs when the rock is at $8 . 1 0 \\mathrm { m }$ and heading up, and the negative value occurs when the rock is at $8 . 1 0 \\mathrm { m }$ and heading back down. It has the same spe dbut the opposite direction. ",
+        "page_idx": 94
+    },
+    {
+        "type": "image",
+        "img_path": "images/1d592cd788881dee9c7bc6104b616532dd039b3c876c42b48a5cf86b92e191e4.jpg",
+        "img_caption": [
+            "FIGURE 2.41 (a) A person throws a rock straight up, as explored in Example 2.14. The arrows are velocity vectors at 0, 1.00, 2.00, and 3.00 s. (b) A person throws a rock straight down from a cliff with the same initial speed as before, as in Example 2.15. Note that at the same distance below the point of release, the rock has the same velocity in both cases. "
+        ],
+        "img_footnote": [],
+        "page_idx": 94
+    },
+    {
+        "type": "text",
+        "text": "Another way to look at it is this: In Example 2.14, the rock is thrown up with an initial velocity of $1 3 . 0 \\mathrm { m / s }$ . It rises and then falls back down. When its position is $y = 0$ on its way back down, its velocity is $- 1 3 . 0 \\mathrm { m / s }$ . That is, it has the same speed on its way down as on its way up. We would then expect its velocity at a position of $y = - 5 . 1 0 \\mathrm { m }$ to be the same whether we have thrown it upwards at $+ 1 3 . 0 \\mathrm { m / s }$ or thrown it downwards at $- 1 3 . 0 \\mathrm { m / s }$ . The velocity of the rock on its way down from $y = 0$ is the same whether we have thrown it up or down to start with, as long as the speed with which it was initially thrown is the same. ",
+        "page_idx": 94
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2.16 ",
+        "text_level": 1,
+        "page_idx": 95
+    },
+    {
+        "type": "text",
+        "text": "Find gfrom Data on a Falling Object ",
+        "text_level": 1,
+        "page_idx": 95
+    },
+    {
+        "type": "text",
+        "text": "The acceleration due to gravity on Earth differs slightly from place to place, depending on topography (e.g., whether you are on a hill or in a valley) and subsurface geology (whether there is dense rock like iron ore as opposed to light rock like salt beneath you.) The precise acceleration due to gravity can be calculated from data taken in an introductory physics laboratory course. An object, usually a metal ball for which air resistance is negligible, is dropped and the time it takes to fall a known distance is measured. See, for example, Figure 2.42. Very precise results can be produced with this method if sufficient care is taken in measuring the distance fallen and the elapsed time. ",
+        "page_idx": 95
+    },
+    {
+        "type": "image",
+        "img_path": "images/8ea420ff1f57b5047a0ea728099f431c8678e9045a40491c7f94fc568067f632.jpg",
+        "img_caption": [
+            "FIGURE 2.42 Positions and velocities of a metal ball released from rest when air resistance is negligible. Velocity is seen to increase linearly with time while displacement increases with time squared. Acceleration is a constant and is equal to gravitational acceleration. "
+        ],
+        "img_footnote": [],
+        "page_idx": 95
+    },
+    {
+        "type": "text",
+        "text": "Suppose the ball falls $\\pm . 0 0 0 0 \\mathsf { m }$ in 0.45173 s. Assuming the ball is not affected by air resistance, what is the precise acceleration due to gravity at this location? ",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "Draw a sketch. ",
+        "page_idx": 96
+    },
+    {
+        "type": "image",
+        "img_path": "images/cd7e049d4318981d4d046619b0d1613bbf92634279772395ce9c698b93b5613c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "We need to solve for acceleration . Note that in this case, displacement is downward and therefore negative, as is acceleration. ",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $= 0 ; y = - 1 . 0 0 0 0 \\mathrm { m } ; t = 0 . 4 5 1 7 3 ; v _ { 0 } = 0 .$ ",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "2. Choose the equation that allows you to solve for $a$ using the known values. ",
+        "page_idx": 96
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = y _ { 0 } + v _ { 0 } t + { \\frac { 1 } { 2 } } a t ^ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "3. Substitute 0 for $v _ { 0 }$ and rearrange the equation to solve for $a$ . Substituting 0 for $v _ { 0 }$ yields ",
+        "page_idx": 96
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = y _ { 0 } + { \\frac { 1 } { 2 } } a t ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "Solving for $a$ gives ",
+        "page_idx": 96
+    },
+    {
+        "type": "equation",
+        "text": "$$\na = \\frac { 2 ( y - y _ { 0 } ) } { t ^ { 2 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "4. Substitute known values yields ",
+        "page_idx": 96
+    },
+    {
+        "type": "equation",
+        "text": "$$\na = { \\frac { 2 ( - 1 . 0 0 0 0 \\mathrm { ~ m } - 0 ) } { ( 0 . 4 5 1 7 3 \\mathrm { ~ s } ) ^ { 2 } } } = - 9 . 8 0 1 0 \\mathrm { ~ m } / \\mathrm { s } ^ { 2 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "so, because $a = - g$ with the directions we have chosen, ",
+        "page_idx": 96
+    },
+    {
+        "type": "equation",
+        "text": "$$\ng = 9 . 8 0 1 0 \\mathrm { m } / \\mathrm { s } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "The negative value for $a$ indicates that the gravitational acceleration is downward, as expected. We expect the value to be somewhere around the average value of $9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ , so $\\mathrm { \\nabla { 9 . 8 0 1 0 \\ m / s ^ { 2 } } }$ makes sense. Since the data going into the calculation are relatively precise, this value for $g$ is more precise than the average value of $9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ ; it represents the local value for the acceleration due to gravity. ",
+        "page_idx": 96
+    },
+    {
+        "type": "image",
+        "img_path": "images/a0011f37a643ad8bae940a59f2f14cd6c073d7568d9d8dc4eb06b788af18decd.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "A chunk of ice breaks off a glacier and falls 30.0 meters before it hits the water. Assuming it falls freely (there is no air resistance), how long does it take to hit the water? ",
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 96
+    },
+    {
+        "type": "text",
+        "text": "We know that initial position $y _ { 0 } = 0$ , final position $y = - 3 0 . 0 \\mathrm { m }$ , and $a = - g = - 9 . 8 0 \\mathrm { m } / \\mathrm { s } ^ { 2 }$ . We can then use the equation $\\begin{array} { r } { y = y _ { 0 } + v _ { 0 } t + \\frac { 1 } { 2 } a t ^ { 2 } } \\end{array}$ to solve for $t$ . Inserting $a = - g$ , we obtain ",
+        "page_idx": 96
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { y } & { = } & { 0 + 0 - { \\frac { 1 } { 2 } } g t ^ { 2 } } \\\\ { t ^ { 2 } } & { = } & { { \\frac { 2 y } { - g } } } \\\\ { t } & { = } & { \\pm { \\sqrt { \\frac { 2 y } { - g } } } = \\pm { \\sqrt { \\frac { 2 ( - 3 0 . 0 \\ \\mathrm { m } ) } { - 9 . 8 0 \\ \\mathrm { m } / \\mathrm { s } ^ { 2 } } } } = \\pm { \\sqrt { 6 . 1 2 \\ \\mathrm { s } ^ { 2 } } } = 2 . 4 7 \\ \\mathrm { s } \\approx 2 . 5 \\ \\mathrm { s } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "where we take the positive value as the physically relevant answer. Thus, it takes about 2.5 seconds for the piece of ice to hit the water. ",
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "PHET EXPLORATIONS ",
+        "text_level": 1,
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "Equation Grapher ",
+        "text_level": 1,
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "Learn about graphing polynomials. The shape of the curve changes as the constants are adjusted. View the curves for the individual terms (e.g. $y = b x .$ ) to see how they add to generate the polynomial curve. ",
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "Click to view content (https://openstax.org/books/college-physics-2e/pages/2-7-falling-objects) ",
+        "page_idx": 97
+    },
+    {
+        "type": "text",
+        "text": "",
+        "text_level": 1,
+        "page_idx": 97
+    }
+]

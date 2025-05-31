@@ -1,0 +1,13 @@
+7.2.6 Priority Encoder
+
+Let us now assume that we do not have the restriction that only one input line can be equal to 1. Let us assume that more than one inputs can be equal to 1. In this case, we need to report the binary encoding of the input line that has the highest index (priority). For example, if lines 3 and 5 and on, then we need to report the binary encoding of the  line. The block diagram remains the same as Figure 7.13.
+
+However, the equations for computing the output change. For a 4-2-bit priority encoder, the equations are as follows.
+
+Let us consider  . If  , then  , because  has the highest priority. However, if  , then we cannot take a decision based on its value, because  , and  might also be equal to 1. If  , then there is no issue, because it also sets the value of  . However, if  , and  , then we need to disregard  . Hence, we need to compute  for  . The equation for  remains the same (the reader should try to find the reason). The circuit diagram of a 4-2-bit encoder is shown in Figure 7.15.
+
+Example 120
+
+Write the equations for an 8-3-bit priority encoder. Assume that the inputs are  , and the outputs are  ,  , and  .
+
+Answer:

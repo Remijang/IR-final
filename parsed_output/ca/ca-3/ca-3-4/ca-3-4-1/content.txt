@@ -1,0 +1,39 @@
+3.4.1 Summary
+
+Summary 3
+
+1. Assembly language is a textual representation of machine instructions. Each statement in an assembly language program typically corresponds to one machine instruction.   
+2. An assembler is a program that converts an assembly language program to machine code.   
+3. An assembly language is specific to an ISA and an assembler.   
+4. Assembly language is a vital tool for writing efficient programs, and for designing the core routines of operating systems, and device drivers.   
+5. Hardware designers learn assembly languages to understand the semantics of an ISA. It tells them what to build.   
+6. An assembly language program typically assumes a Von Neumann machine augmented with a finite set of registers.
+
+7. A typical GNU assembly file contains a list of sections. Two important sections are text and data. The text section contains the assembly statements that correspond to machine code. The data section holds data and constants that the program will need during its operation.
+
+8. A typical assembly statement contains an optional label to uniquely identify it, an instruction with a set of operands, and an optional comment. Instead of an instruction, it can also contain a directive that is a command to the assembler.
+
+9. There are typically four types of generic assembly instructions:
+
+(a) Data processing instructions – arithmetic and logical   
+(b) Data transfer instructions – move, load, and store   
+(c) Branch instructions – branch, function call, return   
+(d) Exception generating instructions – transfer control to the operating system
+
+An assembly language for a specific ISA also contains some machine specific instructions also that are mainly used to set its configuration or invoke some special feature.
+
+10. The semantics of operands is also known as the addressing mode.
+
+11. The main addressing modes are immediate (specify constant in instruction), registerdirect (specify the register’s name in the instruction), register-indirect (a register contains the memory address), and base-offset (the offset is added to the memory location in the base register).
+
+12. We designed the SimpleRisc assembly language that contains 21 instructions. It is a complete RISC ISA.
+
+13. We designed an encoding for each SimpleRisc instruction. We broadly defined three instruction formats
+
+branch Contains a 5-bit opcode and 27-bit offset.
+
+register Encodes a 3-address instruction with two register source operands and one register destination operand.
+
+immediate Encodes a 3-address instruction that has an immediate as one of the operands.
+
+In this chapter we have looked at the generic principles underlying different flavors of assembly language. We constructed a small assembly language of our own for the SimpleRisc ISA, and proceeded to encode it. This information is sufficient to design a basic processor for SimpleRisc in Chapter 9. However, we would like to strongly advise the reader to study at least one of the chapters on real-world assembly languages – either ARM (Chapter 4) or x86 (Chapter 5). Studying a real language in all its glory will help the reader deepen her knowledge, and she can appreciate all the tricks that are required to make an ISA expressive.

@@ -1,0 +1,262 @@
+10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Describe the right-hand rule to find the direction of angular velocity, momentum, and torque.   
+• Explain the gyroscopic effect.   
+• Study how Earth acts like a gigantic gyroscope.
+
+Angular momentum is a vector and, therefore, hasdirectionaswel asmagnitude. Torque affects both the direction and the magnitude of angular momentum. What is the direction of the angular momentum of a rotating object like the disk in Figure 10.26? The figure shows the right-hand rule used to find the direction of both angular momentum and angular velocity. Both and  are vectors—each has direction and magnitude. Both can be represented by arrows. The right-hand rule defines both to be perpendicular to the plane of rotation in the direction shown. Because angular momentum is related to angular velocity by  , the direction of  is the same as the direction of . Notice in the figure that both point along the axis of rotation.
+
+Now, recall that torque changes angular momentum as expressed by
+
+This equation means that the direction of  is the same as the direction of the torque  that creates it. This result is illustrated in Figure 10.27, which shows the direction of torque and the angular momentum it creates.
+
+Let us now consider a bicycle wheel with a couple of handles attached to it, as shown in Figure 10.28. (This device is popular in demonstrations among physicists, because it does unexpected things.) With the wheel rotating as shown, its angular momentum is to the woman's left. Suppose the person holding the wheel tries to rotate it as in the figure. Her natural expectation is that the wheel will rotate in the direction she pushes it—but what happens is quite different. The forces exerted create a torque that is horizontal toward the person, as shown in Figure 10.28(a). This torque creates a change in angular momentum in the same direction, perpendicular to the original angular momentum , thus changing the direction of but not the magnitude of . Figure 10.28 shows how and add, giving a new angular momentum with direction that is inclined more toward the person than before. The axis of the wheel has thus moved perpendiculartotheforcesexertedonit, instead of in the expected direction.
+
+This same logic explains the behavior of gyroscopes. Figure 10.29 shows the two forces acting on a spinning gyroscope. The torque produced is perpendicular to the angular momentum, thus the direction of the torque is changed, but not its magnitude. The gyroscope preces esaround a vertical axis, since the torque is always horizontal and perpendicular to . If the gyroscope is notspinning, it acquires angular momentum in the direction of the torque  ), and it rotates around a horizontal axis, falling over just as we would expect.
+
+Earth itself acts like a gigantic gyroscope. Its angular momentum is along its axis and points at Polaris, the North Star. But Earth is slowly precessing (once in about 26,000 years) due to the torque of the Sun and the Moon on its nonspherical shape.
+
+CHECK YOUR UNDERSTANDING
+
+Rotational kinetic energy is associated with angular momentum? Does that mean that rotational kinetic energy is a vector?
+
+Solution
+
+No, energy is always a scalar whether motion is involved or not. No form of energy has a direction in space and you can see that rotational kinetic energy does not depend on the direction of motion just as linear kinetic energy is independent of the direction of motion.
+
+Glossary
+
+angular acceleration the rate of change of angular velocity with time   
+angular momentum the product of moment of inertia and angular velocity   
+change in angular velocity the difference between final and initial values of angular velocity   
+kinematics of rotational motion describes the relationships among rotation angle, angular velocity, angular acceleration, and time   
+law of conservation of angular momentum angular momentum is conserved, i.e., the initial angular momentum is equal to the final angular momentum when no external torque is applied to the system   
+moment of inertia mass times the square of perpendicular distance from the rotation axis; for a point mass, it is  and, because any object can be built up from a collection of point masses, this relationship is the basis for all other moments of inertia
+
+Section Summary
+
+10.1 Angular Acceleration
+
+• Uniform circular motion is the motion with a constant angular velocity  ·   
+In non-uniform circular motion, the velocity changes with time and the rate of change of angular velocity (i.e. angular acceleration) is  Linear or tangential acceleration refers to changes in the magnitude of velocity but not its direction, given as  . For circular motion, note that  , so that  The radius r is constant for circular motion, and so  . Thus,  By definition,  . Thus,  or 
+
+10.2 Kinematics of Rotational Motion
+
+• Kinematics is the description of motion.   
+• The kinematics of rotational motion describes the relationships among rotation angle, angular velocity, angular acceleration, and time. Starting with the four kinematic equations we developed in the One-Dimensional Kinematics, we   
+right-hand rule direction of angular velocity ω and angular momentum L in which the thumb of your right hand points when you curl your fingers in the direction of the disk’s rotation   
+rotational inertia resistance to change of rotation. The more rotational inertia an object has, the harder it is to rotate   
+rotational kinetic energy the kinetic energy due to the rotation of an object. This is part of its total kinetic energy   
+tangential acceleration the acceleration in a direction tangent to the circle at the point of interest in circular motion   
+torque the turning effectiveness of a force   
+work-energy theorem if one or more external forces act upon a rigid object, causing its kinetic energy to change from  to  , then the work  done by the net force is equal to the change in kinetic energy can derive the four rotational kinematic equations (presented together with their translational counterparts) seen in Table 10.2. • In these equations, the subscript 0 denotes initial values  and  are initial values), and the average angular velocity  and average velocity  are defined as follows:  and 
+
+10.3 Dynamics of Rotational Motion: Rotational Inertia
+
+• The farther the force is applied from the pivot, the greater is the angular acceleration; angular acceleration is inversely proportional to mass.   
+• If we exert a force  on a point mass that is at a distance  from a pivot point and because the force is perpendicular to  , an acceleration  is obtained in the direction of  . We can rearrange this equation such that  ， and then look for ways to relate this expression to expressions for rotational quantities. We note that  , and we substitute this expression into  , yielding    
+• Torque is the turning effectiveness of a force. In this case, because  is perpendicular to  , torque is simply  . If we multiply both sides of the equation above by  , we get torque on the lefthand side. That is,  or    
+The moment of inertia  of an object is the sum of  for all the point masses of which it is composed. That is,    
+The general relationship among torque, moment of inertia, and angular acceleration is  or 
+
+10.4 Rotational Kinetic Energy: Work and Energy Revisited
+
+The rotational kinetic energy  for an object with a moment of inertia  and an angular velocity  is given by    
+Helicopters store large amounts of rotational kinetic energy in their blades. This energy must be put into the blades before takeoff and maintained until the end of the flight. The engines do not have enough power to simultaneously provide lift and put significant rotational energy into the blades.   
+• Work and energy in rotational motion are completely analogous to work and energy in translational motion. The equation for the work-energy theorem for rotational motion is, net 
+
+10.5 Angular Momentum and Its Conservation
+
+• Every rotational phenomenon has a direct translational analog , likewise angular momentum  can be defined as    
+• This equation is an analog to the definition of
+
+Conceptual Questions
+
+10.1 Angular Acceleration
+
+1. Analogies exist between rotational and translational physical quantities. Identify the rotational term analogous to each of the following: acceleration, force, mass, work, translational kinetic energy, linear momentum, impulse.
+
+linear momentum as  . The relationship between torque and angular momentum is net t =. • Angular momentum, like energy and linear momentum, is conserved. This universally applicable law is another sign of underlying unity in physical laws. Angular momentum is conserved when net external torque is zero, just as linear momentum is conserved when the net external force is zero.
+
+10.6 Collisions of Extended Bodies in Two Dimensions
+
+• Angular momentum  is analogous to linear momentum and is given by  . • Angular momentum is changed by torque, following the relationship • Angular momentum is conserved if the net torque is zero  constant (net  or  (net  . This equation is known as the law of conservation of angular momentum, which may be conserved in collisions.
+
+10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum
+
+• Torque is perpendicular to the plane formed by  and and is the direction your right thumb would point if you curled the fingers of your right hand in the direction of . The direction of the torque is thus the same as that of the angular momentum it produces.   
+• The gyroscope precesses around a vertical axis, since the torque is always horizontal and perpendicular to . If the gyroscope is not spinning, it acquires angular momentum in the direction of the torque  ), and it rotates about a horizontal axis, falling over just as we would expect.   
+• Earth itself acts like a gigantic gyroscope. Its angular momentum is along its axis and points at Polaris, the North Star.   
+2. Explain why centripetal acceleration changes the direction of velocity in circular motion but not its magnitude.   
+3. In circular motion, a tangential acceleration can change the magnitude of the velocity but not its direction. Explain your answer.
+
+4. Suppose a piece of food is on the edge of a rotating microwave oven plate. Does it experience nonzero tangential acceleration, centripetal acceleration, or both when: (a) The plate starts to spin? (b) The plate rotates at constant angular velocity? (c) The plate slows to a halt?
+
+10.3 Dynamics of Rotational Motion: Rotational Inertia
+
+5. The moment of inertia of a long rod spun around an axis through one end perpendicular to its length is  . Why is this moment of inertia greater than it would be if you spun a point mass  at the location of the center of mass of the rod (at  )? (That would be  )   
+6. Why is the moment of inertia of a hoop that has a mass  and a radius  greater than the moment of inertia of a disk that has the same mass and radius? Why is the moment of inertia of a spherical shell that has a mass  and a radius  greater than that of a solid sphere that has the same mass and radius?   
+7. Give an example in which a small force exerts a large torque. Give another example in which a large force exerts a small torque.   
+8. While reducing the mass of a racing bike, the greatest benefit is realized from reducing the mass of the tires and wheel rims. Why does this allow a racer to achieve greater accelerations than would an identical reduction in the mass of the bicycle’s frame?
+
+9. A ball slides up a frictionless ramp. It is then rolled without slipping and with the same initial velocity up another frictionless ramp (with the same slope angle). In which case does it reach a greater height, and why?
+
+10.4 Rotational Kinetic Energy: Work and Energy Revisited
+
+10. Describe the energy transformations involved when a yo-yo is thrown downward and then climbs back up its string to be caught in the user’s hand.   
+11. What energy transformations are involved when a dragster engine is revved, its clutch let out rapidly, its tires spun, and it starts to accelerate forward? Describe the source and transformation of energy at each step.   
+12. The Earth has more rotational kinetic energy now than did the cloud of gas and dust from which it formed. Where did this energy come from?
+
+10.5 Angular Momentum and Its Conservation
+
+13. When you start the engine of your car with the transmission in neutral, you notice that the car rocks in the opposite sense of the engine’s rotation. Explain in terms of conservation of angular momentum. Is the angular momentum of the car conserved for long (for more than a few seconds)?
+
+14. Suppose a child walks from the outer edge of a rotating merry-go round to the inside. Does the angular velocity of the merry-go-round increase, decrease, or remain the same? Explain your answer.
+
+15. Suppose a child gets off a rotating merry-goround. Does the angular velocity of the merry-goround increase, decrease, or remain the same if: (a) He jumps off radially? (b) He jumps backward to land motionless? (c) He jumps straight up and hangs onto an overhead tree branch? (d) He jumps off forward, tangential to the edge? Explain your answers. (Refer to Figure 10.32).
+
+16. Helicopters have a small propeller on their tail to keep them from rotating in the opposite direction of their main lifting blades. Explain in terms of Newton’s third law why the helicopter body rotates in the opposite direction to the blades.
+
+17. Whenever a helicopter has two sets of lifting blades, they rotate in opposite directions (and there will be no tail propeller). Explain why it is best to have the blades rotate in opposite directions.
+
+18. Describe how work is done by a skater pulling in her arms during a spin. In particular, identify the force she exerts on each arm to pull it in and the distance each moves, noting that a component of the force is in the direction moved. Why is angular momentum not increased by this action?
+
+19. When there is a global heating trend on Earth, the atmosphere expands and the length of the day increases very slightly. Explain why the length of a day increases.
+
+20. Nearly all conventional piston engines have flywheels on them to smooth out engine vibrations caused by the thrust of individual piston firings. Why does the flywheel have this effect?
+
+21. Jet turbines spin rapidly. They are designed to fly apart if something makes them seize suddenly, rather than transfer angular momentum to the plane’s wing, possibly tearing it off. Explain how flying apart conserves angular momentum without transferring it to the wing.
+
+22. An astronaut tightens a bolt on a satellite in orbit. He rotates in a direction opposite to that of the bolt, and the satellite rotates in the same direction as the bolt. Explain why. If a handhold is available on the satellite, can this counter-rotation be prevented? Explain your answer.
+
+23. Competitive divers pull their limbs in and curl up their bodies when they do flips. Just before entering the water, they fully extend their limbs to enter straight down. Explain the effect of both actions on their angular velocities. Also explain the effect on their angular momenta.
+
+24. Draw a free body diagram to show how a diver gains angular momentum when leaving the diving board.
+
+25. In terms of angular momentum, what is the advantage of giving a football or a rifle bullet a spin when throwing or releasing it?
+
+10.6 Collisions of Extended Bodies in Two Dimensions
+
+26. Describe two different collisions—one in which angular momentum is conserved, and the other in which it is not. Which condition determines whether or not angular momentum is conserved in a collision?
+
+27. Suppose an ice hockey puck strikes a hockey stick that lies flat on the ice and is free to move in any direction. Which quantities are likely to be conserved: angular momentum, linear momentum, or kinetic energy (assuming the puck and stick are very resilient)?   
+28. While driving his motorcycle at highway speed, a physics student notices that pulling back lightly on the right handlebar tips the cycle to the left and produces a left turn. Explain why this happens.
+
+10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum
+
+29. While driving his motorcycle at highway speed, a physics student notices that pulling back lightly on the right handlebar tips the cycle to the left and produces a left turn. Explain why this happens.   
+30. Gyroscopes used in guidance systems to indicate directions in space must have an angular momentum that does not change in direction. Yet they are often subjected to large forces and accelerations. How can the direction of their angular momentum be constant when they are accelerated?
+
+Problems & Exercises
+
+10.1 Angular Acceleration
+
+1. At its peak, a tornado is  in diameter and carries  winds. What is its angular velocity in revolutions per second?   
+2. Integrated Concepts An ultracentrifuge accelerates from rest to 100,000 rpm in  . (a) What is its angular acceleration in  (b) What is the tangential acceleration of a point  from the axis of rotation? (c) What is the radial acceleration in  and multiples of  of this point at full rpm?   
+3. Integrated Concepts You have a grindstone (a disk) that is  , has a  radius, and is turning at 90.0 rpm, and you press a steel axe against it with a radial force of  . (a) Assuming the kinetic coefficient of friction between steel and stone is 0.20, calculate the angular acceleration of the grindstone. (b) How many turns will the stone make before coming to rest?
+
+4. Unreasonable Results
+
+You are told that a basketball player spins the ball with an angular acceleration of  . (a) What is the ball’s final angular velocity if the ball starts from rest and the acceleration lasts  (b) What is unreasonable about the result? (c) Which premises are unreasonable or inconsistent?
+
+10.2 Kinematics of Rotational Motion
+
+5. With the aid of a string, a gyroscope is accelerated from rest to  in  . (a) What is its angular acceleration in  (b) How many revolutions does it go through in the process?   
+6. Suppose a piece of dust finds itself on a CD. If the spin rate of the CD is 500 rpm, and the piece of dust is  from the center, what is the total distance traveled by the dust in 3 minutes? (Ignore accelerations due to getting the CD rotating.)
+
+7. A gyroscope slows from an initial rate of  at a rate of . (a) How long does it take to come to rest? (b) How many revolutions does it make before stopping?
+
+8. During a very quick stop, a car decelerates at  . (a) What is the angular acceleration of its  - radius tires, assuming they do not slip on the pavement? (b) How many revolutions do the tires make before coming to rest, given their initial angular velocity is 95.0 rad/s? (c) How long does the car take to stop completely? (d) What distance does the car travel in this time? (e) What was the car’s initial velocity? (f) Do the values obtained seem reasonable, considering that this stop happens very quickly?
+
+9. Everyday application: Suppose a yo-yo has a center shaft that has a 0.250 cm radius and that its string is being pulled. (a) If the string is stationary and the yo-yo accelerates away from it at a rate of  , what is the angular acceleration of the yo-yo? (b) What is the angular velocity after 0.750 s if it starts from rest? (c) The outside radius of the yo-yo is  . What is the tangential acceleration of a point on its edge?
+
+10.3 Dynamics of Rotational Motion: Rotational Inertia
+
+10. This problem considers additional aspects of example Calculating the Effect of Mass Distribution on a Merry-Go-Round. (a) How long does it take the father to give the merry-go-round an angular velocity of  (b) How many revolutions must he go through to generate this velocity? (c) If he exerts a slowing force of  at a radius of  , how long would it take him to stop them?
+
+11. Calculate the moment of inertia of a skater given the following information. (a) The  skater is approximated as a cylinder that has a  radius. (b) The skater with arms extended is approximately a cylinder that is  has a  radius, and has two  -long arms which are  each and extend straight out from the cylinder like rods rotated about their ends.
+
+12. The triceps muscle in the back of the upper arm extends the forearm. This muscle in a professional boxer exerts a force of  with an effective perpendicular lever arm of  , producing an angular acceleration of the forearm of  . What is the moment of inertia of the boxer’s forearm?
+
+13. A soccer player extends her lower leg in a kicking motion by exerting a force with the muscle above the knee in the front of her leg. She produces an angular acceleration of  and her lower leg has a moment of inertia of  . What is the force exerted by the muscle if its effective perpendicular lever arm is 
+
+14. Suppose you exert a force of  tangential to a  -radius  grindstone (a solid disk). (a)What torque is exerted? (b) What is the angular acceleration assuming negligible opposing friction? (c) What is the angular acceleration if there is an opposing frictional force of 20.0 N exerted 1.50 cm from the axis?
+
+15. Consider the  motorcycle wheel shown in Figure 10.36. Assume it to be approximately an annular ring with an inner radius of  and an outer radius of  . The motorcycle is on its center stand, so that the wheel can spin freely. (a) If the drive chain exerts a force of  at a radius of  , what is the angular acceleration of the wheel? (b) What is the tangential acceleration of a point on the outer edge of the tire? (c) How long, starting from rest, does it take to reach an angular velocity of 80.0 rad/s?
+
+16. Zorch, an archenemy of Superman, decides to slow Earth’s rotation to once per  by exerting an opposing force at and parallel to the equator. Superman is not immediately concerned, because he knows Zorch can only exert a force of  (a little greater than a Saturn V rocket’s thrust). How long must Zorch push with this force to accomplish his goal? (This period gives Superman time to devote to other villains.) Explicitly show how you follow the steps found in Problem-Solving Strategy for Rotational Dynamics
+
+17. An automobile engine can produce  of torque. Calculate the angular acceleration produced if  of this torque is applied to the drive shaft, axle, and rear wheels of a car, given the following information. The car is suspended so that the wheels can turn freely. Each wheel acts like a  disk that has a  radius. The walls of each tire act like a  annular ring that has inside radius of  and outside radius of  . The tread of each tire acts like  hoop of radius  . The  axle acts like a rod that has a 2.00-cm radius. The  drive shaft acts like a rod that has a 3.20-cm radius.
+
+18. Starting with the formula for the moment of inertia of a rod rotated around an axis through one end perpendicular to its length  , prove that the moment of inertia of a rod rotated about an axis through its center perpendicular to its length is  . You will find the graphics in Figure 10.11 useful in visualizing these rotations.
+
+19. Unreasonable Results A gymnast doing a forward flip lands on the mat and exerts a  torque to slow their angular velocity to zero. Their initial angular velocity is  , and their moment of inertia is  . (a) What time is required for the gymnast to exactly stop their spin? (b) What is unreasonable about the result? (c) Which premises are unreasonable or inconsistent?
+
+20. Unreasonable Results An advertisement claims that an  car is aided by its  flywheel, which can accelerate the car from rest to a speed of  s. The flywheel is a disk with a  radius. (a) Calculate the angular velocity the flywheel must have if  of its rotational energy is used to get the car up to speed. (b) What is unreasonable about the result? (c) Which premise is unreasonable or which premises are inconsistent?
+
+10.4 Rotational Kinetic Energy: Work and Energy Revisited
+
+21. This problem considers energy and work aspects of Example 10.7—use data from that example as needed. (a) Calculate the rotational kinetic energy in the merry-go-round plus child when they have an angular velocity of 20.0 rpm. (b) Using energy considerations, find the number of revolutions the father will have to push to achieve this angular velocity starting from rest. (c) Again, using energy considerations, calculate the force the father must exert to stop the merry-go-round in two revolutions   
+22. What is the final velocity of a hoop that rolls without slipping down a  -high hill, starting from rest?   
+23. (a) Calculate the rotational kinetic energy of Earth on its axis. (b) What is the rotational kinetic energy of Earth in its orbit around the Sun?   
+24. Calculate the rotational kinetic energy in the motorcycle wheel (Figure 10.36) if its angular velocity is 120 rad/s. Assume  ,   , and  .
+
+25. A baseball pitcher throws the ball in a motion where there is rotation of the forearm about the elbow joint as well as other movements. If the linear velocity of the ball relative to the elbow joint is  at a distance of  from the joint and the moment of inertia of the forearm is  , what is the rotational kinetic energy of the forearm?
+
+26. While punting a football, a kicker rotates her leg about the hip joint. The moment of inertia of the leg is  and its rotational kinetic energy is 175 J. (a) What is the angular velocity of the leg? (b) What is the velocity of tip of the punter’s shoe if it is  from the hip joint? (c) Explain how the football can be given a velocity greater than the tip of the shoe (necessary for a decent kick distance).
+
+27. A bus contains a  flywheel (a disk that has a  radius) and has a total mass of 10,000 kg. (a) Calculate the angular velocity the flywheel must have to contain enough energy to take the bus from rest to a speed of  , assuming  of the rotational kinetic energy can be transformed into translational energy. (b) How high a hill can the bus climb with this stored energy and still have a speed of  at the top of the hill? Explicitly show how you follow the steps in the Problem-Solving Strategy for Rotational Energy.
+
+28. A ball with an initial velocity of  rolls up a hill without slipping. Treating the ball as a spherical shell, calculate the vertical height it reaches. (b) Repeat the calculation for the same ball if it slides up the hill without rolling.
+
+29. While exercising in a fitness center, a man lies face down on a bench and lifts a weight with one lower leg by contacting the muscles in the back of the upper leg. (a) Find the angular acceleration produced given the mass lifted is  at a distance of  from the knee joint, the moment of inertia of the lower leg is  , the muscle force is 1500 N, and its effective perpendicular lever arm is  . (b) How much work is done if the leg rotates through an angle of  with a constant force exerted by the muscle?
+
+30. To develop muscle tone, a woman lifts a  weight held in her hand. She uses her biceps muscle to flex the lower arm through an angle of  . (a) What is the angular acceleration if the weight is  from the elbow joint, her forearm has a moment of inertia of  , and the net force she exerts is  at an effective perpendicular lever arm of  (b) How much work does she do?
+
+31. Consider two cylinders that start down identical inclines from rest except that one is frictionless. Thus one cylinder rolls without slipping, while the other slides frictionlessly without rolling. They both travel a short distance at the bottom and then start up another incline. (a) Show that they both reach the same height on the other incline, and that this height is equal to their original height. (b) Find the ratio of the time the rolling cylinder takes to reach the height on the second incline to the time the sliding cylinder takes to reach the height on the second incline. (c) Explain why the time for the rolling motion is greater than that for the sliding motion.
+
+32. What is the moment of inertia of an object that rolls without slipping down a  -high incline starting from rest, and has a final velocity of 6.00  Express the moment of inertia as a multiple of  , where  is the mass of the object and  is its radius.
+
+33. Suppose a  motorcycle has two wheels like, the one described in Problem 10.15 and is heading toward a hill at a speed of  . (a) How high can it coast up the hill, if you neglect friction? (b) How much energy is lost to friction if the motorcycle only gains an altitude of  before coming to rest?
+
+34. In softball, the pitcher throws with the arm fully extended (straight at the elbow). In a fast pitch the ball leaves the hand with a speed of  . (a) Find the rotational kinetic energy of the pitcher’s arm and ball together given that the arm's moment of inertia is  and the ball leaves the hand at a distance of  from the pivot at the shoulder. (b) What force did the muscles exert to cause the arm to rotate if their effective perpendicular lever arm is  and the ball is 0.156 kg?
+
+35. Construct Your Own Problem Consider the work done by a spinning skater pulling his arms in to increase his rate of spin. Construct a problem in which you calculate the work done with a “force multiplied by distance” calculation and compare it to the skater’s increase in kinetic energy.
+
+10.5 Angular Momentum and Its Conservation
+
+36. (a) Calculate the angular momentum of the Earth in its orbit around the Sun. (b) Compare this angular momentum with the angular momentum of Earth on its axis.   
+37. (a) What is the angular momentum of the Moon in its orbit around Earth? (b) How does this angular momentum compare with the angular momentum of the Moon on its axis? Remember that the Moon keeps one side toward Earth at all times. (c) Discuss whether the values found in parts (a) and (b) seem consistent with the fact that tidal effects with Earth have caused the Moon to rotate with one side always facing Earth.   
+38. Suppose you start an antique car by exerting a force of  on its crank for  . What angular momentum is given to the engine if the handle of the crank is  from the pivot and the force is exerted to create maximum torque the entire time?   
+39. A playground merry-go-round has a mass of 120 kg and a radius of  and it is rotating with an angular velocity of  . What is its angular velocity after a  child gets onto it by grabbing its outer edge? The child is initially at rest.   
+40. Three children are riding on the edge of a merrygo-round that is  , has a  radius, and is spinning at 20.0 rpm. The children have masses of 22.0, 28.0, and  . If the child who has a mass of  moves to the center of the merrygo-round, what is the new angular velocity in rpm?   
+41. (a) Calculate the angular momentum of an ice skater spinning at 6.00 rev/s given his moment of inertia is  . (b) He reduces his rate of spin (his angular velocity) by extending his arms and increasing his moment of inertia. Find the value of his moment of inertia if his angular velocity decreases to 1.25 rev/s. (c) Suppose instead he keeps his arms in and allows friction of the ice to slow him to 3.00 rev/s. What average torque was exerted if this takes 
+
+42. Construct Your Own Problem
+
+Consider the Earth-Moon system. Construct a problem in which you calculate the total angular momentum of the system including the spins of the Earth and the Moon on their axes and the orbital angular momentum of the Earth-Moon system in its nearly monthly rotation. Calculate what happens to the Moon’s orbital radius if the Earth’s rotation decreases due to tidal drag. Among the things to be considered are the amount by which the Earth’s rotation slows and the fact that the Moon will continue to have one side always facing the Earth.
+
+10.6 Collisions of Extended Bodies in Two Dimensions
+
+43. Repeat Example 10.15 in which the disk strikes and adheres to the stick  from the nail.   
+44. Repeat Example 10.15 in which the disk originally spins clockwise at 1000 rpm and has a radius of 1.50 cm.   
+45. Twin skaters approach one another as shown in Figure 10.37 and lock hands. (a) Calculate their final angular velocity, given each had an initial speed of  relative to the ice. Each has a mass of  , and each has a center of mass located  from their locked hands. You may approximate their moments of inertia to be that of point masses at this radius. (b) Compare the initial kinetic energy and final kinetic energy.
+
+46. Suppose a 0.250-kg ball is thrown at  to a motionless person standing on ice who catches it with an outstretched arm as shown in Figure 10.38. (a) Calculate the final linear velocity of the person, given his mass is  . (b) What is his angular velocity if each arm is 5.00 kg? You may treat the ball as a point mass and treat the person's arms as uniform rods (each has a length of  ) and the rest of his body as a uniform cylinder of radius  . Neglect the effect of the ball on his center of mass so that his center of mass remains in his geometrical center. (c) Compare the initial and final total kinetic energies.
+
+47. Repeat Example 10.15 in which the stick is free to have translational motion as well as rotational motion.
+
+10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum
+
+48. Integrated Concepts
+
+The axis of Earth makes a  angle with a direction perpendicular to the plane of Earth’s orbit. As shown in Figure 10.39, this axis   
+precesses, making one complete rotation in   
+   
+(a) Calculate the change in angular momentum in half this time.   
+(b) What is the average torque producing this change in angular momentum?   
+(c) If this torque were created by a single force (it is not) acting at the most effective point on the equator, what would its magnitude be?

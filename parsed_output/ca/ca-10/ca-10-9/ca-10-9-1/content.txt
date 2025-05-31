@@ -1,0 +1,27 @@
+10.9.1 The Performance Equation
+
+Let us now discuss the performance of our pipelined processor. We need to first define the meaning of “performance” in the context of processors. Most of the time, when we look up the specifications of a laptop or smartphone, we are inundated with a lot of terms such as the clock frequency, RAM, and hard disk size. Sadly, none of these terms are directly indicative of the performance of a processor. The reason that the performance is never explicitly mentioned on the label of a computer, is because the term “performance” is rather vague. The term performance of a processor is always with respect to a given program or set of programs. This is because processors perform differently with respect to different programs.
+
+Given a program,  , let us try to quantify the performance of a given processor. We say that processor  performs better than processor  , if it takes less time for  to execute  on  than on  . Thus, quantifying performance with respect to a given program is very simple. We measure the time it takes to run the program, and then compute its reciprocal. This number can be interpreted to be proportional to the performance of the processor with respect to the program.
+
+Let us first compute the time  it takes to run program  .
+
+The number of cycles per second is the processor’s clock frequency  . The average number of cycles per instruction is known as the  , and its inverse (number of instructions per cycle) is known as the  . The last term is the number of instructions (abbreviated to #insts). Note that this is the number of dynamic instructions, or, alternatively, the number of instructions that the processor actually executes. Note that it is NOT the number of instructions in the program’s executable file.
+
+Definition 85
+
+Static Instruction The binary or executable of a program contains a list of instructions. Each such instruction is a static instruction.
+
+Dynamic Instruction A dynamic instruction is the instance of a static instruction, which is created by the processor when an instruction enters the pipeline.
+
+Definition 86
+
+CPI Cycles per instruction
+
+IPC Instructions per cycle
+
+We can now define the performance  as a quantity that is inversely proportional to the time,  . Equation 10.3 is known as the Performance Equation.
+
+We can thus quickly conclude that the performance of a processor with respect to a program is proportional to the IPC, and frequency, and inversely proportional to the number of instructions.
+
+Let us now look at the performance of a single cycle processor. Its CPI is equal to 1 for all instructions. The performance is thus proportional to  . This is a rather trivial result. It says that as we increase the frequency, a single cycle processor keeps getting faster proportionally. Likewise, if we are able to reduce the number of instructions in our program by a factor of  , then the performance also increases by a factor of  . Let us consider the performance of a pipelined processor. The analysis is more complicated, and the insights are very profound.

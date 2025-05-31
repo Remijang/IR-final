@@ -1,0 +1,11 @@
+9.2.7 The Data Path
+
+Let us now form the whole by joining all the parts. We have up till now divided a processor into five basic units: instruction fetch unit (IF), operand fetch unit (OF), execution unit (EX), memory access unit (MA), and register writeback unit (RW). It is time to combine all the parts and look at the unified picture. Figure 9.15 shows the result of all our hard work. We have omitted detailed circuits, and just focused on the flow of data and control signals.
+
+Every clock cycle, the processor fetches an instruction from a new PC, fetches the operands, executes the instruction, and writes the results back to the data memory and register file. There are two memory elements in this circuit namely the data and instruction memory. They can possibly refer to the same physical memory structure, or refer to different structures. We shall have ample opportunities to discuss the different schemes in Chapter 11.
+
+The main state elements of the processor are the following registers:  , and f lags registers, and the register file. We can optionally add mar and mdr registers with the memory unit. Note that they are strictly not required in our simple version of the processor. However, they shall be required in advanced designs where a memory request can possibly take multiple cycles. We shall also require them in our microprogrammed processor. Hence, it is a good idea to keep them in our basic design.
+
+Note that most of the sets of wires in the data path have a top-down orientation i.e., the source is above the destination in Figure 9.15. There are two notable exceptions. The source of these wires is below the destination in Figure 9.15. The first such exception is the set of wires that carry the branch target/outcome information from the execute unit to the fetch unit. The second exception is the set of wires that carry the data to be written from the register writeback unit to the register file.
+
+We need to lastly note that the magic of a processor lies in the interplay of the data path and the control path. The control signals give a form to the data path. The unique values of the set of all the control signals determine the nature of instructions. It is possible to change the behavior of instructions, or in fact define new instructions by just changing the control unit. Let us take a deeper look at the control unit.

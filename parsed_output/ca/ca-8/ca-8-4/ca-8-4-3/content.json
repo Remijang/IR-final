@@ -1,0 +1,49 @@
+[
+    {
+        "type": "text",
+        "text": "8.4.3 Implementing Rounding ",
+        "text_level": 1,
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "From our discussion on rounding, it is clear that we need to maintain some state regarding the discarded bits and $\\widehat { P }$ such that we can make the proper rounding decision. In specific, we need four pieces of information \u2013 $L S B ( \\widehat { P } )$ , is $R = 0 . 5$ , is $R > 0$ , and is $R > 0 . 5$ . The last three requirements can be captured with btwo bits \u2013 round and sticky. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "The round bit is the MSB of the residue, $R$ . The sticky bit is a logical OR of the rest of the bits of the residue. We can thus express the different conditions on the residue as shown in Table 8.7. ",
+        "page_idx": 348
+    },
+    {
+        "type": "table",
+        "img_path": "images/a0b48401b8ba3c2db7f3474c1d91f8a3d3722aee55652acce8a2f3f77ae11af2.jpg",
+        "table_caption": [
+            "Table 8.7: Evaluating properties of the residue using round and sticky bits "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Condition on Residue</td><td>Implementation</td></tr><tr><td>R>0</td><td>rVs=1</td></tr><tr><td>R= 0.5</td><td>r>s=1</td></tr><tr><td>R > 0.5</td><td>r>s=1</td></tr><tr><td colspan=\"2\">r (round bit),s(sticky bit)</td></tr></table></body></html>\n\n",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Implementing rounding is thus as simple as maintaining the round bit, and sticky bit, and then using Table 8.6 to round the result. Maintaining the round and sticky bits requires us to simply update them on every single action of the algorithm. We can initialize these bits to 0. They need to be updated when $B$ is shifted to the right. Then, they need to be further updated when we normalize the result. Now, it is possible that after rounding, the result is not in normalized form. For example, if $\\widehat { P }$ contains all 1s, then incrementing it will produce 1 followed by 23 0s, which is not in the n bmalized form. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Renormalization after Rounding ",
+        "text_level": 1,
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "In case, the process of rounding brings the result to a state that is not in the normalized form, then we need to re-normalize the result. Note that in this case, we need to increment the exponent by 1, and set the mantissa to all 0s. Incrementing the exponent can make it invalid (if $E = 2 5 5$ ). We need to explicitly check for this case. ",
+        "page_idx": 348
+    }
+]
