@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "42.4 Solution #3: Other Approaches ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "We’ve thus far described two options in keeping file system metadata consistent: a lazy approach based on fsck, and a more active approach known as journaling. However, these are not the only two approaches. One such approach, known as Soft Updates [GP94], was introduced by Ganger and Patt. This approach carefully orders all writes to the file system to ensure that the on-disk structures are never left in an inconsistent state. For example, by writing a pointed-to data block to disk before the inode that points to it, we can ensure that the inode never points to garbage; similar rules can be derived for all the structures of the file system. Implementing Soft Updates can be a challenge, however; whereas the journaling layer described above can be implemented with relatively little knowledge of the exact file system structures, Soft Updates requires intricate knowledge of each file system data structure and thus adds a fair amount of complexity to the system. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Another approach is known as copy-on-write (yes, COW), and is used in a number of popular file systems, including Sun’s ZFS [B07]. This technique never overwrites files or directories in place; rather, it places new updates to previously unused locations on disk. After a number of updates are completed, COW file systems flip the root structure of the file system to include pointers to the newly updated structures. Doing so makes keeping the file system consistent straightforward. We’ll be learning more about this technique when we discuss the log-structured file system (LFS) in a future chapter; LFS is an early example of a COW. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Another approach is one we just developed here at Wisconsin. In this technique, entitled backpointer-based consistency (or BBC), no ordering is enforced between writes. To achieve consistency, an additional back pointer is added to every block in the system; for example, each data block has a reference to the inode to which it belongs. When accessing a file, the file system can determine if the file is consistent by checking if the forward pointer (e.g., the address in the inode or direct block) points to a block that refers back to it. If so, everything must have safely reached disk and thus the file is consistent; if not, the file is inconsistent, and an error is returned. By adding back pointers to the file system, a new form of lazy crash consistency can be attained $\\scriptstyle [ C + 1 2 ]$ . ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Finally, we also have explored techniques to reduce the number of times a journal protocol has to wait for disk writes to complete. Entitled optimistic crash consistency $\\left[ \\mathsf { C } \\mathrm { + } 1 3 \\right]$ , this new approach issues as many writes to disk as possible by using a generalized form of the transaction checksum $\\scriptstyle { [ { \\mathrm { P } } + 0 5 ] } ,$ , and includes a few other techniques to detect inconsistencies should they arise. For some workloads, these optimistic techniques can improve performance by an order of magnitude. However, to truly function well, a slightly different disk interface is required $\\left[ \\mathrm { C } \\mathrm { + } 1 3 \\right]$ . ",
+        "page_idx": 17
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "14.6 Other Calls ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "There are a few other calls that the memory-allocation library supports. For example, calloc() allocates memory and also zeroes it before returning; this prevents some errors where you assume that memory is zeroed and forget to initialize it yourself (see the paragraph on “uninitialized reads” above). The routine realloc() can also be useful, when you’ve allocated space for something (say, an array), and then need to add something to it: realloc() makes a new larger region of memory, copies the old region into it, and returns the pointer to the new region. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    }
+]

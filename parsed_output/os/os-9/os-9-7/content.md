@@ -1,0 +1,87 @@
+# 9.7 The Linux Completely Fair Scheduler (CFS)  
+
+Despite these earlier works in fair-share scheduling, the current Linux approach achieves similar goals in an alternate manner. The scheduler, entitled the Completely Fair Scheduler (or CFS) [J09], implements fairshare scheduling, but does so in a highly efficient and scalable manner.  
+
+To achieve its efficiency goals, CFS aims to spend very little time making scheduling decisions, through both its inherent design and its clever use of data structures well-suited to the task. Recent studies have shown that scheduler efficiency is surprisingly important; specifically, in a study of Google datacenters, Kanev et al. show that even after aggressive optimization, scheduling uses about $5 \%$ of overall datacenter CPU time $[ \mathsf { K } \bar { + } 1 5 ]$ Reducing that overhead as much as possible is thus a key goal in modern scheduler architecture.  
+
+![](images/1fb5f72766cb9bcbf11f6c9cffb60b8430e01b81d885769acdb6846f9654c618.jpg)  
+Figure 9.4: CFS Simple Example  
+
+# Basic Operation  
+
+Whereas most schedulers are based around the concept of a fixed time slice, CFS operates a bit differently. Its goal is simple: to fairly divide a CPU evenly among all competing processes. It does so through a simple counting-based technique known as virtual runtime (vruntime).  
+
+As each process runs, it accumulates vruntime. In the most basic case, each process’s vruntime increases at the same rate, in proportion with physical (real) time. When a scheduling decision occurs, CFS will pick the process with the lowest vruntime to run next.  
+
+This raises a question: how does the scheduler know when to stop the currently running process, and run the next one? The tension here is clear: if CFS switches too often, fairness is increased, as CFS will ensure that each process receives its share of CPU even over miniscule time windows, but at the cost of performance (too much context switching); if CFS switches less often, performance is increased (reduced context switching), but at the cost of near-term fairness.  
+
+CFS manages this tension through various control parameters. The first is sched latency. CFS uses this value to determine how long one process should run before considering a switch (effectively determining its time slice but in a dynamic fashion). A typical sched latency value is 48 (milliseconds); CFS divides this value by the number $( n )$ of processes running on the CPU to determine the time slice for a process, and thus ensures that over this period of time, CFS will be completely fair.  
+
+For example, if there are $n = 4$ processes running, CFS divides the value of sched latency by $n$ to arrive at a per-process time slice of 12 ms. CFS then schedules the first job and runs it until it has used $1 2 ~ \mathrm { m s }$ of (virtual) runtime, and then checks to see if there is a job with lower vruntime to run instead. In this case, there is, and CFS would switch to one of the three other jobs, and so forth. Figure 9.4 shows an example where the four jobs $( \mathrm { A } , \mathrm { B } , \mathrm { C } , \mathrm { D } )$ each run for two time slices in this fashion; two of them (C, D) then complete, leaving just two remaining, which then each run for $2 4 ~ \mathrm { { m s } }$ in round-robin fashion.  
+
+But what if there are “too many” processes running? Wouldn’t that lead to too small of a time slice, and thus too many context switches? Good question! And the answer is yes.  
+
+To address this issue, CFS adds another parameter, min granularity, which is usually set to a value like $6 \mathrm { m s }$ . CFS will never set the time slice  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+of a process to less than this value, ensuring that not too much time is spent in scheduling overhead.  
+
+For example, if there are ten processes running, our original calculation would divide sched latency by ten to determine the time slice (result: $4 . 8 ~ \mathrm { m s }$ ). However, because of min granularity, CFS will set the time slice of each process to 6 ms instead. Although CFS won’t (quite) be perfectly fair over the target scheduling latency (sched latency) of $4 8 ~ \mathrm { { \bar { m } s } }$ , it will be close, while still achieving high CPU efficiency.  
+
+Note that CFS utilizes a periodic timer interrupt, which means it can only make decisions at fixed time intervals. This interrupt goes off frequently (e.g., every $1 \mathrm { m s }$ ), giving CFS a chance to wake up and determine if the current job has reached the end of its run. If a job has a time slice that is not a perfect multiple of the timer interrupt interval, that is OK; CFS tracks vruntime precisely, which means that over the long haul, it will eventually approximate ideal sharing of the CPU.  
+
+# Weighting (Niceness)  
+
+CFS also enables controls over process priority, enabling users or administrators to give some processes a higher share of the CPU. It does this not with tickets, but through a classic UNIX mechanism known as the nice level of a process. The nice parameter can be set anywhere from -20 to $+ 1 9$ for a process, with a default of 0. Positive nice values imply lower priority and negative values imply higher priority; when you’re too nice, you just don’t get as much (scheduling) attention, alas.  
+
+CFS maps the nice value of each process to a weight, as shown here:  
+
+static const int prio_to_weight $\begin{array} { r c l } { { [ 4 0 ] } } & { { = } } & { { \left\{ \begin{array} { l } { \begin{array} { r l r l } \end{array} } \end{array} \right. } } \end{array}$ { /\* -20 \*/ 88761, 71755, 56483, 46273, 36291, /\* -15 \*/ 29154, 23254, 18705, 14949, 11916, /\* -10 \*/ 9548, 7620, 6100, 4904, 3906, /\* -5 \*/ 3121, 2501, 1991, 1586, 1277, /\* 0 \*/ 1024, 820, 655, 526, 423, /\* 5 \*/ 335, 272, 215, 172, 137, /\* 10 \*/ 110, 87, 70, 56, 45, /\* 15 \*/ 36, 29, 23, 18, 15,   
+};  
+
+These weights allow us to compute the effective time slice of each process (as we did before), but now accounting for their priority differences. The formula used to do so is as follows, assuming $^ n$ processes:  
+
+$$
+{ \mathsf { t i m e } } _ { - } { \mathsf { s l i c e } } _ { k } = { \frac { { \mathsf { w e i g h t } } _ { k } } { \sum _ { i = 0 } ^ { n - 1 } { \mathsf { w e i g h t } } _ { i } } } \cdot { \mathsf { s c h e d } } _ { - } { \mathsf { l a t e n c y } }
+$$  
+
+Let’s do an example to see how this works. Assume there are two jobs, A and B. A, because it’s our most precious ${ \mathrm { j o b } } ,$ is given a higher priority by assigning it a nice value of -5; B, because we hates it3, just has the default priority (nice value equal to 0). This means weight $A$ (from the table) is 3121, whereas weight $B$ is 1024. If you then compute the time slice of each job, you’ll find that A’s time slice is about $\textstyle { \frac { 3 } { 4 } }$ of sched latency (hence, $3 6 ~ \mathrm { m s }$ ), and $\mathrm { { \mathbf { B ^ { \prime } s } } }$ about $\textstyle { \frac { 1 } { 4 } }$ (hence, $1 2 \mathrm { m s } ,$ ).  
+
+In addition to generalizing the time slice calculation, the way CFS calculates vruntime must also be adapted. Here is the new formula, which takes the actual run time that process $i$ has accrued (runtimei) and scales it inversely by the weight of the process, by dividing the default weight of 1024 (weight0) by its weight, weight $\mathbf { \chi } _ { i }$ . In our running example, A’s vruntime will accumulate at one-third the rate of $\mathrm { { \mathbf { B ^ { \prime } s } } }$ .  
+
+$$
+\mathrm { v r u n t i m e } _ { i } = \mathrm { v r u n t i m e } _ { i } + \frac { \mathrm { w e i g h t } _ { 0 } } { \mathrm { w e i g h t } _ { i } } \cdot \mathrm { r u n t i m e } _ { i }
+$$  
+
+One smart aspect of the construction of the table of weights above is that the table preserves CPU proportionality ratios when the difference in nice values is constant. For example, if process A instead had a nice value of 5 (not -5), and process B had a nice value of 10 (not 0), CFS would schedule them in exactly the same manner as before. Run through the math yourself to see why.  
+
+# Using Red-Black Trees  
+
+One major focus of CFS is efficiency, as stated above. For a scheduler, there are many facets of efficiency, but one of them is as simple as this: when the scheduler has to find the next job to run, it should do so as quickly as possible. Simple data structures like lists don’t scale: modern systems sometimes are comprised of 1000s of processes, and thus searching through a long-list every so many milliseconds is wasteful.  
+
+CFS addresses this by keeping processes in a red-black tree [B72]. A red-black tree is one of many types of balanced trees; in contrast to a simple binary tree (which can degenerate to list-like performance under worst-case insertion patterns), balanced trees do a little extra work to maintain low depths, and thus ensure that operations are logarithmic (and not linear) in time.  
+
+CFS does not keep all processes in this structure; rather, only running (or runnable) processes are kept therein. If a process goes to sleep (say, waiting on an I/O to complete, or for a network packet to arrive), it is removed from the tree and kept track of elsewhere.  
+
+Let’s look at an example to make this more clear. Assume there are ten jobs, and that they have the following values of vruntime: 1, 5, 9, 10, 14, 18, 17, 21, 22, and 24. If we kept these jobs in an ordered list, finding the next job to run would be simple: just remove the first element. However, when placing that job back into the list (in order), we would have to scan the list, looking for the right spot to insert it, an $O ( n )$ operation. Any search is also quite inefficient, also taking linear time on average.  
+
+![](images/f830adb1d28d52c5cab54a9840995e38c13a4a69177494c8b1b56284651f8417.jpg)  
+Figure 9.5: CFS Red-Black Tree  
+
+Keeping the same values in a red-black tree makes most operations more efficient, as depicted in Figure 9.5. Processes are ordered in the tree by vruntime, and most operations (such as insertion and deletion) are logarithmic in time, i.e., $O { \bar { ( } } \log n )$ . When $n$ is in the thousands, logarithmic is noticeably more efficient than linear.  
+
+# Dealing With I/O And Sleeping Processes  
+
+One problem with picking the lowest vruntime to run next arises with jobs that have gone to sleep for a long period of time. Imagine two processes, A and ${ \bar { \mathbf { B } } } ,$ one of which (A) runs continuously, and the other (B) which has gone to sleep for a long period of time (say, 10 seconds). When B wakes up, its vruntime will be 10 seconds behind A’s, and thus (if we’re not careful), B will now monopolize the CPU for the next 10 seconds while it catches up, effectively starving A.  
+
+CFS handles this case by altering the vruntime of a job when it wakes up. Specifically, CFS sets the vruntime of that job to the minimum value found in the tree (remember, the tree only contains running jobs) $\left[ \mathsf { B } { + } 1 8 \right]$ . In this way, CFS avoids starvation, but not without a cost: jobs that sleep for short periods of time frequently do not ever get their fair share of the CPU [AC97].  
+
+# Other CFS Fun  
+
+CFS has many other features, too many to discuss at this point in the book. It includes numerous heuristics to improve cache performance, has strategies for handling multiple CPUs effectively (as discussed later in the book), can schedule across large groups of processes (instead of treating  
+
+TIP: USE EFFICIENT DATA STRUCTURES WHEN APPROPRIATE In many cases, a list will do. In many cases, it will not. Knowing which data structure to use when is a hallmark of good engineering. In the case discussed herein, simple lists found in earlier schedulers simply do not work well on modern systems, particular in the heavily loaded servers found in datacenters. Such systems contain thousands of active processes; searching through a long list to find the next job to run on each core every few milliseconds would waste precious CPU cycles. A better structure was needed, and CFS provided one by adding an excellent implementation of a red-black tree. More generally, when picking a data structure for a system you are building, carefully consider its access patterns and its frequency of usage; by understanding these, you will be able to implement the right structure for the task at hand.  
+
+each process as an independent entity), and many other interesting features. Read recent research, starting with Bouron $\scriptstyle { \big [ } { \mathrm { B } } + 1 8 { \big ] }$ , to learn more.  
+

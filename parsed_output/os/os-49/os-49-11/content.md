@@ -1,0 +1,44 @@
+# 49.11 Implications On Server-Side Write Buffering  
+
+Our focus so far has been on client caching, and that is where most of the interesting issues arise. However, NFS servers tend to be wellequipped machines with a lot of memory too, and thus they have caching concerns as well. When data (and metadata) is read from disk, NFS servers will keep it in memory, and subsequent reads of said data (and metadata) will not go to disk, a potential (small) boost in performance.  
+
+More intriguing is the case of write buffering. An NFS server absolutely may not return success on a WRITE protocol request until the write has been forced to stable storage (e.g., to disk or some other persistent device). While the server can place a copy of the data in its memory, returning success to the client on a WRITE protocol request could result in incorrect behavior; can you figure out why?  
+
+The answer lies in our assumptions about how clients handle server failure. Imagine the following sequence of writes as issued by a client:  
+
+write(fd, a_buffer, size); // fill 1st block with a’s write(fd, b_buffer, size); // fill 2nd block with b’s write(fd, c_buffer, size); // fill 3rd block with c’s  
+
+These writes overwrite the three blocks of a file with a block of a’s, then b’s, and then c’s. Thus, if the file initially looked like this:  
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz  
+
+We might expect the final result after these writes to be like this, with the x’s, y’s, and z’s, would be overwritten with a’s, b’s, and c’s, respectively.  
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb cccccccccccccccccccccccccccccccccccccccccccc  
+
+Now let’s assume for the sake of the example that these three client writes were issued to the server as three distinct WRITE protocol messages. Assume the first WRITE message is received by the server and issued to the disk, and the client informed of its success. Now assume the second write is just buffered in memory, and the server also reports it success to the client before forcing it to disk; unfortunately, the server crashes before writing it to disk. The server quickly restarts and receives the third write request, which also succeeds.  
+
+Thus, to the client, all the requests succeeded, but we are surprised that the file contents look like this:  
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy <--- oops cccccccccccccccccccccccccccccccccccccccccccc  
+
+Yikes! Because the server told the client that the second write was successful before committing it to disk, an old chunk is left in the file, which, depending on the application, might be catastrophic.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+WWW.OSTEP.ORG  
+
+# ASIDE: INNOVATION BREEDS INNOVATION  
+
+As with many pioneering technologies, bringing NFS into the world also required other fundamental innovations to enable its success. Probably the most lasting is the Virtual File System (VFS) / Virtual Node (vnode) interface, introduced by Sun to allow different file systems to be readily plugged into the operating system [K86].  
+
+The VFS layer includes operations that are done to an entire file system, such as mounting and unmounting, getting file-system wide statistics, and forcing all dirty (not yet written) writes to disk. The vnode layer consists of all operations one can perform on a file, such as open, close, reads, writes, and so forth.  
+
+To build a new file system, one simply has to define these “methods”; the framework then handles the rest, connecting system calls to the particular file system implementation, performing generic functions common to all file systems (e.g., caching) in a centralized manner, and thus providing a way for multiple file system implementations to operate simultaneously within the same system.  
+
+Although some of the details have changed, many modern systems have some form of a VFS/vnode layer, including Linux, BSD variants, macOS, and even Windows (in the form of the Installable File System). Even if NFS becomes less relevant to the world, some of the necessary foundations beneath it will live on.  
+
+To avoid this problem, NFS servers must commit each write to stable (persistent) storage before informing the client of success; doing so enables the client to detect server failure during a write, and thus retry until it finally succeeds. Doing so ensures we will never end up with file contents intermingled as in the above example.  
+
+The problem that this requirement gives rise to in NFS server implementation is that write performance, without great care, can be the major performance bottleneck. Indeed, some companies (e.g., Network Appliance) came into existence with the simple objective of building an NFS server that can perform writes quickly; one trick they use is to first put writes in a battery-backed memory, thus enabling to quickly reply to WRITE requests without fear of losing the data and without the cost of having to write to disk right away; the second trick is to use a file system design specifically designed to write to disk quickly when one finally needs to do so [HLM94, RO91].  
+

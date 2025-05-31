@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "22.10 Other VM Policies ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Page replacement is not the only policy the VM subsystem employs (though it may be the most important). For example, the OS also has to decide when to bring a page into memory. This policy, sometimes called the page selection policy (as it was called by Denning [D70]), presents the OS with some different options. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "For most pages, the OS simply uses demand paging, which means the OS brings the page into memory when it is accessed, “on demand” as it were. Of course, the OS could guess that a page is about to be used, and thus bring it in ahead of time; this behavior is known as prefetching and should only be done when there is reasonable chance of success. For example, some systems will assume that if a code page $P$ is brought into memory, that code page $P { + } 1$ will likely soon be accessed and thus should be brought into memory too. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Another policy determines how the OS writes pages out to disk. Of course, they could simply be written out one at a time; however, many systems instead collect a number of pending writes together in memory and write them to disk in one (more efficient) write. This behavior is usually called clustering or simply grouping of writes, and is effective because of the nature of disk drives, which perform a single large write more efficiently than many small ones. ",
+        "page_idx": 13
+    }
+]

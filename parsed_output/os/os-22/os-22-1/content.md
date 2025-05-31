@@ -1,0 +1,20 @@
+# 22.1 Cache Management  
+
+Before diving into policies, we first describe the problem we are trying to solve in more detail. Given that main memory holds some subset of all the pages in the system, it can rightly be viewed as a cache for virtual memory pages in the system. Thus, our goal in picking a replacement policy for this cache is to minimize the number of cache misses, i.e., to minimize the number of times that we have to fetch a page from disk. Alternately, one can view our goal as maximizing the number of cache hits, i.e., the number of times a page that is accessed is found in memory.  
+
+Knowing the number of cache hits and misses let us calculate the average memory access time (AMAT) for a program (a metric computer architects compute for hardware caches [HP06]). Specifically, given these values, we can compute the AMAT of a program as follows:  
+
+$$
+A M A T = T _ { M } + ( P _ { M i s s } \cdot T _ { D } )
+$$  
+
+where $T _ { M }$ represents the cost of accessing memory, $T _ { D }$ the cost of accessing disk, and $P _ { M i s s }$ the probability of not finding the data in the cache (a miss); $P _ { M i s s }$ varies from 0.0 to 1.0, and sometimes we refer to a percent miss rate instead of a probability (e.g., a $1 0 \%$ miss rate means $\bar { P _ { M i s s } } ~ = ~ 0 . 1 0 \bar { }$ ). Note you always pay the cost of accessing the data in memory; when you miss, however, you must additionally pay the cost of fetching the data from disk.  
+
+For example, let us imagine a machine with a (tiny) address space: 4KB, with 256-byte pages. Thus, a virtual address has two components: a 4-bit VPN (the most-significant bits) and an 8-bit offset (the least-significant bits). Thus, a process in this example can access $2 ^ { 4 }$ or 16 total virtual pages. In this example, the process generates the following memory references (i.e., virtual addresses): $0 { \times } 0 0 0$ , $0 { \times } 1 0 0$ , $0 { \times } 2 0 0$ , $0 { \times } 3 0 0$ , $0 { \times } 4 0 0$ , $\dot { 0 } \dot { \times } 5 0 0$ , $0 { \times } 6 0 0$ , $0 { \times } 7 0 0$ , $0 { \times } 8 0 0$ , $0 { \times } 9 0 0$ . These virtual addresses refer to the first byte of each of the first ten pages of the address space (the page number being the first hex digit of each virtual address).  
+
+Let us further assume that every page except virtual page 3 is already in memory. Thus, our sequence of memory references will encounter the following behavior: hit, hit, hit, miss, hit, hit, hit, hit, hit, hit. We can compute the hit rate (the percent of references found in memory): $9 0 \% ,$ , as 9 out of 10 references are in memory. The miss rate is thus $1 0 \%$ $\mathbf { \nabla } _ { P _ { M i s s } } =$ 0.1). In general, $P _ { H i t } + P _ { M i s s } = 1 . \dot { 0 } \$ ; hit rate plus miss rate sum to $1 0 0 \%$ .  
+
+To calculate AMAT, we need to know the cost of accessing memory and the cost of accessing disk. Assuming the cost of accessing memory $( T _ { M } )$ is around 100 nanoseconds, and the cost of accessing disk $( T _ { D } )$ is about 10 milliseconds, we have the following AMAT: $1 0 0 n s + 0 . 1 \cdot 1 0 m s ,$ which is $1 0 0 n s + 1 m s ,$ or $1 . 0 0 0 1 ~ \mathrm { { m s } }$ , or about 1 millisecond. If our hit rate had instead been $9 9 . 9 \%$ ( $P _ { m i s s } = 0 . 0 0 1$ ), the result is quite different: AMAT is 10.1 microseconds, or roughly 100 times faster. As the hit rate approaches $1 0 0 \%$ , AMAT approaches 100 nanoseconds.  
+
+Unfortunately, as you can see in this example, the cost of disk access is so high in modern systems that even a tiny miss rate will quickly dominate the overall AMAT of running programs. Clearly, we need to avoid as many misses as possible or run slowly, at the rate of the disk. One way to help with this is to carefully develop a smart policy, as we now do.  
+

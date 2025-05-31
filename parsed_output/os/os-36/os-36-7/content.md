@@ -1,0 +1,21 @@
+# 36.7 Fitting Into The OS: The Device Driver  
+
+One final problem we will discuss: how to fit devices, each of which have very specific interfaces, into the OS, which we would like to keep as general as possible. For example, consider a file system. We’d like to build a file system that worked on top of SCSI disks, IDE disks, USB keychain drives, and so forth, and we’d like the file system to be relatively oblivious to all of the details of how to issue a read or write request to these different types of drives. Thus, our problem:  
+
+THE CRUX: HOW TO BUILD A DEVICE-NEUTRAL OS How can we keep most of the OS device-neutral, thus hiding the details of device interactions from major OS subsystems?  
+
+The problem is solved through the age-old technique of abstraction. At the lowest level, a piece of software in the OS must know in detail how a device works. We call this piece of software a device driver, and any specifics of device interaction are encapsulated within.  
+
+Let us see how this abstraction might help OS design and implementation by examining the Linux file system software stack. Figure 36.4 is a rough and approximate depiction of the Linux software organization. As you can see from the diagram, a file system (and certainly, an application above) is completely oblivious to the specifics of which disk class it is using; it simply issues block read and write requests to the generic block layer, which routes them to the appropriate device driver, which handles the details of issuing the specific request. Although simplified, the diagram shows how such detail can be hidden from most of the OS.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+![](images/f45f1836ce7336226105f17958289c1f0cd4aeb1191c60351ab960ec148e0c38.jpg)  
+Figure 36.4: The File System Stack  
+
+The diagram also shows a raw interface to devices, which enables special applications (such as a file-system checker, described later [AD14], or a disk defragmentation tool) to directly read and write blocks without using the file abstraction. Most systems provide this type of interface to support these low-level storage management applications.  
+
+Note that the encapsulation seen above can have its downside as well. For example, if there is a device that has many special capabilities, but has to present a generic interface to the rest of the kernel, those special capabilities will go unused. This situation arises, for example, in Linux with SCSI devices, which have very rich error reporting; because other block devices (e.g., ATA/IDE) have much simpler error handling, all that higher levels of software ever receive is a generic EIO (generic IO error) error code; any extra detail that SCSI may have provided is thus lost to the file system [G08].  
+
+Interestingly, because device drivers are needed for any device you might plug into your system, over time they have come to represent a huge percentage of kernel code. Studies of the Linux kernel reveal that over $\bar { 7 0 \% }$ of OS code is found in device drivers [C01]; for Windows-based systems, it is likely quite high as well. Thus, when people tell you that the OS has millions of lines of code, what they are really saying is that the OS has millions of lines of device-driver code. Of course, for any given installation, most of that code may not be active (i.e., only a few devices are connected to the system at a time). Perhaps more depressingly, as drivers are often written by “amateurs” (instead of full-time kernel developers), they tend to have many more bugs and thus are a primary contributor to kernel crashes [S03].  
+

@@ -1,0 +1,37 @@
+[
+    {
+        "type": "text",
+        "text": "7.5 Shortest Time-to-Completion First (STCF) ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "To address this concern, we need to relax assumption 3 (that jobs must run to completion), so let’s do that. We also need some machinery within the scheduler itself. As you might have guessed, given our previous discussion about timer interrupts and context switching, the scheduler can certainly do something else when B and C arrive: it can preempt job A and decide to run another job, perhaps continuing A later. SJF by our definition is a non-preemptive scheduler, and thus suffers from the problems described above. ",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/c0a68ede5f81a5dcb1c2c7937291f7b627e7bd07140a71b9cb582dd38cdd4b97.jpg",
+        "img_caption": [
+            "Figure 7.5: STCF Simple Example "
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Fortunately, there is a scheduler which does exactly that: add preemption to SJF, known as the Shortest Time-to-Completion First (STCF) or Preemptive Shortest Job First (PSJF) scheduler [CK68]. Any time a new job enters the system, the STCF scheduler determines which of the remaining jobs (including the new job) has the least time left, and schedules that one. Thus, in our example, STCF would preempt A and run B and C to completion; only when they are finished would A’s remaining time be scheduled. Figure 7.5 shows an example. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The result is a much-improved average turnaround time: 50 seconds ( (120−0)+(20−10)+(30−10) ). And as before, given our new assumptions, STCF is provably optimal; given that SJF is optimal if all jobs arrive at the same time, you should probably be able to see the intuition behind the optimality of STCF. ",
+        "page_idx": 5
+    }
+]

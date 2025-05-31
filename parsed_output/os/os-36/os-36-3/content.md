@@ -1,0 +1,19 @@
+# 36.3 The Canonical Protocol  
+
+In the picture above, the (simplified) device interface is comprised of three registers: a status register, which can be read to see the current status of the device; a command register, to tell the device to perform a certain task; and a data register to pass data to the device, or get data from the device. By reading and writing these registers, the operating system can control device behavior.  
+
+Let us now describe a typical interaction that the OS might have with the device in order to get the device to do something on its behalf. The protocol is as follows:  
+
+While (STATUS $\scriptstyle = =$ BUSY) ; // wait until device is not busy   
+Write data to DATA register   
+Write command to COMMAND register (starts the device and executes the command)   
+While (STATUS $\scriptstyle = =$ BUSY) ; // wait until device is done with your request  
+
+The protocol has four steps. In the first, the OS waits until the device is ready to receive a command by repeatedly reading the status register; we call this polling the device (basically, just asking it what is going on). Second, the OS sends some data down to the data register; one can imagine that if this were a disk, for example, that multiple writes would need to take place to transfer a disk block (say 4KB) to the device. When the main CPU is involved with the data movement (as in this example protocol), we refer to it as programmed I/O (PIO). Third, the OS writes a command to the command register; doing so implicitly lets the device know that both the data is present and that it should begin working on the command. Finally, the OS waits for the device to finish by again polling it in a loop, waiting to see if it is finished (it may then get an error code to indicate success or failure).  
+
+This basic protocol has the positive aspect of being simple and working. However, there are some inefficiencies and inconveniences involved. The first problem you might notice in the protocol is that polling seems inefficient; specifically, it wastes a great deal of CPU time just waiting for the (potentially slow) device to complete its activity, instead of switching to another ready process and thus better utilizing the CPU.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+THE CRUX: HOW TO AVOID THE COSTS OF POLLING How can the OS check device status without frequent polling, and thus lower the CPU overhead required to manage the device?  
+

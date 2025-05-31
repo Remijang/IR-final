@@ -1,0 +1,247 @@
+28.1 Locks: The Basic Idea 333
+28.2 Pthread Locks . . 334 
+28.3 Building A Lock . 335 
+28.4 Evaluating Locks . 335 
+28.5 Controlling Interrupts . 336 
+28.6 A Failed Attempt: Just Using Loads/Stores . 337 
+28.7 Building Working Spin Locks with Test-And-Set . 338 
+28.8 Evaluating Spin Locks . . 341 
+28.9 Compare-And-Swap . . 342 
+28.10 Load-Linked and Store-Conditional . 343 
+28.11 Fetch-And-Add . . 344 
+28.12 Too Much Spinning: What Now? . 345 
+28.13 A Simple Approach: Just Yield, Baby . 346 
+28.14 Using Queues: Sleeping Instead Of Spinning . 347 
+28.15 Different OS, Different Support . . 350 
+28.16 Two-Phase Locks . . 352 
+28.17 Summary . 352 
+References . 353  
+OPERATINGSYSTEMS[VERSION 1.10]  
+Homework (Simulation) 354  
+29 Lock-based Concurrent Data Structures 355
+29.1 Concurrent Counters . 355 
+29.2 Concurrent Linked Lists . 361 
+29.3 Concurrent Queues . . 364 
+29.4 Concurrent Hash Table . 366 
+29.5 Summary . 366 
+References . 369 
+Homework (Code) . . 370  
+30 Condition Variables 371
+30.1 Definition and Routines . 372 
+30.2 The Producer/Consumer (Bounded Buffer) Problem . 376 
+30.3 Covering Conditions . . 384 
+30.4 Summary . 386 
+References . 387 
+Homework (Code) . . 388  
+31 Semaphores 391
+31.1 Semaphores: A Definition . 391 
+31.2 Binary Semaphores (Locks) . 393 
+31.3 Semaphores For Ordering . 394 
+31.4 The Producer/Consumer (Bounded Buffer) Problem . 396 
+31.5 Reader-Writer Locks . . 401 
+31.6 The Dining Philosophers . 403 
+31.7 Thread Throttling . . 406 
+31.8 How To Implement Semaphores . 406 
+31.9 Summary . 407 
+References . 409 
+Homework (Code) . . 410  
+32 Common Concurrency Problems 411
+32.1 What Types Of Bugs Exist? . 411 
+32.2 Non-Deadlock Bugs . 412 
+32.3 Deadlock Bugs . 415 
+32.4 Summary . 424 
+References . 425 
+Homework (Code) . . 426  
+33 Event-based Concurrency (Advanced) 427
+33.1 The Basic Idea: An Event Loop 427 
+33.2 An Important API: select() (or poll()) . 428 
+33.3 Using select() . . 429 
+33.4 Why Simpler? No Locks Needed . 431 
+33.5 A Problem: Blocking System Calls . 431 
+33.6 A Solution: Asynchronous I/O . . 432  
+THREE EASY PIECES  
+33.7 Another Problem: State Management 433 
+33.8 What Is Still Difficult With Events . 435 
+33.9 Summary . 436 
+References . 437 
+Homework (Code) . . 438  
+34 Summary Dialogue on Concurrency 439
+III Persistence 441  
+35 A Dialogue on Persistence 443
+36 I/O Devices 445
+36.1 System Architecture 445 
+36.2 A Canonical Device 447 
+36.3 The Canonical Protocol 448 
+36.4 Lowering CPU Overhead With Interrupts 449 
+36.5 More Efficient Data Movement With DMA 450 
+36.6 Methods Of Device Interaction 451 
+36.7 Fitting Into The OS: The Device Driver . 452 
+36.8 Case Study: A Simple IDE Disk Driver . 453 
+36.9 Historical Notes 455 
+36.10 Summary 457 
+References 458  
+37 Hard Disk Drives 459
+37.1 The Interface 459 
+37.2 Basic Geometry 460 
+37.3 A Simple Disk Drive . 461 
+37.4 I/O Time: Doing The Math . 464 
+37.5 Disk Scheduling . 468 
+37.6 Summary . 472 
+References . 473 
+Homework (Simulation) . 474  
+38 Redundant Arrays of Inexpensive Disks (RAIDs) 475
+38.1 Interface And RAID Internals 476 
+38.2 Fault Model . 477 
+38.3 How To Evaluate A RAID . 477 
+38.4 RAID Level 0: Striping . . 478 
+38.5 RAID Level 1: Mirroring . 481 
+38.6 RAID Level 4: Saving Space With Parity . 484 
+38.7 RAID Level 5: Rotating Parity . 488 
+38.8 RAID Comparison: A Summary 489 
+38.9 Other Interesting RAID Issues . 490 
+38.10 Summary . 490  
+OPERATINGSYSTEMS[VERSION 1.10]  
+References 491 
+Homework (Simulation) . 492  
+39 Interlude: Files and Directories 493
+39.1 Files And Directories . 493 
+39.2 The File System Interface 495 
+39.3 Creating Files . 495 
+39.4 Reading And Writing Files 497 
+39.5 Reading And Writing, But Not Sequentially 499 
+39.6 Shared File Table Entries: fork() And dup() . 501 
+39.7 Writing Immediately With fsync() . 504 
+39.8 Renaming Files . 504 
+39.9 Getting Information About Files . 506 
+39.10 Removing Files . 507 
+39.11 Making Directories . 508 
+39.12 Reading Directories . 509 
+39.13 Deleting Directories . 510 
+39.14 Hard Links . 510 
+39.15 Symbolic Links . 512 
+39.16 Permission Bits And Access Control Lists . 514 
+39.17 Making And Mounting A File System . 516 
+39.18 Summary . 518 
+References . 520 
+Homework (Code) . . 521  
+40 File System Implementation 523
+40.1 The Way To Think 523 
+40.2 Overall Organization . 524 
+40.3 File Organization: The Inode 526 
+40.4 Directory Organization . 530 
+40.5 Free Space Management . . 532 
+40.6 Access Paths: Reading and Writing . 532 
+40.7 Caching and Buffering . . 536 
+40.8 Summary . 538 
+References . 539 
+Homework (Simulation) . 540  
+41 Locality and The Fast File System 541
+41.1 The Problem: Poor Performance 541 
+41.2 FFS: Disk Awareness Is The Solution . 543 
+41.3 Organizing Structure: The Cylinder Group . 543 
+41.4 Policies: How To Allocate Files and Directories . 545 
+41.5 Measuring File Locality . 547 
+41.6 The Large-File Exception . 548 
+41.7 A Few Other Things About FFS . 550 
+41.8 Summary . 552 
+References . 553  
+Homework (Simulation) 554  
+42 Crash Consistency: FSCK and Journaling 555
+42.1 A Detailed Example 556 
+42.2 Solution #1: The File System Checker . 559 
+42.3 Solution #2: Journaling (or Write-Ahead Logging) . 561 
+42.4 Solution #3: Other Approaches . 571 
+42.5 Summary . 572 
+References . 573 
+Homework (Simulation) . 575  
+43 Log-structured File Systems 577
+43.1 Writing To Disk Sequentially 578 
+43.2 Writing Sequentially And Effectively 579 
+43.3 How Much To Buffer? 580 
+43.4 Problem: Finding Inodes 581 
+43.5 Solution Through Indirection: The Inode Map 581 
+43.6 Completing The Solution: The Checkpoint Region 583 
+43.7 Reading A File From Disk: A Recap 583 
+43.8 What About Directories? 584 
+43.9 A New Problem: Garbage Collection . 585 
+43.10 Determining Block Liveness . 586 
+43.11 A Policy Question: Which Blocks To Clean, And When? . . 587 
+43.12 Crash Recovery And The Log . 588 
+43.13 Summary . 588 
+References . 590 
+Homework (Simulation) . 591  
+44 Flash-based SSDs 593
+44.1 Storing a Single Bit . 593 
+44.2 From Bits to Banks/Planes . 594 
+44.3 Basic Flash Operations . 595 
+44.4 Flash Performance And Reliability . 597 
+44.5 From Raw Flash to Flash-Based SSDs . 598 
+44.6 FTL Organization: A Bad Approach . 599 
+44.7 A Log-Structured FTL . . 600 
+44.8 Garbage Collection . . 602 
+44.9 Mapping Table Size . 604 
+44.10 Wear Leveling . 609 
+44.11 SSD Performance And Cost . 609 
+44.12 Summary . 611 
+References . 613 
+Homework (Simulation) . 615  
+45 Data Integrity and Protection 617
+45.1 Disk Failure Modes . 617 
+45.2 Handling Latent Sector Errors . 619  
+OPERATINGSYSTEMS[VERSION 1.10]  
+45.3 Detecting Corruption: The Checksum 620 
+45.4 Using Checksums 623 
+45.5 A New Problem: Misdirected Writes . 624 
+45.6 One Last Problem: Lost Writes . 625 
+45.7 Scrubbing . 625 
+45.8 Overheads Of Checksumming 626 
+45.9 Summary . 627 
+References . 628 
+Homework (Simulation) . 629 
+Homework (Code) . . 630  
+46 Summary Dialogue on Persistence 631
+47 A Dialogue on Distribution 633
+48 Distributed Systems 635
+48.1 Communication Basics . 636 
+48.2 Unreliable Communication Layers . 637 
+48.3 Reliable Communication Layers . 639 
+48.4 Communication Abstractions . 642 
+48.5 Remote Procedure Call (RPC) . 643 
+48.6 Summary . 648 
+References . 649 
+Homework (Code) . . 650  
+49 Sun’s Network File System (NFS) 653
+49.1 A Basic Distributed File System . 654 
+49.2 On To NFS . 655 
+49.3 Focus: Simple And Fast Server Crash Recovery . 655 
+49.4 Key To Fast Crash Recovery: Statelessness . 656 
+49.5 The NFSv2 Protocol . 657 
+49.6 From Protocol To Distributed File System . 659 
+49.7 Handling Server Failure With Idempotent Operations . 661 
+49.8 Improving Performance: Client-side Caching . 663 
+49.9 The Cache Consistency Problem . 663 
+49.10 Assessing NFS Cache Consistency . 665 
+49.11 Implications On Server-Side Write Buffering . 665 
+49.12 Summary . 667 
+References . 669 
+Homework (Measurement) . . 670  
+50 The Andrew File System (AFS) 671
+50.1 AFS Version 1 . 671 
+50.2 Problems with Version 1 . 673 
+50.3 Improving the Protocol . 674 
+50.4 AFS Version 2 . . 674 
+50.5 Cache Consistency . 676  
+THREE EASY PIECES  
+50.6 Crash Recovery 678 
+50.7 Scale And Performance Of AFSv2 679 
+50.8 AFS: Other Improvements . . 681 
+50.9 Summary . 682 
+References . 683 
+Homework (Simulation) . 684  
+51 Summary Dialogue on Distribution 685
+General Index 687  
+Asides 699  
+Tips 703  
+Cruces 707  
+OPERATINGSYSTEMS[VERSION 1.10]  
+WWW.OSTEP.ORG  

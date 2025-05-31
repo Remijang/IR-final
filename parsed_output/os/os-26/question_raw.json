@@ -1,0 +1,52 @@
+[
+    {
+        "type": "text",
+        "text": "1. Let’s examine a simple program, “loop.s”. First, just read and understand it. Then, run it with these arguments ( $\\cdot / { \\bf { x } } 8 6 \\cdot \\tt { p y } ^ { \\mathrm { ~ - ~ t ~ } 1 }$ $- \\mathtt { p }$ loop.s -i 100 -R dx) This specifies a single thread, an interrupt every 100 instructions, and tracing of register %dx. What will $\\frac { 0 } { 0 } \\mathrm { d } \\mathbf { x }$ be during the run? Use the $- c$ flag to check your answers; the answers, on the left, show the value of the register (or memory value) after the instruction on the right has run.",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "2. Same code, different flags: (./x86.py $- \\mathtt { p }$ loop.s -t 2 -i 100 $- a$ $\\operatorname { d } \\mathbf { x } = 3$ , $\\operatorname { d } \\mathbf { x } = 3$ $- \\mathtt { R }$ dx) This specifies two threads, and initializes each $\\% \\mathrm { d } \\mathrm { x }$ to 3. What values will %dx see? Run with $- c$ to check. Does the presence of multiple threads affect your calculations? Is there a race in this code?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "3. Run this: . $/ \\mathrm { x } 8 6 . \\mathrm { p y }$ $- \\mathtt { p }$ loop.s -t 2 -i 3 -r -R dx -a $\\operatorname { d } \\mathbf { x } = 3$ , $\\operatorname { d } \\mathbf { x } = 3$ This makes the interrupt interval small/random; use different seeds $( - s )$ to see different interleavings. Does the interrupt frequency change anything?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "4. Now, a different program, looping-race-nolock.s, which accesses a shared variable located at address 2000; we’ll call this variable value. Run it with a single thread to confirm your understanding: . $/ \\times 8 6$ .py $- \\mathtt { p }$ looping-race-nolock.s -t 1 -M 2000 What is value (i.e., at memory address 2000) throughout the run? Use $- \\mathsf { C }$ to check.",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "5. Run with multiple iterations/threads: . $/ \\mathrm { x } 8 6$ .py $- \\mathrm { p }$ looping-race-nolock.s -t 2 -a bx $: = 3$ -M 2000 Why does each thread loop three times? What is final value of value?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "6. Run with random interrupt intervals: . $/ { \\bf { x } } 8 6 . 9 { \\bf { y } } - { \\bf { p } }$ looping-race-nolock.s - $\\texttt { \\small C 2 } - \\texttt { \\small M } 2 0 0 0 - \\texttt { i 4 } - \\texttt { r } - \\texttt { \\small S 0 }$ with different seeds $( - s \\in \\mathsf { ~ 1 } , \\mathsf { - s } \\in \\mathsf { ~ 2 }$ , etc.) Can you tell by looking at the thread interleaving what the final value of value will be? Does the timing of the interrupt matter? Where can it safely occur? Where not? In other words, where is the critical section exactly?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "7. Now examine fixed interrupt intervals: . $/ \\mathrm { x } 8 6 . \\mathrm { p y }$ $- \\mathtt { p }$ looping-race-nolock.s -a bx $: = 1$ -t 2 -M 2000 -i 1 What will the final value of the shared variable value be? What about when you change -i 2, -i 3, etc.? For which interrupt intervals does the program give the “correct” answer?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "8. Run the same for more loops (e.g., set -a $_ { \\mathrm { b x } = 1 0 0 }$ ). What interrupt intervals $( - \\mathrm { i } )$ lead to a correct outcome? Which intervals are surprising?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "9. One last program: wait-for-me.s. Run: ./x86.py $- \\mathtt { p }$ wait-for-me.s $^ { - \\mathtt { a } }$ $\\mathsf { a x } { = } 1$ , $\\mathsf { a x } { = } 0$ -R ax $- \\mathtt { M } \\ 2 0 0 0$ This sets the %ax register to 1 for thread 0, and 0 for thread 1, and watches $\\frac { 0 } { 0 } \\mathtt { a x }$ and memory location 2000. How should the code behave? How is the value at location 2000 being used by the threads? What will its final value be?",
+        "page_idx": 14
+    },
+    {
+        "type": "text", 
+        "text": "10. Now switch the inputs: ./ $\\mathbf { x } 8 6$ .py $- \\mathtt { p }$ wait-for-me.s -a $\\mathsf { a x } { = } 0$ , $\\mathsf { a x } { = } 1$ $^ { - \\mathrm { R } }$ ax -M 2000 How do the threads behave? What is thread 0 doing? How would changing the interrupt interval (e.g., $- \\mathrm { i } \\ \\mathsf { \\Omega } 1 0 0 0$ , or perhaps to use random intervals) change the trace outcome? Is the program efficiently using the CPU? ",
+        "page_idx": 14
+    }
+]

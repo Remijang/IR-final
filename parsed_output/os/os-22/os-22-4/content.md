@@ -1,0 +1,14 @@
+# 22.4 Another Simple Policy: Random  
+
+Another similar replacement policy is Random, which simply picks a random page to replace under memory pressure. Random has properties similar to FIFO; it is simple to implement, but it doesn’t really try to be too intelligent in picking which blocks to evict. Let’s look at how Random does on our famous example reference stream (see Figure 22.3).  
+
+Of course, how Random does depends entirely upon how lucky (or unlucky) Random gets in its choices. In the example above, Random does a little better than FIFO, and a little worse than optimal. In fact, we can run the Random experiment thousands of times and determine how it does in general. Figure 22.4 shows how many hits Random achieves over 10,000 trials, each with a different random seed. As you can see, sometimes (just over $4 0 \%$ of the time), Random is as good as optimal, achieving 6 hits on the example trace; sometimes it does much worse, achieving 2 hits or fewer. How Random does depends on the luck of the draw.  
+
+![](images/ed3d45518d591397951077eab29caa7c7fcb782403124e5dd5d482e12c3a245c.jpg)  
+Figure 22.4: Random Performance Over 10,000 Trials  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+![](images/31f3b1aee0983e449d966c40eef3beb09ada12cf51c266b65f9fd2836b526860.jpg)  
+Figure 22.5: Tracing The LRU Policy  
+

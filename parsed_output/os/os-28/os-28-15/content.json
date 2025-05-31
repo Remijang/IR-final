@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "28.15 Different OS, Different Support ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "We have thus far seen one type of support that an OS can provide in order to build a more efficient lock in a thread library. Other OS’s provide similar support; the details vary. ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "For example, Linux provides a futex which is similar to the Solaris interface but provides more in-kernel functionality. Specifically, each futex has associated with it a specific physical memory location, as well as a ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "1 void mutex_lock (int \\*mutex) {   \n2 int v;   \n3 // Bit 31 was clear, we got the mutex (fastpath)   \n4 if (atomic_bit_test_set (mutex, 31) $\\scriptstyle \\mathbf { \\mu } = \\mathbf { \\mu } 0$ )   \n5 return;   \n6 atomic_increment (mutex);   \n7 while (1) {   \n8 if (atomic_bit_test_set (mutex, 31) $\\scriptstyle = = 0$ ) {   \n9 atomic_decrement (mutex);   \n10 return;   \n11 }   \n12 // Have to waitFirst to make sure futex value   \n13 // we are monitoring is negative (locked).   \n14 $\\mathrm { ~  ~ v ~ } = \\mathrm { ~  ~ \\nabla ~ } \\star$ mutex;   \n15 if $\\mathrm { ~ \\mathit ~ { ~ \\chi ~ } ~ } \\ > = \\mathrm { ~ \\mathit ~ { ~ 0 ~ } ~ }$ )   \n16 continue;   \n17 futex_wait (mutex, v);   \n18 }   \n19 }   \n20   \n21 void mutex_unlock (int \\*mutex) {   \n22 // Adding $0 \\times 8 0 0 0 0 0 0 0$ to counter results in 0 if and   \n23 // only if there are not other interested threads   \n24 if (atomic_add_zero (mutex, 0x80000000))   \n25 return;   \n26   \n27 // There are other threads waiting for this mutex,   \n28 // wake one of them up.   \n29 futex_wake (mutex);   \n30 } ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "per-futex in-kernel queue. Callers can use futex calls (described below) to sleep and wake as need be. ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Specifically, two calls are available. The call to futex wait(address, expected) puts the calling thread to sleep, assuming the value at the address address is equal to expected. If it is not equal, the call returns immediately. The call to the routine futex wake(address) wakes one thread that is waiting on the queue. The usage of these calls in a Linux mutex is shown in Figure 28.10 (page 19). ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "This code snippet from lowlevellock.h in the nptl library (part of the gnu libc library) [L09] is interesting for a few reasons. First, it uses a single integer to track both whether the lock is held or not (the high bit of the integer) and the number of waiters on the lock (all the other bits). Thus, if the lock is negative, it is held (because the high bit is set and that bit determines the sign of the integer). ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Second, the code snippet shows how to optimize for the common case, specifically when there is no contention for the lock; with only one thread acquiring and releasing a lock, very little work is done (the atomic bit test-and-set to lock and an atomic add to release the lock). ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "See if you can puzzle through the rest of this “real-world” lock to understand how it works. Do it and become a master of Linux locking, or at least somebody who listens when a book tells you to do something 3. ",
+        "page_idx": 19
+    }
+]

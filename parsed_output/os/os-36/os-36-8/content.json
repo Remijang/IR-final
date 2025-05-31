@@ -1,0 +1,52 @@
+[
+    {
+        "type": "text",
+        "text": "36.8 Case Study: A Simple IDE Disk Driver ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "To dig a little deeper here, let’s take a quick look at an actual device: an IDE disk drive [L94]. We summarize the protocol as described in this reference [W10]; we’ll also peek at the xv6 source code for a simple example of a working IDE driver $\\mathrm { \\tilde { \\vert C K + 0 8 \\vert } }$ ]. ",
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/7745f6cab9e9f79015909bfce17df334c1cfb8c9b52c01518da92bb3536fce04.jpg",
+        "img_caption": [
+            "Figure 36.5: The IDE Interface "
+        ],
+        "img_footnote": [],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "An IDE disk presents a simple interface to the system, consisting of four types of register: control, command block, status, and error. These registers are available by reading or writing to specific “I/O addresses” (such as $\\mathtt { 0 } \\mathtt { x } \\mathtt { 3 } \\mathtt { E } 6$ below) using (on $\\times 8 6$ ) the in and out I/O instructions. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The basic protocol to interact with the device is as follows, assuming it has already been initialized. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "• Wait for drive to be ready. Read Status Register (0x1F7) until drive is READY and not BUSY.   \n• Write parameters to command registers. Write the sector count, logical block address (LBA) of the sectors to be accessed, and drive number (maste $\\scriptstyle \\mathtt { \\omega = 0 \\times 0 0 }$ or slave $\\scriptstyle = 0 \\times 1 0$ , as IDE permits just two drives) to command registers $( 0 \\mathrm { x } 1 \\mathrm { F } 2 \\ – 0 \\mathrm { x } 1 \\mathrm { F } 6 ) ,$ ).   \n• Start the I/O. Write READ|WRITE command to command register (0x1F7). ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "• Data transfer (for writes): Wait until drive status is READY and DRQ (drive request for data); write data to data port. • Handle interrupts. In the simplest case, handle an interrupt for each sector transferred; more complex approaches allow batching and thus one final interrupt when the entire transfer is complete. Error handling. After each operation, read the status register. If the ERROR bit is on, read the error register for details. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Most of this protocol is found in the xv6 IDE driver (Figure 36.6), which (after initialization) works through four primary functions. The first is ide rw(), which queues a request (if there are others pending), or issues it directly to the disk (via ide start request()); in either case, the routine waits for the request to complete and the calling process is put to sleep. The second is ide start request(), which is used to send a request (and perhaps data, in the case of a write) to the disk; the in and out $\\times 8 6$ instructions are called to read and write device registers, respectively. The start request routine uses the third function, ide wait ready(), to ensure the drive is ready before issuing a request to it. Finally, ide intr() is invoked when an interrupt takes place; it reads data from the device (if the request is a read, not a write), wakes the process waiting for the $\\mathrm { I } / \\mathrm { O }$ to complete, and (if there are more requests in the I/O queue), launches the next I/O via ide start request(). ",
+        "page_idx": 10
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "type": "text",
+        "text": "44.11 SSD Performance And Cost ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Before closing, let’s examine the performance and cost of modern SSDs, to better understand how they will likely be used in persistent storage systems. In both cases, we’ll compare to classic hard-disk drives (HDDs), and highlight the biggest differences between the two. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Performance ",
+        "text_level": 1,
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Unlike hard disk drives, flash-based SSDs have no mechanical components, and in fact are in many ways more similar to DRAM, in that they are “random access” devices. The biggest difference in performance, as compared to disk drives, is realized when performing random reads and writes; while a typical disk drive can only perform a few hundred random I/Os per second, SSDs can do much better. Here, we use some data from modern SSDs to see just how much better SSDs perform; we’re particularly interested in how well the FTLs hide the performance issues of the raw chips. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Table 44.4 shows some performance data for three different SSDs and one top-of-the-line hard drive; the data was taken from a few different online sources [S13, T15]. The left two columns show random I/O performance, and the right two columns sequential; the first three rows show data for three different SSDs (from Samsung, Seagate, and Intel), and the last row shows performance for a hard disk drive (or HDD), in this case a Seagate high-end drive. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "We can learn a few interesting facts from the table. First, and most dramatic, is the difference in random I/O performance between the SSDs and the lone hard drive. While the SSDs obtain tens or even hundreds of MB/s in random $\\mathrm { I / O s }$ , this “high performance” hard drive has a peak of just a couple MB/s (in fact, we rounded up to get to 2 MB/s). Second, you can see that in terms of sequential performance, there is much less of a difference; while the SSDs perform better, a hard drive is still a good choice if sequential performance is all you need. Third, you can see that SSD random read performance is not as good as SSD random write performance. The reason for such unexpectedly good random-write performance is due to the log-structured design of many SSDs, which transforms random writes into sequential ones and improves performance. Finally, because SSDs exhibit some performance difference between sequential and random $\\mathrm { { I / O s } , }$ many of the techniques in chapters about how to build file systems for hard drives are still applicable to SSDs [AD14b]; although the magnitude of difference between sequential and random I/Os is smaller, there is enough of a gap to carefully consider how to design file systems to reduce random $1 / \\mathrm { { \\bar { O } s } }$ . ",
+        "page_idx": 16
+    },
+    {
+        "type": "table",
+        "img_path": "images/3fa6220f2b2c995571fa9ffe9b466e3fc85bb52c2cf0a204ffba556a2242d310.jpg",
+        "table_caption": [
+            "Figure 44.4: SSDs And Hard Drives: Performance Comparison "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"2\"></td><td colspan=\"2\">Random</td><td colspan=\"2\">Sequential</td></tr><tr><td>Reads</td><td>Writes (MB/s)</td><td>Reads (MB/s)</td><td>Writes (MB/s)</td></tr><tr><td>Device Samsung 840 Pro SSD</td><td>(MB/s) 103</td><td>287</td><td>421</td><td>384</td></tr><tr><td>Seagate 600 SSD</td><td>84</td><td>252</td><td>424</td><td>374</td></tr><tr><td>Intel SSD 335 SSD</td><td>39</td><td>222</td><td>344</td><td>354</td></tr><tr><td>Seagate Savvio 15K.3 HDD</td><td>2</td><td>2</td><td>223</td><td>223</td></tr></table></body></html>\n\n",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Cost ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "As we saw above, the performance of SSDs greatly outstrips modern hard drives, even when performing sequential I/O. So why haven’t SSDs completely replaced hard drives as the storage medium of choice? The answer is simple: cost, or more specifically, cost per unit of capacity. Currently [A15], an SSD costs something like $\\$ 150$ for a 250-GB drive; such an SSD costs 60 cents per GB. A typical hard drive costs roughly $\\$ 50$ for 1-TB of storage, which means it costs 5 cents per GB. There is still more than a $1 0 \\times$ difference in cost between these two storage media. ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "These performance and cost differences dictate how large-scale storage systems are built. If performance is the main concern, SSDs are a terrific choice, particularly if random read performance is important. If, on the other hand, you are assembling a large data center and wish to store massive amounts of information, the large cost difference will drive you towards hard drives. Of course, a hybrid approach can make sense – some storage systems are being assembled with both SSDs and hard drives, using a smaller number of SSDs for more popular “hot” data and delivering high performance, while storing the rest of the “colder” (less used) data on hard drives to save on cost. As long as the price gap exists, hard drives are here to stay. ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 17
+    }
+]

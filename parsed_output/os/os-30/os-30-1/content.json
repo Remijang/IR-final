@@ -1,0 +1,407 @@
+[
+    {
+        "type": "text",
+        "text": "30.1 Definition and Routines ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "To wait for a condition to become true, a thread can make use of what is known as a condition variable. A condition variable is an explicit queue that threads can put themselves on when some state of execution (i.e., some condition) is not as desired (by waiting on the condition); some other thread, when it changes said state, can then wake one (or more) of those waiting threads and thus allow them to continue (by signaling on the condition). The idea goes back to Dijkstra’s use of “private semaphores” [D68]; a similar idea was later named a “condition variable” by Hoare in his work on monitors [H74]. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "To declare such a condition variable, one simply writes something like this: pthread cond t c;, which declares $\\mathrm { ~ \\varsigma ~ } _ { \\mathrm { ~ C ~ } }$ as a condition variable (note: proper initialization is also required). A condition variable has two operations associated with it: wait() and signal(). The wait() call is executed when a thread wishes to put itself to sleep; the signal() call ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "1 int done $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n2 pthread_mutex_t m $\\mathbf { \\tau } = \\mathbf { \\tau }$ PTHREAD_MUTEX_INITIALIZE   \n3 pthread_cond_t c $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ PTHREAD_COND_INITIALIZER   \n4   \n5 void thr_exit() {   \n6 Pthread_mutex_lock(&m);   \n7 done $\\mathbf { \\Sigma } = \\mathbf { \\Sigma } 1$ ;   \n8 Pthread_cond_signal(&c);   \n9 Pthread_mutex_unlock(&m);   \n10 }   \n11   \n12 void \\*child(void \\*arg) {   \n13 printf(\"child\\n\");   \n14 thr_exit();   \n15 return NULL;   \n16 }   \n17   \n18 void thr_join() {   \n19 Pthread_mutex_lock(&m);   \n20 while (done $\\scriptstyle = = 0$ )   \n21 Pthread_cond_wait(&c, &m);   \n22 Pthread_mutex_unlock(&m);   \n23 }   \n24   \n25 int main(int argc, char \\*argv[]) {   \n26 printf(\"parent: begin\\n\");   \n27 pthread_t p;   \n28 Pthread_create(&p, NULL, child, NULL);   \n29 thr_join();   \n30 printf(\"parent: end\\n\");   \n31 return 0;   \n32 } ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Figure 30.3: Parent Waiting For Child: Use A Condition Variable ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "is executed when a thread has changed something in the program and thus wants to wake a sleeping thread waiting on this condition. Specifically, the POSIX calls look like this: ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "pthread_cond_wait(pthread_cond_t \\*c, pthread_mutex_t $\\star \\mathfrak { m }$ );   \npthread_cond_signal(pthread_cond_t $\\star { \\mathsf { C } }$ ); ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "We will often refer to these as wait() and signal() for simplicity. One thing you might notice about the wait() call is that it also takes a mutex as a parameter; it assumes that this mutex is locked when wait() is called. The responsibility of wait() is to release the lock and put the calling thread to sleep (atomically); when the thread wakes up (after some other thread has signaled it), it must re-acquire the lock before returning to the caller. This complexity stems from the desire to prevent certain race conditions from occurring when a thread is trying to put itself to sleep. Let’s take a look at the solution to the join problem (Figure 30.3) to understand this better. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "There are two cases to consider. In the first, the parent creates the child thread but continues running itself (assume we have only a single processor) and thus immediately calls into thr join() to wait for the child thread to complete. In this case, it will acquire the lock, check if the child is done (it is not), and put itself to sleep by calling wait() (hence releasing the lock). The child will eventually run, print the message “child”, and call thr exit() to wake the parent thread; this code just grabs the lock, sets the state variable done, and signals the parent thus waking it. Finally, the parent will run (returning from wait() with the lock held), unlock the lock, and print the final message “parent: end”. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "In the second case, the child runs immediately upon creation, sets done to 1, calls signal to wake a sleeping thread (but there is none, so it just returns), and is done. The parent then runs, calls thr join(), sees that done is 1, and thus does not wait and returns. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "One last note: you might observe the parent uses a while loop instead of just an if statement when deciding whether to wait on the condition. While this does not seem strictly necessary per the logic of the program, it is always a good idea, as we will see below. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "To make sure you understand the importance of each piece of the thr exit() and thr join() code, let’s try a few alternate implementations. First, you might be wondering if we need the state variable done. What if the code looked like the example below? (Figure 30.4) ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Unfortunately this approach is broken. Imagine the case where the child runs immediately and calls thr exit() immediately; in this case, the child will signal, but there is no thread asleep on the condition. When the parent runs, it will simply call wait and be stuck; no thread will ever wake it. From this example, you should appreciate the importance of the state variable done; it records the value the threads are interested in knowing. The sleeping, waking, and locking all are built around it. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "1 void thr_exit() {   \n2 Pthread_mutex_lock(&m);   \n3 Pthread_cond_signal(&c);   \n4 Pthread_mutex_unlock(&m);   \n5 }   \n6   \n7 void thr_join() {   \n8 Pthread_mutex_lock(&m);   \n9 Pthread_cond_wait(&c, &m);   \n10 Pthread_mutex_unlock(&m);   \n11 } ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Figure 30.4: Parent Waiting: No State Variable ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "1 void thr_exit() {   \n2 done $\\mathbf { \\Sigma } = \\mathbf { \\Sigma } 1$ ;   \n3 Pthread_cond_signal(&c);   \n4 }   \n5   \n6 void thr_join() {   \n7 if (done $\\scriptstyle \\mathbf { \\mu } = \\mathbf { \\mu } 0$ )   \n8 Pthread_cond_wait(&c);   \n9 } ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Here (Figure 30.5) is another poor implementation. In this example, we imagine that one does not need to hold a lock in order to signal and wait. What problem could occur here? Think about it1! ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The issue here is a subtle race condition. Specifically, if the parent calls thr join() and then checks the value of done, it will see that it is 0 and thus try to go to sleep. But just before it calls wait to go to sleep, the parent is interrupted, and the child runs. The child changes the state variable done to 1 and signals, but no thread is waiting and thus no thread is woken. When the parent runs again, it sleeps forever, which is sad. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Hopefully, from this simple join example, you can see some of the basic requirements of using condition variables properly. To make sure you understand, we now go through a more complicated example: the producer/consumer or bounded-buffer problem. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "TIP: ALWAYS HOLD THE LOCK WHILE SIGNALING Although it is strictly not necessary in all cases, it is likely simplest and best to hold the lock while signaling when using condition variables. The example above shows a case where you must hold the lock for correctness; however, there are some other cases where it is likely OK not to, but probably is something you should avoid. Thus, for simplicity, hold the lock when calling signal. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The converse of this tip, i.e., hold the lock when calling wait, is not just a tip, but rather mandated by the semantics of wait, because wait always (a) assumes the lock is held when you call it, (b) releases said lock when putting the caller to sleep, and (c) re-acquires the lock just before returning. Thus, the generalization of this tip is correct: hold the lock when calling signal or wait, and you will always be in good shape. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "1 int buffer;   \n2 int count $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ; // initially, empty   \n3   \n4 void put(int value) {   \n5 assert(count $\\scriptstyle = = 0$ );   \n6 count $\\mathit { \\Theta } = \\mathit { \\Theta } 1$ ;   \n7 buffer $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ value;   \n8 }   \n9   \n10 int get() {   \n11 assert(count $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ );   \n12 count $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n13 return buffer;   \n14 } ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "30.2 The Producer/Consumer (Bounded Buffer) Problem ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The next synchronization problem we will confront in this chapter is known as the producer/consumer problem, or sometimes as the bounded buffer problem, which was first posed by Dijkstra [D72]. Indeed, it was this very producer/consumer problem that led Dijkstra and his co-workers to invent the generalized semaphore (which can be used as either a lock or a condition variable) [D01]; we will learn more about semaphores later. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Imagine one or more producer threads and one or more consumer threads. Producers generate data items and place them in a buffer; consumers grab said items from the buffer and consume them in some way. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "This arrangement occurs in many real systems. For example, in a multi-threaded web server, a producer puts HTTP requests into a work queue (i.e., the bounded buffer); consumer threads take requests out of this queue and process them. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "A bounded buffer is also used when you pipe the output of one program into another, e.g., grep foo file.txt | wc $- 1$ . This example runs two processes concurrently; grep writes lines from file.txt with the string foo in them to what it thinks is standard output; the UNIX shell redirects the output to what is called a UNIX pipe (created by the pipe system call). The other end of this pipe is connected to the standard input of the process wc, which simply counts the number of lines in the input stream and prints out the result. Thus, the grep process is the producer; the wc process is the consumer; between them is an in-kernel bounded buffer; you, in this example, are just the happy user. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Because the bounded buffer is a shared resource, we must of course require synchronized access to it, lest2 a race condition arise. To begin to understand this problem better, let us examine some actual code. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The first thing we need is a shared buffer, into which a producer puts data, and out of which a consumer takes data. Let’s just use a single ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "1 void \\*producer(void \\*arg) {   \n2 int i;   \n3 int loops $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (int) arg;   \n4 for ( $\\textrm { \\scriptsize ( i ) } = \\textrm { \\scriptsize 0 }$ ; i < loops; ${ \\dot { \\bf \\underline { { 1 } } } } + +$ ) {   \n5 put(i);   \n6 }   \n7 }   \n8   \n9 void \\*consumer(void \\*arg) {   \n10 while (1) {   \n11 int tmp $\\mathbf { \\tau } = \\mathbf { \\tau }$ get();   \n12 printf(\"%d\\n\", tmp);   \n13 }   \n14 } ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "integer for simplicity (you can certainly imagine placing a pointer to a data structure into this slot instead), and the two inner routines to put a value into the shared buffer, and to get a value out of the buffer. See Figure 30.6 (page 6) for details. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Pretty simple, no? The put() routine assumes the buffer is empty (and checks this with an assertion), and then simply puts a value into the shared buffer and marks it full by setting count to 1. The get() routine does the opposite, setting the buffer to empty (i.e., setting count to 0) and returning the value. Don’t worry that this shared buffer has just a single entry; later, we’ll generalize it to a queue that can hold multiple entries, which will be even more fun than it sounds. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Now we need to write some routines that know when it is OK to access the buffer to either put data into it or get data out of it. The conditions for this should be obvious: only put data into the buffer when count is zero (i.e., when the buffer is empty), and only get data from the buffer when count is one (i.e., when the buffer is full). If we write the synchronization code such that a producer puts data into a full buffer, or a consumer gets data from an empty one, we have done something wrong (and in this code, an assertion will fire). ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "This work is going to be done by two types of threads, one set of which we’ll call the producer threads, and the other set which we’ll call consumer threads. Figure 30.7 shows the code for a producer that puts an integer into the shared buffer loops number of times, and a consumer that gets the data out of that shared buffer (forever), each time printing out the data item it pulled from the shared buffer. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "A Broken Solution ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Now imagine that we have just a single producer and a single consumer. Obviously the put() and get() routines have critical sections within them, as put() updates the buffer, and get() reads from it. However, putting a lock around the code doesn’t work; we need something more. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "1 int loops; // must initialize somewhere..   \n2 cond_t cond;   \n3 mutex_t mutex;   \n4   \n5 void \\*producer(void \\*arg) {   \n6 int i;   \n7 for ( $\\mathrm { ~ \\\\ ~ \\underline { ~ } { ~ i ~ } ~ } = \\mathrm { ~ \\ 0 ~ }$ ; i < loops; $\\dot { \\bf \\underline { { 1 } } } + +$ ) {   \n8 Pthread_mutex_lock(&mutex); // p1   \n9 if (count $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ ) // p2   \n10 Pthread_cond_wait(&cond, &mutex); // p3   \n11 put(i); // p4   \n12 Pthread_cond_signal(&cond); // p5   \n13 Pthread_mutex_unlock(&mutex); // p6   \n14 }   \n15 }   \n16   \n17 void $\\star$ consumer(void \\*arg) {   \n18 int i;   \n19 for ( $\\mathrm { ~ \\\\ ~ i ~ } = \\mathrm { ~ \\ ~ 0 ~ }$ ; i < loops; $\\dot { 1 } + +$ ) {   \n20 Pthread_mutex_lock(&mutex); // c1   \n21 if (count $\\scriptstyle \\mathbf { \\mu } = \\mathbf { \\mu } 0$ ) // c2   \n22 Pthread_cond_wait(&cond, &mutex); // c3   \n23 int tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ get(); // c4   \n24 Pthread_cond_signal(&cond); // c5   \n25 Pthread_mutex_unlock(&mutex); // c6   \n26 printf(\"%d\\n\", tmp);   \n27 }   \n28 } ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Not surprisingly, that something more is some condition variables. In this (broken) first try (Figure 30.8), we have a single condition variable cond and associated lock mutex. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s examine the signaling logic between producers and consumers. When a producer wants to fill the buffer, it waits for it to be empty (p1– p3). The consumer has the exact same logic, but waits for a different condition: fullness (c1–c3). ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "With just a single producer and a single consumer, the code in Figure 30.8 works. However, if we have more than one of these threads (e.g., two consumers), the solution has two critical problems. What are they? ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "... (pause here to think) ... ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s understand the first problem, which has to do with the if statement before the wait. Assume there are two consumers ( $\\mathit { T } _ { c 1 }$ and ${ T _ { c 2 } }$ ) and one producer $( T _ { p } )$ . First, a consumer $( T _ { c 1 } )$ runs; it acquires the lock (c1), checks if any buffers are ready for consumption (c2), and finding that none are, waits (c3) (which releases the lock). ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Then the producer $( T _ { p } )$ runs. It acquires the lock (p1), checks if all ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/622e47783565633e7a09b7e390e12a60d6dfb96a61351be722a63907ed45d57d.jpg",
+        "img_caption": [
+            "Figure 30.9: Thread Trace: Broken Solution (v1) "
+        ],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "buffers are full (p2), and finding that not to be the case, goes ahead and fills the buffer (p4). The producer then signals that a buffer has been filled (p5). Critically, this moves the first consumer $( T _ { c 1 } )$ from sleeping on a condition variable to the ready queue; ${ T _ { c 1 } }$ is now able to run (but not yet running). The producer then continues until realizing the buffer is full, at which point it sleeps (p6, p1–p3). ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Here is where the problem occurs: another consumer $( T _ { c 2 } )$ sneaks in and consumes the one existing value in the buffer $( \\mathrm { c 1 } , \\mathrm { c 2 } , \\mathrm { c 4 } , \\mathrm { c 5 } , \\mathrm { c }$ 6, skipping the wait at c3 because the buffer is full). Now assume ${ T _ { c 1 } }$ runs; just before returning from the wait, it re-acquires the lock and then returns. It then calls get() (c4), but there are no buffers to consume! An assertion triggers, and the code has not functioned as desired. Clearly, we should have somehow prevented $\\textstyle T _ { c 1 }$ from trying to consume because ${ T _ { c 2 } }$ snuck in and consumed the one value in the buffer that had been produced. Figure 30.9 shows the action each thread takes, as well as its scheduler state (Ready, Running, or Sleeping) over time. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The problem arises for a simple reason: after the producer woke $T _ { c 1 }$ , but before $T _ { c 1 }$ ever ran, the state of the bounded buffer changed (thanks to ${ T _ { c 2 } }$ ). Signaling a thread only wakes them up; it is thus a hint that the state of the world has changed (in this case, that a value has been placed in the buffer), but there is no guarantee that when the woken thread runs, the state will still be as desired. This interpretation of what a signal means is often referred to as Mesa semantics, after the first research that built a condition variable in such a manner [LR80]; the contrast, referred to as ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "1 int loops;   \n2 cond_t cond;   \n3 mutex_t mutex;   \n4   \n5 void \\*producer(void \\*arg) {   \n6 int i;   \n7 for ( $\\mathrm { ~ \\\\ ~ \\underline { ~ } { ~ i ~ } ~ } = \\mathrm { ~ \\ 0 ~ }$ ; i < loops; $\\dot { \\bf \\underline { { 1 } } } + +$ ) {   \n8 Pthread_mutex_lock(&mutex); // p1   \n9 while (count $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ ) // p2   \n10 Pthread_cond_wait(&cond, &mutex); // p3   \n11 put(i); // p4   \n12 Pthread_cond_signal(&cond); // p5   \n13 Pthread_mutex_unlock(&mutex); // p6   \n14 }   \n15 }   \n16   \n17 void \\*consumer(void \\*arg) {   \n18 int i;   \n19 for ( $\\mathrm { ~ \\\\ ~ i ~ } = \\mathrm { ~ \\ ~ 0 ~ }$ ; i < loops; $\\dot { 1 } + +$ ) {   \n20 Pthread_mutex_lock(&mutex); // c1   \n21 while (count $\\scriptstyle \\mathbf { \\mu } = \\mathbf { \\mu } 0$ ) // c2   \n22 Pthread_cond_wait(&cond, &mutex); // c3   \n23 int tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ get(); // c4   \n24 Pthread_cond_signal(&cond); // c5   \n25 Pthread_mutex_unlock(&mutex); // c6   \n26 printf(\"%d\\n\", tmp);   \n27 }   \n28 } ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Figure 30.10: Producer/Consumer: Single CV And While ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Hoare semantics, is harder to build but provides a stronger guarantee that the woken thread will run immediately upon being woken [H74]. Virtually every system ever built employs Mesa semantics. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Better, But Still Broken: While, Not If ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Fortunately, this fix is easy (Figure 30.10): change the if to a while. Think about why this works; now consumer $T _ { c 1 }$ wakes up and (with the lock held) immediately re-checks the state of the shared variable (c2). If the buffer is empty at that point, the consumer simply goes back to sleep (c3). The corollary if is also changed to a while in the producer (p2). ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Thanks to Mesa semantics, a simple rule to remember with condition variables is to always use while loops. Sometimes you don’t have to recheck the condition, but it is always safe to do so; just do it and be happy. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "However, this code still has a bug, the second of two problems mentioned above. Can you see it? It has something to do with the fact that there is only one condition variable. Try to figure out what the problem is, before reading ahead. DO IT! (pause for you to think, or close your eyes...) ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "table",
+        "img_path": "images/d3252444ee2c87629be9b28269902cf62fcc5b7a968002a03bfb354f5cab840b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Te1 c1</td><td>State</td><td>Tc2</td><td>State</td><td>Tp State</td><td>connr 0</td><td>Comment</td></tr><tr><td>c2 c3 c2 c4 c5 c6 c1 c2 c3</td><td>Run Run Ready Ready Ready Ready Run Run Run Run Run Run Sleep Sleep Sleep Sleep Sleep Sleep Sleep Ready Sleep Sleep Sleep</td><td>c1 c2 c3 c2 c3</td><td>Ready Ready Ready Run Run p5 p3 Ready Ready Ready Ready Ready Run Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep</td><td>Ready Ready Ready Ready Ready Ready p1 Run p2 Run Run Run p6 Run p1 Run p2 Run p4 Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep Sleep</td><td>0 0 0 0 0 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0</td><td>Nothing to get Nothing to get Buffer now full Tc1 awoken Must sleep (full) Recheck condition Tc1 grabs data Oops! Woke Tc2 Nothing to get. Everyone aslep...</td></tr></table></body></html>\n\n",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Let’s confirm you figured it out correctly, or perhaps let’s confirm that you are now awake and reading this part of the book. The problem occurs when two consumers run first $\\mathit { T } _ { c 1 }$ and ${ T _ { c 2 } }$ ) and both go to sleep (c3). Then, the producer runs, puts a value in the buffer, and wakes one of the consumers (say $T _ { c 1 }$ ). The producer then loops back (releasing and reacquiring the lock along the way) and tries to put more data in the buffer; because the buffer is full, the producer instead waits on the condition (thus sleeping). Now, one consumer is ready to run $( T _ { c 1 } )$ , and two threads are sleeping on a condition $\\mathit { T } _ { c 2 }$ and $T _ { p }$ ). We are about to cause a problem: things are getting exciting! ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The consumer $T _ { c 1 }$ then wakes by returning from wait() (c3), re-checks the condition (c2), and finding the buffer full, consumes the value (c4). This consumer then, critically, signals on the condition (c5), waking only one thread that is sleeping. However, which thread should it wake? ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Because the consumer has emptied the buffer, it clearly should wake the producer. However, if it wakes the consumer ${ T _ { c 2 } }$ (which is definitely possible, depending on how the wait queue is managed), we have a problem. Specifically, the consumer ${ T _ { c 2 } }$ will wake up and find the buffer empty (c2), and go back to sleep (c3). The producer $T _ { p } ,$ which has a value ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "1 cond_t empty, fill;   \n2 mutex_t mutex;   \n3   \n4 void \\*producer(void \\*arg) {   \n5 int i;   \n6 for ( $\\mathrm { ~ \\\\ ~ i ~ } = \\mathrm { ~ \\ ~ 0 ~ }$ ; i < loops; ${ \\dot { \\bf \\underline { { 1 } } } } + + { \\bf \\underline { { 1 } } }$ ) {   \n7 Pthread_mutex_lock(&mutex);   \n8 while (count $\\scriptstyle \\mathbf { \\alpha = { \\begin{array} { l } { 1 } \\end{array} } }$ )   \n9 Pthread_cond_wait(&empty, &mutex);   \n10 put(i);   \n11 Pthread_cond_signal(&fill);   \n12 Pthread_mutex_unlock(&mutex);   \n13 }   \n14 }   \n15   \n16 void \\*consumer(void \\*arg) {   \n17 int i;   \n18 for ( $\\mathrm { ~ \\\\ ~ i ~ } = \\mathrm { ~ \\ ~ 0 ~ }$ ; i < loops; ${ \\dot { \\bf \\underline { { 1 } } } } + + { \\bf \\underline { { 1 } } }$ ) {   \n19 Pthread_mutex_lock(&mutex);   \n20 while (count $\\scriptstyle \\mathbf { \\mu } = \\mathbf { \\mu } 0$ )   \n21 Pthread_cond_wait(&fill, &mutex);   \n22 int tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ get();   \n23 Pthread_cond_signal(&empty);   \n24 Pthread_mutex_unlock(&mutex);   \n25 printf(\"%d\\n\", tmp);   \n26 }   \n27 } ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "to put into the buffer, is left sleeping. The other consumer thread, $T _ { c 1 }$ , also goes back to sleep. All three threads are left sleeping, a clear bug; see Figure 30.11 for the brutal step-by-step of this terrible calamity. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Signaling is clearly needed, but must be more directed. A consumer should not wake other consumers, only producers, and vice-versa. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "The Single Buffer Producer/Consumer Solution ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "The solution here is once again a small one: use two condition variables, instead of one, in order to properly signal which type of thread should wake up when the state of the system changes. Figure 30.12 shows the resulting code. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "In the code, producer threads wait on the condition empty, and signals fill. Conversely, consumer threads wait on fill and signal empty. By doing so, the second problem above is avoided by design: a consumer can never accidentally wake a consumer, and a producer can never accidentally wake a producer. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "1 int buffer[MAX];   \n2 int fill_ptr $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n3 int use_ptr $\\mathbf { \\xi } = \\mathbf { \\xi } 0 ; \\mathbf { \\zeta }$   \n4 int count $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n5   \n6 void put(int value) {   \n7 buffer[fill_ptr] $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ value;   \n8 fill_ptr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (fill_ptr $\\mathbf { \\Sigma } + \\mathbf { \\Sigma } \\ b { \\mathrm { 1 } }$ ) % MAX;   \n9 count $^ { + + }$ ;   \n10 }   \n11   \n12 int get() {   \n13 int tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ buffer[use_ptr];   \n14 use_ptr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (use_ptr + 1) % MAX;   \n15 count--;   \n16 return tmp;   \n17 }   \n1 cond_t empty, fill;   \n2 mutex_t mutex;   \n3   \n4 void \\*producer(void \\*arg) {   \n5 int i;   \n6 for ( $\\mathrm { ~ \\\\ ~ i ~ } = \\mathrm { ~ \\ r ~ 0 ~ }$ ; i < loops; ${ \\dot { \\bf \\underline { { 1 } } } } + +$ ) {   \n7 Pthread_mutex_lock(&mutex); // p1   \n8 while (count $\\scriptstyle = =$ MAX) // p2   \n9 Pthread_cond_wait(&empty, &mutex); // p3   \n10 put(i); // p4   \n11 Pthread_cond_signal(&fill); // p5   \n12 Pthread_mutex_unlock(&mutex); // p6   \n13 }   \n14 }   \n15   \n16 void \\*consumer(void \\*arg) {   \n17 int i;   \n18 for ( $\\mathrm { ~ \\\\ ~ i ~ } = \\mathrm { ~ \\ ~ 0 ~ }$ ; i < loops; ${ \\dot { \\bf \\underline { { 1 } } } } + +$ ) {   \n19 Pthread_mutex_lock(&mutex); // c1   \n20 while (count $\\scriptstyle \\mathbf { \\mu } = \\mathbf { \\mu } 0$ ) // c2   \n21 Pthread_cond_wait(&fill, &mutex); // c3   \n22 int tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ get(); // c4   \n23 Pthread_cond_signal(&empty); // c5   \n24 Pthread_mutex_unlock(&mutex); // c6   \n25 printf(\"%d\\n\", tmp);   \n26 }   \n27 1 ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "TIP: USE WHILE (NOT IF) FOR CONDITIONS ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "When checking for a condition in a multi-threaded program, using a while loop is always correct; using an if statement only might be, depending on the semantics of signaling. Thus, always use while and your code will behave as expected. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Using while loops around conditional checks also handles the case where spurious wakeups occur. In some thread packages, due to details of the implementation, it is possible that two threads get woken up though just a single signal has taken place [L11]. Spurious wakeups are further reason to re-check the condition a thread is waiting on. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The Correct Producer/Consumer Solution ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "We now have a working producer/consumer solution, albeit not a fully general one. The last change we make is to enable more concurrency and efficiency; specifically, we add more buffer slots, so that multiple values can be produced before sleeping, and similarly multiple values can be consumed before sleeping. With just a single producer and consumer, this approach is more efficient as it reduces context switches; with multiple producers or consumers (or both), it even allows concurrent producing or consuming to take place, thus increasing concurrency. Fortunately, it is a small change from our current solution. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The first change for this correct solution is within the buffer structure itself and the corresponding put() and get() (Figure 30.13). We also slightly change the conditions that producers and consumers check in order to determine whether to sleep or not. We also show the correct waiting and signaling logic (Figure 30.14). A producer only sleeps if all buffers are currently filled (p2); similarly, a consumer only sleeps if all buffers are currently empty (c2). And thus we solve the producer/consumer problem; time to sit back and drink a cold one. ",
+        "page_idx": 13
+    }
+]

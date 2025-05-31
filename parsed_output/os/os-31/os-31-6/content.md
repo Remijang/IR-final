@@ -1,0 +1,63 @@
+# 31.6 The Dining Philosophers  
+
+One of the most famous concurrency problems posed, and solved, by Dijkstra, is known as the dining philosopher’s problem [D71]. The problem is famous because it is fun and somewhat intellectually interesting; however, its practical utility is low. However, its fame forces its inclusion here; indeed, you might be asked about it on some interview, and you’d really hate your OS professor if you miss that question and don’t get the job. Conversely, if you get the job, please feel free to send your OS professor a nice note, or some stock options.  
+
+The basic setup for the problem is this (as shown in Figure 31.14): assume there are five “philosophers” sitting around a table. Between each pair of philosophers is a single fork (and thus, five total). The philosophers each have times where they think, and don’t need any forks, and times where they eat. In order to eat, a philosopher needs two forks, both the one on their left and the one on their right. The contention for these forks, and the synchronization problems that ensue, are what makes this a problem we study in concurrent programming.  
+
+Here is the basic loop of each philosopher, assuming each has a unique thread identifier $\mathrm { ~ p ~ }$ from 0 to 4 (inclusive):  
+
+while (1) { think(); get_forks(p); eat(); put_forks(p);   
+}  
+
+The key challenge, then, is to write the routines get forks() and put forks() such that there is no deadlock, no philosopher starves and never gets to eat, and concurrency is high (i.e., as many philosophers can eat at the same time as possible).  
+
+![](images/022d3e964d0fad8f1326736fbc6d4d6494ade91e2e88aca5aba0e4e950dd629f.jpg)  
+Figure 31.14: The Dining Philosophers  
+
+Following Downey’s solutions [D08], we’ll use a few helper functions to get us towards a solution. They are:  
+
+int left(int p) { return p; } int right(int p) { return (p + 1) % 5; }  
+
+When philosopher $\mathrm { ~ p ~ }$ wishes to refer to the fork on their left, they simply call left(p). Similarly, the fork on the right of a philosopher $\mathrm { ~ p ~ }$ is referred to by calling right $( \rho )$ ; the modulo operator therein handles the one case where the last philosopher $\scriptstyle ( \mathtt { p } = 4$ ) tries to grab the fork on their right, which is fork 0.  
+
+We’ll also need some semaphores to solve this problem. Let us assume we have five, one for each fork: sem t forks[5].  
+
+# Broken Solution  
+
+We attempt our first solution to the problem. Assume we initialize each semaphore (in the forks array) to a value of 1. Assume also that each philosopher knows its own number $( \mathrm { p } )$ . We can thus write the get forks() and put forks() routine (Figure 31.15, page 15).  
+
+The intuition behind this (broken) solution is as follows. To acquire the forks, we simply grab a “lock” on each one: first the one on the left,  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+1 void get_forks(int p) {   
+2 sem_wait(&forks[left(p)]);   
+3 sem_wait(&forks[right(p)]);   
+4 }   
+5   
+6 void put_forks(int p) {   
+7 sem_post(&forks[left(p)]);   
+8 sem_post(&forks[right(p)]);   
+9 }   
+1 void get_forks(int p) {   
+2 if ( $_ { \mathrm { ~ p ~ } } = = \mathrm { ~ 4 ~ }$ ) {   
+3 sem_wait(&forks[right(p)]);   
+4 sem_wait(&forks[left(p)]);   
+5 } else {   
+6 sem_wait(&forks[left(p)]);   
+7 sem_wait(&forks[right(p)]);   
+8 }   
+9 }  
+
+and then the one on the right. When we are done eating, we release them. Simple, no? Unfortunately, in this case, simple means broken. Can you see the problem that arises? Think about it.  
+
+The problem is deadlock. If each philosopher happens to grab the fork on their left before any philosopher can grab the fork on their right, each will be stuck holding one fork and waiting for another, forever. Specifically, philosopher 0 grabs fork 0, philosopher 1 grabs fork 1, philosopher 2 grabs fork 2, philosopher 3 grabs fork 3, and philosopher 4 grabs fork 4; all the forks are acquired, and all the philosophers are stuck waiting for a fork that another philosopher possesses. We’ll study deadlock in more detail soon; for now, it is safe to say that this is not a working solution.  
+
+# A Solution: Breaking The Dependency  
+
+The simplest way to attack this problem is to change how forks are acquired by at least one of the philosophers; indeed, this is how Dijkstra himself solved the problem. Specifically, let’s assume that philosopher 4 (the highest numbered one) gets the forks in a different order than the others (Figure 31.16); the put forks() code remains the same.  
+
+Because the last philosopher tries to grab right before left, there is no situation where each philosopher grabs one fork and is stuck waiting for another; the cycle of waiting is broken. Think through the ramifications of this solution, and convince yourself that it works.  
+
+There are other “famous” problems like this one, e.g., the cigarette smoker’s problem or the sleeping barber problem. Most of them are just excuses to think about concurrency; some of them have fascinating names. Look them up if you are interested in learning more, or just getting more practice thinking in a concurrent manner [D08].  
+

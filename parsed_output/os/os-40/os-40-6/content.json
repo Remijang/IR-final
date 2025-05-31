@@ -1,0 +1,153 @@
+[
+    {
+        "type": "text",
+        "text": "40.6 Access Paths: Reading and Writing ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Now that we have some idea of how files and directories are stored on disk, we should be able to follow the flow of operation during the activity of reading or writing a file. Understanding what happens on this access path is thus the second key in developing an understanding of how a file system works; pay attention! ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "For the following examples, let us assume that the file system has been mounted and thus that the superblock is already in memory. Everything else (i.e., inodes, directories) is still on the disk. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "table",
+        "img_path": "images/449e749338325b692396c56a05b3226cd058daa52dd89e32ffd133fefcb8a341.jpg",
+        "table_caption": [
+            "Figure 40.3: File Read Timeline (Time Increasing Downward) "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>data inode bitmap bitmap</td><td>root</td><td>foo inode inode inode</td><td>bar</td><td>root data</td><td>foo data</td><td>bar data [0]</td><td>bar data [1]</td><td>bar data [2]</td></tr><tr><td>open(bar)</td><td></td><td>read</td><td>read</td><td>read</td><td>read</td><td>read</td><td></td><td></td><td></td></tr><tr><td>read(</td><td></td><td></td><td>read write</td><td></td><td></td><td></td><td>read</td><td></td><td></td></tr><tr><td>read0</td><td></td><td></td><td></td><td>read write</td><td></td><td></td><td></td><td>read</td><td></td></tr><tr><td>read()</td><td></td><td></td><td>read write</td><td></td><td></td><td></td><td></td><td></td><td>read</td></tr></table></body></html>\n\n",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Reading A File From Disk ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "In this simple example, let us first assume that you want to simply open a file (e.g., /foo/bar), read it, and then close it. For this simple example, let’s assume the file is just 12KB in size (i.e., 3 blocks). ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "When you issue an open(\"/foo/bar\", O RDONLY) call, the file system first needs to find the inode for the file bar, to obtain some basic information about the file (permissions information, file size, etc.). To do so, the file system must be able to find the inode, but all it has right now is the full pathname. The file system must traverse the pathname and thus locate the desired inode. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "All traversals begin at the root of the file system, in the root directory which is simply called /. Thus, the first thing the FS will read from disk is the inode of the root directory. But where is this inode? To find an inode, we must know its i-number. Usually, we find the i-number of a file or directory in its parent directory; the root has no parent (by definition). Thus, the root inode number must be “well known”; the FS must know what it is when the file system is mounted. In most UNIX file systems, the root inode number is 2. Thus, to begin the process, the FS reads in the block that contains inode number 2 (the first inode block). ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Once the inode is read in, the FS can look inside of it to find pointers to data blocks, which contain the contents of the root directory. The FS will thus use these on-disk pointers to read through the directory, in this case looking for an entry for foo. By reading in one or more directory data blocks, it will find the entry for foo; once found, the FS will also have found the inode number of foo (say it is 44) which it will need next. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The next step is to recursively traverse the pathname until the desired inode is found. In this example, the FS reads the block containing the ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: READS DON’T ACCESS ALLOCATION STRUCTURES We’ve seen many students get confused by allocation structures such as bitmaps. In particular, many often think that when you are simply reading a file, and not allocating any new blocks, that the bitmap will still be consulted. This is not true! Allocation structures, such as bitmaps, are only accessed when allocation is needed. The inodes, directories, and indirect blocks have all the information they need to complete a read request; there is no need to make sure a block is allocated when the inode already points to it. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "inode of foo and then its directory data, finally finding the inode number of bar. The final step of open() is to read bar’s inode into memory; the FS then does a final permissions check, allocates a file descriptor for this process in the per-process open-file table, and returns it to the user. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Once open, the program can then issue a read() system call to read from the file. The first read (at offset 0 unless lseek() has been called) will thus read in the first block of the file, consulting the inode to find the location of such a block; it may also update the inode with a new lastaccessed time. The read will further update the in-memory open file table for this file descriptor, updating the file offset such that the next read will read the second file block, etc. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "At some point, the file will be closed. There is much less work to be done here; clearly, the file descriptor should be deallocated, but for now, that is all the FS really needs to do. No disk I/Os take place. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "A depiction of this entire process is found in Figure 40.3 (page 11); time increases downward in the figure. In the figure, the open causes numerous reads to take place in order to finally locate the inode of the file. Afterwards, reading each block requires the file system to first consult the inode, then read the block, and then update the inode’s last-accessed-time field with a write. Spend some time and understand what is going on. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Also note that the amount of I/O generated by the open is proportional to the length of the pathname. For each additional directory in the path, we have to read its inode as well as its data. Making this worse would be the presence of large directories; here, we only have to read one block to get the contents of a directory, whereas with a large directory, we might have to read many data blocks to find the desired entry. Yes, life can get pretty bad when reading a file; as you’re about to find out, writing out a file (and especially, creating a new one) is even worse. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Writing A File To Disk ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Writing to a file is a similar process. First, the file must be opened (as above). Then, the application can issue write() calls to update the file with new contents. Finally, the file is closed. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Unlike reading, writing to the file may also allocate a block (unless the block is being overwritten, for example). When writing out a new file, each write not only has to write data to disk but has to first decide ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 11
+    },
+    {
+        "type": "table",
+        "img_path": "images/ea48aea954db08ae9590e8ace592097b54caf989246a1a3fed87b281f15124f5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>data inode bitmap bitmap</td><td>root</td><td>foo bar inode inode inode</td><td>root data</td><td>foo data</td><td>bar data [0]</td><td>bar data [1]</td><td>bar data [2]</td></tr><tr><td>create (/foo/bar)</td><td>read write</td><td>read read</td><td>read write</td><td>read</td><td>read write</td><td></td><td></td><td></td></tr><tr><td>write0</td><td>read write</td><td>write</td><td>read write</td><td></td><td></td><td>write</td><td></td><td></td></tr><tr><td>write()</td><td>read write</td><td></td><td>read write</td><td></td><td></td><td>write</td><td></td><td></td></tr><tr><td>write()</td><td>read write</td><td></td><td>read write</td><td></td><td></td><td></td><td></td><td>write</td></tr></table></body></html>\n\n",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "which block to allocate to the file and thus update other structures of the disk accordingly (e.g., the data bitmap and inode). Thus, each write to a file logically generates five $\\mathrm { I / O s }$ : one to read the data bitmap (which is then updated to mark the newly-allocated block as used), one to write the bitmap (to reflect its new state to disk), two more to read and then write the inode (which is updated with the new block’s location), and finally one to write the actual block itself. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "The amount of write traffic is even worse when one considers a simple and common operation such as file creation. To create a file, the file system must not only allocate an inode, but also allocate space within the directory containing the new file. The total amount of $\\bar { 1 / \\mathrm { O } }$ traffic to do so is quite high: one read to the inode bitmap (to find a free inode), one write to the inode bitmap (to mark it allocated), one write to the new inode itself (to initialize it), one to the data of the directory (to link the high-level name of the file to its inode number), and one read and write to the directory inode to update it. If the directory needs to grow to accommodate the new entry, additional I/Os (i.e., to the data bitmap, and the new directory block) will be needed too. All that just to create a file! ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Let’s look at a specific example, where the file /foo/bar is created, and three blocks are written to it. Figure 40.4 (page 13) shows what happens during the open() (which creates the file) and during each of three 4KB writes. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "In the figure, reads and writes to the disk are grouped under which system call caused them to occur, and the rough ordering they might take place in goes from top to bottom of the figure. You can see how much work it is to create the file: $1 0 ~ \\mathrm { I / O s }$ in this case, to walk the pathname and then finally create the file. You can also see that each allocating write costs $5 \\mathrm { I / O s }$ : a pair to read and update the inode, another pair to read and update the data bitmap, and then finally the write of the data itself. How can a file system accomplish any of this with reasonable efficiency? ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "THE CRUX: HOW TO REDUCE FILE SYSTEM I/O COSTS ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Even the simplest of operations like opening, reading, or writing a file incurs a huge number of I/O operations, scattered over the disk. What can a file system do to reduce the high costs of doing so many I/Os? ",
+        "page_idx": 13
+    }
+]

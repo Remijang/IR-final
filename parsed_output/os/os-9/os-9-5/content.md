@@ -1,0 +1,4 @@
+# 9.5 How To Assign Tickets?  
+
+One problem we have not addressed with lottery scheduling is: how to assign tickets to jobs? This problem is a tough one, because of course how the system behaves is strongly dependent on how tickets are allocated. One approach is to assume that the users know best; in such a case, each user is handed some number of tickets, and a user can allocate tickets to any jobs they run as desired. However, this solution is a nonsolution: it really doesn’t tell you what to do. Thus, given a set of jobs, the “ticket-assignment problem” remains open.  
+

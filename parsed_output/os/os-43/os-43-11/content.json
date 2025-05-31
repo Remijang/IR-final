@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "43.11 A Policy Question: Which Blocks To Clean, And When? ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "On top of the mechanism described above, LFS must include a set of policies to determine both when to clean and which blocks are worth cleaning. Determining when to clean is easier; either periodically, during idle time, or when you have to because the disk is full. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Determining which blocks to clean is more challenging, and has been the subject of many research papers. In the original LFS paper [RO91], the authors describe an approach which tries to segregate hot and cold segments. A hot segment is one in which the contents are being frequently over-written; thus, for such a segment, the best policy is to wait a long time before cleaning it, as more and more blocks are getting over-written (in new segments) and thus being freed for use. A cold segment, in contrast, may have a few dead blocks but the rest of its contents are relatively stable. Thus, the authors conclude that one should clean cold segments sooner and hot segments later, and develop a heuristic that does exactly that. However, as with most policies, this policy isn’t perfect; later approaches show how to do better $[ \\mathrm { M R } { + } 9 7 ]$ . ",
+        "page_idx": 10
+    }
+]

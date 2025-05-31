@@ -1,0 +1,20 @@
+28.13 A Simple Approach: Just Yield, Baby
+Hardware support got us pretty far: working locks, and even (as with the case of the ticket lock) fairness in lock acquisition. However, we still have a problem: what to do when a context switch occurs in a critical section, and threads start to spin endlessly, waiting for the interrupted (lock-holding) thread to be run again?  
+Our first try is a simple and friendly approach: when you are going to spin, instead give up the CPU to another thread. As Al Davis might say, “just yield, baby!” [D91]. Figure 28.8 (page 15) shows the approach.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+1 void init() { 
+2 flag = 0; 
+3 } 
+4 
+5 void lock() { 
+6 while (TestAndSet(&flag, 1) $\scriptstyle \mathbf { \alpha = } \ 1$ ) 
+7 yield(); // give up the CPU 
+8 } 
+9 
+10 void unlock() { 
+11 $\pounds \mathrm { 1 a g ~ = ~ 0 ~ }$ ; 
+12 }  
+In this approach, we assume an operating system primitive yield() which a thread can call when it wants to give up the CPU and let another thread run. A thread can be in one of three states (running, ready, or blocked); yield is simply a system call that moves the caller from the running state to the ready state, and thus promotes another thread to running. Thus, the yielding thread essentially deschedules itself.  
+Think about the example with two threads on one CPU; in this case, our yield-based approach works quite well. If a thread happens to call lock() and find a lock held, it will simply yield the CPU, and thus the other thread will run and finish its critical section. In this simple case, the yielding approach works well.  
+Let us now consider the case where there are many threads (say 100) contending for a lock repeatedly. In this case, if one thread acquires the lock and is preempted before releasing it, the other 99 will each call lock(), find the lock held, and yield the CPU. Assuming some kind of round-robin scheduler, each of the 99 will execute this run-and-yield pattern before the thread holding the lock gets to run again. While better than our spinning approach (which would waste 99 time slices spinning), this approach is still costly; the cost of a context switch can be substantial, and there is thus plenty of waste.  
+Worse, this approach does not address starvation. A thread may get caught in an endless yield loop while other threads repeatedly enter and exit the critical section. We clearly will need an approach that addresses starvation directly.  

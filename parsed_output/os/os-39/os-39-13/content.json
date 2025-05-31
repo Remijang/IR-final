@@ -1,0 +1,13 @@
+[
+    {
+        "type": "text",
+        "text": "39.13 Deleting Directories ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Finally, you can delete a directory with a call to rmdir() (which is used by the program of the same name, rmdir). Unlike file deletion, however, removing directories is more dangerous, as you could potentially delete a large amount of data with a single command. Thus, rmdir() has the requirement that the directory be empty (i.e., only has “.” and “..” entries) before it is deleted. If you try to delete a non-empty directory, the call to rmdir() simply will fail. ",
+        "page_idx": 17
+    }
+]

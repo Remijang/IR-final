@@ -1,0 +1,84 @@
+[
+    {
+        "type": "text",
+        "text": "10.4 Single-Queue Scheduling ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "With this background in place, we now discuss how to build a scheduler for a multiprocessor system. The most basic approach is to simply reuse the basic framework for single processor scheduling, by putting all jobs that need to be scheduled into a single queue; we call this singlequeue multiprocessor scheduling or SQMS for short. This approach has the advantage of simplicity; it does not require much work to take an existing policy that picks the best job to run next and adapt it to work on more than one CPU (where it might pick the best two jobs to run, if there are two CPUs, for example). ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "However, SQMS has obvious shortcomings. The first problem is a lack of scalability. To ensure the scheduler works correctly on multiple CPUs, the developers will have inserted some form of locking into the code, as described above. Locks ensure that when SQMS code accesses the single queue (say, to find the next job to run), the proper outcome arises. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Locks, unfortunately, can greatly reduce performance, particularly as the number of CPUs in the systems grows [A90]. As contention for such a single lock increases, the system spends more and more time in lock overhead and less time doing the work the system should be doing (note: it would be great to include a real measurement of this in here someday). ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The second main problem with SQMS is cache affinity. For example, let us assume we have five jobs to run $( A , B , C , D , E )$ and four processors. Our scheduling queue thus looks like this: ",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/62fe40930759cc23832a07a66079bc634080ed0611ae9a9ca5381099b2d7c70f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Over time, assuming each job runs for a time slice and then another job is chosen, here is a possible job schedule across CPUs: ",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/b4a2e7e6caff966ac55711857d56f0d7539e810b669c424afb63a8dc0be48799.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Because each CPU simply picks the next job to run from the globallyshared queue, each job ends up bouncing around from CPU to CPU, thus doing exactly the opposite of what would make sense from the standpoint of cache affinity. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "To handle this problem, most SQMS schedulers include some kind of affinity mechanism to try to make it more likely that process will continue ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "to run on the same CPU if possible. Specifically, one might provide affinity for some jobs, but move others around to balance load. For example, imagine the same five jobs scheduled as follows: ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/bfff054ec26d99afdcbea4c408b3cb4e7c39a0b3ddac9eb0ac835d58e3a2d033.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "In this arrangement, jobs $A$ through $D$ are not moved across processors, with only job $E$ migrating from CPU to CPU, thus preserving affinity for most. You could then decide to migrate a different job the next time through, thus achieving some kind of affinity fairness as well. Implementing such a scheme, however, can be complex. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Thus, we can see the SQMS approach has its strengths and weaknesses. It is straightforward to implement given an existing single-CPU scheduler, which by definition has only a single queue. However, it does not scale well (due to synchronization overheads), and it does not readily preserve cache affinity. ",
+        "page_idx": 6
+    }
+]

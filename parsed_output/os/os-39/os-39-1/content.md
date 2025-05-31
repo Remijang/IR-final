@@ -1,0 +1,23 @@
+# 39.1 Files And Directories  
+
+Two key abstractions have developed over time in the virtualization of storage. The first is the file. A file is simply a linear array of bytes, each of which you can read or write. Each file has some kind of low-level name, usually a number of some kind; often, the user is not aware of this name (as we will see). For historical reasons, the low-level name of a file is often referred to as its inode number (i-number). We’ll be learning a lot more about inodes in future chapters; for now, just assume that each file has an inode number associated with it.  
+
+![](images/f711013b45659c27042f82612fbb45551c68f7a182221080db42f437f328c882.jpg)  
+Figure 39.1: An Example Directory Tree  
+
+In most systems, the OS does not know much about the structure of the file (e.g., whether it is a picture, or a text file, or C code); rather, the responsibility of the file system is simply to store such data persistently on disk and make sure that when you request the data again, you get what you put there in the first place. Doing so is not as simple as it seems!  
+
+The second abstraction is that of a directory. A directory, like a file, also has a low-level name (i.e., an inode number), but its contents are quite specific: it contains a list of (user-readable name, low-level name) pairs. For example, let’s say there is a file with the low-level name $" 1 0 ^ { \prime \prime }$ , and it is referred to by the user-readable name of $^ { \prime \prime } \mathrm { f o o } ^ { \prime \prime }$ . The directory that “foo” resides in thus would have an entry $( ^ { \prime \prime } \mathrm { f o o ^ { \prime \prime } } , \mathrm { \mathrm { ~ } } ^ { \prime \prime } 1 0 ^ { \prime \prime } )$ that maps the user-readable name to the low-level name. Each entry in a directory refers to either files or other directories. By placing directories within other directories, users are able to build an arbitrary directory tree (or directory hierarchy), under which all files and directories are stored.  
+
+The directory hierarchy starts at a root directory (in UNIX-based systems, the root directory is simply referred to as $/$ ) and uses some kind of separator to name subsequent sub-directories until the desired file or directory is named. For example, if a user created a directory foo in the root directory /, and then created a file bar.txt in the directory foo, we could refer to the file by its absolute pathname, which in this case would be /foo/bar.txt. See Figure 39.1 for a more complex directory tree; valid directories in the example are /, /foo, /bar, /bar/bar, /bar/foo and valid files are /foo/bar.txt and /bar/foo/bar.txt.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+TIP: THINK CAREFULLY ABOUT NAMING Naming is an important aspect of computer systems [SK09]. In UNIX systems, virtually everything that you can think of is named through the file system. Beyond just files, devices, pipes, and even processes [K84] can be found in what looks like a plain old file system. This uniformity of naming eases your conceptual model of the system, and makes the system simpler and more modular. Thus, whenever creating a system or interface, think carefully about what names you are using.  
+
+Directories and files can have the same name as long as they are in different locations in the file-system tree (e.g., there are two files named bar.txt in the figure, /foo/bar.txt and /bar/foo/bar.txt).  
+
+You may also notice that the file name in this example often has two parts: bar and txt, separated by a period. The first part is an arbitrary name, whereas the second part of the file name is usually used to indicate the type of the file, e.g., whether it is C code $\left( \mathrm { e . g . , ~ . c } \right)$ , or an image (e.g., .jpg), or a music file (e.g., .mp3). However, this is usually just a convention: there is usually no enforcement that the data contained in a file named main.c is indeed C source code.  
+
+Thus, we can see one great thing provided by the file system: a convenient way to name all the files we are interested in. Names are important in systems as the first step to accessing any resource is being able to name it. In UNIX systems, the file system thus provides a unified way to access files on disk, USB stick, CD-ROM, many other devices, and in fact many other things, all located under the single directory tree.  
+

@@ -1,0 +1,42 @@
+# 45.1 Disk Failure Modes  
+
+As you learned in the chapter about RAID, disks are not perfect, and can fail (on occasion). In early RAID systems, the model of failure was quite simple: either the entire disk is working, or it fails completely, and the detection of such a failure is straightforward. This fail-stop model of disk failure makes building RAID relatively simple [S90].  
+
+What you didn’t learn is about all of the other types of failure modes modern disks exhibit. Specifically, as Bairavasundaram et al. studied in great detail $[ \mathsf { B } + 0 7 , \mathsf { B } + 0 8 ]$ , modern disks will occasionally seem to be mostly working but have trouble successfully accessing one or more blocks. Specifically, two types of single-block failures are common and worthy of consideration: latent sector errors (LSEs) and block corruption. We’ll now discuss each in more detail.  
+
+<html><body><table><tr><td></td><td>Cheap</td><td>Costly</td></tr><tr><td>LSEs</td><td>9.40%</td><td>1.40%</td></tr><tr><td>Corruption</td><td>0.50%</td><td>0.05%</td></tr></table></body></html>  
+
+LSEs arise when a disk sector (or group of sectors) has been damaged in some way. For example, if the disk head touches the surface for some reason (a head crash, something which shouldn’t happen during normal operation), it may damage the surface, making the bits unreadable. Cosmic rays can also flip bits, leading to incorrect contents. Fortunately, in-disk error correcting codes (ECC) are used by the drive to determine whether the on-disk bits in a block are good, and in some cases, to fix them; if they are not good, and the drive does not have enough information to fix the error, the disk will return an error when a request is issued to read them.  
+
+There are also cases where a disk block becomes corrupt in a way not detectable by the disk itself. For example, buggy disk firmware may write a block to the wrong location; in such a case, the disk ECC indicates the block contents are fine, but from the client’s perspective the wrong block is returned when subsequently accessed. Similarly, a block may get corrupted when it is transferred from the host to the disk across a faulty bus; the resulting corrupt data is stored by the disk, but it is not what the client desires. These types of faults are particularly insidious because they are silent faults; the disk gives no indication of the problem when returning the faulty data.  
+
+Prabhakaran et al. describes this more modern view of disk failure as the fail-partial disk failure model $\left[ \mathrm { P } { + } 0 5 \right]$ . In this view, disks can still fail in their entirety (as was the case in the traditional fail-stop model); however, disks can also seemingly be working and have one or more blocks become inaccessible (i.e., LSEs) or hold the wrong contents (i.e., corruption). Thus, when accessing a seemingly-working disk, once in a while it may either return an error when trying to read or write a given block (a non-silent partial fault), and once in a while it may simply return the wrong data (a silent partial fault).  
+
+Both of these types of faults are somewhat rare, but just how rare? Figure 45.1 summarizes some of the findings from the two Bairavasundaram studies $\left[ \mathrm { B } { + } 0 7 , \mathrm { B } { + } 0 8 \right]$ .  
+
+The figure shows the percent of drives that exhibited at least one LSE or block corruption over the course of the study (about 3 years, over 1.5 million disk drives). The figure further sub-divides the results into “cheap” drives (usually SATA drives) and “costly” drives (usually SCSI or Fibre Channel). As you can see, while buying better drives reduces the frequency of both types of problem (by about an order of magnitude), they still happen often enough that you need to think carefully about how to handle them in your storage system.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+Some additional findings about LSEs are:  
+
+• Costly drives with more than one LSE are as likely to develop additional errors as cheaper drives   
+• For most drives, annual error rate increases in year two   
+• The number of LSEs increase with disk size   
+• Most disks with LSEs have less than 50   
+• Disks with LSEs are more likely to develop additional LSEs   
+• There exists a significant amount of spatial and temporal locality   
+• Disk scrubbing is useful (most LSEs were found this way)  
+
+Some findings about corruption:  
+
+• Chance of corruption varies greatly across different drive models within the same drive class   
+• Age effects are different across models   
+• Workload and disk size have little impact on corruption   
+• Most disks with corruption only have a few corruptions   
+• Corruption is not independent within a disk or across disks in RAID   
+• There exists spatial locality, and some temporal locality   
+• There is a weak correlation with LSEs  
+
+To learn more about these failures, you should likely read the original papers $\left[ \mathsf { B } { + } 0 7 , \mathsf { B } { + } 0 8 \right]$ . But hopefully the main point should be clear: if you really wish to build a reliable storage system, you must include machinery to detect and recover from both LSEs and block corruption.  
+

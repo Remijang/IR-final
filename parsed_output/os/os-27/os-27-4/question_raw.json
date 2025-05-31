@@ -1,0 +1,57 @@
+[
+    {
+        "type": "text",
+        "text": "1. Our first question focuses on main-two-cvs-while.c (the working solution). First, study the code. Do you think you have an understanding of what should happen when you run the program?",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "2. Run with one producer and one consumer, and have the producer produce a few values. Start with a buffer (size 1), and then increase it. How does the behavior of the code change with larger buffers? (or does it?) What would you predict num full to be with different buffer sizes (e.g., $- \\mathtt { m } \\mathtt { \\Omega } 1 0 \\mathtt { j }$ ) and different numbers of produced items (e.g., $- 1 \\ 1 0 0 ^ { \\cdot }$ ), when you change the consumer sleep string from default (no sleep) to ${ \\bar { \\mathbf { \\Gamma } } } ^ { \\bar { \\mathbf { C } } } 0 , 0 , 0 , 0 , { \\bar { \\mathbf { \\zeta } } } ^ { 0 } , 0 , 0 , 0 , 1 ?$",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "3. If possible, run the code on different systems (e.g., a Mac and Linux). Do you see different behavior across these systems?",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "4. Let’s look at some timings. How long do you think the following execution, with one producer, three consumers, a single-entry shared buffer, and each consumer pausing at point c3 for a second, will take? ./main-two-cvs-while $- \\texttt { p i } - \\texttt { c 3 } - \\texttt { m l } - \\texttt { C }$ $0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 ; 0 , 0 , 0 , 1 , 0 , 0 , 0 , 0 ; 0 , 0 , 1 , 0 , 0 , 0 , - 1 , 1 0 , - \\mathrm { v e n } , 0 , 1 , 1 , 0 , 0 , 0 , 0 , - 1 , 0 , - \\mathrm { v e n } , 0 , 0 , 1 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 1 .$ -t",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "5. Now change the size of the shared buffer to 3 $( - \\mathfrak { m } \\ 3 )$ . Will this make any difference in the total time?",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "6. Now change the location of the sleep to $\\mathtt { c 6 }$ (this models a consumer taking something off the queue and then doing something with it), again using a single-entry buffer. What time do you predict in this case? ./main-two-cvs-while $- \\texttt { p 1 } - \\texttt { c 3 } - \\overline { { \\texttt { m 1 } } }$ -C 0,0,0,0,0,0,1:0,0,0,0,0,0,1:0,0,0,0,0,0,1 -l 10 -v -t",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "7. Finally, change the buffer size to 3 again $\\left( - \\mathfrak { m } \\ 3 \\right)$ . What time do you predict now?",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "8. Now let’s look at main-one-cv-while.c. Can you configure a sleep string, assuming a single producer, one consumer, and a buffer of size 1, to cause a problem with this code? ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "9. Now change the number of consumers to two. Can you construct sleep strings for the producer and the consumers so as to cause a problem in the code?",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "10. Now examine main-two-cvs-if.c. Can you cause a problem to happen in this code? Again consider the case where there is only one consumer, and then the case where there is more than one.",
+        "page_idx": 17
+    },
+    {
+        "type": "text", 
+        "text": "11. Finally, examine main-two-cvs-while-extra-unlock.c. What problem arises when you release the lock before doing a put or a get? Can you reliably cause such a problem to happen, given the sleep strings? What bad thing can happen? ",
+        "page_idx": 18
+    }
+]

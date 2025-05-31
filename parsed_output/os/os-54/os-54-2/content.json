@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "54.2 Attaching Identities To Processes ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Where do processes come from? Usually they are created by other processes. One simple way to attach an identity to a new process, then, is to copy the identity of the process that created it. The child inherits the parent’s identity. Mechanically, when the operating system services a call from old process A to create new process B (fork, for example), it consults A’s process control block to determine A’s identity, creates a new process control block for B, and copies in A’s identity. Simple, no? ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "That’s all well and good if all processes always have the same identity. We can create a primal process when our operating system boots, perhaps assigning it some special system identity not assigned to any human user. All other processes are its descendants and all of them inherit that single identity. But if there really is only one identity, we’re not going to be able to implement any policy that differentiates the privileges of one process versus another. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "We must arrange that some processes have different identities and use those differences to manage our security policies. Consider a multi-user system. We can assign identities to processes based on which human user they belong to. If our security policies are primarily about some people being allowed to do some things and others not being allowed to, we now have an idea of how we can go about making our decisions. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "If processes have a security-relevant identity, like a user ID, we’re going to have to set the proper user ID for a new process. In most systems, a user has a process that he or she works with ordinarily: the shell process in command line systems, the window manager process in windoworiented system – you had figured out that both of these had to be processes themselves, right? So when you type a command into a shell or double click on an icon to start a process in a windowing system, you are asking the operating system to start a new process under your identity. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Great! But we do have another issue to deal with. How did that shell or window manager get your identity attached to itself? Here’s where a little operating system privilege comes in handy. When a user first starts interacting with a system, the operating system can start a process up for that user. Since the operating system can fiddle with its own data structures, like the process control block, it can set the new process’s ownership to the user who just joined the system. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Again, well and good, but how did the operating system determine the user’s identity so it could set process ownership properly? You probably can guess the answer - the user logged in, implying that the user provided identity information to the OS proving who the user was. We’ve now identified a new requirement for the operating system: it must be able to query identity from human users and verify that they are who they claim to be, so we can attach reliable identities to processes, so we can use those identities to implement our security policies. One thing tends to lead to another in operating systems. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "So how does the OS do that? As should be clear, we’re building a towering security structure with unforeseeable implications based on the OS making the right decision here, so it’s important. What are our options? ",
+        "page_idx": 3
+    }
+]

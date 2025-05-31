@@ -1,0 +1,4 @@
+# 41.2 FFS: Disk Awareness Is The Solution  
+
+A group at Berkeley decided to build a better, faster file system, which they cleverly called the Fast File System (FFS). The idea was to design the file system structures and allocation policies to be “disk aware” and thus improve performance, which is exactly what they did. FFS thus ushered in a new era of file system research; by keeping the same interface to the file system (the same APIs, including open(), read(), write(), close(), and other file system calls) but changing the internal implementation, the authors paved the path for new file system construction, work that continues today. Virtually all modern file systems adhere to the existing interface (and thus preserve compatibility with applications) while changing their internals for performance, reliability, or other reasons.  
+

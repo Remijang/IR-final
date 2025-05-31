@@ -1,0 +1,16 @@
+# 21.6 When Replacements Really Occur  
+
+Thus far, the way we’ve described how replacements occur assumes that the OS waits until memory is entirely full, and only then replaces (evicts) a page to make room for some other page. As you can imagine, this is a little bit unrealistic, and there are many reasons for the OS to keep a small portion of memory free more proactively.  
+
+To keep a small amount of memory free, most operating systems thus have some kind of high watermark $( { \dot { H } } W )$ and low watermark $( L W )$ to help decide when to start evicting pages from memory. How this works is as follows: when the OS notices that there are fewer than $L W$ pages available, a background thread that is responsible for freeing memory runs. The thread evicts pages until there are $H W$ pages available. The background thread, sometimes called the swap daemon or page daemon1, then goes to sleep, happy that it has freed some memory for running processes and the OS to use.  
+
+By performing a number of replacements at once, new performance optimizations become possible. For example, many systems will cluster  
+
+# TIP: DO WORK IN THE BACKGROUND  
+
+When you have some work to do, it is often a good idea to do it in the background to increase efficiency and to allow for grouping of operations. Operating systems often do work in the background; for example, many systems buffer file writes in memory before actually writing the data to disk. Doing so has many possible benefits: increased disk efficiency, as the disk may now receive many writes at once and thus better be able to schedule them; improved latency of writes, as the application thinks the writes completed quite quickly; the possibility of work reduction, as the writes may need never to go to disk (i.e., if the file is deleted); and better use of idle time, as the background work may possibly be done when the system is otherwise idle, thus better utilizing the hardware $\left[ \mathsf { G } { + } 9 5 \right]$ .  
+
+or group a number of pages and write them out at once to the swap partition, thus increasing the efficiency of the disk [LL82]; as we will see later when we discuss disks in more detail, such clustering reduces seek and rotational overheads of a disk and thus increases performance noticeably.  
+
+To work with the background paging thread, the control flow in Figure 21.3 should be modified slightly; instead of performing a replacement directly, the algorithm would instead simply check if there are any free pages available. If not, it would inform the background paging thread that free pages are needed; when the thread frees up some pages, it would re-awaken the original thread, which could then page in the desired page and go about its work.  
+

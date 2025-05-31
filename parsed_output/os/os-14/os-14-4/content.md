@@ -1,0 +1,69 @@
+# 14.4 Common Errors  
+
+There are a number of common errors that arise in the use of malloc() and free(). Here are some we’ve seen over and over again in teaching the undergraduate operating systems course. All of these examples compile and run with nary a peep from the compiler; while compiling a C program is necessary to build a correct C program, it is far from sufficient, as you will learn (often in the hard way).  
+
+Correct memory management has been such a problem, in fact, that many newer languages have support for automatic memory management. In such languages, while you call something akin to malloc() to allocate memory (usually new or something similar to allocate a new object), you never have to call something to free space; rather, a garbage collector runs and figures out what memory you no longer have references to and frees it for you.  
+
+# Forgetting To Allocate Memory  
+
+Many routines expect memory to be allocated before you call them. For example, the routine strcpy(dst, src) copies a string from a source pointer to a destination pointer. However, if you are not careful, you might do this:  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+char \*src $\mathbf { \Sigma } = \mathbf { \Sigma }$ "hello"; char $\star$ dst; // oops! unallocated strcpy(dst, src); // segfault and die  
+
+TIP: IT COMPILED OR IT $\mathrm { R A N } \neq \mathrm { I T }$ IS CORRECT  
+
+Just because a program compiled(!) or even ran once or many times correctly does not mean the program is correct. Many events may have conspired to get you to a point where you believe it works, but then something changes and it stops. A common student reaction is to say (or yell) “But it worked before!” and then blame the compiler, operating system, hardware, or even (dare we say it) the professor. But the problem is usually right where you think it would be, in your code. Get to work and debug it before you blame those other components.  
+
+When you run this code, it will likely lead to a segmentation fault3, which is a fancy term for YOU DID SOMETHING WRONG WITH MEMORY YOU FOOLISH PROGRAMMER AND I AM ANGRY.  
+
+In this case, the proper code might instead look like this:  
+
+char \*src $\mathbf { \Sigma } = \mathbf { \Sigma }$ "hello"; char $\star$ dst $\mathbf { \Sigma } = \mathbf { \Sigma }$ (char $\star$ ) malloc(strlen(src) + 1); strcpy(dst, src); // work properly  
+
+Alternately, you could use strdup() and make your life even easier. Read the strdup man page for more information.  
+
+# Not Allocating Enough Memory  
+
+A related error is not allocating enough memory, sometimes called a buffer overflow. In the example above, a common error is to make almost enough room for the destination buffer.  
+
+char \*src $\mathbf { \Sigma } = \mathbf { \Sigma }$ "hello";   
+char $\star$ dst $\mathbf { \Sigma } = \mathbf { \Sigma }$ (char $\star$ ) malloc(strlen(src)); // too small! strcpy(dst, src); // work properly  
+
+Oddly enough, depending on how malloc is implemented and many other details, this program will often run seemingly correctly. In some cases, when the string copy executes, it writes one byte too far past the end of the allocated space, but in some cases this is harmless, perhaps overwriting a variable that isn’t used anymore. In some cases, these overflows can be incredibly harmful, and in fact are the source of many security vulnerabilities in systems [W06]. In other cases, the malloc library allocated a little extra space anyhow, and thus your program actually doesn’t scribble on some other variable’s value and works quite fine. In even other cases, the program will indeed fault and crash. And thus we learn another valuable lesson: even though it ran correctly once, doesn’t mean it’s correct.  
+
+# Forgetting to Initialize Allocated Memory  
+
+With this error, you call malloc() properly, but forget to fill in some values into your newly-allocated data type. Don’t do this! If you do forget, your program will eventually encounter an uninitialized read, where it reads from the heap some data of unknown value. Who knows what might be in there? If you’re lucky, some value such that the program still works (e.g., zero). If you’re not lucky, something random and harmful.  
+
+# Forgetting To Free Memory  
+
+Another common error is known as a memory leak, and it occurs when you forget to free memory. In long-running applications or systems (such as the OS itself), this is a huge problem, as slowly leaking memory eventually leads one to run out of memory, at which point a restart is required. Thus, in general, when you are done with a chunk of memory, you should make sure to free it. Note that using a garbage-collected language doesn’t help here: if you still have a reference to some chunk of memory, no garbage collector will ever free it, and thus memory leaks remain a problem even in more modern languages.  
+
+In some cases, it may seem like not calling free() is reasonable. For example, your program is short-lived, and will soon exit; in this case, when the process dies, the OS will clean up all of its allocated pages and thus no memory leak will take place per se. While this certainly “works” (see the aside on page 7), it is probably a bad habit to develop, so be wary of choosing such a strategy. In the long run, one of your goals as a programmer is to develop good habits; one of those habits is understanding how you are managing memory, and (in languages like C), freeing the blocks you have allocated. Even if you can get away with not doing so, it is probably good to get in the habit of freeing each and every byte you explicitly allocate.  
+
+# Freeing Memory Before You Are Done With It  
+
+Sometimes a program will free memory before it is finished using it; such a mistake is called a dangling pointer, and it, as you can guess, is also a bad thing. The subsequent use can crash the program, or overwrite valid memory (e.g., you called free(), but then called malloc() again to allocate something else, which then recycles the errantly-freed memory).  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+# ASIDE: WHY NO MEMORY IS LEAKED ONCE YOUR PROCESS EXITS  
+
+When you write a short-lived program, you might allocate some space using malloc(). The program runs and is about to complete: is there need to call free() a bunch of times just before exiting? While it seems wrong not to, no memory will be “lost” in any real sense. The reason is simple: there are really two levels of memory management in the system. The first level of memory management is performed by the OS, which hands out memory to processes when they run, and takes it back when processes exit (or otherwise die). The second level of management is within each process, for example within the heap when you call malloc() and free(). Even if you fail to call free() (and thus leak memory in the heap), the operating system will reclaim all the memory of the process (including those pages for code, stack, and, as relevant here, heap) when the program is finished running. No matter what the state of your heap in your address space, the OS takes back all of those pages when the process dies, thus ensuring that no memory is lost despite the fact that you didn’t free it.  
+
+Thus, for short-lived programs, leaking memory often does not cause any operational problems (though it may be considered poor form). When you write a long-running server (such as a web server or database management system, which never exit), leaked memory is a much bigger issue, and will eventually lead to a crash when the application runs out of memory. And of course, leaking memory is an even larger issue inside one particular program: the operating system itself. Showing us once again: those who write the kernel code have the toughest job of all...  
+
+# Freeing Memory Repeatedly  
+
+Programs also sometimes free memory more than once; this is known as the double free. The result of doing so is undefined. As you can imagine, the memory-allocation library might get confused and do all sorts of weird things; crashes are a common outcome.  
+
+# Calling free() Incorrectly  
+
+One last problem we discuss is the call of free() incorrectly. After all, free() expects you only to pass to it one of the pointers you received from malloc() earlier. When you pass in some other value, bad things can (and do) happen. Thus, such invalid frees are dangerous and of course should also be avoided.  
+
+# Summary  
+
+As you can see, there are lots of ways to abuse memory. Because of frequent errors with memory, a whole ecosphere of tools have developed to help find such problems in your code. Check out both purify [HJ92] and valgrind [SN05]; both are excellent at helping you locate the source of your memory-related problems. Once you become accustomed to using these powerful tools, you will wonder how you survived without them.  
+

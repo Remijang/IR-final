@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "29.3 Concurrent Queues ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "As you know by now, there is always a standard method to make a concurrent data structure: add a big lock. For a queue, we’ll skip that approach, assuming you can figure it out. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Instead, we’ll take a look at a slightly more concurrent queue designed by Michael and Scott [MS98]. The data structures and code used for this queue are found in Figure 29.9 (page 11). ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "If you study this code carefully, you’ll notice that there are two locks, one for the head of the queue, and one for the tail. The goal of these two locks is to enable concurrency of enqueue and dequeue operations. In the common case, the enqueue routine will only access the tail lock, and dequeue only the head lock. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "One trick used by Michael and Scott is to add a dummy node (allocated in the queue initialization code); this dummy enables the separation of head and tail operations. Study the code, or better yet, type it in, run it, and measure it, to understand how it works deeply. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Queues are commonly used in multi-threaded applications. However, the type of queue used here (with just locks) often does not completely meet the needs of such programs. A more fully developed bounded queue, that enables a thread to wait if the queue is either empty or overly full, is the subject of our intense study in the next chapter on condition variables. Watch for it! ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "1 typedef struct node_t {   \n2 int value;   \n3 struct __node_t \\*next;   \n4 } node_t;   \n5   \n6 typedef struct __queue_t {   \n7 node_t \\*head;   \n8 node_t \\*tail;   \n9 pthread_mutex_t head_lock, tail_lock;   \n10 queue_t;   \n11   \n12 void Queue_Init(queue_t $\\star \\mathsf { q }$ ) {   \n13 node_t \\*tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ malloc(sizeof(node_t));   \n14 tmp->next $\\mathit { \\Theta } = \\mathrm { ~ N ~ }$ ULL;   \n15 q->head $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ q->tail $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ tmp;   \n16 pthread_mutex_init(&q->head_lock, NULL);   \n17 pthread_mutex_init(&q->tail_lock, NULL);   \n18 }   \n19   \n20 void Queue_Enqueue(queue_t $\\star \\mathsf { q }$ , int value) {   \n21 node_t \\*tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ malloc(sizeof(node_t));   \n22 assert(tmp ! $\\mathbf { \\Sigma } =$ NULL);   \n23 tmp->value $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ value;   \n24 tmp->next $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ NULL;   \n25   \n26 pthread_mutex_lock(&q->tail_lock);   \n27 q->tail->next $\\mathbf { \\Sigma } =$ tmp;   \n28 q->tail $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ tmp;   \n29 pthread_mutex_unlock(&q->tail_lock);   \n30 }   \n31   \n32 int Queue_Dequeue(queue_t \\*q, int \\*value) {   \n33 pthread_mutex_lock(&q->head_lock);   \n34 node_t \\*tmp $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ q->head;   \n35 node_t $\\star$ new_head $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ tmp->next;   \n36 if (new_head $\\scriptstyle = =$ NULL) {   \n37 pthread_mutex_unlock(&q->head_lock);   \n38 return -1; // queue was empty   \n39 }   \n40 \\*value $\\mathbf { \\tau } = \\mathbf { \\tau }$ new_head->value;   \n41 q->head $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ new_head;   \n42 pthread_mutex_unlock(&q->head_lock);   \n43 free(tmp);   \n44 return 0;   \n45 }   \n1 #define BUCKETS (101)   \n2   \n3 typedef struct __hash_t {   \n4 list_t lists[BUCKETS];   \n5 } hash_t;   \n6   \n7 void Hash_Init(hash_t $^ { \\star \\mathrm { H } }$ ) {   \n8 int i;   \n9 for ( $\\mathrm { ~ \\ : ~ i ~ } = \\mathrm { ~ 0 ~ }$ ; i $\\prec$ BUCKETS; $\\dot { \\bf \\underline { { 1 } } } + +$ )   \n10 List_Init(&H->lists[i]);   \n11 }   \n12   \n13 int Hash_Insert(hash_t $^ { \\star \\mathrm { H } }$ , int key) {   \n14 return List_Insert(&H- $>$ lists[key $\\frac { 0 } { 0 }$ BUCKETS], key);   \n15 }   \n16   \n17 int Hash_Lookup(hash_t $^ { \\star \\mathrm { H } }$ , int key) {   \n18 return List_Lookup(&H- $>$ lists[key % BUCKETS], key);   \n19 } ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 11
+    }
+]

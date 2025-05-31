@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "28.8 Evaluating Spin Locks ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Given our basic spin lock, we can now evaluate how effective it is along our previously described axes. The most important aspect of a lock is correctness: does it provide mutual exclusion? The answer here is yes: the spin lock only allows a single thread to enter the critical section at a time. Thus, we have a correct lock. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The next axis is fairness. How fair is a spin lock to a waiting thread? Can you guarantee that a waiting thread will ever enter the critical section? The answer here, unfortunately, is bad news: spin locks don’t provide any fairness guarantees. Indeed, a thread spinning may spin forever, under contention. Simple spin locks (as discussed thus far) are not fair and may lead to starvation. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The final axis is performance. What are the costs of using a spin lock? To analyze this more carefully, we suggest thinking about a few different cases. In the first, imagine threads competing for the lock on a single processor; in the second, consider threads spread out across many CPUs. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "For spin locks, in the single CPU case, performance overheads can be quite painful; imagine the case where the thread holding the lock is preempted within a critical section. The scheduler might then run every other thread (imagine there are $N - 1$ others), each of which tries to acquire the lock. In this case, each of those threads will spin for the duration of a time slice before giving up the CPU, a waste of CPU cycles. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "However, on multiple CPUs, spin locks work reasonably well (if the number of threads roughly equals the number of CPUs). The thinking ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "1 int CompareAndSwap(int \\*ptr, int expected, int new) {   \n2 int original $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ \\*ptr;   \n3 if (original $\\scriptstyle = =$ expected)   \n4 $\\star \\mathrm { p t } \\mathrm {  ~ r ~ } = \\mathrm {  ~ \\ n e w } ;$   \n5 return original;   \n6 } ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "goes as follows: imagine Thread A on CPU 1 and Thread B on CPU 2, both contending for a lock. If Thread A (CPU 1) grabs the lock, and then Thread B tries to, B will spin (on CPU 2). However, presumably the critical section is short, and thus soon the lock becomes available, and is acquired by Thread B. Spinning to wait for a lock held on another processor doesn’t waste many cycles in this case, and thus can be effective. ",
+        "page_idx": 9
+    }
+]

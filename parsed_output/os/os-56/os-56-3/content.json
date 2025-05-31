@@ -1,0 +1,100 @@
+[
+    {
+        "type": "text",
+        "text": "56.3 Public Key Cryptography ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "When we discussed using cryptography for authentication, you might have noticed a little problem. In order to verify the authenticity of a piece of encrypted information, you need to know the key used to encrypt it. If we only care about using cryptography for authentication, that’s inconvenient. It means that we need to communicate the key we’re using for that purpose to whoever might need to authenticate us. What if we’re Microsoft, and we want to authenticate ourselves to every user who has purchased our software? We can’t use just one key to do this, because we’d need to send that key to hundreds of millions of users and, once they had that key, they could pretend to be Microsoft by using it to encrypt information. Alternately, Microsoft could generate a different key for each of those hundreds of millions of users, but that would require secretly delivering a unique key to hundreds of millions of users, not to mention keeping track of all those keys. Bummer. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Fortunately, our good friends, the cryptographic wizards, came up with a solution. What if we use two different keys for cryptography, one to encrypt and one to decrypt? Our encryption operation becomes ",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC = E ( P , K _ { e n c r y p t } )\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "And our decryption operation becomes ",
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = D ( C , K _ { d e c r y p t } )\n$$",
+        "text_format": "latex",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Life has just become a lot easier for Microsoft. They can tell everyone their decryption key $K _ { d e c r y p t } ,$ , but keep their encryption key $K _ { e n c r y p t }$ secret. They can now authenticate their data by encrypting it with their secret key, while their hundreds of millions of users can check the authenticity using the key Microsoft made public. For example, Microsoft could encrypt an update to their operating system with $K _ { e n c r y p t }$ and send it out to all their users. Each user could decrypt it with $K _ { d e c r y p t }$ . If it decrypted into a properly formatted software update, the user could be sure it was created by Microsoft. Since no one else knows that private key, no one else could have created the update. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Sounds like magic, but it isn’t. It’s actually mathematics coming to our rescue, as it so frequently does. We won’t get into the details here, but you have to admit it’s pretty neat. This form of cryptography is called public key cryptography, since one of the two keys can be widely known to the entire public, while still achieving desirable results. The key everyone knows is called the public key, and the key that only the owner knows is called the private key. Public key cryptography (often abbreviated as PK) has a complicated invention history, which, while interesting, is not really germane to our discussion. Check out a paper by a pioneer in the field, Whitfield Diffie, for details [D88]. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Public key cryptography avoids one hard issue that faced earlier forms of cryptography: securely distributing a secret key. Here, the private key is created by one party and kept secret by him. It’s never distributed to anyone else. The public key must be distributed, but generally we don’t care if some third party learns this key, since they can’t use it to sign messages. Distributing a public key is an easier problem than distributing a secret key, though, alas, it’s harder than it sounds. We’ll get to that. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Public key cryptography is actually even neater, since it works the other way around. You can use the decryption key $K _ { d e c r y p t }$ to encrypt, in which case you need the encryption key $K _ { e n c r y p t }$ to decrypt. We still ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "expect the encryption key to be kept secret and the decryption key to be publicly known, so doing things in this order no longer allows authentication. Anyone could encrypt with $K _ { d e c r y p t } ,$ , after all. But only the owner of the key can decrypt such messages using $K _ { e n c r y p t }$ . So that allows anyone to send an encrypted message to someone who has a private key, provided you know their public key. Thus, PK allows authentication if you encrypt with the private key and secret communication if you encrypt with the public key. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "What if you want both, as you very well might? You’ll need two different key pairs to do that. Let’s say Alice wants to use PK to communicate secretly with her pal Bob, and also wants to be sure Bob can authenticate her messages. Let’s also say Alice and Bob each have their own PK pair. Each of them knows his or her own private key and the other party’s public key. If Alice encrypts her message with her own private key, she’ll authenticate the message, since Bob can use her public key to decrypt and will know that only Alice could have created that message. But everyone knows Alice’s public key, so there would be no secrecy achieved. However, if Alice takes the authenticated message and encrypts it a second time, this time with Bob’s public key, she will achieve secrecy as well. Only Bob knows the matching private key, so only Bob can read the message. Of course, Bob will need to decrypt twice, once with his private key and then a second time with Alice’s public key. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Sounds expensive. It’s actually worse than you think, since it turns out that public key cryptography has a shortcoming: it’s much more computationally expensive than traditional cryptography that relies on a single shared key. Public key cryptography can take hundreds of times longer to perform than standard symmetric cryptography. As a result, we really can’t afford to use public key cryptography for everything. We need to pick and choose our spots, using it to achieve the things it’s good at. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "There’s another important issue. We rather blithely said that Alice knows Bob’s public key and Bob knows Alice’s. How did we achieve this blissful state of affairs? Originally, only Alice knew her public key and only Bob knew his public key. We’re going to need to do something to get that knowledge out to the rest of the world if we want to benefit from the magic of public key cryptography. And we’d better be careful about it, since Bob is going to assume that messages encrypted with the public key he thinks belongs to Alice were actually created by Alice. What if some evil genius, called, perhaps, Eve, manages to convince Bob that Eve’s public key actually belongs to Alice? If that happens, messages created by Eve would be misidentified by Bob as originating from Alice, subverting our entire goal of authenticating the messages. We’d better make sure Eve can’t fool Bob about which public key belongs to Alice. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "This leads down a long and shadowy road to the arcane realm of key distribution infrastructures. You will be happier if you don’t try to travel that road yourself, since even the most well prepared pioneers who have hazarded it often come to grief. We’ll discuss how, in practice, we distribute public keys in a chapter on distributed system security. For the moment, bear in mind that the beautiful magic of public key cryptography rests on the grubby and uncertain foundation of key distribution. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "One more thing about PK cryptography: THE CRYPTOGRAPHY’S BENEFIT RELIES ENTIRELY ON THE SECRECY OF THE KEY. (Bet you’ve heard that before.) In this case, the private key. But the secrecy of that private key is every bit as important to the overall benefit of public key cryptography as the secrecy of the single shared key in the case of symmetric cryptography. Never divulge private keys. Never share private keys. Take great care in your use of private keys and in how you store them. If you lose a private key, everything you used it for is at risk, and whoever gets hold of it can pose as you and read your secret messages. That wouldn’t be very good, would it? ",
+        "page_idx": 7
+    }
+]

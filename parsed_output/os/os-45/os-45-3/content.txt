@@ -1,0 +1,38 @@
+45.3 Detecting Corruption: The Checksum
+Let’s now tackle the more challenging problem, that of silent failures via data corruption. How can we prevent users from getting bad data when corruption arises, and thus leads to disks returning bad data?  
+CRUX: HOW TO PRESERVE DATA INTEGRITY DESPITE CORRUPTION Given the silent nature of such failures, what can a storage system do to detect when corruption arises? What techniques are needed? How can one implement them efficiently?  
+Unlike latent sector errors, detection of corruption is a key problem. How can a client tell that a block has gone bad? Once it is known that a particular block is bad, recovery is the same as before: you need to have some other copy of the block around (and hopefully, one that is not corrupt!). Thus, we focus here on detection techniques.  
+The primary mechanism used by modern storage systems to preserve data integrity is called the checksum. A checksum is simply the result of a function that takes a chunk of data (say a 4KB block) as input and computes a function over said data, producing a small summary of the contents of the data (say 4 or 8 bytes). This summary is referred to as the checksum. The goal of such a computation is to enable a system to detect if data has somehow been corrupted or altered by storing the checksum with the data and then confirming upon later access that the data’s current checksum matches the original storage value.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+TIP: THERE’S NO FREE LUNCH
+There’s No Such Thing As A Free Lunch, or TNSTAAFL for short, is an old American idiom that implies that when you are seemingly getting something for free, in actuality you are likely paying some cost for it. It comes from the old days when diners would advertise a free lunch for customers, hoping to draw them in; only when you went in, did you realize that to acquire the “free” lunch, you had to purchase one or more alcoholic beverages. Of course, this may not actually be a problem, particularly if you are an aspiring alcoholic (or typical undergraduate student).  
+Common Checksum Functions
+A number of different functions are used to compute checksums, and vary in strength (i.e., how good they are at protecting data integrity) and speed (i.e., how quickly can they be computed). A trade-off that is common in systems arises here: usually, the more protection you get, the costlier it is. There is no such thing as a free lunch.  
+One simple checksum function that some use is based on exclusive or (XOR). With XOR-based checksums, the checksum is computed by XOR’ing each chunk of the data block being checksummed, thus producing a single value that represents the XOR of the entire block.  
+To make this more concrete, imagine we are computing a 4-byte checksum over a block of 16 bytes (this block is of course too small to really be a disk sector or block, but it will serve for the example). The 16 data bytes, in hex, look like this:  
+365e c4cd ba14 8a92 ecef 2c3a 40be f666  
+If we view them in binary, we get the following:  
+0011 0110 0101 1110 1100 0100 1100 1101 
+1011 1010 0001 0100 1000 1010 1001 0010 
+1110 1100 1110 1111 0010 1100 0011 1010 
+0100 0000 1011 1110 1111 0110 0110 0110  
+Because we’ve lined up the data in groups of 4 bytes per row, it is easy to see what the resulting checksum will be: perform an XOR over each column to get the final checksum value:  
+0010 0000 0001 1011 1001 0100 0000 0011  
+The result, in hex, is $0 { \times } 2 0 1 { \mathrm { b } } 9 4 0 3$ .  
+XOR is a reasonable checksum but has its limitations. If, for example, two bits in the same position within each checksummed unit change, the checksum will not detect the corruption. For this reason, people have investigated other checksum functions.  
+Another basic checksum function is addition. This approach has the advantage of being fast; computing it just requires performing $2 ^ { \prime } \mathrm { s }$ -complement addition over each chunk of the data, ignoring overflow. It can detect many changes in data, but is not good if the data, for example, is shifted.  
+A slightly more complex algorithm is known as the Fletcher checksum, named (as you might guess) for the inventor, John G. Fletcher [F82]. It is quite simple to compute and involves the computation of two check bytes, $s 1$ and $s 2$ . Specifically, assume a block $D$ consists of bytes d1 ... $d \bar { n } ; s 1$ is defined as follows: ${ \bf { \dot { s } } } _ { 1 } = ( s 1 + d _ { i } )$ mod 255 (computed over all $d _ { i }$ ); $s 2$ in turn is: $s 2 = ( s 2 + s 1 )$ mod 255 (again over all $d _ { i }$ ) [F04]. The Fletcher checksum is almost as strong as the CRC (see below), detecting all single-bit, double-bit errors, and many burst errors [F04].  
+One final commonly-used checksum is known as a cyclic redundancy check (CRC). Assume you wish to compute the checksum over a data block $D$ . All you do is treat $D$ as if it is a large binary number (it is just a string of bits after all) and divide it by an agreed upon value $( k )$ . The remainder of this division is the value of the CRC. As it turns out, one can implement this binary modulo operation rather efficiently, and hence the popularity of the CRC in networking as well. See elsewhere for more details [M13].  
+Whatever the method used, it should be obvious that there is no perfect checksum: it is possible two data blocks with non-identical contents will have identical checksums, something referred to as a collision. This fact should be intuitive: after all, computing a checksum is taking something large (e.g., 4KB) and producing a summary that is much smaller (e.g., 4 or 8 bytes). In choosing a good checksum function, we are thus trying to find one that minimizes the chance of collisions while remaining easy to compute.  
+Checksum Layout
+Now that you understand a bit about how to compute a checksum, let’s next analyze how to use checksums in a storage system. The first question we must address is the layout of the checksum, i.e., how should checksums be stored on disk?  
+The most basic approach simply stores a checksum with each disk sector (or block). Given a data block $D$ , let us call the checksum over that data $C ( D )$ . Thus, without checksums, the disk layout looks like this:  
+DOD1D2D3D4D5D6
+With checksums, the layout adds a single checksum for every block:  
+OPERATINGSYSTEMS[VERSION 1.10]  
+WWW.OSTEP.ORG  
+[oaloDOD1D2D3D4
+Because checksums are usually small (e.g., 8 bytes), and disks only can write in sector-sized chunks (512 bytes) or multiples thereof, one problem that arises is how to achieve the above layout. One solution employed by drive manufacturers is to format the drive with 520-byte sectors; an extra 8 bytes per sector can be used to store the checksum.  
+In disks that don’t have such functionality, the file system must figure out a way to store the checksums packed into 512-byte blocks. One such possibility is as follows:  
+DOD3DodloD1D2D4
+In this scheme, the $n$ checksums are stored together in a sector, followed by $\scriptstyle { n }$ data blocks, followed by another checksum sector for the next $\mid n \mid$ blocks, and so forth. This approach has the benefit of working on all disks, but can be less efficient; if the file system, for example, wants to overwrite block $D 1$ , it has to read in the checksum sector containing $C ( D 1 )$ , update $C ( D 1 )$ in it, and then write out the checksum sector and new data block $D 1$ (thus, one read and two writes). The earlier approach (of one checksum per sector) just performs a single write.  

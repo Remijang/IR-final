@@ -1,0 +1,21 @@
+# 8.3 Attempt #2: The Priority Boost  
+
+Let’s try to change the rules and see if we can avoid the problem of starvation. What could we do in order to guarantee that CPU-bound jobs will make some progress (even if it is not much?).  
+
+The simple idea here is to periodically boost the priority of all the jobs in the system. There are many ways to achieve this, but let’s just do something simple: throw them all in the topmost queue; hence, a new rule:  
+
+• Rule 5: After some time period $S$ , move all the jobs in the system to the topmost queue.  
+
+Our new rule solves two problems at once. First, processes are guaranteed not to starve: by sitting in the top queue, a job will share the CPU with other high-priority jobs in a round-robin fashion, and thus eventually receive service. Second, if a CPU-bound job has become interactive, the scheduler treats it properly once it has received the priority boost.  
+
+Let’s see an example. In this scenario, we just show the behavior of a long-running job when competing for the CPU with two short-running interactive jobs. Two graphs are shown in Figure 8.4 (page 7). On the left, there is no priority boost, and thus the long-running job gets starved once the two short jobs arrive; on the right, there is a priority boost every 100 ms (which is likely too small of a value, but used here for the example),  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+![](images/0e59c3c2a6e1825adc9ef883c6c0d3f0755702af1ba996ef3229d9bdbf78d995.jpg)  
+Figure 8.4: Without (Left) and With (Right) Priority Boost  
+
+and thus we at least guarantee that the long-running job will make some progress, getting boosted to the highest priority every $1 0 0 ~ \mathrm { { m s } }$ and thus getting to run periodically.  
+
+Of course, the addition of the time period $S$ leads to the obvious question: what should $S$ be set to? John Ousterhout, a well-regarded systems researcher [O11], used to call such values in systems voo-doo constants, because they seemed to require some form of black magic to set them correctly. Unfortunately, $S$ has that flavor. If it is set too high, long-running jobs could starve; too low, and interactive jobs may not get a proper share of the CPU. As such, it is often left to the system administrator to find the right value – or in the modern world, increasingly, to automatic methods based on machine learning $[ \mathrm { A } { + } 1 7 ]$ .  
+

@@ -1,0 +1,259 @@
+[
+    {
+        "type": "text",
+        "text": "23.1 VAX/VMS Virtual Memory ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The VAX-11 minicomputer architecture was introduced in the late 1970’s by Digital Equipment Corporation (DEC). DEC was a massive player in the computer industry during the era of the mini-computer; unfortunately, a series of bad decisions and the advent of the PC slowly (but surely) led to their demise [C03]. The architecture was realized in a number of implementations, including the VAX-11/780 and the less powerful VAX-11/750. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The OS for the system was known as VAX/VMS (or just plain VMS), one of whose primary architects was Dave Cutler, who later led the effort to develop Microsoft’s Windows NT [C93]. VMS had the general problem that it would be run on a broad range of machines, including very inexpensive VAXen (yes, that is the proper plural) to extremely high-end and powerful machines in the same architecture family. Thus, the OS had to have mechanisms and policies that worked (and worked well) across this huge range of systems. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "As an additional issue, VMS is an excellent example of software innovations used to hide some of the inherent flaws of the architecture. Although the OS often relies on the hardware to build efficient abstractions and illusions, sometimes the hardware designers don’t quite get everything right; in the VAX hardware, we’ll see a few examples of this, and what the VMS operating system does to build an effective, working system despite these hardware flaws. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Memory Management Hardware ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The VAX-11 provided a 32-bit virtual address space per process, divided into 512-byte pages. Thus, a virtual address consisted of a 23-bit VPN and a 9-bit offset. Further, the upper two bits of the VPN were used to differentiate which segment the page resided within; thus, the system was a hybrid of paging and segmentation, as we saw previously. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The lower-half of the address space was known as “process space” and is unique to each process. In the first half of process space (known as P0), the user program is found, as well as a heap which grows downward. In the second half of process space (P1), we find the stack, which grows upwards. The upper-half of the address space is known as system space (S), although only half of it is used. Protected OS code and data reside here, and the OS is in this way shared across processes. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "One major concern of the VMS designers was the incredibly small size of pages in the VAX hardware (512 bytes). This size, chosen for historical reasons, has the fundamental problem of making simple linear page tables excessively large. Thus, one of the first goals of the VMS designers was to ensure that VMS would not overwhelm memory with page tables. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The system reduced the pressure page tables place on memory in two ways. First, by segmenting the user address space into two, the VAX-11 provides a page table for each of these regions (P0 and P1) per process; ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: THE CURSE OF GENERALITY ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Operating systems often have a problem known as the curse of generality, where they are tasked with general support for a broad class of applications and systems. The fundamental result of the curse is that the OS is not likely to support any one installation very well. In the case of VMS, the curse was very real, as the VAX-11 architecture was realized in a number of different implementations. It is no less real today, where Linux is expected to run well on your phone, a TV set-top box, a laptop computer, desktop computer, and a high-end server running thousands of processes in a cloud-based datacenter. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "thus, no page-table space is needed for the unused portion of the address space between the stack and the heap. The base and bounds registers are used as you would expect; a base register holds the address of the page table for that segment, and the bounds holds its size (i.e., number of page-table entries). ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Second, the OS reduces memory pressure even further by placing user page tables (for P0 and P1, thus two per process) in kernel virtual memory. Thus, when allocating or growing a page table, the kernel allocates space out of its own virtual memory, in segment S. If memory comes under severe pressure, the kernel can swap pages of these page tables out to disk, thus making physical memory available for other uses. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Putting page tables in kernel virtual memory means that address translation is even further complicated. For example, to translate a virtual address in $\\mathtt { P 0 }$ or P1, the hardware has to first try to look up the page-table entry for that page in its page table (the $\\mathtt { P 0 }$ or P1 page table for that process); in doing so, however, the hardware may first have to consult the system page table (which lives in physical memory); with that translation complete, the hardware can learn the address of the page of the page table, and then finally learn the address of the desired memory access. All of this, fortunately, is made faster by the VAX’s hardware-managed TLBs, which usually (hopefully) circumvent this laborious lookup. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "A Real Address Space ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "One neat aspect of studying VMS is that we can see how a real address space is constructed (Figure 23.1). Thus far, we have assumed a simple address space of just user code, user data, and user heap, but as we can see above, a real address space is notably more complex. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For example, the code segment never begins at page 0. This page, instead, is marked inaccessible, in order to provide some support for detecting null-pointer accesses. Thus, one concern when designing an address space is support for debugging, which the inaccessible zero page provides here in some form. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Perhaps more importantly, the kernel virtual address space (i.e., its data structures and code) is a part of each user address space. On a context switch, the OS changes the P0 and P1 registers to point to the appropriate page tables of the soon-to-be-run process; however, it does not change the S base and bound registers, and as a result the “same” kernel structures are mapped into each user address space. ",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/6deb7c237713aba8bde8e51d6aef0a560cc11761ec0f674d1a965e0a4a65f275.jpg",
+        "img_caption": [
+            "Figure 23.1: The VAX/VMS Address Space "
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The kernel is mapped into each address space for a number of reasons. This construction makes life easier for the kernel; when, for example, the OS is handed a pointer from a user program (e.g., on a write() system ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: WHY NULL POINTER ACCESSES CAUSE SEG FAULTS You should now have a good understanding of exactly what happens on a null-pointer dereference. A process generates a virtual address of 0, by doing something like this: ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "int $\\star \\tt { p } ^ { \\mathrm { ~ \\tiny ~ = ~ \\tt ~ \\mathrm { N U L L } } }$ ; // set $\\mathrm { ~ \\tt ~ p ~ } = \\mathrm { ~ \\tt ~ 0 ~ }$ $\\star \\mathrm { p } \\ = \\ 1 0$ ; // try to store 10 to virtual addr 0 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The hardware tries to look up the VPN (also 0 here) in the TLB, and suffers a TLB miss. The page table is consulted, and the entry for VPN 0 is found to be marked invalid. Thus, we have an invalid access, which transfers control to the OS, which likely terminates the process (on UNIX systems, processes are sent a signal which allows them to react to such a fault; if uncaught, however, the process is killed). ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "call), it is easy to copy data from that pointer to its own structures. The OS is naturally written and compiled, without worry of where the data it is accessing comes from. If in contrast the kernel were located entirely in physical memory, it would be quite hard to do things like swap pages of the page table to disk; if the kernel were given its own address space, moving data between user applications and the kernel would again be complicated and painful. With this construction (now used widely), the kernel appears almost as a library to applications, albeit a protected one. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "One last point about this address space relates to protection. Clearly, the OS does not want user applications reading or writing OS data or code. Thus, the hardware must support different protection levels for pages to enable this. The VAX did so by specifying, in protection bits in the page table, what privilege level the CPU must be at in order to access a particular page. Thus, system data and code are set to a higher level of protection than user data and code; an attempted access to such information from user code will generate a trap into the ${ \\mathrm { O S } } ,$ and (you guessed it) the likely termination of the offending process. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Page Replacement ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The page table entry (PTE) in VAX contains the following bits: a valid bit, a protection field (4 bits), a modify (or dirty) bit, a field reserved for OS use (5 bits), and finally a physical frame number (PFN) to store the location of the page in physical memory. The astute reader might note: no reference bit! Thus, the VMS replacement algorithm must make do without hardware support for determining which pages are active. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The developers were also concerned about memory hogs, programs that use a lot of memory and make it hard for other programs to run. Most of the policies we have looked at thus far are susceptible to such hogging; for example, LRU is a global policy that doesn’t share memory fairly among processes. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: EMULATING REFERENCE BITS ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "As it turns out, you don’t need a hardware reference bit in order to get some notion of which pages are in use in a system. In fact, in the early $1 9 8 0 ^ { \\prime } \\mathrm { s } ,$ Babaoglu and Joy showed that protection bits on the VAX can be used to emulate reference bits [BJ81]. The basic idea: if you want to gain some understanding of which pages are actively being used in a system, mark all of the pages in the page table as inaccessible (but keep around the information as to which pages are really accessible by the process, perhaps in the “reserved OS field” portion of the page table entry). When a process accesses a page, it will generate a trap into the OS; the OS will then check if the page really should be accessible, and if so, revert the page to its normal protections (e.g., read-only, or read-write). At the time of a replacement, the OS can check which pages remain marked inaccessible, and thus get an idea of which pages have not been recently used. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The key to this “emulation” of reference bits is reducing overhead while still obtaining a good idea of page usage. The OS must not be too aggressive in marking pages inaccessible, or overhead would be too high. The OS also must not be too passive in such marking, or all pages will end up referenced; the OS will again have no good idea which page to evict. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "To address these two problems, the developers came up with the segmented FIFO replacement policy [RL81]. The idea is simple: each process has a maximum number of pages it can keep in memory, known as its resident set size (RSS). Each of these pages is kept on a FIFO list; when a process exceeds its RSS, the “first-in” page is evicted. FIFO clearly does not need any support from the hardware, and is thus easy to implement. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Of course, pure FIFO does not perform particularly well, as we saw earlier. To improve FIFO’s performance, VMS introduced two secondchance lists where pages are placed before getting evicted from memory, specifically a global clean-page free list and dirty-page list. When a process $\\bar { P }$ exceeds its RSS, a page is removed from its per-process FIFO; if clean (not modified), it is placed on the end of the clean-page list; if dirty (modified), it is placed on the end of the dirty-page list. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "If another process $Q$ needs a free page, it takes the first free page off of the global clean list. However, if the original process $P$ faults on that page before it is reclaimed, $P$ reclaims it from the free (or dirty) list, thus avoiding a costly disk access. The bigger these global second-chance lists are, the closer the segmented FIFO algorithm performs to LRU [RL81]. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Another optimization used in VMS also helps overcome the small page size in VMS. Specifically, with such small pages, disk I/O during swapping could be highly inefficient, as disks do better with large transfers. To make swapping $\\dot { \\mathrm { I } } / \\mathrm { O }$ more efficient, VMS adds a number of optimizations, but most important is clustering. With clustering, VMS groups large batches of pages together from the global dirty list, and writes them ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "to disk in one fell swoop (thus making them clean). Clustering is used in most modern systems, as the freedom to place pages anywhere within swap space lets the OS group pages, perform fewer and bigger writes, and thus improve performance. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Other Neat Tricks ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "VMS had two other now-standard tricks: demand zeroing and copy-onwrite. We now describe these lazy optimizations. One form of laziness in VMS (and most modern systems) is demand zeroing of pages. To understand this better, let’s consider the example of adding a page to your address space, say in your heap. In a naive implementation, the OS responds to a request to add a page to your heap by finding a page in physical memory, zeroing it (required for security; otherwise you’d be able to see what was on the page from when some other process used it!), and then mapping it into your address space (i.e., setting up the page table to refer to that physical page as desired). But the naive implementation can be costly, particularly if the page does not get used by the process. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "With demand zeroing, the OS instead does very little work when the page is added to your address space; it puts an entry in the page table that marks the page inaccessible. If the process then reads or writes the page, a trap into the OS takes place. When handling the trap, the OS notices (usually through some bits marked in the “reserved for ${ \\bar { \\mathrm { O S ^ { \\prime \\prime } } } }$ portion of the page table entry) that this is actually a demand-zero page; at this point, the OS does the needed work of finding a physical page, zeroing it, and mapping it into the process’s address space. If the process never accesses the page, all such work is avoided, and thus the virtue of demand zeroing. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Another cool optimization found in VMS (and again, in virtually every modern OS) is copy-on-write (COW for short). The idea, which goes at least back to the TENEX operating system $\\left[ { \\mathrm { B B } } { + } 7 2 \\right]$ , is simple: when the OS needs to copy a page from one address space to another, instead of copying it, it can map it into the target address space and mark it readonly in both address spaces. If both address spaces only read the page, no further action is taken, and thus the OS has realized a fast copy without actually moving any data. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "If, however, one of the address spaces does indeed try to write to the page, it will trap into the OS. The OS will then notice that the page is a COW page, and thus (lazily) allocate a new page, fill it with the data, and map this new page into the address space of the faulting process. The process then continues and now has its own private copy of the page. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "COW is useful for a number of reasons. Certainly any sort of shared library can be mapped copy-on-write into the address spaces of many processes, saving valuable memory space. In UNIX systems, COW is even more critical, due to the semantics of fork() and exec(). As you might recall, fork() creates an exact copy of the address space of the caller; with a large address space, making such a copy is slow and data intensive. Even worse, most of the address space is immediately ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "TIP: BE LAZY ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Being lazy can be a virtue in both life as well as in operating systems. Laziness can put off work until later, which is beneficial within an OS for a number of reasons. First, putting off work might reduce the latency of the current operation, thus improving responsiveness; for example, operating systems often report that writes to a file succeeded immediately, and only write them to disk later in the background. Second, and more importantly, laziness sometimes obviates the need to do the work at all; for example, delaying a write until the file is deleted removes the need to do the write at all. Laziness is also good in life: for example, by putting off your OS project, you may find that the project specification bugs are worked out by your fellow classmates; however, the class project is unlikely to get canceled, so being too lazy may be problematic, leading to a late project, bad grade, and a sad professor. Don’t make professors sad! ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "over-written by a subsequent call to exec(), which overlays the calling process’s address space with that of the soon-to-be-exec’d program. By instead performing a copy-on-write fork(), the OS avoids much of the needless copying and thus retains the correct semantics while improving performance. ",
+        "page_idx": 7
+    }
+]

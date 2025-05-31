@@ -1,0 +1,53 @@
+[
+    {
+        "type": "text",
+        "text": "56.6 Cryptography And Operating Systems ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Cryptography is fascinating, but lots of things are fascinating5, while having no bearing on operating systems. Why did we bother spending half a chapter on cryptography? Because we can use it to protect operating systems. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "But not just anywhere and for all purposes. We’ve pounded into your head that key secrecy is vital for effective use of cryptography. That should make it clear that any time the key can’t be kept secret, you can’t effectively use cryptography. Casting your mind back to the first chapter on security, remember that the operating system has control of and access to all resources on a computer. Which implies that if you have encrypted information on the computer, and you have the necessary key to decrypt it on the same computer, the operating system on that machine can decrypt the data, whether that was the effect you wanted or not6. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Either you trust your operating system or you don’t. If you don’t, life is going to be unpleasant anyway, but one implication is that the untrusted operating system, having access at one time to your secret key, can copy it and re-use it whenever it wants to. If, on the other hand, you trust your operating system, you don’t need to hide your data from it, so cryptography isn’t necessary in this case. This observation has relevance to any situation in which you provide your data to something you don’t trust. For instance, if you don’t trust your cloud computing facility with your data, you won’t improve the situation by giving them your data in plaintext and asking them to encrypt it. They’ve seen the plaintext and can keep a copy of the key. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "If you’re sure your operating system is trustworthy right now, but are concerned it might not be later, you can encrypt something now and make sure the key is not stored on the machine. Of course, if you’re wrong about the current security of the operating system, or if you ever decrypt the data on the machine after the OS goes rogue, your cryptography will not protect you, since that ever-so-vital secrecy of the key will be compromised. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "One can argue that not all compromises of an operating system are permanent. Many are, but some only give an attacker temporary access to system resources, or perhaps access to only a few particular resources. In such cases, if the encrypted data is not stored in plaintext and the decryption key is not available at the time or in the place the attacker can access, encrypting that data may still provide benefit. The tricky issue here is that you can’t know ahead of time whether successful attacks on your system will only occur at particular times, for particular durations, or on particular elements of the system. So if you take this approach, you want to minimize all your exposure: decrypt infrequently, dispose of plaintext data quickly and carefully, and don’t keep a plaintext version of the key in the system except when performing the cryptographic operations. Such minimization can be difficult to achieve. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "If cryptography won’t protect us completely against a dishonest operating system, what OS uses for cryptography are there? We saw a specialized example in the chapter on authentication. Some cryptographic operations are one-way: they can encrypt, but never decrypt. We can use these to securely store passwords in encrypted form, even if the OS is compromised, since the encrypted passwords can’t be decrypted7. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "What else? In a distributed environment, if we encrypt data on one machine and then send it across the network, all the intermediate components won’t be part of our machine, and thus won’t have access to the key. The data will be protected in transit. Of course, our partner on the ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "final destination machine will need the key if he or she is to use the data.   \nAs we promised before, we’ll get to that issue in another chapter. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Anything else? Well, what if someone can get access to some of our hardware without going through our operating system? If the data stored on that hardware is encrypted, and the key isn’t on that hardware itself, the cryptography will protect the data. This form of encryption is sometimes called at-rest data encryption, to distinguish it from encrypting data we’re sending between machines. It’s useful and important, so let’s examine it in more detail. ",
+        "page_idx": 13
+    }
+]

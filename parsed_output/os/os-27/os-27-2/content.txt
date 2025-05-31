@@ -1,0 +1,69 @@
+27.2 Thread Completion
+The example above shows how to create a thread. However, what happens if you want to wait for a thread to complete? You need to do something special in order to wait for completion; in particular, you must call the routine pthread join().  
+int pthread_join(pthread_t thread, void **value_ptr);  
+OPERATINGSYSTEMS[VERSION 1.10]  
+WWW.OSTEP.ORG  
+1 #include  
+2 #include  
+3 
+4 typedef struct { 
+5 int a; 
+6 int b; 
+7 } myarg_t; 
+8 
+9 void *mythread(void *arg) { 
+10 myarg_t *args $\mathbf { \Sigma } = \mathbf { \Sigma }$ (myarg_t $\star$ ) arg; 
+11 printf("%d %d\n", args->a, args->b); 
+12 return NULL; 
+13 } 
+14 
+15 int main(int argc, char *argv[]) { 
+16 pthread_t p; 
+17 myarg_t args $\mathbf { \Sigma } = \mathbf { \Sigma }$ { 10, 20 }; 
+18 
+19 int rc $\mathbf { \tau } = \mathbf { \tau }$ pthread_create(&p, NULL, mythread, &args); 
+20 
+}  
+This routine takes two arguments. The first is of type pthread t, and is used to specify which thread to wait for. This variable is initialized by the thread creation routine (when you pass a pointer to it as an argument to pthread create()); if you keep it around, you can use it to wait for that thread to terminate.  
+The second argument is a pointer to the return value you expect to get back. Because the routine can return anything, it is defined to return a pointer to void; because the pthread join() routine changes the value of the passed in argument, you need to pass in a pointer to that value, not just the value itself.  
+Let’s look at another example (Figure 27.2, page 4). In the code, a single thread is again created, and passed a couple of arguments via the myarg t structure. To return values, the myret t type is used. Once the thread is finished running, the main thread, which has been waiting inside of the pthread join() routine1, then returns, and we can access the values returned from the thread, namely whatever is in myret t.  
+A few things to note about this example. First, often times we don’t have to do all of this painful packing and unpacking of arguments. For example, if we just create a thread with no arguments, we can pass NULL in as an argument when the thread is created. Similarly, we can pass NULL into pthread join() if we don’t care about the return value.  
+1 typedef struct { int a; int b; } myarg_t; 
+2 typedef struct { int x; int y; } myret_t; 
+3 
+4 void *mythread(void *arg) { 
+5 myret_t *rvals $\mathbf { \Sigma } = \mathbf { \Sigma }$ Malloc(sizeof(myret_t)); 
+6 rvals->x $\mathit { \Theta } = \mathit { \Theta } 1$ ; 
+7 rvals->y = 2; 
+8 return (void $\star$ ) rvals; 
+9 } 
+10 
+11 int main(int argc, char *argv[]) { 
+12 pthread_t p; 
+13 myret_t *rvals; 
+14 myarg_t args $\mathbf { \Sigma } = \mathbf { \Sigma }$ { 10, 20 }; 
+15 Pthread_create(&p, NULL, mythread, &args); 
+16 Pthread_join(p, (void $\star \star$ ) &rvals); 
+17 printf("returned %d %d\n", rvals->x, rvals->y); 
+18 free(rvals); 
+19 return 0; 
+20 }  
+Second, if we are just passing in a single value (e.g., a long long int), we don’t have to package it up as an argument. Figure 27.3 (page 5) shows an example. In this case, life is a bit simpler, as we don’t have to package arguments and return values inside of structures.  
+Third, we should note that one has to be extremely careful with how values are returned from a thread. Specifically, never return a pointer which refers to something allocated on the thread’s call stack. If you do, what do you think will happen? (think about it!) Here is an example of a dangerous piece of code, modified from the example in Figure 27.2.  
+1 void *mythread(void *arg) { 
+2 myarg_t *args $\mathbf { \Sigma } = \mathbf { \Sigma }$ (myarg_t $\star$ ) arg; 
+3 printf("%d %d\n", args->a, args->b); 
+4 myret_t oops; // ALLOCATED ON STACK: BAD! 
+5 oops.x $\mathit { \Theta } = \mathit { \Theta } 1$ ; 
+6 $\mathrm { \texttt { o o p s . y } = \ 2 } ;$ ; 
+7 return (void $\star$ ) &oops 
+8 }  
+In this case, the variable oops is allocated on the stack of mythread. However, when it returns, the value is automatically deallocated (that’s why the stack is so easy to use, after all!), and thus, passing back a pointer to a now deallocated variable will lead to all sorts of bad results. Cer  
+OPERATINGSYSTEMS[VERSION 1.10]  
+void *mythread(void *arg) { long long int value $\mathbf { \Sigma } = \mathbf { \Sigma }$ (long long int) arg; printf("%lld\n", value); return (void $\star$ ) (value + 1); 
+} 
+int main(int argc, char *argv[]) { pthread_t p; long long int rvalue; Pthread_create(&p, NULL, mythread, (void $\star$ ) 100); Pthread_join(p, (void $\star \star$ ) &rvalue); printf("returned %lld\n", rvalue); return 0; 
+}  
+tainly, when you print out the values you think you returned, you’ll probably (but not necessarily!) be surprised. Try it and find out for yourself2!  
+Finally, you might notice that the use of pthread create() to create a thread, followed by an immediate call to pthread join(), is a pretty strange way to create a thread. In fact, there is an easier way to accomplish this exact task; it’s called a procedure call. Clearly, we’ll usually be creating more than just one thread and waiting for it to complete, otherwise there is not much purpose to using threads at all.  
+We should note that not all code that is multi-threaded uses the join routine. For example, a multi-threaded web server might create a number of worker threads, and then use the main thread to accept requests and pass them to the workers, indefinitely. Such long-lived programs thus may not need to join. However, a parallel program that creates threads to execute a particular task (in parallel) will likely use join to make sure all such work completes before exiting or moving onto the next stage of computation.  

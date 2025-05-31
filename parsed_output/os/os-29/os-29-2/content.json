@@ -1,0 +1,85 @@
+[
+    {
+        "type": "text",
+        "text": "29.2 Concurrent Linked Lists ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "We next examine a more complicated structure, the linked list. Let’s start with a basic approach once again. For simplicity, we’ll omit some of the obvious routines that such a list would have and just focus on concurrent insert and lookup; we’ll leave it to the reader to think about delete, etc. Figure 29.7 shows the code for this rudimentary data structure. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "As you can see in the code, the code simply acquires a lock in the insert routine upon entry, and releases it upon exit. One small tricky issue arises if malloc() happens to fail (a rare case); in this case, the code must also release the lock before failing the insert. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "This kind of exceptional control flow has been shown to be quite error prone; a recent study of Linux kernel patches found that a huge fraction of bugs (nearly $4 0 \\%$ ) are found on such rarely-taken code paths (indeed, this observation sparked some of our own research, in which we removed all memory-failing paths from a Linux file system, resulting in a more robust system $\\mathsf { \\bar { \\Pi } } [ { \\mathsf { S } } { + } 1 1 ]$ ). ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Thus, a challenge: can we rewrite the insert and lookup routines to remain correct under concurrent insert but avoid the case where the failure path also requires us to add the call to unlock? ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The answer, in this case, is yes. Specifically, we can rearrange the code a bit so that the lock and release only surround the actual critical section in the insert code, and that a common exit path is used in the lookup code. The former works because part of the insert actually need not be locked; assuming that malloc() itself is thread-safe, each thread can call into it without worry of race conditions or other concurrency bugs. Only when updating the shared list does a lock need to be held. See Figure 29.8 for the details of these modifications. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "As for the lookup routine, it is a simple code transformation to jump out of the main search loop to a single return path. Doing so again reduces the number of lock acquire/release points in the code, and thus decreases the chances of accidentally introducing bugs (such as forgetting to unlock before returning) into the code. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "1 // basic node structure   \n2 typedef struct __node_t {   \n3 int key;   \n4 struct __node_t \\*next;   \n5 } node_t;   \n6   \n7 // basic list structure (one used per list)   \n8 typedef struct __list_t {   \n9 node_t \\*head;   \n10 pthread_mutex_t lock;   \n11 } list_t;   \n12   \n13 void List_Init(list_t $\\star \\ I$ ) {   \n14 L->head $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ NULL;   \n15 pthread_mutex_init(&L->lock, NULL);   \n16 }   \n17   \n18 int List_Insert(list_t \\*L, int key) {   \n19 pthread_mutex_lock(&L->lock);   \n20 node_t \\*new $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ malloc(sizeof(node_t));   \n21 if (new $\\scriptstyle = =$ NULL) {   \n22 perror(\"malloc\");   \n23 pthread_mutex_unlock(&L->lock);   \n24 return -1; // fail   \n25 }   \n26 new->key $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ key;   \n27 new->next $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ L->head;   \n28 L->head $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ new;   \n29 pthread_mutex_unlock(&L->lock);   \n30 return 0; // success   \n31 }   \n32   \n33 int List_Lookup(list_t $^ { \\star \\ I }$ , int key) {   \n34 pthread_mutex_lock(&L->lock);   \n35 node_t \\*curr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ L->head;   \n36 while (curr) {   \n37 if (curr->key $\\scriptstyle = =$ key) {   \n38 pthread_mutex_unlock(&L->lock);   \n39 return 0; // success   \n40 }   \n41 curr $\\mathbf { \\tau } = \\mathbf { \\tau }$ curr->next;   \n42 }   \n43 pthread_mutex_unlock(&L->lock);   \n44 return -1; // failure   \n45 } ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "1 void List_Init(list_t $^ { \\star \\ I }$ ) {   \n2 L->head $\\mathbf { \\Sigma } =$ NULL;   \n3 pthread_mutex_init(&L->lock, NULL);   \n4 }   \n5   \n6 int List_Insert(list_t $^ { \\star \\ I }$ , int key) {   \n7 // synchronization not needed   \n8 node_t \\*new $\\mathbf { \\Sigma } =$ malloc(sizeof(node_t));   \n9 if (new $\\scriptstyle = =$ NULL) {   \n10 perror(\"malloc\");   \n11 return $^ { - 1 }$ ;   \n12 }   \n13 new->key = key;   \n14 // just lock critical section   \n15 pthread_mutex_lock(&L->lock);   \n16 new->next $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ L->head;   \n17 L->head $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ new;   \n18 pthread_mutex_unlock(&L->lock);   \n19 return 0; // success   \n20 }   \n21   \n22 int List_Lookup(list_t $^ { \\star \\ I }$ , int key) {   \n23 int rv $\\mathbf { \\Sigma } = \\mathbf { \\Sigma } - 1$ ;   \n24 pthread_mutex_lock(&L->lock);   \n25 node_t \\*curr $\\begin{array} { r l } { = } & { { } \\ I _ { \\Sigma } - > } \\end{array}$ head;   \n26 while (curr) {   \n27 if (c $1 \\Upsilon \\Upsilon ^ { - } \\Upsilon \\mathrm { k e y \\ \\stackrel { \\ } { = } - \\ } \\mathrm { k e y } )$ {   \n28 $\\mathtt { r v } \\ = \\ 0$ ;   \n29 break;   \n30 }   \n31 curr $\\mathbf { \\Sigma } =$ curr->next;   \n32 }   \n33 pthread_mutex_unlock(&L->lock);   \n34 return rv; // now both success and failure   \n35 } ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Scaling Linked Lists ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Though we again have a basic concurrent linked list, once again we are in a situation where it does not scale particularly well. One technique that researchers have explored to enable more concurrency within a list is something called hand-over-hand locking (a.k.a. lock coupling) [MS04]. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The idea is pretty simple. Instead of having a single lock for the entire list, you instead add a lock per node of the list. When traversing the list, the code first grabs the next node’s lock and then releases the current node’s lock (which inspires the name hand-over-hand). ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "TIP: BE WARY OF LOCKS AND CONTROL FLOW A general design tip, which is useful in concurrent code as well as elsewhere, is to be wary of control flow changes that lead to function returns, exits, or other similar error conditions that halt the execution of a function. Because many functions will begin by acquiring a lock, allocating some memory, or doing other similar stateful operations, when errors arise, the code has to undo all of the state before returning, which is errorprone. Thus, it is best to structure code to minimize this pattern. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Conceptually, a hand-over-hand linked list makes some sense; it enables a high degree of concurrency in list operations. However, in practice, it is hard to make such a structure faster than the simple single lock approach, as the overheads of acquiring and releasing locks for each node of a list traversal is prohibitive. Even with very large lists, and a large number of threads, the concurrency enabled by allowing multiple ongoing traversals is unlikely to be faster than simply grabbing a single lock, performing an operation, and releasing it. Perhaps some kind of hybrid (where you grab a new lock every so many nodes) would be worth investigating. ",
+        "page_idx": 9
+    }
+]

@@ -1,0 +1,22 @@
+# 53.4 Designing Secure Systems  
+
+Few of you will ever build your own operating system, nor even make serious changes to any existing operating system, but we expect many of you will build large software systems of some kind. Experience of many computer scientists with system design has shown that there are certain design principles that are helpful in building systems with security requirements. These principles were originally laid out by Jerome Saltzer and Michael Schroeder in an influential paper [SS75], though some of them come from earlier observations by others. While neither the original authors nor later commentators would claim that following them will guarantee that your system is secure, paying attention to them has proven to lead to more secure systems, while you ignore them at your own peril. We’ll discuss them briefly here. If you are actually building a large software system, it would be worth your while to look up this paper (or more detailed commentaries on it) and study the concepts carefully.  
+
+1. Economy of mechanism – This basically means keep your system as small and simple as possible. Simple systems have fewer bugs and it’s easier to understand their behavior. If you don’t understand your system’s behavior, you’re not likely to know if it achieves its security goals.  
+
+2. Fail-safe defaults – Default to security, not insecurity. If policies can be set to determine the behavior of a system, have the default for those policies be more secure, not less.  
+
+3. Complete mediation – This is a security term meaning that you should check if an action to be performed meets security policies every single time the action is taken3.  
+
+4. Open design – Assume your adversary knows every detail of your design. If the system can achieve its security goals anyway, you’re in good shape. This principle does not necessarily mean that you actually tell everyone all the details, but base your security on the assumption that the attacker has learned everything. He often has, in practice.  
+
+5. Separation of privilege – Require separate parties or credentials to perform critical actions. For example, two-factor authentication, where you use both a password and possession of a piece of hardware to determine identity, is more secure than using either one of those methods alone.  
+
+6. Least privilege – Give a user or a process the minimum privileges required to perform the actions you wish to allow. The more privileges you give to a party, the greater the danger that they will abuse those privileges. Even if you are confident that the party is not malicious, if they make a mistake, an adversary can leverage their error to use their superfluous privileges in harmful ways.  
+
+7. Least common mechanism – For different users or processes, use separate data structures or mechanisms to handle them. For example, each process gets its own page table in a virtual memory system, ensuring that one process cannot access another’s pages.  
+
+8. Acceptability – A critical property not dear to the hearts of many programmers. If your users won’t use it, your system is worthless. Far too many promising secure systems have been abandoned because they asked too much of their users.  
+
+These are not the only useful pieces of advice on designing secure systems out there. There is also lots of good material on taking the next step, converting a good design into code that achieves the security you intended, and other material on how to evaluate whether the system you have built does indeed meet those goals. These issues are beyond the scope of this course, but are extremely important when the time comes for you to build large, complex systems. For discussion of approaches to secure programming, you might start with Seacord [SE13], if you are working in C. If you are working in another language, you should seek out a similar text specific to that language, since many secure coding problem are related to details of the language. For a comprehensive treatment on how to evaluate if your system is secure, start with Dowd et al.’s work $\scriptstyle { [ \mathrm { D + 0 7 } ] }$ .  
+

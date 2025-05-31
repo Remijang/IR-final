@@ -1,0 +1,1538 @@
+[
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "1. Run process-run.py with the following flags:  What should the CPU utilization be (e.g., the percent of time the CPU is in use?) Why do you know this? Use the  and  flags to see if you were right.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "2. Now run with these flags: ./process-run.py  . These flags specify one process with 4 instructions (all to use the CPU), and one that simply issues an I/O and waits for it to be done. How long does it take to complete both processes? Use  and  to find out if you were right.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "3. Switch the order of the processes:  . What happens now? Does switching the order matter? Why? (As always, use  and  to see if you were right)",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "4. We\u2019ll now explore some of the other flags. One important flag is  which determines how the system reacts when a process issues an I/O. With the flag set to SWITCH ON END, the system will NOT switch to another process while one is doing  instead waiting until the process is completely finished. What happens when you run the following two processes   SWITCH ON END), one doing  and the other doing CPU work?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "5. Now, run the same processes, but with the switching behavior set to switch to another process whenever one is WAITING for I/O (   SWITCH ON IO). What happens now? Use  and  to confirm that you are right.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "6. One other important behavior is what to do when an I/O completes. With -I IO RUN LATER, when an I/O completes, the process that issued it is not necessarily run right away; rather, whatever was running at the time keeps running. What happens when you run this combination of processes? (./process-run.py  3:0,5:100,5:100,5:100 -S SWITCH ON IO -c -p -I IO RUN LATER) Are system resources being effectively utilized?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "7. Now run the same processes, but with -I IO RUN IMMEDIATE set, which immediately runs the process that issued the I/O. How does this behavior differ? Why might running a process that just completed an I/O again be a good idea?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "4",
+        "subchapter": "",
+        "problem": "8. Now run with some randomly generated processes using flags   or  or  , 3:50. See if you can predict how the trace will turn out. What happens when you use the flag -I IO RUN IMMEDIATE versus that flag -I IO RUN LATER? What happens when you use the flag  SWITCH ON IO versus -S SWITCH ON END? ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "1. Run ./fork.py  and see which actions are taken. Can you predict what the process tree looks like at each step? Use the  flag to check your answers. Try some different random seeds  or add more actions  to get the hang of it.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "2. One control the simulator gives you is the fork percentage, controlled by the  flag. The higher it is, the more likely the next action is a fork; the lower it is, the more likely the action is an exit. Run the simulator with a large number of actions (e.g.,  100) and vary the fork percentage from 0.1 to 0.9. What do you think the resulting final process trees will look like as the percentage changes? Check your answer with  .",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "3. Now, switch the output by using the  flag (e.g., run ./fork.py -t). Given a set of process trees, can you tell which actions were taken?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "4. One interesting thing to note is what happens when a child exits; what happens to its children in the process tree? To study this, let\u2019s create a specific example: ./fork.py  This example has process  create  , which in turn creates  , which then creates  and  . However, then,  exits. What do you think the process tree should like after the exit? What if you use the  flag? Learn more about what happens to orphaned processes on your own to add more context.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "5. One last flag to explore is the  flag, which skips intermediate steps and only asks to fill in the final process tree. Run ./fork.py  and see if you can write down the final tree by looking at the series of actions generated. Use different random seeds to try this a few times.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "6. Finally, use both  and  together. This shows the final process tree, but then asks you to fill in the actions that took place. By looking at the tree, can you determine the exact actions that took place? In which cases can you tell? In which can\u2019t you tell? Try some different random seeds to delve into this question.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "1. Write a program that calls fork(). Before calling fork(), have the main process access a variable (e.g., x) and set its value to something (e.g., 100). What value is the variable in the child process? What happens to the variable when both the child and parent change the value of ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "2. Write a program that opens a file (with the open() system call) and then calls fork() to create a new process. Can both the child and parent access the file descriptor returned by open()? What happens when they are writing to the file concurrently, i.e., at the same time?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "3. Write another program using fork(). The child process should print \u201chello\u201d; the parent process should print \u201cgoodbye\u201d. You should try to ensure that the child process always prints first; can you do this without calling wait() in the parent?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "4. Write a program that calls fork() and then calls some form of exec() to run the program /bin/ls. See if you can try all of the variants of exec(), including (on Linux) execl(), execle(), execlp(), execv(), execvp(), and execvpe(). Why do you think there are so many variants of the same basic call?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "6. Write a slight modification of the previous program, this time using waitpid() instead of wait(). When would waitpid() be useful?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "7. Write a program that creates a child process, and then in the child closes standard output (STDOUT FILENO). What happens if the child calls printf() to print some output after closing the descriptor?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "5. Now write a program that uses wait() to wait for the child process to finish in the parent. What does wait() return? What happens if you use wait() in the child? ",
+        "page_idx": 13
+    },
+    {
+        "chapter": "5",
+        "subchapter": "",
+        "problem": "8. Write a program that creates two children, and connects the standard output of one to the standard input of the other, using the pipe() system call. ",
+        "page_idx": 14
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "1. Compute the response time and turnaround time when running three jobs of length 200 with the SJF and FIFO schedulers.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "2. Now do the same but with jobs of different lengths: 100, 200, and 300.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "3. Now do the same, but also with the RR scheduler and a time-slice of 1.",
+        "page_idx": 12
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "4. For what types of workloads does SJF deliver the same turnaround times as FIFO?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "5. For what types of workloads and quantum lengths does SJF deliver the same response times as RR?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "6. What happens to response time with SJF as job lengths increase? Can you use the simulator to demonstrate the trend?",
+        "page_idx": 12
+    },
+    {
+        "chapter": "7",
+        "subchapter": "",
+        "problem": "7. What happens to response time with RR as quantum lengths increase? Can you write an equation that gives the worst-case response time, given  jobs? ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "8",
+        "subchapter": "",
+        "problem": "1. Run a few randomly-generated problems with just two jobs and two queues; compute the MLFQ execution trace for each. Make your life easier by limiting the length of each job and turning off I/Os.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "8",
+        "subchapter": "",
+        "problem": "2. How would you run the scheduler to reproduce each of the examples in the chapter?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "8",
+        "subchapter": "",
+        "problem": "3. How would you configure the scheduler parameters to behave just like a round-robin scheduler?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "8",
+        "subchapter": "",
+        "problem": "4. Craft a workload with two jobs and scheduler parameters so that one job takes advantage of the older Rules 4a and  (turned on with the -S flag) to game the scheduler and obtain  of the CPU over a particular time interval.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "8",
+        "subchapter": "",
+        "problem": "5. Given a system with a quantum length of  in its highest queue, how often would you have to boost jobs back to the highest priority level (with the  flag) in order to guarantee that a single longrunning (and potentially-starving) job gets at least  of the CPU?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "8",
+        "subchapter": "",
+        "problem": "6. One question that arises in scheduling is which end of a queue to add a job that just finished  ; the  flag changes this behavior for this scheduling simulator. Play around with some workloads and see if you can see the effect of this flag. ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "9",
+        "subchapter": "",
+        "problem": "1. Compute the solutions for simulations with 3 jobs and random seeds of 1, 2, and 3.",
+        "page_idx": 13
+    },
+    {
+        "chapter": "9",
+        "subchapter": "",
+        "problem": "2. Now run with two specific jobs: each of length 10, but one (job 0) with 1 ticket and the other (job 1) with 100 (e.g.,  ). What happens when the number of tickets is so imbalanced? Will job 0 ever run before job 1 completes? How often? In general, what does such a ticket imbalance do to the behavior of lottery scheduling?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "9",
+        "subchapter": "",
+        "problem": "n3. When running with two jobs of length 100 and equal ticket allocations of 100  , how unfair is the scheduler? Run with some different random seeds to determine the (probabilistic) answer; let unfairness be determined by how much earlier one job finishes than the other.",
+        "page_idx": 13
+    },
+    {
+        "chapter": "9",
+        "subchapter": "",
+        "problem": "4. How does your answer to the previous question change as the quantum size  gets larger?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "9",
+        "subchapter": "",
+        "problem": "5. Can you make a version of the graph that is found in the chapter? What else would be worth exploring? How would the graph look with a stride scheduler? ",
+        "page_idx": 13
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "1. To start things off, let\u2019s learn how to use the simulator to study how to build an effective multi-processor scheduler. The first simulation will run just one job, which has a run-time of 30, and a working-set size of 200. Run this job (called job  here) on one simulated CPU as follows: ./multi.py  . How long will it take to complete? Turn on the  flag to see a final answer, and the -t flag to see a tick-by-tick trace of the job and how it is scheduled.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "2. Now increase the cache size so as to make the job\u2019s working set (siz  ) fit into the cache (which, by default, is size  ); for example, run ./multi.py  . Can you predict how fast the job will run once it fits in cache? (hint: remember the key parameter of the warm rate, which is set by the -r flag) Check your answer by running with the solve flag  enabled.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "3. One cool thing about multi.py is that you can see more detail about what is going on with different tracing flags. Run the same simulation as above, but this time with time left tracing enabled  . This flag shows both the job that was scheduled on a CPU at each time step, as well as how much run-time that job has left after each tick has run. What do you notice about how that second column decreases?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "4. Now add one more bit of tracing, to show the status of each CPU cache for each job, with the  flag. For each job, each cache will either show a blank space (if the cache is cold for that job) or a  (if the cache is warm for that job). At what point does the cache become warm for job  in this simple example? What happens as you change the warmup time parameter  to lower or higher values than the default?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "5. At this point, you should have a good idea of how the simulator works for a single job running on a single CPU. But hey, isn\u2019t this a multi-processor CPU scheduling chapter? Oh yeah! So let\u2019s start working with multiple jobs. Specifically, let\u2019s run the following three jobs on a two-CPU system (i.e., type ./multi.py -n  Can you predict how long this will take, given a round-robin centralized scheduler? Use  to see if you were right, and then dive down into details with -t to see a step-by-step and then  to see whether caches got warmed effectively for these jobs. What do you notice?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "6. Now we\u2019ll apply some explicit controls to study cache affinity, as described in the chapter. To do this, you\u2019ll need the  flag. This flag can be used to limit which CPUs the scheduler can place a particular job upon. In this case, let\u2019s use it to place jobs  and  on CPU 1, while restricting  to CPU 0. This magic is accomplished by typing this ./multi.py  ,  ; don\u2019t forget to turn on various tracing options to see what is really happening! Can you predict how fast this version will run? Why does it do better? Will other combinations of  , and  onto the two processors run faster or slower? ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "7. One interesting aspect of caching multiprocessors is the opportunity for better-than-expected speed up of jobs when using multiple CPUs (and their caches) as compared to running jobs on a single processor. Specifically, when you run on  CPUs, sometimes you can speed up by more than a factor of  , a situation entitled super-linear speedup. To experiment with this, use the job description here  with a small cache  to create three jobs. Run this on systems with 1, 2, and 3 CPUs  . Now, do the same, but with a larger per-CPU cache of size 100. What do you notice about performance as the number of CPUs scales? Use  to confirm your guesses, and other tracing flags to dive even deeper. ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "8. One other aspect of the simulator worth studying is the per-CPU scheduling option, the  flag. Run with two CPUs again, and this three job configuration  . How does this option do, as opposed to the hand-controlled affinity limits you put in place above? How does performance change as you alter the \u2019peek interval\u2019  to lower or higher values? How does this per-CPU approach work as the number of CPUs scales? ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "10",
+        "subchapter": "",
+        "problem": "9. Finally, feel free to just generate random workloads and see if you can predict their performance on different numbers of processors, cache sizes, and scheduling options. If you do this, you\u2019ll soon be a multi-processor scheduling master, which is a pretty awesome thing to be. Good luck! ",
+        "page_idx": 12
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "1. The first Linux tool you should check out is the very simple tool free. First, type man free and read its entire manual page; it\u2019s short, don\u2019t worry!",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "2. Now, run free, perhaps using some of the arguments that might be useful (e.g.,  to display memory totals in megabytes). How much memory is in your system? How much is free? Do these numbers match your intuition?",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "3. Next, create a little program that uses a certain amount of memory, called memory-user.c. This program should take one commandline argument: the number of megabytes of memory it will use. When run, it should allocate an array, and constantly stream through the array, touching each entry. The program should do this indefinitely, or, perhaps, for a certain amount of time also specified at the command line.",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "4. Now, while running your memory-user program, also (in a different terminal window, but on the same machine) run the free tool. How do the memory usage totals change when your program is running? How about when you kill the memory-user program? Do the numbers match your expectations? Try this for different amounts of memory usage. What happens when you use really large amounts of memory?",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "5. Let\u2019s try one more tool, known as pmap. Spend some time, and read the pmap manual page in detail.",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "6. To use pmap, you have to know the process ID of the process you\u2019re interested in. Thus, first run ps auxw to see a list of all processes; then, pick an interesting one, such as a browser. You can also use your memory-user program in this case (indeed, you can even have that program call getpid() and print out its PID for your convenience).",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "7. Now run pmap on some of these processes, using various flags (like -X) to reveal many details about the process. What do you see? How many different entities make up a modern address space, as opposed to our simple conception of code/stack/heap?",
+        "page_idx": 8
+    },
+    {
+        "chapter": "13",
+        "subchapter": "",
+        "problem": "8. Finally, let\u2019s run pmap on your memory-user program, with different amounts of used memory. What do you see here? Does the output from pmap match your expectations? ",
+        "page_idx": 8
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "1. First, write a simple program called null.c that creates a pointer to an integer, sets it to NULL, and then tries to dereference it. Compile this into an executable called null. What happens when you run this program?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "2. Next, compile this program with symbol information included (with the  flag). Doing so let\u2019s put more information into the executable, enabling the debugger to access more useful information about variable names and the like. Run the program under the debugger by typing gdb null and then, once gdb is running, typing run. What does gdb show you?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "3. Finally, use the valgrind tool on this program. We\u2019ll use memcheck that is a part of valgrind to analyze what happens. Run this by typing in the following: valgrind --leak-check  yes null. What happens when you run this? Can you interpret the output from the tool?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "4. Write a simple program that allocates memory using malloc() but forgets to free it before exiting. What happens when this program runs? Can you use gdb to find any problems with it? How about valgrind (again with the --leak-check  yes flag)?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "5. Write a program that creates an array of integers called data of size 100 using malloc; then, set data[100] to zero. What happens when you run this program? What happens when you run this program using valgrind? Is the program correct?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "6. Create a program that allocates an array of integers (as above), frees them, and then tries to print the value of one of the elements of the array. Does the program run? What happens when you use valgrind on it?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "7. Now pass a funny value to free (e.g., a pointer in the middle of the array you allocated above). What happens? Do you need tools to find this type of problem?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "8. Try out some of the other interfaces to memory allocation. For example, create a simple vector-like data structure and related routines that use realloc() to manage the vector. Use an array to store the vectors elements; when a user adds an entry to the vector, use realloc() to allocate more space for it. How well does such a vector perform? How does it compare to a linked list? Use valgrind to help you find bugs.",
+        "page_idx": 10
+    },
+    {
+        "chapter": "14",
+        "subchapter": "",
+        "problem": "9. Spend more time and read about using gdb and valgrind. Knowing your tools is critical; spend the time and learn how to become an expert debugger in the UNIX and C environment. ",
+        "page_idx": 10
+    },
+    {
+        "chapter": "15",
+        "subchapter": "",
+        "problem": "1. Run with seeds 1, 2, and 3, and compute whether each virtual address generated by the process is in or out of bounds. If in bounds, compute the translation.",
+        "page_idx": 14
+    },
+    {
+        "chapter": "15",
+        "subchapter": "",
+        "problem": "2. Run with these flags:  . What value do you have to set  (the bounds register) to in order to ensure that all the generated virtual addresses are within bounds?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "15",
+        "subchapter": "",
+        "problem": "3. Run with these flags:  . What is the maximum value that base can be set to, such that the address space still fits into physical memory in its entirety?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "15",
+        "subchapter": "",
+        "problem": "4. Run some of the same problems above, but with larger address spaces  and physical memories  .",
+        "page_idx": 14
+    },
+    {
+        "chapter": "15",
+        "subchapter": "",
+        "problem": "5. What fraction of randomly-generated virtual addresses are valid, as a function of the value of the bounds register? Make a graph from running with different random seeds, with limit values ranging from 0 up to the maximum size of the address space. ",
+        "page_idx": 14
+    },
+    {
+        "chapter": "16",
+        "subchapter": "",
+        "problem": "1. First let\u2019s use a tiny address space to translate some addresses. Here\u2019s a simple set of parameters with a few different random seeds; can you translate the addresses? segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 0   \nsegmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 1   \nsegmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 2 ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "16",
+        "subchapter": "",
+        "problem": "2. Now, let\u2019s see if we understand this tiny address space we\u2019ve constructed (using the parameters from the question above). What is the highest legal virtual address in segment 0? What about the lowest legal virtual address in segment 1? What are the lowest and highest illegal addresses in this entire address space? Finally, how would you run segmentation.py with the  flag to test if you are right? ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "16",
+        "subchapter": "",
+        "problem": "3. Let\u2019s say we have a tiny 16-byte address space in a 128-byte physical memory. What base and bounds would you set up so as to get the simulator to generate the following translation results for the specified address stream: valid, valid, violation, ..., violation, valid, valid? Assume the following parameters: segmentation.py -a 16 -p 128 -A 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --b0 ? --l0 ? --b1 ? --l1 ? ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "16",
+        "subchapter": "",
+        "problem": "4. Assume we want to generate a problem where roughly  of the randomly-generated virtual addresses are valid (not segmentation violations). How should you configure the simulator to do so? Which parameters are important to getting this outcome? ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "16",
+        "subchapter": "",
+        "problem": "5. Can you run the simulator such that no virtual addresses are valid? How? ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "1. First run with the flags  BEST -s 0 to generate a few random allocations and frees. Can you predict what al will return? Can you guess the state of the free list after each request? What do you notice about the free list over time?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "2. How are the results different when using a WORST fit policy to search the free list  ? What changes?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "3. What about when using FIRST fit  FIRST)? What speeds up when you use first fit?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "4. For the above questions, how the list is kept ordered can affect the time it takes to find a free location for some of the policies. Use the different free list orderings  ADDRSORT,  SIZESORT+, -l SIZESORT-) to see how the policies and the list orderings interact.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "5. Coalescing of a free list can be quite important. Increase the number of random allocations (say to  ). What happens to larger allocation requests over time? Run with and without coalescing (i.e., without and with the  flag). What differences in outcome do you see? How big is the free list over time in each case? Does the ordering of the list matter in this case?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "6. What happens when you change the percent allocated fraction  to higher than 50? What happens to allocations as it nears 100? What about as the percent nears 0?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "17",
+        "subchapter": "",
+        "problem": "7. What kind of specific requests can you make to generate a highlyfragmented free space? Use the  flag to create fragmented free lists, and see how different policies and options change the organization of the free list. ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "18",
+        "subchapter": "",
+        "problem": "1. Before doing any translations, let\u2019s use the simulator to study how linear page tables change size given different parameters. Compute the size of linear page tables as different parameters change. Some suggested inputs are below; by using the  flag, you can see how many page-table entries are filled. First, to understand how linear page table size changes as the address space grows, run with these flags: Then, to understand how linear page table size changes as page size grows: Before running any of these, try to think about the expected trends. How should page-table size change as the address space grows? As the page size grows? Why not use big pages in general? ",
+        "page_idx": 13
+    },
+    {
+        "chapter": "18",
+        "subchapter": "",
+        "problem": "2. Now let\u2019s do some translations. Start with some small examples, and change the number of pages that are allocated to the address space with the -u flag. For example: What happens as you increase the percentage of pages that are allocated in each address space? ",
+        "page_idx": 13
+    },
+    {
+        "chapter": "18",
+        "subchapter": "",
+        "problem": "3. Now let\u2019s try some different random seeds, and some different (and sometimes quite crazy) address-space parameters, for variety: -P 8 -a 32 -p 1024 -v -s 1   \n-P 8k -a 32k -p 1m -v -s 2   \n-P 1m -a 256m -p 512m -v -s 3 Which of these parameter combinations are unrealistic? Why? ",
+        "page_idx": 14
+    },
+    {
+        "chapter": "18",
+        "subchapter": "",
+        "problem": "4. Use the program to try out some other problems. Can you find the limits of where the program doesn\u2019t work anymore? For example, what happens if the address-space size is bigger than physical memory? ",
+        "page_idx": 14
+    },
+    {
+        "chapter": "19",
+        "subchapter": "",
+        "problem": "1. For timing, you\u2019ll need to use a timer (e.g., gettimeofday()). How precise is such a timer? How long does an operation have to take in order for you to time it precisely? (this will help determine how many times, in a loop, you\u2019ll have to repeat a page access in order to time it successfully)   \n2. Write the program, called tlb.c, that can roughly measure the cost of accessing each page. Inputs to the program should be: the number of pages to touch and the number of trials.   \n3. Now write a script in your favorite scripting language (bash?) to run this program, while varying the number of pages accessed from 1 up to a few thousand, perhaps incrementing by a factor of two per iteration. Run the script on different machines and gather some data. How many trials are needed to get reliable measurements?   \n4. Next, graph the results, making a graph that looks similar to the one above. Use a good tool like ploticus or even zplot. Visualization usually makes the data much easier to digest; why do you think that is?   \n5. One thing to watch out for is compiler optimization. Compilers do all sorts of clever things, including removing loops which increment values that no other part of the program subsequently uses. How can you ensure the compiler does not remove the main loop above from your TLB size estimator?   \n6. Another thing to watch out for is the fact that most systems today ship with multiple CPUs, and each CPU, of course, has its own TLB hierarchy. To really get good measurements, you have to run your code on just one CPU, instead of letting the scheduler bounce it from one CPU to the next. How can you do that? (hint: look up \u201cpinning a thread\u201d on Google for some clues) What will happen if you don\u2019t do this, and the code moves from one CPU to the other?   \n7. Another issue that might arise relates to initialization. If you don\u2019t initialize the array a above before accessing it, the first time you access it will be very expensive, due to initial access costs such as demand zeroing. Will this affect your code and its timing? What can you do to counterbalance these potential costs? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "20",
+        "subchapter": "",
+        "problem": "1. With a linear page table, you need a single register to locate the page table, assuming that hardware does the lookup upon a TLB miss. How many registers do you need to locate a two-level page table? A three-level table?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "20",
+        "subchapter": "",
+        "problem": "2. Use the simulator to perform translations given random seeds 0, 1, and 2, and check your answers using the  flag. How many memory references are needed to perform each lookup?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "20",
+        "subchapter": "",
+        "problem": "3. Given your understanding of how cache memory works, how do you think memory references to the page table will behave in the cache? Will they lead to lots of cache hits (and thus fast accesses?) Or lots of misses (and thus slow accesses)? ",
+        "page_idx": 14
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "1. First, open two separate terminal connections to the same machine, so that you can easily run something in one window and the other. Now, in one window, run vmstat 1, which shows statistics about machine usage every second. Read the man page, the associated README, and any other information you need so that you can understand its output. Leave this window running vmstat for the rest of the exercises below. Now, we will run the program mem.c but with very little memory usage. This can be accomplished by typing ./mem 1 (which uses only  of memory). How do the CPU usage statistics change when running mem? Do the numbers in the user time column make sense? How does this change when running more than one instance of mem at once? ",
+        "page_idx": 9
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "2. Let\u2019s now start looking at some of the memory statistics while running mem. We\u2019ll focus on two columns: swpd (the amount of virtual memory used) and free (the amount of idle memory). Run ./mem 1024 (which allocates 1024 MB) and watch how these values change. Then kill the running program (by typing control-c) and watch again how the values change. What do you notice about the values? In particular, how does the free column change when the program exits? Does the amount of free memory increase by the expected amount when mem exits? ",
+        "page_idx": 9
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "3. We\u2019ll next look at the swap columns (si and so), which indicate how much swapping is taking place to and from the disk. Of course, to activate these, you\u2019ll need to run mem with large amounts of memory. First, examine how much free memory is on your Linux system (for example, by typing cat /proc/meminfo; type man proc for details on the /proc file system and the types of information you can find there). One of the first entries in /proc/meminfo is the total amount of memory in your system. Let\u2019s assume it\u2019s something like 8 GB of memory; if so, start by running mem 4000 (about  ) and watching the swap in/out columns. Do they ever give non-zero values? Then, try with 5000, 6000, etc. What happens to these values as the program enters the second loop (and beyond), as compared to the first loop? How much data (total) are swapped in and out during the second, third, and subsequent loops? (do the numbers make sense?) ",
+        "page_idx": 9
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "4. Do the same experiments as above, but now watch the other statistics (such as CPU utilization, and block I/O statistics). How do they change when mem is running?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "5. Now let\u2019s examine performance. Pick an input for mem that comfortably fits in memory (say 4000 if the amount of memory on the system is 8 GB). How long does loop 0 take (and subsequent loops 1, 2, etc.)? Now pick a size comfortably beyond the size of memory (say 12000 again assuming 8 GB of memory). How long do the loops take here? How do the bandwidth numbers compare? How different is performance when constantly swapping versus fitting everything comfortably in memory? Can you make a graph, with the size of memory used by mem on the x-axis, and the bandwidth of accessing said memory on the y-axis? Finally, how does the performance of the first loop compare to that of subsequent loops, for both the case where everything fits in memory and where it doesn\u2019t?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "6. Swap space isn\u2019t infinite. You can use the tool swapon with the -s flag to see how much swap space is available. What happens if you try to run mem with increasingly large values, beyond what seems to be available in swap? At what point does the memory allocation fail?",
+        "page_idx": 10
+    },
+    {
+        "chapter": "21",
+        "subchapter": "",
+        "problem": "7. Finally, if you\u2019re advanced, you can configure your system to use different swap devices using swapon and swapoff. Read the man pages for details. If you have access to different hardware, see how the performance of swapping changes when swapping to a classic hard drive, a flash-based SSD, and even a RAID array. How much can swapping performance be improved via newer devices? How close can you get to in-memory performance? ",
+        "page_idx": 10
+    },
+    {
+        "chapter": "22",
+        "subchapter": "",
+        "problem": "1. Generate random addresses with the following arguments:   , and  . Change the policy from FIFO, to LRU, to OPT. Compute whether each access in said address traces are hits or misses.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "22",
+        "subchapter": "",
+        "problem": "2. For a cache of size 5, generate worst-case address reference streams for each of the following policies: FIFO, LRU, and MRU (worst-case reference streams cause the most misses possible. For the worst case reference streams, how much bigger of a cache is needed to improve performance dramatically and approach OPT?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "22",
+        "subchapter": "",
+        "problem": "3. Generate a random trace (use python or perl). How would you expect the different policies to perform on such a trace?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "22",
+        "subchapter": "",
+        "problem": "4. Now generate a trace with some locality. How can you generate such a trace? How does LRU perform on it? How much better than RAND is LRU? How does CLOCK do? How about CLOCK with different numbers of clock bits?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "22",
+        "subchapter": "",
+        "problem": "5. Use a program like valgrind to instrument a real application and generate a virtual page reference stream. For example, running valgrind --too  lackey --trace-mem  yes ls will output a nearly-complete reference trace of every instruction and data reference made by the program ls. To make this useful for the simulator above, you\u2019ll have to first transform each virtual memory reference into a virtual page-number reference (done by masking off the offset and shifting the resulting bits downward). How big of a cache is needed for your application trace in order to satisfy a large fraction of requests? Plot a graph of its working set as the size of the cache increases. ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "1. Let\u2019s examine a simple program, \u201cloop.s\u201d. First, just read and understand it. Then, run it with these arguments (   loop.s -i 100 -R dx) This specifies a single thread, an interrupt every 100 instructions, and tracing of register %dx. What will  be during the run? Use the  flag to check your answers; the answers, on the left, show the value of the register (or memory value) after the instruction on the right has run.",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "2. Same code, different flags: (./x86.py  loop.s -t 2 -i 100   ,   dx) This specifies two threads, and initializes each  to 3. What values will %dx see? Run with  to check. Does the presence of multiple threads affect your calculations? Is there a race in this code?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "3. Run this: .   loop.s -t 2 -i 3 -r -R dx -a  ,  This makes the interrupt interval small/random; use different seeds  to see different interleavings. Does the interrupt frequency change anything?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "4. Now, a different program, looping-race-nolock.s, which accesses a shared variable located at address 2000; we\u2019ll call this variable value. Run it with a single thread to confirm your understanding: .  .py  looping-race-nolock.s -t 1 -M 2000 What is value (i.e., at memory address 2000) throughout the run? Use  to check.",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "5. Run with multiple iterations/threads: .  .py  looping-race-nolock.s -t 2 -a bx  -M 2000 Why does each thread loop three times? What is final value of value?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "6. Run with random interrupt intervals: .  looping-race-nolock.s -  with different seeds  , etc.) Can you tell by looking at the thread interleaving what the final value of value will be? Does the timing of the interrupt matter? Where can it safely occur? Where not? In other words, where is the critical section exactly?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "7. Now examine fixed interrupt intervals: .   looping-race-nolock.s -a bx  -t 2 -M 2000 -i 1 What will the final value of the shared variable value be? What about when you change -i 2, -i 3, etc.? For which interrupt intervals does the program give the \u201ccorrect\u201d answer?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "8. Run the same for more loops (e.g., set -a  ). What interrupt intervals  lead to a correct outcome? Which intervals are surprising?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "9. One last program: wait-for-me.s. Run: ./x86.py  wait-for-me.s   ,  -R ax  This sets the %ax register to 1 for thread 0, and 0 for thread 1, and watches  and memory location 2000. How should the code behave? How is the value at location 2000 being used by the threads? What will its final value be?",
+        "page_idx": 14
+    },
+    {
+        "chapter": "26",
+        "subchapter": "",
+        "problem": "10. Now switch the inputs: ./  .py  wait-for-me.s -a  ,   ax -M 2000 How do the threads behave? What is thread 0 doing? How would changing the interrupt interval (e.g.,  , or perhaps to use random intervals) change the trace outcome? Is the program efficiently using the CPU? ",
+        "page_idx": 14
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "1. First build main-race.c. Examine the code so you can see the (hopefully obvious) data race in the code. Now run helgrind (by typing valgrind --tool  helgrind main-race) to see how it reports the race. Does it point to the right lines of code? What other information does it give to you?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "2. What happens when you remove one of the offending lines of code? Now add a lock around one of the updates to the shared variable, and then around both. What does helgrind report in each of these cases?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "3. Now let\u2019s look at main-deadlock.c. Examine the code. This code has a problem known as deadlock (which we discuss in much more depth in a forthcoming chapter). Can you see what problem it might have?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "4. Now run helgrind on this code. What does helgrind report?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "5. Now run helgrind on main-deadlock-global.c. Examine the code; does it have the same problem that main-deadlock.c has? Should helgrind be reporting the same error? What does this tell you about tools like helgrind?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "6. Let\u2019s next look at main-signal.c. This code uses a variable (done) to signal that the child is done and that the parent can now continue. Why is this code inefficient? (what does the parent end up spending its time doing, particularly if the child thread takes a long time to complete?)",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "7. Now run helgrind on this program. What does it report? Is the code correct?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "8. Now look at a slightly modified version of the code, which is found in main-signal-cv.c. This version uses a condition variable to do the signaling (and associated lock). Why is this code preferred to the previous version? Is it correctness, or performance, or both?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.1",
+        "problem": "9. Once again run helgrind on main-signal-cv. Does it report any errors? ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "1. Examine flag.s. This code \u201cimplements\u201d locking with a single memory flag. Can you understand the assembly?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "2. When you run with the defaults, does flag.s work? Use the  and  flags to trace variables and registers (and turn on  to see their values). Can you predict what value will end up in flag?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "3. Change the value of the register %bx with the -a flag (e.g., -a bx  ,  if you are running just two threads). What does the code do? How does it change your answer for the question above?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "4. Set bx to a high value for each thread, and then use the  flag to generate different interrupt frequencies; what values lead to a bad outcomes? Which lead to good outcomes?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "5. Now let\u2019s look at the program test-and-set.s. First, try to understand the code, which uses the xchg instruction to build a simple locking primitive. How is the lock acquire written? How about lock release?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "6. Now run the code, changing the value of the interrupt interval  again, and making sure to loop for a number of times. Does the code always work as expected? Does it sometimes lead to an inefficient use of the CPU? How could you quantify that?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "7. Use the  flag to generate specific tests of the locking code. For example, run a schedule that grabs the lock in the first thread, but then tries to acquire it in the second. Does the right thing happen? What else should you test?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "8. Now let\u2019s look at the code in peterson.s, which implements Peterson\u2019s algorithm (mentioned in a sidebar in the text). Study the code and see if you can make sense of it.",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "9. Now run the code with different values of -i. What kinds of different behavior do you see? Make sure to set the thread IDs appropriately (using   ,  for example) as the code assumes it.",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "10. Can you control the scheduling (with the  flag) to \u201cprove\u201d that the code works? What are the different cases you should show hold? Think about mutual exclusion and deadlock avoidance.",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "11. Now study the code for the ticket lock in ticket.s. Does it match the code in the chapter? Then run with the following flags:   ,  (causing each thread to loop through the critical section 1000 times). Watch what happens; do the threads spend much time spin-waiting for the lock?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "12. How does the code behave as you add more threads?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "13. Now examine yield.s, in which a yield instruction enables one thread to yield control of the CPU (realistically, this would be an OS primitive, but for the simplicity, we assume an instruction does the task). Find a scenario where test-and-set.s wastes cycles spinning, but yield.s does not. How many instructions are saved? In what scenarios do these savings arise?",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.3",
+        "problem": "14. Finally, examine test-and-test-and-set.s. What does this lock do? What kind of savings does it introduce as compared to test-and-set.s? ",
+        "page_idx": 21
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "1. Our first question focuses on main-two-cvs-while.c (the working solution). First, study the code. Do you think you have an understanding of what should happen when you run the program?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "2. Run with one producer and one consumer, and have the producer produce a few values. Start with a buffer (size 1), and then increase it. How does the behavior of the code change with larger buffers? (or does it?) What would you predict num full to be with different buffer sizes (e.g.,  ) and different numbers of produced items (e.g.,  ), when you change the consumer sleep string from default (no sleep) to ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "3. If possible, run the code on different systems (e.g., a Mac and Linux). Do you see different behavior across these systems?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "4. Let\u2019s look at some timings. How long do you think the following execution, with one producer, three consumers, a single-entry shared buffer, and each consumer pausing at point c3 for a second, will take? ./main-two-cvs-while   -t",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "5. Now change the size of the shared buffer to 3  . Will this make any difference in the total time?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "6. Now change the location of the sleep to  (this models a consumer taking something off the queue and then doing something with it), again using a single-entry buffer. What time do you predict in this case? ./main-two-cvs-while  -C 0,0,0,0,0,0,1:0,0,0,0,0,0,1:0,0,0,0,0,0,1 -l 10 -v -t",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "7. Finally, change the buffer size to 3 again  . What time do you predict now?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "8. Now let\u2019s look at main-one-cv-while.c. Can you configure a sleep string, assuming a single producer, one consumer, and a buffer of size 1, to cause a problem with this code? ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "9. Now change the number of consumers to two. Can you construct sleep strings for the producer and the consumers so as to cause a problem in the code?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "10. Now examine main-two-cvs-if.c. Can you cause a problem to happen in this code? Again consider the case where there is only one consumer, and then the case where there is more than one.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "27",
+        "subchapter": "27.4",
+        "problem": "11. Finally, examine main-two-cvs-while-extra-unlock.c. What problem arises when you release the lock before doing a put or a get? Can you reliably cause such a problem to happen, given the sleep strings? What bad thing can happen? ",
+        "page_idx": 18
+    },
+    {
+        "chapter": "29",
+        "subchapter": "",
+        "problem": "1. We\u2019ll start by redoing the measurements within this chapter. Use the call gettimeofday() to measure time within your program. How accurate is this timer? What is the smallest interval it can measure? Gain confidence in its workings, as we will need it in all subsequent questions. You can also look into other timers, such as the cycle counter available on  via the rdtsc instruction.",
+        "page_idx": 15
+    },
+    {
+        "chapter": "29",
+        "subchapter": "",
+        "problem": "2. Now, build a simple concurrent counter and measure how long it takes to increment the counter many times as the number of threads increases. How many CPUs are available on the system you are using? Does this number impact your measurements at all?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "29",
+        "subchapter": "",
+        "problem": "3. Next, build a version of the approximate counter. Once again, measure its performance as the number of threads varies, as well as the threshold. Do the numbers match what you see in the chapter?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "29",
+        "subchapter": "",
+        "problem": "4. Build a version of a linked list that uses hand-over-hand locking [MS04], as cited in the chapter. You should read the paper first to understand how it works, and then implement it. Measure its performance. When does a hand-over-hand list work better than a standard list as shown in the chapter?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "29",
+        "subchapter": "",
+        "problem": "5. Pick your favorite data structure, such as a B-tree or other slightly more interesting structure. Implement it, and start with a simple locking strategy such as a single lock. Measure its performance as the number of concurrent threads increases.",
+        "page_idx": 15
+    },
+    {
+        "chapter": "29",
+        "subchapter": "",
+        "problem": "6. Finally, think of a more interesting locking strategy for this favorite data structure of yours. Implement it, and measure its performance. How does it compare to the straightforward locking approach? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "1. The first problem is just to implement and test a solution to the fork/join problem, as described in the text. Even though this solution is described in the text, the act of typing it in on your own is worthwhile; even Bach would rewrite Vivaldi, allowing one soon-to-be master to learn from an existing one. See fork-join.c for details. Add the call sleep(1) to the child to ensure it is working.",
+        "page_idx": 19
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "2. Let\u2019s now generalize this a bit by investigating the rendezvous problem. The problem is as follows: you have two threads, each of which are about to enter the rendezvous point in the code. Neither should exit this part of the code before the other enters it. Consider using two semaphores for this task, and see rendezvous.c for details.",
+        "page_idx": 19
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "3. Now go one step further by implementing a general solution to barrier synchronization. Assume there are two points in a sequential piece of code, called  and  . Putting a barrier between  and  guarantees that all threads will execute  before any one thread executes  . Your task: write the code to implement a barrier() function that can be used in this manner. It is safe to assume you know  (the total number of threads in the running program) and that all  threads will try to enter the barrier. Again, you should likely use two semaphores to achieve the solution, and some other integers to count things. See barrier.c for details.",
+        "page_idx": 19
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "4. Now let\u2019s solve the reader-writer problem, also as described in the text. In this first take, don\u2019t worry about starvation. See the code in reader-writer.c for details. Add sleep() calls to your code to demonstrate it works as you expect. Can you show the existence of the starvation problem?",
+        "page_idx": 19
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "5. Let\u2019s look at the reader-writer problem again, but this time, worry about starvation. How can you ensure that all readers and writers eventually make progress? See reader-writer-nostarve.c for details.",
+        "page_idx": 19
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "6. Use semaphores to build a no-starve mutex, in which any thread that tries to acquire the mutex will eventually obtain it. See the code in mutex-nostarve.c for more information.",
+        "page_idx": 19
+    },
+    {
+        "chapter": "31",
+        "subchapter": "",
+        "problem": "7. Liked these problems? See Downey\u2019s free text for more just like them. And don\u2019t forget, have fun! But, you always do when you write code, no? ",
+        "page_idx": 19
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "1. First let\u2019s make sure you understand how the programs generally work, and some of the key options. Study the code in vector-deadlock.  as well as in main-common.c and related files. Now, run ./vector-deadlock  which instantiates two threads  , each of which does one vector add  , and does so in verbose mode  . Make sure you understand the output. How does the output change from run to run?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "2. Now add the  flag, and change the number of loops  from 1 to higher numbers. What happens? Does the code (always) deadlock?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "3. How does changing the number of threads  change the outcome of the program? Are there any values of  that ensure no deadlock occurs?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "4. Now examine the code in vector-global-order.c. First, make sure you understand what the code is trying to do; do you understand why the code avoids deadlock? Also, why is there a special case in this vector add() routine when the source and destination vectors are the same?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "5. Now run the code with the following flags:  . How long does the code take to complete? How does the total time change when you increase the number of loops, or the number of threads?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "6. What happens if you turn on the parallelism flag  How much would you expect performance to change when each thread is working on adding different vectors (which is what  enables) versus working on the same ones?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "7. Now let\u2019s study vector-try-wait.c. First make sure you understand the code. Is the first call to pthread mutex trylock() really needed? Now run the code. How fast does it run compared to the global order approach? How does the number of retries, as counted by the code, change as the number of threads increases?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "8. Now let\u2019s look at vector-avoid-hold-and-wait.c. What is the main problem with this approach? How does its performance compare to the other versions, when running both with  and without it?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "9. Finally, let\u2019s look at vector-nolock.c. This version doesn\u2019t use locks at all; does it provide the exact same semantics as the other versions? Why or why not?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "32",
+        "subchapter": "",
+        "problem": "10. Now compare its performance to the other versions, both when threads are working on the same two vectors (no  ) and when each thread is working on separate vectors  . How does this no-lock version perform? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "33",
+        "subchapter": "",
+        "problem": "1. First, write a simple server that can accept and serve TCP connections. You\u2019ll have to poke around the Internet a bit if you don\u2019t already know how to do this. Build this to serve exactly one request at a time; have each request be very simple, e.g., to get the current time of day.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "33",
+        "subchapter": "",
+        "problem": "2. Now, add the select() interface. Build a main program that can accept multiple connections, and an event loop that checks which file descriptors have data on them, and then read and process those requests. Make sure to carefully test that you are using select() correctly.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "33",
+        "subchapter": "",
+        "problem": "3. Next, let\u2019s make the requests a little more interesting, to mimic a simple web or file server. Each request should be to read the contents of a file (named in the request), and the server should respond by reading the file into a buffer, and then returning the contents to the client. Use the standard open(), read(), close() system calls to implement this feature. Be a little careful here: if you leave this running for a long time, someone may figure out how to use it to read all the files on your computer!",
+        "page_idx": 11
+    },
+    {
+        "chapter": "33",
+        "subchapter": "",
+        "problem": "4. Now, instead of using standard I/O system calls, use the asynchronous I/O interfaces as described in the chapter. How hard was it to incorporate asynchronous interfaces into your program?",
+        "page_idx": 11
+    },
+    {
+        "chapter": "33",
+        "subchapter": "",
+        "problem": "5. For fun, add some signal handling to your code. One common use of signals is to poke a server to reload some kind of configuration file, or take some other kind of administrative action. Perhaps one natural way to play around with this is to add a user-level file cache to your server, which stores recently accessed files. Implement a signal handler that clears the cache when the signal is sent to the server process.",
+        "page_idx": 11
+    },
+    {
+        "chapter": "33",
+        "subchapter": "",
+        "problem": "6. Finally, we have the hard part: how can you tell if the effort to build an asynchronous, event-based approach are worth it? Can you create an experiment to show the benefits? How much implementation complexity did your approach add? ",
+        "page_idx": 11
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "1. Use the simulator to perform some basic RAID mapping tests. Run with different levels (0, 1, 4, 5) and see if you can figure out the mappings of a set of requests. For RAID-5, see if you can figure out the difference between left-symmetric and left-asymmetric layouts. Use some different random seeds to generate different problems than above.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "2. Do the same as the first problem, but this time vary the chunk size with  . How does chunk size change the mappings?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "3. Do the same as above, but use the  flag to reverse the nature of each problem.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "4. Now use the reverse flag but increase the size of each request with the  flag. Try specifying sizes of 8k,  , and  while varying the RAID level. What happens to the underlying  pattern when the size of the request increases? Make sure to try this with the sequential workload too  sequential); for what request sizes are RAID-4 and RAID-5 much more  efficient?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "5. Use the timing mode of the simulator  to estimate the performance of 100 random reads to the RAID, while varying the RAID levels, using 4 disks.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "6. Do the same as above, but increase the number of disks. How does the performance of each RAID level scale as the number of disks increases?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "7. Do the same as above, but use all writes  instead of reads. How does the performance of each RAID level scale now? Can you do a rough estimate of the time it will take to complete the workload of 100 random writes?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "38",
+        "subchapter": "",
+        "problem": "8. Run the timing mode one last time, but this time with a sequential workload (-W sequential). How does the performance vary with RAID level, and when doing reads versus writes? How about when varying the size of each request? What size should you write to a RAID when using RAID-4 or RAID-5? ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "39",
+        "subchapter": "",
+        "problem": "1. Stat: Write your own version of the command line program stat, which simply calls the stat() system call on a given file or directory. Print out file size, number of blocks allocated, reference (link) count, and so forth. What is the link count of a directory, as the number of entries in the directory changes? Useful interfaces: stat(), naturally. ",
+        "page_idx": 28
+    },
+    {
+        "chapter": "39",
+        "subchapter": "",
+        "problem": "2. List Files: Write a program that lists files in the given directory. When called without any arguments, the program should just print the file names. When invoked with the  flag, the program should print out information about each file, such as the owner, group, permissions, and other information obtained from the stat() system call. The program should take one additional argument, which is the directory to read, e.g., myls  directory. If no directory is given, the program should just use the current working directory. Useful interfaces: stat(), opendir(), readdir(), getcwd(). ",
+        "page_idx": 28
+    },
+    {
+        "chapter": "39",
+        "subchapter": "",
+        "problem": "3. Tail: Write a program that prints out the last few lines of a file. The program should be efficient, in that it seeks to near the end of the file, reads in a block of data, and then goes backwards until it finds the requested number of lines; at this point, it should print out those lines from beginning to the end of the file. To invoke the program, one should type: mytail -n file, where n is the number of lines at the end of the file to print. Useful interfaces: stat(), lseek(), open(), read(), close(). ",
+        "page_idx": 28
+    },
+    {
+        "chapter": "39",
+        "subchapter": "",
+        "problem": "4. Recursive Search: Write a program that prints out the names of each file and directory in the file system tree, starting at a given point in the tree. For example, when run without arguments, the program should start with the current working directory and print its contents, as well as the contents of any sub-directories, etc., until the entire tree, root at the CWD, is printed. If given a single argument (of a directory name), use that as the root of the tree instead. Refine your recursive search with more fun options, similar to the powerful find command line tool. Useful interfaces: figure it out. ",
+        "page_idx": 28
+    },
+    {
+        "chapter": "40",
+        "subchapter": "",
+        "problem": "1. Run the simulator with some different random seeds (say 17, 18, 19, 20), and see if you can figure out which operations must have taken place between each state change.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "40",
+        "subchapter": "",
+        "problem": "2. Now do the same, using different random seeds (say 21, 22, 23, 24), except run with the  flag, thus making you guess the state change while being shown the operation. What can you conclude about the inode and data-block allocation algorithms, in terms of which blocks they prefer to allocate?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "40",
+        "subchapter": "",
+        "problem": "3. Now reduce the number of data blocks in the file system, to very low numbers (say two), and run the simulator for a hundred or so requests. What types of files end up in the file system in this highlyconstrained layout? What types of operations would fail?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "40",
+        "subchapter": "",
+        "problem": "4. Now do the same, but with inodes. With very few inodes, what types of operations can succeed? Which will usually fail? What is the final state of the file system likely to be? ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "1. Examine the file in.largefile, and then run the simulator with flag  in.largefile and -L 4. The latter sets the large-file exception to 4 blocks. What will the resulting allocation look like? Run with  to check.",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "2. Now run with  30. What do you expect to see? Once again, turn on  to see if you were right. You can also use  to see exactly which blocks were allocated to the file  .",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "3. Now we will compute some statistics about the file. The first is something we call filespan, which is the max distance between any two data blocks of the file or between the inode and any data block. Calculate the filespan of /a. Run ffs.py -f in.largefile -L 4 -T -c to see what it is. Do the same with -L 100. What difference do you expect in filespan as the large-file exception parameter changes from low values to high values?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "4. Now let\u2019s look at a new input file, in.manyfiles. How do you think the FFS policy will lay these files out across groups? (you can run with  to see what files and directories are created, or just cat in.manyfiles). Run the simulator with  to see if you were right.",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "5. A metric to evaluate FFS is called dirspan. This metric calculates the spread of files within a particular directory, specifically the max distance between the inodes and data blocks of all files in the directory and the inode and data block of the directory itself. Run with in.manyfiles and the  flag, and calculate the dirspan of the three directories. Run with  to check. How good of a job does FFS do in minimizing dirspan?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "6. Now change the size of the inode table per group to 5 (-i 5). How do you think this will change the layout of the files? Run with  to see if you were right. How does it affect the dirspan?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "7. Which group should FFS place inode of a new directory in? The default (simulator) policy looks for the group with the most free inodes. A different policy looks for a set of groups with the most free inodes. For example, if you run with -A 2, when allocating a new directory, the simulator will look at groups in pairs and pick the best pair for the allocation. Run ./ffs.py -f in.manyfiles  to see how allocation changes with this strategy. How does it affect dirspan? Why might this policy be good?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "8. One last policy change we will explore relates to file fragmentation. Run ./ffs.py -f in.fragmented  and see if you can predict how the files that remain are allocated. Run with  to confirm your answer. What is interesting about the data layout of file /i? Why is it problematic?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "41",
+        "subchapter": "",
+        "problem": "9. A new policy, which we call contiguous allocation  , tries to ensure that each file is allocated contiguously. Specifically, with  the file system tries to ensure that n contiguous blocks are free within a group before allocating a block. Run ./ffs.py -f in.fragmented  to see the difference. How does layout change as the parameter passed to  increases? Finally, how does  affect filespan and dirspan? ",
+        "page_idx": 13
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "1. First, run fsck.py  ; this flag turns off any corruption, and thus you can use it to generate a random file system, and see if you can determine which files and directories are in there. So, go ahead and do that! Use the  flag to see if you were right. Try this for a few different randomly-generated file systems by setting the seed  to different values, like 1, 2, and 3.",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "2. Now, let\u2019s introduce a corruption. Run fsck.py  to start. Can you see what inconsistency is introduced? How would you fix it in a real file system repair tool? Use  to check if you were right.",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "3. Change the seed to  or  ; which inconsistency do you see? Use  to check your answer. What is different in these two cases?",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "4. Change the seed to -S 5; which inconsistency do you see? How hard would it be to fix this problem in an automatic way? Use  to check your answer. Then, introduce a similar inconsistency with  38; is this harder/possible to detect? Finally, use  ; is this inconsistency detectable? If so, how would you fix the file system?",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "5. Change the seed to  or  ; which inconsistency do you see? Use  to check your answer. What is the difference across these two cases? What should the repair tool do when encountering such a situation?",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "6. Change the seed to -S 9; which inconsistency do you see? Use  to check your answer. Which piece of information should a checkand-repair tool trust in this case?",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "7. Change the seed to  ; which inconsistency do you see? Use  to check your answer. What can a repair tool do in this case? If no repair is possible, how much data is lost?",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "8. Change the seed to  ; which inconsistency do you see? Use  to check your answer. Is there redundancy in the file system structure here that can help a repair?",
+        "page_idx": 20
+    },
+    {
+        "chapter": "42",
+        "subchapter": "",
+        "problem": "9. Change the seed to  and -S 20; which inconsistency do you see? Use  to check your answer. How should the repair tool fix the problem? ",
+        "page_idx": 20
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "1. Run ./lfs.py  , perhaps varying the seed  . Can you figure out which commands were run to generate the final file system contents? Can you tell which order those commands were issued? Finally, can you determine the liveness of each block in the final file system state? Use  to show which commands were run, and  to show the liveness of the final file system state. How much harder does the task become for you as you increase the number of commands issued (i.e., change -n 3 to  )?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "2. If you find the above painful, you can help yourself a little bit by showing the set of updates caused by each specific command. To do  run ./lfs.py  . Now see if it is easier to understand what each command must have been. Change the random seed to get different commands to interpret (e.g.,  , etc.).",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "3. To further test your ability to figure out what updates are made to disk by each command, run the following: .   100 (and perhaps a few other random seeds). This just shows a set of commands and does NOT show you the final state of the file system. Can you reason about what the final state of the file system must be?",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "4. Now see if you can determine which files and directories are live after a number of file and directory operations. Run tt ./lfs.py  and then examine the final file system state. Can you figure out which pathnames are valid? Run tt ./lfs.py   to see the results. Run with  to see if your answers match up given the series of random commands. Use different random seeds to get more problems.",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "5. Now let\u2019s issue some specific commands. First, let\u2019s create a file and write to it repeatedly. To do so, use the  flag, which lets you specify specific commands to execute. Let\u2019s create the file  and write to it four times:   . See if you can determine the liveness of the final file system state; use  to check your answers.",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "6. Now, let\u2019s do the same thing, but with a single write operation instead of four. Run ./lfs.py  to create file  and write 4 blocks with a single write operation. Compute the liveness again, and check if you are right with  . What is the main difference between writing a file all at once (as we do here) versus doing it one block at a time (as above)? What does this tell you about the importance of buffering updates in main memory as the real LFS does? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "7. Let\u2019s do another specific example. First, run the following: ./lfs.py -L c,/foo:w,/foo,0,1. What does this set of commands do? Now, run ./lfs.py -L c,/foo:w,/foo,7,1. What does this set of commands do? How are the two different? What can you tell about the size field in the inode from these two sets of commands? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "8. Now let\u2019s look explicitly at file creation versus directory creation. Run simulations ./lfs.py -L c,/foo and ./lfs.py -L d,/foo to create a file and then a directory. What is similar about these runs, and what is different? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "9. The LFS simulator supports hard links as well. Run the following to study how they work: ./lfs.py -L c,/foo:l,/foo,/bar:l,/foo,/goo -o -i. What blocks are written out when a hard link is created? How is this similar to just creating a new file, and how is it different? How does the reference count field change as links are created? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "10. LFS makes many different policy decisions. We do not explore many of them here \u2013 perhaps something left for the future \u2013 but here is a simple one we do explore: the choice of inode number. First, run ./lfs.py   to show the usual behavior with the \u201dsequential\u201d allocation policy, which tries to use free inode numbers nearest to zero. Then, change to a \u201drandom\u201d policy by running .  (the  flag ensures 100 percent of the random operations are file creations). What on-disk differences does a random policy versus a sequential policy result in? What does this say about the importance of choosing inode numbers in a real LFS? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "43",
+        "subchapter": "",
+        "problem": "11. One last thing we\u2019ve been assuming is that the LFS simulator always updates the checkpoint region after each update. In the real LFS, that isn\u2019t the case: it is updated periodically to avoid long seeks. Run ./lfs.py  to see some operations and the intermediate and final states of the file system when the checkpoint region isn\u2019t forced to disk. What would happen if the checkpoint region is never updated? What if it is updated periodically? Could you figure out how to recover the file system to the latest state by rolling forward in the log? ",
+        "page_idx": 15
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "1. The homework will mostly focus on the log-structured SSD, which is simulated with the  flag. We\u2019ll use the other types of SSDs for comparison. First, run with flags   . Can you figure out which operations took place? Use  to check your answers (or just use  instead of  . Use different values of  to generate different random workloads.",
+        "page_idx": 22
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "2. Now just show the commands and see if you can figure out the intermediate states of the Flash. Run with flags   to show each command. Now, determine the state of the Flash between each command; use  to show the states and see if you were right. Use different random seeds to test your burgeoning expertise.",
+        "page_idx": 22
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "3. Let\u2019s make this problem ever so slightly more interesting by adding the  flag. What differences does this cause in the commands? Use  again to check your answers.",
+        "page_idx": 22
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "4. Performance is determined by the number of erases, programs, and reads (we assume here that trims are free). Run the same workload again as above, but without showing any intermediate states (e.g.,  ). Can you estimate how long this workload will take to complete? (default erase time is 1000 microseconds, program time is 40, and read time is 10) Use the -S flag to check your answer. You can also change the erase, program, and read times with the -E, -W,  flags.",
+        "page_idx": 22
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "5. Now, compare performance of the log-structured approach and the (very bad) direct approach (-T direct instead of  ). First, estimate how you think the direct approach will perform, then check your answer with the -S flag. In general, how much better will the log-structured approach perform than the direct one?",
+        "page_idx": 22
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "6. Let us next explore the behavior of the garbage collector. To do so, we have to set the high  and low  watermarks appropriately. First, let\u2019s observe what happens when you run a larger workload to the log-structured SSD but without any garbage collection. To do this, run with flags -T log -n 1000 (the high watermark default is 10, so the GC won\u2019t run in this configuration). What do you think will happen? Use  and perhaps  to see. ",
+        "page_idx": 22
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "7. To turn on the garbage collector, use lower values. The high watermark (-G N) tells the system to start collecting once N blocks have been used; the low watermark  tells the system to stop collecting once there are only M blocks in use. What watermark values do you think will make for a working system? Use  and  to show the commands and intermediate device states and see. ",
+        "page_idx": 23
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "8. One other useful flag is  , which shows what the collector is doing when it runs. Run with flags  to see both the commands and the GC behavior. What do you notice about the GC? The final effect of  of course, is performance. Use  to look at final statistics; how many extra reads and writes occur due to garbage collection? Compare this to the ideal SSD (-T ideal); how much extra reading, writing, and erasing is there due to the nature of Flash? Compare it also to the direct approach; in what way (erases, reads, programs) is the log-structured approach superior? ",
+        "page_idx": 23
+    },
+    {
+        "chapter": "44",
+        "subchapter": "",
+        "problem": "9. One last aspect to explore is workload skew. Adding skew to the workload changes writes such that more writes occur to some smaller fraction of the logical block space. For example, running with   makes  of the writes go to  of the blocks. Pick some different skews and perform many randomly-chosen operations (e.g.,  ), using first  direct to understand the skew, and then  to see the impact on a log-structured device. What do you expect will happen? One other small skew control to explore is  100; by adding this flag to a skewed workload, the first 100 writes are not skewed. The idea is to first create a lot of data, but then only update some of it. What impact might that have upon a garbage collector? ",
+        "page_idx": 23
+    },
+    {
+        "chapter": "45",
+        "subchapter": "",
+        "problem": "1. Write a short C program (called check-xor.c) that computes an XOR-based checksum over an input file, and prints the checksum as output. Use a 8-bit unsigned char to store the (one byte) checksum. Make some test files to see if it works as expected.",
+        "page_idx": 13
+    },
+    {
+        "chapter": "45",
+        "subchapter": "",
+        "problem": "2. Now write a short C program (called check-fletcher.c) that computes the Fletcher checksum over an input file. Once again, test your program to see if it works.",
+        "page_idx": 13
+    },
+    {
+        "chapter": "45",
+        "subchapter": "",
+        "problem": "3. Now compare the performance of both: is one faster than the other? How does performance change as the size of the input file changes? Use internal calls to gettimeofday to time the programs. Which should you use if you care about performance? About checking ability?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "45",
+        "subchapter": "",
+        "problem": "4. Read about the 16-bit CRC and then implement it. Test it on a number of different inputs to ensure that it works. How is its performance as compared to the simple XOR and Fletcher? How about its checking ability?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "45",
+        "subchapter": "",
+        "problem": "5. Now build a tool (create-csum.c) that computes a single-byte checksum for every 4KB block of a file, and records the results in an output file (specified on the command line). Build a related tool (check-csum.c) that reads a file, computes the checksums over each block, and compares the results to the stored checksums stored in another file. If there is a problem, the program should print that the file has been corrupted. Test the program by manually corrupting the file. ",
+        "page_idx": 13
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "1. Using the code provided in the chapter, build a simple UDP-based server and client. The server should receive messages from the client, and reply with an acknowledgment. In this first attempt, do not add any retransmission or robustness (assume that communication works perfectly). Run this on a single machine for testing; later, run it on two different machines.",
+        "page_idx": 16
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "2. Turn your code into a communication library. Specifically, make your own API, with send and receive calls, as well as other API calls as needed. Rewrite your client and server to use your library instead of raw socket calls.",
+        "page_idx": 16
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "3. Add reliable communication to your burgeoning communication library, in the form of timeout/retry. Specifically, your library should make a copy of any message that it is going to send. When sending it, it should start a timer, so it can track how long it has been since the message was sent. On the receiver, the library should acknowledge received messages. The client send should block when sending, i.e., it should wait until the message has been acknowledged before returning. It should also be willing to retry sending indefinitely. The maximum message size should be that of the largest single message you can send with UDP. Finally, be sure to perform timeout/retry efficiently by putting the caller to sleep until either an ack arrives or the transmission times out; do not spin and waste the CPU!",
+        "page_idx": 16
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "4. Make your library more efficient and feature-filled. First, add verylarge message transfer. Specifically, although the network limit maximum message size, your library should take a message of arbitrarily large size and transfer it from client to server. The client should transmit these large messages in pieces to the server; the server-side library code should assemble received fragments into the contiguous whole, and pass the single large buffer to the waiting server code.",
+        "page_idx": 16
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "5. Do the above again, but with high performance. Instead of sending each fragment one at a time, you should rapidly send many pieces, thus allowing the network to be much more highly utilized. To do so, carefully mark each piece of the transfer so that the re-assembly on the receiver side does not scramble the message.",
+        "page_idx": 16
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "6. A final implementation challenge: asynchronous message send with in-order delivery. That is, the client should be able to repeatedly call send to send one message after the other; the receiver should call receive and get each message in order, reliably; many messages from the sender should be able to be in flight concurrently. Also add a sender-side call that enables a client to wait for all outstanding messages to be acknowledged. ",
+        "page_idx": 16
+    },
+    {
+        "chapter": "48",
+        "subchapter": "",
+        "problem": "7. Now, one more pain point: measurement. Measure the bandwidth of each of your approaches; how much data can you transfer between two different machines, at what rate? Also measure latency: for single packet send and acknowledgment, how quickly does it finish? Finally, do your numbers look reasonable? What did you expect? How can you better set your expectations so as to know if there is a problem, or that your code is working well? ",
+        "page_idx": 16
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "1. A first question for your trace analysis: using the timestamps found in the first column, determine the period of time the traces were taken from. How long is the period? What day/week/month/year was it? (does this match the hint given in the file name?) Hint: Use the tools head -1 and tail  to extract the first and last lines of the file, and do the calculation.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "2. Now, let\u2019s do some operation counts. How many of each type of operation occur in the trace? Sort these by frequency; which operation is most frequent? Does NFS live up to its reputation?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "3. Now let\u2019s look at some particular operations in more detail. For example, the GETATTR request returns a lot of information about files, including which user ID the request is being performed for, the size of the file, and so forth. Make a distribution of file sizes accessed within the trace; what is the average file size? Also, how many different users access files in the trace? Do a few users dominate traffic, or is it more spread out? What other interesting information is found within GETATTR replies?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "4. You can also look at requests to a given file and determine how files are being accessed. For example, is a given file being read or written sequentially? Or randomly? Look at the details of READ and WRITE requests/replies to compute the answer.",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "5. Traffic comes from many machines and goes to one server (in this trace). Compute a traffic matrix, which shows how many different clients there are in the trace, and how many requests/replies go to each. Do a few machines dominate, or is it more evenly balanced?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "6. The timing information, and the per-request/reply unique ID, should allow you to compute the latency for a given request. Compute the latencies of all request/reply pairs, and plot them as a distribution. What is the average? Maximum? Minimum?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "7. Sometimes requests are retried, as the request or its reply could be lost or dropped. Can you find any evidence of such retrying in the trace sample?",
+        "page_idx": 17
+    },
+    {
+        "chapter": "49",
+        "subchapter": "",
+        "problem": "8. There are many other questions you could answer through more analysis. What questions do you think are important? Suggest them to us, and perhaps we\u2019ll add them here! ",
+        "page_idx": 17
+    },
+    {
+        "chapter": "50",
+        "subchapter": "",
+        "problem": "1. Run a few simple cases to make sure you can predict what values will be read by clients. Vary the random seed flag  and see if you can trace through and predict both intermediate values as well as the final values stored in the files. Also vary the number of files  , the number of clients  , and the read ratio  from between 0 to 1) to make it a bit more challenging. You might also want to generate slightly longer traces to make for more interesting interactions, e.g., (  or higher).",
+        "page_idx": 13
+    },
+    {
+        "chapter": "50",
+        "subchapter": "",
+        "problem": "2. Now do the same thing and see if you can predict each callback that the AFS server initiates. Try different random seeds, and make sure to use a high level of detailed feedback (e.g.,  to see when callbacks occur when you have the program compute the answers for you (with  ). Can you guess exactly when each callback occurs? What is the precise condition for one to take place?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "50",
+        "subchapter": "",
+        "problem": "3. Similar to above, run with some different random seeds and see if you can predict the exact cache state at each step. Cache state can be observed by running with  and  .",
+        "page_idx": 13
+    },
+    {
+        "chapter": "50",
+        "subchapter": "",
+        "problem": "4. Now let\u2019s construct some specific workloads. Run the simulation with  oa1:w1:c1,oa1:r1:c1 flag. What are different possible values observed by client 1 when it reads the file  when running with the random scheduler? (try different random seeds to see different outcomes)? Of all the possible schedule interleavings of the two clients\u2019 operations, how many of them lead to client 1 reading the value 1, and how many reading the value 0?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "50",
+        "subchapter": "",
+        "problem": "5. Now let\u2019s construct some specific schedules. When running with the  oa1:w1:c1,oa1:r1:c1 flag, also run with the following schedules:  , -S 100011, -S 011100, and others of which you can think. What value will client 1 read?",
+        "page_idx": 13
+    },
+    {
+        "chapter": "50",
+        "subchapter": "",
+        "problem": "6. Now run with this workload: -A oa1:w1:c1,oa1:w1:c1, and vary the schedules as above. What happens when you run with  011100? What about when you run with -S 010011? What is important in determining the final value of the file? ",
+        "page_idx": 13
+    }
+]

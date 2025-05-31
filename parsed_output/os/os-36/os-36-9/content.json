@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "36.9 Historical Notes ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Before ending, we include a brief historical note on the origin of some of these fundamental ideas. If you are interested in learning more, read Smotherman’s excellent summary [S08]. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Interrupts are an ancient idea, existing on the earliest of machines. For example, the UNIVAC in the early 1950’s had some form of interrupt vectoring, although it is unclear in exactly which year this feature was available [S08]. Sadly, even in its infancy, we are beginning to lose the origins of computing history. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "There is also some debate as to which machine first introduced the idea of DMA. For example, Knuth and others point to the DYSEAC (a “mobile” machine, which at the time meant it could be hauled in a trailer), whereas others think the IBM SAGE may have been the first [S08]. Either way, by the mid $5 0 \\mathrm { ^ { \\prime } s }$ , systems with $\\bar { \\mathrm { I } / \\mathrm { O } }$ devices that communicated directly with memory and interrupted the CPU when finished existed. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The history here is difficult to trace because the inventions are tied to real, and sometimes obscure, machines. For example, some think that the Lincoln Labs TX-2 machine was first with vectored interrupts [S08], but this is hardly clear. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "static int ide_wait_ready() { while (((int r $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ inb(0x1f7)) & IDE_BSY) || !(r & IDE_DRDY)) ; // loop until drive isn’t busy // return -1 on error, or 0 otherwise   \n}   \nstatic void ide_start_request(struct buf $\\star \\mathrm { b }$ ) { ide_wait_ready(); outb(0x3f6, 0); // generate interrupt outb(0x1f2, 1); // how many sectors? outb(0x1f3, b->sector & 0xff); // LBA goes here . outb(0x1f4, (b->sector >> 8) & 0xff); // ... and here outb(0x1f5, (b->sector >> 16) & 0xff); // . . and here! outb(0x1f6, 0xe0 | ((b->dev&1) $< < 4$ ) | (( $b - >$ sector $> > 2 4$ ) $\\& 0 \\mathbf { x } 0 \\mathbf { f }$ )); if(b->flags & B_DIRTY){ outb(0x1f7, IDE_CMD_WRITE); // this is a WRITE outsl(0x1f0, b->data, 512/4); // transfer data too! } else { outb(0x1f7, IDE_CMD_READ); // this is a READ (no data) }   \n}   \nvoid ide_rw(struct buf $^ { \\star \\mathrm { b } }$ ) { acquire(&ide_lock); for (struct buf $\\star \\star \\mathrm { p p } =$ &ide_queue; \\*pp; $\\mathrm { p } \\mathrm { p } { = } \\&$ ( $\\star _ { \\mathrm { P P } }$ ) $- >$ qnext) ; // walk queue $\\star \\mathrm { p p } \\ = \\ \\mathrm { b }$ ; // add request to end if (ide_queue $= = \\mathrm { ~ b ~ }$ ) // if q is empty ide_start_request(b); // send req to disk while ((b->flags & (B_VALID|B_DIRTY)) ! $\\mathrel { \\mathop : } =$ B_VALID) sleep(b, &ide_lock); // wait for completion release(&ide_lock);   \n}   \nvoid ide_intr() { struct buf $^ { \\star \\mathrm { b } }$ ; acquire(&ide_lock); if (!(b->flags & B_DIRTY) && ide_wait_ready() $> = ~ 0$ ) insl(0x1f0, b->data, 512/4); // if READ: get data b->flags | $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ B_VALID; b->flags $\\& =$ ˜B_DIRTY; wakeup(b); // wake waiting process if ((ide_queue $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ b->qnext) ! $\\ ! = 0$ ) // start next request ide_start_request(ide_queue); // (if one exists) release(&ide_lock);   \n} ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Because the ideas are relatively obvious — no Einsteinian leap is required to come up with the idea of letting the CPU do something else while a slow $\\mathrm { I } / \\mathrm { O }$ is pending — perhaps our focus on “who first?” is misguided. What is certainly clear: as people built these early machines, it became obvious that I/O support was needed. Interrupts, DMA, and related ideas are all direct outcomes of the nature of fast CPUs and slow devices; if you were there at the time, you might have had similar ideas. ",
+        "page_idx": 12
+    }
+]

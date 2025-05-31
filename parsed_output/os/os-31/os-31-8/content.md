@@ -1,0 +1,40 @@
+# 31.8 How To Implement Semaphores  
+
+Finally, let’s use our low-level synchronization primitives, locks and condition variables, to build our own version of semaphores called ... (drum roll here) ... Zemaphores. This task is fairly straightforward, as you can see in Figure 31.17 (page 17).  
+
+In the code above, we use just one lock and one condition variable, plus a state variable to track the value of the semaphore. Study the code for yourself until you really understand it. Do it!  
+
+One subtle difference between our Zemaphore and pure semaphores as defined by Dijkstra is that we don’t maintain the invariant that the value of the semaphore, when negative, reflects the number of waiting threads; indeed, the value will never be lower than zero. This behavior is easier to implement and matches the current Linux implementation.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+1 typedef struct __Zem_t {   
+2 int value;   
+3 pthread_cond_t cond;   
+4 pthread_mutex_t lock;   
+5 } Zem_t;   
+6   
+7 // only one thread can call this   
+8 void Zem_init(Zem_t $\star \boldsymbol { \mathrm { S } }$ , int value) {   
+9 s->value $\mathbf { \Sigma } = \mathbf { \Sigma }$ value;   
+10 Cond_init(&s->cond);   
+11 Mutex_init(&s->lock);   
+12 }   
+13   
+14 void Zem_wait(Zem_t $\star \boldsymbol { \mathrm { s } }$ ) {   
+15 Mutex_lock(&s->lock);   
+16 while (s->value $\ < = \ 0$ )   
+17 Cond_wait(&s->cond, &s->lock);   
+18 s->value--;   
+19 Mutex_unlock( $\mathrm { ' } \& \mathrel { \phantom { = } } \mathrm { - } \mathrm { > } \mathrm { 1 } \mathrm { \circ } \mathrm { c } \mathrm { k }$ );   
+20 }   
+21   
+22 void Zem_post(Zem_t \*s) {   
+23 Mutex_lock(&s->lock);   
+24 s->value++;   
+25 Cond_signal(&s->cond);   
+26 Mutex_unlock(&s->lock);   
+27 }  
+
+Curiously, building condition variables out of semaphores is a much trickier proposition. Some highly experienced concurrent programmers tried to do this in the Windows environment, and many different bugs ensued [B04]. Try it yourself, and see if you can figure out why building condition variables out of semaphores is more challenging of a problem than it might appear.  
+

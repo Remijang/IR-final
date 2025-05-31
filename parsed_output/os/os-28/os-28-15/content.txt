@@ -1,0 +1,39 @@
+28.15 Different OS, Different Support
+We have thus far seen one type of support that an OS can provide in order to build a more efficient lock in a thread library. Other OS’s provide similar support; the details vary.  
+For example, Linux provides a futex which is similar to the Solaris interface but provides more in-kernel functionality. Specifically, each futex has associated with it a specific physical memory location, as well as a  
+OPERATINGSYSTEMS[VERSION 1.10]  
+1 void mutex_lock (int *mutex) { 
+2 int v; 
+3 // Bit 31 was clear, we got the mutex (fastpath) 
+4 if (atomic_bit_test_set (mutex, 31) $\scriptstyle \mathbf { \mu } = \mathbf { \mu } 0$ ) 
+5 return; 
+6 atomic_increment (mutex); 
+7 while (1) { 
+8 if (atomic_bit_test_set (mutex, 31) $\scriptstyle = = 0$ ) { 
+9 atomic_decrement (mutex); 
+10 return; 
+11 } 
+12 // Have to waitFirst to make sure futex value 
+13 // we are monitoring is negative (locked). 
+14 $\mathrm { ~  ~ v ~ } = \mathrm { ~  ~ \nabla ~ } \star$ mutex; 
+15 if $\mathrm { ~ \mathit ~ { ~ \chi ~ } ~ } \ > = \mathrm { ~ \mathit ~ { ~ 0 ~ } ~ }$ ) 
+16 continue; 
+17 futex_wait (mutex, v); 
+18 } 
+19 } 
+20 
+21 void mutex_unlock (int *mutex) { 
+22 // Adding $0 \times 8 0 0 0 0 0 0 0$ to counter results in 0 if and 
+23 // only if there are not other interested threads 
+24 if (atomic_add_zero (mutex, 0x80000000)) 
+25 return; 
+26 
+27 // There are other threads waiting for this mutex, 
+28 // wake one of them up. 
+29 futex_wake (mutex); 
+30 }  
+per-futex in-kernel queue. Callers can use futex calls (described below) to sleep and wake as need be.  
+Specifically, two calls are available. The call to futex wait(address, expected) puts the calling thread to sleep, assuming the value at the address address is equal to expected. If it is not equal, the call returns immediately. The call to the routine futex wake(address) wakes one thread that is waiting on the queue. The usage of these calls in a Linux mutex is shown in Figure 28.10 (page 19).  
+This code snippet from lowlevellock.h in the nptl library (part of the gnu libc library) [L09] is interesting for a few reasons. First, it uses a single integer to track both whether the lock is held or not (the high bit of the integer) and the number of waiters on the lock (all the other bits). Thus, if the lock is negative, it is held (because the high bit is set and that bit determines the sign of the integer).  
+Second, the code snippet shows how to optimize for the common case, specifically when there is no contention for the lock; with only one thread acquiring and releasing a lock, very little work is done (the atomic bit test-and-set to lock and an atomic add to release the lock).  
+See if you can puzzle through the rest of this “real-world” lock to understand how it works. Do it and become a master of Linux locking, or at least somebody who listens when a book tells you to do something 3.  

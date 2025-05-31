@@ -1,0 +1,113 @@
+[
+    {
+        "type": "text",
+        "text": "19.2 Example: Accessing An Array ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "To make clear the operation of a TLB, let’s examine a simple virtual address trace and see how a TLB can improve its performance. In this example, let’s assume we have an array of 10 4-byte integers in memory, starting at virtual address 100. Assume further that we have a small 8-bit virtual address space, with 16-byte pages; thus, a virtual address breaks down into a 4-bit VPN (there are 16 virtual pages) and a 4-bit offset (there are 16 bytes on each of those pages). ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Figure 19.2 (page 4) shows the array laid out on the 16 16-byte pages of the system. As you can see, the array’s first entry $\\left( \\mathsf { a } \\left[ \\mathsf { 0 } \\right] \\right)$ begins on $( \\mathrm { V P N } { = } \\dot { 0 } 6 )$ offse $\\scriptstyle { \\mathsf { t } } = 0 4$ ); only three 4-byte integers fit onto that page. The array continues onto the next page $( \\dot { \\mathrm { V } } \\mathrm { P N } { = } 0 7 \\dot { 7 }$ ), where the next four entries $( \\alpha [ 3 ] \\ldots ) [ 6 ] )$ are found. Finally, the last three entries of the 10-entry array $\\left( \\ a \\left[ \\ 7 \\right] \\ \\dots \\ a \\left[ \\ 9 \\right] \\right) ,$ ) are located on the next page of the address space $( \\mathrm { V P N = } 0 8 ) \\$ ). ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Now let’s consider a simple loop that accesses each array element, something that would look like this in C: ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "int i, $s \\mathsf { u m } \\ = \\ \\mathsf { 0 } ;$ ;   \nfor $\\begin{array} { r c l c r c l } { { ( \\dot { \\perp } } } & { { = } } & { { 0 ; } } & { { \\dot { \\perp } } } & { { < } } & { { 1 0 ; } } & { { \\dot { \\perp } + + ) } } & { { \\left\\{ \\begin{array} { c c c c } { { } } \\end{array} \\right. } } \\end{array}$ sum $+ = \\mathrm { ~ \\mathsf ~ { ~ a ~ } ~ } [ \\mathrm { ~ i ~ } ]$ ;   \n} ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For the sake of simplicity, we will pretend that the only memory accesses the loop generates are to the array (ignoring the variables i and sum, as well as the instructions themselves). When the first array element $\\big ( \\mathrm { a } \\left[ 0 \\right] \\big )$ is accessed, the CPU will see a load to virtual address 100. The hardware extracts the VPN from this $( \\mathrm { V P N } { = } 0 6 ) ^ { \\circ }$ ), and uses that to check the TLB for a valid translation. Assuming this is the first time the program accesses the array, the result will be a TLB miss. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The next access is to a[1], and there is some good news here: a TLB hit! Because the second element of the array is packed next to the first, it lives on the same page; because we’ve already accessed this page when accessing the first element of the array, the translation is already loaded into the TLB. And hence the reason for our success. Access to $\\mathsf { a } [ 2 ]$ encounters similar success (another hit), because it too lives on the same page as a[0] and $\\mathsf { a } \\left[ \\mathsf { 1 } \\right]$ . ",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/650e602256838ba84fe47f0f9887d8a60b6c2d8930e2ff86b9e9555e2c57abe3.jpg",
+        "img_caption": [
+            "Figure 19.2: Example: An Array In A Tiny Address Space "
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Unfortunately, when the program accesses a[3], we encounter another TLB miss. However, once again, the next entries $( \\mathsf { a } [ 4 ] \\dots \\mathsf { a } [ 6 ] )$ will hit in the TLB, as they all reside on the same page in memory. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Finally, access to a[7] causes one last TLB miss. The hardware once again consults the page table to figure out the location of this virtual page in physical memory, and updates the TLB accordingly. The final two accesses (a[8] and a[9]) receive the benefits of this TLB update; when the hardware looks in the TLB for their translations, two more hits result. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Let us summarize TLB activity during our ten accesses to the array: miss, hit, hit, miss, hit, hit, hit, miss, hit, hit. Thus, our TLB hit rate, which is the number of hits divided by the total number of accesses, is $7 0 \\%$ . Although this is not too high (indeed, we desire hit rates that approach $1 0 0 \\%$ ), it is non-zero, which may be a surprise. Even though this is the first time the program accesses the array, the TLB improves performance due to spatial locality. The elements of the array are packed tightly into pages (i.e., they are close to one another in space), and thus only the first access to an element on a page yields a TLB miss. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Also note the role that page size plays in this example. If the page size ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "TIP: USE CACHING WHEN POSSIBLE ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Caching is one of the most fundamental performance techniques in computer systems, one that is used again and again to make the “commoncase fast” [HP06]. The idea behind hardware caches is to take advantage of locality in instruction and data references. There are usually two types of locality: temporal locality and spatial locality. With temporal locality, the idea is that an instruction or data item that has been recently accessed will likely be re-accessed soon in the future. Think of loop variables or instructions in a loop; they are accessed repeatedly over time. With spatial locality, the idea is that if a program accesses memory at address $\\scriptstyle { \\mathbf { { \\mathit { x } } } } ,$ it will likely soon access memory near $x$ . Imagine here streaming through an array of some kind, accessing one element and then the next. Of course, these properties depend on the exact nature of the program, and thus are not hard-and-fast laws but more like rules of thumb. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Hardware caches, whether for instructions, data, or address translations (as in our TLB) take advantage of locality by keeping copies of memory in small, fast on-chip memory. Instead of having to go to a (slow) memory to satisfy a request, the processor can first check if a nearby copy exists in a cache; if it does, the processor can access it quickly (i.e., in a few CPU cycles) and avoid spending the costly time it takes to access memory (many nanoseconds). ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "You might be wondering: if caches (like the TLB) are so great, why don’t we just make bigger caches and keep all of our data in them? Unfortunately, this is where we run into more fundamental laws like those of physics. If you want a fast cache, it has to be small, as issues like the speed-of-light and other physical constraints become relevant. Any large cache by definition is slow, and thus defeats the purpose. Thus, we are stuck with small, fast caches; the question that remains is how to best use them to improve performance. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "had simply been twice as big (32 bytes, not 16), the array access would suffer even fewer misses. As typical page sizes are more like 4KB, these types of dense, array-based accesses achieve excellent TLB performance, encountering only a single miss per page of accesses. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "One last point about TLB performance: if the program, soon after this loop completes, accesses the array again, we’d likely see an even better result, assuming that we have a big enough TLB to cache the needed translations: hit, hit, hit, hit, hit, hit, hit, hit, hit, hit. In this case, the TLB hit rate would be high because of temporal locality, i.e., the quick re-referencing of memory items in time. Like any cache, TLBs rely upon both spatial and temporal locality for success, which are program properties. If the program of interest exhibits such locality (and many programs do), the TLB hit rate will likely be high. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "1 VPN $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (VirtualAddress & VPN_MASK) $> >$ SHIFT   \n2 (Success, TlbEntry) $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ TLB_Lookup(VPN)   \n3 if (Success $\\scriptstyle = =$ True) // TLB Hit   \n4 if (CanAccess(TlbEntry.ProtectBits) $\\scriptstyle = =$ True)   \n5 Offset $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ VirtualAddress & OFFSET_MASK   \n6 PhysAddr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (TlbEntry.PFN << SHIFT) | Offset   \n7 Register $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ AccessMemory(PhysAddr)   \n8 else   \n9 RaiseException(PROTECTION_FAULT)   \n10 else // TLB Miss   \n11 RaiseException(TLB_MISS) ",
+        "page_idx": 5
+    }
+]

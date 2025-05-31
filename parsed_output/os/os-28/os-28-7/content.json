@@ -1,0 +1,98 @@
+[
+    {
+        "type": "text",
+        "text": "28.7 Building Working Spin Locks with Test-And-Set ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Because disabling interrupts does not work on multiple processors, and because simple approaches using loads and stores (as shown above) don’t work, system designers started to invent hardware support for locking. The earliest multiprocessor systems, such as the Burroughs B5000 in the early $1 9 6 0 ^ { \\prime } \\mathrm { s }$ [M82], had such support; today all systems provide this type of support, even for single CPU systems. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The simplest bit of hardware support to understand is known as a test-and-set (or atomic exchange1) instruction. We define what the testand-set instruction does via the following C code snippet: ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "1 int TestAndSet(int \\*old_ptr, int new) {   \n2 int old $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ \\*old_ptr; // fetch old value at old_ptr   \n3 \\*old_ $\\mathrm {  ~ \\ p t { } ~ } \\mathrm {  ~ \\cdot ~ } \\mathrm {  ~ \\nabla ~ } = \\mathrm {  ~ \\ n e w ~ }$ ; // store ’new’ into old_ptr   \n4 return old; // return the old value   \n5 } ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: DEKKER’S AND PETERSON’S ALGORITHMS ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "In the $1 9 6 0 ^ { \\prime } \\mathrm { s }$ , Dijkstra posed the concurrency problem to his friends, and one of them, a mathematician named Theodorus Jozef Dekker, came up with a solution [D68]. Unlike the solutions we discuss here, which use special hardware instructions and even OS support, Dekker’s algorithm uses just loads and stores (assuming they are atomic with respect to each other, which was true on early hardware). ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Dekker’s approach was later refined by Peterson [P81]. Once again, just loads and stores are used, and the idea is to ensure that two threads never enter a critical section at the same time. Here is Peterson’s algorithm (for two threads); see if you can understand the code. What are the flag and turn variables used for? ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "int flag[2];   \nint turn;   \nvoid init() { // indicate you intend to hold the lock w/ ’flag f $\\begin{array} { l c l } { { \\mathrm { \\ l a g \\ [ \\ 0 ] } } } & { { = } } & { { \\mathrm { f \\ l a g \\ [ \\ 1 ] } } } \\end{array} = 0 ,$ ; // whose turn is it? (thread 0 or 1) turn $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n}   \nvoid lock() { // ’self’ is the thread ID of caller flag[self] $\\mathbf { \\Sigma } = \\mathbf { \\Sigma } 1$ ; // make it other thread’s turn turn $\\mathbf { \\Sigma } = \\mathbf { \\Sigma } \\mathbf { 1 }$ - self; while ((flag[1-self] $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ ) && (turn $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ - self)) ; // spin-wait while it’s not your turn   \nvoid unlock() { // simply undo your intent flag[self] $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n} ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "For some reason, developing locks that work without special hardware support became all the rage for a while, giving theory-types a lot of problems to work on. Of course, this line of work became quite useless when people realized it is much easier to assume a little hardware support (and indeed that support had been around from the earliest days of multiprocessing). Further, algorithms like the ones above don’t work on modern hardware (due to relaxed memory consistency models), thus making them even less useful than they were before. Yet more research relegated to the dustbin of history... ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "1 typedef struct __lock_t {   \n2 int flag;   \n3 } lock_t;   \n4   \n5 void init(lock_t \\*lock) {   \n6 // 0: lock is available, 1: lock is held   \n7 lock->flag $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n8 }   \n9   \n10 void lock(lock_t \\*lock) {   \n11 while (TestAndSet(&lock->flag, 1) $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ )   \n12 ; // spin-wait (do nothing)   \n13 }   \n14   \n15 void unlock(lock_t \\*lock) {   \n16 lock->flag $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n17 } ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "What the test-and-set instruction does is as follows. It returns the old value pointed to by the old ptr, and simultaneously updates said value to new. The key, of course, is that this sequence of operations is performed atomically. The reason it is called “test and set” is that it enables you to “test” the old value (which is what is returned) while simultaneously “setting” the memory location to a new value; as it turns out, this slightly more powerful instruction is enough to build a simple spin lock, as we now examine in Figure 28.3. Or better yet: figure it out first yourself! ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s make sure we understand why this lock works. Imagine first the case where a thread calls lock() and no other thread currently holds the lock; thus, flag should be 0. When the thread calls TestAndSet(flag, 1), the routine will return the old value of flag, which is 0; thus, the calling thread, which is testing the value of flag, will not get caught spinning in the while loop and will acquire the lock. The thread will also atomically set the value to 1, thus indicating that the lock is now held. When the thread is finished with its critical section, it calls unlock() to set the flag back to zero. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The second case we can imagine arises when one thread already has the lock held (i.e., flag is 1). In this case, this thread will call lock() and then call TestAndSet(flag, 1) as well. This time, TestAndSet() will return the old value at flag, which is 1 (because the lock is held), while simultaneously setting it to 1 again. As long as the lock is held by another thread, TestAndSet() will repeatedly return 1, and thus this thread will spin and spin until the lock is finally released. When the flag is finally set to 0 by some other thread, this thread will call TestAndSet() again, which will now return 0 while atomically setting the value to 1 and thus acquire the lock and enter the critical section. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "By making both the test (of the old lock value) and set (of the new ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "TIP: THINK ABOUT CONCURRENCY AS A MALICIOUS SCHEDULER From this example, you might get a sense of the approach you need to take to understand concurrent execution. What you should try to do is to pretend you are a malicious scheduler, one that interrupts threads at the most inopportune of times in order to foil their feeble attempts at building synchronization primitives. What a mean scheduler you are! Although the exact sequence of interrupts may be improbable, it is possible, and that is all we need to demonstrate that a particular approach does not work. It can be useful to think maliciously! (at least, sometimes) ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "value) a single atomic operation, we ensure that only one thread acquires the lock. And that’s how to build a working mutual exclusion primitive! ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "You may also now understand why this type of lock is usually referred to as a spin lock. It is the simplest type of lock to build, and simply spins, using CPU cycles, until the lock becomes available. To work correctly on a single processor, it requires a preemptive scheduler (i.e., one that will interrupt a thread via a timer, in order to run a different thread, from time to time). Without preemption, spin locks don’t make much sense on a single CPU, as a thread spinning on a CPU will never relinquish it. ",
+        "page_idx": 8
+    }
+]

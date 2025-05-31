@@ -1,0 +1,17 @@
+33.6 A Solution: Asynchronous I/O
+To overcome this limit, many modern operating systems have introduced new ways to issue I/O requests to the disk system, referred to generically as asynchronous I/O. These interfaces enable an application to issue an I/O request and return control immediately to the caller, before the I/O has completed; additional interfaces enable an application to determine whether various I/Os have completed.  
+For example, let us examine the interface provided on a Mac (other systems have similar APIs). The APIs revolve around a basic structure, the struct aiocb or AIO control block in common terminology. A simplified version of the structure looks like this (see the manual pages for more information):  
+struct aiocb { int aio_fildes; // File descriptor off_t aio_offset; // File offset volatile void *aio_buf; // Location of buffer size_t aio_nbytes; // Length of transfer 
+};  
+To issue an asynchronous read to a file, an application should first fill in this structure with the relevant information: the file descriptor of the file to be read (aio fildes), the offset within the file (aio offset) as well as the length of the request (aio nbytes), and finally the target memory location into which the results of the read should be copied (aio buf).  
+After this structure is filled in, the application must issue the asynchronous call to read the file; on a Mac, this API is simply the asynchronous read API:  
+int aio_read(struct aiocb *aiocbp);  
+This call tries to issue the $\scriptstyle { \mathrm { I / O } } ;$ ; if successful, it simply returns right away and the application (i.e., the event-based server) can continue with its work.  
+There is one last piece of the puzzle we must solve, however. How can we tell when an I/O is complete, and thus that the buffer (pointed to by aio buf) now has the requested data within it?  
+One last API is needed. On a Mac, it is referred to (somewhat confusingly) as aio error(). The API looks like this:  
+int aio_error(const struct aiocb *aiocbp);  
+This system call checks whether the request referred to by aiocbp has completed. If it has, the routine returns success (indicated by a zero); if not, EINPROGRESS is returned. Thus, for every outstanding asynchronous I/O, an application can periodically poll the system via a call to aio error() to determine whether said I/O has yet completed.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+One thing you might have noticed is that it is painful to check whether an I/O has completed; if a program has tens or hundreds of I/Os issued at a given point in time, should it simply keep checking each of them repeatedly, or wait a little while first, or ... ?  
+To remedy this issue, some systems provide an approach based on the interrupt. This method uses UNIX signals to inform applications when an asynchronous I/O completes, thus removing the need to repeatedly ask the system. This polling vs. interrupts issue is seen in devices too, as you will see (or already have seen) in the chapter on I/O devices.  
+In systems without asynchronous I/O, the pure event-based approach cannot be implemented. However, clever researchers have derived methods that work fairly well in their place. For example, Pai et al. [PDZ99] describe a hybrid approach in which events are used to process network packets, and a thread pool is used to manage outstanding I/Os. Read their paper for details.  

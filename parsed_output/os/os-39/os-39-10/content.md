@@ -1,0 +1,12 @@
+# 39.10 Removing Files  
+
+At this point, we know how to create files and access them, either sequentially or not. But how do you delete files? If you’ve used UNIX, you probably think you know: just run the program rm. But what system call does rm use to remove a file?  
+
+Let’s use our old friend strace again to find out. Here we remove that pesky file foo:  
+
+prompt> strace rm foounlink("foo")  
+
+= 0  
+
+We’ve removed a bunch of unrelated cruft from the traced output, leaving just a single call to the mysteriously-named system call unlink(). As you can see, unlink() just takes the name of the file to be removed, and returns zero upon success. But this leads us to a great puzzle: why is this system call named unlink? Why not just remove or delete? To understand the answer to this puzzle, we must first understand more than just files, but also directories.  
+

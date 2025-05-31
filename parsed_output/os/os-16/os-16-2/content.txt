@@ -1,0 +1,22 @@
+16.2 Which Segment Are We Referring To?
+The hardware uses segment registers during translation. How does it know the offset into a segment, and to which segment an address refers?  
+One common approach, sometimes referred to as an explicit approach, is to chop up the address space into segments based on the top few bits of the virtual address; this technique was used in the VAX/VMS system [LL82]. In our example above, we have three segments; thus we need two bits to accomplish our task. If we use the top two bits of our 14-bit virtual address to select the segment, our virtual address looks like this:  
+ 
+In our example, then, if the top two bits are 00, the hardware knows the virtual address is in the code segment, and thus uses the code base and bounds pair to relocate the address to the correct physical location. If the top two bits are 01, the hardware knows the address is in the heap,  
+OPERATINGSYSTEMS[VERSION 1.10]  
+and thus uses the heap base and bounds. Let’s take our example heap virtual address from above (4200) and translate it, just to make sure this is clear. The virtual address 4200, in binary form, can be seen here:  
+ 
+As you can see from the picture, the top two bits (01) tell the hardware which segment we are referring to. The bottom 12 bits are the offset into the segment: $0 0 0 0 0 1 1 0 1 0 0 0 ,$ , or hex $0 { \times } 0 6 8$ , or 104 in decimal. Thus, the hardware simply takes the first two bits to determine which segment register to use, and then takes the next 12 bits as the offset into the segment. By adding the base register to the offset, the hardware arrives at the final physical address. Note the offset eases the bounds check too: we can simply check if the offset is less than the bounds; if not, the address is illegal. Thus, if base and bounds were arrays (with one entry per segment), the hardware would be doing something like this to obtain the desired physical address:  
+1 // get top 2 bits of 14-bit VA 
+2 Segment $\mathbf { \Sigma } = \mathbf { \Sigma }$ (VirtualAddress & SEG_MASK) >> SEG_SHIFT 
+3 // now get offset 
+4 Offset $\mathbf { \Sigma } = \mathbf { \Sigma }$ VirtualAddress & OFFSET_MASK 
+5 if (Offset $> =$ Bounds[Segment]) 
+6 RaiseException(PROTECTION_FAULT) 
+7 else 
+8 PhysAddr $\mathbf { \Sigma } = \mathbf { \Sigma }$ Base[Segment] $^ +$ Offset 
+9 Register $\mathbf { \Sigma } = \mathbf { \Sigma }$ AccessMemory(PhysAddr)  
+In our running example, we can fill in values for the constants above. Specifically, SEG MASK would be set to $0 \times 3 0 0 0$ , SEG SHIFT to 12, and OFFSET MASK to 0xFFF.  
+You may also have noticed that when we use the top two bits, and we only have three segments (code, heap, stack), one segment of the address space goes unused. To fully utilize the virtual address space (and avoid an unused segment), some systems put code in the same segment as the heap and thus use only one bit to select which segment to use [LL82].  
+Another issue with using the top so many bits to select a segment is that it limits use of the virtual address space. Specifically, each segment is limited to a maximum size, which in our example is 4KB (using the top two bits to choose segments implies the 16KB address space gets chopped into four pieces, or 4KB in this example). If a running program wishes to grow a segment (say the heap, or the stack) beyond that maximum, the program is out of luck.  
+There are other ways for the hardware to determine which segment a particular address is in. In the implicit approach, the hardware determines the segment by noticing how the address was formed. If, for example, the address was generated from the program counter (i.e., it was an instruction fetch), then the address is within the code segment; if the address is based off of the stack or base pointer, it must be in the stack segment; any other address must be in the heap.  

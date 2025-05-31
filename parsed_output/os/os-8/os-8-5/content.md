@@ -1,0 +1,23 @@
+# 8.5 Tuning MLFQ And Other Issues  
+
+A few other issues arise with MLFQ scheduling. One big question is how to parameterize such a scheduler. For example, how many queues should there be? How big should the time slice be per queue? The allotment? How often should priority be boosted in order to avoid starvation and account for changes in behavior? There are no easy answers to these questions, and thus only some experience with workloads and subsequent tuning of the scheduler will lead to a satisfactory balance.  
+
+For example, most MLFQ variants allow for varying time-slice length across different queues. The high-priority queues are usually given short time slices; they are comprised of interactive jobs, after all, and thus  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+![](images/2588ee91151577537af55a853d063357eee3ab9b25596d13c8a5889811694b7a.jpg)  
+Figure 8.6: Lower Priority, Longer Quanta  
+
+quickly alternating between them makes sense (e.g., 10 or fewer milliseconds). The low-priority queues, in contrast, contain long-running jobs that are CPU-bound; hence, longer time slices work well (e.g., 100s of ms). Figure 8.6 shows an example in which two jobs run for $2 0 \mathrm { m s }$ at the highest queue (with a $\scriptstyle 1 0 - { \mathrm { m s } }$ time slice), $4 0 ~ \mathrm { { m s } }$ in the middle (20-ms time slice), and with a $4 0 \mathrm { - m s }$ time slice at the lowest.  
+
+The Solaris MLFQ implementation — the Time-Sharing scheduling class, or TS — is particularly easy to configure; it provides a set of tables that determine exactly how the priority of a process is altered throughout its lifetime, how long each time slice is, and how often to boost the priority of a job [AD00]; an administrator can muck with this table in order to make the scheduler behave in different ways. Default values for the table are 60 queues, with slowly increasing time-slice lengths from 20 milliseconds (highest priority) to a few hundred milliseconds (lowest), and priorities boosted around every 1 second or so.  
+
+Other MLFQ schedulers don’t use a table or the exact rules described in this chapter; rather they adjust priorities using mathematical formulae. For example, the FreeBSD scheduler (version 4.3) uses a formula to calculate the current priority level of a job, basing it on how much CPU the process has used $\left[ \mathrm { L M } \substack { + } \dot { 8 } 9 \right]$ ; in addition, usage is decayed over time, providing the desired priority boost in a different manner than described herein. See Epema’s paper for an excellent overview of such decay-usage algorithms and their properties [E95].  
+
+Finally, many schedulers have a few other features that you might encounter. For example, some schedulers reserve the highest priority levels for operating system work; thus typical user jobs can never obtain the highest levels of priority in the system. Some systems also allow some user advice to help set priorities; for example, by using the command-line utility nice you can increase or decrease the priority of a job (somewhat) and thus increase or decrease its chances of running at any given time. See the man page for more.  
+
+# TIP: USE ADVICE WHERE POSSIBLE  
+
+As the operating system rarely knows what is best for each and every process of the system, it is often useful to provide interfaces to allow users or administrators to provide some hints to the OS. We often call such hints advice, as the OS need not necessarily pay attention to it, but rather might take the advice into account in order to make a better decision. Such hints are useful in many parts of the OS, including the scheduler (e.g., with nice), memory manager (e.g., madvise), and file system (e.g., informed prefetching and caching $\scriptstyle [ \mathrm { P } + 9 5 ] .$ ).  
+

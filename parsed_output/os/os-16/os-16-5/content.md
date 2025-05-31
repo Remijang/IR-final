@@ -1,0 +1,9 @@
+# 16.5 Fine-grained vs. Coarse-grained Segmentation  
+
+Most of our examples thus far have focused on systems with just a few segments (i.e., code, stack, heap); we can think of this segmentation as coarse-grained, as it chops up the address space into relatively large, coarse chunks. However, some early systems (e.g., Multics [CV65,DD68]) were more flexible and allowed for address spaces to consist of a large number of smaller segments, referred to as fine-grained segmentation.  
+
+Supporting many segments requires even further hardware support, with a segment table of some kind stored in memory. Such segment tables usually support the creation of a very large number of segments, and thus enable a system to use segments in more flexible ways than we have thus far discussed. For example, early machines like the Burroughs B5000 had support for thousands of segments, and expected a compiler to chop code and data into separate segments which the OS and hardware would then support [RK68]. The thinking at the time was that by having finegrained segments, the OS could better learn about which segments are in use and which are not and thus utilize main memory more effectively.  
+
+![](images/962fe6382c0f8738e0530802a51cab2db3c6b4214cc0cbab9e18838b07a6b2c8.jpg)  
+Figure 16.6: Non-compacted and Compacted Memory  
+

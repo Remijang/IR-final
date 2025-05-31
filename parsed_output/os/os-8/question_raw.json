@@ -1,0 +1,32 @@
+[
+    {
+        "type": "text",
+        "text": "1. Run a few randomly-generated problems with just two jobs and two queues; compute the MLFQ execution trace for each. Make your life easier by limiting the length of each job and turning off I/Os.",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "2. How would you run the scheduler to reproduce each of the examples in the chapter?",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "3. How would you configure the scheduler parameters to behave just like a round-robin scheduler?",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "4. Craft a workload with two jobs and scheduler parameters so that one job takes advantage of the older Rules 4a and $\\boldsymbol { 4 \\mathrm { b } }$ (turned on with the -S flag) to game the scheduler and obtain $9 9 \\%$ of the CPU over a particular time interval.",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "5. Given a system with a quantum length of $1 0 \\mathrm { m s }$ in its highest queue, how often would you have to boost jobs back to the highest priority level (with the $^ { - \\mathrm { B } }$ flag) in order to guarantee that a single longrunning (and potentially-starving) job gets at least $5 \\%$ of the CPU?",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "6. One question that arises in scheduling is which end of a queue to add a job that just finished $\\mathrm { I / O } ;$ ; the $- \\ I$ flag changes this behavior for this scheduling simulator. Play around with some workloads and see if you can see the effect of this flag. ",
+        "page_idx": 11
+    }
+]

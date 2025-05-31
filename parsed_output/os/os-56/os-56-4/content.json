@@ -1,0 +1,54 @@
+[
+    {
+        "type": "text",
+        "text": "56.4 Cryptographic Hashes ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "As we discussed earlier, we can protect data integrity by using cryptography, since alterations to encrypted data will not decrypt properly. We can reduce the costs of that integrity check by hashing the data and encrypting just the hash, instead of encrypting the entire thing. However, if we want to be really careful, we can’t use just any hash function, since hash functions, by their very nature, have hash collisions, where two different bit patterns hash to the same thing. If an attacker can change the bit pattern we intended to send to some other bit pattern that hashes to the same thing, we would lose our integrity property. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "So to be particularly careful, we can use a cryptographic hash to ensure integrity. Cryptographic hashes are a special category of hash functions with several important properties: ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "• It is computationally infeasible to find two inputs that will produce the same hash value.   \n• Any change to an input will result in an unpredictable change to the resulting hash value.   \n• It is computationally infeasible to infer any properties of the input based only on the hash value. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Based on these properties, if we only care about data integrity, rather than secrecy, we can take the cryptographic hash of a piece of data, encrypt only that hash, and send both the encrypted hash and the unencrypted data to our partner. If an opponent fiddles with the data in transit, when we decrypt the hash and repeat the hashing operation on the data, we’ll see a mismatch and detect the tampering2. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "To formalize it a bit, to perform a cryptographic hash we take a plaintext $P$ and a hashing algorithm $H ( )$ . Note that there is not necessarily any key involved. Here’s what happens: ",
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS = H ( P )\n$$",
+        "text_format": "latex",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Since cryptographic hashes are a subclass of hashes in general, we normally expect $S$ to be shorter than $P$ , perhaps a lot shorter. That implies there will be collisions, situations in which two different plaintexts $P$ and $P ^ { \\prime }$ both hash to $S$ . However, the properties of cryptographic hashes outlined above will make it difficult for an adversary to make use of collisions. Even if you know both $S$ and $P$ , it should be hard to find any other plaintext $P ^ { \\prime }$ that hashes to $S ^ { 3 }$ . It won’t be hard to figure out what $S ^ { \\prime }$ should be for an altered value of plaintext $P ^ { \\prime }$ , since you can simply apply the cryptographic hashing algorithm directly to $P ^ { \\prime }$ . But even a slightly altered version of $P$ , such as a ${ \\bf { \\bar { \\boldsymbol { P } } } } ^ { \\prime }$ differing only in one bit, should produce a hash $S ^ { \\prime }$ that differs from S in completely unpredictable ways. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Cryptographic hashes can be used for other purposes than ensuring integrity of encrypted data, as well. They are the class of hashes of choice for storing salted hashed passwords, for example, as discussed in the chapter on authentication. They can be used to determine if a stored file has been altered, a function provided by well-known security software like Tripwire. They can also be used to force a process to perform a certain amount of work before submitting a request, an approach called “proof of work.” The submitter is required to submit a request that hashes to a certain value using some specified cryptographic hash, which, because of the properties of such hashes, requires them to try a lot of request formats before finding one that hashes to the required value. Since each hash operation takes some time, submitting a proper request will require a predictable amount of work. This use of hashes, in varying forms, occurs in several applications, including spam prevention and blockchains. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Like other cryptographic algorithms, you’re well advised to use standard algorithms for cryptographic hashing. For example, the SHA-3 algorithm is commonly regarded as a good choice. However, there is a history of cryptographic hashing algorithms becoming obsolete, so if you are designing a system that uses one, it’s wise to first check to see what current recommendations are for choices of such an algorithm. ",
+        "page_idx": 8
+    }
+]

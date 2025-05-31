@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "54.8 Summary ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "If we want to apply security policies to actions taken by processes in our system, we need to know the identity of the processes, so we can make proper decisions. We start the entire chain of processes by creating a process at boot time belonging to some system user whose purpose is to authenticate users. They log in, providing authentication information in one or more forms to prove their identity. The system verifies their identity using this information and assigns their identity to a new process that allows the user to go about their business, which typically involves running other processes. Those other processes will inherit the user’s identity from their parent process. Special secure mechanisms can allow identities of processes to be changed or to be set to something other than the parent’s identity. The system can then be sure that processes belong to the proper user and can make security decisions accordingly. ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Historically and practically, the authentication information provided to the system is either something the authenticating user knows (like a password or PIN), something the user has (like a smart card or proof of possession of a smart phone), or something the user is (like the user’s fingerprint or voice scan). Each of these approaches has its strengths and weaknesses. A higher degree of security can be obtained by using multifactor authentication, which requires a user to provide evidence of more than one form, such as requiring both a password and a one-time code that was texted to the user’s smart phone. ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 17
+    }
+]

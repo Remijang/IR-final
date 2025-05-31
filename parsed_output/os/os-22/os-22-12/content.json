@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "22.12 Summary ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "We have seen the introduction of a number of page-replacement (and other) policies, which are part of the VM subsystem of all modern operating systems. Modern systems add some tweaks to straightforward LRU approximations like clock; for example, scan resistance is an important part of many modern algorithms, such as ARC [MM03]. Scan-resistant algorithms are usually LRU-like but also try to avoid the worst-case behavior of LRU, which we saw with the looping-sequential workload. Thus, the evolution of page-replacement algorithms continues. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "For many years, the importance of replacement algorithms had decreased, as the discrepancy between memory-access and disk-access times was so large. Specifically, because paging to disk was so expensive, the cost of frequent paging was prohibitive; simply put, no matter how good your replacement algorithm was, if you were performing frequent replacements, your system became unbearably slow. Thus, the best solution was a simple (if intellectually unsatisfying) one: buy more memory. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "However, recent innovations in much faster storage devices (e.g., Flashbased SSDs) have changed these performance ratios yet again, leading to a renaissance in page replacement algorithms. See $[ \\mathsf { S } \\dot { \\mathsf { S } } 1 0 , \\mathsf { W } + 2 1 ]$ for recent work in this space. ",
+        "page_idx": 14
+    }
+]

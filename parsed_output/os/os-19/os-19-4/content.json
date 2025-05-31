@@ -1,0 +1,34 @@
+[
+    {
+        "type": "text",
+        "text": "19.4 TLB Contents: What’s In There? ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s look at the contents of the hardware TLB in more detail. A typical TLB might have 32, 64, or 128 entries and be what is called fully associative. Basically, this just means that any given translation can be anywhere in the TLB, and that the hardware will search the entire TLB in parallel to find the desired translation. A TLB entry might look like this: ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "VPN PFN other bits ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Note that both the VPN and PFN are present in each entry, as a translation could end up in any of these locations (in hardware terms, the TLB is known as a fully-associative cache). The hardware searches the entries in parallel to see if there is a match. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "More interesting are the “other bits”. For example, the TLB commonly has a valid bit, which says whether the entry has a valid translation or not. Also common are protection bits, which determine how a page can be accessed (as in the page table). For example, code pages might be marked read and execute, whereas heap pages might be marked read and write. There may also be a few other fields, including an address-space identifier, a dirty bit, and so forth; see below for more information. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    }
+]

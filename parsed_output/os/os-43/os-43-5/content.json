@@ -1,0 +1,61 @@
+[
+    {
+        "type": "text",
+        "text": "43.5 Solution Through Indirection: The Inode Map ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "To remedy this, the designers of LFS introduced a level of indirection between inode numbers and the inodes through a data structure called the inode map (imap). The imap is a structure that takes an inode number as input and produces the disk address of the most recent version of the ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "TIP: USE A LEVEL OF INDIRECTION ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "People often say that the solution to all problems in Computer Science is simply a level of indirection. This is clearly not true; it is just the solution to most problems (yes, this is still too strong of a comment, but you get the point). You certainly can think of every virtualization we have studied, e.g., virtual memory, or the notion of a file, as simply a level of indirection. And certainly the inode map in LFS is a virtualization of inode numbers. Hopefully you can see the great power of indirection in these examples, allowing us to freely move structures around (such as pages in the VM example, or inodes in LFS) without having to change every reference to them. Of course, indirection can have a downside too: extra overhead. So next time you have a problem, try solving it with indirection, but make sure to think about the overheads of doing so first. As Wheeler famously said, “All problems in computer science can be solved by another level of indirection, except of course for the problem of too many indirections.” ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "inode. Thus, you can imagine it would often be implemented as a simple array, with 4 bytes (a disk pointer) per entry. Any time an inode is written to disk, the imap is updated with its new location. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The imap, unfortunately, needs to be kept persistent (i.e., written to disk); doing so allows LFS to keep track of the locations of inodes across crashes, and thus operate as desired. Thus, a question: where should the imap reside on disk? ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "It could live on a fixed part of the disk, of course. Unfortunately, as it gets updated frequently, this would then require updates to file structures to be followed by writes to the imap, and hence performance would suffer (i.e., there would be more disk seeks, between each update and the fixed location of the imap). ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Instead, LFS places chunks of the inode map right next to where it is writing all of the other new information. Thus, when appending a data block to a file $k ,$ LFS actually writes the new data block, its inode, and a piece of the inode map all together onto the disk, as follows: ",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/af7fc2f6de830593ebadddf79b7e87e7536d64e42043d8a5144900621288df3e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "In this picture, the piece of the imap array stored in the block marked imap tells LFS that the inode $k$ is at disk address $\\boldsymbol { A 1 }$ ; this inode, in turn, tells LFS that its data block $D$ is at address $\\mathbf { \\nabla } A 0 \\mathbf { \\Omega }$ . ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    }
+]

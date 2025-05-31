@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "33.3 Using select() ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "To make this more concrete, let’s examine how to use select() to see which network descriptors have incoming messages upon them. Figure 33.1 shows a simple example. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "This code is actually fairly simple to understand. After some initialization, the server enters an infinite loop. Inside the loop, it uses the FD ZERO() macro to first clear the set of file descriptors, and then uses FD SET() to include all of the file descriptors from minFD to maxFD in ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "1 #include <stdio.h>   \n2 #include <stdlib.h>   \n3 #include <sys/time.h>   \n4 #include <sys/types.h>   \n5 #include <unistd.h>   \n6   \n7 int main(void) {   \n8 // open and set up a bunch of sockets (not shown)   \n9 // main loop   \n10 while (1) {   \n11 // initialize the fd_set to all zero   \n12 fd_set readFDs;   \n13 FD_ZERO(&readFDs);   \n14   \n15 // now set the bits for the descriptors   \n16 // this server is interested in   \n17 // (for simplicity, all of them from min to max)   \n18 int fd;   \n19 for (fd $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ minFD; fd $\\prec$ maxFD; $\\operatorname { f d } + +$ )   \n20 FD_SET(fd, &readFDs);   \n21   \n22 // do the select   \n23 int rc $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ select(maxFD $+ 1$ , &readFDs, NULL, NULL, NULL);   \n24   \n25 // check which actually have data using FD_ISSET()   \n26 int fd;   \n27 for (fd $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ minFD; fd $\\prec$ maxFD; $\\operatorname { f d } + +$ )   \n28 if (FD_ISSET(fd, &readFDs))   \n29 processFD(fd);   \n30 }   \n31 } ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "the set. This set of descriptors might represent, for example, all of the network sockets to which the server is paying attention. Finally, the server calls select() to see which of the connections have data available upon them. By then using FD ISSET() in a loop, the event server can see which of the descriptors have data ready and process the incoming data. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Of course, a real server would be more complicated than this, and require logic to use when sending messages, issuing disk I/O, and many other details. For further information, see Stevens and Rago [SR05] for API information, or Pai et. al or Welsh et al. for a good overview of the general flow of event-based servers [PDZ99, WCB01]. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "TIP: DON’T BLOCK IN EVENT-BASED SERVERS Event-based servers enable fine-grained control over scheduling of tasks. However, to maintain such control, no call that blocks the execution of the caller can ever be made; failing to obey this design tip will result in a blocked event-based server, frustrated clients, and serious questions as to whether you ever read this part of the book. ",
+        "page_idx": 4
+    }
+]

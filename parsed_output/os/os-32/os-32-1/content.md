@@ -1,0 +1,14 @@
+# 32.1 What Types Of Bugs Exist?  
+
+The first, and most obvious, question is this: what types of concurrency bugs manifest in complex, concurrent programs? This question is difficult to answer in general, but fortunately, some others have done the work for us. Specifically, we rely upon a study by Lu et al. $\left[ \mathrm { L } { + } 0 8 \right]$ , which analyzes a number of popular concurrent applications in great detail to understand what types of bugs arise in practice.  
+
+The study focuses on four major and important open-source applications: MySQL (a popular database management system), Apache (a wellknown web server), Mozilla (the famous web browser), and OpenOffice (a free version of the MS Office suite, which some people actually use). In the study, the authors examine concurrency bugs that have been found and fixed in each of these code bases, turning the developers’ work into a quantitative bug analysis; understanding these results can help you understand what types of problems actually occur in mature code bases.  
+
+Figure 32.1 shows a summary of the bugs Lu and colleagues studied. From the figure, you can see that there were 105 total bugs, most of which were not deadlock (74); the remaining 31 were deadlock bugs. Further, you can see the number of bugs studied from each application; while OpenOffice only had 8 total concurrency bugs, Mozilla had nearly 60.  
+
+![](images/8ee0a16ecc0c384f60181d4abba400c986cc25cf8c3502ae9de7484d6a7fde91.jpg)  
+Figure 32.1: Bugs In Modern Applications   
+Figure 32.2: Atomicity Violation (atomicity.c)  
+
+We now dive into these different classes of bugs (non-deadlock, deadlock) a bit more deeply. For the first class of non-deadlock bugs, we use examples from the study to drive our discussion. For the second class of deadlock bugs, we discuss the long line of work that has been done in either preventing, avoiding, or handling deadlock.  
+

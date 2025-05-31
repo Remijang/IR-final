@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "36.5 More Efficient Data Movement With DMA ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Unfortunately, there is one other aspect of our canonical protocol that requires our attention. In particular, when using programmed I/O (PIO) to transfer a large chunk of data to a device, the CPU is once again overburdened with a rather trivial task, and thus wastes a lot of time and effort that could better be spent running other processes. This timeline illustrates the problem: ",
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/08dc978951188d0ecac2805f16acc52e26a984c0d2b4a24756c6eeb4cf8b2a09.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>CPU</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>c</td><td>c</td><td>c</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>1</td></tr><tr><td>Disk</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "In the timeline, Process 1 is running and then wishes to write some data to the disk. It then initiates the ${ \\mathrm { I } } / { \\mathrm { O } } ,$ which must copy the data from memory to the device explicitly, one word at a time (marked $\\mathrm { ~  ~ \\bar { ~ } { ~ C ~ } ~ }$ in the diagram). When the copy is complete, the $\\mathrm { I } / \\mathrm { O }$ begins on the disk and the CPU can finally be used for something else. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "THE CRUX: HOW TO LOWER PIO OVERHEADS With PIO, the CPU spends too much time moving data to and from devices by hand. How can we offload this work and thus allow the CPU to be more effectively utilized? ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The solution to this problem is something we refer to as Direct Memory Access (DMA). A DMA engine is essentially a very specific device within a system that can orchestrate transfers between devices and main memory without much CPU intervention. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "DMA works as follows. To transfer data to the device, for example, the OS would program the DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to. At that point, the OS is done with the transfer and can proceed with other work. When the DMA is complete, the DMA controller raises an interrupt, and the OS thus knows the transfer is complete. The revised timeline: ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/b89eb5ad228825b6686f2823ccdee9d034fae115fc0539049754af90af9dd6bf.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "From the timeline, you can see that the copying of data is now handled by the DMA controller. Because the CPU is free during that time, the OS can do something else, here choosing to run Process 2. Process 2 thus gets to use more CPU before Process 1 runs again. ",
+        "page_idx": 6
+    }
+]
