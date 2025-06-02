@@ -1,0 +1,119 @@
+2.3 The Slope and the Tangent Line
+
+Chapter 1 started with straight line graphs. The velocity was constant (at least piecewise). The distance function was linear. Now we are facing polynomials like  or  , with other functions to come soon. Their graphs are definitely curved. Most functions are not close to linear—except if you focus all your attention near a single point. That is what we will do.
+
+Over a very short range a curve looks straight. Look through a microscop1e, or zoom in with a computer, and there is no doubt. The graph of distance versus time become1s nearly linear. Its slope is the velocity at that moment. We want to find the line that the graph stays closest to—the “tangent line”—before it curves away.
+
+The tangent line is easy to describe. We are at a particular point on the graph of  : At that point  equals  and  equals  and the slope equals  : The tangent line goes through that point  with that slope  . Figure 2.5 shows the line more clearly than any equation, but we have to turn the geometry into algebra. We need the equation of the line.
+
+EXAMPLE 1 Suppose  : At the point  , the height is  : The slope is  : At  the slope is  : That is  :
+
+The numbers  ;  ;  determine the tangent line.
+
+The equation of the tangent line is  , and this section explains why.
+
+THE EQUATION OF A LINE
+
+A straight line is determined by two conditions. We know the line if we know two of its points. (We still have to write down the equation.) Also, if we know one point and the slope, the line is set. That is the situation for the tangent line, which has a known slope at a known point:
+
+1. The equation of a line has the form    
+2. The number  is the slope of the line, because    
+3. The number  adjusts the line to go through the required point.
+
+I will take those one at a time—first  , then  , then  :
+
+2.3 The Slope and the Tangent Line
+
+1. The graph of  is not curved. How do we know ? For the specific example  , take two points whose coordinates  satisfy the equation:
+
+Those points  and  lie on the graph. The point halfway between has  and  . That point also satisfies  : The halfway point is on the graph. If we subdivide again, the midpoint between  and  is  : This also has  : The graph contains all halfway points and must be straight.
+
+2. What is the correct slope m for the tangent line ? In our example it is  :
+
+The curve and its tangent line have the same slope at the crucial point:  :
+
+Allow me to say in another way why the line  has slope  : At  its height is  : At  its height is  : The graph has gone one unit across .0 to 1/ and m units up .  to  /: The whole idea is
+
+Each unit across means  units up, to  or  : A straight line keeps a constant slope, whereas the slope of  equals 2 only at  :
+
+3. Finally we decide on  : The tangent line  must go through  ;  : Therefore  : With letters instead ofnumbers,  leads to  : So we know  :
+
+2E The equation of the tangent line has  :
+
+That last form is the best. You see immediately what happens at  : The factor  is zero. Therefore  as required. This is the point-slope form of the equation, and we use it constantly:
+
+EXAMPLE 2 The curve  goes through  when  : At that point  : The point-slope equation of the tangent line uses 2 and 6 and 12:
+
+There is another important line. It is perpendicular to the tangent line and perpendicular to thecurve. Thisis the normal line in Figure 2.6. Its new feature is its slope. When the tangent line has slope  , the normal line has slope  : (Rule: Slopes of perpendicular lines multiply to give  :) Example 2 has  , so the normal line has slope  :
+
+Light rays travel in the normal direction. So do brush fires—they move perpendicular to the fire line. Use the point-slope form! The tangent is  , the normal is not  :
+
+2 Derivatives
+
+EXAMPLE 3 You are on a roller-coaster whose track follows  : You see a friend at  and want to get there quickly. Where do you step off ?
+
+Solution Your path will be the tangent line (at high speed). The problem is to choose  so the tangent line passes through  :When you step off at  , the height is  and the slope is  the equation of the tangent line is  this line goes through  if  or  :
+
+The same problem is solved by spacecraft controllers and baseball pitchers. Releasing a ball at the right time to hit a target 60 feet away is an amazing display of calculus. Quarterbacks with a moving target should read Chapter 4 on related rates.
+
+Here is a better example than a roller-coaster. Stopping at a red light wastes gas. It is smarter to slow down early, and then accelerate. When a car is waiting in front of you, the timing needs calculus:
+
+EXAMPLE 4 How much must you slow down when a red light is 72 meters away ? In 4 seconds it will be green. The waiting car will accelerate at 3 meters=  : You cannot pass the car.
+
+Strategy Slow down immediately to the speed  at which you will just catch that car. (If you wait and brake later, your speed will have to go below  ) At the catchup time  , the cars have the same speed and same distance. Two conditions, so the distance functions in Figure 2.6d are tangent.
+
+Solution At time  , the other car’s speed is  : That shows the delay of 4 seconds. Speeds are equal when  or  : Now require equal distances. Your distance is  times  The other car’s distance is  :
+
+The solution is  meters=second. This is  or 27 miles per hour.
+
+Without the other car, you only slow down to  meters=second. As the light turns green, you go through at  or 40 miles per hour. Try it.
+
+2.3 The Slope and the Tangent Line
+
+THE SECANT LINE CONNECTING TWO POINTS ON A CURVE
+
+Instead of the tangent line through one point, consider the secant line through two points. For the tangent line the points came together. Now spread them apart. The point-slope form of a linear equation is replaced by the two-point form.
+
+The equation of the curve is still  : The first point remains at  ;  : The other point is at  : The secant line goes between them, and we want its equation. This time we don’t start with the slope—but  is easy to find.
+
+EXAMPLE 5 The curve  goes through  It also goes through  : The slope between those points is
+
+The point-slope form (at the first point) is  : This line automatically goes through the second point .3; 25/: Check:  equals  : The secant has the right slope 19 to reach the second point. It is the average slope  .
+
+A look ahead The second point is going to approach the first point. The secant slope  will approach the tangent slope  : We discover the derivative (in the limit). That is the main point now—but not forever.
+
+Soon you will be fast at derivatives. The exact  will be much easier than  : The situation is turned around as soon as you know that  has slope  : Near  , the distance up is about 9 times the distance across. To find  , just multiply  by 9: The quick approximation is :009, the calculator gives  : It is easier to follow the tangent line than the curve.
+
+Come back to the secant line, and change numbers to letters. What line connects  to  A mathematician puts formulas ahead of numbers, and reasoning ahead of formulas, and ideas ahead of reasoning:
+
+(1) The slope is  (2) The height is  at  (3) The height is  at  (automatic with correct slope).
+
+2F The two-point form uses the slope between the points: 
+
+At  the right side is zero. So  on the left side. At  the right side has two factors  : They cancel to leave  : With equation (2) for the tangent line and equation (3) for the secant line, we are ready for the moment of truth.
+
+THE SECANT LINE APPROACHES THE TANGENT LINE
+
+What comes now is pretty basic. It matches what we did with velocities:
+
+The limit is  : We now do exactly the same thing with slopes. The secant line turns into the tangent line as  approaches  :
+
+There stands the fundamental idea of differential calculus! You have to imagine more secant lines than I can draw in Figure 2.7, as  comes close to  : Everybody recognizes  as  : Do you recognize  as  ? It is  , the change in height. All lines go through  : Their limit is the tangent line.
+
+Intuitively, the limit is pretty clear. The two points come together, and the tangent line touches the curve at one point. (It could touch again at faraway points.) Mathematically this limit can be trickyÑ—it takesus from algebra to calculus. Algebra stays away from  , but calculus gets as close as it can.
+
+The new limit for  looks different, but it is the same as before:
+
+EXAMPLE 6 Find the secant lines and tangent line for  at  :
+
+The starting point is  : This is the origin  : The ratio of distance up to distance across is  :
+
+As  approaches zero, the secant line becomes the tangent line. The limit of  is not  , which is meaningless, but 1; which is  :
+
+EXAMPLE 7 The gold you own will be worth  million dollars in  years. When does the rate of increase drop to  of the current value, so you should sell the gold and buy a bond ? At  , how far does that put you ahead of 
+
+2.3 The Slope and the Tangent Line
+
+Solution The rate of increase is the derivative of  , which is  : That is  of the current value  when  : Therefore  or  : At that time yo?u sell the gold, leave the curve, and go onto the tangent line:
+
+With straight interest on the bond, not compounded, you have reached  million dollars. The gold is worth a measly five million.

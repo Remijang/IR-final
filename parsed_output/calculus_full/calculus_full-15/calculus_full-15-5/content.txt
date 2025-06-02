@@ -1,0 +1,123 @@
+15.5 The Divergence Theorem
+
+This section returns to the fundamental law  . In two dimensions, the flow was in and out through a closed curve  . The plane region inside was  . In three dimensions, the flow enters and leaves through a closed surface S: The solid region inside is  Green’s Theorem in its normal form (for the flux of a smooth vector field) now becomes the great three-dimensional balance equation— the Divergence Theorem:
+
+15K The flux of  through the boundary surface  equals the integral of the divergence of  inside  The Divergence Theorem is  (1)
+
+In Green’s Theorem the divergence was  : The new term  accounts for upward flow. Notice that a constant upward component  adds nothing to the divergence (its derivative is zero). It also adds nothing to the flux (flow up through the top equals flow up through the bottom). When the whole field  is constant, the theorem becomes  :
+
+There are other vector fieldswith div  : Theyare of the greatest importance. The Divergence Theorem for those fields is again  ; and there is conservation of fluid. When div  ; flow in equals flow out. We begin with examples of these “divergence-free” fields.
+
+EXAMPLE 1 The spin fields  and  have zero divergence.
+
+The first is an old friend, spinning around the  axis. The second is new, spinning around the  axis. Three-dimensional flow has a great variety of spin fields. The separate terms  are all zero, so div  : The flow goes around in circles, and whatever goes out through  comes back in. (We might have put a circle on  as we did on  ; to emphasize that  is closed.)
+
+EXAMPLE 2 The position field  has div  :
+
+This is radial flow, straight out from the origin. Mass has to be added at every point to keep the flow going. On the right side of the divergence theorem is  : Therefore the flux is three times the volume.
+
+Example 11 in Section 15.4 found the flux of  through acylinder. The answer was  : Now we also get  from the Divergence Theorem, since the volume is  : This is one of many cases in which the triple integral is easier than the double integral.
+
+EXAMPLE 3 An electrostatic field  or gravity field  almost has div  :
+
+The vecBtor  has lengBth  : Then  has length  (inverse square law). Gravity from a point mass pulls inward (mBinus BsignB). T hBe eBlect rBic field from a point charge repels outward. The three steps almost show that div  :
+
+Step  —but do not add those three.  is not  or  (these are scalars). The vector field is  : We need  ;  :
+
+Step 2.  is equal to  : For  and  ; replace  by  and  : Now add those three.
+
+The calculation div  leaves a puzzle. One side of the Divergence Theorem seems to give  : Then the other side should be  : But the flux is not zero when all flow is outward:
+
+The unit normal vector to the sphere  constant is  : The outward flow  is always positive. Then  We have reached  0:
+
+This paradox in three dimensions is the same as for  in two dimensions. Section 15.3 reached  ; and the explanation was a point source at the origin. Same explanation here:  are infinite when  : The divergence is a “delta function” times  ; from the point source. The Divergence Theorem does not apply (unless we allow delta functions). That single point makes all the difference.
+
+Every surface enclosing the origin has flux  : Our calculation was for a sphere. The surface integral is much harder when  is twisted (Figure 15.21a). But the Divergence Theorem takes care of everything, because div  in the volume  between these surfaces. Therefore  for the two surfaces together. The flux  into the sphere must be balanced by  out of the twisted surface.
+
+Instead of a paradox  ; this example leads to Gauss’s Law. A mass  at the origin produces a gravity field  : A charge  at the origin produces an electric field  : The physical constants are  and  ; the mathematical constant is the relation between divergence and flux. Equation (1) yields equation (2), in which the mass densities  and charge densities  need not be concentrated at the origin:
+
+15L Gauss’s law in differential form: div  and div  : Gauss’s law in integral form: Flux is proportional to total mass or charge:  (2)
+
+THE REASONING BEHIND THE DIVERGENCE THEOREM
+
+The general principle is clear: Flow out minus flow in equals source. Our goal is to see why the divergence of  measures the source. Ina small box around each point, we show that div  balances  through the six sides.
+
+So consider a small box. Its center is at  : Its edges have length  : Out of the top and bottom, the normal vectors are  and  : T Bhe d oBt product with  is  or  : The area  is  : So the two fluxes are close to  and  : When the top is combined with the bottom, the difference of those  ’s is  :
+
+Similarly, the combined flux on two side faces is approximately  : On the front and back it is  : Adding the six faces, we reach the key point:
+
+This is  : For a constant field both sides are zero—the flow goes straight through. For  ; a little moreÑgoes out than comes in. The divergence is 3; so  is created inside the box. By the balance equation the flux is also 
+
+The approximation symbol  means that the leading term is correct (probably not the next term). The ratio  is not exactly  : The difference is of order  ; so the error in (3) is of higher order  : Added over many boxes (about  boxes), this error disappears as  :
+
+The sum of  over all the boxes approaches  On the other side of the equation is a sum of fluxes. There is  out of the top of one box, plus  out of the bottom of the box above. The first has  and the second has  : They cancel each other—the flow goes from box to box. This happens every time two boxes meet. The only fluxes that survive (because nothing cancels them) are at the outer surface  : The final step, as  ; is that those outside terms approach  : Then the local divergence the Borem B(4) becomes the global Divergence Theorem (1).
+
+Remark on the proof That “final step” is not easy, because the box surfaces don’t line up with the outer surface  : A formal proof of the Divergence Theorem would imitate the proof of Green’s Theorem. On a very simple region  equals  over the top minus  over the bottom. After checking the orientation this is  : Similarly the volume integrals of  and  are the surface integrals  and  : Adding the three integrals gives the Divergence Theorem. Since Green’s Theorem was already proved in this way, the reasoning behind (4) is more helpful than repeating a detailed proof.
+
+The discoverer of the Divergence Theorem was probably Gauss. His notebooks only contain the outline of a proof—but after all, this is Gauss. Green and Ostrogradsky both published proofs in 1828; one in England and the other in St. Petersburg (now Leningrad). As the theorem was studied, the requirements came to light (smoothness of  and  ; avoidance of one-sided Möbius strips).
+
+New applications are discovered all the time—when a scientist writes down a balance equation in a small box. The source is known. The equation is div  source. After Example 5 we explain F:
+
+EXAMPLE 4 If the temperature inside the sun is  ; find the heat flow  grad  and the source div  and the flux  : The sun is a ball of radius  :
+
+Solution»  i  : Derivatives of  bring division by  :
+
+This flow is radially outward, of magnitude  : The normal vector  is also radially outward, of magnitude 1: The dot product on the sun’s surface is  :
+
+Check that answer by the Divergence Theorem. Example 5 will find div  : Integrate over the sun. In spherical coordinates we integrate  , sin  ; and  :
+
+This example illustrates the basic framework of equilibrium. The pattern appears everywhere in applied mathematics—electromagnetism, heat flow, elasticity, even relativity. There is usually a constant  that depends on the material (the example has  ). The names change, but we always take the divergence of the gradient:
+
+potential  force field c grad  Then div.  grad  electric charge temperature  grad  : Then div.  grad  /  heat source displacement u stress field Cc grad  : Then div.  grad u/ D outside force:
+
+You are studying calculus, not physics or thermodynamics or elasticity. But please notice the main point. The equation to solve is div.  grad  known source. The divergence and gradient are exactly what the applications need. Calculus teaches the right things.
+
+This framework is developed in many books, including my own text Introduction to Applied Mathematics (Wellesley-Cambridge Press). It governs equilibrium, in matrix equations and differential equations.
+
+PRODUCT RULE FOR VECTORS: INTEGRATION BY PARTS
+
+May I go back to basic facts about the divergence? First the definition:
+
+The divergence is a scalar (not a vector). At each point div  is a number. In fluid flow, it is the rate at which mass leaves—the “flux per unit volume” or “flux density.”
+
+The symbol  stands for aB ve cBtor whoBse c BomponeBnts  aBre operations not numbers:
+
+This vector is illegal but very useful. First, apply it to an ordinary function  :
+
+Second, take the dot product  with a vector function   :
+
+Third, take the cross product  : This produces the vector curl  (next section):
+
+The gradient and divergeBnce Band curl Bare  and  B andB  : The three great operations of vector calculBus useB a singleB notatBion! YouBare frBee to write  or not—to make equations shorter or to help the memory. Notice that Laplace’s equation shrinks to
+
+Equation (10) gives the potential when the source is zero (very common).  combines with div  into Laplace’s equation div grad  : This equation is so important that it shrinks further to  and even to  : Of course  has nothing to do with  : Above all, remember that  is a scalar and  is a vector: gradient of scalar is vector and divergence of vector is scalar.
+
+Underlying this chapter is the idea of extending calculus to vectors. So far we have emphasized the Fundamental Theorem. The integral of  is now the integral of div  : Instead of endpoints  and  ; we have a curve  or surface  : But it is the rules for derivatives and integrals that make calculus work, and we need them now for vectors. Remember the derivative of  times  and the integral (by parts) of  :
+
+15»M» Scalar functions  »and vector fields  »o»bey the product rule:
+
+The reverse of the product rule is integration by parts (Gauss’s Formula):
+
+For a plane field this is Green’s Formula (and  gives Green’s Theorem):
+
+Those look like heavy formulas. They are too much to memorize, unless you use them often. The important point is to connect vector calculus with “scalar calculus,” which is not heavy. Every product rule yields two terms:
+
+Add those ordinary rules and you have the vector rule (11) for the divergence of  :
+
+Integrating the two parts of  gives  by the Divergence Theorem. Then one part moves to the other side, producing the minus signs in (12) and (13). Integration by parts leaves a boundary term, in three and two dimensions as it did in one dimension:  :
+
+EXAMPLE 5 Find the divergence of  ; starting from grad  :
+
+Solution Take  and  in the product rule (11). Then div   . The divergence of  is 3: For grad  apply the chain rule:
+
+The two parts of div  combine into  —as claimed in Example 4.
+
+EXAMPLE 6 Find the balance equation for flow with velocity  and fluid density  :
+
+ is the rate of movement of fluid, while  is the rate of movement of mass. Comparing the ocean to the atmosphere shows the difference. Air has a greater velocity than water, but a much lower density. So normally  is larger for the ocean. (Don’t confuse the density  with the radial distance  : The Greeks only used 24 letters.)
+
+There is another difference between water and air. Water is virtually incompressible (meaning  . Air is certainly compreBssib lBe (its density varies). The balance equation is a fundamental law—the conservation of mass or the “continuity equation” for fluids. This is a mathematical statement about a physical floBw w Bithout sources or sinks:
+
+Explanation: The mass in a region is  Its rate of decrease is  The decrease comes from flow out through the surface (normal vector  ). The dot product  is the rate of mass flow through the surface. So the integral  is the total rate that mass goes out. By the Divergence Theorem this is rrr div  :
+
+To balance  in every region, div  must equal  at every point. The figure shows this continuity equation (14) for flow in the  direction.

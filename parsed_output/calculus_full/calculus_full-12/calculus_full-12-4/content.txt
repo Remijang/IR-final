@@ -1,0 +1,96 @@
+12.4 Polar Coordinates and Planetary Motion
+
+This section has a general purpose—to do vector calculus in polar coordinates. It also has a specific purpose—to study central forces and the motion of planets. The main gravitational force on a planet is from the sun. It is a central force, because it comes from the sun at the center. Polar coordinates are natural, so the two purposes go together.
+
+You may feel that the planets are too old for this course. But Kepler’s laws are more than theorems, they are something special in the history of mankind—“the greatest scientific discovery of all time.” If we can recapture that glory we should do it. Part of the greatness is in the difficulty—Kepler was working sixty years before Newton discovered calculus. From pages of observations, and some terrific guesses, a theory was born. We will try to preserve the greatness without the difficulty, and show how elliptic orbits come from calculus. The first conclusion is quick.
+
+Motion in a central force field always stays in a plane.
+
+ is a multiple of the vector  from the origin (central force).  also equals ma (Newton’s Law). Therefore  and a are in the same direction and  : Then  has zero derivative and is constant:
+
+ is a constant vector H: So R stays in the plane perpendicular to  :
+
+How does a planet move in that plane ? We turn to polar coordinates. At each point except the origin (where the sun is),  is the unit vector pointing outward. It is the position vector  divided by its length  (which is  :
+
+That is a unit vector because  : It goes out from the center. Figure 12.9 shows  and the second unit vector  at a  angle:
+
+The dot product is  : The subscripts  and  indicate direction (not derivative).
+
+Question 1: How do  and  change as  changes (out a ray) ? They don  .
+
+Question 2: How do  and  change as  changes ? Take the derivative:
+
+Since  , one formula is simple: The position vector is  : For its derivative  , use the chain rule 
+
+The outward speed is  : The circular speed is  : The sum of squares is 
+
+Return one more time to steady motion around a circle, say  and  : The velocity is  , all circular. The acceleration is  , all inward. For circles  is the tangent vector  : But the unit vector  points outward and  points inward— the way the curve turns.
+
+Now we tackle acceleration for any motion in polar coordinates. There can be speedup in  and speedup in  (also change of direction). Differentiate  in (5) by the product rule:
+
+For  and  , multiply equation (4) by  : Then all terms contain  or  : The formula for  is famous but not popular (except it got us to the moon):
+
+In the steady motion with  and  , only one acceleration term is nonzero:  : Formula (6) can be memorized (maybe). Problem 14 gives a new way to reach it, using rei :
+
+EXAMPLE 1 Find  and  and a for speedup  around the circle  :
+
+Solution The position vector is  : Then  and a come from  :
+
+This question and answer were also in Example 6 of the previous section. The acceleration was  : Notice again that  and  , going round the circle.
+
+EXAMPLE 2 Find  and  and  and a for the spiral motion  :
+
+Solution The position vector is  : Equation (5) gives velocity and speed:
+
+The motion goes out and also around. From (6) the acceleration is  : The same answers would come more slowly from  :
+
+This example uses polar coordinates, but the motion is not circular. One of Kepler’s inspirations, after many struggles, was to get away from circles.
+
+KEPLER’S LAWS
+
+You may know that before Newton and Leibniz and calculus and polar coordinates, Johannes Kepler discovered three laws of planetary motion. He was the court mathematician to the Holy Roman Emperor, who mostly wanted predictions of wars. Kepler also determined the date of every Easter—no small problem. His triumph was to discover patterns in the observations made by astronomers (especially by Tycho Brahe). Galileo and Copernicus expected circles, but Kepler found ellipses.
+
+Law 1: Each planet travels in an ellipse?with one focus at the sun.
+
+Law 2: The vector from sun to planet sweeps out area at a steady rate:  constant.
+
+Law 3: The length of the planet’s year is  , where  maximum distance from the center (not the sun) and  is the same for all planets.
+
+With calculus the proof of these laws is a thousand times quicker. But Law 2 is the only easy one. The sun exerts a central force. Equation (1) gave  stant for central forces. Replace  by  and replace  by equation (5):
+
+This vector  is constant, so its length  is constant. In polar coordinates, the area is  : This area  is swept out by the planet (Figure 12.10), and we have proved Law 2:
+
+Near the sun  is small. So  is big and planets go around faster.
+
+Now for Law 1, about ellipses. We are aiming for  s  , which is the polar coordinate equation of an ellipse.It is easier to write  than  , and find an equation for  : The equation we will reach is  : The desired  cos  solves that equation (check this), and gives us Kepler’s ellipse.
+
+The first step is to connect  to  by the chain rule:
+
+Notice especially  : What we really want are second derivatives:
+
+After this trick of introducing  , we are ready for physics. The planet obeys Newton’s Law  , and the central force  is the sun’s gravity:
+
+That right side is the  component of a in (6). Change  to  and change  to  : The preparation in(10) allows us to rewrite  in equation (11). That equation becomes
+
+Dividing by  gives what we hoped for—the simple equation for  :
+
+The solution is  cos  : Section 9:3 gave this polar equation for an ellipse or parabola or hyperbola. To be sure it is an ellipse, an astronomer computes  and  from the sun’s mass  and the constant  and the earth’s position and velocity. The main point is that  : Then  is never zero and  is never infinite. Hyperbolas and parabolas are ruled out, and the orbit in Figure 12.10 must be an ellipse.
+
+Astronomy is really impressive. You should visit the Greenwich Observatory in London, to see how Halley watched his comet. He amazed the world by predicting the day it would return. Also the discovery of Neptune was pure mathematics—the path of Uranus was not accounted for by the sun and known planets. LeVerrier computed a point in the sky and asked a Berlin astronomer to look. Sure enough Neptune was there.
+
+Recently one more problem was solved—to explain the gap in the asteroids around Jupiter. The reason is “chaos”—the three-body problem goes unstable and an asteroid won’t stay in that orbit. We have come a long way from circles.
+
+Department of Royal Mistakes The last pound note issued by the Royal Mint showed Newton looking up from his great book Principia Mathematica. He is not smiling and we can see why. The artist put the sun at the center! Newton has just proved it is at the focus. True, the focus is marked  and the planet is  : But those rays at the center brought untold headaches to the Mint—the note is out of circulation. I gave an antique dealer three pounds for it (in coins).
+
+Kepler’s third law gives the time  to go around the ellipse—the planet’s year. What is special in the formula is  —and for Kepler himself, the 15th of May 1618 was unforgettable: “the right ratio outfought the darkness of my mind, by the great proof afforded by my labor of seventeen years on Brahe’s observations.” The second law  is the key, plus two facts about an ellipse—it?s area ab and the height  above the sun:
+
+1. The area  must equal ab, so    
+2. The distance  at  must equal  , so  :
+
+The height  is in Figure 12.10 and Problems 25 26: The constant  is in equation (12). Put them together to find the period:
+
+To think of Kepler guessing  is amazing. To think of Newton proving Kepler’s laws by calculus is also wonderful—because we can do it too.
+
+EXAMPLE 3 When a satelliteagoes around in a circle, find the time  :
+
+Let  be the radius and  be the angular velocity. The time for a complete circle (angle  is  : The acceleration is  from gravity, and it is also  for circular motion. Therefore Kepler is proved right:

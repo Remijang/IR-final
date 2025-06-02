@@ -1,0 +1,443 @@
+[
+    {
+        "type": "text",
+        "text": "Calculus is about functions. I use that word \u201cfunctions\u201d in the first sentence, because we can\u2019t go forward without it. Like all other words, we learn this one in two different ways: We define the word and we use the word. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "I believe that seeing examples of functions, and using the word to explain those examples, is a fast and powerful way to learn. I will start with three examples: ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Linear function $\\begin{array} { l } { y \\left( x \\right) = 2 x } \\\\ { y \\left( x \\right) = { { x } ^ { 2 } } } \\\\ { y \\left( x \\right) = { { 2 } ^ { x } } } \\end{array}$   \nSquaring function   \nExponential function ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "The first point is that those are not the same! Their formulas involve 2 and $x$ in very different ways. When I draw their graphs (this is a good way to understand functions) you see that all three are increasing when $x$ is positive. The slopes are positive. ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "When the input $x$ increases (moving to the right), the output $y$ also increases (the graph goes upward). The three functions increase at different rates. ",
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/0560de74667fb4ab5a283a39d324b9fc2433759fac14123c3caedd285b310b25.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Near the start at $x = 0$ , the first function increases the fastest. But the others soon catch up. All three graphs reach the same height $y = 4$ when $x = 2$ : Beyond that point the second graph $y = x ^ { 2 }$ pulls ahead. At $x = 3$ the squaring function reaches $y = 3 ^ { 2 } = 9$ , while the height of the third graph is only $y = 2 ^ { 3 } = 8$ : ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Don\u2019t be deceived, the exponential will win. It pulls even at $x = 4$ , because $4 ^ { 2 }$ and $2 ^ { 4 }$ are both 16. Then $y = 2 ^ { x }$ moves ahead of $y = x ^ { 2 }$ and it stays ahead. When you reach $x = 1 0$ , the third graph will have $y = 2 ^ { 1 0 } = 1 0 2 4$ compared to $y = 1 0 ^ { 2 } = 1 0 0$ : ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The graphs themselves are a straight line and a parabola and an exponential. The straight line has constant growth rate. The parabola has increasing growth rate. The exponential curve has exponentially increasing growth rate. I emphasize these because calculus is all about growth rates. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The whole point of differential calculus is to discover the growth rate of a function, and to use that information. So there are actually two functions in play at the same time\u2014the original function and its growth rate. Before I go further down this all-important road, let\u00a5me give a working definition of a function $y ( x )$ : ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "A function has inputs $\\boldsymbol { x }$ and outp\u00a5uts $y ( x )$ . To each $\\boldsymbol { x }$ it as\u00a5signs one $y$ . ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The inputs $x$ come from the \u201cdomain\u201d of the function. In our graphs the domain contained all numbers $x \\geqslant 0$ . The outputs $y$ form the \u201crange\u201d of the function. The ranges for the first two functions $y = 2 x$ and $y = x ^ { 2 }$ contained all numbers $y \\geqslant 0$ . But the range for $y = 2 ^ { x }$ is limited to $y \\geqslant 1$ when the domain is $x \\geqslant 0$ . ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Since these examples are so important, let me also allow $x$ to be negative. The three graphs are shown below. Strictly speaking, these are new functions! Their domains have been extended to all real numbers $x$ . Notice that the three ranges are also different: ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The range of $y = 2 x$ is all real numbers $y$ The range of $y = x ^ { 2 }$ is all nonnegative numbers $y \\geqslant 0$ The range of $y = 2 ^ { x }$ is all positive numbers $y > 0$ ",
+        "page_idx": 13
+    },
+    {
+        "type": "image",
+        "img_path": "images/8b788796d98690f7f69cbdf5326b930a76180f5e9c0ef79c78e1a9f5469842d7.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "One more note about the idea of a function, and then calculus can begin. We have seen the three most popular ways to describe a function: ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "1. Give a formula to find $y$ from $x$ . Example: $y ( x ) = 2 x$ :   \n2. Give a graph that shows $x$ (distance across) and $y$ (distance up).   \n3. Give the input-output pairs ( $x$ in the domain and $y$ in the range). ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "In a high-level definition, the \u201cfunction\u201d is the set of all the input-output pairs. We could also say: The function is the rule that assigns an output $y$ in the range to every input $x$ in the domain. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "This shows something that we see for other words too. Logically, the definition should come first. Practically, we understand the definition better after we know examples that use the word. Probably that is the way we learn other words and also the way we will learn calculus. Examples show the general idea, and the definition is more precise. Together, we get it right. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The first words in this book were Calculus is about functions. Now I have to update that. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "PAIRS OF FUNCTIONS ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Calculus is about pairs of functions. Call them Function (1) and Function (2). Our graphs of $y = 2 x$ and $y = x ^ { 2 }$ and $y = 2 ^ { x }$ were intended to be examples of Function (1). Then we discussed the growth rates of those three examples. The growth rate of Function (1) is Function (2). This is our first task\u2014to find the growth rate of a function. Differential calculus starts with a formula for Function .1/ and aims to produce a formula for Function .2/: ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Let me say right away how calculus operates. There are two ways to compute how quickly $y$ changes when $x$ changes: ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Method 1 (Limits): Write ${ \\frac { { \\mathrm { C h a n g e ~ i n ~ } } y } { { \\mathrm { C h a n g e ~ i n ~ } } x } } = { \\frac { \\Delta y } { \\Delta x } } ,$ . Take the limit of this ratio as $\\Delta x  0$ .   \nMethod 2 (Rules): Follow a rule to produce new growth rates from known rates. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "For each new function $y ( x )$ , look to see if it can be produced from known functions\u2014obeying one of the rules. An important part of learning calculus is to see different ways of producing new functions from old. Then we follow the rules for the growth rate. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Suppose the new function is not produced from known functions $2 ^ { x }$ is not produced from $2 x$ or $x ^ { 2 }$ ). Then we have to find its growth rate directly. By \u201cdirectly\u201d I mean that we compute a limit which is Function (2). This book will explain what a \u201climit\u201d means and how to compute it. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Here we begin with examples\u2014almost always the best way. I will state the growth rates ${ } ^ { \\ast } d y / d x ^ { \\prime \\prime }$ for the three functions we are working with: ",
+        "page_idx": 14
+    },
+    {
+        "type": "table",
+        "img_path": "images/44ec5697cc7af71d36d94e3b7d64146f40abbc8d3c9a1b48a824b29ad3e73807.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Function (1)</td><td>y = 2x</td><td>y=x\u00b2</td><td>y = 2x</td></tr><tr><td>Function (2)</td><td>dy =2 dx</td><td>dy = 2x dx</td><td>dy = 2 (ln 2) dx</td></tr></table></body></html>\n\n",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The linear function $y = 2 x$ has constant growth rate $d y / d x = 2$ . This section will take that first and easiest step. It is our opportunity to connect the growth rate to the slope of the graph. The ratio of up to across is $2 x / x$ which is 2. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Section 0:2 takes the next step. The squaring function $y = x ^ { 2 }$ has linear growth rate $d y / d x = 2 x$ . (This requires the idea of a limit\u2014so fundamental to calculus.) Then we can introduce our first two rules: ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Constant factor The growth rate of $C y ( x )$ is $C$ times the growth rate of $y ( x )$ .   \nSum of functions The growth rate of $y _ { 1 } + y _ { 2 }$ is the sum of the two growth rates. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The first rule says that $y = 5 x ^ { 2 }$ has growth rate $1 0 x$ . The factor $C = 5$ multiplies the growth rate $2 x$ . The second rule says that $y _ { 1 } + y _ { 2 } = 5 x ^ { 2 } + 2 x$ has growth rate $1 0 x + 2$ . Notice how we immediately took $5 x ^ { 2 }$ as a function $y _ { 1 }$ with a known growth rate. Together, the two rules give the growth rate for any \u201clinear combination\u201d\u0001of $y _ { 1 }$ and $y _ { 2 }$ : ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The growth rate of $C _ { 1 } y _ { 1 } + C _ { 2 } y _ { 2 }$ is that same combination $C _ { 1 } \\frac { d y _ { 1 } } { d x } + C _ { 2 } \\frac { d y _ { 2 } } { d x }$ ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "In words, the step from Function (1) to Function (2) is linear. The slope of $y = x ^ { 2 } - x$ is $d y / d x = 2 x - 1$ . This rule is simple but so important. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Finally, Section 0:3 will present the exponential functions $y = 2 ^ { x }$ and $y = e ^ { x }$ . Our first job is their meaning\u2014what is $^ { 6 6 } 2$ to the power $\\pi ^ { \\mathfrak { N } } ?$ We understand $2 ^ { 3 } = 8$ and $2 ^ { 4 } = 1 6$ , but how can we multiply 2 by itself $\\pi$ times? ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "When we meet $e ^ { x }$ , we are seeing the great creation of calculus. This is a function with the remarkable property that $d y / d x = y$ . The slope equals the function. This requires the amazing number $e$ , which was never seen in algebra\u2014because it only appears when you take the right limit. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "So these first sections compute growth rates for three essential functions. We are ready for $y = 2 x$ . ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "THE SLOPE OF A GR\u0001APH ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The slope is distance up divided by distance across. I am thinking now about the graph of a function $y ( x )$ . The \u201cdistance across\u201d is the change $x _ { 2 } - x _ { 1 }$ in the inputs, from $x _ { 1 }$ to $x _ { 2 }$ . The \u201cdistance up\u201d is the change $y _ { 2 } - y _ { 1 }$ \u0001in the outputs, from $y _ { 1 }$ to $y _ { 2 }$ . The slope is large and the graph is steep when $y _ { 2 } - y _ { 1 }$ is much larger than $x _ { 2 } - x _ { 1 }$ . Change in y divided by change in $x$ matches our ordinary meaning of the word slope: ",
+        "page_idx": 15
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { A v e r a g e ~ s l o p e ~ } } = { \\frac { \\mathrm { c h a n g e ~ i n ~ } y } { \\mathrm { c h a n g e ~ i n ~ } x } } = { \\frac { y _ { 2 } - y _ { 1 } } { x _ { 2 } - x _ { 1 } } } = { \\frac { \\Delta y } { \\Delta x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "I introduced the very useful Greek letter $\\Delta$ (delta), as a symbol for change. We take a step of length $\\Delta x$ to go from $x _ { 1 }$ to $x _ { 2 }$ . For the height $y ( x )$ on the graph, that produces a step $\\Delta y = y _ { 2 } - y _ { 1 }$ . The ratio of $\\Delta y$ to $\\Delta x$ , up divided by across, is the average slope between $x _ { 1 }$ and $x _ { 2 }$ . The slope is the steepne\u0001ss. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Important point: I had to say \u201caverage\u201d because the s\u0001lope could be changing as we go. The graph of $y = x ^ { 2 }$ shows an increasing slope. Between $x _ { 1 } = 1$ and $x _ { 2 } = 2$ , what is the average slope for $y = x ^ { 2 }$ ? Divide $\\Delta y$ by $\\Delta x$ : ",
+        "page_idx": 15
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{c} y _ { 1 } = 1 { \\mathrm { ~ a t ~ } } x _ { 1 } = 1  \\\\ { y _ { 2 } = 4 { \\mathrm { ~ a t ~ } } x _ { 2 } = 2 } \\end{array} \\qquad { \\mathrm { A v e r a g e ~ s l o p e } } = { \\frac { 4 - 1 } { 2 - 1 } } = { \\frac { \\Delta y } { \\Delta x } } = 3 .\n$$",
+        "text_format": "latex",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Between $x _ { 1 } = 0$ and $x _ { 2 } = 2$ , we get a diff\u0001erent answe\u0001r (not 3). This graph of $x ^ { 2 }$ shows the problem of calculus, to deal with changes in slope and changes in speed. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The graph of $y = 2 x$ has constant slope. The ratio of $\\Delta y$ to $\\Delta x$ , distance up to distance across, is always 2: ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Constant slope ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\Delta y } { \\Delta x } } = { \\frac { y _ { 2 } - y _ { 1 } } { x _ { 2 } - x _ { 1 } } } = { \\frac { 2 x _ { 2 } - 2 x _ { 1 } } { x _ { 2 } - x _ { 1 } } } = 2 .\n$$",
+        "text_format": "latex",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The mathematics is easy, which gives me a chance to emphasize the words and the ideas: ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Function $( 1 ) =$ Height of the graph Function $( 2 ) =$ Slope of the graph ",
+        "page_idx": 15
+    },
+    {
+        "type": "image",
+        "img_path": "images/6c33cc3360e23cbe97a431e09b675b9fdfbdfe74640a31eea314dc7fa10ac642.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "When Function (1) is $y = C x$ , the ratio $\\Delta y / \\Delta x$ is always $C$ . A linear function has a constant slope. And those same functions can come from driving a car at constant speed: ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Function $( 1 ) =$ Distance traveled $\\mathbf { \\Psi } = C \\mathbf { \\Psi } \\mathbf { t }$ Function $( 2 ) =$ Speed of the car $= C$ ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "For a graph of Function (1), its rate of change is the slope. When Function (1) measures distance traveled, its rate of change is the speed (or velocity). When Function .1/ measures our height, its rate of change is our growth rate. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The first point is that functions are everywhere. For calculus, those functions come in pairs. Function .2/ is the rate of change of Function .1/: ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The second point is that Function (1) and Function (2) are measured in different units. That is natural: ",
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\left( \\mathrm { S p e e d ~ i n ~ } \\displaystyle \\frac { \\mathrm { m i l e s } } { \\mathrm { h o u r } } \\right) \\mathrm { ~ m u l t i p l i e s ~ } \\left( \\mathrm { T i m e ~ i n ~ h o u r s } \\right) \\mathrm { t o ~ g i v e ~ } \\Big ( \\mathrm { D i s t a n c e ~ i n ~ m i l e s } \\Big ) } \\\\ & { \\left( \\mathrm { G r o w t h ~ r a t e ~ i n ~ } \\displaystyle \\frac { \\mathrm { i n c h e s } } { \\mathrm { y e a r } } \\right) \\mathrm { ~ m u l t i p l i e s ~ } \\left( \\mathrm { T i m e ~ i n ~ y e a r s } \\right) \\mathrm { t o ~ g i v e ~ } \\Big ( \\mathrm { H e i g h t ~ i n ~ i n c h e s } \\Big ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "When time is in seconds and distance is in meters, then speed is automatically in meters per second. We can choose two units, and they decide the third. Function (2) always involves a division: $\\Delta y$ is divided by $\\Delta x$ or distance is divided by time. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The delicate and tricky part of calculus is coming next. We want the slope at one point and the speed at one instant. What is the rate of change in zero time ? ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The distance across is $\\Delta x = 0$ at a point. The distance up is $\\Delta y = 0$ . Formally, their ratio is $\\frac { 0 } { 0 }$ . It is the inspiration of calculus to give this a useful meaning. ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Big Picture ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Calculus connects Function (1) with Function $( 2 ) =$ rate of change of (1) Function (1) Distance traveled $f ( t )$ Function (2) Speed $s ( t ) = d f / d t$ Function (1) Height of graph $y ( x )$ Function (2) Slope $s ( x ) = d y / d x$ Function (2) tells how quickly Function (1) is changing ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "$s = { \\frac { \\operatorname { D i s t a n c e } f } { \\operatorname { T i m e } t } }$ Distance up KEY Constant speed Constant slope s D Distance across ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Graphs of (1) and (2) $f =$ increasing distance $s =$ constant speed ",
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/21e3e4f125efd48c440ff803f62f9420a983ea821bfbc09aee039de3c99f6927.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Slope of $f \\mathrm { - g r a p h } = { \\frac { \\mathrm { u p } } { \\mathrm { a c r o s s } } } = { \\frac { s t } { t } } = s$ Area under $s$ -graph $\\ b =$ area of rectangle ${ } = s t = f$ ",
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Now run the car backwards. Speed is negative Distance goes down to 0 Area \u201cunder\u201d $s ( t )$ is zero ",
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/39e1ec2013bca39321a229e5e6944a6ad63808882eb0de87cdd5ca51c19e5fa4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 17
+    },
+    {
+        "type": "image",
+        "img_path": "images/569de9976e948f2545fbf7b5cfd1c95761cadb1714e67b2d1560cc2f9f8c40ee.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "When speed is changing, algebra is not enough $s = { \\frac { f } { t } }$ is wrong Still true that area under $s = { \\mathrm { t r i a n g l e ~ a r e a } } = { \\frac { 1 } { 2 } } ( t ) ( 2 0 t ) = 1 0 t ^ { 2 } = f$ Still true that $s = { \\mathrm { s l o p e } }$ of $f = { \\frac { d f } { d t } } =$ \u201cderivative\u201d of $f$ ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "When $f$ is increasing, the slope $s$ is positive   \nWhen $f$ is decreasing, the slope $s$ is negative   \nWhen $f$ is at its maximum or minimum, the slope $s$ is zero   \nThe graphs of any $f ( t )$ and $f ( t ) + 1 0$ have the same slope at every t   \nTo recover $f =$ Function (1) from dft ; good to know a starting height f .0/ ",
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "1. Draw a graph of $f ( t )$ that goes up and down and up again. ",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Then draw a reasonable graph of its slope. ",
+        "page_idx": 19
+    },
+    {
+        "type": "image",
+        "img_path": "images/b8285038a112d7d63c8c338bb07f7c55a3a13682bbad045f3902d97810b6f0fc.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "2. The world population $f ( t )$ increased slowly at first, now quickly, then slowly again (we hope and expect). Maybe a limit $\\approx 1 2$ or 14 billion. ",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Draw a graph for $f ( t )$ and its slope $s ( t ) = \\frac { d f } { d t }$ ",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "3. Suppose $f ( t ) = 2 t$ for $t \\leq 1$ and then $f ( t ) = 3 t + 2$ for $t \\geq 1$ Describe the slope graph $s ( t )$ : Compare its area out to $t = 3$ with $f ( 3 )$ ",
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "4. Draw a graph of $f ( t ) = \\cos t$ : Then sketch a graph of its slope. At what angles $t$ is the slope zero (slope $= 0$ when $f ( t )$ is \u201cflat\u201d).   \n5. Suppose the graph of $f ( t )$ is shaped like the capital letter W. Describe the graph of its slope $s ( t ) = \\frac { d f } { d t }$ : What is the total area under the graph of $s$ ? -   \n6. A train goes a distance $f$ at constant speed $s$ : Inside the train, a passenger walks forward a distance $F$ at walking speed $S$ : What distance does the passenger go ? At what speed ? (Measure distance from the train station) ",
+        "page_idx": 19
+    }
+]

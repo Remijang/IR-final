@@ -1,0 +1,49 @@
+Up to now, points have been located by their  and  coordinates. But if you were a flight controller, and a plane appeared on the screen, you would not give its position that way. Instead of  and  , you would read off the direction of the plane and its distance. The direction is given by an angle  : The distance is given by a positive number  : Those are the polar coordinates of the point, where  and  are the rectangular coordinates.
+
+The angle  is measured from the horizontal.Suppose the distance is 2 and the direction is  or  (degrees preferred by flight controllers, radians by mathematicians). A pilot looking along the  axis would give the plane’s direction as “11 o’clock.” This totally destroys our system of units, by measuring direction in hours. But the angle and the distance locate the plane.
+
+How far to a landing strip at  and  For that question polar coordinates are not good. They are perfect for distance from the origin (which equals  ), but for most other distances I would switch to  and  : It is extremely simple to determine  and  from  and  , and we will do it constantly. The most used formulas?in this chapter come from Figure?9.1—where the right triangle has angle  and hypotenuse  : The sides of that triangle are  and  :
+
+The point at  has  and  : The cosine of  is  and the sine is  : So  and  : Polar coordinates convert easily to  coordinates—now we go the other way.
+
+Always  :?In this example  : Pythagor?as produces  from  and  : The direction  is also available, but the formula is not so beautiful:
+
+Our point has  : One angle with this tangent is  :
+
+EXAMPLE 1 Point  in Figure 9.1c is at a negative angle  : The  coordinate  is the same as  cos  (the cosine is even). But the  coordinate  s  is negative. Computing  and  from  and  , the distance is  and tan  is  :
+
+Warning To any angle  we can add or subtract  —which goes a full  circle and keeps the same direction. Thus  or  is the same angle as  or  : So is  or  :
+
+If we add or subtract  , the tangent doesn’t change. The point  is on the  line at  : The point  is on the  line also with  : Both have tan  : We had to write “almost” in equation (2), because a point has many  ’s and two points have the same  and tan  :
+
+Even worse, we could say that  is on the  line but at a negative distance  : A negative  carries the point backward along the  line, which is forward to  : In giving the position of  , I would always keep  : But in drawing the graph of a polar equation,  is allowed. We move now to those graphs.
+
+THE CIRCLE 
+
+The basis for Chapters 1–8 was  : The key to this chapter is  : That is a relation between the polar coordinates, and the points satisfying an equation like  produce a polar graph.
+
+It is not obvious why  gives a circle. The equations  and  and  produce entirely different graphs—not circles. The direct approach is to take  and go out the distance  on each ray. The points are marked in Figure 9.2a, and connected into a curve. It seems to be a circle of radius  , with its center at the point  : We have to be able to show mathematically that  represents a shifted circle.
+
+One point must be mentioned. The angles from 0 to  give the whole circle. The number  becomes negative after  , and we go backwards along each ray.
+
+At  (to the left of the origin) the cosine is  : Going backwards brings us to the same point as  and  —which completes the circle.
+
+When  continues from  to  we go around again. The polar equation gives the circle twice. (Or more times, when  continues past  :) If you don’t like negative  ’s and multiple circles, restrict  to the range from  to  : We still have to see why the graph of  is a circle.
+
+Method 5 Multiply by  and convert to rectangular coordinates  and  :
+
+This is a circle because of  : From rewriting as  we recognize its center and radius. Center at  and  ; radius  : Done.
+
+Method 6 Write  and  separately as functions of  : Then  is a “parameter”:
+
+These are not polar equations but parametric equations. The parameter  is the angle, but it could be the time—the curve would be the same. Chapter 12 studies parametric equations in detail—here we stay with the circle.
+
+To find the circle, square  and  and add. This produces  in Problem 26: But here we do something new: Start with the circle and find equation (4). In case you don’t reach Chapter 12, the idea is this. Add the vectors  to the center and  out the radius:
+
+The point  in Figure 9.2 has 
+
+The parameter  is the angle at the center of the circle. The equations are  and  : A trigonometric person sees a double angle and sets  : The result is equation (4) for the circle:
+
+This step rediscovers a basic theorem of geometry: The angle t at the center is twice the angle  at the circumference. End of quick introduction to parameters.
+
+A second circle is  , drawn in Figure  . A third circle is  sin  , not drawn. Problem 27 asks you to find its  equation and its radius. All calculations go back to  and  sin  —the basic facts of polar coordinates! The last exercise shows a parametric equation with beautiful graphs, because it may be possible to draw them now. Then the next section concentrates on  —and goes far beyond circles.

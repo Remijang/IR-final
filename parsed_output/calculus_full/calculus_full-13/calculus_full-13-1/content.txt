@@ -1,0 +1,46 @@
+13.1 Surfaces and Level Curves
+
+The graph of  is a curve in the  plane. There are two variables—  is independent and free,  is dependent on  : Above  on the base line is the point  on the curve. The curve can be displayed on a two-dimensional printed page. The graph of  is a surface in xyz space. There are three variables—  and  are independent,  is dependent. Above  in the base plane is the point  on the surface (Figure 13.1). Since the printed page remains two-dimensional, we shade or color or project the surface. The eyes are extremely good at converting two-dimensional images into three-dimensional understanding—they get a lot of practice. The mathematical part of our brain also has something new to work on—two partial derivatives.
+
+This section uses examples and figures to illustrate surfaces and their level curves. The next section is also short. Then the work begins.
+
+EXAMPLE 1 Describe the surface and the level curves for  :
+
+The surface is a cone. Reason:  is the distance in the base plane from  to  : When we go out a distance 5 in the base plane, we go up the same distance 5 to the surface. The cone climbs with slope 1: The distance out to  equals the distance up to  (this is a  cone).
+
+The level curves are circles. At height 5; the cone contains a circle of points—all at the same “level” on the surface. The plane  meets the surface  at those points (Figure 13.1b). The circle below them (in the base plane) is the level curve.
+
+DEFINITION A level curve or contour line of  contains all points  that share the same value  . Above those points, the surface is at the height  :
+
+There are different level curves for different  : To see the curve for  ; cut through the surface with the horizontal plane  : The plane meets the surface above the points where  : The level curve in the base plane has the equation  : Above it are all the points at “level  or “level  on the surface.
+
+Every curve  is labeled by its constant  : This produces a contour map (the base plane is full of curves). For the cone, the level curves are given by  ; and the contour map consists of circles of radius  :
+
+Question What are the level curves of 
+
+Answer Still circles. But the surface is not a cone (it bends up like a parabola). The circle of radius 3 is the level curve  : On the surface above, the height is 9:
+
+EXAMPLE 2 For the linear function  ; the surface is a plane. Its level curves are straight lines. The surface  meets the plane  in the line  . That line is above the base plane when  is positive, and below when  is negative. The contour lines are in the base plane. Figure  labels these parallel lines according to their height in the surface.
+
+Question If the level curves are all straight lines, must they be parallel? Answer No. The surface  has level curves  : Those lines  swing around the origin, as the surface climbs like a spiral playground slide.
+
+EXAMPLE 3 The weather map shows contour lines of the temperature function. Each level curve connects points at a constant temperature. One line runs from Seattle to Omaha to Cincinnati to Washington. In winter it is painful even to think about the line through L.A. and Texas and Florida. USA Today separates the contours by color, which is better. We had never seen a map of universities.
+
+Question From a contour map, how do you find the highest point? Answer The level curves form loops around the maximum point. As  increases the loops become tighter. Similarly the curves squeeze to the lowest point as  decreases.
+
+EXAMPLE 4 A contour map of a mountain may be the best example of all. Normally the level curves are separated by 100 feet in height. On a steep trail those curves are bunched together—the trail climbs quickly. In a flat region the contour lines are far apart. Water runs perpendicular to the level curves. On my map of New Hampshire that is true of creeks but looks doubtful for rivers.
+
+Question Which direction in the base plane is uphill on the surface? Answer The steepest direction is perpendicular to the level curves. This is important. Proof to come.
+
+EXAMPLE 5 In economics  is a utility function and  is an indifference curve.
+
+The utility function  gives the value of  hours awake and  hours asleep. Two hours awake and fifteen minutes asleep have the value  : This is the same
+
+as one hour of each:  : Those lie on the same level curve in Figure 13.4a.   
+We are indifferent, and willing to exchange any two points on a level curve.
+
+The indifference curve is “convex.” We prefer the average of any two points. The line between two points is up on higher level curves.
+
+Figure  shows an extreme case. The level curves are straight lines  Four quarters are freely substituted for one dollar. The value is  dollars.
+
+Figure  shows the other extreme. Extra left shoes or extra right shoes are useless. The value (or utility) is the smaller of  and  : That counts pairs of shoes.

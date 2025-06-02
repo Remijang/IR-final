@@ -1,0 +1,151 @@
+Calculus is about functions. I use that word “functions” in the first sentence, because we can’t go forward without it. Like all other words, we learn this one in two different ways: We define the word and we use the word.
+
+I believe that seeing examples of functions, and using the word to explain those examples, is a fast and powerful way to learn. I will start with three examples:
+
+Linear function    
+Squaring function   
+Exponential function
+
+The first point is that those are not the same! Their formulas involve 2 and  in very different ways. When I draw their graphs (this is a good way to understand functions) you see that all three are increasing when  is positive. The slopes are positive.
+
+When the input  increases (moving to the right), the output  also increases (the graph goes upward). The three functions increase at different rates.
+
+0 Highlights of Calculus
+
+Near the start at  , the first function increases the fastest. But the others soon catch up. All three graphs reach the same height  when  : Beyond that point the second graph  pulls ahead. At  the squaring function reaches  , while the height of the third graph is only  :
+
+Don’t be deceived, the exponential will win. It pulls even at  , because  and  are both 16. Then  moves ahead of  and it stays ahead. When you reach  , the third graph will have  compared to  :
+
+The graphs themselves are a straight line and a parabola and an exponential. The straight line has constant growth rate. The parabola has increasing growth rate. The exponential curve has exponentially increasing growth rate. I emphasize these because calculus is all about growth rates.
+
+The whole point of differential calculus is to discover the growth rate of a function, and to use that information. So there are actually two functions in play at the same time—the original function and its growth rate. Before I go further down this all-important road, let¥me give a working definition of a function  :
+
+A function has inputs  and outp¥uts  . To each  it as¥signs one  .
+
+The inputs  come from the “domain” of the function. In our graphs the domain contained all numbers  . The outputs  form the “range” of the function. The ranges for the first two functions  and  contained all numbers  . But the range for  is limited to  when the domain is  .
+
+Since these examples are so important, let me also allow  to be negative. The three graphs are shown below. Strictly speaking, these are new functions! Their domains have been extended to all real numbers  . Notice that the three ranges are also different:
+
+The range of  is all real numbers  The range of  is all nonnegative numbers  The range of  is all positive numbers 
+
+One more note about the idea of a function, and then calculus can begin. We have seen the three most popular ways to describe a function:
+
+1. Give a formula to find  from  . Example:  :   
+2. Give a graph that shows  (distance across) and  (distance up).   
+3. Give the input-output pairs (  in the domain and  in the range).
+
+In a high-level definition, the “function” is the set of all the input-output pairs. We could also say: The function is the rule that assigns an output  in the range to every input  in the domain.
+
+This shows something that we see for other words too. Logically, the definition should come first. Practically, we understand the definition better after we know examples that use the word. Probably that is the way we learn other words and also the way we will learn calculus. Examples show the general idea, and the definition is more precise. Together, we get it right.
+
+The first words in this book were Calculus is about functions. Now I have to update that.
+
+PAIRS OF FUNCTIONS
+
+Calculus is about pairs of functions. Call them Function (1) and Function (2). Our graphs of  and  and  were intended to be examples of Function (1). Then we discussed the growth rates of those three examples. The growth rate of Function (1) is Function (2). This is our first task—to find the growth rate of a function. Differential calculus starts with a formula for Function .1/ and aims to produce a formula for Function .2/:
+
+Let me say right away how calculus operates. There are two ways to compute how quickly  changes when  changes:
+
+Method 1 (Limits): Write  . Take the limit of this ratio as  .   
+Method 2 (Rules): Follow a rule to produce new growth rates from known rates.
+
+For each new function  , look to see if it can be produced from known functions—obeying one of the rules. An important part of learning calculus is to see different ways of producing new functions from old. Then we follow the rules for the growth rate.
+
+Suppose the new function is not produced from known functions  is not produced from  or  ). Then we have to find its growth rate directly. By “directly” I mean that we compute a limit which is Function (2). This book will explain what a “limit” means and how to compute it.
+
+Here we begin with examples—almost always the best way. I will state the growth rates  for the three functions we are working with:
+
+The linear function  has constant growth rate  . This section will take that first and easiest step. It is our opportunity to connect the growth rate to the slope of the graph. The ratio of up to across is  which is 2.
+
+Section 0:2 takes the next step. The squaring function  has linear growth rate  . (This requires the idea of a limit—so fundamental to calculus.) Then we can introduce our first two rules:
+
+Constant factor The growth rate of  is  times the growth rate of  .   
+Sum of functions The growth rate of  is the sum of the two growth rates.
+
+0 Highlights of Calculus
+
+The first rule says that  has growth rate  . The factor  multiplies the growth rate  . The second rule says that  has growth rate  . Notice how we immediately took  as a function  with a known growth rate. Together, the two rules give the growth rate for any “linear combination”of  and  :
+
+The growth rate of  is that same combination 
+
+In words, the step from Function (1) to Function (2) is linear. The slope of  is  . This rule is simple but so important.
+
+Finally, Section 0:3 will present the exponential functions  and  . Our first job is their meaning—what is  to the power  We understand  and  , but how can we multiply 2 by itself  times?
+
+When we meet  , we are seeing the great creation of calculus. This is a function with the remarkable property that  . The slope equals the function. This requires the amazing number  , which was never seen in algebra—because it only appears when you take the right limit.
+
+So these first sections compute growth rates for three essential functions. We are ready for  .
+
+THE SLOPE OF A GRAPH
+
+The slope is distance up divided by distance across. I am thinking now about the graph of a function  . The “distance across” is the change  in the inputs, from  to  . The “distance up” is the change  in the outputs, from  to  . The slope is large and the graph is steep when  is much larger than  . Change in y divided by change in  matches our ordinary meaning of the word slope:
+
+I introduced the very useful Greek letter  (delta), as a symbol for change. We take a step of length  to go from  to  . For the height  on the graph, that produces a step  . The ratio of  to  , up divided by across, is the average slope between  and  . The slope is the steepness.
+
+Important point: I had to say “average” because the slope could be changing as we go. The graph of  shows an increasing slope. Between  and  , what is the average slope for  ? Divide  by  :
+
+Between  and  , we get a different answer (not 3). This graph of  shows the problem of calculus, to deal with changes in slope and changes in speed.
+
+The graph of  has constant slope. The ratio of  to  , distance up to distance across, is always 2:
+
+Constant slope
+
+The mathematics is easy, which gives me a chance to emphasize the words and the ideas:
+
+Function  Height of the graph Function  Slope of the graph
+
+When Function (1) is  , the ratio  is always  . A linear function has a constant slope. And those same functions can come from driving a car at constant speed:
+
+Function  Distance traveled  Function  Speed of the car 
+
+For a graph of Function (1), its rate of change is the slope. When Function (1) measures distance traveled, its rate of change is the speed (or velocity). When Function .1/ measures our height, its rate of change is our growth rate.
+
+The first point is that functions are everywhere. For calculus, those functions come in pairs. Function .2/ is the rate of change of Function .1/:
+
+The second point is that Function (1) and Function (2) are measured in different units. That is natural:
+
+When time is in seconds and distance is in meters, then speed is automatically in meters per second. We can choose two units, and they decide the third. Function (2) always involves a division:  is divided by  or distance is divided by time.
+
+The delicate and tricky part of calculus is coming next. We want the slope at one point and the speed at one instant. What is the rate of change in zero time ?
+
+The distance across is  at a point. The distance up is  . Formally, their ratio is  . It is the inspiration of calculus to give this a useful meaning.
+
+0 Highlights of Calculus
+
+Big Picture
+
+Calculus connects Function (1) with Function  rate of change of (1) Function (1) Distance traveled  Function (2) Speed  Function (1) Height of graph  Function (2) Slope  Function (2) tells how quickly Function (1) is changing
+
+ Distance up KEY Constant speed Constant slope s D Distance across
+
+Graphs of (1) and (2)  increasing distance  constant speed
+
+Slope of  Area under  -graph  area of rectangle 
+
+Now run the car backwards. Speed is negative Distance goes down to 0 Area “under”  is zero
+
+When speed is changing, algebra is not enough  is wrong Still true that area under  Still true that  of  “derivative” of 
+
+When  is increasing, the slope  is positive   
+When  is decreasing, the slope  is negative   
+When  is at its maximum or minimum, the slope  is zero   
+The graphs of any  and  have the same slope at every t   
+To recover  Function (1) from dft ; good to know a starting height f .0/
+
+0 Highlights of Calculus
+
+Practice Questions
+
+1. Draw a graph of  that goes up and down and up again.
+
+Then draw a reasonable graph of its slope.
+
+2. The world population  increased slowly at first, now quickly, then slowly again (we hope and expect). Maybe a limit  or 14 billion.
+
+Draw a graph for  and its slope 
+
+3. Suppose  for  and then  for  Describe the slope graph  : Compare its area out to  with 
+
+4. Draw a graph of  : Then sketch a graph of its slope. At what angles  is the slope zero (slope  when  is “flat”).   
+5. Suppose the graph of  is shaped like the capital letter W. Describe the graph of its slope  : What is the total area under the graph of  ? -   
+6. A train goes a distance  at constant speed  : Inside the train, a passenger walks forward a distance  at walking speed  : What distance does the passenger go ? At what speed ? (Measure distance from the train station)

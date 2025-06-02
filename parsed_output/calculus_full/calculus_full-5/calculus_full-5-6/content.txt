@@ -1,0 +1,119 @@
+5.6 Properties of the Integral and Average Value
+
+The previous section reached the definition of  : But the subject cannot stop there. The integral was defined in order to be used. Its properties are important, and its applications are even more important. The definition was chosen so that the integral has properties that make the applications possible.
+
+One direct application is to the average value of  : The average of  numbers is clear, and the integral extends that idea—it produces the average of a whole continuum of numbers  : This develops from the last rule in the following list (Property 7). We now collect together seven basic properties of definite integrals.
+
+The addition rule for  will not be repeated—even though this property of linearity is the most fundamental. We start instead with a different kind of addition. There is only one function  , but now there are two intervals.
+
+The integral from a to  is added to its neighbor from  to  : Their sum is the integral from a to  . That is the first (not surprising) property in the list.
+
+Property 1 Areas over neighboring intervals add to the area over the combined interval:
+
+This sum of areas is graphically obvious (Figure 5.11a). It also comes from the formal definition of the integral. Rectangular areas obey (1)—with a meshpoint at  to make sure. When  approaches zero, their limits also obey (1). All the normal rules for rectangular areas are obeyed in the limit by integrals.
+
+Property 1 is worth pursuing. It indicates how to define the integral when  : The integral “from  to  is the area over a point, which we expect to be zero. It is.
+
+Property 2
+
+That comes from Property 1 when  : Equation (1) has two identical integrals, so the one from  to  must be zero. Next we see what happens if  —which makes the second integral go from  to  :
+
+What happens when an integral goes backward? The “lower limit” is now the larger number  : The “upper limit”  is smaller. Going backward reverses the sign:
+
+Property 3
+
+Proof When  the right side of (1) is zero. Then the integrals on the left side must cancel, which is Property 3. In going from  to a the steps  are negative. That justifies a minus sign on the rectangular areas, and a minus sign on the integral (Figure 5.11b). Conclusion: Property 1 holds for any ordering of  :
+
+Property 4 For odd functions  : “Odd” means that  : For even functions  : “Even” means that  :
+
+The functions  are odd. If  changes sign, these powers change sign. The functions sin  and tan  are also odd, together with their inverses. This is an
+
+important family of functions, and the integral of an odd function from  to a equals zero. Areas cancel:
+
+If  is odd then  is even! All powers  ; : : : are even functions. Curious fact: Odd function times even function is odd, but odd number times even number is even.
+
+For even functions, areas add:  cos 
+
+The next properties involve inequalities. If  is positive, the area under its graph is positive (not surprising). Now we have a proof: The lower sums  are positive and they increase toward the area integral. So the integral is positive:
+
+A positive velocity me¤ans a po¤sitive distance¤. A p¤ositive  lies above a positive area. A more general statement is true. Suppose  stays between a lower function  and an upper function  : Then¤the rectangles f¤or  stay between the rectangles for  and  : In the limit, the area under  (Figure 5.12) is between the areas under  and  :
+
+Property 6 If  for  then
+
+EXAMPLE 3 Integrating  leads to  :
+
+All those examples are for  : You may remember that Section 2.4 used geometry to prove sin  : Examples 1–2 seem to give new and shorter proofs. But I think the reasoning is doubtful. The inequalities were needed to compute the derivatives (therefore the integrals) in the first place.
+
+Property 7 (Mean Value Theorem for Integrals) If  is continuous, there is a point  between  and  where  equals the average value of  :
+
+This is the same as the ordinary Mean Value Theorem (for the derivative of  :
+
+With  ; (3) and (4) are the same equation. But honesty makes me admit to a flaw in the logic. We need the Fundamental Theorem of Calculus to guarantee that  really gives  :
+
+A direct proof of (3) places one rectangle across the interval from  to  : Now raise the top of that rectangle, starting at  (the bottom of the curve) and moving up to  (the top of the curve). At some height the area will be just right—equal to the area under the curve. Then the rectangular area, which is  times  , equals the curved area  : This is equation (3).
+
+That direct proof uses the intermediate value theorem: A continuous function  takes on every height between  and  : At some point (at two points in Figure 5.12c) the function  equals its own average value.
+
+Figure 5.13 shows equal areas above and below the average height   .
+
+EXAMPLE 4 The average value of an odd function is zero (between  and 1):
+
+For once we know  : It is the center point  ; where  :
+
+EXAMPLE 5 The average value of  is  (between 1 and  ):
+
+Where does this function  equal its average value  That happens when  , so  can be either of the points  and  in Figure 5.13b. Those are the Gauss points, which are terrific for numerical integration as Section 5.8 will show.
+
+EXAMPLE 6 The average value of  over a period (zero to  ) is 
+
+The point  is  or  , where  : The graph of  oscillates around its average value  . See the figure or the formula:
+
+The steady term is  , the oscillation is  : The integral is   sin  , which is the same as  cos  : This integral of  will be seen again. Please verify that  :
+
+THE AVERAGE VALUE AND EXPECTED VALUE
+
+The “average value” from  to  is the integral divided by the length  : This was computed for  and  and  , but not explained. It is a major application of the integral, and it is guided by the ordinary average of  numbers:
+
+Integration is parallel to summation! Su ms approach integrals. Discrete averages approach continuous averages. The average of  is  : The average of  is  : The average of  numbers from  to  is
+
+The middle term givÑes the average, when  is odd. Or we can do the addition. As  the sum approaches an integral (do you see the rectangles?). The ordinary average of numbers becomes the continuous average of  :
+
+In ordinary language: “The average value of the numbers between 0 and 1 is  :” Since a whole continuum of numbers lies between 0 and 1, that statement is meaningless until we have integration.
+
+The average value of the squares of those numbers is  If you pick a number randomly between 0 and 1; its expected value is  and its expected square is  .
+
+To me that sentence is a puzzle. First, we don’t expect the number to be exactly  —so we need to define “expected value.” Second, if the expected value is  , why is the expected square equal to  instead of  The ideas come from probability theory, and calculus is leading us to continuous probability. We introduce it briefly here, and come back to it in Chapter 8.
+
+PREDICTABLE AVERAGES FROM RANDOM EVENTS
+
+Suppose you throw a pair of dice. The outcome is not predictable. Otherwise why throw them? But the average over more and more throws is totally predictable. We don’t know what will happen, but we know its probability.
+
+For dice, we are adding two numbers between 1 and 6: The outcome is between 2 and 12: The probability of 2 is the chance of two ones:  : Beside each outcome we can write its probability:
+
+To repeat, one roll is unpredictable. Only the probabilities are known, and they add to 1: (Those fractions add to  ; all possibilities are covered.) The total from a million rolls is even more unpredictable—it can be anywhere between 2; 000; 000 and 12; 000; 000: Nevertheless the average of those million outcomes is almost completely predictable. This expected value is found by adding the products in that line above:
+
+Expected value: multiply (outcome) times (probability of outcome) and add:
+
+If you throw the dice 1000 times, and the average is not between 6:9 and 7:1, you get an A. Use the random number generator on a computer and round off to integers.
+
+Now comes continuous probability. Suppose all numbers between 2 and 12 are equally probable. This means all numbers—not just integers. What is the probability of hitting the particular number  is zero! By any reasonable measure,  has no chance to occur. In the continuous case, every  has probability zero. But an interval of  ’s has a nonzero probability:
+
+the probability of an outcome between 2 and 3 is  the probability of an outcome between  and  is 
+
+To find the average, add up each outcome times the probability of that outcome. First divide 2 to 12 into intervals of length  and probability  : If we round off  , the average is  :
+
+Here all outcomes are integers (as with dice). It is more accurate to use 20 intervals of length  and probability  : The average is  , and you see what is coming. These are rectangular areas (Riemann sums). As  they approach an integral. The probability of an outcome between  and  is  , and this problem has  : The average outcome in the continuous case is not a sum but an integral:
+
+That is a big jump. From the point of view of integration, it is a limit of sums. From the point of view of probability, the chance of each outcome is zero but the probability density at  is  : The integral of  is 1, because so?me outcome must happen. The integral of  is  , the expected value. Each choice of  is random, but the average is predictable.
+
+This completes a first step in probability theory. The second step comes after more calculus. Decaying probabilities use  and  ?—then the chance of a large  is very small. Here we end with the expected values of  and  and  , for a random choice between 0 and 1 (so  :
+
+A CONFUSION ABOUT “EXPECTED” CLASS SIZE
+
+A college can advertise an average class size of 29; while most students are in large classes most of the time. I will show quickly how that happens.
+
+Suppose there are 95 classes of 20 students and 5 classes of 200 students. The total enrollment in 100 classes is  : A random professor has expected class size 29: But a random student sees it differently. The probability is 1900=2900 of being in a small class and  of being in a large class. Adding class size times probability gives the expected class size for the student:
+
+Similarly, the average waiting time at a restaurant seems like 40 minutes (to the customer). To the hostess, who averages over the whole day, it is 10 minutes. If you came at a random time it would be10, but if you are a random customer it is 40:
+
+Traffic problems could be eliminated by raising the average number of people per car to 2:5, or even 2: But that is virtually impossible. Part of the problem is the difference between (a) the percentage of cars with one person and (b) the percentage of people alone in a car. Percentage (b) is smaller. In practice, most people would be in crowded cars. See Problems  :

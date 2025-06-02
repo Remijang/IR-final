@@ -1,0 +1,563 @@
+[
+    {
+        "type": "text",
+        "text": "14.2 Change to Better Coordinates ",
+        "text_level": 1,
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "You don\u2019t go far with double integrals before wanting to change variables. Many regions simply do not fit with the $x$ and $y$ axes. Two examples are in Figure 14.5, a tilted square and a ring. Those are excellent shapes\u2014in the right coordinates. ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "We have to be able to answer basic questions like these: ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "Find the area $\\iint d A { \\mathrm { ~ a n d ~ m o m e n t } } \\iint x d A { \\mathrm { ~ a n d ~ m o m e n t ~ o f ~ i n e r t i a ~ } } \\iint$ ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "The problem is: What is $d A \\operatorname { \\mathrm { ? } }$ We are leaving the $x y$ variables where $d A = d x d y$ : ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "The reason for changing is this: The limits of integration in the $y$ direction are miserable. I don\u2019t know them and I don\u2019t want to know them. For every $x$ we would need the entry point $P$ of the line $x =$ constant, and the exit point $\\boldsymbol { Q }$ : The heights of $P$ and $\\boldsymbol { Q }$ are the limits on $\\int d y$ ; the inner integral. The geometry of the square and ring are totally missed, if we stick rigidly to $x$ and $y$ : ",
+        "page_idx": 617
+    },
+    {
+        "type": "image",
+        "img_path": "images/1c884c0214d1703555865c9931f5802a8d46ccc249d3e069098d673c851ef021.jpg",
+        "img_caption": [
+            "Fig. 14.5 Unit square turned through angle $\\alpha$ : Ring with radii 4 and 5: "
+        ],
+        "img_footnote": [],
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "Which coordinates are better ? Any sensible person agrees that the area of the tilted square is 1: \u201cJust turn it and the area is obvious.\u201d But that sensible person may not know the moment or the center of gravity or the moment of inertia. So we actually have to do the turning. ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "The new coordinates $u$ and $v$ are in Figure 14.6a. The limits of integration on $v$ are 0 and 1: So are?the limits on $u$ : But when you change variables, you don\u2019t just change limits. Two other changes come with new variables: ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "1. The small area $d A = d x d y$ becomes $d A = - d u d v$ :   \n2. The integral of $x$ becomes the integral of ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "Substituting $u = { \\sqrt { x } }$ in a single integral, we make the same changes. Limits $x = 0$ and $x = 4$ become $u = 0$ and $u = 2$ : Since $x$ is $u ^ { 2 }$ ; $d x$ is $2 u d u$ : The purpose of the change is to find an antiderivative. For double integrals, the u\u0001sual purpose is to improve the limits\u2014but we have to accept the whole package. ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "To turn the s\u0001quare, there are formulas connecting $x$ and $y$ to $u$ and $v$ : The geometry is clear\u2014rotate axes by $\\alpha$ \u2014but it has to be converted into algebra: ",
+        "page_idx": 617
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l } { { u = x \\cos \\alpha + y \\sin \\alpha } } & { { x = u \\cos \\alpha - v \\sin \\alpha } } \\\\ { { } } & { { { \\mathrm { a n d ~ i n ~ r e v e r s e } } } } \\\\ { { v = - x \\sin \\alpha + y \\cos \\alpha } } & { { y = u \\sin \\alpha + v \\cos \\alpha . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "Figure 14.6 shows the rotation. As points move, the whole square turns. A good way to remember equation (1) is to follow the corners as they become $( 1 , 0 )$ and $( 0 , 1 )$ : ",
+        "page_idx": 617
+    },
+    {
+        "type": "text",
+        "text": "The change from $\\iint x d A$ to $\\iint { \\frac { \\partial \\mathbf { u } \\ d v } { \\partial \\mathbf { u } \\ d v } }$ is partly decided by equation (1). It gives $x$ as a function of $u$ and $v$ : We also need $d A$ : For a pure rotation the first guess is correct: The area $d x$ dy equals the area $d u d v$ : For most changes of variable this is false. The general formula for $d A$ comes after the examples. ",
+        "page_idx": 618
+    },
+    {
+        "type": "image",
+        "img_path": "images/37a5bf66adbb27dff57d7dd515a0da0c8353971c0953f212f74c7bd6371fd1bd.jpg",
+        "img_caption": [
+            "Fig. 14.6 Change of coordinates\u2014axes turned by $\\alpha$ : For rotation $d A$ is $d u d v$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 Find $\\iint d A$ and $\\iint x d A$ and $\\textstyle { \\overline { { x } } }$ and also $\\iint x ^ { 2 } d A$ for the tilted square. ",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "Solution The area of the square is $\\textstyle \\int _ { 0 } ^ { 1 } \\int _ { 0 } ^ { 1 } d u d v = 1$ : Notice the good limits. Then ",
+        "page_idx": 618
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\iint x d A = \\int _ { 0 } ^ { 1 } \\int _ { 0 } ^ { 1 } ( u \\cos \\alpha - v \\sin \\alpha ) d u d v = \\frac 1 2 \\cos \\alpha - \\frac 1 2 \\sin \\alpha . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "This is the moment around the $y$ axis. The factors $\\frac { 1 } { 2 }$ come from ${ \\scriptstyle { \\frac { 1 } { 2 } } } u ^ { 2 }$ and ${ \\scriptstyle { \\frac { 1 } { 2 } } } v ^ { 2 }$ : The $x$ coordinate of the center of gravity is ",
+        "page_idx": 618
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { x } } } = \\int \\int x d A { \\bigg / } \\int \\int d A = \\left( { \\textstyle { \\frac { 1 } { 2 } } } \\cos \\alpha - { \\textstyle { \\frac { 1 } { 2 } } } \\sin \\alpha \\right) / 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "Similarly the integral of $y$ leads to $\\overline { { y } }$ : The answer is no mystery\u2014the point $( { \\overline { { x } } } , { \\overline { { y } } } )$ is at the center of the square! Substi\u0001tuting $x = u$ cos $\\alpha - v$ sin $\\alpha$ \u0001made $x d A$ look worse, but the limits 0 and 1 are much better. ",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "The moment of inertia $I _ { y }$ around the $y$ axis is also simplified: ",
+        "page_idx": 618
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iint x ^ { 2 } d A = \\int _ { 0 } ^ { 1 } \\int _ { 0 } ^ { 1 } ( u \\cos \\alpha - v \\sin \\alpha ) ^ { 2 } d u d v = { \\frac { \\cos ^ { 2 } \\alpha } { 3 } } - { \\frac { \\cos \\alpha \\sin \\alpha } { 2 } } + { \\frac { \\sin ^ { 2 } \\alpha } { 3 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "You know this next fact but I will write it anyway: The answers don\u2019t contain u or $v$ : Those are dummy variables like $x$ and $y$ : The answers do contain $\\alpha$ ; because the square has turned. (The area is fixed at 1:) The moment of inertia $I _ { x } = \\iint y ^ { 2 } d A$ is the same as equation (3) but with all plus signs. ",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "Question The sum $I _ { x } + I _ { y }$ simplifies to $\\frac { 2 } { 3 }$ (a constant). Why no dependence on $\\alpha$ ? Answer $I _ { x } + I _ { y }$ equals $I _ { 0 }$ : This moment of inertia around $( 0 , 0 )$ is unchanged by rotation. We are turning the square around one of its corners. ",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "CHANGE TO POLAR COORDINATES ",
+        "text_level": 1,
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "The next change is to $r$ and $\\theta$ : A small area becomes $d A = r d r d \\theta$ (definitely not $d r d \\theta )$ ). Area always comes from multiplying two lengths, and $d \\theta$ is not a length. Figure 14.7 shows the crucial region\u2014a \u201cpolar rectangle\u201d cut out by rays and circles. Its area $\\Delta A$ is found in two ways, both leading to $r d r d \\theta$ : ",
+        "page_idx": 618
+    },
+    {
+        "type": "text",
+        "text": "(Approximate) The straight sides have length $\\Delta r$ : The circular arcs are close to $r \\Delta \\theta$ : The angles are\u0001 $9 0 ^ { \\circ }$ : S\u0001o $\\Delta A$ is close to $( \\Delta r ) ( r \\Delta \\theta )$ : ",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "(Exact) A wedge has area ${ \\frac { 1 } { 2 } } r ^ { 2 } \\Delta \\theta$ : The difference between wedges is $\\Delta A$ : ",
+        "page_idx": 619
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta A = \\frac { 1 } { 2 } \\left( r + \\frac { \\Delta r } { 2 } \\right) ^ { 2 } \\Delta \\theta - \\frac { 1 } { 2 } \\left( r - \\frac { \\Delta r } { 2 } \\right) ^ { 2 } \\Delta \\theta = r \\Delta r \\Delta \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "The exact method places $r$ dead center (see figure). The approximation says: Forget the change in $r \\Delta \\theta$ as you move outward. Keep only the first-order terms. ",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "A third method is coming, which requires no picture and no geometry. Calculus always has a third method! The change of variables $x = r$ cos $\\theta , y = r$ sin $\\theta$ will go into a general formula for $d A$ ; and out will come the area $r d r d \\theta$ : ",
+        "page_idx": 619
+    },
+    {
+        "type": "image",
+        "img_path": "images/729714f3f1331eddae1f0dd58275bf94289f1f9f3ff54c680d4e9cd0d02d92c0.jpg",
+        "img_caption": [
+            "Fig. 14.7 Ring and polar rectangle in $x y$ and $r \\theta$ ; with stretching fac\u0001tor $r = 4 . 5$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Find the area and center of gravity of the ring. Also find $\\iint x ^ { 2 } d A$ : ",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "Solution The limits on $r$ are 4 and 5: The limits on $\\theta$ a\u0001re 0 and $2 \\pi$ : Polar coordinates are perfect for a ring. Compared with limits like $x = \\sqrt { 2 5 - y ^ { 2 } }$ ; the change to $r d r d \\theta$ is a small price to pay: ",
+        "page_idx": 619
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\scriptstyle { \\mathrm { a r e a } } = { \\int { \\int { \\int r d r d \\theta } } } = 2 \\pi \\left[ { \\frac { 1 } { 2 } } r ^ { 2 } \\right] _ { 4 } ^ { 5 } = \\pi 5 ^ { 2 } - \\pi 4 ^ { 2 } = 9 \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "The $\\theta$ integral is $2 \\pi$ (full circle). Actually the ring is a giant polar rectangle. We could have used the exact formula $r \\Delta r \\Delta \\theta$ ; with $\\Delta \\theta = 2 \\pi$ and $\\Delta r = 5 - 4$ : When the radius $r$ is centered at 4:5; the product $r \\Delta r \\Delta \\theta$ is $( 4 . 5 ) ( 1 ) ( 2 \\pi ) = 9 \\pi$ as above. ",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "Since the ring is symmetric around $( 0 , 0 )$ ; the integral of $x d A$ must be zero: ",
+        "page_idx": 619
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\underset { \\pmb { R } } { \\iint } x d A = \\int \\int \\int ( r \\cos \\theta ) r d r d \\theta = \\Big [ \\frac { 1 } { 3 } r ^ { 3 } \\Big ] _ { 4 } ^ { 5 } \\Big [ \\sin \\theta \\Big ] _ { 0 } ^ { 2 \\pi } = 0 . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "Notice $r$ cos $\\theta$ from $x$ \u2014the other $r$ is from $d A$ : The moment of inertia is ",
+        "page_idx": 619
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { \\iint x ^ { 2 } d A = \\int _ { 0 } ^ { 2 \\pi } \\int r ^ { 2 } \\cos ^ { 2 } \\theta r d r d \\theta = \\left[ \\frac { 1 } { 4 } r ^ { 4 } \\right] _ { 4 } ^ { 5 } \\int \\cos ^ { 2 } \\theta d \\theta = \\frac { 1 } { 4 } ( 5 ^ { 4 } - 4 ^ { 4 } ) \\pi . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "This $\\theta$ integral is $\\pi$ not $2 \\pi$ ; because the average of $\\cos ^ { 2 } \\theta$ is $\\frac { 1 } { 2 }$ not 1: ",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "For reference here are the moments of inertia when the density is $\\rho ( x , y )$ ",
+        "page_idx": 619
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { I _ { y } = \\iint { x ^ { 2 } \\rho d A } } & { { } I _ { x } = \\iint { y ^ { 2 } \\rho d A } \\quad I _ { 0 } = \\iint { r ^ { 2 } \\rho d A } = p o l a r m o m e n t = I _ { x } + I _ { y } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 619
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Find masses and moments for semicircular plates: $\\rho = 1$ and $\\rho = 1 - r$ : ",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "Solution The semicircles in Figure 14.8 have $r = 1$ :\u0001The angle goes from 0 to $\\pi$ (the upper half-circle). Polar coordinates are best. The mass is the integral of the density $\\rho$ : ",
+        "page_idx": 620
+    },
+    {
+        "type": "equation",
+        "text": "$$\nM = \\int \\displaylimits _ { 0 } ^ { \\pi } \\int r d r d \\theta = ( \\textstyle { \\frac { 1 } { 2 } } ) ( \\pi ) \\quad \\mathrm { a n d } \\quad M = \\int \\displaylimits _ { 0 } ^ { \\pi } \\int ( 1 - r ) r d r d \\theta = ( \\textstyle { \\frac { 1 } { 6 } } ) ( \\pi ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "The first mass $\\pi / 2$ equals the area (because $\\rho = 1$ ). The second mass $\\pi / 6$ is smaller (because $\\rho < 1$ ). Integrating $\\rho = 1$ is the same as finding a volume when the height is $z = 1$ (part of a cylinder). Integrating $\\rho = 1 - r$ is the same as finding a volume when the height is $z = 1 - r$ (part of a cone). Volumes of cones have the extra factor $\\begin{array} { l } { { \\frac { 1 } { 3 } } } \\end{array}$ : The center of gravity involves the moment $M _ { x } = \\iint y \\rho d A$ : The distance fro\u0001m the $x$ axis is $y$ ; the mass of a small piece is $\\rho d A$ ; integrate to add mass times distance. Polar coordinates are still best, with $y = r \\sin \\theta$ : Again $\\rho = 1$ and $\\rho = 1 - r$ : ",
+        "page_idx": 620
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iint y d A = \\int _ { 0 } ^ { \\pi } \\int r \\sin \\theta r d r d \\theta = \\frac { 2 } { 3 } \\qquad \\iint y ( 1 - r ) d A = \\int _ { 0 } ^ { \\pi } \\int r \\sin \\theta ( 1 - r ) r d r d \\theta = \\frac { 1 } { 6 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "The height of the center of gravity is $\\overline { { y } } = M _ { x } / M = \\imath$ moment divided by mass: ",
+        "page_idx": 620
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { y } } = \\frac { 2 / 3 } { \\pi / 2 } = \\frac { 4 } { 3 \\pi } \\quad \\mathrm { w h e n } \\ \\rho = 1 \\qquad \\overline { { y } } = \\frac { 1 / 6 } { \\pi / 6 } = \\frac { 1 } { \\pi } \\quad \\mathrm { w h e n } \\ \\rho = 1 - r .\n$$",
+        "text_format": "latex",
+        "page_idx": 620
+    },
+    {
+        "type": "image",
+        "img_path": "images/8c5d0c76eda9176d5470c2ebc78fdd3a748974a1fd451efa01b1988616d1b962.jpg",
+        "img_caption": [
+            "Fig. 14.8 Semicircles with density piled above them. "
+        ],
+        "img_footnote": [],
+        "page_idx": 620
+    },
+    {
+        "type": "image",
+        "img_path": "images/0917d0cb1d5d4b273bec053078f0cbb9b39d3290a8c035a516bf04d81cb2a5cd.jpg",
+        "img_caption": [
+            "Fig. 14.9 Bell-shaped curve. "
+        ],
+        "img_footnote": [],
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "Question Compare $\\overline { { y } }$ for $\\rho = 1$ and $\\rho =$ other positive constants and $\\rho = 1 - r$ : Answer Any constant $\\rho$ gives $\\overline { { y } } = 4 / 3 \\pi$ : Since $1 - r$ is dense at $r = 0$ ; $\\overline { { y } }$ drops to $1 / \\pi$ : ",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "Question How is $\\overline { { y } } = 4 / 3 \\pi$ related to the \u201caverage\u201d of $y$ in the semicircle ? Answer They are identical. This is the point of $\\overline { { y } }$ : Divide the integral by the area: ",
+        "page_idx": 620
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT h e a \\nu e r a g e \\nu a l u e o f a f u n c t i o n i s \\int \\int f ( x , y ) d A \\bigg / \\iint d A .\n$$",
+        "text_format": "latex",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "The integral of $f$ is divided by the integral of 1 (the area). In one dimension $\\int _ { a } ^ { b } v ( x ) d x$ was divided by $\\textstyle \\int _ { a } ^ { b } 1 d x$ (the length $b - a )$ . That gave the average value of $v ( x )$ in Section 5:6: Equation (5) is the same idea for $f ( x , y )$ : ",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 Compute $A { = } \\displaystyle \\int _ { - \\infty } ^ { \\infty } e ^ { - x ^ { 2 } } d x { = } \\sqrt { \\pi }$ from $A ^ { 2 } = \\int _ { - \\infty } ^ { \\infty } e ^ { - x ^ { 2 } } d x \\int _ { - \\infty } ^ { \\infty } e ^ { - y ^ { 2 } } d y =$ $\\pi$ : ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "$A$ is the area under a \u201cbell-shaped curve\u201d\u2014see Figure 14.9. This is the most important definite integral in the study of probability. It is difficult because a factor $2 x$ is not present. Int\u00bbeg8rating\u00bb $2 x e ^ { - x ^ { 2 } }$ gives $- e ^ { - x ^ { 2 } }$ ; but\u00bbintegr\u00bbat8ing $e ^ { - x ^ { 2 } }$ is impossible\u2014 except approximately by a computer. How can we hope to show that $A$ is exactly $\\sqrt { \\pi }$ ? The trick is\u0001t8o go fr\u0001o8m an area integral $A$ to a volume integral $A ^ { 2 }$ : This is unusual (and hard to like), but the end justifies the means: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA ^ { 2 } = \\int _ { x = - \\infty } ^ { \\infty } \\int _ { y = - \\infty } ^ { \\infty } e ^ { - x ^ { 2 } } e ^ { - y ^ { 2 } } d y d x = \\int _ { \\theta = 0 } ^ { 2 \\pi } \\int _ { r = 0 } ^ { \\infty } e ^ { - r ^ { 2 } } r d r d \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "The double integrals cover the whole plane. The $r ^ { 2 }$ comes from $x ^ { 2 } + y ^ { 2 }$ ; and?the key factor $r$ appears in polar coordinates. It is now possible to substitu\u0001te $u = r ^ { 2 }$ : The $r$ integral is $\\begin{array} { r } { \\frac { 1 } { 2 } \\int _ { 0 } ^ { \\infty } \\bar { e } ^ { - u } d u = \\frac { 1 } { 2 } } \\end{array}$ : The $\\theta$ integral is $2 \\pi$ : The double integral is $\\textstyle { \\bigl ( } { \\frac { 1 } { 2 } } { \\bigr ) } ( 2 \\pi )$ : Therefore $A ^ { 2 } = \\pi$ and the single integral is $A = { \\sqrt { \\pi } }$ : ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5? Apply Example 4 to\u00bbth8e \u201cnormal distributi\u00bbon8\u201d p.x/ D e x2=2= 2\u0019: ",
+        "text_level": 1,
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "Section 8:4 discussed probability. It\u00018emphasized the impo\u0001rt8ance of this particular $p ( x )$ : At that time we could not verify that $\\int p ( x ) d x = 1$ : Now we can: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = { \\sqrt { 2 } } y \\quad { \\mathrm { y i e l d s } } \\quad { \\frac { 1 } { \\sqrt { 2 \\pi } } } \\int _ { - \\infty } ^ { \\infty } e ^ { - x ^ { 2 } / 2 } d x = { \\frac { 1 } { \\sqrt { \\pi } } } \\int _ { - \\infty } ^ { \\infty } e ^ { - y ^ { 2 } } d y = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "Question Why include the 2\u2019s in $p ( x ) ^ { . }$ ? The integral of $e ^ { - x ^ { 2 } } / \\sqrt { \\pi }$ also equals 1: Answer With the 2\u2019s the \u201cvariance\u201d is $\\int x ^ { 2 } p ( x ) d x = 1$ : This is a convenient number. ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "CHANGE TO OTHER COORDINATES ",
+        "text_level": 1,
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "A third method was promised, to find $r d r d \\theta$ without a picture and without geometry. The method works directly from $x = r$ cos $\\theta$ and $y = r$ sin $\\theta$ : It also finds the 1 in $d u d v$ ; after a rotation of axes. Most important, this new method finds the factor $J$ in the area $d A = J d u d v$ ; for any change of variables. The change is from $x y$ to $u v$ : ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "For single integrals, the \u201cstretching factor\u201d $J$ between the original $d x$ and the new $d u$ is (not surprisingly) the ratio $d x / d u$ : Where we have $d x$ ; we write $( d x / d u ) d u$ : Where we have $( d u / d x ) d x$ ; we write $d u$ : That was the idea of substitutions\u2014the main way to simplify integrals. ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "For double integrals the stretching factor appears in the area: $d x d y$ becomes $\\mid J \\mid d u d v$ : The old and new variables are related by $x = x ( u , v )$ and $y = y ( u , v )$ : The point with coordinates $u$ and $v$ comes from the point with coordinates $x$ and $y$ : A whole region $S$ ; full of points in the $u v$ plane, comes from the region $R$ full of corresponding points in the $x y$ plane. A small piece with area $\\mid J \\mid d u d v$ comes from a small piece with area $d x d y$ : The formula for $J$ is a two-dimensional version of $d x / d u$ : ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "14B The str\u00bbe\u00bbtching factor for area\u00bbi\u00bbs the 2 by 2 Jacobian determinant $J ( u , v )$ : ",
+        "page_idx": 622
+    },
+    {
+        "type": "equation",
+        "text": "$$\nJ = \\left| \\begin{array} { l l } { \\partial x / \\partial u } & { \\partial x / \\partial v } \\\\ { \\partial y / \\partial u } & { \\partial y / \\partial v } \\end{array} \\right| = \\frac { \\partial x } { \\partial u } \\frac { \\partial y } { \\partial v } - \\frac { \\partial x } { \\partial v } \\frac { \\partial y } { \\partial u } .\n$$",
+        "text_format": "latex",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "An integral over $R$ in the $x y$ plane becBomes an  iBntegral over $S$ in the $u v$ plane: ",
+        "page_idx": 622
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iint _ { R } f ( x , y ) d x d y = \\iint _ { S } f ( x ( u , v ) , y ( u , v ) ) | J | d u d v .\n$$",
+        "text_format": "latex",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "The determinant $J$ is often\u0001 written $\\hat { \\cal { O } } ( x , y ) / \\hat { \\cal { O } } ( u , v )$ ; as a reminder that this stretching factor is like $d x / d u$ : We require $J \\neq 0$ : That keeps the stretching and shrinking under control. ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "You naturally ask: Why take the absolute value $\\vert J \\vert$ in equation (9) ? Good question\u2014it wasn\u2019t done for single integrals. The reason is in the limits of integration. The single integral $\\textstyle \\int _ { 0 } ^ { 1 } d x$ is $\\int _ { 0 } ^ { - 1 } \\left( - d u \\right)$ after changing $x$ to $- u$ : We keep the minus sign and allow single integ\u0007rals to run back \u0007ward\u0007 . Double integrals\u0007 could too, but normally they go left to right\u0007 Band  BdownBto u Bp. \u0007We \u0007use the ab\u0001solute va\u0007lue $\\left| J \\right|$ and run forward. ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 Polar coordinates have $x = u$ cos $v = r$ cos $\\theta$ and $y = u$ sin $v = r \\sin \\theta$ : ",
+        "page_idx": 622
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { J = \\left| \\begin{array} { l l } { \\partial x / \\partial r } & { \\partial x / \\partial \\theta } \\\\ { \\partial y / \\partial r } & { \\partial y / \\partial \\theta } \\end{array} \\right| = \\left| \\begin{array} { l l } { \\cos \\theta } & { - r \\sin \\theta } \\\\ { \\sin \\theta } & { r \\cos \\theta } \\end{array} \\right| = r . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 7 Find $J$ for the linear change to $x = a u + b v$ and $y = c u + d v$ : ",
+        "page_idx": 622
+    },
+    {
+        "type": "equation",
+        "text": "$$\nJ = \\left| \\begin{array} { l l } { \\partial x / \\partial u } & { \\partial x / \\partial v } \\\\ { \\partial y / \\partial u } & { \\partial y / \\partial v } \\end{array} \\right| = \\left| \\begin{array} { l l } { a } & { b } \\\\ { c } & { d } \\end{array} \\right| = a d - b c .\n$$",
+        "text_format": "latex",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Why make this simple change, in which ${ a , b , c , d }$ are all constant ? It straightens parallelograms into squares (and rotates\u0005those squares). Figure 14.10 is typical. ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Common sense indicated $J = 1$ for pure rotation\u2014no change in area. Now $J = 1$ comes from equations (1) and (11), because $a d - b c$ is $\\cos ^ { 2 } \\alpha + \\sin ^ { 2 } \\alpha$ : ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "In practice, $x y$ rectangles generally go into $u v$ rectangles. The sides can be curved (as in polar rectangles) but the angles are often $9 0 ^ { \\circ }$ : The change is \u201corthogonal.\u201d The next example has angles that are not $9 0 ^ { \\circ }$ ; and $J$ still gives the answer. ",
+        "page_idx": 622
+    },
+    {
+        "type": "image",
+        "img_path": "images/00a811fbad3153d3e2ff0fa9b71e18d65f11bdba20046b6d62fc4f44fc17f112.jpg",
+        "img_caption": [
+            "Fig. 14.10 Change from $x y$ to $u v$ has $\\begin{array} { r } { J = \\frac { 1 } { 3 } } \\end{array}$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 622
+    },
+    {
+        "type": "image",
+        "img_path": "images/bc780fd2de6d2195cdca000b0edbb3a9f888f5af7c72d098bcaa8c34e6ce216a.jpg",
+        "img_caption": [
+            "Fig. 14.11 Curved areas are also $\\mathop { d A } = | J | \\mathop { d u } \\mathop { d v }$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 8 Find\u0007Bthe  aBrea oBf $R$ iBn F\u0007igu\u0007re 14.10. Al\u0007so compute $\\iint _ { R } e ^ { x } d x d y$ : ",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "Solution The figure shows $\\begin{array} { r } { x = \\frac { 2 } { 3 } u + \\frac { 1 } { 3 } v } \\end{array}$ and $\\begin{array} { r } { y = \\frac { 1 } { 3 } u + \\frac { 2 } { 3 } v } \\end{array}$ : The determinant is ",
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\nJ = \\left| { \\begin{array} { c c } { \\partial x / \\partial u } & { \\partial x / \\partial v } \\\\ { \\partial y / \\partial u } & { \\partial y / \\partial v } \\end{array} } \\right| = \\left| { \\begin{array} { c c } { 2 / 3 } & { 1 / 3 } \\\\ { 1 / 3 } & { 2 / 3 } \\end{array} } \\right| = { \\frac { 4 } { 9 } } - { \\frac { 1 } { 9 } } = { \\frac { 1 } { 3 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "The area of the $x y$ parallelogram becomes an integral over the $u v$ square: ",
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iint d x d y = \\iint _ { S } | J | d u d v = \\int _ { 0 } ^ { 3 } \\int { \\frac { 1 } { 3 } } d u d v = { \\textstyle { \\frac { 1 } { 3 } } } \\cdot 3 \\cdot 3 = 3 .\n$$",
+        "text_format": "latex",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "The square has area 9; the parallelogram has area 3: I don\u2019t know if $\\begin{array} { r } { J = \\frac { 1 } { 3 } } \\end{array}$ is a stretching factor or a shrinking factor. The other integral $\\iint e ^ { x } d x d y$ is ",
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { 3 } \\int _ { 0 } ^ { 3 } e ^ { 2 u / 3 + v / 3 } { \\frac { 1 } { 3 } } d u d v = \\left[ { \\frac { 3 } { 2 } } e ^ { 2 u / 3 } \\right] _ { 0 } ^ { 3 } \\left[ 3 e ^ { v / 3 } \\right] _ { 0 } ^ { 3 } { \\frac { 1 } { 3 } } = { \\frac { 3 } { 2 } } ( e ^ { 2 } - 1 ) ( e - 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "Main point: The change to $u$ and $v$ makes the limits ea sBy (j uBst 0 anBd 3 )B. ",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "Why is the stretching factor $J$ a determinant ? With straight sides, this goes back to Section 11:3 on vectors. The area of a parallelogram is a determinant. Here the sides are curved, but that only produces $( d u ) ^ { 2 }$ and $( d v ) ^ { 2 }$ ; which we ignore. ",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "A change $d u$ gives one side of Figure 14.11\u2014it is $( \\partial x / \\partial u { \\bf i } + \\partial y / \\partial u { \\bf j } ) d u$ : Side 2 is $( \\partial x / \\partial v { \\bf i } + \\partial y / \\partial v { \\bf j } ) d v$ : The curving comes from second derivatives. The area (the cross product of the sid\u0007es) is $\\mid J \\mid d u d v$ : ",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "Final remark I can\u2019t resis\u0007t looking at the ch\u0007ange in the reverse direction. Now the rectangle is in $x y$ and the paBral lBelograBm i sB in $u v$ : In all formulas, exchange $x$ for $u$ and $y$ for $v$ : ",
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\nn e w \\ J = { \\left| \\begin{array} { l l } { \\displaystyle \\partial u / \\partial x } & { \\displaystyle \\partial u / \\partial y } \\\\ { \\displaystyle \\partial v / \\partial x } & { \\displaystyle \\partial v / \\partial y } \\end{array} \\right| } = { \\frac { \\partial ( u , v ) } { \\partial ( x , y ) } } = { \\frac { 1 } { o l d \\ J } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "This is exactly like $d u / d x = 1 / ( d x / d u ) .$ : It is the derivative of the inverse function. The product of slopes is 1\u2014stBretc hB out,Bshri Bnk backB. F rBom $x y$ to B $u v$ we have 2 by 2 matrices, and the identity matrix $I$ takes the place of 1: ",
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { d x } { d u } \\frac { d u } { d x } = 1 \\quad \\mathrm { b e c o m e s } \\quad \\left[ \\begin{array} { l l } { \\hat { \\partial } x / \\hat { \\partial } u } & { \\hat { \\partial } x / \\hat { \\partial } v } \\\\ { \\hat { \\partial } y / \\hat { \\partial } u } & { \\hat { \\partial } y / \\hat { \\partial } v } \\end{array} \\right] \\left[ \\begin{array} { l l } { \\hat { \\partial } u / \\hat { \\partial } x } & { \\hat { \\partial } u / \\hat { \\partial } y } \\\\ { \\hat { \\partial } v / \\hat { \\partial } x } & { \\hat { \\partial } v / \\hat { \\partial } y } \\end{array} \\right] = \\left[ \\begin{array} { l l } { 1 } & { 0 } \\\\ { 0 } & { 1 } \\end{array} \\right] .\n$$",
+        "text_format": "latex",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "The first row times the first column is $( \\partial x / \\partial u ) ( \\partial u / \\partial x ) + ( \\partial x / \\partial v ) ( \\partial v / \\partial x ) =$ $\\partial x / \\partial x = 1$ : The first row times the second column is $( \\partial x / \\partial u ) ( \\partial u / \\partial y ) + ( \\partial x / \\partial v )$ $( \\partial v / \\partial y ) = \\partial x / \\partial y = 0$ : The matrices are inverses of each other. The determinants of a matrix and its inverse obey our rule: old $J$ times new $J = 1$ : Those $J$ \u2019s cannot be zero, just as $d x / d u$ and $d u / d x$ were not zero. (Inverse functions increase steadily or decrease steadily.) ",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "In two dimensions, an area $d x d y$ goes to $\\textit { J d u d v }$ and comes back to $d x d y$ : ",
+        "page_idx": 623
+    }
+]

@@ -1,0 +1,98 @@
+5.4 Indefinite Integrals and Substitutions
+
+This section integrates the easy way, by looking for antiderivatives. We leave aside sums of rectangular areas, and their limits as  : Instead we search for an  with the required derivative  : In practice, this approach is more or less independent of the approach through sums—but it gives the same answer. And also, the search for an antiderivative may not succeed. We may not find  In that case we go back to rectangles, or on to something better in Section 5.8.
+
+A computer is ready to integrate  , but not by discovering  It integrates between specified limits, to obtain a number (the definite integral). Here we hope to find a function (the indefinite integral). That requires a symbolic integration code like MACSYMA or Mathematica or MAPLE, or a reasonably nice  , or both. An expression for  can have tremendous advantages over a list of numbers.
+
+Thus our goal is to find antiderivatives and use them. The techniques will be further developed in Chapter 7—this section is short but good. First we write down what we know. On each line,  is an antiderivative of  because  .
+
+ is not included, because  would be zero.  will lead us to  :
+
+You recognize that each integration formula came directly from a differentiation formula. The integral of the cosine is the sine, because the derivative of the sine is the cosine. For emphasis we list three derivatives above three integrals:
+
+There are two ways to make this list longer. One is to find the derivative of a new  : Then  goes in one column and  goes in the other co1umn.  The other possibility is to use rules for derivatives to find rules for integrals. That is the way to extend the list, enormously and easily.
+
+5 Integrals
+
+RULES FOR INTEGRALS
+
+Among the rules for derivatives, three wÑere of supreme importance. They were linearity, the product rule, and the chain rule. Everything flowed from those three. In the reverse direction (from  to  ) this is still true. The three basic methods of differential calculus also dominate integral cÑalculus:
+
+The easiest is linearity, which comes first. Integration by parts will be left for Section 7.1. This section starts on substitutions, reversing the chain rule to make an integral simpler.
+
+LINEARITY OF INTEGRALS
+
+What is the integral of  Add the two separate integrals. The graph of  has two regions below it, the area under  and the area from  to  : Adding areas gives the sum rule. Suppose  and  are antiderivatives of  and  :
+
+sum rule:    
+constant rule:   
+linearity:
+
+This is a case of overkill. The first two rules are special cases of the third, so logically the last rule is enough. However it is so important to deal quickly with constants— just “factor them out”—that the rule  is stated separately. The proofs come from the linearity of derivatives:  equals  which equals  . The rules can be restated with integral signs:
+
+sum rule:    
+constant rule:   
+linearity:
+
+Note about the constant in  . All antiderivatives allow the addition of a constant. For a combination like  , the antiderivat ive is  : The constants for each part combine into a single constant. To give all possible antiderivatives of a function, just remember to write  after one of them. The real problem is to find that one antiderivative.
+
+EXAMPLE 1 The antiderivative of  is  EXAMPLE 2 The antiderivative of  is  :
+
+EXAMPLE 3 Rewrite  as 
+
+The antiderivative is tan  : That rewriting is done by a symbolic algebra code (or by you). Differentiation is often simple, so most people check that  :
+
+Question How to integrate  Method Write it as  : Answer tan  :
+
+INTEGRALS BY SUBSTITUTION
+
+We now present the most valuable technique in this section—substitution. To see the idea, you have to remember the chain rule:
+
+If the function on the right is given, the function on the left is its antiderivative! There are two points to emphasize right away:
+
+1. Constants are no problem—they can always be fixed. Divide by 2 or 15:
+
+Notice the 2 from  , the 5 from the fifth power, and the 3 from  :
+
+2. Choosing the inside function  (or  ) commits us to its derivative:
+
+To substitute  for  , we need its derivative. The trick is to spot an inside function whose derivative is present. We can fix constants like 2 or 15; but otherwise  has to be there. Very often the inside function  is written  . We use that letter to state the substitution rule, when  is the integral of  :
+
+EXAMPLE 4  (compare Example 6)
+
+EXAMPLE 5 
+
+EXAMPLE 6   (compare Example 4)
+
+EXAMPLE 7 
+
+The next example has  and  : The key step is choosing  :
+
+EXAMPLE 8  A shift of  (to  ) or a multiple of  (rescaling to  ) is particularly easy:
+
+You will soon be able to do those in your sleep. Officially the derivative of  uses the chain rule. But the inside function  has  : The “1” is there automatically, and the graph shifts over—as in Figure 5.8b.
+
+For Example 10 the inside function is  : Its derivative is  : This
+
+required factor 2 is missing in  , but we put it there by multiplying and dividing by 2: Check the derivative of  : the 2 from the chain rule cancels the  : The rule for any nonzero constant is similar:
+
+Squeezing the graph by  divides the area by  rescales and shifts:
+
+EXAMPLE 11  Remark on writing down the steps When the substitution is complicated, it is a good idea to get  where you need it. Here  needs  :
+
+Now integrate: 
+
+Check the derivative at the end. The exponent 5 cancels 5 in the denominator,  from the chain rule cancels 6, and  is what we started with.
+
+Remark on differentials In place of  , many people just write  :
+
+This really shows how substitution works. We switch from  to  , and we also switch from  to  . The most common mistake is to confuse  with  : The factor  from the chain rule is absolutely needed, to reach  : The change of variables (dummy variables anyway!) leaves an easy integral, and then  turns back into  : Here are the four steps to substitute  for  :
+
+1. Choose  and co?mpute    
+2. Locate  times  times  , or  times    
+3. Integrate  to find    
+4. Substitute  back into this antiderivative 
+
+The choice of  must be right, to change everything from  to  : With ingenuity, some remarkable integrals are possible. But most will remain impossible forever. The functions cos  and  have no “elementary” antiderivative. Those integrals are well defined and they come up in applications—the latter gives the distance around an ellipse. That can be computed to tremendous accuracy, but not to perfect»accuracy.
+
+The exercises concentrate on substitutions, which needand deserve practice. We give a nonexample—  does not equal  —to emphasize the need for  : Since  is missing,  does not work. But we can fix up  :

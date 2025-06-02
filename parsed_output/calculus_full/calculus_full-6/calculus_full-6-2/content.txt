@@ -1,0 +1,114 @@
+6.2 The Exponential 
+
+The last section discussed  and  : The base  was arbitrary—it could be 2 or 6 or 9:3 or any positive number except 1: But in practice, only a few bases are used. I have never met a logarithm to base 6 or 9:3: Realistically there are two leading candidates for  , and 10 is one of them. This section is about the other one, which is an extremely remarkable number. This number is not seen in arithmetic or algebra or geometry, where it looks totally clumsy and out of place. In calculus it comes into its own.
+
+The number is  : That symbol was chosen by Euler (initially in a fit of selfishness, but he was a wonderful mathematician). It is the base of the natural logarithm. It also controls the exponential  , which is much more important than ln  : Euler also chose  to stand for perimeter—anyway, our first goal is to find  :
+
+Remember that the derivatives of  and  include a constant  that depends on  : Equations (10) and (11) in the previous section were
+
+At  , the graph of  starts from  : The slope is  : At  , the graph of  starts from  : The logarithm has slope  : With the right choice of the base  those slopes will equal 1 (because  will equal 1).
+
+For  the slopeÑ  is near :7: We already tried  and found  : The base has to be larger than 2; for a starting slope of  :
+
+We begin with a direct computation of the slope of  at  :
+
+Always  : The fraction in the m8iddle is  times the number  : This number can go up into the exponent, and it did.
+
+The quantity  is unusual, to put it mildly. As  , the number  is approaching 1: At the same time,  is approaching infinity. In the limit  have  : But that expression is meaningless (like  ). Everything depends on the balance between “nearly 1” and “nearly  :” This balance produces the extraordinary number  :
+
+DEFINITION The number  is equal to  : Equivalently 
+
+Before computing  , look again at the slope  : At the end of equation (2) is the logarithm of  :
+
+When the base is  ; the slope is  : That base  has  as desired:
+
+is is why the base  is all-important in calculus. It makes  :
+
+To compute the actual number  from  , choose  Then the exponents  are  (All limits and derivatives will become official in Section 6:4:) The table shows  approaching  as  and  :
+
+The last column is converging to  (not quickly). There is an infinite series that converges much faster. We know 125; 000 digits of  (and a billion digits of  ). There are no definite patterns, although you might think so from the first sixteen digits:
+
+The powers of  produce  : At  and 5; we are close to  and 150:
+
+The logarithm is the inverse function. The logarithms of 150 and 10; to the base  , are close to  and  : There is a special name for this logarithm—the natural logarithm. There is also a special notation “ln” to show that the base is  :
+
+ln y means the same as  : The natural logarithm is the exponent in 
+
+The notation ln  (or ln  —it is the function that matters, not the variable) is standard in calculus courses. After calculus, the base is generally assumed to be  : In most of science and engineering, the natural logarithm is the automatic choice. The symbol “exp  means  , and the truth is that the symbol “log  generally means ln  : Base  is understood even without the letters ln : But in any case of doubt—on a calculator key for example—the symbol “ln  emphasizes that the base is  :
+
+THE DERIVATIVES OF  AND ln 
+
+Come back to derivatives and slopes. The derivative of  is  ; and the derivative of  is  : If  then  . For all bases, equation (3) is  : This gives  —the slope of  at  :
+
+6E The number  is  : Thus c equals ln b.
+
+ is the mysterious constant that was not available earlier. The slope of  is  times  : The slope of  is  times  (but ln  ). We have the derivatives on which this chapter depends:
+
+6F The derivatives of  and ln  are  and  : For other bases
+
+To make clear that those derivatives come from the functions (and not at all from the dummy variables), we rewrite them using  and  :
+
+Remark on slopes at  : It would be satisfying to see directly that the slope of  is below 1; and the slope of  is above 1: Quick proof:  is between 2 and 4. But the idea is to see the slopes graphically. This is a small puzzle, which is fun to solve but can be skipped.
+
+ rises from 1 at  to 2 at  : On that interval its average slope is 1: Its slope at the beginning is smaller than average, so it must be less than 1—as desired. On the other hand  rises from  at  to 1 at  : Again the average slope is  : Since  comes at the end of this new interval, the slope of  at that poinıt exceeds 1: Somewhere between  and  is  , which starts out with slope 1:
+
+This is the graphical approach to  : There is also the infinite series, and a fifth definition through integrals which is written here for the record:
+
+1.  is the number such that  has slope 1 at    
+2.  is the base for which ln  has slope 1 at   n   
+3.  is the limit of as n    
+5. the area  equals 1:
+
+The connections between 1, 2, and 3 have been made. The slopes are 1 when  is the limit of  : Multiplying this out wlll lea8d to 4, the infinite series in Section 6.6. The official definition of  comes from  , and then 5 says that ln  : This approach to  (Section 6.4) seems less intuitive than the others.
+
+Figure  shows the graph of  : It is the mirror image of  across the vertical axis. Their product is  : Where  grows exponentially,  decays exponentially—or it grows as  approaches  : Their growth and decay are faster than any power of  . Exponential growth is more rapid than polynomial growth, so that  goes to infinity (Problem 59). It is the fact that  has slope  which keeps the function climbing so fast.
+
+The other curve is  : This is the famous “bell-shaped curve” of probability theory. After dividing by  , it gives the normal distribution, which applies to so many averages and so many experiments. The Gallup Poll will be an example in Section 8.4. The curve is symmetric around its mean value  , since changing  to  has no effect on  :
+
+About two thirds of the area under this curve is between  and  : If you pick points at random below the graph,  of all samples are expected in that interval. The points  and  are “two standard deviations” from the center, enclosing  of the area. There is only a  chance of landing beyond. The decay is even faster than an ordinary exponential, because  has replaced  :
+
+THE DERIVATIVES OF  AND 
+
+The slope of  is  : This opens up a whole world of functions that calculus can deal with. The chain rule gives the slope of  and  and every  :
+
+6G The derivative of  is  times du=dx:
+
+Special case  W The derivative of  is  :
+
+EXAMPLE 1 The derivative of  is  (here  ). The derivative of  is  (here  ). The derivative of  is  times  : Here  so  : The chain rule demands that second factor  .
+
+EXAMPLE 2  is the same as  : Its derivative is  times  : The chain rule rediscovers our constant  : In the slope of  it rediscovers the factor  :
+
+Generally  is preferred to the original  : The derivative just brings down the constant  is better to agree on  as the base, and put all complications (like  ) up in the exponent. The second derivative of  is  :
+
+EXAMPLE 3 The derivative of  is  (here  so  .
+
+EXAMPLE 4 The second derivative of  , by the chain rule and product rule, is
+
+Notice how the exponential survives. With every derivative it is multiplied by more factors, but it is still there to dominate growth or decay. The points of inflection, where the bell-shaped curve has  in equation (10), are  and  .
+
+EXAMPLE 5 .  /: Since  is  in disguise, its slope must be  :
+
+This slope is correct for all  ; integer or not. Chapter 2 produced  and  from the binomial theorem. Now  comes from ln and exp and the chain rule.
+
+EXAMPLE 6 An extreme case is  : Here  ln  and we need 
+
+The integral of»  is  : The integral of  is n»ot  . The derivative multiplies by  so the integral divides by  : The integral of  is  (pÑlus a constant).
+
+The first one has  : The second has  —remember again that  : The integral divides by  : In the third one,  is  times the number 
+
+and that number is carried along. Or more likely we see  as  : The missing  is fixed by dividing by 3: The last example fails because  is not there. We cannot integrate without  :
+
+Here are three ex?amples with  and one without it:
+
+The first is a pure  : So is the second. The third has  and   ,
+
+so only the factor 2 had to be fixed. The fourth example does not belong with the others. It is the integral of  , not the integral of  : I don’t know any way to tell you which substitution is best—except that the complicated part is  and it is natural to substitute  . If it works, good.
+
+Without an extra  for  ; the integral  looks bad. But  is still worth trying. It has  :
+
+That last step is “partial fractions.” The integral splits into simpler pieces (explained in Section 7:4) and we integrate each piece. Here are three other integrals:
+
+The first can change to  , which is not much better. (It is just as impossible.) The second is actually  , but I prefer a split:  and  are safer to do separately. The third is  , which also separates. The exercises offer practice in reaching  —ready to be integrated.
+
+War»ning about definite integrals When th»e lower limit is  , there is a natural tendency to expect  —in which case the lower limit contributes nothing. For a power  that is true. For an exponential  it is definitely not true, because  :

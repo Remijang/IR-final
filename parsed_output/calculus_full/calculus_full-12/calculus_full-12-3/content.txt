@@ -1,0 +1,98 @@
+12.3 Curvature and Normal Vector
+
+A driver produces acceleration three ways—by the gas pedal, the brake, and steering wheel. The first two change the speed |.  T|urning the wheel changes the direction.  three change the veloc|it |y (they give acceleration). For steady motion around a circle, the change is from steering—the acceleration  points to the center. We now look at motion along other curves, to separate change in the speed  from change in the direction  :
+
+The direction of motion is  : It depends on the path but not the speed (because we divide by  . For turning we measure two things:
+
+1. How fast T turns: this will be the curvature  (kappa).   
+2. Which direction T turns: this will be the normal vector N.
+
+ and  depend, like  and  , only on the shape of the curve. Replacing  by  or  leaves them unchanged. For a circle we give the answers in advance. The normal vector  points to the center. The curvature  is 1=radius.
+
+A smaller turning circle means a larger curvature  : more bending.
+
+The curvature  is change i|n directi|on  divided by cha|ngein | p |o s|ition  : There are three formulas for  —a direct one for graphs  , a brutal but valuable one for any parametric curve  ; and a neat formula that uses the vectors  and a: We begin with the definition and the neat formula.
+
+The definition does not involve the parameter  —but the calculations do. The position vector  yields  and  : If  is changed to  , the velocity  is doubled and a is multi|pl |ied by 4: Then  and  are multiplied by 8, and their ratio  is unchanged.
+
+Proof of formula (1) Start from  and compute its derivative a:
+
+Now take the cross product with  : Remember that  :
+
+We know that  : |E q|uation (4) will show that  is perpendi|cu |lar to  : So  is the first length  times the second length  : The factor sin  in the length of a cross product is |1 from t|he  angle. In other words
+
+The chain rule brings the extra  into the denominator.
+
+Before any examples, we show that  is pe1rpendicular to  : The reason is that  is a unit vector. Differentiate both sides of  :
+
+That proof used the product rule  for the derivative of  (Problem 23, with  ). Think of the vector  moving around the unit sphere.
+
+To keep a constant length  , we need  : Movement  is perpendicular to radius vector  :
+
+Our first ex1amples 1will be plane curves. The position v1ector  has components  and  but no  : Look at the components of  and a and  (  means  :
+
+Equation (5) is the brutal but valuable formula for  : Apply it to movement around a circle. We should find  :
+
+EXAMPLE 1 When  cos  and  sin !t we substitute  into (5):
+
+This is  and  cancels. The speed makesano difference to  :
+
+The third formula for  applies to an ordinary plane curve given by  : The parameter  is  ! You see the square root in the speed  :
+
+In practice this is the most popular formula for  :|Th|e most popular approximation is  : (The denominator is omitted.) For the bending of a beam, the nonlinear equation uses  and the linear equation uses  :We can see the difference for a parabola:
+
+EXAMPLE 2 The curvature of  is 
+
+The approximation is  : This agrees with  at  , where the parabola turns the corner. But for large  , the curvature approaches zero. Far out on the parabola, we go a long way for a small change in direction.
+
+The parabola  , opening down, has the same  : Now try a space curve.
+
+EXAMPLE 3 Find the curvature of the unit helix  :
+
+Take the cross product of  and  j:
+
+This cross product has length  : Also the speed is   W
+
+Compare with a unit circle. Without the climbing term  , the curvature would be 1: Because of climbing, each turn of the helix is longer and  :
+
+That makes one think: Is the helix twice as long as the circle  . The length of a turn is only increased by  : The other  is because the tangent  slopes upward. The shadow in the base turns a full  , but  turns less.
+
+THE NORMAL VECTOR N
+
+The discussion is bringing us to an important vector. Where  measures the rate of turning, the unit vector  gives the direction of turning.  is perpendicular to  , and in the plane that leaves practically no choice. Turn left or right. For a space curve, follow  : Remember e|quation (|4), which makes  perpendicular|to  :
+
+The normal vector N is a unit vector along  is perpendicular to T:
+
+EXAM P|L |E 4 Find the normal vector  for the same helix   :
+
+Solution Copy v from Example 3, divide by  , and compute  :
+
+To change  into a unit vector, cancel the  : The normal vector is   : It is perpendicularto  : Since the  component is zero,  is horizontal. The tangent  slopes up at  —it goes around the circle at that latitude. The normal  is tangent to this circle  is tangent to the path of the tangent!). So  stays horizontal as the helix climbs.
+
+There is also a third direction, perpendicular to  and  : It is the binormal vector  , computed in Problems  : The unit vectors  provide the natural coordinate system for the path—along the curve, in the plane of the curve, and out of that plane. The theory is beautiful but the computations are not often done—we stop here.
+
+TANGENTIAL AND NORMAL COMPONENTS OF ACCELERATION
+
+May I return a last time to the gas pedal and brake and steering wheel ? The first two give acceleration along T: Turning gives acceleration along  : The rate of turning (curvature  ) and the direction  are established. We now ask about the force
+
+12 Motion along a Curve
+
+required. Newton’s Law is  , so we need the acceleration a—especially its component along  and its component along  :
+
+For a straight path,  is the only acceleration—the ordinary second derivative. The term  is the acceleration in turning. Both have the dimension of length=(time)2:
+
+The force to steer around a corner depends on curvature and speed—as all drivers know. Acceleration is the derivative of  :
+
+That last term is  , since  by formula (7). So (8) is proved.
+
+EXAMPLE 5 A fixed speed  gives  : The only acceleration is  :
+
+EXAMPLE 6 Find the components of a for circular speed-up  :
+
+Without stopping to think, compute  and  and  :
+
+The derivative of  is  : The derivative of  is a:
+
+In the first terms of a we see 2T: In the last terms we must be seeing  : Certainly  and  , because the circle has radius 1: Thus  has the tangential component 2 and normal component  —acceleration along the circle and in to the center.
+
+Table of Form|ulas

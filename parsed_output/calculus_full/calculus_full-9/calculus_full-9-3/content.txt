@@ -1,0 +1,56 @@
+9.3 Slope, Length, and Area for Polar Curves
+
+The previous sections introduced polar coordinates and polar equations and polar graphs. There was no calculus! We now tackle the problems of area (integral calculus) and slope (differential calculus), when the equation is  . The use of  instead of  is a reminder that the slope is not  and the area is not  .
+
+Start with area. The region is always divided into small pieces—what is their shape ? Look between the angles  and  in Figure 9.6a. Inside the curve is a narrow wedge—almost a triangle, with  as its small angle. If the radius is constant the wedge is a sector of a circle. It is a piece of pie cut at the extremely narrow angle  . The area of that piece is a fraction (the angle  divided by the whole angle  ) of the whole area  of the circle:
+
+We admit that the exact shape is not circular. The true radius  varies with  but in a narrow angle that vari»ation is small». When we add up the wedges and let  approach zero, the area becomes an integral.
+
+EXAMPLE 1 Find the area inside the circle  of radius  (Figure 9.6).
+
+That is wrong! The correct area of a circle of radius  is  . The mistake is that we went twice around the circle as  increased to  . Integrating from  to  gives  .
+
+EXAMPLE 2 Find the area between the circles  and 
+
+The circles cross at the points where  agrees with  . Figure 9.6 shows these points at  , or  . Those are the limits of integration, where cos   .
+
+The integral adds up the difference between two wedges,one out to  and a smaller one with r D 21 :
+
+Note tha»t chopped wedges have area  and not  .
+
+EXAMPLE 3 Find the area between the cardioid  and the circle  .
+
+SLOPE OF A POLAR CURVE
+
+Where is the highest point on the cardioid  What is the slope at  Those are not the most important questions in calculus, but still we should know how to answer them. I will describe the method quickly, by switching to rectangular coordinates:
+
+For the highest point, maximize  by setting its derivative to zero:
+
+Thus cos  , which happens at  . The height is  .
+
+For the slope, use the chain rule  :
+
+Equations (3) and (4) avoid the awkward (or impossible) step of eliminating  . Instead of trying to find  as a function of  , we keep  and  as functions of  . At  , the ratio in equation (4) yields  .
+
+Problem 18 finds a general formula for the slope, using  . Problem 20 finds a more elegant formula, by looking at the question differently.
+
+LENGTH OF A POLAR CURVE
+
+The length integral always starts with  . A polar curve has  cos  and  . Now take derivatives by the product rule:
+
+Squaring and adding (note  ) gives the element of length  :
+
+The figure shows  , the same formula with different letters.   
+The total arc length is  .
+
+The area of a surface of revolution is  (around the  axis) or  (around the  axis). Write  , and  in terms of  and  . Then integrate.
+
+EXAMPLE 4 The circle  has  . So its length is  (not  !!— don’t go around twice). Revolved around the  axis the circle yields a doughnut with no hole. Since  cos  , the surface area of the doughnut is
+
+EXAMPLE 5 The length of  is, by symmet»ry, double the integral from 0 to  :
+
+We substituted  for  in the square root. It is possible to skip symmetry and inte»grate fro»m 0 to  —but that needs the absolute value  to maintain a positive square root.
+
+EXAMPLE 6 The logarithmic spiral  has  . It spirals to zero as  goes to infinity, and the total length is finite:
+
+Revolve this spiral for a mathematical seashell with area  .

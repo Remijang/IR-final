@@ -1,0 +1,541 @@
+[
+    {
+        "type": "text",
+        "text": "8.1 Areas and Volumes by Slices ",
+        "text_level": 1,
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "This section starts with areas between curves. Then it moves to volumes, where the strips become slices. We are weighing a loaf of bread by adding the weights of the slices. The discussion is dominated by examples and figures\u2014the theory is minimal. The real problem is to set up the right integral. At the end we look at a different way of cutting up volumes, into thin shells. All formulas are collected into final table. ",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "Figure 8.1 shows the area between two curves. The upper curve is the graph of $y = v ( x )$ : The lower curve is the graph of $y = w ( x )$ : The strip height is $v ( x ) -$ $w ( x )$ ; from one curve down to the other. The width is $d x$ (speaking informally again). The total area is the integral of \u201ctop minus bottom\u201d: ",
+        "page_idx": 384
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a b e t w e e n t w o c u r \\nu e s = \\int _ { a } ^ { b } \\Bigl [ v ( x ) - w ( x ) \\Bigr ] d x .\n$$",
+        "text_format": "latex",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The upper curve is $y = 6 x$ (straight line). The lower curve is $y = 3 x ^ { 2 }$ (parabola). The area lies between the points where those curves intersect. ",
+        "page_idx": 384
+    },
+    {
+        "type": "image",
+        "img_path": "images/27a0b1586298c749e792e9a46a6bb4118adfcf0e5010440d434ffbc8a6da4b13.jpg",
+        "img_caption": [
+            "Fig. 8.1 Area between c\u0001urves $\\ c =$ integral of $v - w$ : Area in Exam\u0001ple 2 starts with $x \\geqslant 0$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "One crossing is at $x = 0$ ; the other is at $x = 2$ : The area is\u0001an integral from\u0005 0 to 2: ",
+        "page_idx": 384
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\mathrm { a r e a } = \\int _ { a } ^ { b } ( v - w ) d x = \\int _ { 0 } ^ { 2 } ( 6 x - 3 x ^ { 2 } ) d x = 3 x ^ { 2 } - x ^ { 3 } \\bigg ] _ { 0 } ^ { 2 } = 4 . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Find the area between the circle $v = { \\sqrt { 1 - x ^ { 2 } } }$ and the $4 5 ^ { \\circ }$ line $w =$ $x$ : ",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "First question: Which area and what limits ? Start with the pie-shaped wedge in Figure 8.1b. The area begins at the $y$ axis and ends where the circle meets the line. At the intersection point we have $v ( x ) = w ( x )$ : ",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "from ${ \\sqrt { 1 - x ^ { 2 } } } = x$ squaring gives $1 - x ^ { 2 } = x ^ { 2 }$ and then $2 x ^ { 2 } = 1$ : ",
+        "page_idx": 384
+    },
+    {
+        "type": "text",
+        "text": "Thus $\\textstyle x ^ { 2 } = { \\frac { 1 } { 2 } }$ : The endpoint is at $x = 1 / \\sqrt { 2 }$ : Now integrate the strip height $v - w$ : ",
+        "page_idx": 385
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\displaystyle \\int _ { 0 } ^ { 1 / \\sqrt { 2 } } ( \\sqrt { 1 - x ^ { 2 } } - x ) d x = \\frac { 1 } { 2 } \\mathrm { s i n } ^ { - 1 } x + \\frac { 1 } { 2 } x \\sqrt { 1 - x ^ { 2 } } - \\frac { 1 } { 2 } x ^ { 2 } \\bigg ] _ { 0 } ^ { 1 / \\sqrt { 2 } } } \\\\ { \\displaystyle = \\frac { 1 } { 2 } \\mathrm { s i n } ^ { - 1 } \\left( \\frac { 1 } { \\sqrt { 2 } } \\right) + \\frac { 1 } { 4 } - \\frac { 1 } { 4 } = \\frac { 1 } { 2 } \\bigg ( \\frac { \\pi } { 4 } \\bigg ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "The area is $\\pi / 8$ (one eighth of the circle). To integrate ${ \\sqrt { 1 - x ^ { 2 } } } d x$ we apply the techniques of Chap?ter 7: Set $x = \\sin \\theta$ ; convert to $\\textstyle \\int \\cos ^ { 2 } \\theta d \\theta = { \\frac { 1 } { 2 } } ( \\theta + \\sin \\theta \\cos \\theta )$ ; convert back using $\\theta = \\sin ^ { - 1 } x$ : It is harder than expected, for a familiar shape. ",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "Remark Suppose the problem is to find the whole area between the circle and the line. The figure shows $v = w$ at two points, which are $x = 1 / \\sqrt { 2 }$ (already used) and also $x = - 1 / \\sqrt { 2 }$ : Instead of starting at $x = 0$ ; which gave $\\frac { 1 } { 8 }$ of a circle, we now include the area to the left. ",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "Main point: Integrating from $x = - 1 / \\sqrt { 2 }$ to $x = 1 / \\sqrt { 2 }$ will give the wrong answer. It misses the part of the circle that bulges out over itself, at the far left. In that part, the strips have height $2 v$ instead of $v - w$ : The figure is essential, to get the correct area of this half-circle. ",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "HORIZONTAL STRIPS INSTEAD OF VERTICAL STRIPS ",
+        "text_level": 1,
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "There is more than one way to slice a region. Vertical slices give $x$ integrals. Horizontal slices give $y$ integrals. We have a free choice, and sometimes the $y$ integral is better. ",
+        "page_idx": 385
+    },
+    {
+        "type": "image",
+        "img_path": "images/8eec9d11df3501fac543157f057df6d296629d0d8e18a2c287c6b6bef349d101.jpg",
+        "img_caption": [
+            "Fig. 8.2 Vertical slices $x$ integrals) vs. horizontal slices ( $y$ integrals). "
+        ],
+        "img_footnote": [],
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "Figure 8.2 shows a unit parallelogram, with base 1 and height 1: To find its area from vertical slices, three separate integrals are necessary. You should see why! With horizontal slices of length 1 and thickness $d y$ ; the area is just $\\begin{array} { r } { \\int _ { 0 } ^ { 1 } d y = 1 } \\end{array}$ : ",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Find the area under $y = \\ln x$ (or beyond $x = e ^ { y }$ ) out to $x = e$ : ",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "The $x$ integral from vertical slices is in Figure $8 . 2 \\mathrm { c }$ . The $y$ integral is in Figure 8.2d. The area is a choice between two equal integrals (I personally would choose $y$ ): ",
+        "page_idx": 385
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\textstyle \\int _ { x = 1 } ^ { e } \\ln x d x = \\left[ x \\ln x - x \\right] _ { 1 } ^ { e } = 1 \\quad { \\mathrm { o r } } \\quad \\int _ { y = 0 } ^ { 1 } ( e - e ^ { y } ) d y = \\left[ e y - e ^ { y } \\right] _ { 0 } ^ { 1 } = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 385
+    },
+    {
+        "type": "text",
+        "text": "8.1 Areas and Volumes by Slices ",
+        "text_level": 1,
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "VOLUMES BY SLICES ",
+        "text_level": 1,
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "For the first time in this book, we now look at volumes. The regions are three-dimensional solids. There are three coordinates $x , y , z$ \u2014and many ways to cut up a solid. ",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "Figure 8.3 shows one basic way\u2014using slices. The slices have thickness $d x$ ; like strips in the plane. Instead of the height $y$ of a strip, we now have the area $A$ of $\\pmb { a }$ cross-section. This area is different for different slices: $A$ depends on $x$ : The volume of the slice is its area times its thickness: $d V = A ( x ) d x$ : The volume of the whole solid is the integral: ",
+        "page_idx": 386
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\nu o l u m e = i n t e g r a l o f a r e a t i m e s t h i c k n e s s = \\int A ( x ) d x . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "Note An actual slice does not have the same area on both sides! Its thickness is $\\Delta x ( \\mathrm { n o t } d x )$ . Its volume is approximately $A ( x ) \\Delta x$ (but not exactly). In the limit, the thickness approaches zero and the sum of volumes approaches the integral. ",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "For a cylinder all slices are the same. Figure 8.3b shows a cylinder\u2014not circular. The area is a fixed number $A$ ; so integration is trivial. The volume is $A$ times $h$ . The letter $h$ ; which stands for height, reminds us that the cylinder often stands on its end. Then the slices are horizontal and the $y$ integral or $z$ integral goes from 0 to $h$ : ",
+        "page_idx": 386
+    },
+    {
+        "type": "image",
+        "img_path": "images/af82bb30818751e4d3f3b92b6fbd7ca54f8dd0918ea24ecf04643a0123165082.jpg",
+        "img_caption": [
+            "Fig. 8.3 Cross-sections have area $A ( x )$ : Volumes are $\\int A ( x ) d x$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "When the cross-section is a circle, the cylinder has volume $\\hat { \\pi } r ^ { 2 } h$ : ",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 The triangular wedge in Figure 8.3b has constant cross-sections with area $\\begin{array} { r } { A = \\frac 1 2 ( 3 ) ( 4 ) = 6 . } \\end{array}$ : The volume is $6 h$ : ",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 For the triangular pyramid in Figure 8.3c, the area $A ( x )$ drops from 6 to 0: It is a general rule for pyramids or cones that their volume has an extra factor $\\frac 1 3$ (compared\u0001to cylinders). The volume is now $2 h$ instead of $6 h$ : For a cone with base area $\\pi r ^ { 2 }$ ; the volume is ${ \\scriptstyle { \\frac { 1 } { 3 } } } \\pi r ^ { 2 } h$ : Tapering the area to zero leaves only $\\begin{array} { l } { { \\frac { 1 } { 3 } } } \\end{array}$ of the volume. ",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "Why the\u00bb ${ \\begin{array} { l } { { \\frac { 1 } { 3 } } } \\end{array} } ?$ Triangles s\u00bbliced from the pyramid have shorter sides. Starting from 3 and 4; the side lengths $3 ( 1 - x / h )$ and $4 ( 1 - x / h )$ drop\u0001to zero at $x = h$ : The area is $A = 6 ( 1 - x / h ) ^ { \\bar { 2 } }$ : Notice: The side lengths go down linearly, the area drops quadratically. The factor $\\frac 1 3$ really comes from integrating $x ^ { 2 }$ to get ${ \\overset { 1 } { \\frac { 3 } { 3 } } } x ^ { 3 }$ : ",
+        "page_idx": 386
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { h } A ( x ) d x = \\int _ { 0 } ^ { h } 6 { \\biggl ( } 1 - { \\frac { x } { h } } { \\biggr ) } ^ { 2 } d x = - 2 h \\left( 1 - { \\frac { x } { h } } \\right) ^ { 3 } \\Biggr ] _ { 0 } ^ { h } = 2 h .\n$$",
+        "text_format": "latex",
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 A half-sphere of radius $R$ has known volume $\\scriptstyle { \\frac { 1 } { 2 } } ( { \\frac { 4 } { 3 } } \\pi R ^ { 3 } )$ : Its cross-sections are semi\u0001circles. The key relation is $x ^ { 2 } + r ^ { 2 } = R ^ { 2 }$ ; for the right triangle in Figure 8.4a. The area of the semicircle is $A = { \\textstyle \\frac { 1 } { 2 } } \\pi r ^ { 2 } = { \\textstyle \\frac { 1 } { 2 } } \\pi ( R ^ { 2 } - { \\bar { x ^ { 2 } } } )$ : So we integrate $A ( x )$ : ",
+        "page_idx": 387
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\mathrm { v o l u m e } = \\int _ { - R } ^ { R } A ( x ) d x = \\frac { 1 } { 2 } \\pi ( R ^ { 2 } x - \\frac { 1 } { 3 } x ^ { 3 } ) \\bigg ] _ { - R } ^ { R } = \\frac { 2 } { 3 } \\pi R ^ { 3 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 7 Find the volume of the sa\u0001me half-sphere using horizontal slices (Figure 8.4b). The sphere still has radius $R$ : The new right triangle gives $y ^ { 2 } + r ^ { 2 } =$ $R ^ { 2 }$ : Since we have full circles the area is $\\pi r ^ { 2 } = \\pi ( R ^ { 2 } - \\mathbf { \\bar { \\gamma } } ^ { 2 } )$ : Notice that this is $A ( y )$ not $A ( x )$ : But the $y$ integral starts at zero: ",
+        "page_idx": 387
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\mathrm { v o l u m e } = \\int _ { 0 } ^ { R } A ( y ) d y = \\pi ( R ^ { 2 } y - \\frac { 1 } { 3 } y ^ { 3 } ) \\bigg ] _ { 0 } ^ { R } = \\frac { 2 } { 3 } \\pi R ^ { 3 } \\mathrm { { ( a s \\ b e f o r e ) } } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 387
+    },
+    {
+        "type": "image",
+        "img_path": "images/cfd6c72bd8f29477f0260daaad7fc8d8fc9b94bd4488eab5beb2368b394bec88.jpg",
+        "img_caption": [
+            "Fig. 8.4 A half-sphere sliced vertically or horizontally. Washer area $\\pi f ^ { 2 } - \\pi g ^ { 2 }$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "SOLIDS OF REVOLUTION",
+        "text_level": 1,
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "Cones and spheres and circular cylinders are \u201csolids of revolution.\u201d Rotating a horizontal line around the $x$ axis gives a cylinder. Rotating a sloping line gives a cone. Rotating a semicircle gives a sphere. If a circle is moved away from the axis, rotation produces a torus (a doughnut). The\u00bbrotation of any\u00bbcurve $y = f ( x )$ produces a solid of revolution. ",
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "The volume of that solid is made easier because every cross-section is a circle. All slices are pancakes (or pizz?as). Rotating the cu?rve $y = f ( x )$ around the $x$ axis gives disks of radius $y$ ; so the area is $A = \\pi y ^ { 2 } = \\pi [ f ( x ) ] ^ { 2 }$ : We add the slices: ",
+        "page_idx": 387
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\nu o l u m e \\ o f s o l i d o f r e \\nu o l u t i o n = \\int _ { a } ^ { b } \\pi y ^ { 2 } d x = \\int _ { a } ^ { b } \\pi \\left[ f ( x ) \\right] ^ { 2 } d x .\n$$",
+        "text_format": "latex",
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 8 Rotating $y = { \\sqrt { x } }$ with $A = \\pi ( { \\sqrt { x ^ { 2 } } } ) ^ { 2 }$ prod?uces a \u201cheadlight\u201d (Figure 8.5a): ",
+        "page_idx": 387
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { v o l u m e ~ o f ~ h e a d l i g h t } } = \\int _ { 0 } ^ { 2 } A d x = \\int _ { 0 } ^ { 2 } \\pi x d x = { \\textstyle { \\frac { 1 } { 2 } } } \\pi x ^ { 2 } \\int _ { 0 } ^ { 2 } = 2 \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "If the same curve is rotated around the $y$ axis, it makes a champagne glass. The slices are horizontal. The area of a slice is $\\pi x ^ { 2 }$ not $\\pi y ^ { 2 }$ : When $y = { \\sqrt { x } }$ this area is $\\pi y ^ { 4 }$ : Integrating from $y = 0$ to $\\sqrt { 2 }$ gives the champagne volume $\\pi ( { \\sqrt { 2 } } ) ^ { 5 } / 5$ : ",
+        "page_idx": 387
+    },
+    {
+        "type": "equation",
+        "text": "$$\nr e \\nu o l u t i o n a r o u n d t h e \\ y a x i s : \\quad \\nu o l u m e = \\int \\pi x ^ { 2 } d y .\n$$",
+        "text_format": "latex",
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9 The headlight has a hole down the center (Figure 8.5b). Volume $\\overset { \\vartriangle } { \\boldsymbol { \\mathbf { \\Lambda } } } = \\boldsymbol { \\mathbf { \\Lambda } } ?$ ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "The hole has radius $1 . A l l$ of the $\\sqrt { x }$ solid is remove\u0001d, up to the po\u0001int where $\\sqrt { x }$ reaches 1: After that, from $x = 1$ to $x = 2$ ; each cross-section is a disk with a hole. The disk has radius $f = { \\sqrt { x } }$ and the hole has radius $g = 1$ : The slice is a flat ring or a \u201cwasher.\u201d Its area is the full disk minus the area of the hole: ",
+        "page_idx": 388
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a ~ o f w a s h e r = \\pi f ^ { 2 } - \\pi g ^ { 2 } = \\pi ( { \\sqrt { x } } ) ^ { 2 } - \\pi ( 1 ) ^ { 2 } = \\pi x - \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "This is the area $A ( x )$ in the method of wash\u0001ers. Its integral is the\u0001volume: ",
+        "page_idx": 388
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { 1 } ^ { 2 } A d x = \\int _ { 1 } ^ { 2 } ( \\pi x - \\pi ) d x = \\Big [ \\frac { 1 } { 2 } \\pi x ^ { 2 } - \\pi x \\Big ] _ { 1 } ^ { 2 } = \\frac { 1 } { 2 } \\pi . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "Please notice: The washer area is not $\\pi ( f - g ) ^ { 2 }$ . It is $A = \\pi f ^ { 2 } - \\pi g ^ { 2 }$ : ",
+        "page_idx": 388
+    },
+    {
+        "type": "image",
+        "img_path": "images/466e181b7db3a36e49fbff57eca0536edbb5ce4eeb3942fc9bc0d2992485742e.jpg",
+        "img_caption": [
+            "Fig. 8.5 $y = { \\sqrt { x } }$ revolved; $y = 1$ revolved inside it; circle revolved to give torus. "
+        ],
+        "img_footnote": [],
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10 (D\u0001oughnut sliced into washers) Rotate a circle of radius $a$ around the $x$ axis. The center of the circle stays out at a distance $b > a$ : Show that the volume of the dou?ghnut (or torus) is $2 \\pi ^ { 2 } a ^ { 2 } b$ : ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "The outside half of the circle rotates to give the outside of the doughnut. The inside half gives the hole. The baiggest slice (through thae center plane) has oauter radius $b + a$ and inner radius $b - a$ : ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "Shifting over by $x$ ; the outer radius is $f = b + { \\sqrt { a ^ { 2 } - x ^ { 2 } } }$ and the inner radius is $g = b - { \\sqrt { a ^ { 2 } - x ^ { 2 } } }$ : Figure 8.5c shows a slice (a washer) with area $\\pi f ^ { 2 } - \\pi g ^ { 2 }$ : ",
+        "page_idx": 388
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { a r e a } A = \\pi ( b + { \\sqrt { a ^ { 2 } - x ^ { 2 } } } ) ^ { 2 } - \\pi ( b - { \\sqrt { a ^ { 2 } - x ^ { 2 } } } ) ^ { 2 } = 4 \\pi b { \\sqrt { a ^ { 2 } - x ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "Now integrate over the washers to find the volume of the doughnut: ",
+        "page_idx": 388
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { - a } ^ { a } A ( x ) d x = 4 \\pi b \\int _ { - a } ^ { a } { \\sqrt { a ^ { 2 } - x ^ { 2 } } } d x = ( 4 \\pi b ) ( \\frac { 1 } { 2 } \\pi a ^ { 2 } ) = 2 \\pi ^ { 2 } a ^ { 2 } b . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "That integral ${ \\scriptstyle { \\frac { 1 } { 2 } } } \\pi a ^ { 2 }$ is the area of a semicircle. When we set $x = a$ sin $\\theta$ the area is $\\int a ^ { 2 } \\cos ^ { 2 } \\theta d \\bar { \\theta }$ : Not for the last time do we meet $\\cos ^ { 2 } \\theta$ : ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "The hardest part is visualizing the washers, because a doughnut usually breaks the other way. A better description is a bagel, sliced the long way to be buttered. ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "VOLUMES BY CYLINDRICAL SHELLS ",
+        "text_level": 1,
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "Finally we look at a different way of cutting up a solid of revolution. So far it was cut into slices. The slices were perpendicular to the axis of revolution. Now the cuts are parallel to the axis, and ea\u0001ch piece is a thin cylindrical shell. The ne\u0001w formula gives the same volume, but the integral to be computed might be easier. ",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "Figure 8.6a shows a solid cone. A shell is inside it. The inner radius is $x$ and the outer radius is $x + d x$ : The shell is an outer cylinder minus an inner cylinder: ",
+        "page_idx": 389
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\pi ( x + d x ) ^ { 2 } h - \\pi x ^ { 2 } h = \\pi x ^ { 2 } h + 2 \\pi x ( d x ) h + \\pi ( d x ) ^ { 2 } h - \\pi x ^ { 2 } h .\n$$",
+        "text_format": "latex",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "The term that matters is $2 \\pi x ( d x ) h$ : The shell volume is essentially $2 \\pi x$ (the distance around) times $d x$ (the thickness) times $h$ (the height). The volume of the solid comes from putting together the thin shells: ",
+        "page_idx": 389
+    },
+    {
+        "type": "equation",
+        "text": "$$\ns o l i d \\nu o l u m e = i n t e g r a l o f s h e l l \\nu o l u m e s = \\int 2 \\pi x h d x .\n$$",
+        "text_format": "latex",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "This is the central formula of the shell method. The rest is examples. ",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "Remark on this volume formula It is completely typical of integration that $( d x ) ^ { 2 }$ and $( \\Delta x ) ^ { 2 }$ disappear. The reason is this. The number of shells grows like $1 / \\Delta x$ : Terms of order $( \\Delta x ) ^ { 2 }$ add up to a volume of order $\\Delta x$ (approaching zero). The linear term involving $\\Delta x$ or $d x$ is the one to get right. Its limit gives the integral $\\int 2 \\pi x h d x$ : The key is to build the solid out of shells\u2014and to find the area or volume of each piece. ",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 11 Find the volume of a cone (base area $\\pi r ^ { 2 }$ ; height $b$ ) cut into shells. ",
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "A tall shell at the center has $h$ near $b$ : A short shell at the outside has $h$ near zero. In between the shell heig\u0001ht $h$ decreases linearly\u0001, reaching zero at $x = r$ : The height in Figure 8.6a is $h = b - b x / r$ : Integrating over all shells gives the volume of the cone (with the expected $\\frac 1 3$ ): ",
+        "page_idx": 389
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { r } 2 \\pi x \\bigg ( b - b \\frac { x } { r } \\bigg ) d x = \\bigg [ \\pi x ^ { 2 } b - \\frac { 2 \\pi x ^ { 3 } b } { 3 r } \\bigg ] _ { 0 } ^ { r } = \\frac { 1 } { 3 } \\pi r ^ { 2 } b .\n$$",
+        "text_format": "latex",
+        "page_idx": 389
+    },
+    {
+        "type": "image",
+        "img_path": "images/1b2fbaa0e69dcd15cca6d0b23f9d78acd69661a81b965ebef0e35673bf90c265.jpg",
+        "img_caption": [
+            "Fig. 8.6 Shells of volume 2\u0019xh $d x$ inside cone, sphere with hole, and paraboloid. "
+        ],
+        "img_footnote": [],
+        "page_idx": 389
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12 Bore a hole of radius $a$ through a sp?here of radius $b > a$ : ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "The hole removes all points out to $x = a$ ; where the shells begin. The height of the shell is $h = 2 \\sqrt { b ^ { 2 } - x ^ { 2 } }$ : (The key is the right triangle in\u0001Figure 8.6b. The height u\u0001pward is $\\sqrt { b ^ { 2 } - x ^ { 2 } }$ \u2014this is half the he?ight of the shell.) Therefore the sphere-withhole has ",
+        "page_idx": 390
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r } { \\mathrm { v o l u m e } = \\int _ { a } ^ { b } 2 \\pi x h d x = \\int _ { a } ^ { b } 4 \\pi x { \\sqrt { b ^ { 2 } - x ^ { 2 } } } d x . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "With $u = b ^ { 2 } - x ^ { 2 }$ we almost see $d u$ : Multiplying $d u = - 2 x d x$ is an extra factor $- 2 \\pi$ : ",
+        "page_idx": 390
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\mathrm { v o l u m e } = - 2 \\pi \\int \\sqrt { u } \\ d u = - 2 \\pi \\big ( \\frac { 2 } { 3 } u ^ { 3 / 2 } \\big ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "We can find limits on $u$ ; or we can put back $u = b ^ { 2 } - x ^ { 2 }$ : ",
+        "page_idx": 390
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { v o l u m e } = - { \\frac { 4 \\pi } { 3 } } ( b ^ { 2 } - x ^ { 2 } ) ^ { 3 / 2 } \\Biggr ] _ { a } ^ { b } = { \\frac { 4 \\pi } { 3 } } ( b ^ { 2 } - a ^ { 2 } ) ^ { 3 / 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "If $a = b$ (the hole is as big as the sphere) this volume is zero. If $a = 0$ (no hole) we have $4 \\pi b ^ { 3 } / 3$ for the complete sphere. ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "Question What if the sphere-with-hole is cut into slices instead of shells ? Answe\u0001r Horizontal slices are washers (Problem 66). Vertical slices are not good. ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 13 \u00bbR?otate the parabola $y = x ^ { 2 }$ around the $y$ ?axis to form a bowl. ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "We go out to $x = { \\sqrt { 2 } }$ (and\u0001up to $y = 2$ ). The\u0001shells in Figure 8.6c have height $h = 2 - x ^ { 2 }$ : The bowl (or paraboloid) is the same as the headlight in Example 8, but we have shells not slices: ",
+        "page_idx": 390
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { \\sqrt { 2 } } 2 \\pi x ( 2 - x ^ { 2 } ) d x = 2 \\pi x ^ { 2 } - { \\frac { 2 \\pi x ^ { 4 } } { 4 } } \\Biggr ] _ { 0 } ^ { \\sqrt { 2 } } = 2 \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 390
+    },
+    {
+        "type": "table",
+        "img_path": "images/4f417f3748fd263a7bdcb1e04c75d48169b023cab66dc96c0a818b6c246d4a5c.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>TABLE oF AREAS AND VOLUMES</td><td>area between curves: A= f(v(x)-w(x)) dx solid volume cut into slices: V = fA(x) dx or f A(y) dy solid of revolution: cross-section A= \u03c0y\u00b2 or \u03c0 x\u00b2 solid with hole: washer area A = \u03c0 f\u00b2 - \u03c0 g\u00b2 solid of revolution cut into shells: V = f 2\u03c0 xh d x .</td></tr></table></body></html>\n\n",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "Which to use, slices or shells ? Start with a vertical line going up to $y = \\cos x $ : Rotating the line around the $x$ axis produces a slice (a circular disk). The radius is cos $x$ : Rotating the line around the $y$ axis produces a shell (the outside of a cylinder). The height is cos $x$ : See Figure 8.7 for the slice and the shell. For volumes we just integrate $\\pi \\cos ^ { 2 } x d x$ (the slice volume) or $2 \\pi x \\cos x d x$ (the shell volume). ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "This is the normal choice\u2014slices t\u0001hrough the $x$ axis and shells a\u0001round the $y$ axis. Then $y = f ( x )$ gives the disk radius and the shell height. The slice is a washer instead of a disk if there is also an inner radius $g ( x )$ : No problem\u2014just integrate small volumes. ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "What if you use slices for rotation around the $y$ axis ? The disks are in Figure 8.7b, and their radius is $x$ : This is $x = \\cos ^ { - 1 } y$ in the example. It is $x = f ^ { - 1 } \\bar { ( y ) }$ in general. You have to solve $y = f ( x )$ to find $x$ in terms of $y$ : Similarly for shells around the $x$ axis: The length of the shell is $x = f ^ { - 1 } ( y )$ : Integrating may be difficult or impossible. ",
+        "page_idx": 390
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 391
+    },
+    {
+        "type": "text",
+        "text": "When $y = \\cos x $ is rotated around the $x$ axis, here are the choices for volume: ",
+        "page_idx": 391
+    },
+    {
+        "type": "image",
+        "img_path": "images/cf93ce38a118b1944a61dade0e7ae8e1378dfcd4858a803455f30545e4bb34de.jpg",
+        "img_caption": [
+            "Fig. 8.7 Slices through $x$ axis and shells around $y$ axis $( g o o d )$ . The opposite way needs $f ^ { - 1 } ( y )$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 391
+    }
+]

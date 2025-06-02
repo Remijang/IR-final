@@ -1,0 +1,132 @@
+13.4 Directional Derivatives and Gradients
+
+As  changes, we know how  changes. The partial derivative  treats  as constant. Similarly  keeps  constant, and gives the slope in the  direction. But east-west and north-south are not the only directions to move. We could go along a  line, where  . In principle, before we draw axes, no direction is preferred. The graph is a surface with slopes in all directions.
+
+On that surface, calculus looks for the rate of change (or the slope). There is a dBire cBtional Bderi vBative, whatever the direction. In the  case we are inclined to divide  by  , but we would be wrong. Let me state the problem. We are given  around a point  . We are also given a direction u (a unit vector). There must be a natural definition of  —the derivative of  in the direction u: To compute this slope at  ; we need a formula. Preferably the formula is based on  and  ; which we already know.
+
+Note that the  direction has  . The square root of 2 is going to enter the derivative. This shows that dividing  by  is wrong. We should divide by the step length  .
+
+EXAMPLE 1 Stay on the surface  . When  moves a distance  in the  direction fr?om  , w?hat is 
+
+Solution The step is  tim?es the unit vector u. Starting from  the step ends at  . (The components of  are  / Then  is
+
+The ratio  approaches  as  : That is the slope in the  direction.
+
+DEFINITION The derivative of  in the direction u at the point  is  :
+
+The step from  has length  . It takes us to  . We compute the chBang eB  and divide by  . But formula (2) below saves time. The  direction is  : Then  is  andweB rec Bover  :
+
+Similarly  ; when  is in the  direction. What is  when  BThat is tBhe n eBgative  direction, so  .
+
+CALCULATING THE DIRECTIONAL DERIVATIVE
+
+ is the slope of the surface  in the direction  . How do you compute it? From  and  ; in two special directions, there is a quick way to find  in all directions. Remember that  is a unit vector.
+
+13E The directional derivative  in the direction  equals 
+
+The reasoning goes back to the linear approximation of  :
+
+Divide by  and let  approach zero. Formula (2) is the limit of  ; as the approximation becomes exact. A more careful argument guarantees this limit provided  and  are continuous at the basepoint  :
+
+Main point: Slopes in all directions are known from slopes in two directions.
+
+EXAMPLE 1 (repeated)  and  and  : Find  :
+
+The derivatives  and  equal 1 at  . The  der Bivative is
+
+EXAMPLE 2 The linear function  has slope  .
+
+The  direction is  ; and  : That is  : In the  direction  : Two other directions are special—along the level lines of  and perpendicular:
+
+Level direction:  is zero because  is constant Steepest direction:  is as large as possible .with  /:
+
+To find those directions, look at  : The level direction has   : Then  is proportional to  : Changing  by 1 and  by  produces no change in  :
+
+In the steepest direction  is proportion?al to  : Note the partial deriva?tives  and  : The dot product of  and  is zero—steepest direction is perpendicular to level direction. To make  a unit vector, divide by  :
+
+Steepest climb:  Steepest descent:
+
+The contour lines around a mountain follow  . The creeks are perpendicular. On a plane like  ; those directions stay the same at all points (Figure 13.12). On a mountain the steepest direction changes as the slopes change.
+
+THE GRADIENT VECTOR
+
+Look again at  ; which is the directional derivative  This iBs the dotB product of two vectors. One vector is  ; which sets the directBion. The other vector is  ; wBhich coBmes from theBfunction. This second vector is the gradient.
+
+DEFINI  and 
+
+The space-saving symbol  is read as “grad.” In Chapter 15 it becomes “del.”
+
+For the linear function  ; the gradient is the constant vector .3; 1/: It is the way to climb the plane. For the nonlinear function  ; the gradient is the non-constant vector  : Notice that grad  shares the two derivatives in  : But the gradient is not the normal vector.  is in three dimensions, pointing away from the surface  : The|gradien|t vector is in the  plane! The gradient tells which way on the surface is up, but it does that from down in the base.
+
+The level curve is also in the  plane, perpendicularto the gradient. The contour map is a projection on the base plane of what the hiker sees on thebmountain. The vector grad  tells the direction of climb, and its length |grad  gives the steepness.
+
+13F The directional derivative is  : The level directio|n is perpendicular|to grad  since  : The slope  is la|rgest when u is parallel to grad  : That maximum slope is the length grad  : for 
+
+The example  had grad  : Its steepest slope was in the direction  : The maximum slope was  : That is grad  :
+
+Important point: The maximum of .grad  is the length grad  : In nonlinear examples, the gradient and steepest direction and slope will vary. But look at one particular point in Figure 13.13. Near that point, and near any point, the linear picture takes over.
+
+On the graph of  the special vectors are the level direction  and the uphill direction  and the normal  : Problem 18 checks that tho se are perpendicular.
+
+EXAMPLE 3 The gradient of  :
+
+On the surface, the normal vector is  : At the point  ; this perpendicular is  : At the point  down in the base, the gradient is  : The length of grad  is the slope  :
+
+Probably a hiker does not go straight up. A “grade” of  is fairly steep (almost  ). To estimate the slope in other directions, measure the distance along the path between two contour lines. If  in a distance  the slope is about  : This calculation is not exact until the limit of  , which is 
+
+EXAMPLE 4 The gradient of  has three components.
+
+The pattern extends from  to  : The gradient is now the threedimensional vector  : For this function grad  is  : To draw the graph of  would require a four-dimensional picture, with axes in the  directions.
+
+Notice the dimensions. The graph is a 3-dimensional “surface” in 4-dimensional space. The gradient is down below in the 3-dimensional base. The level sets of  come from  —they are 2-dimensional. The gradient is perpendicular to that level set (still downain 3 dimensions). The gradient is notaN! The normal vectorais  ; perpendicular to the surface up in 4-dimensional space.
+
+EXAMPLE 5 Find grad  when  is given implicitly:   :
+
+In this case we find  : The derivatives are  and  ,  which go into grad  : But the point is this: To find that gradient faster, differentiate  as it stands. Then divide by  :
+
+The gradient is  : Those derivatives are evaluated at  : The computation does not need the explicit function  :
+
+To go uphill on the cone, move in the direction  : That gradient direction goes radially outward. The steepness of the cone is the length of the gradient vector:
+
+DERIVATIVES ALONG CURVED PATHS
+
+On a straight path the derivative of  is  : What is the derivative on a curved path? The path direction u is the tangent vector T. So replace u by  ; which gives the “direction” of the curve.
+
+The path is given by the position vector  : The velocity is  : The tangent vector is  : Notice the choice—to
+
+move at any speed (with  ) or to go at unit speed (with  :) There is the same choice for the derivative of  along this curve:
+
+Th |e  |first involves time. If we move faster,  increases. The second involves distance. If we move a distance  , at any speed, the function changes by  : So the slope in that direction is  : Chapter 1 introduced velocity as  and slope as  and mixed them up. Finally we see the difference. Uniform motion on a straight line has  : The velocity  is constant. The direction   is also constant. The directional derivative is .grad  , but the rate of change is .grad  :
+
+Equations (4) and (5) look like chain rules. They are chain rules. The next section extends  to more variables, proving (4) and (5). Here we focus on the meaning:  is the derivative of  in the direction  along the curve.
+
+EXAMPLE 7 Find  and  for  : The curve is?  in Figure 13.14a.
+
+Solution The velocity along the curve is  : At the typical point  it is  : The unit tangent is  : The gradient is a unit vector  pointing outward, when  is the distance  from the center. The dot product with  is  : The dot product with  is  :
+
+When we slow down to speed 1 (with  ), the changes in  slow down too.
+
+EXAMPLE 8 Find  for  along the circular path  : First take a direct approach. On the circle,  equals  : Its derivative comes from the product rule:  : Normally this is different from  , because the time  need not equal the arc length  : There is a speed factor  to divide by—but here the speed is 1: (A circle of length  is completed at  :) Thus the slope  along the roller-coaster in Figure 13.14 is   :
+
+The second approach uses the vectors grad  and  : The gradient of  is  : The unit tangent vector to the path is  : Their
+
+dot product is the same  :
+
+GRADIENTS WITHOUT COORDINATES
+
+This section ends with a little “philosophy.” What is the coordinate-free definition of the gradient? Up to now, grad  depended totally on the choice of  and  axes. But the steepness of a surface is independent of the axes. Those are added later, to help us compute.
+
+The steepness  involves only  and the direction, nothing else. The gradient should be a “te|nsor”—i|ts meaning does not depend on the coordinate system. The gradient has different formulas in different systems  or  or . . . ), but the direction and length of grad  are determined by  —without any axes:
+
+The direction of grad  is the one in which  is largest.   
+The length  is that largest slope.
+
+|The key|equation is .change in  / .gradient off / .change in position/: That is another way to write  : It is the multivariable form—we used two variables—of the basic linear approximation  :
+
+EXAMPLE 9  distance from  to  : Without derivatives prove grad  : The graph of  is a cone with slope 1 and sharp point  :
+
+First question In which direction does the distance  increase fastest? Answer Going directly away from  : Therefore this is the direction of grad  :
+
+Second question How quickly does  increase in that steepest direction? Answer A step of length  increases  by  : Therefore  1:
+
+Conclusion grad  is a unit vector. The derivatives of  in Problem 48 are  and  : The sum of their squares is 1, because   equals  :

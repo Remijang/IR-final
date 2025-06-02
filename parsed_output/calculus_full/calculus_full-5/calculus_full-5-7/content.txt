@@ -1,0 +1,123 @@
+5.7 The Fundamental Theorem and Its Applications
+
+When the endpoints are fixed at  and  , we have a definite integral. When the upper limit is a variable point  , we have an indefinite integral. More generally: When the endpoints depend in any way on  , the integral is a function of  : Therefore we can find its derivative. This requires the Fundamental Theorem of Calculus.
+
+The essence of the Theorem is: Derivative of integral of  equals  . We also compute the derivative when the integral goes from  to  —both limits variable.
+
+Part 2 of the Fundamental Theorem reverses the order: Integral of derivative of  equals  . That will follow quickly from Part 1, with help from the Mean Value Theorem. It is Part 2 that we use most, since integrals are harder than derivatives.
+
+After the proofs we go to new applications, beyond the standard problem of area under a curve. Integrals can add up rings and triangles and shells—not just rectangles. The answer can be a volume or a probability—not just an area.
+
+THE FUNDAMENTAL THEOREM, PART 1
+
+Start with a continuous function  : Integrate it from a fixed point  to a variable point  : For each  , this integral  is a number. We do not require or expect a formula for  —it is the area out to the point  : It is a function of  ! The Fundamental Theorem says that this area function has a derivative (another limiting process). The derivative  equals the original  :
+
+5C (Fundamental Theorem, Part 1) Suppose  is a continuous function: 
+
+The dummy variable is written as  , so we can concentrate on the limits. The value of the integral depends on the limits  and  , not on  :
+
+To find  , start with  ifference of areas:
+
+Officially, this is Property 1: The area out to  minus the area out to  equals the small part from  to  : Now divide by  :
+
+This is Property 7, the Mean Value Theorem for integrals. The average value on this short interval equals  : This point  is somewhere between  and  (exact position not known), and we let  approach zero. That squeezes  toward  , so  approaches  —remember that  is continuous. The limit of equation (2) is the Fundamental Theorem:
+
+If  is negative the reasoning still holds. Why assume that  is continuous? Because if  is a step function, then  has a corner where  is not  :
+
+5 Integrals
+
+We could skip the Mean Value Theorem and simply bound  above and below:
+
+As  ,  and  approach  : In the limit  again equals  :
+
+Graphical meaning The  -graph gives the area under the  -graph. The thin strip in Figure 5.14 has area  That area is approximately  times  . Dividing by its base,  is close to the height  : When  and the strip becomes infinitely thin, the expression “close to” converges to “equals.” Then  is the height at  :
+
+DERIVATIVES WITH VARIABLE ENDPOINTS
+
+When the upper limit is  , the derivative is  : Suppose the lower limit is  : The integral goes from  to  , instead of  to  : When  moves, the lower limit moves. The change in area is on the left side of Figure 5.15. As  goes forward, area is removed. So there is a minus sign in the derivative of area:
+
+The quickest proof is to reverse  and  , which reverses the sign (Property 3):
+
+The general case is messier but not much harder (it is quite useful). Suppose both limits are changing. The upper limit  is not necessarily  , but it depends on  :
+
+The lower limit  can also depend on  (Figure 5.15b). The area  between those limits changes as  changes, and we want  :
+
+The figure shows two thin strips, one added to the area and one subtracted.
+
+First check the two cases we know. When  and  , we have  and  : The derivative according to (6) is  times 1—the Fundamental Theorem. The other case has  and  constant. Then the lower limit in (6) produces  : When the integral goes from  to  , its derivative is new:
+
+EXAMPLE 1
+
+That fits with (6), because  is  and  is 2 (with minus sign). It also looks like the ch1ain rule—which1 it is! To prove (6) we use the letters  and  :
+
+Since  , eq»uation (6) is proved. In the next example the area turns out to be constant, although it seems to depend on  : Note that  so  :
+
+EXAMPLE 2  Question  has  : Why does  have a plus sign?
+
+THE» FUNDAMEN»TAL THEOREM, PART 2
+
+We have used a hundred times the Theorem that is now to be proved. It is the key to integration. “The integral of  is  .” The application starts with  : We search for an  with this derivative. If  , the Theorem says that
+
+We can’t rely on knowing formulas for  and  —only the definitions of  and  : The proof rests on one extremely special case:  is the zero function. We easily find  . The problem is to prove that there are no other possibilities:1  must beconstant. When the slope is zero, the graph must be flat. Everybody knows this is true, but intuition is not the same as proof.
+
+Ass1ume that  in an interval. If  is not constant, there are points where  : By the Mean Value Theorem, there is a point  where
+
+But  directly contradicts  : Therefore  must be constant.
+
+Note the crucial role of the Mean Value Theorem. A local hypothesis  at each point) yields a global conclusion (  constant in the whole interval). The derivative narrows the field of view, the integral widens it. The Mean Value Theorem connects instantaneous to average, local to global, pointsto intervals. This special case (the zero function) applies when  and  have the same derivative:
+
+Reason: The derivative of  is zero. So  must be constant. Now comes the big theorem. It assumes that  is continuous, andintegrates using  :
+
+Proof The antiderivative is  : But Part 1 gave another antiderivative for the same  : It was the inte1gral—constructed from rectangles and now called  :
+
+Since  and  , the special case in equation (7) states that   : That is the essential point: The integral from rectangles equals  .
+
+At the lower limit the area integral is  : So  : At the upper limit  : Subtract to find  , the definite integral:
+
+Calculus is beautiful—its Fundamental Theorem is also its most useful theorem.
+
+Another proof of Part 2 starts with  and looks at subintervals:
+
+The left sides add to  : The sum on the right, as  , is  :
+
+APPLICATIONS OF INTEGRATION
+
+Up to now the integral has been the area under a curve. There are many other applications, quite different from areas. Whenever addition becomes “continuous,” we have integrals instead of sums. Chapter 8 has space to develop more applications, but four examples can be given immediately—which will make the point.
+
+We stay with geometric problems, rather than launching into physics or engineering or biology or economics. All those will come. The goal here is to take a first step away from rectangles.
+
+EXAMPLE 3 (for circles) The area A and circumference  are related by  .
+
+The question is why. The area is  : Its derivative  is the circumference. By the Fundamental Theorem, the integral of  is  : What is missing is the geometrical reason. Certainly  is the integral of  , but what is the real explanation for 
+
+My point is that the pieces are not rectangles. We could squeeze rectangles under a circular curve, but their heights would have nothing to do with  : Our intuition has to take a completely different direction, and add up the thin rings in Figure 5.16.
+
+Suppose the ring thickness is  : Then the ring area is close to  times  : This is precisely the kind of approximation we need, because its error is of higher order  : The integral adds ring areas just as it added rectangular areas:
+
+That is our first step toward freedom, away from rectanglesÑto rings.
+
+The ring area  can be checked exactly—it is the difference of circles:
+
+This is  plus a correction. Dividing both sides by  leaves  :
+
+Finally there is a geometrical reason. The ring unwinds into a thin strip. Its width is  and its length is close to  : The inside and outside circles have different perimeters, so this is not a true rectangle—but the area is near  :
+
+EXAMPLE 4 For a sphere, surface area and volume satisfy  :
+
+What worked for circles will work for spheres. The thin rings become thin shells. A shell goes from radius  to radius  , so its thickness is  : We want the volume of the shell, but we don’t need it exactly. The surface area is  , so the volume is about  : That is close enough!
+
+Again we are correct except for  : Infinitesimally speaking  :
+
+This is the volume of a sphere. The derivative of  is  , and the shells explain why.   
+Main point: Integration is not restricted to rectangles.
+
+EXAMPLE 5 The distance around a square is  : Why does the area have 
+
+The side is  and the area is  : Its derivative  goes only half way around the square. I tried to understand that by drawing a figure. Normally this works, but in the figure  looks like  : Something is wrong. The bell is ringing so I leave this as an exercise.
+
+EXAMPLE 6 Find the area under  from  to  :
+
+That is a conventional problem, but we have no antiderivative for  : We could look harder, and find one. However there is another solution—unconventional but correct. The region can be filled with horizontal rectangles (not vertical rectangles). Figure 5.17b shows a typical strip of length  (the curve has  ). As the thickness  approaches zero, the total area becomes  : We are integrating upward, so the limits are on  not on  :
+
+The exercises ask you to set up other integrals—not always with rectangles.   
+Archimedes used triangles instead of rings to find the area of a circle.

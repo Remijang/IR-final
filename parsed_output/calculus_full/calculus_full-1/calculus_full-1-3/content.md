@@ -1,0 +1,128 @@
+# 1.3 The Velocity at an Instant
+
+We have arrived at the central problems that calculus was invented to solve. There are two questions, in opposite directions, and I hope you could see them coming.
+
+1. If the velocity is changing, how can you compute the distance traveled ?   
+2. If the graph of $f ( t )$ is not a straight line, what is its slope ?
+
+Find the distance from the velocity, find the velocity from the distance. Our goal is to do both—but not in one section. Calculus may be a good course, but it is not magic. The first step is to let the velocity change in the steadiest possible way.
+
+# Question 1 Suppose the velocity at each time t is $v ( t ) = 2 t$ : Find $f ( t )$ :
+
+With $v = 2 t$ , a physicist would say that the acceleration is constant (it equals 2). The driver steps on the gas, the car accelerates, and the speedometer goes steadily up. The distance goes up too—faster and faster. If we measure $t$ in seconds and $v$ in feet per second, the distance $f$ comes out in feet. After 10 seconds the speed is 20 feet per second. After 44 seconds the speed is 88 feet=second (which is 60 miles=hour). The acceleration is clear, but how far has the car gone ?
+
+Question 2 The distance traveled by time t is $f ( t ) = t ^ { 2 }$ : Find the velocity $v ( t )$ :
+
+The graph of $f ( t ) = t ^ { 2 }$ is on the right of Figure 1.12. It is a parabola. The curve starts at zero, when the car is new. At $t = 5$ the distance is $f = 2 5$ : By $t = 1 0 , f$ reaches 100:
+
+Velocity is distance divided by time, but what happens when the speed is changing ? Dividing $f = 1 0 0$ by $t = 1 0$ gives $v = 1 0$ —the average velocity over the first ten seconds. Dividing $f = 1 2 1$ by $t = 1 1$ gives the average speed over 11 seconds. But how do we find the instantaneous velocity—the reading on the speedometer at the exact instant when $t = 1 0 \ ?$
+
+I hope you see the problem. As the car goes faster, the graph of $t ^ { 2 }$ gets steeper— because more distance is covered in each second. The average velocity between $t = 1 0$ and $t = 1 1$ is a good approximation—but only an approximation—to the speed at the moment $t = 1 0$ : Averages are easy to find:
+
+distance at $t = 1 0$ is $f ( 1 0 ) = 1 0 ^ { 2 } = 1 0 0$ distance at $t = 1 1$ is $f ( 1 1 ) = 1 1 ^ { 2 } = 1 2 1$ average velocity is $\frac { f ( 1 1 ) - f ( 1 0 ) } { 1 1 - 1 0 } = \frac { 1 2 1 - 1 0 0 } { 1 } = 2 1 .$
+
+The car covered 21 feet in that 1 second. Its average speed was 21 feet=second. Since it was gaining speed, the velocity at the beginning of that second was below 21:
+
+Geometrically, what is the average ? It is a slope, but not the slope of the curve. The average velocity is the slope of a straight line. The line goes between two points on the curve in Figure 1.12. When we compute an average, we pretend the velocity is constant—so we go back to the easiest case. It only requires a division of distance by time:
+
+$$
+{ \mathrm { a v e r a g e ~ v e l o c i t y } } = { \frac { \mathrm { c h a n g e ~ i n ~ } f } { \mathrm { c h a n g e ~ i n ~ } t } } .
+$$
+
+Calculus and the Law You enter a highway at $1 : 0 0$ : If you exit 150 miles away at $3 : 0 0$ , your average speed is 75 miles per hour. I’m not sure if the police can give you a ticket. You could say to the judge, “When was I doing $7 5 ? ^ { , , }$ The police would have to admit that they have no idea—but they would have a definite feeling that you must have been doing 75 sometime.
+
+We return to thecentral problem—computing $v ( 1 0 )$ at the instant $t = 1 0$ : The average velocity over the next second is 21: We can also find the average over the half-second between $t = 1 0 . 0$ and $t = 1 0 . 5$ : Divide the change in distance by the change in time:
+
+$$
+{ \frac { f ( 1 0 . 5 ) - f ( 1 0 . 0 ) } { 1 0 . 5 - 1 0 . 0 } } = { \frac { ( 1 0 . 5 ) ^ { 2 } - ( 1 0 . 0 ) ^ { 2 } } { . 5 } } = { \frac { 1 1 0 . 2 5 - 1 0 0 } { . 5 } } = 2 0 . 5 .
+$$
+
+That average of 20:5 is closer to the speed at $t = 1 0$ : It is still not exact.
+
+The way to find $v ( 1 0 )$ is to keep reducing the time interval. This is the basis for Chapter 2; and the key to differential calculus. Find the slope between points that are closer and closer on the curve. The “limit” is the slope at a single point.
+
+Algebra gives the average velocity between $t = 1 0$ and any later time $t = 1 0 + h$ : The distance increases from $1 0 ^ { 2 }$ to $( 1 0 + h ) ^ { 2 }$ : The change in time is $h$ : So divide:
+
+$$
+v _ { \mathrm { a v e r a g e } } = { \frac { ( 1 0 + h ) ^ { 2 } - 1 0 ^ { 2 } } { h } } = { \frac { 1 0 0 + 2 0 h + h ^ { 2 } - 1 0 0 } { h } } = 2 0 + h .
+$$
+
+This formula fits our previous calculations. The interval from $t = 1 0$ to $t = 1 1$ had $h = 1$ , and the average was $2 0 + h = 2 1$ : When the time step was $\begin{array} { r } { h = \frac { 1 } { 2 } } \end{array}$ , the average was $2 0 + { \textstyle \frac { 1 } { 2 } } = 2 0 . 5$ : Over a millionth of a second the average will be 20 plus $1 / 1 , 0 0 0 , 0 0 0$ —which is very near 20:
+
+Conclusion: The velocity at $t = 1 0$ is $v = 2 0$ . That is the slope of the curve. It agrees with the $v$ -graph on the left side of Figure 1.12, which also has $v ( 1 0 ) = 2 0$ :
+
+# 1.3 The Velocity at an Instant
+
+We now show that the two graphs match at all times. If $f ( t ) = t ^ { 2 }$ then $v ( t ) = 2 t$ : You are seeing the key computation of calculus, and we can put it into words before equations. Compute the distance at time $t + h$ , subtract the distance at time $t$ , and divide by $h$ : That gives the average velocity:
+
+$$
+v _ { \mathrm { a v e } } = { \frac { f ( t + h ) - f ( t ) } { h } } = { \frac { ( t + h ) ^ { 2 } - t ^ { 2 } } { h } } = { \frac { t ^ { 2 } + 2 t h + h ^ { 2 } - t ^ { 2 } } { h } } = 2 t + h .
+$$
+
+This fits the previous calculation, where $t$ was 10: The average was $2 0 + h$ : Now the average is $2 t + h$ : It depends on the time step $h$ , because the velocity is changing. But we can see what happens as $h$ approaches zero. The average is closer and closer to the speedometer reading of $2 t$ , at the exact moment when the clock shows time $t$ :
+
+1E As $h$ approaches zero, the average velocity $2 t + h$ approaches $v ( t ) = 2 t$ :
+
+Note The computation (3) shows how calculus needs algebra. If we want the whole $v$ -graph, we have to let time be a “variable.” It is represented by the letter $t$ : Numbers are enough at the specific time $t = 1 0$ and the specific step $h = 1$ —but algebra gets beyond that. The average between any $t$ and any $t + h$ is $2 t + h$ : Please don’t hesitate to put back numbers for the letters—that checks the algebra.
+
+There is also a step beyond algebra! Calculus requires the limit of the average. As $h$ shrinks to zero, the points on the graph come closer. “Average over an interval” becomes “velocity at an instant.” The general theory of limits is not particularly simple, but here we don’t need it. (It isn’t particularly hard either.) In this example the limiting value is easy to identify. The average $2 t + h$ approaches $2 t$ , as $h  0$ :
+
+What remains to do in this section ? We answered Question 2—to find velocity from distance. We have not answered Question 1: If $v ( t ) = 2 t$ increases linearly with time, what is the distance ? This goes in the opposite direction (it is integration).
+
+The Fundamental Theorem of Calculus says that no new work is necessary. If the slope of $f ( t )$ leads to $v ( t )$ , then the area under that $v$ -graph leads back to the $f$ -graph. The odometer readings $f = t ^ { 2 }$ produced speedometer readings $v = 2 t$ : By the Fundamental Theorem, the area under $2 t$ should be $t ^ { 2 }$ : But we have certainly not proved any fundamental theorems, so it is better to be safe—by actually computing the area.
+
+Fortunately, it is the area of a triangle. The base of the triangle is $t$ and the height is $v = 2 t$ : The area agrees with $f ( t )$ :
+
+$$
+\begin{array} { r } { \mathrm { a r e a } = { \frac { 1 } { 2 } } ( \mathrm { b a s e } ) ( \mathrm { h e i g h t } ) = { \frac { 1 } { 2 } } ( t ) ( 2 t ) = t ^ { 2 } . } \end{array}
+$$
+
+EXAMPLE 1 The graphs are shifted in time. The car doesn’t start until $t = 1$ : Therefore $v = 0$ and $f = 0$ up to that time. After the car starts we have $v = 2 ( t - 1 )$ and $f = ( t - 1 ) ^ { 2 }$ : You see how the time delay of 1 enters the formulas. Figure 1.13 shows how it affects the graphs.
+
+EXAMPLE 2 The acceleration changes from 2 to another constant $a$ : The velocity changes from $v = 2 t$ to $v = a t$ : The acceleration is the slope of the velocity curve! The distance is also proportional to $a$ , but notice the factor $\frac { 1 } { 2 }$ :
+
+$$
+\begin{array} { r l r } { \boldsymbol { \mathrm {  ~ \psi ~ } } _ { \mathcal { A } } } & { \Leftrightarrow } & { \mathrm { v e l o c i t y } \ \boldsymbol { v } = \boldsymbol { a } t \quad \Leftrightarrow \quad \mathrm { d i s t a n c e \ } \boldsymbol { f } = \frac { 1 } { 2 } \boldsymbol { a } t ^ { 2 } . } \end{array}
+$$
+
+If $a$ equals 1, then $v = t$ and $\begin{array} { r } { f = \frac { 1 } { 2 } t ^ { 2 } } \end{array}$ : That is one of the most famous pairs in calculus. If $a$ equals the gravitational constant $g$ , then $v = g t$ is the velocity of a
+
+falling body. The speed doesn’t depend on the mass (tested by Galileo at the Leaning Tower of Pisa). Maybe he saw the distance $\begin{array} { r } { f = \frac { 1 } { 2 } g t ^ { 2 } } \end{array}$ more easily than the speed $v = g t$ : Anyway, this is the most famous pair in physics.
+
+EXAMPLE 3 Suppose $f ( t ) = 3 t + t ^ { 2 }$ : The average velocity from $t$ to $t + h$ is
+
+$$
+v _ { \mathrm { a v e } } = { \frac { f ( t + h ) - f ( t ) } { h } } = { \frac { 3 ( t + h ) + ( t + h ) ^ { 2 } - 3 t - t ^ { 2 } } { h } } .
+$$
+
+The change in distance has an extra $3 h$ (coming from $3 ( t + h )$ minus $3 t$ ). The velocity contains an additional 3 (coming from $3 h$ divided by $h$ ). When $3 t$ is added to the distance, 3 is added to the velocity. If Galileo had thrown a weight instead of dropping it, the starting velocity $v _ { 0 }$ would have added $v _ { 0 } t$ to the distance.
+
+# FUNCTIONS ACROSS TIME
+
+The idea of slope is not difficult—for one straight line. Divide the change in $f$ by the change in $t$ : In Chapter 2; divide the change in $y$ by the change in $x$ : Experience shows that the hard part is to see what happens to the slope as the line moves.
+
+Figure 1.14a shows the line between points $A$ and $B$ on the curve. This is a “secant line.” Its slope is an average velocity. What calculus does is to bring that point $B$ down the curve toward $A$ :
+
+Question 1 What happens to the “change in $f ^ { , , , }$ —the height of $B$ above $A$ ? Answer The change in $f$ decreases to zero. So does the change in $t$ :
+
+# 1.3 The Velocity at an Instant
+
+Question 2 As $B$ approaches $A$ , does the slope of the line increase or decrease ? Answer I am not going to answer that question. It is too important. Draw another secant line with $B$ closer to $A$ : Compare the slopes.
+
+This question was created by Steve Monk at the University of Washington—where $57 \%$ of the class gave the right answer. Probably $9 7 \%$ would have found the right slope from a formula. Figure 1.14b shows the opposite problem. We know the velocity, not the distance. But calculus answers questions about both functions.
+
+Question 3 Which car is going faster at time $t = 3 / 4 ?$ Answer Car $C$ has higher speed. Car $D$ has greater acceleration.
+
+Question 4 If the cars start together, is $D$ catching up to $C$ at the end ? Between $\begin{array} { r } { t = \frac { 1 } { 2 } } \end{array}$ and $t = 1$ , do the cars get closer or further apart ?   
+Answer This time more than half the class got it wrong. You won’t but you can see why they did. You have to look at the speed graph and imagine the distance graph. When car $C$ is going faster, the distance between them
+
+To repeat: The cars start together, but they don’t finish together. They reach the same speed at $t = 1$ , not the same distance. Car $C$ went faster. You really should draw their distance graphs, to see how they bend.
+
+These problems help to emphasize one more point. Finding the speed (or slope) is entirely different from finding the distance (or area):
+
+1. To find the slope of the $f$ -graph at a particular time $t$ , you don $\mathbf { \chi } _ { t }$ have to know the whole history.   
+2. To find the area under the $v$ -graph up to a particular time $t$ , you do have to know the whole history.
+
+A short record of distance is enough to recover $v ( t )$ : Point $B$ moves toward point $A$ : The problem of slope is local—the speed is completely decided by $f ( t )$ near point $A$ :
+
+In contrast, a short record of speed is not enough to recover the total distance. We have to know what the mileage was earlier. Otherwise we can only know the increase in mileage, not the total.

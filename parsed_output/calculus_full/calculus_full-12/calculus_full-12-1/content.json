@@ -1,0 +1,526 @@
+[
+    {
+        "type": "text",
+        "text": "12.1 The Position Vector ",
+        "text_level": 1,
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "This chapter is about \u201cvector functions.\u201d The vector $2 \\mathbf { i } + 4 \\mathbf { j } + 8 \\mathbf { k }$ is constant. The vector $\\bar { \\mathbf { R } ( t ) } = t \\mathbf { i } + t ^ { 2 } \\mathbf { j } + t ^ { 3 } \\mathbf { k }$ is moving. It is a function of the parameter $t$ , which often represents time. At each time $t$ , the position vector $\\mathbf { R } ( t )$ locates the moving body: ",
+        "page_idx": 528
+    },
+    {
+        "type": "equation",
+        "text": "$$\np o s i t i o n \\ \\nu e c t o r = \\mathbf { R } ( t ) = x ( t ) \\mathbf { i } + y ( t ) \\mathbf { j } + z ( t ) \\mathbf { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Our example has $x = t$ ; $y = t ^ { 2 }$ ; $z = t ^ { 3 }$ . As $t$ varies, these points trace out a curve in space. The parameter $t$ tells when the body passes each point on the curve. The constant vector $2 \\mathbf { i } + 4 \\mathbf { j } + 8 \\mathbf { k }$ is the position vector $\\mathbf { R } ( 2 )$ at the instant $t = 2$ . ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "What are the questions to be asked ? Every student of calculus knows the first question: Find the derivative. If something moves, the Navy salutes it and we differentiate it. At each instant, the body moving along the curve has a speed and a direction. This information is contained in another vector function\u2014the velocity vector $\\mathbf { v } ( t )$ which is the derivative of $\\mathbf { R } ( t )$ : ",
+        "page_idx": 528
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { v } ( t ) = { \\frac { d \\mathbf { R } } { d t } } = { \\frac { d x } { d t } } \\mathbf { i } + { \\frac { d y } { d t } } \\mathbf { j } + { \\frac { d z } { d t } } \\mathbf { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Since i; j; k are fixed vectors, their derivatives are zero. In polar coordinates i and $\\textbf { j }$ are replaced by moving vectors. Then the velocity $\\mathbf { v }$ has more terms from the product rule (Section 12:4). ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Two important cases are uniform motion along a line and around a circle. We study those motions in detail $\\mathbf { \\bar { v } } =$ constant on line, $\\mathbf { v } =$ tan\u0001gent to circle). This section also finds the speed and distan\u00d1ce and accele\u00d1ration for any motion $\\mathbf { R } ( t )$ . ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "Equation (2) is the computing rule for the velocity $d \\mathbf { R } / d t$ . It is not the definition of $d \\mathbf { R } / d t$ , which goes back to basics and does not depend on coordinates: ",
+        "page_idx": 528
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d \\mathbf { R } } { d t } } = \\operatorname* { l i m } _ { \\Delta t  0 } { \\frac { \\Delta \\mathbf { R } } { \\Delta t } } = \\operatorname* { l i m } _ { \\Delta t  0 } { \\frac { \\mathbf { R } ( t + \\Delta t ) - \\mathbf { R } ( t ) } { \\Delta t } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "We repeat: $\\mathbf { R }$ is a vector so $\\Delta \\mathbf { R }$ is a vector so $d \\mathbf { R } / d t$ is a vector. All three vectors are in Figure 12.1 $t$ is not a vector!). This figure reveals the key fact about the geometry: The velocity $\\mathbf { v } = d \\mathbf { R } / d t$ is tangent to the curve. ",
+        "page_idx": 528
+    },
+    {
+        "type": "text",
+        "text": "The vector $\\Delta \\mathbf { R }$ goes from one point on the curve to a nearby point. Dividing by $\\Delta t$ changes its length, not its direction. That direction lines up with the tangent to the curve, as the points come closer. ",
+        "page_idx": 529
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\bf R } ( t ) = t { \\bf i } + t ^ { 2 } { \\bf j } + t ^ { 3 } { \\bf k } \\qquad { \\bf v } ( t ) = { \\bf i } + 2 t { \\bf j } + 3 t ^ { 2 } { \\bf k }\n$$",
+        "text_format": "latex",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "This curve swings upward as $t$ increases. When $t = 0$ the velocity is $\\mathbf { v } = \\mathbf { i }$ . The tangent is along the $x$ axis, since the $\\mathbf { j }$ and $\\mathbf { k }$ components are zero. When $t = 1$ the velocity is $\\mathbf { i } + 2 \\mathbf { j } + 3 \\mathbf { k }$ , and the curve is climbing. ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "For the shadow on the $x y$ plane, drop the $\\mathbf { k }$ component. Position on the shadow is $t \\mathbf { i } + t ^ { 2 } \\mathbf { j }$ . Velocity along the shadow is $\\mathbf { i } + 2 t \\mathbf { j }$ . The shadow is a plane curve. ",
+        "page_idx": 529
+    },
+    {
+        "type": "image",
+        "img_path": "images/d204a4745833b8547a1c933399e02906750620875027f41d5b7e236cbb16cd93.jpg",
+        "img_caption": [
+            "Fig. 12.1 Position vector $\\mathbf { R }$ , change $\\Delta \\mathbf { R }$ , velocity $d { \\bf R } / d t$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 529
+    },
+    {
+        "type": "image",
+        "img_path": "images/766cd60c96e76e997ccaf89c8c84e4fb35260bae08adad17b080ac386fccae6e.jpg",
+        "img_caption": [
+            "Fig. 12.2 Equations of a line, with and without the parameter $t$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Uniform motion in a straight line: the velocity vector v is constant. The speed and direction don\u2019t change. The position vector moves with $d \\mathbf { R } / d t = \\mathbf { v }$ : ",
+        "page_idx": 529
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\mathbf { R } ( t ) = \\mathbf { R } _ { 0 } + t \\mathbf { v } } & { { } ( \\mathbf { R } _ { 0 } \\mathrm { ~ f i x e d } , \\mathbf { v } \\mathrm { ~ f i x e d } , t \\mathrm { ~ v a r y i n g } ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "That is the equation of a line in vaector form. Certainly $d \\mathbf { R } / d t = \\mathbf { v }$ . The starting point $\\mathbf { R } _ { 0 } = x _ { 0 } \\mathbf { i } + y _ { 0 } \\mathbf { j } + z _ { 0 } \\mathbf { k }$ is given. The velocity $\\mathbf { v } = v _ { 1 } \\mathbf { i } + v _ { 2 } \\mathbf { j } + v _ { 3 } \\mathbf { k }$ is also given. Separating the $x , y$ and $z$ components, equation (3) for a line is ",
+        "page_idx": 529
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\mathrm { ~ : ~ } \\quad x = x _ { 0 } + t v _ { 1 } , \\quad y = y _ { 0 } + t v _ { 2 } , \\quad z = z _ { 0 } + t v _ { 3 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "The speed along the line is $| \\mathbf { v } | = \\sqrt { v _ { 1 } ^ { 2 } + v _ { 2 } ^ { 2 } + v _ { 3 } ^ { 2 } }$ : The direction of the line is the unit vector $\\mathbf { v } / | \\mathbf { v } |$ . We have three equations for $x , y , z$ , and eliminating $t$ leaves two equations. The parameter $t$ equals $( x - x _ { 0 } ) / v _ { 1 }$ from equation (4). It also equals $( y - y _ { 0 } ) / v _ { 2 }$ and $( z - z _ { 0 } ) / v _ { 3 }$ . So these ratios equal each other, and $t$ is gone: ",
+        "page_idx": 529
+    },
+    {
+        "type": "equation",
+        "text": "$$\nl i n e \\ w i t h o u t p a r a m e t e r ; \\quad \\frac { x - x _ { 0 } } { v _ { 1 } } = \\frac { y - y _ { 0 } } { v _ { 2 } } = \\frac { z - z _ { 0 } } { v _ { 3 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "An example is $x = y / 2 = z / 3$ . In this case $( x _ { 0 } , y _ { 0 } , z _ { 0 } ) = ( 0 , 0 , 0 )$ \u2014the line goes through the origin. Another point on the line is $( x , y , z ) = ( 2 , 4 , 6 )$ . Because $t$ is gone, we cannot say when we reach that point and how fast we are going. The equations $x / 4 = y / 8 = z / 1 2$ give the same line. Without $t$ we can\u2019t know the velocity $\\mathbf { v } =$ $d { \\bf R } / d t$ . ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Find an equation for the line through $P = ( 0 , 2 , 1 )$ and $\\mathcal { Q } = ( 1 , 3 , 3 )$ . ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "Solution We have choices! ${ \\bf R } _ { 0 }$ can go to any point on the line. The velocity $\\mathbf { v }$ can be any multiple of the vector from $P$ to $\\boldsymbol { Q }$ . The decision on ${ \\bf R } _ { 0 }$ controls where we start, and v controls our speed. ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "The vector from $P$ to $\\boldsymbol { Q }$ is $\\mathbf { i } + \\mathbf { j } + 2 \\mathbf { k }$ . Those numbers 1; 1; 2 come from subtracting 0; 2; 1 from 1; 3; 3. We choose this vector $\\mathbf { i } + \\mathbf { j } + 2 \\mathbf { k }$ as a first $\\mathbf { v }$ , and double it for a second v. We choose the vector $\\mathbf { R } _ { 0 } = \\mathbf { P }$ as a first start and $\\mathbf { R } _ { 0 } = \\mathbf { Q }$ as a second start. Here are two different expressions for the same line\u2014they are $\\mathbf { P } + t \\mathbf { v }$ and $\\mathbf { Q } + t ( 2 \\mathbf { v } )$ : ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 530
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { R } ( t ) = ( 2 \\mathbf { j } + \\mathbf { k } ) + t ( \\mathbf { i } + \\mathbf { j } + 2 \\mathbf { k } ) \\qquad \\mathbf { R } ^ { * } ( t ) = ( \\mathbf { i } + 3 \\mathbf { j } + 3 \\mathbf { k } ) + t ( 2 \\mathbf { i } + 2 \\mathbf { j } + 4 \\mathbf { k } ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "The vector $\\mathbf { R } ( t )$ gives $x = t$ ; $y = 2 + t$ ; $z = 1 + 2 t$ . The vector $\\mathbf { R } ^ { * }$ is at a different point on the same line at the same time: $x ^ { * } = 1 + 2 t$ ; $y ^ { * } = 3 + 2 t$ ; $z ^ { * } = 3 + 4 t$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "If I pick $t = 1$ in $\\mathbf { R }$ and $t = 0$ in $\\mathbf { R } ^ { * }$ , the point is $( 1 , 3 , 3 )$ . We arrive there at different times. You are seeing how p\u0001arameters work, to tel\u0001l \u201cwhe\u0001re\u201d and also \u201cwhen.\u201d If $t$ goes from $- \\infty$ to $+ \\infty$ , all points on one line are also on the other line. The path is the same, but the \u201ctwins\u201d are going at different speeds. ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 1 When do these twins meet ? When does $\\mathbf { R } ( t ) = \\mathbf { R } ^ { * } ( t )$ ? Answer They meet at $t = - 1$ , when $\\mathbf { R } = \\mathbf { R } ^ { * } = - \\mathbf { i } + \\mathbf { j } - \\mathbf { k }$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 2 What is an equation for the segment between $P$ and $\\boldsymbol { Q }$ (not beyond) ? Answer In the equation for $\\mathbf { R } ( t )$ , let $t$ go from 0 to 1 (not beyond): ",
+        "page_idx": 530
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = t \\quad y = 2 + t \\quad z = 1 + 2 t \\quad [ 0 \\leqslant t \\leqslant 1 { \\mathrm { ~ f o r ~ s e g m e n t } } ] .\n$$",
+        "text_format": "latex",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "At $t = 0$ we start from $P = ( 0 , 2 , 1 )$ . At $t = 1$ we reach $\\mathcal { Q } = ( 1 , 3 , 3 )$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 3 What is a\u0001n equation for the line with o\u0001ut the\u0001parameter $t$ ? Answer Solve equations (6) for $t$ or use .5/: $x / 1 = ( y - 2 ) / 1 = ( z - 1 ) / 2$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 4 Which point on the line is closest to the origin ? Answer The derivative of $x ^ { 2 } + y ^ { 2 } + z ^ { 2 } = t ^ { 2 } + ( 2 + t ) ^ { 2 } + ( 1 + 2 t ) ^ { 2 }$ is $8 + 8 t$ . This derivative is zero at $t = - 1$ . So the closest point is $( - 1 , 1 , - 1 )$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 5 Where does the line meet the plane $x + y + z = 1 1 \\cdot$ ? Answer Equation (6) gives $x + y + z = 3 + 4 t = 1 1$ .\u0001So $t = 2$ . The meeting point is $x = t = 2 , y = t + 2 = 4 , z = 1 + 2 t = 5$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 6 What line goes through $( 3 , 1 , 1 )$ perpendicular to the plane $x - y - z =$ 1 ?   \nAnswer The normal vector to the plane is $\\mathbf { N } = \\mathbf { i } - \\mathbf { j } - \\mathbf { k }$ . That is v. The position vector to $( 3 , 1 , 1 )$ is ${ \\bf R } _ { 0 } = 3 \\mathbf { i } + \\mathbf { j } + \\mathbf { k }$ . Then ${ \\bf R } = { \\bf R } _ { 0 } + t { \\bf v }$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "COMPARING LINES AND PLANES ",
+        "text_level": 1,
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "A line has one parameter or two equations. We give the starting point and velocity: $( x , y , z ) = ( x _ { 0 } , y _ { 0 } , z _ { 0 } ) + t ( v _ { 1 } , v _ { 2 } , v _ { 3 } )$ . That tells directly which points are on the line. Or we eliminate $t$ to find the two equations in .5/. ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "A plane has one equation or two parameters! The equation is $a x + b y + c z = d$ . That tells us indirectly which points are on the plane. (Instead of knowing $x , y , z$ ; we\u0001know the equation they satisfy. Instead of directions $\\mathbf { v }$ and $\\mathbf { w }$ in the plane, we are told the perpendicular direction $\\mathbf { N } = ( a , b , c )$ :/ With parameters, the line contains $\\mathbf { R } _ { 0 } + t \\mathbf { v }$ and the plane contains $\\mathbf { R } _ { 0 } + t \\mathbf { v } + s \\mathbf { w }$ . A plane looks worse with parameters $( t$ and $s$ ), a line looks better. ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Questions 5 and 6 c\u0004onnected lines to plan\u0002es. Here are two more. See Problems $4 1 - 4 4$ : ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Question 7 When is the line $\\mathbf { R } _ { 0 } + t \\mathbf { v }$ parallel to the plane ? When is it perpendicular ? ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "Answer The test is $\\mathbf { v } \\cdot \\mathbf { N } = 0$ . The test is $\\mathbf { v } \\times \\mathbf { N } = 0$ . ",
+        "page_idx": 530
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 Find the plane co\u0007ntaining $P _ { 0 } = ( 1 , 2 , 1 )$ and the line of points $( 1 , 0 , 0 ) + t ( 2 , 0 , - 1 ) .$ . That vector $\\mathbf { v }$ will be in \u0007the plane. ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "Solution The vector ${ \\bf v } = 2 { \\bf i } - { \\bf k }$ goes along \u0007the line. The vector $\\mathbf { w } = 2 \\mathbf { j } + \\mathbf { k }$ goes from $( 1 , 0 , 0 )$ to $( 1 , 2 , 1 )$ . Their cro\u0007ss product is\u0007 ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { N } = \\mathbf { v } \\times \\mathbf { w } = { \\left| \\begin{array} { l l l } { \\mathbf { i } } & { \\mathbf { j } } & { \\mathbf { k } } \\\\ { 2 } & { 0 } & { - 1 } \\\\ { 0 } & { 2 } & { 1 } \\end{array} \\right| } = 2 \\mathbf { i } - 2 \\mathbf { j } + 4 \\mathbf { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "The plane $2 x - 2 y + 4 z = 2$ has this normal $\\mathbf { N }$ and contains the point .1; 2; 1/. ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "SPEED, |D I|RECTION, DISTANCE, ACCELERATION ",
+        "text_level": 1,
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "We go back to the curve traced out by $\\mathbf { R } ( t )$ . The derivative $\\mathbf { v } ( t ) = d \\mathbf { R } / d t$ is the velocity vector along that curve. The spee |d  |is the magnitude of $\\mathbf { v }$ : ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { s p e e d } = | { \\mathbf { v } } | = { \\sqrt { ( d x / d t ) ^ { 2 } + ( d y / d t ) ^ { 2 } + ( d z / d t ) ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "The direction of the velocity vector is $\\mathbf { v } / | \\mathbf { v } |$ . This is a unit vector, since $\\mathbf { v }$ is divided by its length. The unit tangent vector $\\mathbf { v } / | \\mathbf { v } |$ is denoted by $\\mathbf { T }$ . ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "The tangent vector is constant for lines. It changes direction for curves. ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 (important) Find v and $| \\mathbf { v } |$ and T for steady motion around a circle: ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = r \\cos \\omega t , \\quad y = r \\sin \\omega t , \\quad z = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "Solution The positionavector is $\\mathbf { R } = r \\cos \\omega t \\mathbf { i } + r$ sin !t j. The velocity is ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "${ \\bf v } = d { \\bf R } / d t = - \\omega r \\sin \\omega t { \\bf i } + \\omega r \\cos \\omega t { \\bf j }$ .tangent, not unit tangent/ ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "The speed is the radius $r$ times the angular velocity $\\omega$ : ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { | \\mathbf { v } | = \\sqrt { ( - \\omega r \\sin \\omega t ) ^ { 2 } + ( \\omega r \\cos \\omega t ) ^ { 2 } } = \\omega r . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "The unit tangent vector is $\\mathbf { v }$ divided by $| \\mathbf { v } |$ : ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { T } = - \\sin { \\omega t } \\mathbf { i } + \\cos { \\omega t } \\mathbf { j } \\qquad ( \\mathrm { l e n g t h } \\ 1 \\mathrm { s i n c e } \\ \\sin ^ { 2 } { \\omega t } + \\cos ^ { 2 } { \\omega t } = 1 )\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "Think next about the distance traveled. Distance along a curve is always denoted by $s$ (called arc le|ng |th). I don\u2019t know why we use $s$ \u2014certainly n|ot as  the initial for speed. In fact speed is distance divided by time. The ratio $s / t$ gives average speed; $d s / d t$ is ins|ta |ntaneous speed. We are back to Chapter 1 and Section 8:3, the relation of speed to distance: ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l r l } & { \\operatorname { s p e e d } | \\mathbf { v } | = d s / d t } & & { { \\mathrm { d i s t a n c e } } s = \\int \\left( d s / d t \\right) d t = \\int \\left| \\mathbf { v } ( t ) \\right| d t . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "Notice that $| \\mathbf { v } |$ and $s$ and $t$ are scalars. The d|irect|ion vector is $\\mathbf { T }$ : ",
+        "page_idx": 531
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { T } = { \\frac { \\mathbf { v } } { | \\mathbf { v } | } } = { \\frac { d \\mathbf { R } / d t } { d s / d t } } = { \\frac { d \\mathbf { R } } { d s } } = u n i t t a n g e n t \\nu e c t o r .\n$$",
+        "text_format": "latex",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "In Figure 12.3, the chord length (straight) is $| \\Delta \\mathbf { R } |$ . The arc length (curved) is $\\Delta s$ . As $\\Delta \\mathbf { R }$ and $\\Delta s$ approach zero, the ratio $| \\Delta \\mathbf { R } / \\Delta s |$ approaches $\\left. \\mathbf { T } \\right. = 1$ . ",
+        "page_idx": 531
+    },
+    {
+        "type": "text",
+        "text": "Think finally about the acceleration vector ${ \\bf { a } } ( t )$ . It is the rate of change of velocity (not the rate of change of speed): ",
+        "page_idx": 532
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { a } = { \\frac { d \\mathbf { v } } { d t } } = { \\frac { d ^ { 2 } \\mathbf { R } } { d t ^ { 2 } } } = { \\frac { d ^ { 2 } x } { d t ^ { 2 } } } \\mathbf { i } + { \\frac { d ^ { 2 } y } { d t ^ { 2 } } } \\mathbf { j } + { \\frac { d ^ { 2 } z } { d t ^ { 2 } } } \\mathbf { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 532
+    },
+    {
+        "type": "image",
+        "img_path": "images/357e0cab5185736c5f50599db3140a2363a050ce4226a9cb2e57229a99e19846.jpg",
+        "img_caption": [
+            "Fig. 12.3 Steady motion around a circle. Half turn up a helix. "
+        ],
+        "img_footnote": [],
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "For steady motion along a line, as in $x = t , y = 2 + t , z = 1 + 2 t$ , there is no acceleration. The second derivatives are all zero. For steady motion around a circle, there is acceleration. In driving a car, you accelerate with the gas pedal or the brake. You also accelerate by turning the wheel. It is the velocity vector that changes, not the speed. ",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 Find the distance $s ( t )$ and acceleration ${ \\bf a } ( t )$ for circular motion. ",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "Solution The speed in Example 5 is $d s / d t = \\omega r$ . After integrating, the distance is $s = \\omega r t$ . At time $t$ we have gone through an angle of $\\omega t$ . The radius is $r$ , so the distance traveled agrees wit\u0001h $\\omega t$ times $r$ . N\u0001ote that the dimension of $\\omega$ is $1 / \\mathrm { t i m e }$ (Angles are dimensionless.) At time $t = 2 \\pi / \\omega$ we have gone once around the circle\u2014 to $s = 2 \\pi r$ not back to $s = 0$ . ",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "The acceleration is $\\mathbf { a } = d ^ { 2 } \\mathbf { R } / d t ^ { 2 }$ . Remember ${ \\bf R } = r \\cos \\omega t { \\bf i } + r \\sin \\omega t { \\bf j } ;$ ",
+        "page_idx": 532
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { a } ( t ) = - \\omega ^ { 2 } r \\cos \\omega t \\mathbf { i } - \\omega ^ { 2 } r \\sin \\omega t \\mathbf { j } .\n$$",
+        "text_format": "latex",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "That direction is opposite to $\\mathbf { R }$ . This is a special motion, with no action on the gas pedal or the brake. All the acceleration is from turning. The magnitude is $| \\mathbf { a } | = \\omega ^ { \\bar { 2 } } r$ , with the correct dimension of diastance=(time)2. ",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 7 Find v?and $s$ and a around the helix $\\mathbf { R } = \\cos t \\mathbf { i } + \\sin t \\mathbf { j } + t \\mathbf { k }$ . ",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "Solution The velocity is $\\mathbf { v } = - \\sin t \\mathbf { i } + \\cos t \\mathbf { j } + \\mathbf { k }$ . The speed is ",
+        "page_idx": 532
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd s / d t = | { \\bf v } | = \\sqrt { \\sin ^ { 2 } t + \\cos ^ { 2 } t + 1 } = \\sqrt { 2 } { \\mathrm { ~ ( c o n s t a n t ) } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "Then distance is $s = \\sqrt { 2 } t$ . At time $t = \\pi$ , a half turn is\u0001complete\u0001. The distance along the shadow is $\\pi$ (a half circle). The distance along the helix is $\\sqrt { 2 } \\pi$ , because of its $4 5 ^ { \\circ }$ slope. ",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "The unit tangent vector is velocity=speed, and the acceleration is $d { \\bf v } / d t$ : ",
+        "page_idx": 532
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { T } = ( - \\sin t \\mathbf { i } + \\cos t \\mathbf { j } + \\mathbf { k } ) / \\sqrt { 2 } \\qquad \\mathbf { a } = - \\cos t \\mathbf { i } - \\sin t \\mathbf { j } .\n$$",
+        "text_format": "latex",
+        "page_idx": 532
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 8 Find $\\mathbf { v }$ and $s$ and a around the ellipse $x = \\cos t , y = 2 \\sin t , z = 0$ . ",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "Solution Take derivatives: $\\mathbf { v } = - \\sin t \\mathbf { i } + 2 \\cos t \\mathbf { j }$ and $\\left| \\mathbf { v } \\right| = { \\sqrt { \\sin ^ { 2 } t + 4 \\cos ^ { 2 } t } }$ . This is the speed $d s / d t$ . For the distance $s$ , something bad happens (or something normal). The speed is not simplified by $\\sin ^ { 2 } t + \\cos ^ { 2 } t = { \\overline { { 1 } } } .$ We cannot integrate $d s / d t$ to find a formula for $s$ . The square root defeats us. ",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "The acceleration $- \\cos t { \\bf i } - 2 \\sin t { \\bf j }$ still points to the center. This is not the Earth going around the sun. The path is an ellipse but the speed is wrong. See Section 12:4 (the pound note) for a terrible erro|r  |in the position of the sun. ",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "12A The basic formulas for motion along a curve are ",
+        "page_idx": 533
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\bf v } = { \\frac { d { \\bf R } } { d t } } \\quad { \\bf a } = { \\frac { d { \\bf v } } { d t } } \\quad | { \\bf v } | = { \\frac { d s } { d t } } \\quad { \\bf T } = { \\frac { { \\bf v } } { | { \\bf v } | } } = { \\frac { d { \\bf R } / d t } { d s / d t } } = { \\frac { d { \\bf R } } { d s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "Suppose we know the acceleration ${ \\bf a } ( t )$ and the initial velocity $\\mathbf { v } _ { 0 }$ and position ${ \\bf R } _ { 0 }$ . Then $\\mathbf { v } ( t )$ and $\\mathbf { R } ( t )$ are also known. We integrate each component: ",
+        "page_idx": 533
+    },
+    {
+        "type": "equation",
+        "text": "",
+        "text_format": "latex",
+        "page_idx": 533
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathbf { a } ( t ) = \\mathrm { c o n s t a n t } \\Rightarrow \\mathbf { v } ( t ) = \\mathbf { v } _ { 0 } + \\mathbf { a } t \\qquad \\Rightarrow \\mathbf { R } ( t ) = \\mathbf { R } _ { 0 } + \\mathbf { v } _ { 0 } t + \\frac { 1 } { 2 } \\mathbf { a } t ^ { 2 } } \\\\ & { \\mathbf { a } ( t ) = \\cos t \\mathbf { k } \\Rightarrow \\mathbf { v } ( t ) = \\mathbf { v } _ { 0 } + \\sin t \\mathbf { k } \\Rightarrow \\mathbf { R } ( t ) = \\mathbf { R } _ { 0 } + \\mathbf { v } _ { 0 } t - \\cos t \\mathbf { k } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "THE CURVE OF A BASEB\u0001ALL ",
+        "text_level": 1,
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "There is a nice discussion of curve balls in the calculus book by Edwards and Pen\u0002ney. We summarize it here (optionally). The ball leaves the pitcher\u2019s hand five feet off the ground: $\\mathbf { R } _ { 0 } = 0 \\mathbf { i } + 0 \\mathbf { j } + 5 \\mathbf { k }$ . The initial velocity is ${ \\bf v } _ { 0 } = 1 2 0 { \\bf i } - 2 { \\bf j } + 2 { \\bf k }$ (120 ft=sec is more than 80 miles per hour). The acceleration is $- 3 2 \\mathbf { k }$ from gravity, plus a new term from spin. If the spin is aro u\u0001nd the $z$ axis, an\u0001d the ball goes along the $x$ axis, then this acceleration is in the $y$ direction. ( I\u0001t comes from the cross\u0001product $\\mathbf { k } \\times \\mathbf { i } - \\mathbf { \\partial }$ there is a pressure difference on the sides of the ball.) A good pitcher can achieve $\\mathbf { a } = 1 6 \\mathbf { j } - 3 2 \\mathbf { k }$ . The batter integrates as fast as he can: ",
+        "page_idx": 533
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathbf { v } ( t ) = \\mathbf { v } _ { 0 } + \\mathbf { a } t = 1 2 0 \\mathbf { i } + ( - 2 + 1 6 t ) \\mathbf { j } + ( 2 - 3 2 t ) \\mathbf { k } } \\\\ & { \\mathbf { R } ( t ) = \\mathbf { R } _ { 0 } + \\mathbf { v } _ { 0 } t + \\frac { 1 } { 2 } \\mathbf { a } t ^ { 2 } = 1 2 0 t \\mathbf { i } + ( - 2 t + 8 t ^ { 2 } ) \\mathbf { j } + ( 5 + 2 t - 1 6 t ^ { 2 } ) \\mathbf { k } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "Notice the $t ^ { 2 }$ . The effect of spin is small at first, then suddenly bigger (as every batter knows). So is the effect of gravity\u2014the ball starts to dive. At $\\begin{array} { r } { t = \\frac { 1 } { 2 } } \\end{array}$ , the i component is 60 feet and the ball reaches the batter. The $\\mathbf { j }$ component is 1 foot and the $\\mathbf { k }$ component is 2 feet\u2014the curve goes low over the outside corner. ",
+        "page_idx": 533
+    },
+    {
+        "type": "text",
+        "text": "$\\begin{array} { r } { \\operatorname { A t } t = \\frac { 1 } { 4 } } \\end{array}$ , when the batter saw the ball halfway, the j component was zero. It looked as if it was coming right over the plate. ",
+        "page_idx": 533
+    },
+    {
+        "type": "image",
+        "img_path": "images/7c73f11f6de5ed1c9faef150259fc1c874dfddaf545836c1413787123096d6e4.jpg",
+        "img_caption": [
+            "Fig. 12.4 A curve ball approaches home plate. Halfway it is on line. "
+        ],
+        "img_footnote": [],
+        "page_idx": 533
+    }
+]

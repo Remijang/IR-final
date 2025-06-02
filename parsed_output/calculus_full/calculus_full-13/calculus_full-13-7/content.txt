@@ -1,0 +1,97 @@
+13.7 Constraints and Lagrange Multipliers
+
+This section faces up to a practical problem. We often minimize one function  while another function  is fixed. There is a constraint on  and  ; given by  : This restricts the material available or the funds available or the energy available. With this constraint, the problem is to do the best possible .  or  :
+
+At the absolute minimum of  ; the requirement  is probably violated. In that case the minimum point is not allowed. We cannot use  and  —those equations don’t account for  :
+
+Step 1 Find equations for the constrained minimum or constrained maximum. They will involve  and  and also  and  ; which give local information about  and  : To see the equations, look at two examples.
+
+EXAMPLE 1 Minimize  subject to the constraint  :
+
+Trial runs The constraint allows  ; where  : Also  satisfies the constraint, and  is smaller. Also  gives  (best so far).
+
+Idea of solution Look at the level curves of  in Figure 13.21. They are circles  : When  is small, the circles do not touch the line  : There are no points that satisfy the constraint, when  is too small. Now increase  :
+
+Eventually the growing circles  will just touch the line  : The point where they touch is the winner. It gives the smallest value of  that can be achieved on the line. The touching point is  ; and the value of  is  :
+
+What equation describes that point? When the circle touches the line, they are tangent. They have the same slope. The perpendiculars to the circle and the line  in the same direction. That is the key fact, which you see in Figure 13.21a.The direction perpendicular to  is given by grad  : The direction perpendicular to  is given by grad  : The key equation says that those two vectors are parallel. One gradient vector is a multiple of the other gradient vector, with a multiplier  (called lambda) that is unknown:
+
+13N At the minimum of  subject to  ; the gradient of  is parallel to the gradient of  —with an unknown number  as the multiplier:  (1)
+
+Step 2 There are now three unknowns  : There are also three equations:
+
+In the third equation, substitute  for  and  for  : Then  equals  equals  : Knowing  ; go back to the first two equations for  ; and  :
+
+The winning point  is  . It minimizes the “distance squared,”  ; from the origin to the line.
+
+Question What is the meaning of the Lagrange multiplier ?
+
+Mysterious answer The derivative of  ; which equals  : The multiplier  is the derivative of  with respect to  . Move the line by  ; and  changes by about  : Thus the Lagrange multiplier measures the sensitivity to  :
+
+Pronounce his name “Lagronge” or better “Lagrongh” as if you are French.
+
+EXAMPLE 2 Maximize and minimize  on the ellipse   :
+
+Idea and equations The circles  grow until they touch the ellipse. The touching point is  and that smallest value of  is  : As the circles grow they cut through the ellipse. Finally there is a point  / where the last circle touches. That largest value of  is  :
+
+The minimum and maximum are described by the same rule: the circle is tangent to the ellipse (Figure 13.21b). The perpendiculars go in the same direction. Therefore  is a multiple of  ; and the unknown multiplier is  :
+
+Solution The second equation allows two possibilities:  or  : Following up  ; the last equation gives  : Thus  or  : Then the first equation gives  or  : The values of  a?re  and  :
+
+Now follow  : The first equation yields  : Then the last equation requires  : Since  we find  : This is  :
+
+Conclusion The equations (3) have four solutions, at which the circle and ellipse are tangent. The four points are  ; and  : The four values of  are  :
+
+Summary The three equations are  and  and  : The unknowns are  ; and  : There is no absolute system for solving the equations (unless they are linear; then use elimination or Cramer’s Rule). Often the first two equations yield  and  in terms of  ; and substituting into  gives an equation for  :
+
+At the minimB um, the lBevel curve  is tangent to the constraint curve  : If that constraint curve is given parametrically by  and  ; then minimizing  uses the chain rule:
+
+This is the calculus proof that grad  is perpendicular to the curve.Thus grad  is parallel to grad  : This means  .
+
+We have lost  and  : But a new function  has three zero derivatives:
+
+Note that  automatically produces  : The constraint is “built in” to  : Lagrange has included a term  ; which is destined to be zero—but its derivatives are absolutely needed in the equations! At the solution,  and  and  :
+
+What is important is  and  ; coming from  : In words: The constraint  forces  : This restricts the movements  and  : They must keep to the curve. The equations say that  is equal to  : Thus  is zero in the allowed direction—which is the key point.
+
+MAXIMUM AND MINIMUM WITH TWO CONSTRAINTS
+
+The whole subject of min(max)imization is called optimization. Its applications to business decisions make up operations research. The special case of linear functions is always important—in this part of mathematics it is called linear programming. A book about those subjects won’t fit inside a calculus book, but we can take one more step—to allow a second constraint.
+
+The function to minimize or maximize is now  : The constraints are  and  : The multipliers are  and  : We need at least three variables  because two constraints would completely determine  and  :
+
+Figure  shows the geometry behind these equations. For convenience  is  ; so we are minimizing distance (squared). The constraints   and  are linear—their graphs are planes. The constraints keep  on both planes—and therefore on the line where they meet. We are finding the squared distance from  to a line.
+
+What equation do we solve? Thñe level surfaces  are spheres. They grow as  increases. The first sphñere to touch the line is tangent to it. That touching point gives the solution (the smallest  ). All three vectors grad  ; grad  ; grad  are perpendicular to the line:
+
+line tangent to sphere  grad  perpendicular to line line in both planes  grad  and grad  perpendicular to line.
+
+Thus grad  grad  ; grad  are in the same plane—perpendicular to the line. With three vectors in a plane, grad  is a combination of grad  and grad  :
+
+This is the key equation (5). It applies to curved surfaces as well as planes.
+
+In (Figure 13.22b), the normals to those planes are grad  and grad  .1; 2; 3/: The gradient of  is  : The equations (5)– (6) are
+
+Substitute these  into the other two equations  and  :
+
+After multiplying by 2; these simplify to  and  The solutions are  and  : Now the previous equations give  :
+
+The Lagrange function with two constraints is   /  : Its five derivatives are zero—those are our five equations. Lagrange has increased the number of unknowns from 3 to 5; by adding  and  : The best point .2; 3; 4/ gives  : The  ’s give  —the sensitivity to changes in 9 and 20:
+
+INEQUALITY CONSTRAINTS
+
+In practice, applications involve inequalities as well as equations. The constraints might be  and  : The first means: It is not required to use the whole resource  ; but you cannot use more. The second means:  measures a quantity that cannot be negative.  the minimum point, the multipliers must satisfy the same inequalities:  and  :There are inequalities on the  ’s when there are inequalities in the constraints.
+
+Brief reasoning: With  the minimum can be on or inside the constraint curve. Inside the curve, where  ; we are free to move in all directions. The constraint is not really constraining. This brings back  and  and  —an ordinary minimum. On the curve, where  constrains the minimum from going lower, we have  : W¥e don’t know in advance which to expect.
+
+For 100 constraints  ; there are  ’s. Some  ’s are zero (when  ) and some are nonzero (when  ). It is those  possibilities that make optimization interesting. In linear programming with two variables,¥the constraints are  :
+
+EXAMPLE 4 Minimixe  with  and  and  0:
+
+The constraint  is an equation,  and  yield inequalities. Each has its own Lagrange multiBplier—anBd the ineqBualities reBquire  and  : The derivatives of  are no problem to compute:
+
+Those equations make  larger than  : Therefore  ; which means that the co¥nstraint on  must be an equation. (Inequality for the multiplier means equality for the constraint.) In other words  : Then  leads to  : The solution is at  ; where  :
+
+At this minimum,  is above zero. The multiplier for the constraint  must be  : Then the first equation gives  : As always, the multiplier measures sensitivity.¥When  is increased by  ; the cost  is increased by  : In economics  is called a shadow price—it is the cost of increasing the constraint.
+
+Behind this example is a nice problem in geometry. The constraint curve  is a line. The inequalities  and  leave a piece of that line—from  to  in Figure 13.23. The level curves  move out as  increases, until they touch the line. The first touching point is  ; which is the solution.  is always an endpoint—or a corner of the triangle  : It gives the smallest cost  ; which is  :

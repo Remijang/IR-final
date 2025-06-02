@@ -1,0 +1,411 @@
+[
+    {
+        "type": "text",
+        "text": "10.1 The Geometric S\u0001eries ",
+        "text_level": 1,
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "We begin by looking at both sides of the geometric series: ",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 + x + x ^ { 2 } + x ^ { 3 } + \\cdots = { \\frac { 1 } { 1 - x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "How does the series on the left produce the function on the right ? How does $1 / ( 1 -$ $x$ / produce the series ? Add up two terms of the series, then three terms, then $n$ terms: ",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 + x = { \\frac { 1 - x ^ { 2 } } { 1 - x } } \\quad 1 + x + x ^ { 2 } = { \\frac { 1 - x ^ { 3 } } { 1 - x } } \\quad 1 + \\cdots + x ^ { n - 1 } = { \\frac { 1 - x ^ { n } } { 1 - x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "For the first, $1 + x$ times $_ { 1 - x }$ equals $1 - x ^ { 2 }$ by ordinary algebra. The second begins to make the point: $1 + x + x ^ { 2 }$ times $_ { 1 - x }$ gives $1 - x + x - x ^ { 2 } + x ^ { 2 } - x ^ { 3 }$ . Between 1 at the start and $- x ^ { 3 }$ at the end, everything cancels. The same happens in all cases: $1 + \\cdots + x ^ { n - 1 }$ times $_ { 1 - x }$ leaves 1 at the start and $- x ^ { n }$ at the end. This proves equation (2)\u2014the sum of $n$ terms of the series. ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "For the whole series we will push $n$ towards infinity. On a graph you can see what is happening. Figure 10.1 shows $n = 1$ and $n = 2$ and $n = 3$ and $n = \\infty$ \u0004. ",
+        "page_idx": 444
+    },
+    {
+        "type": "image",
+        "img_path": "images/50a7fb0440694305be56e96c6a08d35b38dc798244e9fdb65c6c5261f8651361.jpg",
+        "img_caption": [
+            "Fig. 10.1 Two terms, then\u0004t\u0004h\u0004ree terms, then full series: "
+        ],
+        "img_footnote": [],
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 + x + x ^ { 2 } + \\cdots = { \\frac { 1 } { 1 - x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { 1 + x + x ^ { 2 } + \\cdots } \\\\ { 1 - x \\sqrt { 1 } } \\\\ { \\frac { 1 - x } { x } } \\\\ { \\frac { x - x ^ { 2 } } { x ^ { 2 } } } \\\\ { \\frac { x ^ { 2 } - x ^ { 3 } } { \\cdots } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "The infini\u0001te sum gives a finite answer, pr\u0001ovided $x$ \u0001is between $^ { - 1 }$ and 1. Then $x ^ { n }$ goes to zero: ",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 - x ^ { n } } { 1 - x } } \\to { \\frac { 1 } { 1 - x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "Now start with the function $1 / ( 1 - x )$ . How does it produce the series ? One way is elementary but\u0001brutal, to do \u201clong d\u0001ivision\u201d of $_ { 1 - x }$ into\u00011 (nex\u0004t\u0004t\u0004o the figure). Another way is to look up the binomial formula for $( 1 - x ) ^ { - 1 }$ . That is cheating\u2014 we want to discover the series, not just memorize it. The successful approach uses calculus. Compute the derivatives of $f ( x ) = 1 / ( 1 - x )$ : ",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ^ { \\prime } = ( 1 - x ) ^ { - 2 } \\quad f ^ { \\prime \\prime } = 2 ( 1 - x ) ^ { - 3 } \\quad f ^ { \\prime \\prime \\prime } = 6 ( 1 - x ) ^ { - 4 } \\cdots\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "At $x = 0$ these derivatives are 1, 2, 6, 24, : : : : Notice how $^ { - 1 }$ from the chain rule keeps them positive. The nth derivative at $x = 0$ is $n$ factorial: ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( 0 ) = 1 \\quad f ^ { \\prime } ( 0 ) = 1 \\quad f ^ { \\prime \\prime } ( 0 ) = 2 \\quad f ^ { \\prime \\prime \\prime } ( 0 ) = 6 \\quad \\cdots \\quad f ^ { ( n ) } ( 0 ) = n ! .\n$$",
+        "text_format": "latex",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Now comes the idea. To \u0004m\u0004a\u0004tch the series with $1 / ( 1 - x ) ;$ , match all tho\u0001se derivatives at $x = 0$ . Each power $x ^ { n }$ gets one derivative ri2ght. Its derivatives at $x = 0$ are zero, except the $n$ th derivative, which is $n$ ! By adding all powers we get every derivative right\u2014so the geometric series matches the function: ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 + x + x ^ { 2 } + x ^ { 3 } + \\cdot \\cdot \\cdot h a s ~ t h e ~ s a m e ~ d e r i \\nu a t i \\nu e s ~ a t ~ x = 0 ~ a s ~ 1 / ( 1 - x ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "The linear approximation is $1 + x$ . Then comes ${ \\textstyle { \\frac { 1 } { 2 } } } f ^ { \\prime \\prime } ( 0 ) x ^ { 2 } = x ^ { 2 }$ . The third derivative is supposed to be 6, a\u0001nd $x ^ { 3 }$ is just what we need. Through its derivatives, the function produces the series. ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "With that example, you have seen a part of this subject. The geometric series diverges if $\\left| x \\right| \\geqslant 1$ . Otherwise it adds up to the function it comes from (when $- 1 < x < 1 .$ ). To get familiar with other series, we now apply algebra or calculus\u2014to reach the square of $1 / ( 1 - x )$ or its derivative or its integral. The point is that these operations are applied to the series. ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "The best I know is to show you\u0001eight operations that produce som\u0001ething useful. At the end we discover series for $\\ln 2$ and $\\pi$ . ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "1. Multiply the geometric series by a or ax: ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\na + a x + a x ^ { 2 } + \\cdots = { \\frac { a } { 1 - x } } \\quad a x + a x ^ { 2 } + a x ^ { 3 } + \\cdots = { \\frac { a x } { 1 - x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "The first series fits the decimal 3:333 : : :: In that case $a = 3$ . The geometric series for $\\textstyle x = { \\frac { 1 } { 1 0 } }$ gave $1 . 1 1 1 . . . = 1 0 / 9$ , and this series is just three ti\u0001mes larger. Its sum is $1 0 / 3$ . ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "The second series fits other decimals that are fractions in disguise. To get 12=99, choose $a = 1 2$ and $x = 1 / 1 0 0$ : ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\n. 1 2 1 2 1 2 . . . = { \\frac { 1 2 } { 1 0 0 } } + { \\frac { 1 2 } { 1 0 0 ^ { 2 } } } + { \\frac { 1 2 } { 1 0 0 ^ { 3 } } } + \\cdots = { \\frac { 1 2 / 1 0 0 } { 1 - 1 / 1 0 0 } } = { \\frac { 1 2 } { 9 9 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Problem 13 asks about :8787 : : : and :123123 : : :: It is usual in precalculus to write $a + a r + a r ^ { 2 } + \\cdots = a / ( 1 - r )$ . But \u0004w\u0004 \u0004e use $x$ instead of $r$ to emphasize that this is a function\u2014which we can now differentiate. ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "2. The derivative of the geometric series $1 + x + x ^ { 2 } + \\cdots$ is $1 / ( 1 - x ) ^ { 2 }$ : ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 + 2 x + 3 x ^ { 2 } + 4 x ^ { 3 } + \\cdots = { \\frac { d } { d x } } \\left( { \\frac { 1 } { 1 - x } } \\right) = { \\frac { 1 } { ( 1 - x ) ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "At $\\textstyle x = { \\frac { 1 } { 1 0 } }$ the left s\u0004i\u0004d\u0004e starts with 1:234\u00045\u00046\u0004789. The right side is $1 / ( 1 - \\textstyle { \\frac { 1 } { 1 0 } } ) ^ { 2 } = 1 / ( 9 / 1 0 ) ^ { 2 }$ , which is 100=81. If you have a calculator, divide 100 by ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "The answer should also be near .1:11111111/2, which is 1:2345678987654321. ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "3. Subtract $1 + x + x ^ { 2 } + \\cdots f r o m \\ 1 + 2 x + 3 x ^ { 2 } + \\cdots$ as you subtract functions: ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx + 2 x ^ { 2 } + 3 x ^ { 3 } + \\cdots = { \\frac { 1 } { ( 1 - x ) ^ { 2 } } } = { \\frac { 1 } { ( 1 - x ) } } = { \\frac { x } { ( 1 - x ) ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Curiously, the same series comes from multiplying .5/ by $x$ . It answers a question left open in Section 8.4\u2014the average number of coin tosses until the result is heads. This is the sum $1 ( p _ { 1 } ) + 2 ( p _ { 2 } ) + \\cdots$ from probability, with $\\begin{array} { r } { x = \\frac { 1 } { 2 } } \\end{array}$ : ",
+        "page_idx": 445
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 { \\bigl ( } { \\frac { 1 } { 2 } } { \\bigr ) } + 2 { \\bigl ( } { \\frac { 1 } { 2 } } { \\bigr ) } ^ { 2 } + 3 { \\bigl ( } { \\frac { 1 } { 2 } } { \\bigr ) } ^ { 3 } + \\cdots = { \\frac { \\frac { 1 } { 2 } } { ( 1 - { \\frac { 1 } { 2 } } ) ^ { 2 } } } = 2 .\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The probability of waiting until the $n$ th toss is $\\begin{array} { r } { p _ { n } = \\left( \\frac { 1 } { 2 } \\right) ^ { n } } \\end{array}$ . The expected value is two tosses. I suggested experiments, but now this mean v\u0000alu\u0001e is exact. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "4. Multiply series: the geometric series times itself is $1 / ( 1 - x )$ squared: ",
+        "page_idx": 446
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( 1 + x + x ^ { 2 } + \\cdots ) ( 1 + x + x ^ { 2 } + \\cdots ) = 1 + 2 x + 3 x ^ { 2 } + \\cdots .\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The series on the right is not new! In equation (5) it was the derivative of $y = 1 / ( 1 - x )$ . Now it is the square of the same $y$ . The geometric series satisfies $d y / d x = y ^ { 2 }$ , so the function does too. We have stumbled onto a differential equation. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Notice how the series was squared. A typical term in equation (8) is $3 x ^ { 2 }$ , coming from 1 times $x ^ { 2 }$ and $x$ times $x$ and $x ^ { 2 }$ times 1 on the left s1ide. It is a lot quicker to square $1 / ( 1 - x )$ \u2014but other series can be multiplied when we don\u2019t know what functions they a\u0004dd\u0004up to. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "5. Solve $d y / d x = y ^ { 2 }$ from any starting value\u2014a new application of series: ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Suppose the starting value is $y = 1$ at $x = 0$ . The equation $y ^ { \\prime } = y ^ { 2 }$ gives $1 ^ { 2 }$ for the de1rivative. Now a key step: The derivative of the equat\u0001ion gives $y ^ { \\prime \\prime } { = } 2 y y ^ { \\prime }$ . At $x = 0$ that is $2 \\cdot 1 \\cdot 1$ . Continuing upwards, t1he derivative of $2 y y ^ { \\prime }$ is $2 y y ^ { \\prime \\prime } + 2 ( y ^ { \\prime } ) ^ { 2 }$ . At $x = 0$ that is $y ^ { \\prime \\prime \\prime } { = } 4 + 2 = 6$ . ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "All derivatives are factorials: 1; 2; 6; 24; : : : : We are matching the derivatives of the geometric series $1 + x + x ^ { 2 } + x ^ { 3 } + \\ldots$ Term by term, we rediscover the solution to $y ^ { \\prime } = y ^ { 2 }$ . The solution star\u0001ting fro\u0001m $y ( 0 ) = 1$ i\u0004s\u0004 $y = 1 / ( 1 - x )$ . ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "A different starting value is $^ { - 1 }$ . Then $y ^ { \\prime } = ( - 1 ) ^ { 2 } = 1$ as before. The chain rule gives $y ^ { \\prime \\prime } { = } 2 y y ^ { \\prime } { = } - 2$ and then $y ^ { \\prime \\prime \\prime } = 6$ . With alter\u0001nating signs to m\u0001atch these derivatives, the solution starting from $^ { - 1 }$ is ",
+        "page_idx": 446
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = - 1 + x - x ^ { 2 } + x ^ { 3 } + \\cdots = - 1 / ( 1 + x ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "It is a small challenge to recognize the function on the right from the series on the left. The series has $- x$ in place of $x$ \u0004; \u0004then mul\u0001tiply by $^ { - 1 }$ .\u0004 \u0004The sum $y = - 1 / ( 1 + x )$ also satisfies $y ^ { \\prime } = y ^ { 2 }$ . We can solve differential equations from all starting values by infinite series. Essentially we sub\u0004s\u0004t\u0004itute an unknown\u0001series i\u0001nto the equation, and calculate one term at a time. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "6. The integrals of\u0001 $1 + x + x ^ { 2 } + \\cdots$ and $1 - x + x ^ { 2 } - \\cdot \\cdot \\cdot$ are logarithms: ",
+        "page_idx": 446
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { { \\displaystyle x + { \\frac { 1 } { 2 } } x ^ { 2 } + { \\frac { 1 } { 3 } } x ^ { 3 } + \\cdots = { \\int _ { 0 } ^ { x } { \\frac { d x } { 1 - x } } = - \\ln \\left( 1 - x \\right) } } } \\\\ { { \\displaystyle x - { \\frac { 1 } { 2 } } x ^ { 2 } + { \\frac { 1 } { 3 } } x ^ { 3 } - \\cdots = { \\int _ { 0 } ^ { x } { \\frac { d x } { 1 + x } } = + \\ln \\left( 1 + x \\right) } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The derivative of (10a) brings back the geometr\u0004i\u0004c\u0004seri\u0001es. For log a8rithms we find $1 / n$ not $1 / n !$ The first term $x$ and second term ${ \\scriptstyle { \\frac { 1 } { 2 } } } x ^ { 2 }$ give linear and quadratic approximations. Now we have the whole series. I cannot fail to substitute 1 and $\\frac { 1 } { 2 }$ , to find $\\ln ( 1 - 1 )$ and $\\ln ( 1 + 1 )$ and $\\ln ( 1 - { \\frac { 1 } { 2 } } )$ : ",
+        "page_idx": 446
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c } { x = 1 : } & { 1 + \\frac { 1 } { 2 } + \\frac { 1 } { 3 } + \\frac { 1 } { 4 } + \\cdots = - \\ln 0 = + \\infty } \\\\ { x = 1 : } & { 1 - \\frac { 1 } { 2 } + \\frac { 1 } { 3 } - \\frac { 1 } { 4 } + \\cdots = \\ln 2 { = . 6 9 3 } } \\\\ { x = \\frac { 1 } { 2 } : } & { \\frac { 1 } { 2 } + \\frac { 1 } { 8 } + \\frac { 1 } { 2 4 } + \\frac { 1 } { 6 4 } + \\cdots = - \\ln \\frac { 1 } { 2 } = \\ln 2 . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The first series diverges to infinity. This harmonic series $1 + { \\frac { 1 } { 2 } } + { \\frac { 1 } { 3 } } + \\cdots$ came into the earliest discussion of limits (Section 2.6). The second series has alternating signs and converges to ln 2. The third has plus signs and also converges to ln 2. These will be exa\u0001mples for a major topic in infinite series\u2014 tests for convergence. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "For the first time in this book we are able to compute a logarithm! Something remarkable is involved. The sums of numbers in .11/ and .12/ were discovered from the sums of functions in .10/. You might think it would be easier to deal only with numbers, to compute ln 2. But then we would never have integrated the series for $1 / ( 1 - x )$ and detected .10/. It is better to work with $x$ , and substitute special values like $\\frac { 1 } { 2 }$ at the end. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "There are two practical probl\u0004e\u0004 \u0004ms with these ser\u0001ies. Fo\u0001r $\\ln 2$ they c\u0001onverge slowly. For ln $e$ they blow up. The correct answer is ln $e = 1$ , but the series can\u2019t find it. Both problems are solved by addi\u0001ng (10a) to (10b), which cancels the even powers: ",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\left( x + { \\frac { x ^ { 3 } } { 3 } } + { \\frac { x ^ { 5 } } { 5 } } + \\cdots \\right) = \\ln ( 1 + x ) - \\ln ( 1 - x ) = \\ln { \\frac { 1 + x } { 1 - x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "At $\\begin{array} { r } { x = \\frac { 1 } { 3 } } \\end{array}$ , the right side is $\\ln { \\frac { 4 } { 3 } } - \\ln { \\frac { 2 } { 3 } } = \\ln 2$ . Powers of $\\begin{array} { l } { { \\frac { 1 } { 3 } } } \\end{array}$ are much smaller than powers of 1 or $\\frac { 1 } { 2 }$ , so ln 2 is quickly comput\u0004e\u0004d\u0004. All loga\u0001rithms can be found from the improved series .13/. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "7. Change variables in the geometric series (replace $x$ by $x ^ { 2 } o r \\ - x ^ { 2 } )$ : ",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { 1 + x ^ { 2 } + x ^ { 4 } + x ^ { 6 } + \\cdots = 1 / ( 1 - x ^ { 2 } ) } } \\\\ { { 1 - x ^ { 2 } + x ^ { 4 } - x ^ { 6 } + \\cdots = 1 / ( 1 + x ^ { 2 } ) . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "This produces new functions (always our goal). They involve even powers of $x$ . The second series will soon be used to calculate $\\pi$ . O\u0004 \u0004t\u0004her changes are valuable: ",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { { \\cfrac { x } { 2 } } { \\mathrm { i n p l a c e ~ o f ~ } } x : } & { 1 + { \\cfrac { x } { 2 } } + \\left( { \\cfrac { x } { 2 } } \\right) ^ { 2 } + \\cdots = { \\cfrac { 1 } { 1 - ( x / 2 ) } } = { \\cfrac { 2 } { 2 - x } } } \\\\ { { \\cfrac { 1 } { x } } { \\mathrm { i n p l a c e ~ o f ~ } } x : } & { 1 + { \\cfrac { 1 } { x } } + { \\cfrac { 1 } { x ^ { 2 } } } } & { + \\cdots = { \\cfrac { 1 } { 1 - ( 1 / x ) } } = { \\cfrac { x } { x - 1 } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Equation (17) is a\u0001series of nega\u0001tive pow\u0004e\u0004r\u0004s $x ^ { - n }$ . It converges\u0001when $| x |$ is greater than 1. Convergence in .17/ is for large $x$ . Convergence in .16/ is for $\\vert x \\vert < 2$ . ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "8. The integral of $1 - x ^ { 2 } + x ^ { 4 } - x ^ { 6 } + \\cdot \\cdot \\cdot$ yields the inverse tangent of $x$ : ",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx - { \\frac { 1 } { 3 } } x ^ { 3 } + { \\frac { 1 } { 5 } } x ^ { 5 } - { \\frac { 1 } { 7 } } x ^ { 7 } + \\cdots = \\int { \\frac { d x } { 1 + x ^ { 2 } } } = \\tan ^ { - 1 } x .\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "We integrated .15/ and got odd powers. The magical formula for $\\pi$ (discovered by Leibniz) comes when $x = 1$ . The angle with tangent 1 is $\\pi / 4$ : ",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 - { \\frac { 1 } { 3 } } + { \\frac { 1 } { 5 } } - { \\frac { 1 } { 7 } } + \\cdots = { \\frac { \\pi } { 4 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "The first three terms give $\\pi \\approx 3 . 4 7$ (not very close). The 5000th term is still of size :0001, so the fourth decimal is still not settled. By changing to $x = 1 / \\sqrt { 3 }$ , the astronomer Halley and his assistant found 71 correct digits of $\\pi / 6$ (while waiting for the comet). That is one step in the long and amazing story of calculating $\\pi$ . The ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Chudnovsky brothers recently took the latest step with a supercomputer\u2014they have found more than one billion decimal places of $\\dot { \\pi }$ (see Science, June 1989). The digits look completely random, as everyone expected. But so far we have no proof that all ten digits occur $\\frac { 1 } { 1 0 }$ of the time. ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Historical note Archim\u0001edes locate\u0001d $\\pi$ above 3:\u000114 an\u0001d bel\u0001ow $3 { \\frac { 1 } { 7 } }$ . Variations of his method (polygons in circles) reached as far as 34 digits\u2014but not for 1800 years. Then Halley found 71 digits of $\\pi / 6$ with equation (18). For faster convergence that series was replaced by other inverse tangents, using smaller values of $x$ : ",
+        "page_idx": 448
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\pi } { 4 } } = \\tan ^ { - 1 } { \\frac { 1 } { 2 } } + \\tan ^ { - 1 } { \\frac { 1 } { 3 } } = 4 \\tan ^ { - 1 } { \\frac { 1 } { 5 } } - \\tan ^ { - 1 } { \\frac { 1 } { 2 3 9 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "A prodigy named Dase, who could multiply 100-digit numbers in his head in 8 hours, finally passed 200 digits of $\\pi$ . The climax of hand calculation came when Shanks published 607 digits. I am sorry to say that only 527 were correct. (With years of calculation he went on to 707 digits, but still only 527 were correct.) The mistake was not noticed until 1945! Then Ferguson reached 808 digits with a desk calculator. ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Now comes the computer. Three days on an ENIAC .1949/ gave 2000 digits. A hundred minutes on an IBM 704 .1958/ gave 10; 000 digits. Shanks (no relation) reached 100; 000 digits. Finally a million digits were found in a day in 1973, with a CDC 7600. All these calculations used variations of equation (20). ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "The record after that wentabetween Cray and Hitachi and now IBM. But the method changed. The calculations rely on an incredibly accurate algorithm, based on the \u201carithmetic-geometric mean iteration\u201d of Gauss. It is also incredibly simple, all things considered: ",
+        "page_idx": 448
+    },
+    {
+        "type": "equation",
+        "text": "$$\na _ { n + 1 } = { \\frac { a _ { n } + b _ { n } } { 2 } } b _ { n + 1 } = \\sqrt { a _ { n } b _ { n } } \\pi _ { n } = 2 a _ { n + 1 } ^ { 2 } \\Bigg / \\left( 1 - \\sum _ { k = 0 } ^ { n } 2 ^ { k } ( a _ { k } ^ { 2 } - b _ { k } ^ { 2 } ) \\right) .\n$$",
+        "text_format": "latex",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "The number of correct digits more than doubles at every step. B\u0001y $n = 9$ we are far beyond Shan?ks (the hand calculator). No?end is in sig\u0001ht. Almost anyone can go past a billion digits, s\u0001ince with the Chudnovsky m\u0001ethod we don\u2019t have to start over again. ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "It is time to stop. You may think (or hop|e) th\u00a0at nothing more could possibly be done with geometric series. We have gone a long way from $1 / ( 1 - x )$ , but some functions can never be reached. One is $e ^ { x }$ (and its relatives sin $x$ , cos $x$ , $\\sinh x$ , cosh $x$ ). Another is $\\sqrt { 1 - x }$ (and its relatives $1 / { \\sqrt { 1 - x ^ { 2 } } } , \\sin ^ { - 1 } x , \\sec ^ { - 1 } x , \\ldots )$ . The exponentials are in 10:4, with series that converge for all $x$ . The square-roots are in 10:5, closer to geometric series and converging for $\\left| x \\right| < 1$ . Before that we have to say what convergence means. ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "The series came fast, but I hope you see what can be done (subtract, multiply, differentiate, integrate). Addition is easy, division is harder, all are legal. Some unexpected numbers are the sums of infinite series. ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Added in proof By e-mail I just learned that the record for $\\pi$ is back in Japan: $2 ^ { 3 0 }$ digits which is more than 1:07 billion. The elapsed time was 100 hours (75 hours of CPU time on an NEC machine). The billionth digit after the decimal point is 9. ",
+        "page_idx": 448
+    }
+]

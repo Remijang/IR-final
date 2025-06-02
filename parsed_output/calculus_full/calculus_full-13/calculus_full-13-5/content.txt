@@ -1,0 +1,135 @@
+13.5 The Chain Rule
+
+Calculus goes back and forth between solving problems and getting ready for harder problems. The first is “application,” the second looks like “theory.” If we minimize  to save time or money or energy, that is an application. If we don’t take derivatives to find the minimum—maybe because  is a function of other functions, and we don’t have a chain rule—then it is time for more theory. The chain rule is a fundamental working tool, because  appears all the time in applications. So do  and  and worse. We have to know their derivatives. Otherwise calculus can’t continue with the applicationBs.
+
+You may instinctively say: Don’t bother with the theory, jBust t eBach me the formulas. That is not possible. You now regard the derivative of sin  as a trivial problem, unworthy of an answer. That was not always so. Before the chain rule, the slopes of sin  and sin  and  were hard to compute from  : We are now at the same point for  : We know the meaning of  ; but if  tan  and  cos  and  ; we need a way to compute  : A liBttle  tBheory is unavoidable, if the problem-solving part of calculus is to keep going.
+
+To repeat: The chain rule applies to a function of a function. In one variable that was  : With two variables there are more possibilities:
+
+All derivatives are assumed continuous. More exactly, the input derivatives like  and  and  are continuous. Then the output derivatives like  and  and  will be continuous from the chain rule. We avoid points like  in polar coordinates—where  has a division by zero.
+
+A Typical Problem Start with a function of  and  ; for example  times  : Thus  : Change  to  cos  and  to  sin  : The function becomes .  times  : We want its derivatives with respect to  and  : First we have to decide on its name.
+
+To be correct, we should not reuse the letter  The new function can be  :
+
+Why not call it  Be Bcause strictly speaking that is  times  If we follow the rules, then  is  and  should be  : The new function  does the right thing—it multiplies  : But in many cases, the rules get bent and the letter  is changed back to  :
+
+This crime has already occurred. The end of the last page ought to say  : InsteadBthe prinBterBput  : The purpose of the chain rule is to find derivatives in the new variables  and  (or  and  ). In our example we want the derivative of  with respect to  : Here is the chain rule:
+
+I substituted  Band  for  and  :BYoBu immBediaBtely check the answer:  does lead to  cos  : The derivative is correct. The only incorrect thing—but we do it anyway—is to write  instead of  :
+
+Question Wh 
+
+THE DERIVATIVES OF 
+
+Here  depends on  and  ; and  depends on  : Suppose  moves by  ; while  stays constant. Then  moves by  :When  changes,  also changes:  : Now substitute for  Bto make thBe chain:  : This is the first rule:
+
+EXAMPLE 1 Every  satisfiesBthe  1B-way wave equation  :
+
+TheBinside funcBtion is  : BThe outsideBfunction can be anBything,  or sin  or  : The comBposite function is  or  or  : In eacBh separate case we could check that  : The chain rule produces this equation in all cases at once,Bfrom B  and  :
+
+This is important:  is our first example of a partial differential equation. The unknown  has two variables. Two partial derivatives enter the equation.
+
+Up to now we have worked with  and ordinary differential equations. The independent variable was time or space (and only one dimension in space). For partial differential equations the variables are time and space (possibly several dimensions in space). The great equations of mathematical physics—heat equation, wave equation, Laplace’s equation—are partial differential equations.
+
+Notice how the chain rule applies to  : Its  derivative is  : A patient reader would check that  is sin  and  is  and  is  : Probably you are not so patient—you know the derivative of sin  : Therefore we pass quickly to the next chain rule. Its outside function depends on two inside functions, and each of those depends on  : We want  :
+
+THE DERIVATIVE OF 
+
+Before the formBula, hereBis the idea. Suppose  changes by  : That affects  and  ; they change by  and  : There is a domino effect on  ; it changes by  : Tracing backwards,
+
+Substitute the last two into the first, connecting  to  : Then let  :
+
+This is close to the one-variable rule  : There we could “cancel”  : (We actually canceled  in  , and then approached the limit.) Now  affects  in two ways, through  and through  : The chain rule has two terms. If we cancel in  we only get one of the terms!
+
+We mention again that the true name for  is  not  : For  the rule has three terms:  is  (or better  :)
+
+EXAMPLE 2 How quickly does the temperature change when you drive to Florida?
+
+Suppose the Midwest is at  and Florida is at  Going 1000 miles south increases the temperature  by  ; or .05 degrees per mile. Driving straight south at 70 miles per hour, the rate of increase is  degrees per hour. Note how .degreesB=mile/ timBes .miles=hour/ equals .degrees=hour/. That is the ordinary chain rule  —there is no  variable going south.
+
+If the road goes southeast, the temperature is  : Now  is distance south and  is distance east. What is  if the speed is still 70?
+
+In reality there is another term. The temperature alBso dependBs directly oBn  ; because of night and day. The factor  has a period of 24 hours, and it brings an extra term into the chain rule:
+
+This is the total derivative  ; from all causes. Changes in  all affect  The partial derivative  is only one part of  : (Note that  :) If night and day add  to  the extra term is  : At nightfall that is  degrees per hour. You have to drive faster than  to get warm.
+
+SECOND DERIVATIVES
+
+What is  We need the derivative of (4), which is painful. It is like acceleration in Chapter 12, with many terms. So start with movement in a straight line.
+
+Suppose  and  : We are moving at the fixed angle  ; with speed 1: The derivatives are  and  and  1: Then  is immediate from the chain rule:
+
+For the second derivative  ; apply this rule to  : Then  is
+
+In polar coordinates change  to  : When we move in the  direction,  is fixed. Equation (6) gives  from  : Second derivatives on curved paths (with new terms from the curving) are saved for the exercises.
+
+EXAMPLE 3 If  are all continuous and bounded by  ; find a bound on  : This is the second derivative along any line.
+
+Solution Equation (6) gives  sin  : This upper bound  was needed in equation 13.3.14, for the error in linear approximation.
+
+THE DERIVATIVES OF 
+
+Suppose there are two inside functions  and  ;B eacBh depBendiBng on  and  : When  moves,  and  both move:  and  :BTheBn  and  force a change in  : The chain rule for  is no surprise:
+
+This rule has  instead of  ; because of the extra variable  : The symbols remind us that  is constant. Similarly  is constant while  moves, and there is a second cBhain rulBe foBr  :
+
+EXAMPLE 4 In polar coordinates find  and  : Start from  : The chain rule uses the  derivatives of  and  :
+
+TBhe seBcond  dBerivatBive isBhardeBr, becBause (B8) has four terms that depend on  : Apply the chain rule to the first term  : It is a function of  and  ; and  and  are functions of  :
+
+The  derivative of  is similar. So apply the product rule to (8):
+
+This formula is not attractive. In mathematics, a messy formula is almost always a signal of asking the wrong question. In fact the combination  is much more special than the separate derivatives. We might hope the same for  ; but dimensionally that is impossible—since  is a length and  is an angle. The dimensions of  and  are matched by  and  and  : We could even hope that
+
+This equation is true. Add  with  changed to  : Laplace’s eqBuat iBon  is now expressed in polar coordinates:  :
+
+A PARADOX
+
+Before leaving polar coordinates there is one more question. It goes back to  ; which was practically the first example of partial derivatives:
+
+My problem is this. We know that  is  cos  : So  on the right side is cos  : On the other hand  is  : So  is also  : How can  lead to cos  one way and  the other way?
+
+13.5 The Chain Rule
+
+I will admit that this cost me a sleepless night. There must be an explanation— we cannot end with cos  : This paradox brings a new respect for partial derivatives. May I tell you what I finally noticed? You could cover up the next paragraph and think about the puzzle first.
+
+The key to partial derivatives is to ask: Which variable is held constant? In equation (11),  is constant. But when  gave  was constant. In both cases we change  and look at the effect on  . The movement is on a horizontal line (constant  ) or on a radial line (constant  ). Figure 13.15 shows the difference.
+
+Remark This example shows that  is different from  : The neat formula  is not generally true. May I tell you what takes its place? We have toB in cBlude  : WBithB two variables  and two variables  ; we need 2 by 2 matrices! Section 14.4 gives the details:
+
+NON-INDEPENDENT VARIABLES
+
+This paradox points to a serious problem. In computing partial derivatives of  ; we assumed that  were independent. Up to now,  could move while  and  wer Be fix eBd. In physics and chemistry and economics that may not be possible. If there is a relation between  ; then  can’t move by itself.
+
+BEX ABMPLE 5 The gas law  relates pressure to volume and temperature.  are not independent. What is the meaning of  Does it equal  ?
+
+Those questions have no answers, until we say what is held constant. In the paradox,  had one meaning for fixed  aBnd  aBnother meaning for fixed  : To indicate Bwha tBis held constant, use an extra subscript (not denoting a derivative):
+
+ has constant volume and  has constant temperature. The usual  has both  and  constant. But then the gas law won’t let us change  :
+
+EXAMPLE 6 Let  : Compute  on the plane  :
+
+13 Partial Derivatives
+
+Solution 1 Think of  and  as independent. Replace  by  :
+
+Solution 2 Keep  and  independent. Deal with  by the chain rule:
+
+SoBlutio Bn 3 (different) Make  and  independent. Then  :
+
+WBitho But a subscript,  means: Take the  derivative the usual way. The answer is  ; when  and  don’t move. But on the plane  ; one of them must move! 3 is only part of the total answer, which is  or   :
+
+Here is the geometrical meaning. We are on the plane  : The derivative  moves  but not  : To stay on the plane,  is  : The change in   is  :
+
+EXA BMP LBE 7 OnBthe  wBorld l iBne  find  for  :
+
+The subscripts  mean that  and  are fixed. The chain Brule  Bskips  and  :
+
+EXAMPLE 8 From the law  ; compute the product 
+
+Any intelligentperson cancels  ’s,  ’s, and  ’s to get 1: The right answer is  :
+
+The product is  This is  The chain rule is tricky (Problem 42).
+
+EXAMPLE 9 Implicit differentiation was used in Chapter 4. The chain rule explains it:

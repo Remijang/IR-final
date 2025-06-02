@@ -1,0 +1,169 @@
+11.2 Planes and Projections
+
+The most important “curves” are straight lines. The most important functions are linear. Those sentences take us back to the beginning of the book—the graph of  is a line. The goal now is to move into three dimensions, where graphs are surfaces. Eventually the surfaces will be curved. But calculus starts with the flat surfaces that correspond to straight lines:
+
+What are the most important surfaces ? Planes.   
+What are the most important functions ? Still linear.
+
+The geometrical idea of a plane is turned into algebra, by finding the equation of a plane. Not just a general formula, but the particular equation of a particular plane.
+
+A line is determined by one point  and the slope m. The point-slope equation is  . That is a linear equation, it is satisfied when  and  , and  is  . For a plane, we start again with a particular point— which is now  . But the slope of a plane is not so simple. Many planes climb at a  angle—with “slope 1”—and more information is needed.
+
+The direction of a plane is described by a vector  . The vector is not  the plane, but perpendicular to the plane. In the plane, there are many directions. Perpendicular to the plane, there is only one direction. A vector in that perpendicular direction is a normal vector.
+
+The normal vector  can point “up” or “down”. The length of  is not crucial (we often make it a unit vector and call it  ). Knowing  and the point  , we know the plane (Figure 11.9). For its equation we switch to algebra and use the dot product—which is the key to perpendicularity.
+
+ is described by its components  . In other words  is  . This vector is perpendicular to every direction in the plane. A typical direction goes from
+
+ to another point  in the plane. The vector from  to  has components  : This vector lies in the plane, so its dot product with  is zero:
+
+11C The plane through  perpendicular to  has the equation   : (1)   
+The point  lies on the plane when its coordinates  satisfy this equation.
+
+11.2 Planes and Projections
+
+EXAMPLE 1 The plane through  perpendicular to  has the equation  . That can be rewritten as  6.
+
+Notice three things. First,  lies on the plane because  . Second,  can be recognized from the  coefficients in  . Third, we could change  to  and we could change  to  —because  is still perpendicular and  is still in the plane:  .
+
+The new normal vector  produces  0. That can be rewritten as  Same normal direction, same plane.
+
+The new point  produces  . That is another form of  . All we require is a perpendicular  and a point  in the plane.
+
+EXAMPLE 2 The plane through .1;2;4/ with the same  has a different equation:  . This is  (instead of 6). These planes with 7 and 6 are parallel.
+
+Starting from  , we often move   to the right hand side—and call this constant  :
+
+EXAMPLE 3 The plane  goes through the origin  . The normal vector is read directly from the equation:  . The equation is satisfied by  and  . Subtraction gives a vector  that is in the plane, and  .
+
+The parallel planes  have the same  but different  ’s. These planes miss the origin because  is not zero .  on the left side needs  on the right side). Note that  is parallel to both planes.  is changed to 3N in Figure 11.9, but its direction is not changed.
+
+EXAMPLE 4 The angle between two planes is the angle between their normal vectors.
+
+The planes  and  ar|e perpen|d i|cula||r, be|cause   . The planes  and  are also perpendicular, because   . (Those are the  plane and the  plane.) The planes  and  make a  angle, because cos  .
+
+The cosine of the angle between two planes is  . See Figure 11.10.
+
+Remark 1 We gave the “point-slope” equation of a line (using  ), and the “pointnormal” equationof a plane (using  ). What is the normal vector  toa line ?
+
+The vector  is parallel to the line  . The line goes across by 1 and up by  . The perpendicular vector is  . The dot product  is  . Then the point-normal equation matches the point-slope equation:
+
+Remark 2 What is the point-slope equation for a plane ? The difficulty is that a plane has different slopes in the  and  directions. The function   has two derivatives  and  .
+
+This remark has to stop. In Chapter 13; “slopes” become “partial derivatives.”
+
+A LINE IN SPACE
+
+In three dimensions, a line is not as simple as a plane.  line in space needs two equations. Each equation gives a plane, and the line is the intersection of two planes.
+
+Two points on that line are  and  . They satisfy both equations so they lie on both planes. Therefore they are on the line of intersection. The direction of that line, subtracting coordinates of  from  , is along the vector  .
+
+The line goes through  in the direction of  :
+
+Starting from  , add on any multiple  . Then  and
+
+ and  . Those are the components of the vector equation  —which produces the line.
+
+Here is the problem. The line needs two equations—or a vector equation with a parameter  . Neither form is as simple as  . Some books push ahead anyway, to give full details about both forms. After trying this approach, I believe that those details should wait. Equations with parameters are the subject of Chapter 12; and a line in space is the first example. Vectors and planes give plenty to do here—especially when a vector is projected onto another vector or a plane.
+
+PROJECTION OF A VECTOR
+
+What is the projection of a vector  onto another vector A ? One part of  goes along A—that is the projection. The other part of  is perpendicular to A. We now compute these two parts, which are  and  .
+
+In geometry, projections involve  . In algebra, we use the dot product (which is closely tied to  ). In applications, the vector  might be a velocity  or a force F:
+
+An airplane flies northeast, and a 100-mile per hour wind blows due east. What is the projection of  in the flight direction A ?
+
+Gravity makes a ball roll down the surface  . What are the projections of  in the plane and perpendicular to the plane ?
+
+The component of  along  is the push from the wind (tail wind). The other component of  pushes sideways (crosswind). Similarly the force parallel to the surface makes the ball move. Adding the two components brings back  or  .
+
+We now compute the projection of B onto A. Call this projection  . |Sin|ce its direction i|s |kno |wn|—P is along A—we can describe  in twoways:
+
+1) Give the length of P along A   
+2) Give the vector P as a multiple of A.
+
+Figure 11.11b shows the projection  and its length. The hypotenuse is  . The length is  . The perpendicular component  has length  . The cosine is positive for angles less than  : The cosine (and  ) are zero when A and  are perpendicular.  is negative for angles greater than  ; and the projection points along – A (the length is  . Unless the angle is  or  or  or  or  ; we don’t want to compute cosines—and we don’t have to. The dot product does it automatically:
+
+Notice that the length of  cancels out at the end of (4). If  is doubled,  is unchanged. But if  is doubled, the projection is doubled.
+
+What is the vector  ? Its length along  is  . If  is a unit vector, then  and the projection is  times A. Generally  is not a unit vector, until we divide by  . Here is the projection P of B along A:
+
+EXAMPLE 5 For the wind velocity  and flying direction  , find P. Here  points east,  points northeast. The projection of  onto  is  :
+
+EXAMPLE 6 Project  onto the plane with normal  .
+
+The projection of  along  is not the answer. But compute that first:
+
+ is the component of|  perpendicular to the plane. It does not move the ball. The in-plane component is the difference  . Any vector  has two projections, along  and perpendicular:
+
+The projection  is perpendicular to the remaining component 
+
+EXAMPLE 7 Express  as the sum of a vector  parallel to  and a vector  perpendicular to A. Note  .
+
+Check:  : These projections of  are perpendicular.
+
+Pythagoras:  equals  . Check that too:  .
+
+Question When is  ? Answer When  and  are perpendicular.
+
+EXAMPLE 8 Find the nearest point to the origin on the plane  5.
+
+The shortest distance from the origin is along the normal vector N. The vector  to the nearest point (Figure 11.12) is  times  , for some unknown number  . We find  by requiring  to lie on the plane.
+
+The plane  has normal vector  . Therefore   . To lie on the plane, this must satisfy  :
+
+Then  . That locates the nearest point. The distance is  . This example is important enough to memorize, with lett?ers not numbers:
+
+The steps are the same.  has components  . The nearest point on the plane is a multiple  . It lies on the plane if  .
+
+Thus  . The point  is in equation (7). The distance to the plane is  .
+
+Question How far is the plane from an arbitrary point  ?
+
+Answer The vector from  to  is our multiple  . In vector form  . This reaches the plane if  , and again we find  :
+
+This new term  enters the distance from  to the plane:
+
+When the point is on the plane, that distance is zero—because  .   
+When  is  , the figure shows  and distance  .
+
+PROJECTIONS OF THE HEART VECTOR
+
+An electrocardiogram has leads to your right arm–left arm–left leg. You produce the voltage. The machine amplifies and records the readings. There are also six chest leads, to add a front-back dimension that is monitored across the heart. We will concentrate on the big “Einthoven triangle,” named after the inventor of the ECG.
+
+The graphs show voltage variations plotted against time. The first graph plots the voltage difference between the arms. Lead II connects the left leg to the right arm. Lead III completes the triangle, which has roughly equal sides (especially if you are a little lopsided). So the projections a re based on  and  angles.
+
+The heart vector  is the sum of many small vectors—all moved to the same origin.  is the net effect of action potentials from the cells—small dipoles adding to a single dipole. The pacemaker  node) starts the impulse. The atria depolarize to give the  wave on the graphs. This is actually a  loop of the heart vector— the graphs only show its projections. The impulse reaches the  node, pauses, and moves quickly through the ventricles. This produces the QRS complex—the large sharp movement on the graph.
+
+The total QRS interval should not exceed  second  spaces on the printout). V points first toward the right shoulder. This direction is opposite to the leads, so the tracings go slightly down. That is the Q wave, small and negative. Then the heart vector sweeps toward the left leg. In positions 3 and 4, its projection on lead I (between the arms) is strongly positive. The R wave is this first upward deflection in each lead. Closing the loop, the S wave is negative (best seen in leads I and aVR).
+
+Question 1 How many graphs from the arms and leg are really independent ?
+
+Answer Only two! In a plane, the heart vector  has two components. If we know two projections, we can compute the others. (The ECG does that for us.) Different vectors show better in different projections. A mathematician would use  angles, with an electrode at your throat.
+
+Question 2 How are the voltages related ? What is the aVR lead ?
+
+Answer Project the heart vector  onto the sides?of the triangle:
+
+The lead vectors have  — they form a triangle. The projections have 
+
+The aVR lead is  . It is pure algebra (no wire). By vector addition it points toward the electrode on the right arm. Its length is  if the other lengths are 2:
+
+Including aVL and aVF to the left arm and foot, there are six leads intersecting at equal angles. Visualize them going out f?rom a single point (the?origin in the chest).
+
+Question 3 If the heart vector is  , what voltage differences are recorded ?
+
+Answer The leads around the triangle have length 2: The machine projects  :
+
+Lead I is the horizontal vector 2i. So  .   
+Lead II is the  vector  . So  .   
+Lead III is the  vector  . So  .
+
+The first and third add to the second. The largest  waves are in leads I and  . In aVR the projection of  will be negative (Problem 46), and will be labeled an S wave.
+
+Question 4 What about the potential (not just its differences). Is it zero at the center ?
+
+Answer It is zero if we say so. The potential contains an arbitrary constant  . (It is like an indefinite integral. Its differences are like definite integrals.) Cardiologists define a “central terminal” where the potential is zero.
+
+The average of  over a loop is the mean heart vector H. This average requires  , by Chapter 5: With no time to integrate, the doctor looks for a lead where the area under the QRS complex is zero. Then the direction of  (the axis) is perpendicular to that lead. There is so much to say about calculus in medicine.

@@ -1,0 +1,260 @@
+[
+    {
+        "type": "text",
+        "text": "12.2 Plane Motion: Projectiles and Cycloids ",
+        "text_level": 1,
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The previous section started with $\\mathbf { R } ( t )$ : From this position vector we computed $\\mathbf { v }$ and a: Now we find $\\mathbf { R } ( t )$ itself, from more basic information. The laws of physics govern projectiles, and the motion of a wheel produces a cycloid (which enters problems in robotics). The projectiles fly without friction, so the only force is gravity. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "These motions occur in a plane. The two components of position will be $x$ (across) and $y$ (up). A projectile moves as $t$ changes, so we look for $x ( t )$ and $y ( t )$ : We are shooting a basketball or firing a gun or peacefully watering the lawn, an\u0001d we have to aim in the right direction (not directly at the target). If the hose delivers wa\u0001ter at 10 meters=second; can you reach the car 12 meters away ? ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The usual initial position is $( 0 , 0 )$ : Some flights start hig\u0001her, at $( 0 , h )$ : The initial velocity is $( v _ { 0 } \\cos \\alpha , v _ { 0 } \\sin \\alpha )$ ; where $v _ { 0 }$ is the speed and $\\alpha$ is the angle with the horizontal. The acceleration from gravity is purely vertical: $d ^ { 2 } y / d t ^ { 2 } = - g$ : So the horizontal velocity stays at its initial value. The upward velocity decreases by $- g t$ : ",
+        "page_idx": 536
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd x / d t = v _ { 0 } \\cos \\alpha , d y / d t = v _ { 0 } \\sin \\alpha - g t .\n$$",
+        "text_format": "latex",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The horizontal distance $x ( t )$ is steadily increasing. The height $y ( t )$ increases and then decreases. To find the position, integrate the velocities (for a high start add $h$ to $y$ ): ",
+        "page_idx": 536
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\textbf {  { s } } x ( t ) = ( v _ { 0 } \\cos \\alpha ) t , y ( t ) = ( v _ { 0 } \\sin \\alpha ) t - \\frac { 1 } { 2 } g t ^ { 2 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "This path is a parabola. But it is not written as $y = a x ^ { 2 } + b x + c$ : It could be, if we eliminated $t$ : Then we would lose track of time. The parabola is $y ( x )$ , with no parameter, where we have $x ( t )$ and $y ( t )$ : ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "Basic question: Where does the projectile hit the ground ? For the parabola, we solve $y ( x ) = 0$ : That gives the position $x$ : For the projectile we solve $y ( t ) = 0$ : That gives the time it hits the ground, not the place. If that time is $T$ ; then $x ( T )$ gives the place. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The information is there. It takes two steps instead\u0001of one, but we learn more. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 Water leaves the hose at 10 meters=second (this is $v _ { 0 }$ ). It starts up at the angle $\\alpha$ : Find the time $T$ when $y$ is zero again, and find where the projectile lands. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "Solution The flight ends when $y = ( 1 0 \\sin \\alpha ) T - { \\textstyle { \\frac { 1 } { 2 } } } g T ^ { 2 } = 0$ : The flight time is $T = ( 2 0 \\sin \\alpha ) / g$ : At that time, the horizontal distance is ",
+        "page_idx": 536
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx ( T ) = ( 1 0 \\cos \\alpha ) T = ( 2 0 0 \\cos \\alpha \\sin \\alpha ) / g . \\mathrm { T h i s ~ i s ~ t h e ~ } r a n g e ~ .\n$$",
+        "text_format": "latex",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The projectile (or water from the hose) hits the ground at $x = R$ : To simplify, replace 200 cos $\\alpha$ si\u0005n $\\alpha$ by $1 0 0 \\sin 2 \\alpha$ : Since $g = 9 . 8$ meters= $\\sec ^ { 2 }$ ; we can\u2019t reach the car: ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The range $R = ( 1 0 0 \\sin 2 \\alpha ) / 9 . 8$ is at most 100=9:8: This is less than 12: ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "The range is greatest when sin $2 \\alpha = 1 ( \\alpha \\mathrm { i s } 4 5 ^ { \\circ } )$ . To reach 12 meters we could stand on a ladder (Problem 14). To hit a baseball against air resistance, the best angle is nearer to $3 5 ^ { \\circ }$ : Figure 12.5 shows symmetric parabolas (no air resistance) and unsymmetric flight paths that drop more steeply. ",
+        "page_idx": 536
+    },
+    {
+        "type": "text",
+        "text": "12B The flight time $T$ and the horizontal range $R = x ( T )$ are reached when $y = 0$ , which means $\\begin{array} { r } { ( v _ { 0 } \\sin \\alpha ) T = \\frac { 1 } { 2 } g T ^ { 2 } } \\end{array}$ : $T = ( 2 v _ { 0 } \\sin \\alpha ) / g$ and $R = ( v _ { 0 } \\cos \\alpha ) T = ( v _ { 0 } ^ { 2 } \\sin 2 \\alpha ) / g .$ : ",
+        "page_idx": 536
+    },
+    {
+        "type": "image",
+        "img_path": "images/243227bc3b3a2869b41d3fa308733a196a89653c1dd76eed36c9aafc6d782ba9.jpg",
+        "img_caption": [
+            "Fig. 12.5 Equal range $R$ ; different times T: Baseballs hit at $3 5 ^ { \\circ }$ with increasing $v _ { 0 }$ : The dots are at half-seconds (from The Physics of Baseball by Robert Adair: Harper and Row 1990). "
+        ],
+        "img_footnote": [],
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 What are the correct angles $\\alpha$ for a given range $R$ and given $v _ { 0 }$ ? ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Solution The range is $R = ( v _ { 0 } ^ { 2 } \\sin { 2 \\alpha } ) / g$ : This determines the sine of $2 \\alpha$ \u2014but two angles can have the same sine. We might find $2 \\alpha = 6 0 ^ { \\circ }$ or $1 2 0 ^ { \\circ }$ : The starting angles $\\alpha = 3 0 ^ { \\circ }$ and $\\alpha = 6 0 ^ { \\circ }$ in Figure 12.5 give the same sin $2 \\alpha$ and the same range $R$ : The flight times contain sin $\\alpha$ and ar\u0001e different. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "By calculus, the maximum height occurs when $d y / d t = 0$ : Then $v _ { 0 } \\sin \\alpha = g t$ , which means that $t = ( v _ { 0 } \\sin \\alpha ) / g$ : This is half of the total flight time $T$ \u2014the time going up equals the time coming down. The value of $y$ at this halfway time $\\begin{array} { r } { t = \\frac { 1 } { 2 } T } \\end{array}$ is ",
+        "page_idx": 537
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { \\operatorname* { m a x } } = ( v _ { 0 } \\sin \\alpha ) ( v _ { 0 } \\sin \\alpha ) / g - \\textstyle { \\frac { 1 } { 2 } } g ( v _ { 0 } \\sin \\alpha / g ) ^ { 2 } = ( v _ { 0 } \\sin \\alpha ) ^ { 2 } / 2 g .\n$$",
+        "text_format": "latex",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 If a ski jumper goes 90 meters down a $3 0 ^ { \\circ }$ slope, after taking off at 28 meters=second; find equations for the flight time and the ramp angle $\\alpha$ : ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Solution The jumper lands at the point $x = 9 0 \\cos 3 0 ^ { \\circ }$ ; $y = - 9 0$ sin $3 0 ^ { \\circ }$ (minus sign for obvious reasons). The basic equation (2) is $x = ( 2 8 \\cos \\alpha ) t$ ; $y = ( 2 8 \\sin \\alpha ) t -$ $\\scriptstyle { \\frac { 1 } { 2 } } { \\bar { g t } } ^ { 2 }$ : Those are two equations for $\\alpha$ and $t$ : Note that $t$ is not $T$ , the flight time to $y = 0$ : ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Conclusion The position of a projectile involves three parameters $v _ { 0 } , \\alpha$ , and $t$ : Three pieces of information determine the flight (almost). The reason for the word almost is the presence of sin $\\alpha$ and cos $\\alpha$ : Some flight requirements cannot be met (reaching a car at 12 meters). Other requirements can be met in two ways (when the car is close). The equation sin $\\alpha = c$ is more likely to have no solution or two solutions than exactly one solution. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Watch for the three pieces of information in each problem. When a football starts at $v _ { 0 } = 2 0$ meters=second and hits the ground at $x = 4 0$ meters, the third fact is This is like a lawyer who is asked the fee and says $\\$ 1000$ for three questions. \u201cIsn\u2019t that steep ? \u201d says the client. \u201cYes,\u201d says the lawyer, \u201cnow what\u2019s your last question ? \u201d ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "CYCLOIDS ",
+        "text_level": 1,
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "A projectile\u2019s path is a parabola. To compute it, eliminate $t$ from the equations for $x$ and $y$ : Problem 5 finds $y = a x ^ { 2 } + b x$ , a parabola through the origin. The path of a point on a wheel seems equally simple, but eliminating $t$ is virtually impossible. The cycloid is a curve that really needs and uses a parameter. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "To trace out a cycloid, roll a circle of radius a along the $x$ axis. Watch the point that starts at the bottom of the circle. It comes back to the bottom at $x = 2 \\pi a$ , after a complete turn of the circle. The path in between is shown in Figure 12.6. After a century of looking for the $x y$ equation, a series of great scientists (Galileo, Christopher Wren, Huygens, Bernoulli, even Newton and l\u2019H\u00f4pital) found the right way to study a cycloid\u2014by introducing a parameter. We will call it $\\theta$ ; it could also be t: ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 538
+    },
+    {
+        "type": "image",
+        "img_path": "images/caef0961549c3d40fe41b6105a3fd34fc4ba1e77a605f3843abc4b91319b5ec7.jpg",
+        "img_caption": [
+            "Fig. 12.6 Path of $P$ on a rolling circle is a cycloid. Fastest slide to $\\boldsymbol { \\mathcal { Q } }$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "The parameter is the angle $\\theta$ through\u0001which the circle turns\u0001. (This angle is not at the origin, like $\\theta$ in polar coordinates.) The circle rolls a distance $a \\theta$ , radius times angle, along the $x$ axis. So the center of the circle is at $x = a \\theta$ ; $y = a$ : To account for the segment $C P$ , subtract $a$ sin $\\theta$ from $x$ and $a$ cos $\\theta$ from $y$ : ",
+        "page_idx": 538
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT h e p o i n t P h a s x = a ( \\theta - \\sin \\theta ) a n d y = a ( 1 - \\cos \\theta ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "At $\\theta = 0$ the position is $( 0 , 0 )$ : At $\\theta = 2 \\pi$ the position is $( 2 \\pi a , 0 )$ : In between, the slope of the cycloid comes from the chain rule: ",
+        "page_idx": 538
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d y } { d x } } = { \\frac { d y / d \\theta } { d x / d \\theta } } = { \\frac { a \\sin \\theta } { a ( 1 - \\cos \\theta ) } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "This is infinite at $\\theta = 0$ : The point on the circle starts staraight upward and the cycloid has a cusp. Note how all calculations use the parameter $\\theta$ : We go?qui\u0001ckly: ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Question 1 Find the area under one arch of the cycloid . $\\overset { \\cdot } { \\theta } = 0$ to $\\theta = 2 \\pi$ /: Answer The area is $\\textstyle { \\int y d x } = \\int _ { 0 } ^ { 2 \\pi } a ( 1 - \\cos \\theta ) a ( 1 - \\cos \\theta ) d \\theta . $ : This equals $3 \\pi a ^ { 2 }$ ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Question 2 Find the length of the arch, using $d s = { \\sqrt { ( d x / d \\theta ) ^ { 2 } - ( d y / d \\theta ) ^ { 2 } } } d \\theta .$ Answer $\\begin{array} { r } { \\int d s = \\int _ { 0 } ^ { 2 \\pi } a \\sqrt { ( 1 - \\cos \\theta ) ^ { 2 } - ( \\sin \\theta ) ^ { 2 } } d \\theta = \\int _ { 0 } ^ { 2 \\pi } a \\sqrt { 2 - 2 \\cos \\theta } d \\theta . } \\end{array}$ : Now substitute $1 - \\cos \\theta = 2 \\sin ^ { 2 } { \\frac { 1 } { 2 } } \\theta$ : The square root is $2 \\sin { \\textstyle { \\frac { 1 } { 2 } } \\theta }$ : The length is $8 a$ : ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Question 3 If the cycloid is turned over ( $y$ is dow\u0001nward), find the tiame to slide to the bottom. The slider starts with $v = 0$ at $y = 0$ : ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Answer Kinetic plus potential energy is ${ \\begin{array} { r l } { { \\frac { 1 } { 2 } } m v ^ { 2 } - m g y = 0 } \\end{array} }$ (?it starts from zero and can\u2019t change). So the speed is $v = { \\sqrt { 2 g y } }$ : This is $d s / d t$ and we know $d s$ : ",
+        "page_idx": 538
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { s l i d i n g ~ t i m e } } = \\int d t = \\int { \\frac { d s } { \\sqrt { 2 g y } } } = \\int _ { 0 } ^ { \\pi } { \\frac { a { \\sqrt { 2 - 2 \\cos \\theta } } d \\theta } { \\sqrt { 2 g a ( 1 - \\cos \\theta ) } } } = \\pi { \\sqrt { a / g } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Check dimensions?: $a =$ distancea; $g =$ distance=.ti?mes/2; ${ \\pi } { \\sqrt { a / g } } = { \\mathrm { t i m e } }$ : That is the shortest sliding time for any curve. The cycloid solves the \u201cbrachistochrone problem,\u201d which minimizes the time?down curves from $o$ to $\\boldsymbol { Q }$ (Figure 12.6). You might think a straight path would be quicker\u2014it is certainly shorter. A straight line has the equation $x = \\pi y / 2$ , so the sliding time is ",
+        "page_idx": 538
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int d t = \\int d s / \\sqrt { 2 g y } = \\int _ { 0 } ^ { 2 a } \\sqrt { ( \\pi / 2 ) ^ { 2 } + 1 } d y / \\sqrt { 2 g y } = \\sqrt { \\pi ^ { 2 } + 4 } \\sqrt { a / g } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "This is larger than the cycloid time $\\pi { \\sqrt { a / g } }$ : It is better to start out vertically and pick up speed early, even if the path is longer. ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Instead of publishing his solution, John Bernoulli turned this problem into an international challenge: Prove that the cycloid gives the fastest slide. Most mathematicians couldn\u2019t do it. The problem reached Isaac Newton (this was later in his life). As you would expect, Newton solved it. For some reason he sent back his proof with no name. But when Bernoulli received the answer, he was not fooled for a moment: \u201cI recognize the lion by his claws.\u201d ",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "What is also amazing is a further property of the cycloid: The time to $\\boldsymbol { \\mathcal { Q } }$ is the same if you begin anywhere along the path. Starting from rest at $P$ instead of $o$ , the bottom is reached at the same time. This time Bernoulli got carried away: \u201cYou will be petrified with astonishment when I say...\u201d. ",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "There are other beautiful curves, closely related to the cycloid. For an epicycloid, the circl\u00a0e rolls around the outside of another circle. For a hypocycloid, the rolling circle is inside the fixed circle. The astroid is the special case with radii in the ratio 1 to 4: It is the curved star in Problem 34, where $x = a \\cos ^ { 3 } \\theta$ and $y = a \\sin ^ { 3 } \\theta$ : ",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "The cycloid even solves the old puzzle: What point moves backward when a train starts forward ? The train wheels have a flange that extends below the track, and $d x / d t < 0$ at the bottom of the flange. ",
+        "page_idx": 539
+    }
+]

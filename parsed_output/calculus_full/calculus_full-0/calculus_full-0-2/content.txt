@@ -1,0 +1,120 @@
+0.2 The Changing Slope of  and 
+
+The second of our three examples is  : Now the slope is changing as we move up the curve. The average slope is still  ; but that is not our final goal. We have to answer the crucial questions of differential calculus:
+
+What is the meaning of “slope at a point” and how can we compute it ?
+
+My video lecture on Big Picture: Derivatives also faces those questions. Every student of calculus soon reaches this same problem. What is the meaning of “rate of change” when we are at a single moment in time, and nothing actually changes in that moment ? Good question.
+
+The answers will come in two steps. Algebra produces  ; and then calculus finds  : Those steps  and  are infinitesimally short, so formally we are looking at  : Trying to define  and  and  is not wise, and I won’t do it. The successful plan is to realize that the ratio of  to  is clearly defined, and those two numbers can become very small. If that ratio  approaches a limit, we have a perfect answer:
+
+The distance across, from  to  ; is just  : The distance up is from  to  : Let me show how algebra leads directly to  when  :
+
+Notice that calculation! The “leading terms”  and  cancel. The important term here is  : This “first-order term” is responsible for most of  : The “secondorder term” in this example is  : After we divide by  ; this term is still small. That part  will disappear as the step size  goes to zero.
+
+That limiting process  produces the slope  at a point. The firstorder term survives in  and higher-order terms disappear.
+
+Algebra produced  : In the limit, calculus gave us  : Look at the graph, to see the geometry of those steps. The ratio  is the slope between two points on the graph. The two points come together in the limit. Then  approaches the slope  at a single point.
+
+The color lines connecting points on the first two graphs are called “chords.” They approach the color line on the third graph, which touches at only one point. This is the “tangent line” to the curve. Here is the idea of differential calculus:
+
+To find the equation for this tangent line, return to algebra. Choose any specific value  : Above that position on the  axis, the graph isat height  : The slope of the tangent line at that point of the graph is  : We want the equation for the line through that point with that slope.
+
+At the point where  and  ; this equation becomes  : The equation is satisfied and the point is on the line. Furthermore the slope of the line matches the slope  of the curve. You see that directly if you divide both sides by  :
+
+Tangent line
+
+Let me say this again. The curve  is bending, the tangent line is straight. This line stays as close to the curve as possible, near the point where they touch. The tangent line gives a linear approximation to the nonlinear function  :
+
+I only moved  to the right side of equation (1). Then I used the symbol  for “approximately equal” because the symbol  would be wrong: The curve bends. Important for the future: This bending comes from the second derivative of  :
+
+THE SECOND DERIVATIVE
+
+The first derivative is the slope  : The second derivative is the slope of the slope. By good luck we found the slope of  in the previous section (easy to do, it is just the constant 2). Notice the symbol  for the slope of the slope:
+
+In ordinary language, the first derivative  tells how fast the function  is changing. The second derivative tells whether we are speeding up or slowing down. The example  is certainly speeding up, since the graph is getting steeper. The curve is bending and the tangent line is steepening.
+
+Think also about  on the left side (the negative side) of  : The graph is coming down to zero. Its slope is certainly negative. But the curve is still bending upwards! The algebra agrees with this picture: The slope  is negative on the left side of  ; but the second derivative  is still positive.
+
+An economist or an investor watches all three of those numbers:  tells where the economy is, and  tells which way it is going (short term, close to the tangent line). But it is  that reveals the longer term prediction. I am writing these words near the end of the economic downturn (I hope). I am sorry that  has been negative but happy that  has recently been positive.
+
+DISTANCE AND SPEED AND ACCELERATION
+
+An excellent example of  and  and  comes from driving a car. The function  is the distance traveled. Its rate of change (first derivative) is the speed. The rate of change of the speed (second derivative) is the acceleration. If you are pressing on the gas pedal, all three will be positive. If you are pressing on the brake, the distance and speed are probably still positive but the acceleration is negative: The speed is dropping. If the car is in reverse and you are braking, what then ?
+
+The speed is negative (going backwards) The speed is increasing (less negative) The acceleration is positive (increasing speed).
+
+The video lecture mentions that car makers don’t know calculus. The distance meter on the dashboard does not go back toward zero (in reverse gear it should). The speedometer does not go below zero (it should). There is no meter at all (on my car) for acceleration. Spaceships do have accelerometers, and probably aircraft too.
+
+We often hear that an astronaut or a test pilot is subjected to a high number of  ’s. The ordinary acceleration in free fall is one  ; from the gravity of the Earth. An airplane in a dive and a rocket at takeoff will have a high second derivative—the rocket may be hardly moving but it is accelerating like mad.
+
+One more very useful point about this example of motion. The natural letter to use is not  but t. The distance is a function of time. The slope of a graph is up=across, but now the right ratio is (change of distance) divided by (change in time):
+
+Average speed between  Speed at t itself (instant speed) 
+
+The words “rate of change” and “rate of growth” suggest  . The word “slope” suggests  : But calculus doesn’t worry much about the letters we use. If we graph the distance traveled as a function of time, then the  axis (across) becomes the  axis. And the slope of that graph becomes the speed (velocity is the best word).
+
+Here is something not often seen in calculus books—the second difference. We know the first difference  . It is the change in  : The second difference  is the change in  :
+
+ simplifies to  : We divide by  to approximate the acceleration. In the limit as  , this ratio  becomes the second derivative  .
+
+The slope of  is  : Now I want to compute the slopes of  and  and all succeeding powers  : The rate of increase of  will be found again in Section 2:2: But there are two reasons to discover these special derivatives early:
+
+1.Their pattern is simple: The slope of each power  is    
+2. The next section can then introduce  : This amazing function has 
+
+Of course  fits into this pattern for  : The exponent drops by 1 from  to  . Also  multiplies that lower power to give  :
+
+The slope of  is  . Watch how  appears in  :
+
+Cancel  with  : Then divide by  :
+
+Average slope
+
+When the step length  goes to zero, the limit value  is  : This is 
+
+To establish this pattern for  the only hard part is  : When  was 3; we multiplied this out in equation (5) above. The result will always start with  : We claim that the next term (the “first-order term” in  ) will be  : When we divide this part of  by  ; we have the answer we want—the correct derivative  of  :
+
+How to see that term  Our multiplications showed that  and  are correct for  and 3. Then we can reach  from  :
+
+That multiplication produces  and  , exactly what we want. We can go from each  to the next one in the same way (this is called “induction”). The derivatives of all the powers  are   .
+
+Section 2:2 of the book shows you a slightly different proof of this formula. And the video lecture on the Product Rule explains one more way. Look at  as the product of  times  , and use the rule for the slope of  times  :
+
+With  and  , the slope of  comes out right:
+
+Again we can increase  one step at a time. Soon comes the truly valuable fact that this derivative formula is correct for all powers  . The exponent  can be negative, or a fraction, or any number at all. The slope  is always  .
+
+By combining different powers of  , you know the slope of every “polynomial.” An example is  . Compute  one term at a time, as the Sum Rule allows:
+
+The slope of the slope is  . The fourth derivative is zero!
+
+Function (1) tells us the height  above each point  The problem is to find the “instant slope” at  This slope  is written  It is Function (2) KEY:  approaches  as 
+
+Compute the instant slope  for the function    
+First find the average slope between  and    
+Average    
+Write    
+Subtract  and divide by    
+
+
+0 Highlights of Calculus
+
+Neat Fact: The slope of  is  The graphs show this is reasonable Slope at the start is 1 (to find later)
+
+Sine curve climbing  Cosine curve  Top of sine curve (flat)  Cosine is zero at the first bullet Sine curve falling  Cosine curve  between bullets Bottom of sine curve (flat)  Cosine back to zero at the second bullet
+
+Practice Questions
+
+1. For  ; what is t he average  from  to  ?   
+2. What is the instant slope of  at  What is    
+3.  has  : What is  when    
+4. For  , what is the average slope  from x  to  ?   
+5. What is the instant slope of  at 
+
+6. Suppose the graph of  climbs up to its maximum at    
+Then it goes downward for    
+6A. What is the sign of  for  and then for  ?   
+6B. What is the instant slope at  ?   
+7 If  , write an expression for  at any point  :   
+We see later that this  approaches cos

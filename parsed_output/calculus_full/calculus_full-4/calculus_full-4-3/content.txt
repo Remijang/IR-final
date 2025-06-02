@@ -1,0 +1,124 @@
+4.3 Inverse Functions and Their Derivatives
+
+There is a remarkable special case of the chain rule. It occurs when  and  are “inverse functions.” That idea is expressed by a very short and powerful equation:  : Here is what that means.
+
+Inverse functions: Start with any input, say  : Compute  , say  : Then compute  , and the answer must be 5. What one function does, the inverse function undoes. If  then  : The inverse function  takes the output  back to the input  .
+
+EXAMPLE 1  and  are inverse functions. Starting with  , the function  subtracts 2: That produces  : Then the function  adds 2: That brings back  . To say it directly: The inverse of  is  .
+
+EXAMPLE 2  and  are inverse functions (for temperature). Here  is degrees Fahrenheit and  is degrees Celsius. From  (freezing in Fahrenheit) you find  (freezing in Celsius). The inverse function takes  back to  : Figure 4.4 shows how  matches  .
+
+Notice that  subtracts 32 first. The inverse  adds 32 last. In the same way  multiplies last by  while  multiplies first by  :
+
+The inverse function is written  and pronounced “  inverse.”  is not  :
+
+If the demand  is a function of the price  , then the price is a function of the demand. Those are inverse functions. Their derivatives obey a fundamental rule:  times  equals 1. In Example 2,  is  and  is  :
+
+There is another important point. When  and  are applied in the opposite order, they still come back to the start. First  adds 2, then  subtracts 2: The chain  brings back  is the inverse of  then  is the inverse of  . The relation is completely symmetric, and so is the definition:
+
+Inverse function: If  th 
+
+The loop in the figure goes from  to  to  : The composition  i?s the “identity function.” Instead of a new point  it returns to the original  : This will make the chain rule particularly easy—leading to  :
+
+EXAMPLE 3  and  are inverse functions.
+
+Starting from  we find  : The inverse gives  : The square of  is  : In the opposite direction, the square root of  is  :
+
+Caution That example does not allow  to be negative. The domain of  —the set of numbers with square roots—is restricted to  : This matches the range of  : The outputs  are nonnegative. With domain of  of  , the equation  is possible and true. The nonnegative  goes into  and comes out of  :
+
+In this example  is also nonnegative. You might think we could square anything, but  must come back as the square root of  : So  :
+
+To summarize: The domain of a function matches the range of its inverse. The inputs to  are the outputs from  : The i?nputs to  are the outputs from  :
+
+I  then solving that equation for  gives  :
+
+In practice that is how  is computed: Solve  : This is the reason inverses are important. Every time we solve an equation we are computing a value of  :
+
+Not all equations have one solution. Not all functions have inverses. For each  , the equation  is ¤only allowed to produce one  : That solution is  : If there is a second solution, then  will not be a function—because a function cannot produce two  ’s from the same  :
+
+EXAMPLE 4 There is more than one solution to sin  : Many angles have the same sine. On the interval  , the inverse of  is not a function. Figure 4.5 shows how two  ’s give the same  :
+
+Prevent  from passing  and the sine has an inverse. Write  :
+
+The function  has no inverse if two points  and  give  . Its inverse would have to bring the same  back to  and  : No function can do that;  cannot equal both  and  : There must be only one  for each  :
+
+To be invertible over an interval,  must be steadily increasing or steadily decreasing.
+
+It is time for calculus. Forgive me for this very humble example.
+
+EXAMPLE 5 (ordinary multiplication) The inverse of  is  :
+
+This shows with special clarity the rule for derivatives: The slopes  and  multiply to give 1: This rule holds for all inverse functions, even if their slopes are not constant. It is a crucial application of the chain rule to the derivative of  :
+
+4C (Derivative of inverse function) From  the chain rule gives  : Writing  and  , this rule looks better:
+
+The slope of  times the slope of  equals one.
+
+This is the chain rule with a special feature. Since  , the derivative of both sides is 1: If we know  we now know  : That rule will be tested on a familiar example. In the next section it leads to totally new derivatives.
+
+EXAMPLE 6 The inverse of  is  : We can find  two ways:
+
+The equation  is not ordinary algebra, but it is true. Those derivatives are limits of fractions. The fractions are  and we let  :
+
+Before going to new functions, I want todraw graphs. Figure 4.6 shows  and  : What is special is that the same graphs also show the inverse functions. The inverse of  is  : The pair  is the same for both. That is the whole point of inverse functions—if  then  . Notice that the graphs go steadily up.
+
+The only problem is, the graph of  is on its side. To change the slope from 3 to  , you would have to turn the figure. After that turn there is another problem—the axes don’t point to the right and up. You also have to look in a mirror! (The typesetter refused to print the letters backward. He thinks it’s crazy but it’s not.) To keep thebook in position, and the typesetter in position, we need a better idea.
+
+The graph of  comes from turning the picture across the  line. The  axis becomes horizontal and  goes upward. The point  on the line  goes into the point  on the line  : The eyes see a reflection across the  line (Figure 4.6c). The mathematics sees the same pairs  and  : The special properties of  and  allow us to know two functions—and draw two graphs—at the same time.  The graph of  is the mirror image of the graph of  .
+
+4.3 Inverse Functions and Their Derivatives
+
+EXPONENTIALS AND LOGARITHMS
+
+I would like to add two more examples of inverse functions, because they are so important. Both examples involve the exponential and the logarithm. One is made up of linear pieces that imitate  ; it appeared in Chapter 1: The other is the true function  , which is not yet defined—and it is not going to be defined here. The functions  and  are so overwhelmingly important that they deserve and will get a whole chapter of the book (at least). But you have to see the graphs.
+
+The slopes in the linear model are powers of 2: So are the heights  at the start of each piece. The slopes 1; 2; 4; : : : equal the heights 1; 2; 4; : : : at those special points.
+
+The inverse is a discrete model for the logarithm (to base 2). The logarithm of 1 is 0, because  : The logarithm of 2 is 1, because  : The logarithm of  is the exponent  : Thus the model gives the correct  at the breakpoints  The slopes are  because  :
+
+The model is good, but the real thing is better. The figure on the right shows the true exponential  : At  : : : the heights  are the same as before. But now the height at  is the number  , which is  : The height at  is the tenth root  : : : : The slope at  is no longer 1—it is closer to  : The exact slope is a number  (near .7) that we are not yet prepared to reveal.
+
+The special property of  is that the slope at all points is  : The slope is proportional to the function. The exponential solves  :
+
+Now look at the inverse function—the logarithm. Its graph is the mirror image:
+
+What the exponential does, the logarithm undoes—and vice versa. The logarithm of  is the exponent  . Since the exponential starts with slope  , the logarithm must start with slope  : Check that numerically. The logarithm of 1:07 is near  : The slope is near .  : The beautiful property is that  :
+
+I have to mention that calculus avoids logarithms to base 2: The reason lies in that mysterious number  : It is the “natural logarithm” of 2, which is .693147 : : —and who wants that? Also  enters the slope of  : Then  : The right choice is to use “natural logarithms” throughout. In place of 2, they are based on the special number  :
+
+The derivatives of those functions are sensational—they are saved for Chapter 6.   
+Together with  and sin  and cos  , they are the backbone of calculus.
+
+Note It is almost possible to go directly to Chapter 6: The inverse functions  and  can be done quickly. The reason for including integrals first (Chapter 5) is that they solve differential equations with no guesswork:
+
+Integrals have applications of all kinds, spread through the rest of the book. But do not lose sight of  and  : They solve  —the key to applied calculus.
+
+THE INVERSE OF A CHAIN 
+
+The functions  and  were easy to invert. For  we added 2, and for  we divided by 3: Now the question is: If we create the composite function  , or  , what is its inverse?
+
+Virtually all known functions are created in this way, from chains of simpler functions. The problem is to invert achain using the inverse of each piece. The answer is one of the fundamental rules of mathematics:
+
+4D The inverse of  is a chain of inverses in the opposite order:
+
+ is applied first because  was applied last:  :
+
+That last equation looks like a mess, but it holds the key. In the middle you see  and  : That part of the chain does nothing! The inverse functions cancel, to leave  : But that is  . The whole chain collapses, when  and  are in the correct order—which is opposite to the order of  :
+
+EXAMPLE 7 
+
+First  divides by 3: Then  adds 2: The inverse of  is  :  can be found directly by solving  . A chain of inverses is like writing in prose—we do it without knowing it.
+
+EXAMPLE 8 Invert  by writing  and¥then  :
+
+The inverse adds 2 and takes the square—but not in that order. That would give  , which is wrong. The correct order is  :
+
+The domains and ranges are explained by Figure 4.8. We start with  : Subtracting 2 gives  : Taking the square root gives  : Taking the square brings back  : Adding 2 brings back  —which is in the original domain of  :
+
+EXAMPLE 9 Inverse matrices  (this linear algebra is optional).
+
+Suppose a vector  is multiplied by a square matrix  : The inverse function multiplies by the inverse matrix:  : It is like multiplication by  and  , except that  and  are vectors.
+
+Now suppose a second function multiplies by another matrix  The problem is to recover  from  : The first step is to invert  , because that came last:  : Then the second step multiplies by  and brings back  : The product  inverts the product  . The rule for matrix inverses is like the rule for function inverses—in fact it is a special case.
+
+I had better not wander too far from calculus. The next section introduces the inverses of the sine and cosine and tangent, and finds their derivatives. Remember that the ultimate source is the chain rule.

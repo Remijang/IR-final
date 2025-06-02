@@ -1,0 +1,31 @@
+CHAPTER 15 Vector Calculus
+
+Chapter 14 introduced double and triple integrals. We went from  to  and  . All those integrals add up small pieces, and the limit gives area or volume or mass. What could be more natural than that? I regret to say, after the success of those multiple integrals, that something is missing. It is even more regrettable that we didn’t notice it. The missing piece is nothing less than the Fundamental Theorem of Calculus.
+
+The double integral  equals the area. To compute it, we did not use an antiderivative of 1: At least not consciously. The method was almost trial and error, and the hard part was to find the limits of integration. This chapter goes deeper, to show how the step from a double integral to a single integral is really a new form of the Fundamental Theorem—when it is done right.
+
+Two new ideas are needed early, one pleasant and one not. You will like vector fields. You may not think so highly of line integrals. Those are ordinary single integrals like  ; but they go along curves instead of straight lines. The nice step  becomes the confusing step  : Where  equals the length of the interval,  is the length of the curve. The point is that regions are enclosed by curves, and we have to integrate along them. The Fundamental Theorem in its two-dimensional form (Green’s Theorem) connects  double integral over the region to a single integral along its boundary curve.
+
+The great applications are in science and engineering, where vector fields are so natural. But there are changes in the language. Instead of an antiderivative, we speak about a potential function. Instead of the derivative, we take the “divergence” and “curl.” Instead of area, we compute flux and circulation and work. Examples come first.
+
+15.1 Vector Fields
+
+For an ordinary scalar function, the input is a number  and the output is a number  : For a vector field (or vector function), the input is a point  and the output is a two-dimensional vector  : There is a “field” of vectors, one at every point. In three dimensions the input point is  and the output vector  has three components.
+
+DEFINITION Let  be a region in the  plane. A vector field  assigns to every point  in  a vector  with two components:
+
+This plane vector field involves two functions of two variables. They are the components  and  ; which vary from point to point. A vector has fixed components, a vector field has varying components.
+
+A three-dimensional vector field has components  and  and  : Then the vectors are  :
+
+EXAMPLE 1 The position vector at  is  : Its components are  and  : The vectors grow larger as we leave the origin (Figure 15.1a). Their direction is outward and their length is  : The vector  is boldface, the number  is lightface.
+
+EXAMPLE 2 The vector field  consists of unit vectors  ; pointing outward. We divide  by its length, at every point except the origin. The components of  are  and  : Figure 15.1 shows a third field  ; whose length is  :
+
+EXAMPLE 3 The spin field or rotation field or turning field goes around the origin instead of away from it. The field is S: Its components are  and  :
+
+S is perpendicular to  —their dot product is zero:  : The spin fields  and  have lengths 1 and  :
+
+The unit vector  is  : Notice the blank at  ; where this field is not defined.
+
+EXAMPLE 4 A gradient field starts with an ordinary function  : The components  and  are the partial derivatives  and  : Then the field  is the gradient of  :

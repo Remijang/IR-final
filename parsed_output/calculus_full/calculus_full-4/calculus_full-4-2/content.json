@@ -1,0 +1,328 @@
+[
+    {
+        "type": "text",
+        "text": "4.2 Implicit Differentiation and Related Ra\u0001tes ",
+        "text_level": 1,
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "We start with the equations $x y = 2$ and $y ^ { 5 } + x y = 3$ : As $x$ changes, these $y$ \u2019s will change\u2014to keep $( x , y )$ on the curve. We want to know $d y / d x$ at a typical point. For $x y = 2$ that is no trouble, but the slope of $y ^ { 5 } + x y = 3$ requires a new idea. ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "In the first case, solve for $y = 2 / x$ and take its derivative: $d y / d x = - 2 / x ^ { 2 }$ : The curve is a hyperbola. At $x = 2$ the slope is $- 2 / 4 = - 1 / 2$ : ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "The problem with $y ^ { 5 } + x y = 3$ is that it can\u2019t be solved for $y$ : Galois proved that there is no solution formula for fifth-degree equations. $\\dag$ The function $y ( x )$ cannot be given explicitly. All we have is the implicit definition of $y$ , as a solution to $y ^ { 5 } + x y = 3$ : The point $x = 2$ , $y = 1$ satisfies the equation and lies on the curve, but how to find $d y / d x ?$ ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "This section answers that question. It is a situation that often occurs. Equations like sin $y + \\sin x = 1$ or $y$ sin $y = x$ (maybe even sin $y = x .$ ) are difficult or impossible to solve directly for $y$ : Nevertheless we can find $d y / d x$ at any point. ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "The way out is implicit differentiation. Work with the equation as it stands. Find the $x$ derivative of every term in $y ^ { 5 } + x y = 3$ . That includes the constant term 3; whose derivative is zero. ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The power rule for $y ^ { 5 }$ and the product rule for $x y$ yield ",
+        "page_idx": 222
+    },
+    {
+        "type": "equation",
+        "text": "$$\n5 y ^ { 4 } { \\frac { d y } { d x } } + x { \\frac { d y } { d x } } + y = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "Now substitute the typical point $x = 2$ and $y = 1$ , and solve for $d y / d x$ : ",
+        "page_idx": 222
+    },
+    {
+        "type": "equation",
+        "text": "$$\n5 { \\frac { d y } { d x } } + 2 { \\frac { d y } { d x } } + 1 = 0 \\quad { \\mathrm { p r o d u c e s } } \\quad { \\frac { d y } { d x } } = - { \\frac { 1 } { 7 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "This is implicit differentiation $\\mathbf { \\left( I D \\right) }$ , and you see the idea: Include $d y / d x$ from the chain rule, even if $y$ is not known explicitly as a function of $x$ : ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 s $\\ln y + \\sin x = 1 { \\mathrm { ~ l e a d s ~ t o ~ c o s ~ } } y { \\frac { d y } { d x } } + \\cos x = 0$ ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 $y \\sin y = x \\operatorname { l e a d s } \\operatorname { t o } y \\cos y { \\frac { d y } { d x } } = \\sin y { \\frac { d y } { d x } } = 1$ ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "Knowing the slope makes it easier to draw the curve. We still need points $( x , y )$ that satisfy the equ\u0001ation. Sometimes we can solve for $x$ : Dividing $y ^ { 5 } + x y = 3$ by $y$ gives $x = { 3 / y - \\overset { \\cdot } { y } ^ { 4 } }$ : Now the derivative (the $x$ derivative!) is ",
+        "page_idx": 222
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 = \\left( - { \\frac { 3 } { y ^ { 2 } } } - 4 y ^ { 3 } \\right) { \\frac { d y } { d x } } = - 7 { \\frac { d y } { d x } } { \\mathrm { a t } } y = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "Again $d y / d x = - 1 / 7$ : All these examples confirm the main point of the section: ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "4B (Implicit differentiation) An equation $F ( x , y ) = 0 $ can be differentiated directly by the chain rule, without solving for $y$ in terms of $x$ : ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "The example $x y = 2$ , done implicitly, gives $x d y / d x + y = 0$ : The slope $d y / d x$ is $- y / x$ : That agrees with the explicit slope $- 2 / x ^ { 2 }$ : ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "ID is explained better by examples than theory (maybe everything is). The essential theory can be boiled down to one idea: \u201cGo ahead and differentiate.\u201d ",
+        "page_idx": 222
+    },
+    {
+        "type": "text",
+        "text": "4 Derivatives by the Chain Rule ",
+        "text_level": 1,
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 Find the tangent direction to the circle $x ^ { 2 } + y ^ { 2 } = 2 5$ : ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "We can solve for $y = \\pm { \\sqrt { 2 5 - x ^ { 2 } } }$ , or operate directly on $x ^ { 2 } + y ^ { 2 } = 2 5$ : ",
+        "page_idx": 223
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 x + 2 y { \\frac { d y } { d x } } = 0 \\qquad { \\mathrm { o r } } \\qquad { \\frac { d y } { d x } } = - { \\frac { x } { y } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "Compare with the radius, which has slope $y / x$ : The radius goes across $x$ and up $y$ : T\u0001he tangent goes\u0001across $- y$ and up $x$ \u0001: The slopes m\u0001ultiply to give $( - x / y ) ( y / x ) = - 1$ : ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "To emphasize implicit differentiation, go on to the second derivative. The top of the circle is concave down, so $d ^ { 2 } y / d x ^ { 2 }$ is negative. Use the quotient rule on $- x / y$ : ",
+        "page_idx": 223
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d y } { d x } } = - { \\frac { x } { y } } \\quad { \\mathrm { s o } } \\quad { \\frac { d ^ { 2 } y } { d x ^ { 2 } } } = - { \\frac { y d x / d x - x d y / d x } { y ^ { 2 } } } = - { \\frac { y + ( x ^ { 2 } / y ) } { y ^ { 2 } } } = - { \\frac { y ^ { 2 } + x ^ { 2 } } { y ^ { 3 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "RELATED RATES ",
+        "text_level": 1,
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "There is a group of problems that has never found a perfect place in calculus. They seem to fit here\u2014as applications of the chain rule. The problem is to compute $d f / d t$ , but the odd thing is that we are given another derivative $d g / d t$ : To find $d f / d t$ , we need a relation between $f$ and $g$ : ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "The chain rule is $d f / d t = ( d f / d g ) ( d g / d t )$ : Here the variable is $t$ because that is typical in applications. From the rate of change of $g$ we find the rate of change of $f .$ This is the problem of related rates, and examples will make the point. ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 The radius of a circle is growing by $d r / d t = 7$ : How fast is the circumference growing? Remember that $C = 2 \\pi r$ (this relates $C$ to $r$ ). ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "page_idx": 223
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { d C } { d t } = \\frac { d C } { d r } \\frac { d r } { d t } = ( 2 \\pi ) ( 7 ) = 1 4 \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "That is pretty basic, but its implications are amazing. Suppose you want to put a rope around the earth that any 7-footer can walk under. If the distance is 24; 000 miles, what is the additional length of the rope? Answer: Only $1 4 \\pi$ feet. ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "More realistically, if two lanes on a circular track are separated by 5 feet, how much head start should the outside runner get? Only $1 0 \\pi$ feet. If your speed around a turn is 55 and the car in the next lane goes 56; who wins? See Problem 14: ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "Examples 6\u20138 are from the 1988 Advanced Placement Exams (copyright 1989 by the College Entrance Examination Board). Their questions are carefully prepared. ",
+        "page_idx": 223
+    },
+    {
+        "type": "image",
+        "img_path": "images/30c552765fa43c6b55bd314f326a7a2db3a7e95fc14f86a8086670b43cde8ee8.jpg",
+        "img_caption": [
+            "Fig. 4.3 Rectangle for Example 6, shadow for Example 7, balloon for Example 8. "
+        ],
+        "img_footnote": [],
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 The sides of the rectangle increase in such a way that $d z / d t = 1$ and $d x / d t = 3 d y / d t$ : At the instant when $x = 4$ and $y = 3$ , what is the value of $d x / d t ?$ ",
+        "page_idx": 223
+    },
+    {
+        "type": "text",
+        "text": "Solution The key relation is $x ^ { 2 } + y ^ { 2 } = z ^ { 2 }$ : Take its derivative (implicitly): ",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 x { \\frac { d x } { d t } } + 2 y { \\frac { d y } { d t } } = 2 z { \\frac { d z } { d t } } \\quad { \\mathrm { p r o d u c e s } } \\quad 8 { \\frac { d x } { d t } } + 6 { \\frac { d y } { d t } } = 1 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "We used all information, including $z = 5$ , except for $d x / d t = 3 d y / d t$ : The term $6 d y / d t$ equals $2 d x / d t$ , so we have $1 0 d x / d t = 1 0$ : Answer: $d x / d t = 1$ : ",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 7 A person 2 meters tall walks directly away from a streetlight that is 8 meters above the ground. If the person\u2019s shadow is lengthening at the rate of $4 / 9$ meters per second, at what rate in meters per second is the person walking? ",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "Solution Draw a figure! You must relate the shadow length $s$ to the distance $x$ from the streetlight. The problem gives $d s / d t = 4 / 9$ and asks for $d x / d t$ : ",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { B y ~ s i m i l a r ~ t r i a n g l e s ~ } } { \\frac { x } { 6 } } = { \\frac { s } { 2 } } \\quad { \\mathrm { s o } } \\quad { \\frac { d x } { d t } } = { \\frac { 6 } { 2 } } { \\frac { d s } { d t } } = ( 3 ) \\left( { \\frac { 4 } { 9 } } \\right) = { \\frac { 4 } { 3 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "Note This problem was hard. I drew three figures before catching on to $x$ and $s$ : It is interesting that we never knew $x$ or s or the angle. ",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 8 An observer at point $A$ is watching balloon $B$ as it rises from point $C$ : (The figure is given.) The balloon is rising at a constant rate of 3 meters per second (this means ${ d y } / { d t } = 3 \\$ ) and the observer is 100 meters from point $C$ : ",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "(a) Find the rate of change in $z$ at the in?stant when $y = 5 0$ :\u0004(They want $d z / d t .$ .) ",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz ^ { 2 } = y ^ { 2 } + 1 0 0 ^ { 2 } \\Rightarrow 2 z { \\frac { d z } { d t } } = 2 y { \\frac { d y } { d t } }\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz = { \\sqrt { 5 0 ^ { 2 } + 1 0 0 ^ { 2 } } } = 5 0 { \\sqrt { 5 } } \\Rightarrow { \\frac { d z } { d t } } = { \\frac { 2 \\cdot 5 0 \\cdot 3 } { 2 \\cdot 5 0 { \\sqrt { 5 } } } } = { \\frac { 3 { \\sqrt { 5 } } } { 5 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "(b) Find the rate of change in the area of right triangle $B C A$ when $y = 5 0$ : ",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = { \\frac { 1 } { 2 } } ( 1 0 0 ) ( y ) = 5 0 y \\qquad { \\frac { d A } { d t } } = 5 0 { \\frac { d y } { d t } } = 5 0 \\cdot 3 = 1 5 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "(c) Find the rate of change in $\\theta$ when $y = 5 0$ : (They want d\u0012=dt:) ",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = 5 0 \\Rightarrow \\cos \\theta = { \\frac { 1 0 0 } { 5 0 { \\sqrt { 5 } } } } = { \\frac { 2 } { \\sqrt { 5 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathfrak { n } \\theta = { \\frac { y } { 1 0 0 } } \\Rightarrow \\sec ^ { 2 } \\theta { \\frac { d \\theta } { d t } } = { \\frac { 1 } { 1 0 0 } } { \\frac { d y } { d t } } \\Rightarrow { \\frac { d \\theta } { d t } } = \\left( { \\frac { 2 } { \\sqrt { 5 } } } \\right) ^ { 2 } { \\frac { 3 } { 1 0 0 } } = { \\frac { 3 } { 1 2 5 } }\n$$",
+        "text_format": "latex",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "In all problems I first wrote down a relation from the figure: Then $\\pmb { I }$ took its derivative: Then I substituted known information: (The substitution is after taking the derivative of tan $\\theta = y / 1 0 0$ : If we substitute $y = 5 0$ too soon; the derivative of $5 0 / 1 0 0$ is useless:) ",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "\u201cCandidates are advised to show their work in order to minimize the risk of not receiving credit for it.\u201d $50 \\%$ solved Example 6 and $21 \\%$ solved Example 7. From 12; 000 candidates, the average on Example 8 (free response) was 6:1 out of 9: ",
+        "page_idx": 224
+    },
+    {
+        "type": "text",
+        "text": "4 Derivatives by the Chain Rule ",
+        "text_level": 1,
+        "page_idx": 225
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9 $A$ is a lighthouse and $B C$ is the shoreline (same figure as the balloon). The light at $A$ turns once a second . $( d \\theta / d t = 2 \\pi$ radians =second/: How quickly does the receiving point $B$ move up the shoreline? ",
+        "page_idx": 225
+    },
+    {
+        "type": "text",
+        "text": "Solution The figure shows $y = 1 0 0$ tan $\\theta$ : The speed $d y / d t$ is $1 0 0 \\sec ^ { 2 } \\theta d \\theta / d t$ : This is $2 0 0 \\pi \\sec ^ { 2 } \\theta$ , so $B$ speeds up as sec $\\theta$ increases. ",
+        "page_idx": 225
+    },
+    {
+        "type": "text",
+        "text": "Paradox When $\\theta$ approaches a right angle, sec $\\theta$ approaches infinity. So does $d y / d t$ : $B$ moves faster than light! This contradicts Einstein\u2019s theory of relativity. The paradox is resolved (I hope) in Problem 18: ",
+        "page_idx": 225
+    },
+    {
+        "type": "text",
+        "text": "If you walk around a light at $A$ , your shadow at $B$ seems to go faster than light. Same problem. This speed is impossible\u2014something has been forgotten. ",
+        "page_idx": 225
+    },
+    {
+        "type": "text",
+        "text": "Smaller paradox (not destroying the theory of relativity). The figure shows $y = z \\sin \\theta$ Apparently $d y / d t = ( d z / d t ) \\sin \\theta$ : This is totally wrong. Not only is it wrong, the exact opposite is true: $d z / d t = ( d y / d t ) \\sin \\theta$ : If you can explain that (Problem 15), then ${ \\bf I D }$ and related rates hold no terrors. ",
+        "page_idx": 225
+    }
+]

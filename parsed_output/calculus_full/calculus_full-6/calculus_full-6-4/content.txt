@@ -1,0 +1,101 @@
+6.4 Logarithms
+
+We have given first place to  and a lower place to ln  : In applications that is absolutely correct. But log»arithms have one important» theoretical advantage (plus many applications of their own). The advantage is that the derivative of  is  ; whereas the derivative of  is  : We can’t define  as its own integral, without circular reasoning. But we can and do define  (the natural logarithm) as the integral of the “  power” which is  :
+
+Note the dummy variables, first  then  : Note also the live variables, first  then  : Especially note the lower limit of integration, which is 1 and not 0: The logarithm is the area measured from 1. Therefore ln  at that starting poin¡t—as required.
+
+Earlier chapters integrated all powers except this  power.” The logarithm is that missing integral. The curve in Figure 6.11 has height  —it is a hyperbola. At  the height goes to infinity and the area becomes infinite:  : The minus sign is because the integral goes backward from 1 to 0: The integral does not extend past zero to negative  : We are defining  only for  
+
+With this new approach, ln  has a direct definition.  is an integral (or an area). Its two key properties must follo»w from thi»s definition. »That step is a beautiful application of the theory behind integrals.
+
+Property 1:  : The areas from 1 to  and from  to  combine into a single area (1 to  in the middle figure):
+
+The right side is  ; from definition (1). The first term on the left is  : The problem is to show that the second integral (  to  ) is  :
+
+We need  when  (the lower limit) and  when  (the upper limit). The choice  satisfies these requirements. Substituting  and  a  yields  : Equation (3) gives  ; and equation (2) is   :
+
+6.4 Logarithms
+
+Property 2:  : These are the left and right sides of
+
+This comes from the substitution  : The lower limit  corresponds to  ; and  corresponds to  : The differential  is  : Dividing by  leaves  : Then equation (4) becomes  :
+
+Everything comes logically from the definition as an area. Also definite integrals:
+
+EXAMPLE 1 Comp  EXAMPLE 2 Comput  EXAMPLE 3 Compute  : Solution: ln  : The area from 1 to  is 2:
+
+Remark While working on the theory this is a chance to straighten out old debts. The book has discussed and computed (and even differentiated) the functions  and  and  ; without defining them properly. When the exponent is an irrational number like  ; how do we multiply  by itself  times ? One approach (not taken) is to come closer and closer to  by rational exponents like  : Another approach (taken now) is to determine the number  : : : by its logarithm.  Start with  itself:
+
+When the area in Figure 6.12 reaches 1; the basepoint is e. When the area reaches  ; the basepoint is  : We are constructing the inverse function (which is  ). But how do we know that the area reaches  or 1000 or  at exactly one point ? (The area is 1000 far out at  : The area is  very near zero at  :) To define  we have to know that somewhere the area equals 1!
+
+For a proof in two steps, go back to Figure 6.11c. The area from 1 to 2 is more than  (because  is more than  on that interval of length one). The combined area from 1 to 4 is more than 1: We come to area  before reaching 4: (Actually at  ) Since  is positive, the area is increasing and never comes back to 1:
+
+To double the area we have to square the distance. The logarithm creeps upwards:
+
+The logarithm grows slowly because  grows so fast (and vice versa—they are inverses). Remember that  goes past every power  : Therefore  is passed by every root  : Problems 60 and 61 give two proofs that  approaches zero.
+
+We might compare ln  with  : At  they are close (2:3 versus 3:2). But out at  the comparison is 10 against  ; and ln  loses to  :
+
+APPROXIMATION OF LOGARITHMS
+
+The limiting cases  and ln  are important. More important are logarithms near the starting point ln  : Our question is: What is  for  near zero ? The exact answer is an area. The approximate answer is much simpler. If  (positive or negative) is small, then
+
+The calculator gives ln  : This is close to  : Between 1 and  the ar2ea under the graph of  is nearly a rectangle. Its base is  and its height is 1: So the curved area  is close to the rectangular area  : Figure 6.14 shows how a small triangle is chopped off at the top.
+
+The difference between .0099503 (actual) and .01 (linear approximation) is :0000497: That is predicted almost exactly by the second derivative:  times  times  is  : This is the area of the small triangle!
+
+The remaining mistake of :0000003 is close to  (Problem 65).
+
+May I switch to  ? Its slope starts at  ; so its linear approximation is  : Then  : Twowrongs do make a right:  exactly.
+
+The calculator gives  as 1:0100502 (actual) instead of 1:01 (approximation). The second-order correction is again a small triangle:  : The complete series for  and  are in Sections 10:1 and 6:6 W
+
+DERIVATIVES BASED ON LOGARITHMS
+
+Logarithms turn up as antiderivatives very often. To build up a collection of integrals, we now differentiate ln  by the chain rule.
+
+6.4 Logarithms
+
+The slope of ln  was hard work in Section 6:2: With its new definition (the integral of  ) the work is gone. By the Fundamental Theorem, the slope must be  :
+
+For ln  the derivative comes from the chain rule. The inside function is  ; the outside function is ln : (Keep  to define ln  :) The chain rule gives
+
+Those are worth another look, especially the first. Any reasonable person would expect the slope of  to be  : Not so. The 3 cancels, and  has the same slope as  : (The real reason is that ln  ) The antiderivative of  is not ln  but  ; which is  :
+
+Before moving to integrals, here is a new method for derivatives: logarithmic differentiation or LD. It applies to produ?cts and powers. The product and power rules are always available, but sometimes there is an easier way.
+
+Main idea: The logarithm of a product  is a sum of logarithms. Switching to  ; the sum rule just adds up the derivatives. But there is a catch at the end, as you see in the example.
+
+EXAMPLE 4 Find  if  : Here ln  ln  :
+
+The catch is that last step. Multiplying by  complicates the answer. This can’t be helped—logarithmic differentiation contains no magic. The derivative of  is the same as from the product rule: ln  gives
+
+For  ; with three factors, the sum has three terms:
+
+We multiply  times  (the derivative of ln  ). Do the same for powers:
+
+INTEGRALS BASED ON LOGARITHMS
+
+Now comes an important step. Many integrals produce logarithms. The foremost example is  ; whose integral is ln  : In a certain way that is the only example, but its range is enormously extended by the chain rule. The derivative of  is  ; so the integral goes from  back to ln  :
+
+Try to choose  so that the integral contains  divided by  :
+
+EXAMPLES
+
+Final remark When  is negative, ln  cannot be the integral of  : The logarithm is not defi ned when  : But the integral can go forward by switching to  :
+
+Thus  succeeds when  fails. The forbidden case is  . The integrals  and  ; on the plus and minus sides of zero, can be combined as  : Every integral that gives a logarithm allows  by changing to the absolute value  :
+
+The areas are  and  : The graphs of  and  are below t he  axis. We do not have l|og|arithms of negative numbers, and we will not integrate  from 2»to 6: That cro»sses the forbidden point  ; »with infinite area on both sides.
+
+The ratio  leads to important integrals. When  or  ; we are integra»ting the tange»nt and cotangent. When there i»s a possibility that  ; write the integral as ln  :
+
+Now w»e report on the»secant and cosecant. The integrals of  and  also surrender to an attack by logarithms—based on a crazy|trick:
+
+Here  is in the denominator;  tan  is above it. The integral is ln  : Similarly (10) contains  over  :
+
+6.4 Logarithms
+
+In closing we integrate ln  itself. The derivative of  ln  is ln  : To remove the extra 1; subtract  from the integral:  ln  :
+
+In contrast, the area under  has no elementary formula. Nevertheless it is the key to the greatest approximation in mathematics—the prime number theorem. The area  is approximately the number of primes between a and  . Near  ; about  of the integers are prime.

@@ -1,0 +1,160 @@
+3.7 Newton’s Method (and Chaos)
+
+The equation to be solved is  : Its solution  is the point 1where the graph crosses the  axis. Figure 3.22 shows  and a starting guess  : Our goal is to come as close as possible to  , based on the information  and  .
+
+Section 3.6 reached Newton’s formula for  (the next guess). We now do that directly.
+
+What do we see at  ? The graph has height  and slope  : We know where we are, and which direction the curv1e is going. We don’t know if the curve bends (we don’t have  . The best plan is to follow the tangent line, which uses all the information we have.
+
+Newton replaces  by its linear approximation  tangent approximation):
+
+We want the left side to be zero. The best we can do is to make the right side zero! The tangent line crosses the axis at  , while t1he curve crosses at  : The new guess  comes from  : Dividing by  and solving for  , this is step 1 of Newton’s method:
+
+At this new point, compute  and  —the height and slope at  : They give a new tangent line, which crosses at  every step we want  and we settle for  . After dividing by  , the formula for  is Newton’s method.
+
+3L The tangent line from  crosses the axis at  : Newton’s method  (3) Usually this iteration  converges quickly to  :
+
+Linear approximation involves three numbers. They are  (across) and  (up) and the slope  : If we know two of those numbers, we can estimate the third. It is remarkable to realize that calculus has n1ow used all three calculations—they are the key to this subject:
+
+The desired  is  : Formula .3/ is exactly  :
+
+EXAMPLE 1 (Square roots)  is zero at  and also at  : Newton’s method is a quick way to find square roots—probably built into your calculator. The slope is  , and formula .3/ for the new guess becomes
+
+This simplifies to  : Guess the square root, divide into  ; and average the two numbers. The ancient Babylonians had this same idea, without knowing functions or slopes. They iterated  :1
+
+The Babylonians did exactly the right thing. The slope  is zero at the solution, when  : That makes Newton’s method converge at high speed. The convergence test is  : Newton achieves  —which is superconvergence.
+
+To find  , start the iteration  at  : Then  :
+
+The wrong decimal istwice as far out at each step. The error is squared. Subtracting  from both sides of  gives an error equation which displays that square:
+
+This is  : It explains the speed of Newton’s method.
+
+Remark 1 You can’t start this iteration at  : The first step computes  and blows up. Figure 3.22a shows why—the tangent line at zero is horizontal. It will never cross the axis.
+
+Remark 2 Starting at  , Newton converges to  instead of  : That is the other  : Often it is difficult to predict which  Newton’s method will choose. Around every solution is a “basin of attraction,” but other parts of the basin may be far away. Numerical experiments are needed, with many starts  : Finding basins of attraction was one of the problems that led to fractals.
+
+EXAMPLE 2  to find  without dividing by  .
+
+Here  : Newton uses  : Surprisingly, we don’t divide:
+
+Do these iterations converge ? I will take  and aim for  : Subtracting  from both sides of .7/ changes the iteration into the error equation:
+
+At each step the error is squared. This is terrific if (and only if) you are close to  : Otherwise squaring a large error and multiplying by  is not good:
+
+The algebra in Problem 18 confirms those experiments. There is fast convergence if  : There is divergence if  is negative or  : The tangent line goes to a negative  : After that Figure 3.22 shows a long trip backwards.
+
+In the previous section we drew  : The iteration  converged to the  line, where  : In this section we are drawing  1: Now  is the point on the axis where  :
+
+To repeat: It is  that we aim for. But it is the slope  that decides whether we get there. Example 2 has  : The fixed points are  (our solution) and  (not attr1active). The slopes  are zero (typical Newton) and 2 (typical repeller). The key to Newton’s method is  at the solution:
+
+The examples  and  show fast convergence or failure. In Chapter 13, and in reality, Newton’s method solves much harder equations. Here I am going to choose a third example that came from pure curiosity about what might happen. The results are absolutely amazing. The equation is  :
+
+EXAMPLE 3 What happens to Newton’s method if you ask it to solve  ?
+
+The only solutions are the imaginary numbers  and  : There is no real square root of  : Newton’s method might as well give up. But it has no way to know that! The tangent line still crosses the axis at a new point  , even if the curve  never crosses. Equation (5) still gives the iteration for  :
+
+The  ’s cannot approach  or  (nothing is imaginary). So what do they do ?
+
+The starting guess  is interesting. It is followed by  : Then  divides by zero and blows up. I expected other sequences to go to infinity. But the experiments showed something different (and mystifying). When  is large,  is less than half as large. After  comes  : After much indecision and a long wait, a number near zero eventually appears. Then the next guess divides by that small number and goes far out again. This reminded me of “chaos.”
+
+It is temptingto retreat to ordinary examples, where Newton’s method is a big success. By trying exercises from the book or equations of your own, you will see that the fast convergence to  is very typical. The function can be much more complicated than  (in practice it certainly is). The iteration for  was in the previous section, and the error was squared at every step. If Newton’smethod starts close to  , its convergence is overwhelming. That has to be the main point of this section: Follow the tangent line.
+
+Instead of those good functions, may I stay with this strange example  It is not so predictable, and maybe not so important, but somehow it is more interesting. There is no real solution  , and Newton’s method  bounces around. We will now discover  :
+
+A FORMULA FOR xn
+
+The key is an exercise from trigonometry books. Most of those problems just give practice with sines and cosines, but this one exactly fits  :
+
+In the left equation, the common denominator is  (which is sin  ). The numerator is  (which is cos  ). Replace cosine=sine by cotangent, and the identity says this:
+
+This is the formula. Our points are on the cotangent curve. Figure 3.23 starts from  , and every iteration doubles the angle.
+
+Example A The sequence  matches the cotangents of  , and  : This sequence blows up because  has a division by  :
+
+Example  The sequence  matches the cotangents of  , and  : This sequence cycles forever because 
+
+Example  Start with a large  (a small  ). Then  is about half as large (at  ). Eventually one of the angles  ; : : : hits on a large cotangent, and the  ’s go far out again. This is typical. Examples  and  were special, when  was  or  :
+
+What we have here is chaos. The  ’s can’t converge. They are strongly repelled by all points. They are also extremely sensitive to the value of  : After ten steps  is multiplied by  : The starting angles  and  look close, but now they are different by  . If that were a multiple of  , the cotangents would still be close. In fact the  ’s are 0:6 and 14:
+
+This chaos in mathematics is also seen in nature. The most familiar example is the weather, which is much more delicate than you might think. The headline “Forecasting Pushed Too Far” appeared in Science .1989/. The article said that the snowballing of small errors destroys the forecast after six days. We can’t follow the weather equations for a month—the flight of a plane can change everything. This is a revolutionary idea, that a simple rule can lead to answers that are too sensitive to compute.
+
+We are accustomed to complicated formulas (or no formulas). We are not accustomed to innocent-looking formulas like cot  , which are absolutely hopeless after 100 steps.
+
+CHAOS FROM A PARABOLA
+
+Now I get to tell you about new mathematics. First I will change the iteration   into one that is even simpler. By switching from  to  , each new  turns out to involve only the old  and  :
+
+This is the most famous quadratic iteration in the world. There are books about it, and Problem 28 shows where it comes from. Our formula for  leads to  :
+
+The sine is just as unpredictable as the cotangent, when  gets large. The new thing is to locate this quadratic as the last member (when  ) of the family
+
+Example 2 happened to be the middle member  , converging to  : I would like to give a brief and very optional report on this iteration, for different  .
+
+The general principle i¤s to¤start with a number  between 0 and 1, and compute  It is fascin¤ating¤to watch the behavior change as  increases. You can see it on your own computer. Here we describe some things to look for. All numbers stay between 0 and 1 and they may approach a limit. That happens when  is small:
+
+Those limit points are the solutions of  :T |h¡ey are the fixed points where  : But remember the test for approaching a limit: The slope at  cannot be larger than one. Here  has  : It is easy to check  at the limits predicted above. The hard problem—sometimes impossible— is to predict what happens above  : Our case is  :
+
+The  ’s cannot approach a limit when  . Something has to happen, and there are at least three possibilities:
+
+The  ’s can cycle or fill the whole interval  or approach a Cantor set.
+
+I start with a random number  , take 100 steps, and write down steps 101 to 105:
+
+The first column is converging to a “2-cycle.” It alternates between  and  : Those satisfy  and  : If we look at a double step when  and  are fixed points of the double iteration  : When  increases past 3:45, this cycle becomes unstable.
+
+At that point the period doubles from 2 to 4. With  you see a “4-cycle” in the table—it repeats after four steps. The sequence bounces from :875 to :383 to :827 to :501 and back to :875. This cycle must be attractive or we would not see it. But it also becomes unstable as  increases. Next comes an 8-cycle, which is stable in a little window (you could compute it) around  : The cycles are stable for shorter and shorter intervals of  ’s. Those stability windows are reduced by the Feigenbaum shrinking factor 4:6692. . . . Cycles of length 16 and 32 and 64 can be seen in physical experiments, but they are all unstable before  : What happens then ?
+
+The new and unexpected behavior is between 3:57 and 4: Down each line of Figure 3.24, the computer has plotted the valuesof  to  —omitting the first thousand points to let a stable period (or chaos) become established. No points appeared in the big white wedge. I don’t know why. In the window for period 3, you see only three  ’s. Period 3 is followed by 6; 12; 24; . . . . There is period doubling at the end of every window (including all the windows that are too small to see). You can reproduce this figure by iterating  from any  and plotting the results.
+
+CANTOR SETS AND FRACTALS
+
+I can’t tell what happens at  : There may be a stable cycle of some long period. The  ’s may come close to every point between 0 and 1: A third possibility is to approach a very thin limit set, which looks like the famous Cantor set:
+
+To construct the Cantor set, divide  into three pieces and remove the open interval  : Then remove  and  from what remains. At each step take out the middle thirds . Thepoints  thatare left form the Cantor set.
+
+tAhlel tehnegtehnsdopfoitnhtes  varles ianddthteo seta.nSdothies  (ntPorrobsletmha4s2“).meNaesvuerrethzelreos.”s What is especially striking is its self-similarity: Between 0 and  you see the same Cantor set three times smaller. From 0 to  the Cantor set is there again, scaled down by 9: Every section, when blown up, copies the larger picture.
+
+Fractals That self-similarity is typical of a fractal. There is an infinite sequence of scales. A mathematical snowflake starts with a triangle and adds a bump in the middle of each side. At every step the bumps lengthen the sides by  : The final boundary is self-similar, like an infinitely long coastline.
+
+The period  is the number of  ’s in a cycle.
+
+a=4
+
+The word “fractal” comes from fractional dimension. The snowflake boundary has dimension larger than 1 and smaller than 2: The Cantor set has dimension larger than 0 and smaller than 1: Covering an ordinary line segment with circles of radius  would take  circles. For fractals it takes  circles—and  is the dimension.
+
+Our iteration  has  , at the end of Figure 3.24. The sequence  everywhere and nowhere. Its behavior is chaotic, and statistical tests find no pattern. For all practical purposes the numbers are random.
+
+Think what this means in an experiment (or the stock market). If simple rules produce chaos, there is absolutely no way to predict the results. No measurement can ever be sufficiently accurate. The newspapers report that Pluto’s orbit is chaotic— even though it obeys the law of gravity. The motion is totally unpredictable over long times. I don’t know what that does for astronomy (or astrology).
+
+The most readable book on this subject is Gleick’s best-seller Chaos: Making a New Science. The most dazzling books are The Beauty of Fractals and The Science
+
+3 Applications of the Derivative
+
+of Fractal Images, in which Peitgen and Richter and Saupe show photographs that have been in art museums around the world. The most original books are Mandelbrot’s Fractals and Fractal Geometry. Our cover has a fractal from Figure 13.11.
+
+We return to friendlier problems in which calculus is not helpless.
+
+NEWTON’S METHOD VS. SECANT METHOD: CALCULATOR PROGRAMS
+
+The hard part of Newton’s method is to find  : We need itfor th eslope of the tangent line. But calculus can approximate by  —usingthe values of  already computed at  and  :
+
+The secant method follows the secant line instead of the tangent line:
+
+The secant line connects the two latest points on the graph of  : Its equation is  : Set  to find equation (13) for the new  , where the line crosses t1he axis.
+
+Prediction: Three secant steps are about as good as two Newton steps. Both should give four times as many correct decimals:  : Probably the secant method is also chaotic for  :
+
+These Newton and secant programs are for the TI-81. Place the formula for  in slot  and the formula for  in slot  on the  function edit screen. NAn:sDweirsthpe'prEoNmpTtEwRithFOthRe iMniOtiRalE  .gTmheS:prSogErCamAsNpTause to:dYisÑplTay each ap:prDoxismpati'o'n  ,2thTeOvaBluRe  ', and th:eDdiffserpe'n'ceX  : Pr:esYs1ÑY to:coDnitinsupe'o'r pr'e'ss  and select item  toXbreak. If  ,stphe'prEo-N gra:mDsidispl'a'yXN FXN XN-anXdNthMe1ro'o't  :
+
+PrgmN:NEWTON :Disp''ENTER FOR MORE" PrgmS:SECANT :Y→T  
+: Disp"  :Disp"'ON 2 TO BREAK' : Disp'xΩ= :Y1→Y  
+:Input X :Disp" - : Input X : Disp''ENTERFORMORE'  
+：  : Disp''XNFXN XN-XNM1'' ：  : Disp''XN FXN XN-XNM1 '\`  
+ : Disp X :Y1→T : Disp X  
+:Lbl1 : DispY : Disp'X1=" : DispY  
+:X-Y/Y2→X : Disp D : Input X : Disp D  
+:X-S→D : Pause :Y1→Y : Pause  
+:x→S :If  :Lbl1 :If    
+:Y1→Y :Goto 1 : X-S→D : Goto1: Disp ''ROOT AT' : X→S : Disp "'ROOT AT':Disp X :X-YD/(Y-T)→X : Disp X

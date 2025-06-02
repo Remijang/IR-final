@@ -1,0 +1,93 @@
+4.2 Implicit Differentiation and Related Rates
+
+We start with the equations  and  : As  changes, these  ’s will change—to keep  on the curve. We want to know  at a typical point. For  that is no trouble, but the slope of  requires a new idea.
+
+In the first case, solve for  and take its derivative:  : The curve is a hyperbola. At  the slope is  :
+
+The problem with  is that it can’t be solved for  : Galois proved that there is no solution formula for fifth-degree equations.  The function  cannot be given explicitly. All we have is the implicit definition of  , as a solution to  : The point  ,  satisfies the equation and lies on the curve, but how to find 
+
+This section answers that question. It is a situation that often occurs. Equations like sin  or  sin  (maybe even sin  ) are difficult or impossible to solve directly for  : Nevertheless we can find  at any point.
+
+The way out is implicit differentiation. Work with the equation as it stands. Find the  derivative of every term in  . That includes the constant term 3; whose derivative is zero.
+
+EXAMPLE 1 The power rule for  and the product rule for  yield
+
+Now substitute the typical point  and  , and solve for  :
+
+This is implicit differentiation  , and you see the idea: Include  from the chain rule, even if  is not known explicitly as a function of  :
+
+EXAMPLE 2 s 
+
+EXAMPLE 3 
+
+Knowing the slope makes it easier to draw the curve. We still need points  that satisfy the equation. Sometimes we can solve for  : Dividing  by  gives  : Now the derivative (the  derivative!) is
+
+Again  : All these examples confirm the main point of the section:
+
+4B (Implicit differentiation) An equation  can be differentiated directly by the chain rule, without solving for  in terms of  :
+
+The example  , done implicitly, gives  : The slope  is  : That agrees with the explicit slope  :
+
+ID is explained better by examples than theory (maybe everything is). The essential theory can be boiled down to one idea: “Go ahead and differentiate.”
+
+4 Derivatives by the Chain Rule
+
+EXAMPLE 4 Find the tangent direction to the circle  :
+
+We can solve for  , or operate directly on  :
+
+Compare with the radius, which has slope  : The radius goes across  and up  : The tangent goesacross  and up  : The slopes multiply to give  :
+
+To emphasize implicit differentiation, go on to the second derivative. The top of the circle is concave down, so  is negative. Use the quotient rule on  :
+
+RELATED RATES
+
+There is a group of problems that has never found a perfect place in calculus. They seem to fit here—as applications of the chain rule. The problem is to compute  , but the odd thing is that we are given another derivative  : To find  , we need a relation between  and  :
+
+The chain rule is  : Here the variable is  because that is typical in applications. From the rate of change of  we find the rate of change of  This is the problem of related rates, and examples will make the point.
+
+EXAMPLE 5 The radius of a circle is growing by  : How fast is the circumference growing? Remember that  (this relates  to  ).
+
+Solution
+
+That is pretty basic, but its implications are amazing. Suppose you want to put a rope around the earth that any 7-footer can walk under. If the distance is 24; 000 miles, what is the additional length of the rope? Answer: Only  feet.
+
+More realistically, if two lanes on a circular track are separated by 5 feet, how much head start should the outside runner get? Only  feet. If your speed around a turn is 55 and the car in the next lane goes 56; who wins? See Problem 14:
+
+Examples 6–8 are from the 1988 Advanced Placement Exams (copyright 1989 by the College Entrance Examination Board). Their questions are carefully prepared.
+
+EXAMPLE 6 The sides of the rectangle increase in such a way that  and  : At the instant when  and  , what is the value of 
+
+Solution The key relation is  : Take its derivative (implicitly):
+
+We used all information, including  , except for  : The term  equals  , so we have  : Answer:  :
+
+EXAMPLE 7 A person 2 meters tall walks directly away from a streetlight that is 8 meters above the ground. If the person’s shadow is lengthening at the rate of  meters per second, at what rate in meters per second is the person walking?
+
+Solution Draw a figure! You must relate the shadow length  to the distance  from the streetlight. The problem gives  and asks for  :
+
+Note This problem was hard. I drew three figures before catching on to  and  : It is interesting that we never knew  or s or the angle.
+
+EXAMPLE 8 An observer at point  is watching balloon  as it rises from point  : (The figure is given.) The balloon is rising at a constant rate of 3 meters per second (this means  ) and the observer is 100 meters from point  :
+
+(a) Find the rate of change in  at the in?stant when  :(They want  .)
+
+(b) Find the rate of change in the area of right triangle  when  :
+
+(c) Find the rate of change in  when  : (They want d=dt:)
+
+In all problems I first wrote down a relation from the figure: Then  took its derivative: Then I substituted known information: (The substitution is after taking the derivative of tan  : If we substitute  too soon; the derivative of  is useless:)
+
+“Candidates are advised to show their work in order to minimize the risk of not receiving credit for it.”  solved Example 6 and  solved Example 7. From 12; 000 candidates, the average on Example 8 (free response) was 6:1 out of 9:
+
+4 Derivatives by the Chain Rule
+
+EXAMPLE 9  is a lighthouse and  is the shoreline (same figure as the balloon). The light at  turns once a second .  radians =second/: How quickly does the receiving point  move up the shoreline?
+
+Solution The figure shows  tan  : The speed  is  : This is  , so  speeds up as sec  increases.
+
+Paradox When  approaches a right angle, sec  approaches infinity. So does  :  moves faster than light! This contradicts Einstein’s theory of relativity. The paradox is resolved (I hope) in Problem 18:
+
+If you walk around a light at  , your shadow at  seems to go faster than light. Same problem. This speed is impossible—something has been forgotten.
+
+Smaller paradox (not destroying the theory of relativity). The figure shows  Apparently  : This is totally wrong. Not only is it wrong, the exact opposite is true:  : If you can explain that (Problem 15), then  and related rates hold no terrors.

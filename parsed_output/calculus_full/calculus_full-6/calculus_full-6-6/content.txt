@@ -1,0 +1,207 @@
+6.6 Powers Instead of Exponentials
+
+You may remember our first look at  . It is the special base for which  has slope 1 at  . That led to the great equation of exponential growth: The derivative of  equals  . But our look at the actual number  was very short. It appeared as the limit of  . This seems an unnatural way to write down such an important number.
+
+I want to show how  and  arise naturally. They give discrete growth in finite steps—with applications to compound interest. Loans and life insurance and money market funds use the discrete form of  . (We include extra information about bank rates, hoping this may be useful some day.) The applications in science and engineering are equally important. Scientific computing, like accounting, has difference equations in parallel with differential equations.
+
+Knowing that this section will be full of formulas,  Iwould like to jump ahead and tell you the best one. It is an infinite series for  . What makes the series beautiful is that its derivative is itself.
+
+Start with  . This has  and  at  . But  is zero, not one. Such a simple function doesn’t stand a chance! No polynomial can be its own derivative, because the highest power  drops down to  . The only way is to have no highest power. We are forced to consider infinitely many terms—a power series—to achieve “derivative equals function.”
+
+To produce the derivative  ; we need  : Then  is the derivative of  ; which is the derivative of  : The best way is to write the whole series at once:
+
+This must be the greatest power series ever discovered.Its derivative is itself:
+
+The derivative of each term is the term before it. The integral of each term is the one after it (so  . The approximation  appears in the first two terms. Other properties like  are not so obvious. (Multiplying series is hard but interesting.)  is no teven clear why the sum is 2:718 : : : when  . Somehow  equals  : That is where  will come in.
+
+Notice that  is divided by the product  : This is  factorial.” Thus  is divided by  ; and  is divided by  : The derivative of  is  ; because 5 from the derivative cancels 5 from the factorial. In general  has derivative  Surprisingly 0Š is 1:
+
+Chapter 10 emphasizes that  becomes extremely small as  increases. The infinite series adds up to a finite number—which is  : We turn now to discrete growth, which produces the same series in the limit.
+
+This headline was on page one of the New York Times for May 27; 1990:
+
+213 Years After Loan, Uncle Sam is Dunned
+
+San Antonio, May 26—More than 200 years ago, a wealthy Pennsylvania merchant named Jacob DeHaven lent  450,000$ to the Continental Congress to rescue the troops at Valley Forge. That loan was apparently never repaid.
+
+So Mr. DeHaven’s descendants are taking the United States Government to court to collect what they believe they are owed. The total:  141\ billion.
+
+The thousands of family members scattered around the country say they are not being greedy. “It’s not the money—it’s the principle of the thing,” said Carolyn Cokerham, a DeHaven on her father’s side who lives in San Antonio. “You have to wonder whether there would even be a United States if this man had not made the sacrifice that he did. He gave everything he had.”
+
+The descendants say that they are willing to be flexible about the amount of settlement. But they also note that interest is accumulating at  190$ a second.
+
+“None of these people have any intention of bankrupting the Government,” said Jo Beth Kloecker, a lawyer from Stafford, Texas. Fresh out of law school, Ms. Kloecker accepted the case for less than the customary 30 percent contingency.
+
+It is unclear how many descendants there are. Ms. Kloecker estimates that based on 10 generations with four children in each generation, there could be as many as half a million.
+
+The initial suit was dismissed on the ground that the statute of limitations is six years for a suit against the Federal Government. The family’s appeal asserts that this violates Article 6 of the Constitution, which declares as valid all debts owed by the Government before the Constitution was adopted.
+
+Mr. DeHaven died penniless in 1812: He had no children.
+
+COMPOUND INTEREST
+
+The idea of compound interest can be applied right away. Suppose you invest  1000100 \%\ : You receive  2000$ in all. But if the interest is compounded you receive more:
+
+after six months: Interest of  500\ end of year: New interest of  75050 \%\ total.
+
+The bank multiplied twice by 1:5 (1000 to 1500 to 2250). Compounding quarterly multiplies four times by 1:25 (1 for principal, :25 for interest):
+
+after one quarter the total is  after two quarters the total is  after nine months the total is  after a full year the total is 
+
+Each step multiplies by  ; to add one  thof a year’s interest—still at  :
+
+quarterly conversion:  monthly conversion:  daily conversion: 
+
+Many banks use 360 days in a year, although computers have made that obsolete. Very few banks use minutes (525; 600 per year). Nobody compounds every second .  : But some banks offer continuous compounding. This is the limiting case .  / that produces  :
+
+1. Quick method for  : Take its logarithm. Use  with   :
+
+As  gets smaller, this approximation gets better. The limit is 1: Conclusion:  approaches the number whose logarithm is 1: Sections 6:2 and 6:4 define the same number (which is  ).
+
+2. Slow method for  : Multiply out all theterms. Then let  .
+
+This is a brutal use of the binomial theorem. It involves nothing smart like logarithms, but the result is a fantastic new formula for  :
+
+Binomial theorem for any positive integer  :
+
+Each term in equation(4) approaches a limit as  : Typical terms are
+
+Next comes  : The su8m of all those limits in (4) is our new formula for  :
+
+In summation notation this is  : The factorials give fast convergence:
+
+Those nine terms give an accuracy that was not reached by  compoundings. A limit is still involved (to add up the whole series). You never see e without a limit! It can be defined by derivatives or integrals or powers  or by an infinite series. Something goes to zero or infinity, and care is required.
+
+All terms in equation (4) are below (or equal to) the corresponding terms in (5). The power  approaches e from below. There is a steady increase with  : Faster compounding yields more interest. Continuous compounding at  yields  ; as each term in (4) moves up to its limit in (5).
+
+Remark Change  to  : Now the binomial theorem produces ex:
+
+Please recognize  on the right side! It is the infinite power series in equation (1). The next term is  (  can be positive or negative). This is a final formula for  :
+
+6L The limit of  is  : At  we find  :
+
+The logarithm of that power is   : The power approaches  : To summarize: The quick method proves  by logarithms. The slow method (multiplying out every term) led to the infinite series. Together they show the agreement of all our definitions of  :
+
+DIFFERENCE EQUATIONS VS. DIFFERENTIAL EQUATIONS
+
+We have the chance to see an important part of applied mathematics. This is not a course on differential equations, and it cannot become a course on difference equations. But it is a course with a purpose—we aim to use what we know. Our main application of  was to solve  and  : Now we solve the corresponding difference equations.
+
+Above all, the goal is to see the connections. The purpose of mathematics is to understand and explain patterns. The path from “discrete to continuous” is beautifully illustrated by these equations. Not every class will pursue them to the end, but I cannot fail to show the pattern in a difference equation:
+
+Each step multiplies by the same number  : The starting value  is followed by  , and  : The solution at discrete times  is  :
+
+This formula  replaces the continuous solution  of the differential equation.
+
+A source or sink (birth or death, deposit or withdrawal) is like  :
+
+Each step multiplies by  and adds  : The first outputs are
+
+We saw this pattern for differential equations—every input  becomes a new starting point. It is multiplied by powers of  : Since  enters later than  ; the powers
+
+stop at  : Algebra turns the sum into a clean formula by adding the geometric series:
+
+EXAMPLE 1 Interest at  from annual IRA deposits of  2000y _ { 0 } = 0$ ).
+
+The first deposit is at year  : In a year it is multiplied by  ; because  is added. At the same time a new  goes in. At  the first deposit has been multiplied by  ; the second by 1:08; and there is another  : After year  ;
+
+With  this is 2000: With  it is 2000 .  —two deposits. Notice how  (the interest rate :08) appears in the denominator.
+
+EXAMPLE 2 Approach to steady state when  Compare with  :
+
+With  ; everything has been increasing. That corresponds to  in the differential equation (which is growth). But things die, and moneyis spent, so  can be smaller than one. In that case  approaches zero—the starting balance disappears. WhÑat8happens if there is also a source ? Every year half of the balance  is spent and a new  2000\begin{array} { r } { a = \frac { 1 } { 2 } } \end{array}$ :
+
+The limit as  is an equilibrium point. As  goes to z8ero,  stabilizes to
+
+Why8is 4000 steady ? Because half is lost an8d the new 2000 makes it up again. The iteration is  : Its fixed point iswhere  .
+
+In general the steady equation is  : Solving for  gives  : Compare with the steady differential equation  :
+
+EXAMPLE 3 Demand equals supply when the price is right.
+
+Difference equations are basic to economics. Decisions are madeevery year (by a farmer) or every day (by a bank) or every minute (by the stock market). There are three assumptions:
+
+1. Supply next time depends on price this time:  :   
+2. Demand next time depends on price next time:  :   
+3. Demand next time equals supply next time:  :
+
+Comment on 3: the price sets itself to make  . The demand slope  is negative. The supply slope  isposit8ive. Those l8ines interse8ct at the competitive price, where supply equals demand. To find the difference equation, substitute 1 and 2 into 3:
+
+If the price starts above  ; the difference equation brings it down. If below, the price goes up. When the price is  ; it stays there. This is not news—economic
+
+theory depends on approach to a steady state. But convergence only occurs if  : If supply is less sensitive than demand, the economy is stable.
+
+Blow-up example:  ,  : The difference equation is   : From  the price oscillates as it grows: 
+
+Stable example:  : The price moves from  to  :
+
+Increasing  gives greater stability. That is the effect of price supports. For  (fixed demand regardless of price) the economy is out of control.
+
+THE MATHEMATICS OF FINANCE
+
+It would be a pleasure to make this supply-demand model more realistic—with curves, not straight lines. Stability depends on the slope—calculus enters. But we also have to be realistic about class time. I believe the most practical application is to solve the fundamental problems of finance. Section 6.3 answered six questions about continuous interest. We now answer the same six questions when the annual rate is  and interest is compounded n times a year.
+
+First we compute effective rates, higher than :05 because of compounding:
+
+Now come the six questions. Next to the new answer (discrete) we write the old answer (continuous). One is algebra, the other is calculus. The time period is 20 years, so simple interest on  would produce  That equals  —money doubles in 20 years at  simple interest.
+
+Questions 1 and 2 ask for the future value  and present value  with compound interest n times a year:
+
+Each step multiplies by  : There are   steps in 20 years. Time goes backward in Question 2. We divide by the growth factor instead of multiplying. The future value is greater than the present value (unless the interest rate is negative!). As  the discrete  on the left approaches the continuous  on the right.
+
+Questions 3 and 4 connect  to  (with  at the start). As soon as each  is deposited, it starts growing. Then 
+
+Questions 5 and 6 connect  to  : This time  is zero—there is nothing left at the end. Everything is paid. The deposit  is just enough to allow payments of  : This is an annuity, where the bank earns interest on your  while it pays you   times a year for 20 years). So your deposit in Question 5 is less than  :
+
+Question 6 is the opposite—a loan. At the start you borrow  (instead of giving the bank  ). You canearn interest on it as you pay it back.Therefore your payments have to total more than  : This is the calculation for car loans and mortgages.
+
+5: Annuity: Deposit  to receive  payments of  :
+
+6: Loan: Repay  with  payments of  :
+
+Questions  are the inverses of 1; 3; 5: Notice the pattern: There are three numbers  ; and  : One of them is zero each time. If all three are present, go back to equation (9).
+
+The algebra for these lines is in the exercises.  is not calculus because  is not  . All factors in brackets  are listed in tables, and the banks keep copies. It might also be helpful to know their symbols. If a bank has interest rate  per period over  periods, then in our notation  and  :
+
+To tell the truth, I never knew the last two formulas until writing this book. The mortgage on my home has  monthly payments with interest rate  : In 1972 the present value was  42,000$ amount borrowed. I am now going to see if the bank is honest.
+
+Remark In many loans, the bank computes interest on the amount paid back instead of the amount received. This is called discounting. A loan of  10005 \%\ interest. Normally you receive  1000\ : With discounting you receive  950\ : The true interest rate is higher than  —because the  50\ : In this case the “discount rate” is  :
+
+SCIENTIFIC COMPUTING: DIFFERENTIAL EQUATIONS BY DIFFERENCE EQUATIONS
+
+In biology and business, most events are discrete. In engineering and physics, time and space are continuous. Maybe at some quantum level it’s all the same, but the
+
+equations of physics (starting with Newton’s law  ) are differential equations.   
+The great contribution of calculus is to model the rates of change we see in nature.   
+But to solve that model with a computer, it needs to be made digital and discrete.
+
+These paragraphs work with  : It is the test equation that all analysts use, as soon as a new computing method is proposed. Its solution is  ; starting from  : Here we test Euler’s method (nearly ancient, and not well thought of). He replaced  by  :
+
+The left side is  ; in the limit  : We stop earlier, when 
+
+The problem is to solve (13). Multiplying by  ; the equation is
+
+Each step multiplies by  ; so  steps multiply by  :
+
+This is growth or decay, depending on  : The correct  is growth or decay, depending on  : The question is whether  and  stay close. Can one of them grow while the other decays ? We expect the difference equation to copy  ; but we might be wrong.
+
+A good example is  :Then  and  —the true solution decays. The calculator gives the following answers  for  :
+
+The big step  shows total instability (top row). The numbers blowup when they should decay. The row with  is equally useless (all zeros). In practice the magnitude of  must come down to .10 or .05: For accurate calculations it would have to be even smaller, unless we change to a better difference equation. That is the right thing to do.
+
+Noticethe two reasonable numbers. They are :35 and :36; approÑaching  : They come from  (with  ) and  (with  ). Those have the same clock time  :
+
+The main diagonal of the table is executing  in the case  :
+
+Final question: How quickly are :35 and :36 converging to  With  the error is :02: With  the error is :01: Cutting the time step in half cuts the error in half. We are not keeping enough digits to be sure, but the
+
+error seems close to  : To test that, apply the “quick method” and estimate  from its logarithm:
+
+The clock time is  : Now take exponentials of the far left and right:
+
+The difference between  and  is the last term  : Everything comes down to one question: Is that error the same as  The answer is yes, because  is  : If we keep only one digit, the prediction is perfect!
+
+That took an hour to work out, and I hope it takes longer than  to read. I wanted you to see in use the properties of ln  and  : The exact property ln  ln  came first. In the middle of (15) was the key approximation  ; with  : That  term uses the second derivative (Section 6.4). At the very end came  :
+
+A linear approximation shows convergence:  : A quadratic shows the error: proportional to  : It is like using rectangles for areas, with error proportional to  : This minimal accuracy was enough to define the integral, and here it is enough to define  : It is completely unacceptablefor scientific computing.
+
+The trapezoidal rule, for integrals or for  ; has errors of order  and  : All good software goes further than that. Euler’s first-order method could not predict the weather before it happens.

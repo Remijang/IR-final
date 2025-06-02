@@ -1,0 +1,410 @@
+0.4 Video Summaries and Practice Problems
+
+This section is to help readers who also look at the Highlights of Calculus video lectures. The first five videos are just released on ocw.mit.edu as I write these words. Sections 0.1–0.2–0.3 discussed the content of three lectures in full detail. The summaries and practice problems for the other two will come first in this section:
+
+4. Maximum and Minimum and Second Derivative   
+5. Big Picture of Integrals
+
+That Lecture 5 is a taste of Integral Calculus. A second set of video lectures goes deeper into Differential Calculus—the rules for computing and using derivatives.
+
+This second set is right now with the video editors, to zoom in when I write on the blackboard and zoom out for the big picture. I just borrowed a video camera from MIT’s OpenCourseWare and set it up in an empty room. I am not good at looking at the audience anyway, so it was easier with nobody watching !
+
+I hope it will be helpful to print here the summaries and practice problems that are planned to accompany those videos. Here are the topics:
+
+6. Derivative of the Sine and Cosine 7. Product and Quotient Rules 8. Chain Rule for the Slope of  9. Inverse Functions and Logarithms 10. Growth Rates and Log Graphs 11. Linear Approximation and Newton’s Method 12. Differential Equations of Growth 13. Differential Equations of Motion 14. Power Series and Euler’s Formula 15. Six Functions, Six Rules, Six Theorems
+
+That last lecture summarizes the theory of differential calculus. The other lectures explain the steps. Here are the first lines written for the max-min video.
+
+Maximum and Minimum and Second Derivative
+
+To find the maximum and minimum values of a function    
+Solve  to find points  where slope  zero   
+Test each  for a possible minimum or maximum   
+Example    
+The slope is  at  and    
+At those points  and 
+
+ is a minimum Look at  second derivative  derivative of  : This second derivative is  :  increases Slopegoes from down to up at  The bending is upwards and this  is a minimum  decreases Slope goes from up to down at  The bending is downwards and  is a maximum
+
+Find the maximum of y.x/ D sin x Ccos x using  The slope is zero when cos  at  degrees  radians That point  has  The second derivative is   this is   is bending down  is a maximum
+
+ when the curve bends up  when the curve bends down Direction of bending changes ata point of inflection where  Which  gives the minimum of  You can write  The slope is  at the minimum point  Then  and  Minimum point is the average of 1, 2, 6 Key for max=min word problems is to choose a suitable meaning for 
+
+Practice Quest¡ions
+
+1. Which  gives the minimum of  Solve  :
+
+2. Find  for  : This is  so the parabola bends up.
+
+3. Find the maximum height of  : Solve  :
+
+4. Find  to show that this parabola bends down.
+
+5. For  show that  at  : Find  :  Check max versus min by the sign of  :
+
+6. At a minimum point explain why  an 
+
+7. Bending down  changes to bending up  at a point of : At this point  Does  have such a point ?
+
+8. Suppose  : What is the maximum of  times  ? This question asks for the maximum of  : Find where the slope  is zero. What is  times  ?
+
+The Big Picture of Integrals
+
+Key problem Recover the integral  from its derivative    
+Find the total distance traveled from a record of the speed   
+Find Function  total height knowing Function  slope since the start   
+Simplest way Recognize  as derivative of a known    
+If  then its integral  was  (1)   
+If  2x then y D    
+Integral Calculus is the reverse of Differential Calculus   
+ adds up the whole history of slopes  to find    
+Integral is like sum Derivative is like difference
+
+Sums  Differen Notice cancellation  change in height Divide and multiply the differences by the step size  Sum of  y2 »y1 x is still y2 y0 Now let  Sum changes to integral 
+
+Fundamental Theorem of Calculus  The integral reverses the derivative and brin»gs back  Integration and Differentiation are inverse operations Fundamental Theorem in the opposite order  KEY What is the meaning of an integral  Add up short
+
+Example  shows increasing speed and slope. Find  :   
+Method 1  has the required derivative  (this is the simplest way !)   
+Method 2 The triangle under the graph of  has area  1   
+From 0 to  ; base  and height  and area D t .6t /: 2   
+[Most shapes are more difficult! Area comes from integrating  or    
+Method 3 (fundamental) Add up short time steps each at constant speed   
+In a step  ; the distance is close to    
+ is the starting time for that step and  is the starting speed   
+This is not exact because the speed changes a little within time    
+The total distance becomes exact as  and sum  integral
+
+Fundamental Theorem Area  has the desired derivative  Reason: y is the thin area under  between  and 
+
+ is the base of that thin “rectangle”  is the height of that thin “rectangle”
+
+This height  approaches  as the base 
+
+Practice »Questions
+
+1. What functions  have the constant derivative    
+2. What is the area from 0 to  under the graph of    
+3. From  to 2; find the integral    
+4. What function  has the derivative    
+5. From  to 2; find area  integral  :   
+6. At this instant  , what is 
+
+7. From 0 to  ; the area under the curve  IS NOT  : If  is small, the area must be small. The wrong answer  is not small ! 8. From 0 to  ; the correct area under  is  : The slope  is and now the starting area  is 9. Same for sums. Notice  in  The sum of  becomes the integral of  The area under  from 0 to  becomes  :
+
+0 Highlights of Calculus
+
+Derivative of the Sine and Cosine
+
+This lecture shows that  and  We have to measure the angle  in radians  radians  full 360 degrees All the way around the circle (  radians) Length  when the radius is 1 Part way around the circle (  radians) Length  when the radius is 1
+
+Slope cos x
+
+Slope sin x
+
+Problem:  is not as simple as  Good idea to start at  Show  approaches 1 Draw a right triangle with angle  to see sin 
+
+IDEA  and  will squeeze  as 
+
+To prove  which is tan  Go to a bigger triangle
+
+Triangle area .1/.tan x/ greater than x   
+Circular area (whole circle) D .x/ 2   
+The squeeze cos  tells us that  approaches 1   
+   
+For the slope at other  remember a formula from Ñtrigonometry:   
+ cos  sin    
+We want  Divide that by    
+   
+In the limit  Derivative of sin    
+For  the formula for  leads similarly to 
+
+Practice Questions
+
+1. What is the slope of  at  and at  ?   
+2. What is the slope of  at  and    
+3. The slope of  is 2 sin  cos  : The slope of  is  :   
+Combined, the slope of  is zero. Why is this true ?   
+4. What is the second derivative of  (derivative of the derivative) ?   
+5. At what angle  does  have zero slope ?
+
+6. Here are amazing infinite series for sin  andc os  :     
+7. Take the derivative of the sine series to see the cosine series.   
+8. Take the derivative of the cosine series to see minus the sine series.   
+9. Those series tell us that for small angles sin  and  : With these approximations check that  is close to 1:
+
+0 Highlights of Calculus
+
+Product and Quotient Rules
+
+Goal To find the derivative of  from  and 
+
+Idea Write  by separating  and  That same  is   Exampl  A picture shows the two unshaded pieces of 
+
+Example  Product Rule  The correct derivative of  leads to the correct derivative of 
+
+Quotient Rule If  then  EXAMPLE  This says tha   Write this  as  Now divide that  by  As  we have the Quotient Rule
+
+Practice Questions
+
+1. Product Rule: Find the derivative of  : Simplify and explain.   
+2. Product Rule: Find the derivative of  : Simplify and explain.   
+3. Quotient Rule: Find the derivative of    
+4. Quotient Rule: Show that  sin x has a max¡imum (zero slope) at x D 0:   
+5. Product and Quotient! Find the derivative of    
+6.  has a minimum when  and  The graph is bending up   
+ has a maxiÝmÑum at that point: Show that  and 
+
+Chain Rule for the Slope of 
+
+ Average slope  Instant slope  You MUST change  to  in the final answer
+
+Example of chain    
+Chain rule  dz   
+Replace y by  to get only x D 20.x5/3x4 D 20 x19 dx   
+CHECK  does have dz D 20x19 dx   
+1. Find  for  Write  and  so    
+2. Find  for  Write  and    
+CHECK 
+
+0 Highlights of Calculus
+
+Practice Questions
+
+3. Find  for 
+
+Product rule first Then the Chain rule for each factor
+
+4. Tough challenge: Find the second derivative of 
+
+FIRST DERIV    
+PRODUCT   
+RULE   
+SECOND   
+DERIV   
+Check     
+SECOND    
+DERIV
+
+Inverse Functions and Logarithms
+
+A function assigns an output  to each input  A one-to-one function has different outputs  for different inputs  For the inverse function the input is  and the output is  Example If  then  KEY If y D ax Cb then solve for x D y b inverse function Notice that  and  The chain rule will connect the derivatives of  and 
+
+The great function of calculus is  Its inverse function is the “natural logarithm”  Remember that  is the exponent in  The rule  tells us that  Add logarithms because you add exponents:   (multiply exponent) tells us that 
+
+We can change from base  to base 10: New function  The inverse function is the logarithm to base 10 Call it log:  
+
+Practice Questions
+
+1. What is  if  ?
+
+2. What is  if  Why do we keep  ?
+
+3. Draw a graph of an increasing function  : This has different outputs  for different  : Flip the graph (switch the axes) to see 
+
+4. This graph has the same  from two  . There is no 
+
+5. The natural logarithm of  is  What is  ? 6. The natural logarithm of  is  and also base 10 has log  7. The natural logarithm of  is ? The base 10 logarithm of  is ? 8. I believe that  because we can write  in two ways  and also  : Explain those last steps. 9. Change from base  and base 10 to base 2: Now  means  : What are  and  Why is  ?
+
+0 Highlights of Calculus
+
+Growth Rates and Log Graphs
+
+In order of fast growth as  gets large log x  logarithmic polynomial exponential factorial Choose  so that log  OK to use   Why is  Logarithms are best for big numbers Logarithms are exponents!  log log  is VERY slow Logarithms 3;6;9 300;434;1000 2566;3000 Polynomial growth  Exponential growth  Factorial growth Decay to zero for NEGATIVE powers and exponents x12 D x 2 decays much more slowly than the exponential 
+
+Logarithmic scale shows  equally spaced. NO ZERO!
+
+Question If  are plotted, what would you see ? Answer THEY ARE EQUALLY SPACED TOO!
+
+log-log graphs (log scale up and also across) If  , how to see  and  on the graph ? Plot log  versus log  to get a straight line
+
+ Slope on a log-log graph is the exponent 
+
+For  use semilog (  versus log y is now a line) 
+
+New type of question How quickly does  approach  as    
+The error  will be  What is  ?   
+Usual one-sided  only has    
+Centered difference  has    
+Centered is much better than one-sided  vs    
+IDEA FOR  - One-sided  vs centered    
+PROJECT at  Graph log  vs log  Should see slope 1 or 2
+
+Practice Questions
+
+1. Does  grow faster or slower than  as  gets large ?
+
+2. Does  grow faster or slower than  as  gets large ?
+
+3. Put these in increasing order for large  : 
+
+4. Put these in increasing order for large  : 
+
+5. Describe the log-log graph of  (graph log y vs log x)   
+Why don’t we see  at  on this graph ?   
+What is the slope of the straight line on the log-log graph ?   
+The line crosses the vertical axis when  and    
+Then log  and log    
+The line crosses the horizontal axis when  and    
+Then log  and log    
+6. Draw the semilog graph (a line) of  (graph  versus  )   
+7. That line cross the  axis at which  ? What is the slope ?
+
+0 Highlights of Calculus
+
+Linear Approximation and Newton’s Method
+
+Start at  with known  height and  KEY IDEA f .a/  when  is near 
+
+Tangent line has slope  Solve for  
+
+ means “approximately” curve  line near 
+
+Examples of linear approximation to    
+1.   and  are known at    
+Follow the tangent line    
+ is the linear part of the series for    
+2.  and   and  known at    
+Follow the tangent line  near    
+Take   is approximately 
+
+Newton’s Method (looking for  to nearly solve  D
+
+Go back to   and  are again known
+
+Solve for  when   Newton x Line crossing near curve crossing
+
+Examples of Newton’s Method Solve  1.  gives  and  Tangent line hits 0 at  Newton’s  will be 1:1 2. For a better  ; Newton starts again from that point  Now  The new tangent line has  For this  ;  is very close to 1:2
+
+Practice Questions
+
+1. The graph of  is a straight
+
+At  the height is    
+At  the slope is    
+This graph is t t to the graph of  at    
+For  at  this linear approximation is    
+2.  has  when    
+Instead of the curve  crossing 0, Newton has tangent line  crossing 0   
+ at  has  and    
+Newton’s method gives    
+This Newton  nearly has  : It actually has 
+
+Differential Equations of Growth
+
+  Now include a constant source term  This gives a new equation dyt D cy C s s 0 is saving, s 0 is spending, cy is interest Complete solution  (any  gives a solution)  is a constant solution with  and  and  For that solution, the spending  exactly balances the income  Cho 
+
+Now add a nonlinear term  coming from competition  world population at time  (for example) follows a new equation   birth rate minus death rate “LOGISTIC EQN”  since each person competes with each person To bring back a linear equation set  Then 
+
+ produced our linear equation (no  ) with  not    
+ e ct D old solution with change to c   
+At  we correctly get  CORRECT START   
+As  and  we get  and  c   
+The population  increases along an  -curve approaching s
+
+ has  Inflection point Bending changes from up to down CHECK   World population approaches the limit  billion (FOR THIS MODEL!) Population now  billion Try Google for “World population”
+
+Practice Questions
+
+ has  spending rate not savings rate (with minus sign) 1. The constant solution is  when  In that case interest incom¡e balances spending:  2. The complete solution is  : Why is  3. If you start with  why does wealth approach  ? If you start with  why does wealth approach  ? 4. The complete solution to  is  What solution  starts from  at  5. If  and  P explain why  Pure competition. Show that  as  6. If  D cP sP4 find a linear equation for y D 3
+
+Differential Equations of Motion
+
+A differential equation for  can involve  and also    
+Here are examples with solutions  and  can be any numbers  y and  Solutions    
+Now include  and look for a solution method    
+Cancel  to leave the key equation for     
+The quadratic formula gives  D r r2 km Two solutions  and    
+The differential equation is solved by    
+Special case  has  Then  enters 
+
+EXAMPLE 1  and  and   Solution  Overdamping with no oscillation EXAMPLE  Oscillations from the imaginary part of  Decay from the real part  Solution   leads to  cos  EXAMPLE 3 Change to  Now  (repeated root) Solution  includes the factor 
+
+Practice Questions
+
+1. For  find two solutions  : What are  and  ?   
+2. For  find two solutions  cos  sin  : What is  ?   
+3. For  find two solutions  and (???)   
+4. Put  into  to find  and  (real numbers)   
+5. Put  into  to find  and  (complex numbers)   
+6. Put  into  to find  and  (equal numbers)   
+Now  : The factor  appears when 
+
+0.4 Video Summaries and Practice Problems
+
+Power Series and Euler’s Formula
+
+At  , the  th derivative of  is the number  ! Other derivatives are 0: Multiply the  th derivatives of  by  to match function with series
+
+EXAMPLE 1  All derivatives  at  Match with  ! Taylor Series  Exponential Series
+
+EXAMPLE 2  At  this is  REPEAT si  ODD POWERS 
+
+EXAMPLE 3  produces 1 0 1 0 1 0 1 0 REPEAT  EVEN POWERS 
+
+Imaginary  and then  Find the exponential eix
+
+EULER’S GREAT FORMULA eix D cos x C i sin x
+
+ei D cos  C i sin    
+   
+ei D 1 combines 4 great numbers
+
+Two more examples of Power Series (Taylor Series for  . 
+
+0 Highlights of Calculus
+
+Summary:Six Functions, Six Rules, Six Theorem s
+
+Six Rules of Differential Calculus 1. The derivative of  is  Sum 2. The derivative of  is  Product 3. The derivative of  is  Quotient 4. The derivative of  is  where  Chain 5. The derivative of  is  Inverse 6. When  and  as  , what about  l’Hôpital  if these limits exist. Normally this is 
+
+Fundamental Theorem of Calculus
+
+ df   
+If then derivative of integral s.x/   
+dx   
+If  then integral of derivative    
+Both parts assume that  is a continuous function.   
+All Values Theorem Suppose  is a continuous function for  : Then on that interval,  reaches its maximum value  and its minimum  : And  takes all values between  and  (there are no jumps).   
+Mean Value Theorem If  has a derivative for  then  at some  between a and    
+“At some moment  , instant speed  average speed”   
+Taylor Series Match all the derivatives  at the basepoint     
+Stopping at  leaves the error    
+ is somewhere between  and  ]  is the Mean Value Theorem]
+
+The Taylor series looks best around a D 0 f .x/ D f .n/.0/ xn nD0
+
+Binomial Theorem shows Pascal’s triangle
+
+Those are just the Taylor series for  when 
+
+Divide by  to find the Taylor coefficients  Binomial coefficients
+
+The series stops at  when  Infinite series for other 
+
+0 Highlightsof Calculus
+
+Practice Questions
+
+1. Check that the derivative of  is  :
+
+2. The “sign function” is 
+
+What ramp function  has   is tÑhe integral of  : Why is the derivative  (Infinite spike at  with area 2)
+
+3. (l’HoOpital) What is the limit of  as  What about  ?   
+4. l’HoOpital’s Rule says that  when  : Here  :
+
+5. Derivative is like Difference Integral is like Sum
+
+Difference of sums If  , what is  Sums of differences What is  ？ Those are the Fundamental Theorems of “Difference Calculus”
+
+6. Draw a non-continuous graph for  where your function does NOT reach its maximum value.
+
+7. For  , which in-between point  gives 
+
+8. If your average speed on the Mass Pike is 75, then at some instant your speedometer will read
+
+9. Find three Taylor coefficients  for  (around  ).
+
+10. Find the Taylor  Binomial) series for  around  :

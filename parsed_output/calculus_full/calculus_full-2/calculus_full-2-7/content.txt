@@ -1,0 +1,100 @@
+2.7 Continuous Functions
+
+This will be a brief section. It was originally included with limits, but the combination was too long. We are still concerned with the limit of  as  , but a new number is involved. That number is  , the value of  at  . For a “limit,”  approached  but never reached it—so  was ignored. For a “continuous function,” this final number  must be right.
+
+May I summarize the usual (good) situation as  approaches  ?
+
+1. The nu    
+2. The li   
+3. The li
+
+In such a case,  is continuous at  : These requirements are often written in a single line:  as  : By way of contrast, start with four functions that are not continuous at  :
+
+In Figure 2.20, the first function would be continuous if it had  : But it has  : After changing  toÑthe right value, the problem is gone. The discontinuity is removable. Examples 2; 3; 4 are mÑore important and more serious. There is no “correct” value for  :
+
+2.  step function (jump from 0 to 1 at  )   
+3.  (infinite limit as  )   
+4.  (infinite oscillation as  ).
+
+The graphs show how the limit fails to exist. The step function has a jump discontinuity. It has one-sided limits, from the left and right. It does not have an ordinary (two-sided) limit. The limit from the left  ) is 0: The limit from the right  ) is 1: Another step function is  , which jumps from  to 1:
+
+In the graph of  , the only reasonable limit is  : I cannot go on record as saying that this limit eÑxists. Officially, it doesn’t—but wÑe often write it anyway:  as  : This means that  goes (and stays) above every  as  :
+
+In the same unofficial way we write one-sided limits for  :
+
+Remark  has a “pole” at  : So has  (a double pole). The function  has poles at  and  : In each case the denominator goes to zero and the function goes to  or  : Similarly  has a pole at every multiple of  (where sin  is zero). Except for  these poles are “simple”—the functions are completely smooth at  when we multiply them by  :
+
+ has a double pole, since it needs multiplication by  (not just  ). A ratio of polynomials  has poles where  , provided any common factors like  are removed first.
+
+Jumps and poles are the most basic discontinuities, but others can occur. The fourth graph shows that  has no limit as  : This function does not blow up; the sine never exceeds 1: At  and  and  it equals sin 3 and sin 4 and sin 1000: Those numbers are positive and negative and ( ? ). As  gets small and  gets large, the sine oscillates faster and faster. Its graph won’t stay in a smallÑbox of heightÑ  , no matter how narrow the box.
+
+CONTINUOUS FUNCTIONS
+
+DEFINITION  is “continuous at  if  is defined and  as  : If  is continuous at every point where it is defined, it is a continuous function.
+
+Objection The definition makes  a continuous function! It is not defined at  , so its continuity can’t fail. The logic requires us to accept this, but we don’t have to like it. Certainly there is no  that would make  continuous at  :
+
+It is amazing but true that the definition of “continuous function” is still debated (Mathematics Teacher, May 1989). You see the reason—we speak about a discontinuity of  , and at the same time call it a continuous function. The definition misses the difference between  and  : The function  can be made continuous at all  . Just set  :
+
+We call a function “continuable” if its definition can be extended to all  in a way that makes it continuous. Thus  and  are continuable. The functions  and tan  are not continuable. This suggestion may not end the debate, but I hope it is helpful.
+
+EXAMPLE 1 sin  and cos  and all polynomials  are continuous functions.
+
+EXAMPLE 2 The absolute value  is continuous. Its slope jumps (not continuable).
+
+EXAMPLE 3 Any rational function  is continuous except where  :
+
+EXAMPLE 4 The function that jumps between 1 at fractions and 0 at non-fractions is discontinuous everywhere. There is a fraction between every pair of non-fractions and vice versa. (Somehow there are many more non-fractions.)
+
+EXAMPLE 5 The function  is zero for every  , except that  is not defined. So define it as zero and this function is continuous. But see the next paragraph where  has to be 1:
+
+We could fill the book with proofs of continuity, but usually the situation is clear. “A function is continuous if you can draw its graph without lifting up your pen.” At a jump, or an infinite limit, or an infinite oscillation, there is no way across the discontinuity except to start again on the other side. The function  is continuous for  : It is not continuable for  : The function  equals 1 for every  , except that  is not defined. This time continuity requires  :
+
+The interesting examples are the close ones—we have seen two of them:
+
+EXAMPLE 6 
+
+Those were crucial for the slope of sin  : The first approaches 1 and the second approaches 0: Strictly speaking we must give these functions the correct values (1 and 0) at the limiting point  —which of course we do.
+
+It is important to know what happens when the denominators change to  :
+
+Since  approaches 1, dividing by another  gives a function like  : There is a simple pole. It is anexample of  , in which the zero from  is reached more quickly than the zero from sin  : The “race to zero” proÑduces almost all iÑnteresting problems about limits.
+
+For  and  the race is almost even. Their ratio is 1 to 2:
+
+This answer  will be found again (m1ore easily) by “l’Hôpital’s rule.” Here I emphasize not the answer but the problem. A central question of differential calculus is to know how fast the limit is approached. The speed of approach is exactly the information in the derivative.
+
+These three examples are all continuous at  : The race is controlled by the slope—because  i8s neaØrly  times  :
+
+derivative of sin  is 1  sin  decreases like  derivative of  is 0   decreases faster than  derivative o|f  is  x1=3 decreases more slowly than x:
+
+DIFFERENTIABLE FUNCTIONS
+
+The absolute value  is continuous at  but has no derivative. The same is true for  : Asking for a derivative is more than askÑing for continuÑity. The reason is fundamental, and carries us back to the key definitions:
+
+ 
+
+2 Derivatives
+
+In the first case,  goes to zero (maybe slowly). In the second case,  goes to zero as fast as  (because  has a limit). That requirement is stronger:
+
+2I AtÑa point where  has a derivative, the function must be continuous.   
+But  can be continuous with no derivative.
+
+Proof The limit of  is  : So   :
+
+The continuous function  has no derivative at  , because  blows up. The absolute value  has no derivative because its slope jumps. The remarkable function  is continuous at all points and has a derivative at no points. You can draw its graph without lifting your pen (but not easily—it turns at every point). To most people, it belongs with space-filling curves and unmeasurable areas—in a box of curiosities. Fractals used to go into the same box! They are beauÑtif8ul shapesÑ, with boundaries that have no tangents. The theory of fractals is very alive, for good mathematical reasons, and we touch on it in Section 3:7:
+
+I hope you have a clear idea of these basic definitions of calculus:
+
+1 Limit .  or  / 2 Continuity (at  ) 3 Derivative (at  ).
+
+Those go back to  and  , but it is seldom necessary to follow them so far. In the same way that economics describes many transactions, or history describes many events, a function comes from many values  : A few points may be special, like market crashes or wars or discontinuities. At other points  is the best guide to the function.
+
+This chapter ends with two essential facts about a continuous function on a closed interval. The interval is  , written simply as  At the endpoints  and  we require  to approach  and  :
+
+Extreme Value Property A continuous function on the finite interval  has a maximum value  and a minimum value  : There are points  and  in  where it reaches those values:
+
+Int erm¤ediate Value Property If the number  is between  and  , there is a point  between  and  where  : Thus if  is between the minimum  and the maximum  , there is a point  between  and  where  :
+
+Examples show why we require closed intervals and continuous functions. For  the function  never reaches its minimum (zero). If we close the interval by defining  (discontinu¥ous) the minimum is still not reached. Because of the jump, the intermediate value  is also not reached. The idea of continuity was inescapable, after Cauchy defined the idea of a limit.

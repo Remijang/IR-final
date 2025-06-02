@@ -1,0 +1,140 @@
+14.2 Change to Better Coordinates
+
+You don’t go far with double integrals before wanting to change variables. Many regions simply do not fit with the  and  axes. Two examples are in Figure 14.5, a tilted square and a ring. Those are excellent shapes—in the right coordinates.
+
+We have to be able to answer basic questions like these:
+
+Find the area 
+
+The problem is: What is  We are leaving the  variables where  :
+
+The reason for changing is this: The limits of integration in the  direction are miserable. I don’t know them and I don’t want to know them. For every  we would need the entry point  of the line  constant, and the exit point  : The heights of  and  are the limits on  ; the inner integral. The geometry of the square and ring are totally missed, if we stick rigidly to  and  :
+
+Which coordinates are better ? Any sensible person agrees that the area of the tilted square is 1: “Just turn it and the area is obvious.” But that sensible person may not know the moment or the center of gravity or the moment of inertia. So we actually have to do the turning.
+
+The new coordinates  and  are in Figure 14.6a. The limits of integration on  are 0 and 1: So are?the limits on  : But when you change variables, you don’t just change limits. Two other changes come with new variables:
+
+1. The small area  becomes  :   
+2. The integral of  becomes the integral of
+
+Substituting  in a single integral, we make the same changes. Limits  and  become  and  : Since  is  ;  is  : The purpose of the change is to find an antiderivative. For double integrals, the usual purpose is to improve the limits—but we have to accept the whole package.
+
+To turn the square, there are formulas connecting  and  to  and  : The geometry is clear—rotate axes by  —but it has to be converted into algebra:
+
+Figure 14.6 shows the rotation. As points move, the whole square turns. A good way to remember equation (1) is to follow the corners as they become  and  :
+
+The change from  to  is partly decided by equation (1). It gives  as a function of  and  : We also need  : For a pure rotation the first guess is correct: The area  dy equals the area  : For most changes of variable this is false. The general formula for  comes after the examples.
+
+EXAMPLE 1 Find  and  and  and also  for the tilted square.
+
+Solution The area of the square is  : Notice the good limits. Then
+
+This is the moment around the  axis. The factors  come from  and  : The  coordinate of the center of gravity is
+
+Similarly the integral of  leads to  : The answer is no mystery—the point  is at the center of the square! Substituting  cos  sin  made  look worse, but the limits 0 and 1 are much better.
+
+The moment of inertia  around the  axis is also simplified:
+
+You know this next fact but I will write it anyway: The answers don’t contain u or  : Those are dummy variables like  and  : The answers do contain  ; because the square has turned. (The area is fixed at 1:) The moment of inertia  is the same as equation (3) but with all plus signs.
+
+Question The sum  simplifies to  (a constant). Why no dependence on  ? Answer  equals  : This moment of inertia around  is unchanged by rotation. We are turning the square around one of its corners.
+
+CHANGE TO POLAR COORDINATES
+
+The next change is to  and  : A small area becomes  (definitely not  ). Area always comes from multiplying two lengths, and  is not a length. Figure 14.7 shows the crucial region—a “polar rectangle” cut out by rays and circles. Its area  is found in two ways, both leading to  :
+
+(Approximate) The straight sides have length  : The circular arcs are close to  : The angles are  : So  is close to  :
+
+(Exact) A wedge has area  : The difference between wedges is  :
+
+The exact method places  dead center (see figure). The approximation says: Forget the change in  as you move outward. Keep only the first-order terms.
+
+A third method is coming, which requires no picture and no geometry. Calculus always has a third method! The change of variables  cos  sin  will go into a general formula for  ; and out will come the area  :
+
+EXAMPLE 2 Find the area and center of gravity of the ring. Also find  :
+
+Solution The limits on  are 4 and 5: The limits on  are 0 and  : Polar coordinates are perfect for a ring. Compared with limits like  ; the change to  is a small price to pay:
+
+The  integral is  (full circle). Actually the ring is a giant polar rectangle. We could have used the exact formula  ; with  and  : When the radius  is centered at 4:5; the product  is  as above.
+
+Since the ring is symmetric around  ; the integral of  must be zero:
+
+Notice  cos  from  —the other  is from  : The moment of inertia is
+
+This  integral is  not  ; because the average of  is  not 1:
+
+For reference here are the moments of inertia when the density is 
+
+EXAMPLE 3 Find masses and moments for semicircular plates:  and  :
+
+Solution The semicircles in Figure 14.8 have  :The angle goes from 0 to  (the upper half-circle). Polar coordinates are best. The mass is the integral of the density  :
+
+The first mass  equals the area (because  ). The second mass  is smaller (because  ). Integrating  is the same as finding a volume when the height is  (part of a cylinder). Integrating  is the same as finding a volume when the height is  (part of a cone). Volumes of cones have the extra factor  : The center of gravity involves the moment  : The distance from the  axis is  ; the mass of a small piece is  ; integrate to add mass times distance. Polar coordinates are still best, with  : Again  and  :
+
+The height of the center of gravity is  moment divided by mass:
+
+Question Compare  for  and  other positive constants and  : Answer Any constant  gives  : Since  is dense at  ;  drops to  :
+
+Question How is  related to the “average” of  in the semicircle ? Answer They are identical. This is the point of  : Divide the integral by the area:
+
+The integral of  is divided by the integral of 1 (the area). In one dimension  was divided by  (the length  . That gave the average value of  in Section 5:6: Equation (5) is the same idea for  :
+
+EXAMPLE 4 Compute  from   :
+
+ is the area under a “bell-shaped curve”—see Figure 14.9. This is the most important definite integral in the study of probability. It is difficult because a factor  is not present. Int»eg8rating»  gives  ; but»integr»at8ing  is impossible— except approximately by a computer. How can we hope to show that  is exactly  ? The trick ist8o go fro8m an area integral  to a volume integral  : This is unusual (and hard to like), but the end justifies the means:
+
+The double integrals cover the whole plane. The  comes from  ; and?the key factor  appears in polar coordinates. It is now possible to substitute  : The  integral is  : The  integral is  : The double integral is  : Therefore  and the single integral is  :
+
+EXAMPLE 5? Apply Example 4 to»th8e “normal distributi»on8” p.x/ D e x2=2= 2:
+
+Section 8:4 discussed probability. It8emphasized the import8ance of this particular  : At that time we could not verify that  : Now we can:
+
+Question Why include the 2’s in  ? The integral of  also equals 1: Answer With the 2’s the “variance” is  : This is a convenient number.
+
+CHANGE TO OTHER COORDINATES
+
+A third method was promised, to find  without a picture and without geometry. The method works directly from  cos  and  sin  : It also finds the 1 in  ; after a rotation of axes. Most important, this new method finds the factor  in the area  ; for any change of variables. The change is from  to  :
+
+For single integrals, the “stretching factor”  between the original  and the new  is (not surprisingly) the ratio  : Where we have  ; we write  : Where we have  ; we write  : That was the idea of substitutions—the main way to simplify integrals.
+
+For double integrals the stretching factor appears in the area:  becomes  : The old and new variables are related by  and  : The point with coordinates  and  comes from the point with coordinates  and  : A whole region  ; full of points in the  plane, comes from the region  full of corresponding points in the  plane. A small piece with area  comes from a small piece with area  : The formula for  is a two-dimensional version of  :
+
+14B The str»e»tching factor for area»i»s the 2 by 2 Jacobian determinant  :
+
+An integral over  in the  plane becBomes an  iBntegral over  in the  plane:
+
+The determinant  is often written  ; as a reminder that this stretching factor is like  : We require  : That keeps the stretching and shrinking under control.
+
+You naturally ask: Why take the absolute value  in equation (9) ? Good question—it wasn’t done for single integrals. The reason is in the limits of integration. The single integral  is  after changing  to  : We keep the minus sign and allow single integrals to run back ward . Double integrals could too, but normally they go left to right Band  BdownBto u Bp. We use the absolute value  and run forward.
+
+EXAMPLE 6 Polar coordinates have  cos  cos  and  sin  :
+
+EXAMPLE 7 Find  for the linear change to  and  :
+
+Why make this simple change, in which  are all constant ? It straightens parallelograms into squares (and rotatesthose squares). Figure 14.10 is typical.
+
+Common sense indicated  for pure rotation—no change in area. Now  comes from equations (1) and (11), because  is  :
+
+In practice,  rectangles generally go into  rectangles. The sides can be curved (as in polar rectangles) but the angles are often  : The change is “orthogonal.” The next example has angles that are not  ; and  still gives the answer.
+
+EXAMPLE 8 FindBthe  aBrea oBf  iBn Figure 14.10. Also compute  :
+
+Solution The figure shows  and  : The determinant is
+
+The area of the  parallelogram becomes an integral over the  square:
+
+The square has area 9; the parallelogram has area 3: I don’t know if  is a stretching factor or a shrinking factor. The other integral  is
+
+Main point: The change to  and  makes the limits ea sBy (j uBst 0 anBd 3 )B.
+
+Why is the stretching factor  a determinant ? With straight sides, this goes back to Section 11:3 on vectors. The area of a parallelogram is a determinant. Here the sides are curved, but that only produces  and  ; which we ignore.
+
+A change  gives one side of Figure 14.11—it is  : Side 2 is  : The curving comes from second derivatives. The area (the cross product of the sides) is  :
+
+Final remark I can’t resist looking at the change in the reverse direction. Now the rectangle is in  and the paBral lBelograBm i sB in  : In all formulas, exchange  for  and  for  :
+
+This is exactly like  : It is the derivative of the inverse function. The product of slopes is 1—stBretc hB out,Bshri Bnk backB. F rBom  to B  we have 2 by 2 matrices, and the identity matrix  takes the place of 1:
+
+The first row times the first column is   : The first row times the second column is   : The matrices are inverses of each other. The determinants of a matrix and its inverse obey our rule: old  times new  : Those  ’s cannot be zero, just as  and  were not zero. (Inverse functions increase steadily or decrease steadily.)
+
+In two dimensions, an area  goes to  and comes back to  :

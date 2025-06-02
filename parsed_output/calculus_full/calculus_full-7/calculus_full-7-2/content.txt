@@ -1,0 +1,130 @@
+7.2 Trigonometric Integrals
+
+The next section will put old integrals into new forms. For example  will become  . That looks simpler because the square root is gone. But still  has to be integrated. This brief section integrates any product of sines and cosines and secants and tangents.
+
+There are two methods to choose from. One uses integration by parts, the other is based on trigonometric identities. Both methods try to make the integral easy (but that may take time). We follow convention by changing the letter  back to  .
+
+Notice that  cos  is easy to integrate. It is  :This is the goal in Exam»ple 1—to separate ou»t cos  : It becomes  ; and sin  is  :
+
+EXAMPLE 1  (the exponent 3 is odd)
+
+Solution Keep cos  as  : Convert the other  to  :
+
+EXAMPLE 2  (the exponent 5 is odd)
+
+Solution Keep sin  and convert everythin gelse to cosines. The conversion is always based on  :
+
+Now cos  is  and  is  : We have  :
+
+General method for  ; when m or n is odd
+
+If  is odd, separate out a single cos  : That leaves an even number of cosines.
+
+Convert them to sines. Then cos  is  and the sines are  ’s.   
+If  is odd, separate out a single sin  as  : Convert the rest to cosines.   
+If  and  are both odd, use either method.   
+If  and  are both even, a new method is needed. Here are two examples.
+
+EXAMPLE 3 
+
+There are two good ways to integrate  ; but substitution is not one of them. If  equals cos  ; then  is not here. The successful methods are integration by parts and double-angle formulas. Both answers are in equation (2) below—I don’t see either one as the obvious winner.
+
+Integrating  by parts was Example 3 of Section 7.1. The other approach, by double angles, is based on these formulas from trigonometry:
+
+The integral of cos  is  : So these formulas can be integrated directly. They give the only integrals you should memorize—either the integration by parts form, or the result from these double angles:
+
+EXAMPLE 4 
+
+Changing  to  gets us nowhere. All exponents stay even. Substituting  won’t simplify  ; without  : Integrate by parts or switch to  :
+
+First solution Integrate by parts. Take  and  :
+
+The last integral has even powers  and  : This looks like no progress. Replacing  by  produces  on the right-hand side also:
+
+Always even powers in the integrals. But now move 3  to the left side:
+
+Partial success—the problem is reduced from  to  : Still an even power, but a lower power. The integral of  is already known. Use it in equation (4):
+
+Second solution Substitute the double-angle formula  cos  :
+
+Certainly  : That leaves the cosine squared:
+
+The integral of  using double angles is
+
+That solution looks different from equation (5), but it can’t be. There all angles were  ; here we have  and  : We went from  to  to cos  ; which was integrated immediately. The powers were cut in half as the angle was doubled.
+
+Double-angle method for  ; when m and n are even:
+
+Replace  by  and  by  : The exponents drop to  and  : If those are even, repeat the idea (  goes to  ). If  or  is odd, switch to the “general method” using substitution. With an odd power, we have  :
+
+EXAMPLE 5 (Double angle) 
+
+This leaves  in the last integral. That is familiar but not necessarily easy. We can look it up (safest) or remember it (quickest) or use double angles again:
+
+Conclusion Every  can be integrated. This includes negative  and  — see tangents and secants below. Symbolic codes like MACSYMA or Mathematica give the answer directly. Do they use double angles or integration by parts ?
+
+You may prefer the answer from integration by parts (I usually do). It avoids  and  : But it makes no sense to go through every step every time. Either a computer does the algebra, or we use a “reduction formula” from  to  :
+
+For  this is  —the integral to learn. For  the reduction produces  : The integral of  goes to  : There are similar reduction formulas for  and also for  : I don’t see a good reason to memorize them.
+
+INTEGRALS WITH ANGLES px AND qx
+
+Instead of  times  ; suppose you have sin  times cos  : How do you integrate ? Separately a sine and cosine are easy. The new question is the integral of the product:
+
+EXAMPLE 6 Find  sin 8x cos 6x dx: More generally find  sin  cos 
+
+This is not for the sake of making up new problems. I believe these are the most important definite integrals in this chapter (  and  are  . They may be the most important in all of mathematics, especially because the question has such a beautiful answer. The integrals are zero. On that fact rests the success of Fourier series, and the whole industry of signal processing.
+
+One approach (the slow way) is to replace sin  and cos  by powers of cosines. That involves  : The integration is not fun. A better approach, which applies to all angles  and  ; is to use the identity
+
+Thus sin  cos  : Separated like that, sines are easy to integrate:
+
+Since cos  is periodic, it has the same value at 0 and  : Subtraction gives zero. The same is true for cos  : The integral of sine times cosine is always zero over a complete period (like 0 to  ).
+
+What about sin  and cos  cos  ? Their integrals are also zero, provided  is different from  . When  we have a perfect square. There is no negative area to cancel the positive area. The integral of  or  is  :
+
+EXAMPLE 7
+
+With two sines or two cosines (instead of sine times cosine), we go back to the addition formulas of Section 1.5. Problem 24 derives these formulas:
+
+With  and  ; we get cos  and cos  : Their definite integrals are zero. With  and  ; we get cos  and cos  (which is 1). Formulas (9) and (10)
+
+also give a factor  : The integral of  is  :
+
+The answer zero is memorable. The answer  appears constantly in Fourier series. No ordinary numbers are seen in these integrals. The case  brings back  :
+
+SECANTS AND TANGENTS
+
+When we allow negative powers  |and  ;|the main fact remains true. All integrals  can be expressed by known functions. The novelty for negative powers is that logarithms appear. That happens right at the start, for sin  and for  (tangent and secant):
+
+For higher powers there is one key identity:  : That is the old identity  in disguise (just divide by  ). We switch tangents to secants just as we switched sines to cosines. Since  and  sec  tan  ; nothing else comes in.
+
+EXAMPLE 9
+
+The first integral on the right is  ; with  : The last integral is  : The complete answer is  : By taking absolute values, a negative cosine is also allowed. Avoid cos  :
+
+Same idea—separate off .tan  as  : Then integrate  ; which is  : This leaves the integral on the right, with the exponent lowered by 2: Every power .tan  is eventually reduced to Example 8 or 9.
+
+EXAMPLE 11 
+
+This was integration by parts, with  and  : In the integral on the right, replace tan  by  (this identity is basic):
+
+Bring  to the left side. That reduces theproblem from  to sec  :
+
+I believe those examples make the point—trigonometric integrals are computable. Every product t  can be reduced to one of these examples. If  is even we substitute  : If  is odd we set  : If  is even and  is odd, use a reduction formula (and always use  )
+
+7 Techniques of Integration
+
+I mention very briefly a completely different substitution  : This seems to all students and instructors (quite correctly) to come out of the blue:
+
+The  -integral can involve sums as well as products—not only  but also  : (No square roots.) The  -integral is a ratio of ordinary polynomials. It is done by partial fractions.
+
+Application of r sec x dx to distance on a map (Mercator projection)
+
+The strange integral  has an everyday application. It measures the distance from the equator to latitude  ; on a Mercator map of the world.
+
+All mapmakers face the impossibility of putting part of a sphere onto a flat page. You can’t preserve distances, when an orange peel is flattened. But angles can be preserved, and Mercator found a way to do it. His map came before Newton and Leibniz. Amazingly, and accidentally, somebody matched distances on the map with a table of logarithms—and discovered  before calculus. You would not be surprised to meet sin  ; but who would recognize  ?
+
+The map starts with strips at all latitudes  : The heights are  ; the lengths are proportional to  : We stretch the strips by  —then Figure 7.3c lines up evenly on the page. When  is also divided by cos  ; angles are preserved—a small square becomes a bigger square. The distance north adds up the strip heights  : This gives  :
+
+The distance to the North Pole is infinite! Close to the Pole, maps are stretched totally out of shape. When sailors wanted to go from  to  at a constant angle with the North Star, they looked on Mercator’s map to find the angle.

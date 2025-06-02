@@ -1,0 +1,169 @@
+15.3 Green’s Theorem
+
+This section contains the Fundamental Theorem of Calculus, extended to two dimensions. That sounds important and it is. The formula was discovered 150 years after Newton and Leibniz, by an ordinary mortal named George Green. His theorem connects a double integral over a region  to a line integral along its boundary  :
+
+The integral of  equals  : This connects a one-dimensional integral to a zero-dimensional integral. The boundary only contains two points  and  ! The answer  is some kind of a “point integral.” It is this absolutely crucial idea—to integrate a derivative from information at the boundary—that Green’s Theorem extends into two dimensions.
+
+There are two important integrals around  : The work is   : The  is  (notice the switch). The first is for a force field, the second is for a flow field. The tangent vector  turns  clockwise to become the normal vector  : Green’s Theorem handles both, in two dimensions. In three dimensions they split into the Divergence Theorem (15.5) and Stokes’ Theorem (15.6).
+
+Green’s Theorem applies to “smooth” functions  and  ; with continuous first derivatives in a region slightly bigger than  : Then all integrals are well defined.  and  will have a definite and specific meaning in each application—to electricity or magnetism or fluid flow or mechanics. The purpose of a theorem is to capture the central ideas once and for all. We do that now, and the applications follow.
+
+15E Green’s Theorem Suppose the region  is bounded by the simple closed piecewise smooth curve  : Then an integral over  equals a line integral around  :
+
+A curve is “simple” if it doesn’t cross itself (figure 8’s are excluded). It is “closed” if its endpoint  is the same as its starting point  : This is indicated by the closed circle on the integral sign. The curve is “smooth” if its tangent  changes continuously— the word “piecewise” allows a finite number of corners. Fractals are not allowed, but all reasonable curves are acceptable (later we discuss figure 8’s and rings). First comes an understanding of the formula, by testing it on special cases.
+
+Special case  :  and  : Green’s Theorem with  becomes
+
+The integrals look equal, because the inner integral of  is  : Then both integrals have  —but we need to go carefully. The area of a  layer of  is  times the difference in  (the length of the strip). The line integral in Figure 15.8 agrees. It has an upward  times  (at the right) plus a downward  times  (at the left). The integrals add up the strips, to give the total area.
+
+Special case 2:  and  and 
+
+Now Green’s formula has a minus sign, because the line integral is counterclockwise. The top of each slice has  (going left) and the bottom has  (going right). Then  at the top and bottom combine to give minus the area of the slice in Figure 15.8b.
+
+Special case 3:  : The  ’s to the right cancel the  ’s to the left (the curve is closed). With  and  ; Green’s Theorem is  :
+
+Most important case:  is a gradient field. It has a potential function  : Green’s Theorem is  ; because  : This is test  :
+
+The cross derivatives always satisfy  : That is why gradient fields pass test  :
+
+When the double integral is zero, the lineintegral is also zero:  0: ThBe w oBrk is zBero.  BThe field is conservative! This last step in  A will be complete when Green’s Theorem is proved.
+
+Conservative examples are¾  a¾nd  : Area is not involved.
+
+Remark The special cases  and  led to the area of  : As long as  ; the double integral becomes  : This gives a way to compute area by a line integral.
+
+EXAMPLE 1 The area of the triangle in Figure 15.9 is 2: Check Green’s Theorem. The last area formula in (4) uses  ; half the spin field.  and  yield  : On one side of Green’s Theorem is  area of triangle. On the other side, the line integral has three pieces.
+
+15.3 Green’s Theorem
+
+Two pieces are zero:  on the sides where  and  : The sloping side  has  : The line integral agrees with the area, confirming Green’s Theorem:
+
+EXAMPLE 2 The area of an ellipse is ab when the semiaxes have lengths a and  .
+
+This is a classical example, which all authors like. The points on the ellipse are  ; as  goes from 0 to  : (The ellipse has  1:/ By computing the boundary integral, we discover the area inside. Note that the differential  is just ab d t :
+
+The line integral is  : This a Brea  Bab is  ; for a circle with  :
+
+Proof of Green’s Theorem: In our special cases, the two sides of the formula were equal. We now show that they are always equal. The proof uses the Fundamental Theorem to integrate  and  : Frankly speaking, this one-dimensional theorem is all we have to work with—since we don’t know  and  :¾
+
+The proof is a stepup in mathematics, to work with symbols  and  instead of specific functions. The iBntegral in (6) below has no numbers. The idea iBs to deal with  and  in two separate parts, which added together give Green’s Theorem:
+
+Start with a “vBery simple” region (Figure 15.10a). Its top is given by  and its bottom by  : In the double integral, integrate  first with respect to  : The inner integral is
+
+The Fundamental Theorem (in the  variable) gives this answer that depends on  : If we knew  and  and  ; we could do the outer integral—from  to  : But we have to leave it and go to the other side of Green’s Theorem—the line integral:
+
+Compare (7) with (6). The integral of  is the same for both. The integral of  has a minus sign from (6). In .7/ it has a plus sign but the integral is from  to  : So life is good.
+
+The part for  uses the same idea. Now the  integral comes first, because  is practically asking to be integrated—from  at the left to   at the right. We reach  : Then the  integral matches  and completes (5). Adding the two parts of (5) proves Green’s Theorem.
+
+Finally we discuss the shape of  : The broken ring in Figure 15.10 is not “very simple,” because horizontal lines go in and out and in and out. Vertical lines do the same. The  and  strips break into pieces. Our reasoning assumed no break between  at the top and  at the bottom.
+
+There is a nice idea that saves Green’s Theorem. Separate the broken ring into three very simple regions  ;  ;  : The three double integrals equal the three line integrals around the  ’s. Now add these separate results, to produce the double integral over all of  : When we add the line integrals, the crosscuts  are covered twice and they cancel. The cut between  and  is covered upward (around  ) and downward (around  ). That leaves the integral around the boundary equal to the double integral inside—which is Green’s Theorem.
+
+When  is a complete ring, including the piece  ; the theorem is still true. The integral around the outside is still counterclockwise. But the integral is clockwise around the inner circle. Keep the region  to your left as you go around  : The complete ring is “doubly” connected, not “simply” connected. Green’s Theorem allows any finite number of regions  and crosscuts  and holes.
+
+EXAMPLE 3 The area under a curve is  ; as we always believed.
+
+In computing area we never noticed the whole boundary. The true area is a line integral  around the closed curve in Figure 15.11a. But  on the  axis. Also  on the vertical lines (up and down at  and  ). Those parts contribute zero to the integral of  : The only nonzero part is back along the curve—which is the area  or  that we know well.
+
+What about signs, when the curve dips below the  axis? That area has been counted as negative since Chapter 1. I saved the proof for Chapter 15. The reason lies in the arrows on  :
+
+The line integral around that part goes the other way. The arrows are clockwise, the region is on the right, and the area counts as negative. With the correct rules, a figure 8 is allowed after all.
+
+CONSERVATIVE FIELDS
+
+We never leave gradients alone! They give conservative fields—the work around a closed path is  : But a potential function  is only available when test  is passed: If  and  then  The reason is that  :
+
+Some applications prefer the language of “differentials.”BInst eBad ofBlook Bing for  ; we look for  :
+
+DEFINITION The expression  is a differential form. When it agrees with the differential  of some function, the form is called exact. The test for an exact differential is D:  :
+
+Nothing is new but the language. Is  an exact differential?  , because  and  : Is  an exact differential? Yes, it is the differential of   : That is the product rule! Now comeBs an important example, to show why  should be simply connected (a region with no holes).
+
+EXAMPLE 4 The spin field  almost passes test  :
+
+Both numerators are  : Test  looks good. To find  integrate  :
+
+The extra part  can be zero—the  derivative of  gives  with no help from  : The potential  is the angle  in the usual  right triangle.
+
+Test  is passed and  is grad  : What am I worried about? It is only this, that Green’s Theorem on a circle seems to give  : The double integral is  : According to (8) this is the integral of zero. But the line integral is  :
+
+With  cos  and  sin  we would find the same answer. The work is  (not zero!) when the path goes around the origin.
+
+We have a paradox. If Green’s Theorem is wrong, calculus is in deep trouble. Some requirement must be violated to reach  : Looking at  ; the problem is at the origin. The field is not defined when  (it blows up). The derivatives in (8)
+
+are not continuous. Test D does not apply at the origin, and was not passed. We could remove  ; but then the region where test D is passed would have a hole.
+
+It is amazing how one point can change everything. When the path circles the origin, the line integral is not zero. The potential function  increases by  . That agrees with  from (9). It disagrees with  : The  is right, the zero is wrong.  must be a “delta function of strength  :”
+
+The double integral is  from an infinite spike over the origin—even though  everywhere else. In fluid flow the delta function is a “vortex.”
+
+FLOW ACROSS A CURVE: GREEN’S THEOREM TURNED BY 
+
+A flow field is easier to visualize than a force field, because something is really there and it moves. Instead of gravity in empty space, water has velocity  : At the boundary  it can flow in or out. The new form of Green’s Theorem is a fundamental “balance equation” of applied mathematics:
+
+Flow through  (out minus in)  replacement in  (source minus sink).
+
+The flow is steady. Whatever goes out through  must be replaced in  : When there are no sources or sinks (negative sources), the total flow through  must be zero. This balance law is Green’s Theorem in its “normal form” (for  ) instead of its “tangential form” (for  ):
+
+Playing with letters has proved a new theorem! The two left sides in (11) are equal, so the right sides are equal—which is Green’s Theorem (10) for the flux. The components  and  can be chosen freely and named freely.
+
+The change takes  into its perpendicular field  : The field is turned at every point (we are not just turning the plane by  ). The spin field   changes to the position field  : The position field  changes to  : Streamlines of one field are equipotentials of the other field. The new form (10) of Green’s Theorem is just as important as the old one—in fact I like it better. It is easier to visualize flow across a curve than circulation along it.
+
+The change of letters was jusBt for Bthe prBoof. BFrom now on  :
+
+EXAMPLE 5 Compute both sides of the new form (10) for  : The region  is a rectangle with sides  and  :
+
+Solution This field has  : The integral over  is  : The line integral has four parts, because  has four sides. Between the left and right sides,  increaseBs by B  : BDow nB the left and up the right,  (those sides have length  ). Similarly  changes by  between the bottom and top. Those sides have length  ; so they contribute  to a total line integral of  :
+
+Important: The “divergence” of a flow field is  : The example has divergence  : To maintain this flow we must replace 5 units continually—not just at the origin but everywhere. (A one-point source is in example 7.) The divergence is the source strength, because it equals the outflow.  understand Green’s Theorem for any vector field  ; look at a tiny rectangle (sides  and  :
+
+Flow out the right side minus flow in the left side  .change in  / times 
+
+Flow out the top minus flow in the bottom  .change in  / times 
+
+Total flow out of rectangle: 
+
+The divergence times the area  equals the total flow out. Section 15:5 gives more detail with more care in three dimensions. The divergence is  :
+
+EXAMPLE 6 Find the flux through a closed curve  of the spin field   :
+
+Solution The field has  and  and  : The double integral is zero. Therefore the total flow (out minus in) is also zero—through any closed curve. Figure 15.13 shows flow entering and leaving a square. No fluid is added or removed. There is no rain and no evaporation. When the divergence  is zero, there is no source or sink.
+
+FLOW FIELDS WITHOUT SOURCES
+
+This is really quite important. Remember that conservative fields do no work around  ; they have a potential  ; and they have “zero curl.” Now turn those statements through  ; to find their twins. Source-free fields have no flux through  ; they have stream functions  ; and they have “zero divergence.” The new statements  describe fields without sources.
+
+15G The field  is source-free if it has these properties: E The total flux  through every closed curve is zero. F Across all curves from  to  ; the flux  is the same. G There is astream function  ; for which  and  : H The components satisfy  (the divergence is zero). A field with one of these properties has them all.  is the quick test.
+
+The spin field  passed this test (Example 6 was source-free). The field  j does not pass (Example 5 had  ). Example 7 almost passes.
+
+EXAMPLE 7 The radial field  has a point source at  :
+
+The new test  is divergenc  : Those two derivatives are
+
+They add to zero. There seems to be no source (if the calculation is correct). The flow through a circle  should be zero. But it’s not:
+
+A source is hidden somewhere. Looking at  ; the problem is at  : The field is not defined when  (it blows up). The derivatives in (12) are not continuous. Test  does not apply, and was not passed. The divergence  must be a “delta function” of strength  : There is a point source sending flow out through all circles.
+
+I hope you see the analogy with Example 4. The field  is curl-free except at  : The field  is divergence-free except at  : The mathematics is parallel and the fields are perpendicular. A potential  and a stream function  require a region without holes.
+
+THE BEST FIELDS: CONSERVATIVE AND SOURCE-FREE
+
+What if F is conservative and also source-free? Those are outstandingly important fields. The curl is zero and the divergence is zero. Because the field is conservative, it comes from a potential. Because it is source-free, there is a stream function:
+
+Those are the Cauchy-Riemann equations, named after a great mathematician of his time and one of the greatest of all time. I can’t end without an example.
+
+EXAMPLE 8 Show that  is both conservative and source-free. Find  and  :
+
+Solution With  and  ; check first that  : There must be a potential function. It is  ; which achieves  and   : Note that  :
+
+Check next that  : There must be a stream function. It is  ; which achieves  and  : Note that  gyy D0:
+
+The curves  constant are the equipotentials. The curves  constant are the streamlines (Figure 15.4). These are the twin properties—a conservative field with a potential and a source-free field with a stream function. They come together into the fundamental partial differential equation of equilibrium—Laplace’s equation  :
+
+15H There is a potential and stream function when  and  : They satisfy Laplace’s equation:  (15)
+
+If we have  without  ; as in  and  and  ; we don’t have Laplace’s equation:  : This is a gradient field that needs a source. If we have  without  ; as in  and  and  ; we don’t have Laplace’s equation. The field is source-free but it has spin. The first field is 2R and the second field is 2S:
+
+With no source an»d»no spin, we are with¾Laplace at the cen»te»r of mathematics and science.

@@ -1,0 +1,79 @@
+3.1 Linear Approximation
+
+The book started with a straight line  : The distance is linear when the velocity is constant. As soon as  begins to change,  falls apart. Which velocity do we choose, when  is not constant? The solution is to take very short time intervals, in which  is nearly constant:
+
+For a brief moment the function  is line1ar—andstays near its tangent line.
+
+In Section 2.3 we found the tangent line to  : At  , the slope of the curve and the slope of the line are  : For points on the line, start at  : Add the slope times the “increment”  :
+
+We write a ca?pital  for the line and a small  for the curve. The who?le point of tangents is that th?ey are close .provided we don’t move too far from  /:
+
+That is the all-purpose linear approximation. Figure 3.1 shows the square root function  and its tangent line at  : At the point  , the slope is  : The table beside the figure compares  with  :
+
+The accuracy gets worse as  departs from 100: The tangent line leaves the curve. The arrow points to a good approximation at 102, and at 101 it would be even better. In this example  is larger than  —th?e straigh?t line is above the curve. The slope of the line stays constant, and the slope of thecurve is decreasing. Such a curve will soon be called “concave downward,”and its tangent lines are above it.
+
+Look again at  , where the approximation is good. In Chapter 2, when we were approaching  , we started with  :
+
+Now that is turned around! The slope is  : What we don’t know is  :
+
+You work with what you have. Earlier we didn’t know  , so we used .3/: Now we are experts at  , and we use .4/: After computing  once and for all, the tangent line stays near  for every number near 100: When that nearby number is  , notice the error as the approximation is squared:
+
+The desired answer is  , and we are off by the last term involving  : The whole point of linear approximation is to ignore every term after  :
+
+There is nothing magic about  , except that it has a nice square root. Other points and other functions allow  : I would like to express this same idea in different symbols. Instead of starting from a and going to  , we start from  and  a distance  to  . The letters are different but the mathematics is identical.
+
+3A At any point  , and for any smooth function  ,
+
+For the approximation to  , multiply both sides by  and add  :
+
+EXAMPLE 1 An important linear approximation:  for  near zero.
+
+EXAMPLE 2 A second important approximation:  for  near zero.
+
+Discussion Those are really the same. By changing  to  in Example 1, it becomes Example 2. These are linear approximations using th e slopes  and  at  :
+
+Here is the same thingwith  :The basepoint in equation (6) is now 1 or  :
+
+Better than that, here are numbers. For  and  and 100, take  :
+
+Actually that last number is no good. The 100th power is too much. Linear approximation gives  , but a calculator gives  : : : This is close to  , the all-important number in Chapter 6. The binomial formula shows why the approximation failed:
+
+Linear approximation forgets the  term. For  that error is nearly  : It is too big to overlook. The exact error is  , where the Mean Value Theorem in Section 3.8 places  between  and  : You already see the point:
+
+ is of order  : Linear approximation, quadratic error.
+
+DIFFERENTIALS
+
+There is one more notation for this linear approximation. It has to be presented, because it is often used. The notation is suggestive and confusing at the same time—it keeps the same symbols  and  that appear in the derivative. Earlier we took great pains to emphasize that  is not an ordinary fraction.  Until this paragraph,  and  have had no independent meaning. Now they become separate variables, like  and  but with their own names. These quantities  and  are called differentials.
+
+The symbols  and  measure changes along the tangent line. They do for the approximation  exactly what  and  did for  : Thus  and  both measure distance across.
+
+Figure 3.2 has  : But the change in  does not equal the change in  : One is  (exact for the function). The other is  (exact for the tangent line). The differential  is equal to  , the change along the tangent line. Where  is the true change,  is its linear approximation  :
+
+You often see  written as  :
+
+ change in  (along curve)  change in  (along tangent)
+
+EXAMPLE 3  has  so  : The table has basepoint  : The prediction  differs from the true  by exactly  and :04 and :09:
+
+The differential  is consistent with the derivative  : We finally have  , but this is not as obvious as it seems! It looks like cancellation—it is really a definition. Entirely new symbols could be used, but  and  have two advantages: They suggest small steps and they satisfy  : Here are three examples and three rules:
+
+Science and engineering and virtually all applications of mathematics depend on linear approximation. The true function is “linearized,” using its slope  :
+
+Increasing the time by  increases the distance by  Increasing the force by  increases the deflection by  Increasing the production by  increases its value by 
+
+The goal of dynamics or statics or economics is to predict this multiplier  —the derivative that equals the slope of the tangent line. The multiplier gives a local prediction of the change in the function. The exact law is nonlinear—but Ohm’s law and Hooke’s law and Newton’s law are linear approximations.
+
+ABSOLUTE CHANGE, RELATIVE CHANGE, PERCENTAGE CHANGE
+
+The change  or  can be measured in three ways. So can  :
+
+Relative change is often more rea listic than absolute change. If we know the distance to the moon within three miles, that is more impressive than knowing our own height within one inch. Absolutely, one inch is closer than three miles. Relatively, three miles is much closer:
+
+EXAMPLE 4 The radius of the Earth is within 80 miles of  miles. (a) Find the variation  in the volume  , using linear approximation. (b) Compute the relative variations  and  and  :
+
+Solution The job of calculus is to produce the derivative. After  , its work is done. The variation in volume is  cubic miles. A  relative variation in  gives a  relative variation in  :
+
+Without calculus we need the exact volume at  (also at  ):
+
+One comment on  : This is (area of sphere) times (change in radius). It is the volume of a thin shell around the sphere. The shell is added when the radius grows by  : The exact  is  ; but calculus just calls it  :

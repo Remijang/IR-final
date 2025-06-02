@@ -1,0 +1,946 @@
+[
+    {
+        "type": "text",
+        "text": "0.4 Video Summaries and Practice Problems ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "This section is to help readers who also look at the Highlights of Calculus video lectures. The first five videos are just released on ocw.mit.edu as I write these words. Sections 0.1\u20130.2\u20130.3 discussed the content of three lectures in full detail. The summaries and practice problems for the other two will come first in this section: ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "4. Maximum and Minimum and Second Derivative   \n5. Big Picture of Integrals ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "That Lecture 5 is a taste of Integral Calculus. A second set of video lectures goes deeper into Differential Calculus\u2014the rules for computing and using derivatives. ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "This second set is right now with the video editors, to zoom in when I write on the blackboard and zoom out for the big picture. I just borrowed a video camera from MIT\u2019s OpenCourseWare and set it up in an empty room. I am not good at looking at the audience anyway, so it was easier with nobody watching ! ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "I hope it will be helpful to print here the summaries and practice problems that are planned to accompany those videos. Here are the topics: ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "6. Derivative of the Sine and Cosine 7. Product and Quotient Rules 8. Chain Rule for the Slope of $f ( g ( x ) )$ 9. Inverse Functions and Logarithms 10. Growth Rates and Log Graphs 11. Linear Approximation and Newton\u2019s Method 12. Differential Equations of Growth 13. Differential Equations of Motion 14. Power Series and Euler\u2019s Formula 15. Six Functions, Six Rules, Six Theorems ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "That last lecture summarizes the theory of differential calculus. The other lectures explain the steps. Here are the first lines written for the max-min video. ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "Maximum and Minimum and Second Derivative ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "To find the maximum and minimum values of a function $y ( x )$   \nSolve ${ \\frac { d y } { d x } } = 0$ to find points $x ^ { * }$ where slope $\\ l =$ zero   \nTest each $x ^ { * }$ for a possible minimum or maximum   \nExample $y ( x ) = x ^ { 3 } - 1 2 x { \\frac { d y } { d x } } = 3 x ^ { 2 } - 1 2 { \\mathrm { ~ S o l v e ~ } } 3 x ^ { 2 } = 1 2$   \nThe slope is ${ \\frac { d y } { d x } } = 0$ at ${ \\boldsymbol { x } } ^ { * } = 2$ and $x ^ { * } = - 2$   \nAt those points $y ( 2 ) = 8 - 2 4 = - 1 6 = \\mathbf { m i n }$ and $y ( - 2 ) = - 8 + 2 4 = 1 6 = \\mathbf { m a x }$ ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "$x ^ { * } = 2$ is a minimum Look at ${ \\frac { d } { d x } } \\left( { \\frac { d y } { d x } } \\right) =$ second derivative ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } =$ derivative of $3 x ^ { 2 } - 1 2$ : This second derivative is $6 x$ : ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } > 0 \\quad { \\frac { d y } { d x } }$ increases Slope\u0006goes from down to up at $x ^ { * } = 2$ The bending is upwards and this $x ^ { * }$ is a minimum ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } < 0 \\quad { \\frac { d y } { d x } }$ decreases Slope goes from up to down at $x ^ { * } = - 2$ The bending is downwards and $x ^ { * }$ is a maximum ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Find the maximum of y.x/ D sin x Ccos x using ${ \\frac { d y } { d x } } = \\cos x - \\sin x$ The slope is zero when cos $x = \\sin { x }$ at $x ^ { * } = 4 5$ degrees $= { \\frac { \\pi } { 4 } }$ radians That point $x ^ { * }$ has $y = \\sin { \\frac { \\pi } { 4 } } + \\cos { \\frac { \\pi } { 4 } } = { \\frac { \\sqrt { 2 } } { 2 } } + { \\frac { \\sqrt { 2 } } { 2 } } = { \\sqrt { 2 } }$ The second derivative is ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } = - \\sin x - \\cos x$ $\\operatorname { A t } x ^ { * } = { \\frac { \\pi } { 4 } }$ this is $< 0$ $y$ is bending down $x ^ { * }$ is a maximum ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } > 0$ when the curve bends up $\\frac { d ^ { 2 } y } { d x ^ { 2 } } < 0$ when the curve bends down Direction of bending ch\u0001anges at\u0001a point o\u0001f inflection where ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } = \\mathbf { 0 }$ Which $x ^ { * }$ gives the m\u0006inimum of $y = ( x - 1 ) ^ { 2 } + ( x - 2 ) ^ { 2 } + ( x - 6 ) ^ { 2 } ?$ You can write $y = ( x ^ { 2 } - 2 x + 1 ) + ( x ^ { 2 } - 4 x + 4 ) + ( x ^ { 2 } - 1 2 x + 3 6 )$ The slope is $\\frac { d y } { d x } = 2 x - 2 + 2 x - 4 + 2 x - 1 2 = 0$ at the minimum point $x ^ { * }$ Then $6 x ^ { * } = 1 8$ and $x ^ { * } = 3$ Minimum point is the average of 1, 2, 6 Key for max=min word problems is to choose a suitable meaning for $x$ ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Practice Quest\u00a1ions ",
+        "text_level": 1,
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "1. Which $x ^ { * }$ gives the minimum of $y ( x ) = x ^ { 2 } + 2 x ?$ Solve ${ \\frac { d y } { d x } } = 0$ : ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "2. Find $\\frac { d ^ { 2 } y } { d x ^ { 2 } }$ for $y ( x ) = x ^ { 2 } + 2 x$ : This is $> 0$ so the parabola bends up. ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "3. Find the maximum height of $y ( x ) = 2 + 6 x - x ^ { 2 }$ : Solve ${ \\frac { d y } { d x } } = 0$ : ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "4. Find $\\frac { d ^ { 2 } y } { d x ^ { 2 } }$ to show that this parabola bends down. ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "5. For $y ( x ) = x ^ { 4 } - 2 x ^ { 2 }$ show that ${ \\frac { d y } { d x } } = 0$ at $x = - 1 , 0 , 1$ : Find $y ( - 1 ) , y ( 0 ) , y ( 1 )$ : \u00a0Check max versus min by the sign of $d ^ { 2 } y / d x ^ { 2 }$ : ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "6. At a minimum point explain why ${ \\frac { d y } { d x } } = 0$ an ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } > 0$ ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "7. Bending down $\\left( \\frac { d ^ { 2 } y } { d x ^ { 2 } } < 0 \\right)$ changes to bending up $\\left( \\frac { d ^ { 2 } y } { d x ^ { 2 } } > 0 \\right)$ at a point of : At this point ${ \\frac { d ^ { 2 } y } { d x ^ { 2 } } } = 0$ Does $y = \\sin x$ have such a point ? ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "8. Suppose $x + X = 1 2$ : What is the maximum of $x$ times $X$ ? This question asks for the maximum of $y = x ( 1 2 - x ) = 1 2 x - x ^ { 2 }$ : Find where the slope ${ \\frac { d y } { d x } } = 1 2 - 2 x$ is zero. What is $x$ times $X$ ? ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "The Big Picture of Integrals ",
+        "text_level": 1,
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "Key problem Recover the integral $y ( x )$ from its derivative $\\frac { d y } { d x }$   \nFind the total distance traveled from a record of the speed   \nFind Function $( 1 ) =$ total height knowing Function $( 2 ) =$ slope since the start   \nSimplest way Recognize $\\frac { d y } { d x }$ as derivative of a known $y ( x )$   \nIf ${ \\frac { d y } { d x } } = x ^ { 3 }$ then its integral $y ( x )$ was ${ \\frac { 1 } { 4 } } x ^ { 4 } + C = \\mathbf { F u n c t i o n }$ (1)   \nIf ${ \\frac { d y } { d x } } = e ^ { 2 x }$ 2x then y D $y = { \\frac { 1 } { 2 } } e ^ { 2 x } + C$   \nIntegral Calculus is the reverse of Differential Calculus   \n$y ( x ) = \\int { \\frac { d y } { d x } } d x$ adds up the whole history of slopes $\\frac { d y } { d x }$ to find $y ( x )$   \nIntegral is like sum Derivative is like difference ",
+        "page_idx": 36
+    },
+    {
+        "type": "text",
+        "text": "Sums $\\begin{array} { c c c c c c c c c c c c c c c c c c c } { { } } & { { } } & { { } } & { { } } & { { } } & { { y _ { 0 } } } & { { } } & { { y _ { 1 } } } & { { } } & { { } } & { { y _ { 2 } } } & { { } } & { { y _ { 3 } } } & { { } } & { { y _ { 4 } } } \\\\ { { \\mathbf { c e s } } } & { { } } & { { y _ { 1 } - y _ { 0 } } } & { { } } & { { y _ { 2 } - y _ { 1 } } } & { { } } & { { y _ { 3 } - y _ { 2 } } } & { { } } & { { y _ { 4 } - y _ { 3 } } } & { { } } & { { } } & { { } } & { { } } \\end{array}$ Differen Notice cancellation $( y _ { 1 } - y _ { 0 } ) + ( y _ { 2 } - y _ { 1 } ) = y _ { 2 } - y _ { 0 } =$ change in height Divide and multiply the differences by the step size $\\Delta x$ Sum of ${ \\frac { \\Delta y } { \\Delta x } } \\Delta x = { \\frac { y _ { 1 } - y _ { 0 } } { \\Delta x } } \\Delta x + { \\frac { y _ { 2 } - y _ { 1 } } { \\Delta x } } \\Delta x$ y2 \u00bby1 \u0081x is still y2 y0 Now let $\\Delta x  0$ Sum changes to integral $\\int { \\frac { d y } { d x } } d x = y _ { \\mathrm { e n d } } - y _ { \\mathrm { s t a r t } }$ ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Fundamental Theorem of Calculus $\\int { \\frac { d y } { d x } } d x = y ( x ) + C$ The integral reverses the derivative and brin\u00bbgs back $y ( x )$ Integration and Differentiation are inverse operations Fundamental Theorem in the opposite order ${ \\frac { d } { d x } } \\int _ { 0 } ^ { x } s ( t ) d t = s ( x )$ KEY What is the meaning of an integral $\\int _ { 0 } ^ { x } s ( t ) d t ?$ Add up short ",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Example $s ( t ) = 6 t$ shows increasing speed and slope. Find $y ( t )$ :   \nMethod 1 $y = 3 t ^ { 2 }$ has the required derivative $6 t$ (this is the simplest way !)   \nMethod 2 The triangle under the graph of $s ( t ) = 6 t$ has area $3 t ^ { 2 }$ 1   \nFrom 0 to $t$ ; base $= t$ and height $= 6 t$ and area D t .6t /: 2   \n[Most shapes are more difficult! Area comes from integrating $s ( t )$ or $s ( x ) ]$   \nMethod 3 (fundamental) Add up short time steps each at constant speed   \nIn a step $\\Delta t$ ; the distance is close to $s ( t ^ { * } ) \\Delta t$   \n$t ^ { * }$ is the starting time for that step and $s ( t ^ { * } )$ is the starting speed   \nThis is not exact because the speed changes a little within time $\\Delta t$   \nThe total distance become\u0006s exact as $\\Delta t \\to 0$ and sum $$ integral ",
+        "page_idx": 37
+    },
+    {
+        "type": "table",
+        "img_path": "images/ec8f1366b716720a289df33a8ea8cef47759e60b6975519c050f883009b592d0.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"3\">Picture of each step shows a tall thin rectangle</td></tr><tr><td>s(t)=6t 0 \u25b3 Sum of s(t*)\u25b3t = total area of all rectangles Now \u25b3t \u2192 O The rectangles fillup the triangle</td><td>s(t*)\u25b3t = height times base =areaofrectangle t* = start point of the time step</td></tr></table></body></html>\n\n",
+        "page_idx": 37
+    },
+    {
+        "type": "text",
+        "text": "Fundamental Theorem Area $y ( t )$ has the desired derivative $s ( t )$ Reason: \u0081y is the thin area under $s ( t )$ between $t$ and $t + \\Delta t$ ",
+        "page_idx": 38
+    },
+    {
+        "type": "image",
+        "img_path": "images/7e98209df63d41780c906fbff18e8c8311c1cdae5dff23f7e686e58f2fd13248.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "$\\Delta t$ is the base of that thin \u201crectangle\u201d $\\frac { \\Delta y } { \\Delta t }$ is the height of that thin \u201crectangle\u201d ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "This height $\\Delta y / \\Delta t$ approaches $s ( t )$ as the base $\\Delta t \\to 0$ ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "Practice \u00bbQuestions ",
+        "text_level": 1,
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "1. What functions $y ( t )$ have the constant derivative $s ( t ) = 7 ?$   \n2. What is the area from 0 to $t$ under the graph of $s ( t ) = 7 ?$   \n3. From $t = 0$ to 2; find the integral $\\int _ { 0 } ^ { 2 } 7 d t = - { \\frac { } { } } \\cdotp$   \n4. What function $y ( t )$ has the derivative $s ( t ) = 7 + 6 t \\ ?$   \n5. From $t = 0$ to 2; find area $\\ b =$ integral $\\int _ { 0 } ^ { 2 } ( 7 + 6 t ) d t$ :   \n6. At this instant $t = 2$ , what is ${ \\frac { d ( \\mathrm { a r e a } ) } { d t } } \\ \\ ?$ ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "7. From 0 to $t$ ; the area under the curve $s = e ^ { t }$ IS NOT $y = e ^ { t }$ : If $t$ is small, the area must be small. The wrong answer $e ^ { t }$ is not small ! 8. From 0 to $t$ ; the correct area under $s = e ^ { t }$ is $y = e ^ { t } - 1$ : The slope $\\frac { d y } { d t }$ is and now the starting area $y ( 0 )$ is 9. Same for sums. Notice $y _ { 0 }$ in $( y _ { 1 } - y _ { 0 } ) + ( y _ { 2 } - y _ { 1 } ) + ( y _ { 3 } - y _ { 2 } ) = \\qquad .$ The sum of $\\Delta y = \\frac { \\Delta y } { \\Delta t } \\Delta t$ becomes the integral of $\\frac { d y } { d t } d t$ The area under $s ( t )$ from 0 to $\\prime$ becomes ${ \\bf y } ( { \\pmb t } ) - { \\bf y } ( { \\pmb 0 } )$ : ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Derivative of the Sine and Cosine ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "This lecture shows that ${ \\frac { d } { d x } } ( \\sin x ) = \\cos x$ and ${ \\frac { d } { d x } } ( \\cos x ) = - \\sin x$ We have to measure the angle $x$ in radians $2 \\pi$ radians $\\ b =$ full 360 degrees All the way around the circle ( $2 \\pi$ radians) Length ${ } = 2 \\pi$ when the radius is 1 Part way around the circle ( $x$ radians) Length ${ } = { \\pmb x }$ when the radius is 1 ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Slope cos x ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "image",
+        "img_path": "images/a5fdb300d101bd42fe0444bb66190faf2da89248fc06f31a58e1db71c1eed889.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 39
+    },
+    {
+        "type": "table",
+        "img_path": "images/f88f727fc87573799c2d0bf96a2d0edc84e212f9de86c4de9877ec6248195434.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>at x=0</td><td>slope 1= cos 0</td></tr><tr><td>at x=\u03c0/2</td><td>slope 0 = cos \u03c0/2</td></tr><tr><td>at x=\u03c0</td><td>slope -1 =cos \u03c0</td></tr></table></body></html>\n\n",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Slope sin x ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "image",
+        "img_path": "images/fa8ae1f72850d47f4bdb43ca04e0a418da2d8182842fcba4a6b5282bbcc22ad8.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 39
+    },
+    {
+        "type": "table",
+        "img_path": "images/fdab8416847b948f930b4b6ef8afaa7255c03f5183a9aaca7723ee06cf9f566b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>atx=0 at x=\u03c0/2</td><td>slope =0=-sin 0 slope-1=-sin \u03c0/2</td></tr></table></body></html>\n\n",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Problem: ${ \\frac { \\Delta y } { \\Delta x } } = { \\frac { \\sin ( x + \\Delta x ) - \\sin x } { \\Delta x } }$ is not as simple as $\\frac { ( x + \\Delta x ) ^ { 2 } - x ^ { 2 } } { \\Delta x }$ Good idea to start at $x = 0$ Show ${ \\frac { \\Delta y } { \\Delta x } } = { \\frac { \\sin \\Delta x } { \\Delta x } }$ approaches 1 Draw a right triangle with angle $\\Delta x$ to see sin $\\Delta x \\leq \\Delta x$ ",
+        "page_idx": 39
+    },
+    {
+        "type": "table",
+        "img_path": "images/9ad30ee246e94c27aa58418dac6370fe7f6aaff8ba93777d2f005dc79f4f7c1a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"4\">\u25b3x r=1</td><td rowspan=\"4\">straight piece curved arc</td><td></td></tr><tr><td>straight length= sin\u25b3x curved length =\u25b3x</td></tr><tr><td>straight piece is shortest</td></tr><tr><td></td></tr></table></body></html>\n\n",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "IDEA $\\frac { \\sin \\Delta x } { \\Delta x } < 1$ and ${ \\frac { \\sin \\Delta x } { \\Delta x } } > \\cos \\Delta x$ will squeeze ${ \\frac { \\sin \\Delta x } { \\Delta x } } \\to 1$ as $\\Delta x  0$ ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "To prove ${ \\frac { \\sin \\Delta x } { \\Delta x } } > \\cos \\Delta x$ which is tan $\\Delta x > \\Delta x$ Go to a bigger triangle ",
+        "page_idx": 39
+    },
+    {
+        "type": "image",
+        "img_path": "images/69a7ffd8428abe72e7e38a4c7d04eb5ed4bddb7fd087dcd36a6767c3720cf5b5.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Triangle area .1/.tan \u0081x/ greater than \u0081x   \nCircular area (whole circle) D .\u0081x/ 2\u0019   \nThe squeeze cos $\\Delta x < \\frac { \\sin \\Delta x } { \\Delta x } < 1$ tells us that $\\frac { \\sin \\Delta x } { \\Delta x }$ approaches 1   \n$\\begin{array} { l } { \\displaystyle \\frac { ( \\sin \\Delta x ) ^ { 2 } } { ( \\Delta x ) ^ { 2 } } < 1 \\mathrm { m e a n s } \\frac { ( 1 - \\cos \\Delta x ) } { \\Delta x } ( 1 + \\cos \\Delta x ) < \\Delta x } \\\\ { \\displaystyle \\mathrm { S o } \\frac { \\mathbf { 1 } - \\cos \\Delta x } { \\Delta x } \\to \\mathbf { 0 } \\quad \\mathbf { C o s i n e ~ c u r v e ~ h a s ~ s l o p e = 0 ~ } } \\end{array}$   \nFor the slope at other $x$ remember a formula from \u00d1trigonometry:   \n$\\sin ( x + \\Delta x ) = \\sin x$ cos $\\Delta x + \\cos x$ sin $\\pmb { \\Delta x }$   \nWe want $\\Delta y = \\sin ( x + \\Delta x ) - \\sin x$ Divide that by $\\Delta x$   \n${ \\frac { \\Delta y } { \\Delta x } } = ( \\sin x ) \\left( { \\frac { \\cos \\Delta x - 1 } { \\Delta x } } \\right) + ( \\cos x ) \\left( { \\frac { \\sin \\Delta x } { \\Delta x } } \\right) \\quad { \\mathrm { N o w ~ l e t ~ } } \\Delta x \\to 0$   \nIn the limit ${ \\frac { d y } { d x } } = ( \\sin x ) ( 0 ) + ( \\cos x ) ( 1 ) = \\cos x = \\operatorname { I }$ Derivative of sin $x$   \nFor $y = \\cos x $ the formula for $\\cos ( x + \\Delta x )$ leads similarly to ${ \\frac { d y } { d x } } = - \\sin x$ ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "1. What is the slope of $y = \\sin x$ at $x = \\pi$ and at $x = 2 \\pi$ ?   \n2. What is the slope of $y = \\cos x $ at $x = \\pi / 2$ and $x = 3 \\pi / 2 ?$   \n3. The slope of $( \\sin x ) ^ { 2 }$ is 2 sin $x$ cos $x$ : The slope of $( \\cos x ) ^ { 2 }$ is $- 2 \\cos x \\sin x$ :   \nCombined, the slope of $( \\sin x ) ^ { 2 } + ( \\cos x ) ^ { 2 }$ is zero. Why is this true ?   \n4. What is the second derivative of $y = \\sin x$ (derivative of the derivative) ?   \n5. At what angle $x$ does $y = \\sin x + \\cos x$ have zero slope ? ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "6. Here are amazi\u0001ng infinite series for sin $x$ a\u0001nd\u0004c\u0004 \u0004os $x$ : $e ^ { i x } = \\cos x + i \\sin x$ ${ \\begin{array} { l l l } { \\sin x \\ = { \\frac { x } { 1 } } - { \\frac { x ^ { 3 } } { 3 \\cdot 2 \\cdot 1 } } + { \\frac { x ^ { 5 } } { 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 } } - \\cdots } & { ( o d d p o w e r s \\ o f x ) } \\\\ { \\cos x \\ = \\ 1 - { \\frac { x ^ { 2 } } { 2 \\cdot 1 } } + { \\frac { x ^ { 4 } } { 4 \\cdot 3 \\cdot 2 \\cdot 1 } } - \\cdots } & { ( e v e n p o w e r s \\ o f x ) } \\end{array} }$   \n7. Take the derivative of the sine series to see the cosine series.   \n8. Take the derivative of the cosine series to see minus the sine series.   \n9. Those series tell us that for small angles sin ${ \\pmb x } \\approx { \\pmb x }$ and $\\cos x \\approx 1 - { \\frac { 1 } { 2 } } x ^ { 2 }$ : With these approximations check that $( \\sin x ) ^ { 2 } + ( \\cos x ) ^ { 2 }$ is close to 1: ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Product and Quotient Rules ",
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Goal To find the derivative of $y = f ( x ) g ( x )$ from $\\frac { d f } { d x }$ and $\\frac { d g } { d x }$ ",
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Idea Write $\\Delta y = f ( x + \\Delta x ) g ( x + \\Delta x ) - f ( x ) g ( x )$ by separating $\\Delta f$ and $\\Delta g$ That same $\\Delta y$ is $f ( x + \\Delta x ) \\left[ g ( x + \\Delta x ) - g ( x ) \\right] + g ( x ) \\left[ f ( x + \\Delta x ) - f ( x ) \\right]$ ${ \\frac { \\Delta y } { \\Delta x } } = f ( x + \\Delta x ) { \\frac { \\Delta g } { \\Delta x } } + g ( x ) { \\frac { \\Delta f } { \\Delta x } } \\quad { \\mathsf { P r o d u c t } } { \\mathsf { R u l e } } { \\frac { d y } { d x } } = f ( x ) { \\frac { d g } { d x } } + g ( x ) { \\frac { d f } { d x } }$ Exampl $\\Theta \\qquad \\ y = x ^ { 2 } \\sin { x } \\quad { \\mathrm { P r o d u c t ~ R u l e } } \\ { \\frac { d y } { d x } } = x ^ { 2 } \\cos { x } + 2 x \\sin { x }$ A picture shows the two unshaded pieces of $\\Delta y = f ( x + \\Delta x ) \\Delta g + g ( x ) \\Delta f$ ",
+        "page_idx": 41
+    },
+    {
+        "type": "image",
+        "img_path": "images/183f6467d16cf42b99bad0696ccc73d88b66db7f70dc2987d45f396a5c5df279.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Example $f ( x ) = x ^ { n } \\quad g ( x ) = x \\quad y = f ( x ) g ( x ) = x ^ { n + 1 }$ Product Rule ${ \\frac { d y } { d x } } = x ^ { n } { \\frac { d x } { d x } } + x { \\frac { d x ^ { n } } { d x } } = x ^ { n } + x n x ^ { n - 1 } = ( n + 1 ) x ^ { n }$ The correct derivative of $x ^ { n }$ leads to the correct deriva\u0001tive of $x ^ { n + 1 }$ ",
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Quotient Rule If $y = { \\frac { f ( x ) } { g ( x ) } }$ then ${ \\frac { d y } { d x } } = \\left( g ( x ) { \\frac { d f } { d x } } - f ( x ) { \\frac { d g } { d x } } \\right) \\bigg / g ^ { 2 }$ EXAMPLE ${ \\frac { d } { d x } } \\left( { \\frac { \\sin x } { \\cos x } } \\right) = ( \\cos x ( \\cos x ) - \\sin x ( - \\sin x ) ) \\left/ \\cos ^ { 2 } x \\right.$ This says tha ${ \\frac { d } { d x } } \\tan x = { \\frac { 1 } { \\cos ^ { 2 } x } } = \\sec ^ { 2 } x \\qquad { \\mathrm { ( N o t i c e ~ } } ( \\cos x ) ^ { 2 } + ( \\sin x ) ^ { 2 } = 1 { \\mathrm { ) } }$ $\\begin{array} { r l } & { \\mathsf { E X A M P L E } \\quad \\displaystyle \\frac { d } { d x } \\left( \\frac { 1 } { x ^ { 4 } } \\right) = \\frac { x ^ { 4 } \\mathrm { ~ t i m e s ~ } 0 - 1 \\mathrm { ~ t i m e s ~ } 4 x ^ { 3 } } { x ^ { 8 } } = \\frac { - 4 } { x ^ { 5 } } \\quad \\mathrm { T h i s ~ i s ~ } n x ^ { n - 1 } } \\\\ & { \\mathsf { P r o v e ~ t h e ~ Q u o t i e n t ~ R u l e } \\quad \\Delta y = \\displaystyle \\frac { f ( x + \\Delta x ) } { g ( x + \\Delta x ) } - \\frac { f ( x ) } { g ( x ) } = \\frac { f + \\Delta f } { g + \\Delta g } - \\frac { f } { g } } \\end{array}$ Write this $\\Delta y$ as $\\frac { g ( f + \\Delta f ) - f ( g + \\Delta g ) } { g ( g + \\Delta g ) } = \\frac { g \\Delta f - f \\Delta g } { g ( g + \\Delta g ) }$ Now divide that $\\Delta y$ by $\\Delta x$ As $\\Delta x  0$ we have the Quotient Rule ",
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "1. Product Rule: Find the derivative of $y = ( x ^ { 3 } ) ( x ^ { 4 } )$ : Simplify and explain.   \n2. Product Rule: Find the derivative of $y = ( x ^ { 2 } ) ( x ^ { - 2 } )$ : Simplify and explain.   \n3. Quotient Rule: Find the derivative of $y = { \\frac { \\cos x } { \\sin x } }$   \n4. Quotient Rule: Show that $y = { \\frac { \\sin x } { x } }$ sin x has a max\u00a1imum (zero slope) at x D 0:   \n5. Product and Quotient! Find the derivative of $y = { \\frac { x \\sin x } { \\cos x } }$   \n6. $g ( x )$ has a minimum when ${ \\frac { d g } { d x } } = 0$ and ${ \\frac { d ^ { 2 } g } { d x ^ { 2 } } } > 0$ The graph is bending up   \n$y = { \\frac { 1 } { g ( x ) } }$ has a maxi\u00ddm\u00d1um at that point: Show that ${ \\frac { d y } { d x } } = 0$ and $\\frac { d ^ { 2 } y } { d x ^ { 2 } } < 0$ ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "Chain Rule for the Slope of $f ( g ( x ) )$ ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "${ \\begin{array} { r l } { y = g ( x ) } & { z = f ( y ) \\ \\longrightarrow \\ { \\mathrm { t h e ~ c h a i n ~ i s } } \\quad z = f ( g ( x ) ) } \\\\ { y = x ^ { 5 } \\quad z = y ^ { 4 } \\quad \\longrightarrow \\ { \\mathrm { t h e ~ c h a i n ~ i s } } \\quad z = ( x ^ { 5 } ) ^ { 4 } = x ^ { 2 0 } } \\end{array} }$ Average slope ${ \\frac { \\Delta z } { \\Delta x } } = \\left( { \\frac { \\Delta z } { \\Delta y } } \\right) \\left( { \\frac { \\Delta y } { \\Delta x } } \\right) { \\mathrm { J u s t ~ c a n c e l ~ } } \\Delta y$ Instant slope ${ \\frac { d z } { d x } } = { \\frac { d z } { d y } } { \\frac { d y } { d x } } = \\mathbf { C H A I N R U L E } \\ ( { \\mathrm { l i k e ~ c a n c e l l i n g ~ } } d y )$ You MUST change $y$ to $g ( x )$ in the final answer ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "Example of chain $z = y ^ { 4 } = ( x ^ { 5 } ) ^ { 4 } \\quad { \\frac { d z } { d y } } = 4 y ^ { 3 } \\quad { \\frac { d y } { d x } } = { \\bf 5 } x ^ { 4 }$   \nChain rule ${ \\frac { d z } { d x } } = \\left( { \\frac { d z } { d y } } \\right) \\left( { \\frac { d y } { d x } } \\right) = ( 4 y ^ { 3 } ) ( 5 x ^ { 4 } ) = 2 0 y ^ { 3 } x ^ { 4 }$ dz   \nReplace y by $x ^ { 5 }$ to get only x D 20.x5/3x4 D 20 x19 dx   \nCHECK $z = ( x ^ { 5 } ) ^ { 4 } = x ^ { 2 0 }$ does have dz D 20x19 dx   \n1. Find $\\frac { d z } { d x }$ for $z = \\cos { ( 4 x ) }$ Write $y = 4 x$ and $z = \\cos y$ so ${ \\frac { d z } { d x } } =$   \n2. Find $\\frac { d z } { d x }$ for $z = ( 1 + 4 x ) ^ { 2 }$ Write $y = 1 + 4 x$ and $z = y ^ { 2 } \\ : \\mathrm { s o } \\ : \\frac { d z } { d x } =$   \nCHECK $( 1 + 4 x ) ^ { 2 } = 1 + 8 x + 1 6 x ^ { 2 } \\mathrm { s o } \\frac { d z } { d x } =$ ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "3. Find $\\frac { d h } { d x }$ for $h ( x ) = ( \\sin 3 x ) ( \\cos 3 x )$ ",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "Product rule first Then the Chain rule for each factor ",
+        "page_idx": 43
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { \\displaystyle { \\frac { d h } { d x } = ( \\sin 3 x ) \\frac { d } { d x } ( \\cos 3 x ) + ( \\cos 3 x ) \\frac { d } { d x } ( \\sin 3 x ) } } \\\\ { \\displaystyle { \\ = ( \\sin 3 x ) ( \\mathrm { C H A I N } ) + ( \\cos 3 x ) ( \\mathrm { C H A I N } ) = \\mathrm { ~ \\ ? ~ } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "4. Tough challenge: Find the second derivative of $z ( x ) = f ( g ( x ) )$ ",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "FIRST DERIV ${ \\begin{array} { r l } & { { \\frac { d z } { d x } } = \\left( { \\frac { d z } { d y } } \\right) \\left( { \\frac { d y } { d x } } \\right) \\quad { \\mathrm { ~ F u n c t i o n ~ o f ~ } } y ( x ) } \\\\ & { { \\frac { d ^ { 2 } z } { d x ^ { 2 } } } = \\left( { \\frac { d z } { d y } } \\right) { \\frac { d } { d x } } \\left( { \\frac { d y } { d x } } \\right) + \\left( { \\frac { d y } { d x } } \\right) { \\frac { d } { d x } } \\left( { \\frac { d z } { d y } } \\right) } \\\\ & { \\left( { \\frac { d z } { d y } } \\right) \\left( { \\frac { d ^ { 2 } y } { d x ^ { 2 } } } \\right) + \\left( { \\frac { d y } { d x } } \\right) \\left( { \\frac { d ^ { 2 } z } { d y ^ { 2 } } } \\right) \\left( { \\frac { d y } { d x } } \\right) \\quad { \\frac { d y } { d x } } t w i c e ! } \\end{array} }$   \nPRODUCT   \nRULE   \nSECOND   \nDERIV   \nCheck $y = x ^ { 5 }$ $z = y ^ { 4 } = x ^ { 2 0 } \\quad { \\frac { d z } { d x } } = 2 0 x ^ { 1 9 } \\quad { \\frac { d ^ { 2 } z } { d x ^ { 2 } } } = 3 8 0 x ^ { 1 8 }$   \nSECOND $( 4 y ^ { 3 } ) ( 2 0 x ^ { 3 } ) + ( 5 x ^ { 4 } ) ( 1 2 y ^ { 2 } ) ( 5 x ^ { 4 } ) \\quad 8 0 + 3 0 0 = 3 8 0 \\mathrm { O K }$   \nDERIV ",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "Inverse Functions and Logarithms ",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "A function assigns an output $y = f ( x )$ to each input $\\boldsymbol { x }$ A one-to-one function has different outputs $y$ for different inputs $x$ For the inverse fun\u0001ction the input is $y$ and t\u0001he output is $x = f ^ { - 1 } ( y )$ Example If $y = f ( x ) = x ^ { 5 }$ then $x = f ^ { - 1 } ( y ) = y ^ { \\frac { 1 } { 5 } }$ KEY If y D ax Cb then solve for x D y b inverse function Notice that $x = f ^ { - 1 } ( f ( x ) )$ and $y = f ( f ^ { - 1 } ( y ) )$ The chain rule will connect the derivatives of $f ^ { - 1 }$ and $f$ ",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "The great function of calculus is $y = e ^ { x }$ Its inverse function is the \u201cnatural logarithm\u201d $\\scriptstyle x = \\ln y$ Remember that $x$ is the exponent in $y = e ^ { x }$ The rule $e ^ { x } e ^ { X } = e ^ { x + X }$ tells us that $\\mathbf { l n } ( y Y ) = \\mathbf { l n } y + \\mathbf { l n } Y$ Add logarithms because you add exponents: $\\mathbf { l n } ( e ^ { 2 } e ^ { 3 } ) = 5$ $( e ^ { x } ) ^ { n } = e ^ { n x }$ (multiply exponent) tells us that $\\mathbf { l n } ( y ^ { n } ) = n \\mathbf { l n } y$ ",
+        "page_idx": 43
+    },
+    {
+        "type": "text",
+        "text": "We can change from base $e$ to base 10: New function $\\mathbf { \\boldsymbol { y } } = \\mathbf { 1 0 } ^ { x }$ The inverse function is the logarithm to base 10 Call it log: $\\pmb { x } = \\mathbf { l o g } \\ y$ $\\begin{array} { l } { { \\mathrm { T h e n ~ l o g ~ } 1 0 0 = 2 \\quad \\mathrm { a n d \\quad l o g ~ } \\displaystyle \\frac { 1 } { 1 0 0 } = - 2 \\quad \\mathrm { a n d \\quad l o g ~ } 1 = 0 } } \\\\ { { \\mathrm { W e ~ w i l l ~ s o o n ~ f i n d ~ t h e ~ b e a u t i f u l ~ d e r i v a t i v e ~ o f ~ l n ~ } y \\quad \\displaystyle \\frac { d } { d y } ( | { \\bf n } y ) = \\frac { 1 } { y } } } \\\\ { { \\mathrm { Y o u ~ c a n ~ c h a n g e ~ l e t t e r s ~ t o ~ w r i t e ~ t h a t ~ a s ~ } \\displaystyle \\frac { d } { d x } ( | { \\bf n } x ) = \\frac { 1 } { x } } } \\end{array}$ ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "1. What is $x = f ^ { - 1 } ( y )$ if $y = 5 0 x ^ { \\prime }$ ? ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "2. What is $x = f ^ { - 1 } ( y )$ if $y = x ^ { 4 } ?$ Why do we keep $x \\geq 0 ^ { \\cdot }$ ? ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "3. Draw a graph of an increasing function $y = f ( x )$ : This has different outputs $y$ for different $x$ : Flip the graph (switch the axes) to see $x = f ^ { - 1 } ( y )$ ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "4. This graph has the same $y$ from two $\\mathbf { \\Delta } _ { \\mathbf { \\vec { \\mathbf { x } } } ^ { \\prime } \\mathbf { \\vec { \\mathbf { s } } } }$ . There is no $f ^ { - 1 } ( y )$ ",
+        "page_idx": 44
+    },
+    {
+        "type": "image",
+        "img_path": "images/ee198a2d50c924ee78ea0b4c5d9a674b78075619065438ab856497a130c76458.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "5. The natural logarithm of $y = 1 / e$ is $\\ln ( e ^ { - 1 } ) = ?$ What is $\\ln ( { \\sqrt { e } } )$ ? 6. The natural logarithm of $y = 1$ is $\\ln 1 = ?$ and also base 10 has log $1 = ?$ 7. The natural logarithm of $( e ^ { 2 } ) ^ { 5 0 }$ is ? The base 10 logarithm of $( 1 0 ^ { 2 } ) ^ { 5 0 }$ is ? 8. I believe that ${ \\bf { l n } } y = ( { \\bf { l n } } { \\bf { 1 0 } } ) ( { \\bf { l o g } } y )$ because we can write $y$ in two ways $y = e ^ { \\ln y }$ and also $y = 1 0 ^ { \\log y } = e ^ { ( \\ln 1 0 ) ( \\log y ) }$ : Explain those last steps. 9. Change from base $e$ and base 10 to base 2: Now $y = 2 ^ { x }$ means $\\pmb { x } = \\mathbf { l o g } _ { 2 } \\pmb { y }$ : What are $\\log _ { 2 } 3 2$ and $\\log _ { 2 } 2 !$ Why is $\\log _ { 2 } ( e ) > 1$ ? ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Growth Rates and Log Graphs ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "In order of fast growth as $x$ gets large log x $x , x ^ { 2 } , x ^ { 3 } \\qquad 2 ^ { x } , e ^ { x } , 1 0 ^ { x } \\qquad x ! , x ^ { x }$ logarithmic polynomial exponential factorial Choose $x = 1 0 0 0 = 1 0 ^ { 3 }$ so that log $x = 3$ OK to use $x ! \\approx { \\frac { x ^ { x } } { e ^ { x } } }$ $\\begin{array} { r l r l } { { 2 } 0 9 1 0 0 0 = 3 } & { { } 1 0 ^ { 3 } , 1 0 ^ { 6 } , 1 0 ^ { 9 } } & { } & { { } 1 0 ^ { 3 0 0 } , 1 0 ^ { 4 3 4 } , 1 0 ^ { 1 0 0 0 } } & { } & { { } 1 0 ^ { 2 5 6 6 } , 1 0 ^ { 3 0 0 0 } } \\end{array}$ Why is $1 0 0 0 ^ { 1 0 0 0 } = 1 0 ^ { 3 0 0 0 } ?$ Logarithms are best for big numbers Logarithms are exponents! $\\log 1 0 ^ { 9 } = 9$ log log $x$ is VERY slow Logarith\u0001ms 3;6;9 300;434;1000 2566;3000 Polynomial growth $\\ll$ Exponential growth $\\ll$ Factorial growth Decay to zero for NEGATIVE powers and exponents x12 D x 2 decays much more slowly than the exponential ${ \\frac { 1 } { e ^ { x } } } = e ^ { - x }$ ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Logarithmic scale shows $x = 1 , 1 0 , 1 0 0$ equally spaced. NO ZERO! ",
+        "page_idx": 45
+    },
+    {
+        "type": "image",
+        "img_path": "images/b06c76c74b32b0169b25e448e79caa52cdad9d9233ef4fcc9a47f65e043656ab.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Question If $x = 1 , 2 , 4 , 8$ are plotted, what would you see ? Answer THEY ARE EQUALLY SPACED TOO! ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "log-log graphs (log scale up and also across) If $y = A x ^ { n }$ , how to see $A$ and $n$ on the graph ? Plot log $y$ versus log $x$ to get a straight line ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "$\\log y = \\log A + n \\log x$ Slope on a log-log graph is the exponent $\\pmb { n }$ ",
+        "page_idx": 45
+    },
+    {
+        "type": "image",
+        "img_path": "images/626beeba217c916479b11c6381e72dbcdf42260409dc17110150550b6c97b00b.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "For $y = A b ^ { x }$ use semilog ( $x$ versus log y is now a line) $\\log y = \\log A + x \\log b$ ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "New type of question How quickly does $\\frac { \\Delta f } { \\Delta x }$ approach $\\frac { d f } { d x }$ as $\\Delta x  0 ?$   \nThe error $E = \\frac { \\Delta f } { \\Delta x } - \\frac { d f } { d x }$ will be $E \\approx A ( \\Delta x ) ^ { n }$ What is $n$ ?   \nUsual one-sided ${ \\frac { \\Delta f } { \\Delta x } } = { \\frac { f ( x + \\Delta x ) - f ( x ) } { \\Delta x } }$ only has $n = 1$   \nCentered difference $\\frac { f ( x + \\Delta x ) - f ( x - \\Delta x ) } { 2 \\Delta x }$ has $n = 2$   \nCentered is much better than one-sided $E \\approx ( \\Delta x ) ^ { 2 }$ vs $E \\approx \\Delta x$   \nIDEA FOR $f ( x ) = e ^ { x }$ - One-sided $E$ vs centered $E$   \n\u0014PROJECT at $x = 0$ Graph log $E$ vs log $\\Delta x$ Should see slope 1 or 2 ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "1. Does $x ^ { 1 0 0 }$ grow faster or slower than $e ^ { x }$ as $x$ gets large ? ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "2. Does $1 0 0 \\ln x$ grow faster or slower than $x$ as $x$ gets large ? ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "3. Put these in increasing order for large $n$ : $\\frac { 1 } { n } , \\quad n \\log n , \\quad n ^ { 1 . 1 } , \\quad \\frac { 1 0 ^ { n } } { n ! }$ ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "4. Put these in increasing order for large $x$ : $2 ^ { - x } , \\quad e ^ { - x } , \\quad \\frac { 1 } { x ^ { 2 } } , \\quad \\frac { 1 } { x ^ { 1 0 } }$ ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "5. Describe the log-log graph of $y = 1 0 x ^ { 5 }$ (graph log y vs log x)   \nWhy don\u2019t we see $y = 0$ at $x = 0$ on this graph ?   \nWhat is the slope of the straight line on the log-log graph ?   \nThe line crosses the vertical axis when $x = \\_$ and $y =$   \nThen log $x = 0$ and log $y =$   \nThe line crosses the horizontal axis when $x = -$ and $y = 1$   \nThen log $x = \\_$ and log $y = 0$   \n6. Draw the semilog graph (a line) of $y = 1 0 e ^ { x }$ (graph $\\log y$ versus $x$ )   \n7. That line cross the $x = 0$ axis at which $\\log y$ ? What is the slope ? ",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Linear App\u0001roximation and Newton\u2019s Method ",
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Start at $x = a$ with known $f ( a ) =$ height and $f ^ { \\prime } ( a ) = { \\mathrm { s l o p e } }$ KEY IDEA f .a/ $f ^ { \\prime } ( a ) \\approx { \\frac { f ( x ) - f ( a ) } { x - a } }$ when $x$ is near $a$ ",
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Tangent line has slope $f ^ { \\prime } ( a )$ Solve for $f ( x )$ $f ( x ) \\approx f ( a ) + ( x - a ) f ^ { \\prime } ( a )$ ",
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "$\\approx$ means \u201capproximately\u201d curve $\\approx$ line near $x = a$ ",
+        "page_idx": 47
+    },
+    {
+        "type": "image",
+        "img_path": "images/609d20d719e9037ae2fd9075015a3b7aa6f5a7ccb1d5b767c3e7e143ae043e12.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Examples of linear approximation to $f ( x )$   \n1. $f ( x ) = e ^ { x }$ $f ( 0 ) = e ^ { 0 } = 1$ and $f ^ { \\prime } ( 0 ) = e ^ { 0 } = 1$ are known at $a = 0$   \nFollow the tangent line $e ^ { x } \\approx 1 + ( x - 0 ) 1 = 1 + x$   \n$1 + x$ is the linear part of the series for $e ^ { x }$   \n2. $f ( x ) = x ^ { 1 0 }$ and $f ^ { \\prime } ( x ) = 1 0 x ^ { 9 }$ $f ( 1 ) = 1$ and $f ^ { \\prime } ( 1 ) = 1 0$ known at $a = 1$   \nFollow the tangent line $x ^ { 1 0 } \\approx { \\bf 1 } + ( x - 1 ) { \\bf 1 0 }$ near $x = 1$   \nTake $x = 1 . 1$ $( 1 . 1 ) ^ { 1 0 }$ is approximately $1 + 1 = 2$ ",
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Newton\u2019s Method (looking for $x$ to nearly solve $f ( x ) = 0 { \\mathrm { , } }$ D ",
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Go back to $f ^ { \\prime } ( a ) \\approx { \\frac { f ( x ) - f ( a ) } { x - a } }$ $f ( a )$ and $f ^ { \\prime } ( a )$ are again known ",
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Solve for $x$ when $f ( x ) = 0$ $x - { \\pmb a } \\approx - \\frac { f ( { \\pmb a } ) } { f ^ { \\prime } ( { \\pmb a } ) }$ Newton x Line crossing near curve crossing ",
+        "page_idx": 47
+    },
+    {
+        "type": "image",
+        "img_path": "images/b8a095fd84f2f587a32a0906a265ecf14132d24041bcc6b94503fed37c322184.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 47
+    },
+    {
+        "type": "text",
+        "text": "Examples of Newton\u2019s Method Solve $f ( x ) = x ^ { 2 } - 1 . 2 = 0$ 1. $a = 1$ gives $f ( a ) = 1 - 1 . 2 = - . 2$ and $f ^ { \\prime } ( a ) = 2 a = 2$ Tangent line hits 0 at $x - 1 = - { \\frac { ( - . 2 ) } { 2 } }$ Newton\u2019s $x$ will be 1:1 2. For a better $x$ ; Newton starts again from that point $a = 1 . 1$ Now $f ( a ) = 1 . 1 ^ { 2 } - 1 . 2 = . { \\bf 0 1 } \\quad \\mathrm { a n d } \\quad f ^ { \\prime } ( a ) = 2 a = 2 . 2$ The new tangent line has $x - 1 . 1 = - \\frac { . 0 1 } { 2 . 2 }$ For this $x$ ; $x ^ { 2 }$ is very close to 1:2 ",
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "1. The graph of $y = f ( a ) + ( x - a ) f ^ { \\prime } ( a )$ is a straight ",
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "At $x = a$ the height is $y =$   \nAt $x = a$ the slope is $d y / d x =$   \nThis graph is t t to the graph of $f ( x )$ at $x = a$   \nFor $f ( x ) = x ^ { 2 }$ at $a = 3$ this linear approximation is $y =$   \n2. $y = f ( a ) + ( x - a ) f ^ { \\prime } ( a )$ has $y = 0$ when $x - a =$   \nInstead of the curve $f ( x )$ crossing 0, Newton has tangent line $y$ crossing 0   \n$f ( x ) = x ^ { 3 } - 8 . 1 2$ at $a = 2$ has $f ( a ) = \\_$ and $f ^ { \\prime } ( a ) = 3 a ^ { 2 } =$   \nNewton\u2019s method gives $x - 2 = - { \\frac { f ( a ) } { f ^ { \\prime } ( a ) } } =$   \nThis Newton $x = 2 . 0 1$ nearly has $x ^ { 3 } = 8 . 1 2$ : It actually has $( 2 . 0 1 ) ^ { 3 } = -$ ",
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "Differential Equations of Growth ",
+        "text_level": 1,
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "${ \\frac { d y } { d t } } = c y$ $\\begin{array} { l l l } { { , } } & { { \\mathrm { C o m p l e t e ~ s o l u t i o n ~ } } } & { { y \\left( t \\right) = A e ^ { c t } } } & { { \\mathrm { f o r ~ a n y ~ } A } } \\\\ { { } } & { { \\mathrm { S t a r t i n g ~ f r o m ~ } y \\left( 0 \\right) } } & { { y \\left( t \\right) = y \\left( 0 \\right) e ^ { c t } } } & { { A = y \\left( 0 \\right) } } \\end{array}$ Now include a constant source term $s$ This gives a new equation dyt D cy C s s 0 is saving, s 0 is spending, cy is interest Complete solution $y ( t ) = - \\frac { s } { c } + A e ^ { c t }$ (any $A$ \u0001gives a solution) $y = - { \\frac { s } { c } }$ is a constant solution with $c y + s = 0$ and $\\frac { d y } { d t } = 0$ and $A = 0$ For that solution, the spending $s$ exactly balances the income $_ { c y }$ Cho $\\quad \\mathrm { o s e } ~ A { \\mathrm { ~ t o ~ s t a r t ~ f r o m ~ } } y ( 0 ) { \\mathrm { ~ a t ~ } } t = 0 \\quad y ( t ) = - { \\frac { s } { c } } + \\left( y \\left( \\mathbf { 0 } \\right) + { \\frac { s } { c } } \\right) e ^ { c t }$ ",
+        "page_idx": 48
+    },
+    {
+        "type": "text",
+        "text": "Now add a nonlinear term $s P ^ { 2 }$ coming from competition $P ( t ) =$ world population at time $t$ (for example) follows a new equation $\\frac { d P } { d t } = c P - s P ^ { 2 }$ $c =$ birth rate minus death rate \u201cLOGISTIC EQN\u201d $P ^ { 2 }$ since each person competes with each person To bring back a linear equation set $y = { \\frac { 1 } { P } }$ Then ${ \\frac { d y } { d t } } = - { \\frac { d P / d t } { P ^ { 2 } } } = { \\frac { ( - c P + s P ^ { 2 } ) } { P ^ { 2 } } } = - { \\frac { c } { P } } + s = - c y + s$ ",
+        "page_idx": 49
+    },
+    {
+        "type": "text",
+        "text": "$y = 1 / P$ produced our linear equation (no $y ^ { 2 }$ ) with $- c$ not $+ c$   \n$y ( t ) = { \\frac { s } { c } } + A e ^ { - c t } = { \\frac { s } { c } } + \\left( y ( 0 ) - { \\frac { s } { c } } \\right) e ^ { - c t } = \\mathrm { o l d }$ e ct D old solution with change to c   \nAt $t = 0$ we correctly get $y ( 0 )$ CORRECT START   \nAs $t \\to \\infty$ and $e ^ { - c t } \\to 0$ we get $y ( \\infty ) = { \\frac { s } { c } }$ and $P ( \\infty ) = { \\frac { c } { s } }$ c   \nThe population $P ( t )$ increases along an $s$ -curve approaching s ",
+        "page_idx": 49
+    },
+    {
+        "type": "image",
+        "img_path": "images/1dd42689b3a707c83238b5039bcd79d1ad69c3e2938b3cb0699e685dd509a087.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 49
+    },
+    {
+        "type": "text",
+        "text": "$P = { \\frac { c } { 2 s } }$ has $P ^ { \\prime \\prime } { = } 0$ Inflection point Bending changes from up to down CHECK ${ \\frac { d ^ { 2 } P } { d t ^ { 2 } } } = { \\frac { d } { d t } } \\left( c P - s P ^ { 2 } \\right) = ( c - 2 s P ) { \\frac { d P } { d t } } = 0 { \\mathrm { ~ a t } }$ $P = \\frac { c } { 2 s }$ World population approaches the limit $\\frac { c } { s } \\approx 1 2$ billion (FOR THIS MODEL!) Population now $\\approx 7$ billion Try Google for \u201cWorld population\u201d ",
+        "page_idx": 49
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 50
+    },
+    {
+        "type": "text",
+        "text": "$\\frac { d y } { d t } = c y - s$ has $s =$ spending rate not savings rate (with minus sign) 1. The constant solution is $y = \\_$ when $\\frac { d y } { d t } = 0$ In that case interest incom\u00a1e balances spending: $c y = s$ 2. The complete solution\u00a0is $y ( t ) = \\frac { s } { c } + A e ^ { c t }$ : Why is $A = y ( 0 ) - { \\frac { s } { c } } ?$ 3. If you start with $y ( 0 ) > \\frac { s } { c }$ why does wealth approach $\\infty$ ? If you start with $y ( 0 ) < \\frac { s } { c }$ why does wealth approach $- \\infty$ ? 4. The complete solution to ${ \\frac { d y } { d t } } = s$ is $y ( t ) = s t + A$ What solution $y ( t )$ starts from $y ( 0 )$ at $t = 0 \\mathrm { ~ ? ~ }$ 5. If $\\frac { d P } { d t } = - s P ^ { 2 }$ and $y = { \\frac { 1 } { P } }$ P explain why ${ \\frac { d y } { d t } } = s$ Pure competition. Show that $P ( t ) \\to 0$ as $t \\to \\infty$ 6. If $\\frac { d P } { d t } = c P - s P ^ { 4 }$ D cP sP4 find a linear equation for y D 3 ",
+        "page_idx": 50
+    },
+    {
+        "type": "text",
+        "text": "Differential Equations of Motion ",
+        "text_level": 1,
+        "page_idx": 50
+    },
+    {
+        "type": "text",
+        "text": "A differential equation for $y ( t )$ can involve $d y / d t$ and also $d ^ { 2 } y / d t ^ { 2 }$   \nHere are examples with solutions $C$ and $D$ can be any numbers ${ \\frac { d ^ { 2 } y } { d t ^ { 2 } } } = - y$ y and ${ \\frac { d ^ { 2 } y } { d t ^ { 2 } } } = - \\omega ^ { 2 } y$ Solutions $\\begin{array} { l } { y = C \\cos t + D \\sin t } \\\\ { y = C \\cos \\omega t + D \\sin \\omega t } \\end{array}$   \nNow include $d y / d t$ and look for a solution method $\\begin{array} { l } { { m \\displaystyle \\frac { d ^ { 2 } y } { d t ^ { 2 } } + 2 r \\displaystyle \\frac { d y } { d t } + k y = 0 \\mathrm { h a s ~ a ~ d a m p i n g ~ t e r m ~ } 2 r \\displaystyle \\frac { d y } { d t } . \\quad \\mathrm { \\bf T r y ~ } y = e ^ { \\lambda t } } } \\\\ { { \\mathrm { \\bf ~ \\it ~ \\it ~ \\ / s u b s t i u t u p ~ } e ^ { \\lambda t } \\mathrm { \\bf ~ g i v e s ~ } \\quad m \\lambda ^ { 2 } e ^ { \\lambda t } + 2 r \\lambda e ^ { \\lambda t } + k e ^ { \\lambda t } = 0 } } \\end{array}$   \nCancel $e ^ { \\lambda t }$ to leave the key equation for \u0015 $m \\lambda ^ { 2 } + 2 r \\lambda + k = 0$   \nThe quadratic formula gives \u0015 D r r2 km Two solutions $\\lambda _ { 1 }$ and $\\lambda _ { 2 }$   \nThe differential equation is solved by $y = C e ^ { \\lambda _ { 1 } t } + D e ^ { \\lambda _ { 2 } t }$   \nSpecial case $r ^ { 2 } = k m$ has $\\lambda _ { 1 } = \\lambda _ { 2 }$ Then $t$ enters $y = C e ^ { \\lambda _ { 1 } t } + D t e ^ { \\lambda _ { 1 } t }$ ",
+        "page_idx": 50
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 $\\frac { d ^ { 2 } y } { d t ^ { 2 } } + 6 \\frac { d y } { d t } + 8 y = 0 \\quad m = 1$ and $2 r = 6$ and $k = 8$ $\\lambda _ { 1 } , \\lambda _ { 2 } = { \\frac { - r \\pm { \\sqrt { r ^ { 2 } - k m } } } { m } } { \\mathrm { ~ i s ~ } } \\textstyle - 3 \\pm { \\sqrt { 9 - 8 } } \\quad \\quad \\mathrm { T h e n } \\quad \\lambda _ { 1 } = - 2$ Solution $y = C e ^ { - 2 t } + D e ^ { - 4 t }$ Overdamping with no oscillation EXAMPLE $\\cdot 2 \\mathrm { c h a n g e ~ t o } k = 1 0 \\lambda = - 3 \\pm \\sqrt { 9 - 1 0 } \\mathrm { h a s } \\lambda _ { 1 } = - 3 + i$ Oscillations from the imaginary part of $\\lambda$ \u0001Dec\u0001ay from the real part $^ { - 3 }$ Solution $y = C e ^ { \\lambda _ { 1 } t } + D e ^ { \\lambda _ { 2 } t } = C e ^ { ( - 3 + i ) t } + D e ^ { ( - 3 - i ) t }$ $e ^ { i t } = \\cos t + i \\sin t$ leads to $y = ( C + D ) e ^ { - 3 t }$ cos $t + ( C - D ) e ^ { - 3 t } \\sin t$ EXAMPLE 3 Change to $k = 9$ Now $\\lambda = - 3 , - 3$ (repeated root) Solution $y = C e ^ { - 3 t } + D t e ^ { - 3 t }$ includes the factor $\\prime$ ",
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "Practice Questions ",
+        "text_level": 1,
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "1. For ${ \\frac { d ^ { 2 } y } { d t ^ { 2 } } } = 4 y$ find two solutions $y = C e ^ { a t } + D e ^ { b t }$ : What are $a$ and $b$ ?   \n2. For ${ \\frac { d ^ { 2 } y } { d t ^ { 2 } } } = - 4 y$ find two solutions $y = C$ cos $\\omega t + D$ sin $\\omega t$ : What is $\\omega$ ?   \n3. For ${ \\frac { d ^ { 2 } y } { d t ^ { 2 } } } = \\mathbf { 0 } y$ find two solutions $y = C e ^ { 0 t }$ and (???)   \n4. Put $y = e ^ { \\lambda t }$ into $2 { \\frac { d ^ { 2 } y } { d t ^ { 2 } } } + 3 { \\frac { d y } { d t } } + y = 0$ to find $\\lambda _ { 1 }$ and $\\lambda _ { 2 }$ (real numbers)   \n5. Put $y = e ^ { \\lambda t }$ into $2 { \\frac { d ^ { 2 } y } { d t ^ { 2 } } } + 5 { \\frac { d y } { d t } } + 3 y = 0$ to find $\\lambda _ { 1 }$ and $\\lambda _ { 2 }$ (complex numbers)   \n6. Put $y = e ^ { \\lambda t }$ into ${ \\frac { d ^ { 2 } y } { d t ^ { 2 } } } + 2 { \\frac { d y } { d t } } + y = 0$ to find $\\lambda _ { 1 }$ and $\\lambda _ { 2 }$ (equal numbers)   \nNow $y = C e ^ { \\lambda _ { 1 } t } + D t e ^ { \\lambda _ { 1 } t }$ : The factor $t$ appears when $\\lambda _ { 1 } = \\lambda _ { 2 }$ ",
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "0.4 Video Summaries and Practice Problems ",
+        "text_level": 1,
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Power Series and Euler\u2019s Formula ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "At $x = 0$ , the $n$ th derivative of $x ^ { n }$ is the number $n$ ! Other derivatives are 0: Multiply the $n$ th derivatives of $f ( x )$ by $x ^ { n } / n !$ to match function with series ",
+        "page_idx": 52
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\boxed { f ( x ) = f ( 0 ) + f ^ { \\prime } ( 0 ) \\frac { x } { 1 } + f ^ { \\prime \\prime } ( 0 ) \\frac { x ^ { 2 } } { 2 } + \\cdots + f ^ { ( n ) } ( 0 ) \\frac { x ^ { n } } { n ! } + \\cdots }\n$$",
+        "text_format": "latex",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 $f ( x ) = e ^ { x }$ All derivatives $= 1$ at $x = 0$ Match with $x ^ { n } / n$ ! Taylor Series $= \\left| e ^ { x } = 1 + 1 { \\frac { x } { 1 } } + 1 { \\frac { x ^ { 2 } } { 2 } } + \\cdots + 1 { \\frac { x ^ { n } } { n ! } } + \\cdots \\right|$ Exponential Series ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 $f = \\sin x \\quad f ^ { \\prime } = \\cos x \\quad f ^ { \\prime \\prime } = - \\sin x \\quad f ^ { \\prime \\prime \\prime } = - \\cos x$ At $x = 0$ this is $\\begin{array} { c c c c c c c c c } { { 0 } } & { { 1 } } & { { 0 } } & { { - 1 } } & { { 0 } } & { { 1 } } & { { 0 } } & { { - 1 } } \\end{array}$ REPEAT si $\\overset { } { \\underset { } { \\mathfrak { n } } \\underset { } { x = 1 } \\cdot \\frac { x } { 1 } - 1 \\frac { x ^ { 3 } } { 3 ! } + 1 \\frac { x ^ { 5 } } { 5 ! } - \\cdots }$ ODD POWERS $\\sin ( - x ) = - \\sin x$ ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 $f = \\cos x$ produces 1 0 1 0 1 0 1 0 REPEAT $\\begin{array} { l } { \\displaystyle { \\overline { { \\cos x = 1 - 1 \\frac { x ^ { 2 } } { 2 ! } + 1 \\frac { x ^ { 4 } } { 4 ! } - \\cdots } } } } \\end{array}$ EVEN POWERS ${ \\frac { d } { d x } } ( \\cos x ) = - \\sin x$ ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Imaginary $i ^ { 2 } = - 1$ and then $i ^ { 3 } = - i$ Find the exponential eix ",
+        "page_idx": 52
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l l } & { e ^ { i x } = 1 + i x + { \\cfrac { 1 } { 2 ! } } ( i x ) ^ { 2 } + { \\cfrac { 1 } { 3 ! } } ( i x ) ^ { 3 } + \\cdots } & { { \\mathrm { T h o s e ~ a r e } } } \\\\ & { = \\left( 1 - { \\cfrac { x ^ { 2 } } { 2 ! } } + \\cdots \\right) + i \\left( x - { \\cfrac { x ^ { 3 } } { 3 ! } } + \\cdots \\right) } & { { \\ccos x + i \\sin x } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "EULER\u2019S GREAT FORMULA eix D cos x C i si\u0001n x ",
+        "page_idx": 52
+    },
+    {
+        "type": "image",
+        "img_path": "images/4d0e94fcc02f6978a9a7b6d1d15f0cbb8dba01965e846be50ff1f9335b7be42c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "ei\u0012 D cos \u0012 C i sin \u0012   \n$e ^ { i \\theta } + e ^ { - i \\theta } = 2 \\cos \\theta$   \nei\u0019 D 1 combines 4 great numbers ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Two more examples of Power Series (Taylor Series for $f ( x ) )$ . $\\begin{array} { l } { f ( x ) = { \\cfrac { \\displaystyle 1 } { \\displaystyle 1 - x } } = 1 + x + x ^ { 2 } + x ^ { 3 } + \\cdots \\qquad \\mathrm { \\ \" G e o m e t r i c ~ s e r i e s } ^ { \\mathrm { , } } } \\\\ { f ( x ) = - \\ln ( 1 - x ) = { \\cfrac { x } { 1 } } + { \\cfrac { x ^ { 2 } } { 2 } } + { \\cfrac { x ^ { 3 } } { 3 } } + { \\cfrac { x ^ { 4 } } { 4 } } + \\cdots \\qquad \\mathrm { \\ \" { \\mathrm { \u2030 ~ } } x p ~ } { \\mathrm { \\textlessgtr e o m e t r i c ~ s e r i e s } } ^ { \\mathrm { , } } { \\mathrm { , } } } \\end{array}$ ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights of Calculus ",
+        "text_level": 1,
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "Summary:\u0001Six Functions, Six Rules, Six Theorem \u0001s ",
+        "page_idx": 53
+    },
+    {
+        "type": "table",
+        "img_path": "images/73ba45b5d7ae223f27ba09bfd278d953543349697921bae3da9e6f244e2e81ed.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Integrals</td><td colspan=\"2\">Six Functions</td><td colspan=\"2\">Derivatives</td></tr><tr><td>xn+1/(n+1),n\u2260-1</td><td colspan=\"2\"></td><td colspan=\"2\">nxn-1</td></tr><tr><td>-cos X</td><td colspan=\"2\">sin x</td><td colspan=\"2\">cos X</td></tr><tr><td>sin x</td><td colspan=\"2\">cos x</td><td colspan=\"2\">-sin x</td></tr><tr><td>ecx/c</td><td colspan=\"2\">ecx</td><td colspan=\"2\">cecx</td></tr><tr><td>xlnx-x</td><td colspan=\"2\">In x</td><td colspan=\"2\">1/x</td></tr><tr><td>Ramp function</td><td colspan=\"2\">Step function</td><td colspan=\"2\">Delta function</td></tr><tr><td>X</td><td colspan=\"2\">1</td><td colspan=\"2\">Infinite spike</td></tr></table></body></html>\n\n",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "Six Rules of Differential Calculus 1. The derivative of $a f ( x ) + b g ( x )$ i\u0001s $a { \\frac { d f } { d x } } + b { \\frac { d g } { d x } }$ Sum 2. The derivative of $f ( x ) g ( x )$ is $f ( x ) { \\frac { d g } { d x } } + g ( x ) { \\frac { d f } { d x } }$ Product 3. The derivative of $\\frac { f ( x ) } { g ( x ) }$ is $\\left( g { \\frac { d f } { d x } } - f { \\frac { d g } { d x } } \\right) \\Biggl / g ^ { 2 }$ Quotient 4. The derivative of $f ( g ( x ) )$ is ${ \\frac { d f } { d y } } { \\frac { d y } { d x } }$ where $y = g ( x )$ Chain 5. The derivative of $x = f ^ { - 1 } ( y )$ is ${ \\frac { d x } { d y } } = { \\frac { 1 } { d y / d x } }$ Inverse 6. When $f ( x )  0$ and $g ( x )  0$ as $x \\to a$ , what about $f ( x ) / g ( x ) ?$ l\u2019H\u00f4pital $\\operatorname* { l i m } { \\frac { f ( x ) } { g ( x ) } } = \\operatorname* { l i m } { \\frac { d f / d x } { d g / d x } }$ if these limits exist. Normally this is $\\frac { f ^ { \\prime } ( a ) } { g ^ { \\prime } ( a ) }$ ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "Fundamental Theorem of Calculus ",
+        "text_level": 1,
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "$f ( x ) = \\int _ { a } ^ { x } s ( t ) d t$ df   \nIf then derivative of integral s.x/   \ndx   \nIf ${ \\frac { d f } { d x } } = s ( x )$ then integral of derivative $= \\int _ { a } ^ { b } s ( x ) d x = f ( b ) - f ( a )$   \nBoth parts assume that $s ( x )$ is a continuous function.   \nAll Values Theorem Suppose $f ( x )$ is a continuous function for $a \\leqslant x \\leqslant b$ : Then on that interval, $f ( x )$ reaches its maximum value $M$ and its minimum $m$ : And $f ( x )$ takes all values between $m$ and $M$ (there are no jumps).   \nMean Value Theorem If $f ( x )$ has a derivative for $a \\leqslant x \\leqslant b$ then ${ \\frac { f ( b ) - f ( a ) } { b - a } } = { \\frac { d f } { d x } } ( c )$ at some $c$ between a and $b$   \n\u201cAt some moment $c$ , instant speed $\\ c =$ average speed\u201d   \nTaylor Series Match all the derivatives $f ^ { ( n ) } = d ^ { n } f / d x ^ { n }$ at the basepoint $x = a$ ${ \\begin{array} { l } { f ( x ) = f ( a ) + f ^ { \\prime } ( a ) ( x - a ) + { \\cfrac { 1 } { 2 } } f ^ { \\prime \\prime } ( a ) ( x - a ) ^ { 2 } + \\cdots } \\\\ { \\displaystyle = \\sum _ { n = 0 } ^ { \\infty } { \\frac { 1 } { n ! } } f ^ { ( n ) } ( a ) ( x - a ) ^ { n } } \\end{array} }$   \nStopping at $( x - a ) ^ { n }$ leaves the error $f ^ { n + 1 } ( c ) \\left( x - a \\right) ^ { n + 1 } / ( n + 1 ) !$   \n$[ c$ is somewhere between $a$ and $x$ ] $[ n = 0$ is the Mean Value Theorem] ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "The Taylor series looks best around a D 0 f .x/ D f .n/.0/ xn nD0 ",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Binomial Theorem shows Pascal\u2019s triangle ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c } { { ( 1 + x ) } } & { { 1 + 1 x } } \\\\ { { ( 1 + x ) ^ { 2 } } } & { { 1 + 2 x + 1 x ^ { 2 } } } \\\\ { { ( 1 + x ) ^ { 3 } } } & { { 1 + 3 x + 3 x ^ { 2 } + 1 x ^ { 3 } } } \\\\ { { ( 1 + x ) ^ { 4 } } } & { { 1 + 4 x + 6 x ^ { 2 } + 4 x ^ { 3 } + 1 x ^ { 4 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Those are just the Taylor series for $f ( x ) = ( 1 + x ) ^ { p }$ when $p = 1 , 2 , 3 , 4$ ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { f ^ { ( n ) } ( x ) = ~ ( 1 + x ) ^ { p } ~ p ( 1 + x ) ^ { p - 1 } ~ p ( p - 1 ) ( 1 + x ) ^ { p - 2 } ~ \\cdots } } \\\\ { { f ^ { ( n ) } ( 0 ) = ~ 1 ~ p ~ p ( p - 1 ) ~ \\cdots } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Divide by $n !$ to find the Taylor coefficients $\\ b =$ Binomial coefficients ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { n ! } } f ^ { ( n ) } ( 0 ) = { \\frac { p ( p - 1 ) \\cdots ( p - n + 1 ) } { n ( n - 1 ) \\cdots ( 1 ) } } = { \\frac { p ! } { ( p - n ) ! n ! } } = { \\binom { p } { n } }\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "The series stops at $x ^ { n }$ when $p = n$ Infinite series for other $p$ ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { y } \\left( 1 + x \\right) ^ { p } = 1 + p x + { \\frac { p ( p - 1 ) } { ( 2 ) ( 1 ) } } x ^ { 2 } + { \\frac { p ( p - 1 ) ( p - 2 ) } { ( 3 ) ( 2 ) ( 1 ) } } x ^ { 3 } + \\cdots\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "0 Highlights\u0001of Calculus ",
+        "text_level": 1,
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "Practice Q\u0001uestions ",
+        "text_level": 1,
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "1. Check that the derivative of $y = x \\ln x - x$ is $d y / d x = \\ln x$ : ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "2. The \u201csign function\u201d is $S ( x ) = \\left\\{ \\begin{array} { r l } { { 1 } } & { { \\mathrm { f o r } x \\ge 0 } } \\\\ { { - 1 } } & { { \\mathrm { f o r } x < 0 } } \\end{array} \\right.$ ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "What ramp function $F ( x )$ has $\\frac { d F } { d x } = S ( x ) ?$ $F$ is t\u00d1he integral of $S$ : Why is the derivative ${ \\frac { d S } { d x } } = 2 \\mathbf { d e l t a } ( x ) \\ ?$ (Infinite spike at $x = 0$ with area 2) ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "3. (l\u2019HoOpital) What is the limit of $\\frac { 2 x + 3 x ^ { 2 } } { 5 x + 7 x ^ { 2 } }$ as $x  0 ?$ What about $x \\to \\infty$ ?   \n4. l\u2019HoOpital\u2019s Rule says that $\\operatorname* { l i m } _ { x \\to 0 } { \\frac { f ( x ) } { x } } = \\ ? \\ ?$ when $f ( 0 ) = 0$ : Here $g ( x ) = x$ : ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "5. Derivative is like Difference Integral is like Sum ",
+        "text_level": 1,
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "Difference of sums If $f _ { n } = s _ { 1 } + s _ { 2 } + \\cdots + s _ { n }$ , what is $f _ { n } - f _ { n - 1 } ?$ Sums of differences What is $( f _ { 1 } - f _ { 0 } ) + ( f _ { 2 } - f _ { 1 } ) + \\cdots + ( f _ { n } - f _ { n - 1 } ) ^ { \\mathit { r } }$ \uff1f Those are the Fundamental Theorems of \u201cDifference Calculus\u201d ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "6. Draw a non-continuous graph for $0 \\leq x \\leq 1$ where your function does NOT reach its maximum value. ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "7. For $f ( x ) = x ^ { 2 }$ , which in-between point $c$ gives ${ \\frac { f ( 5 ) - f ( 1 ) } { 5 - 1 } } = { \\frac { d f } { d x } } ( c ) ? \\quad$ ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "8. If your average speed on the Mass Pike is 75, th\u0004e\u0004n\u0004 at some instant your speedometer will read ",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "9. Find three Taylor coefficients $A , B , C$ for $\\sqrt { 1 + x }$ (around $x = 0$ ). ",
+        "page_idx": 55
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( 1 + x ) ^ { \\frac { 1 } { 2 } } = A + B x + C x ^ { 2 } + \\cdots\n$$",
+        "text_format": "latex",
+        "page_idx": 55
+    },
+    {
+        "type": "text",
+        "text": "10. Find the Taylor $\\mathit { \\Theta } ^ { ' } = \\mathit { \\Theta } ^ { ' }$ Binomial) series for $f = { \\frac { 1 } { 1 + x } }$ around $x = 0 ( p = - 1 )$ : ",
+        "page_idx": 55
+    }
+]

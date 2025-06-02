@@ -1,0 +1,100 @@
+1.3 The Velocity at an Instant
+
+We have arrived at the central problems that calculus was invented to solve. There are two questions, in opposite directions, and I hope you could see them coming.
+
+1. If the velocity is changing, how can you compute the distance traveled ?   
+2. If the graph of  is not a straight line, what is its slope ?
+
+Find the distance from the velocity, find the velocity from the distance. Our goal is to do both—but not in one section. Calculus may be a good course, but it is not magic. The first step is to let the velocity change in the steadiest possible way.
+
+Question 1 Suppose the velocity at each time t is  : Find  :
+
+With  , a physicist would say that the acceleration is constant (it equals 2). The driver steps on the gas, the car accelerates, and the speedometer goes steadily up. The distance goes up too—faster and faster. If we measure  in seconds and  in feet per second, the distance  comes out in feet. After 10 seconds the speed is 20 feet per second. After 44 seconds the speed is 88 feet=second (which is 60 miles=hour). The acceleration is clear, but how far has the car gone ?
+
+Question 2 The distance traveled by time t is  : Find the velocity  :
+
+The graph of  is on the right of Figure 1.12. It is a parabola. The curve starts at zero, when the car is new. At  the distance is  : By  reaches 100:
+
+Velocity is distance divided by time, but what happens when the speed is changing ? Dividing  by  gives  —the average velocity over the first ten seconds. Dividing  by  gives the average speed over 11 seconds. But how do we find the instantaneous velocity—the reading on the speedometer at the exact instant when 
+
+I hope you see the problem. As the car goes faster, the graph of  gets steeper— because more distance is covered in each second. The average velocity between  and  is a good approximation—but only an approximation—to the speed at the moment  : Averages are easy to find:
+
+distance at  is  distance at  is  average velocity is 
+
+The car covered 21 feet in that 1 second. Its average speed was 21 feet=second. Since it was gaining speed, the velocity at the beginning of that second was below 21:
+
+Geometrically, what is the average ? It is a slope, but not the slope of the curve. The average velocity is the slope of a straight line. The line goes between two points on the curve in Figure 1.12. When we compute an average, we pretend the velocity is constant—so we go back to the easiest case. It only requires a division of distance by time:
+
+Calculus and the Law You enter a highway at  : If you exit 150 miles away at  , your average speed is 75 miles per hour. I’m not sure if the police can give you a ticket. You could say to the judge, “When was I doing  The police would have to admit that they have no idea—but they would have a definite feeling that you must have been doing 75 sometime.
+
+We return to thecentral problem—computing  at the instant  : The average velocity over the next second is 21: We can also find the average over the half-second between  and  : Divide the change in distance by the change in time:
+
+That average of 20:5 is closer to the speed at  : It is still not exact.
+
+The way to find  is to keep reducing the time interval. This is the basis for Chapter 2; and the key to differential calculus. Find the slope between points that are closer and closer on the curve. The “limit” is the slope at a single point.
+
+Algebra gives the average velocity between  and any later time  : The distance increases from  to  : The change in time is  : So divide:
+
+This formula fits our previous calculations. The interval from  to  had  , and the average was  : When the time step was  , the average was  : Over a millionth of a second the average will be 20 plus  —which is very near 20:
+
+Conclusion: The velocity at  is  . That is the slope of the curve. It agrees with the  -graph on the left side of Figure 1.12, which also has  :
+
+1.3 The Velocity at an Instant
+
+We now show that the two graphs match at all times. If  then  : You are seeing the key computation of calculus, and we can put it into words before equations. Compute the distance at time  , subtract the distance at time  , and divide by  : That gives the average velocity:
+
+This fits the previous calculation, where  was 10: The average was  : Now the average is  : It depends on the time step  , because the velocity is changing. But we can see what happens as  approaches zero. The average is closer and closer to the speedometer reading of  , at the exact moment when the clock shows time  :
+
+1E As  approaches zero, the average velocity  approaches  :
+
+Note The computation (3) shows how calculus needs algebra. If we want the whole  -graph, we have to let time be a “variable.” It is represented by the letter  : Numbers are enough at the specific time  and the specific step  —but algebra gets beyond that. The average between any  and any  is  : Please don’t hesitate to put back numbers for the letters—that checks the algebra.
+
+There is also a step beyond algebra! Calculus requires the limit of the average. As  shrinks to zero, the points on the graph come closer. “Average over an interval” becomes “velocity at an instant.” The general theory of limits is not particularly simple, but here we don’t need it. (It isn’t particularly hard either.) In this example the limiting value is easy to identify. The average  approaches  , as  :
+
+What remains to do in this section ? We answered Question 2—to find velocity from distance. We have not answered Question 1: If  increases linearly with time, what is the distance ? This goes in the opposite direction (it is integration).
+
+The Fundamental Theorem of Calculus says that no new work is necessary. If the slope of  leads to  , then the area under that  -graph leads back to the  -graph. The odometer readings  produced speedometer readings  : By the Fundamental Theorem, the area under  should be  : But we have certainly not proved any fundamental theorems, so it is better to be safe—by actually computing the area.
+
+Fortunately, it is the area of a triangle. The base of the triangle is  and the height is  : The area agrees with  :
+
+EXAMPLE 1 The graphs are shifted in time. The car doesn’t start until  : Therefore  and  up to that time. After the car starts we have  and  : You see how the time delay of 1 enters the formulas. Figure 1.13 shows how it affects the graphs.
+
+EXAMPLE 2 The acceleration changes from 2 to another constant  : The velocity changes from  to  : The acceleration is the slope of the velocity curve! The distance is also proportional to  , but notice the factor  :
+
+If  equals 1, then  and  : That is one of the most famous pairs in calculus. If  equals the gravitational constant  , then  is the velocity of a
+
+falling body. The speed doesn’t depend on the mass (tested by Galileo at the Leaning Tower of Pisa). Maybe he saw the distance  more easily than the speed  : Anyway, this is the most famous pair in physics.
+
+EXAMPLE 3 Suppose  : The average velocity from  to  is
+
+The change in distance has an extra  (coming from  minus  ). The velocity contains an additional 3 (coming from  divided by  ). When  is added to the distance, 3 is added to the velocity. If Galileo had thrown a weight instead of dropping it, the starting velocity  would have added  to the distance.
+
+FUNCTIONS ACROSS TIME
+
+The idea of slope is not difficult—for one straight line. Divide the change in  by the change in  : In Chapter 2; divide the change in  by the change in  : Experience shows that the hard part is to see what happens to the slope as the line moves.
+
+Figure 1.14a shows the line between points  and  on the curve. This is a “secant line.” Its slope is an average velocity. What calculus does is to bring that point  down the curve toward  :
+
+Question 1 What happens to the “change in  —the height of  above  ? Answer The change in  decreases to zero. So does the change in  :
+
+1.3 The Velocity at an Instant
+
+Question 2 As  approaches  , does the slope of the line increase or decrease ? Answer I am not going to answer that question. It is too important. Draw another secant line with  closer to  : Compare the slopes.
+
+This question was created by Steve Monk at the University of Washington—where  of the class gave the right answer. Probably  would have found the right slope from a formula. Figure 1.14b shows the opposite problem. We know the velocity, not the distance. But calculus answers questions about both functions.
+
+Question 3 Which car is going faster at time  Answer Car  has higher speed. Car  has greater acceleration.
+
+Question 4 If the cars start together, is  catching up to  at the end ? Between  and  , do the cars get closer or further apart ?   
+Answer This time more than half the class got it wrong. You won’t but you can see why they did. You have to look at the speed graph and imagine the distance graph. When car  is going faster, the distance between them
+
+To repeat: The cars start together, but they don’t finish together. They reach the same speed at  , not the same distance. Car  went faster. You really should draw their distance graphs, to see how they bend.
+
+These problems help to emphasize one more point. Finding the speed (or slope) is entirely different from finding the distance (or area):
+
+1. To find the slope of the  -graph at a particular time  , you don  have to know the whole history.   
+2. To find the area under the  -graph up to a particular time  , you do have to know the whole history.
+
+A short record of distance is enough to recover  : Point  moves toward point  : The problem of slope is local—the speed is completely decided by  near point  :
+
+In contrast, a short record of speed is not enough to recover the total distance. We have to know what the mileage was earlier. Otherwise we can only know the increase in mileage, not the total.

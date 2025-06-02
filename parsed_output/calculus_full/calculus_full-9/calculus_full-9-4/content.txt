@@ -1,0 +1,100 @@
+9.4 Complex Numbers
+
+Real numbers are sufficient for most of calculus. Starting from  , its integral  is also real. If we are given  , its derivative  is real. But the roots (or zeros) of those polynomials are complex numbers:
+
+We expect two square roots of  . There are three cube roots of 1. Complex numbers are unavoidable, in order to find  roots for each polynomial of degree  .
+
+This section explains how to work with complex numbers. You will see their relation to polar coordinates. At the end, we use them to solve differential equations.
+
+Start with the imaginary number  . Everybody knows that  has no real solution. When you square a real number, the result is never negative. So the world has agreed on a solution called  . (Except that electrical engineers call it  Imaginary numbers follow the normal rules of addition, subtraction, multiplication, and division, with one difference: Whenever  appears it is replaced by  . In particular  times  gives  . In other words,  is also a square root of  . There are two solutions .  and  / to the equation  .
+
+Finding cube roots of 1 will stretch us further. We need complex numbers—real plus imaginary.
+
+9B A complex number (say  ) is the sum of a real number .1/ and a pure imaginary number .3i/. Addition keeps those parts separate; multiplication uses  : 
+
+Adding  to  is easy  . Multiplying is longer, but you see the rules:
+
+The point is this: We don’t have to imagine any more new numbers. After accepting  , the rest is straightforward. A real number isjust a complex number with no imaginary part! When  combines with its “complex conjugate”  —adding or multiplying—the answer is real:
+
+The complex conjugate offers a way to do division, by making the denominator real:
+
+9C The complex number  has real part  and imaginary part  . Its complex conjugate is  . The product  equals  . The absolute value (or modulus) is  .
+
+THE COMPLEX PLANE
+
+Complex numbers correspond to points in a plane. The number  corresponds to the point .1; 3/. Similarly  is paired with  —which is  units along the “real axis” and  units up the “imaginary axis.” The ordinary plane turns into the complex plane. The absolute value  is the same as the polar coordinate  (Figure 9.8a).
+
+The figure shows two more copies of the complex plane. The one in the middle is for addition and subtraction. It uses rectangular coordinates. The one on the right is for multiplication and division and squaring. It uses polar coordinates. In squaring a complex number,  is squared and  is doubled—as the right figure and equation (3) both show.
+
+Adding complex numbers is like adding vectors (Chapter 11). The real parts give  and the imaginary parts give  . The vector sum  corresponds to the complex sum  . The complex conjugate  is the mirror image across the real axis .  reversed to  /. The connection to  and  is the same as before (you see it in the triangle):
+
+In the third figure,  has  and  . The polar form is   sin  . When this number is squared, its  angle becomes  : The square is  . Its polar form is 2 cos  sin  .
+
+9D Multiplication adds angles, division subtracts angles, and sq?uaring doubles angles. The absolute values are multiplied, divided, and squared:
+
+For  th powers we reach  and  . For square roots,  goes to  and  goes to  . The number  is at  , so its square root  is at  .
+
+To see why  is doubled in equation (3), factor out  and multiply as usual:
+
+The right side is c  . The double-angle formulas from trigonometry match the squaring of complex numbers. The cube would be cos  sin  (because  and  add to  , and  is still 1). The  th power is in de Moivre’s formula:
+
+With  we get co  —which is cos  sin  , the complex conjugate:
+
+We are almost touching Euler’s formula, the key to all numbers on the unit circle:
+
+Squaring both sides gives  . That is equation (3). The  power is  . That is equation (5). Multiplying any  by  produces  . The special case  gives the square, and the special case  gives  1.
+
+Euler’s formula appeared in Section 6.7, by changing  to  in the series for  :
+
+A highlight of Chapter 10 is to recognize two new series on the right. The real terms  add up to cos  . The imaginary part  adds up to sin  . Therefore  equals cos  sin  . It is fantastic that the most important periodic functions in all of mathematics come together in this graceful way.
+
+We learn from Euler (pronounced oiler) that  . The cosine of  is 1, the sine is zero. If you substitute  into the infinite series, somehow everything cancels except the 1—this is almost a miracle. From the viewpoint of angles,  carries us around a full circle and back to  .
+
+Multiplying Euler’s formula by  , we have a third way to write a complex number:
+
+EXAMPLE 1  times  equals  . For  times  is  .
+
+EXAMPLE 2 Find  and  and  and  when  .
+
+Solution  is  . Note that  Now watch angles:
+
+Figure 9.9 shows the eight powers of  . They are the eighth roots of 1.
+
+EXAMPLE 3 .  The square roots of  are  and  . Instead of  we have  If Euler insists, we write  and  as  and 2ei3=2.
+
+EXAMPLE 4 (The cube roots of 1) In rectangular coordinates we have to solve  , which is not easy. In polar coordinates this same equation is  . Immediately  . The angle  can be  or  or  —the cube roots in the figure are evenly spaced:
+
+You see why the angle  gives nothing new. It completes a full circle back to  .
+
+The nth roots of 1 are  ,  , : : :, 1. There are n of them.   
+They lie at angles  ,  , : : :,  around the unit circle.
+
+SOLUTION OF DIFFERENTIAL EQUATIONS
+
+The algebra of complex numbers is now applied to the calculus of complex functions. The complex number is  , the complex function is  . It will solve the2equations  and  , by connecting them to  and  . Chapter 16 does the same for all lineardifferential equationswith constant coefficients—this is an optional preview.
+
+Please memorize the one key idea: Substitute  into the differential equation and solve for  . Each derivative brings a factor  , so  and  :
+
+For this differential equation,  must be a square root of  . We know the candidates .  and  /. The equation has two “pure exponential solutions”  :
+
+Their combinations  give all solutions. In Chapter 16 we will choose the two numbers  and  to match two initial conditions at  .
+
+The solution  sin  is complex. The differential equation is real. For real  ’s, take the real and imaginary parts of the complex solutions:
+
+These are the “pure oscillatory solutions.” When  travels around the unit circle, its imaginary part sin  moves up and down. (It is like the ball and its shadow in Section 1.4, but twice as fast because of  .) The real part cos  goes backward and forward. By the chain rule, the second derivative of cos  is 4 cos 2t . Thus  and we have real solutions.
+
+EXAMPLE 5 Find threesolutions and then three real solutions to  .
+
+Key step: Substitute  . The result is  . Thus  and  is a cube root of 1. The candidate  gives  (our first solution|). |The next  i?s complex:
+
+The real part of the exponent leads to the absolute value  . It decreases as  gets larger, so  moves toward zero. At the same time, the factor  goes around the unit circle. Therefore  spirals in to zero (Figure 9.10). So does its complex
+
+conjugate, which is the third exponential. Changing  to  in (11) gives the third cube root of 1 and the third solution e t=2e i 3t=2.
+
+The first real solution is  . The others are the two parts of the spiral:
+
+That is  cos  and  sin  . It is the ultimate use (until Chapter 16) of polar coordinates and complex numbers. We might have discovered cos  and sin  without help, for  don’t think22these solutions to  would have been found.
+
+EXAMPLE 6 Find four solutions to  by substituting  .
+
+Four derivatives lead to  . Therefore  is  or  or  or 1. The solutions are  ,  ,  , and  . If we want real solutions,  and  combine into cos  and sin  . In all cases  .

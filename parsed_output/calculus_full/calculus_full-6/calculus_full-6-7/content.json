@@ -1,0 +1,240 @@
+[
+    {
+        "type": "text",
+        "text": "6.7 Hyperbolic Functions ",
+        "text_level": 1,
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "This section combines $e ^ { x }$ with $e ^ { - x }$ . Up to now those functions have gone separate ways\u2014one increasing, the other decreasing. But two particular combinations have earned names of their own (cosh $x$ and sinh $x$ ): ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh y p e r b o l i c ~ c o s i n e ~ \\cosh x = \\frac { e ^ { x } + e ^ { - x } } 2 ~ h y p e r b o l i c ~ s i n e ~ \\sinh x = \\frac { e ^ { x } - e ^ { - x } } 2\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "The first name rhymes with \u201cgosh\u201d. The second is usually pronounced \u201ccinch\u201d. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "The graphs in Figure 6.18 show that cosh $x > \\sinh { x }$ . For large $x$ both hyperbolic functions come extremely close to ${ \\scriptstyle { \\frac { 1 } { 2 } } } e ^ { x } $ . When $x$ is large and negative, it is $e ^ { - x }$ that dominates. Cosh $x$ still goes up to $+ \\infty$ while sinh $x$ goes down to $- \\infty$ (because sinh $x$ has a minus sign in front of $e ^ { - x }$ ). ",
+        "page_idx": 347
+    },
+    {
+        "type": "image",
+        "img_path": "images/3b2d07e40d27422e20f8f7296551806e410b173c360831e5616014d61e0f1c8a.jpg",
+        "img_caption": [
+            "Fig. 6.18 Cosh $x$ and sinh $x$ . The hyperbolic fu\u0001nctions combine ${ \\scriptstyle { \\frac { 1 } { 2 } } } e ^ { x } $ and ${ \\frac { 1 } { 2 } } e ^ { - x }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 347
+    },
+    {
+        "type": "image",
+        "img_path": "images/0052354ab0b83a52117d783a4fa9a446e0d2a6166c40fef1c934a3d4d76630ab.jpg",
+        "img_caption": [
+            "Fig. 6.19 Gateway Arch courtesy of the St. Louis Visitors Commission. "
+        ],
+        "img_footnote": [],
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "The following facts come directly from $\\scriptstyle { \\frac { 1 } { 2 } } \\left( e ^ { x } + e ^ { - x } \\right)$ and $\\scriptstyle { \\frac { 1 } { 2 } } \\left( e ^ { x } - e ^ { - x } \\right)$ : ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { \\mathrm { c o s h } ( - x ) = \\cosh x \\ \\mathrm { a n d } \\ \\mathrm { c o s h } 0 = 1 } } \\\\ { { \\mathrm { s i n h } ( - x ) = - \\sinh x \\ \\mathrm { a n d } \\ \\mathrm { s i n h } 0 = 0 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "The graph of cosh $x$ corresponds to a hanging cable (hanging under its weight). Turned upside down, it has the shape of the Gateway Arch in St. Louis. That must be the largest upside-down cosh function ever built. A cable is easier to construct than an arch, because gravity does the work. With the right axes in Problem 55; the height of the cable is a stretched-out cosh function called a catenary: ",
+        "page_idx": 347
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = a \\cosh \\left( x / a \\right) \\qquad { \\mathrm { ( c a b l e ~ t e n s i o n / c a b l e ~ d e n s i t y = } } a ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Busch Stadium in St. Louis has 96 catenary curves, to match the Arch. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "The properties of the hyperbolic functions come directly from the definitions. There are too many properties to memorize\u2014and no reason to do it! One rule is the most important. Every fact about sines and cosines is reflected in a corresponding fact about sinh $x$ and cosh $x$ : Often the only difference is a minus sign. Here are four properties: ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "1. $( \\cosh x ) ^ { 2 } - ( \\sinh x ) ^ { 2 } = 1 \\quad \\Bigl [ \\mathrm { i n s t e a d o f } ( \\cos x ) ^ { 2 } + ( \\sin x ) ^ { 2 } = 1 \\Bigr ]$   \nCheck: $\\left[ { \\frac { e ^ { x } + e ^ { - x } } { 2 } } \\right] ^ { 2 } - \\left[ { \\frac { e ^ { x } - e ^ { - x } } { 2 } } \\right] ^ { 2 } = { \\frac { e ^ { 2 x } + 2 + e ^ { - 2 x } - e ^ { 2 x } + 2 - e ^ { - 2 x } } { 4 } } = 1$   \n2 ${ \\frac { d } { d x } } { \\big ( } \\cosh x { \\big ) } = \\sinh x \\quad \\left[ \\operatorname { i n s t e a d o f } { \\frac { d } { d x } } { \\big ( } \\cos x { \\big ) } = - \\sin x \\right]$   \n3. ${ \\frac { d } { d x } } \\left( \\sinh x \\right) = \\cosh x \\quad \\left[ \\operatorname { l i k e } { \\frac { d } { d x } } \\sin x = \\cos x \\right]$   \n4. $\\int \\sinh x d x = \\cosh x + C \\qquad { \\mathrm { a n d } } \\qquad \\int \\cosh x d x = \\sinh x + C$ ",
+        "page_idx": 348
+    },
+    {
+        "type": "image",
+        "img_path": "images/66253ab18a7f863bb1e6067f01495d67a3aa4e615dc568deb085a569196e0371.jpg",
+        "img_caption": [
+            "Fig. 6.20 The unit circle $\\cos ^ { 2 } t + \\sin ^ { 2 } t = 1$ and the unit hyperbola $\\cosh ^ { 2 } t - \\sinh ^ { 2 } t = 1$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Property 1 is the connection to hyperbolas. It is responsible for the \u201ch\u201d in cosh and sinh: Remember that $( \\cos x ) ^ { 2 } + ( \\sin x ) ^ { 2 } = 1$ puts the point . $( \\cos x , \\sin x )$ onto a unit circle. As $x$ varies, t\u0001he p\u0001oint goes around the circle. The o\u0001rdinary sine and cosine are \u201ccircular functions.\u201d\u0001Now look at $( \\cosh x , \\sinh x )$ /:\u0001Pr\u0001operty 1 is $( \\cosh x ) ^ { 2 } - ( \\sinh x ) ^ { 2 } = 1$ , so this point travels on the unit hyperbola in Figure 6.20. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "You will guess the definitions of the other four hyperbolic functions: ",
+        "page_idx": 348
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l } { \\operatorname { t a n h } x = { \\frac { \\sinh x } { \\cosh x } } = { \\frac { e ^ { x } - e ^ { - x } } { e ^ { x } + e ^ { - x } } } } & { \\operatorname { c o t h } x = { \\frac { \\cosh x } { \\sinh x } } = { \\frac { e ^ { x } + e ^ { - x } } { e ^ { x } - e ^ { - x } } } } \\\\ { \\operatorname { s e c h } x = { \\frac { 1 } { \\cosh x } } = { \\frac { 2 } { e ^ { x } + e ^ { - x } } } } & { \\operatorname { c s c h } x = { \\frac { 1 } { \\sinh x } } = { \\frac { 2 } { e ^ { x } - e ^ { - x } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "I think \u201ctanh\u201d is pronounceable, and \u201csech\u201d is easy. The others are harder. Their properties come di\u00bbrectly from c $\\operatorname { \\mathrm { : o s h } } ^ { 2 } x - \\sinh ^ { 2 } x = 1$ : Divide by $\\cosh ^ { 2 } x$ and $\\sinh ^ { 2 } x$ : ",
+        "page_idx": 348
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { 1 - \\operatorname { t a n h } ^ { 2 } x = \\operatorname { s e c h } ^ { 2 } x \\quad } & { \\mathrm { a n d } \\quad \\coth ^ { 2 } x - 1 = \\operatorname { c s c h } ^ { 2 } x } \\\\ { ( \\operatorname { t a n h } x ) ^ { \\prime } = \\operatorname { s e c h } ^ { 2 } x \\quad } & { \\mathrm { a n d } \\quad ( \\operatorname { s e c h } x ) ^ { \\prime } = - \\operatorname { s e c h } x \\operatorname { t a n h } x } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 348
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int \\operatorname { t a n h } x \\ d x = \\int { \\frac { \\sinh x } { \\cosh x } } d x = \\ln ( \\cosh x ) + C .\n$$",
+        "text_format": "latex",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "INVERSE HYPERBOLIC FUNCTIONS ",
+        "text_level": 1,
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "You remember the angles $\\sin ^ { - 1 } x$ and $\\tan ^ { - 1 } x$ and $\\sec ^ { - 1 } x$ : In Section 4.4 we differentiated those inverse functions by the chain rule. The main application was to integrals. If we happen to meet $\\textstyle \\int d x / ( 1 + x ^ { 2 } )$ ; it is $\\tan ^ { - 1 } x + C$ : The situation for ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "$\\sinh ^ { - 1 } x$ and tanh $^ { - 1 } x$ and $\\operatorname { s e c h } ^ { - 1 } \\boldsymbol { x }$ is the same except for sign changes\u2014which are expected for hyperboli\u0001c functions. We write down the three new derivatives: ",
+        "page_idx": 349
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { y = \\sinh ^ { - 1 } x \\ ( \\operatorname { m e a n i n g } x = \\sinh y ) \\operatorname { h a s } \\ { \\frac { d y } { d x } } = { \\frac { 1 } { \\sqrt { x ^ { 2 } + 1 } } } } \\\\ { y = \\operatorname { t a n h } ^ { - 1 } x \\ ( \\operatorname { m e a n i n g } x = \\operatorname { t a n h } y ) \\operatorname { h a s } \\ { \\frac { d y } { d x } } = { \\frac { 1 } { 1 - x ^ { 2 } } } } \\\\ { y = \\operatorname { s e c h } ^ { - 1 } x \\ ( \\operatorname { m e a n i n g } x = \\operatorname { s e c h } y ) \\operatorname { h a s } \\ { \\frac { d y } { d x } } = { \\frac { - 1 } { x { \\sqrt { 1 - x ^ { 2 } } } } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Problems $4 4 - 4 6$ compute $d y / d x$ from $1 / ( d x / d y )$ : The alternative is to use logarithms. Since ln $x$ is the inverse of $e ^ { x }$ ; we can express $\\sinh ^ { - 1 } x$ and tanh $^ { - 1 } x$ and sech $^ { - 1 } x$ as logarithms. Here is $y = \\operatorname { t a n h } ^ { - 1 } x$ : ",
+        "page_idx": 349
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = { \\frac { 1 } { 2 } } \\ln \\left[ { \\frac { 1 + x } { 1 - x } } \\right] { \\mathrm { h a s ~ s l o p e ~ } } { \\frac { d y } { d x } } = { \\frac { 1 } { 2 } } { \\frac { 1 } { 1 + x } } - { \\frac { 1 } { 2 } } { \\frac { 1 } { 1 - x } } = { \\frac { 1 } { 1 - x ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "The last step is a\u0001n ordinar\u0001y derivative of ${ \\scriptstyle { \\frac { 1 } { 2 } } } \\ln ( 1 + x ) - { \\frac { 1 } { 2 } } \\ln ( 1 - x )$ : Nothing is new except the answer. But where did the logarithms come from ? In the middle of the following identity, multiply above and below by cosh $y$ : ",
+        "page_idx": 349
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 + x } { 1 - x } } = { \\frac { 1 + \\operatorname { t a n h } y } { 1 - \\operatorname { t a n h } y } } = { \\frac { \\cosh y + \\sinh y } { \\cosh y - \\sinh y } } = { \\frac { e ^ { y } } { e ^ { - y } } } = e ^ { 2 y } .\n$$",
+        "text_format": "latex",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Then $2 y$ is the logarithm of the left side. This is the first equation in (4), and it is the third formula in the following list: ",
+        "page_idx": 349
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l } { \\sinh ^ { - 1 } x = \\ln \\left[ x + { \\sqrt { x ^ { 2 } + 1 } } \\right] \\quad } & { \\cosh ^ { - 1 } x = \\ln \\left[ x + { \\sqrt { x ^ { 2 } - 1 } } \\right] } \\\\ { \\operatorname { t a n h } ^ { - 1 } x = { \\displaystyle { \\frac { 1 } { 2 } } } \\ln \\left[ { \\frac { 1 + x } { 1 - x } } \\right] \\quad } & { \\operatorname { s e c h } ^ { - 1 } x = \\ln \\left[ { \\frac { 1 + { \\sqrt { 1 - x ^ { 2 } } } } { x } } \\right] } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Remark 1 Those are listed only for reference. If possible d\u0001o not memorize them. The derivatives i\u0001n equations (1),\u0001 (2), (3) offer a choice of antiderivatives\u2014either inverse functions or logarithms (most tables prefer logarithms). The inside cover of the book has ",
+        "page_idx": 349
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int { \\frac { d x } { 1 - x ^ { 2 } } } = { \\frac { 1 } { 2 } } \\ln \\left[ { \\frac { 1 + x } { 1 - x } } \\right] + C \\quad { \\mathrm { ( i n ~ p l a c e ~ o f ~ t a n h } } ^ { - 1 } x + C { \\mathrm { ) } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Remark 2 Logarithms were not seen for $\\sin ^ { - 1 } x$ and $\\tan ^ { - 1 } x$ and $\\sec ^ { - 1 } x$ : You might wonder why. How does it happen th\u0001at $\\operatorname { t a n h } ^ { - 1 } x$ is e\u0001xpr\u0001essed by logarithms, when the parallel formula for $\\tan ^ { - 1 } x$ was missing ? Answer: There must be a parallel formula. To display it I have to reveal a secret that has been hidden throughout this section. ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "The secret is one of the great equations of mathematics. What formulas for cos $x$ and sin $x$ correspond to $\\begin{array} { r } { \\frac { 1 } { 2 } \\left( \\bar { e } ^ { x } + e ^ { - x } \\right) } \\end{array}$ and $\\scriptstyle { \\frac { 1 } { 2 } } \\left( e ^ { x } - e ^ { - x } \\right)$ ? With so many analogies (circular vs. hyperbolic\u0000) you wo\u0001uld expe\u0000ct to find something. The formulas do exist, but they involve imaginary numbers. Fortunately they are very ",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "6.7\u0001 Hyperbolic Functions ",
+        "text_level": 1,
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "simple and there is no reason to withhold the truth any longer: ",
+        "page_idx": 350
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\cos x = { \\frac { 1 } { 2 } } { \\big ( } e ^ { i x } + e ^ { - i x } { \\big ) } \\qquad { \\mathrm { a n d } } \\qquad \\sin x = { \\frac { 1 } { 2 i } } { \\big ( } e ^ { i x } - e ^ { - i x } { \\big ) } .\n$$",
+        "text_format": "latex",
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "It is the imaginary exponents that kept those identities hidden. Multiplying sin $x$ by $i$ and adding to cos $x$ gives Euler\u2019s unbelievably beautiful equation ",
+        "page_idx": 350
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\cos x + i \\sin x = e ^ { i x } .\n$$",
+        "text_format": "latex",
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "That is parallel to the non-beautiful hyperbolic equation cosh $x + \\sinh x = e ^ { x }$ : ",
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "I have to say that (6) is infinitely more important than anything hyperbolic will ever be. The sine and cosine are far more useful than the sinh and cosh : So we end our record of the main properties, with exercises to bring out their applications. ",
+        "page_idx": 350
+    }
+]

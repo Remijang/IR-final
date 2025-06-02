@@ -1,0 +1,135 @@
+1.2 Calculus Without Limits
+
+The next page is going to reveal one of the key ideas behind calculus. The discussion is just about numbers—functions and slopes can wait. The numbers are not even special, they can be any numbers. The crucial point is to look at their differences:
+
+The differences are printed in between, to show  and  and  : Notice how  gives a negative answer  : The numbers in  can go up or down, the differences in  can be positive or negative. The idea behind calculus comes when you add up those differences:
+
+The sum of differences is 9: This is the last number on the top line (in  ). Is this an accident, or is this always true ? If we stop earlier, after  , we get the 7 in  Test any prediction on a second example:
+
+The  ’s are increased by 1: The differences are exactly the same—no change. The sum of differences is still 9: But the last  is now 10: That prediction is not right, we don’t always get the last  :
+
+The first  is now 1: Theanswer 9 (the sum of differences) is  , the last  minus the first  What happens when we change the  ’s in the middle ?
+
+The differences add to  : This is still 10 1: No matter what  ’s we choose or how many, the sum of differences is controlled by the first  and last  If this is always true, there must be a clear reason why the middle  cancel out.
+
+The sum of differences is 
+
+The 5’s cancel, the 12’s cancel, and the 7’s cancel. It is only  that doesn’t cancel. This is the key to calculus!
+
+1B The differences of the  ’s add up to  .
+
+EXAMPLE 1 The numbers grow linearly:  Their differences are constant:
+
+The sum of differences is certainly 5: This agrees with  : The numbers in  remind us of constant velocity. The numbers in  remind us of a straight line  : This example has  and the  ’s start at 2: The straight line would come from  :
+
+EXAMPLE 2 The numbers are squares:  1 4 9 16 Their differences grow linearly: 
+
+ agrees with  : It is a beautiful fact that the first  odd numbers always add up to  : The  ’s are the odd numbers, the  ’s are perfect squares.
+
+Note The letter  is sometimes useful to tell which number in  we are looking at. For this example the zeroth number is  and the  th number is  : This is a part of algebra, to give a formula for the  ’s instead of a list of numbers. We can also use  to tell which difference we are looking at. The first  is the first odd number  : The  th difference is the  th odd number  : (Thus  is  ) It is better to start the differences with  , since there is no zeroth odd number  :
+
+With this notation the  th difference is  : Sooner or later you will get comfortable with subscripts like  and  , but it can be later. The important point is that the sum of the  ’s equals  : We now connect the  ’s to slopes and the  ’s to areas.
+
+Figure 1.7 shows a natural way to graph Example 2, with the odd numbers in  and the squares in  Notice an important difference between the  -graph and the  -graph. The graph of  is “piecewise linear.” We plotted the numbers in  and connected them by straight lines. The graph of  is “piecewise constant.” We plotted the differences as constant over each piece. This reminds us of the distance-velocity graphs, when the distance  is a straight line and the velocity  is a horizontal line.
+
+Now make the connection to slopes:
+
+Over each piece, the change in  (across) is 1: The change in  (upward) is the difference that we are calling  : The ratio is the slope  or just  : The slope makes a sudden change at the breakpoints  ; : : :. At thosespecial points the slope of the  -graph is not defined—we connected the  ’s by vertical lines but this is very debatable. The main idea is that between the breakpoints, the slope of  is  .
+
+Now make the connection to areas:
+
+The total area under the  -graph is  :
+
+This area, underneath the staircase in Figure 1.7, is composed of rectangles. The base of every rectangle is 1: The heights of the rectangles are the v’s. So the areas also equal the  ’s, and the total area is the sum of the  ’s. This area is  :
+
+Even more is true. We could start at any time and end at any later time— not necessarily at the special times  : Suppose we stop at  : Only half of the last rectangular area (under  ) will be counted. The total area is  : This still agrees with  : At this new ending time  , we are only halfway up the last step in the  -graph. Halfway between 9 and 16 is 12:5:
+
+1C The v’s are slopes of  : The area under the  -graph is  :
+
+This is nothing less than the Fundamental Theorem of Calculus. But we have only used algebra (no curved graphs and no calculations involving limits). For now the Theorem is restricted to piecewise linear  and piecewise constant  : In Chapter 5 that restriction will be overcome.
+
+Notice that a proof of  is suggested by Figure 1.7a. The triangle under the dotted line has the same area as the four rectangles under the staircase. The area of the triangle is  , which is the perfect square  : When there are  rectangles instead of 4, we get  for the area.
+
+The next examples show other patterns, where  and  increase exponentially or   
+oscillate around zero. I hope you like them but I don’t think you have to learn them.   
+They are like the special functions  and sin  and cos t—except they go in steps.   
+You get a first look at the important functions of calculus, but you only need algebra.   
+Calculus is needed for a steadily changing velocity, when the graph of  is curved.
+
+The last example will be income tax—which really does go in steps. Then Section 1:3 will introduce the slope of a curve. The crucial step for curves is working with limits. That will take us from algebra to calculus.
+
+EXPONENTIAL VELOCITY AND DISTANCE
+
+Start with the numbers  : These are “powers of 2:” They start with the zeroth power, which is  : The exponential starts at 1 and not 0. After  steps there are  factors of 2, and  equals  : Please recognize the difference between  and  and  . The numbers  grow linearly, the numbers  grow quadratically, the numbers  grow exponentially. At  these are 20 and 100 and 1024: The exponential  quickly becomes much larger than the others.
+
+The differences of  are exactly  : We get the same beautiful numbers. When the  ’s are powers of 2; so are the  ’s. The formula  is slightly different from  , because the first  is numbered  : (Then  : The zeroth power of every number is 1, except that  is meaningless.) The two graphs in Figure 1.8 use the same numbers but they look different, because  is piecewise linear and  is piecewise constant.
+
+Where will calculus come in ? It works with the smooth curve  : This exponential growth is critically important for population and money in a bank and the national debt. You can spot it by the following test:  is proportional to  :
+
+1 Introduction to Calculus
+
+Remark The function  is trickier than  : For  the slope is  : It is proportional to  and not  : For  the slope is  , and we won’t find the constant  until Chapter 6: (The number  is the natural logarithm of 2:) Problem 37 estimates  with a calculator—the important thingis that it’s constant.
+
+OSCILLATING VELOCITY AND DISTANCE
+
+We have seen a forward-back motion, velocity  followed by  That is oscillation of the simplest kind. The graph of  goes linearly up and linearly down. Figure 1.9 shows another oscillation that returns to zero, but the path is more interesting.
+
+The numbers in  are now  : Since  the motion brings us back to the start. The whole oscillation can be repeated.
+
+The differences in  are  : They add up to zero, which agrees with  : It is the same oscillation as in  (and also repeatable), but shifted in time.
+
+The  -graph resembles (roughly) a sine curve. The  -graph resembles (even more roughly) a cosine curve. The waveforms in nature are smooth curves, while these are “digitized”—the way a digital watch goes forward in jumps. You recognize that the change from analog to digital brought the computer revolution. The same revolution is coming in CD players. Digital signals (off or on, 0 or 1) seem to win every time.
+
+The piecewise  and  start again at  : The ordinary sine and cosine repeat at  : A repeating motion is periodic—here the “period” is 6 or  : (With  in degrees the period is 360—a full circle. The period becomes  when angles are measured in radians. We virtually always use radians—which are degrees times  1 A watch has a period of 12 hours. If the dial shows AM and PM, the period is
+
+A SHORT BURST OF SPEED
+
+The next example is a car that is driven fast for a short time. The speed is  until the distance reaches  , when the car suddenly stops. The graph of  goes up linearly with slope  , and then across with slope zero:
+
+This is another example of “function notation.” Notice the general time  and the particular stopping time  : The distance is  : The domain of  (the inputs) includes all times  : The range of  (the outputs) includes all distances  :
+
+Figure 1.10 allows us to compare three cars—a Jeep and a Corvette and a Maserati. They have different speeds but they all reach  : So the areas under the  -graphs are all 1: The rectangles have height  and base 
+
+Optional remark It is natural to think about faster and faster speeds, which means steeper slopes. The  -graph reaches 1 in shorter times. The extreme case is a step function, when the graph of  goes straight up. This is the unit step  , which is zero up to  and jumps immediately to  for  :
+
+What is the slope of the step function ? It is zero except at the jump. At that moment, which is  , the slope is infinite. We don’t have an ordinary velocity  —instead we have an impulse that makes the car jump. The graph is a spike over the single point  , and it is often denoted by  —so the slope of the step function is called a “delta function.” The area under the infinite spike is 1:
+
+You are absolutely not responsible for the theory of delta functions! Calculus is about curves, not jumps.
+
+Our last example is a real-world application of slopes ands rates—to explain “how taxes work.” Note especially the difference between tax rates and tax brackets and total tax. The rates are  , the brackets are on  , the total tax is 
+
+EXAMPLE 3 Income tax is piecewise linear. The slopes are the tax rates :15; :28; :31:
+
+Suppose you¤are¤single with taxable income of  dollars (Form 1040; line 37—after all deductions). These are the 1991 instructions from the Internal Revenue Service:
+
+If  is not over  20,3501 5 \%x$ :
+
+If  20,350 \leqslant x \leqslant \ ; the tax is  3052.50+28 \%\ :
+
+If  is over  49,300\ of the amount over  49,300$ :
+
+The first bracket is  : (The IRS never uses this symbol  , but I think it is OK here.We know what it means.)Thesecond bracket is  20,350 \leqslant x \leqslant \ : The top bracket  49,30031 \%$ : But only the income in that bracket is taxed at that rate.
+
+Figure 1.11 shows the rates and the brackets and the tax due. Those are not average rates, they are marginal rates. Total tax divided by total income would be the average rate. The marginal rate of .28 or :31 gives the tax on each additional dollar of income— it is the slope at the point  : Tax is like area or distance—it adds up. Tax rate is like slope or velocity—it depends where you are. This is often unclear in the news media.
+
+Question What is the equation for the straight line in the top bracket ?
+
+Answer The bracket begins at  when the tax is  : The slope of the line is the tax rate :31: When we know a point on the line and the slope, we know the equation. This is important enough to be highlighted.
+
+1D For  in the top bracket the tax is  123,456.50+.31( x -\mathbb { S } 4 9 , 30 0 )\ plus the extra tax on extra income.
+
+Section 2:3 presents this “point-slope equation” for any straight line. Here you see it for one specific example. Where does the number  11$ ;158:50 come from ? It is the tax at the end of the middle bracket, so it is the tax at the start of thetop bracket.
+
+Figure 1.11 also shows a distance-velocity example. The distance at  is  miles. After that time the velocity is 60 miles per hour. So the line with slope 60 on the  -graph has the equation
+
+The starting point is .2; 40/: The new speed 60 multiplies the extra time  : The point-slope equation makes sense. We now review this section, with comments.
+
+Central idea Start with any numbers in  Their differences go in  : Then the sum of those differences is flast ffirst:
+
+Subscript notation The numbers are  and the first difference is  : A typical number is  and the  th difference is  : When those differences are added, all  ’s in the middle (like  ) cancel out:
+
+Examples  or  or  : Then  (constant) or  (odd numbers) or 2j 1:
+
+Functions Connect the  ’s to be piecewise linear. Then the slope  is piecewise constant. The area under the  -graph from any  to any  equals  :
+
+Units Distance in miles and velocity in miles per hour. Tax in dollars and tax rate in (dollars paid)=(dollars earned). Tax rate is a percentage like :28, with no units.

@@ -1,0 +1,575 @@
+[
+    {
+        "type": "text",
+        "text": "5.3 Summation versus Integration ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "This section does integration the hard way. We find explicit formulas for $f _ { n } = v _ { 1 } + \\cdots + v _ { n }$ : From areas of rectangles, the limits produce the area $f ( x )$ under a curve. According to the Fundamental Theorem, $d f / d x$ should return us to $v ( x )$ \u2014and we verify in each case that it does. ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "May I recall that there is sometimes an easier way? If we can find an $f ( x )$ whose derivative is $v ( x )$ , then the integral of $v$ is $f .$ Sums and limits are not required, when $f$ is spotted directly. The next section, which explains how to look for $f ( x )$ , will displace this one. (If we can\u2019t find an antiderivative we fall back on summation.) Given a successful $f ,$ ; adding any constant produces another $f$ \u2014since the derivative of the constant is zero. The right constant achieves $f ( 0 ) = 0$ , with no extra effort. ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "This section constructs $f ( x )$ from sums. The next section searches for antiderivatives. ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "THE SIGMA NOTATION ",
+        "text_level": 1,
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "In a section about sums, there has to be a decent way to express them. Consider $1 ^ { 2 } + 2 ^ { 2 } + 3 ^ { 2 } + 4 ^ { 2 }$ : The individual terms are $v _ { j } = j ^ { 2 }$ : Their sum can be written in summation notation, using the capital Greek letter $\\Sigma$ (pronounced sigma): ",
+        "page_idx": 251
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 ^ { 2 } + 2 ^ { 2 } + 3 ^ { 2 } + 4 ^ { 2 } { \\mathrm { ~ i s ~ w r i t t e n } } \\sum _ { j = 1 } ^ { 4 } j ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "Spoken aloud, that becomes \u201cthe sum of $j ^ { 2 }$ from $j = 1$ to 4.\u201d It equals 30: The limits on $j$ (written below and above $\\Sigma$ ) indicate where to start and stop: ",
+        "page_idx": 251
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv _ { 1 } + \\cdots + v _ { n } = \\sum _ { j = 1 } ^ { n } v _ { j } \\quad { \\mathrm { a n d } } \\quad v _ { 3 } + \\cdots + v _ { 9 } = \\sum _ { k = 3 } ^ { 9 } v _ { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "The $k$ at the end of (1) makes an additional point. There is nothing special about the letter $j$ : That is a \u201cdummy variable,\u201d no better and no worse than $k$ (or $i$ ). Dummy variables are only on one side (the side with $\\Sigma$ ), and they have no effect on the sum. The upper limit $n$ is on both sides. Here are six sums: ",
+        "page_idx": 251
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { k = 1 } ^ { n } k = 1 + 2 + 3 + \\cdots + n \\qquad \\quad \\sum _ { j = 1 } ^ { 4 } ( - 1 ) ^ { j } = - 1 + 1 - 1 + 1 = 0\n$$",
+        "text_format": "latex",
+        "page_idx": 251
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { j = 1 } ^ { 5 } ( 2 j - 1 ) = 1 + 3 + 5 + 7 + 9 = 5 ^ { 2 } \\sum _ { i = 0 } ^ { 0 } v _ { i } = v _ { 0 } \\left[ { \\mathrm { o n l y ~ o n e ~ t e r m } } \\right]\n$$",
+        "text_format": "latex",
+        "page_idx": 251
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { k = 0 } ^ { \\infty } { \\frac { 1 } { 2 ^ { k } } } = 1 + { \\frac { 1 } { 2 } } + { \\frac { 1 } { 4 } } + \\cdots = 2 \\left[ { \\mathrm { i n f n i t e ~ s e r i e s } } \\right]\n$$",
+        "text_format": "latex",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "The numbers 1 and $n$ or 1 and 4 (or 0 and $\\infty$ ) are the lower limit and upper limit. The dummy variable $i$ or $j$ or $k$ is the index of summation. I hope it seems reasonable that the infinite series $\\textstyle 1 + { \\frac { 1 } { 2 } } + { \\frac { 1 } { 4 } } + \\cdots$ adds to 2: We will come back to it in Chapter $1 0 . \\dagger$ ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "A sum like $\\Sigma _ { j = 1 } ^ { n } 6$ looks meaningless, but it is actually $6 + 6 + \\cdots + 6 = 6 n$ : It follows the rules. In fact $\\Sigma _ { i = 1 } ^ { 4 } j ^ { 2 }$ is not meaningless either. Every term is $j ^ { 2 }$ and by the same rules, that sum is $4 j ^ { 2 }$ : However the $i$ was probably intended to be $j$ : Then the sum is $1 + 4 + 9 + 1 6 = 3 0$ : ",
+        "page_idx": 251
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Question What happens to these sums when the upper limits are changed to $n$ ? ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Answer The sum depends on the stopping point $n$ . A formula is required (when possible). Integrals stop at $x$ , sums stop at $n$ , and we now look for special cases when $f ( x )$ or $f _ { n }$ can be found. ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "A SPECIAL SUMMATION FORMULA ",
+        "text_level": 1,
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "How do you add the first 100 whole numbers? The problem is to compute ",
+        "page_idx": 252
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { j = 1 } ^ { 1 0 0 } j = 1 + 2 + 3 + \\cdots + 9 8 + 9 9 + 1 0 0 = ?\n$$",
+        "text_format": "latex",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "If you were G\u0001auss, you would see the answer at once. (He solved this problem at a ridiculous age, which gave his friends the idea of getting him into another class.) His solution was to combine $1 + 1 0 0$ , and $2 + 9 9$ , and $3 + 9 8$ , always adding to 101. There are fifty of those combinations. Thus the sum is . $5 0 ) ( 1 0 1 ) = 5 0 5 0$ . ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "The sum from 1 to $n$ uses the same idea. The first and last terms add to $n + 1$ : The next terms $n - 1$ and 2 also add to $n + 1$ : If $n$ is even (as 100 was) then there are ${ \\begin{array} { l } { { \\frac { 1 } { 2 } } n } \\end{array} }$ parts. Therefore the sum is ${ \\begin{array} { l } { { \\frac { 1 } { 2 } } n } \\end{array} } $ times $n + 1$ : ",
+        "page_idx": 252
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { j = 1 } ^ { n } j = 1 + 2 + \\cdots + ( n - 1 ) + n = { \\frac { 1 } { 2 } } n ( n + 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "The important term is ${ \\frac { 1 } { 2 } } n ^ { 2 }$ , but the exact sum is ${ \\frac { 1 } { 2 } } n ^ { 2 } + { \\frac { 1 } { 2 } } n$ : ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "What happens if $n$ is an odd number (like $n = 9 9$ )? Formula (2) remains true. The combinations $1 + 9 9$ and $2 + 9 8$ still add to $n + 1 = 1 0 0$ : There are $\\begin{array} { r } { \\frac { 1 } { 2 } ( 9 9 ) = 4 9 \\frac { 1 } { 2 } } \\end{array}$ such pairs, because the middle term (which is 50) has nothing to combine with. Thus $1 + 2 + \\cdots + 9 9$ equals $4 9 { \\frac { 1 } { 2 } }$ times 100, or 4950. ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Remark That sum had to be 4950; because it is 5050 minus 100: The sum up to 99 equals the sum up to 100 with the last term removed. Our key formula $f _ { n } - f _ { n - 1 } =$ $v _ { n }$ has turned up again! ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE Find the sum $1 0 1 + 1 0 2 + \\cdots + 2 0 0$ of the second hundred numbers. ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "First solution This is the sum from 1 to 200 minus the sum from 1 to 100 W ",
+        "page_idx": 252
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { 1 0 1 } ^ { 2 0 0 } j = \\sum _ { 1 } ^ { 2 0 0 } j - \\sum _ { 1 } ^ { 1 0 0 } j .\n$$",
+        "text_format": "latex",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "The middle sum is ${ \\scriptstyle { \\frac { 1 } { 2 } } } ( 2 0 0 ) ( 2 0 1 )$ and the last is ${ \\scriptstyle { \\frac { 1 } { 2 } } } ( 1 0 0 ) ( 1 0 1 )$ : Their difference is 15050:   \nNote! I left out $\\cdot \\cdot _ { j } = \"$ in the limits. It is there, but not written. ",
+        "page_idx": 252
+    },
+    {
+        "type": "text",
+        "text": "Second solution The answer 15050 is exactly the sum of the first hundred numbers (which was 5050) plus an additional 10000: Believing that a number like 10000 can never turn up by accident, we look for a reason. It is found through changing the limits of summation: ",
+        "page_idx": 252
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { j = 1 0 1 } ^ { 2 0 0 } j { \\mathrm { ~ i s ~ t h e ~ s a m e ~ s u m ~ a s ~ } } \\sum _ { k = 1 } ^ { 1 0 0 } ( k + 1 0 0 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "This is important, to be able to shift limits around. Ofte\u0001n the lower limit is moved to zero or one, for convenience. Both sums have 100 terms (that doesn\u2019t change). The dummy variable $j$ is replaced by another dummy variable $k$ : They are related by $j = k + 1 0 0$ or equivalently by $k = j - 1 0 0$ : ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "The variable must change everywhere\u2014in the lower limit and the upper limit as well as inside the sum. If $j$ starts at 101; then $k = j - 1 0 0$ starts at 1: If $j$ ends at 200; $k$ ends at 100: If $j$ appears in the sum, it is replaced by $k + 1 0 0$ (and if $j ^ { 2 }$ appeared it would become $( k + 1 0 0 ) ^ { 2 } )$ : ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "From equation (4) you see why the a\u0001nswer is 15050: The sum $1 + 2 + \\cdots + 1 0 0$ is 5050 as before. 100 is added to each of those 100 terms. That gives 10000: ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLES OF CHANGING THE VARIABLE (and the limits) ",
+        "text_level": 1,
+        "page_idx": 253
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\displaystyle \\sum _ { i = 0 } ^ { 3 } 2 ^ { i } \\mathrm { \\ e q u a l s } \\sum _ { j = 1 } ^ { 4 } 2 ^ { j - 1 } } & { ( \\mathrm { h e r e \\ } i = j - 1 ) . \\mathrm { B o t h \\ s u m s \\ a r e \\ } 1 + 2 + 4 + 8 } \\\\ { \\displaystyle \\sum _ { i = 3 } ^ { n } v _ { i } \\mathrm { \\ e q u a l s } \\sum _ { j = 0 } ^ { n - 3 } v _ { j + 3 } } & { ( \\mathrm { h e r e \\ } i = j + 3 \\mathrm { \\ a n d \\ } j = i - 3 ) . \\mathrm { B o t h \\ s u m s \\ a r e \\ } v _ { 3 } + \\cdots + v _ { n } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Why change $n$ to $n - 3 2$ Because the upper limit is $i = n$ : So $j + 3 = n$ and $j =$ $n - 3$ : ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "A final step is possible, and you will often see it. The new variable $j$ can be changed back to $i$ : Dummy variables have no meaning of their own, but at first the result looks surprising: ",
+        "page_idx": 253
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { i = 0 } ^ { 5 } 2 ^ { i } \\mathrm { \\ e q u a l s \\ } \\sum _ { j = 1 } ^ { 6 } 2 ^ { j - 1 } \\mathrm { \\ e q u a l s \\ } \\sum _ { i = 1 } ^ { 6 } 2 ^ { i - 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "With practice you might do that in one step, skipping the temporary letter $j$ : Every $i$ on the left becomes $i - 1$ on the right. Then $i = 0 , . . . , 5$ changes to $i = 1 , . . . , 6$ : (At first two steps are safer.) This may seem a minor point, but soon we will be changing the limits on integrals instead of sums. Integration is parallel to summation, and it is better to see a \u201cchange of variable\u201d here first. ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Note about $1 + 2 + \\cdots + n$ : The good thing is that Gauss found the sum ${ \\textstyle { \\frac { 1 } { 2 } } n ( n + 1 ) }$ : The bad thing is that his method looked too much like a trick. I wo \u0001uld like to\u0001show how this fits the fund\u0001am e\u0001ntal rule connecting sums and differences: ",
+        "page_idx": 253
+    },
+    {
+        "type": "equation",
+        "text": "$$\ni f \\ v _ { 1 } + v _ { 2 } + \\cdots + v _ { n } = f _ { n } \\ t h e n \\ v _ { n } = f _ { n } - f _ { n - 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Gauss says that $f _ { n }$ is ${ \\textstyle { \\frac { 1 } { 2 } } n ( n + 1 ) }$ : Reducing $n$ by 1, his formula f o\u0001r $f _ { n - 1 }$ is $\\frac { 1 } { 2 } ( n - 1 ) n$ : The difference $f _ { n } - f _ { n - 1 }$ should be the last term $n$ in the sum: ",
+        "page_idx": 253
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { f _ { n } - f _ { n - 1 } = \\frac { 1 } { 2 } n ( n + 1 ) - \\frac { 1 } { 2 } ( n - 1 ) n = \\frac { 1 } { 2 } ( n ^ { 2 } + n - n ^ { 2 } + n ) = n . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "This is the one term $v _ { n } = n$ that is included in $f _ { n }$ but not in $f _ { n - 1 }$ : ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "There is a deeper point here. For any sum $f _ { n }$ ; there are two things to check. The $f$ \u2019s must begin correctly and they must change correctly. The underlying idea is mathematical induction: Assume the statement is true below $n$ : Prove it for $n$ . ",
+        "page_idx": 253
+    },
+    {
+        "type": "text",
+        "text": "Goal: To prove that $1 + 2 + \\cdots + n = { \\frac { 1 } { 2 } } n ( n + 1 )$ : This is the guess $f _ { n }$ . ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Proof by induction: Check $f _ { 1 }$ (it equals 1). Check $f _ { n } - f _ { n - 1 } ( i t ~ e q u a l s n )$ . ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "For $n = 1$ the answer $\\textstyle { \\frac { 1 } { 2 } } n ( n + 1 ) = { \\frac { 1 } { 2 } } \\cdot 1 \\cdot 2$ is correct. For $n = 2$ this formula ${ \\frac { 1 } { 2 } } \\cdot 2 \\cdot 3$ agrees with $1 + 2$ : But that separate test is not necessary! If $f _ { 1 }$ is right, and if the change $f _ { n } - f _ { n - 1 }$ is right for every $n$ ; then $f _ { n }$ must be right. Equation (6) was the key test, to show that the change in $f$ \u2019s agrees with $v$ : ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "That is the logic behind mathematical induction, but I am not happy with most of the exercises that use it. There is absolutely no excitement. The answer is given by some higher power (like Gauss), and it is proved correct by some lower power (like us). It is much better when we lower powers find the answer for ourselves. $\\dag$ Therefore I will try to do that for the second problem, which is the sum of squares. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "THE SUM OF $j ^ { 2 }$ AND THE INT\u0004E\u0004\u0004GRAL OF $x ^ { 2 }$ ",
+        "text_level": 1,
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "An important calculation comes next. It is the area in Figure 5.6. One region is made up of rectangles, so its area is a sum of $n$ pieces. The other region lies under the parabola $v = x ^ { 2 }$ : It cannot be divided into rectangles, and calculus is needed. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "The first problem is to find $f _ { n } = 1 ^ { 2 } + 2 ^ { 2 } + 3 ^ { 2 } + \\cdot \\cdot \\cdot + n ^ { 2 }$ : This is a sum of squares, with $f _ { 1 } = 1$ and $f _ { 2 } = 5$ and $f _ { 3 } = 1 4$ : The goal is to find the pattern in that sequence. By trying to guess $f _ { n }$ we are copying what will soon be done for integrals. ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "Calculus looks for an $f ( x )$ whose derivative is $v ( x )$ : There $f$ is an antiderivative ",
+        "page_idx": 254
+    },
+    {
+        "type": "image",
+        "img_path": "images/8cb87add779e78d6810bf6d2a9ef3764c056c12b4e648b4d9ff7cffe0e6c81bc.jpg",
+        "img_caption": [
+            "Fig. 5.6 Rectangles enclosing $v = x ^ { 2 }$ have area $\\begin{array} { r } { \\left( \\frac { 1 } { 3 } n ^ { 3 } + \\frac { 1 } { 2 } n ^ { 2 } + \\frac { 1 } { 6 } n \\right) ( \\Delta x ) ^ { 3 } \\approx \\frac { 1 } { 3 } ( n \\Delta x ) ^ { 3 } = \\frac { 1 } { 3 } x ^ { 3 } . } \\end{array}$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "(or an integral).\u0001Algeb\u0001ra looks for $f _ { n } ^ { \\mathrm { ~ * ~ } }$ s whos\u0001e difference\u0001s produce $v _ { n }$ : Here $f _ { n }$ could be called an antidifference (better to call it a sum). ",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "The best start is a\u0001good guess. Copying directly from integrals, we might try $\\begin{array} { r } { f _ { n } = \\frac { 1 } { 3 } n ^ { 3 } } \\end{array}$ : To test if it is right, check whether $f _ { n } - f _ { n - 1 }$ produces on $v _ { n } = n ^ { \\bar { 2 } }$ : ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\frac { 1 } { 3 } n ^ { 3 } - \\frac { 1 } { 3 } ( n - 1 ) ^ { 3 } = \\frac { 1 } { 3 } n ^ { 3 } - \\frac { 1 } { 3 } ( n ^ { 3 } - 3 n ^ { 2 } + 3 n - 1 ) = n ^ { 2 } - n + \\frac { 1 } { 3 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "We see n2, but also n C 31 : The guess\u000131 n3 needs correction terms. To cancel 31 in the difference, I subtract ${ \\begin{array} { l } { { \\frac { 1 } { 3 } } n } \\end{array} }$ from the sum. To put back $n$ in the difference, I add $1 + 2 + \\cdots + n = { \\frac { 1 } { 2 } } n ( n + 1 ) $ to the sum. The new guess (which should be right) is ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { f _ { n } = \\frac { 1 } { 3 } n ^ { 3 } + \\frac { 1 } { 2 } n ( n + 1 ) - \\frac { 1 } { 3 } n = \\frac { 1 } { 3 } n ^ { 3 } + \\frac { 1 } { 2 } n ^ { 2 } + \\frac { 1 } { 6 } n . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 254
+    },
+    {
+        "type": "text",
+        "text": "To check this answer, verify first that $f _ { 1 } = 1$ : Also $f _ { 2 } = 5$ and $f _ { 3 } = 1 4$ : To be certain, verify that $f _ { n } - f _ { n - 1 } = n ^ { 2 }$ : For calculus the important term is ${ \\scriptstyle { \\frac { 1 } { 3 } } } n ^ { 3 }$ : ",
+        "page_idx": 254
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT h e s u m \\sum _ { j = 1 } ^ { n } j ^ { 2 } \\ o f t h e f i r s t \\ n s q u a r e s \\ i s \\ \\frac 1 3 \\ n ^ { 3 } p l u s \\ c o r r e c t i o n s \\ \\frac 1 2 \\ n ^ { 2 } \\ a n d \\ \\frac 1 6 n .\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "In practice ${ \\frac { 1 } { 3 } } n ^ { 3 }$ is an excellent estimate. The sum of the first 100 squares is approximately ${ \\textstyle \\frac { 1 } { 3 } } ( 1 0 0 ) ^ { 3 }$ , or a third of a million. If we need the exact answer, equation (7) is available: the sum is 338; 350: Many applications (example: the number of steps to solve 100 linear equations) can settle for ${ \\overline { { \\frac { 1 } { 3 } } } } n ^ { 3 }$ : ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "What is fascinating is the contrast with calculus. Calculus has no correction terms! They get washed away in the limit of thin rectangles. When the sum is replaced by the integral (the area), we get an absolutely clean answer: ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "The area under the parabola, out to the point $x = 1 0 0$ , is precisely a third of a million.   \nWe have to explain why, with many rectangles. ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "The idea is to approach an infinite number of infinitely thin rectangles. A hundred rectangles gave an area of 338; 350: Now take a thousand\u0004 \u0004re\u0004ctangles. Their heights are $\\begin{array} { r } { \\left( \\frac { \\bar { 1 } } { 1 0 } \\right) ^ { 2 } , \\left( \\frac { 2 } { 1 0 } \\right) ^ { 2 } } \\end{array}$ ; : : : because the curve is $v = x ^ { 2 }$ : The base of every rectangle is $\\begin{array} { r } { \\Delta x = \\frac { 1 } { 1 0 } } \\end{array}$ , a\u0000nd \u0001we add heights times base: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n= { \\bigg ( } { \\frac { 1 } { 1 0 } } { \\bigg ) } ^ { 2 } \\left( { \\frac { 1 } { 1 0 } } \\right) + \\left( { \\frac { 2 } { 1 0 } } \\right) ^ { 2 } \\left( { \\frac { 1 } { 1 0 } } \\right) + \\cdots + \\left( { \\frac { 1 0 0 0 } { 1 0 } } \\right) ^ { 2 } \\left( { \\frac { 1 } { 1 0 } } \\right) .\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Factor out $\\scriptstyle \\left( { \\frac { 1 } { 1 0 } } \\right) ^ { 3 }$ : What you have left is $1 ^ { 2 } + 2 ^ { 2 } + \\cdots + 1 0 0 0 ^ { 2 }$ , which fits the sum of squares for\u0000mul\u0001a. The exact area of the thousand rectangles is 333; 833:5: I could try to guess ten thousand rectangles but I won\u2019t. ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Main point: The area is approaching 333; 333:333 : : :: But the calculations are getting worse. It is time for algebra\u2014which means that we keep \u201c $\\Delta x ^ { , \\mathbf { \\vec { \\mathbf { \\tau } } } }$ and avoid numbers. ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "The interval of length 100 is divided into $n$ pieces of length $\\Delta x$ : (Thus $n = 1 0 0 / \\Delta x . )$ The $j$ th rectangle meets the curve $v = x ^ { 2 }$ , so its height is $( j \\Delta x ) ^ { 2 }$ : Its base is $\\Delta x$ , and we add areas: ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a = ( \\Delta x ) ^ { 2 } ( \\Delta x ) + ( 2 \\Delta x ) ^ { 2 } ( \\Delta x ) + \\cdots + ( n \\Delta x ) ^ { 2 } ( \\Delta x ) = \\sum _ { j = 1 } ^ { n } ( j \\Delta x ) ^ { 2 } ( \\Delta x ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "Factor out $( \\Delta x ) ^ { 3 }$ , leaving a sum of $n$ squares. The area is $( \\Delta x ) ^ { 3 }$ times $f _ { n }$ ; and $n = \\frac { 1 0 0 } { \\Delta x }$ (8) 100 ",
+        "page_idx": 255
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( \\Delta x ) ^ { 3 } \\left[ \\frac { 1 } { 3 } \\left( \\frac { 1 0 0 } { \\Delta x } \\right) ^ { 3 } + \\frac { 1 } { 2 } \\left( \\frac { 1 0 0 } { \\Delta x } \\right) ^ { 2 } + \\frac { 1 } { 6 } \\left( \\frac { 1 0 0 } { \\Delta x } \\right) \\right] = \\frac { 1 } { 3 } 1 0 0 ^ { 3 } + \\frac { 1 } { 2 } 1 0 0 ^ { 2 } ( \\Delta x ) + \\frac { 1 } { 6 } 1 0 0 ( \\Delta x ) ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "This equation shows what is happening. The leading term is a third of a million, as predicted. The other terms are approaching zero! They contain $\\Delta x$ , and as the rectangles get thinner they disappear. They only account for the small corners of rectangles that lie above the curve. The vanishing of those corners will eventually be proved for any continuous functions\u2014the area from the correction terms goes to zero\u2014but here in equation (9) you see it explicitly. ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "The area under the curve came from the central idea of integration: $1 0 0 / \\Delta x$ rectangles of width $\\Delta x$ approach the limiting area $\\scriptstyle = { \\frac { 1 } { 3 } } ( 1 0 0 ) ^ { 3 }$ : The rectangular area is $\\Sigma v _ { j } \\Delta x$ : The exact area is $\\int v ( x ) d x$ : In the limit $\\Sigma$ becomes $\\int$ and $v _ { j }$ becomes $v ( x )$ and $\\Delta x$ becomes $d x$ : ",
+        "page_idx": 255
+    },
+    {
+        "type": "text",
+        "text": "That completes the calculation for a parab\u0001ola. It used the formula for a sum of squares, which was special. But the underlying idea is much more general. The limit of the sums agrees with the antiderivative: The antiderivative of $v ( x ) = x ^ { 2 }$ is $\\begin{array} { r } { f ( x ) = \\frac { 1 } { 3 } x ^ { 3 } } \\end{array}$ . According to the Fundamental Theorem, the area under $v ( x )$ is $f ( x )$ : ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { 0 } ^ { 1 0 0 } v ( x ) d x = f ( 1 0 0 ) - f ( 0 ) = \\frac { 1 } { 3 } ( 1 0 0 ) ^ { 3 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "That Fundamental Theorem is not yet proved! I mean it is not proved by us. Whether Leibniz or Newton managed to prove it, I am not quite sure. But it can be done. Starting from sums of differences, the difficulty is that we have too many limits at once. The sums of $v _ { j } \\Delta x$ are approaching the integral. The differences $\\Delta f / \\Delta x$ approach the derivative. A real proof has to separate those steps, and Section 5.7 will do it. ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Proved or not, you are seeing the main point. What was true for the numbers $f _ { j }$ and $v _ { j }$ is true in the limit for $v ( x )$ and $f ( x )$ : Now $v ( x )$ can vary continuously, but it is still the slope of $f ( x )$ : The reverse of slope is area. ",
+        "page_idx": 256
+    },
+    {
+        "type": "image",
+        "img_path": "images/2698de54f3ab8e19fc9c66cf3379cea22f0cfdcbe27c3a74f0587c214796ebd0.jpg",
+        "img_caption": [
+            "Proof without words by Roger Nelsen (Mathematics Magazine 1990). "
+        ],
+        "img_footnote": [],
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Finally we review the area under $v = x$ : The sum of $1 + 2 + \\cdots + n$ is ${ \\frac { 1 } { 2 } } n ^ { 2 } + { \\frac { 1 } { 2 } } n$ : This gives the area of $n = 4 / \\Delta x$ rectangles, going out to $x = 4$ : The heights are $j \\Delta x$ , the bases are $\\Delta x$ , and we add areas: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum _ { j = 1 } ^ { 4 / \\Delta x } ( j \\Delta x ) ( \\Delta x ) = ( \\Delta x ) ^ { 2 } \\left[ \\frac { 1 } { 2 } \\left( \\frac { 4 } { \\Delta x } \\right) ^ { 2 } + \\frac { 1 } { 2 } \\left( \\frac { 4 } { \\Delta x } \\right) \\right] = 8 + 2 \\Delta x .\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "With $\\Delta x = 1$ the area is $1 + 2 + 3 + 4 = 1 0 .$ : With\u00d1eight rectangles and $\\begin{array} { r } { \\Delta x = \\frac { 1 } { 2 } } \\end{array}$ , the area was $8 + 2 \\Delta x = 9$ : Sixteen rectangles of width $\\textstyle { \\frac { 1 } { 4 } }$ brought the correction $2 \\Delta x$ down to $\\frac { 1 } { 2 }$ : The exact area is 8: The error is proportion\u0001al to $\\Delta x$ . ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Important note There you see a question in applied mathematics. If there is an error, what size is it? How does it behave as $\\Delta x \\to 0 ?$ The $\\Delta x$ term disappears in the limit, and $( \\Delta x ) ^ { 2 }$ disappears faster. But to get an error of $1 0 ^ { - 6 }$ we need eight million rectangles: ",
+        "page_idx": 256
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\Delta x = 2 \\cdot 4 / 8 , 0 0 0 , 0 0 0 = 1 0 ^ { - 6 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "That is horrifying! The numbers $1 0 , 9 , 8 { \\scriptstyle \\frac 1 2 } , 8 { \\scriptstyle \\frac 1 4 } , .$ : : : seem to approach the area 8 in a satisfactory way, but the convergence is much too slow. It takes twice as much work to get one more binary digit in the answer\u2014which is absolutely unacceptable. Somehow the $\\Delta x$ term must be removed. If the correction is $( \\Delta x ) ^ { 2 }$ instead of $\\Delta x$ , then a thousand rectangles will reach an accuracy of $1 0 ^ { - 6 }$ : ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "The problem is that the rectangles are unbalanced. Their right sides touch the graph of $v$ , but their left sides are much too high. The best is to cross the graph in the middle of the interval\u2014this is the midpoint rule. Then the rectangle sits halfway across the line $v = x$ , and the error is zero. Section 5.8 comes back to this rule\u2014and to Simpson\u2019s rule that fits parabolas and removes the $( \\Delta x ) ^ { 2 }$ term and is built into many calculators. ",
+        "page_idx": 256
+    },
+    {
+        "type": "text",
+        "text": "Finally we try the quick way. The area under $v = x$ is $\\scriptstyle f = { \\frac { 1 } { 2 } } x ^ { 2 }$ , because $d f / d x$ is $v$ : The area out to $x = 4$ is ${ \\begin{array} { l } { { \\frac { 1 } { 2 } } ( 4 ) ^ { 2 } = 8 } \\end{array} }$ : Done. ",
+        "page_idx": 257
+    },
+    {
+        "type": "image",
+        "img_path": "images/c9956ac4ae3a2675203c54171e0b601f2f58763b7010d714a5b3dc69aa83e39e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 257
+    },
+    {
+        "type": "image",
+        "img_path": "",
+        "img_caption": [
+            "Fig. 5.7 Endpoint rules: e\u0004r\u0004r\u0004or $\\sim 1 / ( \\mathrm { w o r k } ) \\sim 1 / n$ : Midpoint rule is better: error $\\sim 1 / ( \\mathrm { w o r k } ) ^ { 2 }$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Optional: $p$ th powers Our sums are following a pattern. First, $1 + \\cdots + n$ is ${ \\scriptstyle { \\frac { 1 } { 2 } } } n ^ { 2 }$ plus ${ \\frac { 1 } { 2 } } n$ : The sum of squares is ${ \\scriptstyle { \\frac { 1 } { 3 } } } n ^ { 3 }$ plus correction terms. The sum of $p$ th powers is ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 ^ { p } + 2 ^ { p } + \\cdots + n ^ { p } = { \\frac { 1 } { p + 1 } } n ^ { p + 1 } p l u s c o r r e c t i o n t e r m s .\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "192 The correction involves lower powers of $n$ , and you know what is coming. Those corrections disappear in calculus. The area under $v = x ^ { p }$ from 0 to $n$ is ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { x = 0 } ^ { n } x ^ { p } d x = \\operatorname* { l i m } _ { \\Delta x \\to 0 } \\sum _ { j = 1 } ^ { n / \\Delta x } ( j \\Delta x ) ^ { p } ( \\Delta x ) = { \\frac { 1 } { p + 1 } } n ^ { p + 1 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "Calculus doesn\u2019t c\u0004ar\u0004e\u0004 if the upper limit $n$ is an integer, and it doesn\u2019t care if the power $p$ is an integer. We only need $p + 1 > 0$ to be sure $n ^ { p + 1 }$ is genuinely the leading term. The antiderivative of $v = x ^ { p }$ is $f = x ^ { p + 1 } / ( p + 1 )$ . ",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "We are close to interesting experiments. The corr\u0001ection terms disappear and the sum approaches the integral. Here are actual numbers for $p = 1$ , when the sum and integral are easy: $S _ { n } = 1 + \\cdots + n$ and $\\textstyle I _ { n } = \\int x d x = { \\frac { 1 } { 2 } } n ^ { 2 }$ : The difference is $\\begin{array} { r } { D _ { n } = \\frac { 1 } { 2 } n } \\end{array}$ : The thing to watch is the relative error $\\check { E } _ { n } = D _ { n } / \\bar { I _ { n } }$ : ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c c c c } { { n } } & { { S _ { n } } } & { { I _ { n } } } & { { D _ { n } = S _ { n } - I _ { n } } } & { { E _ { n } = D _ { n } / I _ { n } } } \\\\ { { 1 0 0 } } & { { 5 0 5 0 } } & { { 5 0 0 0 } } & { { 5 0 } } & { { . 0 1 0 } } \\\\ { { 2 0 0 } } & { { 2 0 1 0 0 } } & { { 2 0 0 0 0 } } & { { 1 0 0 } } & { { . 0 0 5 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "The number 20;100 is ${ \\scriptstyle { \\frac { 1 } { 2 } } } ( 2 0 0 ) ( 2 0 1 )$ : Please write down the next line $n = 4 0 0$ , and please find a formula for $E _ { n }$ . You can guess $E _ { n }$ from the table, or you can derive it from knowing $S _ { n }$ and $I _ { n }$ : The formula should show t\u0001hat $E _ { n }$ goes to zero. More important, it should show how quick (or slow) that convergence will be. ",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "One more number\u2014a third of a million\u2014was mentioned earlier. It came from integrating $x ^ { 2 }$ from 0 to 100, which compares to the sum $S _ { 1 0 0 }$ of 100 squares: ",
+        "page_idx": 257
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { c c c c c c } { n } & { p } & { S _ { n } } & { I _ { n } = { \\frac { 1 } { 3 } } n ^ { 3 } } & { D = S - I } & { E = D / I } \\\\ { 1 0 0 } & { 2 } & { 3 3 8 3 5 0 } & { 3 3 3 3 3 { \\frac { 1 } { 3 } } } & { 5 0 1 6 { \\frac { 2 } { 3 } } } & { . 0 1 5 0 5 } \\\\ { 2 0 0 } & { 2 } & { 2 6 8 6 7 0 0 } & { 2 6 6 6 6 6 { \\frac { 2 } { 3 } } } & { 2 0 0 3 3 { \\frac { 1 } { 3 } } } & { . 0 0 7 5 1 2 5 } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "These numbers suggest a new idea, to keep n fixed and change $p$ . The computer can find sums without a formula! With its help we go to fourth powers and square roots: ",
+        "page_idx": 257
+    },
+    {
+        "type": "table",
+        "img_path": "images/86ce7986f3d72f5af857c28f7b917283a3afef22317c0a32f5230171bde4e09b.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>n</td><td>p</td><td>S=1P+.*+np</td><td>I=np+1/(p+1)</td><td>D=S-I</td><td>En,p=D/I</td></tr><tr><td>100</td><td>4</td><td>2050333330</td><td>1(100)5</td><td>50333330</td><td>0.0252</td></tr><tr><td>100</td><td>1-2</td><td>671.4629</td><td>(100)3/2</td><td>4.7963</td><td>0.0072</td></tr></table></body></html>\n\n",
+        "page_idx": 257
+    },
+    {
+        "type": "text",
+        "text": "In this and future tables we don\u2019t expect exact values. The last entries are rounded off, and the goal is to see the pattern. The errors $E _ { n , p }$ are sure to obey a systematic rule\u2014they are proportional to $1 / n$ and to an unknown number $C ( \\boldsymbol { p } )$ that depends on $p$ : I hope you can push the experiments far enough to discover $C ( \\boldsymbol { p } )$ : This is not an exercise with an answer in the back of the book\u2014it is mathematics. ",
+        "page_idx": 258
+    }
+]

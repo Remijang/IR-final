@@ -1,0 +1,132 @@
+3.6 Iterations 
+
+Iteration means repeating the same function. Suppose the function is  cos  : Choose any starting value, say  : Take its cosine:  : Then take the cosine of  . That produces  :  : The iteration is  . I am in radian mode on a calculator, pressing “cos” each time. The early numbers are not important, what is important is the output after 12 or 30 or 100 steps:
+
+The goal is to explain why the  ’s approach  : : : : Every starting value  leads to this same number  : What is special about :7391 ?
+
+Note on iterations Do  , and  , mean that  Absolutely not! Iteration creates a new and different function  : It uses the cos button, not the squaring button. The third step creates  : As soon as you can, iterate with  : What limit do the  ’s approach ? Is it  ?
+
+Let me slow down to understand these questions. The central idea is expressed by the equation  . Substituting  into  gives  : This output  is the input that leads to  : In its turn,  is the input and out comes  : This is iteration, and it produces the sequence 
+
+The  ’s may approach a limit  , depending on the function  : Sometimes  also depends on the starting value  : Sometimes there is  limit. Look at a second example, which does not need a calculator.
+
+EXAMPLE 2  : Starting from  the sequence is
+
+Those numbers  : : : seem to be approaching  : A computer would convince us. So will mathematics, when we see what is special about 8:
+
+8 is the “steady state” where input equals output:  : It is the fixed point. If we start at  , the sequence is 8; 8; 8; : : :: When we start at  , the sequence goes back toward 8:
+
+Equation for limit: If the iterations  converge to  , then  .
+
+To repeat: 8 is special because it equals  : The number :7391 : : : is special because it equals cos :7391 : : :: The graphs of  and  intersect at  . To explain why the  ’s converge (or why they don’t) is the job of calculus.
+
+EXAMPLE 3  has two fixed points:  8and  : Here  :
+
+Starting from  the sequence  ; : : : goes quickly to  : The only approaches to  are from  (of course) and from  : Starting from  we get 4; 16; 256; : : : and the sequence diverges to  :
+
+Each limit  has a “basin of attraction.” The basin contains all starting points  that lead to  : ForExamples 1 and 2, every  led to:7391 and 8: Thebasins were the whole line (that is still to be proved). Example 3 had three basins—the interval  , the two points  , and all the rest. The outer basin  led to  : I challenge you to find the limits and the basins of attraction (by calculator) for  :
+
+In Example 3,  is attracting. Points near  move toward  : The fixed point  is repelling. Points near 1 move away. We now find the rule that decides whether  is attracting or repelling. The key is the slope  at  .
+
+First I will give a calculus proof. Then comes a picture of convergence, by “cobwebs.” Both methods throw light on this crucial testforattr1action:  :
+
+First proof: Subtract  from  : The difference  is the same as  : This is  : The basic idea of calculus is that  is close to  :
+
+The “err|or”  is multiplied by the slope  : The next error  is smaller or larger, based on  or  at  : Every step multiplies approximately by  : Its size controls the speed of convergence.
+
+In Example 1,  is cos  and  is  : There is attraction to :7391 because  : In Example 2,  is  and  is  : There is attraction to 8: In Example 3,  is  and  is  : There is superattraction to  (where  ). There is repulsion from  (where  ).
+
+I admit one major difficulty. The approximation in equation (1) only holds near  : If  is far away, does the sequence still approach  ? When there are several attracting points, which  do we reach ? This section starts with good iterations, which solve the equation  or  : At the end we discover Newton’s method. The next section produces crazy but wonderful iterations, not converging and not blowing up. They lead to “fractals” and “Cantor sets” and “chaos.”
+
+The mathematics of iterations is not finished. It may never be finished, but we are converging on the answers. Please choose a function and join in.
+
+THE GRAPH OF AN ITERATION: COBWEBS
+
+The iteration  involves two graphs at the same time. One is the graph of  : The other is the graph of  (the  line). The iteration jumps back and forth between these graphs. It is a very convenient way tosee the whole process.
+
+Example 1 was  : Figure 3.19 shows the graph of cos  and the “cobweb.” Starting at  on the  line, the rule is based on  :
+
+These steps are repeated forever. From  go up to the curve at  : That height is  : Now cross to the  line at  : The iterations are aiming for  .:7391; :7391/: This is the crossing point of the two graphs  and  :
+
+Example 2 was  : Both graphs are straight lines. The cobweb is one-sided, from  to  to  to  t1o  : Notice how  changes (vertical line) and then  changes (horizontal line).The slope of  is  , so the distance to 8 is multiplied by  at ev¡ery step.
+
+Example 3 was  : The graph of  crosses the  line at two fixed points:  and  : Figure 3.20a starts the iteration close to 1, but it quickly goes away. This fixed point is repelling because  : Distance from  is doubled (at the start). One path moves down to  —which is superattractive because  : The path from  diverges to infinity.
+
+EXAMPLE 4  has two attracting points  (a repelling  is always between).
+
+Figure 3.20b shows two crossings with slope zero. The iterations and cobwebs converge quickly. In between, the graph of  must cross the  IliNneEf:romPbLelOowT. That requires a slope greater than one. Cobwebs diverge from this unstable point, which separates the basins of attraction. The fixed point  is in a basin by itself!
+
+Note 1 To draw cobwebs on a calculator, graph  on top of  : On a CasioY, one way is to pYlot  and give the command  followed by . Now move the cursor vertically to  and press . Then move horizontally to  and press . Continue. Each step draws aPlringe.m
+
+For the TI-81 (and also the Casio) a short program produces a cobweb. Store  in th1e  function slot  . Set the range (square1window or autoscaling). Run the p:rLogirnaem(aSnd,aTn,sTw,erTt)he p:roTmÑpXt wit:h  :u
+
+PrgmC:COBWEB :Disp \*INITIAL Xg"' :Input X :All-off  :Lbl 1 :  ：  :Line (s,S,s,t) :Line(S,T,T,T):  : Pause :Goto 1
+
+Note 2 The  ’s approach  from one side when  :
+
+Note 3 A basin of attraction can include faraway  ’s (basins can come in infinitely many pieces). This makes the problem interesting. If no fixed points are attracting, see Section 3.7 for “cycles” and “chaos.”
+
+At this point we offer the reader a choice. One possibility is to jump ahead to the next section on “Newton’s Method.” That method is an iteration to solve  : The function  combines  and  and  into an optimal formula for  : We will see how quickly Newton’s method works (when it works). It is the outstanding algorithm to solve equations, and it is totally built on tangent approximations.
+
+The other possibility is to understand (through calculus) a whole family of iterations. This family depends on a number  , which is at our disposal. The best choice of c produces Newton’s method. I emphasize that iteration is by no means a new and peculiar idea. It is a fundamental technique in scientific computing.
+
+We start by recognizing that there are many ways to reach  : (I write  for the solution.) A good algorithm may switch to Newton as it gets close. The iterations use  to decide on the next point  :
+
+Notice how  is constructed from  —they are different! We move  to the right side and multiply by a “preconditioner”  : The choice of  (or  , if it changes from step to step) is absolutely critical. The starting guess  is also important—but its accuracy is not always under our control.
+
+Suppose the  converge to  : TheÑn the limit of equatioÑn (2) is
+
+That gives  : If the  ’s have a limit, it solves the right equation. It is a fixed point of  (we can assume  and  . There are two key questions, and both of them are answered by the slope  :
+
+1. How quickly does  approach  (or do the  diverge) ?   
+2. What is a good choice of  (or  ) ?
+
+EXAMPLE 5  is zero at  : The iteration   intends to find  without actually dividing. (Early computers
+
+could not divide; they used iteration.)Subtracting  from both sides leaves an equation for the error:
+
+Replace|  |by  : The right side is  : This “error equation” is
+
+At every step the error is multiplied by  , which is  : The errorgoes to zero if  is less than 1. The absolute value  decides everything:
+
+The perfect choice (if we knew it) is  , which turns the multiplier  into zero. Then one iteration gives the exact answer:  : That is the horizontal line in Figure 3.21a, converging in one step. But look at the other lines.
+
+This example did not need calculus. Linear equations never do. The key idea is that close to  the nonlinear equation  is nearly linear. We apply the tangent approximation. You are seeing how calculus is used, in a problem that doesn’t start by asking for a derivative.
+
+THE BEST CHOICE OF 
+
+The immediate goal is to study the errors  : They go quickly to zero, if the multiplier is small. To understand  , subtract the equation  :
+
+Now calculus enters. When you see a difference of  ’s think of  : Replace  by  , where  stands for the slope  at  :
+
+This is the error equation. The new error at step  is approximate|ly  t|h e old error multiplied by  : This corresponds to  in the linear example. We keep returning to the basic test  :
+
+3K Starting near  ; the errors  go to zero if multiplier has  : The perfect choice is  : Then  :
+
+There is only one difficulty: We don’t know  . Therefore we don’t know the perfect  : It depends on the slope  at the unknown solution. However we can come close, by using the slope at  :
+
+This is Newton’s method. The multiplier  is as near to zero as we can make it. By building  into  , Newton speeded up the convergence of the iteration.
+
+EXAMPLE 6 Solve  with different iterations (1different  ’s).
+
+The line  crosses the cosine curve som1ewhere near  1: The intersection point where  has no simple formula. We start from  and iterate  with three different choices of  :
+
+Take  or  or update  by Newton’s rule  :
+
+The column with  is diverging (repelled from  ). The second column shows convergence (attracted to  ). The third column (Newton’s method) approaches  so quickly that :4501836 and seven more digits are exact for  :
+
+How does this convergence match the prediction ? Note that  so  : Look to see whether the actual errors  , going down each column, are multiplied by the predicted  below that column:
+
+The first column shows a multiplier below  : The errors grow at every step. Because  is negative the errors change sign—the cobweb goes outward.
+
+The second column shows convergence with  : It takes one genuine Newton step, then  is fixed. Af¤ter  steps the error is closely proportional to  — that is “linear convergence” with a good multiplier.
+
+The third column shows the “quadratic convergence” of Newton’s method. Multiplying the error by  is more attractive than ever, because  : In fact  itself is proportional to the error, so at each step the error is squared. Problem 3:8:31 will show that  : This squaring carries us from  to  to  to “machine  in three steps. The number of correct digits is doubled at every step as Newton converges.
+
+Note 1 The choice  produces  : This is “successive substitution.” The equation  is rewritten as  , and |ea ch  is substituted back to produce  : Iteration with  does not always fail!
+
+Note 2 Newton’s method is successive substitution for  , not  Then  :
+
+Note 3 Edwards and Penn1ey happened to choose the same example  : But they cleverly wrote it as  , which has  : This iteration fits into our family with  , and it succeeds. We asked earlier if its limit is  , it is 
+
+Note 4 The choice  is “modified Newton.” After one step of Newton’s method,  is fixed. The steps are quicker, because they don’t require a new  : But we need more steps. Millions of dollars are spent on Newton’s method, so speed is important. In all its forms,  is the central problem of computing.
