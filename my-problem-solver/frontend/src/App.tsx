@@ -61,6 +61,8 @@ function App() {
       setDocuments([]);
       setHasSearched(false);
       setSelectedDocumentIndex(null);
+
+      setRelatedProblems([]);
       return;
     }
 

@@ -321,78 +321,105 @@ h1 {
 /* frontend/src/App.css */
 
 /* ... existing styles ... */
-
 .app-container.searched-layout .documents-section {
   flex: 1;
-  padding: 0; /* Remove padding here, apply to inner panes */
-  display: flex;
-  flex-direction: column; /* Stack upper and lower panes */
+  padding: 20px; /* Padding applied to the whole right pane */
+  display: flex; /* Using flex to manage internal components like nav and content */
+  flex-direction: column;
   max-height: 100vh;
-  /* overflow-y: hidden; /* Prevent double scrollbars, children will handle scroll */
-}
-
-.retrieved-documents-pane,
-.related-problems-pane {
-  flex: 1; /* Each takes half the available space */
-  padding: 20px; /* Add padding to inner panes */
-  overflow-y: auto; /* Allow scrolling within each pane */
+  overflow-y: auto; /* The entire right pane scrolls if content is too long */
   box-sizing: border-box;
-  /* To ensure they don't shrink below their content if flex basis is not set,
-     or if content is very small: */
-  min-height: 0; /* Important for flex children with overflow */
-  display: flex; /* Added to help manage content like loading messages */
-  flex-direction: column; /* To stack title and list/content */
 }
 
-.retrieved-documents-pane {
-  border-bottom: 1px solid #ddd; /* Separator, if not using hr */
+.right-pane-nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Prevent nav from shrinking */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
 }
 
-/* For when a specific item (doc or related problem) is selected */
-.selected-item-view {
-  background-color: #fff;
+.right-pane-nav button {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  background-color: #f0f0f0;
   border-radius: 4px;
-  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */ /* Already have this for general .document-card look */
-  /* This view will now be inside a pane that scrolls, so it shouldn't try to scroll itself
-     unless its own content is exceptionally long and the pane doesn't have enough height.
-     Usually, the pane's scroll will handle it.
-  */
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.selected-item-filename { /* Renamed from selected-document-filename for generality */
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 10px;
-  margin-top: 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #eee;
-  font-weight: normal;
+.right-pane-nav button:hover:not(:disabled) {
+  background-color: #e0e0e0;
 }
 
-.pane-divider {
-  border: none;
-  border-top: 2px solid #e0e0e0;
-  margin: 0 20px; /* Optional horizontal margin if panes have padding */
+.right-pane-nav button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
 }
 
-/* Ensure list containers take up available space if no item is selected */
+.right-pane-nav button:disabled {
+  background-color: #f8f8f8;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+
+.list-view-container {
+  /* This container wraps each list view (docs or related problems) */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows the list content to take available space */
+}
+
+
+/* .retrieved-documents-pane, .related-problems-pane are no longer needed
+   as separate structural elements that split the view. */
+
+/* .pane-divider is no longer needed */
+
+/* Ensure list containers take up available space */
 .document-list-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1; /* Allow it to grow */
 }
-.document-list-container .document-title-list {
-  flex-grow: 1; /* Allow list to take space */
-  overflow-y: auto; /* If list itself becomes too long */
-}
-
-/* Adjust h2 margins within panes */
-.retrieved-documents-pane h2,
-.related-problems-pane h2 {
+.document-list-container h2 { /* Style for titles within list views */
   margin-top: 0;
   color: #333;
   border-bottom: 2px solid #007bff;
   padding-bottom: 10px;
   margin-bottom: 15px;
-  flex-shrink: 0; /* Prevent h2 from shrinking */
+  flex-shrink: 0;
+}
+.document-list-container .document-title-list {
+  flex-grow: 1;
+  overflow-y: auto; /* If list itself becomes too long for its container */
+}
+
+/* Selected item view takes full space and handles its own internal scroll if necessary */
+.selected-item-view {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Take all available space in the right pane */
+  /* If content within selected-item-view (like very long markdown) needs to scroll,
+     and the parent .documents-section already scrolls, you might not need overflow-y here.
+     Test carefully. If you want the markdown content itself to scroll independently
+     of the return button, you'd apply overflow-y to .document-content.
+  */
+}
+
+.selected-item-view .return-button {
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+.selected-item-view .selected-item-filename {
+  flex-shrink: 0; /* Prevent filename from shrinking */
+}
+
+.selected-item-view .document-content {
+  flex-grow: 1; /* Markdown content takes remaining space */
+  overflow-y: auto; /* Allow just the markdown content to scroll */
+  /* padding: 15px; /* Moved from old .document-content */
+  /* border: 1px solid #eee; */ /* Adjust styling as needed */
 }
