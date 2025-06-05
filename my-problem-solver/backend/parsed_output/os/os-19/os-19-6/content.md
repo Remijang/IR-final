@@ -1,0 +1,10 @@
+# 19.6 Issue: Replacement Policy  
+
+As with any cache, and thus also with the TLB, one more issue that we must consider is cache replacement. Specifically, when we are installing a new entry in the TLB, we have to replace an old one, and thus the question: which one to replace?  
+
+THE CRUX: HOW TO DESIGN TLB REPLACEMENT POLICY  
+
+Which TLB entry should be replaced when we add a new TLB entry? The goal, of course, being to minimize the miss rate (or increase hit rate) and thus improve performance.  
+
+We will study such policies in some detail when we tackle the problem of swapping pages to disk; here we’ll just highlight a few typical policies. One common approach is to evict the least-recently-used or LRU entry. LRU tries to take advantage of locality in the memory-reference stream, assuming it is likely that an entry that has not recently been used is a good candidate for eviction. Another typical approach is to use a random policy, which evicts a TLB mapping at random. Such a policy is useful due to its simplicity and ability to avoid corner-case behaviors; for example, a “reasonable” policy such as LRU behaves quite unreasonably when a program loops over $n + 1$ pages with a TLB of size $n ;$ in this case, LRU misses upon every access, whereas random does much better.  
+

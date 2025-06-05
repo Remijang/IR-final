@@ -1,0 +1,386 @@
+[
+    {
+        "type": "text",
+        "text": "You remember that the derivative of $f ( x ) g ( x )$ is not $( d f / d x ) ( d g / d x )$ : The derivative of sin $x$ times $x ^ { 2 }$ is not cos $x$ times $2 x$ : The product rule gave two terms, not one term. But there is another way of combining the sine function $f$ and the squaring function $g$ into a single function. The derivative of that new function does involve the cosine times $2 x$ (but with a certain twist). We will first explain the new function, and then find the \u201cchain rule\u201d for its derivative. ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "May I say here that the chain rule is important. It is easy to learn, and you will use it often. I see it as the third basic way to find derivatives of new functions from derivatives of old functions. (So far the old functions are $x ^ { n }$ , sin $x$ , and cos $x$ : Still ahead are $e ^ { x }$ and $\\log x .$ ) When $f$ and $g$ are added and multiplied, derivatives come from the sum rule and product rule. This section combines $f$ and $g$ in a third way. ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "The new function is $\\sin ( x ^ { 2 } )$ \u2014the sine of $x ^ { 2 }$ . It is created out of the two original functions: if $x = 3$ then $\\scriptstyle x ^ { 2 } = 9$ and $\\sin ( x ^ { 2 } ) = \\sin 9$ : There is a \u201cchain\u201d of functions, combining sin $x$ and $x ^ { 2 }$ into the composite function $\\sin ( x ^ { 2 } )$ : You start with $x$ , then find $g ( x )$ , then find $f ( g ( x ) )$ : ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "The squaring function gi\u0005ves $y = x ^ { 2 } .$ : This is $g ( x )$ : The sine function produces $z = \\sin y = \\sin ( x ^ { 2 } ) .$ : This is $f ( g ( x ) )$ : ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "The \u201cinside function\u201d $g ( x )$ gives $y$ :\u0005 This is the input to the \u201coutside function\u201d $f ( y )$ : That is called composition. It starts with $x$ and ends with $z$ : The composite function is sometimes written $f \\circ g$ (the circle shows the difference from an ordinary product $f g )$ . More often you will see $f ( g ( x ) )$ : ",
+        "page_idx": 215
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz ( x ) = f \\circ g \\left( x \\right) = f ( g ( x ) ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "Other examples are cos $2 x$ and $( 2 x ) ^ { 3 }$ , with $g = 2 x$ : On a calculator you input $x$ , then push the $^ { \\ast } g ^ { , \\prime }$ button, then push the \u201c $f ^ { \\prime \\prime }$ button: ",
+        "page_idx": 215
+    },
+    {
+        "type": "equation",
+        "text": "$$\nF r o m \\textit { x } c o m p u t e \\textit { y } = g ( x ) \\qquad F r o m \\textit { y } c o m p u t e \\textit { z } = f ( y ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "There is not a button for every function! But the squaring function and sine function are on most calculators, and they are used in that order. Figure 4.1a shows how squaring will stretch and squeeze the sine function. ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "4.1 The Chain Rule ",
+        "text_level": 1,
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "That graph of sin $x ^ { 2 }$ is a crazy FM signal (the Frequency is Modulated). The wave goes up and down like sin $x$ , but not at the same places. Changing to sin $g ( x )$ moves the peaks left and right. Compare with a product $g ( x )$ sin $x$ , which is an AM signal (the Amplitude is Modulated). ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "Remark $f ( g ( x ) )$ is usually different from $g ( f ( x ) )$ : The order of $f$ and $g$ is usually important. For $f ( x ) = \\sin { x }$ and $g ( x ) = x ^ { 2 }$ , the chain in the opposite order $g ( f ( x ) )$ gives something different: ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "First apply the sine function: $y = \\sin x$ Then apply the squaring function: $z = ( \\sin x ) ^ { 2 }$ : ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "That result is often written $\\sin ^ { 2 } x$ , to save on parentheses. It is never written sin $x ^ { 2 }$ , which is totally different. Compare them in Figure 4.1. ",
+        "page_idx": 216
+    },
+    {
+        "type": "image",
+        "img_path": "images/a10ebfe9c02790cca53b422cfb1709d79cbd2793680fcab29644e66ae8f92900.jpg",
+        "img_caption": [
+            "Fig. 4.1 $f ( g ( x ) )$ is different from $g ( f ( x ) )$ : Apply $g$ then $f$ , or $f$ then $g$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The composite function $f \\circ g$ can be deceptive. If $g ( x ) = x ^ { 3 }$ and $f ( y ) = y ^ { 4 }$ , how does $f ( g ( x ) )$ differ from the ordinary product $f ( x ) g ( x ) \\}$ The ordinary product is $x ^ { 7 }$ : The chain starts with $y = x ^ { 3 }$ , and then $z = y ^ { 4 } = x ^ { 1 2 }$ : The composition of x3 and y4 gives f .g.x// D x12: ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 In Newton\u2019s method, $F ( x )$ is composed with itself. This is iteration. Every output $x _ { n }$ is fed back as input, to find $x _ { n + 1 } = F ( x _ { n } )$ : The example $\\textstyle F ( x ) = { \\frac { 1 } { 2 } } x + { \\dot { 4 } }$ has $\\begin{array} { r } { { \\cal { F } } ( F ( x ) ) = \\frac { 1 } { 2 } \\big ( \\frac { 1 } { 2 } x + 4 \\big ) + 4 } \\end{array}$ : That produces $\\begin{array} { r } { z = \\frac { 1 } { 4 } x + 6 } \\end{array}$ : ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "The derivative of $F ( x )$ is $\\frac { 1 } { 2 }$ : The\u0000derivativ\u0001e of $z = F ( F ( x ) )$ is $\\textstyle { \\frac { 1 } { 4 } }$ , which is $\\frac { 1 } { 2 }$ times $\\frac { 1 } { 2 }$ : We multiply derivatives. This is a special case of the chain rule. ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "An extremely special case is $f ( x ) = x$ and $g ( x ) = x$ : The ordinary product is $x ^ { 2 }$ : The chain $f ( g ( x ) )$ produces only $x$ !?The output?from the \u201cidentity function\u201d is $g ( x ) = x . \\dagger$ When the second identity function operates on $x$ it produces $x$ again. The derivative is 1 times 1: I can give more composite functions in a table: ",
+        "page_idx": 216
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { { \\underline { { y = g ( x ) } } } } & { { \\underline { { z = f ( y ) } } } } \\\\ { { x ^ { 2 } - 1 } } & { { \\sqrt { y } } } \\end{array} } { \\begin{array} { l } { { \\underline { { z = f ( g ( x ) ) } } } } \\\\ { { \\sqrt { x ^ { 2 } - 1 } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "\u008eA calculator has no button for the identity function. It wouldn\u2019t do anything. ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "The last one adds 5 to get $y$ : Then it subtracts 5 to reach $z$ : So $z = x$ : Here output equals input: $f ( g ( x ) ) = x$ : These \u201cinverse functions\u201d are in Section 4:3: The other examples create new functions $z ( x )$ and we want their derivatives. ",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "THE DERIVATIVE OF $f ( g ( x ) )$ ",
+        "text_level": 1,
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "What is the derivative of $z = \\sin x ^ { 2 } ?$ It is the limit of $\\Delta z / \\Delta x$ : Therefore we look at a nearby point $x + \\Delta x$ : That change in $x$ produces a change in $y = x ^ { 2 }$ \u2014which moves to $y + \\Delta y = ( x + \\Delta x ) ^ { 2 }$ : From this change in $y$ , there is a change in $z = f ( y )$ : It is a \u201cdomino effect,\u201d in which each changed input yields a changed output: $\\Delta x$ produces \u0081y produces $\\Delta z$ : We have to connect the final $\\Delta z$ to the original $\\Delta x$ : ",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "The key is to write $\\Delta z / \\Delta x$ as $\\Delta z / \\Delta y$ times $\\Delta y / \\Delta x$ . Then let $\\Delta x$ approach zero. In the limit, $d z / d x$ is given by the \u201cchain rule\u201d: ",
+        "page_idx": 217
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\Delta z } { \\Delta x } } = { \\frac { \\Delta z } { \\Delta y } } { \\frac { \\Delta y } { \\Delta x } } { \\mathit { b e c o m e s t h e \\ c h a i n \\ r u l e \\ } } { \\frac { d z } { d x } } = { \\frac { d z } { d y } } { \\frac { d y } { d x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "As $\\Delta x$ goes to zero, the ratio $\\Delta y / \\Delta x$ approaches $d y / d x$ : Therefore $\\Delta y$ must be going to zero, and $\\Delta z / \\Delta y$ approaches $d z / d y$ : The limit of a product is the product of the separate limits (end of quick proof). We multiply derivatives: ",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "4A Chain Rule Suppose $g ( x )$ has a derivative at $x$ and $f ( y )$ has a derivative at $y = g ( x )$ : Then the derivative of $z = f ( g ( x ) )$ is ",
+        "page_idx": 217
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d z } { d x } } = { \\frac { d z } { d y } } { \\frac { d y } { d x } } = f ^ { \\prime } ( g ( x ) ) g ^ { \\prime } ( x ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "The slope at $x$ is $d f / d y$ (at $y$ ) times $d g / d x$ (at $x$ ). ",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "Caution The chain rule does not say that the derivative of sin $x ^ { 2 }$ is $( \\cos x ) ( 2 x )$ : True, cos $y$ is the derivative of sin $y$ : The point is that cos $y$ must be evaluated at $y$ (not at $x$ ). We do not want $d f / d x$ at $x$ , we want $d f / d y$ at $y = x ^ { 2 }$ : ",
+        "page_idx": 217
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT h e d e r i \\nu a t i \\nu e o f \\sin x ^ { 2 } i s ( \\cos x ^ { 2 } ) t i m e s ( 2 x ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 If $z = ( \\sin x ) ^ { 2 }$ then $d z / d x = ( 2 \\sin x ) ( \\cos x )$ : Here $y = \\sin x$ is inside. ",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "In this order, $z = y ^ { 2 }$ leads to $d z / d y = 2 y$ : It does not lead to $2 x$ : The inside function sin $x$ produces $d y / d x = \\cos x$ : The answer is $2 y \\cos x$ : We have not yet found the function whose derivative is $2 x$ cos $x$ : ",
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 The derivative of $z = \\sin 3 x$ is ${ \\frac { d z } { d x } } = { \\frac { d z } { d y } } { \\frac { d y } { d x } } = 3 \\cos 3 x .$ ",
+        "page_idx": 217
+    },
+    {
+        "type": "image",
+        "img_path": "images/2204892466ae263ce35b041a7cdd4b52bd545eb474b8d3007a7661a7986029fb.jpg",
+        "img_caption": [
+            "Fig. 4.2 The chain rule: ${ \\cfrac { \\Delta z } { \\Delta x } } = { \\cfrac { \\Delta z } { \\Delta y } } ~ { \\cfrac { \\Delta y } { \\Delta x } }$ approaches ${ \\frac { d z } { d x } } = { \\frac { d z } { d y } } { \\frac { d y } { d x } }$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 217
+    },
+    {
+        "type": "text",
+        "text": "4.1 The Chain Rule ",
+        "text_level": 1,
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "The outside function is $z = \\sin { y }$ : The inside function is $y = 3 x$ : Then $d z / d y =$ cos $y$ \u2014this is cos $3 x$ , not cos $x$ : Remember the other factor $d y / d x = 3$ : ",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "I can explain that factor 3; especially if $x$ is switched to $t$ : The distance is $z = \\sin 3 t$ : That oscillate s\u0001 like sin $t$ except three times as fast. The speeded-up function sin $3 t$ completes a wave at time $2 \\pi / 3$ (instead of $2 \\pi$ ). Naturally the velocity contains the e x\u0001tra factor 3 from the chain rule. ",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 Let $z = f ( y ) = y ^ { n }$ : Find the derivative of $f ( g ( x ) ) = [ g ( x ) ] ^ { n }$ ",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "In this case $d z / d y$ is $n y ^ { n - 1 }$ : The chain rule multiplies\u0001by $d y / d x$ ",
+        "page_idx": 218
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d z } { d x } } = n y ^ { n - 1 } { \\frac { d y } { d x } } \\qquad { \\mathrm { o r } } \\qquad { \\frac { d } { d x } } [ g ( x ) ] ^ { n } = n [ g ( x ) ] ^ { n - 1 } { \\frac { d g } { d x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "This is the power rule! It was already discovered in Section 2:5: Square roots (when $n = 1 / 2 )$ are frequent and important. Suppose $y = x ^ { 2 } - 1$ : ",
+        "page_idx": 218
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d } { d x } } { \\sqrt { x ^ { 2 } - 1 } } = { \\frac { 1 } { 2 } } ( x ^ { 2 } - 1 ) ^ { - 1 / 2 } ( 2 x ) = { \\frac { x } { \\sqrt { x ^ { 2 } - 1 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "Question A Buick uses $1 / 2 0$ of a gallon of gas per mile. You drive at 60 miles per hour. How many gallons per hour? ",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "Answer $( G a l l o n s / h o u r ) = ( g a l l o n s / m i l e ) ( m i l e s / h o u r )$ : The chain rule is $( d y / d t ) = ( d y / d x ) ( d x / d t )$ : The answer is $( 1 / 2 0 ) ( 6 0 ) = 3$ gallons=hour: ",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "Proof of the chain rule The discussion above was correctly based on ",
+        "page_idx": 218
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { \\Delta z } { \\Delta x } = \\frac { \\Delta z } { \\Delta y } \\frac { \\Delta y } { \\Delta x } \\qquad \\mathrm { a n d } \\qquad \\frac { d z } { d x } = \\frac { d z } { d y } \\frac { d y } { d x } .\n$$",
+        "text_format": "latex",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "It was here, over the chain rule, that the \u201cbattle of notation\u201d was won by Leibniz. His notation practically 1tells you what to do: Take t1he limit o1f each term. (I have to mention that when $\\Delta x$ is approaching zero, it is theoretically possible that $\\Delta y$ might hit zero. If that happens, $\\Delta z / \\Delta y$ beco1mes $0 / 0$ : We have to assign it the correct meaning, which is $d z / d y$ :) As $\\Delta x \\to 0$ , ",
+        "page_idx": 218
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\Delta y } { \\Delta x } } \\to g ^ { \\prime } ( x ) \\qquad { \\mathrm { a n d } } \\qquad { \\frac { \\Delta z } { \\Delta y } } \\to f ^ { \\prime } ( y ) = f ^ { \\prime } ( g ( x ) ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "Then $\\Delta z / \\Delta x$ approaches $f ^ { \\prime } ( y )$ times $g ^ { \\prime } ( x )$ , which is the chain rule $( d z / d y ) ( d y / d x )$ : In the table below, the derivative of $( \\sin x ) ^ { 3 }$ is $3 ( \\sin x ) ^ { 2 } \\cos x$ : That extra factor cos $x$ is easy to forget. It is even easier to forget the $^ { - 1 }$ in the last example. ",
+        "page_idx": 218
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { { z = ( x ^ { 3 } + 1 ) ^ { 5 } } } & { { d z / d x = 5 ( x ^ { 3 } + 1 ) ^ { 4 } } } & { { \\mathrm { t i m e s ~ } 3 x ^ { 2 } } } \\\\ { { z = ( \\sin x ) ^ { 3 } } } & { { d z / d x = 3 \\sin ^ { 2 } x } } & { { \\mathrm { t i m e s ~ } \\cos x } } \\\\ { { z = ( 1 - x ) ^ { 2 } } } & { { d z / d x = 2 ( 1 - x ) } } & { { \\mathrm { t i m e s ~ } - 1 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "Important All kinds of letters are used for the chain rule. We named the output $z$ : Very often it is called $y$ , and the inside function is called $u$ : ",
+        "page_idx": 218
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT h e \\ d e r i \\nu a t i \\nu e \\ o f \\ y = \\sin u ( x ) \\ i s \\ { \\frac { d y } { d x } } = \\cos u { \\frac { d u } { d x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "Examples with $d u / d x$ are extremely common. I have to ask you to accept whatever letters may come. What never changes is the key idea\u2014derivative of outside function times derivative of inside function. ",
+        "page_idx": 218
+    },
+    {
+        "type": "text",
+        "text": "4 Derivatives by the Chain Rule ",
+        "text_level": 1,
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 The chain rule is barely needed for $\\sin ( x - 1 )$ : Strictly speaking the inside function is $u = x - 1$ : Then $d u / d x$ is just 1 (not 1). If $y = \\sin ( x - 1 )$ then $d y / d x = \\cos ( x - 1 )$ : The graph is shifted and the slope shifts too. ",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "Notice especially: The cosine is computed at $x - 1$ and not at the unshifted $x$ : ",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "REC?OGNIZING f.?y/ AND $g ( x )$ ",
+        "text_level": 1,
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "A big part of the chain rule is recognizing the chain. The table started with $( x ^ { 3 } + 1 ) ^ { 5 }$ : You look at it for a second. Then you see it as $u ^ { 5 }$ : The inside function is $u = x ^ { 3 } + 1$ : With practice this decomposition (the opposite of composition) gets easy: ",
+        "page_idx": 219
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\cos ( 2 x + 1 ) { \\mathrm { ~ i s ~ } } \\cos u \\qquad { \\sqrt { 1 + \\sin t } } { \\mathrm { ~ i s ~ } } { \\sqrt { u } } \\qquad x \\sin x { \\mathrm { ~ i s ~ } } \\dots ( { \\mathrm { p r o d u c t ~ r u l e ! } } )\n$$",
+        "text_format": "latex",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "In calculations, the carefu\u0001l way is to write down all the functions: ",
+        "page_idx": 219
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz = \\cos u \\quad u = 2 x + 1 \\quad d z / d x = ( - \\sin u ) ( 2 ) = - 2 \\sin ( 2 x + 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "The quick way is to keep in your mind \u201cthe derivative of what\u2019s inside.\u201d The slope of $\\cos ( 2 x + 1 )$ is $- \\sin ( 2 x + 1 )$ , times 2 from the chain rule. The derivative of $2 x + 1$ is remembered\u2014with?out $z$ or $u$ or $f$ ?or $g$ : ",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 7 sin $\\sqrt { 1 - x }$ is a chain of $z = \\sin { y }$ ; $y = \\sqrt { u } , u = 1 - x$ (three functions). With that triple chain you will have the hang of the chain rule: ",
+        "page_idx": 219
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { T h e ~ d e r i v a t i v e ~ o f ~ } \\sin \\sqrt { 1 - x } \\mathrm { ~ i s ~ } ( \\cos \\sqrt { 1 - x } ) \\left( \\frac { 1 } { 2 \\sqrt { 1 - x } } \\right) ( - 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "This is $( d z / d y ) ( d y / d u ) ( d u / d x )$ : Evaluate them at the right places $y , u , x$ : ",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "Finally there is the question of second derivatives. The chain rule gives $d z / d x$ as a product, so $d ^ { 2 } z / d x ^ { \\bar { 2 } }$ needs the product rule: ",
+        "page_idx": 219
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { d z } { d x } = \\frac { d z } { d y } \\frac { d y } { d x } \\frac { d z } { d x } = \\frac { d ^ { 2 } z } { d x ^ { 2 } } = \\frac { d z } { d y } \\frac { d ^ { 2 } y } { d x ^ { 2 } } + \\frac { d } { d x } \\left( \\frac { d z } { d y } \\right) \\frac { d y } { d x } .\n$$",
+        "text_format": "latex",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "That last term needs the chain rule again. It becomes $d ^ { 2 } z / d y ^ { 2 }$ times $( d y / d x ) ^ { 2 }$ : ",
+        "page_idx": 219
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 8 The derivative of sin $x ^ { 2 }$ is $2 x \\cos x ^ { 2 }$ : Then the product rule gives $d ^ { 2 } z / d x ^ { 2 } = 2 \\cos x ^ { 2 } - 4 x ^ { 2 } \\sin x ^ { 2 }$ : In this case $y ^ { \\prime \\prime } { = } 2$ and $( y ^ { \\prime } ) ^ { 2 } = 4 x ^ { 2 }$ : ",
+        "page_idx": 219
+    }
+]

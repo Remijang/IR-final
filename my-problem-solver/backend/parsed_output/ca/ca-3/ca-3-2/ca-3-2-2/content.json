@@ -1,0 +1,126 @@
+[
+    {
+        "type": "text",
+        "text": "3.2.2 View of Memory ",
+        "text_level": 1,
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "In Section 1.6.7, we explained the concept of memory in an abstract machine. The memory can be thought of as one large array of bytes. Each byte has a unique address, which is essentially its location in the array. The address of the first byte is 0, the address of the second byte is 1, and so on. Note that the finest granularity at which we can access memory is at the level of a byte. We do not have a method to uniquely address a given bit. The address is a 32-bit unsigned integer in 32-bit machines, and it is a 64-bit unsigned integer in 64-bit machines. ",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "Now, in a Von Neumann machine, we assume that the program is stored in memory as a sequence of bytes, and the program counter points to the next instruction that is going to be executed. ",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "Assuming that memory is one large array of bytes is fine, if all our data items are only one byte long. However, languages such as C and Java have data types of different sizes \u2013 char (1 byte), short (2 bytes), integer (4 bytes), and long integer (8 bytes). For a multi-byte data type it is necessary to find a representation for it in memory. There are two possible ways of representing a multibyte data type in memory \u2013 little endian and big endian. Secondly, we also need to find methods to represent arrays or lists of data in memory. ",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "Little Indian and Big Endian Representations ",
+        "text_level": 1,
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the problem of storing an integer in locations 0-3. Let the integer be 0x87654321. It can be broken into four bytes \u2013 87, 65, 43, and 21. One option is to store the most significant byte, 87, in the lowest memory address 0. The next location can store 65, then 43, and then ",
+        "page_idx": 99
+    },
+    {
+        "type": "text",
+        "text": "21. This is called the big endian representation because we are starting from the position of the most significant byte. In comparison, we can save the least significant byte first in location 0, and then continue to save the most significant byte in location 3. This representation is called little endian. Figure 3.3 shows the difference. ",
+        "page_idx": 100
+    },
+    {
+        "type": "image",
+        "img_path": "images/3d76577fcb0cac9318f36f6b3260bf671c0a3411f12c68bd94b8d12e233ada15.jpg",
+        "img_caption": [
+            "Figure 3.3: Big endian and little endian representations "
+        ],
+        "img_footnote": [],
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "There is as such no reason to prefer one representation over the other. It depends on the convention. For example, x86 processors use the little endian format. Early versions of ARM processors used to be little endian. However, now they are bi-endian. This means an ARM processor can work as both a little endian and a big endian machine depending on the settings set by the user. Traditionally, IBM $\\textsuperscript { \\textregistered }$ POWER $\\textsuperscript { \\textregistered }$ processors, and Sun $\\textsuperscript { \\textregistered }$ SPARC $\\textsuperscript { \\textregistered }$ processors have been big endian. ",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "Representing Arrays ",
+        "text_level": 1,
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "An array is a linearly ordered set of objects, where an object can be a simple data type such as an integer or character, or can be a complex data type also. ",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "int a[100];  \nchar c[100];",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a simple array of integers, $a$ . If the array has 100 entries, then the total size of the array in memory is equal to $1 0 0 \\times 4 = 4 0 0$ bytes. If the starting memory location of the array is loc. Then $a [ 0 ]$ is stored in the locations $( l o c + 0 ) , ( l o c + 1 ) , ( l o c + 2 ) , ( l o c + 3 )$ . Note that there are two methods of saving the data \u2013 big endian and little endian. The next array entry, $a \\vert 1 \\vert$ , is saved in the locations $( l o c + 4 ) \\ldots ( l o c + 7 )$ . By continuing the argument further, we note that the entry $a [ i ]$ is saved in the locations \u2013 $( l o c + 4 \\times i ) \\dots ( l o c + 4 \\times i + 3 )$ . ",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "Most programming languages define multidimensional arrays of the form: ",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "int a[100][100];  \nchar c[100][100];",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "They are typically represented as regular one dimensional arrays in memory. There is a mapping function between the location in a multidimensional array and an equivalent 1-dimensional array. Let us consider Example 22. We can extend the scheme to consider multidimensional arrays of dimensions greater than 2. ",
+        "page_idx": 100
+    },
+    {
+        "type": "text",
+        "text": "Example 22 ",
+        "text_level": 1,
+        "page_idx": 101
+    },
+    {
+        "type": "text",
+        "text": "Consider a multidimensional array: a[100][100]. Map each entry $( i , j )$ to an entry in $a$ 1-D array: b[10000]. ",
+        "page_idx": 101
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us assume that each entry $( i , j )$ , is in a (row,column) format. Let us try to save the array in row-major fashion. We save the first row in contiguous locations, then the second row and so on. The starting entry of each row is equal to $1 0 0 \\times i$ . Within each row the offset for column $j$ is equal to $j$ . Thus, we can map $( i , j )$ to the entry: $( 1 0 0 \\times i + j )$ in the array $b$ . ",
+        "page_idx": 101
+    },
+    {
+        "type": "text",
+        "text": "We observe that a two-dimensional array can be saved as a one dimensional array by saving it in row-major fashion. This means that data is saved row-wise. We save the first row, then the second row, and so on. Likewise, it is also possible to save a multidimensional array in column major fashion, where the first column is saved, then the second column and so on. ",
+        "page_idx": 101
+    },
+    {
+        "type": "text",
+        "text": "Definition 28 ",
+        "text_level": 1,
+        "page_idx": 101
+    },
+    {
+        "type": "text",
+        "text": "row major In this representation, an array is saved row-wise in memory. ",
+        "page_idx": 101
+    },
+    {
+        "type": "text",
+        "text": "column major In this representation, an array is saved column-wise in memory. ",
+        "page_idx": 101
+    }
+]

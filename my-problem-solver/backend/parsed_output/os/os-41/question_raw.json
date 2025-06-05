@@ -1,0 +1,47 @@
+[
+    {
+        "type": "text",
+        "text": "1. Examine the file in.largefile, and then run the simulator with flag $- \\mathtt { f }$ in.largefile and -L 4. The latter sets the large-file exception to 4 blocks. What will the resulting allocation look like? Run with $- c$ to check.",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "2. Now run with $- \\mathtt { L }$ 30. What do you expect to see? Once again, turn on $- \\mathbf { \\sigma } _ { C }$ to see if you were right. You can also use $- S$ to see exactly which blocks were allocated to the file $/ \\mathsf { a }$ .",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "3. Now we will compute some statistics about the file. The first is something we call filespan, which is the max distance between any two data blocks of the file or between the inode and any data block. Calculate the filespan of /a. Run ffs.py -f in.largefile -L 4 -T -c to see what it is. Do the same with -L 100. What difference do you expect in filespan as the large-file exception parameter changes from low values to high values?",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "4. Now let’s look at a new input file, in.manyfiles. How do you think the FFS policy will lay these files out across groups? (you can run with $- \\tau$ to see what files and directories are created, or just cat in.manyfiles). Run the simulator with $- c$ to see if you were right.",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "5. A metric to evaluate FFS is called dirspan. This metric calculates the spread of files within a particular directory, specifically the max distance between the inodes and data blocks of all files in the directory and the inode and data block of the directory itself. Run with in.manyfiles and the $- \\mathrm { T }$ flag, and calculate the dirspan of the three directories. Run with $- \\mathtt { C }$ to check. How good of a job does FFS do in minimizing dirspan?",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "6. Now change the size of the inode table per group to 5 (-i 5). How do you think this will change the layout of the files? Run with $- \\mathtt { C }$ to see if you were right. How does it affect the dirspan?",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "7. Which group should FFS place inode of a new directory in? The default (simulator) policy looks for the group with the most free inodes. A different policy looks for a set of groups with the most free inodes. For example, if you run with -A 2, when allocating a new directory, the simulator will look at groups in pairs and pick the best pair for the allocation. Run ./ffs.py -f in.manyfiles $- \\texttt { i } 5 - \\texttt { A } 2 - \\texttt { C }$ to see how allocation changes with this strategy. How does it affect dirspan? Why might this policy be good?",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "8. One last policy change we will explore relates to file fragmentation. Run ./ffs.py -f in.fragmented $- \\tau$ and see if you can predict how the files that remain are allocated. Run with $- c$ to confirm your answer. What is interesting about the data layout of file /i? Why is it problematic?",
+        "page_idx": 13
+    },
+    {
+        "type": "text", 
+        "text": "9. A new policy, which we call contiguous allocation $\\mathrm { ( - C ) }$ , tries to ensure that each file is allocated contiguously. Specifically, with $- \\mathrm { C } \\ \\mathrm { ~ n , ~ }$ the file system tries to ensure that n contiguous blocks are free within a group before allocating a block. Run ./ffs.py -f in.fragmented $- \\texttt { V } - { \\texttt { C } } 2 \\texttt { } - { \\texttt { C } }$ to see the difference. How does layout change as the parameter passed to $- \\mathsf { C }$ increases? Finally, how does $- C$ affect filespan and dirspan? ",
+        "page_idx": 13
+    }
+]

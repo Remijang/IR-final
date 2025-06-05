@@ -1,0 +1,17 @@
+9.2.2 Data Path and Control Path
+
+We need to make a fundamental observation here. There are two kinds of elements in a circuit. The first type of elements are registers, memories, arithmetic, and logic circuits to process data values. The second type of elements are control units that decide the direction of the flow of data. The control unit in a processor typically generates signals to control all the multiplexers. These are called control signals primarily because their role is to control the flow of information.
+
+We can thus conceptually think of a processor as consisting of two distinct subsystems. The first is known as the data path that contains all the elements to store and process information. For example the data memory, instruction memory, register file, and the ALU (arithmetic logic unit), are a part of the data path. The memories and register file store information, whereas the ALU processes information. For example, it adds two numbers, and produces the sum as the result, or it can compute a logical function of two numbers.
+
+In comparison, we have a control path that directs the proper flow of information by generating signals. We saw one example in Section 9.2.1, where the control path generated a signal to direct a multiplexer to choose between the branch target and the default next PC. The multiplexer in this case was controlled by a signal isBranchT aken.
+
+We can think of the control path and data path as two distinct elements of a circuit much like the traffic network of a city. The roads and the traffic lights are similar to the data path, where instead of instructions, cars flow. The circuits to control traffic lights constitute the control path. The control path decides the time of the transitions of lights. In modern smart cities, the process of controlling all the traffic lights in a city is typically integrated. A central command center controls all the lights and makes it possible to intelligently divert traffic to avoid traffic jams and accident sites. Similarly, a processor’s control unit is fairly intelligent. Its job is to execute instructions as quickly as possible. In this book, we shall study a basic version of a control unit. However, the control unit will get very complicated in an advanced course on computer architecture.
+
+Definition 58
+
+Data Path The data path consists of all the elements in a processor that are dedicated to storing, retrieving, and processing data such as register files, memories, and ALUs.
+
+Control Path The control path primarily contains the control unit, whose role is to generate appropriate signals to control the movement of instructions, and data in the data path.
+
+A conceptual diagram showing the relationship between the control path and the data path is shown in Figure 9.4. After this short digression, let us now move on to discuss the next stage of instruction processing.

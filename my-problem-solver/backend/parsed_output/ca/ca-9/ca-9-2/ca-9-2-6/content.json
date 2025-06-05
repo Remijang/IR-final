@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "9.2.6 Register Writeback Unit ",
+        "text_level": 1,
+        "page_idx": 376
+    },
+    {
+        "type": "text",
+        "text": "The last step of instruction processing is to write the computed values back to the register file. This value can be the output of a load or ALU instruction, or the return address written by the call instruction. This process is known as writeback, or register writeback. We refer to this unit as the register writeback(RW) unit. Its circuit diagram is shown in Figure 9.14. ",
+        "page_idx": 376
+    },
+    {
+        "type": "text",
+        "text": "We first need to choose the right source operand. We have three choices \u2013 aluResult, ldResult, or the return address. The return address is equal to the PC of the call instruction plus 4. We use a multiplexer to choose between the three input values. We use two control signals to control the multiplexer. The first control signal is $i s L d$ (is load), and the second control signal is $i s C a l l$ . We choose aluResult, when both the control signals are 0. We choose ldResult, when $i s L d = 1$ , and $i s C a l l = 0$ , and lastly, we choose $P C + 4$ , when $i s C a l l$ is equal to 1. The output of the multiplexer, result, needs to be written to the register file. ",
+        "page_idx": 376
+    },
+    {
+        "type": "text",
+        "text": "Note that we had shown a partial view of the register file when we discussed the operand fetch unit in Section 9.2.3. We showed only two read ports. However, the register file also has a write port that is used to write data. The write port has three inputs \u2013 address, data, and enable bit. The address is either the number of the destination register $^ { r d }$ or the id of the return address register (15). The correct address needs to be chosen with a multiplexer. The destination register is specified by bits 23 to 26 of the instruction. The second multiplexer chooses the data that needs to be written. The output of this multiplexer is sent to the data pins of the write port. Lastly, we need an enable signal $( i s W b )$ that specifies if we need to write the value of a register. For example, the store, $n o p$ , and compare instructions do not need a register writeback. Hence, for these instructions, the value of $i s W b$ is false. It is also false for branch (excluding call) instructions. isW b is true for the rest of the ALU instructions, mov and ${ \\it l d }$ instructions. ",
+        "page_idx": 376
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 377
+    }
+]

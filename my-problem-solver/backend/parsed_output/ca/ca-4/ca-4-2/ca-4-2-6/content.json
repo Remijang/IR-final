@@ -1,0 +1,92 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.6 Simple Branch Instructions ",
+        "text_level": 1,
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "An ISA with just data processing instructions is very weak. We need branch instructions such that we can implement if-statements and for-loops. ARM programs primarily use three branch ",
+        "page_idx": 150
+    },
+    {
+        "type": "text",
+        "text": "instructions to do most of their work. They are: $b$ , beq, bne. Their semantics are given in Table 4.9. ",
+        "page_idx": 151
+    },
+    {
+        "type": "table",
+        "img_path": "images/595bbdf7ed0950e9bf71a84fb8afad0575dfc5c5ea4089bccf091edd466a2465.jpg",
+        "table_caption": [
+            "Table 4.9: Semantics of simple branch instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>b label</td><td>b .foo</td><td>Jump unconditionally to label .foo</td></tr><tr><td>beq label</td><td>beq .foo</td><td>Branch to .foo if the last flag setting instruction has resulted in an equal- ity and (Z fag is 1)</td></tr><tr><td>bnelabel</td><td>bne .foo</td><td>Branch to .foo if the last flag set- ting instruction has resulted in an inequality and (Z flag is O)</td></tr></table></body></html>\n\n",
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "Example 44 ",
+        "text_level": 1,
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "Write an ARM assembly program to compute the factorial of a positive number $( > 1 ,$ ) stored in r0. Save the result in r1. ",
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "C int val = get_input(); int idx; int prod = 1; for (idx = 1; idx <= val ; idx++) { $\\mathit { p r o d } \\ = \\ p r o d \\ * \\ i d x ;$ \u2022 } ",
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "ARM assembly mov r1, #1 /\\* prod = 1 \\*/ mov r3, #1 /\\* idx = 1 \\*/ .loop: mul r1, r3, r1 /\\* prod = prod \\* idx \\*/ cmp r3, r0 /\\* compare idx, with the input (num) \\*/ add r3, r3, #1 /\\* idx ++ \\*/ bne .loop /\\* loop condition \\*/ ",
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "Let us now see, how we can use the power of branches to write some powerful programs. Let us consider the factorial function. In Example 44, we show a small program to compute the factorial of a natural number. $r 3$ is a counter that is initialized to 0. We keep on incrementing it till it matches $r 0$ . $r 1$ represents the product. We iteratively multiply the value of $r 3$ with $r 1$ . At the end of the set of iterations, $r 1$ contains the factorial of the value given in $r 0$ . ",
+        "page_idx": 151
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 152
+    },
+    {
+        "type": "text",
+        "text": "Example 45 ",
+        "text_level": 1,
+        "page_idx": 152
+    },
+    {
+        "type": "text",
+        "text": "Write an assembly program to find out if a natural number stored in r0 is a perfect square.   \nSave the Boolean result in r1. ",
+        "page_idx": 152
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 152
+    },
+    {
+        "type": "image",
+        "img_path": "images/6b999f52615d5e31732a347989e46a1c9f10eea3e260561b3afb82a9052f64b1.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 152
+    },
+    {
+        "type": "text",
+        "text": "Let us show the example of another program to test if a number is a perfect square (see Example 45). $r 1$ contains the result of the operation. If the number is a perfect square we set $r 1$ to 1, else we set $r 1$ to 0. The main loop is between lines 3 and 9. Here, we increment the value of $r 2$ iteratively, and test if its square equals $r 0$ . If it does, we jump to .square, set $r 1$ to $^ { 1 }$ , and jump to .exit. Here, we print the value (code not shown), and exit the program. We assume a hypothetical label \u2013 .exit \u2013 that is present at the end of the program (also shown in the code). The exit condition of the loop is Line 9, where we consider the result of the comparison of $r 2$ and $r 0$ . If $r 2$ is equal to $r 0$ , then $r 0$ cannot contain a perfect square because $r 0$ is at least equal to 2 at the end of any iteration. ",
+        "page_idx": 152
+    }
+]

@@ -1,0 +1,18 @@
+7.3.3 Clocked SR Latch
+
+Figure 7.18 shows the SR latch augmented with two NAND gates that have the clock as one of the inputs. The other two inputs are the S and R bits, respectively. If the clock is 0, then both the inputs to the cross-coupled NAND gates are 1. This maintains the previous value. If the clock is 1, then the inputs to the cross-coupled NAND gates are  and  , respectively. These are the same inputs as the basic SR latch. The rest of the operation follows Table 7.2. Note that a clocked latch is typically referred to as a flip-flop.
+
+Definition 48 Flip-flop : It is a clocked latch that can save a bit (0 or 1).
+
+By using the clock, we have partially solved the problem of synchronizing inputs and outputs. In this case, when the clock is 0, the outputs are unaffected by the inputs. When the clock is 1, the outputs are affected by the input. Such a latch is also called a level sensitive latch.
+
+Definition 49
+
+A level sensitive latch is dependent on the value of the clock signal – 0 or 1. Typically, it can read in new values, only when the clock is 1.
+
+In a level sensitive latch, circuits have half a clock cycle to compute the correct outputs (when the clock is 0). When the clock is 1, the outputs are visible. It would be better to have one full clock cycle to compute the outputs. This would require an edge sensitive latch. An edge sensitive latch reflects the inputs at the output, only at the downward edge of the clock.
+
+Definition 50   
+An edge sensitive latch reflects the inputs at the output only at a fixed clock edge, such as the downward edge (transition from 1 to 0).
+
+Let us try to create an edge sensitive SR latch.

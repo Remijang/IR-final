@@ -1,0 +1,319 @@
+/* frontend/src/App.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  /* Ensure body takes full height for initial centering */
+  min-height: 100vh;
+  display: flex; /* Helps with centering app-container if needed */
+  flex-direction: column;
+}
+
+.app-container {
+  width: 100%;
+  display: flex;
+  transition: all 0.3s ease-in-out; /* Smooth transition for layout change */
+  box-sizing: border-box;
+}
+
+/* Initial Layout: Form Centered */
+.app-container.initial-layout {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh; /* Take up most of the viewport height */
+  padding: 20px;
+}
+
+.app-container.initial-layout .problem-section {
+  max-width: 600px; /* Limit width of form in centered view */
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Searched Layout: Split View */
+.app-container.searched-layout {
+  flex-direction: row;
+  min-height: 100vh; /* Take full viewport height */
+}
+
+.problem-section {
+  /* Common styles for problem section */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container.searched-layout .problem-section {
+  flex: 1; /* Takes 50% of the width */
+  padding: 20px;
+  background-color: #fff; /* Give it a background */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05); /* Subtle shadow for separation */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+  max-height: 100vh;
+}
+
+.documents-section {
+  flex: 1; /* Takes 50% of the width */
+  padding: 20px;
+  overflow-y: auto; /* Allow scrolling for document list/content */
+  max-height: 100vh; /* Limit height to viewport */
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 0; /* Adjust margin for h1 */
+  margin-bottom: 20px;
+}
+
+.problem-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap */
+}
+
+.problem-input {
+  width: 100%;
+  padding: 12px; /* Slightly larger padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 12px 18px; /* Slightly larger button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  background-color: #ffebee;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px; /* Add margin top */
+}
+
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* Document List Specific Styles */
+.document-list-container h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.document-title-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.document-title-list li {
+  padding: 12px 15px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  font-size: 0.95rem;
+}
+
+.document-title-list li:hover {
+  background-color: #e9f5ff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #0056b3;
+}
+
+/* Selected Document View Styles */
+.selected-document-view {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.return-button {
+  padding: 8px 15px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  transition: background-color 0.2s;
+}
+
+.return-button:hover {
+  background-color: #545b62;
+}
+
+.document-content {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-top: none; /* If button is outside the main content box visually */
+  border-radius: 0 0 4px 4px; /* If combined with button */
+}
+
+.document-content pre {
+  background-color: #f0f0f0; /* Lighter than previous for contrast with white bg */
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+}
+
+.document-content code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: transparent; /* Code inside pre should be transparent */
+}
+
+.document-content h1, .document-content h2, .document-content h3 {
+  color: #007bff;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3em;
+}
+.document-content h1:first-child, .document-content h2:first-child, .document-content h3:first-child {
+  margin-top: 0;
+}
+
+
+.document-content p {
+  line-height: 1.6;
+}
+
+.document-content ul, .document-content ol {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.document-content blockquote {
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+  margin-left: 0;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+/* frontend/src/App.css */
+
+/* ... existing styles ... */
+
+/* History Section Styles */
+.history-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.history-section h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px; /* Or adjust as needed */
+  overflow-y: auto; /* Scroll if history is long */
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.history-item:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.history-query-text {
+  flex-grow: 1;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #007bff; /* Make query text stand out */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-timestamp {
+  font-size: 0.8rem;
+  color: #777;
+  white-space: nowrap;
+}
+
+/* Adjust problem-section for potential scroll with history */
+.app-container.searched-layout .problem-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  overflow-y: auto; /* Already there, but good to confirm */
+  max-height: 100vh;
+  display: flex; /* Added for better internal layouting */
+  flex-direction: column; /* Added for better internal layouting */
+}
+
+.app-container.searched-layout .problem-section .problem-form {
+  /* This ensures the form doesn't shrink when history appears */
+  flex-shrink: 0;
+}
+
+.app-container.searched-layout .problem-section .history-section {
+  /* This allows the history section to take remaining space and scroll */
+  flex-grow: 1;
+  overflow-y: auto; /* Ensure history section itself can scroll if its content overflows its allocated space */
+  display: flex; /* For internal structure of history-section */
+  flex-direction: column;
+}
+
+.app-container.searched-layout .problem-section .history-section .history-list {
+   /* Allow history list to take available space within history-section */
+  flex-grow: 1;
+  /* max-height: none; */ /* Remove fixed max-height if parent handles scroll */
+}

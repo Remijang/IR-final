@@ -1,0 +1,13 @@
+1.8.1 Representing Information
+
+In modern computers, it is not possible to store numbers or pieces of text directly. Today’s computers are made of transistors. A transistor can be visualized as a basic switch that has two states – on and off. If the switch is on, then it represents 1, otherwise it represents 0. Every single entity inclusive of numbers, text, instructions, programs, and complex software needs to be represented using a sequence of 0s and 1s. We have only two basic symbols that we can use namely 0 and 1. A variable/value that can either be 0 or 1, is known as a bit. Most computers typically store and process a set of 8 bits together. A set of 8 bits is known as a byte. Typically, a sequence of 4 bytes is known as a word.
+
+Definition 11
+
+bit A value that can either be 0 or 1.   
+byte A sequence of 8 bits.   
+word A sequence of 4 bytes.
+
+We can thus visualize all the internal storage structures of a computer such as the memory or the set of registers as a large array of switches as shown in Figure 1.15. In Chapter 2, we shall study the language of bits. We shall see that using bits it is possible to express logical concepts, arithmetic concepts (integer and real numbers), and pieces of text.
+
+This chapter is a prerequisite for the next chapter on assembly language. Assembly language is a textual representation of an ISA. It is specific to the ISA. Since an instruction is a sequence of 0s and 1s, it is very difficult to study it in its bare form. Assembly language gives us a good handle to study the semantics of instructions in an ISA. Chapter 3 introduces the general concepts of assembly language and serves as a common introduction to the next two chapters that delve into the details of two very popular real-world ISAs – ARM and x86. We introduce a simple ISA called SimpleRisc in Chapter 3. Subsequently, in Chapter 4 we introduce the ARM ISA, and in Chapter 5 we briefly cover the x86 ISA. Note that it is not necessary to read both these chapters. After reading the introductory chapter on assembly language and obtaining an understanding of the SimpleRisc assembly language, the interested reader can read just one chapter to deepen her knowledge about a real-world ISA. At this point, the reader should have a good knowledge of what needs to be built.

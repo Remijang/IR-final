@@ -1,0 +1,595 @@
+[
+    {
+        "type": "text",
+        "text": "21.2 Electromotive Force: Terminal Voltage ",
+        "text_level": 1,
+        "page_idx": 930
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 930
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 930
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Compare and contrast the voltage and the electromagnetic force of an electric power source. \u2022 Describe what happens to the terminal voltage, current, and power delivered to a load as internal resistance of the voltage source increases (due to aging of batteries, for example). \u2022 Explain why it is beneficial to use more than one voltage source connected in parallel. ",
+        "page_idx": 930
+    },
+    {
+        "type": "text",
+        "text": "When you forget to turn off your car lights, they slowly dim as the battery runs down. Why don\u2019t they simply blink off when the battery\u2019s energy is gone? Their gradual dimming implies that battery output voltage decreases as the battery is depleted. ",
+        "page_idx": 930
+    },
+    {
+        "type": "text",
+        "text": "Furthermore, if you connect an excessive number of 12-V lights in parallel to a car battery, they will be dim even when the battery is fresh and even if the wires to the lights have very low resistance. This implies that the battery\u2019s output voltage is reduced by the overload. ",
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "The reason for the decrease in output voltage for depleted or overloaded batteries is that all voltage sources have two fundamental parts\u2014a source of electrical energy and an internal resistance. Let us examine both. ",
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "Electromotive Force ",
+        "text_level": 1,
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "You can think of many different types of voltage sources. Batteries themselves come in many varieties. There are many types of mechanical/electrical generators, driven by many different energy sources, ranging from nuclear to wind. Solar cells create voltages directly from light, while thermoelectric devices create voltage from temperature differences. ",
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "A few voltage sources are shown in Figure 21.8. All such devices create a potential difference and can supply current if connected to a resistance. On the small scale, the potential difference creates an electric field that exerts force on charges, causing current. We thus use the name electromotive force, abbreviated emf. ",
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "Emf is not a force at all; it is a special type of potential difference. To be precise, the electromotive force (emf) is the potential difference of a source when no current is flowing. Units of emf are volts. ",
+        "page_idx": 931
+    },
+    {
+        "type": "image",
+        "img_path": "images/6ef92db215ff1e9920dc0e988fae3b2e2200fc3ffa703993d6718e090b1d5343.jpg",
+        "img_caption": [
+            "FIGURE 21.8 A variety of voltage sources (clockwise from top left): the Brazos Wind Farm in Fluvanna, Texas (credit: Leaflet, Wikimedia Commons); the Krasnoyarsk Dam in Russia (credit: Alex Polezhaev); a solar farm (credit: U.S. Department of Energy); and a group of nickel metal hydride batteries (credit: Tiaa Monto). The voltage output of each depends on its construction and load, and equals emf only if there is no load. "
+        ],
+        "img_footnote": [],
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "Electromotive force is directly related to the source of potential difference, such as the particular combination of chemicals in a battery. However, emf differs from the voltage output of the device when current flows. The voltage across the terminals of a battery, for example, is less than the emf when the battery supplies current, and it declines further as the battery is depleted or loaded down. However, if the device\u2019s output voltage can be measured without drawing current, then output voltage will equal emf (even for a very depleted battery). ",
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "Internal Resistance ",
+        "text_level": 1,
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "As noted before, a 12-V truck battery is physically larger, contains more charge and energy, and can deliver a larger current than a $1 2 - \\mathsf { V }$ motorcycle battery. Both are lead-acid batteries with identical emf, but, because of its size, the truck battery has a smaller internal resistance $r$ . Internal resistance is the inherent resistance to the flow of current within the source itself. ",
+        "page_idx": 931
+    },
+    {
+        "type": "text",
+        "text": "Figure 21.9 is a schematic representation of the two fundamental parts of any voltage source. The emf (represented by a script E in the figure) and internal resistance $r$ are in series. The smaller the internal resistance for a given emf, the more current and the more power the source can supply. ",
+        "page_idx": 931
+    },
+    {
+        "type": "image",
+        "img_path": "images/d32ead5d83c92f385bd30a9ac6d24bbdb4bb775e80aa39cb5f6c8d39f7f315ca.jpg",
+        "img_caption": [
+            "FIGURE 21.9 Any voltage source (in this case, a carbon-zinc dry cell) has an emf related to its source of potential difference, and an interna resistance $r$ related to its construction. (Note that the script E stands for emf.). Also shown are the output terminals across which the terminal voltage $V$ is measured. Since $V = { \\mathrm { e m f } } - I r$ , terminal voltage equals emf only if there is no current flowing. "
+        ],
+        "img_footnote": [],
+        "page_idx": 932
+    },
+    {
+        "type": "text",
+        "text": "The internal resistance $r$ can behave in complex ways. As noted, $r$ increases as a battery is depleted. But internal resistance may also depend on the magnitude and direction of the current through a voltage source, its temperature, and even its history. The internal resistance of rechargeable nickel-cadmium cells, for example, depends on how many times and how deeply they have been depleted. ",
+        "page_idx": 932
+    },
+    {
+        "type": "text",
+        "text": "Things Great and Small: The Submicroscopic Origin of Battery Potential ",
+        "text_level": 1,
+        "page_idx": 932
+    },
+    {
+        "type": "text",
+        "text": "Various types of batteries are available, with emfs determined by the combination of chemicals involved. We can view this as a molecular reaction (what much of chemistry is about) that separates charge. ",
+        "page_idx": 932
+    },
+    {
+        "type": "text",
+        "text": "The lead-acid battery used in cars and other vehicles is one of the most common types. A single cell (one of six) of this battery is seen in Figure 21.10. The cathode (positive) terminal of the cell is connected to a lead oxide plate, while the anode (negative) terminal is connected to a lead plate. Both plates are immersed in sulfuric acid, the electrolyte for the system. ",
+        "page_idx": 932
+    },
+    {
+        "type": "image",
+        "img_path": "images/7112cb5261851a3d6d34d9b993d8f68cef41c4a94c6a7cbfa1c1fa13677971f5.jpg",
+        "img_caption": [
+            "FIGURE 21.10 Artist\u2019s conception of a lead-acid cell. Chemical reactions in a lead-acid cell separate charge, sending negative charge to the anode, which is connected to the lead plates. The lead oxide plates are connected to the positive or cathode terminal of the cell. Sulfuric acid conducts the charge as well as participating in the chemical reaction. "
+        ],
+        "img_footnote": [],
+        "page_idx": 932
+    },
+    {
+        "type": "text",
+        "text": "The details of the chemical reaction are left to the reader to pursue in a chemistry text, but their results at the molecular level help explain the potential created by the battery. Figure 21.11 shows the result of a single chemical reaction. Two electrons are placed on the anode, making it negative, provided that the cathode supplied two electrons. This leaves the cathode positively charged, because it has lost two electrons. In short, a separation of charge has been driven by a chemical reaction. ",
+        "page_idx": 932
+    },
+    {
+        "type": "text",
+        "text": "Note that the reaction will not take place unless there is a complete circuit to allow two electrons to be supplied to the cathode. Under many circumstances, these electrons come from the anode, flow through a resistance, and return to the cathode. Note also that since the chemical reactions involve substances with resistance, it is not possible to create the emf without an internal resistance. ",
+        "page_idx": 932
+    },
+    {
+        "type": "image",
+        "img_path": "images/601b770aaaf99e8add926c706d2ca86d63e5b1cb29d7e71c9db0af1f7c35e506.jpg",
+        "img_caption": [
+            "FIGURE 21.11 Artist\u2019s conception of two electrons being forced onto the anode of a cell and two electrons being removed from the cathode of the cell. The chemical reaction in a lead-acid battery places two electrons on the anode and removes two from the cathode. It requires a closed circuit to proceed, since the two electrons must be supplied to the cathode. "
+        ],
+        "img_footnote": [],
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "Why are the chemicals able to produce a unique potential difference? Quantum mechanical descriptions of molecules, which take into account the types of atoms and numbers of electrons in them, are able to predict the energy states they can have and the energies of reactions between them. ",
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "In the case of a lead-acid battery, an energy of $2 \\mathsf { e V }$ is given to each electron sent to the anode. Voltage is defined as the electrical potential energy divided by charge: $V = { \\frac { P _ { \\mathrm { E } } } { q } } $ . An electron volt is the energy given to a single electron by a voltage of 1 V. So the voltage here is $2 \\mathsf { V }$ , since $2 \\mathsf { e V }$ is given to each electron. It is the energy produced in each molecular reaction that produces the voltage. A different reaction produces a different energy and, hence, a different voltage. ",
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "Terminal Voltage ",
+        "text_level": 1,
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "The voltage output of a device is measured across its terminals and, thus, is called its terminal voltage . Terminal voltage is given by ",
+        "page_idx": 933
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = \\mathrm { e m f } - I r ,\n$$",
+        "text_format": "latex",
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "where $r$ is the internal resistance and $I$ is the current flowing at the time of the measurement. ",
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "$I$ is positive if current flows away from the positive terminal, as shown in Figure 21.9. You can see that the larger the current, the smaller the terminal voltage. And it is likewise true that the larger the internal resistance, the smaller the terminal voltage. ",
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "Suppose a load resistance $R _ { \\mathrm { l o a d } }$ is connected to a voltage source, as in Figure 21.12. Since the resistances are in series, the total resistance in the circuit is $R _ { \\mathrm { l o a d } } + r$ . Thus the current is given by Ohm\u2019s law to be ",
+        "page_idx": 933
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI = \\frac { \\mathrm { e m f } } { R _ { \\mathrm { l o a d } } + r } .\n$$",
+        "text_format": "latex",
+        "page_idx": 933
+    },
+    {
+        "type": "image",
+        "img_path": "images/68e56a73d9aa4f9de707bfc2d1828275e893037e70b39701b4830723bf45828f.jpg",
+        "img_caption": [
+            "FIGURE 21.12 Schematic of a voltage source and its load $R _ { \\mathrm { l o a d } }$ . Since the internal resistance $r$ is in series with the load, it can significantl affect the terminal voltage and current delivered to the load. (Note that the script E stands for emf.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "We see from this expression that the smaller the internal resistance $r$ , the greater the current the voltage source supplies to its load $R _ { \\mathrm { l o a d } }$ . As batteries are depleted, $r$ increases. If $r$ becomes a significant fraction of the load resistance, then the current is significantly reduced, as the following example illustrates. ",
+        "page_idx": 933
+    },
+    {
+        "type": "text",
+        "text": "Calculating Terminal Voltage, Power Dissipation, Current, and Resistance: Terminal Voltage and Load ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "A certain battery has a 12.0-V emf and an internal resistance of $0 . 1 0 0 \\Omega$ . (a) Calculate its terminal voltage when connected to a load. (b) What is the terminal voltage when connected to a load? (c) What power does the $0 . 5 0 0 \u2013 \\Omega$ load dissipate? (d) If the internal resistance grows to $0 . 5 0 0 \\Omega$ , find the current, terminal voltage, and power dissipated by a load. ",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "The analysis above gave an expression for current when internal resistance is taken into account. Once the current is found, the terminal voltage can be calculated using the equation $V = \\mathrm { e m f } - I r$ . Once current is found, the power dissipated by a resistor can also be found. ",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Entering the given values for the emf, load resistance, and internal resistance into the expression above yields ",
+        "page_idx": 934
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI = { \\frac { \\mathrm { e m f } } { R _ { \\mathrm { l o a d } } + r } } = { \\frac { 1 2 . 0 \\mathrm { V } } { 1 0 . 1 \\Omega } } = 1 . 1 8 8 \\mathrm { A } .\n$$",
+        "text_format": "latex",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Enter the known values into the equation $V = \\mathrm { e m f } - I r$ to get the terminal voltage: ",
+        "page_idx": 934
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { { V } } & { { = } } & { { \\mathrm { e m f } - I r = 1 2 . 0 \\mathrm { V } - ( 1 . 1 8 8 \\mathrm { A } ) ( 0 . 1 0 0 \\Omega ) } } \\\\ { { } } & { { = } } & { { 1 1 . 9 \\mathrm { V } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (a) ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "The terminal voltage here is only slightly lower than the emf, implying that $1 0 . 0 \\Omega$ is a light load for this particular battery. ",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Similarly, with $R _ { \\mathrm { l o a d } } = 0 . 5 0 0 \\Omega$ , the current is ",
+        "page_idx": 934
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI = { \\frac { \\mathrm { e m f } } { R _ { \\mathrm { l o a d } } + r } } = { \\frac { 1 2 . 0 ~ { \\mathrm { V } } } { 0 . 6 0 0 \\Omega } } = 2 0 . 0 ~ { \\mathrm { A } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "The terminal voltage is now ",
+        "page_idx": 934
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { V } & { = } & { \\operatorname { e m f } - I r = 1 2 . 0 \\mathrm { V } - ( 2 0 . 0 \\mathrm { A } ) ( 0 . 1 0 0 \\Omega ) } \\\\ & { = } & { 1 0 . 0 \\mathrm { V } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (b) ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "This terminal voltage exhibits a more significant reduction compared with emf, implying $0 . 5 0 0 \\Omega$ is a heavy load for this battery. ",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Solution for (c) ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "The power dissipated by the $0 . 5 0 0 \\textrm { - } \\Omega$ load can be found using the formula $P = I ^ { 2 } R$ . Entering the known values gives ",
+        "page_idx": 934
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { l o a d } } = I ^ { 2 } R _ { \\mathrm { l o a d } } = ( 2 0 . 0 ~ \\mathrm { A } ) ^ { 2 } ( 0 . 5 0 0 ~ \\Omega ) = 2 . 0 0 \\times 1 0 ^ { 2 } ~ \\mathrm { W } .\n$$",
+        "text_format": "latex",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (c) ",
+        "text_level": 1,
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Note that this power can also be obtained using the expressions $\\textstyle { \\frac { V ^ { 2 } } { R } }$ or $I V ,$ where $V$ is the terminal voltage (10.0 V in this case). ",
+        "page_idx": 934
+    },
+    {
+        "type": "text",
+        "text": "Solution for (d) ",
+        "text_level": 1,
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Here the internal resistance has increased, perhaps due to the depletion of the battery, to the point where it is as great as the load resistance. As before, we first find the current by entering the known values into the expression, yielding ",
+        "page_idx": 935
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI = { \\frac { \\mathrm { e m f } } { R _ { \\mathrm { l o a d } } + r } } = { \\frac { 1 2 . 0 ~ \\mathrm { V } } { 1 . 0 0 ~ \\Omega } } = 1 2 . 0 ~ \\mathrm { A } .\n$$",
+        "text_format": "latex",
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Now the terminal voltage is ",
+        "page_idx": 935
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { { V } } & { { = } } & { { \\mathrm { e m f } - I r = 1 2 . 0 \\mathrm { V } \\mathrm { - } ( 1 2 . 0 \\mathrm { A } ) ( 0 . 5 0 0 \\Omega ) } } \\\\ { { } } & { { = } } & { { 6 . 0 0 \\mathrm { V } , } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "and the power dissipated by the load is ",
+        "page_idx": 935
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { l o a d } } = I ^ { 2 } R _ { \\mathrm { l o a d } } = ( 1 2 . 0 \\mathrm { \\ A } ) ^ { 2 } ( 0 . 5 0 0 \\Omega ) = 7 2 . 0 \\mathrm { \\ W } .\n$$",
+        "text_format": "latex",
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (d) ",
+        "text_level": 1,
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "We see that the increased internal resistance has significantly decreased terminal voltage, current, and power delivered to a load. ",
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Battery testers, such as those in Figure 21.13, use small load resistors to intentionally draw current to determine whether the terminal voltage drops below an acceptable level. They really test the internal resistance of the battery. If internal resistance is high, the battery is weak, as evidenced by its low terminal voltage. ",
+        "page_idx": 935
+    },
+    {
+        "type": "image",
+        "img_path": "images/16f1bd99ba97fd0df340d96fe4868a2fd8a13bc10aaeb7292d66f398dac98256.jpg",
+        "img_caption": [
+            "FIGURE 21.13 These two battery testers measure terminal voltage under a load to determine the condition of a battery. The large device is being used by a U.S. Navy electronics technician to test large batteries aboard the aircraft carrier USS Nimitzand has a small resistance that can dissipate large amounts of power. (credit: U.S. Navy photo by Photographer\u2019s Mate Airman Jason A. Johnston) The small device is used on small batteries and has a digital display to indicate the acceptability of their terminal voltage. (credit: Keith Williamson) "
+        ],
+        "img_footnote": [],
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Some batteries can be recharged by passing a current through them in the direction opposite to the current they supply to a resistance. This is done routinely in cars and batteries for small electrical appliances and electronic devices, and is represented pictorially in Figure 21.14. The voltage output of the battery charger must be greater than the emf of the battery to reverse current through it. This will cause the terminal voltage of the battery to be greater than the emf, since $V = \\mathrm { e m f } - I r$ , and $I$ is now negative. ",
+        "page_idx": 935
+    },
+    {
+        "type": "image",
+        "img_path": "images/c78fcd637b02ed3192a2d348479fa34fa162c6dc25996bd26c30ed9947fdca41.jpg",
+        "img_caption": [
+            "FIGURE 21.14 A car battery charger reverses the normal direction of current through a battery, reversing its chemical reaction and replenishing its chemical potential. "
+        ],
+        "img_footnote": [],
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Multiple Voltage Sources ",
+        "text_level": 1,
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "There are two voltage sources when a battery charger is used. Voltage sources connected in series are relatively simple. When voltage sources are in series, their internal resistances add and their emfs add algebraically. (See ",
+        "page_idx": 935
+    },
+    {
+        "type": "text",
+        "text": "Figure 21.15.) Series connections of voltage sources are common\u2014for example, in flashlights, toys, and other appliances. Usually, the cells are in series in order to produce a larger total emf. ",
+        "page_idx": 936
+    },
+    {
+        "type": "text",
+        "text": "But if the cells oppose one another, such as when one is put into an appliance backward, the total emf is less, since it is the algebraic sum of the individual emfs. ",
+        "page_idx": 936
+    },
+    {
+        "type": "text",
+        "text": "A battery is a multiple connection of voltaic cells, as shown in Figure 21.16. The disadvantage of series connections of cells is that their internal resistances add. One of the authors once owned a 1957 MGA that had two 6-V batteries in series, rather than a single 12-V battery. This arrangement produced a large internal resistance that caused him many problems in starting the engine. ",
+        "page_idx": 936
+    },
+    {
+        "type": "image",
+        "img_path": "images/7ba9f7f0675e4e01d9096539ca175ba74c89ce7656619ba799d853c5ba8bf19c.jpg",
+        "img_caption": [
+            "FIGURE 21.15 A series connection of two voltage sources. The emfs (each labeled with a script E) and internal resistances add, giving a total emf of $\\mathsf { f } _ { 1 } + \\mathsf { e m f } _ { 2 }$ and a total internal resistance of $r _ { 1 } + r _ { 2 }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 936
+    },
+    {
+        "type": "image",
+        "img_path": "images/b2a341f579af4bb8ab2a677ee29562b85479616c542bc1f33295248968c61155.jpg",
+        "img_caption": [
+            "FIGURE 21.16 Batteries are multiple connections of individual cells, as shown in this modern rendition of an old print. Single cells, such as AA or C cells, are commonly called batteries, although this is technically incorrect. "
+        ],
+        "img_footnote": [],
+        "page_idx": 936
+    },
+    {
+        "type": "text",
+        "text": "If the seriesconnection of two voltage sources is made into a complete circuit with the emfs in opposition, then a current of magnitude flows. See Figure 21.17, for example, which shows a circuit exactly analogous to the battery charger discussed above. If two voltage sources in series with emfs in the same sense are connected to a load $R _ { \\mathrm { l o a d } }$ , as in Figure 21.18, then $I = \\frac { ( \\mathrm { e m f } _ { 1 } + \\mathrm { e m f } _ { 2 } ) } { r _ { 1 } + r _ { 2 } + R _ { \\mathrm { l o a d } } }$ flows. ",
+        "page_idx": 936
+    },
+    {
+        "type": "image",
+        "img_path": "images/13917969796ee5f87ff0baafad65168a82407e45a12ac440a4400f73df06ec7b.jpg",
+        "img_caption": [
+            "FIGURE 21.17 These two voltage sources are connected in series with their emfs in opposition. Current flows in the direction of the greater emf and is limited to by the sum of the internal resistances. (Note that each emf is represented by script E in the figure.) A battery charger connected to a battery is an example of such a connection. The charger must have a larger emf than the battery to reverse current through it. "
+        ],
+        "img_footnote": [],
+        "page_idx": 936
+    },
+    {
+        "type": "image",
+        "img_path": "images/ef8ba776b170d57d9fc1f881755678a88dfb2e5f7fcec3753cdf3edc5cc170f6.jpg",
+        "img_caption": [
+            "FIGURE 21.18 This schematic represents a flashlight with two cells (voltage sources) and a single bulb (load resistance) in series. The current that flows is $I = { \\frac { ( { \\mathrm { e m f } } _ { 1 } + { \\mathrm { e m f } } _ { 2 } ) } { r _ { 1 } + r _ { 2 } + R _ { \\mathrm { l o a d } } } }$ (Note that each emf is represented by script E in the figure.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: Flashlight Batteries ",
+        "text_level": 1,
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "Find a flashlight that uses several batteries and find new and old batteries. Based on the discussions in this module, predict the brightness of the flashlight when different combinations of batteries are used. Do your predictions match what you observe? Now place new batteries in the flashlight and leave the flashlight switched on for several hours. Is the flashlight still quite bright? Do the same with the old batteries. Is the flashlight as bright when left on for the same length of time with old and new batteries? What does this say for the case when you are limited in the number of available new batteries? ",
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "Figure 21.19 shows two voltage sources with identical emfs in parallel and connected to a load resistance. In this simple case, the total emf is the same as the individual emfs. But the total internal resistance is reduced, since the internal resistances are in parallel. The parallel connection thus can produce a larger current. ",
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "Here, $I = \\frac { \\mathrm { e m f } } { \\left( r _ { \\mathrm { t o t } } + R _ { \\mathrm { l o a d } } \\right) }$ flows through the load, and $r _ { \\mathrm { t o t } }$ is less than those of the individual batteries. For example, some diesel-powered cars use two $1 2 - \\mathsf { V }$ batteries in parallel; they produce a total emf of $\\boldsymbol { \\mathsf { 1 2 V } }$ but can deliver the larger current needed to start a diesel engine. ",
+        "page_idx": 937
+    },
+    {
+        "type": "image",
+        "img_path": "images/5b8b4cc2258108fb8f9bbca5be01a92350112eb9b19d729d082dcad1b60e676a.jpg",
+        "img_caption": [
+            "FIGURE 21.19 Two voltage sources with identical emfs (each labeled by script E) connected in parallel produce the same emf but have a smaller total internal resistance than the individual sources. Parallel combinations are often used to deliver more current. Here $I = \\frac { \\mathrm { e m f } } { \\left( r _ { \\mathrm { t o t } } + R _ { \\mathrm { l o a d } } \\right) }$ flows through the load. "
+        ],
+        "img_footnote": [],
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "Animals as Electrical Detectors ",
+        "text_level": 1,
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "A number of animals both produce and detect electrical signals. Fish, sharks, platypuses, and echidnas (spiny anteaters) all detect electric fields generated by nerve activity in prey. Electric eels produce their own emf through biological cells (electric organs) called electroplaques, which are arranged in both series and parallel as a set of batteries. ",
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "Electroplaques are flat, disk-like cells; those of the electric eel have a voltage of 0.15 V across each one. These cells are usually located toward the head or tail of the animal, although in the case of the electric eel, they are found along the entire body. The electroplaques in the South American eel are arranged in 140 rows, with each row stretching horizontally along the body and containing 5,000 electroplaques. This can yield an emf of approximately $6 0 0 \\mathsf { V } ,$ , and a current of 1 A\u2014deadly. ",
+        "page_idx": 937
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "The mechanism for detection of external electric fields is similar to that for producing nerve signals in the cell through depolarization and repolarization\u2014the movement of ions across the cell membrane. Within the fish, weak electric fields in the water produce a current in a gel-filled canal that runs from the skin to sensing cells, producing a nerve signal. The Australian platypus, one of the very few mammals that lay eggs, can detect fields of $3 0 \\ \\frac { \\mathrm { m V } } { \\mathrm { m } }$ , while sharks have been found to be able to sense a field in their snouts as small as 100 $\\textstyle \\frac { \\mathrm { m V } } { \\mathrm { m } }$ (Figure 21.20). Electric eels use their own electric fields produced by the electroplaques to stun their prey or enemies. ",
+        "page_idx": 938
+    },
+    {
+        "type": "image",
+        "img_path": "images/b375bca46ca2e505cd7942ea701329782251c3a44ce272c0f21927ec7c3490d6.jpg",
+        "img_caption": [
+            "FIGURE 21.20 Sand tiger sharks (Carchariastaurus), like this one at the Minnesota Zoo, use electroreceptors in their snouts to locate prey. (credit: Jim Winstead, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "Solar Cell Arrays ",
+        "text_level": 1,
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "Another example dealing with multiple voltage sources is that of combinations of solar cells\u2014wired in both series and parallel combinations to yield a desired voltage and current. Photovoltaic generation (PV), the conversion of sunlight directly into electricity, is based upon the photoelectric effect, in which photons hitting the surface of a solar cell create an electric current in the cell. ",
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "Most solar cells are made from pure silicon\u2014either as single-crystal silicon, or as a thin film of silicon deposited upon a glass or metal backing. Most single cells have a voltage output of about 0.5 V, while the current output is a function of the amount of sunlight upon the cell (the incident solar radiation\u2014the insolation). Under bright noon sunlight, a current of about $1 0 0 \\mathrm { m A } / \\mathrm { c m } ^ { 2 }$ of cell surface area is produced by typical single-crystal cells. ",
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "Individual solar cells are connected electrically in modules to meet electrical-energy needs. They can be wired together in series or in parallel\u2014connected like the batteries discussed earlier. A solar-cell array or module usually consists of between 36 and 72 cells, with a power output of 50 W to 140 W. ",
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "The output of the solar cells is direct current. For most uses in a home, AC is required, so a device called an inverter must be used to convert the DC to AC. Any extra output can then be passed on to the outside electrical grid for sale to the utility. ",
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: Virtual Solar Cells ",
+        "text_level": 1,
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "One can assemble a \u201cvirtual\u201d solar cell array by using playing cards, or business or index cards, to represent a solar cell. Combinations of these cards in series and/or parallel can model the required array output. Assume each card has an output of $0 . 5 \\ : \\forall$ and a current (under bright light) of 2 A. Using your cards, how would you ",
+        "page_idx": 938
+    },
+    {
+        "type": "text",
+        "text": "arrange them to produce an output of 6 A at 3 V (18 W)? ",
+        "page_idx": 939
+    },
+    {
+        "type": "text",
+        "text": "Suppose you were told that you needed only 18 W (but no required voltage). Would you need more cards to make this arrangement? ",
+        "page_idx": 939
+    }
+]

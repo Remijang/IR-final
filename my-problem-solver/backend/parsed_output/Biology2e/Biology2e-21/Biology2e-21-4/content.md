@@ -1,0 +1,224 @@
+# 21.4 Other Acellular Entities: Prions and Viroids
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+Describe prions and their basic properties Define viroids and their targets of infection
+
+Prions and viroids are pathogens (agents with the ability to cause disease) that have simpler structures than viruses but, in the case of prions, still can produce deadly diseases.
+
+# Prions
+
+Prions, so-called because they are proteinaceous, are infectious particles—smaller than viruses—that contain no nucleic acids (neither DNA nor RNA). Historically, the idea of an infectious agent that did not use nucleic acids was considered impossible, but pioneering work by Nobel Prize-winning biologist Stanley Prusiner has convinced the majority of biologists that such agents do indeed exist.
+
+Fatal neurodegenerative diseases, such as kuru in humans and bovine spongiform encephalopathy (BSE) in cattle (commonly known as “mad cow disease”) were shown to be transmitted by prions. The disease was spread by the consumption of meat, nervous tissue, or internal organs between members of the same species. Kuru, native to humans in Papua New Guinea, was spread from human to human via ritualistic cannibalism. BSE, originally detected in the United Kingdom, was spread between cattle by the practice of including cattle nervous tissue in feed for other cattle. Individuals with kuru and BSE show symptoms of loss of motor control and unusual behaviors, such as uncontrolled bursts of laughter with kuru, followed by death. Kuru was controlled by inducing the population to abandon its ritualistic cannibalism.
+
+
+
+On the other hand, BSE was initially thought to only affect cattle. Cattle dying of the disease were shown to have developed lesions or “holes” in the brain, causing the brain tissue to resemble a sponge. Later on in the outbreak, however, it was shown that a similar encephalopathy in humans, known as variant Creutzfeldt-Jakob disease (CJD), could be acquired from eating beef from animals infected with BSE, sparking bans by various countries on the importation of British beef and causing considerable economic damage to the British beef industry (Figure 21.17). BSE still exists in various areas, and although a rare disease, individuals that acquire CJD are difficult to treat. The disease can be spread from human to human by blood, so many countries have banned blood donation from regions associated with BSE.
+
+The cause of spongiform encephalopathies, such as kuru and BSE, is an infectious structural variant of a normal cellular protein called $\mathtt { P r P }$ (prion protein). It is this variant that constitutes the prion particle. $\mathrm { P r P }$ exists in two forms, $\mathbf { p } \mathbf { r } \mathbf { P } ^ { \mathbf { c } }$ , the normal form of the protein, and $\bf { P r P ^ { s c } }$ , the infectious form. Once introduced into the body, the $\mathrm { P r } \mathrm { P ^ { s c } }$ contained within the prion binds to $\mathrm { P r } \mathrm { P ^ { c } }$ and converts it to $\mathrm { P r } \mathrm { P ^ { s c } }$ . This leads to an exponential increase of the $\mathrm { P r } \mathrm { P ^ { s c } }$ protein, which aggregates. $\mathtt { P r P ^ { s c } }$ is folded abnormally, and the resulting conformation (shape) is directly responsible for the lesions seen in the brains of infected cattle. Thus, although not without some detractors among scientists, the prion seems likely to be an entirely new form of infectious agent, the first one found whose transmission is not reliant upon genes made of DNA or RNA.
+
+# Viroids
+
+Viroids are plant pathogens: small, single-stranded, circular RNA particles that are much simpler than a virus. They do not have a capsid or outer envelope, but like viruses can reproduce only within a host cell. Viroids do not, however, manufacture any proteins, and they only produce a single, specific RNA molecule. Human diseases caused by viroids have yet to be identified.
+
+Viroids are known to infect plants (Figure 21.18) and are responsible for crop failures and the loss of millions of dollars in agricultural revenue each year. Some of the plants they infect include potatoes, cucumbers, tomatoes, chrysanthemums, avocados, and coconut palms.
+
+# CAREER CONNECTION
+
+# Virologist
+
+Virology is the study of viruses, and a virologist is an individual trained in this discipline. Training in virology can lead to many different career paths. Virologists are actively involved in academic research and teaching in colleges and medical schools. Some virologists treat patients or are involved in the generation and production of vaccines. They might participate in epidemiologic studies (Figure 21.19) or become science writers, to name just a few possible careers.
+
+If you think you may be interested in a career in virology, find a mentor in the field. Many large medical centers have departments of virology, and smaller hospitals usually have virology labs within their microbiology departments. Volunteer in a virology lab for a semester or work in one over the summer. Discussing the profession and getting a first-hand look at the work will help you decide whether a career in virology is right for you. The American Society of Virology’s website (http://openstax.org/l/asv) is a good resource for information regarding training and careers in virology.
+
+
+
+# KEY TERMS
+
+acellular lacking cells   
+acute disease disease where the symptoms rise and fall within a short period of time   
+asymptomatic disease disease where there are no symptoms and the individual is unaware of being infected unless lab tests are performed   
+attenuation weakening of a virus during vaccine development   
+AZT anti-HIV drug that inhibits the viral enzyme reverse transcriptase   
+back mutation when a live virus vaccine reverts back to it disease-causing phenotype   
+bacteriophage virus that infects bacteria   
+budding method of exit from the cell used in certain animal viruses, where virions leave the cell individually by capturing a piece of the host plasma membrane   
+capsid protein coating of the viral core   
+capsomere protein subunit that makes up the capsid   
+cell necrosis cell death   
+chronic infection describes when the virus persists in the body for a long period of time   
+cytopathic causing cell damage   
+envelope lipid bilayer that encircles some viruses   
+fusion method of entry by some enveloped viruses, where the viral envelope fuses with the plasma membrane of the host cell   
+gall appearance of a plant tumor   
+gene therapy treatment of genetic disease by adding genes, using viruses to carry the new genes inside the cell   
+group I virus virus with a dsDNA genome   
+group II virus virus with an ssDNA genome   
+group III virus virus with a dsRNA genome   
+group IV virus virus with an ssRNA genome with positive polarity   
+group V virus virus with an ssRNA genome with negative polarity   
+group VI virus virus with an ssRNA genome converted into dsDNA by reverse transcriptase   
+group VII virus virus with a single-stranded mRNA converted into dsDNA for genome replication   
+horizontal transmission transmission of a disease between unrelated individuals   
+hyperplasia abnormally high cell growth and division   
+hypoplasia abnormally low cell growth and division   
+intermittent symptom symptom that occurs periodically   
+latency virus that remains in the body for a long period of
+
+time but only causes intermittent symptoms lysis bursting of a cell lysogenic cycle type of virus replication in which the viral genome is incorporated into the genome of the host cell lytic cycle type of virus replication in which virions are released through lysis, or bursting, of the cell matrix protein envelope protein that stabilizes the envelope and often plays a role in the assembly of progeny virions negative polarity ssRNA viruses with genomes complementary to their mRNA oncogenic virus virus that has the ability to cause cancer oncolytic virus virus engineered to specifically infect and kill cancer cells pathogen agent with the ability to cause disease permissive cell type that is able to support productive replication of a virus phage therapy treatment of bacterial diseases using bacteriophages specific to a particular bacterium positive polarity ssRNA virus with a genome that contains the same base sequences and codons found in their mRNA prion infectious particle that consists of proteins that replicate without DNA or RNA productive viral infection that leads to the production of new virions prophage phage DNA that is incorporated into the host cell genome $\mathbf { p } \mathbf { r } \mathbf { P } ^ { \mathbf { c } }$ normal prion protein $\bf { P r P ^ { s c } }$ infectious form of a prion protein replicative intermediate dsRNA intermediate made in the process of copying genomic RNA reverse transcriptase enzyme found in Baltimore groups VI and VII that converts single-stranded RNA into double-stranded DNA vaccine weakened solution of virus components, viruses, or other agents that produce an immune response vertical transmission transmission of disease from parent to offspring viral receptor glycoprotein used to attach a virus to host cells via molecules on the cell virion individual virus particle outside a host cell viroid plant pathogen that produces only a single, specific RNA virus core contains the virus genome
+
+# CHAPTER SUMMARY
+
+# 21.1 Viral Evolution, Morphology, and Classification
+
+Viruses are tiny, noncellular entities that usually can be seen only with an electron microscope. Their genomes contain either DNA or RNA—never both—and they replicate either by using the replication proteins of a host cell or by using proteins encoded in the viral genome. Viruses are diverse, infecting archaea, bacteria, fungi, plants, and animals. Viruses consist of a nucleic acid core surrounded by a protein capsid with or without an outer lipid envelope. The capsid shape, presence of an envelope, and core composition dictate some elements of the classification of viruses. The most commonly used classification method, the Baltimore classification, categorizes viruses based on how they produce their mRNA.
+
+# 21.2 Virus Infections and Hosts
+
+Plant viruses may be transmitted either vertically from parent reproductive cells or horizontally through damaged plant tissues. Viruses of plants are responsible for significant economic damage in both crop plants and plants used for ornamentation. Animal viruses enter their hosts through several types of virus-host cell interactions and cause a variety of infections. Viral infections can be either acute, with a brief period of infection terminated by host immune responses, or chronic, in which the infection persists. Persistent infections may cause chronic symptoms (hepatitis C), intermittent symptoms (latent viruses such a herpes simplex virus 1), or even be effectively asymptomatic (human herpesviruses 6 and 7). Oncogenic viruses in animals have
+
+the ability to cause cancer by interfering with the regulation of the host cell cycle.
+
+# 21.3 Prevention and Treatment of Viral Infections
+
+Viruses cause a variety of diseases in humans. Many of these diseases can be prevented by the use of viral vaccines, which stimulate protective immunity against the virus without causing major disease. Viral vaccines may also be used in active viral infections, boosting the ability of the immune system to control or destroy the virus. A series of antiviral drugs that target enzymes and other protein products of viral genes have been developed and used with mixed success. Combinations of anti-HIV drugs have been used to effectively control the virus, extending the lifespans of infected individuals. Viruses have many uses in medicines, such as in the treatment of genetic disorders, cancer, and bacterial infections.
+
+# 21.4 Other Acellular Entities: Prions and Viroids
+
+Prions are infectious agents that consist of protein, but no DNA or RNA, and seem to produce their deadly effects by duplicating their shapes and accumulating in tissues. They are thought to contribute to several progressive brain disorders, including mad cow disease and Creutzfeldt-Jakob disease. Viroids are single-stranded RNA pathogens that infect plants. Their presence can have a severe impact on the agriculture industry.
+
+# VISUAL CONNECTION QUESTIONS
+
+1. Figure 21.5 Which of the following statements about virus structure is true?
+
+a. All viruses are encased in a viral membrane.   
+b. The capsomere is made up of small protein subunits called capsids.   
+c. DNA is the genetic material in all viruses.   
+d. Glycoproteins help the virus attach to the host cell.
+
+2. Figure 21.8 Influenza virus is packaged in a viral envelope that fuses with the plasma membrane. This way, the virus can exit the host cell without killing it. What advantage does the virus gain by keeping the host cell alive?
+
+3. Figure 21.10 Which of the following statements is false?
+
+a. In the lytic cycle, new phages are produced and released into the environment.   
+b. In the lysogenic cycle, phage DNA is incorporated into the host genome.   
+c. An environmental stressor can cause the phage to initiate the lysogenic cycle.   
+d. Cell lysis only occurs in the lytic cycle.
+
+# REVIEW QUESTIONS
+
+4. Which statement is true?
+
+a. A virion contains DNA and RNA.   
+b. Viruses are acellular.   
+c. Viruses replicate outside of the cell.   
+d. Most viruses are easily visualized with a light microscope.
+
+5. The viral play(s) a role in attaching a virion to the host cell.
+
+a. core b. capsid c. envelope d. both b and c
+
+6. Viruses a. all have a round shape b. cannot have a long shape c. do not maintain any shape d. vary in shape
+
+
+
+7. The observation that the bacteria genus Chlamydia contains species that can only survive as intracellular parasites supports which viral origin hypothesis?
+
+a. Progressive b. Regressive c. Self-replicating d. Virus-first
+
+8. A scientist discovers a new virus with a linear, RNA genome surrounded by a helical capsid. The virus is most likely a member of which family based on structure classification?
+
+a. Rabies virus b. Herpesviruses c. Retroviruses d. Influenza viruses
+
+9. Which statement is nottrue of viral replication?
+
+a. A lysogenic cycle kills the host cell.   
+b. There are six basic steps in the viral replication cycle.   
+c. Viral replication does not affect host cell function.   
+d. Newly released virions can infect adjacent cells.
+
+10. Which statement is true of viral replication?
+
+a. In the process of apoptosis, the cell survives.   
+b. During attachment, the virus attaches at specific sites on the cell surface.   
+c. The viral capsid helps the host cell produce more copies of the viral genome.   
+d. mRNA works outside of the host cell to produce enzymes and proteins.
+
+11. Which statement is true of reverse transcriptase?
+
+a. It is a nucleic acid.   
+b. It infects cells.   
+c. It transcribes RNA to make DNA.   
+d. It is a lipid.
+
+12. Oncogenic virus cores can be
+
+a. RNA   
+b. DNA   
+c. neither RNA nor DNA   
+d. either RNA or DNA
+
+13. Which is true of DNA viruses?
+
+a. They use the host cell’s machinery to produce new copies of their genome.   
+b. They all have envelopes.   
+c. They are the only kind of viruses that can cause cancer.   
+d. They are not important plant pathogens.
+
+14. A bacteriophage can infect
+
+a. the lungs b. viruses c. prions d. bacteria
+
+15. People with the $\mathrm { C C R } 5 \Delta 3 2$ mutation of a T-cell surface protein can be exposed to some strains of HIV-1 without becoming sick. What step of the virus life cycle is likely to be inhibited with this mutation?
+
+a. Release   
+b. Reverse transcription   
+c. Uncoating   
+d. Attachment
+
+16. An apple grower notices that several of his apple trees with fungi growing on their trunks have developed necrotic ring spots, while other trees in the orchard that lack fungi appear healthy. What is the most likely conclusion the farmer can make about the virus infecting his apple trees?
+
+a. The apple trees were infected by horizontal transmission.   
+b. The fungi carry disease.   
+c. The fungi attract disease-carrying insects.   
+d. The apple trees were infected by vertical transmission.
+
+17. Which of the following is NOT used to treat active viral disease?
+
+a. Vaccines b. Antiviral drugs c. Antibiotics d. Phage therapy
+
+18. Vaccines a. are similar to viroids b. are only needed once c. kill viruses d. stimulate an immune response
+
+
+
+19. A patient presents at the clinic with an acute viral infection. Assays that analyze the viral life cycle classify the virus into Group V with a segmented genome. Which virus is the most likely diagnosis for the patient?
+
+a. Rabies virus b. Picornavirus c. HIV-1 d. Influenza A virus
+
+20. Which of the following is not associated with prions?
+
+a. Replicating shapes b. Mad cow disease c. DNA d. Toxic proteins
+
+21. Which statement is true of viroids?
+
+a. They are single-stranded RNA particles.   
+b. They reproduce only outside of the cell.   
+c. They produce proteins.   
+d. They affect both plants and animals.
+
+# CRITICAL THINKING QUESTIONS
+
+22. The first electron micrograph of a virus (tobacco mosaic virus) was produced in 1939. Before that time, how did scientists know that viruses existed if they could not see them? (Hint: Early scientists called viruses “filterable agents.”)   
+23. Varicella-zoster virus is a double-stranded DNA virus that causes chickenpox. How does its genome structure provide an evolutionary advantage over a singlestranded DNA virus?   
+24. Classify the Rabies virus (a rhabdovirus family member) and HIV-1 with both the Baltimore and genomic structure systems. Compare your results. What conclusions can be made about these two different methods?   
+25. Why can’t dogs catch the measles?   
+26. One of the first and most important targets for drugs to fight infection with HIV (a retrovirus) is the reverse transcriptase enzyme. Why?   
+27. In this section, you were introduced to different types of viruses and viral diseases. Briefly discuss the most interesting or surprising thing you learned about viruses.   
+28. Although plant viruses cannot infect humans, what are some of the ways in which they affect humans?   
+29. A bacteriophage with a lytic life cycle develops a mutation that allows it to now also go through the lysogenic cycle. How would this provide an evolutionary advantage over the other bacteriophages that can only spread through lytic cycles?   
+30. Why is immunization after being bitten by a rabid animal so effective and why aren’t people vaccinated for rabies like dogs and cats are?   
+31. The vaccine Gardasil that targets human papilloma virus (HPV), the etiological agent of genital warts, was developed after the anti-HPV medication podofilox. Why would doctors still want a vaccine created after anti-viral medications were available?   
+32. Prions are responsible for variant Creutzfeldt-Jakob Disease, which has resulted in over 100 human deaths in Great Britain during the last 10 years. How do humans contract this disease?   
+33. How are viroids like viruses?   
+34. A botanist notices that a tomato plant looks diseased. How could the botanist confirm that the agent causing disease is a viroid, and not a virus?

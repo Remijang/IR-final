@@ -1,0 +1,50 @@
+[
+    {
+        "type": "text",
+        "text": "1.8.1 Representing Information ",
+        "text_level": 1,
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "In modern computers, it is not possible to store numbers or pieces of text directly. Today\u2019s computers are made of transistors. A transistor can be visualized as a basic switch that has two states \u2013 on and off. If the switch is on, then it represents 1, otherwise it represents 0. Every single entity inclusive of numbers, text, instructions, programs, and complex software needs to be represented using a sequence of 0s and 1s. We have only two basic symbols that we can use namely 0 and 1. A variable/value that can either be 0 or 1, is known as a bit. Most computers typically store and process a set of 8 bits together. A set of 8 bits is known as a byte. Typically, a sequence of 4 bytes is known as a word. ",
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "Definition 11 ",
+        "text_level": 1,
+        "page_idx": 41
+    },
+    {
+        "type": "text",
+        "text": "bit A value that can either be 0 or 1.   \nbyte A sequence of 8 bits.   \nword A sequence of 4 bytes. ",
+        "page_idx": 41
+    },
+    {
+        "type": "image",
+        "img_path": "images/87998f4d2986e977139f67e16cb3d3419cfbce3c4d17db788859e13bce4a45bd.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 42
+    },
+    {
+        "type": "image",
+        "img_path": "images/6567b4aa6fd052ae7f5ec33d5b2bc7e673009f50043f8746ec1ed6ffb9de4c48.jpg",
+        "img_caption": [
+            "Figure 1.15: Memory \u2013 a large array of switches "
+        ],
+        "img_footnote": [],
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "We can thus visualize all the internal storage structures of a computer such as the memory or the set of registers as a large array of switches as shown in Figure 1.15. In Chapter 2, we shall study the language of bits. We shall see that using bits it is possible to express logical concepts, arithmetic concepts (integer and real numbers), and pieces of text. ",
+        "page_idx": 42
+    },
+    {
+        "type": "text",
+        "text": "This chapter is a prerequisite for the next chapter on assembly language. Assembly language is a textual representation of an ISA. It is specific to the ISA. Since an instruction is a sequence of 0s and 1s, it is very difficult to study it in its bare form. Assembly language gives us a good handle to study the semantics of instructions in an ISA. Chapter 3 introduces the general concepts of assembly language and serves as a common introduction to the next two chapters that delve into the details of two very popular real-world ISAs \u2013 ARM and x86. We introduce a simple ISA called SimpleRisc in Chapter 3. Subsequently, in Chapter 4 we introduce the ARM ISA, and in Chapter 5 we briefly cover the x86 ISA. Note that it is not necessary to read both these chapters. After reading the introductory chapter on assembly language and obtaining an understanding of the SimpleRisc assembly language, the interested reader can read just one chapter to deepen her knowledge about a real-world ISA. At this point, the reader should have a good knowledge of what needs to be built. ",
+        "page_idx": 42
+    }
+]

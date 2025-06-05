@@ -1,0 +1,68 @@
+[
+    {
+        "type": "text",
+        "text": "50.4 AFS Version 2 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "AFSv2 introduced the notion of a callback to reduce the number of client/server interactions. A callback is simply a promise from the server to the client that the server will inform the client when a file that the client is caching has been modified. By adding this state to the system, the client no longer needs to contact the server to find out if a cached file is still valid. Rather, it assumes that the file is valid until the server tells it otherwise; notice the analogy to polling versus interrupts. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "AFSv2 also introduced the notion of a file identifier (FID) (similar to the NFS file handle) instead of pathnames to specify which file a client was interested in. An FID in AFS consists of a volume identifier, a file identifier, and a “uniquifier” (to enable reuse of the volume and file IDs when a file is deleted). Thus, instead of sending whole pathnames to the server and letting the server walk the pathname to find the desired file, the client would walk the pathname, one piece at a time, caching the results and thus hopefully reducing the load on the server. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "For example, if a client accessed the file /home/remzi/notes.txt, and home was the AFS directory mounted onto / (i.e., / was the local root directory, but home and its children were in AFS), the client would first Fetch the directory contents of home, put them in the local-disk cache, and set up a callback on home. Then, the client would Fetch the directory ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/521b4e2554d6b26aba69674f2547fa6792c9994e1dca8d115c76a25ebac0cf44.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">I(2 11 0)</td></tr><tr><td>Client (C1) fd = open(\"/home/remzi/notes.txt\", ..);.</td><td>Server</td></tr><tr><td>Send Fetch (home FID, \"remzi\")</td><td>Receive Fetch request look for remzi in home dir setup callback(C1) on remzi</td></tr><tr><td>Receive Fetch reply write remzi to local disk cache record callback status of remzi Send Fetch (remzi FID, \"notes.txt')</td><td>return remzi's content/FID Receive Fetch request 1ook for notes.txt in remzi dir</td></tr><tr><td>Receive Fetch reply write notes.txt to local disk cache record callback status of notes.txt local open () of cached notes.txt return file descriptor to application.</td><td>setup callback(C1) on notes.txt return notes.txt's content/FID</td></tr><tr><td>read(fd, buffer, MAX); perform local read () on cached copy</td><td></td></tr><tr><td>close(fd); do local c1ose () on cached copy if file has changed, flush to server</td><td></td></tr><tr><td>fd = open(\"/home/remzi/notes.txt\", ...); Foreach dir (home, remzi) if (callback(dir) == VALID) use local copy for lookup(dir)</td><td></td></tr><tr><td>else Fetch (as above) if (callback(notes.txt) == VALID) open local cached copy return file descriptor to it else</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Figure 50.2: Reading A File: Client-side And File Server Actions ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "remzi, put it in the local-disk cache, and set up a callback on remzi. Finally, the client would Fetch notes.txt, cache this regular file in the local disk, set up a callback, and finally return a file descriptor to the calling application. See Figure 50.2 for a summary. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The key difference, however, from NFS, is that with each fetch of a directory or file, the AFS client would establish a callback with the server, ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: CACHE CONSISTENCY IS NOT A PANACEA ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "When discussing distributed file systems, much is made of the cache consistency the file systems provide. However, this baseline consistency does not solve all problems with regards to file access from multiple clients. For example, if you are building a code repository, with multiple clients performing check-ins and check-outs of code, you can’t simply rely on the underlying file system to do all of the work for you; rather, you have to use explicit file-level locking in order to ensure that the “right” thing happens when such concurrent accesses take place. Indeed, any application that truly cares about concurrent updates will add extra machinery to handle conflicts. The baseline consistency described in this chapter and the previous one are useful primarily for casual usage, i.e., when a user logs into a different client, they expect some reasonable version of their files to show up there. Expecting more from these protocols is setting yourself up for failure, disappointment, and tear-filled frustration. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "thus ensuring that the server would notify the client of a change in its cached state. The benefit is obvious: although the first access to /home/ remzi/notes.txt generates many client-server messages (as described above), it also establishes callbacks for all the directories as well as the file notes.txt, and thus subsequent accesses are entirely local and require no server interaction at all. Thus, in the common case where a file is cached at the client, AFS behaves nearly identically to a local disk-based file system. If one accesses a file more than once, the second access should be just as fast as accessing a file locally. ",
+        "page_idx": 5
+    }
+]

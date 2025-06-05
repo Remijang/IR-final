@@ -1,0 +1,214 @@
+[
+    {
+        "type": "text",
+        "text": "15.4 Carnot\u2019s Perfect Heat Engine: The Second Law of Thermodynamics Restated ",
+        "text_level": 1,
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "Identify a Carnot cycle.   \n\u2022 Calculate maximum theoretical efficiency of a nuclear reactor.   \n\u2022 Explain how dissipative processes affect the ideal Carnot engine. ",
+        "page_idx": 661
+    },
+    {
+        "type": "image",
+        "img_path": "images/fb54e3da73327b184665eb908ae468b1cb8af0698cbf9a6e9490fbfc63cddb39.jpg",
+        "img_caption": [
+            "FIGURE 15.20 This novelty toy, known as the drinking bird, is an example of Carnot\u2019s engine. It contains methylene chloride (mixed with a dye) in the abdomen, which boils at a very low temperature\u2014about $1 0 0 ^ { \\circ } \\mathrm { F }$ . To operate, one gets the bird\u2019s head wet. As the water evaporates, fluid moves up into the head, causing the bird to become top-heavy and dip forward back into the water. This cools down the methylene chloride in the head, and it moves back into the abdomen, causing the bird to become bottom heavy and tip up. Except for a very small input of energy\u2014the original head-wetting\u2014the bird becomes a perpetual motion machine of sorts. (credit: Arabesk.nl, Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "We know from the second law of thermodynamics that a heat engine cannot be $100 \\%$ efficient, since there must always be some heat transfer $Q _ { \\mathrm { c } }$ to the environment, which is often called waste heat. How efficient, then, can a heat engine be? This question was answered at a theoretical level in 1824 by a young French engineer, Sadi Carnot (1796\u20131832), in his study of the then-emerging heat engine technology crucial to the Industrial Revolution. He devised a theoretical cycle, now called the Carnot cycle, which is the most efficient cyclical process possible. The second law of thermodynamics can be restated in terms of the Carnot cycle, and so what Carnot actually discovered was this fundamental law. Any heat engine employing the Carnot cycle is called a Carnot engine. ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "What is crucial to the Carnot cycle\u2014and, in fact, defines it\u2014is that only reversible processes are used. Irreversible processes involve dissipative factors, such as friction and turbulence. This increases heat transfer $Q _ { \\mathrm { c } }$ to the environment and reduces the efficiency of the engine. Obviously, then, reversible processes are superior. ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "Carnot Engine ",
+        "text_level": 1,
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "Stated in terms of reversible processes, the second law of thermodynamics has a third form: ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "A Carnot engine operating between two given temperatures has the greatest possible efficiency of any heat engine operating between these two temperatures. Furthermore, all engines employing only reversible processes have this same maximum efficiency when operating between the same given temperatures. ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "Figure 15.21 shows the $P V$ diagram for a Carnot cycle. The cycle comprises two isothermal and two adiabatic processes. Recall that both isothermal and adiabatic processes are, in principle, reversible. ",
+        "page_idx": 661
+    },
+    {
+        "type": "text",
+        "text": "Carnot also determined the efficiency of a perfect heat engine\u2014that is, a Carnot engine. It is always true that the efficiency of a cyclical heat engine is given by: ",
+        "page_idx": 662
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE f f = \\frac { Q _ { \\mathrm { h } } - Q _ { \\mathrm { c } } } { Q _ { \\mathrm { h } } } = 1 - \\frac { Q _ { \\mathrm { c } } } { Q _ { \\mathrm { h } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "What Carnot found was that for a perfect heat engine, the ratio $Q _ { \\mathrm { c } } / Q _ { \\mathrm { h } }$ equals the ratio of the absolute temperatures of the heat reservoirs. That is, $Q _ { \\mathrm { c } } / Q _ { \\mathrm { h } } = T _ { \\mathrm { c } } / T _ { \\mathrm { h } }$ for a Carnot engine, so that the maximum or Carnot efficiency $E f f _ { \\mathrm { C } }$ is given by ",
+        "page_idx": 662
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE f f _ { \\mathrm { C } } = 1 - { \\frac { T _ { \\mathrm { c } } } { T _ { \\mathrm { h } } } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "where $T _ { \\mathrm { h } }$ and $T _ { \\mathrm { c } }$ are in kelvins (or any other absolute temperature scale). No real heat engine can do as well as the Carnot efficiency\u2014an actual efficiency of about 0.7 of this maximum is usually the best that can be accomplished. But the ideal Carnot engine, like the drinking bird above, while a fascinating novelty, has zero power. This makes it unrealistic for any applications. ",
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "Carnot\u2019s interesting result implies that $100 \\%$ efficiency would be possible only if $T _ { \\mathrm { c } } = 0 \\ : \\mathrm { K }$ \u2014that is, only if the cold reservoir were at absolute zero, a practical and theoretical impossibility. But the physical implication is this\u2014the only way to have all heat transfer go into doing work is to remove al thermal energy, and this requires a cold reservoir at absolute zero. ",
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "It is also apparent that the greatest efficiencies are obtained when the ratio $T _ { \\mathrm { c } } / T _ { \\mathrm { h } }$ is as small as possible. Just as discussed for the Otto cycle in the previous section, this means that efficiency is greatest for the highest possible temperature of the hot reservoir and lowest possible temperature of the cold reservoir. (This setup increases the area inside the closed loop on the $P V$ diagram; also, it seems reasonable that the greater the temperature difference, the easier it is to divert the heat transfer to work.) The actual reservoir temperatures of a heat engine are usually related to the type of heat source and the temperature of the environment into which heat transfer occurs. Consider the following example. ",
+        "page_idx": 662
+    },
+    {
+        "type": "image",
+        "img_path": "images/5ccc684758b9a60d5a1a12e93c9087bd259d089f610bfae83769d109f387b4ec.jpg",
+        "img_caption": [
+            "FIGURE 15.21 $P V$ diagram for a Carnot cycle, employing only reversible isothermal and adiabatic processes. Heat transfer $Q _ { \\mathrm { h } }$ occurs into the working substance during the isothermal path AB, which takes place at constant temperature $T _ { \\mathrm { h } }$ . Heat transfer $Q _ { \\mathrm { c } }$ occurs out of the working substance during the isothermal path CD, which takes place at constant temperature $T _ { \\mathrm { c } }$ . The net work output $W$ equals the area inside the path ABCDA. Also shown is a schematic of a Carnot engine operating between hot and cold reservoirs at temperatures $T _ { \\mathrm { h } }$ and $T _ { \\mathrm { c } }$ . Any heat engine using reversible processes and operating between these two temperatures will have the same maximum efficiency as the Carnot engine. "
+        ],
+        "img_footnote": [],
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 15.4 ",
+        "text_level": 1,
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "Maximum Theoretical Efficiency for a Nuclear Reactor ",
+        "text_level": 1,
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "A nuclear power reactor has pressurized water at $3 0 0 ^ { \\circ } \\mathrm { C } .$ . (Higher temperatures are theoretically possible but practically not, due to limitations with materials used in the reactor.) Heat transfer from this water is a complex process (see Figure 15.22). Steam, produced in the steam generator, is used to drive the turbine-generators. Eventually the steam is condensed to water at $2 7 ^ { \\circ } \\mathrm { C }$ and then heated again to start the cycle over. Calculate the maximum theoretical efficiency for a heat engine operating between these two temperatures. ",
+        "page_idx": 662
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 663
+    },
+    {
+        "type": "image",
+        "img_path": "images/c84fc09d1f595e9e6c896abd2ef4769e313b689fd4e6733b7be7de9953366d01.jpg",
+        "img_caption": [
+            "FIGURE 15.22 Schematic diagram of a pressurized water nuclear reactor and the steam turbines that convert work into electrical energy. Heat exchange is used to generate steam, in part to avoid contamination of the generators with radioactivity. Two turbines are used because this is less expensive than operating a single generator that produces the same amount of electrical energy. The steam is condensed to liquid before being returned to the heat exchanger, to keep exit steam pressure low and aid the flow of steam through the turbines (equivalent to using a lower-temperature cold reservoir). The considerable energy associated with condensation must be dissipated into the local environment; in this example, a cooling tower is used so there is no direct heat transfer to an aquatic environment. (Note that the water going to the cooling tower does not come into contact with the steam flowing over the turbines.) "
+        ],
+        "img_footnote": [],
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "Since temperatures are given for the hot and cold reservoirs of this heat engine, $\\begin{array} { r } { E f f _ { \\mathrm { C } } = 1 - \\frac { T _ { \\mathrm { c } } } { T _ { \\mathrm { h } } } } \\end{array}$ can be used to calculate the Carnot (maximum theoretical) efficiency. Those temperatures must first be converted to kelvins. ",
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "The hot and cold reservoir temperatures are given as $3 0 0 ^ { \\circ } \\mathrm { C }$ and $2 7 . 0 ^ { \\circ } \\mathrm { C }$ , respectively. In kelvins, then, $T _ { \\mathrm { h } } = 5 7 3 \\mathrm { K }$ and $T _ { \\mathrm { c } } = 3 0 0 \\ : \\mathrm { K }$ , so that the maximum efficiency is ",
+        "page_idx": 663
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE f f _ { \\mathrm { C } } = 1 - { \\frac { T _ { \\mathrm { c } } } { T _ { \\mathrm { h } } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "Thus, ",
+        "page_idx": 663
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { E f f _ { \\mathrm { C } } } & { = } & { 1 - \\frac { 3 0 0 ~ \\mathrm { K } } { 5 7 3 ~ \\mathrm { K } } } \\\\ & { = } & { 0 . 4 7 6 , \\mathrm { o r } { 4 7 . 6 \\% } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 663
+    },
+    {
+        "type": "text",
+        "text": "A typical nuclear power station\u2019s actual efficiency is about $3 5 \\%$ , a little better than 0.7 times the maximum possible value, a tribute to superior engineering. Electrical power stations fired by coal, oil, and natural gas have greater actual efficiencies (about $4 2 \\%$ ), because their boilers can reach higher temperatures and pressures. The cold reservoir temperature in any of these power stations is limited by the local environment. Figure 15.23 shows (a) the exterior of a nuclear power station and (b) the exterior of a coal-fired power station. Both have cooling towers into which water from the condenser enters the tower near the top and is sprayed downward, cooled by evaporation. ",
+        "page_idx": 663
+    },
+    {
+        "type": "image",
+        "img_path": "images/8c8c0ed24e25540e2e8e79c875580a22a077c3fea7f6ed70df44afa2a061ed21.jpg",
+        "img_caption": [
+            "FIGURE 15.23 (a) A nuclear power station (credit: BlatantWorld.com) and (b) a coal-fired power station. Both have cooling towers in which water evaporates into the environment, representing $Q _ { \\mathrm { c } }$ . The nuclear reactor, which supplies $Q _ { \\mathrm { h } }$ , is housed inside the dome-shaped containment buildings. (credit: Robert & Mihaela Vicol, publicphoto.org) "
+        ],
+        "img_footnote": [],
+        "page_idx": 664
+    },
+    {
+        "type": "text",
+        "text": "Since all real processes are irreversible, the actual efficiency of a heat engine can never be as great as that of a Carnot engine, as illustrated in Figure 15.24(a). Even with the best heat engine possible, there are always dissipative processes in peripheral equipment, such as electrical transformers or car transmissions. These further reduce the overall efficiency by converting some of the engine\u2019s work output back into heat transfer, as shown in Figure 15.24(b). ",
+        "page_idx": 664
+    },
+    {
+        "type": "image",
+        "img_path": "images/037158291a8d476b4c47f489df834ea52e567ed37245ff12a76e444013c1fb7c.jpg",
+        "img_caption": [
+            "FIGURE 15.24 Real heat engines are less efficient than Carnot engines. (a) Real engines use irreversible processes, reducing the heat transfer to work. Solid lines represent the actual process; the dashed lines are what a Carnot engine would do between the same two reservoirs. (b) Friction and other dissipative processes in the output mechanisms of a heat engine convert some of its work output into heat transfer to the environment. "
+        ],
+        "img_footnote": [],
+        "page_idx": 665
+    }
+]

@@ -1,0 +1,169 @@
+[
+    {
+        "type": "text",
+        "text": "13.8.3 Optical Disks \u2013 CD, DVD, Blu-ray ",
+        "text_level": 1,
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "Till 2015, CDs, DVDs, and Blu-ray disks were widely used to store videos, music, and software. Such optical disks had become the default distribution media for videos and music. Consequently, almost all desktops and laptops sold in that era had a built-in CD or DVD drive. As of 2025, USB flash drives have replaced them. The reader needs to note that the physics of optical disks is very different from that of hard disks. We read the data stored in a hard disk by measuring the change in magnetic field due to the relative motion of tiny magnets embedded in the platters of the hard disk. In comparison, in an optical disk, we read data by using photodetectors (light detectors) to measure the intensity of optical signals reflected off the surface of the disk. Even though such optical disks are not widely used these days in consumer devices, they still find use in high-volume enterprise storage. Hence, it is a good idea to understand how data is stored on them. ",
+        "page_idx": 713
+    },
+    {
+        "type": "image",
+        "img_path": "images/205ec4edb9c8e727d0eed37bf0dfddd6fe2b8817dced988a38d4f5e8234dd787.jpg",
+        "img_caption": [
+            "Figure 13.37: RAID 6 "
+        ],
+        "img_footnote": [],
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "The reader needs to note that CDs (compact disks), DVDs (Digital Video Disks, or Digital Versatile Disks), and Blu-ray disks basically use the same technology. CDs represent first generation optical disks, DVDs represent second generation optical disks, and Blu-ray disks are representative of the third generation. Successive generations are typically faster and can provide more storage capacity. Let us now consider the physics of optical storage media. ",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "Basic Physics of Optical Storage Media ",
+        "text_level": 1,
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "An optical disk is shown in Figure 13.38. It is a circular disk, and is typically 12 cm in diameter. It has a hole in the center that is meant for attaching to a spindle (similar to hard disks). The hole is 1.5 cm in diameter, and the entire optical disk is 1.2 mm thick. An optical disk is made of multiple layers. We are primarily concerned with the reflective layer that reflects laser light to a set of detectors. We encode data bits by modifying the surface of the reflective layer. Let us elaborate. ",
+        "page_idx": 714
+    },
+    {
+        "type": "text",
+        "text": "The data is saved in a spiral pattern that starts from the innermost track, covers the entire surface of the disk, and ends at the outermost track. The width of the track, and the spacing between the tracks depends on the optical disk generation. Let us outline the basic mechanism that is used to encode data on the spiral path. The spiral path has two types of regions namely lands and pits. Lands reflect the optical signal, and thus represent the physical bit, 1. Lands are represented by a flat region in the reflective layer. In comparison, pits have lower reflectivity, and the reflected light is typically out of phase with the light reflected off the lands, and thus they represent the physical bit, 0. A pit is a depression on the surface of the reflective layer. The data on a CD is encoded using the NRZI encoding scheme (see Section 13.2.7). We infer a logical 1 when there is a pit to land, or land to pit transition. However, if there are no transitions, then we keep on inferring logical 0s. ",
+        "page_idx": 714
+    },
+    {
+        "type": "image",
+        "img_path": "images/44345779c2c71c1ef0979238248417895e19f3f19cad8bb410e47f7cff9cf60b.jpg",
+        "img_caption": [
+            "Figure 13.38: An optical disk (source [dis, ]) "
+        ],
+        "img_footnote": [],
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "Optical Disk Layers ",
+        "text_level": 1,
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "An optical disk typically has four layers (refer to Figure 13.39). ",
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "Polycarbonate Layer The polycarbonate layer is a layer of polycarbonate plastic. Lands and pits are created at its top using an injection molding process. ",
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "Reflective Layer The reflective layer consists a thin layer of aluminum or gold that reflects the laser light. ",
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "Lacquer Layer The lacquer-based layer on top of the reflective layer protects the reflective layer from scratches, and other forms of accidental damage. ",
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "Surface Layer Most vendors typically add a plastic layer over the lacquer layer such that it is possible to add a label to the optical disk. For example, most optical disks typically have a poster of the movie on their top surface. ",
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "The optical disk reader sends a laser signal that passes through the polycarbonate layer and gets focused on the lands or pits. In CDs, the polycarbonate layer is typically very deep, and it occupies most of the volume. In comparison, the polycarbonate layer occupies roughly half the volume in DVDs. For third generation optical disks the reflective layer is very close to the bottom surface. ",
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "Optical Disk Reader ",
+        "text_level": 1,
+        "page_idx": 715
+    },
+    {
+        "type": "text",
+        "text": "An optical disk reader is very similar to a hard disk drive (refer to Figure 13.40). The optical disk rotates on a spindle. The label of the optical disk is oriented towards the top. The actuator and head assembly are located at the bottom. Unlike a hard disk that uses a rotary actuator (rotating arm), an optical disk drive uses a linear actuator [Abramovitch, 2001] that slides radially in or out. Figure 13.40 shows a laser assembly that slides on a set of rails. The laser assembly is connected to an actuator via a system of gears and mechanical components. The actuator motor can very precisely rotate its spindle, and the system of gears translate rotational motion into linear motion of the laser assembly. ",
+        "page_idx": 715
+    },
+    {
+        "type": "image",
+        "img_path": "images/96bee990bf84cbb9b1fda063100453047b654630a51ff9486641888562ae26c3.jpg",
+        "img_caption": [
+            "Figure 13.39: Optical disk layers "
+        ],
+        "img_footnote": [],
+        "page_idx": 716
+    },
+    {
+        "type": "image",
+        "img_path": "images/a12324c53b86604ed8de91cbe98162d057eb0a69aef2a4e08dd9d513b2035663.jpg",
+        "img_caption": [
+            "Figure 13.40: Optical disk reader "
+        ],
+        "img_footnote": [],
+        "page_idx": 716
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 716
+    },
+    {
+        "type": "text",
+        "text": "The head is a part of the laser assembly. The head typically contains a light source (laser) that is focused on the reflective layer through a system of lenses. The reflective layer then reflects the light, and a part of the reflected light gets captured by the optical disk head. The reflected light is converted to electrical signals within the head by photodetectors. The sequence of electrical signals is processed by dedicated circuitry in the drive, and converted to a sequence of logical bits. Similar to hard disks, optical drives perform error detection and correction. ",
+        "page_idx": 716
+    },
+    {
+        "type": "text",
+        "text": "One important point of difference from hard disks is that the optical disk rotates at constant linear velocity. This means that pits and lands traverse under the head at the same velocity irrespective of the track. In other words, the data transfer rate is the same irrespective of the position of the head. To support this feature, it is necessary to change the rotational speed of the spindle according to the position of the head. When the head is traveling towards the periphery of the disk, it is necessary to slow the disk down. The spindle motor has sophisticated support for acceleration and deceleration in optical drives. To simplify the logic, we can implement zoning here similar to the zoning in hard disk drives (see Section 13.8.1). However, in the case of optical drives, zoning is mostly used in high performance drives. ",
+        "page_idx": 716
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 717
+    },
+    {
+        "type": "text",
+        "text": "Advanced Features ",
+        "text_level": 1,
+        "page_idx": 717
+    },
+    {
+        "type": "text",
+        "text": "Most audio, video, and software CDs/DVDs are written once by the original vendors, and are sold as read-only media. Users are not expected to overwrite the optical storage media. Such optical disks use 4 layers as described in Figure 13.39. Optical disks are also used to archive data. Such disks are typically meant to be written once, and read multiple times (CD-R and DVD-R formats). To create such recordable media, the polycarbonate layer is coated with an organic dye that is sensitive to light. The organic dye layer is coated with the reflective metallic layer, the lacquer layer, and the surface layer. While writing the CD, a high powered write-laser focuses light on the dye and changes its reflectivity. Lands are regions of high reflectivity, and pits are regions of low reflectivity. Such write-once optical media were superseded by optical media (CDs or DVDs) that can be read and written many times. Here, the reflective layer is made of a silver-indium-antimony-tellurium alloy. When it is heated to $5 0 0 ^ { \\circ } \\mathrm { C }$ , spots in the reflective layer lose their reflectivity because the structure of the alloy becomes amorphous. To make the spots reflective they are heated to $2 0 0 ^ { \\circ }$ C such that the state of the alloy changes to the polycrystalline state. We can thus encode lands and pits in the reflective layer, erase them, and rewrite them as required. ",
+        "page_idx": 717
+    },
+    {
+        "type": "text",
+        "text": "Modern disks can additionally have an extra layer of lands and pits. The first layer is coated with a chemical that is partially transparent to light. For example, pits can be coated with fluorescent material. When irradiated with red light they glow and emit light of a certain wavelength. However, most of the red light passes to the second layer, and then interacts with the fluorescent material in the pits, which is different from the material in the first layer. By analyzing the nature of reflected light, and by using sophisticated image filtering algorithms, it is possible to read the encoded data in both the layers. A simpler solution is to encode data on both sides of the optical disk. This is often as simple as taking two single side disks and pasting their surface layers together. To read such a disk, we need two laser assemblies. ",
+        "page_idx": 717
+    },
+    {
+        "type": "text",
+        "text": "Comparison of CDs, DVDs, and Blu-ray Disks ",
+        "text_level": 1,
+        "page_idx": 717
+    },
+    {
+        "type": "text",
+        "text": "Refer to Table 13.9 for a comparison of CD, DVD, and Blu-ray disks. ",
+        "page_idx": 717
+    }
+]

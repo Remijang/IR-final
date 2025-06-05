@@ -1,0 +1,510 @@
+[
+    {
+        "type": "text",
+        "text": "3.5 Parabolas, Ellipses, and Hyperbolas ",
+        "text_level": 1,
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "Here is a list of the most important curves in mathematics, so you can tell what is coming. It is not easy to rank the top four: ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "1. straight lines   \n2. sines and cosines (oscillation)   \n3. exponentials (growth and decay)   \n4. parabolas, ellipses, and hyperbolas $( \\operatorname { u s i n g } 1 , x , y , x ^ { 2 } , x y , y ^ { 2 } )$ . ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "The curves that I wrote last, the Greeks would have written first. It is so natural to go from linear equations to quadratic equations. Straight lines use $^ { 1 , x , y }$ : Second degree curves include $x ^ { 2 } , x y , y ^ { 2 }$ : If we go on to $x ^ { 3 }$ and $y ^ { 3 }$ , the mathematics gets complicated. We now study equations of second degree, and the curves they produce. ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "It is quite important to see\u0005both the equations and the curves. This section connects two great parts of mathematics\u2014analysis of the equation and geometry of the curve. Together they produce \u201canalytic geometry.\u201d You already know about functions and graphs. Even more basic: Numbers correspond to points. We speak about \u201cthe point .5; 2/:\u201d Euclid might not have understood. ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "Where Euclid drew a $4 5 ^ { \\circ }$ line through the origin, Descartes wrote down $y = x$ : Analytic geometry has become central to mathematics\u2014we now look at one part of it. ",
+        "page_idx": 181
+    },
+    {
+        "type": "image",
+        "img_path": "images/646ea850475f174f5b057d94165839165ee364929712b613710b4e7ec8a04b94.jpg",
+        "img_caption": [
+            "Fig. 3.15 The cutting plane gets steeper: circle to ellipse to parabola to hyperbola. "
+        ],
+        "img_footnote": [],
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "CONIC SECTIONS ",
+        "text_level": 1,
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "The parabola and ellipse and hyperbola have absolutely remarkable properties. The Greeks discovered that all these curves come from slicing a cone by a plane. The curves are \u201cconic sections.\u201d A level cut gives a circle, and a moderate angle produces an ellipse. A steep cut gives the two pieces of a hyperbola (Figure 3.15d). At the borderline, when the slicing angle matches the cone angle, the plane carves out a parabola. It has one branch like an ellipse, but it opens to infinity like a hyperbola. ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "Throughout mathematics, parabolas are on the border between ellipses and hyperbolas. ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "To repeat: We can slice through cones or we can look for equations. For a cone of light, we see an ellipse on the wall. (The wall cuts into the light cone.) For an equation $A x ^ { 2 } + B x y + C y ^ { 2 } + D x + E y + F = 0$ , we will work to make it simpler. ",
+        "page_idx": 181
+    },
+    {
+        "type": "text",
+        "text": "The graph will be centered and rescaled (and rotated if necessary), aiming for an equation like $y = x ^ { 2 }$ : Eccentricity and polar coordinates are left for Chapter 9. ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "You knew this function long before calculus. The graph crosses the $x$ axis when $y = 0$ : The quadratic formula solves $y = 3 x ^ { 2 } - 4 x + 1 = 0$ , and so does factoring into $( x - 1 ) ( 3 x - 1 )$ : The crossing points $x = 1$ and $\\begin{array} { r } { x = \\frac { 1 } { 3 } } \\end{array}$ come from algebra. ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "The other important point is found by calculus. It is the minimum point, where $d y / d x = 6 x - 4 = 0 .$ : The $x$ coordinate is $\\textstyle { \\frac { 4 } { 6 } } = { \\frac { 2 } { 3 } }$ , halfway between the crossing points. The height is $y _ { \\mathrm { m i n } } = - \\frac { 1 } { 3 }$ : This is the vertex $V$ in Figure 3.16a\u2014a\u0001t the bottom of the parabola. ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "A parabola has no asymptote\u0001s. The slope $6 x - 4$ doesn\u2019t approach a constant. To center the vertex Shift left by $\\frac { 2 } { 3 }$ and up by $\\frac 1 3$ : So introduce the new variables $\\scriptstyle { X = x - { \\frac { 2 } { 3 } } }$ and $\\begin{array} { r } { Y = y + \\frac { 1 } { 3 } } \\end{array}$ : Then $\\textstyle x = { \\frac { 2 } { 3 } }$ and\u0001 $y = - { \\frac { 1 } { 3 } }$ correspond to $X = Y = 0$ \u2014which is the new\u0001vertex: ",
+        "page_idx": 182
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = 3 x ^ { 2 } - 4 x + 1 \\quad { \\mathrm { b e c o m e s } } \\quad Y = 3 X ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "Check the algebra. $Y = 3 X ^ { 2 }$ is the same as $y + \\textstyle { \\frac { 1 } { 3 } } = 3 \\left( x - \\frac { 2 } { 3 } \\right) ^ { 2 }$ : That simplifies to the original equation $y = 3 x ^ { 2 } - 4 x + 1 .$ : The second grap\u0000h show\u0001s the centered parabola Y D 3X 2, with the vertex moved to the origin. ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "To zoom in on the vertex Rescale $X$ and $Y$ by the zoom factor $a$ : ",
+        "page_idx": 182
+    },
+    {
+        "type": "equation",
+        "text": "$$\nY = 3 X ^ { 2 } { \\mathrm { b e c o m e s } } \\mathbf { y } / a = 3 ( \\mathbf { x } / a ) ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "The final equation has $\\mathbf { x }$ and $\\mathbf { y }$ in boldface. With $a = 3$ we find $\\mathbf { y } = \\mathbf { x } ^ { 2 }$ \u2014the graph is magnified by 3: In two steps we have reached the model parabola opening upward. ",
+        "page_idx": 182
+    },
+    {
+        "type": "image",
+        "img_path": "images/47a595bfb0a1324d398b8b018e8fdf12d2bc200f3623e7670e59033edafe6614.jpg",
+        "img_caption": [
+            "Fig. 3.16 Parabola with minimum at $V .$ Rays reflect to focus. Centered in (b), rescaled in (c). "
+        ],
+        "img_footnote": [],
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "A parabola has another important point\u2014the focus. Its distance from the vertex is called $p$ : The special parabola $\\mathbf { y } = \\mathbf { x } ^ { 2 }$ has $p = 1 / 4$ , and other parabolas $Y = a X ^ { 2 }$ have $p = 1 / 4 a$ : You magnify by a factor $a$ to get $\\mathbf { y } = \\mathbf { x } ^ { 2 }$ : The beautiful property of a parabola is that every ray coming straight down is reflected to the focus. ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "Problem 2:3:25 located the focus $F$ \u2014here we mention two applications. A solar collector and a TV dish are parabolic. They concentrate sun rays and TV signals onto a point\u2014a heat cell or a receiver collects them at the focus. The $1 9 8 2 \\ U M A P$ Journal explains how radar and sonar use the same idea. Car headlights turn the idea around, and send the light outward. ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "Here is a classical fact about parabolas. From each point on the curve, the distance to the focus equals the distance to the \u201cdirectrix.\u201d The directrix is the line $y = - p$ b elow the vertex (so the vertex is halfway between focus and directrix). With $\\textstyle p = { \\frac { 1 } { 4 } }$ , the distanc\u0001e down fr\u0001o\u0001m\u0001\u00d1any $( x , y )$ is $y + \\textstyle { \\frac { 1 } { 4 } }$ : Match\u0001t\u0001h\u0001a\u00d1t with the distance to the focus at $( 0 , { \\frac { 1 } { 4 } } )$ \u2014 this is the square root below. Out comes the special parabola y D x2: ",
+        "page_idx": 182
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 183
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny + { \\frac { 1 } { 4 } } = { \\sqrt { x ^ { 2 } + \\left( y - { \\frac { 1 } { 4 } } \\right) ^ { 2 } } } \\quad { \\longrightarrow } \\quad ( { \\mathrm { s q u a r e ~ b o t h ~ s i d e s } } ) \\quad { \\longrightarrow } \\quad y = x ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "The exercises give practice with all the steps we have taken\u2014center the parabola to $Y = a X ^ { 2 }$ , rescale it to $\\mathbf { y } = \\mathbf { x } ^ { 2 }$ , locate the vertex and focus and directrix. ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "Summary for other parabolas $y = a x ^ { 2 } + b x + c$ has its vertex where $d y / d x$ is zero. Thus $2 a x + b = 0$ and $x = - b / 2 a$ : Shifting across to that point is \u201ccompleting the square\u201d: ",
+        "page_idx": 183
+    },
+    {
+        "type": "equation",
+        "text": "$$\na x ^ { 2 } + b x + c \\quad { \\mathrm { e q u a l s } } \\quad a \\left( x + { \\frac { b } { 2 a } } \\right) ^ { 2 } + C .\n$$",
+        "text_format": "latex",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "Here $C = c - ( b ^ { 2 } / 4 a )$ is the height of the vertex. The centering transform $X = x + ( b / 2 a ) , Y = y - C$ produces $Y = a X ^ { 2 }$ : It moves the vertex to $( 0 , 0 )$ , where it belongs. ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "For the ellipse and hyperbola, our plan of attack is the same: ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "1. Center the curve to remove any linear terms $D x$ and $E y$ :   \n2. Locate each focus and discover the reflection property.   \n3. Rotate to remove $B x y$ if the equation contains it. ",
+        "page_idx": 183
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathsf { E L L } | | \\mathsf { P S E S } \\frac { x ^ { 2 } } { a ^ { 2 } } + \\frac { y ^ { 2 } } { b ^ { 2 } } = 1\n$$",
+        "text_format": "latex",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "This equation makes the ellipse symmetric about $( 0 , 0 )$ \u2014the center. Changing $x$ to $- x$ or $y$ to $- y$ leaves the same equation. No extra centering or rotation is needed. ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "The equation also shows that $\\scriptstyle { \\bar { x } } ^ { 2 } / a ^ { 2 }$ and $y ^ { 2 } / b ^ { 2 }$ cannot exceead one. (They add to one and can\u2019t\u0001be negative.) Theref\bore $x ^ { 2 } \\leqslant a ^ { 2 }$ , and $x$ stay\bs betwee\u0001n $- a$ and $a$ : Similarly $y$ stays between $b$ and $- b$ : The ellipse is inside a rectangle. ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "By solving for $y$ we get a function (or two fun c\u0001tions!) of $x$ : ",
+        "page_idx": 183
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { y ^ { 2 } } { b ^ { 2 } } } = 1 - { \\frac { x ^ { 2 } } { a ^ { 2 } } } \\quad { \\mathrm { g i v e s } } \\quad { \\frac { y } { b } } = \\pm { \\sqrt { 1 - { \\frac { x ^ { 2 } } { a ^ { 2 } } } } } \\quad { \\mathrm { o r } } \\quad y = \\pm { \\frac { b } { a } } { \\sqrt { a ^ { 2 } - x ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "The graphs are the top half $( + )$ and bottom half $( - )$ of the ellipse. To draw the ellipse, plot them together. They meet when $y = 0$ , at $x = a$ on the far right of Figure 3.17 and at $x = - a$ on the far left. The maximum $y = b$ and minimum $y = - b$ are at the top and bottom of the ellipse, where we bump into the enclosing rectangle. ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "$A$ circle is a special case of an ellipse,\u0001when $a = b$ . The circle equation $x ^ { 2 } +$ $y ^ { 2 } = r ^ { 2 }$ is the ellipse equation with $a = b = r$ : This circle is centered at $( 0 , 0 )$ ; other circles are centered at $x = h , y = k$ : The circle is determined by its radius $r$ and its center $( h , k )$ : ",
+        "page_idx": 183
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE q u a t i o n o f c i r c l e : \\quad ( x - h ) ^ { 2 } + ( y - k ) ^ { 2 } = r ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "In words, the distance from $( x , y )$ on the circle to $( h , k )$ at the center is $r$ : The equation has linear terms $- 2 h x$ and $- 2 k y$ \u2014they disappear when the center is $( 0 , 0 )$ : ",
+        "page_idx": 183
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 Find the circ\u0001le that has a diameter fro\u0001m $( 1 , 7 )$ to .5; 7/: ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Solution The center is halfway at $( 3 , 7 )$ : So $r = 2$ and $( x - 3 ) ^ { 2 } + ( y - 7 ) ^ { 2 } = 2 ^ { 2 }$ ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Find the center and radius of the circle $x ^ { 2 } - 6 x + y ^ { 2 } - 1 4 y = - 5 4$ : ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Sol\u0001ution C\u0001omplete $x ^ { 2 } - 6 x$ to the square $( x - 3 ) ^ { 2 }$ by adding 9\u0001: Complete $y ^ { 2 } - 1 4 y$ to $( y - 7 ) ^ { 2 }$ by\u0001adding 49: Ad\u0001ding 9 and 49 to both sides of the equation leaves $( x - 3 ) ^ { 2 } + ( y - 7 ) ^ { 2 } = 4$ \u2014the same circle as in Example 1. ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Quicker Solution Match\u0001the given eq\u0001uation with .4/: Then $h = 3$ , $k = 7$ , and $r = 2$ : $x ^ { 2 } - 6 x + y ^ { 2 } - 1 4 y = - 5 4$ must agree with $x ^ { 2 } - 2 h x + h ^ { 2 } + y ^ { 2 } - 2 k y + k ^ { 2 } = r ^ { 2 } .$ : ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "The change to $X = x - h$ and $Y = y - k$ moves the center of the circle from $( h , k )$ to $( 0 , 0 )$ : This is equally true for an ellipse: ",
+        "page_idx": 184
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT h e ~ e l l i p s e ~ \\frac { ( x - h ) ^ { 2 } } { a ^ { 2 } } + \\frac { ( y - k ) ^ { 2 } } { b ^ { 2 } } = 1 \\quad b e c o m e s \\quad \\frac { X ^ { 2 } } { a ^ { 2 } } + \\frac { Y ^ { 2 } } { b ^ { 2 } } = 1\n$$",
+        "text_format": "latex",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "When we rescale by $x = X / a$ and $y = Y / b$ , we get the unit circle $x ^ { 2 } + y ^ { 2 } = 1$ : ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "The unit circle has area $\\pi$ : The ellipse has area $\\pi a b$ (proved later in the book). The distance around the circle is $2 \\pi$ : The distance around an ellipse does not rescale\u2014 it has no simple formula. ",
+        "page_idx": 184
+    },
+    {
+        "type": "image",
+        "img_path": "images/752c787dc042cd3c159085a7269d061d7fc115ff35a0f3fc7f1ff1dfee2dd537.jpg",
+        "img_caption": [
+            "Fig. 3.17 Uncentered circle. Centered ellipse $x ^ { 2 } / 3 ^ { 2 } + y ^ { 2 } / 2 ^ { 2 } = 1$ : The distance from center to far right is also $a = 3$ : All rays from $F _ { 2 }$ reflect to $F _ { 1 }$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "Now we leave circles and concentrate\u0001on ellipses. They have tw\u0001o foci (pronounced fo-sigh). For a parabola, the second focus is at infinity. For a circle, both foci are at the center. The foci of an ellipse are on its longer axis (its major axis), one focus on each side of t\u0001he center: ",
+        "page_idx": 184
+    },
+    {
+        "type": "equation",
+        "text": "$$\nF _ { 1 } { \\mathrm { ~ i s ~ a t ~ } } x = c = { \\sqrt { a ^ { 2 } - b ^ { 2 } } } \\quad { \\mathrm { a n d } } \\quad F _ { 2 } { \\mathrm { ~ i s ~ a t ~ } } x = - c .\n$$",
+        "text_format": "latex",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "The right triangle in Figure 3.17 has sides $a , b , c$ : From the top of the ellipse, the distance to each focus is $a$ : From the endpoint at $x = a$ , the distances to the foci are $a + c$ and $a - c$ : Adding $( a + c ) + ( a - c )$ gives 2a: As you go around the ellipse, the distance to $F _ { 1 }$ plus the distance to $F _ { 2 }$ is constanat (always $2 a$ ). ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "3H At all points on the ellipse, the sum of distances from the foci is $2 a$ : This is another equation for the ellipse: ",
+        "page_idx": 184
+    },
+    {
+        "type": "text",
+        "text": "To draw an ellipse, tie a string of length $2 a$ to the foci. Keep the string taut and your moving pencil will create the ellipse. This description uses $a$ and $c$ \u2014the other form uses $a$ and $b$ (remember $b ^ { 2 } + c ^ { 2 } = a ^ { 2 }$ ). Problem 24 asks you to simplify equation (5) until you reach $x ^ { 2 } / a ^ { 2 } + y ^ { 2 } / b ^ { 2 } = 1$ : ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "The \u201cwhispering gallery\u201d of the United States Senate is an ellipse. If you stand at one focus and speak quietly, you can be heard at the other focus (and nowhere else). Your voice is reflected off the walls to the other focus\u2014following the path of the string. For a parabola the rays come in to the focus from infinity\u2014where the second focus is. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "A hospital uses this reflection property to split up kidney stones. The patient sits inside an ellipse with the kidney stone at one focus. At the other focus a lithotripter sends out hundreds of small shocks. You get a spinal anesthetic (I mean the patient) and the stones break into tiny pieces. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "The most important focus is the Sun. The ellipse is the orbit of the Earth. See Section 12.4 for a terrible printing mistake by the Royal Mint, on England\u2019s last pound note. They put the Sun at the center. ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Question 1 Why do the whispers (and shock waves) arrive together at the second focus ? ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Answer Whichever way they go, the distance is $2 a$ : Exception: straight path is $2 c$ : ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Question 2 Locate the ellipse with equation $4 x ^ { 2 } + 9 y ^ { 2 } = 3 6$ : Answer Divide by 36 to change the constant to 1: Now identify $a$ and $b$ : ",
+        "page_idx": 185
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { x ^ { 2 } } { 9 } } + { \\frac { y ^ { 2 } } { 4 } } = 1 { \\mathrm { ~ s o ~ } } a = { \\sqrt { 9 } } { \\mathrm { ~ a n d ~ } } b = { \\sqrt { 4 } } . { \\mathrm { F o c i ~ a t ~ } } \\pm { \\sqrt { 9 - 4 } } = \\pm { \\sqrt { 5 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Question 3 Shift the center of that ellipse across and down to $x = 1$ , $y = - 5$ : Answer Change $x$ to $x - 1$ : Change $y$ to $y + 5$ : The equation becomes $( x - 1 ) ^ { 2 } / 9 + ( y + 5 ) ^ { 2 } / 4 = 1$ : In practice we start with this uncentered ellipse and go the other way to center it. ",
+        "page_idx": 185
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathsf { H Y P E R B O L A S } } \\ { \\frac { y ^ { 2 } } { a ^ { 2 } } } - { \\frac { x ^ { 2 } } { b ^ { 2 } } } = 1\n$$",
+        "text_format": "latex",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "Notice the minus sign for a hyperbo . That makes all the difference. Unlike an ellipse, $x$ an\u0001d $y$ can both be large. The\bcurve goes out to infini\bty. It is still symmetric, since $x$ can change to $- x$ and $y$ to $- y$ : ",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "The center is at $( 0 , 0 )$ : Solving for $y$ again yields two functions ( $\\cdot +$ and ): ",
+        "page_idx": 185
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { y ^ { 2 } } { a ^ { 2 } } } - { \\frac { x ^ { 2 } } { b ^ { 2 } } } = 1 \\quad { \\mathrm { g i v e s } } \\quad { \\frac { y } { a } } = \\pm { \\sqrt { 1 + { \\frac { x ^ { 2 } } { b ^ { 2 } } } } } \\quad { \\mathrm { o r } } \\quad y = \\pm { \\frac { a } { b } } { \\sqrt { b ^ { 2 } + x ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 185
+    },
+    {
+        "type": "text",
+        "text": "The hyperbola has two branches that never meet. The upper branch,\u0001with a plus sign, has $y \\geqslant a$ : The vertex $V _ { 1 }$ is at $x = 0 , y = a$ \u2014the lowest point on the branch. Much further out, when $x$ is large, the hyperbola climbs up beside its sloping asymptotes: ",
+        "page_idx": 185
+    },
+    {
+        "type": "image",
+        "img_path": "images/5a94be1511afc2878e5376c2ef517ee3a351ec1752f5270d6effa6a24db023fe.jpg",
+        "img_caption": [
+            "F\u0001ig. 3.18 The hyperbola ${ \\textstyle { \\frac { 1 } { 4 } } } y ^ { 2 } - { \\textstyle { \\frac { 1 } { 9 } } } x ^ { 2 } = 1$ has $a = 2 , b = 3 , c = \\sqrt { 4 + 9 }$ : The distances to $F _ { 1 }$ and $F _ { 2 }$ differ by $2 a = 4$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "The asymptotes are the lines $y / a = x / b$ and $y / a = - x / b$ : Their slopes are $a / b$ and $- a / b$ : You can\u2019t miss them in Figure 3.18. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "For a hyperbola, the foci are inside the two branches. Their distance from the center is still called $c$ : But now $c = { \\sqrt { a ^ { 2 } + b ^ { 2 } } }$ , which is larger than $a$ and $b$ : The vertex is a distance $c - a$ from one focus and $c + a$ from the other. The difference (not the sum) is $( c + a ) - ( c - a ) = 2 a$ : ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "All points on the hyperbola have this property: The difference between distances to the foci is constantly $2 a$ : A ray coming in to one focus is reflected toward the other. The reflection is on the outside of the hyperbola, and the inside of the ellipse. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Here is an application to navigation. Radio signals leave two fixed transmitters at the same time. A ship receives the signals a millisecond apart. Where is the ship ? Answer: It is on a hyperbola with foci at the transmitters. Radio signals travel 186 miles in a millisecond, so $1 8 6 = 2 a$ : This determines the curve. In Long Range Navigation (LORAN) a third transmitter gives another hyperbola. Then the ship is located exactly. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Question 4 How do hyperbolas differ from parabolas, far from the center ? Answer Hyperbolas have asymptotes. Parabolas don\u2019t. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "The hyperbola has a natural rescaling. The appearance of $x / b$ is a signal to change to $X$ : Similarly $y / a$ bec\u0001omes $Y$ : Then $Y = 1$ at the vertex, and we have a standard hyperbola: ",
+        "page_idx": 186
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny ^ { 2 } / a ^ { 2 } - x ^ { 2 } / b ^ { 2 } = 1 \\qquad \\mathrm { b e c o m e s } \\qquad Y ^ { 2 } - X ^ { 2 } = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "A $9 0 ^ { \\circ }$ turn gives $X ^ { 2 } - Y ^ { 2 } = 1 \\quad$ \u2014the hyperbola opens to the sides. A $4 5 ^ { \\circ }$ turn produces $2 X Y = 1$ : We show below how to recogniz\u0001e $x ^ { 2 } + x y + y ^ { 2 } = 1$ a?s an ellipse and $x ^ { 2 } + 3 x y + y ^ { 2 } = 1$ as a h\u0001yperbola. (They are not circles because of the $x y$ term.) When the $x y$ coefficient increases past 2, $x ^ { 2 } + y ^ { 2 }$ no longer indicates an ellipse. ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Question 5 Locate the hyperbola with equation $9 y ^ { 2 } - 4 x ^ { 2 } = 3 6$ : Answer\u0001 Divide by 36: Then $y ^ { 2 } / 4 - x ^ { 2 } / 9 = 1$ : Recognize $a = { \\sqrt { 4 } }$ \u0001and $b = { \\sqrt { 9 } }$ : ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "Question 6 Locate the uncentered hyperbola $9 y ^ { 2 } - 1 8 y - 4 x ^ { 2 } - 4 x = 2 8$ : Answer Complete $9 y ^ { 2 } - 1 8 y$ to $9 ( y - 1 ) ^ { 2 }$ by adding 9: Complete $4 x ^ { 2 } + 4 x$ to $4 ( x + { \\textstyle { \\frac { 1 } { 2 } } } ) ^ { 2 }$ by adding $4 { \\left( { \\textstyle { \\frac { 1 } { 2 } } } \\right) } ^ { 2 } = 1$ : The equation is rewritten as $9 ( y - 1 ) ^ { 2 } - 4 ( x + \\frac { 1 } { 2 } ) ^ { 2 } =$ $2 8 + 9 - 1$ : This is the\u0000hy\u0001perbola in Question 5\u2014except its center is $( - \\frac { 1 } { 2 } , 1 )$ : ",
+        "page_idx": 186
+    },
+    {
+        "type": "text",
+        "text": "To summarize: Find the center by completing squares. Then read off $a$ and $b$ : ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "This equation is of second degree, containing any and all of $1 , x , y , x ^ { 2 } , x y , y ^ { 2 }$ : A plane is cuttin\u00a0g through a cone. $I s$ the curve a parabola or ellipse or hyperbola ? Start with the most important case $A x ^ { 2 } + B { \\bar { x y } } + C y ^ { 2 } = 1$ : ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "3I The equation $A x ^ { 2 } + B x y + c y ^ { 2 } = 1$ produces a hyperbola if $B ^ { 2 } > 4 A C$ and an ellipse if $B ^ { 2 } < 4 A C$ : A parabola has $\\bar { B } ^ { 2 } = 4 A C$ : ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "To recognize the curve, we remove $B x y$ by rotating the plane. This also changes $A$ and $C$ \u2014but the combination $B ^ { 2 } - 4 A C$ is not changed (proof omitted). An example is $2 x y = 1$ , with $B ^ { 2 } = 4$ : It rotates to $y ^ { 2 } - x ^ { 2 } = \\bar { 1 }$ , 1with $- 4 A C = 4$ : That positive number 4 signals a hyperbola\u2014since $A = - 1$ and $C = 1$ have opposite signs. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "Another exampl1e is $x ^ { 2 } + y ^ { 2 } = 1$ : It is a circ1le (a special ellipse). However we rotate, the equatio1n stays th 1e same. The comb1inati\u0001on $B ^ { 2 } - 4 A C = 0 - 4 \\cdot 1 \\cdot 1$ is negative, as predicted for ellipses. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "To rotate by an angle $\\alpha$ , change $x$ and $y$ to new variables $x ^ { \\prime }$ a 1nd $y ^ { \\prime }$ : ",
+        "page_idx": 187
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { x = x ^ { \\prime } \\cos \\alpha - y ^ { \\prime } \\sin \\alpha } \\\\ { y = x ^ { \\prime } \\sin \\alpha + y ^ { \\prime } \\cos \\alpha } \\end{array} \\quad \\mathrm { a n d } \\quad \\begin{array} { l } { x ^ { \\prime } = \\quad x \\cos \\alpha + y \\sin \\alpha } \\\\ { y ^ { \\prime } = - y \\sin \\alpha + x \\cos \\alpha . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "Substitu1ting for $x$ and $y$ changes $A x ^ { 2 } + B x y + C y ^ { 2 } = 1$ to $A ^ { \\prime } x ^ { \\prime 2 } + B ^ { \\prime } x ^ { \\prime } y ^ { \\prime } + C ^ { \\prime } y ^ { \\prime 2 } =$ 1: T1he form1 ulas for $A ^ { \\prime }$ , $B ^ { \\prime }$ , $C ^ { \\prime }$ are painf1ul\u0001so I g1 o t1o the key point: ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "$B ^ { \\prime }$ is zero if the rotation angle \u02db has tan $2 \\alpha = B / ( A - C )$ : ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "With $B ^ { \\prime } = 0$ , the curve is easily recognized from $A ^ { \\prime } x ^ { \\prime 2 } + C ^ { \\prime } y ^ { \\prime 2 } = 1 .$ : It is a hyperbola if $A ^ { \\prime }$ and $C ^ { \\prime }$ have opposite signs. Then $B ^ { \\prime 2 } - 4 A ^ { \\prime } C ^ { \\prime }$ is positive. The original $B ^ { 2 } - 4 A C$ was also positive, because this special combination stays constant during rotation. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "After the $x y$ term is gone, we deal with $x$ and $y$ \u2014by centering. To find the center, complete squares as in Questions 3 and 6: For total perfection, rescale to one of the model equations $\\mathbf { y } = \\mathbf { x } ^ { 2 }$ or $\\mathbf { x } ^ { 2 } + \\mathbf { y } ^ { 2 } = 1$ or $\\mathbf { y } ^ { 2 } - \\mathbf { x } ^ { 2 } = 1$ : ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "The remaining question is about $F = 0$ : What is the graph of $A x ^ { 2 } + B x y + C y ^ { 2 } = 0 ?$ The ellipse-hyperbola-parabola have disap\bpeared. But if the Greeks were right, the cone is still cut by a plane. The degenerate case $F = 0$ occurs when the plane cuts right through the sharp point of the cone. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "A level cut hits only that one point $( 0 , 0 )$ : The equation shrinks to $x ^ { 2 } + y ^ { 2 } = 0$ , a circle with radius zero. A steep cut gives two lines. The hyperbola becomes $y ^ { 2 } -$ $x ^ { 2 } = 0$ , leaving only its asymptotes $y = \\pm x$ : A cut at the exact angle of the cone gives only one line, as in $x ^ { 2 } = 0$ : A single point, two lines, and one line are very extreme cases of an ellipse, hyperbola, and parabola. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "All these \u201cconic sections\u201d come from planes and cones. The beauty of the geometry, which Archimedes saw, is matched by the importance of the equations. Galileo discovered that projectiles go along parabolas (Chapter 12). Kepler discovered that the Earth travels on an ellipse (also Chapter 12). Finally Einstein discovered that light travels on hyperbolas. That is in four dimensions, and not in Chapter 12. ",
+        "page_idx": 187
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l r l } { \\operatorname { P } } & { y = a x ^ { 2 } + b x + c \\quad } & { \\left( - { \\frac { b } { 2 a } } , c - { \\frac { b ^ { 2 } } { 4 a } } \\right) } & & { { \\frac { 1 } { 4 a } } { \\mathrm { a b o v e ~ v e r t e x , a l s o ~ i n f i n i t y } } } \\\\ { \\operatorname { E } } & { { \\frac { x ^ { 2 } } { a ^ { 2 } } } + { \\frac { y ^ { 2 } } { b ^ { 2 } } } = 1 , a > b } & & { ( a , 0 ) { \\mathrm { a n d ~ } } ( - a , 0 ) } & & { ( c , 0 ) { \\mathrm { a n d ~ } } ( - c , 0 ) : c = { \\sqrt { a ^ { 2 } - b ^ { 2 } } } } \\\\ { \\operatorname { H } } & { { \\frac { y ^ { 2 } } { a ^ { 2 } } } - { \\frac { x ^ { 2 } } { b ^ { 2 } } } = 1 } & & { ( 0 , a ) { \\mathrm { a n d ~ } } ( 0 , - a ) } & & { ( 0 , c ) { \\mathrm { a n d ~ } } ( 0 , - c ) : c = { \\sqrt { a ^ { 2 } + b ^ { 2 } } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 188
+    }
+]

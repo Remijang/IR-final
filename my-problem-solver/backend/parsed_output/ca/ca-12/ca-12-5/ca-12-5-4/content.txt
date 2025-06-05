@@ -1,0 +1,34 @@
+12.5.4 Predicated Instructions
+
+We have up till now considered vector load, store, and ALU operations. What about branches? Typically, branches have a different connotation in the context of vector processors. For example, let us consider a processor with vector registers that are wide enough to hold 32 integers, and we have a program which requires us to pair-wise add only 18 integers, and then store them in memory. In this case, we cannot store the entire vector register to memory because we risk overwriting valid data.
+
+Let us consider another example. Assume that we want to apply the function  on all elements of an array. In this case, we wish to add 10 to the input operand,  , if it is less than 10. Such patterns are very common in programs that run on vector processors, and thus we need additional support in vector ISAs to support them.
+
+function inc10(x): if  
+
+Let us add a new variant of a regular instruction, and call it a predicated instruction (similar to conditional instructions in ARM). For example, we can create predicated variants of regular load, store, and ALU instructions. A predicated instruction executes if a certain condition is true, otherwise it does not execute at all. If the condition is false, a predicated instruction is equivalent to a nop.
+
+Definition 135
+
+A predicated instruction is a variant of a normal load, store, or ALU instruction. It executes normally, if a certain condition is true. However, if the associated condition is false, then it gets converted to a nop. For example, the addeq instruction in the ARM ISA, executes like a normal add instruction if the last comparison has resulted in an equality. However, if this is not the case, then the add instruction does not execute at all.
+
+Let us now add support for predication in the SimpleRisc ISA. Let us first create a vector form of the cmp instruction, and call it v.cmp. It compares two vectors pair-wise, and saves the results of the comparison in the  .f lags register, which is a vector form of the f lags register. Each component of the  .f lags register contains an  and  field, similar to the f lags register in a regular processor.
+
+v.cmp vr1, vr2
+
+This example compares vr1, and vr2, and saves the results in the v.flags register. We can have an alternate form of this instruction that compares a vector with a scalar.
+
+v.cmp vr1, 10
+
+Now, let us define the predicated form of the vector add instruction. This instruction adds the  elements of two vectors, and updates the  element of the destination vector register, if the v.f lags[i] (  element of  ) register satisfies certain properties. Otherwise, it does not update the  element of the destination register. Let the generic form of the predicated vector add instruction be: v.p.add. Here,  is the predicate condition. Table 12.6 lists the different values that  can take.
+
+Now, let us consider the following code snippet.
+
+v.lt.add vr3, vr1, vr2
+
+Here, the value of the vector register vr3 is the sum of the vectors represented by vr1 and vr2. The predication condition is less than (lt). This means that if both the  and  flags are false for element  in the  .flags register, then only we perform the addition for the  element, and set its value in the vr3 register. The elements in the vr3 register that are not set by the add instruction maintain their previous value. Thus, the code to implement the function  is as follows. We assume that vr1 contains the values of the input array.
+
+v.cmp vr1, 10   
+v.lt.add vr1, vr1, 10
+
+Likewise, we can define predicated versions of the load/store instructions, and other ALU instructions.

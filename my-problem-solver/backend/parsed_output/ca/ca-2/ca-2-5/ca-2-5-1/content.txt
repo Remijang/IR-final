@@ -1,0 +1,7 @@
+2.5.1 ASCII Format
+
+ASCII stands for “American Standard Code for Information Interchange”. It is a format that assigns a 7-bit binary code for each English language character including punctuation marks. Most languages that use the ASCII format, use 8 bits to represent each character. One bit(MSB) is essentially wasted.
+
+The ASCII character set defines 128 characters. The first 32 characters are reserved for control operations, especially for controlling the printer. For example, the zeroth character is known as the null character. It is commonly used to terminate strings in the C language. Similarly, there are special characters for backspace(8), line feed(10), and escape(27). The common English language characters start from 32 onwards. First, we have punctuation marks and special characters, then we have 26 capital letters, and finally 26 small letters. We show a list of ASCII characters along with their decimal encodings in Table 2.15.
+
+Since ASCII can represent only 128 symbols, it is suitable only for English. However, we need an encoding for most of the languages in the world such as Arabic, Russian, French, Spanish, Swahili, Hindi, Chinese, Thai, and Vietnamese. The Unicode format was designed for this purpose. The most popular Unicode standard until recently was UTF-8.

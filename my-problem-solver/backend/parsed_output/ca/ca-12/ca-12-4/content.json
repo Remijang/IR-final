@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "12.4 MIMD Multiprocessors ",
+        "text_level": 1,
+        "page_idx": 581
+    },
+    {
+        "type": "text",
+        "text": "Let us now take a deeper look at strongly-coupled shared-memory-based MIMD machines. We shall first take a look at them from the point of view of software. After we have worked out a broad specification of these machines from the point of view of software, we can proceed to give a brief overview of the design of the hardware. Note that the design of parallel MIMD machines can take an entire book to describe. For additional information, or for added clarity, the reader can refer to the following references [Culler et al., 1998, Sorin et al., 2011]. ",
+        "page_idx": 581
+    },
+    {
+        "type": "text",
+        "text": "Let us call the software interface of a shared memory MIMD machine as the \u201clogical point of view\u201d, and refer to the actual physical design of the multiprocessor as the \u201cphysical point of view\u201d. When we describe the logical point of view, we are primarily interested in how the multiprocessor behaves with respect to software. What guarantees does the hardware make regarding its behavior, and what can the software expect? This includes correctness, performance, and even resilience to failures. The physical point of view is concerned with the actual design of the multiprocessor. This includes the physical design of the processors, the memory system, and the interconnection network. Note that the physical point of view has to conform to the logical point of view. The reader will recall that we are taking a similar approach here as we did for uniprocessors. We first explained the software view (architecture) by looking at assembly code. Then we provided an implementation for the assembly code by describing a pipelined processor (organization). We shall follow a similar approach here. ",
+        "page_idx": 581
+    }
+]

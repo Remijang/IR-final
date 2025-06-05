@@ -1,0 +1,367 @@
+[
+    {
+        "type": "text",
+        "text": "2.3.4 The 2\u2019s Complement Method ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Here are the lessons that we have learned from the sign-magnitude, 1\u2019s complement, and biasbased approaches. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "1. We need a representation that is simple.   \n2. We would ideally like to perform signed arithmetic operations, using the same kind of hardware that is used for unsigned numbers.   \n3. It is not desirable to have two representations for zero. The number zero, should have a single representation. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Keeping all of these requirements in mind, the 2\u2019s complement system was designed. To motivate this number system, let us consider a simple 4-bit number system, and represent the numbers in a circle. Let us first consider unsigned numbers. Figure 2.6 shows the numbers presented in a circular fashion. As we proceed clockwise, we increment the number, and as we proceed anti-clockwise, we decrement the number. This argument breaks at one point as shown in the figure. This is between 15 and 0. If we increment 15, we should get 16. However, because of the limited number of bits, we cannot represent 16. We can only capture its four low order bits which are 0000. This condition is also called an overflow. Likewise, we can also define the term, underflow, that means that a number is too small to be represented in a given number system (see Definition 20). In this book, we shall sometimes use the word \u201coverflow\u201d to denote both an overflow and an underflow. The reader needs to infer the proper connotation from the context. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Definition 20 ",
+        "text_level": 1,
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "overflow An overflow occurs when a number is too large to be represented in a given number system. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "underflow An underflow occurs when a number is too small to be represented in a given number system. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Let us now take a look at these numbers slightly differently as shown in Figure 2.7. We consider the same circular order of numbers. However, after 7 we have -8 instead of $+ 8$ . Henceforth, as we travel clockwise, we effectively increment the number. The only point of discontinuity is between 7 and -8. Let us call this point of discontinuity as the \u201cbreak point\u201d. This number system is known as the 2\u2019s complement number system. We shall gradually refine the definition of a 2\u2019s complement number to make it more precise and generic. ",
+        "page_idx": 69
+    },
+    {
+        "type": "text",
+        "text": "Definition 21 The point of discontinuity in the number circle is called the break point. ",
+        "page_idx": 69
+    },
+    {
+        "type": "image",
+        "img_path": "images/05f270c91fa035c6c5ccf1fac1f2c4fd9180d99947ced9154013cc1c2e0c4644.jpg",
+        "img_caption": [
+            "Figure 2.6: Unsigned 4-bit binary numbers "
+        ],
+        "img_footnote": [],
+        "page_idx": 70
+    },
+    {
+        "type": "image",
+        "img_path": "images/1a072a207c8dcf9e597931444265a6238ceca5f02fd00c42d1af64a86695fd2f.jpg",
+        "img_caption": [
+            "Figure 2.7: Signed 4-bit binary numbers "
+        ],
+        "img_footnote": [],
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to understand what we have achieved through this procedure. We have 16 numbers in the circle, and we have assigned each one of them to numbers from -8 to $+ 7$ . Each number is represented by a 4-bit value. We observe that incrementing a signed number, is tantamount to incrementing its unsigned 4-bit representation. For example, -3 is represented as 1101. If we increment, -3, we get -2, which is represented as 1110. We also observe that 1101 $+ \\ 1 = 1 1 1 0$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to formalize the pattern of numbers shown in the circle in Figure 2.7. First, let us try to give the circular representation a name. Let us call it a Number Circle. In a number circle, we observe that for numbers between 0 and 7, their representation is the same as their unsigned representation. The MSB is 0. For numbers between -8 and -1, the MSB is 1. Secondly, the representation of a negative number, -u ( $u \\geq 0$ ), is the same as the unsigned representation for $1 6 - u$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Definition 22 ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "The steps for creating an n-bit number circle are: ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "1. We start by writing 0 at the top. Its representation is a sequence of n zeros.   \n2. We proceed clockwise and add the numbers $\\mathit { 1 }$ to $( 2 ^ { n - 1 } - 1 )$ . Each number is represented by its $n$ -bit unsigned representation. The MSB is $\\boldsymbol { \\theta }$ .   \n3. We introduce a break point after $2 ^ { n - 1 } - 1$ .   \n4. Then next number is $- 2 ^ { n - 1 }$ represented by 1 followed by $n - 1$ zeros.   \n5. We then proceed clockwise incrementing both the numbers, and their unsigned representations by 1 till we reach $\\boldsymbol { \\mathit { 0 } }$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "We can generalize the process of creating a number circle, to create an $n$ -bit number circle (see Definition 22). To add a positive number, $A$ , to a number $B$ , we need to proceed $A$ steps in the clockwise direction from $B$ . If $A$ is negative, then we need to proceed $A$ steps in the anticlockwise direction. Note that moving $k$ steps in the clockwise direction is the same as moving $2 ^ { n } - k$ steps in the anti-clockwise direction. This magical property means that subtracting $k$ is the same as adding $2 ^ { n } - k$ . Consequently, every subtraction can be replaced by an addition. Secondly, a negative number, $- u$ , is located in the number circle by moving $\\mid u \\mid$ steps anticlockwise from 0, or alternatively, $2 ^ { n } - \\mid u \\mid$ steps clockwise. Hence, the number circle assigns the unsigned representation $2 ^ { n } - \\mid u \\mid$ , to a negative number of the form $- u$ ( $u \\geq 0$ ). ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Succinctly, a number circle can be described by Equation 2.12. This number system is called a $\\boldsymbol { \\mathcal { Z } }$ \u2019s complement number system. ",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { F } ( u ) = \\left\\{ \\begin{array} { l l } { u } & { 0 \\le u \\le 2 ^ { n - 1 } - 1 } \\\\ { 2 ^ { n } - \\left| \\begin{array} { l l } { u } \\end{array} \\right| } & { - 2 ^ { n - 1 } \\le u < 0 } \\end{array} \\right.\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Properties of the 2\u2019s Complement Representation ",
+        "text_level": 1,
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "1. There is one unique representation for $0$ , i.e., $0 0 0 \\ldots 0$ . ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "2. The MSB is equal to the sign bit $( S g n B i t ( u ) )$ . ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Proof: Refer to the number circle. A negative number\u2019s unsigned representation is greater than or equal to $2 ^ { n - 1 }$ . Hence, its MSB is 1. Likewise, all positive numbers are less than $2 ^ { n - 1 }$ . Hence, their MSB is $0$ . ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "3. Negation Rule: $\\mathcal F ( - u ) = 2 ^ { n } - \\mathcal F ( u )$ Proof: If $u \\geq 0$ , then ${ \\mathcal { F } } ( - u ) = 2 ^ { n } - u = 2 ^ { n } - { \\mathcal { F } } ( u )$ according to Equation 2.12. Similarly, if $u < 0$ , then ${ \\mathcal { F } } ( - u ) = | u | = 2 ^ { n } - ( 2 ^ { n } - | u | ) = 2 ^ { n } - { \\mathcal { F } } ( u$ ). ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "4. Every number in the range $[ - 2 ^ { n - 1 } , 2 ^ { n - 1 } - 1 ]$ has a unique representation. Proof: Every number is a unique point on the number circle. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "5. Addition Rule: ",
+        "text_level": 1,
+        "page_idx": 72
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { F } ( u + v ) \\equiv \\mathcal { F } ( u ) + \\mathcal { F } ( v )\n$$",
+        "text_format": "latex",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "For the sake of brevity, we define the $=$ operator. ( $a \\equiv b$ ) means that ( $a$ mod $2 ^ { n } = b$ mod $2 ^ { n }$ ). Recall that the modulo ( mod ) operator computes the remainder of a division, and the remainder is assumed to be always non-negative, and less than the divisor. The physical significance of ( mod $2 ^ { n }$ ) is that we consider the $n$ LSB bits. This is always the case because we have an $n$ -bit number system, and in all our computations we only keep the $n$ LSB bits, and discard the rest of the bits if there are any. In our number circle representation, if we add or subtract $2 ^ { n }$ to any point (i.e. move $2 ^ { n }$ hops clockwise or anti-clockwise), we arrive at the same point. Hence, $a \\equiv b$ implies that they are the same point on the number circle, or their $n$ LSB bits are the same in their binary representation. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Proof: Let us consider the point $u$ on the number circle. Its binary representation is $\\mathcal { F } ( u )$ . Now, if we move $v$ points, we arrive at $u + v$ . If $v$ is positive, we move $v$ steps clockwise; otherwise, we move $v$ steps anticlockwise. The binary representation of the new point is $\\mathcal { F } ( u + v )$ . ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "We can interpret the movement on the number circle in another way. We start at $u$ , and move $\\mathcal { F } ( v )$ steps clockwise. If $v \\geq 0$ , then $v = \\mathcal { F } ( v )$ by Equation 2.12, hence we can conclude that we arrive at $u + v$ . If $v < 0$ , then ${ \\mathcal { F } } ( v ) = 2 ^ { n } - | v |$ . Now, moving $| v |$ steps anticlockwise is the same as moving $2 ^ { n } - | v |$ steps clockwise. Hence, in this case also we arrive at $u + v$ , which has a binary representation equal to $\\mathcal { F } ( u + v )$ . Since, each step moved in a clockwise direction is equivalent to incrementing the binary representation by 1, we can conclude that the binary representation of the destination is equal to: $\\mathcal { F } ( u ) + \\mathcal { F } ( v )$ . Since, we only consider, the last $n$ bits, the binary representation is equal to $( \\mathcal { F } ( u ) + \\mathcal { F } ( v ) )$ mod $2 ^ { \\pi }$ . Hence, $\\mathcal { F } ( u + v ) \\equiv \\mathcal { F } ( u ) + \\mathcal { F } ( v )$ . ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "6. Subtraction Rule ",
+        "text_level": 1,
+        "page_idx": 72
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { F } } ( u - v ) \\equiv { \\mathcal { F } } ( u ) + ( 2 ^ { n } - { \\mathcal { F } } ( v ) )\n$$",
+        "text_format": "latex",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Proof: We have: ",
+        "page_idx": 72
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { { \\mathscr F } ( u - v ) \\equiv { \\mathscr F } ( u ) + { \\mathscr F } ( - v ) \\quad \\mathrm { ( a d d i t i o n ~ r u l e ) } } \\\\ & { \\qquad \\equiv { \\mathscr F } ( u ) + 2 ^ { n } - { \\mathscr F } ( v ) \\quad \\mathrm { ( n e g a t i o n ~ r u l e ) } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "7. Loop Rule: ${ \\mathcal { F } } ( u ) \\equiv 2 ^ { n } + { \\mathcal { F } } ( u )$ ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Proof: After moving $2 ^ { n }$ points on the number circle, we come back to the same point. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "8. Multiplication Rule: (assuming no overflows) ",
+        "page_idx": 73
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { F } ( u \\times v ) \\equiv \\mathcal { F } ( u ) \\times \\mathcal { F } ( v )\n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Proof: If $u$ and $v$ are positive, then this statement is trivially true. If $u$ and $v$ are negative, then we have, $u = - | u |$ and $v = - | v |$ : ",
+        "page_idx": 73
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { { \\mathcal F } ( u ) \\times { \\mathcal F } ( v ) \\equiv ( 2 ^ { n } - { \\mathcal F } ( | u | ) ) \\times ( 2 ^ { n } - { \\mathcal F } ( | v | ) ) } \\\\ & { \\qquad \\equiv 2 ^ { n + 1 } - 2 ^ { n } ( { \\mathcal F } ( | u | ) + { \\mathcal F } ( | v | ) + { \\mathcal F } ( | u | ) \\times { \\mathcal F } ( | v | ) } \\\\ & { \\qquad \\equiv { \\mathcal F } ( | u | ) \\times { \\mathcal F } ( | v | ) } \\\\ & { \\qquad \\equiv { \\mathcal F } ( | u | \\times | v | ) } \\\\ & { \\qquad \\equiv { \\mathcal F } ( u \\times v ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Now, let us assume that $u$ is positive and $v$ is negative. Thus, $u = | u |$ and $v = - | v |$ . We have: ",
+        "page_idx": 73
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathcal { F } ( u ) \\times \\mathcal { F } ( v ) \\equiv \\mathcal { F } ( u ) \\times ( \\mathrm { 2 } ^ { n } - \\mathcal { F } ( | v | ) ) } \\\\ & { \\qquad \\equiv 2 ^ { n } \\mathcal { F } ( u ) - \\mathcal { F } ( u ) \\times \\mathcal { F } ( | v | ) } \\\\ & { \\qquad \\equiv - \\mathcal { F } ( u ) \\times \\mathcal { F } ( | v | ) \\quad ( l o o p ~ r u l e ) } \\\\ & { \\qquad \\equiv - ( \\mathcal { F } ( u \\times | v | ) ) \\quad ( u \\geq 0 , | v | \\geq 0 ) } \\\\ & { \\qquad \\equiv 2 ^ { n } - \\mathcal { F } ( u \\times | v | ) \\quad ( l o o p ~ r u l e ) } \\\\ & { \\qquad \\equiv \\mathcal { F } ( - ( u \\times ( | v | ) ) ) \\quad ( n e g a t i o n ~ r u l e ) } \\\\ & { \\qquad \\equiv \\mathcal { F } ( u \\times ( - | v | ) ) } \\\\ & { \\qquad \\equiv \\mathcal { F } ( u \\times v ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Likewise, we can prove the result for a negative $u$ and positive $v$ . We have thus covered all the cases. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "We thus observe that the 2\u2019s complement number system, and the number circle-based method make the process of representing both positive and negative numbers easy. It has a unique representation for zero. It is easy to compute its sign. We just need to take a look at the MSB. Secondly, addition, subtraction, and multiplication on signed numbers is as simple as performing the same operations on their unsigned representations. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Example 15 ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Add 4 and -3 using a 4-bit 2\u2019s complement representation. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us first try to add it graphically. We can start at 4 and move 3 positions anticlockwise. We arrive at 1, which is the correct answer. Let us now try a more conventional approach. 4 is represented as 0100, -3 is represented as 1101. If we add, 0100 and 1101 using a regular unsigned binary adder, the result is 10001. However, we cannot represent 5 bits in our simple 4-bit system. Hence, the hardware will discard the fifth bit, and report the result as 0001, which is the correct answer. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Computing the 2\u2019s Complement Representation ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to explore the methods to compute a 2\u2019s complement representation. For positive numbers it is trivial. However, for negative numbers of the form, -u ( $u \\geq 0$ ), the representation is $2 ^ { n } - u$ . A simple procedure is outlined in Equation 2.19. ",
+        "page_idx": 74
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { 2 ^ { n } - u = ( 2 ^ { n } - 1 - u ) + 1 } } \\\\ { { = ( \\sim u ) + 1 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "According to Equation 2.9, we can conclude that $( 2 ^ { n } - 1 - u )$ is equivalent to flipping every bit, or alternatively computing $\\sim u$ . Hence, the procedure for negating a number in the 2\u2019s complement system, is to first compute its 1\u2019s complement, and then add 1. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "The Sign Extension Trick ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Let us assume that we want to convert a number\u2019s representation from a 16-bit number system to a 32-bit number system. If the number is positive, then we just need to prefix it with 16 zeros. Let us consider the case when it is negative. Let the number again be of the form, -u ( $u \\geq 0$ ). Its representation in 16 bits is $\\mathcal { F } _ { 1 6 } ( u ) = 2 ^ { 1 6 } - u$ . Its representation using 32 bits is $\\mathcal { F } _ { 3 2 } ( u ) = 2 ^ { 3 2 } - u$ . ",
+        "page_idx": 74
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathcal { F } _ { 3 2 } ( u ) = 2 ^ { 3 2 } - u } \\\\ & { \\qquad = ( 2 ^ { 3 2 } - 2 ^ { 1 6 } ) + ( 2 ^ { 1 6 } - u ) } \\\\ & { \\qquad = \\underbrace { 1 1 \\dots 1 } _ { 1 6 } \\underbrace { 0 0 \\dots 0 } _ { 1 6 } + \\mathcal { F } _ { 1 6 } ( u ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "For a negative number, we need to prefix it with 16 ones. By combining both the results, we conclude that to convert a number from a 16-bit representation to a 32-bit representation, we need to prefix it with 16 copies of its sign bit(MSB). ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Range of the 2\u2019s Complement Number System ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "The range of the number system is from $- 2 ^ { n - 1 }$ to $2 ^ { n - 1 } - 1$ . There is one extra negative number, $- 2 ^ { n - 1 }$ ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Checking if a 2\u2019s Complement Addition has Resulted in an Overflow ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Let us outline the following theorem for checking if a 2\u2019s complement addition results in an overflow. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Theorem 2.3.4.1 Let us consider an addition operation, where both the operands are nonzero. If the signs of the operands are different, then we can never have an overflow. However, if the signs of the operands are the same, and the result has an opposite sign or is zero, then the addition has led to an overflow. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Proof: Let us consider the number circle, and an addition operation of the form $A + B$ . Let us first locate point $A$ . Then, let us move $B$ steps clockwise if $B$ is positive, or $B$ steps anti-clockwise if $B$ is negative. The final point is the answer. We also note that if we cross the break point (see Definition 21), then there is an overflow, because we exceed the range of the number system. Now, if the signs of $A$ and $B$ are different, then we need to move a minimum of $2 ^ { n - 1 } + 1$ steps to cross the break point. This is because we need to move over zero (1), the break point(1), and the set of all the positive numbers $( 2 ^ { n - 1 } - 1 )$ , or all the negative numbers $( 2 ^ { n - 1 } )$ . Since, we have 1 less positive number, we need to move at least $2 ^ { n - 1 } - 1 + 1 + 1 = 2 ^ { n - 1 } + 1$ steps. Since $B$ is a valid $2$ \u2019s complement number, and is in the range of the number system, we have $\\mid B \\mid < 2 ^ { n - 1 } + 1$ . Hence, we can conclude that after moving $B$ steps, we will never cross the break point, and thus an overflow is not possible. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Now, let us consider the case in which the operands have the same sign. In this case, if the result has an opposite sign or is zero, then we are sure that we have crossed the break point. Consequently, there is an overflow. It will never be the case that there is an overflow and the result has the same sign. For this to happen, we need to move at least $2 ^ { n - 1 } + 1$ steps (cross over 0, the break point, and all the positive/negative numbers). Like the earlier case, this is not possible. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Alternative Interpretation of 2\u2019s Complement ",
+        "text_level": 1,
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Theorem 2.3.4.2 A signed n-bit number, A, is equal to $( A _ { 1 \\ldots n - 1 } - A _ { n } 2 ^ { n - 1 } )$ . $A _ { i }$ is the $i ^ { t h }$ bit in A\u2019s 2\u2019s complement binary representation ( $' A _ { 1 }$ is the $L S B$ , and $A _ { n }$ is the $M S B$ ). $A _ { 1 \\dots j }$ is a binary number containing the first $j$ digits of $A$ \u2019s binary $\\mathcal { L }$ \u2019s complement representation. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Proof: Let us consider a 4-bit representation. -2 is represented as $1 1 1 0 _ { 2 }$ . The last $n - 1$ digits are $1 1 0 _ { 2 }$ . This is equal to 6 in decimal. The MSB represents $1 0 0 0 _ { 2 }$ or 8. Indeed - $\\cdot 2 = 6 \\cdot 8$ . ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "If $A > 0$ , then $A _ { n } = 0$ , and the statement of the theorem is trivially true. Let us consider the case when $A < 0$ . Here, $A _ { n } = 1$ . We observe that $A _ { 1 \\ldots n } = 2 ^ { n } - | A | = 2 ^ { n } + A$ since $A$ is negative. Thus, $A = A _ { 1 \\dots n } - 2 ^ { n }$ . ",
+        "page_idx": 76
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } {  { A = A _ { 1 \\ldots n } - 2 ^ { n } } } \\\\ & { = ( A _ { 1 \\ldots n - 1 } + A _ { n } 2 ^ { n - 1 } ) - 2 ^ { n } } \\\\ & { = ( A _ { 1 \\ldots n - 1 } + 2 ^ { n - 1 } ) - 2 ^ { n } \\quad ( A _ { n } = 1 ) } \\\\ & { = A _ { 1 \\ldots n - 1 } - 2 ^ { n - 1 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 76
+    }
+]

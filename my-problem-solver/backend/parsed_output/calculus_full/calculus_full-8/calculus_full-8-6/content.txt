@@ -1,0 +1,89 @@
+8.6 Force, Work, and Energy
+
+Chapter 1 introduced derivatives  and  : The independent variable could be  or  . For velocity it was natural to use the letter  : This section is about two important physical quantities—force and work—for which  is the right choice.
+
+The basic formula is  : Work equals force times distance moved (distance in the direction of  ). With a force of 100 pounds on a car that moves 20 feet, the work is 2000 foot-pounds. If the car is rolling forward and you are pushing backward, the work is  foot-pounds. If your force is only 80 pounds and the car doesn’t move, the work is zero. In these examples the force is constant.
+
+ is completely parallel to  : When  is constant, we only need multiplication. It is a changing velocity that requires calculus. The integral  adds up small multiplications over short times. For a changing force, we add up small pieces of work  over short distances:
+
+In the first case we lift a suitcase weighing  pounds up  feet of stairs. The work is  foot-pounds. The suitcase doesn’t get heavier as we go up—it only seems that way. Actually it gets lighter (we study gravity below).
+
+In the second case we stretch a spring, which needs more force as  increases. Hooke’s law says that  : The force is proportional to the stretching distance  . Starting from  ; the work increases with the square of  :
+
+In metric units the force is measured in Newtons and the distance in meters. The unit of work is a Newton-meter (a joule). The 600 foot-pounds for an American suitcase would have been about 800 joules in France.
+
+EXAMPLE 1 Suppose a force of  pounds stretches a spring 1 foot.
+
+(a) Find  : The elastic constant is  pounds per foot. (b) Find  : The work is  foot-pounds. (c) Find  when  pounds. This is compression not stretching:  foot.
+
+Compressing the same spring through the same distance requires the same work. For compression  and  are negative. But the work  is still positive. Please note that  does not equal  times  Š That is the whole point of variable force (change  to  .
+
+May I add another important quantity from physics ? It comes from looking at the situation from the viewpoint of the spring. In its natural position, the spring rests comfortably. It feels no strain and has no energy. Tension or compression gives it potential energy. More stretching or more compression means more energy. The change in energy equals the work. The potential energy of the suitcase increases by 600 foot-pounds, when it is lifted 20 feet.
+
+Write  for the potential energy. Here  is the height of the suitcase or the extension of the spring. In moving from  to  ;  increase in potential:
+
+This is absolutely beautiful. The work  is the definite integral. The potential  is the indefinite integral. If we carry the suitcase up the stairs and back down, our total work is zero. We may feel tired, but the trip down should have given back our energy. (It was in the suitcase.) Starting with a spring that is compressed one foot, and ending with the spring extended one foot, again we have done no work.  is the same for  and  : But an extension from  to  requires work:
+
+Indefinite int8egrals like  come with a property that we know well. They include an arbitrary constant  . The correct potential is not simply  ; it is  : To compute a change in potential, we don’t need  : The constant cancels. But to determine  itself, we have to choose  . By fixing  at one point, the potential is determined at all other points. A common choice is  at  : Sometimes  at  (for gravity). Electric fields can be “grounded” at any point.
+
+There is another connection between the potential  and the force  : According to (2),  is the indefinite integral of  : Therefore  is the derivative of  : The fundamental theorem of calculus is also fundamental to physics:
+
+Those lines say the same thing. One is our force pulling on the spring, the other is the “restoring force” pulling back. (3a) and (3b) are a warning that the sign of  depends on the point of view. Electrical engineers and physicists use the minus sign. In mechanics the plus sign is more common. It is one of the ironies of fate that  ; while distance and velocity have those letters reversed:  : Note the change to capital letters and the change to  :
+
+EXAMPLE 2 Newton’s law of gravitation (inverse square law):
+
+ An engine pushes a rocket forward. Gravity pulls it back. The gravitational constant is  and the Earth’s mass is  : The mass of the rocket or satellite or suitcase is  ; and the potential is the indefinite integral:
+
+Usually  ; which makes the potential8zero at  :
+
+Remark When carrying the suitcase upstairs,  changed by 20 feet. The weight was regarded as constant—which it nearly is. But an exact calculation of work uses the integral of  ; not just the multiplication 30 times 20: The serious difference comes when the suitcase is carried to  : With constant force that requires infinite work. With the correct (decreasing) force, the work equals  at infinity (which is zero) minus  at the pickup point  : The change in  is  :
+
+KINETIC ENERGY
+
+This optional paragraph carries the physics one step further. Suppose you release the spring or drop the suitcase. The external force changes to  : But the internal force still acts on the spring, and gravity still acts on the suitcase. They both start moving. The potential energy of the suitcase is converted to kinetic energy, until it hits the bottom of the stairs.
+
+Time enters the problem, either through Newton’s law or Einsatein’s:
+
+Here we stay with Newton, and pretend the mass is constant. Exercise 21 follows Einstein; the mass increases with velocity. There  goes to infinity as  approaches  ; the speed of light. That correction comes from the theory of relativity, and is not needed for suit-cases.
+
+What happens as the suitcase falls ? From  at the top of the stairs to  at the bottom, pot»ential energy is» lost. But kinetic energy  is gained, as we see from integrating Newton’s law:
+
+This same force  is given by  : So the work is also the change in  :
+
+Since  , the total energy  (kinetic plus potential) is constant:
+
+This is the law of conservation of energy. The total energy is conserved.
+
+EXAMPLE 3 Attach a mass  to the end of a stretched spring and let go. The spring’s energy  is gradually converted to kinetic energy of the mass. At  the change to kinetic energy is complete: the original  has become  : Beyond  the potential energy increases, the force reverses sign and pulls back, and kinetic energy is lost. Eventually all energy is potential—when the mass reaches the other extreme. It is simple harmonic motion, exactly as in Chapter 1 (where the mass was the shadow of a circling ball). The equation of motion is the statement that the rate of change of energy is zero (and we cancel  ):
+
+That is  in disguise. For a spring, the solution  will be found in this book. For more complicated structures, engineers spend a billion dollars a year computing the solution.
+
+PRESSUREAND HYDROSTATIC FORCE
+
+Our forces have been concentrated at a single points. That is not the case for pressure. A fluid exerts a force all over the base and sides of its container. Suppose a water tank or swimming pool has constant depth  (in meters or feet). The water has weight-density  : On the base, the pressure is  times  : The force is  times the base area  W
+
+Thus pressure is force per unit area. Here  and  are computed by multiplication, because the depth  is constant. Pressure is proportional to depth (as divers know). Down the side wall,  varies and we need calculus.
+
+The pressure on the side is still  —the same in all directions. We divide the side into horizontal strips of thickness  . Geometry gives the length  at depth  (Figure 8.17). The area of a strip is  : The pressure  is nearly constant on the strip—the depth only changes by  : The force on the strip is  . Adding those forces, and narrowing the strips so that  ; the total force approaches an integral:
+
+EXAMPLE 4 Find the total force on the trapezoidal dam in Figure 8.17.
+
+The side length is  when  : The depth  increases from 0 to 20: The main problem is to find  at an in-between depth  : With straight sides the relation is linear:  . We choose  to give  when  : Then  yields  ·
+
+The total force is the integral of  : So substitute  :
+
+With distance in feet and  ,  is in pounds. With distance in meters and  , the force is in Newtons.
+
+Note that .weight-density  .mass-density  / times  9:8/:These SI units were chosen to make the density of water at  exactly  :
+
+EXAMPLE 5 Find the work to pump water out of a tank. The area at depth  is  .
+
+Imagine lifting out one layer of water at a time. The layer weighs  : The work to lift it to the top is its weight times the distance  ; or  : The work
+
+8 Applications of the Integral
+
+to empty the whole tank is theintegral:
+
+Suppose the tank is the bottom half of a sphere of radius  . The cross-sectional area at depth  is  : Then the work is the integral (12) from 0 to  : It equals  .
+
+Units:  force=.distance/3 times  gives work  .force/.distance/.

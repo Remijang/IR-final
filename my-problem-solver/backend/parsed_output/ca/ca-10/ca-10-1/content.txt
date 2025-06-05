@@ -1,0 +1,11 @@
+10.1 A Pipelined Processor
+
+Let us quickly review where, we are.
+
+Way Point 7
+
+1. We have designed a processor with five main stages – IF, OF, EX, MA, and RW.   
+2. We have designed a detailed data path and control path for the hardwired implementation of our processor.   
+3. We introduced a microprogram-based implementation of our processor in Section 9.4, and we designed a detailed data path and control path for it.
+
+Now, our aim is to make our processor fast and efficient. For this we focus on the hardwired implementation of our processor. We exclude microprogrammed processors from our discussion because we are explicitly looking for high performance, and flexibility/ reconfigurability are not important criteria for us in this section. Let us begin by pointing out some problems with the design of the hardwired processor as presented in Section 9.2.

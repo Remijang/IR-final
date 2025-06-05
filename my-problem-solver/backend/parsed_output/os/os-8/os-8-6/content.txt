@@ -1,0 +1,10 @@
+8.6 MLFQ: Summary
+We have described a scheduling approach known as the Multi-Level Feedback Queue (MLFQ). Hopefully you can now see why it is called that: it has multiple levels of queues, and uses feedback to determine the priority of a given job. History is its guide: pay attention to how jobs behave over time and treat them accordingly.  
+The refined set of MLFQ rules, spread throughout the chapter, are reproduced here for your viewing pleasure:  
+• Rule 1: If Priority(A) $>$ Priority(B), A runs (B doesn’t). 
+• Rule 2: If Priority(A) $\ c =$ Priority(B), A & B run in round-robin fashion using the time slice (quantum length) of the given queue. 
+• Rule 3: When a job enters the system, it is placed at the highest priority (the topmost queue). 
+• Rule 4: Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is reduced (i.e., it moves down one queue). 
+• Rule 5: After some time period $S$ , move all the jobs in the system to the topmost queue.  
+MLFQ is interesting for the following reason: instead of demanding a priori knowledge of the nature of a job, it observes the execution of a job and prioritizes it accordingly. In this way, it manages to achieve the best of both worlds: it can deliver excellent overall performance (similar to SJF/STCF) for short-running interactive jobs, and is fair and makes progress for long-running CPU-intensive workloads. For this reason, many systems, including BSD UNIX derivatives $\scriptstyle { [ \mathrm { L M } + 8 9 }$ , B86], Solaris [M06], and Windows NT and subsequent Windows operating systems [CS97] use a form of MLFQ as their base scheduler.  
+OPERATINGSYSTEMS[VERSION 1.10]  

@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "10.2.3 The Instruction Packet ",
+        "text_level": 1,
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "Let us now proceed to design our data path with pipeline stages and registers in some more detail. Up till now we have been maintaining that the instruction needs to be transferred between registers. Let us elaborate on the term \u201cinstruction\u201d. We actually mean an instruction packet here, which contains all the details regarding the instruction, along with all of its intermediate results and the control signals that it may require. ",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "We need to create such an elaborate instruction packet because there are multiple instructions in the processor at the same time. We need to ensure that there is no overlap between the information required to process two different instructions. A clean way of designing this is to confine all the information required to process an instruction in a packet, and transfer the packet between pipeline registers every cycle. This mechanism also ensures that all the intermediate state required to process an instruction is removed after it leaves the pipeline. ",
+        "page_idx": 418
+    },
+    {
+        "type": "text",
+        "text": "What should an instruction packet contain? It needs to contain at the least, the PC and the contents of the instruction. It should also contain all the operands and control signals that are required by subsequent stages. The amount of information that needs to be stored in the instruction packet reduces as the instruction proceeds towards the last stage. For the sake of uniformity, we assume that all the pipeline registers have the same size, and are sized to hold the entire instruction packet. Some fields might not be used. However, this is a negligible overhead. Let us now proceed to design the data path of the pipeline. We shall use exactly the same design as we had used for the single-cycle processor. The only difference is that we add a register after each pipeline stage, other than the last stage, RW. Secondly, we add connections to transfer data in and out of the pipeline registers. Let us quickly take a look at each of the pipeline stages in our pipelined data path. ",
+        "page_idx": 418
+    }
+]

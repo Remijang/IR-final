@@ -1,0 +1,151 @@
+11.5 Linear Algebra
+
+This section moves from two to three dimensions. There are three unknowns  and also three equations. This is at the crossover point between formulas and algorithms—it is real linear algebra. The formulas give a direct solution using determinants. The algorithms use elimination and the numbers  appear at the end. In practice that end result comes quickly. Computers solve linear equations by elimination.
+
+The situation for a nonlinear equation is similar. Quadratic equations  are solved by a formula. Cubic equations are solved by Newton’s method (even though a formula exists). For equations involving  or  , algorithms take over completely.
+
+Since we are at the crossover point, we look both ways. This section has a lot to do, in mixing geometry, determinants, and 3 by 3 matrices:
+
+1: The row picture: three planes intersect at the solution   
+2: The column picture: a vector equation combines the columns   
+3: The formulas: determinants and Cramer’s Rule   
+4: Matrix multiplication and    
+5: The algorithm: Gaussian elimination.
+
+Part of our goal is three-dimensional calculus. Another part is  -dimensional algebra. And a third possibility is that you may not take mathematics next year. If that happens, I hope you will use mathematics. Linear equations are so basic and important, in such a variety of applications, that the effort in this section is worth making.
+
+An example is needed. It is convenient and realistic if the matrix contains zeros. Most equations in practice are fairly simple—a thousand equations each with 990 zeros would be very reasonable. Hereare three equations in three unknowns:
+
+In matrix-vector form, the unknown u has components  : The right sides  go into  : The nine coefficients, including three zeros, enter the matrix  :
+
+The goal is to understand that system geometrically, and then solve it.
+
+THE ROW PICTURE: INTERSECTING PLANES
+
+Start with the first equation  : In the  plane that produces a line. In three dimensions it is a plane. It has the usual form  , except that  happens to be zero. The plane is easy to visualize (Figure 11.20a), because it cuts straight down through the line. The equation  allows  to have any value, so the graph includes all points above and below the line.
+
+The second equation  gives a second plane, which goes through the origin. When the right side is zero, the point  satisfies the equation. This time  is absent from the equation, so the plane contains the whole  axis. All points  meet the requirement  : The normal vector to the plane is   : The plane cuts across, rather than down, in 11.20b.
+
+Before the third equation we combine the first two. The intersection of two planes is a line. In three-dimensional space, two equations (not one) describe a line. The points on the line have to satisfy  and also  : A convenient point is  : Another point is  : The line through  and  extends out in both directions.
+
+The solution is on that line. The third plane decides where.
+
+The third equation  gives the third plane—which misses the origin because the right side is not zero. What is important is the point where the three planes meet. The intersection line of the first two planes crosses the third plane. We used determinants (but elimination is better) to find  ;  ;  : This solution satisfies the three equations and lies on the three planes.
+
+A brief comment on 4 by 4 systems. The first equation might be  : It represents a three-dimensional “hyperplane” in four-dimensional space. (In physics this is space-time.) The second equation gives a second hyperplane, and its intersection with the first one is two-dimensional. The third equation (third hyperplane) reduces the intersection to a line. The fourth hyperplane meets that line at a point, which is the solution. It satisfies the four equations and lies on the four hyperplanes. In this course three dimensions are enough.
+
+COLUMN PICTURE: COMBINATION OF COLUMN VECTORS
+
+There is an extremely important way to rewrite our three equations. In (1) they were separate, in (2) they went into a matrix. Now they becomea vector equation:
+
+The columns of the matrix are multiplied by  : That is a special way to see matrix-vector multiplication: Au is a combination of the columns of  : We are looking for the numbers  so that the combination produces the right side  :
+
+The column vectors  are shown in Figure 11.21a. The vector equation is  : The combination that solves this equation must again be  ,  : That agrees with the intersection point of the three planes in the row picture.
+
+THE DETERMINANT AND THE INVERSE MATRIX
+
+For a 3 by 3 determinant, the section on cross products gave two formulas. One was the triple product a  : The other wrote out the six terms:
+
+Geometricallythis is the volume of abox. The columns  are the edges going out from the origin. In our example the determinant and volume are 2:
+
+A slight dishonesty is present in that calculation, and will be admitted now. In Section 11.3 the vectors  were rows. In this section  are columns. It doesn’t matter, because the determinant is the same either way. Any matrix can be “transposed” —exchanging rows for columns—without altering the determinant. The six terms  is the first) may come in a different order, but they are the same six terms. Here four of those terms are zero, because of the zeros in the matrix. The sum of all six terms is  :
+
+Since  is not zero, the equations can be solved. The three planes meet at a point. The column vectors  produce a genuine box, and are not flattened into the same plane (with zero volume). The solution involves dividing by  —which is only possible if  is not zero.
+
+11L When the determinant  is not zero,  bas an inverse:   : Then the equations  have one and only one solution  :
+
+The 3 by 3 identity matrix  is at the end of equation (5). Always  : We now compute  ; first with letters and then with numbers. The neatest formula uses cross products of the columns of  —it is special for 3 by 3 matrices.
+
+Every entry is divided by  : The inverse matrix is 
+
+To test this formula, multiply by  : Matrix multiplication produces a matrix of dot products—from the rows of the first matrix and the columns of the second, 
+
+I :
+
+On the right side, six of the triple products are zero. They are the off-diagonals like  , which contain the same vector twice. Since  is perpendicular to  , this triple product is zero. The same is true of the others, like  : That is the volume of a box with two identical sides. The six off-diagonal zeros are the volumes of completely flattened boxes.
+
+On the main diagonal the triple products equal  : The order of vectors can be abc or bca or cab, and the volume of the box stays the same. Dividing by thisnumber  , which is placed outside for that purpose, gives the 1’s in the identity matrix  :
+
+Now we change to numbers. The goal isto find  and to test it.
+
+EXAMPLE 1 The inverse of 
+
+That comes from the formula, and it absolutely has to be checked. Do not fail to multiply  times  (or  times  ). Matrix multiplication is much easier than the formula for  : Wehighlight row 3times column 1, with dot product zero:
+
+Remark on  Inverting a matrix requires  : We divide by  : The cross products  and  and  give  in a neat form, but errors are easy. We prefer to avoid writing i; j;  : There are nine 2 by 2 determinants to be calculated, and here is  in full—containing the nine “cofactors” divided by  :
+
+Important: The first row of  does not use the first column of  , except in  : In other words,  does not involve a: Here are the 2 by 2 determinants that produce  —which is divided by  in the top row of  :
+
+The second highlighted determinant looks like  not  : But the sign matrix on the right assigns a minus to that position in  : We reverse the sign of  , to find the cofactor  in the top row of (6).
+
+To repeat: For a row of  ; cross out the corresponding column of A: Find the three 2 by 2 determinants, use the sign matrix, and divide by  :
+
+The multiplication  checks the arithmetic. Notice how  in  leads to a zero in the top row of  : To find row 1, column 3 of  we ignore column 1 and row 3 of  : (Also: the inverse of a triangular matrix is triangular.) The minus signs come from the sign matrix.
+
+The purpose of  is to solve the equation  : Multiplying by  produces  : The matrix becomes the identity,  equals  , and the solution is immediate:
+
+By writing those components  a|s ratios o|f determ| inants, |we have|Cramer’s Rule:
+
+The right side  replaces, in turn, columns a and  and c: All denominators are  : The numerator of  is the determinant  in (9). The second numerator agrees with the second component  , because the cyclic order is correct. The third determinant with columns abd equals the triple product  in  : Thus (10) is the sameas (9).
+
+EXAMPLE A: Multiply by  tofind theknown solution  :
+
+EXAMPLE B: Multiply by  to solve  when  is the column .6; 5; 4/:
+
+EXAMPLE C: Put  in each column of  : Cramer’s Rule gives  .1; 1; 4/:
+
+This rule fills the page with determinants. Those are good ones to check by eye, without writing down the six terms (three  and three ).
+
+The formulas for  are honored chiefly in their absence. They are not used by the computer, even though the algebra is in some ways beautiful. In big calculations, the computer never finds  —just the solution.
+
+We now look at the singular case  : Geometry-algebra-algorithm must all break down. After that is the algorithm: Gaussian elimination.
+
+THE SINGULAR CASE
+
+Changing one entry of a matrix can make the determinant zero. The triple product  , which is also the volume, becomes  : The box is flattened and the matrix is singular. That happensin our example when the lower right entry is changed from 2 to 4:
+
+This does more than change the inverse. It destroys the inverse. We can no longer divide by  : There is no  :
+
+What happens to the row picture and column picture ? For 2 by 2 systems, the singular case had two parallel lines. Now the row picture has three planes, which need not be parallel. Here the planes are not parallel. Their normal vectors are the rows of  , which go in different directions. But somehow the planes fail to go through a common point.
+
+What happens is more subtle. The intersection line from two planes misses the third plane. The line is parallel to the plane and stays above it (Figure 11.22)a. When all three planes are drawn, they form an open tunnel. The picture tells more than the numbers, about how three planes can fail to meet. The third figure shows an end view, where the planes go directly into the page. Each pair meets in a line, but those lines don’t meet in a point.
+
+When two planes are parallel, the determinant is again zero. One row of the matrix is a multiple of another row. The extreme case has all three planes parallel—as in a matrix with nine 1’s.
+
+The column picture must also break down. In the 2 by 2 failure (previous section), the columns were on the same line. Now the three columns are in the same plane. The combinations of those columns produce d only if it happens to lie in that particular plane. Most vectors  will be outside the plane, so most singular systems have no solution.
+
+When the determinant is zero,  has no solution or infinitely many.
+
+THE ELIMINATION ALGORITHM
+
+Go back to the 3 by 3 example  : If you were given those equations, you would never think of determinants. You would—quite correctly—start with the first equation. It gives  , which goes into the next equation toeliminate  :
+
+Stop there for a minute. On the right is a 2 by 2 system for  and  : The first equation and first unknown are eliminated—exactly what we want. But that step was not organized in the best way, because a “1” ended up on the left side. Constants should stay on the right side—the pattern should be preserved. It is better to take the same step by subtracting the first equation from the second:
+
+Same equations, better organization. Now look at the corner term  : Its coefficient  is the second pivot. (The first pivot was  , the coefficient of  in the first corner.) We are ready for the next elimination step:
+
+Plan: Subtract a multiple of the “pivoÑt equation” from the equation below it. Goal: To produce a zero below the pivot, so  is eliminated. Method: Subtract 2 times the pivot equation to cancel  :
+
+The answer comes by back substitution. Equation (12) gives  : Then equation (11) gives  : Then the first equation gives  : This is much quicker than determinants. You may ask: Why use Cramer’s Rule ? Good question.
+
+With numbers elimination is better. It is faster and also safer. (To check against error, substitute  into the original equations.) The algorithm reaches the answer without the determinant and without the inverse. Calculations with letters use det  and  :
+
+Here are the steps in a definite order (top to bottom):
+
+Subtract a multiple of equation 1 to produce  in equation 2   
+Subtract a multiple of equation 1 to produce  in equation 3   
+Subtract a multiple of equation 2 (new) to produce  in equation 3
+
+EXAMPLE (notice the zeros appearing under the pivots):
+
+Elimination leads to a triangular system. The coefficients below the diagonal are zero.
+
+First  , then  , then  :Back substitution solves triangular systems (fast).
+
+As a final example, try the singular case  when the corner entry is changed from 2 to 4: With  , there is no inverse matrix  : Elimination also fails, by reachingan impossibleequation  :
+
+The three planes do not meet at a point—a fact that was not obvious at the start. Algebra discovers this fact from  : Elimination discovers it from  : The chapter is ending at the point where my linear algebra book begins.
+
+One final comment. In actual computing, you will use a code written by professionals. The steps will be the same as above. A multiple of equation 1 is subtracted from each equation below it, to eliminate the first unknown  : With one fewer unknown and equation, elimination starts again. (A parallel computer executes many steps at once.) Extra instructions are included to reduce roundoff error. You only see the result! But it is more satisfying to know what the computer is doing.
+
+In the end, solving linear equations is the key step in solving nonlinear equations. The central idea of differential calculus is to linearize near a point.

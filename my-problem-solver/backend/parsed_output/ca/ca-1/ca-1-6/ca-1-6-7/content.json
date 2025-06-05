@@ -1,0 +1,67 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.7 Summary of Theoretical Results ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "Let us summarize the main results that we have obtained from our short discussion on theoretical computer science. ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "1. The problem of designing a complete ISA is the same as that of designing a universal machine. A universal machine can run any program. We can map each instruction in the ISA to an action in this universal machine. A universal machine is the most powerful computing machine known to man. If a universal machine cannot compute the result of a program because it never terminates (infinite loop), then all other computing machines are also guaranteed to fail for this program.   \n2. Universal machines have been studied extensively in theoretical computer science. One such machine is the Turing machine named after the father of computer science \u2013 Alan Turing.   \n3. The Turing machine is a very abstract computing device, and is not amenable to practical implementations. A practical implementation will be very slow and consume a lot of resources. However, machines equivalent to it can be much faster. Any such machine, ISA, and computing system that is equivalent to a Turing machine is said to be Turing complete. ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "4. We defined a modified Turing machine that is Turing complete in Section 1.6.4. It has the structure shown in Figure 1.10. Its main parts and salient features are as follows. ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "(a) It contains a dedicated instruction table that contains a list of instructions.   \n(b) It has a program counter that keeps track of the current instruction that is being executed. The program counter contains a pointer to an entry in the instruction table.   \n(c) It has a semi-infinite array of storage locations that can save symbols belonging to a finite set. This array is known as the memory.   \n(d) The memory contains the instruction table (also referred to as the program), and contains a data area. The data area saves all the variables and constants that are required by the program.   \n(e) Each instruction can compute the result of a simple arithmetic function using values stored at different memory locations. It can then save the result in another memory location.   \n(f) The machine starts with the first instruction in the program, and then by default, after executing an instruction, the machine fetches the next instruction in the instruction table.   \n(g) It is possible for an instruction to direct the machine to fetch a new instruction from an arbitrary location in the instruction table based on the value stored in a memory location. ",
+        "page_idx": 34
+    },
+    {
+        "type": "image",
+        "img_path": "images/bd4966bd58b410d7afaed2565462685931439e3a7a4e4745cf461c6d5bf61096.jpg",
+        "img_caption": [
+            "Figure 1.10: A basic processing machine "
+        ],
+        "img_footnote": [],
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "5. A simple one instruction ISA that is compatible with our modified Turing machine, contains the single instruction sbn (subtract the values of two memory locations, and branch to a new instruction if the result is negative). ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "6. We can have many Turing complete ISAs that contain a host of different instructions. Such ISAs will need to have the following types of instructions. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Arithmetic Instructions Add, subtract, multiply and divide. These instructions can be used to simulate logical instructions such as OR and AND. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Move Instructions Move values across memory locations, or load constants into memory. ",
+        "page_idx": 35
+    },
+    {
+        "type": "text",
+        "text": "Branch Instructions Fetch the next instruction from a new location in the instruction table, if a certain condition on the value of a memory location holds. ",
+        "page_idx": 35
+    }
+]

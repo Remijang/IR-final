@@ -1,0 +1,17 @@
+11.4.6 Advanced Features of the Paging System
+
+It turns out that we can do several interesting things with the page table mechanism. Let us look at a few examples.
+
+Shared Memory
+
+Let us assume that two processes want to share some memory between each other such that they can exchange data between them. Then each process needs to let the kernel know about this. The kernel can then map two pages in both the virtual address spaces to the same frame. Now, each process can write to a page in its own virtual address space, and magically, the data will get reflected in the virtual address space of the other process. It is sometimes necessary for several processes to communicate among each other, and the shared memory mechanism is one of the fastest methods.
+
+Protection
+
+Computer viruses typically change the code of a running process such that they can execute their own code. This is typically achieved by a giving a specific sequence of erroneous inputs to the program. If appropriate checks are not in place, then the values of specific variables within the program get overwritten. Some variables can get changed to pointers to the text section, and it is possible to exploit this mechanism to change instructions in the text section. It is possible to solve this problem by marking all the pages in text section as read-only. It will thus not be possible to modify their contents in run time.
+
+Segmentation
+
+We have been assuming that a programmer is free to lay out the memory map according to her wish. She might for example decide to start the stack at a very high address such as  . However, this code might not run on a machine that uses 16-bit addresses even if the memory footprint of the program is very small. Secondly, it is possible that a certain system might have reserved some parts of the virtual memory and made them unavailable to the process. For example, operating systems typically reserve the upper 1 or 2 GB for the kernel. To solve these problems, we need to create another virtual layer on top of virtual memory.
+
+In a segmented memory (used in x86 systems), there are specific segment registers for the text, data, and stack sections. Each virtual address is specified as an offset to the specific segment register. By default, instructions use the code segment register, and data uses the data segment register. The memory access  stage of the pipeline adds the offset to the value stored in the segment register to generate the virtual address. Subsequently, the MMU uses this virtual address to generate the physical address.

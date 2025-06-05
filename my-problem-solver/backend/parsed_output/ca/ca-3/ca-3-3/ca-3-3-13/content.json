@@ -1,0 +1,63 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.13 Modifiers ",
+        "text_level": 1,
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the problem of loading a 32-bit constant into a register. The following code snippet shows us how to load the constant $0 x F B 1 2 C D E F$ . ",
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "/\\* load the upper two bytes \\*/   \nmov r0, 0xFB12   \nlsl r0, r0, 16 /\\* load the lower two bytes with 0x CD EF \\*/ mov r1, 0xCDEF   \nlsl r1, r1, 16   \nlsr r1, r1, 16 /\\* top 16 bits are zeros \\*/ ",
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "/\\* load all the four bytes \\*/ add r0, r0, r1 ",
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "This problem requires 6 instructions. The reader needs to note that loading constants is a common operation in programs. Hence, let us devise a mechanism to speed up the process, and load a constant in a register in two operations. Most assemblers provide directives to directly load constants. Nevertheless, these directives need to get translated into a basic sequence of assembly instructions. Thus, directives do not fundamentally solve of our problem of loading constants into registers of memory locations efficiently. ",
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "We shall achieve this by using modifiers. Let us assign a modifier, \u2018u\u2019, or \u2018h\u2019, to an ALU instruction other than shift instructions. By default, we assume that when we load a 16-bit immediate into a 32-bit register, the processor automatically performs sign extension. This means that it sets each of the 16 MSB bits to the sign of the immediate. This preserves the value of the immediate. For example, if our immediate is equal to -2, then its hexadecimal representation is 0x FF FE. If we try to store it in a register, then in effect, we are storing \u2013 0x FF FF FF FE. ",
+        "page_idx": 126
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "Let us have two additional modes. Let us add the suffix \u2018u\u2019 to an instruction to make it interpret the immediate as an unsigned number. For example, the instruction movu r0, 0x $F E A B$ , will load 0x 00 00 FE AB into register r0. This suffix allows us to specify 16-bit unsigned immediate values. Secondly, let us add the suffix \u2018h\u2019 to an instruction to instruct it to load the 16-bit immediate into the upper half of a register. For example, movh r0, 0x FEAB, effectively loads 0x FE AB 00 00, into $r 0$ . We can use modifiers with all ALU instructions except shift instructions. ",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the previous example of loading a 32-bit constant into a register. We can implement it with two instructions as follows: ",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "movh r0, 0xFB12 $\\begin{array} { l } { { / * \\mathrm { ~ \\bf ~ r 0 ~ } = \\mathrm { ~ 0 x F B ~ } 1 2 \\mathrm { ~ 0 0 ~ } \\mathrm { ~ 0 0 ~ } * / \\mathrm { ~ \\bf ~ \\Omega } } } \\\\ { { / * \\mathrm { ~ \\bf ~ r 0 ~ } = \\mathrm { ~ \\bf ~ r 0 ~ } + \\mathrm { ~ 0 x 0 0 ~ } \\mathrm { ~ 0 0 ~ } \\mathrm { ~ C D ~ } \\mathrm { ~ E F ~ } * / \\mathrm { ~ \\bf ~ \\Omega ~ } } } \\end{array}$ addu r0, r0, 0xCDEF ",
+        "page_idx": 127
+    },
+    {
+        "type": "text",
+        "text": "By using modifiers, we can load constants in 2 instructions, rather than 6 instructions. Furthermore, it is possible to create generic routines using modifiers that can set the value of any single byte in a 4 byte register. These routines will require a lesser number of instructions due to the use of modifiers. ",
+        "page_idx": 127
+    }
+]

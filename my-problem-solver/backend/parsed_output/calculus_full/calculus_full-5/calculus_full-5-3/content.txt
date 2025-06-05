@@ -1,0 +1,147 @@
+5.3 Summation versus Integration
+
+This section does integration the hard way. We find explicit formulas for  : From areas of rectangles, the limits produce the area  under a curve. According to the Fundamental Theorem,  should return us to  —and we verify in each case that it does.
+
+May I recall that there is sometimes an easier way? If we can find an  whose derivative is  , then the integral of  is  Sums and limits are not required, when  is spotted directly. The next section, which explains how to look for  , will displace this one. (If we can’t find an antiderivative we fall back on summation.) Given a successful  ; adding any constant produces another  —since the derivative of the constant is zero. The right constant achieves  , with no extra effort.
+
+This section constructs  from sums. The next section searches for antiderivatives.
+
+THE SIGMA NOTATION
+
+In a section about sums, there has to be a decent way to express them. Consider  : The individual terms are  : Their sum can be written in summation notation, using the capital Greek letter  (pronounced sigma):
+
+Spoken aloud, that becomes “the sum of  from  to 4.” It equals 30: The limits on  (written below and above  ) indicate where to start and stop:
+
+The  at the end of (1) makes an additional point. There is nothing special about the letter  : That is a “dummy variable,” no better and no worse than  (or  ). Dummy variables are only on one side (the side with  ), and they have no effect on the sum. The upper limit  is on both sides. Here are six sums:
+
+The numbers 1 and  or 1 and 4 (or 0 and  ) are the lower limit and upper limit. The dummy variable  or  or  is the index of summation. I hope it seems reasonable that the infinite series  adds to 2: We will come back to it in Chapter 
+
+A sum like  looks meaningless, but it is actually  : It follows the rules. In fact  is not meaningless either. Every term is  and by the same rules, that sum is  : However the  was probably intended to be  : Then the sum is  :
+
+Question What happens to these sums when the upper limits are changed to  ?
+
+Answer The sum depends on the stopping point  . A formula is required (when possible). Integrals stop at  , sums stop at  , and we now look for special cases when  or  can be found.
+
+A SPECIAL SUMMATION FORMULA
+
+How do you add the first 100 whole numbers? The problem is to compute
+
+If you were Gauss, you would see the answer at once. (He solved this problem at a ridiculous age, which gave his friends the idea of getting him into another class.) His solution was to combine  , and  , and  , always adding to 101. There are fifty of those combinations. Thus the sum is .  .
+
+The sum from 1 to  uses the same idea. The first and last terms add to  : The next terms  and 2 also add to  : If  is even (as 100 was) then there are  parts. Therefore the sum is  times  :
+
+The important term is  , but the exact sum is  :
+
+What happens if  is an odd number (like  )? Formula (2) remains true. The combinations  and  still add to  : There are  such pairs, because the middle term (which is 50) has nothing to combine with. Thus  equals  times 100, or 4950.
+
+Remark That sum had to be 4950; because it is 5050 minus 100: The sum up to 99 equals the sum up to 100 with the last term removed. Our key formula   has turned up again!
+
+EXAMPLE Find the sum  of the second hundred numbers.
+
+First solution This is the sum from 1 to 200 minus the sum from 1 to 100 W
+
+The middle sum is  and the last is  : Their difference is 15050:   
+Note! I left out  in the limits. It is there, but not written.
+
+Second solution The answer 15050 is exactly the sum of the first hundred numbers (which was 5050) plus an additional 10000: Believing that a number like 10000 can never turn up by accident, we look for a reason. It is found through changing the limits of summation:
+
+This is important, to be able to shift limits around. Often the lower limit is moved to zero or one, for convenience. Both sums have 100 terms (that doesn’t change). The dummy variable  is replaced by another dummy variable  : They are related by  or equivalently by  :
+
+The variable must change everywhere—in the lower limit and the upper limit as well as inside the sum. If  starts at 101; then  starts at 1: If  ends at 200;  ends at 100: If  appears in the sum, it is replaced by  (and if  appeared it would become  :
+
+From equation (4) you see why the answer is 15050: The sum  is 5050 as before. 100 is added to each of those 100 terms. That gives 10000:
+
+EXAMPLES OF CHANGING THE VARIABLE (and the limits)
+
+Why change  to  Because the upper limit is  : So  and   :
+
+A final step is possible, and you will often see it. The new variable  can be changed back to  : Dummy variables have no meaning of their own, but at first the result looks surprising:
+
+With practice you might do that in one step, skipping the temporary letter  : Every  on the left becomes  on the right. Then  changes to  : (At first two steps are safer.) This may seem a minor point, but soon we will be changing the limits on integrals instead of sums. Integration is parallel to summation, and it is better to see a “change of variable” here first.
+
+Note about  : The good thing is that Gauss found the sum  : The bad thing is that his method looked too much like a trick. I wo uld like toshow how this fits the fundam ental rule connecting sums and differences:
+
+Gauss says that  is  : Reducing  by 1, his formula f or  is  : The difference  should be the last term  in the sum:
+
+This is the one term  that is included in  but not in  :
+
+There is a deeper point here. For any sum  ; there are two things to check. The  ’s must begin correctly and they must change correctly. The underlying idea is mathematical induction: Assume the statement is true below  : Prove it for  .
+
+Goal: To prove that  : This is the guess  .
+
+Proof by induction: Check  (it equals 1). Check  .
+
+For  the answer  is correct. For  this formula  agrees with  : But that separate test is not necessary! If  is right, and if the change  is right for every  ; then  must be right. Equation (6) was the key test, to show that the change in  ’s agrees with  :
+
+That is the logic behind mathematical induction, but I am not happy with most of the exercises that use it. There is absolutely no excitement. The answer is given by some higher power (like Gauss), and it is proved correct by some lower power (like us). It is much better when we lower powers find the answer for ourselves.  Therefore I will try to do that for the second problem, which is the sum of squares.
+
+THE SUM OF  AND THE INTEGRAL OF 
+
+An important calculation comes next. It is the area in Figure 5.6. One region is made up of rectangles, so its area is a sum of  pieces. The other region lies under the parabola  : It cannot be divided into rectangles, and calculus is needed.
+
+The first problem is to find  : This is a sum of squares, with  and  and  : The goal is to find the pattern in that sequence. By trying to guess  we are copying what will soon be done for integrals.
+
+Calculus looks for an  whose derivative is  : There  is an antiderivative
+
+(or an integral).Algebra looks for  s whose differences produce  : Here  could be called an antidifference (better to call it a sum).
+
+The best start is agood guess. Copying directly from integrals, we might try  : To test if it is right, check whether  produces on  :
+
+We see n2, but also n C 31 : The guess31 n3 needs correction terms. To cancel 31 in the difference, I subtract  from the sum. To put back  in the difference, I add  to the sum. The new guess (which should be right) is
+
+To check this answer, verify first that  : Also  and  : To be certain, verify that  : For calculus the important term is  :
+
+In practice  is an excellent estimate. The sum of the first 100 squares is approximately  , or a third of a million. If we need the exact answer, equation (7) is available: the sum is 338; 350: Many applications (example: the number of steps to solve 100 linear equations) can settle for  :
+
+What is fascinating is the contrast with calculus. Calculus has no correction terms! They get washed away in the limit of thin rectangles. When the sum is replaced by the integral (the area), we get an absolutely clean answer:
+
+The area under the parabola, out to the point  , is precisely a third of a million.   
+We have to explain why, with many rectangles.
+
+The idea is to approach an infinite number of infinitely thin rectangles. A hundred rectangles gave an area of 338; 350: Now take a thousand rectangles. Their heights are  ; : : : because the curve is  : The base of every rectangle is  , a nd we add heights times base:
+
+Factor out  : What you have left is  , which fits the sum of squares for mula. The exact area of the thousand rectangles is 333; 833:5: I could try to guess ten thousand rectangles but I won’t.
+
+Main point: The area is approaching 333; 333:333 : : :: But the calculations are getting worse. It is time for algebra—which means that we keep “  and avoid numbers.
+
+The interval of length 100 is divided into  pieces of length  : (Thus  The  th rectangle meets the curve  , so its height is  : Its base is  , and we add areas:
+
+Factor out  , leaving a sum of  squares. The area is  times  ; and  (8) 100
+
+This equation shows what is happening. The leading term is a third of a million, as predicted. The other terms are approaching zero! They contain  , and as the rectangles get thinner they disappear. They only account for the small corners of rectangles that lie above the curve. The vanishing of those corners will eventually be proved for any continuous functions—the area from the correction terms goes to zero—but here in equation (9) you see it explicitly.
+
+The area under the curve came from the central idea of integration:  rectangles of width  approach the limiting area  : The rectangular area is  : The exact area is  : In the limit  becomes  and  becomes  and  becomes  :
+
+That completes the calculation for a parabola. It used the formula for a sum of squares, which was special. But the underlying idea is much more general. The limit of the sums agrees with the antiderivative: The antiderivative of  is  . According to the Fundamental Theorem, the area under  is  :
+
+That Fundamental Theorem is not yet proved! I mean it is not proved by us. Whether Leibniz or Newton managed to prove it, I am not quite sure. But it can be done. Starting from sums of differences, the difficulty is that we have too many limits at once. The sums of  are approaching the integral. The differences  approach the derivative. A real proof has to separate those steps, and Section 5.7 will do it.
+
+Proved or not, you are seeing the main point. What was true for the numbers  and  is true in the limit for  and  : Now  can vary continuously, but it is still the slope of  : The reverse of slope is area.
+
+Finally we review the area under  : The sum of  is  : This gives the area of  rectangles, going out to  : The heights are  , the bases are  , and we add areas:
+
+With  the area is  : WithÑeight rectangles and  , the area was  : Sixteen rectangles of width  brought the correction  down to  : The exact area is 8: The error is proportional to  .
+
+Important note There you see a question in applied mathematics. If there is an error, what size is it? How does it behave as  The  term disappears in the limit, and  disappears faster. But to get an error of  we need eight million rectangles:
+
+That is horrifying! The numbers  : : : seem to approach the area 8 in a satisfactory way, but the convergence is much too slow. It takes twice as much work to get one more binary digit in the answer—which is absolutely unacceptable. Somehow the  term must be removed. If the correction is  instead of  , then a thousand rectangles will reach an accuracy of  :
+
+The problem is that the rectangles are unbalanced. Their right sides touch the graph of  , but their left sides are much too high. The best is to cross the graph in the middle of the interval—this is the midpoint rule. Then the rectangle sits halfway across the line  , and the error is zero. Section 5.8 comes back to this rule—and to Simpson’s rule that fits parabolas and removes the  term and is built into many calculators.
+
+Finally we try the quick way. The area under  is  , because  is  : The area out to  is  : Done.
+
+Optional:  th powers Our sums are following a pattern. First,  is  plus  : The sum of squares is  plus correction terms. The sum of  th powers is
+
+192 The correction involves lower powers of  , and you know what is coming. Those corrections disappear in calculus. The area under  from 0 to  is
+
+Calculus doesn’t care if the upper limit  is an integer, and it doesn’t care if the power  is an integer. We only need  to be sure  is genuinely the leading term. The antiderivative of  is  .
+
+We are close to interesting experiments. The correction terms disappear and the sum approaches the integral. Here are actual numbers for  , when the sum and integral are easy:  and  : The difference is  : The thing to watch is the relative error  :
+
+The number 20;100 is  : Please write down the next line  , and please find a formula for  . You can guess  from the table, or you can derive it from knowing  and  : The formula should show that  goes to zero. More important, it should show how quick (or slow) that convergence will be.
+
+One more number—a third of a million—was mentioned earlier. It came from integrating  from 0 to 100, which compares to the sum  of 100 squares:
+
+These numbers suggest a new idea, to keep n fixed and change  . The computer can find sums without a formula! With its help we go to fourth powers and square roots:
+
+In this and future tables we don’t expect exact values. The last entries are rounded off, and the goal is to see the pattern. The errors  are sure to obey a systematic rule—they are proportional to  and to an unknown number  that depends on  : I hope you can push the experiments far enough to discover  : This is not an exercise with an answer in the back of the book—it is mathematics.

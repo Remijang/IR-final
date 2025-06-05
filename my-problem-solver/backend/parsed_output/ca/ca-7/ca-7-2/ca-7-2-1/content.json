@@ -1,0 +1,45 @@
+[
+    {
+        "type": "text",
+        "text": "7.2.1 XOR Gate ",
+        "text_level": 1,
+        "page_idx": 273
+    },
+    {
+        "type": "text",
+        "text": "Let us implement the logic function for exclusive or (XOR). The truth table is shown in Table 7.1. We shall use the $\\bigoplus$ operator for the XOR operation. An exclusive or operation returns a 1 if both the inputs are unequal, otherwise it returns a 0. ",
+        "page_idx": 273
+    },
+    {
+        "type": "table",
+        "img_path": "images/aefbf0d974e2866bc8d3c1cdd903e5f35093f5af48d603fd6d8b76287b542570.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"4\"></td></tr><tr><td></td><td>A</td><td>B</td><td>AB</td></tr><tr><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>1</td><td>0</td><td>1</td></tr><tr><td></td><td>0</td><td>1</td><td>1</td></tr><tr><td></td><td>1</td><td>1</td><td>0</td></tr></table></body></html>\n\n",
+        "page_idx": 273
+    },
+    {
+        "type": "text",
+        "text": "We observe that $A \\oplus B = A . { \\overline { { B } } } + { \\overline { { A } } } . B$ . The circuit for implementing a XOR gate is shown in Figure 7.8. ",
+        "page_idx": 273
+    },
+    {
+        "type": "image",
+        "img_path": "images/60021b41c316ad9b98305c5ebb65a79ed8a9e7ce7a8f63d88a1e7e41c33b41d3.jpg",
+        "img_caption": [
+            "Table 7.1: The XOR operation ",
+            "Figure 7.8: XOR gate "
+        ],
+        "img_footnote": [],
+        "page_idx": 273
+    },
+    {
+        "type": "image",
+        "img_path": "images/0480b2d72ba176a5b80be66802d856dfd3f96d0330c134ee88817d7dbd2dcceb.jpg",
+        "img_caption": [
+            "Figure 7.9: Design of a $2 \\times 4$ decoder "
+        ],
+        "img_footnote": [],
+        "page_idx": 274
+    }
+]

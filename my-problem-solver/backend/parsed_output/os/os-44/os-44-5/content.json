@@ -1,0 +1,57 @@
+[
+    {
+        "type": "text",
+        "text": "44.5 From Raw Flash to Flash-Based SSDs ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Given our basic understanding of flash chips, we now face our next task: how to turn a basic set of flash chips into something that looks like a typical storage device. The standard storage interface is a simple blockbased one, where blocks (sectors) of size 512 bytes (or larger) can be read or written, given a block address. The task of the flash-based SSD is to provide that standard block interface atop the raw flash chips inside it. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Internally, an SSD consists of some number of flash chips (for persistent storage). An SSD also contains some amount of volatile (i.e., nonpersistent) memory (e.g., SRAM); such memory is useful for caching and buffering of data as well as for mapping tables, which we’ll learn about below. Finally, an SSD contains control logic to orchestrate device operation. See Agrawal et. al for details $\\scriptstyle { \\left[ { \\mathrm { A } } + 0 8 \\right] } ;$ a simplified block diagram is seen in Figure 44.3 (page 7). ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "One of the essential functions of this control logic is to satisfy client reads and writes, turning them into internal flash operations as need be. The flash translation layer, or FTL, provides exactly this functionality. The FTL takes read and write requests on logical blocks (that comprise the device interface) and turns them into low-level read, erase, and program commands on the underlying physical blocks and physical pages (that comprise the actual flash device). The FTL should accomplish this task with the goal of delivering excellent performance and high reliability. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Excellent performance, as we’ll see, can be realized through a combination of techniques. One key will be to utilize multiple flash chips in parallel; although we won’t discuss this technique much further, suffice it to say that all modern SSDs use multiple chips internally to obtain higher performance. Another performance goal will be to reduce write amplification, which is defined as the total write traffic (in bytes) issued to the flash chips by the FTL divided by the total write traffic (in bytes) is",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/e74042453d3e909abc1a88575e5c766dabebf944ba1a61bd98b5f02a4d362ab4.jpg",
+        "img_caption": [
+            "Figure 44.3: A Flash-based SSD: Logical Diagram "
+        ],
+        "img_footnote": [],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "sued by the client to the SSD. As we’ll see below, naive approaches to FTL construction will lead to high write amplification and low performance. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "High reliability will be achieved through the combination of a few different approaches. One main concern, as discussed above, is wear out. If a single block is erased and programmed too often, it will become unusable; as a result, the FTL should try to spread writes across the blocks of the flash as evenly as possible, ensuring that all of the blocks of the device wear out at roughly the same time; doing so is called wear leveling and is an essential part of any modern FTL. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Another reliability concern is program disturbance. To minimize such disturbance, FTLs will commonly program pages within an erased block in order, from low page to high page. This sequential-programming approach minimizes disturbance and is widely utilized. ",
+        "page_idx": 6
+    }
+]

@@ -1,0 +1,114 @@
+[
+    {
+        "type": "text",
+        "text": "8.7.1 Summary ",
+        "text_level": 1,
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "Summary 8 ",
+        "text_level": 1,
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "1. Adding two 1-bit numbers (a and b) produces a sum bit(s) and a carry bit(c) ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "(a) $s = a \\oplus b$   \n(b) c = a.b   \n(c) We can add them using a circuit called $a$ half adder. ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "2. Adding three 1-bit numbers $( a , \\ b )$ , and $c _ { i n } .$ ) also produces a sum bit(s) and a carry $b i t ( c _ { o u t } )$ ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "(a) s = a b cin   \n(b) $c _ { o u t } = a . b + a . c _ { i n } + b . c _ { i n }$   \n(c) We can add them using a circuit called $a$ full adder. (d) ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "3. We can create an n-bit adder known as a ripple carry adder by chaining together $n - 1$ full adders, and a half adder. ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "4. We typically use the notion of asymptotic time complexity to express the time taken by an arithmetic unit such as an adder. ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "(a) $f ( n ) = O ( g ( n ) )$ if $| f ( n ) | \\leq c | g ( n ) |$ for all $n > n _ { 0 }$ , where c is a positive constant. (b) For example, if the time taken by an adder is given by $f ( n ) = 2 n ^ { 3 } + 1 0 0 0 n ^ { 2 } + n$ , we can say that $f ( n ) = O ( n ^ { 3 } )$ ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "5. We discussed the following types of adders along with their time complexities: ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "(a) Ripple carry adder \u2013 $O ( n )$ (b) Carry select adder \u2013 $O ( { \\sqrt { n } } )$ (c) Carry lookahead adder \u2013 $O ( l o g ( n ) )$ ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "6. Multiplication can be done iteratively in $O ( n l o g ( n ) )$ time using an iterative multiplier. The algorithm is similar to the one we learned in elementary school. ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "7. We can speed it up by using a Booth multiplier that takes advantage of a continuous run of 1s in the multiplier. ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "8. The Wallace tree multiplier runs in $O ( l o g ( n ) )$ time. It uses a tree of carry save adders that express a sum of three numbers, as a sum of two numbers. ",
+        "page_idx": 355
+    },
+    {
+        "type": "text",
+        "text": "9. We introduced two algorithms for division: ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "(a) Restoring algorithm (b) Non-restoring algorithm ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "10. Floating point addition and subtraction need not be considered separately. We can have one algorithm that takes care of the generic case. ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "11. Floating point addition requires us to perform the following steps: ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "(a) Align the significand of the smaller number with the significand of the larger number.   \n(b) If the signs are different, then take a 2\u2019s complement of the smaller significand.   \n(c) Add the significands.   \n(d) Compute the sign bit of the result.   \n(e) Normalize and round the result using one of four rounding modes.   \n(f) Renormalize the result again if required. ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "12. We can follow the same steps for floating point multiplication and division. The only difference is that in this case the exponents get added or subtracted, respectively. ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "13. Floating point division is fundamentally a faster operation than integer division because of the approximate nature of floating point mathematics. The basic operation is to compute the reciprocal of the denominator. It can be done in two ways: ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "(a) Use the Newton-Raphson method to find the root of the equation $f ( x ) = 1 / x - b$ . The solution is the reciprocal of b.   \n(b) Repeatedly multiply the numerator and denominator of a fraction derived from 1/b such that the denominator becomes 1 and the reciprocal is the numerator. ",
+        "page_idx": 356
+    }
+]

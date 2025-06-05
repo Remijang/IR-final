@@ -1,0 +1,156 @@
+[
+    {
+        "type": "text",
+        "text": "2.4.2 Generic Form of Floating Point Numbers ",
+        "text_level": 1,
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Unlike fixed point numbers, there can potentially be many more digits after the decimal point in floating point numbers. We need a more generic representation. Let us first look at how we represent floating point numbers in a regular base-10 number system. For simplicity, let us limit ourselves to positive floating point numbers in this section. ",
+        "page_idx": 76
+    },
+    {
+        "type": "text",
+        "text": "Representing Floating Point Numbers in Base-10 ",
+        "text_level": 1,
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "Examples of positive floating point numbers in base 10 are: 1.344, 10.329, and 2.338. Alternatively, a floating point number, $A$ , can be expanded according to Equation 2.22. ",
+        "page_idx": 77
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = \\sum _ { i = - n } ^ { n } x _ { i } 1 0 ^ { i }\n$$",
+        "text_format": "latex",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "For example, $1 . 3 4 4 = 1 \\times 1 0 ^ { 0 } + 3 \\times 1 0 ^ { - 1 } + 4 \\times 1 0 ^ { - 2 } + 4 \\times 1 0 ^ { - 3 }$ . The coefficient $x _ { i }$ can vary from 0 to 9. Let us try to use the basic idea in this equation to create a similar representation for floating point numbers in base 2. ",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "Representing Floating Point Numbers in Binary ",
+        "text_level": 1,
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "Let us take inspiration from Equation 2.22 and create a method for representing positive floating point numbers in base 2. Let $A$ be a positive floating point number. We can try to expand $A$ as: ",
+        "page_idx": 77
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = \\sum _ { i = - n } ^ { n } x _ { i } 2 ^ { i }\n$$",
+        "text_format": "latex",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "Here, $x _ { i }$ is either 0 or 1. Note that the form of Equation 2.23 is exactly the same as Equation 2.22. However, we have changed the base from 10 to 2. ",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "We have negative exponents from -1 to $- n$ , and non-negative exponents from 0 to $n$ . The negative exponents represent the fractional part of the number, and the non-negative exponents represent the integer part of the number. Let us show a set of examples in Table 2.12. We show only non-zero co-coefficients for the sake of brevity. ",
+        "page_idx": 77
+    },
+    {
+        "type": "table",
+        "img_path": "images/ee44f5ddf8fec882440ebcaeaaaad6814533f6ed166b42f044492ff943845221.jpg",
+        "table_caption": [
+            "Table 2.12: Representation of floating point numbers "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Number</td><td>Expansion</td></tr><tr><td>0.375</td><td>2-2+2-3</td></tr><tr><td>1</td><td>20</td></tr><tr><td>1.5</td><td>2+2-1</td></tr><tr><td>2.75</td><td>21 +2-1 +2-2</td></tr><tr><td>17.625</td><td>24 +2\u00b0+2-1 +2-3</td></tr></table></body></html>\n\n",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "We observe that using Equation 2.23, we can represent a lot of floating point numbers exactly. However, there are a lot of numbers such as 1.11, which will potentially require an infinite number of terms with negative exponents. It is not possible to find an exact representation for it using Equation 2.23. However, if $n$ is large enough, we can reduce the error between the actual number and the represented number to a large extent. ",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to represent a positive floating point number in a binary format using Equation 2.23. There are two parts in a positive floating point number \u2013 integer part and fractional part. We represent the integer part using a standard binary representation. We ",
+        "page_idx": 77
+    },
+    {
+        "type": "text",
+        "text": "represent the fractional part also with a binary representation of the form: $x _ { - 1 } x _ { - 2 } \\ldots x _ { - n }$ .   \nLastly, we put a \u2019.\u2019 between the integer and fractional parts. ",
+        "page_idx": 78
+    },
+    {
+        "type": "table",
+        "img_path": "images/489b161b3627739b077195a7997a9b8481079ad9c16b026cff4b9df13574371a.jpg",
+        "table_caption": [
+            "Table 2.13: Representation of floating point numbers in binary "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Number</td><td>Expansion</td><td>Binary Representation</td></tr><tr><td>0.375</td><td>2-2+2-3</td><td>0.011</td></tr><tr><td>1</td><td>20</td><td>1.0</td></tr><tr><td>1.5</td><td>2\u00b0+2-1</td><td></td></tr><tr><td>2.75</td><td>21 +2-1 +2-2</td><td>1.1 10.11</td></tr><tr><td>17.625</td><td>24 +2\u00b0+2-1 +2-3</td><td>10001.101</td></tr></table></body></html>\n\n",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Table 2.13 shows the binary representation of numbers originally shown in Table 2.12. ",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Normal Form ",
+        "text_level": 1,
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look at Table 2.13 again. We observe that there are a variable number of binary bits before and after the decimal point. We can limit the number of bits before and after the decimal point to $\\boldsymbol { L } _ { i }$ and $L _ { f }$ , respectively. By doing so, we can have a binary representation for a floating point number that requires $L _ { i } + L _ { f }$ bits \u2013 $\\boldsymbol { L } _ { i }$ bits for the integer part, and $L _ { f }$ bits for the fractional part. The fractional part is traditionally known as the mantissa, whereas the entire number (both integer and fraction) is known as the significand. If we wish to devote 32 bits for representing a floating point number, then the largest number that we can represent is approximately $2 ^ { 1 6 } = 6 5 , 5 3 6$ (if $L _ { i } = L _ { f }$ ), which is actually a very small number for most practical purposes. We cannot represent large numbers such as $2 ^ { 5 0 }$ . ",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Let us thus, slightly modify our generic form to expand the range of numbers that we can represent. We start out by observing that 101110 in binary can be represented as $1 . 0 1 1 1 0 \\times 2 ^ { 5 }$ . The number 1.01110 is the significand. As a convention, we can assume that the first binary digit in the significand is 1, and the decimal point is right after it. Using this notation, we can represent all floating point numbers as: ",
+        "page_idx": 78
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = P \\times 2 ^ { X } , \\quad ( P = 1 + M , 0 \\leq M < 1 , X \\in \\mathbf { Z } )\n$$",
+        "text_format": "latex",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Definition 23 ",
+        "text_level": 1,
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Significand It is the part of the floating point number that just contains its digits. The decimal point is somewhere within the significand. The significand of $1 . 3 8 2 9 \\times 1 0 ^ { 3 }$ is 1.3829. ",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "Mantissa It represents the fractional part of the significand. The mantissa of $1 . 3 8 2 9 \\times 1 0 ^ { 3 }$ is 0.3829. ",
+        "page_idx": 78
+    },
+    {
+        "type": "text",
+        "text": "$\\mathbf { Z }$ is the set of integers, $P$ is the significand, $M$ is the mantissa, and $X$ is known as the exponent. This representation is slightly more flexible. It allows us to specify large exponents, both positive and negative. Lastly, let us try to create a generic form for both positive and floating point numbers by introducing a sign bit, $S$ . We show the resulting form in Equation 2.25 and refer to it as the normal form henceforth. ",
+        "page_idx": 79
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA = ( - 1 ) ^ { S } \\times P \\times 2 ^ { X } , \\quad ( P = 1 + M , 0 \\le M < 1 , X \\in { \\bf Z } )\n$$",
+        "text_format": "latex",
+        "page_idx": 79
+    },
+    {
+        "type": "text",
+        "text": "If $S = 0$ , the number is positive. If $S = 1$ , the number is negative. ",
+        "page_idx": 79
+    }
+]

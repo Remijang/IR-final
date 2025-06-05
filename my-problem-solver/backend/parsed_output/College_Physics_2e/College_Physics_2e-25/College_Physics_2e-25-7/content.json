@@ -1,0 +1,999 @@
+[
+    {
+        "type": "text",
+        "text": "25.7 Image Formation by Mirrors ",
+        "text_level": 1,
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Illustrate image formation in a flat mirror.   \n\u2022 Explain with ray diagrams the formation of an image using spherical mirrors.   \n\u2022 Determine focal length and magnification given radius of curvature, distance of object and image. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "We only have to look as far as the nearest bathroom to find an example of an image formed by a mirror. Images in flat mirrors are the same size as the object and are located behind the mirror. Like lenses, mirrors can form a variety of images. For example, dental mirrors may produce a magnified image, just as makeup mirrors do. Security mirrors in shops, on the other hand, form images that are smaller than the object. We will use the law of reflection to understand how mirrors form images, and we will find that mirror images are analogous to those formed by lenses. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Figure 25.38 helps illustrate how a flat mirror forms an image. Two rays are shown emerging from the same point, striking the mirror, and being reflected into the observer\u2019s eye. The rays can diverge slightly, and both still get into the eye. If the rays are extrapolated backward, they seem to originate from a common point behind the mirror, locating the image. (The paths of the reflected rays into the eye are the same as if they had come directly from that point behind the mirror.) Using the law of reflection\u2014the angle of reflection equals the angle of incidence\u2014we can see that the image and object are the same distance from the mirror. This is a virtual image, since it cannot be projected\u2014the rays only appear to originate from a common point behind the mirror. Obviously, if you walk behind the mirror, you cannot see the image, since the rays do not go there. But in front of the mirror, the rays behave exactly as if they had come from behind the mirror, so that is where the image is situated. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "image",
+        "img_path": "images/e9f0c5cafa779b32e7bb1dd69c7749750b62f3764a1c8169268d642af3839180.jpg",
+        "img_caption": [
+            "FIGURE 25.38 Two sets of rays from common points on an object are reflected by a flat mirror into the eye of an observer. The reflected rays seem to originate from behind the mirror, locating the virtual image. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1150
+    },
+    {
+        "type": "text",
+        "text": "Now let us consider the focal length of a mirror\u2014for example, the concave spherical mirrors in Figure 25.39. Rays of light that strike the surface follow the law of reflection. For a mirror that is large compared with its radius of curvature, as in Figure 25.39(a), we see that the reflected rays do not cross at the same point, and the mirror does not have a well-defined focal point. If the mirror had the shape of a parabola, the rays would all cross at a single point, and the mirror would have a well-defined focal point. But parabolic mirrors are much more expensive to make than spherical mirrors. The solution is to use a mirror that is small compared with its radius of curvature, as shown in Figure 25.39(b). (This is the mirror equivalent of the thin lens approximation.) To a very good approximation, this mirror has a well-defined focal point at F that is the focal distance $f$ from the center of the mirror. The focal length $f$ of a concave mirror is positive, since it is a converging mirror. ",
+        "page_idx": 1150
+    },
+    {
+        "type": "image",
+        "img_path": "images/9f2b16ac8cb0c227ce3b8ff036cb61c604af41f6473b85212154524d9bcff416.jpg",
+        "img_caption": [
+            "FIGURE 25.39 (a) Parallel rays reflected from a large spherical mirror do not all cross at a common point. (b) If a spherical mirror is small compared with its radius of curvature, parallel rays are focused to a common point. The distance of the focal point from the center of the mirror is its focal length $f$ . Since this mirror is converging, it has a positive focal length. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1150
+    },
+    {
+        "type": "text",
+        "text": "Just as for lenses, the shorter the focal length, the more powerful the mirror; thus, $P = 1 / f$ for a mirror, too. A more strongly curved mirror has a shorter focal length and a greater power. Using the law of reflection and some simple trigonometry, it can be shown that the focal length is half the radius of curvature, or ",
+        "page_idx": 1150
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf = { \\frac { R } { 2 } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1150
+    },
+    {
+        "type": "text",
+        "text": "where $R$ is the radius of curvature of a spherical mirror. The smaller the radius of curvature, the smaller the focal length and, thus, the more powerful the mirror. ",
+        "page_idx": 1150
+    },
+    {
+        "type": "text",
+        "text": "The convex mirror shown in Figure 25.40 also has a focal point. Parallel rays of light reflected from the mirror seem to originate from the point F at the focal distance $f$ behind the mirror. The focal length and power of a convex mirror are negative, since it is a diverging mirror. ",
+        "page_idx": 1150
+    },
+    {
+        "type": "image",
+        "img_path": "images/4cc0f30d7a335a7d299ec8d67918557be013f52c839b6d90eb9bafdbbe2b7580.jpg",
+        "img_caption": [
+            "FIGURE 25.40 Parallel rays of light reflected from a convex spherical mirror (small in size compared with its radius of curvature) seem to originate from a well-defined focal point at the focal distance $f$ behind the mirror. Convex mirrors diverge light rays and, thus, have a negative focal length. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1151
+    },
+    {
+        "type": "text",
+        "text": "Ray tracing is as useful for mirrors as for lenses. The rules for ray tracing for mirrors are based on the illustrations just discussed: ",
+        "page_idx": 1151
+    },
+    {
+        "type": "text",
+        "text": "1. A ray approaching a concave converging mirror parallel to its axis is reflected through the focal point F of the mirror on the same side. (See rays 1 and 3 in Figure 25.39(b).)   \n2. A ray approaching a convex diverging mirror parallel to its axis is reflected so that it seems to come from the focal point F behind the mirror. (See rays 1 and 3 in Figure 25.40.)   \n3. Any ray striking the center of a mirror is followed by applying the law of reflection; it makes the same angle with the axis when leaving as when approaching. (See ray 2 in Figure 25.41.)   \n4. A ray approaching a concave converging mirror through its focal point is reflected parallel to its axis. (The reverse of rays 1 and 3 in Figure 25.39.)   \n5. A ray approaching a convex diverging mirror by heading toward its focal point on the opposite side is reflected parallel to the axis. (The reverse of rays 1 and 3 in Figure 25.40.) ",
+        "page_idx": 1151
+    },
+    {
+        "type": "text",
+        "text": "We will use ray tracing to illustrate how images are formed by mirrors, and we can use ray tracing quantitatively to obtain numerical information. But since we assume each mirror is small compared with its radius of curvature, we can use the thin lens equations for mirrors just as we did for lenses. ",
+        "page_idx": 1151
+    },
+    {
+        "type": "text",
+        "text": "Consider the situation shown in Figure 25.41, concave spherical mirror reflection, in which an object is placed farther from a concave (converging) mirror than its focal length. That is, $f$ is positive and $d _ { 0 } > f _ { : }$ , so that we may expect an image similar to the case 1 real image formed by a converging lens. Ray tracing in Figure 25.41 shows that the rays from a common point on the object all cross at a point on the same side of the mirror as the object. Thus a real image can be projected onto a screen placed at this location. The image distance is positive, and the image is inverted, so its magnification is negative. This is a case1imageformirors. It differs from the case 1 image for lenses only in that the image is on the same side of the mirror as the object. It is otherwise identical. ",
+        "page_idx": 1151
+    },
+    {
+        "type": "image",
+        "img_path": "images/389ddfb54b0a4511da0dfb06297ba9aed3541f530779f844f3abc8f3ee570e51.jpg",
+        "img_caption": [
+            "FIGURE 25.41 A case 1 image for a mirror. An object is farther from the converging mirror than its focal length. Rays from a common point on the object are traced using the rules in the text. Ray 1 approaches parallel to the axis, ray 2 strikes the center of the mirror, and ray 3 goes through the focal point on the way toward the mirror. All three rays cross at the same point after being reflected, locating the inverted real image. Although three rays are shown, only two of the three are needed to locate the image and determine its height. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.9 ",
+        "text_level": 1,
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "A Concave Reflector ",
+        "text_level": 1,
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Electric room heaters use a concave mirror to reflect infrared (IR) radiation from hot coils. Note that IR follows the same law of reflection as visible light. Given that the mirror has a radius of curvature of $5 0 . 0 \\mathsf { c m }$ and produces an image of the coils $3 . 0 0 \\mathrm { ~ m ~ }$ away from the mirror, where are the coils? ",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Strategy and Concept ",
+        "text_level": 1,
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "We are given that the concave mirror projects a real image of the coils at an image distance $d _ { \\mathrm { i } } = 3 . 0 0 \\mathrm { m }$ . The coils are the object, and we are asked to find their location\u2014that is, to find the object distance $d _ { \\mathrm { o } }$ . We are also given the radius of curvature of the mirror, so that its focal length is $f = R / 2 = 2 5 . 0 \\mathrm { c m }$ (positive since the mirror is concave or converging). Assuming the mirror is small compared with its radius of curvature, we can use the thin lens equations, to solve this problem. ",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Since $d _ { \\mathrm { i } }$ and $f$ are known, thin lens equation can be used to find $d _ { \\mathrm { o } }$ : ",
+        "page_idx": 1152
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { o } } } } + { \\frac { 1 } { d _ { \\mathrm { i } } } } = { \\frac { 1 } { f } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Rearranging to isolate $d _ { \\mathrm { o } }$ gives ",
+        "page_idx": 1152
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { o } } } } = { \\frac { 1 } { f } } - { \\frac { 1 } { d _ { \\mathrm { i } } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Entering known quantities gives a value for $1 / d _ { 0 }$ : ",
+        "page_idx": 1152
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { d _ { \\mathrm { o } } } = \\frac { 1 } { 0 . 2 5 0 \\mathrm { m } } - \\frac { 1 } { 3 . 0 0 \\mathrm { m } } = \\frac { 3 . 6 6 7 } { \\mathrm { m } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "This must be inverted to find $d _ { 0 }$ : ",
+        "page_idx": 1152
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { 0 } = { \\frac { 1 \\mathrm { m } } { 3 . 6 6 7 } } = 2 7 . 3 \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Note that the object (the filament) is farther from the mirror than the mirror\u2019s focal length. This is a case 1 image $( d _ { 0 } > f$ and $f$ positive), consistent with the fact that a real image is formed. You will get the most concentrated thermal energy directly in front of the mirror and $3 . 0 0 \\mathrm { ~ m ~ }$ away from it. Generally, this is not desirable, since it could cause burns. Usually, you want the rays to emerge parallel, and this is accomplished by having the filament at the focal point of the mirror. ",
+        "page_idx": 1152
+    },
+    {
+        "type": "text",
+        "text": "Note that the filament here is not much farther from the mirror than its focal length and that the image produced is considerably farther away. This is exactly analogous to a slide projector. Placing a slide only slightly farther away from the projector lens than its focal length produces an image significantly farther away. As the object gets closer to the focal distance, the image gets farther away. In fact, as the object distance approaches the focal length, the image distance approaches infinity and the rays are sent out parallel to one another. ",
+        "page_idx": 1153
+    },
+    {
+        "type": "image",
+        "img_path": "images/c349e3c8154d77d6438213a4b55e4410acab7c59574367ea879d4b7a34b548b6.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.10 ",
+        "text_level": 1,
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "Solar Electric Generating System ",
+        "text_level": 1,
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "One of the solar technologies used today for generating electricity is a device (called a parabolic trough or concentrating collector) that concentrates the sunlight onto a blackened pipe that contains a fluid. This heated fluid is pumped to a heat exchanger, where its heat energy is transferred to another system that is used to generate steam\u2014and so generate electricity through a conventional steam cycle. Figure 25.42 shows such a working system in southern California. Concave mirrors are used to concentrate the sunlight onto the pipe. The mirror has the approximate shape of a section of a cylinder. For the problem, assume that the mirror is exactly one-quarter of a full cylinder. ",
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "a. If we wish to place the fluid-carrying pipe $4 0 . 0 \\mathsf { c m }$ from the concave mirror at the mirror\u2019s focal point, what will be the radius of curvature of the mirror?   \nb. Per meter of pipe, what will be the amount of sunlight concentrated onto the pipe, assuming the insolation (incident solar radiation) is $0 . 9 0 0 \\mathrm { k W } / \\mathrm { m } ^ { 2 } ;$ ?   \nc. If the fluid-carrying pipe has a $2 . 0 0 \\mathsf { - c m }$ diameter, what will be the temperature increase of the fluid per meter of pipe over a period of one minute? Assume all the solar radiation incident on the reflector is absorbed by the pipe, and that the fluid is mineral oil. ",
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "To solve an IntegratedConceptProblemwe must first identify the physical principles involved. Part (a) is related to the current topic. Part (b) involves a little math, primarily geometry. Part (c) requires an understanding of heat and density. ",
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "Solution to (a) ",
+        "text_level": 1,
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "To a good approximation for a concave or semi-spherical surface, the point where the parallel rays from the sun converge will be at the focal point, so $R = 2 f = 8 0 . 0 \\mathrm { c m }$ . ",
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "Solution to (b) ",
+        "text_level": 1,
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "The insolation is $9 0 0 \\mathrm { W } / \\mathrm { m } ^ { 2 }$ . We must find the cross-sectional area of the concave mirror, since the power delivered is $9 0 0 \\mathrm { W } / \\mathrm { m } ^ { 2 } \\times \\mathrm { A } .$ The mirror in this case is a quarter-section of a cylinder, so the area for a length $\\mathrm { ~ L ~ }$ of the mirror is $\\begin{array} { r } { \\mathrm { A } = \\frac { 1 } { 4 } ( 2 \\pi R ) \\mathrm { L } } \\end{array}$ . The area for a length of $1 . 0 0 \\mathrm { m }$ is then ",
+        "page_idx": 1153
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { A } = { \\frac { \\pi } { 2 } } R ( 1 . 0 0 \\mathrm { m } ) = { \\frac { ( 3 . 1 4 ) } { 2 } } ( 0 . 8 0 0 \\mathrm { m } ) ( 1 . 0 0 \\mathrm { m } ) = 1 . 2 6 \\mathrm { m } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "The insolation on the $_ { 1 . 0 0 - \\mathsf { m } }$ length of pipe is then ",
+        "page_idx": 1153
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left( 9 . 0 0 \\times 1 0 ^ { 2 } { \\frac { \\mathrm { W } } { { \\mathrm { m } } ^ { 2 } } } \\right) \\left( 1 . 2 6 { \\mathrm { m } } ^ { 2 } \\right) = 1 1 3 0 { \\mathrm { W } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "Solution to (c) ",
+        "text_level": 1,
+        "page_idx": 1153
+    },
+    {
+        "type": "text",
+        "text": "The increase in temperature is given by $Q = m c \\Delta T$ . The mass $m$ of the mineral oil in the one-meter section of pipe is ",
+        "page_idx": 1153
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { m \\ = \\ } & { \\rho \\mathrm { V } = \\rho \\pi { \\left( { \\frac { d } { 2 } } \\right) } ^ { 2 } ( 1 . 0 0 \\mathrm { m } ) } \\\\ { \\ = \\ } & { { \\big ( } 8 . 0 0 \\times 1 0 ^ { 2 } \\mathrm { k g } / \\mathrm { m } ^ { 3 } { \\big ) } ( 3 . 1 4 ) ( 0 . 0 1 0 0 \\mathrm { m } ) ^ { 2 } ( 1 . 0 0 \\mathrm { m } ) } \\\\ { \\ = \\ } & { 0 . 2 5 1 \\mathrm { k g } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1154
+    },
+    {
+        "type": "text",
+        "text": "Therefore, the increase in temperature in one minute is ",
+        "page_idx": 1154
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { \\Delta T } & { = } & { Q / m \\mathbf { c } } \\\\ & { = } & { { \\frac { ( 1 1 3 0 \\ \\mathbf { W } ) ( 6 0 . 0 \\ \\mathbf { s } ) } { ( 0 . 2 5 1 \\ \\mathbf { k g } ) ( 1 6 7 0 \\ \\mathbf { J \\cdot k g / ^ { \\circ } C } ) } } } \\\\ & { = } & { 1 6 2 ^ { \\circ } \\mathbf { C } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1154
+    },
+    {
+        "type": "text",
+        "text": "Discussion for (c) ",
+        "text_level": 1,
+        "page_idx": 1154
+    },
+    {
+        "type": "text",
+        "text": "An array of such pipes in the California desert can provide a thermal output of 250 MW on a sunny day, with fluids reaching temperatures as high as $4 0 0 ^ { \\circ } \\mathrm { C }$ . We are considering only one meter of pipe here, and ignoring heat losses along the pipe. ",
+        "page_idx": 1154
+    },
+    {
+        "type": "image",
+        "img_path": "images/5764309cfa11bb78bf274b4c3cd3237ff33950db839b730e5208dd649d77e99e.jpg",
+        "img_caption": [
+            "IGURE 25.42 Parabolic trough collectors are used to generate electricity in southern California. (credit: kjkolb, Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1154
+    },
+    {
+        "type": "text",
+        "text": "What happens if an object is closer to a concave mirror than its focal length? This is analogous to a case 2 image for lenses ( $d _ { 0 } < f$ and $f$ positive), which is a magnifier. In fact, this is how makeup mirrors act as magnifiers. Figure 25.43(a) uses ray tracing to locate the image of an object placed close to a concave mirror. Rays from a common point on the object are reflected in such a manner that they appear to be coming from behind the mirror, meaning that the image is virtual and cannot be projected. As with a magnifying glass, the image is upright and larger than the object. This is a case2imageformirorsand is exactly analogous to that for lenses. ",
+        "page_idx": 1154
+    },
+    {
+        "type": "image",
+        "img_path": "images/b6bde5084830385ed61ae122c326300ee8926e884fb0bbd3b8fc9e1a89abb134.jpg",
+        "img_caption": [
+            "FIGURE 25.43 (a) Case 2 images for mirrors are formed when a converging mirror has an object closer to it than its focal length. Ray 1 approaches parallel to the axis, ray 2 strikes the center of the mirror, and ray 3 approaches the mirror as if it came from the focal point. (b) A magnifying mirror showing the reflection. (credit: Mike Melrose, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1155
+    },
+    {
+        "type": "text",
+        "text": "All three rays appear to originate from the same point after being reflected, locating the upright virtual image behind the mirror and showing it to be larger than the object. (b) Makeup mirrors are perhaps the most common use of a concave mirror to produce a larger, upright image. ",
+        "page_idx": 1155
+    },
+    {
+        "type": "text",
+        "text": "A convex mirror is a diverging mirror ( $f$ is negative) and forms only one type of image. It is a case3image\u2014one that is upright and smaller than the object, just as for diverging lenses. Figure 25.44(a) uses ray tracing to illustrate the location and size of the case 3 image for mirrors. Since the image is behind the mirror, it cannot be projected and is thus a virtual image. It is also seen to be smaller than the object. ",
+        "page_idx": 1155
+    },
+    {
+        "type": "image",
+        "img_path": "images/4ce2dd62e3e2890b3b5ac930221549a69d8955b91a64944f17bba354ff28fbd6.jpg",
+        "img_caption": [
+            "FIGURE 25.44 Case 3 images for mirrors are formed by any convex mirror. Ray 1 approaches parallel to the axis, ray 2 strikes the center of the mirror, and ray 3 approaches toward the focal point. All three rays appear to originate from the same point after being reflected, locating the upright virtual image behind the mirror and showing it to be smaller than the object. (b) Security mirrors are convex, producing a smaller, upright image. Because the image is smaller, a larger area is imaged compared to what would be observed for a flat mirror (and hence security is improved). (credit: Laura D\u2019Alessandro, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.11 ",
+        "text_level": 1,
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "Image in a Convex Mirror ",
+        "text_level": 1,
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "A keratometer is a device used to measure the curvature of the cornea, particularly for fitting contact lenses. Light is reflected from the cornea, which acts like a convex mirror, and the keratometer measures the magnification of the image. The smaller the magnification, the smaller the radius of curvature of the cornea. If the light source is $1 2 . 0 \\mathsf { c m }$ from the cornea and the image\u2019s magnification is 0.0320, what is the cornea\u2019s radius of curvature? ",
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "If we can find the focal length of the convex mirror formed by the cornea, we can find its radius of curvature (the radius of curvature is twice the focal length of a spherical mirror). We are given that the object distance is $d _ { \\mathrm { o } } = 1 2 . 0 \\mathrm { c m }$ and that $m = 0 . 0 3 2 0$ . We first solve for the image distance $d _ { \\mathrm { i } }$ , and then for $f$ . ",
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "$m = - d _ { \\mathrm { i } } / d _ { \\mathrm { o } }$ . Solving this expression for $d _ { \\mathrm { i } }$ gives ",
+        "page_idx": 1156
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = - m d _ { \\mathrm { o } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1156
+    },
+    {
+        "type": "text",
+        "text": "Entering known values yields ",
+        "page_idx": 1156
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = - ( 0 . 0 3 2 0 ) ( 1 2 . 0 \\mathrm { c m } ) = - 0 . 3 8 4 \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1156
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { f } } = { \\frac { 1 } { d _ { 0 } } } + { \\frac { 1 } { d _ { \\mathrm { i } } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Substituting known values, ",
+        "page_idx": 1157
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { f } } = { \\frac { 1 } { 1 2 . 0 \\operatorname { c m } } } + { \\frac { 1 } { - 0 . 3 8 4 \\operatorname { c m } } } = { \\frac { - 2 . 5 2 } { \\operatorname { c m } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "This must be inverted to find $f$ : ",
+        "page_idx": 1157
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf = { \\frac { \\mathrm { c m } } { - 2 . 5 2 } } = - 0 . 4 0 0 \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "The radius of curvature is twice the focal length, so that ",
+        "page_idx": 1157
+    },
+    {
+        "type": "equation",
+        "text": "$$\nR = 2 \\left| f \\right| = - 0 . 8 0 0 \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "The radius of curvature found here is reasonable for a cornea. The distance from cornea to retina in an adult eye is about $2 . 0 \\mathsf { c m }$ . In practice, many corneas are not spherical, complicating the job of fitting contact lenses. Note that the image distance here is negative, consistent with the fact that the image is behind the mirror, where it cannot be projected. In this section\u2019s Problems and Exercises, you will show that for a fixed object distance, the smaller the radius of curvature, the smaller the magnification. ",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "The three types of images formed by mirrors (cases 1, 2, and 3) are exactly analogous to those formed by lenses, as summarized in the table at the end of Image Formation by Lenses. It is easiest to concentrate on only three types of images\u2014then remember that concave mirrors act like convex lenses, whereas convex mirrors act like concave lenses. ",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: Concave Mirrors Close to Home ",
+        "text_level": 1,
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Find a flashlight and identify the curved mirror used in it. Find another flashlight and shine the first flashlight onto the second one, which is turned off. Estimate the focal length of the mirror. You might try shining a flashlight on the curved mirror behind the headlight of a car, keeping the headlight switched off, and determine its focal length. ",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategy for Mirrors ",
+        "text_level": 1,
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Step 1. Examine the situation to determine that image formation by a mirror is involved. ",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Step 2. Refer to the Problem-Solving Strategies for Lenses. The same strategies are valid for mirrors as for lenses with one qualification\u2014use the ray tracing rules for mirrors listed earlier in this section. ",
+        "page_idx": 1157
+    },
+    {
+        "type": "text",
+        "text": "Glossary ",
+        "text_level": 1,
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "converging lens a convex lens in which light rays that enter it parallel to its axis converge at a single point on the opposite side   \nconverging mirror a concave mirror in which light rays that strike it parallel to its axis converge at one or more points along the axis   \ncorner reflector an object consisting of two mutually perpendicular reflecting surfaces, so that the light that enters is reflected back exactly parallel to the direction from which it came   \ncritical angle incident angle that produces an angle of refraction of $9 0 ^ { \\circ }$   \ndispersion spreading of white light into its full spectrum of wavelengths   \ndiverging lens a concave lens in which light rays that enter it parallel to its axis bend away (diverge) from its axis   \ndiverging mirror a convex mirror in which light rays that strike it parallel to its axis bend away (diverge) from its axis   \nfiber optics transmission of light down fibers of plastic or glass, applying the principle of total internal reflection   \nfocal length distance from the center of a lens or curved mirror to its focal point   \nfocal point for a converging lens or mirror, the point at which converging light rays cross; for a diverging lens or mirror, the point from which diverging light rays appear to originate   \ngeometric optics part of optics dealing with the ray aspect of light   \nindex of refraction for a material, the ratio of the speed of light in vacuum to that in the material   \nlaw of reflection angle of reflection equals the angle of incidence   \nlaw of reflection angle of reflection equals the angle of incidence   \nmagnification ratio of image height to object height   \nmirror smooth surface that reflects light at specific angles, forming an image of the person or object in front of it   \npower inverse of focal length   \nrainbow dispersion of sunlight into a continuous distribution of colors according to wavelength, produced by the refraction and reflection of sunlight by water droplets in the sky   \nray straight line that originates at some point   \nreal image image that can be projected   \nrefraction changing of a light ray\u2019s direction when it passes through variations in matter   \nvirtual image image that cannot be projected   \nzircon natural gemstone with a large index of refraction ",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "Section Summary ",
+        "text_level": 1,
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "25.1 The Ray Aspect of Light ",
+        "text_level": 1,
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "\u2022 A straight line that originates at some point is called a ray.   \n\u2022 The part of optics dealing with the ray aspect of light is called geometric optics.   \n\u2022 Light can travel in three ways from a source to another location: (1) directly from the source through empty space; (2) through various media; (3) after being reflected from a mirror. ",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "25.2 The Law of Reflection ",
+        "text_level": 1,
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The angle of reflection equals the angle of incidence.   \n\u2022 A mirror has a smooth surface and reflects light at specific angles.   \n\u2022 Light is diffused when it reflects from a rough surface.   \nMirror images can be photographed and videotaped by instruments. ",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "25.3 The Law of Refraction ",
+        "text_level": 1,
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The changing of a light ray\u2019s direction when it ",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "passes through variations in matter is called refraction.   \n\u2022 The speed of light in vacuum $c = 2 . 9 9 7 9 2 4 5 8 \\times 1 0 ^ { 8 } \\ { \\mathrm { m } } / { \\mathrm { s } } \\approx 3 . 0 0 \\times 1 0 ^ { 8 } \\ { \\mathrm { m } } / { \\mathrm { s } } .$ .   \n\u2022 Index of refraction $\\textstyle n = { \\frac { c } { v } }$ , where $v$ is the speed of light in the material, $c$ is the speed of light in vacuum, and $n$ is the index of refraction.   \n\u2022 Snell\u2019s law, the law of refraction, is stated in equation form as $n _ { 1 }$ sin $\\theta _ { 1 } = n _ { 2 }$ sin $\\theta _ { 2 }$ . ",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "25.4 Total Internal Reflection ",
+        "text_level": 1,
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The incident angle that produces an angle of refraction of $9 0 ^ { \\circ }$ is called critical angle.   \n\u2022 Total internal reflection is a phenomenon that occurs at the boundary between two mediums, such that if the incident angle in the first medium is greater than the critical angle, then all the light is reflected back into that medium.   \n\u2022 Fiber optics involves the transmission of light down fibers of plastic or glass, applying the principle of total internal reflection.   \n\u2022 Endoscopes are used to explore the body through various orifices or minor incisions, based on the transmission of light through optical fibers.   \n\u2022 Cladding prevents light from being transmitted between fibers in a bundle.   \n\u2022 Diamonds sparkle due to total internal reflection coupled with a large index of refraction. ",
+        "page_idx": 1158
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "25.5 Dispersion: The Rainbow and Prisms ",
+        "text_level": 1,
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The spreading of white light into its full spectrum of wavelengths is called dispersion.   \n\u2022 Rainbows are produced by a combination of refraction and reflection and involve the dispersion of sunlight into a continuous distribution of colors.   \n\u2022 Dispersion produces beautiful rainbows but also causes problems in certain optical systems. ",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "25.6 Image Formation by Lenses ",
+        "text_level": 1,
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Light rays entering a converging lens parallel to its axis cross one another at a single point on the opposite side.   \n\u2022 For a converging lens, the focal point is the point at which converging light rays cross; for a diverging lens, the focal point is the point from which diverging light rays appear to originate.   \n\u2022 The distance from the center of the lens to its focal point is called the focal length $f$ .   \n\u2022 Power $P$ of a lens is defined to be the inverse of its focal length, $\\textstyle P = { \\frac { 1 } { f } }$ ",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "Conceptual Questions ",
+        "text_level": 1,
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "25.2 The Law of Reflection ",
+        "text_level": 1,
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "1. Using the law of reflection, explain how powder takes the shine off of a person\u2019s nose. What is the name of the optical effect? ",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "25.3 The Law of Refraction ",
+        "text_level": 1,
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "2. Diffusion by reflection from a rough surface is described in this chapter. Light can also be diffused by refraction. Describe how this occurs in a specific situation, such as light interacting with crushed ice.   \n3. Why is the index of refraction always greater than or equal to 1?   \n4. Does the fact that the light flash from lightning reaches you before its sound prove that the speed of light is extremely large or simply that it is greater than the speed of sound? Discuss how you could use this effect to get an estimate of the speed of light.   \n5. Will light change direction toward or away from the perpendicular when it goes from air to water? Water to glass? Glass to air?   \n\u2022 A lens that causes the light rays to bend away from its axis is called a diverging lens.   \n\u2022 Ray tracing is the technique of graphically determining the paths that light rays take.   \n\u2022 The image in which light rays from one point on the object actually cross at the location of the image and can be projected onto a screen, a piece of film, or the retina of an eye is called a real image.   \n\u2022 Thin lens equations are and $\\begin{array} { r } { \\frac { h _ { \\mathrm { i } } } { h _ { 0 } } = - \\frac { d _ { \\mathrm { i } } } { d _ { 0 } } = m } \\end{array}$ (magnification).   \n\u2022 The distance of the image from the center of the lens is called image distance.   \n\u2022 An image that is on the same side of the lens as the object and cannot be projected on a screen is called a virtual image. ",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "25.7 Image Formation by Mirrors ",
+        "text_level": 1,
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The characteristics of an image formed by a flat mirror are: (a) The image and object are the same distance from the mirror, (b) The image is a virtual image, and (c) The image is situated behind the mirror.   \n\u2022 Image length is half the radius of curvature. $f = \\frac { R } { 2 }$   \n\u2022 A convex mirror is a diverging mirror and forms only one type of image, namely a virtual image.   \n6. Explain why an object in water always appears to be at a depth shallower than it actually is? Why do people sometimes sustain neck and spinal injuries when diving into unfamiliar ponds or waters?   \n7. Explain why a person\u2019s legs appear very short when wading in a pool. Justify your explanation with a ray diagram showing the path of rays from the feet to the eye of an observer who is out of the water.   \n8. Why is the front surface of a thermometer curved as shown? ",
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1159
+    },
+    {
+        "type": "image",
+        "img_path": "images/0ffc576360e7e9f6d3d2aca859257490f35fda5e5e63d6fd2617566a45953241.jpg",
+        "img_caption": [
+            "FIGURE 25.45 The curved surface of the thermometer serves a purpose. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1159
+    },
+    {
+        "type": "text",
+        "text": "9. Suppose light were incident from air onto a material that had a negative index of refraction, say \u20131.3; where does the refracted light ray go? ",
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "25.4 Total Internal Reflection ",
+        "text_level": 1,
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "10. A ring with a colorless gemstone is dropped into water. The gemstone becomes invisible when submerged. Can it be a diamond? Explain.   \n11. A high-quality diamond may be quite clear and colorless, transmitting all visible wavelengths with little absorption. Explain how it can sparkle with flashes of brilliant color when illuminated by white light.   \n12. Is it possible that total internal reflection plays a role in rainbows? Explain in terms of indices of refraction and angles, perhaps referring to Figure 25.46. Some of us have seen the formation of a double rainbow. Is it physically possible to observe a triple rainbow? ",
+        "page_idx": 1160
+    },
+    {
+        "type": "image",
+        "img_path": "images/277a8b667cef99b823203279230b64892c65526f3069b9fb68d3e892b3ea1a03.jpg",
+        "img_caption": [
+            "FIGURE 25.46 Double rainbows are not a very common observance. (credit: InvictusOU812, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "13. The most common type of mirage is an illusion that light from faraway objects is reflected by a pool of water that is not really there. Mirages are generally observed in deserts, when there is a hot layer of air near the ground. Given that the refractive index of air is lower for air at higher temperatures, explain how mirages can be formed. ",
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "25.6 Image Formation by Lenses ",
+        "text_level": 1,
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "14. It can be argued that a flat piece of glass, such as in a window, is like a lens with an infinite focal length. If so, where does it form an image? That is, how are $d _ { \\mathrm { i } }$ and $d _ { \\mathrm { o } }$ related?   \n15. You can often see a reflection when looking at a sheet of glass, particularly if it is darker on the other side. Explain why you can often see a double image in such circumstances.   \n16. When you focus a camera, you adjust the distance of the lens from the film. If the camera lens acts like a thin lens, why can it not be a fixed distance from the film for both near and distant objects?   \n17. A thin lens has two focal points, one on either side, at equal distances from its center, and should behave the same for light entering from either side. Look through your eyeglasses (or those of a friend) backward and forward and comment on whether they are thin lenses.   \n18. Will the focal length of a lens change when it is submerged in water? Explain. ",
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "25.7 Image Formation by Mirrors ",
+        "text_level": 1,
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "19. What are the differences between real and virtual images? How can you tell (by looking) whether an image formed by a single lens or mirror is real or virtual?   \n20. Can you see a virtual image? Can you photograph one? Can one be projected onto a screen with additional lenses or mirrors? Explain your responses.   \n21. Is it necessary to project a real image onto a screen for it to exist?   \n22. At what distance is an image alwayslocated\u2014at $d _ { \\mathrm { o } } , d _ { \\mathrm { i } }$ , or $f ?$   \n23. Under what circumstances will an image be located at the focal point of a lens or mirror?   \n24. What is meant by a negative magnification? What is meant by a magnification that is less than 1 in magnitude?   \n25. Can a case 1 image be larger than the object even though its magnification is always negative? Explain. ",
+        "page_idx": 1160
+    },
+    {
+        "type": "text",
+        "text": "26. Figure 25.47 shows a light bulb between two mirrors. One mirror produces a beam of light with parallel rays; the other keeps light from escaping without being put into the beam. Where is the filament of the light in relation to the focal point or radius of curvature of each mirror? ",
+        "page_idx": 1161
+    },
+    {
+        "type": "image",
+        "img_path": "images/97f2c73860c6a4216f9c40bceaf9ce30fb332e2f5fffdd86b9635974b8590b35.jpg",
+        "img_caption": [
+            "FIGURE 25.47 The two mirrors trap most of the bulb\u2019s light and form a directional beam as in a headlight. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "27. Devise an arrangement of mirrors allowing you to see the back of your head. What is the minimum number of mirrors needed for this task?   \n28. If you wish to see your entire body in a flat mirror (from head to toe), how tall should the mirror be? Does its size depend upon your distance away from the mirror? Provide a sketch.   \n29. It can be argued that a flat mirror has an infinite focal length. If so, where does it form an image? That is, how are $d _ { \\mathrm { i } }$ and $d _ { \\mathrm { o } }$ related?   \n30. Why are diverging mirrors often used for rear-view mirrors in vehicles? What is the main disadvantage of using such a mirror compared with a flat one? ",
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "Problems & Exercises ",
+        "text_level": 1,
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "25.1 The Ray Aspect of Light ",
+        "text_level": 1,
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "25.2 The Law of Reflection ",
+        "text_level": 1,
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "1. Suppose a man stands in front of a mirror as shown in Figure 25.48. His eyes are $\\mathtt { 1 . 6 5 m }$ above the floor, and the top of his head is $0 . 1 3 ~ \\mathsf { m }$ higher. Find the height above the floor of the top and bottom of the smallest mirror in which he can see both the top of his head and his feet. How is this distance related to the man\u2019s height? ",
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "2. Show that when light reflects from two mirrors that meet each other at a right angle, the outgoing ray is parallel to the incoming ray, as illustrated in the following figure. ",
+        "page_idx": 1161
+    },
+    {
+        "type": "image",
+        "img_path": "images/201bf53e6e17de3213bec85011e78281321ffef35d5c44c30d5fcbd4c2a26912.jpg",
+        "img_caption": [
+            "FIGURE 25.48 A full-length mirror is one in which you can see all of yourself. It need not be as big as you, and its size is independent of your distance from it. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1161
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f95bccde109205a7008cca8f423933cb91f507f94db7d2a192589158d759861.jpg",
+        "img_caption": [
+            "FIGURE 25.49 A corner reflector sends the reflected ray back in a direction parallel to the incident ray, independent of incoming direction. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "3. Light shows staged with lasers use moving mirrors to swing beams and create colorful effects. Show that a light ray reflected from a mirror changes direction by $2 \\theta$ when the mirror is rotated by an angle $\\theta$ . ",
+        "page_idx": 1161
+    },
+    {
+        "type": "text",
+        "text": "4. A flat mirror is neither converging nor diverging. To prove this, consider two rays originating from the same point and diverging at an angle $\\theta .$ . Show that after striking a plane mirror, the angle between their directions remains $\\theta$ . ",
+        "page_idx": 1162
+    },
+    {
+        "type": "image",
+        "img_path": "images/a0b3531f25a2c39cbfc8f1ccabce4fc7b8595db98cc9db6be7dfe4758df345f6.jpg",
+        "img_caption": [
+            "FIGURE 25.50 A flat mirror neither converges nor diverges light rays. Two rays continue to diverge at the same angle after reflection. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1162
+    },
+    {
+        "type": "text",
+        "text": "25.3 The Law of Refraction ",
+        "text_level": 1,
+        "page_idx": 1162
+    },
+    {
+        "type": "text",
+        "text": "5. What is the speed of light in water? In glycerine?   \n6. What is the speed of light in air? In crown glass?   \n7. Calculate the index of refraction for a medium in which the speed of light is $2 . 0 1 2 \\times 1 0 ^ { 8 } ~ \\mathrm { m / s }$ , and identify the most likely substance based on Table 25.1.   \n8. In what substance in Table 25.1 is the speed of light $2 . 2 9 0 \\times 1 0 ^ { 8 } \\mathrm { m } / \\mathrm { s } ?$   \n9. There was a major collision of an asteroid with the Moon in medieval times. It was described by monks at Canterbury Cathedral in England as a red glow on and around the Moon. How long after the asteroid hit the Moon, which is $3 . 8 4 \\times 1 0 ^ { 5 }$ away, would the light first arrive on Earth? ",
+        "page_idx": 1162
+    },
+    {
+        "type": "text",
+        "text": "10. A scuba diver training in a pool looks at his instructor as shown in Figure 25.51. What angle does the ray from the instructor\u2019s face make with the perpendicular to the water at the point where the ray enters? The angle between the ray in the water and the perpendicular to the water is $2 5 . 0 ^ { \\circ }$ . ",
+        "page_idx": 1162
+    },
+    {
+        "type": "image",
+        "img_path": "images/5075830d086edccd7dc93f1532db6980d771402df247e2f9c9461da5db54369f.jpg",
+        "img_caption": [
+            "FIGURE 25.51 A scuba diver in a pool and his trainer look at each other. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1162
+    },
+    {
+        "type": "text",
+        "text": "11. Components of some computers communicate with each other through optical fibers having an index of refraction $n = 1 . 5 5$ . What time in nanoseconds is required for a signal to travel $0 . 2 0 0 \\mathrm { m }$ through such a fiber?   \n12. (a) Given that the angle between the ray in the water and the perpendicular to the water is $2 5 . 0 ^ { \\circ }$ , and using information in Figure 25.51, find the height of the instructor\u2019s head above the water, noting that you will first have to calculate the angle of refraction. (b) Find the apparent depth of the diver\u2019s head below water as seen by the instructor. Assume the diver and the diver's image are the same horizontal distance from the normal.   \n13. Suppose you have an unknown clear substance immersed in water, and you wish to identify it by finding its index of refraction. You arrange to have a beam of light enter it at an angle of $4 5 . 0 ^ { \\circ }$ , and you observe the angle of refraction to be $4 0 . 3 ^ { \\circ }$ . What is the index of refraction of the substance and its likely identity? ",
+        "page_idx": 1162
+    },
+    {
+        "type": "text",
+        "text": "14. On the Moon\u2019s surface, lunar astronauts placed a corner reflector, off which a laser beam is periodically reflected. The distance to the Moon is calculated from the round-trip time. What percent correction is needed to account for the delay in time due to the slowing of light in Earth\u2019s atmosphere? Assume the distance to the Moon is precisely $3 . 8 4 \\times 1 0 ^ { 8 } \\mathrm { ~ m ~ }$ , and Earth\u2019s atmosphere (which varies in density with altitude) is equivalent to a layer $3 0 . 0 \\mathsf { k m }$ thick with a constant index of refraction $n = 1 . 0 0 0 2 9 3$ . ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "15. Suppose Figure 25.52 represents a ray of light going from air through crown glass into water, such as going into a fish tank. Calculate the amount the ray is displaced by the glass $( \\Delta x )$ , given that the incident angle is $4 0 . 0 ^ { \\circ }$ and the glass is $1 . 0 0 \\mathsf { c m }$ thick. ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "16. Figure 25.52 shows a ray of light passing from one medium into a second and then a third. Show that $\\theta _ { 3 }$ is the same as it would be if the second medium were not present (provided total internal reflection does not occur). ",
+        "page_idx": 1163
+    },
+    {
+        "type": "image",
+        "img_path": "images/5ea19f84ad80c06853655411822c2b8f8b0f6ed2741dc42a1ff10efaadf201fb.jpg",
+        "img_caption": [
+            "FIGURE 25.52 A ray of light passes from one medium to a third by traveling through a second. The final direction is the same as if the second medium were not present, but the ray is displaced by $\\Delta x$ (shown exaggerated). "
+        ],
+        "img_footnote": [],
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "17. Unreasonable Results ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "Suppose light travels from water to another substance, with an angle of incidence of $1 0 . 0 ^ { \\circ }$ and an angle of refraction of $1 4 . 9 ^ { \\circ }$ . (a) What is the index of refraction of the other substance? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "18. Construct Your Own Problem ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "Consider sunlight entering the Earth\u2019s atmosphere at sunrise and sunset\u2014that is, at a $9 0 ^ { \\circ }$ incident angle. Taking the boundary between nearly empty space and the atmosphere to be sudden, calculate the angle of refraction for sunlight. This lengthens the time the Sun appears to be above the horizon, both at sunrise and sunset. Now construct a problem in which you determine the angle of refraction for different models of the atmosphere, such as various layers of varying density. Your instructor may wish to guide you on the level of complexity to consider and on how the index of refraction varies with air density. ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "19. Unreasonable Results Light traveling from water to a gemstone strikes the surface at an angle of $8 0 . 0 ^ { \\circ }$ and has an angle of refraction of $1 5 . 2 ^ { \\circ }$ . (a) What is the speed of light in the gemstone? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "25.4 Total Internal Reflection ",
+        "text_level": 1,
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "20. Verify that the critical angle for light going from water to air is $4 8 . 6 ^ { \\circ }$ , as discussed at the end of Example 25.4, regarding the critical angle for light traveling in a polystyrene (a type of plastic) pipe surrounded by air.   \n21. (a) At the end of Example 25.4, it was stated that the critical angle for light going from diamond to air is $2 4 . 4 ^ { \\circ }$ . Verify this. (b) What is the critical angle for light going from zircon to air?   \n22. An optical fiber uses flint glass clad with crown glass. What is the critical angle?   \n23. At what minimum angle will you get total internal reflection of light traveling in water and reflected from ice?   \n24. Suppose you are using total internal reflection to make an efficient corner reflector. If there is air outside and the incident angle is $4 5 . 0 ^ { \\circ }$ , what must be the minimum index of refraction of the material from which the reflector is made?   \n25. You can determine the index of refraction of a substance by determining its critical angle. (a) What is the index of refraction of a substance that has a critical angle of $6 8 . 4 ^ { \\circ }$ when submerged in water? What is the substance, based on Table 25.1? (b) What would the critical angle be for this substance in air? ",
+        "page_idx": 1163
+    },
+    {
+        "type": "text",
+        "text": "26. A ray of light, emitted beneath the surface of an unknown liquid with air above it, undergoes total internal reflection as shown in Figure 25.53. What is the index of refraction for the liquid and its likely identification? ",
+        "page_idx": 1164
+    },
+    {
+        "type": "image",
+        "img_path": "images/649a1841aecc6232def4b335f4b0eedd6b8eded00d4da81c2e0c368a6c913c99.jpg",
+        "img_caption": [
+            "FIGURE 25.53 A light ray inside a liquid strikes the surface at the critical angle and undergoes total internal reflection. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1164
+    },
+    {
+        "type": "text",
+        "text": "27. A light ray entering an optical fiber surrounded by air is first refracted and then reflected as shown in Figure 25.54. Show that if the fiber is made from crown glass, any incident ray will be totally internally reflected. ",
+        "page_idx": 1164
+    },
+    {
+        "type": "image",
+        "img_path": "images/ddbc735d7a8d253d70a2f5f667c050bdace8b3fff651c77d3a05d068b3fab90b.jpg",
+        "img_caption": [
+            "FIGURE 25.54 A light ray enters the end of a fiber, the surface of which is perpendicular to its sides. Examine the conditions under which it may be totally internally reflected. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1164
+    },
+    {
+        "type": "text",
+        "text": "32. A parallel beam of light containing orange (610 nm) and violet $( 4 1 0 \\mathsf { n m } )$ wavelengths goes from fused quartz to water, striking the surface between them at a $6 0 . 0 ^ { \\circ }$ incident angle. What is the angle between the two colors in water?   \n33. A ray of $6 1 0 \\mathsf { n m }$ light goes from air into fused quartz at an incident angle of $5 5 . 0 ^ { \\circ }$ . At what incident angle must $4 7 0 \\ \\mathsf { n m }$ light enter flint glass to have the same angle of refraction?   \n34. A narrow beam of light containing red $( 6 6 0 \\mathsf { n m } )$ and blue $( 4 7 0 \\mathsf { n m } )$ wavelengths travels from air through a $1 . 0 0 \\mathsf { c m }$ thick flat piece of crown glass and back to air again. The beam strikes at a $3 0 . 0 ^ { \\circ }$ incident angle. (a) At what angles do the two colors emerge? (b) By what distance are the red and blue separated when they emerge?   \n35. A narrow beam of white light enters a prism made of crown glass at a $4 5 . 0 ^ { \\circ }$ incident angle, as shown in Figure 25.55. At what angles, $\\theta _ { \\textup R }$ and $\\theta _ {  \\mathrm { V } }$ , do the red $( 6 6 0 \\mathsf { n m } )$ and violet $( 4 1 0 \\mathsf { n m } )$ components of the light emerge from the prism? ",
+        "page_idx": 1164
+    },
+    {
+        "type": "image",
+        "img_path": "images/8a1393b15a838b5b45454bcf7462b35ed2bc5f4ad3a4f2eff1083ff625d3a8e9.jpg",
+        "img_caption": [
+            "FIGURE 25.55 This prism will disperse the white light into a rainbow of colors. The incident angle is $4 5 . 0 ^ { \\circ }$ , and the angles at which the red and violet light emerge are $\\theta _ { \\textup R }$ and $\\theta _ {  \\mathrm { V } }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 1164
+    },
+    {
+        "type": "text",
+        "text": "25.5 Dispersion: The Rainbow and Prisms 25.6 Image Formation by Lenses ",
+        "text_level": 1,
+        "page_idx": 1164
+    },
+    {
+        "type": "text",
+        "text": "28. (a) What is the ratio of the speed of red light to violet light in diamond, based on Table 25.2? (b) What is this ratio in polystyrene? (c) Which is more dispersive?   \n29. A beam of white light goes from air into water at an incident angle of $7 5 . 0 ^ { \\circ }$ . At what angles are the red $( 6 6 0 \\mathsf { n m } )$ and violet $( 4 1 0 \\mathsf { n m } )$ parts of the light refracted?   \n30. By how much do the critical angles for red (660 nm) and violet $( 4 1 0 \\mathsf { n m } )$ light differ in a diamond surrounded by air?   \n31. (a) A narrow beam of light containing yellow (580 nm) and green $( 5 5 0 \\mathsf { n m } )$ wavelengths goes from polystyrene to air, striking the surface at a $3 0 . 0 ^ { \\circ }$ incident angle. What is the angle between the colors when they emerge? (b) How far would they have to travel to be separated by $\\mathsf { 1 . 0 0 } \\mathsf { m m ? }$   \n36. What is the power in diopters of a camera lens that has a $5 0 . 0 ~ \\mathsf { m m }$ focal length?   \n37. Your camera\u2019s zoom lens has an adjustable focal length ranging from 80.0 to $2 0 0 \\mathsf { m m }$ . What is its range of powers?   \n38. What is the focal length of 1.75 D reading glasses found on the rack in a pharmacy?   \n39. You note that your prescription for new eyeglasses is $- 4 . 5 0 \\mathsf { D }$ . What will their focal length be?   \n40. How far from the lens must the film in a camera be, if the lens has a $3 5 . 0 \\mathsf { m m }$ focal length and is being used to photograph a flower 75.0 cm away? Explicitly show how you follow the steps in the Problem-Solving Strategy for lenses. ",
+        "page_idx": 1164
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1164
+    },
+    {
+        "type": "text",
+        "text": "41. A certain slide projector has a $1 0 0 ~ \\mathsf { m m }$ focal length lens. (a) How far away is the screen, if a slide is placed $1 0 3 ~ \\mathsf { m m }$ from the lens and produces a sharp image? (b) If the slide is 24.0 by $3 6 . 0 \\mathsf { m m }$ , what are the dimensions of the image? Explicitly show how you follow the steps in the Problem-Solving Strategy for lenses. ",
+        "page_idx": 1165
+    },
+    {
+        "type": "text",
+        "text": "42. A doctor examines a mole with a 15.0 cm focal length magnifying glass held $1 3 . 5 \\mathsf { c m }$ from the mole (a) Where is the image? (b) What is its magnification? (c) How big is the image of a 5.00 mm diameter mole? ",
+        "page_idx": 1165
+    },
+    {
+        "type": "text",
+        "text": "43. How far from a piece of paper must you hold your father\u2019s 2.25 D reading glasses to try to burn a hole in the paper with sunlight?   \n44. A camera with a $5 0 . 0 \\mathsf { m m }$ focal length lens is being used to photograph a person standing 3.00 m away. (a) How far from the lens must the film be? (b) If the film is $3 6 . 0 \\mathsf { m m }$ high, what fraction of a $ { 1 . 7 5 }  { \\mathrm { m } }$ tall person will fit on it? (c) Discuss how reasonable this seems, based on your experience in taking or posing for photographs.   \n45. A camera lens used for taking close-up photographs has a focal length of $2 2 . 0 \\mathsf { m m }$ . The farthest it can be placed from the film is $3 3 . 0 \\mathsf { m m }$ . (a) What is the closest object that can be photographed? (b) What is the magnification of this closest object?   \n46. Suppose your $5 0 . 0 \\mathsf { m m }$ focal length camera lens is $5 1 . 0 \\mathsf { m m }$ away from the film in the camera. (a) How far away is an object that is in focus? (b) What is the height of the object if its image is 2.00 cm high?   \n47. (a) What is the focal length of a magnifying glass that produces a magnification of 3.00 when held $5 . 0 0 \\mathsf { c m }$ from an object, such as a rare coin? (b) Calculate the power of the magnifier in diopters. (c) Discuss how this power compares to those for store-bought reading glasses (typically 1.0 to 4.0 D). Is the magnifier\u2019s power greater, and should it be?   \n48. What magnification will be produced by a lens of power $- 4 . 0 0 \\mathsf { D }$ (such as might be used to correct myopia) if an object is held 25.0 cm away?   \n49. In Example 25.7, the magnification of a book held $7 . 5 0 \\mathsf { c m }$ from a $\\mathsf { 1 0 . 0 c m }$ focal length lens was found to be 4.00. (a) Find the magnification for the book when it is held $8 . 5 0 \\mathsf { c m }$ from the magnifier. (b) Do the same for when it is held $9 . 5 0 \\mathsf { c m }$ from the magnifier. (c) Comment on the trend in m as the object distance increases as in these two calculations.   \n50. Suppose a $2 0 0 ~ \\mathsf { m m }$ focal length telephoto lens is being used to photograph mountains $1 0 . 0 \\mathsf { k m }$ away. (a) Where is the image? (b) What is the height of the image of a $1 0 0 0 \\mathrm { m }$ high cliff on one of the mountains?   \n51. A camera with a $1 0 0 ~ \\mathsf { m m }$ focal length lens is used to photograph the sun and moon. What is the height of the image of the sun on the film, given the sun is $1 . 4 0 \\times 1 0 ^ { 6 }$ in diameter and is $1 . 5 0 \\times 1 0 ^ { 8 }$ away?   \n52. Combine thin lens equations to show that the magnification for a thin lens is determined by its focal length and the object distance and is given by $m = f / ( f - d _ { 0 } )$ . ",
+        "page_idx": 1165
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1165
+    },
+    {
+        "type": "text",
+        "text": "25.7 Image Formation by Mirrors ",
+        "text_level": 1,
+        "page_idx": 1165
+    },
+    {
+        "type": "text",
+        "text": "53. What is the focal length of a makeup mirror that has a power of 1.50 D?   \n54. Some telephoto cameras use a mirror rather than a lens. What radius of curvature mirror is needed to replace a $8 0 0 ~ \\mathrm { { m m } }$ focal length telephoto lens?   \n55. (a) Calculate the focal length of the mirror formed by the shiny back of a spoon that has a $3 . 0 0 \\mathsf { c m }$ radius of curvature. (b) What is its power in diopters?   \n56. Find the magnification of the heater element in Example 25.9. Note that its large magnitude helps spread out the reflected energy.   \n57. What is the focal length of a makeup mirror that produces a magnification of 1.50 when a person\u2019s face is 12.0 cm away? Explicitly show how you follow the steps in the Problem-Solving Strategy for Mirrors.   \n58. A shopper standing $3 . 0 0 \\mathrm { m }$ from a convex security mirror sees his image with a magnification of 0.250. (a) Where is his image? (b) What is the focal length of the mirror? (c) What is its radius of curvature? Explicitly show how you follow the steps in the Problem-Solving Strategy for Mirrors.   \n59. An object 1.50 cm high is held 3.00 cm from a person\u2019s cornea, and its reflected image is measured to be 0.167 cm high. (a) What is the magnification? (b) Where is the image? (c) Find the radius of curvature of the convex mirror formed by the cornea. (Note that this technique is used by optometrists to measure the curvature of the cornea for contact lens fitting. The instrument used is called a keratometer, or curve measurer.)   \n60. Ray tracing for a flat mirror shows that the image is located a distance behind the mirror equal to the distance of the object from the mirror. This is stated $d _ { \\mathrm { i } } = - d _ { \\mathrm { o } }$ , since this is a negative image distance (it is a virtual image). (a) What is the focal length of a flat mirror? (b) What is its power?   \n61. Show that for a flat mirror $h _ { \\mathrm { i } } = h _ { \\mathrm { o } }$ , knowing that the image is a distance behind the mirror equal in magnitude to the distance of the object from the mirror.   \n62. Use the law of reflection to prove that the focal length of a mirror is half its radius of curvature. That is, prove that $f = R / 2$ . Note this is true for a spherical mirror only if its diameter is small compared with its radius of curvature.   \n63. Referring to the electric room heater considered in the first example in this section, calculate the intensity of IR radiation in $\\mathrm { W } / \\mathrm { m } ^ { 2 }$ projected by the concave mirror on a person $3 . 0 0 \\mathrm { m }$ away. Assume that the heating element radiates 1500 W and has an area of $1 0 0 \\mathrm { c m } ^ { 2 }$ , and that half of the radiated power is reflected and focused by the mirror. ",
+        "page_idx": 1165
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1166
+    },
+    {
+        "type": "text",
+        "text": "64. Consider a 250-W heat lamp fixed to the ceiling in a bathroom. If the filament in one light burns out then the remaining three still work. Construct a problem in which you determine the resistance of each filament in order to obtain a certain intensity projected on the bathroom floor. The ceiling is 3.0 m high. The problem will need to involve concave mirrors behind the filaments. Your instructor may wish to guide you on the level of complexity to consider in the electrical components. ",
+        "page_idx": 1166
+    },
+    {
+        "type": "text",
+        "text": "65. Critical Thinking Light composed of multiple frequencies passes through crown glass. (a) How much faster does the violet component of the light with a wavelength of $4 1 0 \\mathsf { n m }$ travel in the crown glass than the component of orange light with a wavelength of $6 1 0 \\mathsf { n m } ?$ (b) In a mechanical situation with friction, the longer one surface moves relative to the other, the more the friction acts, slowing the relative motion during the process. Is this the same for light in a medium? (c) In a mechanical situation, it is possible for friction to stop the motion if it occurs over a long enough path. Is this the same for light in a medium? (d) In a mechanical friction situation, once the object slows it will not increase in speed once the friction no longer acts unless another force is present. If a light ray exits a medium into a vacuum, will it go back to a speed of ceven though that would be an increase in speed not caused by an additional force? ",
+        "page_idx": 1166
+    }
+]

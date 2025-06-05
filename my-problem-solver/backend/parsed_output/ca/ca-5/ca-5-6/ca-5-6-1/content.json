@@ -1,0 +1,29 @@
+[
+    {
+        "type": "text",
+        "text": "5.6.1 Summary ",
+        "text_level": 1,
+        "page_idx": 220
+    },
+    {
+        "type": "text",
+        "text": "Summary 5 ",
+        "text_level": 1,
+        "page_idx": 220
+    },
+    {
+        "type": "text",
+        "text": "1. The x86 ISA is a family of CISC instruction sets that is primarily used by Intel and AMD processors. (a) The original x86 ISA used by 8086 processors used a 16-bit ISA. (b) Since the mid-eighties, x86 processors have moved to the 32-bit ISA. (c) Finally, since 2003, most of the high end x86 architectures have moved to the 64-bit ISA. (d) The basic structures of all the ISAs is the same. There are minor differences in the syntax.   \n2. The 8 basic registers of the 16-bit x86 ISA are \u2013 ax, bx, cx, dx, sp, bp, si, and di. We use the \u2018e\u2019 prefix in 32-bit mode, and the \u2018r\u2019 prefix in 64-bit mode.   \n3. Additionally, the 16-bit x86 ISA has the ip register to save the program counter, and the flags register to save the results of the last comparison, and other fields that instructions may use.   \n4. The x86 ISA predominantly uses instructions in the 2-address format. The first operand is typically both the source, and the destination. Secondly, one of the operands can be a memory operand. It is thus possible to fetch the value of a memory location, operate on it, and write it back to memory, in the same instruction.   \n5. x86 processes see a segmented memory model. The entire memory space is partitioned into different segments. Instructions reside in the code segment by default, and data resides in the data or stack segments by default. It is in general not possible for instructions to access segments that they typically are not meant for. For example, it is in general not possible for a store instruction to change the contents of an instruction in the code segment. (a) In the 16-bit mode, the top 16 bits of the starting address of each segment are stored in a segment register. (b) The effective memory address specified by a memory instruction is added to the address contained in the segment register (after left shifting it by 4 positions) to compute the actual memory address. (c) In later ISAs (32 and 64-bit mode), the contents of segment registers are looked up in segment descriptor tables (referred to as the LDT and GDT) for obtaining the starting address of segments. To speed up memory accesses, processors typically use a small memory structure known as a segment descriptor cache that keeps the most recently used entries. ",
+        "page_idx": 220
+    },
+    {
+        "type": "text",
+        "text": "6. x86 integer instructions: ",
+        "page_idx": 221
+    },
+    {
+        "type": "text",
+        "text": "(a) The mov instruction is one of the most versatile instructions. It can move values between two registers, or between registers and memory addresses. It can also be used to load immediates in registers or memory locations. (b) x86 defines a host of other arithmetic, and branch instructions. (c) String instructions are a unique feature of the x86 ISA. They can be used to transfer large amounts of data between memory locations. To compress an entire loop of string instructions into one instruction, we typically use the rep prefix that repeats a given instruction n times, where n is the value stored in the ecx register.   \n7. The x86 floating point registers can either be accessed as normal registers (st0 . . . st7), or as values on a floating point stack. Most of the floating point instructions operate on st0, which is the top of the stack.   \n8. There is no direct way to load immediates into the FP registers. We need to first load them into memory, and then load them to the floating point stack. x86 has instructions for computing complex mathematical operations (such as square root), and trigonometric functions directly.   \n9. Encoding the x86 instruction set is relatively simpler, since the encoded form has a very regular structure. (a) We can optionally use 1-4 bytes to encode the prefix. (b) The opcode\u2019s encoding requires 1-3 bytes. (c) We can optionally use two additional bytes known as the ModR/M and SIB bytes to encode the address of operands (both register and memory). (d) If the memory operand uses a displacement (offset), then we can add 1-4 bytes for encoding the displacement after the SIB byte. (e) Lastly, the x86 ISA accepts 32-bit immediate values. Hence, we can use the last 1-4 bytes to specify the value of an immediate operand if required. ",
+        "page_idx": 221
+    }
+]

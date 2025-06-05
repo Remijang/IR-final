@@ -1,0 +1,15 @@
+13.2.4 Return to Zero (RZ) Protocols
+
+In this protocol we transmit a pulse (positive or negative), and then pause for a while in a bit period. Here, we define the bit period as the time it takes to transmit a bit. Most I/O protocols assume that the bit period is independent of the value of the bit (0 or 1) that is being transmitted. Typically, a 1-bit period is equal to the length of one I/O clock cycle. The I/O clock is a dedicated clock that is used by the elements of the I/O system. We shall interchangeably use the terms clock cycle and bit period, where we do not wish to emphasize a difference between the terms.
+
+Definition 147
+
+bit period The time it takes to transfer a single bit over a link.
+
+I/O clock We assume that there is a dedicated I/O clock in our system that is typically synchronized with the processor clock. The I/O clock is slower than the processor clock, and is used by elements of the I/O subsystem.
+
+In the RZ protocol, if we wish to transmit a logical 1, then we send a positive voltage pulse on the link for a fraction of a bit period. Subsequently, we stop transmitting the pulse, and ensure that the voltage on the link returns to the idle state. Similarly, while transmitting a logical 0, we send a negative voltage pulse along the lines for a fraction of a cycle. Subsequently, we wait till the line returns to the idle state. This can be done by allowing the capacitors to discharge, or by applying a reverse voltage to bring the lines to the idle state. In any case, the key point here is that while we are transmitting, we transmit the actual value for some part of the bit period, and then we allow the lines to fall back to the default state, which in our discussion we have assumed to be the idle state. We shall see that returning to the idle state helps the receiver circuitry synchronize with the clock of the sender, and thus read the data correctly. The implicit assumption here is that the sender sends out one bit every cycle (sender cycle). Note that the clock period of the sender and the receiver may be different. We shall take a look at such timing issues in Section 13.4.
+
+Figure 13.9 shows an example of the RZ protocol with ternary signaling. If we were to use binary signaling, then we can have an alternative scheme as follows. We could transmit a short pulse in a cycle for a logical 1, and not transmit anything for a logical 0. Here, the main issue is to figure out if a logical 0 is being sent or not by taking a look at the length of the pause after transmitting a logical 1. This requires complicated circuitry at the end of the receiver.
+
+Nevertheless, a major criticism of the RZ (return to zero) approaches is that it wastes bandwidth. We need to introduce a short pause (period of idleness) after transmitting a logical 0 or 1. It turns out that we can design protocols that do not have this limitation.

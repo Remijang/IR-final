@@ -1,0 +1,52 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.5 JK Flip-flop ",
+        "text_level": 1,
+        "page_idx": 284
+    },
+    {
+        "type": "image",
+        "img_path": "images/3e04b54f1bc5ef492328b5c3b18fb568edde12b7dfe35b5edeba1504c17ec043.jpg",
+        "img_caption": [
+            "Figure 7.20: The JK flip-flop "
+        ],
+        "img_footnote": [],
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.20 shows a JK flip-flop. There are two minor differences as compared to the masterslave SR flip-flop. The first is that the inputs are now J and K, instead of S and R. The second is that Q and $Q$ are now inputs to the input NAND gates ( $N 1$ and $N 2$ ). ",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Let us do a case by case analysis. Assume that the clock is high. If J and K are both 0, then the outputs of $N 1$ and $N 2$ are both 1 and the case is same as that for the master-slave SR flip-flop. The outputs are maintained. If J=1 and K=0, then we need to consider the value of $\\overline { { Q } }$ . If $\\overline { { Q } } = 1$ , then ${ \\mathrm { Q } } = 0$ , and the output of NAND gate N1 (see Figure 7.20) is 0. The outputs of the master flip-flop are therefore 1 and 0, respectively. The output of the slave after the downward/ negative clock edge will therefore be: $Q = 1 , { \\overline { { Q } } } = 0$ . ",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Now, assume that $\\overline { { Q } } = 0$ , and Q=1. In this case, the outputs of both N1 and N2 are 1 and thus all the values are maintained. Hence, after the negative clock edge we have: Q=1, and $\\overline { { Q } } = 0$ . We can thus conclude, that if J=1 and K=0, Q=1, and $\\overline { { Q } }$ =0. ",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Similarly, if J=0 and K=1, we can prove that Q=0, and $Q$ =1. ",
+        "page_idx": 284
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the case when both J and K are 1. In this case the output of N1 is Q and the output of N2 is $Q$ . The output of the master flip-flop is equal to $Q$ and Q, respectively. After the negative clock edge the outputs will be: $\\mathrm { Q } = \\overline { { Q } } _ { o l d }$ and $\\overline { { Q } } = Q _ { o l d }$ . Thus, the outputs will get toggled. We will not have a race condition anymore. Table 7.3 shows the state transition table for the JK flip-flop. ",
+        "page_idx": 285
+    },
+    {
+        "type": "table",
+        "img_path": "images/1be4f55a6caf6f975cb74c7dfb1b0954305f28bf2e2fff86fc1b9cc1c71e04d9.jpg",
+        "table_caption": [
+            "Table 7.3: State transition table for a JK flip-flop "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>J</td><td>K</td><td>Q</td><td>Q</td><td>Action</td></tr><tr><td>0</td><td>0</td><td>Qold</td><td>Qold</td><td>maintain</td></tr><tr><td>1</td><td>0</td><td>1</td><td>0</td><td>set</td></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>reset</td></tr><tr><td>1</td><td>1</td><td>Qold</td><td>Qold</td><td>toggle</td></tr></table></body></html>\n\n",
+        "page_idx": 285
+    }
+]

@@ -1,0 +1,53 @@
+[
+    {
+        "type": "text",
+        "text": "31.5 Reader-Writer Locks ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Another classic problem stems from the desire for a more flexible locking primitive that admits that different data structure accesses might require different kinds of locking. For example, imagine a number of concurrent list operations, including inserts and simple lookups. While inserts change the state of the list (and thus a traditional critical section makes sense), lookups simply read the data structure; as long as we can guarantee that no insert is on-going, we can allow many lookups to proceed concurrently. The special type of lock we will now develop to support this type of operation is known as a reader-writer lock [CHP71]. The code for such a lock is available in Figure 31.13 (page 12). ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "The code is pretty simple. If some thread wants to update the data structure in question, it should call the new pair of synchronization operations: rwlock acquire writelock(), to acquire a write lock, and rwlock release writelock(), to release it. Internally, these simply use the writelock semaphore to ensure that only a single writer can acquire the lock and thus enter the critical section to update the data structure in question. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "More interesting is the pair of routines to acquire and release read locks. When acquiring a read lock, the reader first acquires lock and then increments the readers variable to track how many readers are currently inside the data structure. The important step then taken within rwlock acquire readlock() occurs when the first reader acquires the lock; in that case, the reader also acquires the write lock by calling sem wait() on the writelock semaphore, and then releasing the lock by calling sem post(). ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Thus, once a reader has acquired a read lock, more readers will be allowed to acquire the read lock too; however, any thread that wishes to acquire the write lock will have to wait until all readers are finished; the last one to exit the critical section calls sem post() on “writelock” and thus enables a waiting writer to acquire the lock. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "This approach works (as desired), but does have some negatives, especially when it comes to fairness. In particular, it would be relatively easy for readers to starve writers. More sophisticated solutions to this problem exist; perhaps you can think of a better implementation? Hint: think about what you would need to do to prevent more readers from entering the lock once a writer is waiting. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "1 typedef struct _rwlock_t {   \n2 sem_t lock; // binary semaphore (basic lock)   \n3 sem_t writelock; // allow ONE writer/MANY readers   \n4 int readers; // #readers in critical section   \n5 } rwlock_t;   \n6   \n7 void rwlock_init(rwlock_t \\*rw) {   \n8 rw->readers $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n9 sem_init(&rw->lock, 0, 1);   \n10 sem_init(&rw->writelock, 0, 1);   \n11 }   \n12   \n13 void rwlock_acquire_readlock(rwlock_t \\*rw) {   \n14 sem_wait $\\mathrm { : } \\& \\mathtt { r w \\mathrm { - } > 1 0 \\mathrm { c k } }$ );   \n15 rw->readers++;   \n16 if (rw->readers $\\scriptstyle \\mathbf { \\alpha = } \\ 1$ ) // first reader gets writelock   \n17 sem_wait(&rw->writelock);   \n18 sem_post( $\\& \\Upsilon \\mathrm { w } - > \\Upsilon \\mathrm { o c k }$ );   \n19 }   \n20   \n21 void rwlock_release_readlock(rwlock_t \\*rw) {   \n22 sem_wait $\\mathrm { : } \\& \\mathtt { r w \\mathrm { - } > 1 0 \\mathrm { c k } }$ );   \n23 rw->readers--;   \n24 if (rw->readers $\\scriptstyle \\mathbf { \\alpha = } 0$ ) // last reader lets it go   \n25 sem_post(&rw->writelock);   \n26 sem_post(&rw->lock);   \n27 }   \n28   \n29 void rwlock_acquire_writelock(rwlock_t \\*rw) {   \n30 sem_wait(&rw->writelock);   \n31 }   \n32   \n33 void rwlock_release_writelock(rwlock_t \\*rw) {   \n34 sem_post(&rw->writelock);   \n35 } ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Finally, it should be noted that reader-writer locks should be used with some caution. They often add more overhead (especially with more sophisticated implementations), and thus do not end up speeding up performance as compared to just using simple and fast locking primitives [CB08]. Either way, they showcase once again how we can use semaphores in an interesting and useful way. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "TIP: SIMPLE AND DUMB CAN BE BETTER (HILL’S LAW) You should never underestimate the notion that the simple and dumb approach can be the best one. With locking, sometimes a simple spin lock works best, because it is easy to implement and fast. Although something like reader/writer locks sounds cool, they are complex, and complex can mean slow. Thus, always try the simple and dumb approach first. This idea, of appealing to simplicity, is found in many places. One early source is Mark Hill’s dissertation [H87], which studied how to design caches for CPUs. Hill found that simple direct-mapped caches worked better than fancy set-associative designs (one reason is that in caching, simpler designs enable faster lookups). As Hill succinctly summarized his work: “Big and dumb is better.” And thus we call this similar advice Hill’s Law. ",
+        "page_idx": 12
+    }
+]

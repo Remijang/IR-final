@@ -1,0 +1,19 @@
+8.3.1 Overview
+
+Let us now look at integer division. Unfortunately, unlike addition, subtraction, and multiplication, division is a significantly slower process. Any division operation can be represented as follows:
+
+Here,  is the dividend,  is the divisor,  is the quotient, and  is the remainder. Division algorithms assume that the divisor and dividend are positive. The process of division needs to satisfy the following properties.
+
+Property 1  , and  .
+
+Property 2  is the largest positive integer that satisfies Equation 8.15.
+
+If we wish to divide negative numbers, then we need to first convert them to positive numbers, perform the division, and then adjust the sign of the quotient and remainder. Some architectures try to ensure that the remainder is always positive. In this case, it is necessary to decrement the quotient by 1, and add the divisor to the remainder to make it positive.
+
+Let us focus on the core problem, which is to divide two  bit positive numbers. The MSB is the sign bit, which is 0. Now,  . We can thus write:
+
+We have thus reduced the original problem of division into a smaller problem. The original problem was to divide  by  . The reduced problem is to divide  by  . The remainder for both the problems is the same. The quotient,  , for the reduced problem has the same least significant  bits as the original quotient,  . The  bit of  is  .
+
+To create the reduced problem it is necessary to find  . We can try out both the choices  and 1. We first try 1. If  , then  (Property 1 and 2). Otherwise, it is 0.
+
+Once, we have created the reduced problem, we can proceed to further reduce the problem till we have computed all the quotient bits. Ultimately, the dividend will be equal to the remainder,  , and we will be done. Let us now illustrate an algorithm that precisely follows the procedure that we have just outlined.

@@ -1,0 +1,110 @@
+# 29.2 Concurrent Linked Lists  
+
+We next examine a more complicated structure, the linked list. Let’s start with a basic approach once again. For simplicity, we’ll omit some of the obvious routines that such a list would have and just focus on concurrent insert and lookup; we’ll leave it to the reader to think about delete, etc. Figure 29.7 shows the code for this rudimentary data structure.  
+
+As you can see in the code, the code simply acquires a lock in the insert routine upon entry, and releases it upon exit. One small tricky issue arises if malloc() happens to fail (a rare case); in this case, the code must also release the lock before failing the insert.  
+
+This kind of exceptional control flow has been shown to be quite error prone; a recent study of Linux kernel patches found that a huge fraction of bugs (nearly $4 0 \%$ ) are found on such rarely-taken code paths (indeed, this observation sparked some of our own research, in which we removed all memory-failing paths from a Linux file system, resulting in a more robust system $\mathsf { \bar { \Pi } } [ { \mathsf { S } } { + } 1 1 ]$ ).  
+
+Thus, a challenge: can we rewrite the insert and lookup routines to remain correct under concurrent insert but avoid the case where the failure path also requires us to add the call to unlock?  
+
+The answer, in this case, is yes. Specifically, we can rearrange the code a bit so that the lock and release only surround the actual critical section in the insert code, and that a common exit path is used in the lookup code. The former works because part of the insert actually need not be locked; assuming that malloc() itself is thread-safe, each thread can call into it without worry of race conditions or other concurrency bugs. Only when updating the shared list does a lock need to be held. See Figure 29.8 for the details of these modifications.  
+
+As for the lookup routine, it is a simple code transformation to jump out of the main search loop to a single return path. Doing so again reduces the number of lock acquire/release points in the code, and thus decreases the chances of accidentally introducing bugs (such as forgetting to unlock before returning) into the code.  
+
+1 // basic node structure   
+2 typedef struct __node_t {   
+3 int key;   
+4 struct __node_t \*next;   
+5 } node_t;   
+6   
+7 // basic list structure (one used per list)   
+8 typedef struct __list_t {   
+9 node_t \*head;   
+10 pthread_mutex_t lock;   
+11 } list_t;   
+12   
+13 void List_Init(list_t $\star \ I$ ) {   
+14 L->head $\mathbf { \Sigma } = \mathbf { \Sigma }$ NULL;   
+15 pthread_mutex_init(&L->lock, NULL);   
+16 }   
+17   
+18 int List_Insert(list_t \*L, int key) {   
+19 pthread_mutex_lock(&L->lock);   
+20 node_t \*new $\mathbf { \Sigma } = \mathbf { \Sigma }$ malloc(sizeof(node_t));   
+21 if (new $\scriptstyle = =$ NULL) {   
+22 perror("malloc");   
+23 pthread_mutex_unlock(&L->lock);   
+24 return -1; // fail   
+25 }   
+26 new->key $\mathbf { \Sigma } = \mathbf { \Sigma }$ key;   
+27 new->next $\mathbf { \Sigma } = \mathbf { \Sigma }$ L->head;   
+28 L->head $\mathbf { \Sigma } = \mathbf { \Sigma }$ new;   
+29 pthread_mutex_unlock(&L->lock);   
+30 return 0; // success   
+31 }   
+32   
+33 int List_Lookup(list_t $^ { \star \ I }$ , int key) {   
+34 pthread_mutex_lock(&L->lock);   
+35 node_t \*curr $\mathbf { \Sigma } = \mathbf { \Sigma }$ L->head;   
+36 while (curr) {   
+37 if (curr->key $\scriptstyle = =$ key) {   
+38 pthread_mutex_unlock(&L->lock);   
+39 return 0; // success   
+40 }   
+41 curr $\mathbf { \tau } = \mathbf { \tau }$ curr->next;   
+42 }   
+43 pthread_mutex_unlock(&L->lock);   
+44 return -1; // failure   
+45 }  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+1 void List_Init(list_t $^ { \star \ I }$ ) {   
+2 L->head $\mathbf { \Sigma } =$ NULL;   
+3 pthread_mutex_init(&L->lock, NULL);   
+4 }   
+5   
+6 int List_Insert(list_t $^ { \star \ I }$ , int key) {   
+7 // synchronization not needed   
+8 node_t \*new $\mathbf { \Sigma } =$ malloc(sizeof(node_t));   
+9 if (new $\scriptstyle = =$ NULL) {   
+10 perror("malloc");   
+11 return $^ { - 1 }$ ;   
+12 }   
+13 new->key = key;   
+14 // just lock critical section   
+15 pthread_mutex_lock(&L->lock);   
+16 new->next $\mathbf { \Sigma } = \mathbf { \Sigma }$ L->head;   
+17 L->head $\mathbf { \Sigma } = \mathbf { \Sigma }$ new;   
+18 pthread_mutex_unlock(&L->lock);   
+19 return 0; // success   
+20 }   
+21   
+22 int List_Lookup(list_t $^ { \star \ I }$ , int key) {   
+23 int rv $\mathbf { \Sigma } = \mathbf { \Sigma } - 1$ ;   
+24 pthread_mutex_lock(&L->lock);   
+25 node_t \*curr $\begin{array} { r l } { = } & { { } \ I _ { \Sigma } - > } \end{array}$ head;   
+26 while (curr) {   
+27 if (c $1 \Upsilon \Upsilon ^ { - } \Upsilon \mathrm { k e y \ \stackrel { \ } { = } - \ } \mathrm { k e y } )$ {   
+28 $\mathtt { r v } \ = \ 0$ ;   
+29 break;   
+30 }   
+31 curr $\mathbf { \Sigma } =$ curr->next;   
+32 }   
+33 pthread_mutex_unlock(&L->lock);   
+34 return rv; // now both success and failure   
+35 }  
+
+# Scaling Linked Lists  
+
+Though we again have a basic concurrent linked list, once again we are in a situation where it does not scale particularly well. One technique that researchers have explored to enable more concurrency within a list is something called hand-over-hand locking (a.k.a. lock coupling) [MS04].  
+
+The idea is pretty simple. Instead of having a single lock for the entire list, you instead add a lock per node of the list. When traversing the list, the code first grabs the next node’s lock and then releases the current node’s lock (which inspires the name hand-over-hand).  
+
+#  
+
+TIP: BE WARY OF LOCKS AND CONTROL FLOW A general design tip, which is useful in concurrent code as well as elsewhere, is to be wary of control flow changes that lead to function returns, exits, or other similar error conditions that halt the execution of a function. Because many functions will begin by acquiring a lock, allocating some memory, or doing other similar stateful operations, when errors arise, the code has to undo all of the state before returning, which is errorprone. Thus, it is best to structure code to minimize this pattern.  
+
+Conceptually, a hand-over-hand linked list makes some sense; it enables a high degree of concurrency in list operations. However, in practice, it is hard to make such a structure faster than the simple single lock approach, as the overheads of acquiring and releasing locks for each node of a list traversal is prohibitive. Even with very large lists, and a large number of threads, the concurrency enabled by allowing multiple ongoing traversals is unlikely to be faster than simply grabbing a single lock, performing an operation, and releasing it. Perhaps some kind of hybrid (where you grab a new lock every so many nodes) would be worth investigating.  
+

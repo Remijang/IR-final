@@ -1,0 +1,18 @@
+# 21.1 Swap Space  
+
+The first thing we will need to do is to reserve some space on the disk for moving pages back and forth. In operating systems, we generally refer to such space as swap space, because we swap pages out of memory to it and swap pages into memory from it. Thus, we will simply assume that the OS can read from and write to the swap space, in page-sized units. To do so, the OS will need to remember the disk address of a given page.  
+
+The size of the swap space is important, as ultimately it determines the maximum number of memory pages that can be in use by a system at a given time. Let us assume for simplicity that it is very large for now.  
+
+In the tiny example (Figure 21.1), you can see a little example of a 4- page physical memory and an 8-page swap space. In the example, three processes (Proc 0, Proc 1, and Proc 2) are actively sharing physical memory; each of the three, however, only have some of their valid pages in memory, with the rest located in swap space on disk. A fourth process (Proc 3) has all of its pages swapped out to disk, and thus clearly isn’t currently running. One block of swap remains free. Even from this tiny example, hopefully you can see how using swap space allows the system to pretend that memory is larger than it actually is.  
+
+We should note that swap space is not the only on-disk location for swapping traffic. For example, assume you are running a program binary (e.g., ls, or your own compiled main program). The code pages from this binary are initially found on disk, and when the program runs, they are loaded into memory (either all at once when the program starts execution,  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+<html><body><table><tr><td></td><td>PFN 0</td><td>PFN 1</td><td>PFN 2</td><td>PFN 3</td></tr><tr><td>ical ory</td><td>Proc 0</td><td>Proc 1</td><td>Proc 1</td><td>Proc 2 [VPN 0]][VPN 2]][VPN 3]][VPN O]</td></tr></table></body></html>  
+
+<html><body><table><tr><td rowspan="2">Swap</td><td>Block 0 Block1 Block2 Block3 Block 4 Block 5 Block 6 Block7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Proc 0 Space</td><td>Proc 0 [VPN 1]][VPN 2]</td><td>[Free]</td><td></td><td></td><td></td><td>Proc 1Proc 1Proc 3Proc 2Proc 3 [VPN 0]][VPN 1] [VPN 0] [VPN 1] [VPN 1]</td><td></td></tr></table></body></html>  
+
+or, as in modern systems, one page at a time when needed). However, if the system needs to make room in physical memory for other needs, it can safely re-use the memory space for these code pages, knowing that it can later swap them in again from the on-disk binary in the file system.  
+

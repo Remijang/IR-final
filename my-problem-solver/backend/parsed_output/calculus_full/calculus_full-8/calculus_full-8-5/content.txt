@@ -1,0 +1,107 @@
+8.5 Masses and Moments
+
+This chapter concludes with two sections related to engineering and physics. Each application starts with a finite number of masses or forces. Their sum is the total mass or total force. Then comes the “continuous case,” in which the mass is spread out instead of lumped. Its distribution is given by a density function  (Greek rho), and the sum changes to an integral.
+
+The first step (hardest step ? ) is to get the physical quantities straight. The second step is to move from sums to integrals (discrete to continuous, lumped to distributed). By now we hardly stop to think about it—although this is the key idea of integral calculus. The third step is to evaluate the integrals. For that we can use substitution or integration by parts or tables or a computer.
+
+Figure 8.13 shows the one-dimensional case: masses along the  axis. The total mass is the sum of the masses. The new idea is that of moments—when the mass or force is multiplied by a distance:
+
+moment of mass around the  axis  times (distance to axis):
+
+The figure has masses 1; 3; 2. The total mass is 6. The “lever arms” or “moment arms” are the distances  . The masses have moments 1 and 9 and 14 (since  is 2 times 7). The total moment is  . Then the balance point is at  .
+
+The total mass is the sum of the  ’s. The total moment is the sum of  times  (negative on the other side of  ). If the masses are children on a seesaw, the balance point is the center of gravity  —also called the center of mass:
+
+DEFINITION
+
+If all masses are moved to  , the total moment (6 times 4) is still 24: The moment equals the mass  times  . The masses act like a single mass at  .
+
+Also: If we moPve the axis to  , and leave the children where they are, the seesaw balances. The masses on the left of  will offset the mass on the right. Reason: The distances to the new axis are  . The moments add to zero by equation .1/:
+
+Turn now to the continuous case, when mass is spread out along the line. Each piece of length  has an average density  .mass of piece//.length of piece/   . As the pieces get shorter, this approaches  —the density at the point. The limit of (small mass)=(small length) is the density  .
+
+Integrating that derivative  , we recover the total mass:  becomes
+
+When the mass is spread evenly,  is constant. Then  density times length.
+
+8 Applications of the Integral
+
+The moment formula is similar. For each piece, the moment is mass  multiplied by distance  —and we add. In the continuous limit,  is multiplied by  and we integrate:
+
+Moment is mass times distance. Dividing by the total mass  gives “average distance”:
+
+Remark If you studied Section 8:4 on probability, you will notice how the formulas match up. The mass  is like the total probability  . The moment  is like the meanr  . The moment of inertia  is the variance. Mathematics keeps hammering away at the same basic ideas! The only difference is that the total probability is always 1: The mean really corresponds to the center of mass  , but in probability we didn’t notice the division by  .
+
+EXAMPLE 1 With constant density  from 0 to  , the mass is  . The moment is
+
+The center of mass is  . It is halfway along.
+
+EXAMPLE 2 With density  the mass is 1, the moment is 1, and  is 1:
+
+MASSES AND MOMENTS IN TWO DIMENSIONS
+
+Instead of placing masses along the  axis, suppose  is at the point  in the plane. Similarly  is at  . Now there are two moments to consider. Around the  axis  and around the  axis  . Please notice that the  ’s go into the moment  —because the  coordinate gives the distance from the  axis!
+
+Around the  axis, the distance is  and the moment is  . The center of mass is the point  at which everything balances:
+
+In the continuous case these sums become two-dimensional integrals. The total mass is  , when the density is  per unit area. These “double integrals” are for the future (Section 14:1). Here we consider the most important case:  . Think of a thin plate, made of material with constant density (say  ). To compute its mass and moments, the plate is cut into strips Figure 8.14:
+
+The mass equals the area because  . For moments, all points in a vertical strip are the same distance from the  axis. That distance is  . The moment is  times area, or  times length times  —and the integral accounts for all strips.
+
+Similarly the  -moment of a horizontal strip is  times strip length times 
+
+EXAMPLE 3 A plate has sides  and  and  . Find  .
+
+The vertical strips go up to  , and the horizontal strips go out to   /:
+
+The “center of mass” has  and  . This is the centroid of the triangle (and also the “center of gravity”). With  these terms all refer to the same balance point  . The plate will not tip over, if it rests on that point.
+
+EXAMPLE 4 Find  and  for the half-circle below  .
+
+ because the region is symmetric—Figure 8.14 balances on the  axis. In the  -moment we integrate  times the length of a horizontal strip (notice the factor 2):
+
+Divide by the mass (the area  to find the height of the centroid:   .This is less than  because the bottom of the semicircle is wider than the top.
+
+MOMENT OF INERTIA
+
+The moment of inertia comes from multiplying each mass by the square of its distance from the axis. Around the  axis, the distance is  . Around the origin, it is  :
+
+Notice that  because  . In the continuous case we integrate.
+
+The moment of inertia around the  axis is  . With a constant density  , we again keep together the points on a strip. On a vertical strip they share the same  . On a horizontal strip they share  :
+
+ (vertical strip length)  and  (horizontal strip length)  :
+
+In engineering and physics, it is rotation that leads to the moment of inertia. Look at the energy of a mass  going around a circle of radius  . It has  .
+
+The angular velocity is  (radians per second). The speed is  (meters per second).
+
+An ice skater reduces  by putting her arms up instead of out. She stays close to the axis of rotation  is small). Since her rotational energy  does not change,  increases as  decreases. Then she spins faster.
+
+Another example: It takes force to turn a revolving door. More correctly, it takes torque. The force is multiplied by distance from the turning axis:  , so a push further out is more effective.
+
+To see the physics, replace Newton’s law  by its rotational form:  . Where  makes the mass move, the torque  makes it turn. Where m measures unwillingness to change speed,  measures unwillingness to change rotation.
+
+EXAMPLE 5 Find the moment of inertia of a rod about (a) its end and (b) its center.
+
+The distance  from the end of the rod goes from 0 to  . The distance from the center goes from  to  . Around the center, turning is easier because  is smaller:
+
+MOMENT OF INERTIA EXPERIMENT
+
+Experiment: Roll a solid cylinder (a coin), a hollow cylinder (a ring), a solid ball (a marble), and a hollow ball (not a pingpong ball) down a slope. Galileo dropped things from the Leaning Tower—this experiment requires a Leaning Table. Objects that fall together from the tower don’t roll together down the table.
+
+Question 1 What is the order of finish ? Record your prediction first! Question 2 Does size make a difference if shape and density are the same ? Question 3 Does density make a difference if size and shape are the same ?
+
+8.5 Masses and Moments
+
+Question 4 Find formulas for the velocity  and the finish time  .
+
+To compute  , the key is that potential energy plus kinetic energy is practically constant. Energy loss from rolling friction is very small. If the mass is  and the vertical drop is  , the energy at the top (all potential) is  . The energy at the bottom (all kinetic) has two parts:  from movement along the plane plus  from turning. Important fact:  for a rolling cylinder or ball of radius  .
+
+Equate energies and set  :
+
+The ratio  is critical. Call it  and solve .11/ for  :
+
+The order of  ’s, for different shapes and sizes, should decide the race. Apparently the density doesn’t matter, because it is a factor in both  and  —so it cancels in  . A hollow cylinder has  , which is the largest possible—all its mass is at the full distance  from the axis. So the hollow cylinder should theoretically come in last. This experiment was developed by Daniel Drucker.
+
+Problems  find the other three  ’s. Problem 40 finds the time  by integration. Your experiment will show how close this comes to the measured time.

@@ -1,0 +1,257 @@
+[
+    {
+        "type": "text",
+        "text": "12.4.7 Implementing a Memory Consistency Model\\* ",
+        "text_level": 1,
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "A typical memory consistency model specifies the types of re-orderings that are allowed between memory operations issued by the same thread. For example, in sequential consistency all read/write accesses are completed in program order, writes are atomic, and all other threads also perceive the memory accesses of any thread in its program order. Let us give a simple solution to the problem of implementing sequential consistency first. ",
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "Overview of an Implementation of Sequential Consistency\\* ",
+        "text_level": 1,
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "Let us build a memory system that is coherent, and provides certain guarantees. Let us assume that all the write operations are associated with a time of completion, and appear to execute instantaneously at the time of completion. It is not possible for any read operation to get the value of a write before it completes. After a write completes, all the read operations to the same address either get the value written by the write operation or a newer write operation. Since we assume a coherent memory, all the write operations to the same memory address are seen in the same order by all the processors. Second, each read operation returns the value written by the latest completed write to that address. Let us now consider the case in which processor 1 issues a write to address $x$ , and at the same time processor 2 issues a read request to the same address, $x$ . In this case, we have a concurrent read and write. The behavior is not defined. The read can either get the value set by the concurrent write operation, or it can get the previous value. However, if the read operation gets the value set by the concurrent write operation, then all subsequent reads issued by any processor, need to get that value or a newer value. In this case, we can say that a read operation completes once it has finished reading the value of the memory location, and the write that generated its data also completes. ",
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "Now, let us design a multicore processor where each core issues a memory request to coherent memory (defined above) after all the previous memory requests that it had issued have completed. This means that memory requests are issued in program order. This means that after issuing a memory request (read/write), a core waits for it to complete before issuing the next memory request. We claim that a multiprocessor with such cores and coherent memory is sequentially consistent. Let us now outline a brief informal proof. ",
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "Let us first introduce a theoretical tool called an access graph before proving the sequentia consistency of this system. ",
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "Access Graph\\* ",
+        "text_level": 1,
+        "page_idx": 606
+    },
+    {
+        "type": "image",
+        "img_path": "images/3945d9253fe852e38e63a8886a3d1758a61e9d9ee1a3c7f1150a51d182dfd4e4.jpg",
+        "img_caption": [
+            "Figure 12.15: Graphical representation of memory accesses "
+        ],
+        "img_footnote": [],
+        "page_idx": 606
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.15 shows the execution of two threads and their associated sequence of memory accesses. For each read or write operation, we create a node in the access graph (see Figure 12.15(c)). We add an arrow (or edge) between two nodes if one access follows the other in program order, or if there is a read-write dependence across two accesses from different threads. For example, if we set $x$ to 5 in thread 1, and the read operation in thread 2 reads this value of $x$ , there is a dependence between this read and write. We thus add an arrow in the access graph. The arrow signifies that the destination node (access) must complete after the source node (access). ",
+        "page_idx": 606
+    },
+    {
+        "type": "text",
+        "text": "Let us now define a happens-before relationship between nodes $a$ and $b$ , if there is a path from $a$ to $b$ in the access graph. ",
+        "page_idx": 606
+    },
+    {
+        "type": "text",
+        "text": "Definition 130 ",
+        "text_level": 1,
+        "page_idx": 606
+    },
+    {
+        "type": "text",
+        "text": "Let us define a happens-before relationship between nodes a and b, if there is a path from a to b in the access graph. A happens-before relationship signifies that b must complete its execution after a completes. ",
+        "page_idx": 606
+    },
+    {
+        "type": "text",
+        "text": "The access graph is a general tool and is used to reason about concurrent systems. It consists of a set of nodes, where each node is a dynamic instance of an instruction, specifically a memory instruction. There are edges between nodes. An edge of the form $A  B$ means that $B$ needs to complete its execution after $A$ . In our simple example in Figure 12.15, we have added two kinds of edges namely program order edges, and causality edges. Program order edges indicate the order of completion of memory requests in the same thread. In our system, where we wait for an instruction to complete, before executing the next instruction, there are edges between consecutive instructions issued by the same thread. ",
+        "page_idx": 606
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "Causality edges are between load and store instructions across threads. For example, if a given instruction writes a value, and another instruction reads it in another thread, we add an edge from the store to the load. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "To prove sequential consistency, we need to add additional edges to the access graph as follows (see [Arvind and Maessen, 2006]). Let us first assume that we have an oracle(a hypothetical entity that knows everything) with us. Now, since we assume coherent memory, all the stores to the same memory location are sequentially ordered. Furthermore, there is an order between loads and stores to the same memory location. For example, if we set $x$ to $1$ , then set $x$ to 3, then read $t 1 = x$ , and then set $x$ to 5, there is a store-store-load-store order for the location, $x$ . The oracle knows about such orderings between loads and stores for each memory location. Let us assume that the oracle adds the corresponding happens-before edges to our access graph. We add an edge for each consecutive pair of accesses to the same address (regardless of the threads involved). In this case, the edge between the store and the load is a causality edge, and the additional store-store and load-store edges are examples of coherence edges. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "To summarize, we add four kinds of edges in our access graph. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "Program-order Edges Consecutive memory instructions (in program order) issued by the same thread have such edges between them in the access graph. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "Store Load Edges These edges are added between memory accesses issued by different threads to the same address. They indicate a store $$ load dependence that represents causality. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "Load $$ Store Edges These are edges introduced between nodes that represent load and store accesses (across threads) to the same address, respectively. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "Store $$ Store Edges These are edges introduced between nodes that represent consecutive writes to the same address. The accesses may be issued by different threads. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "The last two types of edges are known as coherence edges. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "Next, let us describe how to use an access graph for proving properties of multiprocessor systems. An access graph can be used to determine if a given program\u2019s execution adheres to a certain consistency model like sequential or weak consistency or not. First, we need to construct an access graph of a program\u2019s execution. We add the four types of edges that we mentioned if we want to test if the execution is sequentially consistent. However, if we want to test if the execution adheres to another consistency model, $\\mathcal { M }$ , then we to add a set of edges that is a subset of the edges that we add to test if the execution is in SC. The set of edges that we add is a field of study in itself for realistic memory models. In general, for weak consistency, we only add coherence edges. Some memory models define additional types of nodes such as synchronization nodes. They need to define additional edges as well to connect these nodes. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "The following result follows from graph theory, specifically topological sorting. If the access graph does not contain cycles, then we can arrange the nodes in a sequential order. Let us prove this fact. In the access graph, if there is a path from $a$ to $b$ , then let $a$ be known as $b$ \u2019s ancestor. We can generate a sequential order by following an iterative process. We first find a node, which does not have an ancestor. There has to be such a node because some operation must have been the first to complete (otherwise there is a cycle). We remove it from our access graph, and proceed to inductively find another node that does not have any ancestors left. We add each such node in our sequential order as shown in Figure 12.15(d). In each step, the number of nodes in the access graph decreases by 1 till we are finally left with just one node, which becomes the last node in our sequential order. Now, let us consider the case, where this process does not terminate. This is only possible if there is a cycle in the access graph. ",
+        "page_idx": 607
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "If the access graph is acyclic, then it means that the execution is consistent with the memory model, $\\mathcal { M }$ , that was used to create the access graph. ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "This is true for atomic memory models. The proof is beyond the scope of the book. The key idea is as follows. We create an access graph from an execution of a parallel program, and add all the edges that need to be added to it as per the memory model. Now, if this access graph is acyclic, then it means that we can arrange all the memory accesses in a sequential order (as seen above). ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "We can assume that the order of completion times is the same as the order of all the accesses in this sequential order. This means that if all the accesses complete as per this order, the execution is feasible. In other words, an order of completion times exists such that none of the happens-before relationships in the access graph are violated. ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "This is sufficient to prove that the execution and its access graph are consistent with the memory model $\\mathcal { M }$ . The key point is that a set of such completion times should exist. An astute reader may argue that the memory accesses may not actually complete at those times. That does not matter. As long as we can find a hypothetical set of completion times for the nodes in the access graph that respect its happens-before relationships, we are done. Given that completion times are not visible anyway to external observers, their precise values are not important. With regard to completion times there are two points that are important: their existence and their order. ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "Hence, if an access graph (for memory model $\\mathcal { M }$ ) does not contain cycles, we can conclude that a given execution follows $\\mathcal { M }$ . If we can prove that all the possible access graphs that can be generated by a system are acyclic, then we can conclude that the entire system is consistent with the memory model $\\mathcal { M }$ . ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "Proof of Sequential Consistency\\* ",
+        "text_level": 1,
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "Let us thus prove that all possible access graphs (assuming SC) that can be generated by our simple system that waits for memory requests to complete before issuing subsequent memory requests are acyclic. Let us consider one such access graph $G$ . We need to prove that $G$ is acyclic. ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "Let us assume that $G$ has a cycle, and it contains a set of nodes $\\boldsymbol { S }$ belonging to the same thread, $t _ { 1 }$ . Let $a$ be the earliest node in program order in $\\boldsymbol { S }$ , and $b$ be the latest node in program order in $\\boldsymbol { S }$ . Clearly, a happens before $b$ because we execute memory instructions in program order, and we wait for a request to complete before starting the next request in the same thread. For a cycle to form due to a causality edge, $b$ needs to write to a value that is read by another memory read request (node), $c$ , belonging to another thread. Alternatively, there can be a coherence edge between $b$ and a node $c$ belonging to another thread. For a cycle to exist, $c$ needs to happen before $a$ . Let us assume that there is a chain of nodes between $c$ and $a$ and the last node in the chain of nodes is $d$ . By definition, $d \\notin t _ { 1 }$ . This means that either $d$ writes to a memory location, and node $a$ reads from it, or there is a coherence edge from $d$ to $a$ . Because there is a path from node $b$ to node $a$ (through $c$ and $d$ ), it must be the case that the request associated with node $b$ happens before the request of node $a$ . This is not possible since we cannot execute the memory request associated with node $b$ till node $a$ \u2019s request completes. Thus, we have a contradiction, and a cycle is not possible in the access graph. Hence, the execution is in SC (proof by contradiction). ",
+        "page_idx": 608
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 609
+    },
+    {
+        "type": "text",
+        "text": "Now, let us clarify the notion of an oracle. The reader needs to understand that the problem here is not to generate a sequential order, it is to rather prove that a sequential order exists. Since we are solving the latter problem, we can always presume that a hypothetical entity adds additional edges to our access graph. The resulting sequential order respects program orders for each thread, causality and coherence-based happens-before relationships. It is thus a valid ordering. ",
+        "page_idx": 609
+    },
+    {
+        "type": "text",
+        "text": "Consequently, we can conclude that it is always possible to find a sequential order for the memory accesses made in our system. Therefore, our multiprocessor is in SC. Now that we have proved that our system is sequentially consistent, let us describe a method to \u201cpractically\u201d implement a multiprocessor with the assumptions that we have made. We can implement a system as shown in Figure 12.16. ",
+        "page_idx": 609
+    },
+    {
+        "type": "text",
+        "text": "Design of a Simple (yet impractical) Sequentially Consistent Machine\\* ",
+        "page_idx": 609
+    },
+    {
+        "type": "image",
+        "img_path": "images/72171dd3bb2afb7010c422f2ca4137d13110fc25d5b743ceed8f91659f152008.jpg",
+        "img_caption": [
+            "Figure 12.16: A simple sequentially consistent system "
+        ],
+        "img_footnote": [],
+        "page_idx": 609
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.16 shows a design that has a large shared L1 cache across all the processors of a multiprocessor. There is only one copy of each memory location that can support only one read or write access at any single time. This ensures coherence. Secondly, a write completes, when it changes the value of its corresponding memory location in the L1 cache. Likewise, a read completes when it reads the value of the memory address in the L1 cache. We need to modify the simple in-order RISC pipeline described in Chapter 10 such that an instruction leaves the memory access $( M A )$ stage only after it completes its read/write access. If there is a cache miss, then the instruction waits till the block comes to the L1 cache, and then the access completes. This simple system ensures that memory requests from the same thread complete in program order, and is thus sequentially consistent. ",
+        "page_idx": 609
+    },
+    {
+        "type": "text",
+        "text": "Note that the system described in Figure 12.16 makes some unrealistic assumptions and is thus impractical. If we have 16 processors, and if the frequency of memory instructions is 1 in 3, then every cycle, 5-6 instructions will need to access the L1 cache. Hence, the L1 cache requires at least 6 read/write ports, which will make the structure too large and too slow. Additionally, the L1 cache needs to be large enough to contain the working sets of all the threads, which further makes the case for a very large and slow L1 cache. Consequently, a multiprocessor system with such a cache will be very slow in practice. Hence, modern processors opt for more high-performance implementations with more complicated memory systems that have a lot of smaller caches. These caches co-operate among each other to provide the illusion of a larger cache (see Section 12.4.6). ",
+        "page_idx": 609
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "It is fairly difficult to prove that a complex system follows sequential consistency(SC). Hence, designers opt to design systems with weak memory models. In the latter case, we need to prove that a fence instruction works correctly. If we take all the subtle corner cases that are possible with complicated designs, this also turns out to be a fairly challenging problem. Interested readers can take a look at pointers mentioned at the end of this chapter for research work in this area. ",
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "Implementing a Weak Consistency Model\\* ",
+        "text_level": 1,
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the access graph for a weakly consistent system. We do not have edges to represent program order for nodes in the same thread. Instead, for nodes in the same thread, we have edges between regular read/write nodes and fence operations. We need to add causality and coherence edges to the access graph as we did in the case of SC. ",
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "An implementation of a weakly consistent machine needs to ensure that this access graph does not have cycles. We can prove that the following implementation does not introduce cycles to the access graph. ",
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "Let us ensure that a f ence instruction starts after all the previous instructions in program order complete for a given thread. The fence instruction is a dummy instruction that simply needs to reach the end of the pipeline. It is used for ordering purposes only. We stall the f ence instruction in the MA stage till all the previous instructions complete. This strategy also ensures that no subsequent instruction reaches the MA stage. Once, all the previous instructions complete, the fence instruction proceeds to the RW stage, and subsequent instructions can issue requests to memory. ",
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "Summary of the Discussion on Implementing a Memory Consistency Model ",
+        "text_level": 1,
+        "page_idx": 610
+    },
+    {
+        "type": "text",
+        "text": "Let us summarize this section on implementing memory consistency models for readers who decided to skip it. Implementing a memory consistency model such as sequential or weak consistency is possible by modifying the pipeline of a processor, and ensuring that the memory system sends an acknowledgement to the processor once it is done processing a memory request. Many subtle corner cases are possible in high=performance implementations and ensuring that they implement a given consistency model is fairly complicated. ",
+        "page_idx": 610
+    }
+]

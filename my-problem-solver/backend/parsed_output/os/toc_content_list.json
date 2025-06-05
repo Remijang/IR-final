@@ -1,0 +1,653 @@
+[
+    {
+        "type": "text",
+        "text": "Contents ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "To Everyone iii To Educators vi To Students viii Acknowledgments . ix Final Words . xiii References xiv ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1 A Dialogue on the Book 1 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "2 Introduction to Operating Systems 3 ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "2.1 Virtualizing The CPU 5   \n2.2 Virtualizing Memory . 7   \n2.3 Concurrency 9   \n2.4 Persistence 11   \n2.5 Design Goals 13   \n2.6 Some History 14   \n2.7 Summary 19   \nReferences 20   \nHomework . 21 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "I Virtualization 23 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "3 A Dialogue on Virtualization 25 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "4 The Abstraction: The Process 27 ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "4.1 The Abstraction: A Process 28   \n4.2 Process API 29   \n4.3 Process Creation: A Little More Detail 30   \n4.4 Process States 31   \n4.5 Data Structures 33   \n4.6 Summary 35   \nReferences 37 ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Homework (Simulation) 38 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5 Interlude: Process API 41 ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5.1 The fork() System Call 41   \n5.2 The wait() System Call 44   \n5.3 Finally, The exec() System Call 44   \n5.4 Why? Motivating The API . 46   \n5.5 Process Control And Users 48   \n5.6 Useful Tools . 49   \n5.7 Summary 50   \nReferences 52   \nHomework (Simulation) 53   \nHomework (Code) . . 54 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "6 Mechanism: Limited Direct Execution 57 ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "6.1 Basic Technique: Limited Direct Execution 57   \n6.2 Problem #1: Restricted Operations 58   \n6.3 Problem #2: Switching Between Processes 63   \n6.4 Worried About Concurrency? 67   \n6.5 Summary 68   \nReferences 71   \nHomework (Measurement) 72 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "7 Scheduling: Introduction 73 ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "7.1 Workload Assumptions 73   \n7.2 Scheduling Metrics 74   \n7.3 First In, First Out (FIFO) 74   \n7.4 Shortest Job First (SJF) 76   \n7.5 Shortest Time-to-Completion First (STCF) 77   \n7.6 A New Metric: Response Time 78   \n7.7 Round Robin 79   \n7.8 Incorporating I/O 81   \n7.9 No More Oracle . 82   \n7.10 Summary 83   \nReferences 84   \nHomework (Simulation) 85 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "8 Scheduling: The Multi-Level Feedback Queue 87 ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "8.1 MLFQ: Basic Rules 88   \n8.2 Attempt #1: How To Change Priority 89   \n8.3 Attempt #2: The Priority Boost 92   \n8.4 Attempt #3: Better Accounting 93   \n8.5 Tuning MLFQ And Other Issues 94   \n8.6 MLFQ: Summary . 96   \nReferences 97   \nHomework (Simulation) 98 ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "9 Scheduling: Proportional Share 99 ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "9.1 Basic Concept: Tickets Represent Your Share 99   \n9.2 Ticket Mechanisms . . 101   \n9.3 Implementation . . 102   \n9.4 An Example . . 103   \n9.5 How To Assign Tickets? . 104   \n9.6 Stride Scheduling . 104   \n9.7 The Linux Completely Fair Scheduler (CFS) . . 105   \n9.8 Summary . . 110   \nReferences . 111   \nHomework (Simulation) . 112 ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "10 Multiprocessor Scheduling (Advanced) 113 ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "10.1 Background: Multiprocessor Architecture . 114   \n10.2 Don’t Forget Synchronization . . 116   \n10.3 One Final Issue: Cache Affinity . 117   \n10.4 Single-Queue Scheduling . 118   \n10.5 Multi-Queue Scheduling . . 119   \n10.6 Linux Multiprocessor Schedulers . 122   \n10.7 Summary . 122   \nReferences . 123   \nHomework (Simulation) . 124 ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "11 Summary Dialogue on CPU Virtualization 127 ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "12 A Dialogue on Memory Virtualization 129 ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "13 The Abstraction: Address Spaces 131 ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "13.1 Early Systems . 131   \n13.2 Multiprogramming and Time Sharing . 131   \n13.3 The Address Space . 133   \n13.4 Goals . . 135   \n13.5 Summary . 136   \nReferences . 138   \nHomework (Code) . . 139 ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "4 Interlude: Memory API 14",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "14.1 Types of Memory . . 141   \n14.2 The malloc() Call . 142   \n14.3 The free() Call . . 144   \n14.4 Common Errors . 144   \n14.5 Underlying OS Support . 148   \n14.6 Other Calls . 148   \n14.7 Summary . 149   \nReferences . 150   \nHomework (Code) . . 151 ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "15 Mechanism: Address Translation 153 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "15.1 Assumptions 154 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "15.2 An Example . . 154   \n15.3 Dynamic (Hardware-based) Relocation . 157   \n15.4 Hardware Support: A Summary . 160   \n15.5 Operating System Issues . . 161   \n15.6 Summary . 163   \nReferences . 166   \nHomework (Simulation) . 167 ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "16 Segmentation 169 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "16.1 Segmentation: Generalized Base/Bounds 169   \n16.2 Which Segment Are We Referring To? . 172   \n16.3 What About The Stack? . . 174   \n16.4 Support for Sharing . . 175   \n16.5 Fine-grained vs. Coarse-grained Segmentation . 175   \n16.6 OS Support . . . 176   \n16.7 Summary . 178   \nReferences . 179   \nHomework (Simulation) . 180 ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "7 Free-Space Management 181 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "17.1 Assumptions . 182   \n17.2 Low-level Mechanisms . 183   \n17.3 Basic Strategies . 191   \n17.4 Other Approaches . 193   \n17.5 Summary . 195   \nReferences . 197   \nHomework (Simulation) . 198 ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "18 Paging: Introduction 199 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "18.1 A Simple Example And Overview . 199   \n18.2 Where Are Page Tables Stored? . 203   \n18.3 What’s Actually In The Page Table? . 204   \n18.4 Paging: Also Too Slow . . 206   \n18.5 A Memory Trace . 207   \n18.6 Summary . 210   \nReferences . 211   \nHomework (Simulation) . 212 ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "19 Paging: Faster Translations (TLBs) 215 ",
+        "text_level": 1,
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "19.1 TLB Basic Algorithm . 216   \n19.2 Example: Accessing An Array . 217   \n19.3 Who Handles The TLB Miss? . 220   \n19.4 TLB Contents: What’s In There? . 222   \n19.5 TLB Issue: Context Switches . 223   \n19.6 Issue: Replacement Policy . . 225 ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "19.7 A Real TLB Entry . . 225   \n19.8 Summary . 226   \nReferences . 228   \nHomework (Measurement) . 229 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "20 Paging: Smaller Tables 231 ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "20.1 Simple Solution: Bigger Pages . 231   \n20.2 Hybrid Approach: Paging and Segments . 232   \n20.3 Multi-level Page Tables . 235   \n20.4 Inverted Page Tables . . 243   \n20.5 Swapping the Page Tables to Disk . 243   \n20.6 Summary . 243   \nReferences . 244   \nHomework (Simulation) . 245 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "21 Beyond Physical Memory: Mechanisms 247 ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "21.1 Swap Space 248   \n21.2 The Present Bit 249   \n21.3 The Page Fault 250   \n21.4 What If Memory Is Full? . . 251   \n21.5 Page Fault Control Flow . 252   \n21.6 When Replacements Really Occur . 253   \n21.7 Summary . 254   \nReferences . 255   \nHomework (Measurement) . . 256 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "22 Beyond Physical Memory: Policies 259 ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "22.1 Cache Management 259   \n22.2 The Optimal Replacement Policy 260   \n22.3 A Simple Policy: FIFO 262   \n22.4 Another Simple Policy: Random . 264   \n22.5 Using History: LRU . 265   \n22.6 Workload Examples . 266   \n22.7 Implementing Historical Algorithms . 269   \n22.8 Approximating LRU . 270   \n22.9 Considering Dirty Pages . 271   \n22.10 Other VM Policies . 272   \n22.11 Thrashing . . 272   \n22.12 Summary . . 273   \nReferences 274   \nHomework (Simulation) . 276 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "23 Complete Virtual Memory Systems 277 ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "23.1 VAX/VMS Virtual Memory . 278   \n23.2 The Linux Virtual Memory System . 284   \n23.3 Summary . 293   \nReferences . 295 ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "THREE EASY PIECES ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "24 Summary Dialogue on Memory Virtualization 297 ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "II Concurrency 301 ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "25 A Dialogue on Concurrency 303 ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "26 Concurrency: An Introduction 305 ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "26.1 Why Use Threads? . 306   \n26.2 An Example: Thread Creation . 307   \n26.3 Why It Gets Worse: Shared Data . 310   \n26.4 The Heart Of The Problem: Uncontrolled Scheduling . 313   \n26.5 The Wish For Atomicity . 315   \n26.6 One More Problem: Waiting For Another . 316   \n26.7 Summary: Why in OS Class? . 317   \nReferences . 318   \nHomework (Simulation) . 319 ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "27 Interlude: Thread API 321 ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "27.1 Thread Creation 321   \n27.2 Thread Completion . 322   \n27.3 Locks . 325   \n27.4 Condition Variables . 327   \n27.5 Compiling and Running . 329   \n27.6 Summary . 329   \nReferences . 331   \nHomework (Code) . . 332 ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "28 Locks 333 ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "28.1 Locks: The Basic Idea 333 ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "28.2 Pthread Locks . . 334   \n28.3 Building A Lock . 335   \n28.4 Evaluating Locks . 335   \n28.5 Controlling Interrupts . 336   \n28.6 A Failed Attempt: Just Using Loads/Stores . 337   \n28.7 Building Working Spin Locks with Test-And-Set . 338   \n28.8 Evaluating Spin Locks . . 341   \n28.9 Compare-And-Swap . . 342   \n28.10 Load-Linked and Store-Conditional . 343   \n28.11 Fetch-And-Add . . 344   \n28.12 Too Much Spinning: What Now? . 345   \n28.13 A Simple Approach: Just Yield, Baby . 346   \n28.14 Using Queues: Sleeping Instead Of Spinning . 347   \n28.15 Different OS, Different Support . . 350   \n28.16 Two-Phase Locks . . 352   \n28.17 Summary . 352   \nReferences . 353 ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Homework (Simulation) 354 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "29 Lock-based Concurrent Data Structures 355 ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "29.1 Concurrent Counters . 355   \n29.2 Concurrent Linked Lists . 361   \n29.3 Concurrent Queues . . 364   \n29.4 Concurrent Hash Table . 366   \n29.5 Summary . 366   \nReferences . 369   \nHomework (Code) . . 370 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "30 Condition Variables 371 ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "30.1 Definition and Routines . 372   \n30.2 The Producer/Consumer (Bounded Buffer) Problem . 376   \n30.3 Covering Conditions . . 384   \n30.4 Summary . 386   \nReferences . 387   \nHomework (Code) . . 388 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "31 Semaphores 391",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "31.1 Semaphores: A Definition . 391   \n31.2 Binary Semaphores (Locks) . 393   \n31.3 Semaphores For Ordering . 394   \n31.4 The Producer/Consumer (Bounded Buffer) Problem . 396   \n31.5 Reader-Writer Locks . . 401   \n31.6 The Dining Philosophers . 403   \n31.7 Thread Throttling . . 406   \n31.8 How To Implement Semaphores . 406   \n31.9 Summary . 407   \nReferences . 409   \nHomework (Code) . . 410 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "32 Common Concurrency Problems 411 ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "32.1 What Types Of Bugs Exist? . 411   \n32.2 Non-Deadlock Bugs . 412   \n32.3 Deadlock Bugs . 415   \n32.4 Summary . 424   \nReferences . 425   \nHomework (Code) . . 426 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "33 Event-based Concurrency (Advanced) 427 ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "33.1 The Basic Idea: An Event Loop 427   \n33.2 An Important API: select() (or poll()) . 428   \n33.3 Using select() . . 429   \n33.4 Why Simpler? No Locks Needed . 431   \n33.5 A Problem: Blocking System Calls . 431   \n33.6 A Solution: Asynchronous I/O . . 432 ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "THREE EASY PIECES ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "33.7 Another Problem: State Management 433   \n33.8 What Is Still Difficult With Events . 435   \n33.9 Summary . 436   \nReferences . 437   \nHomework (Code) . . 438 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "34 Summary Dialogue on Concurrency 439 ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "III Persistence 441 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "35 A Dialogue on Persistence 443 ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "36 I/O Devices 445 ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "36.1 System Architecture 445   \n36.2 A Canonical Device 447   \n36.3 The Canonical Protocol 448   \n36.4 Lowering CPU Overhead With Interrupts 449   \n36.5 More Efficient Data Movement With DMA 450   \n36.6 Methods Of Device Interaction 451   \n36.7 Fitting Into The OS: The Device Driver . 452   \n36.8 Case Study: A Simple IDE Disk Driver . 453   \n36.9 Historical Notes 455   \n36.10 Summary 457   \nReferences 458 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "37 Hard Disk Drives 459 ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "37.1 The Interface 459   \n37.2 Basic Geometry 460   \n37.3 A Simple Disk Drive . 461   \n37.4 I/O Time: Doing The Math . 464   \n37.5 Disk Scheduling . 468   \n37.6 Summary . 472   \nReferences . 473   \nHomework (Simulation) . 474 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "38 Redundant Arrays of Inexpensive Disks (RAIDs) 475 ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "38.1 Interface And RAID Internals 476   \n38.2 Fault Model . 477   \n38.3 How To Evaluate A RAID . 477   \n38.4 RAID Level 0: Striping . . 478   \n38.5 RAID Level 1: Mirroring . 481   \n38.6 RAID Level 4: Saving Space With Parity . 484   \n38.7 RAID Level 5: Rotating Parity . 488   \n38.8 RAID Comparison: A Summary 489   \n38.9 Other Interesting RAID Issues . 490   \n38.10 Summary . 490 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "References 491   \nHomework (Simulation) . 492 ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "39 Interlude: Files and Directories 493 ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "39.1 Files And Directories . 493   \n39.2 The File System Interface 495   \n39.3 Creating Files . 495   \n39.4 Reading And Writing Files 497   \n39.5 Reading And Writing, But Not Sequentially 499   \n39.6 Shared File Table Entries: fork() And dup() . 501   \n39.7 Writing Immediately With fsync() . 504   \n39.8 Renaming Files . 504   \n39.9 Getting Information About Files . 506   \n39.10 Removing Files . 507   \n39.11 Making Directories . 508   \n39.12 Reading Directories . 509   \n39.13 Deleting Directories . 510   \n39.14 Hard Links . 510   \n39.15 Symbolic Links . 512   \n39.16 Permission Bits And Access Control Lists . 514   \n39.17 Making And Mounting A File System . 516   \n39.18 Summary . 518   \nReferences . 520   \nHomework (Code) . . 521 ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "40 File System Implementation 523 ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "40.1 The Way To Think 523   \n40.2 Overall Organization . 524   \n40.3 File Organization: The Inode 526   \n40.4 Directory Organization . 530   \n40.5 Free Space Management . . 532   \n40.6 Access Paths: Reading and Writing . 532   \n40.7 Caching and Buffering . . 536   \n40.8 Summary . 538   \nReferences . 539   \nHomework (Simulation) . 540 ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "41 Locality and The Fast File System 541 ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "41.1 The Problem: Poor Performance 541   \n41.2 FFS: Disk Awareness Is The Solution . 543   \n41.3 Organizing Structure: The Cylinder Group . 543   \n41.4 Policies: How To Allocate Files and Directories . 545   \n41.5 Measuring File Locality . 547   \n41.6 The Large-File Exception . 548   \n41.7 A Few Other Things About FFS . 550   \n41.8 Summary . 552   \nReferences . 553 ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Homework (Simulation) 554 ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "42 Crash Consistency: FSCK and Journaling 555 ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "42.1 A Detailed Example 556   \n42.2 Solution #1: The File System Checker . 559   \n42.3 Solution #2: Journaling (or Write-Ahead Logging) . 561   \n42.4 Solution #3: Other Approaches . 571   \n42.5 Summary . 572   \nReferences . 573   \nHomework (Simulation) . 575 ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "43 Log-structured File Systems 577 ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "43.1 Writing To Disk Sequentially 578   \n43.2 Writing Sequentially And Effectively 579   \n43.3 How Much To Buffer? 580   \n43.4 Problem: Finding Inodes 581   \n43.5 Solution Through Indirection: The Inode Map 581   \n43.6 Completing The Solution: The Checkpoint Region 583   \n43.7 Reading A File From Disk: A Recap 583   \n43.8 What About Directories? 584   \n43.9 A New Problem: Garbage Collection . 585   \n43.10 Determining Block Liveness . 586   \n43.11 A Policy Question: Which Blocks To Clean, And When? . . 587   \n43.12 Crash Recovery And The Log . 588   \n43.13 Summary . 588   \nReferences . 590   \nHomework (Simulation) . 591 ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "44 Flash-based SSDs 593 ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "44.1 Storing a Single Bit . 593   \n44.2 From Bits to Banks/Planes . 594   \n44.3 Basic Flash Operations . 595   \n44.4 Flash Performance And Reliability . 597   \n44.5 From Raw Flash to Flash-Based SSDs . 598   \n44.6 FTL Organization: A Bad Approach . 599   \n44.7 A Log-Structured FTL . . 600   \n44.8 Garbage Collection . . 602   \n44.9 Mapping Table Size . 604   \n44.10 Wear Leveling . 609   \n44.11 SSD Performance And Cost . 609   \n44.12 Summary . 611   \nReferences . 613   \nHomework (Simulation) . 615 ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "45 Data Integrity and Protection 617 ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "45.1 Disk Failure Modes . 617   \n45.2 Handling Latent Sector Errors . 619 ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "45.3 Detecting Corruption: The Checksum 620   \n45.4 Using Checksums 623   \n45.5 A New Problem: Misdirected Writes . 624   \n45.6 One Last Problem: Lost Writes . 625   \n45.7 Scrubbing . 625   \n45.8 Overheads Of Checksumming 626   \n45.9 Summary . 627   \nReferences . 628   \nHomework (Simulation) . 629   \nHomework (Code) . . 630 ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "46 Summary Dialogue on Persistence 631 ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "47 A Dialogue on Distribution 633 ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "48 Distributed Systems 635 ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "48.1 Communication Basics . 636   \n48.2 Unreliable Communication Layers . 637   \n48.3 Reliable Communication Layers . 639   \n48.4 Communication Abstractions . 642   \n48.5 Remote Procedure Call (RPC) . 643   \n48.6 Summary . 648   \nReferences . 649   \nHomework (Code) . . 650 ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "49 Sun’s Network File System (NFS) 653 ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "49.1 A Basic Distributed File System . 654   \n49.2 On To NFS . 655   \n49.3 Focus: Simple And Fast Server Crash Recovery . 655   \n49.4 Key To Fast Crash Recovery: Statelessness . 656   \n49.5 The NFSv2 Protocol . 657   \n49.6 From Protocol To Distributed File System . 659   \n49.7 Handling Server Failure With Idempotent Operations . 661   \n49.8 Improving Performance: Client-side Caching . 663   \n49.9 The Cache Consistency Problem . 663   \n49.10 Assessing NFS Cache Consistency . 665   \n49.11 Implications On Server-Side Write Buffering . 665   \n49.12 Summary . 667   \nReferences . 669   \nHomework (Measurement) . . 670 ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "50 The Andrew File System (AFS) 671 ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "50.1 AFS Version 1 . 671   \n50.2 Problems with Version 1 . 673   \n50.3 Improving the Protocol . 674   \n50.4 AFS Version 2 . . 674   \n50.5 Cache Consistency . 676 ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "THREE EASY PIECES ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "50.6 Crash Recovery 678   \n50.7 Scale And Performance Of AFSv2 679   \n50.8 AFS: Other Improvements . . 681   \n50.9 Summary . 682   \nReferences . 683   \nHomework (Simulation) . 684 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "51 Summary Dialogue on Distribution 685 ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "General Index 687 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Asides 699 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Tips 703 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Cruces 707 ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "WWW.OSTEP.ORG ",
+        "page_idx": 11
+    }
+]

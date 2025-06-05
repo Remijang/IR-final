@@ -1,0 +1,275 @@
+[
+    {
+        "type": "text",
+        "text": "2.6.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "Boolean algebra is a field of study by itself. Boolean formulae, logic, and operations form the basis of modern computer science. We touched upon some basic results in this chapter. The reader should refer to [Kohavi and Jha, 2009] for a detailed discussion on Boolean logic, Karnaugh Maps, and a host of other advanced techniques to minimize the number of terms in Boolean expressions. For Boolean logic and algebra, the reader can also consult [Gregg, 1998, Patt and Patel, 2003, Whitesitt, 2010] The next step for the reader is to read more about the synthesis and optimization of large digital circuits. The book by Giovanni de Michel [Micheli, 1994] can be a very helpful reference in this regard. Number systems such as 2\u2019s complement naturally lead to computer arithmetic where we perform complex operations on numbers. The reader should consult the book by Zimmermann [Brent and Zimmermann, 2010]. For learning more about the representation of characters, and strings, especially in different languages, we refer the reader to the Unicode standard [uni, ]. ",
+        "page_idx": 87
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Boolean Logic ",
+        "text_level": 1,
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 $A$ , $B$ , $C$ and $D$ are Boolean variables. Prove the following results: ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "a) $A . B + \\overline { { A } } . B + \\overline { { B } } . C + \\overline { { B } } . \\overline { { C } } = 1$   \nb) $( { \\overline { { A } } } + { \\overline { { B } } } ) . ( { \\overline { { A } } } + B ) . ( A + { \\overline { { B } } } . D + C ) = { \\overline { { A } } } . { \\overline { { B } } } . D + { \\overline { { A } } } . C$   \nc) ${ \\overline { { A } } } . { \\overline { { B } } } + { \\overline { { B } } } . C = A . { \\overline { { C } } } + B$   \nd) $A . { \\overline { { B } } } + { \\overline { { A } } } . { \\overline { { B } } } + A . { \\overline { { B } } } . C . D = { \\overline { { B } } }$ ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Ex. 2 \u2014 Construct a circuit to compute the following functions using only NOR gates. $\\begin{array} { l } { \\mathrm { a } ) \\overline { { A } } } \\\\ { \\mathrm { b } ) A + B } \\\\ { \\mathrm { c } ) A . B } \\\\ { \\mathrm { d } ) A \\oplus B } \\end{array}$ ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Ex. 3 \u2014 Construct a circuit to compute the following functions using only NAND gates. $\\begin{array} { l } { \\mathrm { a } ) \\overline { { A } } } \\\\ { \\mathrm { b } ) A + B } \\\\ { \\mathrm { c } ) A . B } \\\\ { \\mathrm { d } ) A \\oplus B } \\end{array}$ ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 4 \u2014 Prove that any Boolean function can be realized with just NAND or NOR gates. [HINT: Use the idea of decomposing a function into its set of minterms.] ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Ex. 5 \u2014 Why are the first and last rows or columns considered to be adjacent in a Karnaugh Map? ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Ex. 6 \u2014 Minimize the following Boolean functions using a Karnaugh Map. a) $1 A B C + A B \\overline { { { C } } } + \\overline { { { A } } } B C$ b $) A B C D + A { \\overline { { B C } } } D + A { \\overline { { D } } }$ ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 7 \u2014 Consider the Karnaugh map of the function $A _ { 1 } \\oplus A _ { 2 } \\ldots \\oplus A _ { n }$ . Prove that it looks like a chess board. Why cannot we minimize this expression further? ",
+        "page_idx": 88
+    },
+    {
+        "type": "text",
+        "text": "Integer Number Systems ",
+        "text_level": 1,
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 8 \u2014 Convert the following 8-bit binary numbers in 1\u2019s complement form to decimal. ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "a) 01111101   \nb) 10000000   \nc) 11111111   \nd) 00000000   \ne) 11110101 ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 Convert the following unsigned numbers (in the given base) to decimal: a) (243)5 b) (77)8 c) $( F F A ) _ { 1 6 }$ d) (100)4 e) (55)6 ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 Do the following calculations on unsigned binary numbers and write the result as an unsigned binary number. ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "a) $1 1 0 0 1 1 0 1 0 1 + 1 1 1 1 0 0 1 1 0 1$ b) $1 1 0 1 1 0 1 1 0 + 1 0 1 1 1 0 0 1$ c) $1 1 1 0 1 1 1 0 - 1 1 1 0 0 0$ d) 10000000 111 ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 What are the pros and cons of the 1\u2019s complement number system? ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 12 \u2014 What are the pros and cons of the sign-magnitude number system? ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 What is a number circle? How is it related to the 2\u2019s complement number system? ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 14 \u2014 What does the point of discontinuity on the number circle signify? ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 15 \u2014 Why is moving $k$ steps on the number circle in a clockwise direction equivalent to moving $2 ^ { n }$ - $k$ steps in an anti-clockwise direction? Assume that the number circle contains $2 ^ { n }$ nodes. ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 16 \u2014 What are the advantages of the 2\u2019s complement notation over other number systems? ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 17 \u2014 Outline a method to quickly compute the 2\u2019s complement of a number. ",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 18 \u2014 Prove the following result in your own words: ",
+        "page_idx": 89
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { F } } ( u - v ) \\equiv { \\mathcal { F } } ( u ) + ( 2 ^ { n } - { \\mathcal { F } } ( v ) )\n$$",
+        "text_format": "latex",
+        "page_idx": 89
+    },
+    {
+        "type": "text",
+        "text": "Ex. 19 \u2014 Let us define sign contraction to be the reverse of sign extension. What are the rules for converting a 32-bit number to a 16-bit number by using sign contraction? Can we do this conversion all the time without losing information? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 What are the conditions for detecting an overflow while adding two 2\u2019s complement numbers? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Floating Point Number System ",
+        "text_level": 1,
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 21 \u2014 Describe the IEEE 754 format. ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 22 \u2014 Why do we avoid representing the bit to the left of the decimal point in the significand? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 23 \u2014 Define denormal numbers. How do they help to extend the range of normal floating point numbers? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 24 \u2014 In the standard form of a denormal number, why is the exponent term equal to $2 ^ { - 1 2 6 }$ ? Why is it not equal to $2 ^ { - 1 2 7 }$ ? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 25 \u2014 Convert the following floating point numbers into the IEEE 32-bit 754 format.   \nWrite your answer in the hexadecimal format. ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "a) $- 1 * ( 1 . 7 5 * 2 ^ { - 2 9 } + 2 ^ { - 4 0 } + 2 ^ { - 4 5 } )$ 0   \nb) 52 ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 26 \u2014 What is the range of positive and negative denormal floating point numbers? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 27 \u2014 What will be the output of the following C code snippet assuming that the fractions   \nare stored in an IEEE 32-bit 754 format:   \nfloat $\\mathsf { a } { = } \\mathsf { p o w } ( 2 , - 5 0 )$ ;   \nfloat b=pow(2,-74);   \nfloat $d = a$ ;   \nfor( $\\scriptstyle { \\dot { \\mathbf { 1 } } } = 0$ ; i<100000; i++)   \n{ $d = d + b$ ;   \n}   \nif $( d > a )$ ) printf(\"%d\",1);   \nelse printf(\"%d\",2); ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "Ex. 28 \u2014 We claim that the IEEE 754 format represents real numbers approximately. Is this statement correct? ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 29 \u2014 Prove that it is not possible to exactly represent $\\sqrt { 2 }$ even if we have an indefinitely large number of bits in the mantissa. ",
+        "page_idx": 90
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 30 \u2014 How does having denormal numbers make floating point mathematics slightly more intuitive? ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 31 \u2014 What is the correct way for comparing two floating point numbers for equality? ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 32 \u2014 Assume that the exponent $e$ is constrained to lie in the range $0 \\leq e \\leq X$ with a bias of $q$ , and the base is $b$ . The significand is $p$ digits in length. Use an IEEE 754 like encoding. However, you need to devote one digit to store the value to the left of the decimal point in the significand. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "a) What are the largest and smallest positive values that can be written in normal form.   \nb) What are the largest and smallest positive values that can be written in denormal form. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 33 \u2014 Most of the floating point numbers cannot be represented accurately in hardware due to the loss of precision. However, if we choose some other representation, we can represent certain kinds of floating point numbers without error. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "a) Give a representation for storing rational numbers accurately. Devise a normal form for it. b) Can other floating point numbers such as $\\sqrt { 2 }$ be represented similarly? ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Ex. 34 \u2014 Design a floating point representation, for a base 3 system on the lines of the IEEE 754 format. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Strings ",
+        "text_level": 1,
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Ex. 35 \u2014 Convert the string \u201c459801\u201d to ASCII. The ASCII representation of 0 is 0x30.   \nAssume that all the numbers are represented in the ASCII format in sequence. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Ex. 36 \u2014 Find the Unicode representation for characters in a non-English language, and compare it with the ASCII encoding. ",
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 91
+    },
+    {
+        "type": "text",
+        "text": "Ex. 37 \u2014 In this section, we have minimized Boolean expressions using Karnaugh maps. We solved all our examples manually. This method is not scalable for expressions containing hundreds of variables. Study automated techniques for minimizing Boolean expressions such as the Quinn-McCluskey tabulation method. Write a program to implement this method. ",
+        "page_idx": 91
+    }
+]

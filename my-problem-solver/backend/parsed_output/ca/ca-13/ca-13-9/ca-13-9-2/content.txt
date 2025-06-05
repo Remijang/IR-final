@@ -1,0 +1,91 @@
+13.9.2 Further Reading
+
+For the latest designs of motherboards, and chipsets, the most accurate and up-to-date source of information is the vendor’s website. Most vendors such as Intel and AMD post the details and configurations of their motherboards and chipsets after they are released. However, they typically do not post a lot of details about the architecture of the chips. The reader can refer to research papers for the architectural details of the AMD Opteron North Bridge chip [Conway and Hughes, 2007], Intel Blackford North Bridge chip [Radhakrishnan et al., 2007], and AMD North Bridge chip [Owen and Steinman, 2008] for the Griffin processor family. The book by Dally and Poulton [Dally and Poulton, 1998] is one of the best sources for information on the physical layer, and is a source of a lot of information presented in this book. Other books on digital communication [Proakis and Salehi, 2007, Sklar, 2001] are also excellent resources for further reading. Error control codes are mostly taught in courses on coding and information theory. Hence, for a deeper understanding of error control codes, the reader is referred to [Ling and Xing, 2004, Cover and Thomas, 2013]. For a detailed description of the Intel’s I/O architecture and I/O ports, we shall point the reader to Intel’s software developer manuals at [int, ]. The best sources for the I/O protocols are their official specifications – PCI Express [pci, ], SATA [sat, ], SCSI and SAS [scs, ], USB [usb, ], and FireWire [fir, ]. The book on memory systems by Jacob, Ng, and Wang [Jacob et al., 2007] is one of the best resources for additional information on hard disks, and DRAM memories. They explain the structure of a hard disk, and its internals in great detail. The official standards for compact discs are documented in the rainbow books. Each book in this collection contains the specifications of a certain type of optical disc. One of the earliest and most influential books in this collection is the Red Book [red, ] that contains the specifications for audio CDs. The latest DVD standards are available from http://www.dvdforum.org, and the latest Blu-Ray standards are available at the official website of the Blu-Ray Disc Association (http://www.blu-raydisc.com/en).
+
+Exercises
+
+Overview of the I/O System
+
+Ex. 1 — What are the roles of the North Bridge and South Bridge chips?   
+Ex. 2 — What is the role of the chipset in a motherboard?   
+Ex. 3 — Describe the four layers in the I/O system.   
+Ex. 4 — Why is it a good idea to design a complex system as a sequence of layers?
+
+Physical Layer
+
+Ex. 5 — What is the advantage of LVDS signaling? Ex. 6 — Draw the circuit diagram of a LVDS transmitter and receiver.
+
+Ex. 7 — Assume that we are transmitting the bit sequence: 01101110001101. Show the voltage on the bus as a function of time for the following protocols: RZ, NRZ, Manchester, NRZI.   
+Ex. 8 — What is the advantage of the NRZI protocol over the NRZ protocol?   
+\* Ex. 9 — Draw the circuit diagram of the receiver of a plesiochronous bus.   
+\* Ex. 10 — What are the advantages of a source synchronous bus?   
+\* Ex. 11 — Why is it necessary to avoid transitions in the keep-out region?   
+Ex. 12 — Differentiate between a 2-phase handshake, and a 4-phase handshake?   
+\* Ex. 13 — Why do we set the strobe after the data is stable on the bus?   
+\*\* Ex. 14 — Design the circuit for a tunable delay element.
+
+Data Link, Network, and Protocol Layer
+
+Ex. 15 — What are the different methods for demarcating frames?
+
+Ex. 16 — Consider an 8-5 SECDED code. Encode the message: 10011001.
+
+\*\* Ex. 17 — Construct a code that can detect 3 bit errors.
+
+\*\* Ex. 18 — Construct a fully distributed arbiter. It should not have any central node that schedules requests.
+
+Ex. 19 — What is the advantage of split transaction buses?
+
+Ex. 20 — How do we access I/O ports?
+
+Ex. 21 — What is the benefit of memory-mapped I/O?
+
+Ex. 22 — What are the various methods of communication between an I/O device and the processor? Order them in the increasing order of processor utilization.
+
+Ex. 23 — Assume that for a single polling operation, a processor running at 1 MHz takes 200 cycles. A processor polls a printer 1000 times per minute. What percentage of time does the processor spend in polling?
+
+Ex. 24 — When is polling more preferable than interrupts? Ex. 25 — When are interrupts more preferable than polling? Ex. 26 — Explain the operation of the DMA controller.
+
+Hard Disks
+
+Ex. 27 — What is the advantage of zoned recording? Ex. 28 — Describe the operation of a hard disk. Ex. 29 — We have a hard disk with the following parameters:
+
+(a) How long will it take to read 25 MB on an average if 25 MB can be read in one pass.
+
+(b) Assume that we can only read 5 MB in one pass. Then, we need to wait for the platter to rotate by  such that the same sector comes under the head again. Now, we can read the next chunk of 5 MB. In this case, how long will it take to read the entire 25 MB chunk?
+
+\* Ex. 30 — Typically, in hard disks, all the heads do not read data in parallel. Why is this the case?
+
+Ex. 31 — Let us assume that we need to read or write long sequences of data. What is the best way of arranging the sectors on a hard disk? Assume that we ideally do not want to change tracks, and all the tracks in a cylinder are aligned.
+
+\* Ex. 32 — Now, let us change the assumptions in the previous exercise. Assume that it is faster to move to the next track on the same recording surface, than starting to read from another track in the same cylinder. With these assumptions, how should we arrange the sectors? [NOTE: The question is not as easy as it sounds.]
+
+Ex. 33 — Explain the operation of RAID 0,1,2,3,4,5, and 6.
+
+Ex. 34 — Consider 4 disks D0, D1, D2, D3 and a parity disk P using RAID 4. The following table shows the contents of the disks for a given sector address,  , which is the same across all the disks. Assume the size of a block to be 16 bits.
+
+Compute the value of the parity block? Now the contents of D0 are changed to 0xABD1. What is the new value of the parity block?
+
+Ex. 35 — Assume that we want to read a block as fast as possible, and there are no parallel accesses. Which RAID technology should we choose?
+
+Ex. 36 — What is the advantage of RAID 5 over RAID 4?
+
+Optical and Flash Drives
+
+Ex. 37 — What is the main difference between a CD and DVD?
+
+Ex. 38 — How do we use the NRZI encoding in optical drives?
+
+\* Ex. 39 — What is the advantage of running a drive at constant linear velocity over running it at constant angular velocity?
+
+\* Ex. 40 — For an optical drive that runs at constant linear velocity, what is the relationship between the angular velocity, and the position of the head?
+
+Ex. 41 — What are the basic differences between NAND and NOR flash?
+
+Ex. 42 — Explain wear leveling, and read disturbance? How are these issues typically handled in modern flash drives?
+
+Design Problems
+
+Ex. 43 — Read more about the Hypertransport  , Intel Quickpath, InfinibandTM, and Myrinet  protocols? Try to divide their functionality into layers as we have presented in this chapter.
+
+Part IV

@@ -1,0 +1,37 @@
+# 18.8 Occurrence, Preparation, and Properties of Phosphorus
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Describe the properties, preparation, and uses of phosphorus
+
+The industrial preparation of phosphorus is by heating calcium phosphate, obtained from phosphate rock, with sand and coke:
+
+$$
+2 \mathrm { C a } _ { 3 } ( \mathrm { P O } _ { 4 } ) _ { 2 } ( s ) + 6 \mathrm { S i O } _ { 2 } ( s ) + 1 0 \mathrm { C } ( s ) \stackrel { \Delta } { \longrightarrow } 6 \mathrm { C a S i O } _ { 3 } ( l ) + 1 0 \mathrm { C O } ( g ) + \mathrm { P } _ { 4 } ( g )
+$$
+
+The phosphorus distills out of the furnace and is condensed into a solid or burned to form $\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 }$ . The preparation of many other phosphorus compounds begins with $\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 }$ . The acids and phosphates are useful as fertilizers and in the chemical industry. Other uses are in the manufacture of special alloys such as ferrophosphorus and phosphor bronze. Phosphorus is important in making pesticides, matches, and some plastics. Phosphorus is an active nonmetal. In compounds, phosphorus usually occurs in oxidation states of $3 -$ , $^ { 3 + }$ , and $5 +$ . Phosphorus exhibits oxidation numbers that are unusual for a group 15 element in compounds that contain phosphorus-phosphorus bonds; examples include diphosphorus tetrahydride, $\mathrm { { H _ { 2 } P \mathrm { { - } P H _ { 2 } } } }$ , and tetraphosphorus trisulfide, $\mathrm { P _ { 4 } S _ { 3 } }$ , illustrated in Figure 18.39.
+
+# Phosphorus Oxygen Compounds
+
+Phosphorus forms two common oxides, phosphorus(III) oxide (or tetraphosphorus hexaoxide), $\mathrm { P } _ { 4 } \mathrm { O } _ { 6 }$ , and phosphorus(V) oxide (or tetraphosphorus decaoxide), $\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 }$ , both shown in Figure 18.40. Phosphorus(III) oxide is a white crystalline solid with a garlic-like odor. Its vapor is very poisonous. It oxidizes slowly in air and inflames when heated to $7 0 ^ { \circ } \mathrm { C }$ , forming $\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 }$ . Phosphorus(III) oxide dissolves slowly in cold water to form phosphorous acid, $\mathrm { { H _ { 3 } P O _ { 3 } } }$ .
+
+Phosphorus(V) oxide, $\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 }$ , is a white powder that is prepared by burning phosphorus in excess oxygen. Its enthalpy of formation is very high $( - 2 9 8 4 \mathrm { k J } )$ , and it is quite stable and a very poor oxidizing agent. Dropping $\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 }$ into water produces a hissing sound, heat, and orthophosphoric acid:
+
+$$
+\mathrm { P } _ { 4 } \mathrm { O } _ { 1 0 } ( s ) + 6 \mathrm { H } _ { 2 } \mathrm { O } ( l ) \longrightarrow 4 \mathrm { H } _ { 3 } \mathrm { P O } _ { 4 } ( a q )
+$$
+
+Because of its great affinity for water, phosphorus(V) oxide is an excellent drying agent for gases and solvents, and for removing water from many compounds.
+
+# Phosphorus Halogen Compounds
+
+Phosphorus will react directly with the halogens, forming trihalides, $\mathrm { P X } _ { 3 }$ , and pentahalides, $\mathrm { P X } _ { 5 }$ . The trihalides are much more stable than the corresponding nitrogen trihalides; nitrogen pentahalides do not form because of nitrogen’s inability to form more than four bonds.
+
+The chlorides $\mathrm { P C l } _ { 3 }$ and $\mathrm { P C l } _ { 5 }$ , both shown in Figure 18.41, are the most important halides of phosphorus. Phosphorus trichloride is a colorless liquid that is prepared by passing chlorine over molten phosphorus. Phosphorus pentachloride is an off-white solid that is prepared by oxidizing the trichloride with excess chlorine. The pentachloride sublimes when warmed and forms an equilibrium with the trichloride and chlorine when heated.
+
+Like most other nonmetal halides, both phosphorus chlorides react with an excess of water and yield hydrogen chloride and an oxyacid: $\mathrm { P C l } _ { 3 }$ yields phosphorous acid $\mathrm { { H _ { 3 } P O _ { 3 } } }$ and $\mathrm { P C l } _ { 5 }$ yields phosphoric acid, $\mathrm { H _ { 3 } P O _ { 4 } }$ .
+
+The pentahalides of phosphorus are Lewis acids because of the empty valence $d$ orbitals of phosphorus. These compounds readily react with halide ions (Lewis bases) to give the anion $\mathrm { P X } _ { 6 } -$ Whereas phosphorus pentafluoride is a molecular compound in all states, X-ray studies show that solid phosphorus pentachloride is an ionic compound, $[ \mathrm { P C l } _ { 4 } ^ { + } ] [ \mathrm { P C l } _ { 6 } ^ { - } ]$ as are phosphorus pentabromide, $[ \mathrm { P B r } _ { 4 } ^ { + } ] [ \mathrm { B r } ^ { - } ]$ , and phosphorus pentaiodide, $[ \mathrm { P I } _ { 4 } ^ { + } ] [ \mathrm { I } ^ { - } ]$ .

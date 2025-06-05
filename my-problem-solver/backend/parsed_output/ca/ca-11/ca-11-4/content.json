@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "11.4 Virtual Memory ",
+        "text_level": 1,
+        "page_idx": 541
+    },
+    {
+        "type": "text",
+        "text": "Up till now, we have considered only one program in our system. We have designed our entire system using this assumption. However, this assumption is not correct. For example, at the moment there are 232 programs running on your author\u2019s workstation. The reader can easily find out the number of programs running on her system by opening the Task Manger on Windows, or by entering the command \u201cps -ef\u201d on a Linux or a Macintosh system. It is possible for one processor to run multiple programs by switching between different programs very quickly. For example, while a user is playing a game, her processor might be fetching her new email. The reason she does not feel any interruption, is because the time scale at which the processor switches back and forth between programs (typically several milliseconds) is much smaller than what humans can perceive. ",
+        "page_idx": 541
+    },
+    {
+        "type": "text",
+        "text": "Secondly, we have assumed up till now that all the data that a program needs is resident in main memory. However, this assumption is also not correct. Back in the old days, the size of main memory used to be several megabytes, whereas, users could run very large programs that needed hundreds of megabytes of data. Even now, it is possible to work with data that is much larger than the amount of main memory. Readers can easily verify this statement, by writing a C program that creates data structures that are larger than the amount of physical memory contained in their machine. In most systems, this C program will compile and run successfully. ",
+        "page_idx": 541
+    },
+    {
+        "type": "text",
+        "text": "We shall see in this section that by making a small change in the memory system, we can satisfy both of these requirements. ",
+        "page_idx": 541
+    }
+]

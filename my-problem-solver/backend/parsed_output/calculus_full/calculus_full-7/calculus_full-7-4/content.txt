@@ -1,0 +1,70 @@
+7.4 Partial Fractions
+
+Notice how multiplying by  produced a hole on the left side. Method 2 is the “cover-up method.” Cover up  and then substitute  . The result is  ; just what we wanted.
+
+In Method 1, the numerators of equation (2) must agree. The factors that multiply  and  are again zero at  : That leads to the same  —but the cover-up method avoids the unnecessary step of writing down equation (2).
+
+Calculation of  Multiply equation (1) by  ; which covers up the  :
+
+Now set  ; so  and  are multiplied by zero:
+
+This is almost full speed, but (4) was not needed. Just cover up in  and give  the right value (which makes the covered factor zero).
+
+Calculation of  (quickest) In equation (1), cover up the factor  and set  :
+
+To repeat: The same result  ;  ;  comes from Method 1.
+
+EXAMPLE 2
+
+First cover up  on |the left|and s e|t  : Next cover up  and set   :
+
+The integral is  :
+
+EXAMPLE 3 This was needed for the logistic equation in Section 6.5:
+
+First multiply by  : That covers up  in the first two terms and changes  to  : Then set  : The equation becomes  :
+
+To find  ; multiply by  : That covers up  in the outside terms. In the middle,  times  will be zero at  : That leaves  on the right equal to  on the left. Then  and  give the integral announced in Equation 6:5:9 W
+
+ is time to admit that the general method of partial fractions can be very awkward. First of all, it requires the factors of the denominator  : When  is a quadratic  ; we can find its roots and its factors. In theory a cubic or a quartic can also be facto»red, but in practice only a few are possible—for example  1 is  : Even for this good example, two of the roots are imaginary. We can split  into  : We cannot split  without introducing  :
+
+The method of partial fractions can work directly with  ; as we now see.
+
+EXAMPLE 4
+
+This has another difficulty. The degree of  equals the degree of  : Partial fractions cannot start until  has lower degree. Therefore I divide the leading term  into the leading term  : That gives 3; which is separated off by itself:
+
+Note how 3 really used  from the original numerator. That left  : Partial fractions will accept a linear factor  (or  ; not just  ) above  quadratic.
+
+This example contains  ; which integrates to  : The final  integrates to  : When the denominator is  we complete the square before integrating. The point of Sections 7.2 and 7.3 was to make that integration possible. This section gets the fraction ready—in parts.
+
+The essential point is that we never have to go higher than quadratics. Every denominator  can be split into linear factors and quadratic factors. There is no magic way to find those factors, and most examples begin by giving them. They go into their own fractions, and they have their own numerators—which are the  and  and  we have been computing.
+
+The one remaining question is what to do if a factor is repeated. This happens in Example 5.
+
+EXAMPLE 5
+
+The key is the new term  : That is the right form to expect. With   this term would have been  : But when  is repeated, something new is needed. To find  ; multiply through by  and set  :
+
+This cover-up method gives  : Then  is easy, and the integral is  : The fraction  has an integral without logarithms.
+
+EXAMPLE 6
+
+This final example has almost everything! It is more of a game tha n a calculus problem. In fact calculus doesn’t enter until we integrate (and nothing is new there). Before computing  ; we write down the overall rules for partial fractions:
+
+1. The degree of  must be less than the degree of  : Otherwise divide their leading terms as in equation (8) to lower the degree of  : Here  : 2. Expect the fractions illustrated by Example 6. The linear factors  and  (and the repeated  ) are underneath constants. The quadratic  is under a linear term. A repeated  would be under a new  :
+
+3. Find the numbers  by any means, including cover-up.   
+4. Integrate each term separately and add.
+
+We could prove that this method always works. It makes better sense to show that it works once, in Example 6.
+
+To find  ; cover up  on theleft and substitute  : Then  : To find  ; cover up  on the left and set  : Then  : The cover-up method has done its job, and there are several ways to find  : Compare the numerators, after multiplying through by the common denominator  :
+
+The known terms on the right, from  and  ; can move to the left:
+
+We can divide through by  and  ; which checks that  and  were correct:
+
+Finally  yields  : This leaves  : Then  and  :
+
+You should never have to do such a problem! I never intend to do another one. It completely depends on expecting the right form and matching the numerators. They could also be matched by comparing coefficients of  —to give five equations for  : That is an invitation to human error. Cover-up is the way to start, and usually the way to finish. With repeated factors and quadratic factors, match numerators at the end.

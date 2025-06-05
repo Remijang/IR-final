@@ -1,0 +1,42 @@
+22.8 Torque on a Current Loop: Motors and Meters
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Describe how motors and meters work in terms of torque on a current loop.   
+• Calculate the torque on a current-carrying loop in a magnetic field.
+
+Motors are the most common application of magnetic force on current-carrying wires. Motors have loops of wire in a magnetic field. When current is passed through the loops, the magnetic field exerts torque on the loops, which rotates a shaft. Electrical energy is converted to mechanical work in the process. (See Figure 22.33.)
+
+Let us examine the force on each segment of the loop in Figure 22.33 to find the torques produced about the axis of the vertical shaft. (This will lead to a useful equation for the torque on the loop.) We take the magnetic field to be uniform over the rectangular loop, which has width  and height . First, we note that the forces on the top and bottom segments are vertical and, therefore, parallel to the shaft, producing no torque. Those vertical forces are equal in magnitude and opposite in direction, so that they also produce no net force on the loop. Figure 22.34 shows views of the loop from above. Torque is defined as  sin  , where  is the force,  is the distance from the pivot that the force is applied, and  is the angle between  and  . As seen in Figure 22.34(a), right hand rule 1 gives the forces on the sides to be equal in magnitude and opposite in direction, so that the net force is again zero. However, each force produces a clockwise torque. Since  , the torque on each vertical segment is  sin  , and the two add to give a total torque.
+
+Now, each vertical segment has a length  that is perpendicular to  , so that the force on each is  . Entering  into the expression for torque yields
+
+If we have a multiple loop of  turns, we get  times the torque of one loop. Finally, note that the area of the loop is  ; the expression for the torque becomes
+
+This is the torque on a current-carrying loop in a uniform magnetic field. This equation can be shown to be valid for a loop of any shape. The loop carries a current  , has  turns, each of area  , and the perpendicular to the loop makes an angle  with the field  . The net force on the loop is zero.
+
+EXAMPLE 22.5
+
+Calculating Torque on a Current-Carrying Loop in a Strong Magnetic Field
+
+Find the maximum torque on a 100-turn square loop of a wire of  on a side that carries 15.0 A of current in a 2.00-T field.
+
+Strategy
+
+Torque on the loop can be found using  sin  . Maximum torque occurs when  and  .
+
+Solution
+
+For  , the maximum torque is
+
+Entering known values yields
+
+Discussion
+
+This torque is large enough to be useful in a motor.
+
+The torque found in the preceding example is the maximum. As the coil rotates, the torque decreases to zero at  . The torque then reversesits direction once the coil rotates past  . (See Figure 22.34(d).) This means that, unless we do something, the coil will oscillate back and forth about equilibrium at  . To get the coil to continue rotating in the same direction, we can reverse the current as it passes through  with automatic switches called brushes. (See Figure 22.35.)
+
+Meters, such as those in analog fuel gauges on a car, are another common application of magnetic torque on a current-carrying loop. Figure 22.36 shows that a meter is very similar in construction to a motor. The meter in the figure has its magnets shaped to limit the effect of  by making  perpendicular to the loop over a large angular range. Thus the torque is proportional to  and not  . A linear spring exerts a counter-torque that balances the current-produced torque. This makes the needle deflection proportional to  . If an exact proportionality cannot be achieved, the gauge reading can be calibrated. To produce a galvanometer for use in analog voltmeters and ammeters that have a low resistance and respond to small currents, we use a large loop area  , high magnetic field  , and low-resistance coils.

@@ -1,0 +1,163 @@
+13.3 1Tangent Planes and Linear Approximations
+
+Over a short range, a smooth curve  is almost straight. The curve changes direction, but the tangent line  keeps the same slope forever. The tangent line immediately gives the linear approximation to  W  :
+
+What happens with two variables? The function is  ; and its graph is a surface. We are at a point on that surface, and we are near-sighted. We don’t see far away. The surface may curve out of sight at the horizon, or it may be a bowl or a saddle. To our myopic vision, the surface looks flat. We believe we are on a plane (not necessarily horizontal), and we want the equation of this tangent plane.
+
+Notation The bBase pBoint hasB co oBrdinates  and  . The height on  tBhe  sBurface is  . Other letters are possible: the point can be  with height  . The subscript  indicates the value of  or  or  or  or  at the point.
+
+With one variable the tangent line has slope  . With two variables there are two derivatives  and  . At the particular point, they are  and  . Those are the slopes of the tangent plane . Its equation is the key to this chapter:
+
+13A The tangent plane at  has the same slopes as the surface   : The equation of the tangent plane (a linear equation) is
+
+The normal vector  to that plane has components 
+
+EXAMPLE 1 Find the tangent plane to  at  .
+
+Solution The derivatives are  and  . When  and  those are  and  . The equation of the tangent plane is
+
+This  has derivatives  and  ; just like the surface. So the plane is tangent.
+
+The normal vector  has components  : The equation of the normal line is  : Starting from .1; 2; 9/ the line goes out along N—perpendicular to the plane and the surface.
+
+Figure 13.7 shows more detail about the tangent plane. The dotted lines are the  and  tangent lines. They lie in the plane. All tangent lines lie in the tangent plane! These particular lines are tangent to the “partial functions”—where  is fixed at  2 or  is fixed at  . The plane is balancing on the surface and touching at the tangent point.
+
+More is true. In the surface, every curve through the point is tangent to the plane. Geometrically, the curve goes up to the point and “kisses” the plane.  The tangent  to the curve and the normal  to the surface are perpendicular: T  .
+
+EXAMPLE 2 Find the tangent plane to the sphere  at .1; 2; 3/:
+
+Solution aInstead of  we have  : At  ;  the heightis now  a. The surface is a sphere with radius  . The only trouble from the square root is its derivatives:
+
+At  those slopes are  and  : The equation of the tangent plane is linear:   . I cannot resist improving the equation, by multiplying through by 3 and moving all terms to the left side:
+
+If mathematics is the “science of patterns,” equation (4) is a prime candidate for study. The numbers 1; 2; 3 appear twice. The coordinates are  : The normal vector is  : The tangent equation is  : None of this can be an accident, but the square root of  made a simple pattern look complicated.
+
+This square root is not necessary. Calculus offers a direct way to find  — implicit differentiation. Just differentiate every termas it stands:
+
+Canceling the 2’s, the derivatives on a sphere are  and  . Those are the same as in (3). The equation for the tangent plane has an extremely symmetric form:
+
+Reading off  from the last equation, calculus proves something we already knew: The normal vector to a sphere points outward along the radius.
+
+THE TANGENT PLANE TO 
+
+The sphere suggests a question that is important for other surfaces. Suppose the equation is  instead of  : Can the partial derivatives and tangent plane be found directly from  ?
+
+The answer is yes. It is not necessary to solve first for  : The derivatives of  ; computed at  , give a second formula for the tangent plane and normal vector.
+
+Notice how this includes the original case  . The function  becomes  : Its partial derivatives are  and  and  : (The  is from the derivative of  :) Then equation (7) is the same as our original tangent equation (1).
+
+EXAMPLE 3 The surface  is a hyperboloid. Find its tangent plane.
+
+Solution The partial derivatives are  : Equation (7) is
+
+We can cancel the  . The normal vector is  . For  this hyperboloid has one sheet (Figure 13.8). For  it is a cone and for  it breaks into two sheets (Problem 13.1.26).
+
+DIFFERENTIALS
+
+Come back to the linear equation  for the tangent plane. That may be the most important formula in this chapter. Move along the tangent plane instead of the curved surface. Movements in the plane are  and  and  —while  and  and  are movements in the surface. The  ’s are governed by thetangent equation—the  ’s are governed by  . In Chapter 2 the  ’s were differentials along the tangent line:
+
+Now  is independent like  . The dependent variable is  . The idea is the samBe. The dBistances  and  and  (on the tangent plane) are  and  and  . The equation of the plane is
+
+This is the total differential. All letters  and  and  can be used, but  and  are not used. Differentials suggest small movements in  and  ; then  is the resulting movement in  . On the tangent plane, equation (10) holds exactly.
+
+A “centering transform” has put  at the center of coordinates. Then the “zoom transform” stretches the surface into its tangent plane.
+
+EXAMPLE 4 The area of a triangle is  . Find the total differential  .
+
+Solution BThe base has lengthB  and the sloping sBide has length  . The angle between them is  . You may prefer  ; where  is the perpendicular height  . Either way we need the partial derivatives. If  , then
+
+These lead immediately to the total differential  (like a product rule):
+
+EXAMPLE 5 The volume of a cylinder is  . Decide whether  is more sensitive to a change from  to  or from  to  .
+
+Solution The partial derivatives are  and  . They measure the sensitivity to change. Physically, they are the side area and base area of the cylinder. The volume differential  comes from a shell around the side plus a layer on top:
+
+Starting from  , that differential is  . With  , the shell volume is :  and the layer volume is only :  . So  is sensitive to  .
+
+For a short cylinder like a penny, the layer has greater volume.  is more sensitive to  . In our case  increases from  to  . Compare  to  :
+
+The difference is  . The shell and layer missed a small volume in Figure 13.9, just above the shell and around the layer. The mistake is of order  . For  , the differential  is a linear approximation to the true change  . We now explain that properly.
+
+LINEAR APPROXIMATION
+
+Tangents lead immediately to linear approximations. That is true of tangent planes as it was of tangent lines. The plane stays close to the surface, as the line stayed close to the curve. Linear functions are simpler than  or  or  . All we need are first derivatives at the point. Then the approximation is good near the point. This key idea of calculus is already present in differentials. On the plane,  equals  . On the curved surface that is a linear approximationto  :
+
+13C The linear approximation to  near the point  is
+
+In other words  , as proved in Problem 24. The right side of (13) is a linear function  . At  , the functions  and  have the same slopes. Then  curves away from  with an error of “second order:”
+
+This assumes that  , and  are continuous and bounded by  along the line from  to  . Example 3 of Section 13.5 shows that  along that line. A factor  comes from equation 3.8.12, for the error  with one variable.
+
+For the volume of a cylinder,  and  went from 1.0 to 1.1. The second derivatives of  are  and  and  . They are below  . Then (14) gives the error bound  , not far above the actual error :  . The main point is that the error in linear approximation comes from the quadratic terms—those are the first terms to be ignored by  .
+
+EXAMPLE 6 Find a linear approximation to the distance function 
+
+Solution The partial derivatives are  and  . Then  . For  near  If  is fixed at 2, this is a one-variable approximation to  . If  is fixed at 1, it is a linear approximation in  . Moving both variables, you might think  would involve  and  in a square root. It doesn’t. Distance involves  and  in a square root, but: change of distance is linear in  and  —to a first approximation.
+
+There is a rough point at  . Any movement from  gives   . The square root has returned. The reason is that the partial derivatives  and  are not continuous at  . The cone has a sharp point with no tangent plane. Linear approximation breaks down.
+
+The next example showshowto approximate  from  and  , when the equation is  . We use the implicit derivatives in (7) instead of the explicit derivatives in (1). The idea is the same: Look at the tangent equation asa way to find  , instead of an equation for  . Here is Example 6 with new letters.
+
+EXAMPLE 7 From  find a linear approximation to  :
+
+Solution (implicit derivatives) Use the derivatives of  0. Then solve for  , which gives  —the same as Example 6.
+
+EXAMPLE 8 How does the equilibrium price change when the supply curve changes?
+
+The equilibrium price is at the intersection of the supply and demand curves  . As the price  rises, the demand  drops (the slope is  :
+
+The supply (also  ) goes up with the price. The slope  is positive (here  /:
+
+Those lines are in Figure 13.10. They meet at the equilibrium price  30Q = 5 0PS SPD D$ ). So it is sold.
+
+Where do partial derivatives come in? The reality is that those lines  and  are not fixed for all time. Technology changes, and competition changes, and the value of money changes. Therefore the lines move. Therefore the crossing point  also moves. Please recognize that derivatives are hiding in those sentences.
+
+Main point: The equilibrium price  is  function of  and  . Reducing  by better technology lowers the supply line to  . The demand line has not changed. The customer is as eager or stingy as ever. But the price  and quantity  are different. The new equilibrium is at  and  28X XD D$ .
+
+If the technology is expensive, the supplier will raise  when reducing  . Line  is  . That gives a higher equilibrium  32Q =$ 40—the demand was too weak for the technology.
+
+Calculus question Find  and  . The difficulty is that  is not given as a function of  and  . So take implicit derivatives of the supply  demand equations:
+
+Now substitute  That is the starting point, around which we are finding a linear approximation. The last two equations give  and
+
+ (Problem 25). The linear approximation is
+
+Comment This example turned out to be subtle (so is economics) . I hesitated before including it. The equations are linear and their derivatives are easy, but something in the problem is hard—there is no explicit formula for  . The function  is not known. Instead of a point on a surface, we are following the intersection of two lines. The solution changes as the equation changes.The derivative of the solution comes from the derivative of the equation.
+
+Summary The foundation of this section is equation (1) for the tangent plane. Every thing builds on that—total differential, linear approximation, sensitivity to small change. Later sections go on to the chain rule and “directional derivatives” and “gradients.” The central idea of differential calculus is  .
+
+NEWTON’S METHOD FOR TWO EQUATIONS
+
+Linear approxi1mation is used to solve equations. To find out where a function is zero, look first to see where its approximation is zero. To find out where a graph crosses the  plane, look to see where its tangent plane crosses.
+
+Remember Newton’s method for  . The current guess is  . Around that point,  is close to  . This is zero at the next guess   . That is where the tangent line crosses the  axis.
+
+With two variables the idea is th eB sa mBe—buttwo unk Bnow Bns  and  require two equations. We solve  an dB  .  Both  functions have linear approximations that start from the current point  —where derivatives are computed:
+
+The natural idea is to set these approximations to zero. That gives linear equations for  and  . Those are the steps  and  that take us to the next guess in Newton’s method:
+
+13D Newton’s method to solve  and  has linear equations for the steps  and  that go from  to  :  : (19)
+
+EXAMPLE 9  and  have 3 solutions  ;   
+ .
+
+I will start at different points  . The next guess is   . It is of extreme interest to know which solution Newton’s method will choose—if it converges at all. I made three small experiments.
+
+1: Suppose  . At that point  and  . The derivatives are  . The steps  and  come from solving (19):
+
+This new point  is closer to the solution at  . The next point is .1:1;   
+1:05/ and convergence is clear. Soon convergence is fast.
+
+2: Start at  . There we find  and  :
+
+Newton has jumped from  on the  axis to  on the  axis. The next step goes to  ; back on  the  axis. We are in t he “basin of attraction” of  :
+
+3: Now start further out the axis at  , where  and  :
+
+Newton moves from  to  to  . Convergence breaks down—the method blows up. This danger is ever-present, when we start far from a solution.
+
+Please recognize that even a small computer will uncover amazing patterns. It can start from hundreds of points  , and follow Newton’s method. Each solution has a basin of attraction, containing all  leading to that solution. There is also a basin leading to infinity. The basins in Figure 13.11 are completely mixed together—a color figure shows them as fractals. The most extreme behavior is on the borderline between basins, when Newton can’t decide which way to go. Frequently we see chaos.
+
+Chaos is irregular movement that follows a definite rule. Newton’s method determines an iteration from each point  to the next. In scientific problems it normally converges to the solution we want. (We start close enough.) But the computer makes it possible to study iterations from faraway points. This has created a new part of mathematics—so new that any experiments you do are likely to be original.
+
+Section 3.7 found chaos when trying to solve  : But don’t think Newton’s method is a failure. On the contrary, it is the best method to solve nonlinear equations. The error is squared as the algorithm converges, because linear approximations have errors of order  : Each step doubles the number of correct digits, near the solution. The example shows why it is important to be near.

@@ -1,0 +1,22 @@
+8.1.1 Addition of Two 1-bit Numbers
+
+Let us look at the problem of adding two 1-bit numbers,  and  . Both  and  can take two values – 0 or 1. Hence, there are four possible combinations of  and  . Their sum in binary can be either 00, 01, or 10. Their sum will be 10, when both  and  are 1. We should make an important observation here. The sum of two 1-bit numbers might potentially be two bits long. Let us call the LSB of the result as the sum, and the MSB as the carry. We can relate this concept to standard primary school addition of two 1 digit decimal numbers. If we are adding
+
+8 and 9, then the result is 17. We say that the sum is 7, and the carry is 1. Similarly, if we add   
+3 and 4, then the result is 7. We say that the sum is 7, and the carry is 0.
+
+We can extend the concept of sum and carry to adding three 1-bit numbers also. If we are adding three 1-bit numbers then the range of the result is between 00 and 11 in binary. In this case also, we call the LSB as the sum, and the MSB as the carry.
+
+Definition 52
+
+sum The sum is the LSB of the result of adding two or three 1-bit numbers.
+
+carry The carry is the MSB of the result of adding two or three 1-bit numbers.
+
+For an adder that can add two 1-bit numbers, there will be two output bits – a sum  and a carry  . An adder that adds two bits is known as a half adder. The truth table of a half adder is shown in Table 8.1.
+
+Definition 53
+
+ half adder adds two bits to produce a sum and a carry.
+
+From the truth table, we can conclude that  , where  stands for exclusive or, ‘.’ stands for boolean AND, and ‘  stands for boolean OR. Secondly,  . The circuit diagram of a half adder is shown in Figure 8.1. As we can see, a half adder is a very simple structure, and we have constructed it using just six gates in Figure 8.1.

@@ -1,0 +1,16 @@
+1.6.5 Single Instruction ISA\*
+
+Let us now try to design an ISA for our modified Turing machine. We shall see that it is possible to have a complete ISA that contains just a single instruction. Let us consider an instruction that is compatible with the modified Turing machine and has been proven to be Turing complete.
+
+sbn a, b, c
+
+sbn stands for subtract and branch if negative. Here,  , and  are memory locations. This instruction subtracts  from  , saves the results in  , and if  , it jumps to the instruction at location  in the instruction table. Otherwise, the control transfers to the next instruction. For example, we can use this instruction to add two numbers saved in locations  and  . Note that exit is a special location at the end of the program.
+
+1: sbn temp, b, 2   
+2: sbn a, temp, exit
+
+Here, we assume that the memory location temp already contains the value 0. The first instruction saves  in temp. Irrespective of the value of the result it jumps to the next instruction. Note that the identifier (number :) is a sequence number for the instruction. In the second instruction we compute  . Thus, we have successfully added two numbers. We can now use this basic piece of code to add the numbers from 1 to 10. Assume that the variable counter is initialized to 9, index is initialized to 10, one is initialized to 1, and sum is initialized to 0.
+
+We observe that this small sequence of operations runs a for loop. The exit condition is in line 5, and the loop back happens in line 7. In each iteration it computes –  .
+
+There are many more similar single instruction ISAs that have been proven to be complete such as subtract and branch if less than equal to, reverse subtract and skip if borrow, and a computer that has generic memory move operations. The interested reader can refer to the book by Gilreath and Laplante [Gilreath and Laplante, 2003].

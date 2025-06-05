@@ -1,0 +1,237 @@
+[
+    {
+        "type": "text",
+        "text": "13.9.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 726
+    },
+    {
+        "type": "text",
+        "text": "For the latest designs of motherboards, and chipsets, the most accurate and up-to-date source of information is the vendor\u2019s website. Most vendors such as Intel and AMD post the details and configurations of their motherboards and chipsets after they are released. However, they typically do not post a lot of details about the architecture of the chips. The reader can refer to research papers for the architectural details of the AMD Opteron North Bridge chip [Conway and Hughes, 2007], Intel Blackford North Bridge chip [Radhakrishnan et al., 2007], and AMD North Bridge chip [Owen and Steinman, 2008] for the Griffin processor family. The book by Dally and Poulton [Dally and Poulton, 1998] is one of the best sources for information on the physical layer, and is a source of a lot of information presented in this book. Other books on digital communication [Proakis and Salehi, 2007, Sklar, 2001] are also excellent resources for further reading. Error control codes are mostly taught in courses on coding and information theory. Hence, for a deeper understanding of error control codes, the reader is referred to [Ling and Xing, 2004, Cover and Thomas, 2013]. For a detailed description of the Intel\u2019s I/O architecture and I/O ports, we shall point the reader to Intel\u2019s software developer manuals at [int, ]. The best sources for the I/O protocols are their official specifications \u2013 PCI Express [pci, ], SATA [sat, ], SCSI and SAS [scs, ], USB [usb, ], and FireWire [fir, ]. The book on memory systems by Jacob, Ng, and Wang [Jacob et al., 2007] is one of the best resources for additional information on hard disks, and DRAM memories. They explain the structure of a hard disk, and its internals in great detail. The official standards for compact discs are documented in the rainbow books. Each book in this collection contains the specifications of a certain type of optical disc. One of the earliest and most influential books in this collection is the Red Book [red, ] that contains the specifications for audio CDs. The latest DVD standards are available from http://www.dvdforum.org, and the latest Blu-Ray standards are available at the official website of the Blu-Ray Disc Association (http://www.blu-raydisc.com/en). ",
+        "page_idx": 726
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Overview of the I/O System ",
+        "text_level": 1,
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 What are the roles of the North Bridge and South Bridge chips?   \nEx. 2 \u2014 What is the role of the chipset in a motherboard?   \nEx. 3 \u2014 Describe the four layers in the I/O system.   \nEx. 4 \u2014 Why is it a good idea to design a complex system as a sequence of layers? ",
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Physical Layer ",
+        "text_level": 1,
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Ex. 5 \u2014 What is the advantage of LVDS signaling? Ex. 6 \u2014 Draw the circuit diagram of a LVDS transmitter and receiver. ",
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Ex. 7 \u2014 Assume that we are transmitting the bit sequence: 01101110001101. Show the voltage on the bus as a function of time for the following protocols: RZ, NRZ, Manchester, NRZI.   \nEx. 8 \u2014 What is the advantage of the NRZI protocol over the NRZ protocol?   \n\\* Ex. 9 \u2014 Draw the circuit diagram of the receiver of a plesiochronous bus.   \n\\* Ex. 10 \u2014 What are the advantages of a source synchronous bus?   \n\\* Ex. 11 \u2014 Why is it necessary to avoid transitions in the keep-out region?   \nEx. 12 \u2014 Differentiate between a 2-phase handshake, and a 4-phase handshake?   \n\\* Ex. 13 \u2014 Why do we set the strobe after the data is stable on the bus?   \n\\*\\* Ex. 14 \u2014 Design the circuit for a tunable delay element. ",
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Data Link, Network, and Protocol Layer ",
+        "text_level": 1,
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Ex. 15 \u2014 What are the different methods for demarcating frames? ",
+        "page_idx": 727
+    },
+    {
+        "type": "text",
+        "text": "Ex. 16 \u2014 Consider an 8-5 SECDED code. Encode the message: 10011001. ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 17 \u2014 Construct a code that can detect 3 bit errors. ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 18 \u2014 Construct a fully distributed arbiter. It should not have any central node that schedules requests. ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 19 \u2014 What is the advantage of split transaction buses? ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 How do we access I/O ports? ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 21 \u2014 What is the benefit of memory-mapped I/O? ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 22 \u2014 What are the various methods of communication between an I/O device and the processor? Order them in the increasing order of processor utilization. ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 23 \u2014 Assume that for a single polling operation, a processor running at 1 MHz takes 200 cycles. A processor polls a printer 1000 times per minute. What percentage of time does the processor spend in polling? ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 24 \u2014 When is polling more preferable than interrupts? Ex. 25 \u2014 When are interrupts more preferable than polling? Ex. 26 \u2014 Explain the operation of the DMA controller. ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Hard Disks ",
+        "text_level": 1,
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 27 \u2014 What is the advantage of zoned recording? Ex. 28 \u2014 Describe the operation of a hard disk. Ex. 29 \u2014 We have a hard disk with the following parameters: ",
+        "page_idx": 728
+    },
+    {
+        "type": "table",
+        "img_path": "images/08ed1800ab7d6bddfc1663cae90e566bc63f76af59e6027b0aea86138867188d.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Seek Time</td><td>50 ms</td></tr><tr><td>Rotational Speed</td><td>600 RPM</td></tr><tr><td>Bandwidth</td><td>100MB S</td></tr></table></body></html>\n\n",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "(a) How long will it take to read 25 MB on an average if 25 MB can be read in one pass. ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "(b) Assume that we can only read 5 MB in one pass. Then, we need to wait for the platter to rotate by $3 6 0 ^ { \\circ }$ such that the same sector comes under the head again. Now, we can read the next chunk of 5 MB. In this case, how long will it take to read the entire 25 MB chunk? ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 30 \u2014 Typically, in hard disks, all the heads do not read data in parallel. Why is this the case? ",
+        "page_idx": 728
+    },
+    {
+        "type": "text",
+        "text": "Ex. 31 \u2014 Let us assume that we need to read or write long sequences of data. What is the best way of arranging the sectors on a hard disk? Assume that we ideally do not want to change tracks, and all the tracks in a cylinder are aligned. ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 32 \u2014 Now, let us change the assumptions in the previous exercise. Assume that it is faster to move to the next track on the same recording surface, than starting to read from another track in the same cylinder. With these assumptions, how should we arrange the sectors? [NOTE: The question is not as easy as it sounds.] ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 33 \u2014 Explain the operation of RAID 0,1,2,3,4,5, and 6. ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 34 \u2014 Consider 4 disks D0, D1, D2, D3 and a parity disk P using RAID 4. The following table shows the contents of the disks for a given sector address, $S$ , which is the same across all the disks. Assume the size of a block to be 16 bits. ",
+        "page_idx": 729
+    },
+    {
+        "type": "table",
+        "img_path": "images/c54b489fd635e63418115b8413baa349a161fa56a5bfb57346360e07fc0465d3.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>D0</td><td>D1</td><td>D2</td><td>D3</td></tr><tr><td>OxFF00</td><td>Ox3421</td><td>Ox32FF</td><td>Ox98AB</td></tr></table></body></html>\n\n",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Compute the value of the parity block? Now the contents of D0 are changed to 0xABD1. What is the new value of the parity block? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 35 \u2014 Assume that we want to read a block as fast as possible, and there are no parallel accesses. Which RAID technology should we choose? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 36 \u2014 What is the advantage of RAID 5 over RAID 4? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Optical and Flash Drives ",
+        "text_level": 1,
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 37 \u2014 What is the main difference between a CD and DVD? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 38 \u2014 How do we use the NRZI encoding in optical drives? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 39 \u2014 What is the advantage of running a drive at constant linear velocity over running it at constant angular velocity? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 40 \u2014 For an optical drive that runs at constant linear velocity, what is the relationship between the angular velocity, and the position of the head? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 41 \u2014 What are the basic differences between NAND and NOR flash? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 42 \u2014 Explain wear leveling, and read disturbance? How are these issues typically handled in modern flash drives? ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Ex. 43 \u2014 Read more about the Hypertransport $^ \\mathrm { { ' I M } }$ , Intel Quickpath, InfinibandTM, and Myrinet $\\textsuperscript { \\textregistered }$ protocols? Try to divide their functionality into layers as we have presented in this chapter. ",
+        "page_idx": 729
+    },
+    {
+        "type": "text",
+        "text": "Part IV ",
+        "text_level": 1,
+        "page_idx": 731
+    }
+]

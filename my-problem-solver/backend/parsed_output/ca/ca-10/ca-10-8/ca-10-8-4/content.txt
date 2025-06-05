@@ -1,0 +1,59 @@
+10.8.4 Saving and Restoring Program State
+
+Let us define the term program state as the state of all the registers and memory elements associated with the program. In specific, the program state, comprises the contents of the register file, PC, f lags register, and main memory.
+
+Definition 80
+
+The term program state is defined as the state of all the registers and memory elements associated with the program. In specific, the program state, comprises the contents of the register file, PC, flags register, and main memory.
+
+We need to find effective means of saving and restoring the state of the executing program. Let us start by stating that we do not need a method to save and restore the state of main memory because the assumption is that the interrupt handler uses a different region of main memory. We shall discuss methods to enforce a separation of memory regions between programs in Chapter 11. Nonetheless, the bottom line is that there is no unintended overlap of the memory regions of the executing program and the interrupt handler. In the case of exceptions, the interrupt handler might access some parts of the memory space of the program such that it can add some data that the program requires. One such example of exceptions is a page fault. We will have ample opportunities to discuss page faults in Chapter 11.
+
+Hence, we need to explicitly take care of the PC, the f lags register, and the set of registers. The state of all of these entities is known as the context of a program. Hence, our problem is to successfully save and retrieve the context of a program upon an interrupt.
+
+Definition 81
+
+The context of a program refers to the values of the PC, the flags register, and the values contained in all the registers.
+
+The oldP C Register
+
+Let us add an  field for the next PC in the instruction packet. By default, it is equal to  . However, for branch instructions that are taken, the  field contains the branch target. We envision a small circuit in the EX stage that adds the branch target, or  to the  field of the instruction packet. Recall that the instruction packet gets passed from one stage to the next in a pipeline. Once a marked instruction reaches the RW stage, the exception unit looks up a small internal table indexed by the interrupt/ exception code. For some types of interrupts such as I/O events, we need to return to the next PC (  or the branch target). This value is stored in the  field of the MA-RW pipeline register. However, for some types of exceptions such as page faults, it is necessary to re-execute the faulting instruction once again. A page fault happens because a certain memory location is not loaded with its data. The interrupt handler (for a page fault) needs to load the data of the memory location by fetching values from the hard disk, and then re-execute the instruction. In this case, we need to return to the PC of the marked instruction. In either case, the exception unit transfers the correct return address to an internal  register, and then starts fetching instructions for the interrupt handler.
+
+Spilling General Purpose Registers
+
+We need a mechanism to save and restore registers akin to spilling and restoring registers as in the case of function calls. However, there is an important difference in the case of interrupt handlers. Interrupt handlers have their own stacks that are resident in their private memory regions. To use the stack pointer of an interrupt handler, we need to load its value into  . This step will overwrite the previous value, which is the value of the stack pointer of the program. Hence, to avoid losing the value of the stack pointer of the program, we add another register called  . The interrupt handler first transfers the contents of  to  . Subsequently, it loads  with the value of its stack pointer and then spills all the registers excluding  to its stack. At the end of this sequence of steps, it transfers the contents of  to the stack.
+
+The oldF lags Register
+
+The only part of the program state that we have not saved up till now is the f lags register. Let us assume that the f lags register is a 32-bit register. Its lower 2 bits contain the values,  and  , respectively. Moreover, let us add a flags field to the instruction packet. Instructions other than the cmp instruction write the contents of the f lags register to the f lags field in the instruction packet, in the EX stage. The cmp instruction writes the updated value of the  register to the flags field in the EX stage and moves to the subsequent stages. When a marked instruction reaches the RW stage, the exception unit extracts the contents of the flags field in the instruction packet, and saves it in the oldF lags register. The oldF lags register is a special register that is visible to the ISA, and helps store the last value of the f lags register that a valid instruction in the program had seen.
+
+Saving and Restoring Program State
+
+For saving the program state, the interrupt handler contains assembly routines to save the general purpose registers (excluding  ) and the oldSP , oldF lags, and oldP C registers. We save all of these values in the stack of the interrupt handler. Likewise, we can restore program state in almost the reverse order. We restore the value of oldP C, the f lags register, the general purpose registers, and the stack pointer. As the last step, we need to transfer the contents of oldP C to PC such that we can resume executing the original program.
+
+Privileged Instructions
+
+We have added the following special registers namely oldP C, oldSP , oldF lags and flags. Note that the flags register in non-privileged mode was not accessible as an ordinary register. Next, we add a special category of instructions called privileged instructions that are only accessible to specialized programs such as operating systems, and interrupt handlers. The first privileged instruction that we introduce is  . It transfers values between regular registers and the special registers (oldP C, oldSP , oldF lags, and flags).
+
+The other privileged instruction that we introduce in this section is retz. It reads the value of  , and transfers its contents to PC. In other words, we jump to the location contained in  . We do not allow instructions to directly transfer the values of special registers to and from memory, because we have to create privileged versions of both load and store instructions. We wish to avoid creating two additional instructions.
+
+Definition 82
+
+ privileged instruction is a special instruction that has access to the internals of the processor. It is typically meant to be used only by operating system programs such as the kernel (core of the operating system), device drivers (programs to interact with I/O devices), and interrupt handlers.
+
+To implement the movz instruction, we add a new instruction opcode. Recall that we introduced only 21 instructions in the SimpleRisc instruction set. We can afford to have 11 more instructions in the ISA. movz uses the same register-format-based encoding as the mov instruction. However, it sees a different view of registers. The registers visible to privileged instructions, and their identifiers are shown in Table 10.2.
+
+Privileged instructions use a different register encoding. They can only see the four special registers,  , and  . We need to make a small modification to the OF and RW stages to implement the  instruction. The first is that we need to have a circuit in the OF stage to quickly find out if the opcode of an instruction is  . We can use a fast circuit similar to the one that we use to find out if an instruction is a store. Then, we can choose the right set of register inputs from either the normal register file, or from one of the privileged registers using multiplexers. Similarly, in the RW stage, we can choose to write the value in the normal register file, or in one of the special registers, again, with the help of additional multiplexers. For the sake of brevity, we do not show the circuit. We leave the task of implementing  as an exercise for the reader. We can implement retz on the same lines as the ret instruction. The only difference is that instead of getting the return value from the ra register, we get it from the  register. Note that we will also require forwarding and interlock logic that takes special registers into account. The pseudocode of the forwarding and interlock logic needs to be updated.
+
+Let us summarize the discussion in terms of two new concepts that we have learned. The first is the notion of privileged instructions. These instructions are typically used by interrupt handlers, and other modules of the operating systems. They have more visibility into the internals of the processor. Since they are very powerful, it is not a good idea to give programmers the ability to invoke them. They might corrupt system state, and introduce viruses. Hence, most systems typically disallow the usage of privileged instructions by normal programs. Most processors have a register that contains the current privilege level (CPL). It is typically 1 for user programs, and 0 for operating system programs such as interrupt handlers. There is a privilege level change, when we switch to processing an interrupt handler (1 to 0), and when we execute the  instruction to return to a user program (0 to 1). Whenever, we execute a privileged instruction, the processor checks the CPL register, and if the program is not allowed to execute the instruction, then an exception is flagged. The operating system typically terminates the program, since it may be a virus.
+
+Definition 83
+
+Most processors have a register that contains the current privilege level (CPL). It is typically 1 for user programs, and 0 for operating system programs such as interrupt handlers. We are allowed to execute privileged instructions, only when the CPL is equal to 0.
+
+The second important concept is the notion of different register views for different instructions, or different pieces of code. This concept is known as a register window, and was pioneered by the Sun Ultrasparc processors. The Sun processors used different register windows for different functions. This allowed the compiler to avoid costly register spills. Here, we use register windows to separate the set of registers that can be accessed by user programs and the interrupt handlers. The interrupt handlers can see all the special registers and two regular registers (  and  ).
+
+Definition 84
+
+ register window is defined as the set of registers that a particular instruction or function can access. For example, in our case, privileged instructions can access only six registers,
+
+out of which four are special registers. In comparison, regular instructions have a register window that contains all the 16 general purpose registers, but no special register.

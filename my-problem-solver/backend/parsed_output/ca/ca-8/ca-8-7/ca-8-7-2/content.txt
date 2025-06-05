@@ -1,0 +1,106 @@
+8.7.2 Further Reading
+
+For more details on the different algorithms for computer arithmetic, the reader can refer to classic texts such as the books by Israel Koren [Koren, 2001], Behrooz Parhami [Parhami, 2009], and Brent and Zimmermann [Brent and Zimmermann, 2010]. We have not covered the SRT division algorithm. It is used in a lot of modern processors. The reader can find good descriptions of this algorithm in the references. The reader is also advised to look at algorithms for multiplying large integers. The Karatsuba and Sc¨onhage-Strassen algorithms are the most popular algorithms in this area. The area of approximate adders is gaining in prominence. These adders add two numbers by assuming certain properties such as a bound on the maximum number of positions a carry propagates. It is possible that they can occasionally make a mistake. Hence, they have additional circuitry to detect and correct errors. With high probability such adders can operate in  time. Verma et al. [Verma et al., 2008] describe one such scheme.
+
+Exercises
+
+Addition
+
+Ex. 1 — Design a circuit to find the 1’s complement of a number using half adders only.
+
+Ex. 2 — Design a circuit to find the 2’s complement of a number using half adders and logic gates.
+
+Ex. 3 — Assume that the latency of a full adder is 2ns, and that of a half adder is 1ns. What is the latency of a 32-bit ripple carry adder?
+
+\* Ex. 4 — Design a carry-select adder to add two n-bit numbers in  time, where the sizes of the blocks are  , respectively.
+
+Ex. 5 — Explain the operation of a carry lookahead adder.
+
+\* Ex. 6 — Suppose there is an architecture which supports numbers in base 3 instead of base 2. Design a Carry Lookahead Adder for this system. Assume that you have a simple full-adder which adds numbers in base 3.
+
+\* Ex. 7 — Most of the time, a carry does not propagate till the end. In such cases, the correct output is available much before the worst case delay. Modify a ripple carry adder to consider such cases and set an output line to high as soon as the correct output is available.
+
+\* Ex. 8 — Design a fast adder, which uses only the propagate function, and simple logic operations. It should NOT use the generate function. What is its time and space complexity?
+
+Ex. 9 — Design a hardware structure to compute the sum of  ,  bit numbers. Make it run as fast as possible. Show the design of the structure. Compute a tight bound on its asymptotic time complexity. [NOTE: Computing the time complexity is not as simple as it seems].
+
+\*\* Ex. 10 — You are given a probabilistic adder, which adds two numbers and yields the output ensuring that each bit is correct with probability,  . In other words, a bit in the output may be wrong with probability,  , and this event is independent of other bits being incorrect. How will you add two numbers using probabilistic adders ensuring that each output bit is correct with at least a probability of  , where  ?
+
+\*\*\* Ex. 11 — How frequently does the carry propagate to the end for most numbers? Answer: Very infrequently. In most cases, the carry does not propagate beyond a couple of bits. Let us design an approximately correct adder. The insight is that a carry does not propagate by more than  positions most of the time. Formally, we have:
+
+Assumption 1: While adding two numbers, the largest length of a chain of propagates is at most  .
+
+Design an optimal adder in this case that has time complexity  assuming that Assumption 1 holds all the time. Now design a circuit to check if assumption 1 has ever been violated.
+
+Verma et al. [Verma et al., 2008] proved that  is equal to  with very high probability. You will observe that we have an exactly correct adder, which requires  time steps (most of the time) !!!
+
+\*\*\* Ex. 12 — Let us consider two n-bit binary numbers,  , and  . Further, assume that the probability of a bit being equal to  is  in  , and  in  . Let us consider  as one large chunk(block).   
+(a) What are the expected values of generate and propagate functions of this block as  tends to  ?   
+(b) If  , what are the values of these functions?   
+(c) What can we infer from the answer to part (b) regarding the fundamental limits of binary addition?
+
+Multiplication
+
+Ex. 13 — Write a program in assembly language (any variant) to multiply two unsigned 32-bit numbers given in registers  and  and store the product in registers  (LSB) and r3 (MSB). Instead of using the multiply instruction, simulate the algorithm of the iterative multiplier.
+
+Ex. 14 — Extend the solution to Exercise 13 for 32-bit signed integers.
+
+\* Ex. 15 — Normally, in the Booth’s algorithm, we consider the current bit, and the previous bit. Based on these two values, we decide whether we need to add or subtract a shifted version of the multiplicand. This is known as the radix-2 Booth’s algorithm, because we are considering two bits at one time. There is a variation of Booth’s algorithm, called radix-4 Booth’s algorithm in which we consider 3 bits at a time. Is this algorithm faster than the original radix-2 Booth’s algorithm? How will you implement this algorithm ?
+
+\* Ex. 16 — Assume that in the sizes of the  and  registers are 32 bits in a 32-bit Booth multiplier. Is it possible to have an overflow? Answer the question with an example. [HINT: Can we have an overflow in the first iteration itself?]
+
+\* Ex. 17 — Prove the correctness of the Booth multiplier in your own words.
+
+Ex. 18 — Explain the design of the Wallace tree multiplier. What is its asymptotic time complexity?
+
+\*\* Ex. 19 — Design a Wallace tree multiplier to multiply two signed 32-bit numbers, and save the result in a 32-bit register. How do we detect overflows in this case?
+
+Division
+
+Ex. 20 — Implementation of division using an assembly program. i) Write an assembly program for restoring division.
+
+ii) Write an assembly program for non-restoring division.
+
+\* Ex. 21 — Design an  time algorithm to find out if a number is divisible by 3.   
+Try to minimize  . \* Ex. 22 — Design an  time algorithm to find out if a number is divisible by 5.   
+Try to minimize  .
+
+ Ex. 23 — Design a fast algorithm to compute the remainder of the division of an unsigned number by a number of the form  . What is its asymptotic time complexity?
+
+ Ex. 24 — Design a fast algorithm to compute the remainder of the division of an unsigned number by a number of the form  . What is its asymptotic time complexity?
+
+ Ex. 25 — Design an  algorithm to find the greatest common divisor of two binary numbers  and  . [HINT: The gcd of two even numbers  and  is 
+
+Floating Point Arithmetic
+
+Ex. 26 — Give the simplest possible algorithm to compare two 32-bit IEEE 754 floating point numbers. Do not consider  , NAN, and (negative 0). Prove that your algorithm is correct. What is its time complexity ?
+
+Ex. 27 — Design a circuit to compute  . What is its asymptotic time complexity? Assume  is an integer. How can we use this circuit to convert  to a floating point number?
+
+Ex. 28 —  and  , are saved in the computer as  and  . Neglecting any further truncation or roundoff errors, show that the relative error of the product is approximately the sum of the relative errors of the factors.
+
+Ex. 29 — Explain floating point addition with a flowchart.
+
+Ex. 30 — Explain floating point multiplication with a flowchart.
+
+Ex. 31 — Can we use regular floating point division for dividing integers also? If not, then how can we modify the algorithm for performing integer division?
+
+Ex. 32 — Describe in detail how the “round to nearest” rounding mode is implemented.
+
+\*\*\* Ex. 33 — We wish to compute the square root of a floating point number in hardware using the Newton-Raphson method. Outline the details of an algorithm, prove it, and compute its computational complexity. Follow the following sequence of steps.
+
+1.Find an appropriate objective function.   
+2.Find the equation of the tangent, and the point at which it intersects the x-axis.   
+3.Find an error function.   
+4.Calculate an appropriate initial guess for  .   
+5.Prove that the magnitude of the error is less than 1.   
+6.Prove that the error decreases at least by a constant factor per iteration.   
+7.Evaluate the asymptotic complexity of the algorithm.
+
+Design Problems
+
+Ex. 34 — Implement an adder and a multiplier in a hardware description language such as VHDL or Verilog.
+
+Ex. 35 — Extend your design for implementing floating point addition and multiplication.
+
+Ex. 36 — Read about the SRT division algorithm, comment on its computational complexity, and try to implement it in VHDL/Verilog.

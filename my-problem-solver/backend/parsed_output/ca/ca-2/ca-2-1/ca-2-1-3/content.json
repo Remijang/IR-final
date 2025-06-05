@@ -1,0 +1,90 @@
+[
+    {
+        "type": "text",
+        "text": "2.1.3 Boolean Algebra ",
+        "text_level": 1,
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Given Boolean variables and basic operators, let us define some rules of Boolean algebra. ",
+        "page_idx": 52
+    },
+    {
+        "type": "table",
+        "img_path": "images/b3d581e972f0a8fb4700fe070aea9267a868a69c8b8d34a3163239f7d2240a19.jpg",
+        "table_caption": [
+            "Table 2.6: Truth table for the XOR operator "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>A</td><td>B</td><td>A XOR B</td></tr><tr><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>0</td><td>1</td><td>1</td></tr><tr><td></td><td>1</td><td>0</td><td>1</td></tr><tr><td></td><td>1</td><td>1</td><td>0</td></tr></table></body></html>\n\n",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "NOT Operator ",
+        "text_level": 1,
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "Let us look at some rules governing the NOT operator. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "1. Definition: $\\overline { { 0 } } = 1$ , and $\\bar { 1 } = 0$ \u2013 This is the definition of the NOT operator. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "2. Double negation: ${ \\overline { { \\overline { { A } } } } } = A$ \u2013 The NOT of (NOT of $A$ ) is equal to $A$ itself. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "OR and AND Operators ",
+        "text_level": 1,
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "1. Identity: $A + 0 = A$ , and $A . 1 = A - \\operatorname { I f }$ we compute the OR of a Boolean variable, $A$ , with 0, or AND with 1, the result is equal to $A$ . ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "2. Annulment: $A + 1 = 1$ , and $A . 0 = 0 \\mathrm { ~ - ~ } \\mathrm { I f }$ we compute $A$ OR 1, then the result is always equal to 1. Similarly, $A$ AND 0, is always equal to 0 because the value of the second operand determines the final result. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "3. Idempotence: $A + A = A$ , and $A . A = A$ \u2013 The result of computing the OR or AND of $A$ with itself, is $A$ . ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "4. Complementarity: $A + { \\overline { { A } } } = 1$ , and $A . { \\overline { { A } } } = 0$ \u2013 Either $A = 1$ , or ${ \\overline { { A } } } = 1$ . In either case $A + { \\overline { { A } } }$ will have one term, which is 1, and thus the result is 1. Similarly, one of the terms in $A . { \\overline { { A } } }$ is $0$ , and thus the result is $0$ . ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "5. Commutativity: $A . B = B . A$ , and $A + B = B + A$ \u2013 The order of Boolean variables does not matter. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "6. Associativity: $A + ( B + C ) = ( A + B ) + C$ , and $A . ( B . C ) = ( A . B )$ . $C$ \u2013 We are free to parenthesize expressions containing only OR or AND operators in any way we choose. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "7. Distributivity: $A . ( B + C ) = A . B + A . C$ , and $A + B . C = ( A + B ) . ( A + C )$ \u2013 We can use this law to open up a parenthesis and simplify expressions. ",
+        "page_idx": 53
+    },
+    {
+        "type": "text",
+        "text": "We can use these rules to manipulate expressions containing Boolean variables in a variety of ways. Let us now look at a basic set of theorems in Boolean algebra. ",
+        "page_idx": 53
+    }
+]

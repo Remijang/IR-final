@@ -1,0 +1,180 @@
+11.3 Cross Products and Determinants
+
+After saying that vectors are not multiplied, we offered the dot product. Now we contradict ourselves further, by defining the cross product. Where  was a number, the cross product  is a vector. It has length and direction:
+
+The length is  : The direction is perpendicular to A and B:
+
+The cross product (also called vector product) is defined in three dimensions only.  and  lie on a plane through the origin.  is along the normal vector  , perpendicular to that plane. We still have to say whether it points “up” or “down” along  |:
+
+The length of  depends on sin  , where  involved cos  : The dot product rewards vectors for being parallel .cos  /: The cross product is largest when  is perpendicular to  .sin  /: At every angle
+
+That will be a bridge from geometry to al|gebra. |This| se||cti|on goes from definition to formula to volume to determinant. Equations (6) and (14) are the key formulas for  :
+
+Notice that  : (This is the zero vector, not the zero number.) When  is parallel to  , the angle is zero and the sine is zero. Parallel vectors have  : Perpendicular vectors have sin  and  area of rectangle with sides A and  :
+
+Here are four examples that lead to the cross product  :
+
+EXAMPLE 1 (Fro |m g|eometry) Find t|he |a|rea of|a parallelogram and a triangle.
+
+Vectors A and B, going out from the origin, form two sides of a triangle. They produce the parallelogram in Figure 11.13, which is|tw|i|ce||as larg|e as|thetria|ngle.
+
+The area of a parallelogram is base times height (perpendicular height not sloping height). The base is  : The height is  : We take absolute values because height and area are not negative. Then the area is the length of the cross product:
+
+EXAMPLE 2 (From physics) The torque vector  produces rotation.
+
+The force  acts at the point  : When  is parallel to the position vector  , the force pushes outward (no turning). When  is perpendicular to  , the force creates rotation. For in-between angles there is an outward force  and a turning force  : The turning force times the distance  is the moment  :
+
+The moment gives the magnitude and sign of the torque vector  . The direction of  is along the axis of rotation, at right angles to  and  :
+
+EXAMPLE 3 Does the cross product go up or down ? Use the right-hand rule.
+
+Forces and torques are probably just fine for physicists. Those who are not natural physicists want to see something turn. We can visualize a record or compact disc rotating around its axis—which comes up through the center.
+
+At a point on the disc, you give a push. When the push is outward (hard to do), nothing turns. Rotation comes from force “around” the axis. The disc can turn either way—depending on the angle between force and position. A sign convention is necessary, and it is the right-hand rule:
+
+ points along your right thumb when the fingers curl from A toward B:
+
+This rule is simplest for the vectors  in Figure 11.14—which is all we need.
+
+Suppose the fingers curl from i to  : The thumb points along  : The  -y-z axes form  “right-handed triple.” Since  and  and sin  , the length of  is 1: The cross product is  . The disc turns counterclockwise—its angular velocity is up—when the force acts at i in the direction j:
+
+Figure 11.14b reverses i and  : The force acts at  and its direction is i: The disc turns clockwise (the way records and compact discs actually turn). When the fingers curl from j to i, the thumb points down. Thus  : This is a special case of an amazing rule:
+
+That is quite remarkable. Its discovery by Hamilton produced an intellectual revolution in 19 th century algebra, which had been totally accustomed to  : This commutative law is old and boring for numbers (it is new and boring for dot products). Here we see its opposite for vector products  : Neither law holds for matrix products.
+
+EXAMPLE 4 A screw goes into a wall or out, following the right-hand rule.
+
+The disc was in the  plane. So was the force. (We are not breaking records here.) The axis was up and down. To see the cross product more completely we need to turn a screw into a wall.
+
+Figure 11.14b shows the  plane as the wall. The screw is in the  direction. By turning from  toward  we drive the screw into the wall—which is the negative  direction. In other words  equals minus j: We turn the screw clockwise to make it go in. To take out the screw, twist from  toward i: Then  equals plus j:
+
+To summarize:  and  have plus signs because kij and jki are in the same “cyclic order” as ijk: (Anticyclic is minus.) The  and  axes form righthanded triples like  :
+
+THE FORMULA FOR THE CROSS PRODUCT
+
+We begin the algebra of  : It is essential for computation, and it comes out beautifully. The square roots in  will disappear in formula (6) for  : (The square roots also disappeared in  , which is  : But  tan  would be terrible.) Since  is a vector we need to find three components.
+
+Start with the two-dimensional case. The vectors  and  are in the  plane. Their cross product must go in the  direction. Therefore  and there is only one nonzero component. It must be  (with the correct sign), but we want a better formula. There are two clean ways to compute  , either by algebra  or by a bridge  to the dot product and geometry:
+
+On the right are  and 0: The cross product is 
+
+ Rotate  clockwise through  into  : Its length is unchanged (and  ). Then  equals  , which is  :
+
+11F In the  plane,  equals  : The parallelogram with sides A and  has area  : The triangle  has area  :
+
+EXAMPLE 5 For  and  the cross product is   : Area of parallelogram  , area of triangle  : The minus sign in   is absent in the areas.
+
+Note Splitting  intofour separate cross productsis correct, but it does not follow easily from  : Method  is not justified until Remark 1 below. An algebraist would change the definition of  to start with the distributive law (splitting rule) and the anticommutative law:
+
+THE CROSS PRODUCT FORMULA (3 COMPONENTS)
+
+We move to three dimensions. The goal is to compute all three components of  (not just the length). Method  splits each vector into its i; j; k components, making nine separate cross products:
+
+ seven more terms:
+
+11.3 Cross Products and Determinants
+
+Remember  : Those three terms disappear. The other six terms come in pairs, and please notice the cyclic pattern:
+
+The k component is the  answer, when  : The i component involves indices 2 and 3,  involves 3 and 1,  involves 1 and 2: The cross product formula is written as a “determinant” in equation (14) below—many people use that form to compute  :
+
+EXAMPLE 6     
+ : The i; j; k components give  : Never add the  ; and  :
+
+Remark 1 The three-dimensional formula (6) is still to be matched with  from geometry. One way is to rotate  into  as before, staying in the plane of A and B: Fortunately there isan easier test. The vector in equation (6)satisfies all four geometric requirements on  : perpendicular to A, perpendicular to  , correct length, right-hand rule. The length is checked in Problem 16—here is the zero dot product with A:
+
+Remark 2 (Optional) There is a wonderful extension of the Pythagoras formula  : Instead of sides of a triangle, we go to areas of projections on the  ,  , and  planes.  is the square of the parallelogram area in Example 6.
+
+For triangles these areas are cut in half. Figure 11.15a shows three projected triangles of area  : Its Pythagoras formula is  :
+
+EXAMPLE 7  lie in a plane. Find its equation.
+
+Idea for any  : Find vectors A and B in the plane. Compute the normal  :
+
+Solution The vector from  to  has components  : It is  (subtract to go from  to  ). Similarly the vector from  to  is  : Since  and  are in the plane of Figure 11.15,  is perpendicular:
+
+The normal vector is  : The equation of the plane is   :
+
+With the right choice  , this plane contains  . |Theeq|uatio| n is  1:
+
+EXAMPLE 8 What is the area of this same triangle PQR ?
+
+Solution The area is half of the cross-product length  :
+
+DETERMINANTS AND VOLUMES
+
+We are close to good algebra. The two plane vectors  and  are the sides of a parallelogram. Its area is  , possibly witha sign change. There is a special way to write these four numbers—in a “square matrix.” There is also a name for the combination that leads to area. It is the “determinant of the matrix”:
+
+This is a 2 by 2 matrix (notice brackets) and a 2 by 2 determinant (notice vertical bars). The matrix is an array of four numbers and the determinant is one number:
+
+The second has no area because  : The third is a unit square .  :
+
+Now move to three dimensions, where determinants are most useful. The parallelogram becomes a parallelepiped. The word “box” is much shorter, and we will use it, but remember that the box is squashed. (Like a rectangle squashed to a parallelogram, the angles are generally not  .) |Th|e three e|dg|es from|th|e origin are  : Those edges are at right angles only when  :
+
+Question: What is the volume of the box ? The right-angle case is easy—it is length times width times height. The volume is  times  times  , when the angle|s are  . For|a s|quashed box (Figure 11.15) we need the perpendicular height, not the sloping height.
+
+There is a beautiful formula for volume.  and  give a parallelogram in the base, and  is the base area. This cross product points straight up. The third vector A points up at an angle—its perpendicularheight is  : Thu|s the volum |e is area  times  times cos  : The volume is the dot product of A with  C:
+
+Important:  is a number, not a vector. This volume is zero when  is in the same plane as  and C (the box is totally flattened). Then  is perpendicular
+
+to A and their dot product iszero.
+
+All those come from the same box, with different sides chosen as base—but no change in volume. Figure 11.15 has  and C in the base but it can be A and  or  and  : The triple product  has opposite sign, since  . This order ACB is not cyclic like ABC and CAB and BCA:
+
+To compute this triple product A  , we take  from equation (6):
+
+The numbers  multiply 2 by 2 determinants to give a 3 by 3 determinant! There are three terms with plus signs (like  ). The other three have minus signs (like  . The plus terms have indices 123; 231; 312 in cyclic order. The minus terms have anticyclic indices 132; 213; 321: Again there is a special way to writethe nine components of  —as a “3 by 3 matrix.” The combination in (9), which gives volume, is a “3 by 3 determinant:”
+
+A single number is produced out of nine numbers, by formula .9/: The nine numbers are multiplied three at a time, as in  —except this product is not allowed. Each row and column must be represented once. This gives the six terms in the determinant:
+
+The trick is in the  signs. Products down to the right are “plus”:
+
+With practice the six products like 2 2 2 are done in your head. Write down only  : This is the determinant and the volume.
+
+Note the special case when the vectors are i; j;  : The box is a unit cube:
+
+ lie in the same plane,the v olume is z ero. A ze ro determinant is the test to see whether three vectors lie in a plane. Here row  row  :
+
+Zeros in the matrix simplify the calculation. All three products with plus signs— down to the right—are zero. The only two nonzero products cancel each other.
+
+If the three  ’s are changed to  ’s, the determinant is  : The determinant can be negative when all nine entries are positive! A negative determinant only means that the rows  form a “left-handed triple.” This extra information from the sign—right-handed vs. left-handed—is free and useful, but the volume is the absolute value.
+
+The determinant yields the volume also in higher dimensions. In physics, four dimensions give space-time. Ten dimensions give superstrings. Mathematics uses all dimensions. The 64 numbers in an 8 by 8 matrix give the volume of an eightdimensional box—with  terms instead of  : Under pressure from my class I omit the formula.
+
+Question When is the point  on the plane through the origin containing  and C ? For the vector  to lie in that plane, the volume  must be zero. The equation of the plane is determinan  .
+
+Follow this example for  and  to find the p lane parallel to  and C:
+
+This equation is  : The normal vector  has components  :
+
+THE CROSS PRODUCT AS A DETERMINA NT
+
+There is a connectionbetween 3 by 3 and 2 by 2 determ inants that you have to see. The numbers in the top row multiply determinants from the other rows:
+
+The highlighted product  gives two of the six terms. All six products contain an a and  and  from different columns. There are  different orderings of columns 1; 2; 3: Note how  multiplies a determinant from columns 1 and 2:
+
+Equation (13) is identical with equations (9) and (10). We are meeting the same six terms in different ways. The new feature is the minus sign in front of  —and the common mistake is to forget that sign. In a 4 by 4 determinant,  would multiply 3 by 3 deter minants.
+
+Now comes a key step. We write  as a determinant. Thevectors i; j;  go in the top row, the componentsof  and  go in the other rows. The “determinant” is exactly  :
+
+This time we highlighted the  component with its minus sign. There is no great mathematics in formula (14)—it is probably illegal to mix i; j; k with six numbers
+
+11.3 Cross Products and Determinants
+
+but it w orks. This is the good wayto remember and compute  : In the example  from equation (8), those two vectors go into the last two rows:
+
+The  component is highlighted, to see  again. Note the change from equation (11), which had  in the top row. That triple product was a number (zero). This cross product is a vector  :
+
+Review question 1 With the i; j; k row changed to 3; 4; 5; what is the determinant ? Answer  : That triple product is the volume of a box.
+
+Review question 2 When is  and when is  ? Zero vector, zero number.
+
+Answer When A and  are on the same line. When A; B; C are in the same plane.
+
+Reviewquestion 3 Does the parallelogram area  equal a 2 by 2 determinant ?
+
+Answer If  and  lie in the  plane, yes. Generally no.
+
+Review question 4 What are the vector triple products  and  ? Answer Not computed yet. These are two new vectors in Problem 47:
+
+Review question 5 Find the plane through the origin containing  and  : Find the cross product of those same vectors  and  : Answer The position vector  is perpendicular to  :

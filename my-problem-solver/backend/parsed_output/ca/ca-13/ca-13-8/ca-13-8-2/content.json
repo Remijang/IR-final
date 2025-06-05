@@ -1,0 +1,182 @@
+[
+    {
+        "type": "text",
+        "text": "13.8.2 RAID Arrays ",
+        "text_level": 1,
+        "page_idx": 709
+    },
+    {
+        "type": "text",
+        "text": "Most enterprise systems have an array of hard disks because their storage, bandwidth, and reliability requirements are very high. Such arrays of hard disks are known as RAID arrays (Redundant Arrays of Inexpensive Disks). Nowadays, people are also using the expansion \u201cRedundant Arrays of Independent Disks\u201d. Let us review the design space of RAID-based solutions in this section. ",
+        "page_idx": 709
+    },
+    {
+        "type": "text",
+        "text": "Definition 162 RAID (Redundant Array of Inexpensive Disks) is a class of technologies for deploying large arrays of disks. There are different RAID levels in the design space of RAID solutions. Each level makes separate bandwidth, capacity, and reliability guarantees. ",
+        "page_idx": 709
+    },
+    {
+        "type": "text",
+        "text": "RAID 0 ",
+        "text_level": 1,
+        "page_idx": 710
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the simplest RAID solution known as RAID 0. Here, the aim is to increase bandwidth, and reliability is not a concern. It is typically used in personal computers optimized for high performance gaming. ",
+        "page_idx": 710
+    },
+    {
+        "type": "text",
+        "text": "The basic idea is known as data striping. Here, we distribute blocks of data across disks. A block is a contiguous sequence of data similar to cache blocks. Its size is typically 512 B; however, its size may vary depending on the RAID system. Let us consider a two disk system with RAID 0 as shown in Figure 13.33. We store all the odd numbered blocks $( B 1 , B 3 , \\ldots )$ in disk 1, and all the even numbered blocks $( B 2 , B 4 , \\ldots )$ in disk 2. If a processor has a page fault, then it can read blocks from both the disks in parallel, and thus in effect, the hard disk bandwidth is doubled. We can extend this idea and implement RAID 0, using $N$ disks. The disk bandwidth can thus be theoretically increased $N$ times. ",
+        "page_idx": 710
+    },
+    {
+        "type": "image",
+        "img_path": "images/fcf690ef421ad8bd5b603e24608eccb2ecdc20a45cda601afab16cdcab35ef76.jpg",
+        "img_caption": [
+            "Figure 13.33: RAID 0 "
+        ],
+        "img_footnote": [],
+        "page_idx": 710
+    },
+    {
+        "type": "text",
+        "text": "RAID 1 ",
+        "text_level": 1,
+        "page_idx": 710
+    },
+    {
+        "type": "text",
+        "text": "Let us now add reliability to RAID 0. Note that the process of reading and writing bits in a hard disk is a mechanical process. It is possible that some bits might not be read or written correctly because there might be a slight amount of deviation from ideal operation in the actuator, or the spindle motor. Secondly, external electro-magnetic radiation, and cosmic particle strikes can flip bits in the hard disk and its associated electronic components. The latter type of errors are also known as soft errors. Consequently, each sector of the disk typically has error detecting and correcting codes. Since an entire sector is read or written atomically, error checking and correction is a part of hard disk access. We typically care about more catastrophic failures such as the failure of an entire hard disk drive. This means that there is a breakdown in the actuator, spindle motor, or any other major component that prevents us from reading or writing to most of the hard disk. Let us consider disk failures from this angle. Secondly, let us also assume that disks follow the fail stop model of failure. This means that whenever there is a failure, the disks are not operational anymore, and the system is aware of it. ",
+        "page_idx": 710
+    },
+    {
+        "type": "text",
+        "text": "In RAID 1, we typically have a 2 disk system (see Figure 13.34), and we mirror data of one disk on the other. They are essentially duplicates of each other. We are definitely wasting half of our storage space here. In the case of reads, we can leverage this structure to theoretically double the disk bandwidth. Let us assume that we wish to read the blocks 1 and 3. In the case of RAID 0, we needed to serialize the accesses, because both the blocks map to the same disk. However, in this case, since each disk has a copy of all the data, we can read block 1 from disk 1, and read block 3 from disk 3 in parallel. Thus, the read bandwidth is potentially double that of a single disk. However, the write bandwidth is still the same as that of a single disk, because we need to write to both the disks. Note that here it is not necessary to read both the disks and compare the contents of a block in the interest of reliability. We assume that if a disk is operational, it contains correct data. ",
+        "page_idx": 710
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 711
+    },
+    {
+        "type": "image",
+        "img_path": "images/0f86221048824df5dbaeac6013a387f373a90e02a5067b3627bf9505a60f2a71.jpg",
+        "img_caption": [
+            "Figure 13.34: RAID 1 "
+        ],
+        "img_footnote": [],
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "RAID 2 ",
+        "text_level": 1,
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to increase the efficiency of RAID 1. In this case, we consider a system of $N$ disks. Instead of striping data at the block level, we stripe data at the bit level. We dedicate a disk for saving the parity bit. Let us consider a system with 5 disks as shown in Figure 13.35. We have 4 data disks, and 1 parity disk. We distribute contiguous sequences of 4 bits in a logical block across the 4 data disks. A logical block is defined as a block of contiguous data as seen by software. Software should be oblivious of the fact that we are using a RAID system instead of a single disk. All software programs perceive a storage system as an array of logical blocks. Now, the first bit of a logical block is saved in disk 1, the second bit is saved in disk 2, and finally the fourth bit is saved in disk 4. Disk 5, contains the parity of the first 4 bits. Each physical block in a RAID 2 disk thus contains a subset of bits of the logical blocks. For example, $B 1$ contains bit numbers $1 , 5 , 9 , \\ldots$ of the first logical block saved in the RAID array. Similarly, $B 2$ contains bit numbers $2 , 6 , 1 0 , \\ldots$ . To read a logical block, the RAID controller assembles the physical blocks and creates a logical block. Similarly, to write a logical block, the RAID controller breaks it down into its constituent physical blocks, computes the parity bits, and writes to all the disks. ",
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "Reads are fast in RAID 2. This is because we can read all the 9 disks in parallel. Writes are also fast, because we can write parts of a block to different disks, in parallel. RAID 2 is currently not used because it does not allow parallel access to different logical blocks, introduces complexity because of bit level striping, and every I/O request requires access to all the disks. We would like to iterate again that the parity disk is not accessed on a read. The parity disk is accessed on a write because its contents need to be updated. Its main utility is to keep the system operational if there is a single disk failure. If a disk fails, then the contents of a block can be recovered by reading other blocks in the same row from the other disks, and by reading the parity disk. ",
+        "page_idx": 711
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 712
+    },
+    {
+        "type": "image",
+        "img_path": "images/7239259541e3381e0d7334c78ac54752086b97420cd70898735ed92fdd74b17a.jpg",
+        "img_caption": [
+            "Figure 13.35: RAID 2 "
+        ],
+        "img_footnote": [],
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "RAID 3 ",
+        "text_level": 1,
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "RAID 3 is almost the same as RAID 2. Instead of striping at the bit level, it stripes data at the byte level. It has the same pros and cons as RAID 2, and is thus seldom used. ",
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "RAID 4 ",
+        "text_level": 1,
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "RAID 4 is designed on the same lines as RAID 2 and 3. It stripes data at the block level. It has a dedicated parity disk that saves the parity of all the blocks on the same row. In this scheme, a read access for a single block is not as fast as RAID 2 and 3 because we cannot access different parts of a block in parallel. A write access is also slower for the same reason. However, we can read from multiple blocks at the same time if they do not map to the same disk. We cannot unfortunately do this for writes. ",
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "For a write access, we need to access two disks \u2013 the disk that contains the block, and the disk that contains the parity. An astute reader might try to argue that we need to access all the disks because we need to compute the parity of all the blocks in the same row. However, this is not true. Let us assume that there are $m$ data disks, and the contents of the blocks in a row are $B _ { 1 } \\ldots B _ { m }$ respectively. Then the parity block, $P$ , is equal to $B _ { 1 } \\oplus B _ { 2 } \\oplus . . . \\oplus B _ { m }$ . Now, let us assume that we change the first block from $B _ { 1 }$ to $B _ { 1 } ^ { \\prime }$ . The new parity is given by $P ^ { \\prime } = B _ { 1 } ^ { \\prime } \\oplus B _ { 2 } \\ldots \\oplus B _ { m }$ . We thus have: ",
+        "page_idx": 712
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { P ^ { \\prime } = B _ { 1 } ^ { \\prime } \\oplus B _ { 2 } \\ldots \\oplus B _ { m } } } \\\\ { { \\phantom { f ^ { \\prime } = } = B _ { 1 } \\oplus B _ { 1 } \\oplus B _ { 1 } ^ { \\prime } \\oplus B _ { 2 } \\ldots \\oplus B _ { m } } } \\\\ { { \\phantom { f ^ { \\prime } = } = B _ { 1 } \\oplus B _ { 1 } ^ { \\prime } \\oplus P } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "The results used in Equation 13.9 are: $B _ { 1 } \\oplus B _ { 1 } = 0$ and $0 \\oplus P ^ { \\prime } = P ^ { \\prime }$ . Thus, to compute $P ^ { \\prime }$ , we need the values of $B _ { 1 }$ , and $P$ . Hence, for performing a write to a block, we need two read ",
+        "page_idx": 712
+    },
+    {
+        "type": "text",
+        "text": "accesses (for reading $B _ { 1 }$ and $P$ ), and two write accesses (for writing $B _ { 1 } ^ { \\prime }$ and $P ^ { \\prime }$ ) to the array of hard disks. Since all the parity blocks are saved in one disk, this becomes a point of contention, and the write performance becomes very slow. Hence, RAID 4 is also seldom used. ",
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "RAID 5 ",
+        "text_level": 1,
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "RAID 5 mitigates the shortcomings of RAID 4. It distributes the parity blocks across all the disks for different rows as shown in Figure 13.36. For example, the $5 ^ { t h }$ disk stores the parity for the first row, and then the $1 ^ { s t }$ disk stores the parity for the second row, and the pattern thus continues in a round robin fashion. This ensures that no disk becomes a point of contention, and the parity blocks are evenly distributed across all the disks. ",
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "Note that RAID 5 provides high bandwidth because it allows parallel access for reads, has relatively faster write speed, and is immune to one disk failure. Hence, it is heavily used in commercial systems. ",
+        "page_idx": 713
+    },
+    {
+        "type": "image",
+        "img_path": "images/a1166d5ba8f96e6f1f1f20cfe8f0660cf3e8eb9ba304fd2465958fac858c491e.jpg",
+        "img_caption": [
+            "Figure 13.36: RAID 5 "
+        ],
+        "img_footnote": [],
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "RAID 6 ",
+        "text_level": 1,
+        "page_idx": 713
+    },
+    {
+        "type": "text",
+        "text": "Sometimes, we might desire additional reliability. In this case, we can add a second parity block, and distribute both the parity blocks across all the disks. In this case, a write to the RAID array becomes slightly slower at the cost of higher reliability. RAID 6 is used mostly in enterprises that desire highly reliable storage. It is important to note that the two parity blocks in RAID 6 are not computed using simple XOR operations. The contents of the two parity blocks for each row differ from each other, and are complex functions of the data. The reader requires background in field theory to understand the operation of the error detection blocks in RAID 6. ",
+        "page_idx": 713
+    }
+]

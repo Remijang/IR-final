@@ -1,0 +1,85 @@
+14.3 Triple Integrals
+
+At this point in the book, I feel I can speak to you directly. You can guess what triple integrals are like. Instead of a small interval or a small rectangle, there is a small box. Instead of length  or area  ; the box has volume  : That is length times width times height. The goal is to put small boxes together (by integration). The main problem will be to discover the correct limits on  :
+
+We could dream up more and more complicated regions in three-dimensional space. But I don’t think you can see the method clearly without seeing the region clearly. In practice six shapes are the most important:
+
+box prism cylinder cone tetrahedron sphere.
+
+The box is easiest and the sphere may be the hardest (but no problem in spherical coordinates). Circular cylinders and cones fall in the middle, where  coordinates are possible but  are the best. I start with the box and prism and  :
+
+EXAMPLE 1 By triple integrals find the volume of a box and a prism (Figure 14.12).
+
+The inner integral for both is  : Lines in the  direction have length 2; cutting through the box and the prism. The middle integrals show the limits on  (since  comes second):
+
+After twointegrations these are areas. The first area 6 is for a plane section through the box. The second area  is cut through the prism. The shaded rectangle goes from  to  —we needed and used the equation  for the boundary of the prism.  this point  is still constant! But the area depends on  ; because the prism gets thinner going upwards. The base area is  ; the top area is  :
+
+The outer integral multiplies those areas by  ; to give the volume of slices. They are horizontal slices because  came last. Integration adds up the slices to find the total volume:
+
+The box vo»lum»e  didn’t need calc»ulu»s. The prism is half o»f the box, so its volume was sure to be 3—but it is satisfying to see how  gives the answer. Our purpose is to see how a triple integral works.
+
+Question Find the prism volume in the order dz dy  (six orders are possible).
+
+To find those limits on the  integral, follow a line in the  direction. It enters the prism at  and exits at the sloping face  : That gives the upper limit  : It is the height of a thin stick as in Section 14:1: This section writes out  for the height, but a quicker solution starts at the double integral.
+
+What is the number  in the last integral ? It is the area of a vertical slice, cut by a plane  constant. The outer integral adds up slices.
+
+That step cannot be taken in silence—some basic calculus is involved. The triple integral is the limit of  ; a sum over small boxes of volume  Here  is any value of  Pin the  th box. (In the limit, the boxes fit a curved region.) Now take those boxes in a certain order. Put them into lines in the  direction and put the lines of boxes into planes. The lines lead to the inner  integral, whose answer depends on  and  : The  integral combines the lines into planes. Finally the outer integral accounts for all planes and all boxes.
+
+Example 2 is important because it displays more possibilities than a box or prism.
+
+EXAMPLE 2 Find the volume of a tetrahedron (4-sided pyramid). Locate  .
+
+Solution A tetrahedron has four flat faces, all triangles. Th e fourth face in Figure 14.13 is on the plane  : A line in the  direction enters at  and exits at  : (The length depends on  and  : The equation of the boundary plane gives  :) Then those lines are put into plane slices by the  integral:
+
+What is this number  It is the area at height  : The plane at that height slices out a right triangle, whose legs have length  : The area is correct, but look at the limits of integration.  goes to  ; why does  go to  Reason: We are assembling lines, not points. The figure shows a line at every  up to  :
+
+Adding the slices gives the volume:  : This agrees with  (base times h eight), thevolume of a pyramid.
+
+The height  of the centroid is  :” We compute  and divide by the volume. Each horizontal slice is multiplied by its height  ; and the limits of integration don’t change:
+
+This is quick because  is constant in the  and  integrals. Each triangular slice contributes  times its area  times  : Then the  integral gives the moment
+
+ : To find the average height, divide  by the volume:
+
+By symmetry  and  : The centroid is the point  : Compare that with  ; the centroid of the standard right triangle. Compare also with  ; the center of the unit interval. There must be a five-sided region in four dimensions centered at  :
+
+For area and volume we meet another pattern. Length of standard interval is 1; area of standard triangle is  ; volume of standard tetrahedron is  ; hypervolume in four dimensions must be : The interval reaches the point  ; the triangle reaches the line  ; the tetrahedron reaches the plane  : The fourdimensional region stops at the hyperplane  :
+
+EXAMPLE 3 Find the volume  inside the unit sphere  1:
+
+First question: What are the?limits on  If a needle goes through the sphere in the  direction, where does it enterandleave ? Moving in the  direction, the numbers  and  stay constant. The inner integral deals only with  : The smallest and largest  are at the boundary wher?e  : This equation does the work—we solve it for  : Look at the limits on the  integral:
+
+The limits on  are  and  : You can use algebra on the boundary equation  : But notice that  is gone! Wewant the smallest and largest  ; for each  : It helps very much to draw the plane at height  ; slicing through the sphere in Figure 14.14. The slice is a circle of radius  : So the area is  ; which must come from the  integral:
+
+I admit that I didn’t integrate. Is it cheating to use the formula  don’t think so. Mathematics is hard enough, and we don’t have to work blindfolded. The goal is understanding, and if you know the area then use it. Of course the integral of  can be done if necessary—use Section 7:2:
+
+The trip»le integral is down to a single integral. We went from one needle to a circle of needles and now to a sphere of needles. The volume isa sum of slices of area  :The South Pole is at  ; the North Pole is at  ; and the integral is the volume  inside the unit sphere:
+
+Question 1 A cone also has circular slices. How is the last integral changed ?
+
+Answer The slices of a cone have radius  : Integrate  not  :
+
+Question 2 How does this compare with a circular cylinder (height 1; radius 1) ?
+
+Answer Now all slices have radius 1: Above  ; a cylinder has volume  and a half-sphere has volume  and a cone has volume  :
+
+For solids with equal surface area, the sphere has largest volume.
+
+Question 3 What is the average height  in the cone and half-sphere and cylinder ?
+
+Answer
+
+EXAMPLE 4 Find the volume  inside the ellipsoid   :
+
+The limits on  are now  : The algebra looks terrible. The geometry is better—all slices are ellipses. A change of variable is absolutely the best.
+
+Introduce  and  and  : Then the outer boundary becomes  In these new variables the shape is a sphere. The triple integral for a sphere is  : But what volume  in  space corresponds to a small box with sides  and  and 
+
+Every uvw box comes from an  box. The box is stretched with no bending or twisting. Since  is  ; the length  is a  : Similarly  and   : The volume of the  box (Figure 14.14) is  :
+
+14.3 Triple Integrals
+
+The stretching factor  is a constant, and the volume of the ellipsoid is
+
+You realize that this is special—other volumes are much more complicated. The sphere and ellipsoid are curved, but the small  boxes are straight. The next section introduces spherical coordinates, and we can finally write “good limits.” But then we need a different  :

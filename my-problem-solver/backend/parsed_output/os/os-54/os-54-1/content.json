@@ -1,0 +1,69 @@
+[
+    {
+        "type": "text",
+        "text": "54.1 Introduction ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Given that we need to deal with a wide range of security goals and security policies that are meant to achieve those goals, what do we need from our operating system? Operating systems provide services for processes, and some of those services have security implications. Clearly, the operating system needs to be careful in such cases to do the right thing, security-wise. But the reason operating system services are allowed at all is that sometimes they need to be done, so any service that the operating system might be able to perform probably should be performed – under the right circumstances. ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Context will be everything in operating system decisions on whether to perform some service or to refuse to do so because it will compromise security goals. Perhaps the most important element of that context is who’s doing the asking. In the real world, if your significant other asks you to pick up a gallon of milk at the store on the way home, you’ll probably do so, while if a stranger on the street asks the same thing, you probably won’t. In an operating system context, if the system administrator asks the operating system to install a new program, it probably should, while if a script downloaded from a random web page asks to install a new program, the operating system should take more care before performing the installation. In computer security discussions, we often refer to the party asking for something as the principal. Principals are security-meaningful entities that can request access to resources, such as human users, groups of users, or complex software systems. ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "So knowing who is requesting an operating system service is crucial in meeting your security goals. How does the operating system know that? Let’s work a bit backwards here to figure it out. ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Operating system services are most commonly requested by system calls made by particular processes, which trap from user code into the operating system. The operating system then takes control and performs some service in response to the system call. Associated with the calling process is the OS-controlled data structure that describes the process, so the operating system can check that data structure to determine the identity of the process. Based on that identity, the operating system now has the opportunity to make a policy-based decision on whether to perform the requested operation. In computer security discussions, the process or other active computing entity performing the request on behalf of a principal is often called its agent. ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The request is for access to some particular resource, which we frequently refer to as the object of the access request1. Either the operating system has already determined this agent process can access the object or it hasn’t. If it has determined that the process is permitted access, the OS can remember that decision and it’s merely a matter of keeping track, presumably in some per-process data structure like the PCB, of that fact. For example, as we discovered when investigating virtualization of memory, per-process data structures like page tables show which pages and page frames can be accessed by a process at any given time. Any form of data created and managed by the operating system that keeps track of such access decisions for future reference is often called a credential. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "If the operating system has not already produced a credential showing that an agent process can access a particular object, however, it needs information about the identity of the process’s principal to determine if its request should be granted. Different operating systems have used different types of identity for principals. For instance, most operating systems have a notion of a user identity, where the user is, typically, some human being. (The concept of a user has been expanded over the years to increase its power, as we’ll see later.) So perhaps all processes run by a particular person will have the same identity associated with them. Another common type of identity is a group of users. In a manufacturing company, you might want to give all your salespersons access to your inventory information, so they can determine how many widgets and whizz-bangs you have in the warehouse, while it wouldn’t be necessary for your human resources personnel to have access to that information2. Yet another form of identity is the program that the process is running. Recall that a process is a running version of a program. In some systems (such as the Android Operating System), you can grant certain privileges to particular programs. Whenever they run, they can use these privileges, but other programs cannot. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Regardless of the kind of identity we use to make our security decisions, we must have some way of attaching that identity to a particular process. Clearly, this attachment is a crucial security issue. If you misidentify a programmer employee process as an accounting department employee process, you could end up with an empty bank account. (Not to mention needing to hire a new programmer.) Or if you fail to identify your company president correctly when he or she is trying to give an important presentation to investors, you may find yourself out of a job once the company determines that you’re the one who derailed the next round of startup capital, because the system didn’t allow the president to access the presentation that would have bowled over some potential investors. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "On the other hand, since everything except the operating system’s own activities are performed by some process, if we can get this right for processes, we can be pretty sure we will have the opportunity to check our policy on every important action. But we need to bear in mind one other important characteristic of operating systems’ usual approach to authentication: once a principal has been authenticated, systems will almost always rely on that authentication decision for at least the lifetime of the process. This characteristic puts a high premium on getting it right. Mistakes won’t be readily corrected. Which leads to the crux: ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "CRUX: HOW TO SECURELY IDENTIFY PROCESSES ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For systems that support processes belonging to multiple principals, how can we be sure that each process has the correct identity attached? As new processes are created, how can we be sure the new process has the correct identity? How can we be sure that malicious entities cannot improperly change the identity of a process? ",
+        "page_idx": 2
+    }
+]

@@ -1,0 +1,438 @@
+[
+    {
+        "type": "text",
+        "text": "Click to view content (https://openstax.org/books/college-physics-2e/pages/10-introduction-to-rotational-motion  \nand-angular-momentum)   \n10.1 Angular Acceleration ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "Describe uniform circular motion.   \n\u2022 Explain non-uniform circular motion.   \n\u2022 Calculate angular acceleration of an object.   \n\u2022 Observe the link between linear and angular acceleration. ",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "Uniform Circular Motion and Gravitation discussed only uniform circular motion, which is motion in a circle at constant speed and, hence, constant angular velocity. Recall that angular velocity $\\omega$ was defined as the time rate of change of angle $\\theta$ : ",
+        "page_idx": 409
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = { \\frac { \\Delta \\theta } { \\Delta t } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "where $\\theta$ is the angle of rotation as seen in Figure 10.3. The relationship between angular velocity $\\omega$ and linear velocity $v$ was also defined in Rotation Angle and Angular Velocity as ",
+        "page_idx": 409
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = r \\omega\n$$",
+        "text_format": "latex",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 409
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = { \\frac { v } { r } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "where $r$ is the radius of curvature, also seen in Figure $\\underline { { 1 0 . 3 } }$ . According to the sign convention, the counter clockwise direction is considered as positive direction and clockwise direction as negative ",
+        "page_idx": 409
+    },
+    {
+        "type": "image",
+        "img_path": "images/8f9be987f9be9d97cb70c396867739f43d8f2666636fe6347076a881120b6e4b.jpg",
+        "img_caption": [
+            "FIGURE 10.3 This figure shows uniform circular motion and some of its defined quantities. "
+        ],
+        "img_footnote": [],
+        "page_idx": 409
+    },
+    {
+        "type": "text",
+        "text": "Angular velocity is not constant when a skater pulls in her arms, when a child starts up a merry-go-round from rest, or when a computer\u2019s hard disk slows to a halt when switched off. In all these cases, there is an angular acceleration, in which $\\omega$ changes. The faster the change occurs, the greater the angular acceleration. Angular acceleration $\\alpha$ is defined as the rate of change of angular velocity. In equation form, angular acceleration is expressed as follows: ",
+        "page_idx": 410
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\alpha = \\frac { \\Delta \\omega } { \\Delta t } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "where $\\Delta \\omega$ is the change in angular velocity and $\\Delta t$ is the change in time. The units of angular acceleration are $\\mathrm { ( r a d / s ) / s }$ , or $/ \\mathrm { s } ^ { 2 }$ . If $\\omega$ increases, then $\\alpha$ is positive. If $\\omega$ decreases, then $\\alpha$ is negative. ",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.1 ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Angular Acceleration and Deceleration of a Bike Wheel ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Suppose a teenager puts her bicycle on its back and starts the rear wheel spinning from rest to a final angular velocity of 250 rpm in ${ 5 . 0 0 } \\mathsf { s } .$ . (a) Calculate the angular acceleration in $  \\langle \\mathrm { s } ^ { 2 } \\$ . (b) If she now slams on the brakes, causing an angular acceleration of $- 8 7 . 3 \\ \\mathrm { r a d } / \\mathrm { s } ^ { 2 }$ , how long does it take the wheel to stop? ",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Strategy for (a) ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "The angular acceleration can be found directly from its definition in $\\begin{array} { r } { \\alpha = \\frac { \\Delta \\omega } { \\Delta t } } \\end{array}$ because the final angular velocity and time are given. We see that $\\Delta \\omega$ is 250 rpm and $\\Delta t$ is $5 . 0 0 \\mathsf { s }$ . ",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Entering known information into the definition of angular acceleration, we get ",
+        "page_idx": 410
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { { \\alpha } } & { = } & { { \\frac { \\Delta \\omega } { \\Delta t } } } \\\\ { } & { = } & { { \\frac { 2 5 0 { \\mathrm { r p m } } } { 5 . 0 0 \\mathrm { s } } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Because $\\Delta \\omega$ is in revolutions per minute (rpm) and we want the standard units of $\\mathrm { r a d } / \\mathrm { s } ^ { 2 }$ for angular acceleration, we need to convert $\\Delta \\omega$ from rpm to rad/s: ",
+        "page_idx": 410
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { \\Delta \\omega } & { = } & { 2 5 0 \\frac { \\mathrm { r e v } } { \\mathrm { m i n } } \\cdot \\frac { 2 \\pi \\mathrm { r a d } } { \\mathrm { r e v } } \\cdot \\frac { 1 \\operatorname* { m i n } } { 6 0 \\mathrm { \\ s } } } \\\\ & { = } & { 2 6 . 2 \\frac { \\mathrm { r a d } } { \\mathrm { s } } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Entering this quantity into the expression for $\\alpha$ , we get ",
+        "page_idx": 410
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { \\alpha } & { = } & { { \\frac { \\Delta \\omega } { \\Delta t } } } \\\\ & { = } & { { \\frac { 2 6 . 2 { \\mathrm { ~ r a d / s } } } { 5 . 0 0 \\ { \\mathrm { s } } } } } \\\\ & { = } & { 5 . 2 4 { \\mathrm { ~ r a d / s } } ^ { 2 } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Strategy for (b) ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "In this part, we know the angular acceleration and the initial angular velocity. We can find the stoppage time by using the definition of angular acceleration and solving for $\\Delta t$ , yielding ",
+        "page_idx": 410
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta t = { \\frac { \\Delta \\omega } { \\alpha } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Here the angular velocity decreases from (250 rpm) to zero, so that $\\Delta \\omega$ is $- 2 6 . 2 \\ \\mathrm { r a d / s }$ , and $\\alpha$ is given to $\\mathsf { b e } - 8 7 . 3 \\ \\mathrm { r a d } / \\mathrm { s } ^ { 2 }$ . Thus, ",
+        "page_idx": 410
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\Delta t } } & { { = } } & { { \\frac { - 2 6 . 2 ~ \\mathrm { r a d / s } } { - 8 7 . 3 ~ \\mathrm { r a d / s ^ { 2 } } } } } \\\\ { { } } & { { = } } & { { 0 . 3 0 0 ~ \\mathrm { s } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Note that the angular acceleration as the girl spins the wheel is small and positive; it takes 5 s to produce an appreciable angular velocity. When she hits the brake, the angular acceleration is large and negative. The angular velocity quickly goes to zero. In both cases, the relationships are analogous to what happens with linear motion. For example, there is a large deceleration when you crash into a brick wall\u2014the velocity change is large in a short time interval. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "If the bicycle in the preceding example had been on its wheels instead of upside-down, it would first have accelerated along the ground and then come to a stop. This connection between circular motion and linear motion needs to be explored. For example, it would be useful to know how linear and angular acceleration are related. In circular motion, linear acceleration is tangentto the circle at the point of interest, as seen in Figure 10.4. Thus, linear acceleration is called tangential acceleration $a _ { \\mathrm { t } }$ . ",
+        "page_idx": 411
+    },
+    {
+        "type": "image",
+        "img_path": "images/d0c58989696ffb7d7997513aad7a9be8a49667b600cbb0fa14ecb9d46f3773ba.jpg",
+        "img_caption": [
+            "FIGURE 10.4 In circular motion, linear acceleration $a$ , occurs as the magnitude of the velocity changes: $a$ is tangent to the motion. In the context of circular motion, linear acceleration is also called tangential acceleration $a _ { \\mathrm { t } }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Linear or tangential acceleration refers to changes in the magnitude of velocity but not its direction. We know from Uniform Circular Motion and Gravitation that in circular motion centripetal acceleration, $\\textstyle { a _ { \\mathrm { c } } }$ , refers to changes in the direction of the velocity but not its magnitude. An object undergoing circular motion experiences centripetal acceleration, as seen in Figure 10.5. Thus, $a _ { \\mathrm { t } }$ and $\\textstyle { a _ { \\mathrm { c } } }$ are perpendicular and independent of one another. Tangential acceleration $a _ { \\mathrm { t } }$ is directly related to the angular acceleration $\\alpha$ and is linked to an increase or decrease in the velocity, but not its direction. ",
+        "page_idx": 411
+    },
+    {
+        "type": "image",
+        "img_path": "images/3b5473abc47e170accf018141fc6340e50dd55c316b820396cf0cca4f0aace7d.jpg",
+        "img_caption": [
+            "FIGURE 10.5 Centripetal acceleration $\\textstyle { a _ { \\mathrm { c } } }$ occurs as the direction of velocity changes; it is perpendicular to the circular motion. Centripetal and tangential acceleration are thus perpendicular to each other. "
+        ],
+        "img_footnote": [],
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Now we can find the exact relationship between linear acceleration $a _ { \\mathrm { t } }$ and angular acceleration . Because linear acceleration is proportional to a change in the magnitude of the velocity, it is defined (as it was in One-Dimensional ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Kinematics) to be ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\na _ { \\mathrm { t } } = { \\frac { \\Delta v } { \\Delta t } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "For circular motion, note that $v = r \\omega$ , so that ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\na _ { \\mathrm { t } } = \\frac { \\Delta ( r \\omega ) } { \\Delta t } .\n$$",
+        "text_format": "latex",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "The radius $r$ is constant for circular motion, and so $\\Delta ( r \\omega ) = r ( \\Delta \\omega )$ . Thus, ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\na _ { \\mathrm { t } } = r { \\frac { \\Delta \\omega } { \\Delta t } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "By definition, $\\begin{array} { r } { \\alpha = \\frac { \\Delta \\omega } { \\Delta t } } \\end{array}$ . Thus, ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\na _ { \\mathrm { t } } = r \\alpha ,\n$$",
+        "text_format": "latex",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\alpha = { \\frac { a _ { \\mathrm { t } } } { r } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "These equations mean that linear acceleration and angular acceleration are directly proportional. The greater the angular acceleration is, the larger the linear (tangential) acceleration is, and vice versa. For example, the greater the angular acceleration of a car\u2019s drive wheels, the greater the acceleration of the car. The radius also matters. For example, the smaller a wheel, the smaller its linear acceleration for a given angular acceleration $\\alpha$ . ",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.2 ",
+        "text_level": 1,
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Angular Acceleration of a Motorcycle Wheel ",
+        "text_level": 1,
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "A powerful motorcycle can accelerate from 0 to $3 0 . 0 ~ \\mathsf { m } / \\mathsf { s }$ (about $1 0 8 \\mathrm { ~ k m / h ) }$ in 4.20 s. What is the angular acceleration of its $0 . 3 2 0 - \\mathsf { m }$ -radius wheels? (See Figure $\\underline { { 1 0 . 6 } } .$ ) ",
+        "page_idx": 412
+    },
+    {
+        "type": "image",
+        "img_path": "images/98d17b1a7543ca37198e28dbb121b9580a0dc5bb09be9a7d6e7a74d27620a190.jpg",
+        "img_caption": [
+            "FIGURE 10.6 The linear acceleration of a motorcycle is accompanied by an angular acceleration of its wheels. "
+        ],
+        "img_footnote": [],
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "We are given information about the linear velocities of the motorcycle. Thus, we can find its linear acceleration $a _ { \\mathrm { t } }$ .   \nThen, the expression $\\begin{array} { r } { \\alpha = \\frac { a _ { \\mathrm { t } } } { r } } \\end{array}$ can be used to find the angular acceleration. ",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "The linear acceleration is ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { a _ { \\mathrm { t } } } & { = } & { { \\frac { \\Delta v } { \\Delta t } } } \\\\ & { = } & { { \\frac { 3 0 . 0 { \\mathrm { ~ m / s } } } { 4 . 2 0 { \\mathrm { ~ s } } } } } \\\\ & { = } & { 7 . 1 4 { \\mathrm { ~ m / s } } ^ { 2 } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "We also know the radius of the wheels. Entering the values for $a _ { \\mathrm { t } }$ and $r$ into $\\begin{array} { r } { \\alpha = \\frac { a _ { \\mathrm { t } } } { r } } \\end{array}$ , we get ",
+        "page_idx": 412
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { \\alpha } & { = } & { { \\frac { a _ { \\mathrm { t } } } { r } } } \\\\ & { = } & { { \\frac { 7 . 1 4 { \\mathrm { m } } / { \\mathrm { s } } ^ { 2 } } { 0 . 3 2 0 { \\mathrm { m } } } } } \\\\ & { = } & { 2 2 . 3 { \\mathrm { r a d } } / { \\mathrm { s } } ^ { 2 } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Units of radians are dimensionless and appear in any relationship between angular and linear quantities. ",
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "So far, we have defined three rotational quantities\u2014 $\\theta$ \uff0c $\\omega$ , and $\\alpha$ . These quantities are analogous to the translational quantities $x , v$ , and $a$ . Table 10.1 displays rotational quantities, the analogous translational quantities, and the relationships between them. ",
+        "page_idx": 413
+    },
+    {
+        "type": "table",
+        "img_path": "images/45cacd8ec0b1cab925f3515b5023efc83253df4022cb66e779fd84c7e31a5d22.jpg",
+        "table_caption": [
+            "TABLE 10.1 Rotational and Translational Quantities "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Rotational</td><td>Translational</td><td>Relationship</td></tr><tr><td>0</td><td>X</td><td>\u03b8=x r</td></tr><tr><td></td><td>U</td><td>U \u03c9= 1 r</td></tr><tr><td>\u03b1</td><td>a</td><td>at \u03b1= r</td></tr></table></body></html>\n\n",
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Take-Home Experiment ",
+        "text_level": 1,
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Sit down with your feet on the ground on a chair that rotates. Lift one of your legs such that it is unbent (straightened out). Using the other leg, begin to rotate yourself by pushing on the ground. Stop using your leg to push the ground but allow the chair to rotate. From the origin where you began, sketch the angle, angular velocity, and angular acceleration of your leg as a function of time in the form of three separate graphs. Estimate the magnitudes of these quantities. ",
+        "page_idx": 413
+    },
+    {
+        "type": "image",
+        "img_path": "images/e95dd5977080f087ddab2337b3fa2ec5a1cb5e76a70a2e2dad75ca722d8185d6.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Angular acceleration is a vector, having both magnitude and direction. How do we denote its magnitude and direction? Illustrate with an example. ",
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "The magnitude of angular acceleration is $\\alpha$ and its most common units are . The direction of angular acceleration along a fixed axis is denoted by a + or a \u2013 sign, just as the direction of linear acceleration in one dimension is denoted by a + or a \u2013 sign. For example, consider a gymnast doing a forward flip. Her angular momentum would be parallel to the mat and to her left. The magnitude of her angular acceleration would be proportional to her angular velocity (spin rate) and her moment of inertia about her spin axis. ",
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Ladybug Revolution ",
+        "text_level": 1,
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Join the ladybug in an exploration of rotational motion. Rotate the merry-go-round to change its angle, or choose a constant angular velocity or angular acceleration. Explore how circular motion relates to the bug's x,y position, velocity, and acceleration using vectors or graphs. ",
+        "page_idx": 413
+    },
+    {
+        "type": "text",
+        "text": "Click to view content (https://openstax.org/l/28ladybugrevolutionrotation). ",
+        "page_idx": 413
+    }
+]

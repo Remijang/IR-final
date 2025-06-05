@@ -1,0 +1,255 @@
+[
+    {
+        "type": "text",
+        "text": "12.6.3 Network Topologies",
+        "text_level": 1,
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Let us review some of the most common network topologies in this section. Some of these topologies are used in multicore processors. However, most of the complex topologies are used in loosely coupled multiprocessors that use regular Ethernet links to connect processors. For each topology, let us assume that it has $N$ nodes. For computing the bisection bandwidth, we can further make the simplistic assumption that $N$ is divisible by 2. Note that measures like the bisection bandwidth, and the diameter are approximate measures, and are merely indicative of broad trends. Hence, we have the leeway to make simplistic assumptions. Let us start out with considering simpler topologies that are suitable for multicores. We need to aim for a high bisection bandwidth, and low network diameter. ",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Chain and Ring ",
+        "text_level": 1,
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.21 shows a chain of nodes. Its bisection bandwidth is 1, and the network diameter is $N - 1$ . This is our worst configuration. We can improve both the metrics by considering a ring of nodes (Figure 12.22). The bisection bandwidth is now 2, and the network diameter is $N / 2$ . Both of these topologies are fairly simple, and have been superseded by other topologies. Let us now consider a topology known as a fat tree, which is commonly used in cluster computers. A cluster computer refers to a loosely coupled multiprocessor that consists of multiple processors connected over the local area network. ",
+        "page_idx": 625
+    },
+    {
+        "type": "image",
+        "img_path": "images/dee8d6d4f0a0c755b00a128acbab59e2753ceacfa1017cb169624a827a3761b5.jpg",
+        "img_caption": [
+            "Figure 12.21: Chain "
+        ],
+        "img_footnote": [],
+        "page_idx": 626
+    },
+    {
+        "type": "image",
+        "img_path": "images/3f4ba7b3b938b5c311a54c39c4e3d188162a7f8838e892c06bbcb19955713c8a.jpg",
+        "img_caption": [
+            "Figure 12.22: Ring "
+        ],
+        "img_footnote": [],
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Definition 139   \nA cluster computer refers to a loosely coupled computer that consists of multiple processors connected over the local area network. ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Fat Tree ",
+        "text_level": 1,
+        "page_idx": 626
+    },
+    {
+        "type": "image",
+        "img_path": "images/c49cbc617661231f5461a08bf1a9c5606df601d87d5083cff66f3b240ad0c63a.jpg",
+        "img_caption": [
+            "Figure 12.23: Fat Tree "
+        ],
+        "img_footnote": [],
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.23 shows a fat tree. In a fat tree, all the nodes are at the leaves, and all the internal nodes of the tree are routers dedicated to routing messages. Let us refer to these internal nodes as switches. A message from node $a$ to node $b$ first travels to the closest node that is a common ancestor of both $a$ and $b$ . Then it travels downwards towards $b$ . Note that the density of messages is the highest near the root. Hence, to avoid contention, and bottlenecks, we gradually increase the number of links connecting a node and its children, as we move towards the root. This strategy reduces the message congestion at the root node. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "In our example, two subtrees are connected to the root node. Each subtree has 4 nodes. At the most, the root can receive 4 messages from each subtree. Secondly, at the most, it needs to send 4 messages to each subtree. Assuming a duplex link, the root needs to have 4 links connecting it to each of its children. Likewise, the next level of nodes need 2 links between them and each of their child nodes. The leaves need 1 link each. We can thus visualize the tree growing fatter, as we proceed towards the root, and hence it is referred to as a fat tree. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "The network diameter is equal to 2log(N). Assume that the tree is designed such that there is no contention for links at the root. To ensure this, we connect the root with $N / 2$ links to each subtree such that messages can be sent in parallel to all the leaf nodes in the entire subtree. Thus, the bisection bandwidth in this case is $N / 2$ . Note that we do not allot $N / 2$ links between the root and its children in most practical scenarios. This is because the probability of all the nodes in a subtree transmitting messages at the same time is low. Hence, in practice we reduce the number of links at each level. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Mesh and Torus ",
+        "page_idx": 627
+    },
+    {
+        "type": "image",
+        "img_path": "images/8cf467d5bf6c4a0299ff80a62538669e8f39fd186a6a793b32acbe13dfaae6e3.jpg",
+        "img_caption": [
+            "Figure 12.24: Mesh "
+        ],
+        "img_footnote": [],
+        "page_idx": 627
+    },
+    {
+        "type": "image",
+        "img_path": "images/bcbc62fa55cc7e006af1725c4b55817a3fc0b5ecde908863e55ae66404ee330a.jpg",
+        "img_caption": [
+            "Figure 12.25: Torus "
+        ],
+        "img_footnote": [],
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at topologies that are more suitable for multicores. One of the most common topologies is a mesh where all the nodes are connected in a matrix like fashion (see Figure 12.24). Nodes at the corner have two neighbors, nodes on the rim have three neighbors, and the rest of the nodes have four neighbors. Let us now compute the diameter and bisection bandwidth of a mesh. The longest path is between two corner nodes. The diameter is thus equal to $( 2 \\sqrt { N } ~ - ~ 2 )$ . To divide the network into two equal halves we need to either split the mesh in the middle (horizontally or vertically). Since we have $\\sqrt { N }$ nodes in a row, or column, the bisection bandwidth is equal to $\\sqrt { N }$ . The mesh is better than a chain and a ring in terms of these parameters. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Unfortunately, the mesh topology is asymmetric in nature. Nodes that are at the rim of the mesh are far away from each other. Consequently, we can augment a mesh with cross links between the extremities of each row and column. The resulting structure is known as a torus, and is shown in Figure 12.25. Let us now look at the properties of tori (plural of torus). In this case, nodes on opposite sides of the rim of the network, are only one hop apart. The longest path is thus between any of the corner nodes and a node at the center of the torus. The diameter is thus again equal to (ignoring small additive constants) $\\sqrt { N } / 2 + \\sqrt { N } / 2 = \\sqrt { N }$ . Recall that the length of each side of the torus is equal to $\\sqrt { N }$ . ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Now, to divide the network into two equal parts let us split it horizontally. We need to thus snap $\\sqrt { N }$ vertical links, and $\\sqrt { N }$ cross links (links between the ends of each column). Hence, the bisection bandwidth is equal to $2 \\sqrt { N }$ . ",
+        "page_idx": 628
+    },
+    {
+        "type": "image",
+        "img_path": "images/e1d0f0e7deedc31edfcccaabda115fb21f9ed1a54ca2f7aecbb810bfc60746d5.jpg",
+        "img_caption": [
+            "Figure 12.26: Folded Torus "
+        ],
+        "img_footnote": [],
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "By adding $2 \\sqrt { N }$ cross links ( $\\sqrt { N }$ for rows, and $\\sqrt { N }$ for columns), we have halved the diameter, and doubled the bisection bandwidth of a torus. However, this scheme still has some problems. Let us elaborate. ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "While defining the diameter, we made an implicit assumption that the length of every link is almost the same, or alternatively the time a message takes to traverse a link is almost the same for all the links in the network. Hence, we defined the diameter in terms of the number of links that a message traverses. This assumption is not very unrealistic because in general the propagation time through a link is small as compared to the latencies of routers along the way. Nevertheless, there are limits to the latency of a link. If a link is very long, then our definition of the diameter needs to be revised. In the case of tori, we have such a situation. The cross links are physically $\\sqrt { N }$ times longer than regular links between adjacent nodes. Hence, as compared to a mesh, we have not significantly reduced the diameter in practice because nodes at the ends of a row are still far apart. ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "We can fortunately solve this problem by using a slightly modified structure called a folded torus as shown in Figure 12.26. Here, the topology of each row and column is like a ring. One half of the ring consists of regular links that were originally a part of the mesh topology, and the other half comprises the cross links that were added to convert a mesh into a torus. We alternately place nodes on the regular links and on the cross links. This strategy ensures that the distance between adjacent nodes in a folded torus is twice the distance between adjacent nodes in a regular torus. However, we avoid the long cross links ( $\\sqrt { N }$ hops long) between the two ends of a row or column. ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "The bisection bandwidth and the diameter of the network remain the same as that of the torus. In this case, there are several paths that can qualify as the longest path. However, the path between a corner to the center is not the longest. One of the longest paths is between opposite corners. The folded torus is typically the preferred configuration in multicore processors because it avoids long cross links. ",
+        "page_idx": 629
+    },
+    {
+        "type": "image",
+        "img_path": "images/43788151877ad14bf69ba07140847018de15ca6dd27a447372f113781a59aaa8.jpg",
+        "img_caption": [
+            "Hypercube ",
+            "Figure 12.27: Hypercube "
+        ],
+        "img_footnote": [],
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a network that has $O ( l o g ( N ) )$ diameter. These networks use a lot of links; hence, they are not suitable for multicores. However, they are used often in larger cluster computers. This network is known as a hypercube. A hypercube is actually a family of networks, where each network has an order. A hypercube of order $k$ is referred to as $H _ { k }$ . ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.27(a) shows a hypercube of order 0 ( $H _ { 0 }$ ). It is a single point. To create a hypercube of order 1, we take two copies of a hypercube of order $0$ , and connect the corresponding points with lines. In this case, $H _ { 0 }$ has a single point. Therefore, $H _ { 1 }$ is a simple line segment (see Figure 12.27(b)). Now, let us follow the same procedure to create a hypercube of order 2. We place two copies of $H _ { 1 }$ close to each other and connect corresponding points with lines. Hence, $H _ { 2 }$ is a rectangle (see Figure 12.27(c)). Let us follow the same procedure to create a hypercube of order 3 in Figure 12.27(d). This network is equivalent to a normal cube (the \u201ccube\u201d in hypercube). Finally, Figure 12.27(e), shows the topology of $H _ { 4 }$ , where we connect the corresponding points of two cubes. We can proceed in a similar manner to create hypercubes of order $k$ . ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Let us now investigate the properties of a hypercube. The number of nodes in $H _ { k }$ is equal to twice the number of nodes in $H _ { k - 1 }$ . This is because, we form $H _ { k }$ by joining two copies of $H _ { k - 1 }$ . Since $H _ { 1 }$ has 1 node, we can conclude that $H _ { k }$ has $2 ^ { k }$ nodes. Let us propose a method to label the nodes of a hypercube as shown in Figure 12.27. We label the single node in $H _ { 0 }$ as 0. When we join two copies of a hypercube of order, $k - 1$ , we maintain the same labeling of nodes for $( k - 1 )$ least significant digits. However, for nodes in one copy, we set the MSB as 1, and for nodes in the other copy, we set the MSB to be 0. ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Let us consider, $H _ { 2 }$ (Figure 12.27(c)). The nodes are labeled 00, 01, 10, and 11. We have created a similar 3-bit labeling for $H _ { 3 }$ (Figure 12.27(d)). In our labeling scheme, a node is connected to all other nodes that have a label differing in only one bit. For example, the neighbors of the node 101, are 001, 111, and 100. A similar labeling for $H _ { k }$ requires $k = l o g ( N )$ ) bits per node. ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "This insight will help us compute the diameter of a hypercube. Let us explain through an example. Consider the 8-node hypercube, $H _ { 3 }$ . Assume that we want a message to travel from node $A$ (000) to node $B$ (110). Let us scan the labels of both the nodes from the MSB to the LSB. The first bit (MSB) does not match. Hence, to make the first bit match, let us route the message to node $A _ { 1 }$ (100). Let us now scan the next bit. Here, again there is a mismatch. Hence, let us route the message to node $A _ { 2 }$ (110). Now, we take a look at the third bit (LSB), and find it to match. The message has thus reached its destination. We can follow the same approach for an $N$ -bit hypercube. Since each node has a $l o g ( N )$ -bit label, and in each step we flip at most one bit in the label of the current node, we require a maximum of $l o g ( N )$ routing steps. Thus, the network diameter is $l o g ( N )$ . ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Let us now compute the bisection bandwidth. We shall state the result without proof because the computation of the bisection bandwidth of a hypercube requires a thorough theoretical treatment of hypercubes. This is beyond the scope of this book. The bisection bandwidth of an $N$ -node hypercube is equal to $N / 2$ . ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Butterfly ",
+        "text_level": 1,
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at our last network called the butterfly that also has $O ( l o g ( N ) )$ diameter, yet, is suitable for multicores. Figure 12.28 shows a butterfly network for 8 nodes. Each node is represented by a circle. Along with the nodes, we have a set of switches or internal nodes (shown with rectangles) that route messages between nodes. The messages start on the left side, pass through the switches, and reach the right side of the diagram. Note that the nodes on the leftmost and rightmost sides of the figure are actually the same set of nodes. We did not want to add left to right cross links to avoid complicating the diagram; hence, we show the set of nodes in duplicate. ",
+        "page_idx": 630
+    },
+    {
+        "type": "image",
+        "img_path": "images/07b370fa4b91876fcd11ed17f75d00af14e5f9c579174d3ba79797e4d299709d.jpg",
+        "img_caption": [
+            "Figure 12.28: Butterfly "
+        ],
+        "img_footnote": [],
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "Let us start from the left side of the diagram. For $N$ nodes (assuming $N$ is a power of 2), we have $N / 2$ switches in the first column. Two nodes are connected to each switch. In our example in Figure 12.28, we have labeled the nodes $1 \\ldots 8$ . Each node is connected to a switch. Once a message enters a switch, it gets routed to the correct switch in the rightmost column through the network of switches. For 8 nodes, we have 4 switches in each column. For each column, we have labeled them $0 0 \\ldots 1 1$ in binary. ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "Let us consider an example. Assume that we want to send a message from node 4 to node 7. In this case, the message enters switch 01 in the first column. It needs to reach switch 11 in the third column. We start out by comparing the MSBs of the source switch, and the destination switch. If they are equal, then the message proceeds horizontally rightwards to a switch in the adjacent column and same row. However, if the MSBs are unequal (as is the case in our example), then we need to use the second output link to send it to a switch in a different row in the next column. The label of the new switch differs from the label of the original switch by just 1 bit, which is the MSB bit in this case. Similarly, to proceed from the second to the third column, we compare the second bit position (from the MSB). If they are equal, then the message proceeds horizontally, otherwise it is routed to a switch such that the first two bits match. In this case, the label of the switch that we choose in the second column is 11. The first two bits match the label of the switch in the third column. Hence, the message proceeds horizontally, and is finally routed to node 7. ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "We can extend this method for a butterfly consisting of $k$ columns. In the first column, we compare the MSB. Similarly, in the $i ^ { t h }$ column, we compare the $i ^ { t h }$ bit (MSB is the $1 ^ { s t }$ bit). Note that the first $k - i$ bits of the label of the switch that handles the message in the $i ^ { t h }$ column are equal to the first $k - i$ bits of the destination switch. This strategy ensures that the message gets routed to ultimately the correct switch in the $k ^ { t h }$ column. ",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "Now, let us investigate the properties of the network. Let us assume that we have $N$ nodes, where $N$ is a power of 2. We require $l o g ( N )$ columns, where each column contains $N / 2$ switches. Thus, we require an additional $N l o g ( N ) / 2$ switches. An astute reader would have already concluded that routing a message in a butterfly network is almost the same as routing in a message in a hypercube. In every step we increase the size of the matching prefix between the labels of the source and destination switches by 1. We thus require $\\mathit { l o g } ( N ) + 1$ steps (1 additional step for sending the message to the destination node from the last switch) for sending a message between a pair of nodes. We can thus approximate the diameter of the network to $l o g ( N )$ . ",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "Let us now compute the bisection bandwidth. Let us consider our example with 8 nodes first. Here, we can split the network horizontally. We thus need to snap 4 links, and hence the bisection bandwidth of the network shown in Figure 12.28 is 4. Let us now consider $N > 8$ nodes. In this case, also the best solution is to split the network horizontally. This is because if we draw an imaginary horizontal line between the $( N / 4 ) ^ { t h }$ and $( N / 4 + 1 ) ^ { t h }$ row of switches then it will only intersect the links between the first and second columns. The outgoing links of the rest of the columns will not intersect with our imaginary line. They will either be below it or above it. Since each switch in the first column has only one outgoing link that intersects the imaginary line, a total of $N / 2$ links intersect the imaginary line. All of these links need to be disconnected to divide the network into two equal parts. Hence, the bisection bandwidth is equal to $N / 2$ . ",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "Comparison of Topologies ",
+        "text_level": 1,
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "Let us now compare the topologies with respect to four parameters \u2013 number of internal nodes (or switches), number of links, diameter, and bisection bandwidth in Table 12.7. In all the cases, we assume that the networks have $N$ nodes that can send and receive messages, and $N$ is a power of 2. ",
+        "page_idx": 632
+    }
+]

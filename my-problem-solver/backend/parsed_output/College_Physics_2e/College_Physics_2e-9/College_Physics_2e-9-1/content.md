@@ -1,0 +1,29 @@
+# Click to view content (https://openstax.org/books/college-physics-2e/pages/9-introduction-to-statics-and-torque) 9.1 The First Condition for Equilibrium
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+State the first condition of equilibrium. • Explain static equilibrium. • Explain dynamic equilibrium.
+
+The first condition necessary to achieve equilibrium is the one already mentioned: the net external force on the system must be zero. Expressed as an equation, this is simply
+
+$$
+\mathbf { F } = 0
+$$
+
+Note that if net is zero, then the net external force in anydirection is zero. For example, the net external forces along the typical $x -$ and y-axes are zero. This is written as
+
+Figure 9.2 and Figure 9.3 illustrate situations where $\mathbf { F } = 0$ for both static equilibrium (motionless), and dynamic equilibrium (constant velocity).
+
+However, it is not sufficient for the net external force of a system to be zero for a system to be in equilibrium. Consider the two situations illustrated in Figure 9.4 and Figure 9.5 where forces are applied to an ice hockey stic lying flat on ice. The net external force is zero in both situations shown in the figure; but in one case, equilibrium is achieved, whereas in the other, it is not. In Figure 9.4, the ice hockey stick remains motionless. But in Figure 9.5, with the same forces applied in different places, the stick experiences accelerated rotation. Therefore, we know that the point at which a force is applied is another factor in determining whether or not equilibrium is achieved. This will be explored further in the next section.
+
+
+
+# PHET EXPLORATIONS
+
+# Torque
+
+Investigate how torque causes an object to rotate. Discover the relationships between angular acceleration, moment of inertia, angular momentum and torque.
+
+Click to view content (https://openstax.org/l/21angmomintsim).

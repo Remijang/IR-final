@@ -1,0 +1,99 @@
+[
+    {
+        "type": "text",
+        "text": "8.6.3 Division Using the Newton-Raphson Method ",
+        "text_level": 1,
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "We detail another algorithm that also takes $O ( l o g ( n ) ^ { 2 } )$ time. We assume that we are trying to divide $A$ by $B$ . Let us only consider normal numbers. Akin to Goldschmidt division, the key point of the algorithm is to find the reciprocal of the significand of $B$ . Adjusting the exponents, computing the sign bit, and multiplying the reciprocal with $A$ are fast operations $( O ( l o g ( n ) )$ . ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "For readability, let us designate $P _ { B }$ as $b$ ( $1 \\leq b < 2$ ). We wish to compute $1 / b$ . Let us create a function: $f ( x ) = 1 / x - b$ . $f ( x ) = 0$ when $x = 1 / b$ . The problem of computing the reciprocal of $b$ is thus the same as computing the root of $\\operatorname { f } ( \\mathbf { x } )$ . Let us use the Newton Raphson method [Kreyszig, 2000]. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "The gist of this method is shown in Figure 8.19. We start with an arbitrary value of $x$ such as $x _ { 0 }$ . We then locate the point on $f ( x )$ that has $x _ { 0 }$ as its x co-ordinate and then draw a tangent to $f ( x )$ at $( x _ { 0 } , f ( x _ { 0 } ) )$ . Let the tangent intersect the x axis at $x _ { 1 }$ . We again follow the same procedure, and draw another tangent at $( x _ { 1 } , f ( x _ { 1 } ) )$ . This tangent will intersect the x axis at $x _ { 2 }$ . We continue this process. As we can observe in the figure, we gradually get closer to the root of $\\operatorname { f } ( \\mathbf { x } )$ . We can terminate after a finite number of steps with an arbitrarily small error. Let us analyze this procedure mathematically. ",
+        "page_idx": 352
+    },
+    {
+        "type": "image",
+        "img_path": "images/8bba7b02d99ab8b6ee880b2af6e7ece87c9057ea3158d899fbcdf875a0b261ab.jpg",
+        "img_caption": [
+            "Figure 8.19: The Newton-Raphson method "
+        ],
+        "img_footnote": [],
+        "page_idx": 353
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 353
+    },
+    {
+        "type": "text",
+        "text": "The derivative of $f ( x )$ at $x _ { 0 }$ is $d f ( x ) / d x = - 1 / x _ { 0 } ^ { 2 }$ . Let the equation of the tangent be $y = m x + c$ . The slope is equal to $- 1 / x _ { 0 } ^ { 2 }$ . The equation is thus: $y = - x / x _ { 0 } ^ { 2 } + c$ . Now, we know that at $x _ { 0 }$ , the value of $y$ is $1 / x _ { 0 } - b$ . We thus have: ",
+        "page_idx": 353
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { \\displaystyle \\frac { 1 } { x _ { 0 } } - b = - \\frac { x _ { 0 } } { x _ { 0 } ^ { 2 } } + c } \\\\ { \\displaystyle \\Rightarrow \\frac { 1 } { x _ { 0 } } - b = - \\frac { 1 } { x _ { 0 } } + c } \\\\ { \\displaystyle \\Rightarrow c = \\frac { 2 } { x _ { 0 } } - b } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 353
+    },
+    {
+        "type": "text",
+        "text": "The equation of the tangent is $y = - x / x _ { 0 } ^ { 2 } + 2 / x _ { 0 } - b$ . This line intersects the $\\mathrm { x }$ axis when $y = 0$ , and $x = x _ { 1 }$ . We thus have: ",
+        "page_idx": 353
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { \\displaystyle 0 = - \\frac { x _ { 1 } } { x _ { 0 } ^ { 2 } } + \\frac { 2 } { x _ { 0 } } - b } } \\\\ { { \\displaystyle \\Rightarrow x _ { 1 } = 2 x _ { 0 } - b x _ { 0 } ^ { 2 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 353
+    },
+    {
+        "type": "text",
+        "text": "Let us now define an error function of the form: $\\mathcal { E } ( x ) = b x - 1$ . Note that $\\mathcal { E } ( x )$ is $0$ , when $x$ is equal to $1 / b$ . Let us compute the error: $\\mathcal { E } ( x _ { 0 } )$ and $\\mathcal { E } ( x _ { 1 } )$ . ",
+        "page_idx": 353
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { E } ( x _ { 0 } ) = b x _ { 0 } - 1\n$$",
+        "text_format": "latex",
+        "page_idx": 354
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { { \\mathcal E } ( x _ { 1 } ) = b x _ { 1 } - 1 } \\\\ & { \\qquad = b \\left( 2 x _ { 0 } - b x _ { 0 } ^ { 2 } \\right) - 1 } \\\\ & { \\qquad = 2 b x _ { 0 } - b ^ { 2 } x _ { 0 } ^ { 2 } - 1 } \\\\ & { \\qquad = - ( b x _ { 0 } - 1 ) ^ { 2 } } \\\\ & { \\qquad = - { \\mathcal E } ( x _ { 0 } ) ^ { 2 } } \\\\ & { \\qquad \\mid { \\mathcal E } ( x _ { 1 } ) \\mid = \\mid { \\mathcal E } ( x _ { 0 } ) \\mid ^ { 2 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 354
+    },
+    {
+        "type": "text",
+        "text": "Thus, the error gets squared every iteration, and if the starting value of the error is less than 1, then it will ultimately get arbitrarily close to $0$ . If we can place bounds on the error, then we can compute the number of iterations required. ",
+        "page_idx": 354
+    },
+    {
+        "type": "text",
+        "text": "We start out by observing that $1 \\leq b < 2$ since we only consider normal floating point numbers. Let $x _ { 0 }$ be $1 / 2$ . The range of $b x _ { 0 } - 1$ is thus $[ - 1 / 2 , 0 ]$ . We can thus bound the $\\mathrm { e r r o r } ( \\mathcal { E } ( x _ { 0 } ) )$ as $- 1 / 2 \\le \\mathcal { E } ( x _ { 0 } ) < 0$ . Therefore, we can say that $\\mid \\mathcal { E } ( x _ { 0 } ) \\mid \\leq 1 / 2$ . Let us now take a look at the maximum value of the error as a function of the iteration in Table 8.8. ",
+        "page_idx": 354
+    },
+    {
+        "type": "table",
+        "img_path": "images/c9fbb708fdd75611047a57ac0408ff55a96d4cf45b0ea2d69c5940f8340b3b9a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Iteration</td><td>max(\u03b5(x))</td></tr><tr><td></td><td>0</td><td>1-2</td></tr><tr><td></td><td>1</td><td></td></tr><tr><td></td><td>2</td><td></td></tr><tr><td></td><td>3</td><td></td></tr><tr><td></td><td>4</td><td></td></tr><tr><td></td><td>5</td><td>232 1</td></tr></table></body></html>\n\n",
+        "page_idx": 354
+    },
+    {
+        "type": "text",
+        "text": "Since we only have 23 mantissa bits, we need not go beyond the fifth iteration. Thus, in this case also, the number of iterations is small, and bounded by a small constant. In every step, we have a multiplication and subtraction operation. These are $O ( l o g ( n ) )$ time operations. Let us compute the time complexity for $n$ bit floating point numbers. Here, also we assume that a fixed fraction of bits is used to represent the mantissa. Like the case of Goldschmidt division, we need $O ( l o g ( n ) )$ iterations, and each iteration takes $O ( l o g ( n ) )$ time. Thus, the total complexity is $O ( l o g ( n ) ^ { 2 } )$ . ",
+        "page_idx": 354
+    }
+]

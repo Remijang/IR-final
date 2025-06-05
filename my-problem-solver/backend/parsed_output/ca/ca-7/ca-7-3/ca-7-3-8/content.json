@@ -1,0 +1,32 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.8 Metastability ",
+        "text_level": 1,
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "Up till now we have assumed that at the negative edge of a clock the input instantaneously reflects at the output. This high level assumption is however not strictly correct. Readers need to appreciate the fact that every digital circuit is at its core an analog circuit. Quantities like current and voltage take time to reach their optimal levels, and the circuit is sensitive to the voltage levels, and the timing of the inputs. The readers can refer to standard text books [Taub and Schilling, 1977] on digital design for a thorough explanation. ",
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "In this section, we shall take a look at one particular aspect of the analog nature of flip flops known as metastability. If there is a change in the input close to the negative clock edge, then the output becomes non-deterministic, and might even fluctuate or oscillate for some period of time. This phenomenon is known as metastability. To avoid such behavior it is necessary to ensure that the input is stable (does not change) for $t _ { s e t u p }$ units of time before the clock edge, and is also stable for $t _ { h o l d }$ units of time after the clock edge. This means that there is a window of time around the clock edge in which the input to the flip flop needs to remain stable. Only, in this case, we can guarantee the correct operation of a flip flop. This window of time in which we want the inputs to be stable is known as the keep out region. ",
+        "page_idx": 286
+    },
+    {
+        "type": "text",
+        "text": "Let us now display these concepts graphically in Figure 7.23. We need to note that in practice, the setup time, and the hold time are small fractions of the total cycle time ( $< 1 0 \\%$ ). Designers take special precautions to ensure that there are no transitions in the input in the keep out region. We shall see that this phenomenon has important implications when we discuss I/O circuits. These circuits have sophisticated delay elements that delay signals to keep transitions out of the keep out region. ",
+        "page_idx": 286
+    },
+    {
+        "type": "image",
+        "img_path": "images/4cf73e68158122ef53b2a07fe9a8de23f9a606055fa6a46b62ffddfabd517f2e.jpg",
+        "img_caption": [
+            "Figure 7.23: Setup time, hold time, and the keep out region "
+        ],
+        "img_footnote": [],
+        "page_idx": 287
+    }
+]

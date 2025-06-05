@@ -1,0 +1,76 @@
+[
+    {
+        "type": "text",
+        "text": "9.1.1 Overview ",
+        "text_level": 1,
+        "page_idx": 361
+    },
+    {
+        "type": "text",
+        "text": "The design of a processor is very similar to that of a car assembly line (see Figure 9.1). A car assembly line first casts raw metal into the chassis of a car. Then the engine is built, and put on the chassis. Then it is time to connect the wheels, the dashboard, and the body of the car. The final operation is to paint the car, and test it for manufacturing defects. The assembly line represents a long chain of actions, where one station performs a certain operation, and passes on a half built car to the next station. Each station also uses a pool of raw materials to augment the half built car such as metal, paint, or accessories. ",
+        "page_idx": 361
+    },
+    {
+        "type": "image",
+        "img_path": "images/be91f54d0caf02ae81d023b03364dcee62330344a8625fa83f6e346911bf2573.jpg",
+        "img_caption": [
+            "Figure 9.1: Car Assembly Line "
+        ],
+        "img_footnote": [],
+        "page_idx": 362
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 362
+    },
+    {
+        "type": "text",
+        "text": "We can think of a processor on the same lines as a car assembly line. In the place of a car, we have an instruction. The instruction goes through various stages of processing. The same way that raw metal is transformed to a beautiful finished product in a car factory, a processor acts upon a sequence of bits to do complex arithmetic and logical computations. ",
+        "page_idx": 362
+    },
+    {
+        "type": "image",
+        "img_path": "images/6bc7c1bf65ff283e66bb2f31ba58368cc5dfc5844e5eeccedf68d4542e72980f.jpg",
+        "img_caption": [
+            "Figure 9.2: Five stages of instruction processing "
+        ],
+        "img_footnote": [],
+        "page_idx": 362
+    },
+    {
+        "type": "text",
+        "text": "We can broadly divide the operation of a processor into five stages as shown in Figure 9.2. The first step is to fetch the instruction from memory. The underlying organization of the machine does not matter. The machine can be a Von Neumann machine (shared instruction and data memory), or a Harvard machine (dedicated instruction memory). The fetch stage has logical elements to compute the address of the next instruction. If the current instruction, is not a branch, then we need to add the size of the current instruction (4 bytes) to the address stored in the PC. However, if the current instruction is a branch, then the address of the next instruction depends on the outcome and target of the branch. This information is obtained from other units in the processor. ",
+        "page_idx": 362
+    },
+    {
+        "type": "text",
+        "text": "The next stage is to \u201cdecode\u201d the instruction and fetch its operands from registers. SimpleRisc defines 21 instructions, and the processing required for different instruction types is very different. For example, load-store instructions use a dedicated memory unit, whereas arithmetic instructions do not. To decode an instruction, processors have dedicated logic circuits that generate signals based on fields in the instruction. These signals are then used by other modules to properly process the instruction. The SimpleRisc format is very simple. Hence, decoding the instruction is very easy. However, commercial processors such as Intel processors have very elaborate decode units. Decoding the x86 instruction set is very complicated. Irrespective of the complexity of decoding, the process of decoding typically contains the following steps \u2013 extracting the values of the operands, calculating the embedded immediate values and extending them to 32 or 64 bits, and generating additional information regarding the processing of the instruction. The process of generating more information regarding an instruction involves generating processor specific signals. For example, we can generate signals of the form \u201cenable memory unit\u201d for load/store instructions. For a store instruction, we can generate a signal to disable register write functionality. ",
+        "page_idx": 362
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "In our SimpleRisc processor, we need to extract the immediate, and branch offset values embedded in the instruction. Subsequently, we need to read the values of the source registers. There is a dedicated structure in the processor called the register file that contains all the 16 SimpleRisc registers. For a read operation, it takes the number of the register as input, and produces the contents of the register as its output. In this step, we read the register file, and buffer the values of register operands in latches. ",
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "The next stage executes arithmetic and logical operations. It contains an arithmetic and logical unit(ALU) that is capable of performing all arithmetic and logical operations. The ALU is also required to compute the effective address of load-store operations. Typically, this part of the processor computes the outcome of branches also. ",
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "Definition 57   \nThe ALU (arithmetic logic unit) contains elements for performing arithmetic and logical computations on data values. The ALU typically contains an adder, multiplier, divider, and has units to compute logical bitwise operations. ",
+        "page_idx": 363
+    },
+    {
+        "type": "text",
+        "text": "The next stage contains the memory unit for processing load-store instructions. This unit interfaces with the memory system, and co-ordinates the process of loading and storing values from memory. We shall see in Chapter 11 that the memory system in a typical processor is fairly complex. Some of this complexity is implemented in this part of the processor. The last step in processing an instruction is to write the values computed by the ALU or loaded values obtained from the memory unit to the register file. ",
+        "page_idx": 363
+    }
+]

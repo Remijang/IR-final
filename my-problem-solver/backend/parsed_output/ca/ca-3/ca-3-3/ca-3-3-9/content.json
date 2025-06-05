@@ -1,0 +1,82 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.9 Conditional Branch Instructions ",
+        "text_level": 1,
+        "page_idx": 114
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has two conditional branch instructions \u2013 beq and bgt. Real world instruction sets typically have more branch instructions. Nonetheless, at the cost of code size, these two instructions are sufficient for implementing all types of branches. ",
+        "page_idx": 114
+    },
+    {
+        "type": "text",
+        "text": "The beq instruction stands for \u201cbranch if equal\u201d. This means that if any preceding cmp instruction has set the $E$ flag, then the PC will branch to the label specified in this instruction. Otherwise, the branch is said to fail, and the processor will proceed to execute the instruction after the branch. Similarly, the bgt instruction stands for \u201cbranch if greater than\u201d. This branch instruction bases its outcome on the value of the $G T$ flag. If it is set to 1, then it branches to the label specified in the branch instruction, otherwise the processor executes the next instruction after the branch. Refer to Table 3.8. ",
+        "page_idx": 114
+    },
+    {
+        "type": "table",
+        "img_path": "images/7a7df7ae8f229d6e4c1ce28321a997aa1ee8ff9a65d8139932219fbc474460f6.jpg",
+        "table_caption": [
+            "Table 3.8: Semantics of ranch instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>beq label</td><td>beq .foo</td><td>branch to .foo if flags.E =1</td></tr><tr><td>bgt label</td><td>bgt .foo</td><td>branch to .foo if flags.GT = 1</td></tr></table></body></html>\n\n",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "Example 29   \nWrite an iterative program to compute the factorial of a number stored in r0. Assume that the number is greater than 2. Save the result in r1.   \nAnswer: Let us first take a look at a small $C$ program to compute the factorial of the variable num.   \nC   \nint prod = 1;   \nint idx;   \nfor(idx = num; idx > 1; idx --) {   \nprod = prod \\* idx   \n} ",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to convert this program to SimpleRisc . ",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc   \nmov r1, 1 /\\* prod = 1 \\*/   \nmov r2, r0 /\\* idx = num \\*/   \n.loop: mul r1, r1, r2 /\\* prod = prod \\* idx \\*/ sub r2, r2, 1 /\\* idx = idx - 1 \\*/ cmp r2, 1 /\\* compare (idx, 1) \\*/ bgt .loop /\\* if (idx > 1) goto .loop\\*/ ",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "Example 30 Write an assembly program to find out if the number stored in r1 is a prime number. Assume that it is greater than 3. Save the Boolean result in r0. ",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc ",
+        "page_idx": 115
+    },
+    {
+        "type": "text",
+        "text": "mov r2, 2 .loop: mod r3, r1, r2 @ divide number by r2 cmp r3, 0 @ compare the result with 0 beq .notprime @ if the result is 0, not prime add r2, r2, 1 @ increment r2 cmp r1, r2 @ compare r2 with the number ",
+        "page_idx": 115
+    },
+    {
+        "type": "image",
+        "img_path": "images/f7756c617ac714d0e50d26137121d6bfaf3b4a727e9691c60980586ff370ca66.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 116
+    },
+    {
+        "type": "text",
+        "text": "Example 31 Write an assembly program to find the least common multiple (LCM) of two positive numbers stored in r1 and r2. Save the result in r0.   \nAnswer: ",
+        "page_idx": 116
+    },
+    {
+        "type": "image",
+        "img_path": "images/e8d7350476a9fa3c77a0942455aaeb4cfc25f5163b6b44741c91b09fd958fef3.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 116
+    }
+]

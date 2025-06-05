@@ -1,0 +1,107 @@
+3.3.10 Functions
+
+Now, that we have seen generic instructions, operands, and addressing modes, let us come to one of the most advanced features in high level programming languages that makes their structure extremely modular namely functions (also referred to as subroutines or procedures in some languages). If the same piece of code is used at different points in a program, then it can be encapsulated in a function. The following example shows a function in C to add two numbers.
+
+int addNumbers(int a, int b) { return  ; }
+
+Calling and Returning from Functions
+
+Let us now go over the basic requirements to implement a simple function. Let us assume that an instruction with address  calls a function  . After executing function  , we need to come back to the instruction immediately after the instruction at  . The address of this instruction is  (if we assume that the instruction at  is 4 bytes long). This process is known as returning from a function, and the address  is known as the return address.
+
+Definition 34
+
+Return address: It is the address of the instruction that a process needs to branch to after executing a function.
+
+Thus, there are two fundamental aspects of implementing a function. The first is the process of invoking or calling a function, and the second aspect deals with returning from a function.
+
+Let us consider the process of calling a function in bit more detail. A function is essentially a block of assembly code. Calling a function is essentially making the PC point to the start of this block of code. We have already seen a method to implement this functionality when we discussed branch instructions. We can associate a label with every function. The label should be associated with the first instruction in a function. Calling a function is as simple as branching to the label at the beginning of a function. However, this is only a part of the story. We need to implement the return functionality as well. Hence, we cannot use an unconditional branch instruction to implement a function call.
+
+Let us thus propose a dedicated function call instruction that branches to the beginning of a function, and simultaneously saves the address that the function needs to return to (referred to as the return address). Let us consider the following C code, and assume that each C statement corresponds to one line of assembly code.
+
+In this small code snippet, we use a function call instruction to call the  function. The return address is the address of the instruction in Line 2. It is necessary for the call instruction to save the return address in a dedicated storage location such that it can be retrieved later. Most RISC instruction sets (including SimpleRisc ) have a dedicated register known as the return address register to save the return address. The return address register gets automatically populated by a function call instruction. When we need to return from a function, we need to branch the address contained in the return address register. In SimpleRisc , we devote register 15 to save the return address, and refer to it as  .
+
+What happens if foo calls another function? In this case, the value in  will get overwritten. We will look at this issue later. Let us now consider the problem of passing arguments to a function, and getting return values back.
+
+Passing Arguments and Return Values
+
+Assume that a function foo invokes a function foobar. foo is called the caller, and foobar is called the callee. Note that the caller-callee relationships are not fixed. It is possible for f oo to call foobar, and also possible for foobar to call foo in the same program. The caller and callee are decided for a single function call based on which function is invoking the other.
+
+Definition 35
+
+caller A function, foo, that has called another function, foobar.
+
+callee A function, foobar, that has been called by another function, foo.
+
+Both the caller and the callee see the same view of registers. Consequently, we can pass arguments through the registers, and likewise pass the return values through registers also. However, there are several issues in this simple idea as we enumerate below (Assume that we have 16 registers).
+
+1. A function can take more than 16 arguments. This is more than the number of general purpose registers that we have. Hence, we need to find extra space to save the arguments.   
+2. A function can return a large amount of data, for example, a large structure in C. It might not be possible for this piece of data to fit in registers.   
+3. The callee might overwrite registers that the caller might require in the future.
+
+We thus observe that passing arguments and return values through registers works only for simple cases. It is not a very flexible and generic solution. Nonetheless, there are two requirements that emerge from our discussion.
+
+Space Problem We need extra space to send and return more arguments.
+
+Overwrite Problem We need to ensure that the callee does not overwrite the registers of the caller.
+
+To solve both the problems, we need to take a deeper look at how functions really work. We can think of a function – foo – as a black box to begin with. It takes a list of arguments and returns a set of values. To perform its job, foo can take one nano-second, or one week, or even one year. foo might call other functions to do its job, send data to I/O devices, and access memory locations. Let us visualize the function, foo, in Figure 3.8.
+
+To summarize, a generic function processes the arguments, reads and writes values from memory and I/O devices if required, and then returns the result. Regarding memory and I/O devices, we are not particularly concerned at this point of time. There is a large amount of memory available, and space is not a major constraint. Reading and writing I/O devices is also typically not associated with space constraints. The main issue is with registers, because they are in short supply.
+
+Let us solve the space problem first. We can transfer values through both registers and memory. For simplicity, if we need to transfer a small amount of data, we can use registers, otherwise we can transfer them through memory. Similarly, for return values, we can transfer values through memory. We are not limited by space constraints if we use memory to transfer data. However, this approach suffers from lack of flexibility. This is because there has to be strict agreement between the caller and the callee regarding the memory locations to be used. Note that we cannot use a fixed set of memory locations, because it is possible for the callee to recursively call itself.
+
+recursive function call foobar() { foobar(); }
+
+An astute reader might argue that it is possible for the callee to read the arguments from memory and transfer them to some other temporary area in memory and then call other functions. However, such approaches are not elegant and not very efficient also. We shall look at more elegant solutions later.
+
+Hence, at this point, we can conclude that we have solved the space problem partially. If we need to transfer a few values between the caller and the callee or vice versa, we can use registers. However, if the arguments/return values do not fit in the set of available registers, then we need to transfer them through memory. For transferring data through memory, we need an elegant solution that does not require a strict agreement between the caller and the callee regarding the memory locations used to transfer data. We shall consider such solutions in Section 3.3.10.
+
+Definition 36
+
+The notion of saving registers in memory and later restoring them is known as register spilling.
+
+To solve the overwrite problem, there are two solutions. The first is that the caller can save the set of registers it requires in a dedicated location in memory. It can later retrieve its set of registers after the callee finishes and returns control to the caller. The second solution is for the callee to save and restore the registers that it will require. Both the approaches are shown in Figure 3.9. This method of saving the values of registers in memory, and later retrieving them is known as spilling.
+
+Here, we have the same problem again. Both the caller and the callee need to have a strict agreement on the locations in memory that need to be used. Let us now try to solve both the problems together.
+
+The Stack
+
+We simplified the process of passing arguments to and from a function, and saving/restoring the registers using dedicated locations in memory. However, this solution was found to be inflexible, and it can be quite complex to implement for large real-world programs. To simplify this idea, let us find a pattern in function calls.
+
+A typical C or Java program starts with the main function. This function then calls other functions, which might in turn call other functions, and finally the execution terminates when the main function exits. Each function defines a set of local variables and performs a computation on these variables and the function arguments. It might also call other functions. Finally, the function returns a value and rarely a set of values (structure in C). Note that after a function terminates, the local variables, and the arguments are not required anymore. Hence, if some of these variables or arguments were saved in memory, we need to reclaim the space. Secondly, if the function has spilled registers, then these memory locations also need to be freed after it exits. Lastly, we note that if the callee calls another function, then it will need to save the value of the return address register in memory. We will need to free this location also after the function exits.
+
+It is best to save all of these pieces of information contiguously in a single region of memory. This is known as the activation block of the function. Figure 3.10 shows the memory map of the activation block.
+
+The activation block contains the arguments, return address, register spill area (for both caller saved and callee saved schemes), and the local variables. Once a function terminates, it is possible to get rid of the activation block entirely. If a function wants to return some values, then it can either do so using registers. However, if it wants to return a large structure, then it can write it into the activation block of the caller. The caller can supply a location within its activation block where this data can be written. We shall see that it is possible to do this more elegantly. Prior to explaining how this can be done, we need to look at how to arrange activation blocks in memory.
+
+We can have one memory region where all the activation blocks are stored in contiguous regions. Let us consider an example. Let us assume that function foo calls function foobar, which in turn calls f oobarbar. Figure 3.11(a) - (d) show the state of memory at four points – (a) just before calling f oobar, (b) just before calling f oobarbar, (c) after calling f oobarbar, (d) just after f oobarbar returns.
+
+We observe that there is a last-in-first-out behavior in this memory region. The function that was invoked the last is the first function to finish. Such a last-in-first-out (LIFO) structure is traditionally known as a stack in computer science. Hence, the memory region dedicated to saving activation blocks is known as the stack. Traditionally, the stack has been considered to be downward growing (growing towards smaller memory addresses). This means that the activation block of the main function starts at a very high location and new activation blocks are added just below (towards lower addresses) existing activation blocks. Thus, the top of the stack is actually the smallest address in the stack, and the bottom of the stack is the largest address. The top of the stack represents the activation block of the function that is currently executing, and the bottom of the stack represents the initial main function.
+
+Definition 37
+
+The stack is a memory region that saves all the activation blocks in a program.
+
+• It is traditionally considered to be downward growing.   
+Before calling a function, we need to push its activation block to the stack.   
+• When a function finishes execution, we need to pop its activation block off the stack.
+
+Definition 38
+
+The stack pointer register maintains a pointer to the top of the stack.
+
+Most architectures save a pointer to the top of the stack in a dedicated register called the stack pointer. This register is  in SimpleRisc . It is also called  . Note that for a lot of architectures, the stack is a software structure. For them, the hardware is not aware of the stack. However, for some architectures such as x86, hardware is aware of the stack and uses it to push the return address or the values of other registers. However, even in this case the hardware is not aware of the contents of each activation block. The structure is decided by the assembly programmer or the compiler. In all cases, the compiler needs to explicitly add assembly instructions to manage the stack.
+
+Creating a new activation block for the callee involves the following steps.
+
+1. Decrement the stack pointer by the size of the activation block.
+
+2. Copy the values of the arguments.
+
+3. Initialize any local variables by writing to their corresponding memory locations if required.
+
+4. Spill any registers (store to the activation block) if required.
+
+It is necessary to destroy the activation block upon returning from a function. This can be trivially done by adding the size of the activation block to the stack pointer.
+
+By using a stack, we have solved all of our problems. The caller and the callee cannot overwrite each other’s local variables. The local variables are saved in the activation blocks, and two activation blocks do not overlap. Along with variables it is possible to stop the callee from overwriting the caller’s registers by explicitly inserting instructions to save registers in the activation blocks. There are two methods of achieving this – caller-saved scheme and calleesaved scheme. Secondly, there is no need to have an explicit agreement regarding the memory area that will be used to pass arguments. The stack can be used for this purpose. The caller can simply push the arguments on the stack. These arguments will get pushed into the callee’s activation block, and the callee can easily use them. Similarly, while returning from a function the callee can pass return values through the stack. It needs to first destroy its activation block by decrementing the stack pointer, and then it can push the return values on the stack. The caller will be aware of the semantics of the callee, and thus after the callee returns it can assume that its activation block has been effectively enlarged by the callee. The additional space is consumed by the return values.

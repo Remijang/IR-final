@@ -1,0 +1,72 @@
+[
+    {
+        "type": "text",
+        "text": "2.2.1 Ancient Number Systems ",
+        "text_level": 1,
+        "page_idx": 59
+    },
+    {
+        "type": "text",
+        "text": "Ever since man developed higher intelligence, he has faced the need to count. For numbers from one to ten, human beings can use their fingers. For example, the little finger of the left hand can signify one, and the little finger of the right hand can signify ten. However, for counting numbers greater than ten, we need to figure out a way for representing numbers. In the ancient world, two number systems prevailed \u2013 the Roman numerals used in ancient Rome, and the Indian numerals used in the Indian subcontinent. ",
+        "page_idx": 59
+    },
+    {
+        "type": "text",
+        "text": "The Roman numerals used the characters \u2013 I, II . . . X, for the numbers 1 . . . 10, respectively. However, there were significant issues for representing numbers greater than ten. For example, to represent 50, 100, 500, and 1000, Romans used the symbols L, C, D, and M, respectively. To represent a large number, the Romans represented it as a sequence of symbols. The number 204 can be represented as CCIV $\\mathrm { ( C + C + I V = 1 0 0 + 1 0 0 + 4 }$ ). Hence, to derive the real value of a number, we need to scan the number from left to right, and keep on adding the values. To make things further complicated, there is an additional rule that if a smaller number is preceded by a larger value, then we need to subtract it from the total sum. Note that there is no notion of negative numbers, and zero in this number system. Furthermore, it is extremely difficult to represent large numbers, and perform simple operations such as addition and multiplication. ",
+        "page_idx": 59
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "The ancient Indians used a number system that was significantly simpler, and fundamentally more powerful. The Arabs carried the number system to Europe sometime after seventh century AD, and thus this number system is popularly known as the Arabic number system. The magic tricks used by ancient Indian mathematicians are the number \u20190\u2019, and the place value system. The Indian mathematicians used a sequence of ten symbols including zero, as the basic alphabet for numbers. Figure 2.4 shows ten symbols obtained in the Bakhshali manuscript obtained in the north west frontier province of modern Pakistan (dated seventh century AD). Each such symbol is known as a \u2018digit\u2019. ",
+        "page_idx": 60
+    },
+    {
+        "type": "image",
+        "img_path": "images/c0de226a6c52d5a76a64821c2f346678604d705a304195fe0eccd3f66790ac7f.jpg",
+        "img_caption": [
+            "Figure 2.4: Numerals from the Bakhshali Manuscript (source Wikipedia $\\textsuperscript { \\textregistered }$ ) This article uses material from the Wikipedia article \u201cBakhshali Manuscript\u201d [bak, ], which is released under the Creative Commons Attribution-Share-Alike License 3.0 [ccl, ] "
+        ],
+        "img_footnote": [],
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "Every number was represented as a sequence of digits. Each digit represents a number between zero and nine. The first problem is to represent a number that is greater than nine by one unit. This is where we use the place value system. We represent it as 10. The left most number, 1, is said to be in the ten\u2019s place, and the right most number, $0$ , is in the unit\u2019s place. We can further generalize this representation to any two-digit number of the form, $x _ { 2 } x _ { 1 }$ . The value of the number is equal to $1 0 \\times x _ { 2 } + x _ { 1 }$ . As compared to the Roman system, this representation is far more compact, and can be extended to represent arbitrarily large integers. ",
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "A number of the form $x _ { n } x _ { n - 1 } \\ldots x _ { 1 }$ is equal to $x _ { n } \\times 1 0 ^ { n - 1 } + x _ { n - 1 } \\times 1 0 ^ { n - 1 } + . . . + x _ { 1 } =$ $\\scriptstyle \\sum _ { i = 1 } ^ { n } x _ { i } 1 0 ^ { i - 1 }$ . Each decimal digit is multiplied with a power of 10, and the sum of the products is equal to the value of the number. As we have all studied in elementary school, this number system makes the job of addition, multiplication, and subtraction substantially easier. In this case, the number $\\cdot 1 0 ^ { \\cdot }$ , is known as the base of the number system. ",
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "Historical Note 2 The largest number known to ancient Indian mathematicians was $1 0 ^ { 5 3 }$ [ind, ]. ",
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "Let us now ponder about a basic point. Why did the Indians choose ten as the base? They had the liberty to choose any other number such as seven or eight or nine. The answer can be found by considering the most basic form of counting again, i.e., with fingers. Since human beings have ten fingers, they use them to count till one to ten, or from zero to nine. Hence, they were naturally inclined to use ten as the base. ",
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "Let us now move to a planet, where aliens have seven fingers. It would not be surprising to see them use a base seven number system. In their world, a number of the form, 56, would actually be $7 \\times 5 + 6$ in our number system. We thus observe that it is possible to generalize the concept of a base, and it is possible to represent any number in any base. We introduce the notation $3 2 4 3 _ { 1 0 }$ , which means that the number 3243 is being represented in base 10. ",
+        "page_idx": 60
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 61
+    },
+    {
+        "type": "text",
+        "text": "Example 7 The number $1 0 2 2 _ { 8 }$ is equal to : $8 ^ { 3 } + 0 + 2 * 8 ^ { 1 } + 2 = 5 3 0 _ { 1 0 }$ . ",
+        "page_idx": 61
+    }
+]

@@ -1,0 +1,739 @@
+[
+    {
+        "type": "text",
+        "text": "10.4 Rotational Kinetic Energy: Work and Energy Revisited ",
+        "text_level": 1,
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "Derive the equation for rotational work.   \n\u2022 Calculate rotational kinetic energy.   \n\u2022 Demonstrate the Law of Conservation of Energy. ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "In this module, we will learn about work and energy associated with rotational motion. Figure 10.13 shows a worker using an electric grindstone propelled by a motor. Sparks are flying, and noise and vibration are created as layers of steel are pared from the pole. The stone continues to turn even after the motor is turned off, but it is eventually brought to a stop by friction. Clearly, the motor had to work to get the stone spinning. This work went into heat, light, sound, vibration, and considerable rotational kinetic energy. ",
+        "page_idx": 424
+    },
+    {
+        "type": "image",
+        "img_path": "images/da0c820075ad42d651b2475d4540fed33029c5f4d3c347ae9d61c5d3c3a57659.jpg",
+        "img_caption": [
+            "FIGURE 10.13 The motor works in spinning the grindstone, giving it rotational kinetic energy. That energy is then converted to heat, light, sound, and vibration. (credit: U.S. Navy photo by Mass Communication Specialist Seaman Zachary David Bell) "
+        ],
+        "img_footnote": [],
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "Work must be done to rotate objects such as grindstones or merry-go-rounds. Work was defined in Uniform Circular Motion and Gravitation for translational motion, and we can build on that knowledge when considering work done in rotational motion. The simplest rotational situation is one in which the net force is exerted perpendicular to the radius of a disk (as shown in Figure 10.14) and remains perpendicular as the disk starts to rotate. The force is parallel to the displacement, and so the net work done is the product of the force times the arc length traveled: ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "To get torque and other rotational quantities into the equation, we multiply and divide the right-hand side of the equation by $r$ , and gather terms: ",
+        "page_idx": 424
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { n e t } \\ : W = ( r \\ : \\mathrm { n e t } \\ : F ) \\frac { \\Delta s } { r } .\n$$",
+        "text_format": "latex",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "We recognize that $r$ net $F =$ net $\\tau$ and $\\Delta s / r = \\theta$ , so that ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "This equation is the expression for rotational work. It is very similar to the familiar definition of translational work as force multiplied by distance. Here, torque is analogous to force, and angle is analogous to distance. The equation net $W = ( \\mathrm { n e t } \\tau ) \\theta$ is valid in general, even though it was derived for a special case. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "To get an expression for rotational kinetic energy, we must again perform some algebraic manipulations. The first step is to note that $\\tau = I \\alpha$ , so that ",
+        "page_idx": 425
+    },
+    {
+        "type": "image",
+        "img_path": "images/711e6b1df8e4f145ca1e6595b884cc8c09fa63126b262da816ad64eed1ee17c2.jpg",
+        "img_caption": [
+            "FIGURE 10.14 The net force on this disk is kept perpendicular to its radius as the force causes the disk to rotate. The net work done is thus (net $F ) \\Delta s$ . The net work goes into rotational kinetic energy. "
+        ],
+        "img_footnote": [],
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Making Connections ",
+        "text_level": 1,
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Work and energy in rotational motion are completely analogous to work and energy in translational motion, first presented in Uniform Circular Motion and Gravitation. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Now, we solve one of the rotational kinematics equations for $\\alpha \\theta$ . We start with the equation ",
+        "page_idx": 425
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega ^ { 2 } = { \\omega _ { 0 } } ^ { 2 } + 2 \\alpha \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Next, we solve for : ",
+        "page_idx": 425
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\alpha \\theta = \\frac { \\omega ^ { 2 } - { \\omega _ { 0 } } ^ { 2 } } { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Substituting this into the equation for net $W$ and gathering terms yields ",
+        "page_idx": 425
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { n e t } W = { \\frac { 1 } { 2 } } { I \\omega } ^ { 2 } - { \\frac { 1 } { 2 } } { I \\omega _ { 0 } } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "This equation is the work-energy theorem for rotational motion only. As you may recall, net work changes the kinetic energy of a system. Through an analogy with translational motion, we define the term $\\scriptstyle \\left( { \\frac { 1 } { 2 } } \\right) I \\omega ^ { 2 }$ to be rotational kinetic energy ${ \\mathrm { K E } } _ { \\mathrm { r o t } }$ for an object with a moment of inertia $I$ and an angular velocity $\\omega$ : ",
+        "page_idx": 425
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { r o t } } = { \\frac { 1 } { 2 } } I \\omega ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "The expression for rotational kinetic energy is exactly analogous to translational kinetic energy, with $I$ being analogous to $m$ and $\\omega$ to $v$ . Rotational kinetic energy has important effects. Flywheels, for example, can be used to store large amounts of rotational kinetic energy in a vehicle, as seen in Figure 10.15. ",
+        "page_idx": 425
+    },
+    {
+        "type": "image",
+        "img_path": "images/80b8b9618e2acada5f317caa11ca784b5542574c6dc3ff2146c408eb3b3b5bef.jpg",
+        "img_caption": [
+            "FIGURE 10.15 Experimental vehicles, such as this bus, have been constructed in which rotational kinetic energy is stored in a large flywheel. When the bus goes down a hill, its transmission converts its gravitational potential energy into ${ \\mathrm { K E } } _ { \\mathrm { r o t } }$ . It can also convert translational kinetic energy, when the bus stops, into ${ \\mathrm { K E } } _ { \\mathrm { r o t } }$ . The flywheel\u2019s energy can then be used to accelerate, to go up another hill, or to keep the bus from slowing down due to friction. "
+        ],
+        "img_footnote": [],
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.8 ",
+        "text_level": 1,
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Work and Energy for Spinning a Grindstone ",
+        "text_level": 1,
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "Consider a person who spins a large grindstone by placing her hand on its edge and exerting a force through part of a revolution as shown in Figure 10.16. In this example, we verify that the work done by the torque she exerts equals the change in rotational energy. (a) How much work is done if she exerts a force of $2 0 0 ~ \\mathsf { N }$ through a rotation of $1 . 0 0 \\mathrm { r a d } ( 5 7 . 3 ^ { \\circ } ) \\ ?$ The force is kept perpendicular to the grindstone\u2019s $0 . 3 2 0 - \\mathsf { m }$ radius at the point of application, and the effects of friction are negligible. (b) What is the final angular velocity if the grindstone has a mass of $8 5 . 0 \\mathsf { k g ? }$ (c) What is the final rotational kinetic energy? (It should equal the work.) ",
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "To find the work, we can use the equation $W = ( \\mathrm { n e t } \\tau ) \\theta$ . We have enough information to calculate the torque and are given the rotation angle. In the second part, we can find the final angular velocity using one of the kinematic relationships. In the last part, we can calculate the rotational kinetic energy from its expression in $\\begin{array} { r } { \\mathrm { K E } _ { \\mathrm { r o t } } = \\frac { 1 } { 2 } I \\omega ^ { 2 } } \\end{array}$ . ",
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "The net work is expressed in the equation ",
+        "page_idx": 426
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { r e t } W = ( \\operatorname { n e t } \\tau ) \\theta ,\n$$",
+        "text_format": "latex",
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "where net $\\tau$ is the applied force multiplied by the radius $( r F )$ because there is no retarding friction, and the force is perpendicular to $r$ . The angle $\\theta$ is given. Substituting the given values in the equation above yields ",
+        "page_idx": 426
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { { \\mathrm { n e t } ~ W } } & { { = } } & { { r F \\theta = ( 0 . 3 2 0 ~ \\mathrm { m } ) ( 2 0 0 ~ \\mathrm { N } ) ( 1 . 0 0 ~ \\mathrm { r a d } ) } } \\\\ { { } } & { { = } } & { { 6 4 . 0 ~ \\mathrm { N } \\cdot \\mathrm { m } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "Noting that $1 \\mathrm { N } \\cdot \\mathrm { m } = 1 \\mathrm { J }$ , ",
+        "page_idx": 426
+    },
+    {
+        "type": "image",
+        "img_path": "images/3c8fb5a289a8cdbbfc9f2857bbfb151040da39ae493c222770c6578a08f9d796.jpg",
+        "img_caption": [
+            "FIGURE 10.16 A large grindstone is given a spin by a person grasping its outer edge. "
+        ],
+        "img_footnote": [],
+        "page_idx": 426
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "To find $\\omega$ from the given information requires more than one step. We start with the kinematic relationship in the equation ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega ^ { 2 } = { \\omega _ { 0 } } ^ { 2 } + 2 \\alpha \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Note that $\\omega _ { 0 } = 0$ because we start from rest. Taking the square root of the resulting equation gives ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = ( 2 \\alpha \\theta ) ^ { 1 / 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Now we need to find $\\alpha$ . One possibility is ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\alpha = { \\frac { \\mathrm { n e t } \\tau } { I } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "where the torque is ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\operatorname { n e t } \\tau = r F { = } ( 0 . 3 2 0 \\mathrm { m } ) ( 2 0 0 \\mathrm { N } ) { = } 6 4 . 0 \\mathrm { N } \\cdot \\mathrm { m } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "The formula for the moment of inertia for a disk is found in Figure 10.11: ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI = { \\frac { 1 } { 2 } } M R ^ { 2 } = 0 . 5 ( 8 5 . 0 \\mathrm { k g } ) ( 0 . 3 2 0 \\mathrm { m } ) ^ { 2 } = 4 . 3 5 2 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Substituting the values of torque and moment of inertia into the expression for $\\alpha$ , we obtain ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\alpha = { \\frac { 6 4 . 0 \\mathrm { N } \\cdot \\mathrm { m } } { 4 . 3 5 2 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } } } = 1 4 . 7 { \\frac { \\mathrm { r a d } } { \\mathrm { s } ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Now, substitute this value and the given value for $\\theta$ into the above expression for $\\omega$ : ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = ( 2 \\alpha \\theta ) ^ { 1 / 2 } = \\bigg [ 2 \\bigg ( 1 4 . 7 \\frac { \\mathrm { r a d } } { \\mathrm { s } ^ { 2 } } \\bigg ) ( 1 . 0 0 \\mathrm { r a d } ) \\bigg ] ^ { 1 / 2 } = 5 . 4 2 \\frac { \\mathrm { r a d } } { \\mathrm { s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Solution for (c) ",
+        "text_level": 1,
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "The final rotational kinetic energy is ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { r o t } } = { \\frac { 1 } { 2 } } I \\omega ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Both $I$ and $\\omega$ were found above. Thus, ",
+        "page_idx": 427
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { r o t } } = ( 0 . 5 ) \\big ( 4 . 3 5 2 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } \\big ) ( 5 . 4 2 \\mathrm { r a d } / \\mathrm { s } ) ^ { 2 } = 6 4 . 0 \\mathrm { J } .\n$$",
+        "text_format": "latex",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "The final rotational kinetic energy equals the work done by the torque, which confirms that the work done went into rotational kinetic energy. We could, in fact, have used an expression for energy instead of a kinematic relation to solve part (b). We will do this in later examples. ",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Helicopter pilots are quite familiar with rotational kinetic energy. They know, for example, that a point of no return will be reached if they allow their blades to slow below a critical angular velocity during flight. The blades lose lift, and it is impossible to immediately get the blades spinning fast enough to regain it. Rotational kinetic energy must be supplied to the blades to get them to rotate faster, and enough energy cannot be supplied in time to avoid a crash. Because of weight limitations, helicopter engines are too small to supply both the energy needed for lift and to replenish the rotational kinetic energy of the blades once they have slowed down. The rotational kinetic energy is put into them before takeoff and must not be allowed to drop below this crucial level. One possible way to avoid a crash is to use the gravitational potential energy of the helicopter to replenish the rotational kinetic energy of the blades by losing altitude and aligning the blades so that the helicopter is spun up in the descent. Of course, if the helicopter\u2019s altitude is too low, then there is insufficient time for the blade to regain lift before reaching the ground. ",
+        "page_idx": 427
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategy for Rotational Energy ",
+        "text_level": 1,
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "1. Determinethatenergyorworkisinvolvedintherotation.   \n2. Determinethesystemofinterest. A sketch usually helps.   \n3. Analyzethesituationtodeterminethetypesofworkandenergyinvolved.   \n4. Forclosedsystems,mechanicalenergyisconserved. That is, $\\mathrm { K E _ { i } } + \\mathrm { P E _ { i } } = \\mathrm { K E _ { f } } + \\mathrm { P E _ { f } }$ Note that $\\mathrm { K E _ { i } }$ and $\\mathrm { K E _ { f } }$ may each include translational and rotational contributions.   \n5. Foropensystems, mechanical energy may not be conserved, and other forms of energy (referred to previously as $O E )$ ), such as heat transfer, may enter or leave the system. Determine what they are, and calculate them as necessary.   \n6. Eliminatetermswhereverpos ibletosimplifythealgebra.   \n7. Checktheanswertose ifitisreasonable. ",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.9 ",
+        "text_level": 1,
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Calculating Helicopter Energies ",
+        "text_level": 1,
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "A typical small rescue helicopter, similar to the one in Figure 10.17, has four blades, each is $4 . 0 0 \\mathrm { m }$ long and has a mass of $5 0 . 0 \\mathsf { k g }$ . The blades can be approximated as thin rods that rotate about one end of an axis perpendicular to their length. The helicopter has a total loaded mass of 1000 kg. (a) Calculate the rotational kinetic energy in the blades when they rotate at 300 rpm. (b) Calculate the translational kinetic energy of the helicopter when it flies at $2 0 . 0 \\ : \\mathsf { m } / \\mathsf { s }$ , and compare it with the rotational energy in the blades. (c) To what height could the helicopter be raised if all of the rotational kinetic energy could be used to lift it? ",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Rotational and translational kinetic energies can be calculated from their definitions. The last part of the problem relates to the idea that energy can change form, in this case from rotational kinetic energy to gravitational potential energy. ",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "The rotational kinetic energy is ",
+        "page_idx": 428
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { r o t } } = { \\frac { 1 } { 2 } } I \\omega ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "We must convert the angular velocity to radians per second and calculate the moment of inertia before we can find $\\mathrm { K E } _ { \\mathrm { r o t } }$ . The angular velocity $\\omega$ is ",
+        "page_idx": 428
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\omega = \\frac { 3 0 0 \\mathrm { r e v } } { 1 . 0 0 \\mathrm { m i n } } \\cdot \\frac { 2 \\pi \\mathrm { r a d } } { 1 \\mathrm { r e v } } \\cdot \\frac { 1 . 0 0 \\mathrm { m i n } } { 6 0 . 0 \\mathrm { s } } = 3 1 . 4 \\frac { \\mathrm { r a d } } { \\mathrm { s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "The moment of inertia of one blade will be that of a thin rod rotated about its end, found in Figure 10.11. The total $I$ is four times this moment of inertia, because there are four blades. Thus, ",
+        "page_idx": 428
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI = 4 { \\frac { M \\ell ^ { 2 } } { 3 } } = 4 \\times { \\frac { ( 5 0 . 0 \\mathrm { k g } ) ( 4 . 0 0 \\mathrm { m } ) ^ { 2 } } { 3 } } = 1 0 6 7 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Entering $\\omega$ and $I$ into the expression for rotational kinetic energy gives ",
+        "page_idx": 428
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { { \\mathrm { K E } _ { \\mathrm { r o t } } } } & { { = } } & { { 0 . 5 ( 1 0 6 7 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } ) ( 3 1 . 4 \\mathrm { r a d } / \\mathrm { s } ) ^ { 2 } } } \\\\ { { } } & { { = } } & { { 5 . 2 6 \\times 1 0 ^ { 5 } \\mathrm { J } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 428
+    },
+    {
+        "type": "text",
+        "text": "Translational kinetic energy was defined in Uniform Circular Motion and Gravitation. Entering the given values of mass and velocity, we obtain ",
+        "page_idx": 428
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { K E } } _ { \\mathrm { t r a n s } } = { \\frac { 1 } { 2 } } m v ^ { 2 } = ( 0 . 5 ) ( 1 0 0 0 { \\mathrm { k g } } ) ( 2 0 . 0 { \\mathrm { m } } / { \\mathrm { s } } ) ^ { 2 } = 2 . 0 0 \\times 1 0 ^ { 5 } { \\mathrm { J } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "To compare kinetic energies, we take the ratio of translational kinetic energy to rotational kinetic energy. This ratio is ",
+        "page_idx": 429
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 2 . 0 0 \\times 1 0 ^ { 5 } \\mathrm { ~ J } } { 5 . 2 6 \\times 1 0 ^ { 5 } \\mathrm { ~ J } } = 0 . 3 8 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "Solution for (c) ",
+        "text_level": 1,
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "At the maximum height, all rotational kinetic energy will have been converted to gravitational energy. To find this height, we equate those two energies: ",
+        "page_idx": 429
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { r o t } } = \\mathrm { P E } _ { \\mathrm { g r a v } }\n$$",
+        "text_format": "latex",
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 429
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { 2 } } I \\omega ^ { 2 } = m g h .\n$$",
+        "text_format": "latex",
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "We now solve for $h$ and substitute known values into the resulting equation ",
+        "page_idx": 429
+    },
+    {
+        "type": "equation",
+        "text": "$$\nh = { \\frac { { \\frac { 1 } { 2 } } I { \\omega } ^ { 2 } } { m g } } = { \\frac { 5 . 2 6 \\times 1 0 ^ { 5 } { \\mathrm { ~ J } } } { ( 1 0 0 0 { \\mathrm { ~ k g } } ) { \\left( 9 . 8 0 { \\mathrm { ~ m / s } } ^ { 2 } \\right) } } } = 5 3 . 7 { \\mathrm { ~ m } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "The ratio of translational energy to rotational kinetic energy is only 0.380. This ratio tells us that most of the kinetic energy of the helicopter is in its spinning blades\u2014something you probably would not suspect. The $5 3 . 7 \\mathrm { m }$ height to which the helicopter could be raised with the rotational kinetic energy is also impressive, again emphasizing the amount of rotational kinetic energy in the blades. ",
+        "page_idx": 429
+    },
+    {
+        "type": "image",
+        "img_path": "images/63d67f47b2c8073a466984b0feb5f0412dc78782215219b1705a0fe750f80183.jpg",
+        "img_caption": [
+            "FIGURE 10.17 The first image shows how helicopters store large amounts of rotational kinetic energy in their blades. This energy must be put into the blades before takeoff and maintained until the end of the flight. The engines do not have enough power to simultaneously provide lift and put significant rotational energy into the blades. The second image shows a helicopter from the Auckland Westpac Rescue Helicopter Service. Over 50,000 lives have been saved since its operations beginning in 1973. Here, a water rescue operation is shown. (credit: 111 Emergency, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 429
+    },
+    {
+        "type": "text",
+        "text": "Making Connections ",
+        "text_level": 1,
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "Conservation of energy includes rotational motion, because rotational kinetic energy is another form of .   \nUniform Circular Motion and Gravitation has a detailed treatment of conservation of energy. ",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "How Thick Is the Soup? Or Why Don\u2019t All Objects Roll Downhill at the Same Rate? ",
+        "text_level": 1,
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "One of the quality controls in a tomato soup factory consists of rolling filled cans down a ramp. If they roll too fast, the soup is too thin. Why should cans of identical size and mass roll down an incline at different rates? And why should the thickest soup roll the slowest? ",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "The easiest way to answer these questions is to consider energy. Suppose each can starts down the ramp from rest. Each can starting from rest means each starts with the same gravitational potential energy , which is converted entirely to , provided each rolls without slipping. , however, can take the form of ${ \\mathrm { K E } } _ { \\mathrm { t r a n s } }$ or $\\mathrm { K E } _ { \\mathrm { r o t } }$ , and total is the sum of the two. If a can rolls down a ramp, it puts part of its energy into rotation, leaving less for translation. Thus, the can goes slower than it would if it slid down. Furthermore, the thin soup does not rotate, whereas the thick soup does, because it sticks to the can. The thick soup thus puts more of the can\u2019s original gravitational potential energy into rotation than the thin soup, and the can rolls more slowly, as seen in Figure 10.18. ",
+        "page_idx": 430
+    },
+    {
+        "type": "image",
+        "img_path": "images/abd507899c86ae146e14df07b95481401d04382e01cd3fb35d6d55de62e5468c.jpg",
+        "img_caption": [
+            "FIGURE 10.18 Three cans of soup with identical masses race down an incline. The first can has a low friction coating and does not roll but just slides down the incline. It wins because it converts its entire PE into translational KE. The second and third cans both roll down the incline without slipping. The second can contains thin soup and comes in second because part of its initial PE goes into rotating the can (but not the thin soup). The third can contains thick soup. It comes in third because the soup rotates along with the can, taking even more of the initial PE for rotational KE, leaving less for translational KE. "
+        ],
+        "img_footnote": [],
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "Assuming no losses due to friction, there is only one force doing work\u2014gravity. Therefore the total work done is the change in kinetic energy. As the cans start moving, the potential energy is changing into kinetic energy. Conservation of energy gives ",
+        "page_idx": 430
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { P E _ { i } = K E _ { f } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "More specifically, ",
+        "page_idx": 430
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { P E } _ { \\mathrm { g r a v } } = \\mathrm { K E } _ { \\mathrm { t r a n s } } + \\mathrm { K E } _ { \\mathrm { r o t } }\n$$",
+        "text_format": "latex",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 430
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm g h = { \\frac { 1 } { 2 } } m v ^ { 2 } + { \\frac { 1 } { 2 } } I \\omega ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "So, the initial is divided between translational kinetic energy and rotational kinetic energy; and the greater $I$ is, the less energy goes into translation. If the can slides down without friction, then $\\omega = 0$ and all the energy goes into translation; thus, the can goes faster. ",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment ",
+        "text_level": 1,
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "Locate several cans each containing different types of food. First, predict which can will win the race down an inclined plane and explain why. See if your prediction is correct. You could also do this experiment by collecting several empty cylindrical containers of the same size and filling them with different materials such as wet or dry sand. ",
+        "page_idx": 430
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 10.10 ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Speed of a Cylinder Rolling Down an Incline ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Calculate the final speed of a solid cylinder that rolls down a $2 . 0 0 \\cdot \\mathsf { m }$ -high incline. The cylinder starts from rest, has a mass of $0 . 7 5 0 \\ k \\ g ,$ , and has a radius of $4 . 0 0 ~ \\mathsf { c m }$ . ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "We can solve for the final velocity using conservation of energy, but we must first express rotational quantities in terms of translational quantities to end up with $v$ as the only unknown. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Conservation of energy for this situation is written as described above: ",
+        "page_idx": 431
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm g h = { \\frac { 1 } { 2 } } m v ^ { 2 } + { \\frac { 1 } { 2 } } I \\omega ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Before we can solve for $v$ , we must get an expression for $I$ from Figure 10.11. Because $v$ and $\\omega$ are related (note here that the cylinder is rolling without slipping), we must also substitute the relationship $\\omega = v / R$ into the expression. These substitutions yield ",
+        "page_idx": 431
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm g h = \\frac { 1 } { 2 } m v ^ { 2 } + \\frac { 1 } { 2 } \\left( \\frac { 1 } { 2 } m R ^ { 2 } \\right) \\left( \\frac { v ^ { 2 } } { R ^ { 2 } } \\right) .\n$$",
+        "text_format": "latex",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Interestingly, the cylinder\u2019s radius $R$ and mass $m$ cancel, yielding ",
+        "page_idx": 431
+    },
+    {
+        "type": "equation",
+        "text": "$$\ng h = { \\frac { 1 } { 2 } } v ^ { 2 } + { \\frac { 1 } { 4 } } v ^ { 2 } = { \\frac { 3 } { 4 } } v ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Solving algebraically, the equation for the final velocity $v$ gives ",
+        "page_idx": 431
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = \\left( \\frac { 4 g h } { 3 } \\right) ^ { 1 / 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Substituting known values into the resulting expression yields ",
+        "page_idx": 431
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv = \\left[ { \\frac { 4 \\left( 9 . 8 0 \\mathrm { m / s ^ { 2 } } \\right) \\left( 2 . 0 0 \\mathrm { m } \\right) } { 3 } } \\right] ^ { 1 / 2 } = 5 . 1 1 \\mathrm { m / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Because $m$ and $R$ cancel, the result $v = \\left( { \\textstyle { \\frac { 4 } { 3 } } g h } \\right) ^ { 1 / 2 }$ is valid for any solid cylinder, implying that all solid cylinders will roll down an incline at the same rate independent of their masses and sizes. (Rolling cylinders down inclines is what Galileo actually did to show that objects fall at the same rate independent of mass.) Note that if the cylinder slid without friction down the incline without rolling, then the entire gravitational potential energy would go into translational kinetic energy. Thus, ${ \\frac { 1 } { 2 } } m v ^ { 2 } = m g h$ and $v = ( 2 g h ) ^ { 1 / 2 }$ , which is $2 2 \\%$ greater than $( 4 g h / 3 ) ^ { 1 / 2 }$ . That is, the cylinder would go faster at the bottom. ",
+        "page_idx": 431
+    },
+    {
+        "type": "image",
+        "img_path": "images/622536b539ce9135e6a56b2564ed5232d0b538c1ba80c89a660d5b9a269f9980.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Analogy of Rotational and Translational Kinetic Energy Is rotational kinetic energy completely analogous to translational kinetic energy? What, if any, are their differences? Give an example of each type of kinetic energy. ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "Yes, rotational and translational kinetic energy are exact analogs. They both are the energy of motion involved with the coordinated (non-random) movement of mass relative to some reference frame. The only difference between rotational and translational kinetic energy is that translational is straight line motion while rotational is not. An ",
+        "page_idx": 431
+    },
+    {
+        "type": "text",
+        "text": "example of both kinetic and translational kinetic energy is found in a bike tire while being ridden down a bike path. The rotational motion of the tire means it has rotational kinetic energy while the movement of the bike along the path means the tire also has translational kinetic energy. If you were to lift the front wheel of the bike and spin it while the bike is stationary, then the wheel would have only rotational kinetic energy relative to the Earth. ",
+        "page_idx": 432
+    }
+]

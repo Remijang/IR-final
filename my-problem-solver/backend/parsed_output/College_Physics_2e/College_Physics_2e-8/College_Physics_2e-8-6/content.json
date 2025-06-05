@@ -1,0 +1,382 @@
+[
+    {
+        "type": "text",
+        "text": "8.6 Collisions of Point Masses in Two Dimensions ",
+        "text_level": 1,
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Discuss two dimensional collisions as an extension of one dimensional analysis.   \n\u2022 Define point masses.   \n\u2022 Derive an expression for conservation of momentum along $x \\cdot$ -axis and y-axis.   \n\u2022 Describe elastic collisions of two objects with equal mass.   \nDetermine the magnitude and direction of the final velocity given initial velocity, and scattering angle. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "In the previous two sections, we considered only one-dimensional collisions; during such collisions, the incoming and outgoing velocities are all along the same line. But what about collisions, such as those between billiard balls, in which objects scatter to the side? These are two-dimensional collisions, and we shall see that their study is an extension of the one-dimensional analysis already presented. The approach taken (similar to the approach in discussing two-dimensional kinematics and dynamics) is to choose a convenient coordinate system and resolve the motion into components along perpendicular axes. Resolving the motion yields a pair of one-dimensional problems to be solved simultaneously. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "One complication arising in two-dimensional collisions is that the objects might rotate before or after their collision. For example, if two ice skaters hook arms as they pass by one another, they will spin in circles. We will not consider such rotation until later, and so for now we arrange things so that no rotation is possible. To avoid rotation, we consider only the scattering of point masses\u2014that is, structureless particles that cannot rotate or spin. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "We start by assuming that $\\mathbf { F } _ { \\mathrm { n e t } } = 0$ , so that momentum is conserved. The simplest collision is one in which one of the particles is initially at rest. (See Figure 8.10.) The best choice for a coordinate system is one with an axis parallel to the velocity of the incoming particle, as shown in Figure 8.10. Because momentum is conserved, the components of momentum along the $x -$ and $y$ -axes $\\dot { p } _ { x }$ and $p _ { y }$ will also be conserved, but with the chosen coordinate system, $p _ { y }$ is initially zero and $p _ { x }$ is the momentum of the incoming particle. Both facts simplify the analysis. (Even with the simplifying assumptions of point masses, one particle initially at rest, and a convenient coordinate system, we still gain new insights into nature from the analysis of two-dimensional collisions.) ",
+        "page_idx": 357
+    },
+    {
+        "type": "image",
+        "img_path": "images/346143fda5f9af9e208aa01e61064e7224a749dbe6296649260a72dd2d7aeb37.jpg",
+        "img_caption": [
+            "FIGURE 8.10 A two-dimensional collision with the coordinate system chosen so that $m _ { 2 }$ is initially at rest and $v _ { 1 }$ is parallel to the $x$ -axis. This coordinate system is sometimes called the laboratory coordinate system, because many scattering experiments have a target that is stationary in the laboratory, while particles are scattered from it to determine the particles that make-up the target and how they are bound together. The particles may not be observed directly, but their initial and final velocities are. "
+        ],
+        "img_footnote": [],
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Along the $x$ -axis, the equation for conservation of momentum is ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\np _ { 1 x } + p _ { 2 x } = p _ { 1 x } ^ { \\prime } + p _ { 2 x } ^ { \\prime } .\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Where the subscripts denote the particles and axes and the primes denote the situation after the collision. In terms of masses and velocities, this equation is ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm _ { 1 } v _ { 1 x } + m _ { 2 } v _ { 2 x } = m _ { 1 } v _ { 1 x } + m _ { 2 } v _ { 2 x } .\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "But because particle 2 is initially at rest, this equation becomes ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm _ { 1 } v _ { 1 x } = m _ { 1 } v _ { 1 x } ^ { \\prime } + m _ { 2 } v _ { 2 x } ^ { \\prime } .\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "The components of the velocities along the $x$ -axis have the form $v$ cos $\\theta$ . Because particle 1 initially moves along the $x$ -axis, we find $v _ { 1 x } = v _ { 1 }$ . ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Conservation of momentum along the $x$ -axis gives the following equation: ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm _ { 1 } v _ { 1 } = m _ { 1 } v _ { 1 } ^ { \\prime } \\cos \\theta _ { 1 } + m _ { 2 } v _ { 2 } ^ { \\prime } \\cos \\theta _ { 2 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "where $\\theta _ { 1 }$ and $\\theta _ { 2 }$ are as shown in Figure 8.10. ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Conservation of Momentum along the $x$ -axis ",
+        "text_level": 1,
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm _ { 1 } v _ { 1 } = m _ { 1 } v _ { 1 } ^ { \\prime } \\cos \\theta _ { 1 } + m _ { 2 } v _ { 2 } ^ { \\prime } \\cos \\theta _ { 2 } \n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Along the $y$ -axis, the equation for conservation of momentum is ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\np _ { 1 y } + p _ { 2 y } = p _ { 1 y } ^ { \\prime } + p _ { 2 y } ^ { \\prime }\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "or ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { m _ { 1 } v _ { 1 y } + m _ { 2 } v _ { 2 y } = m _ { 1 } v _ { 1 y } ^ { \\prime } + m _ { 2 } v _ { 2 y } ^ { \\prime } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "But $v _ { 1 y }$ is zero, because particle 1 initially moves along the $x$ -axis. Because particle 2 is initially at rest, $v _ { 2 y }$ is also zero. The equation for conservation of momentum along the $y$ -axis becomes ",
+        "page_idx": 358
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0 = m _ { 1 } v _ { 1 y } ^ { \\prime } + m _ { 2 } v _ { 2 y } ^ { \\prime } .\n$$",
+        "text_format": "latex",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "The components of the velocities along the $y$ -axis have the form $v$ sin $\\theta$ . ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Thus, conservation of momentum along the $y$ -axis gives the following equation: ",
+        "page_idx": 359
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0 = m _ { 1 } v _ { 1 } ^ { \\prime } \\sin \\theta _ { 1 } + m _ { 2 } v _ { 2 } ^ { \\prime } \\sin \\theta _ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Conservation of Momentum along the $y$ -axis ",
+        "text_level": 1,
+        "page_idx": 359
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0 = m _ { 1 } v _ { 1 } ^ { \\prime } \\sin \\theta _ { 1 } + m _ { 2 } v _ { 2 } ^ { \\prime } \\sin \\theta _ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "The equations of conservation of momentum along the $x$ -axis and $y \\mathrm { . }$ -axis are very useful in analyzing twodimensional collisions of particles, where one is originally stationary (a common laboratory situation). But two equations can only be used to find two unknowns, and so other data may be necessary when collision experiments are used to explore nature at the subatomic level. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 8.7 ",
+        "text_level": 1,
+        "page_idx": 359
+    },
+    {
+        "type": "image",
+        "img_path": "images/1ee6153d9e9f33a16cb48ff3903edd344648bb0cce947d6c32ed9711e314be9c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Determining the Final Velocity of an Unseen Object from the Scattering of Another Object ",
+        "text_level": 1,
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Suppose the following experiment is performed. A $0 . 2 5 0 \\mathrm { - } \\mathsf { k g }$ object $( m _ { 1 } )$ is slid on a frictionless surface into a dark room, where it strikes an initially stationary object with mass of $0 . 4 0 0 \\mathrm { \\ k g } \\left( m _ { 2 } \\right)$ . The 0.250-kg object emerges from the room at an angle of $4 5 . 0 ^ { \\circ }$ with its incoming direction. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "The speed of the $0 . 2 5 0 \\mathrm { - } \\mathsf { k g }$ object is originally $2 . 0 0 \\ : \\mathrm { m } / \\mathsf { s }$ and is $1 . 5 0 ~ \\mathrm { m } / \\mathrm { s }$ after the collision. Calculate the magnitude and direction of the velocity $\\mathbf { \\boldsymbol { v } } ^ { \\prime } { } _ { 2 }$ and $\\theta _ { 2 }$ of the $0 . 4 0 0 \\mathrm { - } \\mathrm { k g }$ object after the collision. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Momentum is conserved because the surface is frictionless. The coordinate system shown in Figure 8.11 is one in which $m _ { 2 }$ is originally at rest and the initial velocity is parallel to the $x$ -axis, so that conservation of momentum along the $x$ - and $y$ -axes is applicable. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Everything is known in these equations except $v _ { 2 } ^ { \\prime }$ and $\\theta _ { 2 }$ , which are precisely the quantities we wish to find. We can find two unknowns because we have two independent equations: the equations describing the conservation of momentum in the $x \\cdot$ - and $y$ -directions. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Solving $m _ { 1 } v _ { 1 } = m _ { 1 } v _ { 1 } ^ { \\prime }$ cos $\\theta _ { 1 } + m _ { 2 } v _ { 2 } ^ { \\prime }$ cos $\\theta _ { 2 }$ for $v _ { 2 } ^ { \\prime }$ cos $\\theta _ { 2 }$ and $0 = m _ { 1 } v _ { 1 } ^ { \\prime }$ sin $\\theta _ { 1 } + m _ { 2 } v _ { 2 } ^ { \\prime }$ sin $\\theta _ { 2 }$ for $v _ { 2 } ^ { \\prime }$ sin $\\theta _ { 2 }$ and taking the ratio yields an equation (in which $\\mathsf { \\Omega } _ { 2 }$ is the only unknown quantity. Applying the identity $\\begin{array} { r } { \\theta = \\frac { \\sin \\theta } { \\cos \\theta } , } \\end{array}$ \uff09 we obtain: ",
+        "page_idx": 359
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\tan \\theta _ { 2 } = { \\frac { v _ { 1 } ^ { \\prime } \\sin \\theta _ { 1 } } { v _ { 1 } ^ { \\prime } \\cos \\theta _ { 1 } - v _ { 1 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Entering known values into the previous equation gives ",
+        "page_idx": 359
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\tan \\theta _ { 2 } = { \\frac { ( 1 . 5 0 \\mathrm { m / s } ) ( 0 . 7 0 7 1 ) } { ( 1 . 5 0 \\mathrm { m / s } ) ( 0 . 7 0 7 1 ) - 2 . 0 0 \\mathrm { m / s } } } = - 1 . 1 2 9 .\n$$",
+        "text_format": "latex",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Thus, ",
+        "page_idx": 359
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta _ { 2 } = \\tan ^ { - 1 } ( - 1 . 1 2 9 ) = 3 1 1 . 5 ^ { \\circ } \\approx 3 1 2 ^ { \\circ } .\n$$",
+        "text_format": "latex",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Angles are defined as positive in the counter clockwise direction, so this angle indicates that $m _ { 2 }$ is scattered to the right in Figure 8.11, as expected (this angle is in the fourth quadrant). Either equation for the $x$ - or $y$ -axis can now be used to solve for $\\boldsymbol { v ^ { \\prime } } _ { 2 }$ , but the latter equation is easiest because it has fewer terms. ",
+        "page_idx": 359
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv ^ { \\prime } { } _ { 2 } = - \\frac { m _ { 1 } } { m _ { 2 } } v ^ { \\prime } { } _ { 1 } \\frac { \\sin \\theta _ { 1 } } { \\sin \\theta _ { 2 } }\n$$",
+        "text_format": "latex",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Entering known values into this equation gives ",
+        "page_idx": 360
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv ^ { \\prime } _ { 2 } = - { \\Biggl ( } { \\frac { 0 . 2 5 0 \\mathrm { k g } } { 0 . 4 0 0 \\mathrm { k g } } } { \\Biggl ) } ( 1 . 5 0 \\mathrm { m / s } ) { \\Biggl ( } { \\frac { 0 . 7 0 7 1 } { - 0 . 7 4 8 5 } } { \\Biggl ) } .\n$$",
+        "text_format": "latex",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Thus, ",
+        "page_idx": 360
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv ^ { \\prime } { } _ { 2 } = 0 . 8 8 6 \\mathrm { m / s } .\n$$",
+        "text_format": "latex",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "It is instructive to calculate the internal kinetic energy of this two-object system before and after the collision. (This calculation is left as an end-of-chapter problem.) If you do this calculation, you will find that the internal kinetic energy is less after the collision, and so the collision is inelastic. This type of result makes a physicist want to explore the system further. ",
+        "page_idx": 360
+    },
+    {
+        "type": "image",
+        "img_path": "images/3113db74bd14cbed6c24e396d854c0ed3f7c35281f7a4589fd75f8b365ba4672.jpg",
+        "img_caption": [
+            "FIGURE 8.11 A collision taking place in a dark room is explored in Example 8.7. The incoming object $m _ { 1 }$ is scattered by an initially stationary object. Only the stationary object\u2019s mass $m _ { 2 }$ is known. By measuring the angle and speed at which $m _ { 1 }$ emerges from the room, it is possible to calculate the magnitude and direction of the initially stationary object\u2019s velocity after the collision. "
+        ],
+        "img_footnote": [],
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Elastic Collisions of Two Objects with Equal Mass ",
+        "text_level": 1,
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Some interesting situations arise when the two colliding objects have equal mass and the collision is elastic. This situation is nearly the case with colliding billiard balls, and precisely the case with some subatomic particle collisions. We can thus get a mental image of a collision of subatomic particles by thinking about billiards (or pool). (Refer to Figure 8.10 for masses and angles.) First, an elastic collision conserves internal kinetic energy. Again, let us assume object 2 $\\left( m _ { 2 } \\right)$ is initially at rest. Then, the internal kinetic energy before and after the collision of two objects that have equal masses is ",
+        "page_idx": 360
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { 2 } } m { v _ { 1 } } ^ { 2 } = { \\frac { 1 } { 2 } } m { v ^ { \\prime } } _ { 1 } { } ^ { 2 } + { \\frac { 1 } { 2 } } m { v ^ { \\prime } } _ { 2 } { } ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Because the masses are equal, $m _ { 1 } = m _ { 2 } = m$ . Algebraic manipulation (left to the reader) of conservation of momentum in the $x ^ { . }$ and $y$ -directions can show that ",
+        "page_idx": 360
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { 2 } } m { v _ { 1 } } ^ { 2 } = { \\frac { 1 } { 2 } } m { v ^ { \\prime } } _ { 1 } { } ^ { 2 } + { \\frac { 1 } { 2 } } m { v ^ { \\prime } } _ { 2 } { } ^ { 2 } + m { v ^ { \\prime } } _ { 1 } { v ^ { \\prime } } _ { 2 } \\cos ( \\theta _ { 1 } - \\theta _ { 2 } ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "(Remember that $\\theta _ { 2 }$ is negative here.) The two preceding equations can both be true only if ",
+        "page_idx": 360
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm v _ { 1 } ^ { \\prime } v _ { 2 } ^ { \\prime } \\cos ( \\theta _ { 1 } - \\theta _ { 2 } ) { = } 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "There are three ways that this term can be zero. They are ",
+        "page_idx": 361
+    },
+    {
+        "type": "text",
+        "text": "$v _ { 1 } ^ { \\prime } = 0$ : head-on collision; incoming ball stops $v _ { 2 } ^ { \\prime } = 0$ : no collision; incoming ball continues unaffected \u2022 $\\cos ( \\theta _ { 1 } - \\theta _ { 2 } ) { = } 0$ : angle of separation $( \\theta _ { 1 } - \\theta _ { 2 } )$ is $9 0 ^ { \\circ }$ after the collision ",
+        "page_idx": 361
+    },
+    {
+        "type": "text",
+        "text": "All three of these ways are familiar occurrences in billiards and pool, although most of us try to avoid the second. If you play enough pool, you will notice that the angle between the balls is very close to $9 0 ^ { \\circ }$ after the collision, although it will vary from this value if a great deal of spin is placed on the ball. (Large spin carries in extra energy and a quantity called angularmomentum, which must also be conserved.) The assumption that the scattering of billiard balls is elastic is reasonable based on the correctness of the three results it produces. This assumption also implies that, to a good approximation, momentum is conserved for the two-ball system in billiards and pool. The problems below explore these and other characteristics of two-dimensional collisions. ",
+        "page_idx": 361
+    },
+    {
+        "type": "text",
+        "text": "Connections to Nuclear and Particle Physics ",
+        "text_level": 1,
+        "page_idx": 361
+    },
+    {
+        "type": "text",
+        "text": "Two-dimensional collision experiments have revealed much of what we know about subatomic particles, as we shall see in Medical Applications of Nuclear Physics and Particle Physics. Ernest Rutherford, for example, discovered the nature of the atomic nucleus from such experiments. ",
+        "page_idx": 361
+    }
+]

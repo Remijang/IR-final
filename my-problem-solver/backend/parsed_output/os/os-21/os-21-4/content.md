@@ -1,0 +1,9 @@
+# 21.4 What If Memory Is Full?  
+
+In the process described above, you may notice that we assumed there is plenty of free memory in which to page in a page from swap space. Of course, this may not be the case; memory may be full (or close to it). Thus, the OS might like to first page out one or more pages to make room for the new page(s) the OS is about to bring in. The process of picking a page to kick out, or replace is known as the page-replacement policy.  
+
+As it turns out, a lot of thought has been put into creating a good pagereplacement policy, as kicking out the wrong page can exact a great cost on program performance. Making the wrong decision can cause a program to run at disk-like speeds instead of memory-like speeds; in current technology that means a program could run 10,000 or 100,000 times slower. Thus, such a policy is something we should study in some detail; indeed, that is exactly what we will do in the next chapter. For now, it is good enough to understand that such a policy exists, built on top of the mechanisms described here.  
+
+![](images/9b0f54839da79292970b0280ddcdb9fe28acb70483caa64bbd0eacaa31566e13.jpg)  
+Figure 21.2: Page-Fault Control Flow Algorithm (Hardware)  
+

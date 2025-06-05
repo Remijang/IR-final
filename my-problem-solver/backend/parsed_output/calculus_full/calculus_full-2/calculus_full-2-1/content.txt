@@ -1,0 +1,101 @@
+This chapter begins with the definition of the derivative. Two examples were in Chapter 1: When the distance is  , the velocity is  : When  we found  : The velocity is now called the derivative of  : As we move to a more formal definition and new examples, we use new symbols  and  for the derivative.
+
+2A At time  , the derivative  or  or  is
+
+The ratio on the right is the average velocity over a short time  : The derivative, on the left side, is its limit as the step  (delta  ) approaches zero.
+
+Go slowly and look at each piece. The distance at time  is  : The distance at time  is  : Subtraction gives the change in distance, between those times. We often write  for this differenceÑ:  : The average velocity is the ratio  —change in distance divided by change in time.
+
+The limit of the average velocity is the derivative, if this limit exists:
+
+This is the neat notation that Leibniz invented:  approaches  : Behind the innocent word “limit” is a process that this course will help you understand.
+
+Note that  is not  times  is the change in  Similarly  is not  times  : It is the time step, positive or negative and eventually small. To have a one-letter symbol we replace  by  :
+
+The right sides of (1) and (2) contain average speeds. On the graph of  , the distance  is divided by the distance across. That gives the average slope  :
+
+The left sides of (1) and (2) are instantaneous speeds  : They give the slope at the instant  : This is the derivative  (when  and  shrink to zero). Look again at the calculation for  :
+
+Important point: Those steps are taken before  goes to zero.  we set  too soon, we learn nothing. The ratio  becomes  (which is meaningless). The numbers  and  must approach zero together, not separately. Here their ratio is  , the average speed.
+
+To repeat: Success came by writing out  and subtracting  and dividing by  : Then and only then can we approach  : The limit is the derivative  :
+
+There are several new things in formulas (1) and (2). Some are easy but important, others are more profound. The idea of a function we will come back to, and the definition of a limit. But the notations can be discussed right away. They are used constantly and you also need to know how to read them aloud:
+
+From those last words you see what lies b1 ehind the notation  : The symbol  indicates a nonzero (usually short) length of time. The symbol  indicates an infinitesimal (even shorter) length of time. Some mathematicians work separately with  and  , and  is their ratio. For us  is a single notation (don’t cancel  and don’t cancel  ). The derivative  is the limit of  : When that notation  is awkward, use  :
+
+Remark The notation hides one thing w1e should mention. The time step can be negative just as easily as positive. We can compute the average  over a time interval before the time  , instead of after. This ratio also approaches  :
+
+The notation also hides another thing: The derivative might not exist. The averages  might not approach a limit (it has to be the same limit going forward and backward from time  ). In that case  is not defined. At that instant there is no clear reading on the speedometer. This will happen in Example 2.
+
+EXAMPLE 1 (Constant velocity  ) The distance  is  times  : The distance at time  is  times  : The difference  is  times  :
+
+The derivative of  is  The derivative of  is 2: The averages  are always  , in this exceptional case of a constant velocity.
+
+2.1 The Derivative of a Function
+
+EXAMPLE 2 Constant velocity 2 up to time  , then stop.
+
+For small time¡s we still have  : But after the stopÑping time, the distance is fixed at  : The graph is flat beyond time 3. Then  and  and the derivative of a constant function is zero:
+
+In this example the derivative is not defined at the instant wh1en  . The velocity falls suddenly from 2 to zero. The ratio  depends, at that special moment, on whether  is positive or negative. The average velocity after time  is zero. The average velocity before that time is 2: When the graph of  has a corner, the graph of  has a jump. It is a step function.
+
+One new part of that example is the notation  or  instead of  ). Please look also at the third figure. It shows how the function takes  (on the left) to  : Especially it shows  and  At the start,  is 2. After the stop at  , all  ’s go to the same  : So  and  :
+
+THE DERIVATIVE OF 1=t
+
+Here is a completely different slope, for the “demand function”  : The demand is  when the price is  : A high price  means a low demand  : Increasing the price reduces the demand. The calculus question is: How quickly does  change when t changes ? The “marginal demand” is the slope of the demand curve.
+
+The big thing is to find the derivative of  once and for all. It is  :
+
+Line 1 is algebra, line 2 is calculus. The first step in line 1 subtracts  from  : The difference is  minus  : The common denominator is  times  —this makes the algebra possible. We can’t set  in line 2; until we have divided by  :
+
+The average is  : Now set  : The derivative is  : Section 2:4 will discuss the first of many cases when substituting  is not possible, and the idea of a limit has to be made clearer.
+
+Check the algebra at  and  : The demand  drops from  to  : The difference is  , which agrees with  in line 1. As the steps  and  get smaller, their ratio approaches  :
+
+This derivative is negative. The function  is decreasing, and  is below zero. The graph is going downward in Figure 2.2, and its slope is negative:
+
+An increasing  has positive slope. A decreasing  has negative slope.
+
+The slope  is very negative for small  : A price increase severely cuts demand.
+
+The next figure makes a small but important point. There is nothing sacred about  : Other letters can be used—especially  : A quantity can depend on position instead of time. The height changes as we go west. The area of a square changes as the side changes. Those are not affected by the passage of time, and there is no reason to use  : You will often see  , with  across and  up—connected by a function 
+
+Similarly,  is not the only possibility. Not every function is named  That letter is useful because it stands for the word function—but we are perfectly entitled to write  or  instead of  or  : The distance up is a function of the distance across. This relationship  of  is all-important to mathematics.
+
+The slope is also a function. Calculus is about two functions,  and  :
+
+Question If we add 1 to  , what happens to the slope ? Answer Nothing.
+
+Question If we add 1 to the slope, what happens to the height ? Answer
+
+The symbols  and  represent independent variables—they take any value they want to (in the domain). Once they are set,  and  are determined. Thus  and  represent dependent variables—they depend on  and  : A change  produces a
+
+2.1 The Derivative of a Function
+
+change  A change  produces  : The independent variable goes inside the parentheses in  and  : It is not the letter that matters, it is the idea:
+
+The derivative  comes from [change in  divided by [change in  ]. The time step becomes a space step, forward or backward. The slope is the rate at w1 hich  changes with  : The derivative of a function is its “rate of chaÑnge.”
+
+I mention that physics books use  for distance. Darn it.
+
+To emphasize the definition of a derivative, here it is again with  and  :
+
+The notation  pins down the point  where the 1slope is computed. In  that extra precision is omitted. This book will try for a reasonable compromise between logical perfection and ordinary simplicity. The notation  is not good;  is better; when  is understood it need not be written in parentheses.
+
+You are allowed to say that the function is  and the derivative is  even if the strict notation requires  and  : You can even say that the function is  and its derivative is  and its second derivative is 2—provided everybody knows what you mean.
+
+Here is an example. It is a little early and optional but terrific. You get excellent practice with letters and symbols, and out come new derivatives.
+
+EXAMPLE 4 If  has slope  , what is the slope of 
+
+From the derivative of  this will give the derivative of  : In that case  and  : First point: The derivative of  is not  . We do not square the derivative  : To find the “square rule” we start as we have to—with  :
+
+This algebra puts  in a convenient form. We factored  into  times  : Notice that we don’t have  : We have  , the change in  : Now divide by  and take the limit:
+
+This is the square rule: The derivative of  is  times  .  From the derivatives of  and  and sin  (all known) the examples give new derivatives.
+
+EXAMPLE 5 .  / The derivative of  is  : EXAMPLE 6 .  / The derivative of  is  EXAMPLE 7 .  ;  / The derivative of  is  :
+
+Mathematics is really about ideas. The notation is created to express those ideas. Newton and Leibniz invented calculus independently, and Newton’s friends spent a lot of time proving that he was first. He was, but it was Leibniz who thought of writing  —which caught on. It is the perfect way to suggest the limit of  : Newton was one of the great scientists of all time, and calculus was one of the great inventions of all time-but the notation must help. You now can write and speak about the derivative. What is needed is a longer list of functions and derivatives.

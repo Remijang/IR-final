@@ -1,0 +1,37 @@
+5.2.3 View of Memory
+
+Let us now describe the functionality of the segment registers (see Figure 5.1), and the view of memory. x86 instructions can have two views of memory. The first view is like ARM and SimpleRisc , which views memory as one large array of bytes that stores both code and data.
+
+This is known as the linear memory model. In comparison, the segmented memory model views memory as consisting of fixed size segments, where each segment is tailored to store one type of data such as code, stack data or heap data (for dynamically allocated data structures). We shall not discuss the linear model of memory because we have seen it before in Chapter 3. Let us discuss the segment registers, and the segmented memory model in this section.
+
+Definition 40
+
+Linear Memory Model A linear memory model views the entire memory as one large array of bytes that saves both code and data.
+
+Segmented Memory Model A segmented memory model views the memory as a sequence of multiple fixed size segments. Code, data, and the stack have their own segments.
+
+The Segmented Memory Model
+
+Let us define the term address space as the set of all memory addresses accessible to a program. The aim of the segmented memory model is to divide the address space into separate smaller address spaces. Each address space can be specialized to store a specific type of information such as code or data.
+
+There are two reasons for using segmentation. The first is historical. In the early days different parts of a program were physically saved at different locations. The code was saved on punch cards, and the memory data was stored in DRAM memories. Hence, it was necessary to partition the address space among the devices that stored all the information that a program required (code, static data, dynamic data). This reason is not valid anymore. Nowadays, all the information a program requires is typically stored at the same place. However, we still need segmentation to enforce security. Hackers and viruses typically try to change the code of a program and insert their own code. Thus, a normal program can exhibit malicious behavior and can corrupt data, or transfer sensitive data to third parties. To ensure added protection, the code region is saved in a code segment. Most systems do not allow normal store instructions to modify the code segment. We can similarly partition the data segments for different classes of data. In Section 11.4.6, we will have a more thorough discussion on this topic.
+
+Segmentation in x86
+
+The 8086 designers had 6 segment registers that stored the most significant 16 bits of the starting location of the segment. The remaining bits were assumed to be all zeros. The cs register stored the upper 16 bits of the starting location of the code segment. Similarly, the  register stored the upper 16 bits of the starting location for the data segment, and the  register stored the corresponding set of bits for the stack segment. The es (extra segment),  , and  registers could be used to store information for additional user defined segments. Till date all x86 processors have preserved this model (see Figure 5.1). The contents of instructions are saved in the code segment, and the data that a program accesses is saved in the data segment. In most small programs, the stack and data segments are the same. In 8086 processors the memory address was 20 bits wide. Hence, to obtain the final address also known as the linear address, the 8086 processor first shifted the contents of the segment register 4 positions to the left to obtain the starting location of the segment. It then added this address with the memory address specified by the instruction. We can think of the memory address specified by an instruction as an offset in the segment, where the starting memory location of the segment is indicated by the appropriate segment register.
+
+This strategy served the needs of the 8086 designers well. However, this strategy is not suitable for 32 and 64-bit machines. In this case, the memory addresses are 32 and 64 bits wide, respectively. Thus, the segment registers need to be wider. In the interest of backward compatibility, designers did not touch the segment registers. They just changed the semantics of its contents for newer processors. Instead of saving the upper 16 bits of the starting location of a segment, the registers now contain a segment id. The segment id uniquely identifies a segment across all the programs running in a system. To get the starting location, 32/64-bit x86 processors, lookup a segment descriptor table with 13 bits (bits 4 to 16) of the segment id. 13 bits can specify 8192 entries, which is more than sufficient for all the programs in the system.
+
+Modern x86 processors have two kinds of segment descriptor tables namely the local descriptor table (LDT), and the global descriptor table (GDT). The LDT is typically local to a process (running instance of a program) and contains the details of the segments for that process. The LDT is normally not used nowadays because programs do not use a lot of segments. Comparatively, there is only one system level GDT. The GDT can contain up to 8191 entries ( the first entry is reserved). Each entry in the GDT contains the starting address of the segment, the size of the segment, and the privileges required to access the segment. Every memory access needs to go through the GDT for fetching the starting address of the segment.
+
+This unnecessarily lengthens the critical path of a memory request, and creates contention at the GDT. To make the access to the GDT faster, modern processors have a small structure called a segment descriptor cache that stores a few entries of the GDT that are relevant to the currently executing process. The descriptor cache typically stores the details of all the segments that the frequently running processes use. This strategy ensures that we do not need to access the GDT on every memory access. The small and fast descriptor cache is sufficient. After accessing the descriptor cache, or the GDT, x86 processors get the starting address of the segment. They subsequently generate the memory address by adding the address specified in the instruction with the starting address of the segment. This address is then passed on to the memory system.
+
+Definition 41
+
+Process It is defined as the running instance of a program. For example, if we run two copies of a program, then we create two processes.
+
+LDT (Local Descriptor Table) The LDT is a per process table that saves the description of all the segments that a process uses. The LDT is indexed by a segment id, and contains the starting address of the segment, and the privileges required to access it. It is not used very frequently in modern systems.
+
+GDT (Global Descriptor Table) The GDT is similar to the LDT. However, it is a system-wide table that is shared by all the processes running on a machine.
+
+Now, that we have discussed the view of the register files, and the memory system, let us describe the addressing modes.

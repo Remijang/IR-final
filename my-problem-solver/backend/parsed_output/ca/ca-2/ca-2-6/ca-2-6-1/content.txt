@@ -1,0 +1,46 @@
+2.6.1 Summary
+
+Summary 2
+
+1. In computer architecture, we represent information using the language of bits. A bit can either take the value of 0 or 1. A sequence of 8 bits is called a byte.
+
+2. A variable representing a bit is also called a Boolean variable, and an algebra on such Boolean variables is known as Boolean algebra.
+
+3. (a) The basic operators in Boolean algebra are logical OR, AND, and NOT. (b) Some derived operators are NAND, NOR, and XOR. (c) We typically use the De Morgan’s laws (see Section 2.1.4) to simplify Boolean expressions.
+
+4. Any Boolean expression can be represented in a canonical form as a logical OR of minterms. It can then be minimized using Karnaugh Maps.
+
+5. We can represent positive integers in a binary representation by using a sequence of bits. In this case, we represent a number,  , as  , where  .
+
+6. The four methods to represent a negative integer are as follows:
+
+(a) Sign-magnitude-based method (b) The 1’s complement method (c) Bias-based method (d) The 2’s complement method
+
+7. The 2’s complement method is the most common. Its main properties are as follows:
+
+(a) The representation of a positive integer is the same as its unsigned representation with a leading 0 bit.   
+(b) The representation of a negative integer  is equal to  , in an  -bit number system.   
+(c) To convert an m-bit 2’s complement number to an n-bit 2’s complement number, where  , we need to extend its sign by  places.   
+(d) We can quickly compute the 2’s complement of a negative number of the form   ), by computing the 1’s complement of u (flip every bit), and then adding 1.   
+(e) Addition, subtraction, and multiplication (ignoring overflows) of integers in the 2’s complement representation can be done by assuming that the respective binary representations represent unsigned numbers.
+
+8. Floating point numbers in the IEEE 754 format are always represented in their normal form.
+
+(a) A floating point number,  , is equal to
+
+S is the sign bit,  is the significand, and  is the exponent.
+
+(b) We assume that the significand is of the form  , where  .  is known as the mantissa.
+
+9. The salient points of the IEEE 754 format are as follows:
+
+(a) The MSB is the sign bit.   
+(b) We have an 8-bit exponent that is represented using the biased notation (bias equal to 127).   
+(c) We do not represent the leading bit (equal to 1) in the significand. Furthermore, we represent the mantissa using 23 bits.   
+(d) The exponents, 0 and 255, are reserved for special numbers – denormal numbers, NAN, zero, and ±∞.
+
+10. Denormal numbers are a special class of floating point numbers, that have a slightly different normal form.
+
+11. Floating point arithmetic is always approximate; hence, arithmetic operations can lead to mathematical contradictions.
+
+12. We represent pieces of text as a contiguous sequence of characters. A character can either be encoded in the 7-bit ASCII format, or in the Unicode formats that use 1-4 bytes per character.

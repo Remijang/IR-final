@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "30.3 Covering Conditions ",
+        "text_level": 1,
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "We’ll now look at one more example of how condition variables can be used. This code study is drawn from Lampson and Redell’s paper on Pilot [LR80], the same group who first implemented the Mesa semantics described above (the language they used was Mesa, hence the name). ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "The problem they ran into is best shown via simple example, in this case in a simple multi-threaded memory allocation library. Figure 30.15 shows a code snippet which demonstrates the issue. ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "As you might see in the code, when a thread calls into the memory allocation code, it might have to wait in order for more memory to become free. Conversely, when a thread frees memory, it signals that more memory is free. However, our code above has a problem: which waiting thread (there can be more than one) should be woken up? ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "1 // how many bytes of the heap are free?   \n2 int bytesLeft $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ MAX_HEAP_SIZE;   \n3   \n4 // need lock and condition too   \n5 cond_t c;   \n6 mutex_t m;   \n7   \n8 void \\*   \n9 allocate(int size) {   \n10 Pthread_mutex_lock(&m);   \n11 while (bytesLeft $\\prec$ size)   \n12 Pthread_cond_wait(&c, &m);   \n13 void \\*ptr $\\mathbf { \\Sigma } =$ ...; // get mem from heap   \n14 bytesLeft $\\scriptstyle - =$ size;   \n15 Pthread_mutex_unlock(&m);   \n16 return ptr;   \n17 }   \n18   \n19 void free(void \\*ptr, int size) {   \n20 Pthread_mutex_lock(&m);   \n21 bytesLeft $+ =$ size;   \n22 Pthread_cond_signal(&c); // whom to signal??   \n23 Pthread_mutex_unlock(&m);   \n24 } ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Consider the following scenario. Assume there are zero bytes free; thread $T _ { a }$ calls allocate(100), followed by thread $\\varGamma _ { b }$ which asks for less memory by calling allocate(10). Both ${ \\cal T } _ { a }$ and $T _ { b }$ thus wait on the condition and go to sleep; there aren’t enough free bytes to satisfy either of these requests. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "At that point, assume a third thread, $\\begin{array} { r l } {  } & { { } T _ { c } , } \\end{array}$ calls free(50). Unfortunately, when it calls signal to wake a waiting thread, it might not wake the correct waiting thread, $T _ { b } ,$ which is waiting for only 10 bytes to be freed; ${ \\cal T } _ { a }$ should remain waiting, as not enough memory is yet free. Thus, the code in the figure does not work, as the thread waking other threads does not know which thread (or threads) to wake up. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The solution suggested by Lampson and Redell is straightforward: replace the pthread cond signal() call in the code above with a call to pthread cond broadcast(), which wakes up all waiting threads. By doing so, we guarantee that any threads that should be woken are. The downside, of course, can be a negative performance impact, as we might needlessly wake up many other waiting threads that shouldn’t (yet) be awake. Those threads will simply wake up, re-check the condition, and then go immediately back to sleep. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Lampson and Redell call such a condition a covering condition, as it covers all the cases where a thread needs to wake up (conservatively); the cost, as we’ve discussed, is that too many threads might be woken. ",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The astute reader might also have noticed we could have used this approach earlier (see the producer/consumer problem with only a single condition variable). However, in that case, a better solution was available to us, and thus we used it. In general, if you find that your program only works when you change your signals to broadcasts (but you don’t think it should need to), you probably have a bug; fix it! But in cases like the memory allocator above, broadcast may be the most straightforward solution available. ",
+        "page_idx": 15
+    }
+]

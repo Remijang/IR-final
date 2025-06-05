@@ -1,0 +1,31 @@
+11.3.1 Mathematical Model of the Memory System
+
+Performance
+
+The memory system can be thought of as a black box that just services read and write requests. The time a request takes is variable. It depends on the level of the memory system at which the request hits. The pipeline is attached to the memory system in the memory access  stage, and issues requests to it. If the reply does not come within a single cycle, then additional pipeline bubbles need to be introduced in our 5 stage SimpleRisc in-order pipeline.
+
+Let the average memory access time be  (measured in cycles), and the fraction of load/store instructions be  . Then the CPI can be expressed as:
+
+ is the CPI assuming a perfect memory system having a 1 cycle latency for all accesses. Note that in our 5 stage in-order pipeline the ideal instruction throughput is 1 instruction per cycle, and the memory stage is allotted 1 cycle. In practice, if a memory access takes  cycles, then we have  stall cycles, and they need to be accounted for by Equation 11.1. In this equation, we implicitly assume that every memory access suffers a stall for  cycles. Practically, this is not the case since most of the instructions will hit in the i-cache, and it typically has a 1-cycle latency. Hence, accesses that hit in the i-cache or d-cache will not stall. However, long stall cycles will be introduced by accesses that miss in the L1 and L2 caches.
+
+The reason that Equation 11.1 still holds is because we are interested in the average CPI of a large number of instructions. We can thus derive this equation by adding all the memory stall cycles and computing the average number of cycles per instruction.
+
+Average Memory Access Time
+
+In Equation 11.1,  is determined by the nature of the program and the nature of the other stages (other than  ) of the pipeline.  is also an inherent property of the program running on the processor. We need a formula to compute  . We can compute it in a way similar to Equation 11.1.
+
+Assuming, a memory system with an L1 and an L2 cache, we have:
+
+All the memory accesses need to access the L1 cache (instruction or data) irrespective of a hit or a miss. Hence, they need to incur a delay equal to  . A fraction of accesses,  , will miss in the L1 cache, and move to the L2 cache. Here also, irrespective of a hit or a miss, we need to incur a delay of  cycles. If a fraction of accesses  miss in the L2 cache, then they need to proceed to main memory. We have assumed that all the accesses hit in the main memory. Hence, the  is equal to the main memory access time.
+
+Now, if we assume that we have an  -level memory system where the first level is the L1 cache, and the last level is the main memory, then we can use a similar equation.
+
+We need to note that the miss rate used in these equations for a certain level  is equal to the number of accesses that miss at that level divided by the total number of accesses to that level. This is known as the local miss rate. In comparison, we can define a global miss rate for level  , which is equal to the number of misses at level  divided by the total number of memory accesses.
+
+Definition 106
+
+local miss rate It is equal to the number of misses in a cache at level i divided by the total number of accesses at level i.
+
+global miss rate It is equal to the number of misses in a cache at level i divided by the total number of memory accesses.
+
+Let us take a deeper look at Equation 11.1. We observe that we can increase the performance of a system by either reducing the miss rate, the miss penalty or by decreasing the hit time. Let us first look at the miss rate.

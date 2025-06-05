@@ -1,0 +1,21 @@
+5.4.4 Compare Instruction
+
+The x86 ISA has many compare instructions. In this section, we shall present only one compare instruction called fcomi that compares two floating point values saved in registers, and sets the eflags register. Table 5.26 shows the semantics of the fcomi instruction with and without the ‘p’ suffix. Once, the ef lags register is set, we can use regular branch instructions for implementing control flow within the program. Note that in x86 we need to use the condition codes for unsigned comparison in this case. Most of the time programmers make the mistake of using the condition codes for signed comparison such as  ,  ,  , or  for testing the results of floating point comparison. This leads to wrong results. We should instead use the  (above) and  (below) condition codes.
+
+Let us now consider an example (Example 89) that computes the value of  , and verifies if it is equal to  . The readers should recall from their high school trigonometry class that both these expressions are actually equal, and one can be derived from the other. Example 89 experimentally verifies this fact for any given value of  . We compute the value of  and  , and compare them using  . Note that floating point arithmetic is approximate (see Section 2.4.6). Hence, the correct way to compare floating point numbers is to first subtract them, compute the absolute value of the difference, and compare the difference with a threshold. The threshold is typically a small number (  in our case). If the difference is less than a threshold, we can infer equality.
+
+Example 89
+
+Compare  and  . Verify that they have the same value for any given value of  . Assume that theta is stored in the data section at the label theta, and the threshold for floating point comparison is stored at label threshold. Save the result in eax (1 if equal, and  if unequal).
+
+Answer:
+
+fld dword [threshold]   
+fcomi st0, st1 ; compare   
+ja .equal   
+mov eax, 0   
+jmp .exit   
+.equal: mov eax, 1   
+.exit:
+
+After the end of a function, it is time to clean up the floating point registers, and stack such that another function can use them. Let us conclude this section by taking a look at the cleanup instructions.

@@ -1,0 +1,44 @@
+[
+    {
+        "type": "text",
+        "text": "49.12 Summary ",
+        "text_level": 1,
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "We have seen the introduction of the NFS distributed file system. NFS is centered around the idea of simple and fast recovery in the face of server failure, and achieves this end through careful protocol design. Idem",
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: KEY NFS TERMS ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The key to realizing the main goal of fast and simple crash recovery in NFS is in the design of a stateless protocol. After a crash, the server can quickly restart and begin serving requests again; clients just retry requests until they succeed.   \n• Making requests idempotent is a central aspect of the NFS protocol. An operation is idempotent when the effect of performing it multiple times is equivalent to performing it once. In NFS, idempotency enables client retry without worry, and unifies client lost-message retransmission and how the client handles server crashes.   \nPerformance concerns dictate the need for client-side caching and write buffering, but introduces a cache consistency problem.   \n• NFS implementations provide an engineering solution to cache consistency through multiple means: a flush-on-close (close-toopen) approach ensures that when a file is closed, its contents are forced to the server, enabling other clients to observe the updates to it. An attribute cache reduces the frequency of checking with the server whether a file has changed (via GETATTR requests).   \nNFS servers must commit writes to persistent media before returning success; otherwise, data loss can arise.   \n• To support NFS integration into the operating system, Sun introduced the VFS/Vnode interface, enabling multiple file system implementations to coexist in the same operating system. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "potency of operations is essential; because a client can safely replay a failed operation, it is OK to do so whether or not the server has executed the request. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "We also have seen how the introduction of caching into a multipleclient, single-server system can complicate things. In particular, the system must resolve the cache consistency problem in order to behave reasonably; however, NFS does so in a slightly ad hoc fashion which can occasionally result in observably weird behavior. Finally, we saw how server caching can be tricky: writes to the server must be forced to stable storage before returning success (otherwise data can be lost). ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "We haven’t talked about other issues which are certainly relevant, notably security. Security in early NFS implementations was remarkably lax; it was rather easy for any user on a client to masquerade as other users and thus gain access to virtually any file. Subsequent integration with more serious authentication services (e.g., Kerberos [NT94]) have addressed these obvious deficiencies. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 15
+    }
+]

@@ -1,0 +1,1031 @@
+[
+    {
+        "type": "text",
+        "text": "9.3 Stoichiometry of Gaseous Substances, Mixtures, and Reactions ",
+        "text_level": 1,
+        "page_idx": 450
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 450
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 450
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Use the ideal gas law to compute gas densities and molar masses   \n\u2022 Perform stoichiometric calculations involving gaseous substances   \nState Dalton\u2019s law of partial pressures and use it in calculations involving gaseous mixtures ",
+        "page_idx": 450
+    },
+    {
+        "type": "text",
+        "text": "The study of the chemical behavior of gases was part of the basis of perhaps the most fundamental chemical revolution in history. French nobleman Antoine Lavoisier, widely regarded as the \u201cfather of modern chemistry,\u201d changed chemistry from a qualitative to a quantitative science through his work with gases. He discovered the law of conservation of matter, discovered the role of oxygen in combustion reactions, determined the composition of air, explained respiration in terms of chemical reactions, and more. He was a casualty of the French Revolution, guillotined in 1794. Of his death, mathematician and astronomer JosephLouis Lagrange said, \u201cIt took the mob only a moment to remove his head; a century will not suffice to reproduce it.\u201d2 Much of the knowledge we do have about Lavoisier's contributions is due to his wife, MarieAnne Paulze Lavoisier, who worked with him in his lab. A trained artist fluent in several languages, she created detailed illustrations of the equipment in his lab, and translated texts from foreign scientists to complement his knowledge. After his execution, she was instrumental in publishing Lavoisier's major treatise, which unified many concepts of chemistry and laid the groundwork for significant further study. ",
+        "page_idx": 450
+    },
+    {
+        "type": "text",
+        "text": "As described in an earlier chapter of this text, we can turn to chemical stoichiometry for answers to many of the questions that ask \u201cHow much?\u201d The essential property involved in such use of stoichiometry is the amount of substance, typically measured in moles (n). For gases, molar amount can be derived from convenient experimental measurements of pressure, temperature, and volume. Therefore, these measurements are useful in assessing the stoichiometry of pure gases, gas mixtures, and chemical reactions involving gases. This section will not introduce any new material or ideas, but will provide examples of applications and ways to integrate concepts already discussed. ",
+        "page_idx": 450
+    },
+    {
+        "type": "text",
+        "text": "Gas Density and Molar Mass ",
+        "text_level": 1,
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas law described previously in this chapter relates the properties of pressure $P _ { : }$ volume $V _ { ; }$ \uff0c temperature $T ,$ and molar amount $\\boldsymbol { n }$ . This law is universal, relating these properties in identical fashion regardless of the chemical identity of the gas: ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP V = n R T\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "The density $d$ of a gas, on the other hand, is determined by its identity. As described in another chapter of this text, the density of a substance is a characteristic property that may be used to identify the substance. ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd = { \\frac { m } { V } }\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "Rearranging the ideal gas equation to isolate $V$ and substituting into the density equation yields ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd = { \\frac { m P } { n R T } } = \\left( { \\frac { m } { n } } \\right) { \\frac { P } { R T } }\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "The ratio $m / n$ is the definition of molar mass, $\\mathcal { M }$ : ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { M } } = { \\frac { m } { n } }\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "The density equation can then be written ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd = { \\frac { \\mathcal { M } P } { R T } }\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "This relation may be used for calculating the densities of gases of known identities at specified values of pressure and temperature as demonstrated in Example 9.11. ",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.11 ",
+        "text_level": 1,
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "Measuring Gas Density ",
+        "text_level": 1,
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "What is the density of molecular nitrogen gas at STP? ",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "The molar mass of molecular nitrogen, $\\Nu _ { 2 }$ , is $2 8 . 0 1 \\mathrm { g / m o l }$ . Substituting this value along with standard temperature and pressure into the gas density equation yields ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd = { \\frac { \\mathcal { M } P } { R T } } = { \\frac { ( 2 8 . 0 1 \\ { \\mathrm { g / m o l } } ) ( 1 . 0 0 \\ { \\mathrm { a t m } } ) } { ( 0 . 0 8 2 1 \\ { \\mathrm { L } } { \\cdot } { \\mathrm { a t m } } { \\cdot } { \\mathrm { m o l } } ^ { - 1 } { \\mathrm { K } } ^ { - 1 } ) ( 2 7 3 \\ { \\mathrm { K } } ) } } = 1 . 2 5 \\ { \\mathrm { g / L } }\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "What is the density of molecular hydrogen gas at $1 7 . 0 ^ { \\circ } \\mathrm { C }$ and a pressure of 760 torr? ",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "Answer: $\\mathsf { d } = 0 . 0 8 4 7 \\ \\mathrm { g / L }$ ",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "When the identity of a gas is unknown, measurements of the mass, pressure, volume, and temperature of a sample can be used to calculate the molar mass of the gas (a useful property for identification purposes). Combining the ideal gas equation ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP V = n R T\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "and the definition of molar mass ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { M } = \\frac { m } { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 451
+    },
+    {
+        "type": "text",
+        "text": "yields the following equation: ",
+        "page_idx": 451
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { M } = \\frac { m R T } { P V }\n$$",
+        "text_format": "latex",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Determining the molar mass of a gas via this approach is demonstrated in Example 9.12. ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.12 ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Determining the Molecular Formula of a Gas from its Molar Mass and Empirical Formula ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Cyclopropane, a gas once used with oxygen as a general anesthetic, is composed of $8 5 . 7 \\%$ carbon and $1 4 . 3 \\%$ hydrogen by mass. Find the empirical formula. If $1 . 5 6 ~ \\mathrm { g }$ of cyclopropane occupies a volume of $1 . 0 0 \\mathrm { L }$ at 0.984 atm and $5 0 ^ { \\circ } \\mathrm { C }$ , what is the molecular formula for cyclopropane? ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "First determine the empirical formula of the gas. Assume $_ { 1 0 0 \\mathrm { g } }$ and convert the percentage of each element into grams. Determine the number of moles of carbon and hydrogen in the $_ { 1 0 0 - \\mathrm { g } }$ sample of cyclopropane. Divide by the smallest number of moles to relate the number of moles of carbon to the number of moles of hydrogen. In the last step, realize that the smallest whole number ratio is the empirical formula: ",
+        "page_idx": 452
+    },
+    {
+        "type": "equation",
+        "text": "$$\n8 5 . 7 \\ \\mathrm { g } \\mathrm { C } \\times { \\frac { \\mathrm { 1 \\ m o l } \\mathrm { C } } { 1 2 . 0 1 \\ \\mathrm { g } \\mathrm { C } } } = 7 . 1 3 6 \\ \\mathrm { m o l } \\mathrm { C } \\qquad { \\frac { 7 . 1 3 6 } { 7 . 1 3 6 } } = 1 . 0 0 \\ \\mathrm { m o l } \\mathrm { C }\n$$",
+        "text_format": "latex",
+        "page_idx": 452
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 4 . 3 \\ { \\mathrm { g } } \\ { \\mathrm { H } } \\times { \\frac { \\mathrm { 1 \\ m o l ~ H } } { 1 . 0 1 \\ { \\mathrm { g } } \\ { \\mathrm { H } } } } = 1 4 . 1 5 8 \\ { \\mathrm { m o l } } \\ { \\mathrm { H } } \\qquad { \\frac { 1 4 . 1 5 8 } { 7 . 1 3 6 } } = 1 . 9 8 \\ { \\mathrm { m o l } } \\ { \\mathrm { H } }\n$$",
+        "text_format": "latex",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Empirical formula is $\\mathrm { C H } _ { 2 }$ [empirical mass (EM) of $\\mathtt { 1 4 . 0 3 8 } /$ empirical unit]. ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Next, use the provided values for mass, pressure, temperature and volume to compute the molar mass of the gas: ",
+        "page_idx": 452
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { M } } = { \\frac { m R T } { P V } } = { \\frac { ( 1 . 5 6 \\mathrm { g } ) ( 0 . 0 8 2 1 \\mathrm { L } { \\cdot } \\mathrm { a t m } { \\cdot } \\mathrm { m o l } ^ { - 1 } \\mathrm { K } ^ { - 1 } ) ( 3 2 3 \\mathrm { K } ) } { ( 0 . 9 8 4 \\mathrm { a t m } ) ( 1 . 0 0 \\mathrm { L } ) } } = 4 2 . 0 \\mathrm { g } / \\mathrm { m o l }\n$$",
+        "text_format": "latex",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Comparing the molar mass to the empirical formula mass shows how many empirical formula units make up a molecule: ",
+        "page_idx": 452
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\mathcal { M } } { E M } } = { \\frac { 4 2 . 0 \\mathrm { g / m o l } } { 1 4 . 0 \\mathrm { g / m o l } } } = 3\n$$",
+        "text_format": "latex",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "The molecular formula is thus derived from the empirical formula by multiplying each of its subscripts by three: ",
+        "page_idx": 452
+    },
+    {
+        "type": "equation",
+        "text": "$$\n( \\mathrm { C H } _ { 2 } ) _ { 3 } = \\mathrm { C } _ { 3 } \\mathrm { H } _ { 6 }\n$$",
+        "text_format": "latex",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Acetylene, a fuel used welding torches, is composed of $9 2 . 3 \\%$ C and $7 . 7 \\%$ H by mass. Find the empirical formula. If $1 . 1 0 \\mathrm { g }$ of acetylene occupies of volume of $1 . 0 0 \\mathrm { L }$ at 1.15 atm and $5 9 . 5 ^ { \\circ } \\mathrm { C }$ , what is the molecular formula for acetylene? ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Empirical formula, CH; Molecular formula, $\\mathrm { C _ { 2 } H _ { 2 } }$ ",
+        "page_idx": 452
+    },
+    {
+        "type": "image",
+        "img_path": "images/61343121c69248e7f1606abd4704c0df0391db9e94156625d586837e343ebbb2.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.13 ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "Determining the Molar Mass of a Volatile Liquid ",
+        "text_level": 1,
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "The approximate molar mass of a volatile liquid can be determined by: ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "1. Heating a sample of the liquid in a flask with a tiny hole at the top, which converts the liquid into gas that ",
+        "page_idx": 452
+    },
+    {
+        "type": "text",
+        "text": "may escape through the hole ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "2. Removing the flask from heat at the instant when the last bit of liquid becomes gas, at which time the flask will be filled with only gaseous sample at ambient pressure   \n3. Sealing the flask and permitting the gaseous sample to condense to liquid, and then weighing the flask to determine the sample\u2019s mass (see Figure 9.19) ",
+        "page_idx": 453
+    },
+    {
+        "type": "image",
+        "img_path": "images/788e42ed2850ac30ea8d844bd784fd43af28bf8a30cd8deb1d8be474d4d18eb3.jpg",
+        "img_caption": [
+            "FIGURE 9.19 When the volatile liquid in the flask is heated past its boiling point, it becomes gas and drives air out of the flask. At $t _ { l \\longrightarrow g }$ the flask is filled with volatile liquid gas at the same pressure as the atmosphere. If the flask is then cooled to room temperature, the gas condenses and the mass of the gas that filled the flask, and is now liquid, can be measured. (credit: modification of work by Mark Ott) "
+        ],
+        "img_footnote": [],
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Using this procedure, a sample of chloroform gas weighing $\\phantom { - } 0 . 4 9 4 \\mathrm { g }$ is collected in a flask with a volume of 129 $\\mathrm { c m } ^ { 3 }$ at $9 9 . 6 ^ { \\circ } \\mathrm { C }$ when the atmospheric pressure is $7 4 2 . 1 \\mathrm { m m } \\mathrm { H g }$ . What is the approximate molar mass of chloroform? ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Since $\\textstyle { \\mathcal { M } } = { \\frac { m } { n } }$ and $\\begin{array} { r } { n = \\frac { P V } { R T } } \\end{array}$ substituting and rearranging gives \u2133 then ",
+        "page_idx": 453
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathcal { M } } { = } ~ \\frac { m R T } { P V } = \\frac { ( 0 . 4 9 4 ~ \\mathrm { g } ) \\times 0 . 0 8 2 0 6 ~ { \\mathrm { L } } { \\cdot } \\mathrm { a t m / m o l } ~ \\mathrm { K } \\times 3 7 2 . 8 ~ \\mathrm { K } } { 0 . 9 7 6 ~ \\mathrm { a t m } \\times 0 . 1 2 9 \\mathrm { L } } = 1 2 0 ~ \\mathrm { g / m o l } .\n$$",
+        "text_format": "latex",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "A sample of phosphorus that weighs $3 . 2 4 3 \\times 1 0 ^ { - 2 } \\mathrm { g }$ exerts a pressure of $3 1 . 8 9 \\mathrm { k P a }$ in a $5 6 . 0 \\mathrm { - m L }$ bulb at $5 5 0 ^ { \\circ } \\mathrm { C }$ What are the molar mass and molecular formula of phosphorus vapor? ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Answer: $1 2 4 { \\mathrm { g / m o l } } \\mathrm { P } _ { 4 }$ ",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "The Pressure of a Mixture of Gases: Dalton\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "Unless they chemically react with each other, the individual gases in a mixture of gases do not affect each other\u2019s pressure. Each individual gas in a mixture exerts the same pressure that it would exert if it were present alone in the container (Figure 9.20). The pressure exerted by each individual gas in a mixture is called its partial pressure. This observation is summarized by Dalton\u2019s law of partial pressures: Thetotalpres ure ofamixtureofidealgasesisequaltothesumofthepartialpres uresofthecomponentgases: ",
+        "page_idx": 453
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { T o t a l } = P _ { A } + P _ { B } + P _ { C } + . . . = \\Sigma _ { \\mathrm { i } } P _ { \\mathrm { i } }\n$$",
+        "text_format": "latex",
+        "page_idx": 453
+    },
+    {
+        "type": "text",
+        "text": "In the equation $P _ { T o t a l }$ is the total pressure of a mixture of gases, $P _ { A }$ is the partial pressure of gas A; $P _ { B }$ is the partial pressure of gas B; $P _ { C }$ is the partial pressure of gas C; and so on. ",
+        "page_idx": 453
+    },
+    {
+        "type": "image",
+        "img_path": "images/157834fcbf49cecac33f35a00812448a3be8fa9cbcc6ee499aa18c41f7c698f3.jpg",
+        "img_caption": [
+            "FIGURE 9.20 If equal-volume cylinders containing gasses at pressures of $3 0 0 \\mathsf { k P a }$ , 450 kPa, and 600 kPa are all combined in the same-size cylinder, the total pressure of the gas mixture is $\\mathtt { 1 3 5 0 \\mathsf { k P a } }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "The partial pressure of gas A is related to the total pressure of the gas mixture via its mole fraction $\\mathbf { \\delta } ( { \\mathbf { \\delta } } _ { \\mathbf { X } } )$ , a unit of concentration defined as the number of moles of a component of a solution divided by the total number of moles of all components: ",
+        "page_idx": 454
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { A } = X _ { A } \\times P _ { T o t a l } \\mathrm { w h e r e } X _ { A } = { \\frac { n _ { A } } { n _ { T o t a l } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "where $P _ { A } , X _ { A } ,$ and $n _ { A }$ are the partial pressure, mole fraction, and number of moles of gas A, respectively, and $n _ { T o t a l }$ is the number of moles of all components in the mixture. ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.14 ",
+        "text_level": 1,
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "The Pressure of a Mixture of Gases ",
+        "text_level": 1,
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm { ~ A ~ } 1 0 . 0 { - } \\mathrm { L }$ vessel contains $2 . 5 0 \\times 1 0 ^ { - 3 } \\mathrm { m o l }$ of $\\mathrm { H } _ { 2 }$ , $1 . 0 0 \\times 1 0 ^ { - 3 }$ mol of He, and $3 . 0 0 \\times 1 0 ^ { - 4 }$ mol of Ne at $3 5 ^ { \\circ } \\mathrm { C }$ . ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "(a) What are the partial pressures of each of the gases? (b) What is the total pressure in atmospheres? ",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "The gases behave independently, so the partial pressure of each gas can be determined from the ideal gas equation, using $\\begin{array} { r } { P = \\frac { n R T } { V } } \\end{array}$ : ",
+        "page_idx": 454
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } & { P _ { \\mathrm { H } _ { 2 } } = { \\frac { \\left( 2 . 5 0 \\times 1 0 ^ { - 3 } { \\bmod { } } \\right) \\left( 0 . 0 8 2 0 6 \\pm { \\tan } { \\bmod { } } { \\frac { \\pi 1 } { \\mathrm { K } ^ { - 1 } } } \\right) \\left( 3 0 8 + \\mathrm { K } \\right) } { 1 0 . 0 + } } = 6 . 3 2 \\times 1 0 ^ { - 3 } \\mathrm { ~ a } } \\\\ & { P _ { \\mathrm { H } \\mathrm { e } } = { \\frac { \\left( 1 . 0 0 \\times 1 0 ^ { - 3 } { \\bmod { } } \\right) \\left( 0 . 0 8 2 0 6 \\pm { \\tan } { \\bmod { } } ^ { - 1 } { \\mathrm { K } ^ { - 1 } } \\right) \\left( 3 0 8 + \\mathrm { K } \\right) } { 1 0 . 0 \\pm } } = 2 . 5 3 \\times 1 0 ^ { - 3 } \\mathrm { ~ a } } \\\\ & { P _ { \\mathrm { N e } } = { \\frac { \\left( 3 . 0 0 \\times 1 0 ^ { - 4 } { \\bmod { } } \\right) \\left( 0 . 0 8 2 0 6 \\pm { \\tan } { \\bmod { } } ^ { - 1 } { \\mathrm { K } ^ { - 1 } } \\right) \\left( 3 0 8 + \\mathrm { K } \\right) } { 1 0 . 0 + } } = 7 . 5 8 \\times 1 0 ^ { - 4 } \\mathrm { ~ a } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "The total pressure is given by the sum of the partial pressures: ",
+        "page_idx": 454
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\Gamma } = P _ { \\mathrm { H _ { 2 } } } + P _ { \\mathrm { H e } } + P _ { \\mathrm { N e } } = ( 0 . 0 0 6 3 2 + 0 . 0 0 2 5 3 + 0 . 0 0 0 7 6 ) ~ { \\mathrm { a t m } } = 9 . 6 1 \\times 1 0 ^ { - 3 } ~ { \\mathrm { a } }\n$$",
+        "text_format": "latex",
+        "page_idx": 454
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "A 5.73-L flask at $2 5 ^ { \\circ } \\mathrm { C }$ contains $0 . 0 3 8 8 \\mathrm { m o l }$ of $\\Nu _ { 2 }$ , 0.147 mol of CO, and $0 . 0 8 0 3 ~ \\mathrm { { m o l } }$ of $\\mathrm { H } _ { 2 }$ . What is the total pressure in the flask in atmospheres? ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "1.137 atm ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "Here is another example of this concept, but dealing with mole fraction calculations. ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.15 ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "The Pressure of a Mixture of Gases ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "A gas mixture used for anesthesia contains 2.83 mol oxygen, $\\mathrm { O _ { 2 } }$ , and $8 . 4 1 \\mathrm { m o l }$ nitrous oxide, $\\mathrm { N } _ { 2 } \\mathrm { O } .$ . The total pressure of the mixture is $1 9 2 \\mathrm { k P a }$ . ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "(a) What are the mole fractions of $\\mathrm { O } _ { 2 }$ and $\\mathrm { N _ { 2 } O _ { : } ^ { \\circ } }$ (b) What are the partial pressures of ${ { \\mathrm O } _ { 2 } }$ and $\\mathrm { N _ { 2 } O _ { : } ^ { 2 } }$ ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "The mole fraction is given by $\\begin{array} { r } { X _ { A } = \\frac { n _ { A } } { n _ { T o t a l } } } \\end{array}$ and the partial pressure is $P _ { A } = X _ { A } \\times P _ { T o t a l } .$ . For $\\mathrm { O _ { 2 } }$ , ",
+        "page_idx": 455
+    },
+    {
+        "type": "equation",
+        "text": "$$\nX _ { O _ { 2 } } = { \\frac { n _ { O _ { 2 } } } { n _ { T o t a l } } } = { \\frac { 2 . 8 3 { \\mathrm { m o l } } } { ( 2 . 8 3 + 8 . 4 1 ) { \\mathrm { m o l } } } } = 0 . 2 5 2\n$$",
+        "text_format": "latex",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "and $P _ { O _ { 2 } } = X _ { O _ { 2 } } \\times P _ { T o t a l } = 0 . 2 5 2 \\times 1 9 2 \\mathrm { { k P a } = 4 8 . 4 \\mathrm { { k P a } } }$ ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "For $\\mathrm { N _ { 2 } O }$ , ",
+        "page_idx": 455
+    },
+    {
+        "type": "equation",
+        "text": "$$\nX _ { N _ { 2 } O } = { \\frac { n _ { N _ { 2 } O } } { n _ { \\mathrm { T o t a l } } } } = { \\frac { 8 . 4 1 { \\mathrm { ~ m o l } } } { ( 2 . 8 3 + 8 . 4 1 ) { \\mathrm { ~ m o l } } } } = 0 . 7 4 8\n$$",
+        "text_format": "latex",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "and ",
+        "page_idx": 455
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { N _ { 2 } O } = X _ { N _ { 2 } O } \\times P _ { \\mathrm { { T o t a l } } } = 0 . 7 4 8 \\times 1 9 2 ~ \\mathrm { { k P a } = 1 4 4 ~ \\mathrm { { k P a } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "What is the pressure of a mixture of $0 . 2 0 0 { \\mathrm { g } }$ of $\\mathrm { H } _ { 2 }$ , $1 . 0 0 { \\mathrm { g } }$ of $\\Nu _ { 2 }$ , and $0 . 8 2 0 \\mathrm { g }$ of Ar in a container with a volume of $2 . 0 0 \\mathrm { L }$ at $2 0 { } ^ { \\circ } \\mathrm { C } ?$ ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "1.87 atm ",
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "Collection of Gases over Water ",
+        "text_level": 1,
+        "page_idx": 455
+    },
+    {
+        "type": "text",
+        "text": "A simple way to collect gases that do not react with water is to capture them in a bottle that has been filled with water and inverted into a dish filled with water. The pressure of the gas inside the bottle can be made equal to the air pressure outside by raising or lowering the bottle. When the water level is the same both inside and outside the bottle (Figure 9.21), the pressure of the gas is equal to the atmospheric pressure, which can be measured with a barometer. ",
+        "page_idx": 455
+    },
+    {
+        "type": "image",
+        "img_path": "images/07075c49409dd74121d6fe5272c1bfa5afaa8bb0a559e55783595e435beecd7f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 456
+    },
+    {
+        "type": "text",
+        "text": "However, there is another factor we must consider when we measure the pressure of the gas by this method. Water evaporates and there is always gaseous water (water vapor) above a sample of liquid water. As a gas is collected over water, it becomes saturated with water vapor and the total pressure of the mixture equals the partial pressure of the gas plus the partial pressure of the water vapor. The pressure of the pure gas is therefore equal to the total pressure minus the pressure of the water vapor\u2014this is referred to as the \u201cdry\u201d gas pressure, that is, the pressure of the gas only, without water vapor. The vapor pressure of water, which is the pressure exerted by water vapor in equilibrium with liquid water in a closed container, depends on the temperature (Figure 9.22); more detailed information on the temperature dependence of water vapor can be found in Table 9.2, and vapor pressure will be discussed in more detail in the next chapter on liquids. ",
+        "page_idx": 456
+    },
+    {
+        "type": "image",
+        "img_path": "images/2ac29fbb5f3d5539bb3a62f8a547750a8ac7fbb5282cdd6b1a02ef8812ee6944.jpg",
+        "img_caption": [
+            "FIGURE 9.21 When a reaction produces a gas that is collected above water, the trapped gas is a mixture of the gas produced by the reaction and water vapor. If the collection flask is appropriately positioned to equalize the water levels both within and outside the flask, the pressure of the trapped gas mixture will equal the atmospheric pressure outside the flask (see the earlier discussion of manometers). ",
+            "FIGURE 9.22 This graph shows the vapor pressure of water at sea level as a function of temperature. "
+        ],
+        "img_footnote": [],
+        "page_idx": 456
+    },
+    {
+        "type": "table",
+        "img_path": "images/745b159279e576e2a748665cb224486863775886ba2cc0053146f8a21fc5d2f7.jpg",
+        "table_caption": [
+            "Vapor Pressure of Ice and Water in Various Temperatures at Sea Level ",
+            "TABLE 9.2 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Temperature (C)</td><td>Pressure (torr)</td><td>Temperature (\u2103)</td><td>Pressure (torr)</td><td>Temperature ()</td><td>Pressure (torr)</td></tr><tr><td>-10</td><td>1.95</td><td>18</td><td>15.5</td><td>30</td><td>31.8</td></tr><tr><td>-5</td><td>3.0</td><td>19</td><td>16.5</td><td>35</td><td>42.2</td></tr><tr><td>-2</td><td>3.9</td><td>20</td><td>17.5</td><td>40</td><td>55.3</td></tr><tr><td>0</td><td>4.6</td><td>21</td><td>18.7</td><td>50</td><td>92.5</td></tr><tr><td>2</td><td>5.3</td><td>22</td><td>19.8</td><td>60</td><td>149.4</td></tr><tr><td>4</td><td>6.1</td><td>23</td><td>21.1</td><td>70</td><td>233.7</td></tr><tr><td>6</td><td>7.0</td><td>24</td><td>22.4</td><td>80</td><td>355.1</td></tr><tr><td>8</td><td>8.0</td><td>25</td><td>23.8</td><td>90</td><td>525.8</td></tr><tr><td>10</td><td>9.2</td><td>26</td><td>25.2</td><td>95</td><td>633.9</td></tr><tr><td>12</td><td>10.5</td><td>27</td><td>26.7</td><td>99</td><td>733.2</td></tr><tr><td>14</td><td>12.0</td><td>28</td><td>28.3</td><td>100.0</td><td>760.0</td></tr><tr><td>16</td><td>13.6</td><td>29</td><td>30.0</td><td>101.0</td><td>787.6</td></tr></table></body></html>\n\n",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.16 ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Pressure of a Gas Collected Over Water ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "If $0 . 2 0 0 \\mathrm { { L } }$ of argon is collected over water at a temperature of $2 6 ~ ^ { \\circ } \\mathrm { C }$ and a pressure of 750 torr in a system like that shown in Figure 9.21, what is the partial pressure of argon? ",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "According to Dalton\u2019s law, the total pressure in the bottle (750 torr) is the sum of the partial pressure of argon and the partial pressure of gaseous water: ",
+        "page_idx": 457
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { T } } = P _ { \\mathrm { A r } } + P _ { \\mathrm { H } _ { 2 } \\mathrm { O } }\n$$",
+        "text_format": "latex",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Rearranging this equation to solve for the pressure of argon gives: ",
+        "page_idx": 457
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { A r } } = P _ { \\mathrm { T } } - P _ { \\mathrm { H } _ { 2 } \\mathrm { O } }\n$$",
+        "text_format": "latex",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "The pressure of water vapor above a sample of liquid water at $2 6 ^ { \\circ } \\mathrm { C }$ is 25.2 torr (Appendix E), so: ",
+        "page_idx": 457
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { A r } } = 7 5 0 \\mathrm { t o r r } - 2 5 . 2 \\mathrm { t o r r } = 7 2 5 \\mathrm { t o r r }\n$$",
+        "text_format": "latex",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "A sample of oxygen collected over water at a temperature of $2 9 . 0 ^ { \\circ } \\mathrm { C }$ and a pressure of 764 torr has a volume of 0.560 L. What volume would the dry oxygen from this sample have under the same conditions of temperature ",
+        "page_idx": 457
+    },
+    {
+        "type": "text",
+        "text": "Chemical Stoichiometry and Gases ",
+        "text_level": 1,
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "Chemical stoichiometry describes the quantitative relationships between reactants and products in chemical reactions. ",
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "We have previously measured quantities of reactants and products using masses for solids and volumes in conjunction with the molarity for solutions; now we can also use gas volumes to indicate quantities. If we know the volume, pressure, and temperature of a gas, we can use the ideal gas equation to calculate how many moles of the gas are present. If we know how many moles of a gas are involved, we can calculate the volume of a gas at any temperature and pressure. ",
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "Avogadro\u2019s Law Revisited ",
+        "text_level": 1,
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "Sometimes we can take advantage of a simplifying feature of the stoichiometry of gases that solids and solutions do not exhibit: All gases that show ideal behavior contain the same number of molecules in the same volume (at the same temperature and pressure). Thus, the ratios of volumes of gases involved in a chemical reaction are given by the coefficients in the equation for the reaction, provided that the gas volumes are measured at the same temperature and pressure. ",
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "We can extend Avogadro\u2019s law (that the volume of a gas is directly proportional to the number of moles of the gas) to chemical reactions with gases: Gases combine, or react, in definite and simple proportions by volume, provided that all gas volumes are measured at the same temperature and pressure. For example, since nitrogen and hydrogen gases react to produce ammonia gas according to $\\mathrm { \\Delta N } _ { 2 } ( g ) + 3 \\mathrm { H } _ { 2 } ( g ) \\ \\longrightarrow \\ 2 \\mathrm { N H } _ { 3 } ( g )$ a given volume of nitrogen gas reacts with three times that volume of hydrogen gas to produce two times that volume of ammonia gas, if pressure and temperature remain constant. ",
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "The explanation for this is illustrated in Figure 9.23. According to Avogadro\u2019s law, equal volumes of gaseous $\\Nu _ { 2 }$ , $\\mathrm { H } _ { 2 }$ , and $\\mathrm { N H } _ { 3 }$ , at the same temperature and pressure, contain the same number of molecules. Because one molecule of $\\Nu _ { 2 }$ reacts with three molecules of $\\mathrm { H } _ { 2 }$ to produce two molecules of $\\mathrm { N H } _ { 3 }$ , the volume of $\\mathrm { H } _ { 2 }$ required is three times the volume of $\\Nu _ { 2 }$ , and the volume of $\\mathrm { N H } _ { 3 }$ produced is two times the volume of $\\Nu _ { 2 }$ . ",
+        "page_idx": 458
+    },
+    {
+        "type": "image",
+        "img_path": "images/aa313fd86f3424fd0375fde0444216d10ed46f0882ac130f2c7f0b7f5b39bc77.jpg",
+        "img_caption": [
+            "FIGURE 9.23 One volume of ${ \\sf N } _ { 2 }$ combines with three volumes of ${ \\sf H } _ { 2 }$ to form two volumes of $N H _ { 3 }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.17 ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Reaction of Gases ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Propane, $\\mathrm { C _ { 3 } H _ { 8 } } ( g )$ , is used in gas grills to provide the heat for cooking. What volume of $\\mathrm { O } _ { 2 } ( g )$ measured at $2 5 ^ { \\circ } \\mathrm { C }$ and 760 torr is required to react with $2 . 7 \\mathrm { L }$ of propane measured under the same conditions of temperature and pressure? Assume that the propane undergoes complete combustion. ",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "The ratio of the volumes of $\\mathrm { C _ { 3 } H _ { 8 } }$ and $\\mathrm { O } _ { 2 }$ will be equal to the ratio of their coefficients in the balanced equation for the reaction: ",
+        "page_idx": 459
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { \\mathrm { C _ { 3 } H _ { 8 } ( } g \\mathrm { ) + 5 O _ { 2 } ( } g \\mathrm { ) } } } \\\\ { { \\mathrm { 1 \\ v o l u m e + 5 \\ v o l u m e s } } } \\end{array} \\begin{array} { l } { { \\longrightarrow } } \\\\ { { \\mathrm { 3 \\ v o l u m e s + 4 \\ v o l u m e } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "From the equation, we see that one volume of $\\mathrm { C _ { 3 } H _ { 8 } }$ will react with five volumes of ${ { \\mathrm O } _ { 2 } }$ : ",
+        "page_idx": 459
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 . 7 \\mathrm { \\pm C _ { 3 } \\mathrm { H _ { 8 } } } \\times \\frac { 5 \\mathrm { L O } _ { 2 } } { 1 \\mathrm { \\pm C _ { 3 } \\mathrm { H _ { 8 } } } } = 1 3 . 5 \\mathrm { L O } _ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "A volume of $1 3 . 5 \\mathrm { L }$ of ${ { \\mathrm O } _ { 2 } }$ will be required to react with $2 . 7 \\mathrm { L }$ of $\\mathrm { C _ { 3 } H _ { 8 } }$ . ",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "An acetylene tank for an oxyacetylene welding torch provides $9 3 4 0 \\mathrm { L }$ of acetylene gas, $\\mathrm { C _ { 2 } H _ { 2 } }$ , at $0 { } ^ { \\circ } \\mathrm { C }$ and 1 atm. How many tanks of oxygen, each providing ${ 7 . 0 0 \\times 1 0 ^ { 3 } \\mathrm { L } }$ of $\\mathrm { O _ { 2 } }$ at $0 ^ { \\circ } \\mathrm { C }$ and 1 atm, will be required to burn the acetylene? ",
+        "page_idx": 459
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { C } _ { 2 } \\mathrm { H } _ { 2 } + 5 \\mathrm { O } _ { 2 } \\longrightarrow 4 \\mathrm { C O } _ { 2 } + 2 \\mathrm { H } _ { 2 } \\mathrm { O }\n$$",
+        "text_format": "latex",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "3.34 tanks $( 2 . 3 4 \\times 1 0 ^ { 4 } \\mathrm { L } )$ ",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.18 ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Volumes of Reacting Gases ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Ammonia is an important fertilizer and industrial chemical. Suppose that a volume of 683 billion cubic feet of gaseous ammonia, measured at $2 5 ^ { \\circ } \\mathrm { C }$ and 1 atm, was manufactured. What volume of $\\mathrm { H } _ { 2 } ( g )$ , measured under the same conditions, was required to prepare this amount of ammonia by reaction with ${ \\mathrm { N } } _ { 2 } { \\mathrm { ? } }$ ",
+        "page_idx": 459
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { N } _ { 2 } ( g ) + 3 \\mathrm { H } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { N H } _ { 3 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Because equal volumes of $\\mathrm { H } _ { 2 }$ and $\\mathrm { N H } _ { 3 }$ contain equal numbers of molecules and each three molecules of $\\mathrm { H } _ { 2 }$ that react produce two molecules of $\\mathrm { N H } _ { 3 }$ , the ratio of the volumes of $\\mathrm { H } _ { 2 }$ and $\\mathrm { N H } _ { 3 }$ will be equal to 3:2. Two volumes of $\\mathrm { N H } _ { 3 }$ , in this case in units of billion $\\mathrm { f t } ^ { 3 }$ , will be formed from three volumes of $\\mathrm { H } _ { 2 }$ : ",
+        "page_idx": 459
+    },
+    {
+        "type": "equation",
+        "text": "$$\n6 8 3 \\mathrm { { \\ b i H i o n \\mathrm { { f t ^ { 3 } } \\mathrm { { \\cdot } W H _ { 3 } } \\mathrm { { \\times } \\mathrm { { \\frac { 3 \\ b i l l i o n \\mathrm { { f t ^ { 3 } } H _ { 2 } } } { 2 \\mathrm { { \\cdot } W i l i e o n \\mathrm { { f t ^ { 3 } } \\mathrm { { \\cdot } W H _ { 3 } } } } = 1 . 0 2 \\times 1 0 ^ { 3 } \\ b i l l i o n \\mathrm { { f t ^ { 3 } } H _ { 2 } } } } } } } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "The manufacture of 683 billion $\\mathrm { f t ^ { 3 } }$ of $\\mathrm { N H } _ { 3 }$ required 1020 billion $\\mathrm { f t ^ { 3 } }$ of $\\mathrm { H } _ { 2 }$ . (At $2 5 ^ { \\circ } \\mathrm { C }$ and 1 atm, this is the volume of a cube with an edge length of approximately 1.9 miles.) ",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "What volume of $\\mathrm { O } _ { 2 } ( g )$ measured at $2 5 ^ { \\circ } \\mathrm { C }$ and 760 torr is required to react with $1 7 . 0 \\mathrm { L }$ of ethylene, $\\mathrm { C _ { 2 } H _ { 4 } } ( g )$ , measured under the same conditions of temperature and pressure? The products are $\\mathrm { C O } _ { 2 }$ and water vapor. ",
+        "page_idx": 459
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.19 ",
+        "text_level": 1,
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Volume of Gaseous Product ",
+        "text_level": 1,
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "What volume of hydrogen at $2 7 ^ { \\circ } \\mathrm { C }$ and 723 torr may be prepared by the reaction of $8 . 8 8 \\mathrm { g }$ of gallium with an excess of hydrochloric acid? ",
+        "page_idx": 460
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { G a } \\left( s \\right) + 6 \\mathrm { H C l } \\left( a q \\right) \\longrightarrow 2 \\mathrm { G a C l } _ { 3 } \\left( a q \\right) + 3 \\mathrm { H } _ { 2 } \\left( g \\right)\n$$",
+        "text_format": "latex",
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Convert the provided mass of the limiting reactant, Ga, to moles of hydrogen produced: ",
+        "page_idx": 460
+    },
+    {
+        "type": "equation",
+        "text": "$$\n8 . 8 8 \\underset { \\mathbb { S } } { \\underline { { \\alpha } } } \\mathrm { G a } \\times \\frac { 1 \\mathrm { m o l } \\mathrm { G a } } { 6 9 . 7 2 3 \\underset { \\mathbb { S } } { \\underline { { \\alpha } } } \\mathrm { G a } } \\times \\frac { 3 \\mathrm { m o l } \\mathrm { H } _ { 2 } } { 2 \\mathrm { m o l } \\mathrm { G a } } = 0 . 1 9 1 \\mathrm { m o l } \\mathrm { H } _ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Convert the provided temperature and pressure values to appropriate units (K and atm, respectively), and then use the molar amount of hydrogen gas and the ideal gas equation to calculate the volume of gas: ",
+        "page_idx": 460
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = \\left( { \\frac { n R T } { P } } \\right) = { \\frac { 0 . 1 9 1 { \\mathrm { ~ } } { \\mathrm { m e l } } \\times 0 . 0 8 2 0 6 { \\mathrm { ~ L } } { \\mathrm { ~ a t m m o l } } ^ { - 1 } { \\mathrm { K } } ^ { - 1 } \\times 3 0 0 { \\mathrm { ~ K } } } { 0 . 9 5 1 { \\mathrm { ~ } } { \\mathrm { a t m } } } } = 4 . 9 4 { \\mathrm { ~ L } }\n$$",
+        "text_format": "latex",
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Sulfur dioxide is an intermediate in the preparation of sulfuric acid. What volume of $\\mathrm { S O _ { 2 } }$ at $3 4 3 ^ { \\circ } \\mathrm { C }$ and 1.21 atm is produced by burning $\\mathrm { 1 . 0 0 ~ k g }$ of sulfur in excess oxygen? ",
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Answer: $1 . 3 0 \\times 1 0 ^ { 3 } \\mathrm { L }$ ",
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "HOW SCIENCES INTERCONNECT ",
+        "text_level": 1,
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "Greenhouse Gases and Climate Change ",
+        "text_level": 1,
+        "page_idx": 460
+    },
+    {
+        "type": "text",
+        "text": "The thin skin of our atmosphere keeps the earth from being an ice planet and makes it habitable. In fact, this is due to less than $0 . 5 \\%$ of the air molecules. Of the energy from the sun that reaches the earth, almost $\\frac 1 3$ is reflected back into space, with the rest absorbed by the atmosphere and the surface of the earth. Some of the energy that the earth absorbs is re-emitted as infrared (IR) radiation, a portion of which passes back out through the atmosphere into space. Most if this IR radiation, however, is absorbed by certain atmospheric gases, effectively trapping heat within the atmosphere in a phenomenon known as the gre nhouseefect. This effect maintains global temperatures within the range needed to sustain life on earth. Without our atmosphere, the earth's average temperature would be lower by more than $3 0 ^ { \\circ } \\mathrm { C }$ (nearly $6 0 ~ ^ { \\circ } \\mathrm { F }$ ). The major greenhouse gases (GHGs) are water vapor, carbon dioxide, methane, and ozone. Since the Industrial Revolution, human activity has been increasing the concentrations of GHGs, which have changed the energy balance and are significantly altering the earth\u2019s climate (Figure 9.24). ",
+        "page_idx": 460
+    },
+    {
+        "type": "image",
+        "img_path": "images/2762c8152ca477980c0b6950bdb0552c26166727e408b91b87126cb43ccd1a8d.jpg",
+        "img_caption": [
+            "FIGURE 9.24 Greenhouse gases trap enough of the sun\u2019s energy to make the planet habitable\u2014this is known as the greenhouse effect. Human activities are increasing greenhouse gas levels, warming the planet and causing more extreme weather events. "
+        ],
+        "img_footnote": [],
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "There is strong evidence from multiple sources that higher atmospheric levels of $\\mathrm { C O } _ { 2 }$ are caused by human activity, with fossil fuel burning accounting for about $\\textstyle { \\frac { 3 } { 4 } }$ of the recent increase in $\\mathrm { C O _ { 2 } }$ . Reliable data from ice cores reveals that $\\mathrm { C O _ { 2 } }$ concentration in the atmosphere is at the highest level in the past 800,000 years; other evidence indicates that it may be at its highest level in 20 million years. In recent years, the $\\mathrm { C O } _ { 2 }$ concentration has increased preindustrial levels of $\\sim 2 8 0$ ppm to more than 400 ppm today (Figure 9.25). ",
+        "page_idx": 461
+    },
+    {
+        "type": "image",
+        "img_path": "images/9b99ad31b0241d0ff30bfc047de2969524d42b165b1918bff542ff47f5c8be47.jpg",
+        "img_caption": [
+            "FIGURE 9.25 ${ \\mathsf { C O } } _ { 2 }$ levels over the past 700,000 years were typically from 200\u2013300 ppm, with a steep, unprecedented increase over the past 50 years. "
+        ],
+        "img_footnote": [],
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "LINK TO LEARNING ",
+        "text_level": 1,
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "Click here (http://openstax.org/l/16GlobalWarming) to see a 2-minute video explaining greenhouse gases and global warming. ",
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "Portrait of a Chemist ",
+        "text_level": 1,
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "Susan Solomon ",
+        "text_level": 1,
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "Atmospheric and climate scientist Susan Solomon (Figure 9.26) is the author of one of TheNewYorkTimes books of the year (TheColdestMarch, 2001), one of Time magazine\u2019s 100 most influential people in the world (2008), and a working group leader of the Intergovernmental Panel on Climate Change (IPCC), which was the recipient of the 2007 Nobel Peace Prize. She helped determine and explain the cause of the formation of the ozone hole over Antarctica, and has authored many important papers on climate change. ",
+        "page_idx": 461
+    },
+    {
+        "type": "text",
+        "text": "She has been awarded the top scientific honors in the US and France (the National Medal of Science and the Grande Medaille, respectively), and is a member of the National Academy of Sciences, the Royal Society, the French Academy of Sciences, and the European Academy of Sciences. Formerly a professor at the University of Colorado, she is now at MIT, and continues to work at NOAA. ",
+        "page_idx": 462
+    },
+    {
+        "type": "text",
+        "text": "For more information, watch this video (http://openstax.org/l/16SusanSolomon) about Susan Solomon. ",
+        "page_idx": 462
+    },
+    {
+        "type": "image",
+        "img_path": "images/fffce602ea95aa95f0e16c1a8bbce796fba11acc2f4ef57aca9d074740707687.jpg",
+        "img_caption": [
+            "FIGURE 9.26 Susan Solomon\u2019s research focuses on climate change and has been instrumental in determining the cause of the ozone hole over Antarctica. (credit: National Oceanic and Atmospheric Administration) "
+        ],
+        "img_footnote": [],
+        "page_idx": 462
+    }
+]

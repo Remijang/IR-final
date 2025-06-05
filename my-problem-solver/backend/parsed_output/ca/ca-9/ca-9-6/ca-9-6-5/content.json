@@ -1,0 +1,58 @@
+[
+    {
+        "type": "text",
+        "text": "9.6.5 2-Address Format ALU Instructions ",
+        "text_level": 1,
+        "page_idx": 395
+    },
+    {
+        "type": "text",
+        "text": "The three ALU instructions in the 2-address format, are not, mov, and cmp. not and mov have a similar format. They do not use the first source operand, rs1. They operate on either $r s 2$ , or immx, and transfer the result to the register pointed by rd. ",
+        "page_idx": 395
+    },
+    {
+        "type": "text",
+        "text": "Let us look at the mov instruction first. We first check whether the second operand is an immediate, or not, by comparing the value in register $I$ with 1. If it is equal to 1, then we jump to the label, .imm. Otherwise, we proceed to execute the subsequent instructions in Lines 4, and 5. In Line 4, we transfer $r s 2$ to regSrc, along with the $\\langle r e a d \\rangle$ command. The operand is read and stored in regV al. In the next cycle, we transfer regV al to $r e g D a t a$ such that it can be written back to the register file. If the second operand was an immediate, then we execute the code in Line 9. We transfer the immediate (stored in immx) to the regData register. In either case, regData contains the value to be written to the register file. Then we transfer the id of the destination register (stored in rd) to regSrc, and simultaneously issue the write command in Line 13. ",
+        "page_idx": 395
+    },
+    {
+        "type": "text",
+        "text": "mov instruction /\\* check the value of the immediate register \\*/ 2 mbeq I, 1, .imm /\\* second operand is a register \\*/ mmov regSrc, rs2, <read> mmov regData, regVal 6 mb .rw /\\* second operand is an immediate \\*/ .imm: mmov regData, immx 10 11 /\\* write to the register file\\*/ 12 .rw: 13 mmov regSrc, rd, <write> 14 15 /\\* jump to the beginning \\*/ 16 mb .begin ",
+        "page_idx": 395
+    },
+    {
+        "type": "text",
+        "text": "Let us now write a similar routing for the not instruction. The only additional step is to transfer the value read from the register to the ALU, compute the logical negation, and then transfer the value back to the register file. A hallmark feature of our microassembly language is that we can transfer a value to a unit, and if all the other operands are in place, then we can also perform an operation in the unit in the same cycle. The implicit assumption here is that 1 clock cycle is enough to transfer the data between registers, and perform a computation. In line with this philosophy we transfer the value of immx, or regV al to register $B$ of the ALU, and also perform a $\\langle n o t \\rangle$ operation in the same cycle (see Lines 5 and 9). Like the mov instruction, we transfer the ALU result to the regData register, and write it to the register file in Lines 13, and 14. ",
+        "page_idx": 396
+    },
+    {
+        "type": "text",
+        "text": "not instruction /\\* check the value of the immediate register \\*/ 2 mbeq I, 1, .imm /\\* second operand is a register \\*/ 4 mmov regSrc, rs2, <read> mmov B, regVal, <not> /\\* ALU operation \\*/ 6 mb .rw /\\* second operand is an immediate \\*/ .imm: 9 mmov B, immx, <not> /\\* ALU operation \\*/ 10 11 /\\* write to the register file\\*/ 12 .rw: 13 mmov regData, aluResult 14 mmov regSrc, rd, <write> 15 16 /\\* jump to the beginning \\*/ 17 mb .begin ",
+        "page_idx": 396
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the compare instruction that does not have a destination operand. It compares two operands, where one is a register operand, and the other can be either a register or an immediate. It saves the results automatically in the flags.E and $f l a g s . G T$ registers. ",
+        "page_idx": 396
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the microcode for the cmp instruction. ",
+        "page_idx": 396
+    },
+    {
+        "type": "text",
+        "text": "cmp instruction /\\* transfer rs1 to register A \\*/ 2 mmov regSrc, rs1, <read> 3 mmov A, regVal /\\* check the value of the immediate register \\*/ mbeq I, 1, .imm /\\* second operand is a register \\*/ 8 mmov regSrc, rs2, <read> 9 mmov B, regVal, <cmp> /\\* ALU operation \\*/ 10 mb .begin 11 ",
+        "page_idx": 396
+    },
+    {
+        "type": "text",
+        "text": "12 /\\* second operand is an immediate \\*/   \n13 .imm:   \n14 mmov B, immx, <cmp> /\\* ALU operation \\*/   \n15 mb .begin ",
+        "page_idx": 397
+    },
+    {
+        "type": "text",
+        "text": "Here, we first transfer the value in register rs1 to the ALU (in register $A$ ). Then, we check if the second operand is an immediate. If it is an immediate, then we transfer the value of immx to the ALU (in register $B$ ), and simultaneously issue a command to execute a compare in Line 14. However, if the second operand is a register, then we need to read it from the register file (Line 8), and then transfer it to the ALU (Line 9). The last step is to branch to the beginning (mb .begin). ",
+        "page_idx": 397
+    }
+]

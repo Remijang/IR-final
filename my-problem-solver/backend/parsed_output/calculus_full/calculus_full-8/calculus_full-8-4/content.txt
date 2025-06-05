@@ -1,0 +1,148 @@
+8.4 Probability and Calculus
+
+Discrete probability usually involves careful counting. Not many samples are taken and not many experiments are made. There is a list of possible outcomes, and a known probability for each outcome. But probabilities go far beyond red cards and black cards. The real questions are much more practical:
+
+1. How often will too many passengers arrive for a flight ?   
+2. How many random errors do you make on a quiz ?   
+3. What is the chance of exactly one winner in a big lottery ?
+
+Those are important questions and we will set up models to answer them.
+
+There is another point. Discrete models do not involve calculus. The number of errors or bumped passengers or lottery winners is a small whole number. Calculus enters for continuous probability. Instead of results that exactly equal 1 or 2 or 3, calculus deals with results that fall in a range of numbers. Continuous probability comes up in at least two ways:
+
+(A) An experiment is repeated many times and we take averages.   
+ The outcome lies anywhere in an interval of numbers.
+
+In the continuous case, the probability  of hitting a particular value  becomes zero. Instead we have a probability density  —which is a key idea. The chance that a random  falls between a and  is found by integrating the density  :
+
+Roughly speaking,  is the chance of falling between  and  : Certainly  : If  and  are the extreme limits  and  , including all possible outcomes, the probability is necessarily one:
+
+This is a case where infinite limits of integration are natural and unavoidable. In studying probability they create no difficulty—areas out to infinity are often easier.
+
+Here are typical questions involving continuous probability and calculus:
+
+4. How conclusive is a  poll of 2500 voters ?   
+5. Are 16 random football players safe on an elevator with capacity 3600 pounds ?   
+6. How long before your car is in an accident ?
+
+It is not so traditional for a calculus course to study these questions. They need extra thought, beyond computing integrals (so this section is harder than average). But probability is more important than some traditional topics, and also more interesting. Drug testing and gene identification and market research are major applications. Comparing Questions 1–3 with 4–6 brings out the relation of discrete to continuous— the differences between them, and the parallels.
+
+It would be impossible to give here a full treatment of probability theory. I believe you will see the point (and the use of calculus) from our examples. Frank Morgan’s lectures have been a valuable guide.
+
+8 Applications of the Integral
+
+DISCRETE RANDOM VARIABLES
+
+A discrete random variable  has a list of possible values. For two dice the outcomes are  ; : : : ; 12: For coin tosses (see below), the list is infinite:  A continuous variable lies in an interval  :
+
+EXAMPLE 1 Toss a fair coin until heads come up. The outcome  is the number of tosses. The value of  is 1 or 2 or 3 or : : :, and the probability is  that  (heads on the first toss). The probability of tails then heads is  : The probability that  is  —this is the chance of  tails followed by heads. The sum of all probabilities is necessarily 1:
+
+EXAMPLE 2 Suppose a student (not you) makes an average of 2 unforced errors per hour exam. The number of actual errors on the next exam is  or 1 or 2 or : : : : A reasonable model for the probability of  errors—when they are random and independent—is the Poisson model (pronounced Pwason):
+
+The probabilities of no errors, one error, andtwo errors are  ; and  :
+
+The probability of more than two errors is  :
+
+This Poisson model can be derived theoretically or tested experimentally. The total probability is again 1; from the infinite series (Section 6:6) for  :
+
+EXAMPLE 3 Suppose on average 3 out of 100 passengers with reservations don’t show up for a flight. If the plane holds 98 passengers, what is the probability that someone will be bumped ?
+
+If the passengers come independently to the airport, use the Poisson model with 2 changed to 3:  is the number of no-shows, and  happens with probability  :
+
+There are 98 seats and 100 reservations. Someone is bumped if  or  :
+
+We will soon define the average or expected value or mean of  —this model has  :
+
+8.4 Probability and Calculus
+
+CONTINUOUS RANDOM VARIABLES
+
+If  is the lifetime of a VCR, all numbers  are possible. If  is a sco¥re on the SAT, then  : If  is the fraction of computer owners in a poll of 600 people,  is between 0 and 1: You may object that the SAT score is a whole number and the fraction of computer owners must be 0 or  or  or : : : : But it is completely impractical to work with 601 discrete possibilities. Instead we take  to be a continuous random variable, falling anywhere in the range  or Œ200;800 or  : Of course the various valu¤es o f  are not equally probable.
+
+EXAMPLE 4 The average lifetime of a VCR is 4 years. A reasonable model for breakdown time is an exponential random variable. Its probability density is
+
+The probability that the VCR will eventually break is 1:
+
+The probability of breakdown within 12 years (  from 0 to 12) is :95:
+
+An exponential distribution has  : Its integral from 0 to  is  : Figure 8.11 is the graph for  : It shows the area up to  : To repeat: The probability that  is the integral of  from a to  .
+
+EXAMPLE 5 We now define the most important density8fu nctio n.8Suppose the average SAT score is 500; and the standard deviation (defined below—it measures the spread around the average) is 200: Then the normal distribution of grades has
+
+This is the normal (or Gaussian) distribution with mean 500 and standard deviation 200: The graph of  is the famous bell-shaped curve in Figure 8.12.
+
+A new objection is possible.8The actual scores are between 200 and 800, while the density  extends all the way from  to  : I think the Educational Testing Service counts all scores over 800 as 800: The fraction of such scores is pretty small—in fact the normal distribution gives
+
+Regrettably,  has no elementary antiderivative. We need numerical integration. But there is nothing the matter with that! The integral is called the “error function,” and special tables give its value to great accuracy. The integral of  from  to  is exactly  : Thendivision by  keeps  :
+
+Notice that the normal distribution involves two parameters. They are the mean value (in this case  ) and the standard deviation (in this case  ). Those numbers mu and sigma are often given the “normalized” values  and  :
+
+The bell-shaped graph of  is symmetric around the middle point  : The width of the graph is governed by the second parameter  —which stretches the  axis and shrinks the  ax¤is (uleaving8total area equal to 1). The axes are labeled to show the standard case  and also the graph for any other  and  :
+
+We now give a name to the integral of  : The limits will be  and  , so the integral  m ea8sures the probability that  r8ando8m sample is below  :
+
+ accumulates the probabilities given by  , so  : The total probability is  : This integral from  to  covers all outcomes.
+
+Figure 8.12b shows the integral of the bell-shaped normal distribution. The middle point  has  : By symmetry there is a  chance of an outcome below the mean. The cumulative density  is near :  at  and near :84 at  : The chance of falling in between is :  : Thus  of the outcomes are less than one deviation  away from the center  :
+
+Moving out to  and  ,  of the area is in between. With  confidence  is less than two deviations from the mean. Only one sample in 20 is further out (less than one in 40 on each side).
+
+Note that  is not the precise value for the SAT!
+
+MEAN, VARIANCE, AND STANDARD DEVIATION
+
+In Example 1,  was the number of coin tosses until the appearance of heads. The probabilities were  ; : :: What is the averagenumber of tosses ? We now find the “mean”  of any distribution  —not only the normal distribution, where symmetry guarantees that the built-in number  is the mean.
+
+To find  ; multiply outcomes by probabilities and add:
+
+The average number of tosses is  : This series adds up (in Section 10:1) to  : Please do the experiment 10 times. I am almost certain that the average will be near 2:
+
+When the average is  quiz errors or  no-shows, the Poisson probabilities are  Š Check that the formula  does give  as the mean:
+
+For continuous probability, the sum  changes to  : We multiply outcome  by probability  and integrate. In the VCR model, integration by parts gives a mean breakdown time of  years:
+
+Together with the meanwe introduce the variance. It is always written  , and in the normal distribution that measured the “width” of the curve. When  was  , SAT scores spread out pretty far. If the testing service changed to  , the scores would be a disaster.  of them would be within  of the mean. When a teacher announces an average grade of 72, the variance should also be announced—if it is big then those with 60 can relax. At least they have company.
+
+The standard deviation (written  ) is the square root of  :
+
+EXAMPLE 6 (Yes-no poll, one person asked) The probabilities are  and  :
+
+A fraction  of the population thinks yes, the remaining fraction  thinks no. Suppose we only as?k one person. If  for yes and  for no, the expected value of  is  : The variance is  :
+
+The standard deviation is  : When the fraction  is near one or near zero, the spread is smaller—and one person is more likely to give the right answer for everybody. The maximum of  is at  , where  :
+
+The table shows  and  for important probability distributions.
+
+THE LAW OF AVERAGESAND THE CENTRAL LIMIT THEOREM
+
+We come to the center of probability theory (without intending to give proofs). The key idea is to repeat an experiment many times—poll many voters, or toss many dice, or play considerable poker. Each independent experiment produces an outcome  , and the average from  experiments is  : It is called “  bar”:
+
+All we know about  is its mean  and variance  : It is amazing how much information that gives about the average  :
+
+8F Law of Averages:  is almost sure to approach  as  : Central Limit Theorem: The probability density  for  approaches a normal distribution with the same mean  and variance  :
+
+No matter what the probabilities for  , the probabilities for  move toward the normal bell-shaped curve. The standard deviation is close to  when the experiment is repeated  times. In the Law of Averages, “almost sure” means that the chance of  not approaching  is zero. It can happen, but it won’t.
+
+Remark 1 The Boston Globe doesn’t understand the Law of Averages. I quote from September 1988 W “What would happen if a giant Red Soxslump arrived ? What would happen if the fabled Law of Averages came into play, reversing all those can’t miss decisions during the winning streak ? ” They think the Law of Averages evens everything up, favoring heads aft?er a series of tails. See Problem 20:
+
+EXAMPLE 7 Yes-no poll of  voters. Is a  outcome conclusive ?
+
+The fraction  of “yes” voters in the whole population is not known. That is the reason for the poll. The deviation  is also not known, but for one voter this is never more than  (when  ). Therefore  for 2500 voters is no larger than  , which is  :
+
+The result of the poll was  : With  confidence, this sample is within two standard deviations (here  ) of its mean. Therefore with  confidence, the unknown mean  of the whole population is between  and  . This poll is conclusive.
+
+If the true mean had been  , the poll would have had only a :0013 chance of reaching  : The error margin on each side of a poll is a?mazingly simple; it is always  :
+
+Remark 2 The New York Times has better mathematicians than the Globe. Two days after Bush defeated Dukakis, their poll of  voters was printed with the following explanation. “In theory, in 19 cases out of 20 [there is  ] the results should differ by no more than one percentage point [there is  from what would have been obtained by seeking out all voters in the United States.”
+
+EXAMPLE 8 Football players at Caltech (if any) have average weight  pounds and standard deviation  pounds. Are  players safe on an elevator with capacity 3600 pounds ? 16 times 210 is 3360:
+
+8.4 Probability and Calculus
+
+The average weight  is approximately a normal random variable with  and  : There is only a  chance that  is above  (see Figure 8.12b—weights below the mean are no problem on an elevator). Since 16 times 225 is 3600, a statistician would have  confidence that the elevator is safe. This is an example where  is not good enough—I wouldn’t get on.
+
+EXAMPLE 9 (The famous Weldon Dice) Weldon threw 12 dice 26;306 times and counted the 5’s and  . They came up in  of the 315; 672 separate rolls. Thus  instead of the expected fraction  of 5’s and 6’s. Were the dice fair ?
+
+The variance in each roll is  : The standard deviation of  is  084: For fair dice, there is a  chance that  will differ from  by less than  : (For Poisson probabilities that is false. Here  is normal.) But :3377 differs from :3333 by more than  : The chance of falling 5 standard deviations away from the mean is only about 1 in 
+
+So the dice were unfair. The faces with 5 or 6 indentations were lighter than the others, and a little more likely to come up. Modern dice are made to compensate for that, but Weldon never tried again.

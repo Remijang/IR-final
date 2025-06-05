@@ -1,0 +1,49 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.6 Multiple Instruction ISA\\* ",
+        "text_level": 1,
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Writing a program with just a single instruction is very difficult, and programs tend to be very long. There is no reason to be stingy with the number of instructions. We can make our life significantly easier by considering a multitude of instructions. Let us try to break up the basic sbn instructions into several instructions. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Arithmetic Instructions We can have a set of arithmetic instructions such as add, subtract, multiply and divide. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Move Instructions We can have move instructions that move values across different memory locations. They should allow us to also load constant values into memory locations. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Branch Instructions We require branch instructions that change the program counter to point to new instructions based on the results of computations or values stored in memory. ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Keeping these basic tenets in mind, we can design numerous types of complete ISAs. The point to note is that we definitely need three types of instructions \u2013 arithmetic (data processing), move (data transfer), and branch (control). ",
+        "page_idx": 33
+    },
+    {
+        "type": "text",
+        "text": "Important Point 4 ",
+        "text_level": 1,
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "In any instruction set, we need at least three types of instructions: ",
+        "page_idx": 34
+    },
+    {
+        "type": "text",
+        "text": "1. We need arithmetic instructions to perform operations such as add, subtract, multiply, and divide. Most instruction sets also have specialized instructions in this category to perform logical operations such as logical OR and NOT.   \n2. We need data transfer instructions that can transfer values between memory locations and can load constants into memory locations.   \n3. We need branch instructions that can start executing instructions at different points in the program based on the values of instruction operands. ",
+        "page_idx": 34
+    }
+]

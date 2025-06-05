@@ -1,0 +1,81 @@
+7.5.2 Further Reading
+
+Semiconductors and electronic devices are thoroughly studied in advanced courses on semiconductor device physics. Readers can refer to the books by Sze [Sze and Ng, 2006], and Streetman [Streetman and Banerjee, 2005] for a deeper discussion on the physics of semiconductor devices. In advanced courses on semiconductor device physics, students typically study the basics of the operations of diodes, transistors, and other semiconductor devices from the point of view of quantum mechanics. After introducing semiconductor devices, we introduced combinational logic gates and sequential logic elements. The simple structures that we introduced in this chapter, are very commonly used. Students should however take a look at the following books [Lin, 2011, Wakerly, 2000, Dally and Poulton, 1998] for getting a thorough understanding of the devices, including their behavior from the perspective of analog electronics. We lastly talk about memories. The book, “Introduction to VLSI Systems”, by Ming Bo Lin [Lin, 2011] has a fairly in-depth coverage of memory structures. Memory technology, especially DRAM technology, is advancing very quickly. A host of standards, and design styles have evolved over the last decade. A lot of these trends are discussed in the book on memory systems by Jacob, Ng, and Wang [Jacob et al., 2007]. This book is also very useful for professionals who are looking to build commercial systems with state-of-the-art memory technology.
+
+Exercises
+
+Transistors and Logic Gates
+
+Ex. 1 — Describe the operation of a p-n junction.   
+Ex. 2 — Define drift and diffusion current.   
+Ex. 3 — Describe the operation of a NMOS transistor?   
+Ex. 4 — Draw the circuit of a CMOS inverter, NOR gate, and NAND gate.   
+Ex. 5 — Implement the AND, OR and NOT gates using NAND gates only.   
+Ex. 6 — Implement the AND, OR and NOT gates using NOR gates only.   
+Ex. 7 — Implement XOR and XNOR gates using NAND gates only.   
+Ex. 8 — Implement the following Boolean functions by using only AND, OR and NOT gates. (a)  (b)  (c)  (d) 
+
+Ex. 9 — Answer Question 8 by using only NAND gates.
+
+Combinational Logic and Sequential Logic
+
+Ex. 10 — Draw the circuit diagram of a  decoder.
+
+Ex. 11 — Draw the circuit diagram of a 8-3 bit encoder.
+
+Ex. 12 — Draw the circuit diagram of a 8-3 bit priority encoder.
+
+Ex. 13 — Suppose a poll has to be conducted with three entities A, B and C, each of which can either vote a ‘yes’ (encoded as 1) or a ‘no’ (encoded as 0). The final output is equal to the majority opinion. Draw a truth table of the system, simplify the function, and implement it using logic gates.
+
+\* Ex. 14 — Most circuits in modern computers are built using NAND and NOR gates, because they are easy to build using CMOS technology. Suppose another technology in invented in the near future, which implements a new gate,  , very efficiently.  takes 3 inputs  ,  and  and computes:  . Using only X gates and NOT gates, how will you implement the following function:  ?
+
+\*\* Ex. 15 — Implement the following logic functions using a 4 to 1 multiplexer, and a single NOT gate.
+
+(a)  (b)  (c) 
+
+\*\* Ex. 16 — Is it possible to implement every 3 variable Boolean function with a 4 to 1 multiplexer, and a single NOT gate? Prove your answer.
+
+Sequential Logic
+
+Ex. 17 — What is the difference between a flip-flop and a latch?
+
+Ex. 18 — Define the following terms: i)Metastability ii)Keep out region iii)Setup time iv)Hold time
+
+Ex. 19 — Why do we wish to avoid the indeterminate state in an SR flip-flop?
+
+Ex. 20 — What is the advantage of an edge sensitive flip-flop?
+
+\* Ex. 21 — What is the fundamental advantage of a JK flip-flop over a D flip-flop?
+
+Ex. 22 — Describe the design of registers in your own words.
+
+Ex. 23 — An edge sensitive toggle flip-flop (or T flip-flop) has a single input  and toggles its state on a negative clock edge if  . If (  ), then it maintains its state. How will you construct an edge sensitive T flip-flop form an edge sensitive J-K flip-flop?
+
+\* Ex. 24 — Can you create a negative edge triggered D flip-flop using 2 multiplexers, and a NOT gate?
+
+Ex. 25 — Design a SR flip-flop with NOR gates.
+
+\* Ex. 26 — Using two edge triggered D flip-flops, design a circuit that divides the frequency of the clock signal by 4.
+
+\*\* Ex. 27 — Counters are essential components of any complex digital circuit. They are essentially sequential circuits which loop through a specific set of states. Design a counter which generates a sequence of numbers (in binary form) from 0 to 7 and cycles back again to 0. This is called a MOD 8 counter.
+
+\*\* Ex. 28 — Using D flip-flops and logic gates, design a circuit, which generates the following sequence of numbers:
+
+Assume that the circuit never generates 000. This circuit can be used to generate pseudorandom numbers.
+
+Memories
+
+Ex. 29 — Compare the power, area and time of an SRAM, DRAM, and latch.   
+Ex. 30 — Propose a design for the column mux/demux circuit.   
+Ex. 31 — What is the role of the match line in a CAM array?   
+Ex. 32 — What is the role of the refresh logic in a DRAM array?   
+Ex. 33 — Describe the design of a ROM and PROM cell.   
+Ex. 34 — Design a single PLA array to compute al the following Boolean functions: a  b)A.B.C + A.B.C c)A + B
+
+Design Problems
+
+Ex. 35 — Design the following circuits using a circuit simulator such as Spice and verify their operation:
+
+a)NOT gate b)NAND gate c)D flip-flop d)SRAM cell
+
+Ex. 36 — Prepare a report on novel memory technologies such as phase change memory, Ferro-electric RAM, and magneto-resistive RAM.

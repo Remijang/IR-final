@@ -1,0 +1,312 @@
+[
+    {
+        "type": "text",
+        "text": "5.3.3 Branch/ Function Call Instructions Conditional and Unconditional Branch Instructions ",
+        "text_level": 1,
+        "page_idx": 197
+    },
+    {
+        "type": "table",
+        "img_path": "images/a243769529af00fa0d6f1aebe7f832f1815bea0978993880652d202a338f8ff6.jpg",
+        "table_caption": [
+            "Table 5.14: Semantics of branch instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>jmp (label)</td><td>jmp .foo</td><td>jump to .foo</td></tr><tr><td>j (condcode)</td><td>j (condcode) .foo</td><td>jump to .foo if the (condcode) con- dition is satisfied</td></tr></table></body></html>\n\n",
+        "page_idx": 197
+    },
+    {
+        "type": "table",
+        "img_path": "images/be1dd54728bb9aae58c6cd6f63adeeafa12bcf74adeedf25810281ed017b82d1.jpg",
+        "table_caption": [
+            "Table 5.15: Condition codes in x86 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Condition code</td><td>Meaning</td></tr><tr><td>0</td><td>Overflow</td></tr><tr><td>no</td><td>No overflow</td></tr><tr><td>b</td><td>Below (unsigned less than)</td></tr><tr><td>nb</td><td>Not below (unsigned greater than or equal to)</td></tr><tr><td>e/z</td><td>Equal or zero</td></tr><tr><td>ne/nz</td><td>Not equal or not zero</td></tr><tr><td>be</td><td>Below or equal (unsigned less than or equal)</td></tr><tr><td>S</td><td>Sign bit is 1 (negative)</td></tr><tr><td>ns</td><td>Sign bit is O (O or positive)</td></tr><tr><td></td><td>Less than (signed less than)</td></tr><tr><td>le</td><td>Less than or equal (signed)</td></tr><tr><td>g</td><td>Greater than (signed)</td></tr><tr><td>ge</td><td>Greater than or equal (signed)</td></tr></table></body></html>\n\n",
+        "page_idx": 197
+    },
+    {
+        "type": "text",
+        "text": "Table 5.14 shows the semantics of branch instructions. jmp is an unconditional branch instruction that branches to a label. The assembler internally replaces the label by the PC of the label. x86 defines a series of branch instructions with the $j$ prefix. These are conditional branch instructions. The $j$ prefix is followed by the branch condition. The conditions are shown in Table 5.15. For example, the instruction $j e$ means jump if equal. If the last comparison has resulted in an equality, then the processor branches to the label; otherwise, it executes the next instruction. If the condition is not satisfied, the conditional branch is equivalent to a nop instruction. ",
+        "page_idx": 197
+    },
+    {
+        "type": "text",
+        "text": "Now that we have introduced branch instructions, we can implement complex algorithms using loops. Let us look at a couple of examples. We would like to advise the reader at this point that the best method to learn assembly language is by actually writing assembly programs. No amount of theoretical reading can substitute for actual practice. ",
+        "page_idx": 197
+    },
+    {
+        "type": "text",
+        "text": "Example 71   \nWrite a program in x86 assembly to add the numbers from 1 to 10. Answer: ",
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "x86 assembly code mov eax, 0 ; sum = 0 2 mov ebx, 1 ; idx = 1 .loop: 4 add eax, ebx ; sum += idx inc ebx ; idx ++ 6 cmp ebx, 10 ; compare idx and 10 7 jle .loop ; jump if idx <= 10 ",
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "Here, we store the running sum in eax and the index in ebx. In Line 4, we add the index to the sum. We subsequently, increment the index, and compare it with 10 in Line 6. If it is less than or equal to 10, then we continue iterating. eax contains the final value. ",
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "Example 72 ",
+        "text_level": 1,
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "Write a program in x86 assembly to test if a number stored in eax is prime. Save the result in eax. If the number is prime, set eax to 1, otherwise set it to 0. Assume that the number in eax is greater than 10. ",
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "x86 assembly code   \n1 mov ebx, 2 ; starting index   \n2 mov ecx, eax ; ecx contains the original number   \n.loop:   \n4 mov edx, 0 ; required for correct division   \n5 idiv ebx   \n6 cmp edx, 0 ; compare the remainder   \n7 je .notprime ; number is composite   \n8 inc ebx   \n9 mov eax, ecx ; set the value of eax again   \n10 cmp ebx, eax ; compare the index and the number   \n11 jl .loop   \n12   \n13 ; end of the loop   \n14 mov eax, 1 ; number is prime   \n15 jmp .exit ; exit   \n16   \n17 .notprime:   \n18 mov eax, 0   \n19 .exit: ",
+        "page_idx": 198
+    },
+    {
+        "type": "text",
+        "text": "In this algorithm, we keep on dividing the input (stored in eax) by a monotonically increasing index. If the remainder is equal to 0 in any iteration, then the number is composite (non-prime). Otherwise, the number is prime. In specific, we perform the division in Line 5, and jump to the label .notprime if the remainder (stored in edx) is 0. Otherwise, we increment the index in ebx, and keep iterating. Note that in each iteration, we need to set the values of eax and edx because they are overwritten by the idiv instruction. ",
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "Example 73 ",
+        "text_level": 1,
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "Write a program in x86 assembly to find the factorial of a number stored in eax. Save your result in ecx. You can assume that the number is greater than 10. ",
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 199
+    },
+    {
+        "type": "table",
+        "img_path": "images/a8f10c010e69463ebd4d8fd4e418bb19d82c50965abd0f69839678a618e7c3c3.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"8\"></td><td>x86 assembly code</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td colspan=\"8\">mov ebx,2</td><td>\uff1bidx = 2</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td></td><td>mov ecx,</td><td>1</td><td></td><td></td><td>\uff1bprod = 1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>.loop:</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5</td><td></td><td>imul ecx\uff0cebx</td><td></td><td></td><td>\uff1bprod *= idx</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>inc ebx</td><td></td><td></td><td>\uff1bidx++</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>6</td><td></td><td>cmp ebx\uff0ceax</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>\uff1bcompare num (number\uff09 and idx</td><td></td><td></td></tr><tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>\uff1b jump to .loop if idx <= num</td><td></td><td></td></tr><tr><td>8</td><td></td><td>jle .loop</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "In Line 2, we initialize the product to 1. Subsequently, we multiply the index with the product in Line 5. We then increment the index, and compare it with the input stored in eax. We keep on iterating till the index is less than or equal to the input. ",
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "Function Call and Return Instructions ",
+        "text_level": 1,
+        "page_idx": 199
+    },
+    {
+        "type": "table",
+        "img_path": "images/c22bd234a6ec3d6d064f4f74a9e430dab16b5d63b6afd7978f34294be72db404.jpg",
+        "table_caption": [
+            "Table 5.16: Semantics of the function call and return instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>call (label)</td><td>call .foo</td><td>Push the return address on the stack. Jump to the label .foo.</td></tr><tr><td>ret</td><td>ret</td><td>Return to the address saved on the top of the stack,and pop the entry</td></tr></table></body></html>\n\n",
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "Unlike ARM and SimpleRisc , x86 does not have a return address register. The call instruction pushes the return address on the stack, and jumps to the beginning of the function as explained in Table 5.16. Similarly, the ret instruction jumps to the entry at the top of the stack. The entry at the top of the stack needs to contain the return address. The ret instruction subsequently pops the stack and removes the return address. Let us now consider a set of examples. ",
+        "page_idx": 199
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "Example 74   \nWrite a recursive function to compute the factorial of a number $( \\geq 1 _ { \\cdot }$ ) stored in eax. Save the result in ebx. ",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 200
+    },
+    {
+        "type": "table",
+        "img_path": "images/47e25429516e6c961cee1c4dcddb042f1dc3741f780a216b65d0408a61755552.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td><td></td><td>x86 assembly code</td><td></td></tr><tr><td>factorial:</td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td>mov ebx\uff0c1</td><td></td><td>\uff1bdefault return value</td><td></td></tr><tr><td>3</td><td>cmp eax\uff0c1</td><td></td><td>\uff1bcompare num (input\uff09 with 1</td><td></td></tr><tr><td>4</td><td>je .return</td><td></td><td>; return if input is equal to 1</td><td></td></tr><tr><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td>6</td><td>; recursive step</td><td></td><td></td><td></td></tr><tr><td>7</td><td>push eax</td><td></td><td>\uff1asave input on the stack</td><td></td></tr><tr><td>8</td><td>dec eax</td><td>\uff1bnum--</td><td></td><td></td></tr><tr><td>9</td><td>call factorial</td><td></td><td>\uff1brecursive call</td><td></td></tr><tr><td>10</td><td>pop eax</td><td></td><td>;retrieve input</td><td></td></tr><tr><td>11</td><td>imul ebx\uff0ceax</td><td></td><td>\uff1b prod = prod * num</td><td></td></tr><tr><td>12</td><td></td><td></td><td></td><td></td></tr><tr><td>13</td><td>.return:</td><td></td><td></td><td></td></tr><tr><td>14</td><td>ret</td><td>\uff1breturn</td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "In the factorial function, we assume that the input (num) is stored in eax. We first compare the input with 1. If it is equal to 1, then we return 1 (Lines 2 to 4). However, if the input is greater than 1, then we save the input by pushing it to the stack (7). Subsequently, we decrement it and recursively call the factorial function in Line 9. The result of the recursive call is stored in ebx. To compute the result (in ebx), we multiply ebx with num (stored in eax) in Line 11. ",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "In Example 74 we pass arguments through registers. We use the stack to store only those values that are overwritten by the callee function. Let us now use the stack to pass arguments to the factorial function (see Example 75) ",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "Example 75 ",
+        "text_level": 1,
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "Write a recursive function to compute the factorial of a number $( \\geq 1 ,$ stored in eax. Save the result in ebx. Use the stack to pass arguments. ",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "Answer: x86 assembly code   \n2 factorial: ",
+        "page_idx": 200
+    },
+    {
+        "type": "text",
+        "text": "mov eax, [esp+4] ; get the value of eax from the stack   \n4 mov ebx, 1 ; default return value   \n5 cmp eax, 1 ; compare num (input) with 1   \n6 je .return ; return if input is equal to 1   \n7   \n8 ; recursive step   \n9 push eax ; save eax on the stack   \n10 dec eax ; num  \n11 push eax ; push the argument   \n12 call factorial ; recursive call   \n13 pop eax ; pop the argument   \n14 pop eax ; retrieve the value of eax   \n15 imul ebx, eax ; prod $\\mathbf { \\sigma } = \\mathbf { \\sigma }$ prod $^ *$ num   \n16   \n17 .return:   \n18 ret ; return ",
+        "page_idx": 201
+    },
+    {
+        "type": "text",
+        "text": "Here, we use the stack to pass arguments. Since the stack pointer gets automatically decremented by 4 after a function call, the argument eax is available at [esp $^ +$ 4] because we push it on the stack just before we call the function. To call the factorial function again, we push eax on the stack, and then pop it out after the function returns. ",
+        "page_idx": 201
+    },
+    {
+        "type": "text",
+        "text": "Let us now assume that we have a lot of arguments. In this case, we need to push and pop a lot of arguments from the stack. It is possible that we might lose track of the order of push and pop operations, and bugs might be introduced in our program. Hence, if we have a lot of arguments, it is a better idea to create space in the stack by subtracting the estimated size of the activation block from the stack pointer and moving data between the registers and stack using regular mov instructions. Let us now modify our factorial example to use mov instructions instead of push and pop instructions (see Example 76). ",
+        "page_idx": 201
+    },
+    {
+        "type": "text",
+        "text": "Example 76 ",
+        "text_level": 1,
+        "page_idx": 201
+    },
+    {
+        "type": "text",
+        "text": "Write a recursive function to compute the factorial of a number $( \\geq 1 _ { \\ast }$ ) stored in eax. Save the result in ebx. Use the stack to pass arguments. Avoid push and pop instructions. Answer: ",
+        "page_idx": 201
+    },
+    {
+        "type": "text",
+        "text": "x86 assembly code factorial: 2 mov eax, [esp+4] ; get the value of eax from the stack 3 mov ebx, 1 ; default return value 4 cmp eax, 1 ; compare num (input) with 1 5 jz .return ; return if input is equal to 1 6 ",
+        "page_idx": 201
+    },
+    {
+        "type": "table",
+        "img_path": "images/7142513ed45843146387b8e5aaa414730b5deb9bf2b56584937a0b4f950587f3.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>;recursive step 8 sub esp\uff0c8 ;create space on the stack 9 mov [esp+4]\uff0ceax ; save the input eax on the stack 10 dec eax \uff1bnum-- 11 mov [esp],eax \uff1b push the argument 12 call factorial \uff1brecursive call 13 mov eax\uff0c[esp+4] \uff1bretrieve eax 14 imul ebx,eax ;prod = prod * num 15 add esp\uff0c8 ;restore the stack pointer 16</td></tr></table></body></html>\n\n",
+        "page_idx": 202
+    },
+    {
+        "type": "text",
+        "text": "In this example, we have avoided push and pop instructions altogether. We instead create space on the stack by subtracting 8 bytes from esp in Line 8. We use 4 bytes to save the input (in eax) for later use, and use the rest of the 4 bytes to send the argument to the recursive function call. After the function returns, we retrieve the value of eax from the stack in Line 13. Lastly, we restore the stack pointer in Line 15. ",
+        "page_idx": 202
+    },
+    {
+        "type": "text",
+        "text": "However, this method is also not suitable for large functions in complex programming languages such as C++. In a lot of C++ functions, we dynamically allocate space on the stack. In such cases, most of the time, we do not know the size of the activation block (see Section 3.3.10) of a function in advance. Hence, deallocating an activation block becomes difficult. We need to dynamically keep track of the size of the activation block of the function. This introduces additional complexity, and additional code. It is a better idea to save the value of $e s p$ in a dedicated register at the beginning of a function. At the end of the function, we can transfer the saved value in the register to $e s p$ . This strategy effectively destroys the activation block. Most of the time, we use the ebp (base pointer) register to save the value of esp at the beginning of a function. This register is also referred to as the frame pointer. Now, it is possible that a called function might follow the same strategy, and overwrite the value of ebp set by the caller. Thus, in this case, ebp needs to be a callee saved register. If an invoked function overwrites the value of ebp, it needs to ensure that by the time it returns to the caller, the value of ebp is restored. By using the base pointer, we do not need to explicitly remember the size of the activation block. We dynamically allocate data structures on the stack. ",
+        "page_idx": 202
+    },
+    {
+        "type": "text",
+        "text": "Let us augment our running example with this feature (see Example 77). ",
+        "page_idx": 202
+    },
+    {
+        "type": "text",
+        "text": "Example 77   \nWrite a recursive function to compute the factorial of a number (\u2265 1) stored in eax. Save the result in ebx. Use the stack to pass arguments. Avoid push and pop instructions. Secondly, use the ebp register to store the value of the stack pointer.   \nAnswer: ",
+        "page_idx": 202
+    },
+    {
+        "type": "table",
+        "img_path": "images/4ad0e7fd41dccb810c03b52034c1b1ffae05cf5998530e0749f0cdd122610b75.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>x86 assembly code</td></tr><tr><td>factorial:</td></tr><tr><td>mov eax\uff0c[esp+4] \uff1b get the value of eax from the stack</td></tr><tr><td>push ebp \uff1bsave ebp</td></tr><tr><td>5 mov ebp\uff0cesp \uff1bsave the stack pointer</td></tr><tr><td>6</td></tr><tr><td>7 mov ebx,1 \uff1bdefault return value cmp eax\uff0c1 \uff1bcompare num (input\uff09 with 1</td></tr><tr><td>8 9 je .return ; return if input is equal to 1</td></tr><tr><td>10</td></tr><tr><td>11 ; recursive step</td></tr><tr><td>12 sub esp,8 \uff1bcreate space on the stack</td></tr><tr><td>13 mov [esp+4]\uff0ceax \uff1bsave input on the stack</td></tr><tr><td>14 dec eax ;num-</td></tr><tr><td>15 mov [esp]\uff0ceax \uff1bpush the argument</td></tr><tr><td>16 call factorial \uff1brecursive call</td></tr><tr><td>17 mov eax\uff0c[esp+4] ;retrieve input</td></tr><tr><td>18 imul ebx\uff0ceax \uff1b prod = prod * num 19</td></tr><tr><td>.return: 20</td></tr><tr><td>21 mov esp\uff0cebp ;restore the stack pointer</td></tr><tr><td>22 pop ebp ;restore ebp</td></tr><tr><td></td></tr><tr><td>23 ret \uff1breturn</td></tr></table></body></html>\n\n",
+        "page_idx": 203
+    },
+    {
+        "type": "text",
+        "text": "Here, we save the old value of ebp on the stack, and set its new value to the stack pointer in Lines 4 and 5, respectively. At the end of the function, we restore the values of esp and ebp in Lines 21 and 22. ",
+        "page_idx": 203
+    },
+    {
+        "type": "text",
+        "text": "Stack Management Instructions \u2013 enter and leave ",
+        "text_level": 1,
+        "page_idx": 203
+    },
+    {
+        "type": "table",
+        "img_path": "images/2d50952e07acb896add130c1175ee9664fe4ee2e9d9d33a0c995ce127758f8b2.jpg",
+        "table_caption": [
+            "Table 5.17: Semantics of the enter and leave instructions. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>enter imm,0</td><td>enter 32,0</td><td>push ebp (push the value of ebp on the stack)\uff1bmov ebp,esp (save the stack pointer in ebp)\uff1besp \u2190 esp -</td></tr><tr><td>leave</td><td>leave</td><td>32 mov esp,ebp (restore the value of esp); pop ebp (restore the value of ebp)</td></tr></table></body></html>\n\n",
+        "page_idx": 203
+    },
+    {
+        "type": "text",
+        "text": "The four extra lines added in Example 77 are fairly generic, and are typically part of most large functions. Programmers can add them if they are writing assembly code, or compilers can add them during automatic code generation. In either case, using the base pointer is a very convenient mechanism to manage the stack, and to destroy the activation block. Since these set of instructions are so commonly used, the designers of the x86 ISA decided to dedicate two specialized instructions for this purpose. The enter instruction pushes the value of ebp on the stack, and sets its new value to be equal to the stack pointer. Additionally, it is also possible to set the initial size of the activation block. The first argument takes the size of the activation block. If we specify 32 as the first argument, then the enter instruction decrements $e s p$ by 32. Note that during the course of execution of the function, the size of the activation block might continue to vary. The second argument for the enter instruction corresponds to the nesting level of the function. We shall refrain from discussing it here. Interested readers can refer to the references mentioned at the end of the chapter. We shall simply use the value of 0 for the second argument. ",
+        "page_idx": 204
+    },
+    {
+        "type": "text",
+        "text": "The leave instruction performs the reverse set of computations. It first restores the value of $e s p$ , and then the value of ebp (see Table 5.17). Note that the leave instruction is meant to be invoked just before the ret instruction. We can thus augment Example 77 to use the enter and leave instructions (see Example 78). Secondly, we can omit the statement that subtracted 8 from esp (Line 12) in Example 77 because this functionality is now built in to the enter instruction. ",
+        "page_idx": 204
+    },
+    {
+        "type": "text",
+        "text": "Example 78 ",
+        "text_level": 1,
+        "page_idx": 204
+    },
+    {
+        "type": "text",
+        "text": "Write a recursive function to compute the factorial of a number $( \\geq 1$ ) stored in eax. Save the result in ebx. Use the stack to pass arguments. Avoid push and pop instructions. Use the enter and leave instructions to buffer the values of ebp and esp. ",
+        "page_idx": 204
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 204
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f9e69c5a23c9319a3a11c56b3846c63f384c618419652661f176ec3f86ef97a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 204
+    },
+    {
+        "type": "table",
+        "img_path": "images/15b39f3572069d7b55c28b562300e9d7398569af5ea7e43495c1951a2aefbbf2.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"4\">18</td></tr><tr><td>19</td><td colspan=\"4\">.return:</td></tr><tr><td>20</td><td>leave</td><td></td><td>; load esp and ebp</td></tr><tr><td>21</td><td>ret</td><td>\uff1breturn</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 205
+    },
+    {
+        "type": "text",
+        "text": "Lastly, we should mention that x86 processors have a nop instruction that does not do anything at all. It is mainly used for the purpose of ensuring correctness in modern processors (see Chapter 10), and for ensuring that blocks of code are aligned to 16-byte or 64-byte boundaries. We require the latter functionality for better behavior at the level of the memory system. ",
+        "page_idx": 205
+    }
+]

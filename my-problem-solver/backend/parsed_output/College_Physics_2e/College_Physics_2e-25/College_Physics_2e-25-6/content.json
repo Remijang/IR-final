@@ -1,0 +1,927 @@
+[
+    {
+        "type": "text",
+        "text": "25.6 Image Formation by Lenses ",
+        "text_level": 1,
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "List the rules for ray tracking for thin lenses. Illustrate the formation of images using the technique of ray tracking. \u2022 Determine power of a lens given the focal length. ",
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "Lenses are found in a huge array of optical instruments, ranging from a simple magnifying glass to the eye to a camera\u2019s zoom lens. In this section, we will use the law of refraction to explore the properties of lenses and how they form images. ",
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "The word lensderives from the Latin word for a lentil bean, the shape of which is similar to the convex lens in Figure 25.25. The convex lens shown has been shaped so that all light rays that enter it parallel to its axis cross one another at a single point on the opposite side of the lens. (The axis is defined to be a line normal to the lens at its center, as shown in Figure 25.25.) Such a lens is called a converging (or convex) lens for the converging effect it has on light rays. An expanded view of the path of one ray through the lens is shown, to illustrate how the ray changes direction both as it enters and as it leaves the lens. Since the index of refraction of the lens is greater than that of air, the ray moves towards the perpendicular as it enters and away from the perpendicular as it leaves. (This is in accordance with the law of refraction.) Due to the lens\u2019s shape, light is thus bent toward the axis at both surfaces. The point at which the rays cross is defined to be the focal point F of the lens. The distance from the center of the lens to its focal point is defined to be the focal length $f$ of the lens. Figure 25.26 shows how a converging lens, such as that in a magnifying glass, can converge the nearly parallel light rays from the sun to a small spot. ",
+        "page_idx": 1135
+    },
+    {
+        "type": "image",
+        "img_path": "images/02b54cc93c3eecbdb9e61dbbd6d134f07de3addb8668b10fb86606ef5a9217b7.jpg",
+        "img_caption": [
+            "FIGURE 25.25 Rays of light entering a converging lens parallel to its axis converge at its focal point F. (Ray 2 lies on the axis of the lens.) The distance from the center of the lens to the focal point is the lens\u2019s focal length $f$ . An expanded view of the path taken by ray 1 shows the perpendiculars and the angles of incidence and refraction at both surfaces. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "Converging or Convex Lens ",
+        "text_level": 1,
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "The lens in which light rays that enter it parallel to its axis cross one another at a single point on the opposite side with a converging effect is called converging lens. ",
+        "page_idx": 1135
+    },
+    {
+        "type": "text",
+        "text": "Focal Point F ",
+        "text_level": 1,
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "The point at which the light rays cross is called the focal point F of the lens. ",
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "Focal Length $f$ ",
+        "text_level": 1,
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "The distance from the center of the lens to its focal point is called focal length $f$ . ",
+        "page_idx": 1136
+    },
+    {
+        "type": "image",
+        "img_path": "images/0a97145bddeaf9c7d4b3a0bea81fa849e880e613c1803bc3e12ca9c2b5487efc.jpg",
+        "img_caption": [
+            "FIGURE 25.26 Sunlight focused by a converging magnifying glass can burn paper. Light rays from the sun are nearly parallel and cross at the focal point of the lens. The more powerful the lens, the closer to the lens the rays will cross. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "The greater effect a lens has on light rays, the more powerful it is said to be. For example, a powerful converging lens will focus parallel light rays closer to itself and will have a smaller focal length than a weak lens. The light will also focus into a smaller and more intense spot for a more powerful lens. The power $P$ of a lens is defined to be the inverse of its focal length. In equation form, this is ",
+        "page_idx": 1136
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = { \\frac { 1 } { f } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "Power $P$ ",
+        "text_level": 1,
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "The power $P$ of a lens is defined to be the inverse of its focal length. In equation form, this is ",
+        "page_idx": 1136
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = { \\frac { 1 } { f } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "where $f$ is the focal length of the lens, which must be given in meters (and not cm or mm). The power of a lens $P$ has the unit diopters (D), provided that the focal length is given in meters. That is, $1 \\mathrm { D } = 1 / \\mathrm { m }$ , or $1 \\mathrm { m } ^ { - 1 }$ . (Note that this power (optical power, actually) is not the same as power in watts defined in Work, Energy, and Energy Resources. It is a concept related to the effect of optical devices on light.) Optometrists prescribe common spectacles and contact lenses in units of diopters. ",
+        "page_idx": 1136
+    },
+    {
+        "type": "image",
+        "img_path": "images/8c92bde83f762a85e788a6a1f190d0ec2ec4d79837147cb41d24a53f399244f9.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.5 ",
+        "text_level": 1,
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "What is the Power of a Common Magnifying Glass? ",
+        "text_level": 1,
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "Suppose you take a magnifying glass out on a sunny day and you find that it concentrates sunlight to a small spot 8.00 cm away from the lens. What are the focal length and power of the lens? ",
+        "page_idx": 1136
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "The situation here is the same as those shown in Figure 25.25 and Figure 25.26. The Sun is so far away that the Sun\u2019s rays are nearly parallel when they reach Earth. The magnifying glass is a convex (or converging) lens, focusing the nearly parallel rays of sunlight. Thus the focal length of the lens is the distance from the lens to the spot, and its power is the inverse of this distance (in m). ",
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "The focal length of the lens is the distance from the center of the lens to the spot, given to be 8.00 cm. Thus, ",
+        "page_idx": 1137
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf = 8 . 0 0 \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "To find the power of the lens, we must first convert the focal length to meters; then, we substitute this value into the equation for power. This gives ",
+        "page_idx": 1137
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = { \\frac { 1 } { f } } = { \\frac { 1 } { 0 . 0 8 0 0 ~ { \\mathrm { m } } } } = 1 2 . 5 ~ { \\mathrm { D } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "This is a relatively powerful lens. The power of a lens in diopters should not be confused with the familiar concept of power in watts. It is an unfortunate fact that the word \u201cpower\u201d is used for two completely different concepts. If you examine a prescription for eyeglasses, you will note lens powers given in diopters. If you examine the label on a motor, you will note energy consumption rate given as a power in watts. ",
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "Figure 25.27 shows a concave lens and the effect it has on rays of light that enter it parallel to its axis (the path taken by ray 2 in the figure is the axis of the lens). The concave lens is a diverging lens, because it causes the light rays to bend away (diverge) from its axis. In this case, the lens has been shaped so that all light rays entering it parallel to its axis appear to originate from the same point, , defined to be the focal point of a diverging lens. The distance from the center of the lens to the focal point is again called the focal length $f$ of the lens. Note that the focal length and power of a diverging lens are defined to be negative. For example, if the distance to $F$ in Figure 25.27 is $5 . 0 0 \\mathsf { c m }$ , then the focal length is $f = - 5 . 0 0 \\mathrm { c m }$ and the power of the lens is $P = - 2 0 { \\mathrm { D } }$ . An expanded view of the path of one ray through the lens is shown in the figure to illustrate how the shape of the lens, together with the law of refraction, causes the ray to follow its particular path and be diverged. ",
+        "page_idx": 1137
+    },
+    {
+        "type": "image",
+        "img_path": "images/5bc667be3f972c9f8b5717e632ecbc2e0f44f7709bf185b96890a530c272bb52.jpg",
+        "img_caption": [
+            "FIGURE 25.27 Rays of light entering a diverging lens parallel to its axis are diverged, and all appear to originate at its focal point . The dashed lines are not rays\u2014they indicate the directions from which the rays appear to come. The focal length $f$ of a diverging lens is negative. An expanded view of the path taken by ray 1 shows the perpendiculars and the angles of incidence and refraction at both surfaces. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1137
+    },
+    {
+        "type": "text",
+        "text": "Diverging Lens ",
+        "text_level": 1,
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "A lens that causes the light rays to bend away from its axis is called a diverging lens. ",
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "As noted in the initial discussion of the law of refraction in The Law of Refraction, the paths of light rays are exactly reversible. This means that the direction of the arrows could be reversed for all of the rays in Figure 25.25 and Figure 25.27. For example, if a point light source is placed at the focal point of a convex lens, as shown in Figure 25.28, parallel light rays emerge from the other side. ",
+        "page_idx": 1138
+    },
+    {
+        "type": "image",
+        "img_path": "images/8ceaa7aea3eb06a4bf5d750225855f90ab25000791c400d6001976136bf83e6a.jpg",
+        "img_caption": [
+            "FIGURE 25.28 A small light source, like a light bulb filament, placed at the focal point of a convex lens, results in parallel rays of light emerging from the other side. The paths are exactly the reverse of those shown in Figure 25.25. This technique is used in lighthouses and sometimes in traffic lights to produce a directional beam of light from a source that emits light in all directions. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "Ray Tracing and Thin Lenses ",
+        "text_level": 1,
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "Ray tracing is the technique of determining or following (tracing) the paths that light rays take. For rays passing through matter, the law of refraction is used to trace the paths. Here we use ray tracing to help us understand the action of lenses in situations ranging from forming images on film to magnifying small print to correcting nearsightedness. While ray tracing for complicated lenses, such as those found in sophisticated cameras, may require computer techniques, there is a set of simple rules for tracing rays through thin lenses. A thin lens is defined to be one whose thickness allows rays to refract, as illustrated in Figure 25.25, but does not allow properties such as dispersion and aberrations. An ideal thin lens has two refracting surfaces but the lens is thin enough to assume that light rays bend only once. A thin symmetrical lens has two focal points, one on either side and both at the same distance from the lens. (See Figure 25.29.) Another important characteristic of a thin lens is that light rays through its center are deflected by a negligible amount, as seen in Figure 25.30. ",
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "Thin Lens ",
+        "text_level": 1,
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "A thin lens is defined to be one whose thickness allows rays to refract but does not allow properties such as dispersion and aberrations. ",
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: A Visit to the Optician ",
+        "text_level": 1,
+        "page_idx": 1138
+    },
+    {
+        "type": "text",
+        "text": "Look through your eyeglasses (or those of a friend) backward and forward and comment on whether they act like thin lenses. ",
+        "page_idx": 1138
+    },
+    {
+        "type": "image",
+        "img_path": "images/7002e9a0b4a9234988070a9aaafec68811ace32acf4aa760c9077ab64bd2544f.jpg",
+        "img_caption": [
+            "FIGURE 25.29 Thin lenses have the same focal length on either side. (a) Parallel light rays entering a converging lens from the right cross a its focal point on the left. (b) Parallel light rays entering a diverging lens from the right seem to come from the focal point on the right. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1139
+    },
+    {
+        "type": "image",
+        "img_path": "images/a6bfffdacb1da0737d93ff42f958a526fd45553418afd6a096586512e9a7348a.jpg",
+        "img_caption": [
+            "FIGURE 25.30 The light ray through the center of a thin lens is deflected by a negligible amount and is assumed to emerge parallel to its original path (shown as a shaded line). "
+        ],
+        "img_footnote": [],
+        "page_idx": 1139
+    },
+    {
+        "type": "text",
+        "text": "Using paper, pencil, and a straight edge, ray tracing can accurately describe the operation of a lens. The rules for ray tracing for thin lenses are based on the illustrations already discussed: ",
+        "page_idx": 1139
+    },
+    {
+        "type": "text",
+        "text": "1. A ray entering a converging lens parallel to its axis passes through the focal point F of the lens on the other side (See rays 1 and 3 in Figure 25.25.)   \n2. A ray entering a diverging lens parallel to its axis seems to come from the focal point F. (See rays 1 and 3 in Figure 25.27.)   \n3. A ray passing through the center of either a converging or a diverging lens does not change direction. (See Figure 25.30, and see ray 2 in Figure 25.25 and Figure 25.27.)   \n4. A ray entering a converging lens through its focal point exits parallel to its axis. (The reverse of rays 1 and 3 in Figure 25.25.)   \n5. A ray that enters a diverging lens by heading toward the focal point on the opposite side exits parallel to the ",
+        "page_idx": 1139
+    },
+    {
+        "type": "text",
+        "text": "axis. (The reverse of rays 1 and 3 in Figure 25.27.) ",
+        "page_idx": 1140
+    },
+    {
+        "type": "text",
+        "text": "Rules for Ray Tracing ",
+        "text_level": 1,
+        "page_idx": 1140
+    },
+    {
+        "type": "text",
+        "text": "1. A ray entering a converging lens parallel to its axis passes through the focal point F of the lens on the other side.   \n2. A ray entering a diverging lens parallel to its axis seems to come from the focal point F.   \n3. A ray passing through the center of either a converging or a diverging lens does not change direction.   \n4. A ray entering a converging lens through its focal point exits parallel to its axis.   \n5. A ray that enters a diverging lens by heading toward the focal point on the opposite side exits parallel to the axis. ",
+        "page_idx": 1140
+    },
+    {
+        "type": "text",
+        "text": "Image Formation by Thin Lenses ",
+        "text_level": 1,
+        "page_idx": 1140
+    },
+    {
+        "type": "text",
+        "text": "In some circumstances, a lens forms an obvious image, such as when a movie projector casts an image onto a screen. In other cases, the image is less obvious. Where, for example, is the image formed by eyeglasses? We will use ray tracing for thin lenses to illustrate how they form images, and we will develop equations to describe the image formation quantitatively. ",
+        "page_idx": 1140
+    },
+    {
+        "type": "text",
+        "text": "Consider an object some distance away from a converging lens, as shown in Figure 25.31. To find the location and size of the image formed, we trace the paths of selected light rays originating from one point on the object, in this case the top of the person\u2019s head. The figure shows three rays from the top of the object that can be traced using the ray tracing rules given above. (Rays leave this point going in many directions, but we concentrate on only a few with paths that are easy to trace.) The first ray is one that enters the lens parallel to its axis and passes through the focal point on the other side (rule 1). The second ray passes through the center of the lens without changing direction (rule 3). The third ray passes through the nearer focal point on its way into the lens and leaves the lens parallel to its axis (rule 4). The three rays cross at the same point on the other side of the lens. The image of the top of the person\u2019s head is located at this point. All rays that come from the same point on the top of the person\u2019s head are refracted in such a way as to cross at the point shown. Rays from another point on the object, such as her belt buckle, will also cross at another common point, forming a complete image, as shown. Although three rays are traced in Figure 25.31, only two are necessary to locate the image. It is best to trace rays for which there are simple ray tracing rules. Before applying ray tracing to other situations, let us consider the example shown in Figure 25.31 in more detail. ",
+        "page_idx": 1140
+    },
+    {
+        "type": "image",
+        "img_path": "images/183cd2d418ac62e9180ba3072472378dda04c03d7883f489dcca74462bbac166.jpg",
+        "img_caption": [
+            "FIGURE 25.31 Ray tracing is used to locate the image formed by a lens. Rays originating from the same point on the object are traced\u2014the three chosen rays each follow one of the rules for ray tracing, so that their paths are easy to determine. The image is located at the point where the rays cross. In this case, a real image\u2014one that can be projected on a screen\u2014is formed. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1141
+    },
+    {
+        "type": "text",
+        "text": "The image formed in Figure 25.31 is a real image, meaning that it can be projected. That is, light rays from one point on the object actually cross at the location of the image and can be projected onto a screen, a piece of film, or the retina of an eye, for example. Figure 25.32 shows how such an image would be projected onto film by a camera lens. This figure also shows how a real image is projected onto the retina by the lens of an eye. Note that the image is there whether it is projected onto a screen or not. ",
+        "page_idx": 1141
+    },
+    {
+        "type": "text",
+        "text": "Real Image ",
+        "text_level": 1,
+        "page_idx": 1141
+    },
+    {
+        "type": "text",
+        "text": "The image in which light rays from one point on the object actually cross at the location of the image and can be projected onto a screen, a piece of film, or the retina of an eye is called a real image. ",
+        "page_idx": 1141
+    },
+    {
+        "type": "image",
+        "img_path": "images/958c1acd9ae224dd66b8266283e55c12659cdf3f8bf3e6012ff3b947dd0e7134.jpg",
+        "img_caption": [
+            "FIGURE 25.32 Real images can be projected. (a) A real image of the person is projected onto film. (b) The converging nature of the multiple surfaces that make up the eye result in the projection of a real image on the retina. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "Several important distances appear in Figure 25.31. We define $d _ { \\mathrm { o } }$ to be the object distance, the distance of an object from the center of a lens. Image distance $d _ { \\mathrm { i } }$ is defined to be the distance of the image from the center of a lens. The height of the object and height of the image are given the symbols $h _ { 0 }$ and $h _ { \\mathrm { i } }$ , respectively. Images that appear upright relative to the object have heights that are positive and those that are inverted have negative heights. Using the rules of ray tracing and making a scale drawing with paper and pencil, like that in Figure 25.31, we can accurately describe the location and size of an image. But the real benefit of ray tracing is in visualizing how images are formed in a variety of situations. To obtain numerical information, we use a pair of equations that can be derived from a geometric analysis of ray tracing for thin lenses. The thin lens equations are ",
+        "page_idx": 1142
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { o } } } } + { \\frac { 1 } { d _ { \\mathrm { i } } } } = { \\frac { 1 } { f } }\n$$",
+        "text_format": "latex",
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "and ",
+        "page_idx": 1142
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { h _ { \\mathrm { i } } } { h _ { \\mathrm { 0 } } } } = - { \\frac { d _ { \\mathrm { i } } } { d _ { \\mathrm { 0 } } } } = m .\n$$",
+        "text_format": "latex",
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "We define the ratio of image height to object height $( h _ { \\mathrm { i } } / h _ { \\mathrm { o } } )$ to be the magnification $m$ . (The minus sign in the equation above will be discussed shortly.) The thin lens equations are broadly applicable to all situations involving thin lenses (and \u201cthin\u201d mirrors, as we will see later). We will explore many features of image formation in the following worked examples. ",
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "Image Distance ",
+        "text_level": 1,
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "The distance of the image from the center of the lens is called image distance. ",
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "Thin Lens Equations and Magnification ",
+        "text_level": 1,
+        "page_idx": 1142
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { o } } } } + { \\frac { 1 } { d _ { \\mathrm { i } } } } = { \\frac { 1 } { f } }\n$$",
+        "text_format": "latex",
+        "page_idx": 1142
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { h _ { \\mathrm { i } } } { h _ { \\mathrm { 0 } } } } = - { \\frac { d _ { \\mathrm { i } } } { d _ { \\mathrm { 0 } } } } = m\n$$",
+        "text_format": "latex",
+        "page_idx": 1142
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.6 ",
+        "text_level": 1,
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Finding the Image of a Light Bulb Filament by Ray Tracing and by the Thin Lens Equations ",
+        "text_level": 1,
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "A clear glass light bulb is placed $0 . 7 5 0 \\mathrm { m }$ from a convex lens having a $0 . 5 0 0 \\mathrm { { m } }$ focal length, as shown in Figure 25.33. Use ray tracing to get an approximate location for the image. Then use the thin lens equations to calculate (a) the location of the image and (b) its magnification. Verify that ray tracing and the thin lens equations produce consistent results. ",
+        "page_idx": 1143
+    },
+    {
+        "type": "image",
+        "img_path": "images/d22267a12025ae1fdb094426964d0c654476f0441440329bf0b255c53063d0bb.jpg",
+        "img_caption": [
+            "FIGURE 25.33 A light bulb placed $0 . 7 5 0 \\mathrm { m }$ from a lens having a $0 . 5 0 0 \\mathrm { { m } }$ focal length produces a real image on a poster board as discussed in the example above. Ray tracing predicts the image location and size. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Strategy and Concept ",
+        "text_level": 1,
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Since the object is placed farther away from a converging lens than the focal length of the lens, this situation is analogous to those illustrated in Figure 25.31 and Figure 25.32. Ray tracing to scale should produce similar results for $d _ { \\mathrm { i } }$ . Numerical solutions for $d _ { \\mathrm { i } }$ and $m$ can be obtained using the thin lens equations, noting that $d _ { \\mathrm { o } } = 0 . 7 5 0 \\ \\mathrm { m }$ and $f = 0 . 5 0 0 \\mathrm { m }$ . ",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Solutions (Ray tracing) ",
+        "text_level": 1,
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "The ray tracing to scale in Figure 25.33 shows two rays from a point on the bulb\u2019s filament crossing about $1 . 5 0 \\mathrm { m }$ on the far side of the lens. Thus the image distance $d _ { \\mathrm { i } }$ is about $1 . 5 0 \\mathrm { m }$ . Similarly, the image height based on ray tracing is greater than the object height by about a factor of 2, and the image is inverted. Thus $m$ is about $^ { - 2 }$ . The minus sign indicates that the image is inverted. ",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "The thin lens equations can be used to find $d _ { \\mathrm { i } }$ from the given information: ",
+        "page_idx": 1143
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { o } } } } + { \\frac { 1 } { d _ { \\mathrm { i } } } } = { \\frac { 1 } { f } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Rearranging to isolate $d _ { \\mathrm { i } }$ gives ",
+        "page_idx": 1143
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { d _ { \\mathrm { i } } } = \\frac { 1 } { f } - \\frac { 1 } { d _ { 0 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Entering known quantities gives a value for $1 / d _ { \\mathrm { i } }$ : ",
+        "page_idx": 1143
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { d _ { \\mathrm { i } } } = \\frac { 1 } { 0 . 5 0 0 \\mathrm { ~ m } } - \\frac { 1 } { 0 . 7 5 0 \\mathrm { ~ m } } = \\frac { 0 . 6 6 7 } { \\mathrm { ~ m } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "This must be inverted to find $d _ { \\mathrm { i } }$ : ",
+        "page_idx": 1143
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = \\frac { \\mathrm { m } } { 0 . 6 6 7 } = 1 . 5 0 \\mathrm { m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "Note that another way to find $d _ { \\mathrm { i } }$ is to rearrange the equation: ",
+        "page_idx": 1143
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { d _ { \\mathrm { i } } } = \\frac { 1 } { f } - \\frac { 1 } { d _ { 0 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1143
+    },
+    {
+        "type": "text",
+        "text": "This yields the equation for the image distance as: ",
+        "page_idx": 1143
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = { \\frac { f d _ { \\mathrm { o } } } { d _ { \\mathrm { o } } - f } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "Note that there is no inverting here. ",
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "The thin lens equations can be used to find the magnification $m$ , since both $d _ { \\mathrm { i } }$ and $d _ { \\mathrm { o } }$ are known. Entering their values gives ",
+        "page_idx": 1144
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm = - \\frac { d _ { \\mathrm { i } } } { d _ { \\mathrm { o } } } = - \\frac { 1 . 5 0 \\mathrm { m } } { 0 . 7 5 0 \\mathrm { m } } = - 2 . 0 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "Note that the minus sign causes the magnification to be negative when the image is inverted. Ray tracing and the use of the thin lens equations produce consistent results. The thin lens equations give the most precise results, being limited only by the accuracy of the given information. Ray tracing is limited by the accuracy with which you can draw, but it is highly useful both conceptually and visually. ",
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "Real images, such as the one considered in the previous example, are formed by converging lenses whenever an object is farther from the lens than its focal length. This is true for movie projectors, cameras, and the eye. We shall refer to these as case1images. A case 1 image is formed when $d _ { 0 } > f$ and $f$ is positive, as in Figure 25.34(a). (A summary of the three cases or types of image formation appears at the end of this section.) ",
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "A different type of image is formed when an object, such as a person's face, is held close to a convex lens. The image is upright and larger than the object, as seen in Figure 25.34(b), and so the lens is called a magnifier. If you slowly pull the magnifier away from the face, you will see that the magnification steadily increases until the image begins to blur. Pulling the magnifier even farther away produces an inverted image as seen in Figure 25.34(a). The distance at which the image blurs, and beyond which it inverts, is the focal length of the lens. To use a convex lens as a magnifier, the object must be closer to the converging lens than its focal length. This is called a case2image. A case 2 image is formed when $d _ { 0 } < f$ and $f$ is positive. ",
+        "page_idx": 1144
+    },
+    {
+        "type": "image",
+        "img_path": "images/338a04dd032d7da284a829e0b789ae96163224b2f6d416ad62ee2e5d307c3eed.jpg",
+        "img_caption": [
+            "FIGURE 25.34 (a) When a converging lens is held farther away from the face than the lens\u2019s focal length, an inverted image is formed. This is a case 1 image. Note that the image is in focus but the face is not, because the image is much closer to the camera taking this photograph than the face. (credit: DaMongMan, Flickr) (b) A magnified image of a face is produced by placing it closer to the converging lens than its focal length. This is a case 2 image. (credit: Casey Fleser, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "Figure 25.35 uses ray tracing to show how an image is formed when an object is held closer to a converging lens than its focal length. Rays coming from a common point on the object continue to diverge after passing through the lens, but all appear to originate from a point at the location of the image. The image is on the same side of the lens as the object and is farther away from the lens than the object. This image, like all case 2 images, cannot be projected and, hence, is called a virtual image. Light rays only appear to originate at a virtual image; they do not actually pass through that location in space. A screen placed at the location of a virtual image will receive only diffuse light from the object, not focused rays from the lens. Additionally, a screen placed on the opposite side of the lens will receive rays that are still diverging, and so no image will be projected on it. We can see the magnified image with our eyes, because the lens of the eye converges the rays into a real image projected on our retina. Finally, we note that a virtual image is upright and larger than the object, meaning that the magnification is positive and greater than 1. ",
+        "page_idx": 1144
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1145
+    },
+    {
+        "type": "image",
+        "img_path": "images/0845babe6e9b2e334a9969c3132c0b9f12a9ede074fff7815ba10c57300672be.jpg",
+        "img_caption": [
+            "FIGURE 25.35 Ray tracing predicts the image location and size for an object held closer to a converging lens than its focal length. Ray 1 enters parallel to the axis and exits through the focal point on the opposite side, while ray 2 passes through the center of the lens without changing path. The two rays continue to diverge on the other side of the lens, but both appear to come from a common point, locating the upright, magnified, virtual image. This is a case 2 image. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "Virtual Image ",
+        "text_level": 1,
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "An image that is on the same side of the lens as the object and cannot be projected on a screen is called a virtual image. ",
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.7 ",
+        "text_level": 1,
+        "page_idx": 1145
+    },
+    {
+        "type": "image",
+        "img_path": "images/15e8ed1209bcd266535226591ff426c4133847b46a1a6210685e76b1c24e9560.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "Image Produced by a Magnifying Glass ",
+        "text_level": 1,
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "Suppose the book page in Figure 25.35 (a) is held 7.50 cm from a convex lens of focal length $1 0 . 0 \\mathsf { c m }$ , such as a typical magnifying glass might have. What magnification is produced? ",
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "Strategy and Concept ",
+        "text_level": 1,
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "We are given that $d _ { \\mathrm { o } } = 7 . 5 0 \\mathrm { c m }$ and $f = 1 0 . 0 \\mathrm { c m }$ , so we have a situation where the object is placed closer to the ",
+        "page_idx": 1145
+    },
+    {
+        "type": "text",
+        "text": "lens than its focal length. We therefore expect to get a case 2 virtual image with a positive magnification that is greater than 1. Ray tracing produces an image like that shown in Figure 25.35, but we will use the thin lens equations to get numerical solutions in this example. ",
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "To find the magnification $m$ , we try to use magnification equation, $m = - d _ { \\mathrm { i } } / d _ { \\mathrm { o } }$ . We do not have a value for $d _ { \\mathrm { i } }$ , so that we must first find the location of the image using lens equation. (The procedure is the same as followed in the preceding example, where $d _ { \\mathrm { o } }$ and $f$ were known.) Rearranging the magnification equation to isolate $d _ { \\mathrm { i } }$ gives ",
+        "page_idx": 1146
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { d _ { \\mathrm { i } } } = \\frac { 1 } { f } - \\frac { 1 } { d _ { 0 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "Entering known values, we obtain a value for $1 / d _ { \\mathrm { i } }$ : ",
+        "page_idx": 1146
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { i } } } } = { \\frac { 1 } { 1 0 . 0 \\ \\mathrm { c m } } } - { \\frac { 1 } { 7 . 5 0 \\ \\mathrm { c m } } } = { \\frac { - 0 . 0 3 3 3 } { \\mathrm { c m } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "This must be inverted to find $d _ { \\mathrm { i } }$ : ",
+        "page_idx": 1146
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = - { \\frac { \\mathrm { c m } } { 0 . 0 3 3 3 } } = - 3 0 . 0 \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "Now the thin lens equation can be used to find the magnification $m$ , since both $d _ { \\mathrm { i } }$ and $d _ { 0 }$ are known. Entering their values gives ",
+        "page_idx": 1146
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm = - \\frac { d _ { \\mathrm { i } } } { d _ { \\mathrm { o } } } = - \\frac { - 3 0 . 0 \\mathrm { c m } } { 7 . 5 0 \\mathrm { c m } } = 4 . 0 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "A number of results in this example are true of all case 2 images, as well as being consistent with Figure 25.35. Magnification is indeed positive (as predicted), meaning the image is upright. The magnification is also greater than 1, meaning that the image is larger than the object\u2014in this case, by a factor of 4. Note that the image distance is negative. This means the image is on the same side of the lens as the object. Thus the image cannot be projected and is virtual. (Negative values of $d _ { \\mathrm { i } }$ occur for virtual images.) The image is farther from the lens than the object, since the image distance is greater in magnitude than the object distance. The location of the image is not obvious when you look through a magnifier. In fact, since the image is bigger than the object, you may think the image is closer than the object. But the image is farther away, a fact that is useful in correcting farsightedness, as we shall see in a later section. ",
+        "page_idx": 1146
+    },
+    {
+        "type": "text",
+        "text": "A third type of image is formed by a diverging or concave lens. Try looking through eyeglasses meant to correct nearsightedness. (See Figure 25.36.) You will see an image that is upright but smaller than the object. This means that the magnification is positive but less than 1. The ray diagram in Figure 25.37 shows that the image is on the same side of the lens as the object and, hence, cannot be projected\u2014it is a virtual image. Note that the image is closer to the lens than the object. This is a case3image, formed for any object by a negative focal length or diverging lens. ",
+        "page_idx": 1146
+    },
+    {
+        "type": "image",
+        "img_path": "images/3e7d84333eaa17ef615a37a206e75099bf1c1ef5e11192b9c20a9b89e3700102.jpg",
+        "img_caption": [
+            "FIGURE 25.36 A car viewed through a concave or diverging lens looks upright. This is a case 3 image. (credit: Daniel Oines, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1146
+    },
+    {
+        "type": "image",
+        "img_path": "images/908a0dbc8837e6d411a97c13d5cbf697a29aea6bc3f0a3674fe5341d98a0d39f.jpg",
+        "img_caption": [
+            "FIGURE 25.37 Ray tracing predicts the image location and size for a concave or diverging lens. Ray 1 enters parallel to the axis and is bent so that it appears to originate from the focal point. Ray 2 passes through the center of the lens without changing path. The two rays appear to come from a common point, locating the upright image. This is a case 3 image, which is closer to the lens than the object and smaller in height. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 25.8 ",
+        "text_level": 1,
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "Image Produced by a Concave Lens ",
+        "text_level": 1,
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "Suppose an object such as a book page is held $7 . 5 0 \\mathsf { c m }$ from a concave lens of focal length \u201310.0 cm. Such a lens could be used in eyeglasses to correct pronounced nearsightedness. What magnification is produced? ",
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "Strategy and Concept ",
+        "text_level": 1,
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "This example is identical to the preceding one, except that the focal length is negative for a concave or diverging lens. The method of solution is thus the same, but the results are different in important ways. ",
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "To find the magnification $m$ , we must first find the image distance $d _ { \\mathrm { i } }$ using thin lens equation ",
+        "page_idx": 1147
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { 1 } { d _ { \\mathrm { i } } } = \\frac { 1 } { f } - \\frac { 1 } { d _ { 0 } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "or its alternative rearrangement ",
+        "page_idx": 1147
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { i } = \\frac { f d _ { 0 } } { d _ { 0 } - f } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "We are given that $f = - 1 0 . 0 \\mathrm { c m }$ and $d _ { \\mathrm { o } } = 7 . 5 0 \\mathrm { c m }$ . Entering these yields a value for $1 / d _ { \\mathrm { i } }$ : ",
+        "page_idx": 1147
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { d _ { \\mathrm { i } } } } = { \\frac { 1 } { - 1 0 . 0 \\ \\mathrm { c m } } } - { \\frac { 1 } { 7 . 5 0 \\ \\mathrm { c m } } } = { \\frac { - 0 . 2 3 3 3 } { \\mathrm { c m } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1147
+    },
+    {
+        "type": "text",
+        "text": "This must be inverted to find $d _ { \\mathrm { i } }$ : ",
+        "page_idx": 1147
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = - { \\frac { \\mathrm { c m } } { 0 . 2 3 3 3 } } = - 4 . 2 9 \\ \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Or ",
+        "page_idx": 1148
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd _ { \\mathrm { i } } = { \\frac { ( 7 . 5 ) ( - 1 0 ) } { ( 7 . 5 - ( - 1 0 ) ) } } = - 7 5 / 1 7 . 5 = - 4 . 2 9 \\ \\mathrm { c m } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Now the magnification equation can be used to find the magnification $m$ , since both $d _ { \\mathrm { i } }$ and $d _ { \\mathrm { o } }$ are known. Entering their values gives ",
+        "page_idx": 1148
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm = - { \\frac { d _ { \\mathrm { i } } } { d _ { \\mathrm { o } } } } = - { \\frac { - 4 . 2 9 \\ \\mathrm { c m } } { 7 . 5 0 \\ \\mathrm { c m } } } = 0 . 5 7 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "A number of results in this example are true of all case 3 images, as well as being consistent with Figure 25.37. Magnification is positive (as predicted), meaning the image is upright. The magnification is also less than 1, meaning the image is smaller than the object\u2014in this case, a little over half its size. The image distance is negative, meaning the image is on the same side of the lens as the object. (The image is virtual.) The image is closer to the lens than the object, since the image distance is smaller in magnitude than the object distance. The location of the image is not obvious when you look through a concave lens. In fact, since the image is smaller than the object, you may think it is farther away. But the image is closer than the object, a fact that is useful in correcting nearsightedness, as we shall see in a later section. ",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Table 25.3 summarizes the three types of images formed by single thin lenses. These are referred to as case 1, 2, and 3 images. Convex (converging) lenses can form either real or virtual images (cases 1 and 2, respectively), whereas concave (diverging) lenses can form only virtual images (always case 3). Real images are always inverted, but they can be either larger or smaller than the object. For example, a slide projector forms an image larger than the slide, whereas a camera makes an image smaller than the object being photographed. Virtual images are always upright and cannot be projected. Virtual images are larger than the object only in case 2, where a convex lens is used. The virtual image produced by a concave lens is always smaller than the object\u2014a case 3 image. We can see and photograph virtual images only by using an additional lens to form a real image. ",
+        "page_idx": 1148
+    },
+    {
+        "type": "table",
+        "img_path": "images/3a561c1a074bb4da292307f56a00aa27db49db81888d62bb844885acc39544a1.jpg",
+        "table_caption": [
+            "TABLE 25.3 Three Types of Images Formed By Thin Lenses "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Type</td><td>Formed when</td><td>Image type</td><td>di</td><td>m</td></tr><tr><td>Case 1</td><td>f positive,do > f</td><td>real</td><td>positive</td><td>negative</td></tr><tr><td>Case 2</td><td>f positive,do < f</td><td>virtual</td><td>negative</td><td>positive m >1</td></tr><tr><td>Case 3</td><td>f negative</td><td>virtual</td><td>negative</td><td>positive m<1</td></tr></table></body></html>\n\n",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "In Image Formation by Mirrors, we shall see that mirrors can form exactly the same types of images as lenses. ",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: Concentrating Sunlight ",
+        "text_level": 1,
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Find several lenses and determine whether they are converging or diverging. In general those that are thicker near the edges are diverging and those that are thicker near the center are converging. On a bright sunny day take the converging lenses outside and try focusing the sunlight onto a piece of paper. Determine the focal lengths of the lenses. Be careful because the paper may start to burn, depending on the type of lens you have selected. ",
+        "page_idx": 1148
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategies for Lenses ",
+        "text_level": 1,
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 1. Examine the situation to determine that image formation by a lens is involved. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 2. Determine whether ray tracing, the thin lens equations, or both are to be employed. A sketch is very useful even if ray tracing is not specifically required by the problem. Write symbols and values on the sketch. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 3. Identify exactly what needs to be determined in the problem (identify the unknowns). ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 4. Make alist of what is given or can be inferred from the problem as stated (identify the knowns). It is helpful to determine whether the situation involves a case 1, 2, or 3 image. While these are just names for types of images, they have certain characteristics (given in Table 25.3) that can be of great use in solving problems. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 5. If ray tracing is required, use the ray tracing rules listed near the beginning of this section. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 6. Most quantitative problems require the use of the thin lens equations. These are solved in the usual manner by substituting knowns and solving for unknowns. Several worked examples serve as guides. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Step 7. Check to see if the answer is reasonable: Does it make sense?If you have identified the type of image (case 1, 2, or 3), you should assess whether your answer is consistent with the type of image, magnification, and so on. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "Misconception Alert ",
+        "text_level": 1,
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "We do not realize that light rays are coming from every part of the object, passing through every part of the lens, and all can be used to form the final image. ",
+        "page_idx": 1149
+    },
+    {
+        "type": "text",
+        "text": "We generally feel the entire lens, or mirror, is needed to form an image. Actually, half a lens will form the same, though a fainter, image. ",
+        "page_idx": 1149
+    }
+]

@@ -1,0 +1,329 @@
+[
+    {
+        "type": "text",
+        "text": "14.3 Triple Integrals ",
+        "text_level": 1,
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "At this point in the book, I feel I can speak to you directly. You can guess what triple integrals are like. Instead of a small interval or a small rectangle, there is a small box. Instead of length $d x$ or area $d x d y$ ; the box has volume $d V = d x d y d z$ : That is length times width times height. The goal is to put small boxes together (by integration). The main problem will be to discover the correct limits on $x , y , z$ : ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "We could dream up more and more complicated regions in three-dimensional space. But I don\u2019t think you can see the method clearly without seeing the region clearly. In practice six shapes are the most important: ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "box prism cylinder cone tetrahedron sphere. ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "The box is easiest and the sphere may be the hardest (but no problem in spherical coordinates). Circular cylinders and cones fall in the middle, where $x y z$ coordinates are possible but $r \\theta z$ are the best. I start with the box and prism and $x y z$ : ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 By triple integrals find the volume of a box and a prism (Figure 14.12). ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iiint d V = \\int \\int \\int \\int \\int \\int d x d y d z \\quad { \\mathrm { a n d } } \\quad \\iiint d V = \\int \\int \\int \\int \\int \\int d x d y d z\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "The inner integral for both is $\\textstyle \\int d x = 2$ : Lines in the $x$ direction have length 2; cutting through the box and the prism. The middle integrals show the limits on $y$ (since $d y$ comes second): ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { y = 0 } ^ { 3 } 2 d y = 6 \\quad { \\mathrm { a n d } } \\quad \\int _ { y = 0 } ^ { 3 - 3 z } 2 d y = 6 - 6 z .\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "After two\u0001integrations these are areas. The first area 6 is for a plane section through the box. The second area $6 - 6 z$ is cut through the prism. The shaded rectangle goes from $y = 0$ to $y = 3 - 3 z$ \u2014we needed and used the equation $y + 3 z = 3$ for the boundary of the prism. $\\mathbf { } A t \\mathbf { \\Sigma }$ this point $z$ is still constant! But the area depends on $z$ ; because the prism gets thinner going upwards. The base area is $6 - 6 z = 6$ ; the top area is $6 - 6 z = 0$ : ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "The outer integral multiplies those areas by $d z$ ; to give the volume of slices. They are horizontal slices because $z$ came last. Integration adds up the slices to find the total volume: ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { b o x ~ v o l u m e } } = \\int _ { z = 0 } ^ { 1 } 6 d z = 6 \\qquad { \\mathrm { p r i s m ~ v o l u m e } } = \\int _ { z = 0 } ^ { 1 } ( 6 - 6 z ) d z = \\left[ 6 z - 3 z ^ { 2 } \\right] _ { 0 } ^ { 1 } = 3 .\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "The box vo\u00bblum\u00bbe $2 \\cdot 3 \\cdot 1$ didn\u2019t need calc\u00bbulu\u00bbs. The prism is half o\u00bbf the box, so its volume was sure to be 3\u2014but it is satisfying to see how $6 z - 3 z ^ { 2 }$ gives the answer. Our purpose is to see how a triple integral works. ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Question Find the prism volume in the order dz dy $d x$ (six orders are possible). ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { 2 } \\int _ { 0 } ^ { 3 } \\int _ { 0 } ^ { ( 3 - y ) / 3 } d z d y d x = \\int _ { 0 } ^ { 2 } \\int _ { 0 } ^ { 3 } \\left( { \\frac { 3 - y } { 3 } } \\right) d y d x = \\int _ { 0 } ^ { 2 } { \\frac { 3 } { 2 } } d x = 3 .\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "To find those limits on the $z$ integral, follow a line in the $z$ direction. It enters the prism at $z = 0$ and exits at the sloping face $y + 3 z = 3$ : That gives the upper limit $z = ( 3 - y ) / 3$ : It is the height of a thin stick as in Section 14:1: This section writes out $\\int d z$ for the height, but a quicker solution starts at the double integral. ",
+        "page_idx": 626
+    },
+    {
+        "type": "image",
+        "img_path": "images/e653c9492cc4eeb0c9d8474b672d6957bc41b96577db056339f720e2dba3f232.jpg",
+        "img_caption": [
+            "Fig. 14.12 Box with sides 2;3;1: The prism is half of the box: volume $\\int { ( 6 - 6 z ) d z }$ or $\\textstyle \\int { \\frac { 3 } { 2 } } d x$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "What is the number $\\frac { 3 } { 2 }$ in the last integral ? It is the area of a vertical slice, cut by a plane $x =$ constant. The outer integral adds up slices. ",
+        "page_idx": 627
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iiint f ( x , y , z ) d V ~ i s ~ c o m p u t e d f r o m ~ t h r e e ~ s i n g l e ~ i n t e g r a l s \\int [ \\int [ \\int f ~ d x ~ ] d y ~ ] d z .\n$$",
+        "text_format": "latex",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "That step cannot be taken in silence\u2014some basic calculus is involved. The triple integral is the limit of $\\sum f _ { i } \\Delta V$ ; a sum over small boxes of volume $\\Delta V .$ Here $f _ { i }$ is any value of $f ( x , y , z )$ Pin the $i$ th box. (In the limit, the boxes fit a curved region.) Now take those boxes in a certain order. Put them into lines in the $x$ direction and put the lines of boxes into planes. The lines lead to the inner $x$ integral, whose answer depends on $y$ and $z$ : The $y$ integral combines the lines into planes. Finally the outer integral accounts for all planes and all boxes. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Example 2 is imp\u0001ortan\u0001t because it displays more possibilities than a box or prism. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Find the volume of a tetrahedron (4-sided pyramid). Locate $( { \\overline { { x } } } , { \\overline { { y } } } , { \\overline { { z } } } )$ . ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Solution A tetrahedron has four flat faces, all triangles. Th e fourth face in Figure 14.13 is on the plane $x + y + z = 1$ : A line in the $x$ direction enters at $x = 0$ and exits at $x = 1 - y - z$ : (The length depends on $y$ and $z$ : The equation of the boundary plane gives $x$ :) \u0001Then those lines are put into plane slices by the $y$ integral: ",
+        "page_idx": 627
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { y = 0 } ^ { 1 - z } \\int _ { x = 0 } ^ { 1 - y - z } d x d y = \\int _ { y = 0 } ^ { 1 - z } ( 1 - y - z ) d y = { \\Big [ } y - { \\frac { 1 } { 2 } } y ^ { 2 } - z y { \\Big ] } _ { 0 } ^ { 1 - z } = { \\frac { 1 } { 2 } } ( 1 - z ) ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "What is this number ${ \\scriptstyle { \\frac { 1 } { 2 } } } ( 1 - z ) ^ { 2 } ?$ It is the area a\u0001t height $z$ : The p\u0001lane at that height slices out a right triangle, whose legs have length $_ { 1 - z }$ : The area is correct, but look at the limits of integration. $\\pmb { I f x }$ goes to $1 - y - z$ ; why does $y$ go to $1 - z ?$ Reason: We are assembling lines, not points. The figure shows a line at every $y$ up to $_ { 1 - z }$ : ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Adding the slices gives the volume: $\\begin{array} { r } { \\int _ { 0 } ^ { 1 } { \\frac { 1 } { 2 } } ( 1 - z ) ^ { 2 } d z = \\left[ { \\frac { 1 } { 6 } } ( z - 1 ) ^ { 3 } \\right] _ { 0 } ^ { 1 } = \\frac { 1 } { 6 } } \\end{array}$ : This agrees with $\\frac 1 3$ (base times h e\u0001ight), \u0001the\u0001volume of a pyramid. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "The height $\\overline { { z } }$ of the centroid is $^ { * * } z _ { \\mathrm { a v e r a g e } }$ :\u201d We compute $\\iiint z d V$ and divide by the volume. Each horizontal slice is multiplied by its height $z$ ; and the limits of integration don\u2019t change: ",
+        "page_idx": 627
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\iiint z d V = \\int _ { 0 } ^ { 1 } \\int _ { 0 } ^ { 1 - y } \\int _ { 0 } ^ { 1 - y - z } z d x d y d z = \\int _ { 0 } ^ { 1 } { \\frac { z ( 1 - z ) ^ { 2 } } { 2 } } d z = { \\frac { 1 } { 2 4 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "This is quick because $z$ is constant in the $x$ and $y$ integrals. Each triangular slice contributes $z$ times its area $\\scriptstyle { \\frac { 1 } { 2 } } ( 1 - z ) ^ { 2 }$ times $d z$ : Then the $z$ integral gives the moment ",
+        "page_idx": 627
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f34da96c94c2f9ed4c7a611099e1696a27f8d1589992d16cb8536d94bd45a6c.jpg",
+        "img_caption": [
+            "Fig. 14.13 Lines end at plane $x + y + z = 1$ : Triangles end at edge $y + z = 1$ : The average height is ${ \\overline { { z } } } = \\iiint z d V / \\iint d$ $d V .$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "$1 / 2 4$ : To find the average height, divide $1 / 2 4$ by the volume: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { z } } } = { \\mathrm { h e i g h t o f ~ c e n t r o i d } } = { \\frac { \\iiint z d V } { \\iiint d V } } = { \\frac { 1 / 2 4 } { 1 / 6 } } = { \\frac { 1 } { 4 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "By symmetry $\\textstyle { \\overline { { x } } } = { \\frac { 1 } { 4 } }$ and $\\begin{array} { r } { \\overline { { y } } = \\frac { 1 } { 4 } } \\end{array}$ : The centroid is the point $\\bigl ( { \\frac { 1 } { 4 } } , { \\frac { 1 } { 4 } } , { \\frac { 1 } { 4 } } \\bigr )$ : Compare that with $\\bigl ( { \\frac { 1 } { 3 } } , { \\frac { 1 } { 3 } } \\bigr )$ ; the centroid of the standard right triangle. Compare also with $\\frac { 1 } { 2 }$ ; the center of the unit interval. There must be a five-sided region in four dimensions centered at $\\bigl ( \\frac { 1 } { 5 } , \\frac { 1 } { 5 } , \\frac { 1 } { 5 } , \\frac { 1 } { 5 } \\bigr )$ : ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "For area and volume we meet another pattern. Length of standard interval is 1; area of standard triangle is $\\frac { 1 } { 2 }$ ; volume of standard tetrahedron is $\\frac { 1 } { 6 }$ ; hypervolume in four dimensions must be : The interval reaches the point $\\bar { x } = 1$ ; the triangle reaches the line $x + y = 1$ ; the tetrahedron reaches the plane $x + y + z = 1$ : The fourdimensional region stops at the hyperplane $\\_ 1$ : ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Find the volume $\\iint d x d y d z$ inside the unit sphere $x ^ { 2 } + y ^ { 2 } + z ^ { 2 } =$ 1: ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "First question: What are the?limits on $x ?$ If a needle goes through the sphere in the $x$ direction, where does it enter\u0001and\u0001leave ? Moving in the $x$ direction, the numbers $y$ and $z$ stay constant. The inner integral deals only with $x$ : The smallest and largest $x$ are at the boundary wher?e $x ^ { 2 } + y ^ { 2 } + z ^ { 2 } = 1$ : This equation does the work\u2014we solve it for $x$ : Look at the li\u0001mits o\u0001n the $x$ integral: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { v o l u m e ~ o f ~ s p h e r e } } = \\int \\int \\displaylimits _ { ? } ^ { ? } \\int \\displaylimits _ { - \\sqrt { 1 - y ^ { 2 } - z ^ { 2 } } } ^ { \\sqrt { 1 - y ^ { 2 } - z ^ { 2 } } } d x d y d z = \\int \\displaylimits _ { ? } ^ { ? } \\int \\displaylimits _ { ? } ^ { ? } 2 \\sqrt { 1 - y ^ { 2 } - z ^ { 2 } } d y d z .\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "The limits on $y$ are $- { \\sqrt { 1 - z ^ { 2 } } }$ and $+ { \\sqrt { 1 - z ^ { 2 } } }$ : You can use algebra on the boundary equation $x ^ { 2 } + y ^ { 2 } + z ^ { 2 } = 1$ : But notice that $x$ is gone! We\u0001want the smallest and largest $y$ ; for each $z$ : It helps very much to draw the plane at height $z$ ; slicing through the sphere in Figure 14.14. The slice is a circle of radius $r = \\sqrt { 1 - z ^ { 2 } }$ : So the area is $\\pi r ^ { 2 }$ ; which must come from the $y$ integral: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int 2 \\sqrt { 1 - y ^ { 2 } - z ^ { 2 } } d y = \\mathrm { a r e a } \\mathrm { o f } \\mathrm { s l i c e } = \\pi ( 1 - z ^ { 2 } ) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "I admit that I didn\u2019t integrate. Is it cheating to use the formula $\\pi r ^ { 2 } ? \\mathrm { ~ I ~ }$ don\u2019t think so. Mathematics is hard enough, and we don\u2019t have to work blindfolded. The goal is under\u0001standing, and if you know th\u0001e area then use it. Of course the integral of $\\sqrt { 1 - y ^ { 2 } - z ^ { 2 } }$ can be done if necessary\u2014use Section 7:2: ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "The trip\u00bble integral is down to a single integral. We went from one needle to a circle of needles and now\u0001 to a sphere of n\u0001eedles. The volum\u0001e is\u0001a sum of slices of area $\\pi ( 1 - z ^ { 2 } )$ :\u0001The South Pole is at $z = - 1$ ; the N\u0001orth Pole is at $z = + 1$ ; and the integral is the volume $4 \\pi / 3$ inside the unit sphere: ",
+        "page_idx": 629
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { - 1 } ^ { 1 } \\pi ( 1 - z ^ { 2 } ) d z = \\pi \\left( z - { \\frac { 1 } { 3 } } z ^ { 3 } \\right) \\int _ { - 1 } ^ { 1 } = { \\frac { 2 } { 3 } } \\pi - \\left( - { \\frac { 2 } { 3 } } \\pi \\right) = { \\frac { 4 } { 3 } } \\pi .\n$$",
+        "text_format": "latex",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Question 1 A cone also has circular slices. How is the last integral changed ? ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Answer The slices of a cone have radius $1 - z$ : Integrate $( 1 - z ) ^ { 2 }$ not $\\sqrt { 1 - z ^ { 2 } }$ : ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Question 2 How does this compare with a circular cylinder (height 1; radius 1) ? ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Answer Now all slices have radius 1: Above $z = 0$ ; a cylinder has volume $\\pi$ and a half-sphere has volume $\\scriptstyle { \\frac { 2 } { 3 } } \\pi$ and a cone has volume $\\scriptstyle { \\frac { 1 } { 3 } } \\pi$ : ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "For solids with equal surface area, the sphere has largest volume. ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Question 3 What is the average height $\\overline { { z } }$ in the cone and half-sphere and cylinder ? ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Answer ",
+        "page_idx": 629
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overline { { z } } = \\frac { \\int z ( \\mathrm { s l i c e \\ a r e a } ) d z } { \\int ( \\mathrm { s l i c e \\ a r e a } ) d z } = \\frac { 1 } { 4 } \\quad \\mathrm { a n d } \\quad \\frac { 3 } { 8 } \\quad \\mathrm { a n d } \\quad \\frac { 1 } { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 629
+    },
+    {
+        "type": "image",
+        "img_path": "images/fc8bcb04f6172106862e6e002095cc638012234d03cbedbf99ca8988ccf01f78.jpg",
+        "img_caption": [
+            "Fig. 14.14 r $d x =$ length of neaedle, rr $\\lceil d x d y =$ area of slice. Ellipsoid is a stretched sphere. "
+        ],
+        "img_footnote": [],
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 Find the volume $\\iint d x d y d z$ inside the ellipsoid $x ^ { 2 } / a ^ { 2 } + y ^ { 2 } / b ^ { 2 } +$ $z ^ { 2 } / c ^ { 2 } = 1$ : ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "The limits on $x$ are now $\\pm \\sqrt { 1 - y ^ { 2 } / b ^ { 2 } - z ^ { 2 } / c ^ { 2 } }$ : The algebra looks terrible. The geometry is better\u2014all slices are ellipses. A change of variable is absolutely the best. ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Introduce $u = x / a$ and $v = y / b$ and $w = z / c$ : Then the outer boundary becomes $u ^ { 2 } + v ^ { 2 } + w ^ { 2 } = 1 .$ In these new variables the shape is a sphere. The triple integral for a sphere is $\\iiint d u d v d w = 4 \\pi / 3$ : But what volume $d V$ in $x y z$ space corresponds to a small box with sides $d u$ and $d v$ and $d w ?$ ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Every uvw box comes from an $x y z$ box. The box is stretched with no bending or twisting. Since $u$ is $x / a$ ; the length $d x$ is a $d u$ : Similarly $d y = b d v$ and $d z =$ $c d w$ : The volume of the $x y z$ box (Figure 14.14) is $d x d y d z = ( a b c ) d u d v d w$ : ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "14.3 Triple Integrals ",
+        "text_level": 1,
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "The stretching factor $J = a b c$ is a constant, and the volume of the ellipsoid is ",
+        "page_idx": 630
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\bigcap _ { \\mathrm { e l l i p s o i d } } ^ { \\mathrm { b a d l i m i t s } } d x d y d z = \\overbrace { \\iint _ { \\mathrm { e l l i p s o i d } } } ^ { \\mathrm { b e t t e r l i m i t s } } ( a b c ) d u d v d w = \\frac { 4 \\pi } { 3 } a b c .\n$$",
+        "text_format": "latex",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "You realize that this is special\u2014other volumes are much more complicated. The sphere and ellipsoid are curved, but the small $x y z$ boxes are straight. The next section introduces spherical coordinates, and we can finally write \u201cgood limits.\u201d But then we need a different $J$ : ",
+        "page_idx": 630
+    }
+]

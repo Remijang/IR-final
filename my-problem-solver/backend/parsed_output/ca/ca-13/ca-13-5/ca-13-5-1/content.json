@@ -1,0 +1,120 @@
+[
+    {
+        "type": "text",
+        "text": "13.5.1 I/O Port Addressing ",
+        "text_level": 1,
+        "page_idx": 682
+    },
+    {
+        "type": "text",
+        "text": "Software Interface of an I/O Port ",
+        "text_level": 1,
+        "page_idx": 682
+    },
+    {
+        "type": "text",
+        "text": "In Definition 140, we defined a hardware I/O port as a connection endpoint for an externally attached device. Let us now consider a software port, which we define to be an abstract entity that is visible to software as a single register, or a set of registers. For example, the USB port physically contains a set of metallic pins, and a port controller to run the USB protocol. However, the \u201csoftware version of the USB port\u201d, is an addressable set of registers. If we wish to write to the USB device, then we write to the set of registers exposed by the USB port to software. The USB port controller implements the software abstraction, by physically writing the data sent by the processor to the connected I/O device. Likewise, for reading the value sent by an I/O device through the USB port, the processor issues a read instruction to the software interface of the USB port. The corresponding port controller forwards the output of the I/O device to the processor. ",
+        "page_idx": 682
+    },
+    {
+        "type": "text",
+        "text": "Let us graphically illustrate this concept in Figure 13.27. We have a physical hardware port that has a set of metallic pins, and associated electrical circuitry that implements the physical and data link layers. The port controller implements the network layer by fulfilling requests sent by the processor. It also exposes a set of 8 to 32-bit registers. These registers can be either read-only, write-only, or read-write. For example, the port for the display device such as the monitor contains write-only registers, because we do not get any inputs from it. Similarly, the port controller of a mouse, contains read-only registers, and the port controller of a scanner contains read-write registers. This is because we typically send configuration data and commands to the scanner, and read the image of the document from the scanner. ",
+        "page_idx": 682
+    },
+    {
+        "type": "image",
+        "img_path": "images/90629d3c09d0d4ed61fc9376565290d79acbaa6415d89ccb0f4348f906218b57.jpg",
+        "img_caption": [
+            "Figure 13.27: Software interface of an $\\mathrm { I } / \\mathrm { O }$ port "
+        ],
+        "img_footnote": [],
+        "page_idx": 683
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 683
+    },
+    {
+        "type": "text",
+        "text": "For example, Intel processors define 64K ( $2 ^ { 1 6 }$ ) 8-bit I/O ports. It is possible to fuse 4 consecutive ports to have a 32-bit port. These ports are equivalent to registers that are accessible to assembly code. Secondly, a given physical port such as the Ethernet port or the USB port can have multiple such software ports assigned to them. For example, if we wish to write a large piece of data to the Ethernet in one go, then we might use hundreds of ports. Each port in the Intel processor is addressed using a 16-bit number that varies from 0 to 0xFFFF. Similarly, other architectures define a set of I/O ports that act as software interfaces for actual hardware ports. ",
+        "page_idx": 683
+    },
+    {
+        "type": "text",
+        "text": "Let us define the term I/O address space as the set of all the I/O port addresses that are accessible to the operating system and user programs. Each location in the I/O address space corresponds to an I/O port, which is the software interface to a physical I/O port controller. ",
+        "page_idx": 683
+    },
+    {
+        "type": "text",
+        "text": "ISA Support for I/O Ports ",
+        "text_level": 1,
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Most instruction set architectures have two instructions: in and out. The semantics of the instructions are as follows. ",
+        "page_idx": 684
+    },
+    {
+        "type": "table",
+        "img_path": "images/e73fef4fca425c2dae569afc8a5d196974df47bc8e19bdf0850c75a31e175efa.jpg",
+        "table_caption": [
+            "Table 13.4: Semantics of the $i n$ and out instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Instruction</td><td>Semantics</td></tr><tr><td>in r1, <I/O port)</td><td>r1 \u2190 contents of (I/O port)</td></tr><tr><td>out r1, (I/O port)</td><td>contents of (I/O port>\u2190 r1</td></tr></table></body></html>\n\n",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "The in instruction transfers data from an I/O port to a register. Conversely, the out instruction transfers data from a register to an I/O port. This is a very generic and versatile mechanism for programming I/O devices. For example, if we want to print a page, then we can transfer the contents of the entire page to the I/O ports of the printer. Finally, we write the print command to the I/O port that accepts commands for the printer. Subsequently, the printer can start printing. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Routing Messages to I/O Ports ",
+        "text_level": 1,
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Let us now implement the in and out instructions. The first task is to ensure that a message reaches the appropriate port controller, and the second task is to route the response back to the processor in the case of an out instruction. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Let us again take a look at the architecture of the motherboard in Figure 13.4. The CPU is connected to the North Bridge chip via the front side bus. The DRAM memory modules, and the graphics card are also connected to the North Bridge chip. Additionally, the North Bridge chip is connected to the South Bridge chip that handles slower devices. The South Bridge chip is connected to the USB ports, the PCI Express Bus (and all the devices connected to it), the hard disk, the mouse, keyboard, speakers and the network card. Each of these devices has a set of associated I/O ports, and I/O port numbers. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Typically, the motherboard designers have a scheme for allocating I/O ports. Let us try to construct one such scheme. Let us suppose that we have 64K 8-bit I/O ports like the Intel processors. The addresses of the I/O ports thus range from 0 to 0xFFFF. Let us first allocate I/O ports to high-bandwidth devices that are connected to the North Bridge chip. Let us give them port addresses in the range of 0 to 0x00FF. Let us partition the rest of the addresses for the devices connected to the South Bridge chip. Let us assume that the hard disk has a range of ports from 0x0100 to 0x0800. Let the USB ports have a range from 0x0801 to 0x0FFF. Let us assign the network card the following range: 0x1000 to 0x4000. Let us assign a few of the remaining ports to the rest of the devices, and keep a part of the range empty for any new devices that we might want to attach later. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Now, when the processor issues an I/O instruction (in or out), the processor recognizes that it is an I/O instruction, sends the I/O port address, and the instruction type to the North Bridge chip through the FSB (front side bus). The North Bridge chip maintains a table of ranges for each I/O port type, and their locations. Once it sees the message from the processor, it accesses this table and finds out the relative location of the destination. If the destination is a device that is directly connected to it, then the North Bridge chip forwards the message to the destination. Otherwise, it forwards the request to the South Bridge chip. The South Bridge chip maintains a similar table of I/O port ranges, and device locations. After performing a lookup in this table, it forwards the received message to the appropriate device. These tables are called I/O routing tables. I/O routing tables are conceptually similar to network routing tables used by large networks and the internet. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "For the reverse path, the response is typically sent to the processor. We assign a unique identifier to the processor, and the messages get routed appropriately by the North Bridge and South Bridge chips. Sometimes it is necessary to route the message to the memory modules (see Section 13.6.3). We use a similar addressing scheme. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "This scheme essentially maps the set of physical I/O ports to locations in the I/O address space, and the dedicated I/O instructions use the port addresses to communicate with them. This method of accessing and addressing I/O devices is commonly known as port-mapped I/O (PMIO). ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "Definition 155 Port-mapped I/O is a scheme for addressing and accessing I/O devices by assigning each physical I/O port a unique address in the I/O space, and by using dedicated I/O instructions to transfer data to/from locations in the I/O address space. ",
+        "page_idx": 685
+    }
+]

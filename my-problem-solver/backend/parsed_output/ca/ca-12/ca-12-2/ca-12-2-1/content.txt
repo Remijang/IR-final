@@ -1,0 +1,23 @@
+12.2.1 Strong and Loosely Coupled Multiprocessing
+
+Loosely Coupled Multiprocessing
+
+There are two primary ways to harness the power of multiprocessors. The first method is to run multiple unrelated programs in parallel. For example, it is possible to run a text editor and a web browser at the same time. The text editor can run on processor 1, and the web browser can run on processor 2. Both of them can occasionally request for OS services, and connect to I/O devices. Users often use large multiprocessor systems containing more than 64-128 processors to run a set of jobs (processes) that are unrelated. For example, a user might want to conduct a weather simulation with 128 different sets of parameters. Then she can start 128 separate instances of the weather simulation software on 128 different processors on a large multiprocessor system. We thus have a speedup of 128 times as compared to a single processor system, which is significant. This paradigm is known as loosely coupled multiprocessing. Here, the dependencies between programs is almost negligible. Note that using a multiprocessor in this manner, is not conceptually very different from using a cluster of computers that comprises completely unrelated machines that communicate over a local area network. The only difference is that the latency between machines in a multiprocessor is lower than that in cluster computers. A loosely coupled multiprocessor such as a cluster of PCs is also known as a multicomputer.
+
+Definition 118
+
+ multicomputer consists of a set of computers typically connected over the network. It is capable of running a set of programs in parallel, where the programs do not share their memory space with each other.
+
+Strongly Coupled Multiprocessing
+
+However, the real benefit of a multiprocessor is accrued when there is a strong degree of overlap between different programs. This paradigm is known as strongly coupled multiprocessing. Here programs can share their memory space, file and network connections. This method of using
+
+multiprocessors harnesses their true power, and helps us speed up a large amount of existing software. The design and programming of strongly coupled multiprocessors is a very rich field, and is expected to grow significantly over the coming decade.
+
+Definition 119
+
+Loosely Coupled Multiprocessing Running multiple unrelated programs in parallel on a multiprocessor is known as loosely coupled multiprocessing.
+
+Strongly Coupled Multiprocessing Running a set of programs in parallel that share their memory space, data, code, file, and network connections is known as strongly coupled multiprocessing.
+
+In this book, we shall mainly look at strongly coupled multiprocessing, and primarily focus on systems that allow a set of programs to run co-operatively by sharing a large amount of data and code.

@@ -1,0 +1,33 @@
+13.3.1 Synchronous Buses
+
+Simple Synchronous Bus
+
+Let us first consider the case of a synchronous system where the sender and the receiver share the same clock, and it takes a fraction of a cycle to transfer the data from the sender to the receiver. Moreover, let us assume that the sender is transmitting all the time. Let us call this system a simple synchronous bus.
+
+In this case, the task of synchronizing between the sender and receiver is fairly easy. We know that data is sent at the negative edge of a clock, and in less than a cycle it reaches the receiver. The most important issue that we need to avoid is metastability (see Section 7.3.8). A flip flop enters a metastable state when the data makes a transition within a small window of time around the negative edge of the clock. In specific, we want the data to be stable for an interval known as the setup time before the clock edge, and the data needs to be stable for another interval known as the hold time after the clock edge. The interval consisting of the setup and hold intervals, is known as the keep-out region of the clock as defined in Section 7.3.8 and [Dally and Poulton, 1998].
+
+In this case, we assume that the data reaches the receiver in less than  units of time. Thus, there are no metastability issues, and we can read the data into a flip-flop at the receiver. Since digital circuits typically process data in larger chunks (bytes or words), we use a serial in – parallel out register at the receiver. We serially read in  bits, and read out an  -bit chunk in one go. Since the sender and the receiver clocks are the same, there is no rate mismatch. The circuit for the receiver is shown in Figure 13.13.
+
+Mesochronous Bus
+
+In a mesochronous system, the phase difference between the signal and the clock is a constant. The phase difference can be induced in the signal because of the propagation delay in the link, and because there might be a phase difference in the clocks of the sender and the receiver. In this case, it is possible that we might have a metastability issue because the data might arrive in the crucial keep-out region of the receiver clock.
+
+Hence, we need to add a delay element that can delay the signal by a fixed amount of time such that there are no transitions in the keep-out region of the receiver clock. The rest of the circuit remains the same as that used for the simple synchronous bus. The design of the circuit is shown in Figure 13.14.
+
+A delay element can be constructed by using a delay locked loop (DLL). DLLs can have different designs and some of them can be fairly complex. A simple DLL consists of a chain of inverters. Note that we need to have an even number of inverters to ensure that the output is equal to the input. To create a tunable delay element, we can tap the signals after every pair of inverters. These signals are logically equivalent to the input, but have a progressive phase delay due to the propagation delay of the inverters. We can then choose the signal with a specific amount of phase delay by using a multiplexer.
+
+Plesiochronous Bus\*
+
+Let us now consider a more realistic scenario. In this case the clocks of the sender and receiver might not exactly be the same. We might have a small amount of clock drift. We can assume that over a period of tens or hundreds of cycles it is minimal. However, we can have a couple cycles of drift over millions of cycles. Secondly, let us assume that the sender does not transmit data all the time. There are idle periods in the bus. Such buses are found in server computers where we have multiple motherboards that theoretically run at the same frequency, but do not share a common clock. There is some amount of clock drift (around 200 ppm [Dally and
+
+Poulton, 1998]) between the processors when we consider timescales of the order of millions of cycles.
+
+Let us now make some simplistic assumptions. Typically, a given frame of data contains 100s or possibly 1000s of bits. We need not worry about clock drift when we are transmitting a few bits (  ). However, for more bits (  ), we need to periodically resynchronize the clocks such that we do not miss data. Secondly, ensuring that there are no transitions in the keep-out region of the receiver’s clock is a non-trivial problem.
+
+To solve this problem, we use an additional signal known as the strobe that is synchronized with the sender’s clock. We toggle a strobe pulse at the beginning of the transmission of a frame (or possibly a few cycles before sending the first data bit). We then periodically toggle the strobe pulse once every  cycles. In this case, the receiver uses a tunable delay element. It tunes its delay based on the interval between the time at which it receives the strobe pulse, and the clock transition. After sending the strobe pulse for a few cycles, we start transmitting data. Since the clocks can drift, we need to readjust or retune the delay element. Hence, it is necessary to periodically send strobe pulses to the receiver. We show a timing diagram for the data and the strobe in Figure 13.15.
+
+Similar to the case of the mesochronous bus, every  cycles the receiver can read out all the  bits in parallel using a serial in – parallel out register. The circuit for the receiver is shown in Figure 13.16. We have a delay calculator circuit that takes the strobe and the receiver clock  as input. Based on the phase delay, it tunes the delay element such that data from the source arrives at the middle of the receiver’s clock cycle. This needs to be done because of the following reason. Since the sender and receiver clock periods are not exactly the same, there can be an issue of rate mismatch. It is possible that we might get two valid data bits in one receiver clock cycle, or get no bits at all. This will happen, when a bit arrives towards the beginning or end of a clock cycle. Hence, we want to ensure that bits arrive at the middle of a clock cycle. Additionally, there are also metastability avoidance issues.
+
+Sadly, the phase can gradually change and bits might start arriving at the receiver at the beginning of a clock cycle. It can then become possible to receive two bits in the same cycle. In this case, dedicated circuitry needs to predict this event, and a priori send a message to the sender to pause sending bits. Meanwhile, the delay element should be retuned to ensure that
+
+bits arrive at the middle of a cycle.

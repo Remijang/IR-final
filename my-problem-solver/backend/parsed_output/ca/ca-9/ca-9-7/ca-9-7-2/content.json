@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "9.7.2 Functional Unit Arguments ",
+        "text_level": 1,
+        "page_idx": 404
+    },
+    {
+        "type": "text",
+        "text": "We augment the read bus to carry the arguments for the functional units (referred to as $\\langle a r g s \\rangle$ ). These arguments specify the nature of the operation, which the functional unit needs to perform. For example, the two operations associated with the memory unit are $\\langle l o a d \\rangle$ , and $\\langle s t o r e \\rangle$ , and the two operations associated with the register file are $\\langle r e a d \\rangle$ and $\\langle w r i t e \\rangle$ . Each ALU operation also has its separate code. ",
+        "page_idx": 404
+    },
+    {
+        "type": "text",
+        "text": "We propose to encode each operation in binary, and reserve the special value of 0 to indicate that no operation needs to be performed. Each functional unit needs to be connected to the read bus, and needs to process the value of the arguments. The $\\langle a r g s \\rangle$ field can be split into two parts: $\\langle u n i t \\ i d \\rangle$ , and $\\langle o p c o d e \\rangle$ . The $\\langle u n i t \\ i d \\rangle$ specifies the identifier for the functional unit. For example, we can assign 00 to the ALU, 01 to the register file, and 10 to the memory unit. The $\\langle o p c o d e \\rangle$ contains the details of the operation to be performed. This is specific to the functional unit. We propose a 10-bit $\\langle a r g s \\rangle$ bus that is a part of the read bus. We devote 3 bits to the $\\langle u n i t \\ i d \\rangle$ , and 7 bits to the $\\langle o p c o d e \\rangle$ . Thus, for each unit we can support 128 different operations. Implementing the circuit to process the $\\langle a r g s \\rangle$ is easy, and we leave it as an exercise to the reader. ",
+        "page_idx": 405
+    }
+]

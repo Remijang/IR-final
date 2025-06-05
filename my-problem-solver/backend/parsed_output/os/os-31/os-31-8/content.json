@@ -1,0 +1,38 @@
+[
+    {
+        "type": "text",
+        "text": "31.8 How To Implement Semaphores ",
+        "text_level": 1,
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Finally, let’s use our low-level synchronization primitives, locks and condition variables, to build our own version of semaphores called ... (drum roll here) ... Zemaphores. This task is fairly straightforward, as you can see in Figure 31.17 (page 17). ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "In the code above, we use just one lock and one condition variable, plus a state variable to track the value of the semaphore. Study the code for yourself until you really understand it. Do it! ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "One subtle difference between our Zemaphore and pure semaphores as defined by Dijkstra is that we don’t maintain the invariant that the value of the semaphore, when negative, reflects the number of waiting threads; indeed, the value will never be lower than zero. This behavior is easier to implement and matches the current Linux implementation. ",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "1 typedef struct __Zem_t {   \n2 int value;   \n3 pthread_cond_t cond;   \n4 pthread_mutex_t lock;   \n5 } Zem_t;   \n6   \n7 // only one thread can call this   \n8 void Zem_init(Zem_t $\\star \\boldsymbol { \\mathrm { S } }$ , int value) {   \n9 s->value $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ value;   \n10 Cond_init(&s->cond);   \n11 Mutex_init(&s->lock);   \n12 }   \n13   \n14 void Zem_wait(Zem_t $\\star \\boldsymbol { \\mathrm { s } }$ ) {   \n15 Mutex_lock(&s->lock);   \n16 while (s->value $\\ < = \\ 0$ )   \n17 Cond_wait(&s->cond, &s->lock);   \n18 s->value--;   \n19 Mutex_unlock( $\\mathrm { ' } \\& \\mathrel { \\phantom { = } } \\mathrm { - } \\mathrm { > } \\mathrm { 1 } \\mathrm { \\circ } \\mathrm { c } \\mathrm { k }$ );   \n20 }   \n21   \n22 void Zem_post(Zem_t \\*s) {   \n23 Mutex_lock(&s->lock);   \n24 s->value++;   \n25 Cond_signal(&s->cond);   \n26 Mutex_unlock(&s->lock);   \n27 } ",
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Curiously, building condition variables out of semaphores is a much trickier proposition. Some highly experienced concurrent programmers tried to do this in the Windows environment, and many different bugs ensued [B04]. Try it yourself, and see if you can figure out why building condition variables out of semaphores is more challenging of a problem than it might appear. ",
+        "page_idx": 16
+    }
+]

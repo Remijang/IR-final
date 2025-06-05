@@ -1,0 +1,42 @@
+[
+    {
+        "type": "text",
+        "text": "43.1 Writing To Disk Sequentially ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We thus have our first challenge: how do we transform all updates to file-system state into a series of sequential writes to disk? To understand this better, let’s use a simple example. Imagine we are writing a data block $D$ to a file. Writing the data block to disk might result in the following on-disk layout, with $D$ written at disk address $\\mathbf { \\nabla } A 0$ : ",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/093cd8ba682615af2d8a1fa5f5c0a33a358d139b5e992963f6ce9346ab300e7a.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "However, when a user writes a data block, it is not only data that gets written to disk; there is also other metadata that needs to be updated. In this case, let’s also write the inode $( I )$ of the file to disk, and have it point to the data block $D$ . When written to disk, the data block and inode would look something like this (note that the inode looks as big as the data block, which generally isn’t the case; in most systems, data blocks are $4 \\mathrm { K B }$ in size, whereas an inode is much smaller, around 128 bytes): ",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/7db0ca4fe1fb84b2c4d214432fcc9a1511fde346d3f96c80e9594ae03897a76f.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "This basic idea, of simply writing all updates (such as data blocks, inodes, etc.) to the disk sequentially, sits at the heart of LFS. If you understand this, you get the basic idea. But as with all complicated systems, the devil is in the details. ",
+        "page_idx": 2
+    }
+]

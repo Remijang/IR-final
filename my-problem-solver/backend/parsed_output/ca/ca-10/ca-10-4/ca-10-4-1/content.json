@@ -1,0 +1,108 @@
+[
+    {
+        "type": "text",
+        "text": "10.4.1 The Pipeline Diagram ",
+        "text_level": 1,
+        "page_idx": 422
+    },
+    {
+        "type": "text",
+        "text": "We typically use a pipeline diagram to study the behavior of a pipeline. It shows the relationships between instructions, clock cycles, and the different stages of the pipeline. It can be used to study the nature of dependencies across different instructions, and their execution in the pipeline. ",
+        "page_idx": 422
+    },
+    {
+        "type": "image",
+        "img_path": "images/2217ab51d73b1c0eb0d701b18300a5f45ce835b501972c64c555e80c104ad7fe.jpg",
+        "img_caption": [
+            "Figure 10.9: Pipelined data path "
+        ],
+        "img_footnote": [],
+        "page_idx": 423
+    },
+    {
+        "type": "text",
+        "text": "Figure 10.11 shows a pipeline diagram for three instructions as they proceed through the pipeline. Each row of the diagram corresponds to each pipeline stage. The columns correspond to clock cycles. In our sample code, we have three instructions that do not have any dependencies between each other. We name these instructions \u2013 [1], [2], and [3] \u2013 respectively. ",
+        "page_idx": 423
+    },
+    {
+        "type": "image",
+        "img_path": "images/8181577abeb920ac2034701fcd3595629ac57e535a963f12ee183fd3bf8f482b.jpg",
+        "img_caption": [
+            "Figure 10.10: An abstraction of the pipelined data path "
+        ],
+        "img_footnote": [],
+        "page_idx": 424
+    },
+    {
+        "type": "image",
+        "img_path": "images/261f7d2371fe1e2536b1047a47fb64f5821585e55170b04147e0df41778b5a8e.jpg",
+        "img_caption": [
+            "Figure 10.11: The pipeline diagram "
+        ],
+        "img_footnote": [],
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "The earliest instruction, [1] enters the IF stage of the pipeline in the first cycle, and leaves the pipeline in the fifth cycle. Similarly, the second instruction, [2], enters the IF stage of the pipeline in the second cycle, and leaves the pipeline in the sixth cycle. Each of these instructions progresses to the subsequent stage of the pipeline in each cycle. The trace of each instruction in the pipeline diagram is a diagonal that is oriented towards the bottom-right. Note that this scenario will get fairly complicated after we consider dependencies across instructions. ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "Here, are the rules to construct a pipeline diagram. ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "1. Construct a grid of cells, which has five rows, and $N$ columns, where $N$ is the total number of clock cycles that we wish to consider. Each of the five rows corresponds to a pipeline stage.   \n2. If an instruction ([k]) enters the pipeline in cycle $m$ , then we add an entry corresponding to [k] in the $m ^ { t h }$ column of the first row. ",
+        "page_idx": 424
+    },
+    {
+        "type": "text",
+        "text": "3. In the $( m + 1 ) ^ { t h }$ cycle, the instruction can stay either in the same stage (because the pipeline might be stalled, described later), or can move to the next row (OF stage). We add a corresponding entry in the grid cell. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "4. Similarly, the instruction moves from the IF stage to the RW stage in sequence. It never moves backwards. However, it can stay in the same stage across consecutive cycles. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "5. We cannot have two entries in a cell. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "6. We finally remove the instruction from the pipeline diagram after it leaves the RW stage. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Example 137 ",
+        "text_level": 1,
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Build a pipeline diagram for the following code snippet. Assume that the first instruction enters the pipeline in cycle 1. ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "[1]: add r1, r2, r3   \n[2]: sub r4, r2, r5   \n[3]: mul r5, r8, r9 ",
+        "page_idx": 425
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 425
+    },
+    {
+        "type": "image",
+        "img_path": "images/1b94f3c8681f98abd30717e73484626685d8198744b922f911b25f3cd8b7e13e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 425
+    }
+]

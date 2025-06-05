@@ -1,0 +1,82 @@
+[
+    {
+        "type": "text",
+        "text": "12 Multiprocessor Systems ",
+        "text_level": 1,
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Up till now, we have discussed the design and implementation of a processor in great detail including several methods to optimize its performance such as pipelining. We observed that by optimizing the processor, and the memory system, it is possible to significantly increase the performance of a program. Now, the question is, \u201cIs this enough?\u201d Or, is it possible to do better? ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "A short answer to this question is \u201cMaybe Not.\u201d For a long answer to this question, the reader needs to read through this entire chapter, and possibly take a look at the references. Let us start out by saying that processor performance has its limits. It is not possible to increase the speed of a processor indefinitely. Even with very complicated superscalar processors (see Chapter 10), and highly optimized memory systems, it is typically not possible to increase the IPC by more than $5 0 \\%$ . Secondly, because of power and temperature considerations, it is very difficult to increase processor frequency beyond 3 GHz. The reader should note that processor frequencies have remained more or less the same over the last ten years (2002-2012). Consequently, CPU performance has also been increasing very slowly over the last ten years. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "We illustrate these points in Figures 12.1, and 12.2. Figure 12.1 shows the peak frequency of processors released by multiple vendors such as Intel, AMD, Sun, Qualcomm, and Fujitsu from 2001 till 2010. We observe that the frequency has stayed more or less constant (mostly between 1 GHz to 2.5 GHz). The trends do not indicate a gradual increase in frequency. We expect that in the near future also, the frequency of processors will be limited to 3 GHz. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.2 shows the average Spec Int 2006 score for the same set of processors from 2001 till 2010. We observe that CPU performance is slowly saturating over time, and it is getting increasingly difficult to increase performance. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Even though the performance of a single processor is not expected to significantly increase in the future, the future of computer architecture is not bleak. This is because processor manufacturing technology is steadily getting better, and this is leading to smaller and faster transistors. Till the late nineties processor designers were utilizing the gains in transistor technology to increase the complexity of a processor by implementing more features. However, due to limitations in complexity, and power, designers resorted to using simpler processors after 2005. Instead of implementing more features in processors, vendors instead decided to put more than one processor on a single chip. This helps us run more than one program at the same time. Alternatively, sometimes it is possible to split a single program into multiple parts and run all the parts in parallel. ",
+        "page_idx": 567
+    },
+    {
+        "type": "image",
+        "img_path": "images/3a4fae508c8d3642abc12565e45fd424b2c58555dfaf57a1e3010e4dbe97ead4.jpg",
+        "img_caption": [
+            "Figure 12.1: CPU frequencies (source [Danowitz et al., 2012]) "
+        ],
+        "img_footnote": [],
+        "page_idx": 568
+    },
+    {
+        "type": "image",
+        "img_path": "images/e12927392414c3cb7109e736e9274e6df46a92beb372dd9b6193618fff21bb28.jpg",
+        "img_caption": [
+            "Figure 12.2: CPU performance (source [Danowitz et al., 2012]) "
+        ],
+        "img_footnote": [],
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "This paradigm of using multiple computing units running in parallel is known as multiprocessing. The term \u201cmultiprocessing\u201d is a rather generic term. It can either refer to multiple processors in the same chip working in parallel, or it can refer to multiple processors across chips working in parallel. A multiprocessor is a piece of hardware that supports multiprocessing. When we have multiple processors within a chip, each processor is known as a core, and the chip is called a multicore processor. ",
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Definition 116 ",
+        "text_level": 1,
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "The term multiprocessing refers to multiple processors working in parallel. This is a generic definition, and it can refer to multiple processors in the same chip, or processors across different chips. A multicore processor is a specific type of multiprocessor that contains all of its constituent processors in the same chip. Each such processor is known as a core. ",
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "We are now entering the era of multiprocessors, especially multicore systems. The number of cores per chip is increasing by roughly a factor of two every two years. New applications are being written to leverage this extra hardware. Most experts opine that the future of computing lies in multiprocessor systems. ",
+        "page_idx": 569
+    },
+    {
+        "type": "text",
+        "text": "Before proceeding to the design of different types of multiprocessors, let us quickly take a look at the background and history of multiprocessors. ",
+        "page_idx": 569
+    }
+]

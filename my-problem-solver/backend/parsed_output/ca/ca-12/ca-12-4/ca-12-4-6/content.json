@@ -1,0 +1,259 @@
+[
+    {
+        "type": "text",
+        "text": "12.4.6 Coherent Private Caches ",
+        "text_level": 1,
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "Overview of a Snoopy Protocol ",
+        "text_level": 1,
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "The aim here is to make a set of private caches behave as if it is one large shared cache. From the point of view of software we should not be able to figure out whether a cache is private or shared. A conceptual diagram of the system is shown in Figure 12.9. It shows a set of processors along with their associated caches. The set of caches forms a cache group. The entire cache group needs to appear as one cache. ",
+        "page_idx": 598
+    },
+    {
+        "type": "text",
+        "text": "These caches are connected via an interconnection network, which can range from a simple shared bus type topology to more complex topologies. We shall look at the design of different interconnection networks in Section 12.6. In this section, let us assume that all the caches are connected to a shared bus. A shared bus allows a single writer and multiple readers at any point of time. If one cache writes a message to the bus, then all the other caches can read it. The topology is shown in Figure 12.10. Note that the bus gives exclusive access to only one cache at any point of time for writing a message. Consequently, all the caches perceive the same order of messages. A protocol that implements cache coherence with caches connected on a shared bus is known as a snoopy protocol. ",
+        "page_idx": 598
+    },
+    {
+        "type": "image",
+        "img_path": "images/fcc449aa1f3327874d93c06aab9330bd0ab266e65d04b9d2764594392e880e02.jpg",
+        "img_caption": [
+            "Figure 12.9: A system with many processors and their private caches "
+        ],
+        "img_footnote": [],
+        "page_idx": 599
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 599
+    },
+    {
+        "type": "image",
+        "img_path": "images/20fa36b5906a872d0fb1875f4f9cd7f4eeb6571d84caadc372cceba477901076.jpg",
+        "img_caption": [
+            "Figure 12.10: Caches connected with a shared bus "
+        ],
+        "img_footnote": [],
+        "page_idx": 599
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the operation of the snoopy protocol from the point of view of the two axioms of coherence \u2013 writes always complete (completion axiom), and writes to the same block are seen in the same order by all processors (order axiom). If cache $i$ , wishes to perform a write operation on a block, then this write needs to be ultimately visible to all the other caches. We need to do this to satisfy the completion axiom, because we are not allowed to lose a write request. Secondly, different writes to the same block need to arrive at all the caches that might contain the block in the same order (order axiom). This ensures that for any given block, all the caches perceive the same order of updates. The shared bus automatically satisfies this requirement (the order axiom). ",
+        "page_idx": 599
+    },
+    {
+        "type": "text",
+        "text": "We present the design of two snoopy protocols \u2013 write-update and write-invalidate. ",
+        "page_idx": 599
+    },
+    {
+        "type": "text",
+        "text": "Write-Update Protocol ",
+        "text_level": 1,
+        "page_idx": 600
+    },
+    {
+        "type": "text",
+        "text": "Let us now design a protocol, where a private cache keeps a copy of a write request, and broadcasts the write request to all the caches. This strategy ensures that a write is never lost, and the write messages to the same block are perceived in the same order by all the caches. This strategy requires us to broadcast, whenever we want to write. This is a large additional overhead; however, this strategy will work. Now, we need to incorporate reads into our protocol. A read to a location, $x$ , can first check the private cache to see if a copy of it is already available. If a valid copy is available, then the value can be forwarded to the requesting processor. However, if there is a cache miss, then it is possible that it might be present with another sister cache in the cache group, or it might need to be fetched from the lower level. We need to first check if the value is present with a sister cache. We follow the same process here. The cache broadcasts a read request to all the caches. If any of the caches, has the value, then it replies, and sends the value to the requesting cache. The requesting cache inserts the value, and forwards it to the processor. However, if it does not get any reply from any other cache, then it initiates a read to the lower level. ",
+        "page_idx": 600
+    },
+    {
+        "type": "text",
+        "text": "This protocol is known as the write-update protocol. Each cache block needs to maintain three states, $M$ , $S$ , and $I$ . $M$ refers to the modified state. It means that the cache has modified the block. $S$ (shared) means that the cache has not modified the block, and $I$ (invalid) denotes the fact that the block does not contain valid data. ",
+        "page_idx": 600
+    },
+    {
+        "type": "image",
+        "img_path": "images/291361080f6532d46a1b021d41f03f3ee9847aee1f8d3d3a8bba82d79d077fe9.jpg",
+        "img_caption": [
+            "Figure 12.11: State transition diagram in the write-update protocol "
+        ],
+        "img_footnote": [],
+        "page_idx": 600
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.11 shows a finite state machine (FSM) for each cache block. This FSM is executed by the cache controller. The format for state transitions is event / action. If the cache controller is sent an event, then it takes a corresponding action, which may include a state transition. Note that in some cases, the action field is blank. This means that in those cases, no action is taken. Note that the state of a cache block is a part of its entry in the tag array. If a block is not present in the cache, then its state is assumed to be invalid ( $I$ ). Lastly, it is important to mention that Figure 12.11 shows the transitions for events generated by the processor. It does not show the actions for events sent over the bus by other caches in the cache group. Now, let us discuss the protocol in detail. ",
+        "page_idx": 600
+    },
+    {
+        "type": "text",
+        "text": "All blocks, initially are in the $I$ state. If there is a read miss then it moves to the $S$ state. We additionally need to broadcast the read miss to all the caches in the cache group, and either get the value from a sister cache, or from the lower level. Note that we give first preference to a sister cache, because it might have modified the block without writing it back to the lower level. Similarly, if there is a write miss in the $I$ state, then we need to read the block from another sister cache if it is available, and move to the $M$ state. If no other sister cache has the block, then we need to read the block from the lower level of the memory hierarchy. ",
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "If there is a read hit in the $S$ state, then we can seamlessly pass the data to the processor. However, if we need to write to the block in the $S$ state, we need to broadcast the write to all the other caches such that they get the updated value. Once, the cache gets a copy of its write request from the bus, it can write the value to the block, and change its state to $M$ . To evict a block in the $S$ state, we need to just evict it from the cache. It is not necessary to write back its value because the block has not been modified. ",
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "Now, let us consider the $M$ state. If we need to read a block in the $M$ state, then we can read it from the cache, and send the value to the processor. There is no need to send any message. However, if we wish to write to it, then it is necessary to send a write request on the bus. Once, the cache sees its own write request arrive via the shared bus, it can write its value to the memory location in its private cache. To evict a block in the $M$ state, we need to write it back to the lower level in the memory hierarchy, because it has been modified. ",
+        "page_idx": 601
+    },
+    {
+        "type": "image",
+        "img_path": "images/eee7ba563560b677b6b10c3f62adfe91ea51588ea78c2e0e543bad58fe58a479.jpg",
+        "img_caption": [
+            "Figure 12.12: The bus arbiter "
+        ],
+        "img_footnote": [],
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "Every bus has a dedicated structure called an arbiter that receives requests to use the bus from different caches. It allots the bus to the caches in FIFO order. A schematic of the bus arbiter is shown in Figure 12.12. It is a very simple structure. It contains a queue of requests to transmit on the bus. Each cycle it picks a request from the queue, and gives permission to the corresponding cache to transmit a message on the bus. ",
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a sister cache. Whenever it gets a miss message from the bus, it checks its cache to find if it has the block. If there is a cache hit, then it sends the block on the bus, or directly to the requesting cache. If it receives the notification of a write by another cache, then it updates the contents of the block if it is present in its cache. ",
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "Directory Protocol ",
+        "text_level": 1,
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "Note that in the snoopy protocol we always broadcast a write, a read miss, or a write miss. This is strictly not required. We need to send a message to only those caches that contain a copy of the block. The directory protocol uses a dedicated structure called a directory to maintain this information. For each block address, the directory maintains a list of sharers. A sharer is the id of a cache that might contain the block. The list of sharers is in general a superset of caches that might contain the given block. We can maintain the list of sharers as a bit vector (1 bit per sharer). If a bit is 1, then a cache contains a copy, otherwise it does not. ",
+        "page_idx": 601
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "The write-update protocol with a directory gets modified as follows. Instead of broadcasting data on the bus, a cache sends all of its messages to the directory. For a read or write miss, the directory fetches the block from a sister cache if it has a copy. It then forwards the block to the requesting cache. Similarly, for a write, the directory sends the write message to only those caches that might have a copy of the block. The list of sharers needs to be updated when a cache inserts or evicts a block. Lastly, to maintain coherence the directory needs to ensure that all the caches get messages in the same order, and no message is ever lost. The directory protocol minimizes the number of messages that need to be sent, and is thus more scalable. ",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Definition 129 ",
+        "text_level": 1,
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Snoopy Protocol In a snoopy protocol, all the caches are connected to a shared bus. A cache broadcasts each message to the remaining caches. ",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Directory Protocol In a directory protocol, we reduce the number of messages by adding a dedicated structure known as a directory. The directory maintains the list of caches that might potentially contain a copy of the block. It sends messages for a given block address to only the caches in the list. ",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Question 8 ",
+        "text_level": 1,
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Why is it necessary to wait for the broadcast from the bus to perform a write? ",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us assume this is not the case, and processor 1, wishes to write 1 to x, and processor 2 wishes to write 2 to $x$ . They will then first write 1 and 2 to their copies of $x$ , respectively, and then broadcast the write. Thus, the writes to x will be seen in different orders by both the processors. This violates the order axiom. However, if they wait for a copy of their write request to arrive from the bus, then they write to x in the same order. The bus effectively resolves the conflict between processor 1 and 2, and orders one request after the other. ",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Write-Invalidate Protocol ",
+        "text_level": 1,
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "We need to note that broadcasting a write request for every single write is an unnecessary overhead. It is possible that most of the blocks might not be shared in the first place. Hence, there is no need to send an extra message on every write. Let us try to reduce the number of messages in the write update protocol by proposing the write-invalidate protocol. Here again, we can either use the snoopy protocol, or the directory protocol. Let us show an example with the snoopy protocol. ",
+        "page_idx": 602
+    },
+    {
+        "type": "text",
+        "text": "Let us maintain three states for each block \u2013 $M$ , $S$ , and $I$ . Let us however, change the meaning of our states. The invalid state ( $I$ ) retains the same meaning. It means that the entry is effectively not present in the cache. The shared state ( $S$ ) means that a cache can read the block, but it cannot write to it. It is possible to have multiple copies of the same block in different caches in the shared state. Since the shared state assumes that the block is read-only, having multiple copies of the block does not affect cache coherence. The $M$ (modified) state signifies the fact that the cache can write to the block. If a block is in the $M$ state, then all the other caches in the cache group need to have the block in the $I$ state. No other cache is allowed to have a valid copy of the block in the $S$ or $M$ states. This is where the write-invalidate protocol differs from the write-update protocol. It allows either only one writer at a time, or multiple readers at a time. It never allows a reader and a writer to co-exist at the same time. By restricting the number of caches that have write access to a block at any point of time, we can reduce the number of messages. ",
+        "page_idx": 603
+    },
+    {
+        "type": "text",
+        "text": "The basic insight is as follows. The write-update protocol did not have to send any messages on a read hit. It sent extra messages on a write hit, which we want to eliminate. It needed to send extra messages because multiple caches could read or write a block concurrently. For the write-invalidate protocol, we have eliminated this behavior. If a block is in the $M$ state, then no other cache contains a valid copy of the block. ",
+        "page_idx": 603
+    },
+    {
+        "type": "image",
+        "img_path": "images/c8afd618314c5aa2207e4392de4b73d9756f1b596a1474bb0a06955d5c44fcd2.jpg",
+        "img_caption": [
+            "Figure 12.13: State transition diagram of a block due to actions of the processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 603
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.13 shows the state transition diagram because of actions of the processor. The state transition diagram is mostly the same as the state transition diagram of the write-update protocol. Let us look at the differences. The first is that we define three types of messages that are put on the bus namely write, write miss, and read miss. When we transition from the $I$ to the $S$ state, we place a read miss on the bus. If a sister cache does not reply with the data, the cache controller reads the block from the lower level. The semantics of the $S$ state remains the same. To write to a block in the $S$ state, we need to transition to the $M$ state, after writing a write message on the bus. Now, when a block is in the $M$ state, we are assured of the fact that no other cache contains a valid copy. Hence, we can freely read and write a block in the ",
+        "page_idx": 603
+    },
+    {
+        "type": "image",
+        "img_path": "images/0190a5bebd84b94bb8ad2b50328e4945b7cac5ce99579134221d254ce0763b62.jpg",
+        "img_caption": [
+            "Figure 12.14: State transition diagram of a block due to messages on the bus "
+        ],
+        "img_footnote": [],
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "$M$ state. It is not necessary to send any messages on the bus. If the processor decides to evict a block in the $M$ state, then it needs to write its data to the lower level. ",
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.14 shows the state transitions due to messages received on the bus. In the $S$ state, if we get a read miss, then it means that another cache wants read access to the block. Any of the caches that contains the block sends it the contents of the block. This process can be orchestrated as follows. All the caches that have a copy of the block try to get access to the bus. The first cache that gets access to the bus sends a copy of the block to the requesting cache. The rest of the caches immediately get to know that the contents of the block have been transferred. They subsequently stop trying. If we get a write or write miss message in the $S$ state, then the block transitions to the $I$ state. ",
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the $M$ state. If some other cache sends a write miss message, then the cache controller of the cache that contains the block sends the contents of the block to it, and transitions to the $I$ state. However, if it gets a read miss, then it needs to perform a sequence of steps. We assume that we can seamlessly evict a block in the $S$ state. Hence, it is necessary to write the data to the lower level before moving to the $S$ state. Subsequently, the cache that originally has the block also sends the contents of the block to the requesting cache, and transitions the state of the block to the $S$ state. ",
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "Write-Invalidate Protocol with a Directory ",
+        "text_level": 1,
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "Implementing the write-invalidate protocol with a directory is fairly trivial. The state transition diagrams remain almost the same. Instead of broadcasting a message, we send it to the directory. The directory sends the message to the sharers of the block. ",
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "The life cycle of a block is as follows. Whenever, a block is brought in from the lower level, a directory entry is initialized. At this point it has only one sharer, which is the cache that brought it from the lower level. Now, if there are read misses to the block, then the directory keeps adding sharers. However, if there is a write miss, or a processor decides to write to the block, then it sends a write or write miss message to the directory. The directory cleans the sharers list, and keeps only one sharer, which is the processor that is performing the write access. When a block is evicted, its cache informs the directory, and the directory deletes a sharer. When the set of sharers becomes empty, the directory entry can be removed. ",
+        "page_idx": 604
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 605
+    },
+    {
+        "type": "text",
+        "text": "It is possible to make improvements to the write-invalidate and update protocols by adding an additional state known as the exclusive $( E )$ state. The $E$ state can be the initial state for every cache block fetched from the lower level of the memory hierarchy. This state stores the fact that a block exclusively belongs to a cache. However, the cache has read-only access to it, and does not have write access to it. For an $E$ to $M$ transition, we do not have to send a write miss or write message on the bus, because the block is owned exclusively by one cache. We can seamlessly evict data from the $E$ state if required. Implementing the MESI protocol is left as an exercise for the reader. ",
+        "page_idx": 605
+    }
+]

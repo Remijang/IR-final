@@ -1,0 +1,63 @@
+[
+    {
+        "type": "text",
+        "text": "10.7.3 Data Hazards with Forwarding ",
+        "text_level": 1,
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Question 7 Has forwarding completely eliminated data hazards? ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Let us now answer this question. Let us consider ALU instructions. They produce their result in the EX stage, and they are ready to forward in the MA stage. Any succeeding consumer instruction will need the value of an operand produced by the preceding ALU instruction at the earliest in its EX stage. At this point, we can effect a successful forwarding because the value of the operand is already available in the MA stage. Any subsequent instruction can always get the value using any of the available forwarding paths or from the register file if the producer instruction has left the pipeline. The reader should be convinced that if the producer instruction is an ALU instruction, then it is always possible to forward the result of the ALU operation to a consumer instruction. To prove this fact, the reader needs to consider all possible combinations of instructions, and find out if it is possible to forward the input operands to the consumer instruction. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The only other instruction that produces a register value explicitly is the load instruction. Recall that the store instruction does not write to any register. Let us look at the load instruction. The load instruction produces its value at the end of the MA stage. It is thus ready to forward its value in the RW stage. Let us now consider a code snippet and its pipeline diagram in Figure 10.24. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Instruction [1] is a load instruction that writes to register r1, and instruction [2] is an ALU instruction that uses register $r 1$ as a source operand. The load instruction is ready to forward at the beginning of cycle 5. Sadly, the ALU instruction needs the value of $r 1$ at the beginning of cycle 4. We thus need to draw an arrow in the pipeline diagram that flows backwards in time. Hence, we can conclude that in this case forwarding is not possible. ",
+        "page_idx": 446
+    },
+    {
+        "type": "image",
+        "img_path": "images/863e37e3ea0aa2cd32c289d293dd27a9d9656a80126e165745a5ffcbda87f4af.jpg",
+        "img_caption": [
+            "Figure 10.24: The load-use hazard "
+        ],
+        "img_footnote": [],
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Definition 76 ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Load-Use Hazard A load-use hazard is a situation where a load instruction supplies the loaded value to an immediately succeeding instruction that needs the value in its EX stage. A pipeline even with forwarding needs to insert a single stall cycle after the load instruction. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "This is the only case in which we need to introduce a stall cycle in our pipeline. This situation is known as a load-use hazard, where a load instruction supplies the loaded value to an immediately succeeding instruction that needs the value in its EX stage. The standard method of eliminating load-use hazards is by allowing the pipeline to insert a bubble, or by using the compiler to either reorder instructions or insert a nop instruction. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Thus, we can conclude that a pipeline with forwarding does need interlocks, albeit rarely. The only special condition is a load-use hazard. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Note that if there is a store instruction after a load instruction that stores the loaded value, then we do not need to insert a stall cycle. This is because the store instruction needs the value in its MA stage. At this point of time the load instruction is in the RW stage, and it is possible to forward the value. ",
+        "page_idx": 447
+    }
+]

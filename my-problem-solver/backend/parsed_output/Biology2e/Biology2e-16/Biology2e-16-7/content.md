@@ -1,0 +1,271 @@
+# 16.7 Cancer and Gene Regulation
+
+# Bytheendofthissection,youwil beabletodothefolowing:
+
+Describe how changes to gene expression can cause cancer Explain how changes to gene expression at different levels can disrupt the cell cycle • Discuss how understanding regulation of gene expression can lead to better drug design
+
+Cancer is not a single disease but includes many different diseases. In cancer cells, mutations modify cell-cycle control and cells don’t stop growing as they normally would. Mutations can also alter the growth rate or the progression of the cell through the cell cycle. One example of a gene modification that alters the growth rate is increased phosphorylation of cyclin B, a protein that controls the progression of a cell through the cell cycle and serves as a cell-cycle checkpoint protein.
+
+For cells to move through each phase of the cell cycle, the cell must pass through checkpoints. This ensures that the cell has properly completed the step and has not encountered any mutation that will alter its function. Many proteins, including cyclin B, control these checkpoints. The phosphorylation of cyclin B, a post-translational event, alters its function. As a result, cells can progress through the cell cycle unimpeded, even if mutations exist in the cell and its growth should be terminated. This posttranslational change of cyclin B prevents it from controlling the cell cycle and contributes to the development of cancer.
+
+# Cancer: Disease of Altered Gene Expression
+
+Cancer can be described as a disease of altered gene expression. There are many proteins that are turned on or off (gene activation or gene silencing) that dramatically alter the overall activity of the cell. A gene that is not normally expressed in that cell can be switched on and expressed at high levels. This can be the result of gene mutation or changes in gene regulation (epigenetic, transcription, post-transcription, translation, or post-translation).
+
+Changes in epigenetic regulation, transcription, RNA stability, protein translation, and post-translational control can be detected in cancer. While these changes don’t occur simultaneously in one cancer, changes at each of these levels can be detected when observing cancer at different sites in different individuals. Therefore, changes in histone acetylation (epigenetic modification that leads to gene silencing), activation of transcription factors by phosphorylation, increased RNA stability, increased translational control, and protein modification can all be detected at some point in various cancer cells. Scientists are working to understand the common changes that give rise to certain types of cancer or how a modification might be exploited to destroy a tumor cell.
+
+
+
+# Tumor Suppressor Genes, Oncogenes, and Cancer
+
+In normal cells, some genes function to prevent excess, inappropriate cell growth. These are tumor-suppressor genes, which are active in normal cells to prevent uncontrolled cell growth. There are many tumor-suppressor genes in cells. The most studied tumor-suppressor gene is p53, which is mutated in over 50 percent of all cancer types. The p53 protein itself functions as a transcription factor. It can bind to sites in the promoters of genes to initiate transcription. Therefore, the mutation of p53 in cancer will dramatically alter the transcriptional activity of its target genes.
+
+# LINK TO LEARNING
+
+Watch this animation (http://openstax.org/l/p53_cancer) to learn more about the use of p53 in fighting cancer.
+
+Proto-oncogenes are positive cell-cycle regulators. When mutated, proto-oncogenes can become oncogenes and cause cancer. Overexpression of the oncogene can lead to uncontrolled cell growth. This is because oncogenes can alter transcriptional activity, stability, or protein translation of another gene that directly or indirectly controls cell growth. An example of an oncogene involved in cancer is a protein called myc. Myc is a transcription factor that is aberrantly activated in Burkett’s Lymphoma, a cancer of the lymph system. Overexpression of myc transforms normal B cells into cancerous cells that continue to grow uncontrollably. High B-cell numbers can result in tumors that can interfere with normal bodily function. Patients with Burkett’s lymphoma can develop tumors on their jaw or in their mouth that interfere with the ability to eat.
+
+# Cancer and Epigenetic Alterations
+
+Silencing genes through epigenetic mechanisms is also very common in cancer cells. There are characteristic modifications to histone proteins and DNA that are associated with silenced genes. In cancer cells, the DNA in the promoter region of silenced genes is methylated on cytosine DNA residues in CpG islands. Histone proteins that surround that region lack the acetylation modification that is present when the genes are expressed in normal cells. This combination of DNA methylation and histone deacetylation (epigenetic modifications that lead to gene silencing) is commonly found in cancer. When these modifications occur, the gene present in that chromosomal region is silenced. Increasingly, scientists understand how epigenetic changes are altered in cancer. Because these changes are temporary and can be reversed—for example, by preventing the action of the histone deacetylase protein that removes acetyl groups, or by DNA methyl transferase enzymes that add methyl groups to cytosines in DNA—it is possible to design new drugs and new therapies to take advantage of the reversible nature of these processes. Indeed, many researchers are testing how a silenced gene can be switched back on in a cancer cell to help re-establish normal growth patterns.
+
+Genes involved in the development of many other illnesses, ranging from allergies to inflammation to autism, are thought to be regulated by epigenetic mechanisms. As our knowledge of how genes are controlled deepens, new ways to treat diseases like cancer will emerge.
+
+# Cancer and Transcriptional Control
+
+Alterations in cells that give rise to cancer can affect the transcriptional control of gene expression. Mutations that activate transcription factors, such as increased phosphorylation, can increase the binding of a transcription factor to its binding site in a promoter. This could lead to increased transcriptional activation of that gene that results in modified cell growth. Alternatively, a mutation in the DNA of a promoter or enhancer region can increase the binding ability of a transcription factor. This could also lead to the increased transcription and aberrant gene expression that is seen in cancer cells.
+
+Researchers have been investigating how to control the transcriptional activation of gene expression in cancer. Identifying how a transcription factor binds, or a pathway that activates where a gene can be turned off, has led to new drugs and new ways to treat cancer. In breast cancer, for example, many proteins are overexpressed. This can lead to increased phosphorylation of key transcription factors that increase transcription. One such example is the overexpression of the epidermal growth-factor receptor (EGFR) in a subset of breast cancers. The EGFR pathway activates many protein kinases that, in turn, activate many transcription factors which control genes involved in cell growth. New drugs that prevent the activation of EGFR have been developed and are used to treat these cancers.
+
+# Cancer and Post-transcriptional Control
+
+Changes in the post-transcriptional control of a gene can also result in cancer. Recently, several groups of researchers have shown that specific cancers have altered expression of miRNAs. Because miRNAs bind to the $3 ^ { ^ { \prime } }$ UTR of RNA molecules to degrade them, overexpression of these miRNAs could be detrimental to normal cellular activity. Too many miRNAs could dramatically decrease the RNA population, leading to a decrease in protein expression. Several studies have demonstrated a change in the miRNA population in specific cancer types. It appears that the subset of miRNAs expressed in breast cancer cells is quite different from the subset expressed in lung cancer cells or even from normal breast cells. This suggests that alterations in miRNA activity can contribute to the growth of breast cancer cells. These types of studies also suggest that if some miRNAs are specifically expressed only in cancer cells, they could be potential drug targets. It would, therefore, be conceivable that new drugs that turn off miRNA expression in cancer could be an effective method to treat cancer.
+
+# Cancer and Translational/Post-translational Control
+
+There are many examples of how translational or post-translational modifications of proteins arise in cancer. Modifications are found in cancer cells from the increased translation of a protein to changes in protein phosphorylation to alternative splice variants of a protein. An example of how the expression of an alternative form of a protein can have dramatically different outcomes is seen in colon cancer cells. The c-Flip protein, a protein involved in mediating the cell-death pathway, comes in two forms: long (c-FLIPL) and short (c-FLIPS). Both forms appear to be involved in initiating controlled cell-death mechanisms in normal cells. However, in colon cancer cells, expression of the long form results in increased cell growth instead of cell death. Clearly, the expression of the wrong protein dramatically alters cell function and contributes to the development of cancer.
+
+# New Drugs to Combat Cancer: Targeted Therapies
+
+Scientists are using what is known about the regulation of gene expression in disease states, including cancer, to develop new ways to treat and prevent disease development. Many scientists are designing drugs on the basis of the gene expression patterns within individual tumors. This idea, that therapy and medicines can be tailored to an individual, has given rise to the field of personalized medicine. With an increased understanding of gene regulation and gene function, medicines can be designed to specifically target diseased cells without harming healthy cells. Some new medicines, called targeted therapies, have exploited the overexpression of a specific protein or the mutation of a gene to develop a new medication to treat disease. One such example is the use of anti-EGF receptor medications to treat the subset of breast cancer tumors that have very high levels of the EGF protein. Undoubtedly, more targeted therapies will be developed as scientists learn more about how gene expression changes can cause cancer.
+
+# CAREER CONNECTION
+
+# Clinical Trial Coordinator
+
+A clinical trial coordinator is the person managing the proceedings of the clinical trial. This job includes coordinating patient schedules and appointments, maintaining detailed notes, building the database to track patients (especially for long-term follow-up studies), ensuring proper documentation has been acquired and accepted, and working with the nurses and doctors to facilitate the trial and publication of the results. A clinical trial coordinator may have a science background, like a nursing degree, or other certification. People who have worked in science labs or in clinical offices are also qualified to become a clinical trial coordinator. These jobs are generally in hospitals; however, some clinics and doctor’s offices also conduct clinical trials and may hire a coordinator.
+
+# KEY TERMS
+
+3' UTR 3' untranslated region; region just downstream of the protein-coding region in an RNA molecule that is not translated   
+5' cap a methylated guanosine triphosphate (GTP) molecule that is attached to the $5 ^ { \prime }$ end of a messenger RNA to protect the end from degradation   
+${ \pmb 5 } ^ { \prime }$ UTR 5' untranslated region; region just upstream of the protein-coding region in an RNA molecule that is not translated   
+activator protein that binds to prokaryotic operators to increase transcription   
+catabolite activator protein (CAP) protein that complexes with cAMP to bind to the promoter sequences of operons which control sugar processing when glucose is not available   
+cis-acting element transcription factor binding sites within the promoter that regulate the transcription of a gene adjacent to it   
+Dicer enzyme that chops the pre-miRNA into the mature form of the miRNA   
+DNA methylation epigenetic modification that leads to gene silencing; a process involving adding a methyl group to the DNA molecule   
+enhancer segment of DNA that is upstream, downstream, perhaps thousands of nucleotides away, or on another chromosome that influence the transcription of a specific gene   
+epigenetic heritable changes that do not involve changes in the DNA sequence   
+eukaryotic initiation factor-2 (eIF-2) protein that binds first to an mRNA to initiate translation   
+gene expression processes that control the turning on or turning off of a gene   
+guanine diphosphate (GDP) molecule that is left after the energy is used to start translation   
+guanine triphosphate (GTP) energy-providing molecule that binds to eIF-2 and is needed for translation   
+histone acetylation epigenetic modification that leads to gene silencing; a process involving adding or removing an acetyl functional group   
+inducible operon operon that can be activated or repressed depending on cellular needs and the surrounding environment   
+initiation complex protein complex containing eIF-2 that starts translation   
+lacoperon operon in prokaryotic cells that encodes genes required for processing and intake of lactose   
+large 60S ribosomal subunit second, larger ribosomal subunit that binds to the RNA to translate it into protein   
+microRNA (miRNA) small RNA molecules (approximately 21 nucleotides in length) that bind to RNA molecules to degrade them   
+myc oncogene that causes cancer in many cancer cells   
+negative regulator protein that prevents transcription   
+operator region of DNA outside of the promoter region that binds activators or repressors that control gene expression in prokaryotic cells   
+operon collection of genes involved in a pathway that are transcribed together as a single mRNA in prokaryotic cells   
+poly-A tail a series of adenine nucleotides that are attached to the 3' end of an mRNA to protect the end from degradation   
+positive regulator protein that increases transcription   
+post-transcriptional control of gene expression after the RNA molecule has been created but before it is translated into protein   
+post-translational control of gene expression after a protein has been created   
+proteasome organelle that degrades proteins   
+repressor protein that binds to the operator of prokaryotic genes to prevent transcription   
+RISC protein complex that binds along with the miRNA to the RNA to degrade it   
+RNA stability how long an RNA molecule will remain intact in the cytoplasm   
+RNA-binding protein (RBP) protein that binds to the $3 ^ { ^ { \prime } }$ or $5 ^ { \prime }$ UTR to increase or decrease the RNA stability   
+small 40S ribosomal subunit ribosomal subunit that binds to the RNA to translate it into protein   
+trans-acting element transcription factor binding site found outside the promoter or on another chromosome that influences the transcription of a particular gene   
+transcription factor protein that binds to the DNA at the promoter or enhancer region and that influences transcription of a gene   
+transcription factor binding site sequence of DNA to which a transcription factor binds   
+transcriptional start site site at which transcription begins   
+trpoperon series of genes necessary to synthesize tryptophan in prokaryotic cells   
+tryptophan amino acid that can be synthesized by prokaryotic cells when necessary   
+untranslated region segment of the RNA molecule that is not translated into protein. These regions lie before (upstream or 5') and after (downstream or 3') the proteincoding region
+
+
+
+# CHAPTER SUMMARY
+
+# 16.1 Regulation of Gene Expression
+
+While all somatic cells within an organism contain the same DNA, not all cells within that organism express the same proteins. Prokaryotic organisms express most of their genes most of the time. However, some genes are expressed only when they are needed. Eukaryotic organisms, on the other hand, express only a subset of their genes in any given cell. To express a protein, the DNA is first transcribed into RNA, which is then translated into proteins, which are then targeted to specific cellular locations. In prokaryotic cells, transcription and translation occur almost simultaneously. In eukaryotic cells, transcription occurs in the nucleus and is separate from the translation that occurs in the cytoplasm. Gene expression in prokaryotes is mostly regulated at the transcriptional level (some epigenetic and post-translational regulation is also present), whereas in eukaryotic cells, gene expression is regulated at the epigenetic, transcriptional, post-transcriptional, translational, and post-translational levels.
+
+# 16.2 Prokaryotic Gene Regulation
+
+The regulation of gene expression in prokaryotic cells occurs at the transcriptional level. There are two majors kinds of proteins that control prokaryotic transcription: repressors and activators. Repressors bind to an operator region to block the action of RNA polymerase. Activators bind to the promoter to enhance the binding of RNA polymerase. Inducer molecules can increase transcription either by inactivating repressors or by activating activator proteins. In the trpoperon, the trprepressor is itself activated by binding to tryptophan. Therefore, if tryptophan is not needed, the repressor is bound to the operator and transcription remains off. The lacoperon is activated by the CAP (catabolite activator protein), which binds to the promoter to stabilize RNA polymerase binding. CAP is itself activated by cAMP, whose concentration rises as the concentration of glucose falls. However, the lacoperon also requires the presence of lactose for transcription to occur. Lactose inactivates the lac repressor, and prevents the repressor protein from binding to the lacoperator. With the repressor inactivated, transcription may proceed. Therefore glucose must be absent and lactose must be present for effective transcription of the lacoperon.
+
+# 16.3 Eukaryotic Epigenetic Gene Regulation
+
+In eukaryotic cells, the first stage of gene-expression control occurs at the epigenetic level. Epigenetic mechanisms control access to the chromosomal region to allow genes to be turned on or off. Chromatin remodeling controls how DNA is packed into the nucleus by regulating how tightly the
+
+DNA is wound around histone proteins. The DNA itself may be methylated to selectively silence genes. The addition or removal of chemical modifications (or flags) to histone proteins or DNA signals the cell to open or close a chromosomal region. Therefore, eukaryotic cells can control whether a gene is expressed by controlling accessibility to the binding of RNA polymerase and its transcription factors.
+
+# 16.4 Eukaryotic Transcription Gene Regulation
+
+To start transcription, general transcription factors, such as TFIID, TFIIB, and others, must first bind to the TATA box and recruit RNA polymerase to that location. Additional transcription factors may also bind to other regulatory elements at the promoter to increase or prevent transcription. In addition to promoter sequences, enhancer regions help augment transcription. Enhancers can be upstream, downstream, within a gene itself, or on other chromosomes. Specific transcription factors bound to enhancer regions may either increase or prevent transcription.
+
+# 16.5 Eukaryotic Post-transcriptional Gene Regulation
+
+Post-transcriptional control can occur at any stage after transcription, including RNA splicing and RNA stability. Once RNA is transcribed, it must be processed to create a mature RNA that is ready to be translated. This involves the removal of introns that do not code for protein. Spliceosomes bind to the signals that mark the exon/intron border to remove the introns and ligate the exons together. Once this occurs, the RNA is mature and can be translated. Alternative splicing can produce more than one mRNA from a given transcript. Different splicing variants may be produced under different conditions.
+
+RNA is created and spliced in the nucleus, but needs to be transported to the cytoplasm to be translated. RNA is transported to the cytoplasm through the nuclear pore complex. Once the RNA is in the cytoplasm, the length of time it resides there before being degraded, called RNA stability, can also be altered to control the overall amount of protein that is synthesized. The RNA stability can be increased, leading to longer residency time in the cytoplasm, or decreased, leading to shortened time and less protein synthesis. RNA stability is controlled by RNA-binding proteins (RPBs) and microRNAs (miRNAs). These RPBs and miRNAs bind to the $5 ^ { \prime }$ UTR or the $3 ^ { ^ { \prime } }$ UTR of the RNA to increase or decrease RNA stability. MicroRNAs associated with RISC complexes may repress translation or lead to mRNA breakdown.
+
+# 16.6 Eukaryotic Translational and Post-translational Gene Regulation
+
+Changing the status of the RNA or the protein itself can affect the amount of protein, the function of the protein, or how long it is found in the cell. To translate the protein, a protein initiator complex must assemble on the RNA. Modifications (such as phosphorylation) of proteins in this complex can prevent proper translation from occurring. Once a protein has been synthesized, it can be modified (phosphorylated, acetylated, methylated, or ubiquitinated). These post-translational modifications can greatly impact the stability, degradation, or function of the protein.
+
+# 16.7 Cancer and Gene Regulation
+
+Cancer can be described as a disease of altered gene expression. Changes at every level of eukaryotic gene expression can be detected in some form of cancer at some point in time. In order to understand how changes to gene expression can cause cancer, it is critical to understand how each stage of gene regulation works in normal cells. By understanding the mechanisms of control in normal, nondiseased cells, it will be easier for scientists to understand what goes wrong in disease states including complex ones like cancer.
+
+# VISUAL CONNECTION QUESTIONS
+
+1. Figure 16.5 In E.coli, the trpoperon is on by default, while the lacoperon is off. Why do you think that this is the case?
+
+2. Figure 16.7 In females, one of the two X chromosomes is inactivated during embryonic development because of epigenetic changes to the chromatin. What impact do you think these changes would have on nucleosome packing?
+
+3. Figure 16.13 An increase in phosphorylation levels of eIF-2 has been observed in patients with neurodegenerative diseases such as Alzheimer’s, Parkinson’s, and Huntington’s. What impact do you think this might have on protein synthesis?
+
+# REVIEW QUESTIONS
+
+4. Control of gene expression in eukaryotic cells occurs at which level(s)?
+
+a. only the transcriptional level b. epigenetic and transcriptional levels c. epigenetic, transcriptional, and translational levels d. epigenetic, transcriptional, post-transcriptional, translational, and post-translational levels
+
+5. Post-translational control refers to:
+
+a. regulation of gene expression after transcription b. regulation of gene expression after translation c. control of epigenetic activation d. period between transcription and translation
+
+6. How does the regulation of gene expression support continued evolution of more complex organisms?
+
+a. Cells can become specialized within a multicellular organism.   
+b. Organisms can conserve energy and resources.   
+c. Cells grow larger to accommodate protein production.   
+d. Both A and B.
+
+7. If glucose is absent, but so is lactose, the lacoperon will be
+
+a. activated   
+b. repressed   
+c. activated, but only partially   
+d. mutated
+
+8. Prokaryotic cells lack a nucleus. Therefore, the genes in prokaryotic cells are:
+
+a. all expressed, all of the time   
+b. transcribed and translated almost simultaneously   
+c. transcriptionally controlled because translation begins before transcription ends   
+d. b and c are both true
+
+9. The araoperon is an inducible operon that controls the production of the sugar arabinose. When arabinose is present in a bacterium it binds to the protein AraC, and the complex binds to the initiator site to promote transcription. In this scenario, AraC is a(n)
+
+a. activator b. inducer c. repressor d. operator
+
+10. What are epigenetic modifications?
+
+a. the addition of reversible changes to histone proteins and DNA b. the removal of nucleosomes from the DNA c. the addition of more nucleosomes to the DNA d. mutation of the DNA sequence
+
+11. Which of the following are true of epigenetic changes?
+
+a. allow DNA to be transcribed   
+b. move histones to open or close a chromosomal region   
+c. are temporary   
+d. all of the above
+
+12. The binding of is required for transcription to start.
+
+a. a protein b. DNA polymerase c. RNA polymerase d. a transcription factor
+
+13. What will result from the binding of a transcription factor to an enhancer region?
+
+a. decreased transcription of an adjacent gene b. increased transcription of a distant gene c. alteration of the translation of an adjacent gene d. initiation of the recruitment of RNA polymerase
+
+14. A scientist compares the promoter regions of two genes. Gene A’s core promoter plus proximal promoter elements encompasses 70bp. Gene B’s core promoter plus proximal promoter elements encompasses 250bp. Which of the scientist’s hypotheses is most likely to be correct?
+
+a. More transcripts will be made from Gene B.   
+b. Transcription of Gene A involves fewer transcription factors.   
+c. Enhancers control Gene B’s transcription.   
+d. Transcription of Gene A is more controlled than transcription of Gene B.
+
+15. Which of the following are involved in posttranscriptional control?
+
+a. control of RNA splicing b. control of RNA shuttling c. control of RNA stability d. all of the above
+
+16. Binding of an RNA binding protein will the stability of the RNA molecule.
+
+a. increase   
+b. decrease   
+c. neither increase nor decrease   
+d. either increase or decrease
+
+17. An unprocessed pre-mRNA has the following structure.
+
+Which of the following is not a possible size (in bp) of the mature mRNA?
+
+a. 205bp b. 180bp c. 150bp d. 100bp
+
+18. Alternative splicing has been estimated to occur in more than $9 5 \%$ of multi-exon genes. Which of the following is not an evolutionary advantage of alternative splicing?
+
+a. Alternative splicing increases diversity without increasing genome size.   
+b. Different gene isoforms can be expressed in different tissues.   
+c. Alternative splicing creates shorter mRNA transcripts.   
+d. Different gene isoforms can be expressed during different stages of development.
+
+19. Post-translational modifications of proteins can affect which of the following?
+
+a. protein function b. transcriptional regulation c. chromatin modification d. all of the above
+
+20. A scientist mutates eIF-2 to eliminate its GTP hydrolysis capability. How would this mutated form of eIF-2 alter translation?
+
+a. Initiation factors would not be able to bind to mRNA.   
+b. The large ribosomal subunit would not be able to interact with mRNA transcripts.   
+c. tRNAi-Met would not scan mRNA transcripts for the start codon.   
+d. eIF-2 would not be able to interact with the small ribosomal subunit.
+
+21. Cancer causing genes are called
+
+a. transformation genes  
+b. tumor suppressor genes  
+c. oncogenes  
+d. mutated genes
+
+22. Targeted therapies are used in patients with a set gene expression pattern. A targeted therapy that prevents the activation of the estrogen receptor in breast cancer would be beneficial to which type of patient? a. patients who express the EGFR receptor in normal cells b. patients with a mutation that inactivates the estrogen receptor c. patients with lots of the estrogen receptor expressed in their tumor d. patients that have no estrogen receptor expressed in their tumor
+
+# CRITICAL THINKING QUESTIONS
+
+23. Name two differences between prokaryotic and eukaryotic cells and how these differences benefit multicellular organisms.   
+24. Describe how controlling gene expression will alter the overall protein levels in the cell.   
+25. Describe how transcription in prokaryotic cells can be altered by external stimulation such as excess lactose in the environment.   
+26. What is the difference between a repressible and an inducible operon?   
+27. In cancer cells, alteration to epigenetic modifications turns off genes that are normally expressed. Hypothetically, how could you reverse this process to turn these genes back on?   
+28. A scientific study demonstrated that rat mothering behavior impacts the stress response in their pups. Rats that were born and grew up with attentive mothers showed low activation of stress-response genes later in life, while rats with inattentive mothers had high activation of stress-response genes in the same situation. An additional study that swapped the pups at birth (i.e., rats born to inattentive mothers grew up with attentive mothers and vice versa) showed the same positive effect of attentive mothering. How do genetics and/or epigenetics explain the results of this study?   
+29. Some autoimmune diseases show a positive correlation with dramatically decreased expression of histone deacetylase 9 (HDAC9, an enzyme that removes acetyl groups from histones). Why would the decreased expression of HDAC9 cause immune cells to produce inflammatory genes at inappropriate times?   
+30. A mutation within the promoter region can alter transcription of a gene. Describe how this can happen.   
+31. What could happen if a cell had too much of an activating transcription factor present?   
+32. A scientist identifies a potential transcription regulation site 300bp downstream of a gene and hypothesizes that it is a repressor. What experiment (with results) could he perform to support this hypothesis?   
+33. Describe how RBPs can prevent miRNAs from degrading an RNA molecule.   
+34. How can external stimuli alter post-transcriptional control of gene expression?   
+35. Protein modification can alter gene expression in many ways. Describe how phosphorylation of proteins can alter gene expression.   
+36. Alternative forms of a protein can be beneficial or harmful to a cell. What do you think would happen if too much of an alternative protein bound to the $3 ^ { ^ { \prime } }$ UTR of an RNA and caused it to degrade?   
+37. Changes in epigenetic modifications alter the accessibility and transcription of DNA. Describe how environmental stimuli, such as ultraviolet light exposure, could modify gene expression.   
+38. A scientist discovers a virus encoding a Protein X that degrades a subunit of the eIF4F complex. Knowing that this virus transcribes its own mRNAs in the cytoplasm of human cells, why would Protein X be an effective virulence factor?   
+39. New drugs are being developed that decrease DNA methylation and prevent the removal of acetyl groups from histone proteins. Explain how these drugs could affect gene expression to help kill tumor cells.   
+40. How can understanding the gene expression pattern in a cancer cell tell you something about that specific form of cancer?

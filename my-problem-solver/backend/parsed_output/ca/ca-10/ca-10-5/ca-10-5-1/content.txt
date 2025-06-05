@@ -1,0 +1,38 @@
+10.5.1 RAW Hazards
+
+Now, let us find a way of avoiding a RAW hazard. Let us look at our example again.
+
+[1]: add r1, r2, r3   
+[2]: sub r3, r1, r4
+
+Instruction 2 requires the value of  in the OF stage. However, at that point of time, instruction 1 is in the EX stage, and it would not have written back the value of  to the register file. Thus, instruction 2 cannot be allowed to proceed in the pipeline. Let us propose a naive software solution to this problem. A smart compiler can analyze the code sequence and realize that a RAW hazard exists. It can introduce nop instructions between these instructions to remove any RAW hazards. Let us consider the following code sequence
+
+[1]: add r1, r2, r3   
+[2]: nop   
+[3]: nop   
+[4]: nop   
+[5]: sub r3, r1, r4
+
+Here, when the sub instruction reaches the OF stage, the add instruction would have written its value and left the pipeline. Thus, the sub instruction will get the correct value. Note that adding nop instructions is a costly solution, because we are essentially wasting computational power. In this example, we have basically wasted 3 cycles by adding nop instructions. However, if we consider a longer sequence of code, then the compiler can possibly reorder the instructions such that we can minimize the number of nop instructions. The basic aim of any compiler intervention is to ensure that there are at least 3 instructions between a producer and consumer instruction. Let us consider Example 138.
+
+Example 138   
+Reorder the following code snippet, and add a sufficient number of nop instructions to make it execute correctly on a SimpleRisc pipeline.
+
+add r1, r2, r3   
+add r4, r1, 3   
+add r8, r5, r6   
+add r9, r8, r5   
+add r10, r11, r12   
+add r13, r10, 2
+
+Answer:
+
+add r1, r2, r3   
+add r8, r5, r6   
+add r10, r11, r12   
+nop   
+add r4, r1, 3   
+add r9, r8, r5   
+add r13, r10, 2
+
+We need to appreciate two important points here. The first is the power of the nop instruction, and the next is the power of the compiler. The compiler is a vital tool in ensuring the correctness of the program, and also improving its performance. In this case, we want to reorder code in such a way that we introduce the minimum number of nop instructions.

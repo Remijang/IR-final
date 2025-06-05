@@ -1,0 +1,3 @@
+11.2.6 The evict Operation
+
+Lastly, let us take a look at the evict operation. If the cache follows a write-through policy, then nothing much needs to be done. The block can simply be discarded. However, if the cache follows a write-back policy, then we need to take a look at the modified bit. If the data is not modified, then it can be seamlessly evicted. However, if the data has been modified, then it needs to be written back to the lower level cache.

@@ -1,0 +1,70 @@
+[
+    {
+        "type": "text",
+        "text": "7.2.3 Multiplexer ",
+        "text_level": 1,
+        "page_idx": 274
+    },
+    {
+        "type": "text",
+        "text": "The block diagram of a multiplexer is shown in Figure 7.10. It takes $n$ input bits and $l o g ( n )$ select bits, and based on the value of the select bits, chooses one input as the output (refer to the line with arrows in Figure 7.10). Multiplexers are heavily used in the design of processors, where we need to choose one output out of a set of inputs. A multiplexer is also known as a mux. ",
+        "page_idx": 274
+    },
+    {
+        "type": "text",
+        "text": "To choose 1 input out of $n$ inputs, we need to specify the identifier of the input. Note that it takes $\\lceil l o g ( n ) \\rceil$ bits to identify any input uniquely (see Section 4.4). We can number each input using $\\lceil l o g ( n ) \\rceil$ binary bits. Each input thus has a unique representation. Now, if the select bits match the binary encoding of an input, then the input gets reflected at the output. For example, if the value of the select bits is $i$ , then the value of the output is equal to the value of the $i ^ { t h }$ input. ",
+        "page_idx": 274
+    },
+    {
+        "type": "image",
+        "img_path": "images/5a784b6c2794e0c12709dc280cff887d071baf26abadc6761a496e043b66fdb5.jpg",
+        "img_caption": [
+            "Figure 7.10: Block diagram of a multiplexer "
+        ],
+        "img_footnote": [],
+        "page_idx": 275
+    },
+    {
+        "type": "image",
+        "img_path": "images/9223473542ff5261d0aeed36d03ff84c545cec57864ccdd45b80d0851ff5db05.jpg",
+        "img_caption": [
+            "Figure 7.11: Design of a 4-input multiplexer "
+        ],
+        "img_footnote": [],
+        "page_idx": 275
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 275
+    },
+    {
+        "type": "text",
+        "text": "A multiplexer consists of three stages (see Figure 7.11). The first stage is a decoder that takes the $l o g ( n )$ select bits as its input and sets one of the $n$ output lines to a logical 1. Each output line is connected to an AND gate (second stage). Since only one of the output lines is set to 1, only the AND gate corresponding to that output is enabled. This means that the output of this gate is equal to the value of the other input. ",
+        "page_idx": 275
+    },
+    {
+        "type": "text",
+        "text": "In the example in Figure 7.11, the multiplexer has four inputs: $X _ { 0 0 }$ , $X _ { 0 1 }$ , $X _ { 1 0 }$ , and $X _ { 1 1 }$ . ",
+        "page_idx": 275
+    },
+    {
+        "type": "text",
+        "text": "Each input is connected to an AND gate. If the select bits are equal to 01, then the AND gate corresponding to the input $X _ { 0 1 }$ is enabled by the decoder. Its output is equal to $X _ { 0 1 }$ . The outputs of the rest of the AND gates are a logical 0 because they are not enabled by the decoder: one of their inputs is a logical 0. ",
+        "page_idx": 276
+    },
+    {
+        "type": "text",
+        "text": "Finally, in the third stage, an OR gate computes the logical OR of all the outputs of the second stage. Note that for the OR gate, the inputs are $n - 1$ zeros and $X _ { B A }$ , where $B$ and $A$ are the values of the select bits, respectively. The final output is thus the value of the input that was selected, $X _ { B A }$ . ",
+        "page_idx": 276
+    },
+    {
+        "type": "image",
+        "img_path": "images/5789bd1c83aedf335c6228b14f07e0f78fcfe6938390f6212e93bf16bf6e3f56.jpg",
+        "img_caption": [
+            "Figure 7.12: Design of a demultiplexer "
+        ],
+        "img_footnote": [],
+        "page_idx": 276
+    }
+]

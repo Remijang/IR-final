@@ -1,0 +1,420 @@
+[
+    {
+        "type": "text",
+        "text": "1.2 Calculus Without Limits ",
+        "text_level": 1,
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The next page is going to reveal one of the key ideas behind ca\u0001lculus. The discussion is just about numbers\u2014functions and slopes can wait. The numbers are not even special, they can be any numbers. The crucial point is to look at th\u0001eir differences:\u0001 ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The differences are printed in between\u0001, to show $2 - 0 = 2$ and $6 - 2 = 4$ and $7 - 6 = 1$ : Notice how $4 - 7$ gives a negative answer $^ { - 3 }$ : The numbers in $f$ can go up or down, the differences in $v$ can be positive or negative. The idea behind calculus comes when you add up those differences: ",
+        "page_idx": 70
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\pmb { 2 + 4 + 1 - 3 + 5 } = \\pmb { 9 }\n$$",
+        "text_format": "latex",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The sum of differences is 9: This is the last number on the t\u0001op line (in $f ^ { \\cdot }$ ). Is this an accident, or is this always true ? If we stop earlier, after $2 + 4 + 1$ , we get the 7 in $f .$ Test any prediction on a second example: ",
+        "page_idx": 70
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { { \\mathrm { S u p p o s e ~ t h e ~ n u m b e r s ~ a r e ~ } } f = 1 \\quad 3 \\quad 7 \\quad 8 \\quad 5 \\quad 1 0 } \\\\ { { \\mathrm { T h e i r ~ d i f f e r e n c e s ~ a r e ~ } } v = \\qquad 2 \\quad 4 \\quad 1 \\quad - 3 \\quad 5 } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The $f$ \u2019s are increased by 1: The differences are exactly the same\u2014no change. The sum of differences is still 9: But the last $f$ is now 10: That prediction is not right, we don\u2019t always get the last $f .$ : ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The first $f$ is now 1: The\u0001answer 9 (the sum of differ\u0001ences) is $^ { 1 0 - 1 }$ , the last $f$ minus the first $f .$ What happens when we change the $f$ \u2019s in the middle ? ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The differences add to $4 + 7 - 5 + 3 = 9$ : This is still 10 1: No matter what $f$ \u2019s we choose or how many, the sum of differences is controlled by the first $f$ and last $f .$ If this is always true, there must be a clear reason why the middle $f ^ { \\prime } s$ cancel out. ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The sum of differences is $( 5 - 1 ) + ( 1 2 - 5 ) + ( 7 - 1 2 ) + ( 1 0 - 7 ) = 1 0 - 1 .$ ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The 5\u2019s cancel, the 12\u2019s cancel, and the 7\u2019s cancel. It is only $1 0 - 1$ that doesn\u2019t cancel. This is the key to calculus! ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "1B The differences of the $f$ \u2019s add up to $( f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } } )$ . ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The numbers grow linearly: $\\begin{array} { l } { { \\begin{array} { l l l l l l l } { { \\epsilon = } } & { { 2 } } & { { 3 } } & { { 4 } } & { { 5 } } & { { 6 } } & { { 7 } } \\\\ { { \\it { \\cdot \\ v = } } } & { { 1 } } & { { 1 } } & { { 1 } } & { { 1 } } & { { 1 } } \\end{array} } } \\end{array}$ Their differences are constant: ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "The sum of differences is certainly 5: This agrees with $7 - 2 = f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } }$ : The numbers in $v$ remind us of constant velocity. The numbers in $f$ remind us of a straight line $f = v t + C$ : This example has $v = 1$ and the $f$ \u2019s start at 2: The straight line would come from $f = t + 2$ : ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 The numbers are squares: $\\begin{array} { r l r l } { f = } & { { } } & { 0 } \\end{array}$ 1 4 9 16 Their differences grow linearly: $\\boldsymbol { v } = \\mathrm { ~ \\scriptsize ~ 1 ~ \\ 3 ~ \\ 5 ~ \\ 7 ~ }$ ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "$1 + 3 + 5 + 7$ agrees with $4 ^ { 2 } = 1 6$ : It is a beautiful fact that the first $j$ odd numbers always add up to $j ^ { 2 }$ : The $v$ \u2019s are the odd numbers, the $f$ \u2019s are perfect squares. ",
+        "page_idx": 70
+    },
+    {
+        "type": "text",
+        "text": "Note The letter $j$ is sometimes useful to tell which number in $f$ we are looking at. For this example the zeroth number is $f _ { 0 } = 0$ and the $j$ th number is $f _ { j } = j ^ { 2 }$ : This is a part of algebra, to give a formula for the $f$ \u2019s instead of a list of numbers. We can also use $j$ to tell which difference we are looking at. The first $v$ is the first odd number $v _ { 1 } = 1$ : The $j$ th difference is the $j$ th odd number $v _ { j } = 2 j - 1$ : (Thus $v _ { 4 }$ is $8 - 1 = 7 .$ ) It is better to start the differences with $j = 1$ , since there is no zeroth odd number $v _ { 0 }$ : ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "With this notation the $j$ th difference is $v _ { j } = f _ { j } - f _ { j - 1 }$ : Sooner or later you will get comfortable with subscripts like $j$ and $j - 1$ , but it can be later. The important point is that the sum of the $v$ \u2019s equals $f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } }$ : We now connect the $v$ \u2019s to slopes and the $f$ \u2019s to areas. ",
+        "page_idx": 71
+    },
+    {
+        "type": "image",
+        "img_path": "images/eb8b16578d8c014597d5b12f2663b98a089777c7dfb3c280ab723be776275927.jpg",
+        "img_caption": [
+            "Fig. 1.7 Linear increase in $v = 1 , 3 , 5 , 7$ : Squares in the distances $f = 0 , 1 , 4 , 9 , 1 6$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Figure 1.7 shows a natural way to graph Example 2, with the odd numbers in $v$ and the squares in $f .$ Notice an important difference between the $v$ -graph and the $f$ -graph. The graph of $f$ is \u201cpiecewise linear.\u201d We plotted the numbers in $f$ and connected them by straight lines. The graph of $v$ is \u201cpiecewise constant.\u201d We plotted the differences as constant over each piece. This reminds us of the distance-velocity graphs, when the distance $f ( t )$ is a straight line and the velocity $v ( t )$ is a horizontal line. ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Now make the connection to slopes: ",
+        "page_idx": 71
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { { \\mathrm { d i s t a n c e ~ u p } } } { { \\mathrm { d i s t a n c e ~ a c r o s s } } } } = { \\frac { \\mathrm { c h a n g e ~ i n ~ } f } { \\mathrm { c h a n g e ~ i n ~ } t } } = v .\n$$",
+        "text_format": "latex",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Over each piece, the change in $t$ (across) is 1: The change in $f$ (upward) is the difference that we are calling $v$ : The ratio is the slope $v / 1$ or just $v$ : The slope makes a sudden change at the breakpoints $t = 1 , 2 , 3$ ; : : :. At those\u0001special points the slope of the $f .$ -graph is not defined\u2014we connected the $v$ \u2019s by vertical lines but this is very debatable. The main idea is that between the breakpoints, the slope of $f ( t )$ is $v ( t )$ . ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Now make the connection to areas: ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "The total area under the $v$ -graph is $f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } }$ : ",
+        "text_level": 1,
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "This area, underneath the staircase in Figure 1.7, is composed of rectangles. The base of every rectangle is 1: The heights of the rectangles are the v\u2019s. So the areas also equal the $v$ \u2019s, and the total area is the sum of the $v$ \u2019s. This area is $f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } }$ : ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "Even more is true. We could start at any time and end at any later time\u2014 not necessarily at the special times $t = 0 , 1 , 2 , 3 , 4$ : Suppose we stop at $t = 3 . 5$ : Only half of the last rectangular area (under $v = 7$ ) will be counted. The total area is $1 + 3 + 5 + { \\textstyle { \\frac { 1 } { 2 } } } ( 7 ) = 1 2 . 5$ : This still agrees with $f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } } = 1 2 . 5 - 0$ : At this new ending time $t = 3 . 5$ , we are only halfway up the last step in the $f$ -graph. Halfway between 9 and 16 is 12:5: ",
+        "page_idx": 71
+    },
+    {
+        "type": "text",
+        "text": "1C The v\u2019s are slopes of $f ( t )$ : The area under the $v$ -graph is $f ( t _ { \\mathrm { e n d } } ) - f ( t _ { \\mathrm { s t a r t } } )$ : ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "This is nothing less than the Fundamental Theorem of Calculus. But we have only used algebra (no curved graphs and no calculations involving limits). For now the Theorem is restricted \u0004to pie\u0004cewise line\u0004ar $f ( t )$ and piecewise constant $v ( t )$ : In Chapter 5 that restriction will be overcome. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Notice that a proof of $1 + 3 + 5 + 7 = 4 ^ { 2 }$ is suggested by Figure 1.7a. The triangle under the dotted line has the same area as the four rectangles under the staircase. The area of the triangle is $\\begin{array} { r } { \\frac { 1 } { 2 } \\cdot { \\mathrm { b a s e } } \\cdot { \\mathrm { h e i g h t } } = \\frac { 1 } { 2 } \\cdot 4 \\cdot 8 } \\end{array}$ , which is the perfect square $4 ^ { 2 }$ : When there are $j$ rectangles instead of 4, we get ${ \\frac { 1 } { 2 } } \\cdot j \\cdot 2 j = j ^ { 2 }$ for the area. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "The next examples show other patterns, where $f$ and $v$ increase exponentially or   \noscillate around zero. I hope you like them but I don\u2019t think you have to learn them.   \nThey are like the special functions $2 ^ { t }$ and sin $t$ and cos t\u2014except they go in steps.   \nYou get a first look at the important functions of calculus, but you only need algebra.   \nCalculus is needed for a steadily changing velocity, when the graph of $f$ is curved. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "The last example will be income tax\u2014which really does go in steps. Then Section 1:3 will introduce the slope of a curve. The crucial step for curves is working with limits. That will take us from algebra to calculus. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "EXPONENTIAL VELOCITY AND DISTANCE",
+        "text_level": 1,
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Start with the numbers $f = 1 , 2 , 4 , 8 , 1 6$ : These are \u201cpowers of 2:\u201d They start with the zeroth power, which is $2 ^ { 0 } = 1$ : The exponential starts at 1 and not 0. After $j$ steps there are $j$ factors of 2, and $f _ { j }$ equals $2 ^ { j }$ : Please recognize the difference between $2 j$ and $j ^ { 2 }$ and $2 ^ { j }$ . The numbers $2 j$ grow linearly, the numbers $j ^ { 2 }$ grow quadratically, the numbers $2 ^ { j }$ grow exponentially. At $j = 1 0$ these are 20 and 100 and 1024: The exponential $2 ^ { j }$ quickly becomes much larger than the others. ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "The differences of $f = 1 , 2 , 4 , 8 , 1 6$ are exactly $v = 1 , 2 , 4 , 8$ : We get the same beautiful numbers. When the $f$ \u2019s are powers of 2; so are the $v$ \u2019s. The formula $v _ { j } = 2 ^ { j - 1 }$ is slightly different from $f _ { j } = 2 ^ { j }$ , because the first $v$ is numbered $v _ { 1 }$ : (Then $v _ { 1 } = 2 ^ { 0 } = 1$ : The zeroth power of every number is 1, except that $0 ^ { 0 }$ is meaningless.) The two graphs in Figure 1.8 use the same numbers but they look different, because $f$ is piecewise linear and $v$ is piecewise constant. ",
+        "page_idx": 72
+    },
+    {
+        "type": "image",
+        "img_path": "images/df0d6532dada9e6d79c489e6e4541d0d25c28b10842004ef19b63c30a50b3e0f.jpg",
+        "img_caption": [
+            "Fig. 1.8 The velocity and distance grow exponentially (powers of 2). "
+        ],
+        "img_footnote": [],
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "Where will calculus come in ? It works with the smooth curve $f ( t ) = 2 ^ { t }$ : This exponential growth is critically important for population and money in a bank and the national debt. You can spot it by the following test: $v ( t )$ is proportional to $f ( t )$ : ",
+        "page_idx": 72
+    },
+    {
+        "type": "text",
+        "text": "1 Introduction to Calculus ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Remark The function $2 ^ { t }$ is trickier than $t ^ { 2 }$ : For $f = t ^ { 2 }$ the slope is $v = 2 t$ : It is proportional to $t$ and not $t ^ { 2 }$ : For $f = 2 ^ { t }$ the slope is $v = c 2 ^ { t }$ , and we won\u2019t find the constant $c = . 6 9 3 \\ldots$ until Chapter 6: (The number $c$ is the natural logarithm of 2:) Problem 37 estimates $c$ with a calculator\u2014the important thing\u0001is that it\u2019s constant. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "OSCILLATING VEL\u0001OCI\u0001TY AND DISTANCE ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "We have seen a forward-back motion, velocity $V$ followed by $- V .$ That is oscillation of the simplest kind. The graph of $f$ goes linearly up and linearly down. Figure 1.9 shows another oscillation that returns to zero, but the path is more interesting. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "The numbers in $f$ are now $0 , 1 , 1 , 0 , - 1 , - 1 , 0$ : Since $f _ { 6 } = 0$ the motion brings us back to the start. The whole oscillation can be repeated. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "The differences in $v$ are $1 , 0 , - 1 , - 1 , 0 , 1$ : They add up to zero, which agrees with $f _ { \\mathrm { l a s t } } - f _ { \\mathrm { f i r s t } }$ : It is the same oscillation as in $f$ (and also repeatable), but shifted in time. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "The $f$ -graph resembles (roughly) a sine curve. The $v$ -graph resembles (even more roughly) a cosine curve. The waveforms in nature are smooth curves, while these are \u201cdigitized\u201d\u2014the way a digital watch goes forward in jumps. You recognize that the change from analog to digital brought the computer revolution. The same revolution is coming in CD players. Digital signals (off or on, 0 or 1) seem to win every time. ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "The piecewise $v$ and $f$ start again at $t = 6$ : The ordinary sine and cosine repeat at $t = 2 \\pi$ : A repeating motion is periodic\u2014here the \u201cperiod\u201d is 6 or $2 \\pi$ : (With $t$ in degrees the period is 360\u2014a full circle. The period becomes $2 \\pi$ when angles are measured in radians. We virtually always use radians\u2014which are degrees times $2 \\pi / 3 6 0 . )$ 1 A watch has a period of 12 hours. If the dial shows AM and PM, the period is ",
+        "page_idx": 73
+    },
+    {
+        "type": "image",
+        "img_path": "images/56af06e98c5105872cbcb6df5a96b063e929790fb26574d9795aab5915f59678.jpg",
+        "img_caption": [
+            "Fig. 1.9 Piecewise constant \u201ccosine\u201d and piecewise linear \u201csine.\u201d They both repeat. "
+        ],
+        "img_footnote": [],
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "A SHORT BURST OF SPEED ",
+        "text_level": 1,
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "The next example is a car that is driven fast for a short time. The speed is $V$ until the distance reaches $f = 1$ , when the car suddenly stops. The graph of $f$ goes up linearly with slope $V$ , and then across with slope zero: ",
+        "page_idx": 73
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv ( t ) = \\{ { \\begin{array} { c l } { V } & { { \\mathrm { ~ u p ~ t o ~ } } t = T } \\\\ { 0 } & { { \\mathrm { ~ a f t e r ~ } } t = T } \\end{array} } \\qquad f ( t ) = \\{ { \\begin{array} { c l } { V t } & { { \\mathrm { ~ u p ~ t o ~ } } t = T } \\\\ { 1 } & { { \\mathrm { ~ a f t e r ~ } } t = T } \\end{array} } \n$$",
+        "text_format": "latex",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "This is another example of \u201cfunction notation.\u201d Notice the general time $t$ and the particular stopping time $T _ { \\mathbf { \\delta } }$ : The distance is $f ( t )$ : The domain of $f$ (the inputs) includes all times $t \\geqslant 0$ : The range of $f$ (the outputs) includes all distances $0 \\leqslant f \\leqslant 1$ : ",
+        "page_idx": 73
+    },
+    {
+        "type": "text",
+        "text": "Figure 1.10 allows us to compare three cars\u2014a Jeep and a Corvette and a Maserati. They have different speeds but they all reach $f = 1$ : So the areas under the $v$ -graphs are all 1: The rectangles have height $V$ and base $T = 1 / V .$ ",
+        "page_idx": 73
+    },
+    {
+        "type": "image",
+        "img_path": "images/b6587af93df39aeb65329365599e7b78a3a8cd6ae592fff3b3c0d15dc51bf4d4.jpg",
+        "img_caption": [
+            "Fig. 1.10 Bursts of speed with $V _ { M } T _ { M } = V _ { C } T _ { C } = V _ { J } T _ { J } = 1$ : Step function has infinite slope. "
+        ],
+        "img_footnote": [],
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Optional remark It is natural to think about faster and faster speeds, which means steeper slopes. The $f$ -graph reaches 1 in shorter times. The extreme case is a step function, when the graph of $f$ goes straight up. This is the unit step $U ( t )$ , which is zero up to $t = 0$ and jumps immediately to $U = 1$ for $t > 0$ : ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "What is the slope of the step function ? It is zero except at the jump. At that moment, which is $t = 0$ , the slope is infinite. We don\u2019t have an ordinary velocity $v ( t )$ \u2014instead we have an impulse that makes the car jump. The graph is a spike over the single point $t = 0$ , and it is often denoted by $\\delta$ \u2014so the slope of the step function is called a \u201cdelta function.\u201d The area under the infinite spike is 1: ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "You are absolutely not responsible for the theory of delta functions! Calculus is about curves, not jumps. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Our last example is a real-world application of slopes ands rates\u2014to explain \u201chow taxes work.\u201d Note especially the difference between tax rates and tax brackets and total tax. The rates are $v$ , the brackets are on $x$ , the total tax is $f .$ ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Income tax is piecewise linear. The slopes are the tax rates :15; :28; :31: ",
+        "text_level": 1,
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Suppose you\u00a4are\u00a4single with taxable income of $x$ dollars (Form 1040; line 37\u2014after all deductions). These are the 1991 instructions from the Internal Revenue Service: ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "If $x$ is not over $\\$ 20,350$ ; the tax is $1 5 \\%$ of $x$ : ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "If $\\$ 20,350 \\leqslant x \\leqslant \\$ 49,300$ ; the tax is $\\$ 3052.50+28 \\%$ of the amount\u00a4ove\u00a4r $\\$ 20,350$ : ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "If $x$ is over $\\$ 49,300$ ; the tax is $\\$ 123,458.50+31\\%$ of the amount over $\\$ 49,300$ : ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "The first bracket is $0 \\leqslant x \\leqslant \\Phi 2 0 , 3 5 0$ : (The IRS never uses this symbol $\\leqslant$ , but I think it is OK here.We know what it means.)Thesecond bracket is $\\$ 20,350 \\leqslant x \\leqslant \\$ 49,300$ : The top bracket $x \\geqslant \\$ 49,300$ pays tax at the top rate of $31 \\%$ : But only the income in that bracket is taxed at that rate. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Figure 1.11 shows the rates and the brackets and the tax due. Those are not average rates, they are marginal rates. Total tax divided by total income would be the average rate. The marginal rate of .28 or :31 gives the tax on each additional dollar of income\u2014 it is the slope at the point $x$ : Tax is like area or distance\u2014it adds up. Tax rate is like slope or velocity\u2014it depends where you are. This is often unclear in the news media. ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Question What is the equation for the straight line in the top bracket ? ",
+        "page_idx": 74
+    },
+    {
+        "type": "text",
+        "text": "Answer The bracket begins at $x = \\mathfrak { F } 4 9 , 3 0 0$ when the tax is $f ( x ) = \\mathbb { S } 1 1 , 1 5 8 . 5 0$ : The slope of the line is the tax rate :31: When we know a point on the line and the slope, we know the equation. This is important enough to be highlighted. ",
+        "page_idx": 74
+    },
+    {
+        "type": "image",
+        "img_path": "images/df7ace548219e9c6435ae5756b161562e469145513c8f42840dbe3e942d52600.jpg",
+        "img_caption": [
+            "Fig. 1.11 The tax rate is $v$ , the total tax is $f .$ Tax brackets end at breakpoints. "
+        ],
+        "img_footnote": [],
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "1D For $x$ in the top bracket the tax is $f ( x ) = \\$ 123,456.50+.31( x -\\mathbb { S } 4 9 , 30 0 )$ : This is the tax on $\\$ 49,300$ plus the extra tax on extra income. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Section 2:3 presents this \u201cpoint-slope equation\u201d for any straight line. Here you see it for one specific example. Where does the number $\\$ 11$ ;158:50 come from ? It is the tax at the end of the middle bracket, so it is the tax at the start of the\u0001top bracket. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Figure 1.11 also shows a distance-velocity example. The distance at $t = 2$ is $f ( 2 ) = 4 0$ miles. After that time the velocity is 60 miles per hour. So the line with slope 60 on the $f$ -graph has the equation ",
+        "page_idx": 75
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( t ) = { \\mathrm { s t a r t i n g ~ d i s t a n c e } } + { \\mathrm { e x t r a ~ d i s t a n c e } } = 4 0 + 6 0 ( t - 2 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "The starting point is .2; 40/: The new speed 60 multiplies the extra time $t - 2$ : The point-slo\u0001pe equation makes sense. We now review this section, with co\u0001mme\u0001nts. ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Central idea Start with any numbers in $f .$ Their differences go in $v$ : Then the sum of those differe\u0004n\u0004c\u0004es is flast ffi\u0001rst: ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Subscript notation The numbers are $f _ { 0 } , f _ { 1 } , \\ldots$ and the first difference is $v _ { 1 } = f _ { 1 } - f _ { 0 }$ : A typical number is $f _ { j }$ and the $j$ th difference is $v _ { j } = f _ { j } - f _ { j - 1 }$ : When those differences are added, all $f$ \u2019s in the middle (like $f _ { 1 }$ ) cancel out: ",
+        "page_idx": 75
+    },
+    {
+        "type": "equation",
+        "text": "$$\nv _ { 1 } + v _ { 2 } + \\cdots + v _ { j } = ( f _ { 1 } - f _ { 0 } ) + ( f _ { 2 } - f _ { 1 } ) + \\cdots + ( f _ { j } - f _ { j - 1 } ) = f _ { j } - f _ { 0 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Examples $f _ { j } = j$ or $j ^ { 2 }$ or $2 ^ { j }$ : Then $v _ { j } = 1$ (constant) or $2 j - 1$ (odd numbers) or 2j 1: ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Functions Connect the $f$ \u2019s to be piecewise linear. Then the slope $v$ is piecewise constant. The area under the $v$ -graph from any $t _ { \\mathrm { s t a r t } }$ to any $t _ { \\mathrm { e n d } }$ equals $f ( t _ { \\mathrm { e n d } } ) - f ( t _ { \\mathrm { s t a r t } } )$ : ",
+        "page_idx": 75
+    },
+    {
+        "type": "text",
+        "text": "Units Distance in miles and velocity in miles per hour. Tax in dollars and tax rate in (dollars paid)=(dollars earned). Tax rate is a percentage like :28, with no units. ",
+        "page_idx": 75
+    }
+]

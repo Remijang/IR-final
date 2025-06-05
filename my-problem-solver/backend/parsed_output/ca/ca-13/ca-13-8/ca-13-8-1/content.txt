@@ -1,0 +1,68 @@
+13.8.1 Hard Disks
+
+A hard disk is an integral part of most computer systems starting from laptops to servers. It is a storage device made of ferromagnetic material and mechanical components that can provide a large amount of storage capacity at low cost. Consequently, for the last three decades hard disks have been exclusively used to save persistent state in personal computers, servers, and enterprise class systems.
+
+Surprisingly, the basic physics of data storage is very simple. We save 0s and 1s in a series of magnets. Let us quickly review the basic physics of data storage in hard disks.
+
+Physics of Data Storage in Hard Disks
+
+Let us consider a typical magnet. It has a north pole, and a south pole. Like poles repel each other, and opposite poles attract each other. Along with mechanical properties, magnets have electrical properties also. For example, when the magnetic field passing through a coil of wire changes due to the relative motion between the magnet and the coil, an EMF (voltage) is induced across the two ends of the wire according to Faraday’s law. Hard disks use Faraday’s law as the basis of their operation.
+
+The basic element of a hard disk is a small magnet. Magnets used in hard disks are typically made of iron oxides and exhibit permanent magnetism. This means that their magnetic properties hold all the time. They are called permanent magnets or Ferromagnets (because of iron oxides). In comparison, we can have electromagnets that consist of coils of current carrying wires wrapped around iron bars. Electromagnets lose their magnetism after the current is switched off.
+
+Now, let us consider a set of magnets in series as shown in Figure 13.28. There are two options for their relative orientation namely N-S (north–south), or S-N (south–north). Let us now move a small coil of wire over the arrangement of magnets. Whenever, it crosses the boundary of two magnets that have opposite orientations, there is a change in the magnetic field. Hence, as a direct consequence of Faraday’s law, an EMF is induced across the two ends of the coil. However, when there is no change in the orientation of the magnetic field, the EMF induced across the ends of the coil is negligible. The transition in the orientation of the tiny magnets corresponds to a logical 1 bit, and no transition represents a logical 0 bit. Thus, the magnets in Figure 13.28 represent the bit pattern 0101. In principle, this is similar to the NRZI encoding for I/O channels.
+
+Since we encode data in transitions, we need to save blocks of data. Consequently, hard disks save a block of data in a sector. A sector has traditionally between 512 bytes for hard disks. It is treated as an atomic block, and an entire sector is typically read or written in one go. The structure that contains the small coil, and passes over the magnets is known as the read head.
+
+Let us now look at writing data to the hard disk. In this case, the task is to set the orientation of the magnets. We have another structure called the write head that contains a tiny electromagnet. An electromagnet can induce magnetization of a permanent magnet if it passes over it. Secondly, the direction of magnetization is dependent on the direction of the current. If we reverse the direction of the current, the direction of magnetization changes.
+
+For the sake of brevity, we shall refer to the combined assembly of the read head, and write head, as the head.
+
+Structure of the Platter
+
+A hard disk typically consists of a set of platters. A platter is a circular disk with a hole in the middle. A spindle is attached to the platter through the circular hole in the middle. The platter is divided into a set of concentric rings called tracks. A track is further divided into fixed length sectors as shown in Figure 13.29.
+
+Definition 160 A hard disk consists of multiple platters. A platter is a circular disk that is attached to a spindle. A platter further consists of a set of concentric rings called tracks, and each track consists of a set of sectors. A sector typically contains a fixed number of bytes irrespective of the track.
+
+Now, let us outline the basic operation of a hard disk. The platters are attached to a spindle. During the operation of a hard disk, the spindle, and its attached platters are constantly in rotation. Let us for the sake of simplicity assume a single platter disk. Now, the first step is to position the head on the track that contains the desired data. Next, the head needs to wait at this position till the desired sector arrives under the head. Since the platter is rotating at a constant speed, we can calculate the amount of time that we need to wait based on the current position of the head. Once the desired sector arrives under the head, we can proceed to read or write the data.
+
+There is an important question that needs to be considered here. Do we have the same number of sectors per track, or do we have a different number of sectors per track? Note that there are technological limitations on the number of bits that can be saved per track. Hence, if we have the same number of sectors per track, then we are effectively wasting storage capacity in the tracks towards the periphery. This is because we are limited by the number of bits that we can store in the track that is closest to the center. Consequently, modern hard disks avoid this approach.
+
+Let us try to store a variable number of sectors per track. Tracks towards the center contain fewer sectors, and tracks towards the periphery contain more sectors. This scheme also has its share of problems. Let us compare the innermost and outermost tracks, and let us assume that the innermost track contains  sectors, and the outermost track contains  sectors. If we assume that the number of rotations per minute is constant, then we need to read data twice as fast on the outermost track as compared to the innermost track. In fact for every track, the rate of data retrieval is different. This will complicate the electronic circuitry in the disk. We can explore another option, which is to rotate the disk at different speeds for each track, such that the rate of data transfer is constant. In this case, the electronic circuitry is simpler, but the sophistication required to run the spindle motor at a variety of different speeds is prohibitive. Hence, both the solutions are impractical.
+
+How about, combining two impractical solutions to make it practical !!! We have been following similar approaches throughout this book. Let us divide the set of tracks into a set of zones. Each zone consists of a consecutive set of  tracks. If we have  tracks in the platter, then we have  zones. In each zone, the number of sectors per track is the same. The platter rotates with a constant angular velocity for all the tracks in a zone. In a zone, data is more densely packed for tracks that are closer to the center as compared to tracks towards the periphery of the platter. In other words, sectors have physically different sizes for tracks in a zone. This is not a problem since the disk drive assumes that it takes the same amount of time to pass over each sector in a zone, and rotation at a constant angular velocity ensures this.
+
+Figure 13.30 shows a conceptual breakup of the platter into zones. Note that the number of sectors per track varies across zones. This method is known as Zoned-Bit Recording(ZBR). The two impractical designs that we refrained from considering, are special cases of ZBR. The first design assumes that we have one zone, and the second design assumes that each track belongs to a different zone.
+
+Let us now try to see why this scheme works. Since we have multiple zones, the storage space wasted is not as high as the design with just a single zone. Secondly, since the number of zones is typically not very large, the motor of the spindle does not need to readjust its speed frequently. In fact because of spatial locality, the chances of staying within the same zone are fairly high.
+
+Structure of the Hard Disk
+
+Let us now put all the parts together and take a look at the structure of the hard disk in Figure 13.31 and Figure 13.32. We have a set of platters connected to a single rotating spindle, and a set of disk arms (one for each side of the platter) that contain a head at the end. Typically, all the arms move together, and all the heads are vertically aligned on the same cylinder. Here, a cylinder is defined as a set of tracks from multiple platters, which have the same radius. In most hard disks only one head is activated at a point of time. It performs a read or write access on a given sector. In the case of a read access, the data is transmitted back to the drive electronics for post processing (framing, error correction), and then sent on the bus to the processor through the bus interface.
+
+Let us now consider some subtle points in the design of a hard disk (refer to Figure 13.32). It shows two platters connected to a spindle, and each platter has two recording surfaces. The spindle is connected to a motor (known as the spindle motor), which adjusts its speed depending on the zone that we wish to access. The set of all the arms move together, and are connected using a spindle to the actuator. The actuator is a small motor used for moving the arms clock wise or anti-clockwise. The role of the actuator is to position the head of an arm on a given track by rotating it clockwise or ant-clockwise a given number of degrees.
+
+A typical disk drive in a desktop processor has a track density of about 10,000 tracks per inch. This means that the distance between tracks is 2.5 µm, and thus the actuator has to be incredibly accurate. Typically, there are some markings on a sector indicating the number of the track. Consequently, the actuator typically needs to make slight adjustments to come to the exact point. This control mechanism is known as servo control. Both the actuator and the spindle motor are controlled by electronic circuits that are inside the chassis of the hard disk. Once the actuator has placed the head on the right track, it needs to wait for the desired sector to come under the head. A track has markings to indicate the number of the sector. The head keeps reading the markings after it is positioned on a track. Based on these markings it can accurately predict when the desired sector will be underneath the head.
+
+Along with the mechanical components, a hard disk has electronic components including small processors. They receive and transmit data on the bus, schedule requests on the hard disk, and perform error correction. The reader needs to appreciate the fact that we have just scratched the surface in this book. A hard disk is an incredible feat of human engineering. The hard disk can most of the time seamlessly tolerate errors, dynamically invalidate bad sectors (sectors with faults), and remap data to good sectors. The reader is referred to [Jacob et al., 2007] for further study.
+
+Mathematical Model of a Hard Disk Access
+
+Let us now construct a quick mathematical model for the time a request takes to complete its access to the hard disk. We can divide the time taken into three parts. The first is the seek time, which is defined as the time required for the head to reach the right track. Subsequently, the head needs to wait for the desired sector to arrive under it. This time interval is known as the rotational latency. Lastly, the head needs to read the data, process it to remove errors and redundant information, and then transmit the data on the bus. This is known as the transfer time. Thus, we have the simple equation.
+
+Definition 161
+
+Seek Time The time required for the actuator to move the head to the right track.
+
+Rotational Latency The time required for the desired sector to arrive under the head, after the head is correctly positioned on the right track.
+
+Transfer Time The time required to transfer the data from the hard disk to the processor.
+
+Example 157
+
+Assume that a hard disk has an average seek time of 12 ms, rotates at 600 rpm, and has a bandwidth of  . Find the average time to transfer 10,000 bytes of data (assuming that the data is in consecutive sectors).
+
+Answer:  ms   
+Since the disk rotates at 600 rpm, it takes 100 ms per rotation. On an average, the rotational latency is half this amount because the offset between the current position of the head, and the desired offset is assumed to be uniformly distributed between  and  . Thus, the rotational latency(Trot latency) is 50 ms. Now, the time it takes to transfer  contiguous bytes is 0.01s or 10 ms, because the bandwidth is  .
+
+Hence, the average time per disk access is  s

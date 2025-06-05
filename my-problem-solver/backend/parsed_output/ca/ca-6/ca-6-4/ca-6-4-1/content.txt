@@ -1,0 +1,19 @@
+6.4.1 View of Registers
+
+The RISC-V floating point model has 32 floating point registers. Their names range from  to  . Unlike integer registers, no register is hardwired to 0. There is however a register usage convention (akin to integer registers).
+
+It is not possible to directly load an immediate into a floating point register. Like x86, floating point registers can only be initialized by loading values from memory.
+
+Floating Point Control and Status Register
+
+There is an additional special register called the floating point control and status register  , whose structure is shown in Figure 6.1. Its lower 8 bits encode important information. The first 5 bits starting from the LSB store exceptional conditions encountered since these bits were last reset. This is known as the f f lags field. The rest of the 3 bits store the rounding mode.
+
+Accrued Exception Flags (fflags)
+
+The fflags field stores five flags, which are also known as the accrued exception flags. The first four flags – invalid operation, divide by zero, overflow and underflow – have their standard meanings. Let us discuss the fifth flag (inexact) that we have not encountered before. This is set when the result cannot exactly be stored in a floating point register and some rounding was required. Next, let us discuss the different rounding modes. They are stored in bits 6-8 of the fcsr.
+
+Rounding Modes
+
+RISC-V instructions can use a static rounding mode (encoded in the instruction) or a dynamic rounding mode (encoded in the  csr’s  field). The default rounding mode is RNE. We round the result to the nearest value that can be represented in the IEEE 754 format. If the real value is between two representable values, then the result is rounded to the value that has an even LSB. The next rounding mode is RTZ, which is round towards zero. It is equivalent to truncation where the bits that cannot be fit in the format are simply removed. The next two rounding modes are self-evident: RDN (round towards  or the floor function) and RUP (round towards  or the ceiling function).
+
+The RMM rounding mode is similar to RNE. However, if the result is between two representable values, then we round towards the number that has the higher magnitude (away from zero). The next two values are not used at the moment. Finally, the DYN mode selects a rounding mode dynamically (stored in the  field of the f csr).

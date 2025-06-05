@@ -1,0 +1,55 @@
+28.14 Using Queues: Sleeping Instead Of Spinning
+The real problem with some previous approaches (other than the ticket lock) is that they leave too much to chance. The scheduler determines which thread runs next; if the scheduler makes a bad choice, a thread that runs must either spin waiting for the lock (our first approach), or yield the CPU immediately (our second approach). Either way, there is potential for waste and no prevention of starvation.  
+1 typedef struct __lock_t { 
+2 int flag; 
+3 int guard; 
+4 queue_t $\star \mathsf { q }$ ; 
+5 } lock_t; 
+6 
+7 void lock_init(lock_t $\star \mathfrak { m }$ ) { 
+8 m->flag $\mathit { \Theta } = \mathit { \Theta } 0$ ; 
+9 m->guard $\mathit { \Theta } = \mathit { \Theta } 0$ ; 
+10 queue_init $( \mathrm { m - } > \mathrm { q } )$ ); 
+11 } 
+12 
+13 void lock(lock_t $\star \mathrm { m }$ ) { 
+14 while (TestAndSet(&m->guard, 1) $\scriptstyle \mathbf { \alpha = } \ 1$ ) 
+15 ; //acquire guard lock by spinning 
+16 if $( \mathrm { m - } > \mathrm { f } \mathrm { ~ l } \mathsf { a } \mathsf { g } = 0 ; \mathsf { a }$ ) { 
+17 $\mathrm { \ m { - } } { > } \mathrm { f } \mathrm { 1 } \mathrm { a g } = 1$ ; // lock is acquired 
+18 m->guard $\mathit { \Theta } = \mathit { \Theta } 0$ ; 
+19 } else { 
+20 queue_add $( \mathtt { m } \mathrm { - } ) \mathtt { q }$ , gettid()); 
+21 m->guard $\mathit { \Theta } = \mathit { \Theta } 0$ ; 
+22 park(); 
+23 } 
+24 } 
+25 
+26 void unlock(lock_t $\star \mathfrak { m }$ ) { 
+27 while (TestAndSet(&m->guard, 1) $\scriptstyle \mathbf { \alpha = } \ 1$ ) 
+28 ; //acquire guard lock by spinning 
+29 if (queue_empty $( { \mathrm { m - } } { \mathrm { q } } )$ ) 
+30 $\mathrm { \ m { - } } > \mathrm { f } \mathrm { 1 } \exists \ \mathrm { \simeq } \ 0$ ; // let go of lock; no one wants it 
+31 else 
+32 unpark(queue_remove $( \mathtt { m - } > \mathtt { q }$ )); // hold lock 
+33 // (for next thread! 
+34 m->guard $\mathit { \Theta } = \mathit { \Theta } 0$ ; 
+35 }  
+Thus, we must explicitly exert some control over which thread next gets to acquire the lock after the current holder releases it. To do this, we will need a little more OS support, as well as a queue to keep track of which threads are waiting to acquire the lock.  
+For simplicity, we will use the support provided by Solaris, in terms of two calls: park() to put a calling thread to sleep, and unpark(threadID) to wake a particular thread as designated by threadID. These two routines can be used in tandem to build a lock that puts a caller to sleep if it tries to acquire a held lock and wakes it when the lock is free. Let’s look at the code in Figure 28.9 to understand one possible use of such primitives.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+ASIDE: MORE REASON TO AVOID SPINNING: PRIORITY INVERSION One good reason to avoid spin locks is performance: as described in the main text, if a thread is interrupted while holding a lock, other threads that use spin locks will spend a large amount of CPU time just waiting for the lock to become available. However, it turns out there is another interesting reason to avoid spin locks on some systems: correctness. The problem to be wary of is known as priority inversion, which unfortunately is an intergalactic scourge, occurring on Earth [M15] and Mars [R97]!  
+Let’s assume there are two threads in a system. Thread 2 (T2) has a high scheduling priority, and Thread 1 (T1) has lower priority. In this example, let’s assume that the CPU scheduler will always run T2 over T1, if indeed both are runnable; T1 only runs when T2 is not able to do so (e.g., when T2 is blocked on I/O).  
+Now, the problem. Assume T2 is blocked for some reason. So T1 runs, grabs a spin lock, and enters a critical section. T2 now becomes unblocked (perhaps because an I/O completed), and the CPU scheduler immediately schedules it (thus descheduling T1). T2 now tries to acquire the lock, and because it can’t (T1 holds the lock), it just keeps spinning. Because the lock is a spin lock, T2 spins forever, and the system is hung.  
+Just avoiding the use of spin locks, unfortunately, does not avoid the problem of inversion (alas). Imagine three threads, T1, T2, and T3, with T3 at the highest priority, and T1 the lowest. Imagine now that T1 grabs a lock. T3 then starts, and because it is higher priority than T1, runs immediately (preempting T1). T3 tries to acquire the lock that T1 holds, but gets stuck waiting, because T1 still holds it. If T2 starts to run, it will have higher priority than T1, and thus it will run. T3, which is higher priority than T2, is stuck waiting for T1, which may never run now that T2 is running. Isn’t it sad that the mighty T3 can’t run, while lowly T2 controls the CPU? Having high priority just ain’t what it used to be.  
+You can address the priority inversion problem in a number of ways. In the specific case where spin locks cause the problem, you can avoid using spin locks (described more below). More generally, a higher-priority thread waiting for a lower-priority thread can temporarily boost the lower thread’s priority, thus enabling it to run and overcoming the inversion, a technique known as priority inheritance. A last solution is simplest: ensure all threads have the same priority.  
+We do a couple of interesting things in this example. First, we combine the old test-and-set idea with an explicit queue of lock waiters to make a more efficient lock. Second, we use a queue to help control who gets the lock next and thus avoid starvation.  
+You might notice how the guard is used (Figure 28.9, page 16), basically as a spin-lock around the flag and queue manipulations the lock is using. This approach thus doesn’t avoid spin-waiting entirely; a thread might be interrupted while acquiring or releasing the lock, and thus cause other threads to spin-wait for this one to run again. However, the time spent spinning is quite limited (just a few instructions inside the lock and unlock code, instead of the user-defined critical section), and thus this approach may be reasonable.  
+You might also observe that in lock(), when a thread can not acquire the lock (it is already held), we are careful to add ourselves to a queue (by calling the gettid() function to get the thread ID of the current thread), set guard to 0, and yield the CPU. A question for the reader: What would happen if the release of the guard lock came after the park(), and not before? Hint: something bad.  
+You might further detect that the flag does not get set back to 0 when another thread gets woken up. Why is this? Well, it is not an error, but rather a necessity! When a thread is woken up, it will be as if it is returning from park(); however, it does not hold the guard at that point in the code and thus cannot even try to set the flag to 1. Thus, we just pass the lock directly from the thread releasing the lock to the next thread acquiring it; flag is not set to 0 in-between.  
+Finally, you might notice the perceived race condition in the solution, just before the call to park(). With just the wrong timing, a thread will be about to park, assuming that it should sleep until the lock is no longer held. A switch at that time to another thread (say, a thread holding the lock) could lead to trouble, for example, if that thread then released the lock. The subsequent park by the first thread would then sleep forever (potentially), a problem sometimes called the wakeup/waiting race.  
+Solaris solves this problem by adding a third system call: setpark(). By calling this routine, a thread can indicate it is about to park. If it then happens to be interrupted and another thread calls unpark before park is actually called, the subsequent park returns immediately instead of sleeping. The code modification, inside of lock(), is quite small:  
+1 queue_add $( \mathtt { m } \mathrm { - } > \mathtt { q }$ , gettid()); 
+2 setpark(); // new code 
+3 m->guard $\mathit { \Theta } = \mathit { \Theta } 0$ ;  
+A different solution could pass the guard into the kernel. In that case, the kernel could take precautions to atomically release the lock and dequeue the running thread.  

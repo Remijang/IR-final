@@ -1,0 +1,83 @@
+[
+    {
+        "type": "text",
+        "text": "1.6.3 Universal Turing Machine\\* ",
+        "text_level": 1,
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "The Turing machine described in the Section 1.6.2 is not a universal machine. This is because it contains an action table, which is specific to the function being computed by the machine. A true universal machine will have the same action table, symbols, and also the same set of states for every function. We can make a universal Turing machine, if we can design a Turing machine that can simulate another Turing machine. This Turing machine will be generic and will not be specific to the function that is being computed. ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Let the Turing machine that is being simulated be called $\\mathcal { M }$ , and the universal Turing machine be called $\\mathcal { U }$ . Let us first create a generic format for the action table of $\\mathcal { M }$ , and save it in a designated location on the tape of $\\mathcal { U }$ . This simulated action table contains a list of actions, and each action requires the five parameters \u2013 old state, old symbol, direction(left or right), new state, new symbol. We can use a common set of basic symbols that can be the 10 decimal digits (0-9). If a function requires more symbols, then we can consider one symbol to be contained in a set of contiguous cells demarcated by special delimiters. Let such a symbol be called a simulated symbol. Likewise, the state in the simulated action table can also be encoded as a decimal number. For the direction, we can use 0 for left, and 1 for right. Thus, a single action table entry might look something like ( $\\textcircled { \\Omega } 1 3 3 4 @ 3 4 @ 0 @ 1 3 3 5 @ 1 0 @ )$ . Here the \u2018 $@$ \u2019 symbol is the delimiter. This entry is saying that we are moving from state 1334 to 1335 if symbol 34 is encountered. We move left (0), and write a value of 10. Thus, we have found a way of encoding the action table, set of symbols, and states of a Turing machine designed to compute a certain function. ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "Similarly, we can designate an area of the tape to contain the state register of $\\mathcal { M }$ . We call this the simulated state register. Let the tape of $\\mathcal { M }$ be given a dedicated space in the tape of $\\mathcal { U }$ , and let us call this space the work area. ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "The organization is shown in Figure 1.7. ",
+        "page_idx": 29
+    },
+    {
+        "type": "image",
+        "img_path": "images/4975961ba8d7fc9afcc6046dc9cbe1a11c1cd9a279b5b8f2d56b02239b4ece40.jpg",
+        "img_caption": [
+            "Figure 1.7: Layout of a universal Turing machine "
+        ],
+        "img_footnote": [],
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "The tape is thus divided into three parts. The first part contains the simulated action table, the second part contains the simulated state register, and the last part contains the work area ",
+        "page_idx": 29
+    },
+    {
+        "type": "text",
+        "text": "that contains a set of simulated symbols. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "The universal Turing machine( $\\mathcal { U }$ ) has a very simple action table and set of states. The idea is to find the right entry in the simulated action table that matches the value in the simulated state register and simulated symbol under the tape head. Then the universal Turing machine needs to carry out the corresponding action by moving to a new simulated state, and overwriting the simulated symbol in the work area if required. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "The devil is in the details. For doing every basic action, $\\mathcal { U }$ needs to do tens of tape head movements. The details are given in Hopcroft, Motwani, and Ulmann [Hopcroft et al., 2006]. However, the conclusion is that we can construct a universal Turing machine. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Important Point 2   \nIt is possible to construct a universal Turing machine that can simulate any other Turing machine. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Turing Completeness ",
+        "text_level": 1,
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Since the 1950s, researchers have devised many more types of hypothetical machines with their own sets of states and rules. Each of these machines have been proven to be at most as powerful as the Turing machine. There is a generic name for all machines and computing systems that are as expressive and powerful as a Turing machine. Such systems are said to be Turing complete. Any universal machine and ISA is thus Turing complete. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "Definition 8 Any computing system that is equivalent to a Turing machine is said to be Turing complete. ",
+        "page_idx": 30
+    },
+    {
+        "type": "text",
+        "text": "We thus need to prove that an ISA is complete or universal if it is Turing complete. ",
+        "page_idx": 30
+    }
+]

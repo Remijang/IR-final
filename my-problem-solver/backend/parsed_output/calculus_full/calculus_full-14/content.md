@@ -1,0 +1,19 @@
+CHAPTER 14
+
+# Multiple Integrals
+
+This chapter shows how to integrate functions of two or more variables. First, a double integral is defined as the limit of sums. Second, we find a fast way to compute it. The key idea is to replace a double integral by two ordinary “single” integrals.
+
+The double integral $\iint f ( x , y ) d y d x$ starts with $\int f ( x , y ) d y$ : For each fixed $x$ we integrate with respect to $y$ : The answer depends on $x$ : Now integrate again, this time with respect to $x$ : The limits of integration need care and attention! Frequently those limits on $y$ and $x$ are the hardest part.
+
+Why bother with sums and limits in the first place ? Two reasons. There has to be a definition and a computation to fall back on, when the single integrals are difficult or impossible. And also—this we emphasize—multiple integrals represent more than area and volume. Those words and the pictures that go with them are the easiest to understand. You can almost see the volume as a “sum of slices” or a “double sum of thin sticks.” The true applications are mostly to other things, but the central idea is always the same: Add up small pieces and take limits.
+
+We begin with the area of $R$ and the volume of $V _ { \ast }$ ; by double integrals.
+
+# A LIMIT OF SUMS
+
+The graph of $z = f ( x , y )$ is a curved surface above the $x y$ plane. At the poi¤nt $( x , y )$ in¤the p¤lane, the height of the surface is $z$ : (The surface is above the $x y$ plane only when $z$ is positive. Volumes below the plane come with minus signs, like areas below the $x$ axis.) We begin by choosing a positive function—for example $z = 1 + x ^ { 2 } + y ^ { 2 }$ :
+
+The base of our solid is a region $R$ in the $x y$ plane. That region will be chopped into small rectangles (sides $\Delta x$ and $\Delta y$ ). When $R$ itself is the rectangle $0 \leqslant x \leqslant 1$ ; $0 \leqslant y \leqslant 2$ ; the small pieces fit perfectly. For a triangle or a circle, the rectangles miss part of $R$ : But they do fit in the limit, and any region with a piecewise smooth boundary will be acceptable.
+
+Question What is the volume above $R$ and below the graph of $z = f ( x , y )$ ? Answer It is a double integral—the integral of $f ( x , y )$ over $R$ : To reach it we begin with a sum, as suggested by Figure 14.1.

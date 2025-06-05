@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "B.2.3 Interconnection Network, DRAM Modules, L2 Caches, and ROPs ",
+        "text_level": 1,
+        "page_idx": 758
+    },
+    {
+        "type": "text",
+        "text": "The 8 TPCs are connected via an interconnection network to a set of caches, DRAM modules, and ROPs (raster operation processors). The SMs contain the first level caches. Upon a cache miss, the SP cores access the relevant L2 cache bank via the NOC. In the case of GPUs, the L2 cache is a shared cache split at the level of banks. Beneath the L2 caches, GPUs have a large external DRAM memory. The GeForce 8800 has 384 pins to connect to external DRAM modules. The set of pins is divided into 6 groups, where each group contains 64 pins. The physical memory space is also split into 6 parts, across the 6 groups. Rasterization operations typically require some specialized processing routines. Unfortunately, these routines run inefficiently on TPCs. Hence, the GeForce 8800 chip has 6 ROPs. Each ROP processor can process at the most 4 pixels per cycle. It mostly interpolates the color of pixels, and performs color blending operations. ",
+        "page_idx": 758
+    },
+    {
+        "type": "text",
+        "text": "We are primarily interested in the design of the SMs. Hence, let us look at them in slightly greater detail. ",
+        "page_idx": 758
+    }
+]

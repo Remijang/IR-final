@@ -1,0 +1,758 @@
+[
+    {
+        "type": "text",
+        "text": "13.3 The Ideal Gas Law ",
+        "text_level": 1,
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "\u2022 State the ideal gas law in terms of molecules and in terms of moles.   \n\u2022 Use the ideal gas law to calculate pressure change, temperature change, volume change, or the number of molecules or moles in a given volume.   \n\u2022 Use Avogadro\u2019s number to convert between number of molecules and number of moles. ",
+        "page_idx": 561
+    },
+    {
+        "type": "image",
+        "img_path": "images/87450258bbc1afdc738c039afbd62df5c4ba8159127412a5fcba6fda9d004b5e.jpg",
+        "img_caption": [
+            "FIGURE 13.16 The air inside this hot air balloon flying over Putrajaya, Malaysia, is hotter than the ambient air. As a result, the balloon experiences a buoyant force pushing it upward. (credit: Kevin Poh, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "In this section, we continue to explore the thermal behavior of gases. In particular, we examine the characteristics of atoms and molecules that compose gases. (Most gases, for example nitrogen, ${ \\bf N } _ { 2 }$ , and oxygen, $\\mathbf { O } _ { 2 }$ , are composed of two or more atoms. We will primarily use the term \u201cmolecule\u201d in discussing a gas because the term can also be applied to monatomic gases, such as helium.) ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "Gases are easily compressed. We can see evidence of this in Table 13.2, where you will note that gases have the largestcoefficients of volume expansion. The large coefficients mean that gases expand and contract very rapidly with temperature changes. In addition, you will note that most gases expand at the samerate, or have the same $\\beta$ . This raises the question as to why gases should all act in nearly the same way, when liquids and solids have widely varying expansion rates. ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "The answer lies in the large separation of atoms and molecules in gases, compared to their sizes, as illustrated in Figure 13.17. Because atoms and molecules have large separations, forces between them can be ignored, except when they collide with each other during collisions. The motion of atoms and molecules (at temperatures well above the boiling temperature) is fast, such that the gas occupies all of the accessible volume and the expansion of gases is rapid. In contrast, in liquids and solids, atoms and molecules are closer together and are quite sensitive to the ",
+        "page_idx": 561
+    },
+    {
+        "type": "text",
+        "text": "forces between them. ",
+        "page_idx": 562
+    },
+    {
+        "type": "image",
+        "img_path": "images/c64e3a6cdb4407d06a607359a02676e05bcaaf3d7663d1e76023c6e27c1f8aa1.jpg",
+        "img_caption": [
+            "FIGURE 13.17 Atoms and molecules in a gas are typically widely separated, as shown. Because the forces between them are quite weak at these distances, the properties of a gas depend more on the number of atoms per unit volume and on temperature than on the type of atom. "
+        ],
+        "img_footnote": [],
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "To get some idea of how pressure, temperature, and volume of a gas are related to one another, consider what happens when you pump air into an initially deflated tire. The tire\u2019s volume first increases in direct proportion to the amount of air injected, without much increase in the tire pressure. Once the tire has expanded to nearly its full size, the walls limit volume expansion. If we continue to pump air into it, the pressure increases. The pressure will further increase when the car is driven and the tires move. Most manufacturers specify optimal tire pressure for cold tires. (See Figure 13.18.) ",
+        "page_idx": 562
+    },
+    {
+        "type": "image",
+        "img_path": "images/c4c30bf9fbd3b794576e22e02e4afb921bb9eba907a4e8234a10fb795305e7d3.jpg",
+        "img_caption": [
+            "FIGURE 13.18 (a) When air is pumped into a deflated tire, its volume first increases without much increase in pressure. (b) When the tire is filled to a certain point, the tire walls resist further expansion and the pressure increases with more air. (c) Once the tire is inflated, its pressure increases with temperature. "
+        ],
+        "img_footnote": [],
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "At room temperatures, collisions between atoms and molecules can be ignored. In this case, the gas is called an ideal gas, in which case the relationship between the pressure, volume, and temperature is given by the equation of state called the ideal gas law. ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Ideal Gas Law ",
+        "text_level": 1,
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas law states that ",
+        "page_idx": 562
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { P V = N k T , } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "where $P$ is the absolute pressure of a gas, $V$ is the volume it occupies, $N$ is the number of atoms and molecules in the gas, and $T$ is its absolute temperature. The constant $k$ is called the Boltzmann constant in honor of Austrian physicist Ludwig Boltzmann (1844\u20131906) and has the value ",
+        "page_idx": 562
+    },
+    {
+        "type": "equation",
+        "text": "$$\nk = 1 . 3 8 \\times 1 0 ^ { - 2 3 } \\mathrm { J } / \\mathrm { K } .\n$$",
+        "text_format": "latex",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas law can be derived from basic principles, but was originally deduced from experimental measurements of Charles\u2019 law (that volume occupied by a gas is proportional to temperature at a fixed pressure) and from Boyle\u2019s law (that for a fixed temperature, the product $P V$ is a constant). In the ideal gas model, the volume occupied by its atoms and molecules is a negligible fraction of $V$ . The ideal gas law describes the behavior of real gases under most conditions. (Note, for example, that $N$ is the total number of atoms and molecules, independent of the type of gas.) ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "Let us see how the ideal gas law is consistent with the behavior of filling the tire when it is pumped slowly and the temperature is constant. At first, the pressure $P$ is essentially equal to atmospheric pressure, and the volume increases in direct proportion to the number of atoms and molecules $N$ put into the tire. Once the volume of the tire is constant, the equation $P V = N k T$ predicts that the pressure should increase in proportion to thenumberNof ",
+        "page_idx": 562
+    },
+    {
+        "type": "text",
+        "text": "atomsandmolecules. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 13.6 ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Calculating Pressure Changes Due to Temperature Changes: Tire Pressure ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Suppose your bicycle tire is fully inflated, with an absolute pressure of $7 . 0 0 \\times 1 0 ^ { 5 } ~ \\mathrm { P a }$ (a gauge pressure of just under $9 0 . 0 1 \\mathrm { b } / \\mathrm { i n } ^ { 2 } .$ ) at a temperature of $1 8 . 0 ^ { \\circ } \\mathrm { C }$ . What is the pressure after its temperature has risen to $3 5 . 0 ^ { \\circ } \\mathrm { C } ?$ Assume that there are no appreciable leaks or changes in volume. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "The pressure in the tire is changing only because of changes in temperature. First we need to identify what we know and what we want to know, and then identify an equation to solve for the unknown. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "We know the initial pressure $P _ { 0 } = 7 . 0 0 \\times 1 0 ^ { 5 }$ , the initial temperature $T _ { 0 } = 1 8 . 0 ^ { \\circ } \\mathrm { C }$ , and the final temperature $T _ { \\mathrm { f } } = 3 5 . 0 ^ { \\circ } \\mathrm { C } .$ . We must find the final pressure $P _ { \\mathrm { f } }$ . How can we use the equation $\\displaystyle P V = N k T ?$ At first, it may seem that not enough information is given, because the volume $V$ and number of atoms $N$ are not specified. What we can do is use the equation twice: $P _ { 0 } V _ { 0 } = N k T _ { 0 }$ and $P _ { \\mathrm { f } } V _ { \\mathrm { f } } = N k T _ { \\mathrm { f } }$ . If we divide $P _ { \\mathrm { f } } V _ { \\mathrm { f } }$ by $P _ { 0 } V _ { 0 }$ we can come up with an equation that allows us to solve for $P _ { \\mathrm { f } }$ . ",
+        "page_idx": 563
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { P _ { \\mathrm { f } } V _ { \\mathrm { f } } } { P _ { \\mathrm { 0 } } V _ { \\mathrm { 0 } } } = \\frac { N _ { \\mathrm { f } } k T _ { \\mathrm { f } } } { N _ { \\mathrm { 0 } } k T _ { \\mathrm { 0 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Since the volume is constant, $V _ { \\mathrm { f } }$ and $V _ { 0 }$ are the same and they cancel out. The same is true for $N _ { \\mathrm { f } }$ and $N _ { 0 }$ , and $k$ , which is a constant. Therefore, ",
+        "page_idx": 563
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { P _ { \\mathrm { f } } } { P _ { 0 } } } = { \\frac { T _ { \\mathrm { f } } } { T _ { 0 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "We can then rearrange this to solve for $P _ { \\mathrm { f } }$ : ",
+        "page_idx": 563
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { f } } = P _ { 0 } { \\frac { T _ { \\mathrm { f } } } { T _ { 0 } } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "where the temperature must be in units of kelvins, because $T _ { 0 }$ and $T _ { \\mathrm { f } }$ are absolute temperatures. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "1. Convert temperatures from Celsius to Kelvin. ",
+        "page_idx": 563
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { T _ { 0 } = ( 1 8 . 0 + 2 7 3 ) \\mathrm { K } = 2 9 1 \\mathrm { K } } \\\\ { T _ { \\mathrm { f } } = ( 3 5 . 0 + 2 7 3 ) \\mathrm { K } = 3 0 8 \\mathrm { K } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "2. Substitute the known values into the equation. ",
+        "page_idx": 563
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { \\mathrm { f } } = P _ { 0 } { \\frac { T _ { \\mathrm { f } } } { T _ { 0 } } } = 7 . 0 0 \\times 1 0 ^ { 5 } \\ \\mathrm { P a } { \\biggl ( } { \\frac { 3 0 8 \\ \\mathrm { K } } { 2 9 1 \\ \\mathrm { K } } } { \\biggr ) } = 7 . 4 1 \\times 1 0 ^ { 5 } \\ \\mathrm { P a }\n$$",
+        "text_format": "latex",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "The final temperature is about $6 \\%$ greater than the original temperature, so the final pressure is about $6 \\%$ greater as well. Note that absolutepressure and absolutetemperature must be used in the ideal gas law. ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Making Connections: Take-Home Experiment\u2014Refrigerating a Balloon ",
+        "text_level": 1,
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "Inflate a balloon at room temperature. Leave the inflated balloon in the refrigerator overnight. What happens to the balloon, and why? ",
+        "page_idx": 563
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 13.7 ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Calculating the Number of Molecules in a Cubic Meter of Gas ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "How many molecules are in a typical object, such as gas in a tire or water in a drink? We can use the ideal gas law to give us an idea of how large $N$ typically is. ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Calculate the number of molecules in a cubic meter of gas at standard temperature and pressure (STP), which is defined to be $0 ^ { \\circ } \\mathrm { C }$ and atmospheric pressure. ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Because pressure, volume, and temperature are all specified, we can use the ideal gas law $P V = N k T ,$ to find $N$ . ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. ",
+        "page_idx": 564
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { T } } & { { = } } & { { 0 ^ { \\circ } \\mathrm { C } = 2 7 3 \\mathrm { K } } } \\\\ { { P } } & { { = } } & { { 1 . 0 1 \\times 1 0 ^ { 5 } \\ \\mathrm { P a } } } \\\\ { { V } } & { { = } } & { { 1 . 0 0 \\mathrm { m } ^ { 3 } } } \\\\ { { k } } & { { = } } & { { 1 . 3 8 \\times 1 0 ^ { - 2 3 } \\ \\mathrm { J } / \\mathrm { K } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "2. Identify the unknown: number of molecules, $N$ . ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "3. Rearrange the ideal gas law to solve for $N$ . ",
+        "page_idx": 564
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { P V = N k T } \\\\ { N = \\frac { P V } { k T } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "4. Substitute the known values into the equation and solve for $N$ . ",
+        "page_idx": 564
+    },
+    {
+        "type": "equation",
+        "text": "$$\nN = { \\frac { P V } { k T } } = { \\frac { \\left( 1 . 0 1 \\times 1 0 ^ { 5 } ~ { \\mathrm { P a } } \\right) \\left( 1 . 0 0 ~ { \\mathrm { m } } ^ { 3 } \\right) } { \\left( 1 . 3 8 \\times 1 0 ^ { - 2 3 } ~ { \\mathrm { J } } / { \\mathrm { K } } \\right) \\left( 2 7 3 ~ { \\mathrm { K } } \\right) } } = 2 . 6 8 \\times 1 0 ^ { 2 5 } ~ { \\mathrm { m o l e c u l e s } }\n$$",
+        "text_format": "latex",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "This number is undeniably large, considering that a gas is mostly empty space. $N$ is huge, even in small volumes. For example, $1 { \\mathrm { c m } } ^ { 3 }$ of a gas at STP has $2 . 6 8 \\times 1 0 ^ { 1 9 }$ molecules in it. Once again, note that $N$ is the same for all types or mixtures of gases. ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Moles and Avogadro\u2019s Number ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "It is sometimes convenient to work with a unit other than molecules when measuring the amount of substance. A mole (abbreviated mol) is defined to be the amount of a substance that contains as many atoms or molecules as there are atoms in exactly 12 grams $( 0 . 0 1 2 \\mathsf { k g } )$ of carbon-12. The actual number of atoms or molecules in one mole is called Avogadro\u2019s number $( N _ { \\mathrm { A } } )$ , in recognition of Italian scientist Amedeo Avogadro (1776\u20131856). He developed the concept of the mole, based on the hypothesis that equal volumes of gas, at the same pressure and temperature, contain equal numbers of molecules. That is, the number is independent of the type of gas. This hypothesis has been confirmed, and the value of Avogadro\u2019s number is ",
+        "page_idx": 564
+    },
+    {
+        "type": "equation",
+        "text": "$$\nN _ { \\mathrm { A } } = 6 . 0 2 \\times 1 0 ^ { 2 3 } \\ \\mathrm { m o l ^ { - 1 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "Avogadro\u2019s Number ",
+        "text_level": 1,
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "One mole always contains $6 . 0 2 \\times 1 0 ^ { 2 3 }$ particles (atoms or molecules), independent of the element or substance. A mole of any substance has a mass in grams equal to its molecular mass, which can be calculated ",
+        "page_idx": 564
+    },
+    {
+        "type": "text",
+        "text": "from the atomic masses given in the periodic table of elements. ",
+        "page_idx": 565
+    },
+    {
+        "type": "equation",
+        "text": "$$\nN _ { \\mathrm { A } } = 6 . 0 2 \\times 1 0 ^ { 2 3 } ~ \\mathrm { m o l } ^ { - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 565
+    },
+    {
+        "type": "image",
+        "img_path": "images/3ce9c7b7c36c2a915fa8f35862b7b39929673f0307adb4b15560d54809cb283c.jpg",
+        "img_caption": [
+            "FIGURE 13.19 How big is a mole? On a macroscopic level, one mole of table tennis balls would cover the Earth to a depth of about $4 0 \\ k \\mathsf { m }$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "The active ingredient in a Tylenol pill is $3 2 5 { \\mathsf { m g } }$ of acetaminophen $( \\mathrm { C } _ { 8 } \\mathrm { H } _ { 9 } \\mathrm { N O } _ { 2 }$ . Find the number of active molecules of acetaminophen in a single pill. ",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "We first need to calculate the molar mass (the mass of one mole) of acetaminophen. To do this, we need to multiply the number of atoms of each element by the element\u2019s atomic mass. ",
+        "page_idx": 565
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathrm { ( 8 ~ m o l e s ~ o f ~ c a r b o n ) ( 1 2 ~ g r a m s / m o l e ) } + \\mathrm { ( 9 ~ m o l e s ~ h y d r o g e n ) ( 1 ~ g r a m / m o l e ) } } \\\\ & { + \\mathrm { ( 1 ~ m o l e ~ n i t r o g e n ) ( 1 4 ~ g r a m s / m o l e ) } + \\mathrm { ( 2 ~ m o l e s ~ o x y g e n ) ( 1 6 ~ g r a m s / m o l e ) } = 1 5 1 \\mathrm { ~ g } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Then we need to calculate the number of moles in $3 2 5 { \\mathrm { ~ m g } }$ . ",
+        "page_idx": 565
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left( { \\frac { 3 2 5 \\mathrm { ~ m g } } { 1 5 1 \\mathrm { ~ g r a m s / m o l e } } } \\right) \\left( { \\frac { 1 \\mathrm { ~ g r a m } } { 1 0 0 0 \\mathrm { ~ m g } } } \\right) = 2 . 1 5 \\times 1 0 ^ { - 3 } \\mathrm { ~ m o l e s }\n$$",
+        "text_format": "latex",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Then use Avogadro\u2019s number to calculate the number of molecules. ",
+        "page_idx": 565
+    },
+    {
+        "type": "equation",
+        "text": "$$\nN = \\left( 2 . 1 5 \\times 1 0 ^ { - 3 } { \\mathrm { ~ m o l e s } } \\right) \\left( 6 . 0 2 \\times 1 0 ^ { 2 3 } { \\mathrm { ~ m o l e c u l e s / m o l e } } \\right) = 1 . 3 0 \\times 1 0 ^ { 2 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 13.8 ",
+        "text_level": 1,
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Calculating Moles per Cubic Meter and Liters per Mole ",
+        "text_level": 1,
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Calculate: (a) the number of moles in $1 . 0 0 \\mathrm { m } ^ { 3 }$ of gas at STP, and (b) the number of liters of gas per mole. ",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Strategy and Solution ",
+        "text_level": 1,
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "(a) We are asked to find the number of moles per cubic meter, and we know from Example 13.7 that the number of molecules per cubic meter at STP is $2 . 6 8 \\times 1 0 ^ { 2 5 }$ . The number of moles can be found by dividing the number of molecules by Avogadro\u2019s number. We let $n$ stand for the number of moles, ",
+        "page_idx": 565
+    },
+    {
+        "type": "equation",
+        "text": "$$\nn \\mathrm { { m o l / m ^ { 3 } } = \\frac { N \\mathrm { { m o l e c u l e s / m ^ { 3 } } } } { 6 . 0 2 \\times 1 0 ^ { 2 3 } \\mathrm { { m o l e c u l e s / m o l } } } = \\frac { 2 . 6 8 \\times 1 0 ^ { 2 5 } \\mathrm { { m o l e c u l e s / m ^ { 3 } } } } { 6 . 0 2 \\times 1 0 ^ { 2 3 } \\mathrm { { m o l e c u l e s / m o l } } } = 4 4 . 5 \\mathrm { { m o l / m ^ { 3 } } . } }\n$$",
+        "text_format": "latex",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "(b) Using the value obtained for the number of moles in a cubic meter, and converting cubic meters to liters, we obtain ",
+        "page_idx": 565
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\left( 1 0 ^ { 3 } \\ \\mathrm { L } / \\mathrm { m } ^ { 3 } \\right) } { 4 4 . 5 \\ \\mathrm { m o l } / \\mathrm { m } ^ { 3 } } } = 2 2 . 5 \\mathrm { L } / \\mathrm { m o l } .\n$$",
+        "text_format": "latex",
+        "page_idx": 565
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "This value is very close to the accepted value of $2 2 . 4 \\ L / \\mathrm { m o l }$ . The slight difference is due to rounding errors caused by using three-digit input. Again this number is the same for all gases. In other words, it is independent of the gas. ",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "The (average) molar weight of air (approximately $8 0 \\% \\mathrm { N } _ { 2 }$ and $2 0 \\% \\mathrm { O } _ { 2 }$ is $M = 2 8 . 8 \\ : \\mathrm { g }$ Thus the mass of one cubic meter of air is $\\phantom { + } 1 . 2 8 \\mathsf { k g }$ . If a living room has dimensions $5 \\mathrm { m } \\times 5 \\mathrm { m } \\times 3 \\mathrm { m }$ the mass of air inside the room is $9 6 \\ k \\xi ,$ which is the typical mass of a human. ",
+        "page_idx": 566
+    },
+    {
+        "type": "image",
+        "img_path": "images/0e35b48e0234f4135d90653c31528d55632049d4f11abeb4809b41fcbeaf9b86.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "The density of air at standard conditions $P = 1$ and $T = 2 0 ^ { \\circ } \\mathrm { C } \\$ is $1 . 2 8 \\mathrm { k g } / \\mathrm { m } ^ { 3 }$ . At what pressure is the density $0 . 6 4 \\mathrm { k g } / \\mathrm { m } ^ { 3 }$ if the temperature and number of molecules are kept constant? ",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "The best way to approach this question is to think about what is happening. If the density drops to half its original value and no molecules are lost, then the volume must double. If we look at the equation $P V = N k T ,$ , we see that when the temperature is constant, the pressure is inversely proportional to volume. Therefore, if the volume doubles, the pressure must drop to half its original value, and $P _ { \\mathrm { f } } = 0 . 5 0$ atm. ",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "The Ideal Gas Law Restated Using Moles ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "A very common expression of the ideal gas law uses the number of moles, $n$ , rather than the number of atoms and molecules, $N$ . We start from the ideal gas law, ",
+        "page_idx": 566
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP V = N k T ,\n$$",
+        "text_format": "latex",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "and multiply and divide the equation by Avogadro\u2019s number $N _ { \\mathrm { A } }$ . This gives ",
+        "page_idx": 566
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP V = { \\frac { N } { N _ { \\mathrm { A } } } } N _ { \\mathrm { A } } k T .\n$$",
+        "text_format": "latex",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "Note that $n = N / N _ { \\mathrm { A } }$ is the number of moles. We define the universal gas constant $R = N _ { \\mathrm { A } } k$ , and obtain the ideal gas law in terms of moles. ",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "Ideal Gas Law (in terms of moles) ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas law (in terms of moles) is ",
+        "page_idx": 566
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP V = n R T .\n$$",
+        "text_format": "latex",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "The numerical value of $R$ in SI units is ",
+        "page_idx": 566
+    },
+    {
+        "type": "equation",
+        "text": "$$\nR = N _ { \\mathrm { A } } k = \\left( 6 . 0 2 \\times 1 0 ^ { 2 3 } \\mathrm { ~ m o l } ^ { - 1 } \\right) \\left( 1 . 3 8 \\times 1 0 ^ { - 2 3 } \\mathrm { ~ J } / \\mathrm { K } \\right) = 8 . 3 1 \\mathrm { ~ J } / \\mathrm { m o l } \\cdot \\mathrm { K } .\n$$",
+        "text_format": "latex",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "In other units, ",
+        "page_idx": 566
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { R } } & { { = } } & { { 1 . 9 9 \\mathrm { c a l / m o l \\cdot K } } } \\\\ { { R } } & { { = } } & { { 0 . 0 8 2 1 \\mathrm { L \\cdot a t m / m o l \\cdot K } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "You can use whichever value of $R$ is most convenient for a particular problem. ",
+        "page_idx": 566
+    },
+    {
+        "type": "image",
+        "img_path": "images/c6a76f604f3201e90357d3da25ecf7439e59f90a0b9b3af1303a2b922b4e97c4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 13.9 ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "Calculating Number of Moles: Gas in a Bike Tire ",
+        "text_level": 1,
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "How many moles of gas are in a bike tire with a volume of $2 . 0 0 \\times 1 0 ^ { - 3 } ~ \\mathrm { { m } } ^ { 3 } ( 2 . 0 0 \\mathrm { { L } ) }$ a pressure of $7 . 0 0 \\times 1 0 ^ { 5 }$ (a gauge pressure of just under $9 0 . 0 1 \\mathrm { b } / \\mathrm { i n } ^ { 2 } .$ ), and at a temperature of $1 8 . 0 ^ { \\circ } \\mathrm { C } ?$ ",
+        "page_idx": 566
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Identify the knowns and unknowns, and choose an equation to solve for the unknown. In this case, we solve the ideal gas law, $P V = n R T ,$ , for the number of moles $n$ . ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. ",
+        "page_idx": 567
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { P } & { = } & { 7 . 0 0 \\times 1 0 ^ { 5 } ~ \\mathrm { P a } } \\\\ { V } & { = } & { 2 . 0 0 \\times 1 0 ^ { - 3 } ~ \\mathrm { m } ^ { 3 } } \\\\ { T } & { = } & { 1 8 . 0 ^ { \\circ } \\mathrm { C } = 2 9 1 ~ \\mathrm { K } } \\\\ { R } & { = } & { 8 . 3 1 ~ \\mathrm { J } / \\mathrm { m o l } \\cdot \\mathrm { K } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "2. Rearrange the equation to solve for $n$ and substitute known values. ",
+        "page_idx": 567
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { n } & { = } & { { \\frac { P V } { R T } } = { \\frac { \\left( 7 . 0 0 \\times 1 0 ^ { 5 } \\ { \\mathrm { P a } } \\right) \\left( 2 . 0 0 \\times 1 0 ^ { - 3 } \\ { \\mathrm { m } } ^ { 3 } \\right) } { ( 8 . 3 1 \\ { \\mathrm { J } } / { \\mathrm { m o l } } \\cdot { \\mathrm { K } } ) ( 2 9 1 \\ { \\mathrm { K } } ) } } } \\\\ { } & { = } & { 0 . 5 7 9 \\ { \\mathrm { m o l } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "The most convenient choice for $R$ in this case is $8 . 3 1 ~ \\mathrm { J / m o l \\cdot K }$ because our known quantities are in SI units. The pressure and temperature are obtained from the initial conditions in Example 13.6, but we would get the same answer if we used the final values. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas law can be considered to be another manifestation of the law of conservation of energy (see Conservation of Energy). Work done on a gas results in an increase in its energy, increasing pressure and/or temperature, or decreasing volume. This increased energy can also be viewed as increased internal kinetic energy, given the gas\u2019s atoms and molecules. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "The Ideal Gas Law and Energy ",
+        "text_level": 1,
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Let us now examine the role of energy in the behavior of gases. When you inflate a bike tire by hand, you do work by repeatedly exerting a force through a distance. This energy goes into increasing the pressure of air inside the tire and increasing the temperature of the pump and the air. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas law is closely related to energy: the units on both sides are joules. The right-hand side of the ideal gas law in $P V = N k T$ is . This term is roughly the amount of translational kinetic energy of $N$ atoms or molecules at an absolute temperature $T$ , as we shall see formally in Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature. The left-hand side of the ideal gas law is $P V ,$ which also has the units of joules. We know from our study of fluids that pressure is one type of potential energy per unit volume, so pressure multiplied by volume is energy. The important point is that there is energy in a gas related to both its pressure and its volume. The energy can be changed when the gas is doing work as it expands\u2014something we explore in Heat and Heat Transfer Methods\u2014similar to what occurs in gasoline or steam engines and turbines. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategy: The Ideal Gas Law ",
+        "text_level": 1,
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Step 1 Examine the situation to determine that an ideal gas is involved. Most gases are nearly ideal. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Step 2 Make a list of what quantities are given, or can be inferred from the problem as stated (identify the known quantities). Convert known values into proper SI units (K for temperature, Pa for pressure, $\\mathrm { m } ^ { 3 }$ for volume, molecules for $N$ , and moles for $n$ ). ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Step 3 Identify exactly what needs to be determined in the problem (identify the unknown quantities). A written list is useful. ",
+        "page_idx": 567
+    },
+    {
+        "type": "text",
+        "text": "Step 4 Determine whether the number of molecules or the number of moles is known, in order to decide which form of the ideal gas law to use. The first form is $P V = N k T$ and involves $N$ , the number of atoms or molecules. The second form is $P V = n R T$ and involves $n$ , the number of moles. ",
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Step 5 Solve the ideal gas law for the quantity to be determined (the unknown quantity). You may need to take a ratio of final states to initial states to eliminate the unknown quantities that are kept fixed. ",
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Step 6 Substitute the known quantities, along with their units, into the appropriate equation, and obtain numerical solutions complete with units. Be certain to use absolute temperature and absolute pressure. ",
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Step 7 Check the answer to see if it is reasonable: Does it make sense? ",
+        "page_idx": 568
+    },
+    {
+        "type": "image",
+        "img_path": "images/7ddc63c710d841c752cd728fc10d82b05ff513e3b0631d462ef23c9e9e70b875.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Liquids and solids have densities about 1000 times greater than gases. Explain how this implies that the distances between atoms and molecules in gases are about 10 times greater than the size of their atoms and molecules. ",
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 568
+    },
+    {
+        "type": "text",
+        "text": "Atoms and molecules are close together in solids and liquids. In gases they are separated by empty space. Thus gases have lower densities than liquids and solids. Density is mass per unit volume, and volume is related to the size of a body (such as a sphere) cubed. So if the distance between atoms and molecules increases by a factor of 10, then the volume occupied increases by a factor of 1000, and the density decreases by a factor of 1000. ",
+        "page_idx": 568
+    }
+]

@@ -1,0 +1,53 @@
+9.6.4 3-Address Format ALU Instructions
+
+Let us now look at implementing 3-address format ALU instructions. These instructions are: add, sub, mul, div, mod, and, or, lsl, lsr, and  .
+
+First, we need to read the value of the first operand stored in  from the register file, and send it to the ALU. The microcode snippet to achieve this is as follows:
+
+Note, that we are combining a functional unit operation, and a register transfer in the same cycle. This can be confusing at the beginning. Hence, the reader should read this example several times and ensure that she has a clear understanding. The reason that we fuse both the operations is because microcode registers are typically very small, and thus they can be accessed very quickly. Hence, it is not a good idea to use a complete cycle for transferring data between micro registers. It is a better idea to fuse a register transfer with a functional unit operation, such that we can ensure that we are roughly doing a similar amount of work every cycle.
+
+Let us proceed. Subsequently, we need to check if the second operand is a register or an immediate. This can be achieved by comparing the  register with 1. If it is 1, then the second operand is an immediate, else it is a register. The following piece of code first checks this condition, and then performs data transfers accordingly.
+
+1 mbeq I, 1, .imm /\* second operand is a register \*/   
+3 mmov regSrc, rs2, <read>   
+4 mmov B, regVal, <aluop>   
+5 mb .rw /\* second operand is an immediate \*/ .imm:   
+8 mmov B, immx, <aluop>
+
+/\* write the ALU result to the register file\*/ 10 .rw:
+
+Here, we first check if the value stored in the  register is equal to 1, using the mbeq instruction. If it is not 1, then the second operand is a register, and we start executing the subsequent microinstruction. We move the contents of the register,  , to the regSrc register that contains the index of the register that we need to read from the register file. Then we move the value of the operand read from the register file  to the ALU (register  ). Since the value in register  is already present, we can directly start the ALU operation. This is indicated to the ALU by sending an extra argument  that encodes the ALU operation.  corresponds to one of the following operations: add, sub, mul, div, mod, and, or, lsl,  , and asr.
+
+However, if the value of the  register is 1, then we need to branch to .imm. The value of the immediate embedded in the instruction is already available with appropriate sign extensions in the register immx. We need to simply transfer the value of immx to  (second ALU register), and the arguments  to the ALU. Similar to the case with the second operand being a register,  encodes the ALU operation. Once, we are done, we need to start execution at the label, .  .
+
+The label .  needs to point to code that writes the value of the computed result to the register file, and then proceeds to execute the next instruction. The code for these two operations is shown below.
+
+.rw:
+
+mmov regSrc, rd   
+mmov regData, aluResult, <write>   
+mb .begin
+
+We write the result of the ALU into the register file, and then branch to the beginning, where we proceed to execute the next instruction. To summarize, here is the code for any 3-address format ALU instruction (other than the preamble).
+
+/\* transfer the first operand to the ALU \*/   
+2 mmov regSrc, rs1, <read>   
+3 mmov A, regVal   
+4   
+5 /\* check the value of the immediate register \*/   
+6 mbeq I, 1, .imm   
+/\* second operand is a register \*/   
+8 mmov regSrc, rs2, <read>   
+9 mmov B, regVal, <aluop>   
+10 mb .rw   
+11 /\* second operand is an immediate \*/   
+12 .imm:   
+13 mmov B, immx, <aluop>   
+14   
+15 /\* write the ALU result to the register file\*/   
+16 .rw:   
+17 mmov regSrc, rd   
+18 mmov regData, aluResult, <write>   
+19 mb .begin
+
+This code snippet has 10 microinstructions. Recall that we also need to execute 4 more microinstructions as a part of the preamble before this. They read the PC, decode the instruction, set the next PC, and jump to the beginning of the appropriate set of microinstructions. Executing 14 microinstructions for 1 program instruction is clearly a lot of effort. However, the reader must recall that we are not really after performance here. We wanted to design a very clean and flexible means of accessing different units.

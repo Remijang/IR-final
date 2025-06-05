@@ -1,0 +1,90 @@
+[
+    {
+        "type": "text",
+        "text": "8.4.1 Simple Addition with Same Signs ",
+        "text_level": 1,
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "The problem is to add two floating point numbers $A$ and $B$ with the same sign. We want to compute a new floating point number $C = A + B$ . In this case, the sign of the result is known in advance (sign of $A$ or $B$ ). All of our subsequent discussion assumes the IEEE 32-bit format. However, the techniques that we develop can be extended to other formats, especially double-precision arithmetic. ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "First, the floating point unit needs to unpack different fields from the floating point representations of $A$ and $B$ . Let the $E$ fields (exponent $^ +$ bias) be $E _ { A }$ and $E _ { B }$ for $A$ and $B$ , respectively. Let the $E$ field of the result, $C$ , be $E _ { C }$ . In hardware, let us use a register called $E$ to save the exponent (in the bias notation). The final value of $E$ needs to be equal to $E _ { C }$ . ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "Unpacking the significand is slightly more elaborate. We shall represent the significands as unsigned integers and ignore the decimal point. Moreover, we shall add a leading most significant bit that can act as the sign bit. It is initially 0. For example, if a floating point number is of the form: $1 . 0 1 1 1 \\times 2 ^ { 1 0 }$ , the significand is 1.0111, and we shall represent it as 010111. Note that we have added a leading 0 bit. Figure 8.16 shows an example of how the significand is unpacked, and placed in a register for a normal floating point number. In the 32-bit IEEE 754 format, there are 23 bits for the mantissa, and there is either a 0 or $^ { 1 }$ before the decimal point. The significand thus requires 24 bits, and if we wish to add a leading sign bit(0), then we need 25 bits of storage. Let us save this number in a register, and call it $W$ . ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "Let us start out by observing that we cannot add $A$ and $B$ the way we have added integers, because the exponents might be different. The first task is to ensure that both the exponents are the same. Without no loss of generality, let us assume that $E _ { A } \\geq E _ { B }$ . This can be effected with a simple compare and swap in hardware. We can thus initialize the register $E$ to $E _ { A }$ . ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "Let the significands of $A$ and $B$ be $P _ { A }$ and $P _ { B }$ , respectively. Let us initially set $W$ equal to ",
+        "page_idx": 344
+    },
+    {
+        "type": "image",
+        "img_path": "images/b1751ebaa8f7ec0f745db5667c87703dcb97ba7985e9296d7370d665494ed56a.jpg",
+        "img_caption": [
+            "Figure 8.16: Expanding the significand and placing it in a register "
+        ],
+        "img_footnote": [],
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "the significand of $B ( P _ { B } )$ with a leading 0 bit as shown in Figure 8.16. To make the exponent of $A$ and $B$ equal, we need to right shift $W$ by $\\left( E _ { A } - E _ { B } \\right)$ positions.   \nNow, we can proceed to add the significand of $A$ termed as $P _ { A }$ to $W$ . ",
+        "page_idx": 345
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { W = W > > ( E _ { A } - E _ { B } ) } } \\\\ { { W = W + P _ { A } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "Let the significand represented by $W$ be $P _ { W }$ . There is a possibility that $P _ { W }$ might be greater than or equal to 2. In this case, the significand of the result is not in normalized form. We will thus need to right shift $W$ by 1 position and increment $E$ by 1. This process is called normalization. There is a possibility that incrementing $E$ by 1 might make it equal to 255, which is not allowed. We can signal an overflow in this case. The final result can be obtained by constructing a floating point number out of the $E$ , $W$ , and the sign of the result (sign of either $A$ or $B$ ). ",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "Example 130 ",
+        "text_level": 1,
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "Add the numbers: $1 . 0 1 _ { 2 } \\times 2 ^ { 3 } + 1 . 1 1 _ { 2 } \\times 2 ^ { 1 }$ . Assume that the bias is 0. Answer: ",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "1. $A = 1 . 0 1 \\times 2 ^ { 3 }$ and $B = 1 . 1 1 \\times 2 ^ { 1 }$   \n2. $W = 0 1 . 1 1$ (significand of $B$ )   \n3. $E = \\mathcal { B }$   \n4. $W = 0 1 . 1 1 > > ( \\mathcal { S - I } ) = 0 0 . 0 1 1 1$   \n$5 . \\ W \\ + \\ P _ { A } = 0 0 . 0 1 1 1 \\ + \\ 0 1 . 0 1 0 0 = 0 1 . 1 0 1 1$   \n6. Result: $C = 1 . 1 0 1 1 \\times 2 ^ { 3 }$ ",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "Example 131 ",
+        "text_level": 1,
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "Add $1 . 0 1 \\times 2 ^ { 3 } + 1 . 1 1 \\times 2 ^ { 2 }$ . Assume that the bias is 0. Answer: ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "1. $A = 1 . 0 1 \\times 2 ^ { 3 }$ and $B = 1 . 1 1 \\times 2 ^ { 2 }$   \n2. $W = \\theta \\boldsymbol { { 1 . 1 1 } }$ (significand of $B$ )   \n3. $E = \\mathcal { B }$   \n$\\it 4 . \\ : W = 0 1 . 1 1 > > ( 3  \u2013 2 ) = 0 0 . 1 1 1$   \n${ \\bf \\check { \\cdot } } { \\bf \\nabla } W + P _ { A } = 0 0 . 1 1 1 + 0 1 . 0 1 0 = 1 0 . 0 0 1$   \n6. Normalization: $W = 1 0 . 0 0 1 > > 1 = 1 . 0 0 0 1$ , $E = \\not 4$ 7. Result: $C = 1 . 0 0 0 1 \\times 2 ^ { 4 }$ ",
+        "page_idx": 346
+    }
+]

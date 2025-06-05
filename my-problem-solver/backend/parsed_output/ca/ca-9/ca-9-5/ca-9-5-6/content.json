@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "9.5.6 Overview of the Data Path ",
+        "text_level": 1,
+        "page_idx": 387
+    },
+    {
+        "type": "image",
+        "img_path": "images/cc1081996de7c3fe48e22ebb74ce88c26f3acc72b2592446cc49963c28d6b76d.jpg",
+        "img_caption": [
+            "Figure 9.22: The data path in a microprogrammed processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "Let us now add all the individual units, and take a look at the entire data path as shown in Figure 9.22. Along with all the units that we just described, we have added an extra unit, which is the microprogrammed control unit ( $\\mu$ control unit). Its role is to execute a set of microinstructions corresponding to each program instruction, and orchestrate the flow of data values across the different units in the data path of the microprogrammed processor. It is mainly responsible for the execution of microinstructions, data transfers across the different units, and for transferring control to the correct program instruction by updating the PC. Note that we have also added an extra connection between the ir register and the $\\mu$ control unit to transfer the opcode of the instruction. We require the $\\mu$ control unit to load the appropriate set of microinstructions corresponding to the program instruction. By design, we do not wish to make the value of the opcode available to other units. This is because, we have a set of microinstructions for each opcode, and there is no reason why other units should require the value of the opcode. ",
+        "page_idx": 387
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "Definition 63 ",
+        "text_level": 1,
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "The microcontrol unit, also referred to as the \u00b5control unit is a dedicated piece of hardware that is responsible for the execution of a set of microinstructions corresponding to each program instruction. Its role is to fetch the appropriate set of microinstructions from a dedicated microprogram memory, and execute them in sequence. A register called the micro PC (\u00b5pc) points to the currently executing microinstruction. ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "We envision a microprogram memory that is a part of the $\\mu$ control unit. It contains the set of microinstructions corresponding to each program instruction. It is thus necessary for the $\\mu$ control unit to jump to the starting address of the set of microinstructions corresponding to each program instruction. We also need a microPC that points to the current microinstruction being executed. ",
+        "page_idx": 388
+    },
+    {
+        "type": "text",
+        "text": "Before discussing the design and implementation of the $\\mu$ control unit, let us first look at programming, or rather microprogramming our new processor. We need to design a microassembly language that will help us write programs for it. ",
+        "page_idx": 388
+    }
+]

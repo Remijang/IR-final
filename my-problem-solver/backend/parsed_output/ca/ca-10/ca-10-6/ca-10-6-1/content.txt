@@ -1,0 +1,33 @@
+10.6.1 A Conceptual Look at a Pipeline with Interlocks
+
+Data Hazards
+
+Let us now draw the pipeline diagram of a pipeline with interlocks. Let us consider the following code snippet.
+
+[1]: add r1, r2, r3   
+[2]: sub r4, r1, r2
+
+Here, instruction [1] writes to register  and instruction [2] reads from  . Clearly, there is a RAW dependence. To ensure the Data-Lock condition, we need to ensure that instruction [2] leaves the OF stage only when it has read the value of  written by instruction [1]. This is possible only in cycle 6 (refer to the pipeline diagram in Figure 10.14). However, instruction [2] reaches the OF stage in cycle 3. If there had been no hazard, then it would have ideally proceeded to the EX stage in cycle 4. Since we have an interlock, instruction [2] needs to stay in the OF stage in cycles 4,5 and 6 also. The question is, “what does the EX stage do when it is not processing a valid instruction in cycles 4, 5 and 6?” Similarly, the MA stage does not process any valid instruction in cycles 5, 6 and 7. We need to have a way to disable pipeline stages, such that we do not perform redundant work. The standard approach is to insert nop instructions into stages, if we want to effectively disable them.
+
+Let us refer to Figure 10.14 again. At the end of cycle 3, we know that we need to introduce an interlock. Hence, in cycle 4, instruction [2] remains in the OF stage, and we insert a nop instruction into the EX stage. This nop instruction moves to the MA stage in cycle 5, and RW stage in cycle 6. This nop instruction is called a pipeline bubble. A bubble is a nop instruction that is dynamically inserted by the interlock hardware. It moves through the pipeline stages akin to normal instructions. Similarly, in cycles 5 and 6 also, we need to insert a pipeline bubble. Finally, in cycle 7, instruction [2] is free to proceed to the EX, and subsequent stages. A bubble by definition does not do anything, and thus none of the control signals are turned on when a stage encounters a bubble. The other subtle point to note here is that we cannot read and write to the same register in the same cycle. We need to give preference to the write because it is an earlier instruction, and the read needs to stall for one cycle.
+
+There are two ways to implement a bubble. The first is that we can have a separate bubble bit in the instruction packet. Whenever, the bit is 1, the instruction will be construed to be a bubble. The second is that we can change the opcode of the instruction to that of a  , and replace all of its control signals by 0s. The latter approach is more invasive, but can eliminate redundant work in the circuit completely. In the former approach, the control signals will be on, and units that are activated by them, will remain operational. The hardware needs to ensure that a bubble is not able to make changes to registers or memory.
+
+Definition 74   
+A pipeline bubble is a nop instruction that is inserted dynamically in a pipeline register by the interlock hardware. A bubble propagates through the pipeline in the same way as normal instructions.
+
+We can thus conclude that it is possible to avoid data hazards, by dynamically inserting bubbles in the pipeline. Let us quickly take a look at the issue of slow instructions such as the div and mod instructions. It is highly likely that in most pipelines these instructions will take  (  ) cycles to execute in the EX stage. In each of the  cycles, the ALU completes a part of the processing of the div or mod instructions. Each such cycle is known as a  State. Typically, one stage has 1 T State; however, the EX stage for a slow instruction has many T states. Hence, to correctly implement slow instructions, we need to stall the IF and OF stages for  cycles till the operations complete.
+
+For the sake of simplicity, we shall not discuss this issue further. Instead, we shall move on with the simplistic assumption that all our pipeline stages are balanced, and take 1 cycle to complete their operation.
+
+Control Hazards
+
+Now, let us look at control hazards. Let us start out by considering the following code snippet.
+
+[1]: beq .foo [2]: add r1, r2, r3 [3]: sub r4, r5, r6 .foo: [4]: add r8, r9, r10
+
+Instead of using a delayed branch, we can insert bubbles in the pipeline if the branch is taken. Otherwise, we do not need to do anything. Let us assume that the branch is taken. The pipeline diagram for this case is shown in Figure 10.15.
+
+In this case, the outcome of the branch condition of instruction [1] is decided in cycle 3. At this point, instructions [2] and [3] are already in the pipeline (in the IF and OF stages, respectively). Since the branch condition evaluates to taken, we need to cancel instructions [2] and [3], otherwise they will be executed erroneously. We thus, convert them to bubbles as shown in Figure 10.15. Instructions[2] and [3] are converted to bubbles in cycle 4. Secondly, we fetch from the correct branch target (.foo) in cycle 4, and thus instruction [4] enters the pipeline. Both of our bubbles proceed through all the pipeline stages, and finally leave the pipeline in cycles 6 and 7, respectively.
+
+We can thus ensure both the conditions (Data-Lock and Branch-Lock ) by dynamically introducing bubbles in the pipeline. Now, let us look at these approaches in some more detail.

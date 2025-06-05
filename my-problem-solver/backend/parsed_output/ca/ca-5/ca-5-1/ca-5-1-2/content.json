@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "5.1.2 Main Features of the x86 ISA ",
+        "text_level": 1,
+        "page_idx": 178
+    },
+    {
+        "type": "text",
+        "text": "Before delving into the details of the 32-bit x86 ISA, let us list some of its main features. ",
+        "page_idx": 178
+    },
+    {
+        "type": "text",
+        "text": "1. It is a CISC ISA. Instructions have varying lengths, and operands also do not have a fixed length.   \n2. There are at least 300 scalar instructions, and this number is increasing every year.   \n3. Almost all the instructions can have a memory operand. In fact, most instructions allow a source, and a destination memory operand.   \n4. Most of the x86 instructions are in the 2-address format. For example, the assembly instruction to add two registers eax, and ebx, is add eax, ebx. Here, we add the contents of the $e a x$ , and ebx registers, and save the results in the eax register.   \n5. x86 has many complicated addressing modes for memory operands. Along with the traditional base-offset addressing mode, it supports base-index and base-index-offset addressing modes.   \n6. It does not have a return address register. Function call and return instructions, save and retrieve the return address from the stack. ",
+        "page_idx": 178
+    },
+    {
+        "type": "text",
+        "text": "7. Like ARM and SimpleRisc , x86 has a flags register that saves the outcome of the last comparison. The flags register is used by conditional branch instructions. ",
+        "page_idx": 179
+    },
+    {
+        "type": "text",
+        "text": "8. Unlike SimpleRisc , x86 instructions do not see a unified view of instruction and data memory. The x86 memory is segmented. This means that instructions and data reside in different memory regions (known as segments). x86 machines restrict the segments that an instruction can access. ",
+        "page_idx": 179
+    },
+    {
+        "type": "text",
+        "text": "It is true that the x86 architecture is a CISC instruction set, and it has hundreds of opcodes and many addressing modes. Nevertheless, we are sure that at the end of this chapter, the reader will concur with us that the x86 instruction set is in reality a fairly simple instruction set, is easy to understand, and is very elegant. A conventional argument supporting the case of RISC ISAs is that the hardware is simpler, and more efficient. Consequently, in modern Intel/AMD processors (Pentium $\\textsuperscript { \\textregistered }$ 4 onwards), the x86 instructions are internally translated into RISC instructions, and the entire processor is essentially a RISC processor. We can thus get the best of both worlds. ",
+        "page_idx": 179
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "type": "text",
+        "text": "15.2 An Example ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "To understand better what we need to do to implement address translation, and why we need such a mechanism, let’s look at a simple example. Imagine there is a process whose address space is as indicated in Figure 15.1. What we are going to examine here is a short code sequence that loads a value from memory, increments it by three, and then stores the value back into memory. You can imagine the C-language representation of this code might look like this: ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "TIP: INTERPOSITION IS POWERFUL ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Interposition is a generic and powerful technique that is often used to great effect in computer systems. In virtualizing memory, the hardware will interpose on each memory access, and translate each virtual address issued by the process to a physical address where the desired information is actually stored. However, the general technique of interposition is much more broadly applicable; indeed, almost any well-defined interface can be interposed upon, to add new functionality or improve some other aspect of the system. One of the usual benefits of such an approach is transparency; the interposition often is done without changing the interface of the client, thus requiring no changes to said client. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "void func() { int $\\mathrm { ~  ~ x ~ } = 3 0 0 0$ ; // thanks, Perry. $\\mathrm { ~  ~ x ~ } = \\mathrm { ~  ~ x ~ } + 3$ ; // line of code we are interested in ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The compiler turns this line of code into assembly, which might look something like this (in $\\times 8 6$ assembly). Use objdump on Linux or otool on a Mac to disassemble it: ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "128: movl 0x0(%ebx), %eax ;load 0+ebx into eax   \n132: addl $\\$ 0 x03$ , %eax ;add 3 to eax register   \n135: movl %eax, 0x0(%ebx) ;store eax back to mem ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "This code snippet is relatively straightforward; it presumes that the address of $\\mathbf { x }$ has been placed in the register ebx, and then loads the value at that address into the general-purpose register eax using the movl instruction (for “longword” move). The next instruction adds 3 to eax, and the final instruction stores the value in eax back into memory at that same location. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "In Figure 15.1 (page 4), observe how both the code and data are laid out in the process’s address space; the three-instruction code sequence is located at address 128 (in the code section near the top), and the value of the variable $\\mathrm { ~  ~ { ~ x ~ } ~ }$ at address $1 5 \\mathrm { K B }$ (in the stack near the bottom). In the figure, the initial value of $\\mathrm { \\Delta _ { x } }$ is 3000, as shown in its location on the stack. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "When these instructions run, from the perspective of the process, the following memory accesses take place. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "• Fetch instruction at address 128 • Execute this instruction (load from address 15 KB) • Fetch instruction at address 132 • Execute this instruction (no memory reference) • Fetch the instruction at address 135 • Execute this instruction (store to address 15 KB) ",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/e64e543ee6fc5e71537076f9bb8650c5df6175097f7ca3dc4cd2e9aa6f00c400.jpg",
+        "img_caption": [
+            "Figure 15.1: A Process And Its Address Space "
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/e0e1e4e76e4a14d4617c1028618429089f615782f0daccdfa381f8637c53dabb.jpg",
+        "img_caption": [
+            "Figure 15.2: Physical Memory with a Single Relocated Process "
+        ],
+        "img_footnote": [],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "From the program’s perspective, its address space starts at address 0 and grows to a maximum of 16 KB; all memory references it generates should be within these bounds. However, to virtualize memory, the OS wants to place the process somewhere else in physical memory, not necessarily at address 0. Thus, we have the problem: how can we relocate this process in memory in a way that is transparent to the process? How can we provide the illusion of a virtual address space starting at 0, when in reality the address space is located at some other physical address? ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "An example of what physical memory might look like once this process’s address space has been placed in memory is found in Figure 15.2. In the figure, you can see the OS using the first slot of physical memory for itself, and that it has relocated the process from the example above into the slot starting at physical memory address 32 KB. The other two slots are free (16 KB-32 KB and 48 KB-64 KB). ",
+        "page_idx": 4
+    }
+]

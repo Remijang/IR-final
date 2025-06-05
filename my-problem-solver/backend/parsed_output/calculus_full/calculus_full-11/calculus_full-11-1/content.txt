@@ -1,0 +1,125 @@
+11.1 Vectors and Dot Products
+
+In a plane, every point is described by two numbers. We measure across by  and up by  . Starting from the origin we reach the point with coordinates  . I want to describe this movement by a vector—the straight line that starts at  and ends at  . This vector  has a direction, which goes from  to  and not the other way.
+
+In a picture, the vector is shown by an arrow. In algebra,  is given by its two components. For a column vector, write  above  :
+
+Note that  is printed in boldface; its components  and  are in lightface.  The vector  in the opposite direction changes signs. Adding  to  gives the zero vector (different from the zero number and also in boldface):
+
+Notice how vector addition or subtraction is done separately on the  ’s and  ’s:
+
+The vector  has components  and  . (I write  for the first component and  for the second component. I also write  and  , which is fine for two components.) The vector w has  and  . To add the vectors, add the components. To draw this addition, place the start of w at the end of v. Figure 11.3 shows how w starts where  ends.
+
+VECTORS WITHOUT COORDINATES
+
+In that head-to-tail addition of  , we did something new. The vector  was moved away from the origin. Its length and direction were not changed! The new arrow is parallel to the old arrow—only the starting point is different. The vector is the same as before.
+
+A vector can be defined without an origin and without  and  axes. The purpose of axes is to give the components—the separate distances  and  . Those numbers are necessary for calculations. But  and  coordinates are not necessary for head-totail addition  , or for stretching to  , or for linear combinations  . Some applications depend on coordinates, others don’t.
+
+Generally speaking, physics works without axes—it is “coordinate-free.” A velocity has direction and magnitude, but it is not tied to a point. A force also has direction and magnitude, but it can act anywhere—not only at the origin. In contrast, a vector that gives the prices of five stocks is not floating in space. Each component has a meaning—there are five axes, and we know when prices are zero. After examples from geometry and physics (no axes), we return to vectors with coordinates.
+
+EXAMPLE 1 (Geometry) Take any four-sided figure in space. Connect the midpoints   
+of the four straight sides. Remarkable fact: Those four midpoints lie in the same plane. More than that, they form a parallelogram.
+
+Frankly, this is amazing. Figure  cannot do justice to the problem, because it is printed on a flat page. Imagine the vectors A and  coming upward.  and C go down at different angles. Notice how easily we indicate the four sides as vectors, not caring about axes or origin.
+
+I will prove that  . That shows that the midpoints form a parallelogram.
+
+What is V ? It starts halfway along A and ends halfway along B. The small triangle at the bottom shows  . This is vector addition—the tail of  is at the head of  . Together they equal the shortcut V. For the same reason  . The heart of the proof is to see these relationships.
+
+One step is left. Why is  equal to  In other words, why is  equal to  (I multiplied by 2.) When the right question is asked, the answer jumps out. A head-to-tail addition  brings us to the point  . Also  brings us to  . The proof comes down to one line:
+
+EXAMPLE 2 (Also geometry) In any triangle, draw lines from the corners to the midpoints of the opposite sides. To prove by vectors: Those three lines meet at  point. Problem 38 finds the meeting point in Figure 11.4c. Problem 37 says that the three vectors add to zero.
+
+EXAMPLE 3 (Medicine) An electrocardiogram shows the sum of many small vectors, the voltages in the wall of the heart. What happens to this sum—the heart vector V—in two cases that a cardiologist is watching for ?
+
+Case 1. Part of the heart is dead (infarction).   
+Case 2. Part of the heart is abnormally thick (hypertrophy).
+
+A heart attack kills part of the muscle. A defective valve, or hypertension, overworks it. In case 1 the cells die from the cutoff of blood (loss of oxygen). In case 2 the heart wall can triple in size, from excess pressure. The causes can be chemical or mechanical. The effect we see is electrical.
+
+The machine is adding small vectors and “projecting” them in twelve directions.
+
+The leads on the arms, left leg, and chest give twelve directions in the body. Each graph shows the component of V in one of those directions. Three of the projections— two in the vertical plane, plus lead 2 for front-back—produce the “mean QRS vector” in Figure 11.5. That is the sum  when the ventricles start to contract. The left ventricle is larger, so the heart vector normally points down and to the left.
+
+We come soon to projections, but here the question is about  itself. How does the ECG identify the problem ?
+
+Case 1W Heart attack The dead cells make no contribution to the electrical potential. Some small vectors are missing. Therefore the sum V turns away from the infarcted part.   
+Case 2W Hypertrophy The overwork increases the contribution to the potential. Some vectors are larger than normal. Therefore  turns toward the thickened part.
+
+When  points in an abnormal direction, the ECG graphs locate the problem. The  waves on separate graphs can all indicate hypertrophy, in different regions of the heart. Infarctions generally occur in the left ventricle, which needs the greatest blood supply. When the supply of oxygen is cut back, that ventricle feels it first. The result can be a heart attack  myocardial infarction  coronary occlusion). Section 11.2 shows how the projections on the ECG point to the location.
+
+First come the basic facts about vectors—components, lengths, and dot products.
+
+COORDINATE VECTORS AND LENGTH
+
+To compute with vectors we need axes and coordinates. The picture of the heart is “coordinate-free,” but calculations require numbers. A vector is known by its components. The unit vectors along the axes are i and j in the plane and i; j; k in space:
+
+Notice how easily we moved into three dimensions! The only change is that vectors have three components. The combinations of i and j (or i, j, k) produce all vectors  in the plane (and all vectors  in space):
+
+Those vectors are also written  and  . The components of the vector are also the coordinates of a point. (The vector goes from the origin to the point.) This relation between point and vector is so close that we allow them the same notation:  and  .
+
+The sum  is totally meaningless. Those vectors live in different dimensions.
+
+From the components we find the length. The length of  is  . This comes directbly from a ribght triangle. Inbthree dimensions,  has a third component t|o |be squared and added. The le|ng|th of  is  .
+
+Vertical bars indicate length, which takes the place of absolute value. The length of  is the distance from the point  to the point  :
+
+A unit vector is a vector of length one. Dividing  and  by their lengths produces unit vectors in the same directions:
+
+11A Each nonzero vector has a positive length  . The direction of v is given by a unit vector  . The length times direction equals  .
+
+A unit vector in the plane is determined by its angle  with the  axis:
+
+In 3-space the components of a unit vector are its “direction cosines”:
+
+Then  . We are doing algebra with numbers while we are doing geometry with vectors. It was the great contribution of Descartes to see how to study algebra and geometry at the same time.
+
+THE DOT PRODUCT OF TWO VECTORS
+
+There are two basic operations on vectors. First, vectors are added  . Second, a vector is multiplied by a scalar .7v or  /. That leaves a natural question—how do you multiply two vectors ? The main part of the answer is—|y o|u don’t.|B|ut there is an extremely important operation that begins with two vectors and produces a number. It is usually i|nd |i|cat|ed by a dot between the vectors, as in  , so it is called the dot product.
+
+DEFINITION 1 The dot product multiplies the lengths  times  times a cosine:
+
+EXAMPLE  has length  , the angle is  :
+
+The dot product is  , which simplifies to 6: The square roots in the lengths are “canceled” by square roots in the cosine. For computing  , a second and much simpler way involves no square roots in the first place.
+
+DEFINITION 2 The dot product v w multiplies component by component and adds:
+
+The first form  is coordinate-free. The second form  computes with coordinates|. R||ema|rk 4 explains why these two forms are equal.
+
+11B The dot product or scalar product or inner product of three-dimensional vectors is
+
+If the vectors are perpendicular then  and cos  and  .
+
+These dot products 32 and 0 equal  . In the second one, cos  must be zero. The angle is  or  —in either case a right angle. Fortunately the cosine is the same for  and  , so we need not decide the sign of  .
+
+Remark 1 When  the angle is zero but not the cosine! In this case cos  and  . The dot product of  with itself is the length squared:
+
+Remark 2 The dot product of  with  is  . The axes are perpendicular. Similarly  and  . Those are unit vectors:  .
+
+Remark 3 The dot product has three properties that keep the algebra simple:
+
+When  is doubled .  / the dot product is doubled. When  is split into i; j; k components, the dot product splits in three pieces. The same applies to  , since  . The nine dot products of i; j; k are zeros and ones, and a giant splitting of both  and  gives back the correct  :
+
+Remark 4 The two f|orms of|the |dot| pro|duc|t are |eq|u| al.|This comes from computing  by coordinates and also by the “law of cosines”:
+
+with coordinates  from cosine law
+
+Compare those two lines. Line 1 contains  and  and  . Their sum matches  in the cosine law. Also  matches  . Therefore the terms containing  are the same (you can mentally cancel the  ). The definitions agree:
+
+The cosine law is coordinate-free. It applies to all triangles (even in  dimensions). Its vector form in Figure 11.8 is  . This application to  is its brief moment of glory.
+
+Remark 5 The dot product is the best way to compute the cosine of  :
+
+Here are examples of  and  with a range of angles from 0 to  :
+
+Remark 6 The Cauchy-Schwarz inequality  comes from  .
+
+The left side is  .¤It| n|ever| ex|ceed |s th|e|rig|ht| side  . This is a key inequality in mathematics, from which so many others follow:
+
+|Geome|tr¤ic| m|e|an  arithmetic mean  (true for any  and  ).   
+Triangle inequality   are lengths of sides).
+
+These and other examples are in Problems 39 to 44: The Schwarz inequality  becomes an equality when  and the vectors are

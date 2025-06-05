@@ -1,0 +1,92 @@
+[
+    {
+        "type": "text",
+        "text": "6.3.2 Unconditional Branches ",
+        "text_level": 1,
+        "page_idx": 241
+    },
+    {
+        "type": "table",
+        "img_path": "images/a9ac77d12eb893b8751617719d89094d23e896c033bc9013da8f3b4beb15a04f.jpg",
+        "table_caption": [
+            "Table 6.10: Jump instructions in x86 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>jal rd,label</td><td>jal x1, func</td><td>Jump to the func label and store the return address in x1</td></tr><tr><td>jalr rd,rs1, offset</td><td> jalr x1, x2, 20</td><td>Jump to the address x2 + 20 and store the return address in x1</td></tr></table></body></html>\n\n",
+        "page_idx": 241
+    },
+    {
+        "type": "text",
+        "text": "The unconditional branch/jump instructions of RISC-V are shown in Table 6.10. The most commonly used instruction is jal \u2013 it functions both as a function call instruction as well as a regular unconditional jump instruction. In both cases, the control jumps to the PC pointed to by the label. Akin to other ISAs, while encoding the instruction, the label is translated to a PC-relative offset. The jump can take place within a region of $\\pm \\nobreakspace 1 \\nobreakspace$ MB. The jal instruction additionally stores the return address $( p c + 4 )$ in the first source register ( $x 1$ in the example). Note that if the first source register is equal to $x 0$ $( z e r o )$ , then the return address is not stored. jal in this case acts as a regular unconditional jump that does not store the return address. ",
+        "page_idx": 241
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 242
+    },
+    {
+        "type": "text",
+        "text": "The jalr instruction augments $j a l$ with one additional register argument. Consider the example: jal x1, $x 2$ , 20. In this case, we add the offset 20 to the contents of $x 2$ and jump to the resulting address. The return address is stored in $x 1$ . Similar to $j a l$ , we do not store the return address if the first source register is $x 0$ . The $j a l r$ instruction can be used to implement a function return instruction. All that we have to do is to jump to the PC whose value is $0 ( r a )$ (contents of the register $r a + 0$ ). ",
+        "page_idx": 242
+    },
+    {
+        "type": "text",
+        "text": "Example 108 ",
+        "text_level": 1,
+        "page_idx": 242
+    },
+    {
+        "type": "text",
+        "text": "Write a RISC-V assembly program that has a function call. ",
+        "page_idx": 242
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 242
+    },
+    {
+        "type": "table",
+        "img_path": "images/8e4a97b584daf43c8b9a427320bc39461a18f4bec6c73fab6056d47591c87d0d.jpg",
+        "table_caption": [
+            "Listing 6.1: C code "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>int foo() { return 2; } void main() { int x = 3;</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 242
+    },
+    {
+        "type": "table",
+        "img_path": "images/d8ea689f5b988a342b3bd576f7958953a25c52522613c2a47eae50bddf26eb09.jpg",
+        "table_caption": [
+            "Listing 6.2: RISC-V code "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>.foo:</td><td>#callee</td></tr><tr><td>addi</td></tr><tr><td>a0\uff0czero\uff0c2 # a0 =2 jalr zero\uff0cO(ra) # return</td></tr><tr><td>inst.</td></tr><tr><td>.main:</td></tr><tr><td>addi s0\uff0czero\uff0c3 # s0 = 3</td></tr><tr><td>jal ra\uff0c.foo # jump to.foo</td></tr><tr><td>add s1\uff0cs0\uff0ca0 # y = + foo()</td></tr></table></body></html>\n\n",
+        "page_idx": 242
+    },
+    {
+        "type": "text",
+        "text": "Example 109 Write a RISC-V assembly program to compute $x ^ { n }$ and store the result in a0. x is passed ",
+        "page_idx": 242
+    },
+    {
+        "type": "text",
+        "text": "through a1 and n is passed through a2. ",
+        "page_idx": 243
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 243
+    },
+    {
+        "type": "image",
+        "img_path": "images/bbfce9809b2d11905a5d56043a880171792cc1368c98f36e54bfb95a0004a6c8.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 243
+    }
+]

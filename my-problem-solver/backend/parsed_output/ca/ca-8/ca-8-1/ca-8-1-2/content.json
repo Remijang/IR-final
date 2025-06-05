@@ -1,0 +1,73 @@
+[
+    {
+        "type": "text",
+        "text": "8.1.2 Addition of Three 1-bit Numbers ",
+        "text_level": 1,
+        "page_idx": 308
+    },
+    {
+        "type": "text",
+        "text": "The aim is to be ultimately able to add 32-bit numbers. To add the two least significant bits, we can use a half adder. However, for adding the second bit pair, we cannot use a half adder because there might be an output carry from the first half adder. In this case, we need to add three 1-bit numbers. Hence, we need to implement a full adder that can add 3 bits. One of these bits is a carry out of another adder, and we call it the input carry. We represent the input carry as $c _ { i n }$ , and the two other input bits as $a$ and $b$ . ",
+        "page_idx": 308
+    },
+    {
+        "type": "image",
+        "img_path": "images/0f7b8a1a83d7265cb3ed690ae2e1ce9fb359f64788f2f63abf3412b5d3b3d7b6.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 309
+    },
+    {
+        "type": "image",
+        "img_path": "images/09148fd1971f4a470f117974476012dd1ef2aa1ccf6e14e932cc25e790421016.jpg",
+        "img_caption": [
+            "Figure 8.1: A half adder ",
+            "Table 8.2: Truth table of a full adder "
+        ],
+        "img_footnote": [],
+        "page_idx": 309
+    },
+    {
+        "type": "text",
+        "text": "Definition 54 An adder than can add 3 bits is known as a full adder. ",
+        "page_idx": 309
+    },
+    {
+        "type": "text",
+        "text": "Table 8.2 shows the truth table for the full adder. We have three inputs \u2013 $a$ , $b$ , and $c _ { i n }$ There are two output bits \u2013 the sum (s), and the carry out $( c _ { o u t } )$ . ",
+        "page_idx": 309
+    },
+    {
+        "type": "table",
+        "img_path": "images/bf8ba8f862541fa485b74d664c3bd3061da85ca0b933b34c98707f4bbcdb65ab.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>a</td><td>b</td><td>Cin</td><td>S</td><td>Cout</td></tr><tr><td>0 0</td><td>0 1</td><td>0 0</td><td>0 1</td><td>0 0</td></tr><tr><td>1 0</td><td></td><td>0</td><td>1</td><td>0</td></tr><tr><td>1 0</td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>0 1</td><td>1</td><td>1</td><td>0</td></tr><tr><td>1</td><td></td><td>1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>0 1</td><td>1 1</td><td>0 1</td><td>1 1</td></tr></table></body></html>\n\n",
+        "page_idx": 309
+    },
+    {
+        "type": "text",
+        "text": "From the truth table, we can deduce the following relationships: ",
+        "page_idx": 309
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { s = a \\oplus b \\oplus c _ { i n } } \\\\ & { \\quad = \\left( a \\bar { A } + \\overline { { a } } . b \\right) \\oplus c _ { i n } } \\\\ & { \\quad = \\left( a \\bar { A } + \\overline { { a } } . b \\right) \\bar { c } _ { i n } + \\overline { { \\left( a \\bar { A } - \\bar { a } . b \\right) } } . c _ { i n } } \\\\ & { \\quad = a \\bar { A } . \\overline { { c _ { i n } } } + \\overline { { a } } . b . \\overline { { c _ { i n } } } + \\overline { { \\left( a \\bar { A } \\right) } } . \\overline { { \\overline { { a } } . b } } . c _ { i n } } \\\\ & { \\quad = a \\bar { A } . \\overline { { c _ { i n } } } + \\overline { { a } } . b . \\overline { { c _ { i n } } } + \\overline { { \\left( a \\right) } } . \\overline { { \\left( a + \\bar { b } \\right) } } . c _ { i n } + \\overline { { b } } \\mathrm { ) . } c _ { i n } } \\\\ & { \\quad = a \\bar { A } . \\overline { { c _ { i n } } } + \\overline { { a } } . b . \\overline { { c _ { i n } } } + \\overline { { a } } . \\overline { { b } } . c _ { i n } + a . b . c _ { i n } } \\\\ & { \\quad = a . b + a . c _ { i n } + b . c _ { i n } } \\\\ & { \\quad \\quad c _ { o u t } = a . b + a . c _ { i n } + b . c _ { i n } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 310
+    },
+    {
+        "type": "text",
+        "text": "The circuit diagram of a full adder is shown in Figure 8.2. This is far more complicated than the circuit of a half adder. We have used 12 logic gates to build this circuit. Furthermore, some of these logic gates use three inputs. However, this degree of complexity is required because all our practical adders will use full adders as their basic element. We face the need of adding 3 bits in all of our arithmetic algorithms. ",
+        "page_idx": 310
+    },
+    {
+        "type": "image",
+        "img_path": "images/7556be52d7e332f1d6bbb1c16f1c03ba0656c311304ba1dfc02bfdf782f58cef.jpg",
+        "img_caption": [
+            "Figure 8.2: A full adder "
+        ],
+        "img_footnote": [],
+        "page_idx": 310
+    }
+]

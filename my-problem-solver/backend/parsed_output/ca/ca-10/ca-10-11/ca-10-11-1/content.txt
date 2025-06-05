@@ -1,0 +1,54 @@
+10.11.1 Branch Prediction
+
+Let us start with the IF stage, and see how we can make it better. If there is a taken branch in the pipeline, then the IF stage needs to be stalled for 2 cycles. Subsequently, it needs to start fetching from the branch target. As we add more pipeline stages, the branch penalty increases from 2 cycles to more than 20 cycles. This makes branch instructions extremely expensive, and they are known to severely limit performance. Hence, it is necessary to avoid pipeline stalls even for taken branches.
+
+What if, it is possible to predict the direction of branches, and also predict the branch target? In this case, the fetch unit can immediately start fetching from the predicted branch target. If the prediction is found to be wrong at a later point of time, then all the instructions after the mispredicted branch instruction need to be canceled, and discarded from the pipeline. Such instructions are also known as speculative instructions.
+
+Definition 90 Modern processors typically execute large sets of instructions on the basis of predictions. For example, they predict the direction of branches, and accordingly fetch instructions starting from the predicted branch target. The prediction is verified later when the branch instruction is executed. If the prediction is found to be wrong, then all the instructions that were incorrectly fetched or executed are discarded from the pipeline. These instructions are known as speculative instructions. Conversely, instructions that were fetched and executed correctly, or whose predictions have been verified are called non-speculative instructions.
+
+Note that it is extremely essential to prohibit speculative instructions from making changes to the register file or writing to the memory system. Thus, we need to wait for instructions to become non-speculative before we allow them to make permanent changes. Second, we also do not allow them to leave the pipeline before they become non-speculative. However, if there is a need to discard speculative instructions, then modern pipelines adopt a simpler mechanism. Instead of selectively converting speculative instructions into pipeline bubbles as we have done in our simple pipeline, modern processors typically remove all the instructions that were fetched after the mispredicted branch instruction. This is a simple mechanism that works very well in practice. It is known as a pipeline flush.
+
+Definition 91
+
+Modern processors typically adopt a simple approach of discarding all speculative instructions from a pipeline. They completely finish the execution of all instructions till the mispredicted instruction, and then clean up the entire pipeline, effectively removing all the instructions that were fetched after the mispredicted instruction. This mechanism is known as a pipeline flush.
+
+Main Challenges
+
+Let us now outline the main challenges in branch prediction.
+
+1. We need to first find out in the fetch stage if an instruction is a branch, and if it is a branch, we need to find the address of the branch target.   
+2. Next, we need to predict the expected direction of the branch.   
+3. It is necessary to monitor the result of a predicted instruction. If there is a misprediction, then we need to perform a pipeline flush at a later point of time such that we can effectively remove all the speculative instructions.
+
+Detecting a misprediction in the case of a branch is fairly straightforward. We add the prediction to the instruction packet, and verify the prediction with the actual outcome. If they are different, then we schedule a pipeline flush. The main challenge is to predict the target of a branch instruction, and its outcome.
+
+Branch Target Buffer
+
+Modern processors use a simple hardware structure called a branch target buffer (BTB). It is a simple memory array that saves the program counter of the last  branch instructions, and their targets (  typically varies from 128 to 8192). There is a high likelihood of finding a match, because programs typically exhibit some degree of locality. This means that they tend to execute the same piece of code repeatedly over a period of time such as loops. Hence, entries in the BTB tend to get repeatedly used in a small window of time. If there is a match, then we can also automatically infer that the instruction is a branch.
+
+2-bit Saturating Counter-Based Branch Predictor
+
+It is much more difficult to effectively predict the direction of a branch. However, we can exploit a pattern here. Most branches in a program typically are found in loops, or in if statements where both the directions are not equally likely. In fact, one direction is far more likely than the other. For example, branches in loops are most of the time taken. Sometimes, we have if statements that are only evaluated if a certain exceptional condition is true. Most of the time, the branches associated with these if statements are not taken. Similarly, for most programs, designers have observed that almost all the branch instructions follow certain patterns. They either have a strong bias towards one direction, or can be predicted on the basis of past history, or can be predicted on the basis of the behavior of other branches. There is of course no theoretical proof of this statement. This is just an observation made by processor designers, and they consequently design predictors to take advantage of such patterns in programs.
+
+We shall discuss a simple 2-bit branch predictor in this book. Let us assume that we have a branch prediction table that assigns a 2-bit value to each branch in the table, as shown in Figure 10.38. If this value is 00, or 01, then we predict that the branch is not taken. If it is equal to 10, or 11, then we predict that the branch is taken. Moreover, every time the branch is taken, we increment the associated counter by 1, and every time, the branch is not taken we decrement the counter by 1. To avoid overflows, we do not increment 11 by 1 to produce 00, and we do not decrement 00 to produce 11. We follow the rules of saturating arithmetic that state that (in binary): (  ), and (  ). This 2-bit value is known as a 2-bit saturating counter. The state diagram for the 2-bit counter is shown in Figure 10.39.
+
+There are two basic operations for predicting a branch – prediction, and training. To predict a branch, we look up the value of its program counter in the branch prediction table. In specific, we use the last  bits of the address of the  to access a  entry branch predictor table. We read the value of the 2-bit saturating counter, and predict the branch on the basis of its value. When, we have the real outcome of the branch available, we train our predictor by incrementing or decrementing the value of our counter using saturating arithmetic (as per Table 10.39).
+
+Let us now see why this predictor works. Let us consider a simple piece of C code, and its equivalent SimpleRisc code.
+
+.main:   
+2 call .foo   
+3   
+4 call .foo   
+5   
+6 .foo:   
+7 mov r0, 0     
+8 mov r1, 0   
+9 .loop:   
+10 add r0, r0, r1    
+11 add r1, r1, 1    
+12 cmp r1, 10  compare i with 10
+
+Let us take a look at the branch in the loop statement (Line 13). For all the iterations other than the last one, the branch is taken. If we start our predictor in the state 10, then the first time, the branch is predicted correctly (taken). The counter gets incremented and becomes equal to 11. For each of the subsequent iterations, the branch is predicted correctly (taken). However, in the last iteration, it needs to be predicted as not taken. Here, there is a misprediction. The 2-bit counter thus gets decremented, and gets set to 10. Let us now consider the case when we invoke the function  again. The value of the 2-bit counter is 10, and the branch (Line 13) is correctly predicted as taken.
+
+We thus observe that our 2-bit counter scheme, adds a tiny amount of hysteresis (or past history) to the prediction scheme. If a branch has historically been taking one direction, then one anomaly, does not change the prediction. This pattern is very useful for loops, as we have seen in this simple example. The direction of the branch instruction in the last iteration of a loop is always different. However, the next time we enter a loop, the branch is predicted correctly, as we have seen in this example. Note that this is only one pattern. There are many more types of patterns that modern branch predictors exploit.

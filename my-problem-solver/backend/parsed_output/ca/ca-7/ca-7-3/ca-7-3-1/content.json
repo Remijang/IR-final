@@ -1,0 +1,62 @@
+[
+    {
+        "type": "text",
+        "text": "7.3.1 SR Latch ",
+        "text_level": 1,
+        "page_idx": 279
+    },
+    {
+        "type": "text",
+        "text": "Figure 7.16 shows the SR latch. There are two inputs S(set) and R (reset). There are two outputs Q, and its complement $\\overline { { Q } }$ . Let us now analyze this circuit that contains two crosscoupled NAND gates. Note that if one of the inputs of a NAND gate is 0, then the output is guaranteed to be 1. However, if one of the inputs is 1, and the other input is A, then the output is $\\overline { { A } }$ . ",
+        "page_idx": 279
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the case when, S=1 and R=0. One of the inputs $( \\overline { { S } } )$ to the top NAND gate is 0. Thus, Q=1. The bottom NAND gate has two inputs $\\overline { { R } } = 1$ , and $Q = 1$ . Thus, the output, $\\overline { { Q } } = 0$ . Similarly, if S=0 and R=1, then Q=0, and $\\overline { { Q } } = 1$ . The S input sets the bit in the latch, and the R bit resets it to 0. Let us now consider the case when both S and R are 0. In this case one of the inputs to both the NAND gates is 1. The top NAND gate\u2019s output is ${ \\overline { { \\overline { { Q } } } } } = Q$ , and the bottom NAND gate\u2019s output is $\\overline { { Q } }$ . Thus, the value is maintained, and we have effectively achieved the objective of storing a bit. ",
+        "page_idx": 279
+    },
+    {
+        "type": "image",
+        "img_path": "images/158c6c2ff7dff2f5a4cb8a93a05cd3919cc5b1a3f07e239cabd90beda8b59fb9.jpg",
+        "img_caption": [
+            "Figure 7.16: The SR latch "
+        ],
+        "img_footnote": [],
+        "page_idx": 280
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 280
+    },
+    {
+        "type": "text",
+        "text": "Now, let us see what happens if we set both S and R to 1. In this case, $\\overline { { S } } = 0$ and $\\overline { { R } } = 0$ . Thus, Q and $\\overline { { Q } }$ are both equal to 1. In this case, $\\overline { { Q } }$ is not the logical complement of Q. Now, let us say that S is set to $0$ . Then Q will become $0$ , and $\\overline { { Q } }$ will become 1. Likewise, if R is set to $0$ , then Q will become 1, and $\\overline { { Q } }$ will become 0. However, if both S and R simultaneously become $0$ , then we cannot predict the state of the latch before hand. This is because in practice, signal transitions are never perfectly simultaneous. A non-zero time lag between the transitions of both the inputs is almost always there. Hence, the circuit can see the following sequence of transitions in the SR bits: $1 1  1 0  0 0$ , or $1 1  0 1  0 0$ . For the former sequence, $Q$ will be set to 1, and for the latter sequence $Q$ will be set to 0. This is known as a race condition and causes unpredictable behavior. Thus, we do not want to set both S and R to 1. ",
+        "page_idx": 280
+    },
+    {
+        "type": "table",
+        "img_path": "images/48deb67de514e8dcb2feb96382d62fdff3795d9f74a7376498c8eb3775659d89.jpg",
+        "table_caption": [
+            "Table 7.2: State transition table for an SR latch "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>S</td><td>R</td><td>Q</td><td>Q</td><td>Action</td></tr><tr><td>0</td><td>0</td><td>Qold</td><td>Qold</td><td>maintain</td></tr><tr><td>1</td><td>0</td><td>1</td><td>0</td><td>set</td></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>reset</td></tr><tr><td>1</td><td>1</td><td>\uff1f</td><td>\uff1f</td><td>indeterminate</td></tr></table></body></html>\n\n",
+        "page_idx": 280
+    },
+    {
+        "type": "text",
+        "text": "Table 7.2 shows the state transition table for the SR latch. $Q _ { o l d }$ and $\\overline { { Q } } _ { o l d }$ are the old values of Q and $\\overline { { Q } }$ , respectively. The main feature is that setting SR=00 maintains the value stored in the latch. During this period, we can read the value of the outputs infinitely often. ",
+        "page_idx": 280
+    },
+    {
+        "type": "text",
+        "text": "The main issues with the SR latch are as follows. ",
+        "page_idx": 280
+    },
+    {
+        "type": "text",
+        "text": "S=1 and R=1 is an invalid input.   \nWe do not have a method of synchronizing the transitions in the input and the output. Whenever the inputs change, the outputs also change. As we shall see in the next section, this is not desired behavior. ",
+        "page_idx": 280
+    }
+]

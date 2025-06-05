@@ -1,0 +1,9 @@
+# CHAPTER 12 Mendel's Experiments and Heredity
+
+INTRODUCTION Genetics is the study of heredity. Johann Gregor Mendel set the framework for genetics long before chromosomes or genes had been identified, at a time when meiosis was not well understood. Mendel selected a simple biological system and conducted methodical, quantitative analyses using large sample sizes. Because of Mendel’s work, the fundamental principles of heredity were revealed. We now know that genes, carried on chromosomes, are the basic functional units of heredity with the capability to be replicated, expressed, or mutated. Today, the postulates put forth by Mendel form the basis of classical, or Mendelian, genetics. Not all genes are transmitted from parents to offspring according to Mendelian genetics, but Mendel’s experiments serve as an excellent starting point for thinking about inheritance.
+
+# Chapter Outline
+
+12.1 Mendel’s Experiments and the Laws of Probability   
+12.2 Characteristics and Traits   
+12.3 Laws of Inheritance

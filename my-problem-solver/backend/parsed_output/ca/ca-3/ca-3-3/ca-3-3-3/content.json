@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.3 Register Transfer Instruction \u2013 mov ",
+        "text_level": 1,
+        "page_idx": 110
+    },
+    {
+        "type": "text",
+        "text": "The mov instruction is a 2-address format instruction that can transfer values from one register to another, or can load a register with a constant. Our convention is to always have the destination register at the beginning. Refer to Table 3.2. The size of the signed immediate operand is limited to 16 bits. Hence, its range is between $- 2 ^ { 1 5 }$ to $2 ^ { 1 5 } - 1$ . ",
+        "page_idx": 110
+    },
+    {
+        "type": "table",
+        "img_path": "images/ecb3cbf07f6379501703823768674e9000c6c63788b66efcbea98b607f957dec.jpg",
+        "table_caption": [
+            "Table 3.2: Semantics of the mov instruction "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td rowspan=\"2\">mov reg, (reg/imm)</td><td>mov rl,r2</td><td>r1\u2190r2</td></tr><tr><td>mov r1, 3</td><td>r1\u21903</td></tr></table></body></html>\n\n",
+        "page_idx": 110
+    }
+]

@@ -1,0 +1,5 @@
+2.3 Negative Integers
+
+We represent a negative decimal number by adding a ‘-’ sign before it. We can in principle do the same with a binary number, or devise a better representation.
+
+Let us consider the generic problem first. For a number system consisting of a set of numbers,  (both positive and negative), we wish to create a mapping between each number in  , and a sequence of zeros and ones. A sequence of zeros and ones can alternatively be represented as an unsigned integer. Thus, putting it formally, we propose to devise a method for representing both positive and negative integers as a function  that maps a set of numbers,  , to a set of unsigned integers,  . Let us define the function  of a number,  . It is equal to 1 when  is negative, and equal to 0 when  is positive or zero. Secondly, unless specified otherwise, we assume that all our numbers require  bits per storage in the next few subsections.

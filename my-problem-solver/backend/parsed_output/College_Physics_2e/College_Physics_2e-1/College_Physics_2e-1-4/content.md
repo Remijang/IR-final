@@ -1,0 +1,234 @@
+# 1.4 Approximation
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Make reasonable approximations based on given data.
+
+On many occasions, physicists, other scientists, and engineers need to make approximations or “guesstimates” for a particular quantity. What is the distance to a certain destination? What is the approximate density of a given item? About how large a current will there be in a circuit? Many approximate numbers are based on formulae in which the input quantities are known only to a limited accuracy. As you develop problem-solving skills (that can be applied to a variety of fields through a study of physics), you will also develop skills at approximating. You will develop these skills through thinking more quantitatively, and by being willing to take risks. As with any endeavor, experience helps, as well as familiarity with units. These approximations allow us to rule out certain scenarios or unrealistic numbers. Approximations also allow us to challenge others and guide us in our approaches to our scientific world. Let us do two examples to illustrate this concept.
+
+# EXAMPLE 1.3
+
+# Approximate the Height of a Building
+
+Can you approximate the height of one of the buildings on your campus, or in your neighborhood? Let us make an approximation based upon the height of a person. In this example, we will calculate the height of a 39-story building.
+
+# Strategy
+
+Think about the average height of an adult male. We can approximate the height of the building by scaling up from the height of a person.
+
+# Solution
+
+Based on information in the example, we know there are 39 stories in the building. If we use the fact that the height of one story is approximately equal to about the length of two adult humans (each human is about $2 - m$ tall), then we can estimate the total height of the building to be
+
+$$
+{ \frac { 2 \mathrm { m } } { 1 \ \mathrm { p e r s o n } } } \times { \frac { 2 \mathrm { p e r s o n } } { 1 \ \mathrm { s t o r y } } } { \times } 3 9 \ \mathrm { s t o r i e s } = 1 5 6 \mathrm { m } .
+$$
+
+# Discussion
+
+You can use known quantities to determine an approximate measurement of unknown quantities. If your hand measures 10 cm across, how many hand lengths equal the width of your desk? What other measurements can you approximate besides length?
+
+# EXAMPLE 1.4
+
+# Approximating Vast Numbers: a Trillion Dollars
+
+The U.S. federal debt in 2021 was a little more than $\$ 28$ trillion. Most of us do not have any concept of how much even one trillion actually is. Suppose that you were given a trillion dollars in $\$ 100$ bills. If you made 100-bill stacks and used them to evenly cover a football field (between the end zones), make an approximation of how high the money pile would become. (We will use feet/inches rather than meters here because football fields are measured in yards.) One of your friends says 3 in., while another says 10 ft. What do you think?
+
+# Strategy
+
+When you imagine the situation, you probably envision thousands of small stacks of 100 wrapped $\$ 100$ bills, such as you might see in movies or at a bank. Since this is an easy-to-approximate quantity, let us start there. We can find the volume of a stack of 100 bills, find out how many stacks make up one trillion dollars, and then set this volume equal to the area of the football field multiplied by the unknown height.
+
+# Solution
+
+(1) Calculate the volume of a stack of 100 bills. The dimensions of a single bill are approximately 3 in. by 6 in. A stack of 100 of these is about 0.5 in. thick. So the total volume of a stack of 100 bills is:
+
+(2) Calculate the number of stacks. Note that a trillion dollars is equal to $\$ 10^{ 12}$ and a stack of one-hundred $\$ 100$ bills is equal to $\$ 10,000$ or $\$ 10^ { 4 }$ . The number of stacks you will have is:
+
+$$
+\begin{array} { r } { \mathcal { S } \mathrm { 1 } \times \mathrm { 1 0 ^ { 1 2 } } \mathrm { { ( a ~ t r i l l i o n ~ d o l l a r s ) } / \mathcal { S } \mathrm { 1 } \times \mathrm { 1 0 ^ { 4 } ~ p e r ~ s t a c k } = 1 \times 1 0 ^ { 8 } ~ s t a c k s . } } \end{array}
+$$
+
+(3) Calculate the area of a football field in square inches. The area of a football field is $1 0 0 \mathrm { y d } \times 5 0$ which gives $5 { , } 0 0 0 \mathrm { y d } ^ { 2 }$ Because we are working in inches, we need to convert square yards to square inches:
+
+$$
+{ \mathrm { A r e a } } = 5 { \mathrm { , 0 0 0 ~ y d } } ^ { 2 } \times { \frac { \mathrm { ~ 3 ~ f t ~ } } { \mathrm { ~ 1 ~ y d } } } \times { \frac { \mathrm { ~ 3 ~ f t ~ } } { \mathrm { ~ 1 ~ y d } } } \times { \frac { \mathrm { ~ 1 2 ~ i n . } } { \mathrm { ~ 1 ~ f t ~ } } } \times { \frac { \mathrm { ~ 1 2 ~ i n . } } { \mathrm { ~ 1 ~ f t ~ } } } = 6 { \mathrm { , 4 8 0 , 0 0 0 ~ i n . } } ^ { \mathrm { 2 } } ,
+$$
+
+$$
+{ \mathrm { A r e a } } \approx 6 \times 1 0 ^ { 6 } { \mathrm { ~ i n . } } ^ { 2 } .
+$$
+
+This conversion gives us $6 \times 1 0 ^ { 6 }$ for the area of the field. (Note that we are using only one significant figure in these calculations.)
+
+(4) Calculate the total volume of the bills. The volume of all the $\$ 100$ -bill stacks is
+
+9 in. $^ 3 / \mathrm { s t a c k } \times 1 0 ^ { 8 }$ stacks $= 9 \times 1 0 ^ { 8 }$ in.3
+
+(5) Calculate the height. To determine the height of the bills, use the equation:
+
+$$
+{ \begin{array} { l l l } { { \mathrm { v o l u m e ~ o f ~ b i l l s } } } & { = } & { { \mathrm { a r e a ~ o f ~ f i e l d } } \times { \mathrm { h e i g h t ~ o f ~ m o } } } \\ { { \mathrm { H e i g h t ~ o f ~ m o n e y } } } & { = } & { { \frac { { \mathrm { v o l u m e ~ o f ~ b i l l s } } } { { \mathrm { a r e a ~ o f ~ f i e l d } } } } , } \\ { { \mathrm { H e i g h t ~ o f ~ m o n e y } } } & { = } & { { \frac { 9 \times 1 0 ^ { 8 } { \mathrm { i n . } } ^ { 3 } } { 6 \times 1 0 ^ { 6 } { \mathrm { i n . } } ^ { 2 } } } = 1 . 3 3 \times 1 0 ^ { 2 } { \mathrm { i n . } } , } \\ { { \mathrm { H e i g h t ~ o f ~ m o n e y } } } & { \approx } & { 1 \times 1 0 ^ { 2 } { \mathrm { i n . } } = 1 0 0 { \mathrm { ~ i n . } } } \end{array} }
+$$
+
+The height of the money will be about 100 in. high. Converting this value to feet gives
+
+$$
+1 0 0 \ \mathrm { i n . \times \frac { \mathrm { ~ 1 \ f t } } { 1 2 \ \mathrm { i n . } } = 8 . 3 3 \ \mathrm { f t \approx 8 \ f t . } }
+$$
+
+# Discussion
+
+The final approximate value is much higher than the early estimate of 3 in., but the other early estimate of 10 ft (120 in.) was roughly correct. How did the approximation measure up to your first guess? What can this exercise tell you in terms of rough “guesstimates” versus carefully calculated approximations?
+
+# CHECK YOUR UNDERSTANDING
+
+Using mental math and your understanding of fundamental units, approximate the area of a regulation basketball court. Describe the process you used to arrive at your final approximation.
+
+# Solution
+
+An average male is about two meters tall. It would take approximately 15 males laid out end to end to cover the length, and about 7 to cover the width. That gives an approximate area of $4 2 0 \mathrm { m } ^ { 2 }$ .
+
+# Glossary
+
+accuracy the degree to which a measured value agrees with correct value for that measurement   
+approximation an estimated value based on prior experience and reasoning   
+classical physics physics that was developed from the Renaissance to the end of the 19th century   
+conversion factor a ratio expressing how many of one unit are equal to another unit   
+derived units units that can be calculated using algebraic combinations of the fundamental units   
+English units system of measurement used in the United States; includes units of measurement such as feet, gallons, and pounds   
+fundamental units units that can only be expressed relative to the procedure used to measure them   
+kilogram the SI unit for mass, abbreviated $( \mathsf { k g } )$   
+law a description, using concise language or a mathematical formula, a generalized pattern in nature that is supported by scientific evidence and repeated experiments   
+meter the SI unit for length, abbreviated (m)   
+method of adding percents the percent uncertainty in a quantity calculated by multiplication or division is the sum of the percent uncertainties in the items used to make the calculation   
+metric system a system in which values can be calculated in factors of 10   
+model representation of something that is often too difficult (or impossible) to display directly   
+modern physics the study of relativity, quantum mechanics, or both   
+order of magnitude refers to the size of a quantity as it relates to a power of 10   
+percent uncertainty the ratio of the uncertainty of a measurement to the measured value, expressed as a percentage   
+physical quantity a characteristic or property of an object that can be measured or calculated from other measurements   
+physics the science concerned with describing the interactions of energy, matter, space, and time; it is especially interested in what fundamental mechanisms underlie every phenomenon   
+precision the degree to which repeated measurements agree with each other   
+quantum mechanics the study of objects smaller than can be seen with a microscope   
+relativity the study of objects moving at speeds greater than about $1 \%$ of the speed of light, or of objects being affected by a strong gravitational field   
+scientific method a method that typically begins with an observation and question that the scientist will research; next, the scientist typically performs some research about the topic and then devises a hypothesis; then, the scientist will test the hypothesis by performing an experiment; finally, the scientist analyzes the results of the experiment and draws a conclusion   
+second the SI unit for time, abbreviated (s)   
+SI units the international system of units that scientists in most countries have agreed to use; includes units such as meters, liters, and grams   
+significant figures express the precision of a measuring tool used to measure a value   
+theory an explanation for patterns in nature that is supported by scientific evidence and verified multiple times by various groups of researchers   
+uncertainty a quantitative measure of how much your measured values deviate from a standard or expected value   
+units a standard used for expressing and comparing measurements
+
+
+
+# Section Summary
+
+# 1.1 Physics: An Introduction
+
+• Science seeks to discover and describe the underlying order and simplicity in nature.   
+• Physics is the most basic of the sciences, concerning itself with energy, matter, space and time, and their interactions.   
+• Scientific laws and theories express the general truths of nature and the body of knowledge they encompass. These laws of nature are rules that all natural processes appear to follow.
+
+# 1.2 Physical Quantities and Units
+
+• Physical quantities are a characteristic or property
+
+of an object that can be measured or calculated from other measurements. • Units are standards for expressing and comparing the measurement of physical quantities. All units can be expressed as combinations of four fundamental units. The four fundamental units we will use in this text are the meter (for length), the kilogram (for mass), the second (for time), and the ampere (for electric current). These units are part of the metric system, which uses powers of 10 to relate quantities over the vast ranges encountered in nature. The four fundamental units are abbreviated as follows: meter, m; kilogram, kg; second, s; and
+
+ampere, A. The metric system also uses a standard set of prefixes to denote each order of magnitude greater than or lesser than the fundamental unit itself. • Unit conversions involve changing a value expressed in one type of unit to another type of unit. This is done by using conversion factors, which are ratios relating equal quantities of different units.
+
+# 1.3 Accuracy, Precision, and Significant Figures
+
+• Accuracy of a measured value refers to how close a measurement is to the correct value. The uncertainty in a measurement is an estimate of the amount by which the measurement result may differ from this value. • Precision of measured values refers to how close
+
+the agreement is between repeated measurements.   
+• The precision of a measuringto lis related to the size of its measurement increments. The smaller the measurement increment, the more precise the tool.   
+• Significant figures express the precision of a measuring tool.   
+• When multiplying or dividing measured values, the final answer can contain only as many significant figures as the least precise value. When adding or subtracting measured values, the final answer cannot contain more decimal places than the least precise value.
+
+# 1.4 Approximation
+
+Scientists often approximate the values of quantities to perform calculations and analyze systems.
+
+# Conceptual Questions
+
+# 1.1 Physics: An Introduction
+
+1. Models are particularly useful in relativity and quantum mechanics, where conditions are outside those normally encountered by humans. What is a model?   
+2. How does a model differ from a theory?   
+3. If two different theories describe experimental observations equally well, can one be said to be more valid than the other (assuming both use accepted rules of logic)?   
+4. What determines the validity of a theory?   
+5. Certain criteria must be satisfied if a measurement or observation is to be believed. Will the criteria necessarily be as strict for an expected result as for an unexpected result?   
+6. Can the validity of a model be limited, or must it be universally valid? How does this compare to the required validity of a theory or a law?   
+7. Classical physics is a good approximation to modern physics under certain circumstances. What are they?   
+8. When is it neces aryto use relativistic quantum mechanics?
+
+9. Can classical physics be used to accurately describe a satellite moving at a speed of $7 5 0 0 ~ \mathrm { { m / s ? } }$ Explain why or why not.
+
+# 1.2 Physical Quantities and Units
+
+10. Identify some advantages of metric units.
+
+# 1.3 Accuracy, Precision, and Significant Figures
+
+11. What is the relationship between the accuracy and uncertainty of a measurement?   
+12. Prescriptions for vision correction are given in units called diopters(D). Determine the meaning of that unit. Obtain information (perhaps by calling an optometrist or performing an internet search) on the minimum uncertainty with which corrections in diopters are determined and the accuracy with which corrective lenses can be produced. Discuss the sources of uncertainties in both the prescription and accuracy in the manufacture of lenses.
+
+# Problems & Exercises
+
+# 1.2 Physical Quantities and Units
+
+1. The speed limit on some interstate highways is roughly $1 0 0 ~ \mathsf { k m / h }$ . (a) What is this in meters per second? (b) How many miles per hour is this?   
+2. A car is traveling at a speed of $3 3 \mathrm { m / s }$ . (a) What is its speed in kilometers per hour? (b) Is it exceeding the $9 0  { \mathrm { k m } } /  { \mathrm { h } }$ speed limit?   
+3. Show that $1 . 0 \ \mathrm { m / s } = 3 . 6 \ \mathrm { k m / h }$ . Hint: Show the explicit steps involved in converting $1 . 0 \mathrm { m / s } = 3 . 6 \mathrm { k m / h } .$   
+4. American football is played on a 100-yd-long field, excluding the end zones. How long is the field in meters? (Assume that 1 meter equals 3.281 feet.)   
+5. Soccer fields vary in size. A large soccer field is 115 m long and $8 5 ~ \mathsf { m }$ wide. What are its dimensions in feet and inches? (Assume that 1 meter equals 3.281 feet.)   
+6. What is the height in meters of a person who is 6 ft 1.0 in. tall? (Assume that 1 meter equals 39.37 in.)   
+7. Mount Everest, at 29,028 feet, is the tallest mountain on the Earth. What is its height in kilometers? (Assume that 1 kilometer equals 3,281 feet.)   
+8. The speed of sound is measured to be $3 4 2 \mathrm { m / s }$ on a certain day. What is this in $\mathsf { k m / h ? }$   
+9. Tectonic plates are large segments of the Earth’s crust that move slowly. Suppose that one such plate has an average speed of $4 . 0 \mathsf { c m }$ /year. (a) What distance does it move in 1 s at this speed? (b) What is its speed in kilometers per million years?   
+10. (a) Refer to Table 1.3 to determine the average distance between the Earth and the Sun. Then calculate the average speed of the Earth in its orbit in kilometers per second. (b) What is this in meters per second?
+
+
+
+
+
+# 1.3 Accuracy, Precision, and Significant Figures
+
+# Express your answers to problems in this section to the correct number of significant figures and proper units.
+
+11. Suppose that your bathroom scale reads your mass as $6 5 ~ \mathsf { k g }$ with a $3 \%$ uncertainty. What is the uncertainty in your mass (in kilograms)?   
+12. A good-quality measuring tape can be off by 0.50 cm over a distance of $2 0 ~ \mathsf { m }$ . What is its percent uncertainty?   
+13. (a) A car speedometer has a $5 . 0 \%$ uncertainty. What is the range of possible speeds when it reads $9 0  { \mathrm { k m } } /  { \mathrm { h ? } }$ (b) Convert this range to miles per hour. $\mathrm { 1 k m = 0 . 6 2 1 4 m i ) }$   
+14. An infant’s pulse rate is measured to be $1 3 0 \pm 5$ beats/min. What is the percent uncertainty in this measurement?   
+15. (a) Suppose that a person has an average heart rate of 72.0 beats/min. How many beats do they have in $2 . 0 \forall \ ?$ (b) In 2.00 y? (c) In 2.000 y?   
+16. A can contains $3 7 5 ~ \mathrm { m L }$ of soda. How much is left after $3 0 8 ~ \mathrm { m L }$ is removed?   
+17. State how many significant figures are proper in the results of the following calculations: (a) (106.7)(98.2)/(46.210)(1.01) (b) (18.7)² (c) $\phantom { + } ( 1 . 6 0 \times 1 0 ^ { - 1 9 }$ )(3712).   
+18. (a) How many significant figures are in the numbers 99 and 100? (b) If the uncertainty in each number is 1, what is the percent uncertainty in each? (c) Which is a more meaningful way to express the accuracy of these two numbers, significant figures or percent uncertainties?   
+19. (a) If your speedometer has an uncertainty of $2 . 0 \mathrm { k m / h }$ at a speed of $9 0  { \mathrm { k m } } /  { \mathrm { h } }$ , what is the percent uncertainty? (b) If it has the same percent uncertainty when it reads $6 0  { \mathrm { k m } } /  { \mathrm { h } }$ , what is the range of speeds you could be going?   
+20. (a) A person’s blood pressure is measured to be $1 2 0 \pm 2 \mathrm { m m H g }$ . What is its percent uncertainty? (b) Assuming the same percent uncertainty, what is the uncertainty in a blood pressure measurement of $8 0 \ : \mathrm { m m } \ : \mathrm { H g ? }$   
+21. A person measures their heart rate by counting the number of beats in $3 0 { \mathrm { s } } .$ . If $4 0 \pm 1$ beats are counted in $3 0 . 0 \pm 0 . 5 \mathrm { ~ s ~ }$ , what is the heart rate and its uncertainty in beats per minute?   
+22. What is the area of a circle $3 . 1 0 2 \mathrm { c m }$ in diameter?   
+23. If a marathon runner averages $9 . 5 ~ \mathrm { m i / h }$ , how long does it take him or her to run a 26.22-mi marathon?   
+24. A marathon runner completes a $4 2 . 1 8 8 \mathrm { - k m }$ course in $2 \mathfrak { h }$ , 30 min, and $1 2 \mathrm { s }$ . There is an uncertainty of $2 5 \mathrm { m }$ in the distance traveled and an uncertainty of 1 s in the elapsed time. (a) Calculate the percent uncertainty in the distance. (b) Calculate the uncertainty in the elapsed time. (c) What is the average speed in meters per second? (d) What is the uncertainty in the average speed?   
+25. The sides of a small rectangular box are measured to be $1 . 8 0 \pm 0 . 0 1 \ \mathrm { c m } _ { }$ , $2 . 0 5 \pm 0 . 0 2 \mathrm { c m }$ ,and $3 . 1 \pm 0 . 1$ long. Calculate its volume and uncertainty in cubic centimeters.   
+26. When non-metric units were used in the United Kingdom, a unit of mass called the pound-mas (lbm) was employed, where $1 \ \mathrm { l b m } = 0 . 4 5 3 9 \mathrm { k g }$ . (a) If there is an uncertainty of $0 . 0 0 0 1 \mathrm { k g }$ in the pound-mass unit, what is its percent uncertainty? (b) Based on that percent uncertainty, what mass in pound-mass has an uncertainty of $1 \kappa \theta$ when converted to kilograms?   
+27. The length and width of a rectangular room are measured to be $3 . 9 5 5 \pm 0 . 0 0 5 \mathrm { { m } }$ and $3 . 0 5 0 \pm 0 . 0 0 5 \mathrm { m } .$ Calculate the area of the room and its uncertainty in square meters.
+
+
+
+28. A car engine moves a piston with a circular cross section of $7 . 5 0 0 \pm 0 . 0 0 2 \mathrm { c m }$ diameter a distance of $3 . 2 5 0 \pm 0 . 0 0 1$ to compress the gas in the cylinder. (a) By what amount is the gas decreased in volume in cubic centimeters? (b) Find the uncertainty in this volume.
+
+# 1.4 Approximation
+
+29. How many heartbeats are there in a lifetime?
+
+30. A generation is about one-third of a lifetime. Approximately how many generations have passed since the year 0 AD?   
+31. How many times longer than the mean life of an extremely unstable atomic nucleus is the lifetime of a human? (Hint: The lifetime of an unstable atomic nucleus is on the order of $1 0 ^ { - 2 2 }$ .)   
+32. Calculate the approximate number of atoms in a bacterium. Assume that the average mass of an atom in the bacterium is ten times the mass of a hydrogen atom. (Hint: The mass of a hydrogen atom is on the order of $1 0 ^ { - 2 7 }$ and the mass of a bacterium is on the order of $1 0 ^ { - 1 5 } ~ \mathrm { k g } .$ )   
+33. Approximately how many atoms thick is a cell membrane, assuming all atoms there average about twice the size of a hydrogen atom?   
+34. (a) What fraction of Earth’s diameter is the greatest ocean depth? (b) The greatest mountain height?   
+35. (a) Calculate the number of cells in a hummingbird assuming the mass of an average cell is ten times the mass of a bacterium. (b) Making the same assumption, how many cells are there in a human?   
+36. Assuming one nerve impulse must end before another can begin, what is the maximum firing rate of a nerve in impulses per second?

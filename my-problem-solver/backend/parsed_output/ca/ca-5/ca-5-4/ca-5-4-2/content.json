@@ -1,0 +1,87 @@
+[
+    {
+        "type": "text",
+        "text": "5.4.2 Arithmetic Instructions ",
+        "text_level": 1,
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider arithmetic instructions. The floating point ISA in x86 has rich support for floating point operations, and is thus extensively used in numerical computing. Let us start with the basic floating point add instruction, and take a look at all of its variants. ",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "Add Instruction ",
+        "text_level": 1,
+        "page_idx": 212
+    },
+    {
+        "type": "table",
+        "img_path": "images/e25ce093eb25360538c0ee29ae382eaee66515aeb6171803cbaf3ad5cb209a74.jpg",
+        "table_caption": [
+            "Table 5.23: Floating point add instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>fadd mem</td><td>fadd dword [eax]</td><td>stO \u2190 st0 +[eax]</td></tr><tr><td>fadd reg,reg</td><td>fadd stO, st1</td><td>stO \u2190 stO + stl (one of the registers has to be stO)</td></tr><tr><td>faddp reg</td><td>faddp st1</td><td>st1 \u2190 stO + stl; pop the FP stack</td></tr><tr><td>fiadd mem</td><td>fiadd dword [eax]</td><td>stO \u2190 stO + foat([eax])</td></tr></table></body></html>\n\n",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "The semantics of the floating point add instructions is shown in Table 5.23. The basic fadd instruction has two variants. The first variant uses a single memory operand. Here, we add the value of the floating point number contained in the memory location to the contents of $s t 0$ . The result is also stored in $s t 0$ . The second variant of the fadd instruction uses two floating point registers as arguments. It adds the contents of the second register to the first register. ",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "The $f a d d$ instruction follows the same pattern as the floating point load and store instructions. It accepts the \u2018p\u2019 suffix. The faddp instruction typically takes 1 argument, which is a register. We show an example of the instruction faddp st1 in Table 5.23. Here, we add the contents of $s t 0$ to $s t 1$ , and save the result in $s t 1$ . Then, we pop the stack. For working with integers, we can use the fiadd instruction that takes the address of an integer in memory. It adds this integer to $s t 0$ , and saves the results in $s t 0$ . ",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "Subtraction, Multiplication, and Division Instructions ",
+        "text_level": 1,
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "x86 defines subtraction, multiplication, and division instructions that have exactly the same format as the f add instructions, and all of its variants as shown in Table 5.23. Let us just show ",
+        "page_idx": 212
+    },
+    {
+        "type": "text",
+        "text": "the basic form of each instruction that uses a single memory operand in Table 5.24. ",
+        "page_idx": 213
+    },
+    {
+        "type": "table",
+        "img_path": "images/c44b0952f265216a0811165f18a140aaa45b924ea76e4ee3ee337350cfad039a.jpg",
+        "table_caption": [
+            "Table 5.24: Floating point subtract, multiply, and divide instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td colspan=\"2\">Example</td><td colspan=\"3\">Explanation</td></tr><tr><td>fsub mem</td><td>fsub dword</td><td>[eax]</td><td>st0 \u2191 st0-</td><td>[eax]</td><td></td></tr><tr><td>fmul mem</td><td>fmul dword</td><td>[eax]</td><td>st0 \u4e2a st0</td><td>[eax]</td><td></td></tr><tr><td>fdiv mem</td><td>fdiv dword</td><td>[eax]</td><td>st0 \u4e2a st0</td><td>[eax]</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 213
+    },
+    {
+        "type": "text",
+        "text": "Example 87 ",
+        "text_level": 1,
+        "page_idx": 213
+    },
+    {
+        "type": "text",
+        "text": "Compute the arithmetic mean of two integers stored in eax and ebx. Save the result (in 64 bits) in $e s p + 4$ . Assume that the data section contains the integer, 2, in the memory address two. ",
+        "page_idx": 213
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 213
+    },
+    {
+        "type": "text",
+        "text": "; load the inputs to the FP stack   \nmov [esp], eax   \nmov [esp+4], ebx   \nfild dword [esp]   \nfild dword[esp + 4]   \n; compute the arithmetic mean   \nfadd st0, st1   \nfdiv dword [two]   \n; save the result (converted to 64 bits) to [esp+4]   \n; use the qword identifier   \nfstp qword [esp + 4] ",
+        "page_idx": 213
+    }
+]

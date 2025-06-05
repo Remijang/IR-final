@@ -1,0 +1,224 @@
+[
+    {
+        "type": "text",
+        "text": "19.3 Electrical Potential Due to a Point Charge ",
+        "text_level": 1,
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "Explain point charges and express the equation for electric potential of a point charge.   \nDistinguish between electric potential and electric field.   \n\u2022 Determine the electric potential of a point charge given charge and distance. ",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "Point charges, such as electrons, are among the fundamental building blocks of matter. Furthermore, spherical charge distributions (like on a metal sphere) create external electric fields exactly like a point charge. The electric potential due to a point charge is, thus, a case we need to consider. Using calculus to find the work needed to move a test charge $q$ from a large distance away to a distance of $r$ from a point charge $Q$ , and noting the connection between work and potential $\\mathbf { \\boldsymbol { W } } = - q \\Delta V )$ , it can be shown that the electricpotential $V$ ofapointcharge is ",
+        "page_idx": 845
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = { \\frac { k Q } { r } } { \\mathrm { ~ ( P o i n t ~ C h a r g e ) } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "where kis a constant equal to . ",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "Electric Potential $V$ of a Point Charge ",
+        "text_level": 1,
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "The electric potential $V$ of a point charge is given by ",
+        "page_idx": 845
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = { \\frac { k Q } { r } } { \\mathrm { ~ ( P o i n t ~ C h a r g e ) } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "The potential at infinity is chosen to be zero. Thus $V$ for a point charge decreases with distance, whereas $\\mathbf { E }$ for a point charge decreases with distance squared: ",
+        "page_idx": 845
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = { \\frac { F } { q } } = { \\frac { k Q } { r ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "Recall that the electric potential $V$ is a scalar and has no direction, whereas the electric field $\\mathbf { E }$ is a vector. To find the voltage due to a combination of point charges, you add the individual voltages as numbers. To find the total electric field, you must add the individual fields as vectors, taking magnitude and direction into account. This is consistent with the fact that $V$ is closely associated with energy, a scalar, whereas $\\mathbf { E }$ is closely associated with force, a vector. ",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 19.6 ",
+        "text_level": 1,
+        "page_idx": 845
+    },
+    {
+        "type": "image",
+        "img_path": "images/3044826c87223c5b7e5ef1afcee4934d8ee979f3013bd686b02a10d8b83fc411.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "What Voltage Is Produced by a Small Charge on a Metal Sphere? ",
+        "text_level": 1,
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "Charges in static electricity are typically in the nanocoulomb to microcoulomb $( \\mu \\mathrm { C } )$ range. What is the voltage 5.00 cm away from the center of a 1-cm diameter metal sphere that has a $- 3 . 0 0 \\mathrm { n C }$ static charge? ",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "As we have discussed in Electric Charge and Electric Field, charge on a metal sphere spreads out uniformly and ",
+        "page_idx": 845
+    },
+    {
+        "type": "text",
+        "text": "produces a field like that of a point charge located at its center. Thus we can find the voltage using the equation $V = k Q / r$ . ",
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "Entering known values into the expression for the potential of a point charge, we obtain ",
+        "page_idx": 846
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { V } & { = } & { k { \\frac { Q } { r } } } \\\\ & { = } & { \\left( 8 . 9 9 \\times 1 0 ^ { 9 } \\ \\mathrm { N } \\cdot \\mathrm { m } ^ { 2 } / \\mathrm { C } ^ { 2 } \\right) \\left( { \\frac { - 3 . 0 0 \\times 1 0 ^ { - 9 } \\ \\mathrm { C } } { 5 . 0 0 \\times 1 0 ^ { - 2 } \\ \\mathrm { m } } } \\right) } \\\\ & { = } & { - 5 3 9 \\ \\mathrm { V } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "The negative value for voltage means a positive charge would be attracted from a larger distance, since the potential is lower (more negative) than at larger distances. Conversely, a negative charge would be repelled, as expected. ",
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 19.7 ",
+        "text_level": 1,
+        "page_idx": 846
+    },
+    {
+        "type": "image",
+        "img_path": "images/bf1745e65714b735214e64712a83ddfbd7c8f07808abf25286b09f4ee5707561.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "What Is the Excess Charge on a Van de Graaff Generator ",
+        "text_level": 1,
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "A demonstration Van de Graaff generator has a $2 5 . 0 \\mathsf { c m }$ diameter metal sphere that produces a voltage of $1 0 0 \\mathsf { k V }$ near its surface. (See Figure 19.7.) What excess charge resides on the sphere? (Assume that each numerical value here is shown with three significant figures.) ",
+        "page_idx": 846
+    },
+    {
+        "type": "image",
+        "img_path": "images/5fa4dc72222ec2de4f4d026d76ac2115a8a9d32deb67a36e2890b3db683627c8.jpg",
+        "img_caption": [
+            "FIGURE 19.7 The voltage of this demonstration Van de Graaff generator is measured between the charged sphere and ground. Earth\u2019s potential is taken to be zero as a reference. The potential of the charged conducting sphere is the same as that of an equal point charge at its center. "
+        ],
+        "img_footnote": [],
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "The potential on the surface will be the same as that of a point charge at the center of the sphere, 12.5 cm away. (The radius of the sphere is $1 2 . 5 \\mathsf { c m } .$ .) We can thus determine the excess charge using the equation ",
+        "page_idx": 846
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = { \\frac { k Q } { r } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 846
+    },
+    {
+        "type": "text",
+        "text": "Solving for $Q$ and entering known values gives ",
+        "page_idx": 846
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { Q } & { = } & { { \\frac { r V } { k } } } \\\\ & { = } & { { \\frac { ( 0 . 1 2 5 \\ \\mathrm { m } ) \\left( 1 0 0 \\times 1 0 ^ { 3 } \\ \\mathrm { V } \\right) } { 8 . 9 9 \\times 1 0 ^ { 9 } \\ \\mathrm { N } \\cdot \\mathrm { m } ^ { 2 } / \\mathrm { C } ^ { 2 } } } } \\\\ & { = } & { 1 . 3 9 \\times 1 0 ^ { - 6 } \\ \\mathrm { C } = 1 . 3 9 \\ \\mu \\mathrm { C } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 847
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 847
+    },
+    {
+        "type": "text",
+        "text": "This is a relatively small charge, but it produces a rather large voltage. We have another indication here that it is difficult to store isolated charges. ",
+        "page_idx": 847
+    },
+    {
+        "type": "text",
+        "text": "The voltages in both of these examples could be measured with a meter that compares the measured potential with ground potential. Ground potential is often taken to be zero (instead of taking the potential at infinity to be zero). It is the potential difference between two points that is of importance, and very often there is a tacit assumption that some reference point, such as Earth or a very distant point, is at zero potential. As noted in Electric Potential Energy: Potential Difference, this is analogous to taking sea level as $h = O$ when considering gravitational potential energy, $\\mathrm { P E _ { g } } = m g h$ . ",
+        "page_idx": 847
+    }
+]

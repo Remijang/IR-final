@@ -1,0 +1,118 @@
+3.8 The Mean Value Theorem and l’Hôpital’s Rule
+
+Now comes one of the cornerstones of calculus: the Mean Value Theorem. It connects the local picture (slope at a point) to the global picture (average slope across an interval). In other words it relates  to  : Calculus depends on this connection, which we saw first for velocities. If the average velocity is 75, is there a moment when the instantaneous velocity is 75 ?
+
+Without more information, the answer to that question is no. The velocity could be 100 and then 50—averaging 75 but never equal to 75: If we allow a jump in velocity, it can jump right over its average. At that moment the velocity does not exist. (The distance function in Figure 3.26a has no derivative at  :) We will take away this cheap escape by requiring a derivative at all points inside the interval.
+
+In Figure 3.26b the distance increases by 150 when  increases by 2: There is a derivative  at all interior points (but an infinite slope at  ). The average velocity is
+
+The conclusion of the theorem is that  at some point inside the interval. There is at least one point where  :
+
+This is not a constructive theorem. The value of  is not known. We don’t find  , we just claim (with proof) that such a point exists.
+
+3M Mean Value Theorem Suppose  is continuous in the closed interval  and has a derivative everywhere in the open interval  : Then  (1)
+
+The left side is the average slope  : It equals  at  : The notation for a closed interval [with end1points] is  : For an open interval (without endpoints) we write  : Thus  is defined in  , and  remains continuous at  and  : A derivative is allowed at those endpoints too—but the theorem doesn1’t require it.
+
+The proof is based on a special case—when  and  : Suppose the function starts at zero and returns to zero. The average slope or velocity is zero. We have to prove that  at a point in between. This special case (keeping the assumptions on  is called Rolle’s theorem.
+
+Geometrically, if  goes away from zero and comes back, then  at the turn.
+
+3N Rolle’s theorem Suppose  (zero at the ends). Then  at some point with  :
+
+Proof At a point inside the interval where  reaches its maximum or minimum,  must be zero. That is an acceptable point  : Figure  shows the difference between  (assumed at  and  ) and  (proved at  ).
+
+Small problem: The maximum could be reached at the ends  and  , if  in between. At those endpoints  might not be zero. But in that case the minimum is reached at an interior point  , which is equally acceptable. The key to our proof is that a continuous function on  reaches its maximum and minimum. This is the Extreme Value Theorem.
+
+It is ironic that Rolle himself did not believe the logic behind calculus. He may not have believed his own theorem! Probably he didn’t know what it meant—the language of “evanescent quantities” (Newton) and “infinitesimals” (Leibniz) was exciting but frustrating. Limits were close but never reached. Curves had infinitely many flat sides. Rolle didn’t accept that reasoning, and what was really serious, he didn’t accept the conclusions. The Académie des Sciences had to stop his battles (he fought against ordinary mathematicians, not Newton and Leibniz). So he went back to number theory, but his special case when  leads directly to the big one.
+
+Proof of the Mean Value Theorem We are looking for a point where  equals  : The idea is to tilt the graph back to Rolle’s special case (when  was zero). In Figure 3.27b, the distance  between the curve and the dotted secant line comes from subtraction:
+
+At  and  , this distance is  : Rolle’s the1orem applies to  : There is an interior point where  : At that point take the derivative of equation (2):  : The desired point  is fo1und, proving the theorem.
+
+EXAMPLE 1 The function  goes from zero at  to ten at  : Its average slope is  : The derivative  exists in the open interval  , even though it blows up at the end  : By the Mean Value Theorem there must be a point where  : That point is  :
+
+The truth is that nobody cares about the exact value of  : Its existence is what matters. Notice how it affects the linear approximation   /, which was basic to this chapter. Close bec1omes exact (  becomes  ) when  is computed at  instead of  :
+
+3O The derivative at  gives an exact prediction of  :
+
+The Mean Value Theorem is rewritten here as  : Now  :
+
+EXAMPLE 2 The function  starts from  : The linear prediction (tangent line) uses the slope cos  : The exact prediction uses¤the slope cos  at an unknown point between 0 and  :
+
+The approxima1tion is useful, because everything is computed at  : The exact formula is interesting, because cos  proves again that sin  : The slope is below 1, so the sine graph stays below the  line.
+
+EXAMPLE 3 If  at all points in an interval then  is constant.
+
+Proof When  is everywhere zero, the theorem gives  : Every pair of points has  : The graph is a horizontal line. That deceptively simple case is a key to the Fundamental Theorem of Calculus.
+
+Most applications of  do not end up with a number. They end up with another theorem (like this one). The goal is to connect derivatives (local) to differences (global). But the next application—l’Hôpital’s Rule—manages to produce a number out of  :
+
+L’HÔPITAL’S RULE
+
+When  and  both approach zero, what happens to their ratio 
+
+Since  is meaningless, we cannot work separately with  and  : This is a “race toward zero,” in which two functions become small while t1heir ratio might do anything. The problem is to find the limit of  :
+
+One such limit is already studied.  is the derivative!  automatically builds in a race toward zero, whose limit is  :
+
+The idea of l’Hôpital is to use  to handle  : The derivative is the special case  , with  : The Rule is followed by examples and proofs.
+
+3P l’HôpitÑal’s Rule SÑuppo1se  and  both approach z1ero as  : Then  approaches the same limit as  , if that second limit exists:
+
+This is not the quotient rule! The derivatives of  and  are taken separately. Geometrically, l’Hôpital is saying that when functions go to zero their slopes control their size. An easy case is  and  : The ratio  is exactly  , the ratio of their slopes. F8igure3.828 shows these straight lines dropping to zero, controlled by 6 and 2:
+
+The next figure shows the same limit  , when the curves are tangent to the lines. That picture isthe key to l’Hôpital’s rule.
+
+Generally the limit of  can be a finite number  or  or  : (Also the limit point  can represent a finite number or  or  : We keep it finite.) The one absolute requirement is that  and  must sepa1rately approach zero—we insist on  : Otherwise there is no reason why equation (6) should be true. With  and  use l’Hôpital:
+
+Ordinary ratios approach lim  divided by lim  : l’Hôpital enters only for  :
+
+EXAMPLE 4 (an old friend)  equals  This equals zero.   
+EXAMPLE 5  leads to  At  the limit is    
+EXAMPLEÑ6  At  this is still  ·   
+Solution Apply the Rule to  : It has the same limit as  : 
+
+The reason behind l’Hôpital’s Rule is that the followingfractions are the same:
+
+That is just algebra; the limit hasn’t happened yet. The factors  cancel, and the numbers  and  are zero by assumption. Now take the limit on the right side of (7) as  approaches  :
+
+What normally happensÑ is that one part approaches  at  : The other part approaches  : We hope  is not1 zero. In t1his case we can divid1e one lim1it by the other limit. That gi1ves the “normal” answer
+
+This is also l’Hôpital’s answer. When  and separately  , his overall limit is  : He published this rule in the first textbook ever written on differential calculus. (That was in 1696—the limit was actually discovered by his teacher Bernoulli.) Three hundred years later we apply his name to other cases permitted in .6/; when  might approach a8limit8even if the separate parts do not.
+
+To prove this more general form of l’Hôpital’s Rule, we need a more general Mean Value Theorem.  regard the8discussi8on below as optional in a calculus course (but required in a calculus book). T8he  i8mportant i8dea already came in equation (8).
+
+RemarÑk The basiÑc “8indeterminate” is  . If  and  approach infinity, anything is possible for  : We could have  or  or  : Their limits are  and  and 2:
+
+At the next level are  and  and  : To find the limit in these cases, try l’Hôp8ital’s R8ule. See Problem 24 when  approaches  : When  and  , apply the  rule to  :
+
+T8he next level has  and  and  : Those come from limits of  : If  approaches  ; or  while  approaches  ; or 0, we need more information. A really curious example is  , which shows all three possibilities  and  and  : This function is actually a constant! It equals  :
+
+To go back down a level, take logarithms. Then  returns to  and  and l’Hôpital’s Rule. But logarithms and  have to wait for Chapter 6.
+
+THE GENERALIZED MEAN VALUE THEOREM
+
+The MVT can be extended to two functions. The extension is due to Cauchy, who cleared up the whole idea of limits. You will rec ognize the special case  as the ordinary Mean Value Theorem.
+
+3Q Generalized MVT If  and  are continuous on  and differentiable on  , there is a point  where
+
+The proof comes by constructing a new function that has  :
+
+The ordinary Mean Value Theorem leads to  —which is equation (9).
+
+Application 1 (Proof of l’Hôpital’s Rule) The rule deals with  Inserting those zeros into equation (9) leaves  : Therefore
+
+As  approaches  , so does  : The point  is squeezed between  and  : The limit of equation (10) as  and  is l’Hôpital’s Rule.
+
+Application 2 (Error in linear approximatio2n) Section 3.2 stated that the distance between a curve and its tangent line grows like  : Now we can prove this, and find out more. Linear approximation is
+
+The pattern suggests an error involving  and  : The key example  shows the need for a factor  (to cancel  ). The error in linear approximation is
+
+Key idea Compare the error  to  : Both are zero at  :
+
+The Generalized Mean Value Theorem finds a point  between  and  where  : This is equation (10) with di2fferent letters. After checking  , apply the same theorem to  and  : It produces a point  between  and  —certainly between  and  —where
+
+With  and  and  , the equation on the right is  : The error formula is proved. A?very good approximation is  :
+
+EXAMPLE 7  That last term predicts  : The actual error is  :

@@ -1,0 +1,248 @@
+[
+    {
+        "type": "text",
+        "text": "5.3.1 Data Transfer Instructions ",
+        "text_level": 1,
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "The mov Instruction ",
+        "page_idx": 187
+    },
+    {
+        "type": "table",
+        "img_path": "images/bd3d9c15ca75f1891493c78ac8497fdbda409aef0f91b8ad77939d139ef661c0.jpg",
+        "table_caption": [
+            "Table 5.3: Semantics of the mov instruction "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>mov (reg/mem), (reg/mem/imm)</td><td>mov eax,ebx</td><td>eax \u2190ebx</td></tr></table></body></html>\n\n",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "The mov instruction is a very simple yet versatile instruction in the x86 ISA. It moves the contents of the second operand, into the first operand. The second operand can be a register, a memory location, or an immediate. The first operand can be a register or a memory location (Table 5.3 shows the semantics). The reader needs to note that both the operands cannot be memory locations. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "We thus do not need any dedicated load/store instructions in x86. The mov instruction can achieve the function of loading and storing memory values because it accepts memory operands. The mov instruction can also transfer values between registers (similar to SimpleRisc and ARM). Thus, we have fused the functionality of three RISC instructions into one CISC instruction. Let us consider some examples. ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "Example 55   \nWrite an x86 assembly instruction to set the value of ebx to -17. Answer:   \nmov ebx, -17 Example 56   \nWrite an x86 assembly instruction to load ebx with the contents of (esp - eax\\*4 -12). Answer: ",
+        "page_idx": 187
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "mov ebx, [esp - eax\\*4 -12] ",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "Example 57   \nWrite an x86 assembly instruction to store the contents of edx in (esp - eax\\*4 -12). An  \nswer: ",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "mov [esp - eax\\*4 -12], edx movsx, and movzx Instructions ",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 188
+    },
+    {
+        "type": "table",
+        "img_path": "images/1176448f0ddf8dabaabae5a56a22f84862af7ec76958c708748ce684a42d37a5.jpg",
+        "table_caption": [
+            "Table 5.4: Semantics of the $m o v s x$ , and $m o v z x$ instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>movsx reg, (reg/mem)</td><td>movsx eax,bx</td><td>eax \u2190 sign_extend(bx)\uff0cthe second operand is either 8 or 16 bits</td></tr><tr><td>movzx reg, (reg/mem)</td><td>movsx eax,bx</td><td>eax \u2190 zero_extend(bx)\uff0cthe second operand is either 8 or 16 bits</td></tr></table></body></html>\n\n",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "The simple mov instruction assumes that the sizes of the operands are the same (16, or 32, or 64 bits). However, sometimes we face the need for saving a smaller register or memory operand in a larger register. For example, if we save the 16 bit register $a x$ in $e b x$ then we need to have two options. We can either extend the sign of the input operand, or pad it with 0s. The movsx instruction (see Table 5.4) copies a smaller register or memory operand to a larger register and extends its sign. For example, the following code snippet extends the sign of $b x$ (from 16 to 32 bits), and saves the results in eax. ",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "movsx eax, bx eax $\\mathbf { \\tau } = \\mathbf { \\tau }$ sign_extend(bx) ",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "The movzx instruction is defined on the same lines. However, instead of performing a sign extension, it pads the MSB bits with 0s. ",
+        "page_idx": 188
+    },
+    {
+        "type": "text",
+        "text": "movzx eax, bx eax $\\mathbf { \\sigma } = \\mathbf { \\sigma }$ bx (unsigned) ",
+        "page_idx": 188
+    },
+    {
+        "type": "table",
+        "img_path": "images/cbf961e95d4cff7d163c9819bf6bce07cc43830c71a02b4efbb02f325cd36003.jpg",
+        "table_caption": [
+            "Table 5.5: Semantics of the xchg instruction "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>xchg (reg/mem), (reg/mem)</td><td> xchg eax, [eax + edi]</td><td>swap the contents of eax and [eax + edi] atomi cally</td></tr></table></body></html>\n\n",
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "The Atomic Exchange (xchg) Instruction ",
+        "text_level": 1,
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "The xchg instruction swaps the contents of the first and second operands. Here, also we cannot have two memory operands. This instruction ensures that before the operation is done, no other operation can read temporary values. For example, if we are swapping the values of $e a x$ , and the memory operand $[ e b x ]$ , there might be an intermediate point in the execution where the contents of $e a x$ are updated, but the contents of $[ e b x ]$ are not updated. The x86 processor does not allow other threads (sub-programs that share the address space) to read the contents of $[ e b x ]$ at this point. It makes other conflicting instructions in other execution threads wait till the xchg instruction completes. This property is known as atomicity. An instruction is atomic if it appears to execute instantaneously. Most of the time, atomic instructions such as xchg are used for implementing data structures that are shared across multiple threads. The reader should read Chapter 12 for a detailed discussion on parallel software that uses multiple threads. ",
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "Definition 43 ",
+        "text_level": 1,
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "An instruction is atomic if it appears to execute instantaneously. ",
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "Example 58 ",
+        "text_level": 1,
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "Write a function to swap the contents of eax, and [esp]. ",
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "xchg eax, [esp] ",
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "push and pop Instructions ",
+        "text_level": 1,
+        "page_idx": 189
+    },
+    {
+        "type": "text",
+        "text": "The $\\mathrm { x 8 6 }$ architecture is explicitly aware of the stack. It has two dedicated instructions for saving and retrieving operands off the stack. The push instruction pushes data on the stack. In specific, the push instruction can push the contents of a register, memory location, or immediate on the stack. It has just one source operand. Its operation is shown in Table 5.6. Conceptually, it first saves the value of the first operand as a temporary value temp. Then, it decrements the stack pointer, and transfers the temporary value to the top of the stack. In a 32-bit system, we decrement the stack pointer by 4. When we are pushing a register, the processor knows its size based on the name of the register. For example, if the name of the register is $u x$ , its size is 16 bits, and if the name of the register is eax, its size is 32 bits. However, if we are pushing a memory operand or a constant, the assembler cannot determine the size of the operand. We might be intending to push 2 bytes, 4 bytes, or 8 bytes on the stack. In this case, it is necessary to indicate the size of the operand to the assembler such that it can generate appropriate binary code. In the NASM assembler, we specify this information as follows: ",
+        "page_idx": 189
+    },
+    {
+        "type": "table",
+        "img_path": "images/835bdea8fee032767f9d903a6b625d7aa1c93e18d6015c6b9edd2cc7600d1653.jpg",
+        "table_caption": [
+            "Table 5.6: Semantics of the push and $p o p$ instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td colspan=\"2\">Explanation</td></tr><tr><td>push (reg/mem/imm)</td><td>push ecx</td><td colspan=\"2\">temp \u2190 ecx;esp \u2190 esp - 4;[esp] \u2190 temp</td></tr><tr><td>pop (reg/mem)</td><td>pop ecx</td><td></td><td>temp \u2190 [esp]; esp \u2190 esp + 4; ecx \u2190 temp</td></tr></table></body></html>\n\n",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "push dword [esp] ",
+        "text_level": 1,
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "The modifier dword (double word) represents the fact that we need to push 4 bytes on the stack. The starting address of the 4 bytes is stored in esp. Table 5.7 shows the list of modifiers for different sized data types. ",
+        "page_idx": 190
+    },
+    {
+        "type": "table",
+        "img_path": "images/54837ec27f0121ef594094c78e54e63bceb5521c8f8871867ddc32f0063d325e.jpg",
+        "table_caption": [
+            "Table 5.7: Modifiers in the NASM assembler "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Modifier</td><td>Size</td><td></td></tr><tr><td>byte</td><td>8bits</td><td></td></tr><tr><td>word</td><td>16 bits</td><td></td></tr><tr><td>dword</td><td>32 bits</td><td></td></tr><tr><td>qword</td><td>64 bits</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "For pushing in the value of immediate values, NASM assumes they are by default 32 bits long (if we are running NASM in 32-bit mode). We can override this setting by specifying a size modifier (word,dword,...) in the instruction. ",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "On the same lines we can define a pop instruction as shown in Table 5.6. Conceptually, the pop instruction saves the top of the stack in a temporary location. It then proceeds to increment the stack pointer by 4 (in the case of 32 bits), and then it saves the temporary value in the destination. The destination can either be a register or a memory location. The push and pop instructions thus make working with the stack very easy in x86 assembly programs. ",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "Example 59 What is the final value of ebx? ",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "mov eax, 10 push eax mov ebx, [esp] ",
+        "page_idx": 190
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 191
+    },
+    {
+        "type": "text",
+        "text": "Example 60 What is the final value of ebx? ",
+        "page_idx": 191
+    },
+    {
+        "type": "text",
+        "text": "mov ebp, esp mov eax, 10 mov [esp], eax push dword [esp] mov ebx, [ebp-4] ",
+        "page_idx": 191
+    },
+    {
+        "type": "text",
+        "text": "Answer: Note that ebp and esp are initially the same. After we push a value to the stack, esp gets decremented by 4. Hence, the new location of the top of the stack is equal to ebp 4. Since we push the value of eax (10) to the top of the stack using the push instruction, the value of ebx is equal to 10. ",
+        "page_idx": 191
+    },
+    {
+        "type": "text",
+        "text": "Example 61 What is the final value of ebx? ",
+        "page_idx": 191
+    },
+    {
+        "type": "text",
+        "text": "mov eax, 17   \npush eax   \npop dword [esp]   \nmov dword ebx, [esp] ",
+        "page_idx": 191
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 191
+    }
+]

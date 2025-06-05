@@ -1,0 +1,362 @@
+# 15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Identify probabilities in entropy.   
+• Analyze statistical probabilities in entropic systems.
+
+The various ways of formulating the second law of thermodynamics tell what happens rather than why it happens.
+
+Why should heat transfer occur only from hot to cold? Why should energy become ever less available to do work? Why should the universe become increasingly disorderly? The answer is that it is a matter of overwhelming probability. Disorder is simply vastly more likely than order.
+
+When you watch an emerging rain storm begin to wet the ground, you will notice that the drops fall in a disorganized manner both in time and in space. Some fall close together, some far apart, but they never fall in straight, orderly rows. It is not impossible for rain to fall in an orderly pattern, just highly unlikely, because there are many more disorderly ways than orderly ones. To illustrate this fact, we will examine some random processes, starting with coin tosses.
+
+# Coin Tosses
+
+What are the possible outcomes of tossing 5 coins? Each coin can land either heads or tails. On the large scale, we are concerned only with the total heads and tails and not with the order in which heads and tails appear. The following possibilities exist:
+
+5 heads, O tails   
+4 heads,1 tail   
+3 heads,2 tails   
+2 heads, 3 tails   
+1 head, 4 tails   
+O head, 5 tails
+
+These are what we call macrostates. A macrostate is an overall property of a system. It does not specify the details of the system, such as the order in which heads and tails occur or which coins are heads or tails.
+
+Using this nomenclature, a system of 5 coins has the 6 possible macrostates just listed. Some macrostates are more likely to occur than others. For instance, there is only one way to get 5 heads, but there are several ways to get 3 heads and 2 tails, making the latter macrostate more probable. Table 15.3 lists of all the ways in which 5 coins can be tossed, taking into account the order in which heads and tails occur. Each sequence is called a microstate—a detailed description of every element of a system.
+
+The macrostate of 3 heads and 2 tails can be achieved in 10 ways and is thus 10 times more probable than the one having 5 heads. Not surprisingly, it is equally probable to have the reverse, 2 heads and 3 tails. Similarly, it is equally probable to get 5 tails as it is to get 5 heads. Note that all of these conclusions are based on the crucial assumption that each microstate is equally probable. With coin tosses, this requires that the coins not be asymmetric in a way that favors one side over the other, as with loaded dice. With any system, the assumption that all microstates are equally probable must be valid, or the analysis will be erroneous.
+
+The two most orderly possibilities are 5 heads or 5 tails. (They are more structured than the others.) They are also the least likely, only 2 out of 32 possibilities. The most disorderly possibilities are 3 heads and 2 tails and its reverse. (They are the least structured.) The most disorderly possibilities are also the most likely, with 20 out of 32 possibilities for the 3 heads and 2 tails and its reverse. If we start with an orderly array like 5 heads and toss the coins, it is very likely that we will get a less orderly array as a result, since 30 out of the 32 possibilities are less orderly. So even if you start with an orderly state, there is a strong tendency to go from order to disorder, from low entropy to high entropy. The reverse can happen, but it is unlikely.
+
+This result becomes dramatic for larger systems. Consider what happens if you have 100 coins instead of just 5. The most orderly arrangements (most structured) are 100 heads or 100 tails. The least orderly (least structured) is that of 50 heads and 50 tails. There is only 1 way (1 microstate) to get the most orderly arrangement of 100 heads. There are 100 ways (100 microstates) to get the next most orderly arrangement of 99 heads and 1 tail (also 100 to get its reverse). And there are $1 . 0 \times 1 0 ^ { 2 9 }$ ways to get 50 heads and 50 tails, the least orderly arrangement. Table 15.4 is an abbreviated list of the various macrostates and the number of microstates for each macrostate. The total number of microstates—the total number of different ways 100 coins can be tossed—is an impressively large $1 . 2 7 \times 1 0 ^ { 3 0 }$ . Now, if we start with an orderly macrostate like 100 heads and toss the coins, there is a virtual certainty that we will get a less orderly macrostate. If we keep tossing the coins, it is possible, but exceedingly unlikely, that we will ever get back to the most orderly macrostate. If you tossed the coins once each second, you could expect to get either 100 heads or 100 tails once in $2 \times 1 0 ^ { 2 2 }$ years! This period is 1 trillion $( 1 0 ^ { 1 2 } )$ times longer than the age of the universe, and so the chances are essentially zero. In contrast, there is an $8 \%$ chance of getting 50 heads, a $7 3 \%$ chance of getting from 45 to 55 heads, and a $9 6 \%$ chance of getting from 40 to 60 heads. Disorder is highly likely.
+
+# Disorder in a Gas
+
+The fantastic growth in the odds favoring disorder that we see in going from 5 to 100 coins continues as the number of entities in the system increases. Let us now imagine applying this approach to perhaps a small sample of gas. Because counting microstates and macrostates involves statistics, this is called statistical analysis. The macrostates of a gas correspond to its macroscopic properties, such as volume, temperature, and pressure; and its microstates correspond to the detailed description of the positions and velocities of its atoms. Even a small amount of gas has a huge number of atoms: $1 . 0 \mathrm { c m } ^ { 3 }$ of an ideal gas at 1.0 atm and $0 ^ { \circ } \mathrm { C }$ has $2 . 7 \times 1 0 ^ { 1 9 }$ atoms. So each macrostate has an immense number of microstates. In plain language, this means that there are an immense number of ways in which the atoms in a gas can be arranged, while still having the same pressure, temperature, and so on.
+
+The most likely conditions (or macrostates) for a gas are those we see all the time—a random distribution of atoms in space with a Maxwell-Boltzmann distribution of speeds in random directions, as predicted by kinetic theory. This is the most disorderly and least structured condition we can imagine. In contrast, one type of very orderly and structured macrostate has all of the atoms in one corner of a container with identical velocities. There are very few ways to accomplish this (very few microstates corresponding to it), and so it is exceedingly unlikely ever to occur. (See Figure 15.38(b).) Indeed, it is so unlikely that we have a law saying that it is impossible, which has never been observed to be violated—the second law of thermodynamics.
+
+
+
+The disordered condition is one of high entropy, and the ordered one has low entropy. With a transfer of energy from another system, we could force all of the atoms into one corner and have a local decrease in entropy, but at the cost of an overall increase in entropy of the universe. If the atoms start out in one corner, they will quickly disperse and become uniformly distributed and will never return to the orderly original state (Figure 15.38(b)). Entropy will increase. With such a large sample of atoms, it is possible—but unimaginably unlikely—for entropy to decrease. Disorder is vastly more likely than order.
+
+The arguments that disorder and high entropy are the most probable states are quite convincing. The great Austrian physicist Ludwig Boltzmann (1844–1906)—who, along with Maxwell, made so many contributions to kinetic theory—proved that the entropy of a system in a given state (a macrostate) can be written as
+
+$$
+S = k \ln W ,
+$$
+
+where $k = 1 . 3 8 \times 1 0 ^ { - 2 3 }$ is Boltzmann’s constant, and $\ln W$ is the natural logarithm of the number of microstates $W$ corresponding to the given macrostate. $W$ is proportional to the probability that the macrostate will occur. Thus entropy is directly related to the probability of a state—the more likely the state, the greater its entropy. Boltzmann proved that this expression for $s$ is equivalent to the definition $\Delta S = Q / T$ , which we have used extensively.
+
+Thus the second law of thermodynamics is explained on a very basic level: entropy either remains the same or increases in every process. This phenomenon is due to the extraordinarily small probability of a decrease, based on the extraordinarily larger number of microstates in systems with greater entropy. Entropy candecrease, but for any macroscopic system, this outcome is so unlikely that it will never be observed.
+
+# EXAMPLE 15.9
+
+# Entropy Increases in a Coin Toss
+
+Suppose you toss 100 coins starting with 60 heads and 40 tails, and you get the most likely result, 50 heads and 50 tails. What is the change in entropy?
+
+# Strategy
+
+Noting that the number of microstates is labeled $W$ in Table 15.4 for the 100-coin toss, we can use $\Delta S = S _ { \mathrm { f } } - S _ { \mathrm { i } } = k \mathrm { l n } W _ { \mathrm { f } } - k \mathrm { l n } W _ { \mathrm { i } }$ to calculate the change in entropy.
+
+# Solution
+
+The change in entropy is
+
+$$
+\Delta S = S _ { \mathrm { f } } { - } S _ { \mathrm { i } } = k \mathrm { l n } W _ { \mathrm { f } } { - } k \mathrm { l n } W _ { \mathrm { i , } }
+$$
+
+where the subscript i stands for the initial 60 heads and 40 tails state, and the subscript f for the final 50 heads and 50 tails state. Substituting the values for $W$ from Table 15.4 gives
+
+$$
+{ \begin{array} { l } { \Delta S } \\ { } \end{array} } = \begin{array} { l } { ( 1 . 3 8 \times 1 0 ^ { - 2 3 } ~ { \mathrm { J } } / { \mathrm { K } } ) [ \ln ( 1 . 0 \times 1 0 ^ { 2 9 } ) - \ln ( 1 . 4 \times 1 0 ^ { 2 8 } ) ] } \\ { } \\ { = 2 . 7 \times 1 0 ^ { - 2 3 } ~ { \mathrm { J } } / { \mathrm { K } } } \end{array} 
+$$
+
+# Discussion
+
+This increase in entropy means we have moved to a less orderly situation. It is not impossible for further tosses to produce the initial state of 60 heads and 40 tails, but it is less likely. There is about a 1 in 90 chance for that decrease in entropy $( - 2 . 7 \times 1 0 ^ { - 2 3 } \ \mathrm { J / K } )$ to occur. If we calculate the decrease in entropy to move to the most orderly state, we get $\Delta S = - 9 2 \times 1 0 ^ { - 2 3 }$ . There is about a $1 0 ^ { 3 0 }$ chance of this change occurring. So while very small decreases in entropy are unlikely, slightly greater decreases are impossibly unlikely. These probabilities imply, again, that for a macroscopic system, a decrease in entropy is impossible. For example, for heat transfer to occur spontaneously from $\underline { { 1 . 0 0 } } \mathsf { k g }$ of $0 ^ { \circ } \mathrm { C }$ ice to its $0 ^ { \circ } \mathrm { C }$ environment, there would be a decrease in entropy of $1 . 2 2 \times 1 0 ^ { 3 }$ . Given that a $\Delta S$ of $1 0 ^ { - 2 1 }$ corresponds to about a $1 0 ^ { 3 0 }$ chance, a decrease of this size $( 1 0 ^ { 3 } ~ \mathrm { J / K } )$ is an uterimpossibility. Even for a milligram of melted ice to spontaneously refreeze is impossible.
+
+# Problem-Solving Strategies for Entropy
+
+1. Examinethesituationtodetermineifentropyisinvolved.
+
+2. Identifythesystemofinterestanddrawalabeleddiagramofthesystemshowingenergyflow.   
+3. Identifyexactlywhatne dstobedeterminedintheproblem(identifytheunknowns).A written list is useful.   
+4. Makealistofwhatisgivenorcanbeinferedfromtheproblemasstated(identifytheknowns).You must carefully identify the heat transfer, if any, and the temperature at which the process takes place. It is also important to identify the initial and final states.   
+5. Solvetheap ropriateequationforthequantitytobedetermined(theunknown).Note that the change in entropy can be determined between any states by calculating it for a reversible process.   
+6. Substitutetheknownvaluealongwiththeirunitsintotheap ropriateequation,andobtainnumerical solutionscompletewithunits.   
+7. Tose ifitisreasonable:Doesitmakesense?For example, total entropy should increase for any real process or be constant for a reversible process. Disordered states should be more probable and have greater entropy than ordered states.
+
+# Glossary
+
+adiabatic process a process in which no heat transfer takes place   
+Carnot cycle a cyclical process that uses only reversible processes, the adiabatic and isothermal processes   
+Carnot efficiency the maximum theoretical efficiency for a heat engine   
+Carnot engine a heat engine that uses a Carnot cycle   
+change in entropy the ratio of heat transfer to temperature   
+coefficient of performance for a heat pump, it is the ratio of heat transfer at the output (the hot reservoir) to the work supplied; for a refrigerator or air conditioner, it is the ratio of heat transfer from the cold reservoir to the work supplied   
+cyclical process a process in which the path returns to its original state at the end of every cycle   
+entropy a measurement of a system's disorder and its inability to do work in a system   
+first law of thermodynamics states that the change in internal energy of a system equals the net heat transfer intothe system minus the net work done by the system   
+heat engine a machine that uses heat transfer to do work   
+heat pump a machine that generates heat transfer from cold to hot   
+human metabolism conversion of food into heat transfer, work, and stored fat   
+internal energy the sum of the kinetic and potential energies of a system’s atoms and molecules   
+irreversible process any process that depends on path direction   
+isobaric process constant-pressure process in which a gas does work   
+isochoric process a constant-volume process   
+isothermal process a constant-temperature process   
+macrostate an overall property of a system   
+microstate each sequence within a larger macrostate   
+Otto cycle a thermodynamic cycle, consisting of a pair of adiabatic processes and a pair of isochoric processes, that converts heat into work, e.g., the four-stroke engine cycle of intake, compression, ignition, and exhaust   
+reversible process a process in which both the heat engine system and the external environment theoretically can be returned to their original states   
+second law of thermodynamics heat transfer flows from a hotter to a cooler object, never the reverse, and some heat energy in any process is lost to available work in a cyclical process   
+second law of thermodynamics stated in terms of entropy the total entropy of a system either increases or remains constant; it never decreases   
+statistical analysis using statistics to examine data, such as counting microstates and macrostates
+
+
+
+# Section Summary
+
+# 15.1 The First Law of Thermodynamics
+
+• The first law of thermodynamics is given as $\Delta U = Q - W$ , where $\Delta U$ is the change in internal energy of a system, $Q$ is the net heat transfer (the sum of all heat transfer into and out of the system), and $W$ is the net work done (the sum of all work done on or by the system).   
+• Both $Q$ and $W$ are energy in transit; only $\Delta U$ represents an independent quantity capable of being stored.   
+• The internal energy $U$ of a system depends only on the state of the system and not how it reached that state.   
+Metabolism of living organisms, and photosynthesis of plants, are specialized types of heat transfer, doing work, and internal energy of systems.
+
+# 15.2 The First Law of Thermodynamics and Some Simple Processes
+
+• One of the important implications of the first law of
+
+thermodynamics is that machines can be harnessed to do work that humans previously did by hand or by external energy supplies such as running water or the heat of the Sun. A machine that uses heat transfer to do work is known as a heat engine.   
+• There are several simple processes, used by heat engines, that flow from the first law of thermodynamics. Among them are the isobaric, isochoric, isothermal and adiabatic processes.   
+These processes differ from one another based on how they affect pressure, volume, temperature, and heat transfer.   
+• If the work done is performed on the outside environment, work ( ) will be a positive value. If the work done is done to the heat engine system, work ( ) will be a negative value.   
+• Some thermodynamic processes, including isothermal and adiabatic processes, are reversible in theory; that is, both the thermodynamic system and the environment can be returned to their initial states. However, because of loss of energy
+
+owing to the second law of thermodynamics, complete reversibility does not work in practice.
+
+# 15.3 Introduction to the Second Law of Thermodynamics: Heat Engines and Their Efficiency
+
+• The two expressions of the second law of thermodynamics are: (i) Heat transfer occurs spontaneously from higher- to lower-temperature bodies but never spontaneously in the reverse direction; and (ii) It is impossible in any system for heat transfer from a reservoir to completely convert to work in a cyclical process in which the system returns to its initial state.   
+• Irreversible processes depend on path and do not return to their original state. Cyclical processes are processes that return to their original state at the end of every cycle.   
+• In a cyclical process, such as a heat engine, the net work done by the system equals the net heat transfer into the system, or $W = Q _ { \mathrm { h } } { - } Q _ { \mathrm { c } }$ , where $Q _ { \mathrm { h } }$ is the heat transfer from the hot object (hot reservoir), and $Q _ { \mathrm { c } }$ is the heat transfer into the cold object (cold reservoir).   
+• Efficiency can be expressed as $\begin{array} { r } { E f f = \frac { W } { Q _ { \mathrm { h } } } } \end{array}$ , the ratio of work output divided by the amount of energy input.   
+• The four-stroke gasoline engine is often explained in terms of the Otto cycle, which is a repeating sequence of processes that convert heat into work.
+
+# 15.4 Carnot’s Perfect Heat Engine: The Second Law of Thermodynamics Restated
+
+• The Carnot cycle is a theoretical cycle that is the most efficient cyclical process possible. Any engine using the Carnot cycle, which uses only reversible processes (adiabatic and isothermal), is known as a Carnot engine.   
+• Any engine that uses the Carnot cycle enjoys the maximum theoretical efficiency.   
+• While Carnot engines are ideal engines, in reality, no engine achieves Carnot’s theoretical maximum efficiency, since dissipative processes, such as friction, play a role. Carnot cycles without heat loss
+
+may be possible at absolute zero, but this has never been seen in nature.
+
+# 15.5 Applications of Thermodynamics: Heat Pumps and Refrigerators
+
+• An artifact of the second law of thermodynamics is the ability to heat an interior space using a heat pump. Heat pumps compress cold ambient air and, in so doing, heat it to room temperature without violation of conservation principles. • To calculate the heat pump’s coefficient of performance, use the equation $C O P _ { \mathrm { h p } } = \frac { Q _ { \mathrm { h } } } { W }$ • A refrigerator is a heat pump; it takes warm ambient air and expands it to chill it.
+
+# 15.6 Entropy and the Second Law of Thermodynamics: Disorder and the Unavailability of Energy
+
+• Entropy is the loss of energy available to do work.   
+• Another form of the second law of thermodynamics states that the total entropy of a system either increases or remains constant; it never decreases.   
+• Entropy is zero in a reversible process; it increases in an irreversible process.   
+The ultimate fate of the universe is likely to be thermodynamic equilibrium, where the universal temperature is constant and no energy is available to do work. Entropy is also associated with the tendency toward disorder in a closed system.
+
+# 15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation
+
+• Disorder is far more likely than order, which can be seen statistically.   
+• The entropy of a system in a given state (a macrostate) can be written as $S = k \ln W$ ， where $k = 1 . 3 8 \times 1 0 ^ { - 2 3 } .$ is Boltzmann’s constant, and $\ln W$ is the natural logarithm of the number of microstates $W$ corresponding to the given macrostate.
+
+# Conceptual Questions
+
+# 15.1 The First Law of Thermodynamics
+
+1. Describe the photo of the tea kettle at the beginning of this section in terms of heat transfer, work done, and internal energy. How is heat being transferred? What is the work done and what is doing it? How does the kettle maintain its internal energy?   
+2. The first law of thermodynamics and the conservation of energy, as discussed in Conservation of Energy, are clearly related. How do they differ in the types of energy considered?   
+3. Heat transfer $Q$ and work done $W$ are always energy in transit, whereas internal energy $U$ is energy stored in a system. Give an example of each type of energy, and state specifically how it is either in transit or resides in a system.   
+4. How do heat transfer and internal energy differ? In particular, which can be stored as such in a system and which cannot?   
+5. If you run down some stairs and stop, what happens to your kinetic energy and your initial gravitational potential energy?   
+6. Give an explanation of how food energy (calories) can be viewed as molecular potential energy (consistent with the atomic and molecular definition of internal energy).   
+7. Identify the type of energy transferred to your body in each of the following as either internal energy, heat transfer, or doing work: (a) basking in sunlight; (b) eating food; (c) riding an elevator to a higher floor.
+
+# 15.2 The First Law of Thermodynamics and Some Simple Processes
+
+8. A great deal of effort, time, and money has been spent in the quest for the so-called perpetualmotion machine, which is defined as a hypothetical machine that operates or produces useful work indefinitely and/or a hypothetical machine that produces more work or energy than it consumes. Explain, in terms of heat engines and the first law of thermodynamics, why or why not such a machine is likely to be constructed.
+
+9. One method of converting heat transfer into doing work is for heat transfer into a gas to take place, which expands, doing work on a piston, as shown in the figure below. (a) Is the heat transfer converted directly to work in an isobaric process, or does it go through another form first? Explain your answer. (b) What about in an isothermal process? (c) What about in an adiabatic process (where heat transfer occurred prior to the adiabatic process)?
+
+10. Would the previous question make any sense for an isochoric process? Explain your answer.   
+11. We ordinarily say that $\Delta U = 0$ for an isothermal process. Does this assume no phase change takes place? Explain your answer.   
+12. The temperature of a rapidly expanding gas decreases. Explain why in terms of the first law of thermodynamics. (Hint: Consider whether the gas does work and whether heat transfer occurs rapidly into the gas through conduction.)
+
+13. Which cyclical process represented by the two closed loops, ABCFA and ABDEA, on the $P V$ diagram in the figure below produces the greatest network? Is that process also the one with the smallest work input required to return it to point A? Explain your responses.
+
+14. A real process may be nearly adiabatic if it occurs over a very short time. How does the short time span help the process to be adiabatic?   
+15. It is unlikely that a process can be isothermal unless it is a very slow process. Explain why. Is the same true for isobaric and isochoric processes? Explain your answer.
+
+# 15.3 Introduction to the Second Law of Thermodynamics: Heat Engines and Their Efficiency
+
+16. Imagine you are driving a car up Pike’s Peak in Colorado. To raise a car weighing 1000 kilograms a distance of 100 meters would require about a million joules. You could raise a car 12.5 kilometers with the energy in a gallon of gas. Driving up Pike's Peak (a mere 3000-meter climb) should consume a little less than a quart of gas. But other considerations have to be taken into account. Explain, in terms of efficiency, what factors may keep you from realizing your ideal energy use on this trip.   
+17. Is a temperature difference necessary to operate a heat engine? State why or why not.   
+18. Definitions of efficiency vary depending on how energy is being converted. Compare the definitions of efficiency for the human body and heat engines. How does the definition of efficiency in each relate to the type of energy being converted into doing work?
+
+19. Why—other than the fact that the second law of thermodynamics says reversible engines are the most efficient—should heat engines employing reversible processes be more efficient than those employing irreversible processes? Consider that dissipative mechanisms are one cause of irreversibility.
+
+# 15.4 Carnot’s Perfect Heat Engine: The Second Law of Thermodynamics Restated
+
+20. Think about the drinking bird at the beginning of this section (Figure 15.20). Although the bird enjoys the theoretical maximum efficiency possible, if left to its own devices over time, the bird will cease “drinking.” What are some of the dissipative processes that might cause the bird’s motion to cease?   
+21. Can improved engineering and materials be employed in heat engines to reduce heat transfer into the environment? Can they eliminate heat transfer into the environment entirely?   
+22. Does the second law of thermodynamics alter the conservation of energy principle?
+
+# 15.5 Applications of Thermodynamics: Heat Pumps and Refrigerators
+
+23. Explain why heat pumps do not work as well in very cold climates as they do in milder ones. Is the same true of refrigerators?   
+24. In some Northern European nations, homes are being built without heating systems of any type. They are very well insulated and are kept warm by the body heat of the residents. However, when the residents are not at home, it is still warm in these houses. What is a possible explanation?   
+25. Why do refrigerators, air conditioners, and heat pumps operate most cost-effectively for cycles with a small difference between $T _ { \mathrm { h } }$ and $T _ { \mathrm { c } ? }$ (Note that the temperatures of the cycle employed are crucial to its .)   
+26. Grocery store managers contend that there is les total energy consumption in the summer if the store is kept at a lowtemperature. Make arguments to support or refute this claim, taking into account that there are numerous refrigerators and freezers in the store.   
+27. Can you cool a kitchen by leaving the refrigerator door open?
+
+# 15.6 Entropy and the Second Law of Thermodynamics: Disorder and the Unavailability of Energy
+
+28. A woman shuts her summer cottage up in September and returns in June. No one has entered the cottage in the meantime. Explain what she is likely to find, in terms of the second law of thermodynamics.   
+29. Consider a system with a certain energy content, from which we wish to extract as much work as possible. Should the system’s entropy be high or low? Is this orderly or disorderly? Structured or uniform? Explain briefly.   
+30. Does a gas become more orderly when it liquefies? Does its entropy change? If so, does the entropy increase or decrease? Explain your answer.   
+31. Explain how water’s entropy can decrease when it freezes without violating the second law of thermodynamics. Specifically, explain what happens to the entropy of its surroundings.   
+32. Is a uniform-temperature gas more or less orderly than one with several different temperatures? Which is more structured? In which can heat transfer result in work done without heat transfer from another system?   
+33. Give an example of a spontaneous process in which a system becomes less ordered and energy becomes less available to do work. What happens to the system’s entropy in this process?   
+34. What is the change in entropy in an adiabatic process? Does this imply that adiabatic processes are reversible? Can a process be precisely adiabatic for a macroscopic system?   
+35. Does the entropy of a star increase or decrease as it radiates? Does the entropy of the space into which it radiates (which has a temperature of about 3 K) increase or decrease? What does this do to the entropy of the universe?   
+36. Explain why a building made of bricks has smaller entropy than the same bricks in a disorganized pile. Do this by considering the number of ways that each could be formed (the number of microstates in each macrostate).
+
+
+
+# 15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation
+
+37. Explain why a building made of bricks has smaller entropy than the same bricks in a disorganized pile. Do this by considering the number of ways that each could be formed (the number of microstates in each macrostate).
+
+# Problems & Exercises
+
+# 15.1 The First Law of Thermodynamics
+
+1. What is the change in internal energy of a car if you put 12.0 gal of gasoline into its tank? The energy content of gasoline is $1 . 3 \times 1 0 ^ { 8 } ~ \mathrm { J / g a l }$ . All other factors, such as the car’s temperature, are constant.   
+2. How much heat transfer occurs from a system, if its internal energy decreased by 150 J while it was doing 30.0 J of work?   
+3. A system does $1 . 8 0 \times 1 0 ^ { 8 }$ of work while $7 . 5 0 \times 1 0 ^ { 8 }$ of heat transfer occurs to the environment. What is the change in internal energy of the system assuming no other changes (such as in temperature or by the addition of fuel)?   
+4. What is the change in internal energy of a system which does $4 . 5 0 \times 1 0 ^ { 5 }$ of work while $3 . 0 0 \times 1 0 ^ { 6 } \mathrm { ~ J ~ }$ of heat transfer occurs into the system, and $8 . 0 0 \times 1 0 ^ { 6 }$ of heat transfer occurs to the environment?   
+5. Suppose a woman does 500 J of work and 9500 J of heat transfer occurs into the environment in the process. (a) What is the decrease in her internal energy, assuming no change in temperature or consumption of food? (That is, there is no other energy transfer.) (b) What is her efficiency?   
+6. (a) How much food energy will a man metabolize in the process of doing $3 5 . 0 \mathsf { k } \mathsf { J }$ of work with an efficiency of $5 . 0 0 \%?$ (b) How much heat transfer occurs to the environment to keep his temperature constant? Explicitly show how you follow the steps in the Problem-Solving Strategy for thermodynamics found in Problem-Solving Strategies for Thermodynamics.   
+7. (a) What is the average metabolic rate in watts of a man who metabolizes ${ 1 0 , 5 0 0 \mathsf { k } \mathsf { J } }$ of food energy in one day? (b) What is the maximum amount of work in joules he can do without breaking down fat, assuming a maximum efficiency of $2 0 . 0 \% ?$ (c) Compare his work output with the daily output of a 187-W (0.250-horsepower) motor.   
+8. (a) How long will the energy in a 1470-kJ (350-kcal) cup of yogurt last in a woman doing work at the rate of 150 W with an efficiency of $2 0 . 0 \%$ (such as in leisurely climbing stairs)? (b) Does the time found in part (a) imply that it is easy to consume more food energy than you can reasonably expect to work off with exercise?   
+9. (a) A woman climbing the Washington Monument metabolizes $6 . 0 0 \times 1 0 ^ { 2 } \ \mathrm { k J }$ of food energy. If her efficiency is $1 8 . 0 \%$ , how much heat transfer occurs to the environment to keep her temperature constant? (b) Discuss the amount of heat transfer found in (a). Is it consistent with the fact that you quickly warm up when exercising?
+
+
+
+
+
+# 15.2 The First Law of Thermodynamics and Some Simple Processes
+
+10. A car tire contains $0 . 0 3 8 0 \mathrm { m } ^ { 3 }$ of nitrogen at a gauge pressure of $2 . 2 0 \times 1 0 ^ { 5 } ~ \mathrm { N / m } ^ { 2 }$ (about 32 psi). How much more internal energy does this gas have than the same volume has at zero gauge pressure (which is equivalent to normal atmospheric pressure)? (Use $\begin{array} { r } { U = \frac { 5 } { 2 } N k T } \end{array}$ for the internal energy of nitrogen, a diatomic gas.)
+
+11. A helium-filled rigid ball has a gauge pressure of 0.200 atm and a volume of 10.0 L. How much greater is the internal energy of the helium in the ball than it would be at zero gauge pressure?
+
+12. Steam to drive an old-fashioned steam locomotive is supplied at a constant gauge pressure of $1 . 7 5 \times 1 0 ^ { 6 } \mathrm { N } / \mathrm { m } ^ { 2 }$ (about 250 psi) to a piston with a $0 . 2 0 0 - \mathsf { m }$ radius. (a) By calculating $P \Delta V$ , find the work done by the steam when the piston moves $0 . 8 0 0 \mathsf { m }$ . Note that this is the net work output, since gauge pressure is used. (b) Now find the amount of work by calculating the force exerted times the distance traveled. Is the answer the same as in part (a)?
+
+13. A hand-driven tire pump has a piston with a 2.50-cm diameter and a maximum stroke of 30.0 cm. (a) How much work do you do in one stroke if the average gauge pressure is $2 . 4 0 \times 1 0 ^ { 5 } \ \mathrm { N } / \mathrm { m } ^ { 2 }$ (about 35 psi)? (b) What average force do you exert on the piston, neglecting friction and gravitational force?
+
+14. Calculate the net work output of a heat engine following path ABCDA in the figure below.
+
+15. What is the net work output of a heat engine that follows path ABDA in the figure above, with a straight line from B to D? Why is the work output less than for path ABCDA? Explicitly show how you follow the steps in the Problem-Solving Strategies for Thermodynamics.
+
+16. Unreasonable Results What is wrong with the claim that a cyclical heat engine does $4 . 0 0 \mathsf { k } \mathsf { ] }$ of work on an input of $2 4 . 0 { \ k } ]$ of heat transfer while $1 6 . 0 { \ k } ]$ of heat transfers to the environment?
+
+17. (a) A cyclical heat engine, operating between temperatures of $4 5 0 ^ { \circ } \mathrm { C }$ and $1 5 0 ^ { \circ } \mathrm { C }$ produces 4.00 MJ of work on a heat transfer of 5.00 MJ into the engine. How much heat transfer occurs to the environment? (b) What is unreasonable about the engine? (c) Which premise is unreasonable?
+
+18. Construct Your Own Problem Consider a car’s gasoline engine. Construct a problem in which you calculate the maximum efficiency this engine can have. Among the things to consider are the effective hot and cold reservoir temperatures. Compare your calculated efficiency with the actual efficiency of car engines.
+
+19. Construct Your Own Problem Consider a car trip into the mountains. Construct a problem in which you calculate the overall efficiency of the car for the trip as a ratio of kinetic and potential energy gained to fuel consumed. Compare this efficiency to the thermodynamic efficiency quoted for gasoline engines and discuss why the thermodynamic efficiency is so much greater. Among the factors to be considered are the gain in altitude and speed, the mass of the car, the distance traveled, and typical fuel economy.
+
+# 15.3 Introduction to the Second Law of Thermodynamics: Heat Engines and Their Efficiency
+
+20. A certain heat engine does $1 0 . 0 { \ k } ]$ of work and $8 . 5 0 \mathsf { k } \mathsf { J }$ of heat transfer occurs to the environment in a cyclical process. (a) What was the heat transfer into this engine? (b) What was the engine’s efficiency?
+
+21. With $2 . 5 6 \times 1 0 ^ { 6 }$ of heat transfer into this engine, a given cyclical heat engine can do only $1 . 5 0 \times 1 0 ^ { 5 }$ of work. (a) What is the engine’s efficiency? (b) How much heat transfer to the environment takes place?   
+22. (a) What is the work output of a cyclical heat engine having a $2 2 . 0 \%$ efficiency and $6 . 0 0 \times 1 0 ^ { 9 } { \mathrm { ~ J } }$ of heat transfer into the engine? (b) How much heat transfer occurs to the environment?   
+23. (a) What is the efficiency of a cyclical heat engine in which $7 5 . 0 \mathsf { k } \mathsf { ] }$ of heat transfer occurs to the environment for every $9 5 . 0 \mathsf { k } \mathsf { J }$ of heat transfer into the engine? (b) How much work does it produce for ${ \displaystyle 1 0 0 ~ \mathsf { k } \mathsf { J } }$ of heat transfer into the engine?   
+24. The engine of a large ship does $2 . 0 0 \times 1 0 ^ { 8 }$ of work with an efficiency of $5 . 0 0 \%$ . (a) How much heat transfer occurs to the environment? (b) How many barrels of fuel are consumed, if each barrel produces $6 . 0 0 \times 1 0 ^ { 9 }$ of heat transfer when burned?   
+25. (a) How much heat transfer occurs to the environment by an electrical power station that uses $1 . 2 5 \times 1 0 ^ { 1 4 }$ of heat transfer into the engine with an efficiency of $4 2 . 0 \% ?$ (b) What is the ratio of heat transfer to the environment to work output? (c) How much work is done?   
+26. Assume that the turbines at a coal-powered power plant were upgraded, resulting in an improvement in efficiency of $3 . 3 2 \%$ . Assume that prior to the upgrade the power station had an efficiency of $3 6 \%$ and that the heat transfer into the engine in one day is still the same at $2 . 5 0 x 1 0 ^ { 1 4 } \mathrm { ~ J }$ . (a) How much more electrical energy is produced due to the upgrade? (b) How much less heat transfer occurs to the environment due to the upgrade?
+
+27. This problem compares the energy output and heat transfer to the environment by two different types of nuclear power stations—one with the normal efficiency of $3 4 . 0 \%$ , and another with an improved efficiency of $4 0 . 0 \%$ . Suppose both have the same heat transfer into the engine in one day, $2 . 5 0 x 1 0 ^ { 1 4 } \mathrm { ~ J }$ . (a) How much more electrical energy is produced by the more efficient power station? (b) How much less heat transfer occurs to the environment by the more efficient power station? (One type of more efficient nuclear power station, the gas-cooled reactor, has not been reliable enough to be economically feasible in spite of its greater efficiency.)
+
+# 15.4 Carnot’s Perfect Heat Engine: The Second Law of Thermodynamics Restated
+
+28. A certain gasoline engine has an efficiency of $3 0 . 0 \%$ . What would the hot reservoir temperature be for a Carnot engine having that efficiency, if it operates with a cold reservoir temperature of $2 0 0 ^ { \circ } \mathrm { C } ?$   
+29. A gas-cooled nuclear reactor operates between hot and cold reservoir temperatures of $7 0 0 ^ { \circ } \mathrm { C }$ and $2 7 . 0 ^ { \circ } \mathrm { C } .$ (a) What is the maximum efficiency of a heat engine operating between these temperatures? (b) Find the ratio of this efficiency to the Carnot efficiency of a standard nuclear reactor (found in Example 15.4).   
+30. (a) What is the hot reservoir temperature of a Carnot engine that has an efficiency of $4 2 . 0 \%$ and a cold reservoir temperature of $2 7 . 0 ^ { \circ } \mathrm { C } ?$ (b) What must the hot reservoir temperature be for a real heat engine that achieves 0.700 of the maximum efficiency, but still has an efficiency of $4 2 . 0 \%$ (and a cold reservoir at $2 7 . 0 ^ { \circ } \mathrm { C } ) ?$ (c) Does your answer imply practical limits to the efficiency of car gasoline engines?   
+31. Steam locomotives have an efficiency of $1 7 . 0 \%$ and operate with a hot steam temperature of $4 2 5 ^ { \circ } \mathrm { C } .$ . (a) What would the cold reservoir temperature be if this were a Carnot engine? (b) What would the maximum efficiency of this steam engine be if its cold reservoir temperature were $1 5 0 ^ { \circ } \mathrm { C } ?$
+
+32. Practical steam engines utilize $4 5 0 ^ { \circ } \mathrm { C }$ steam, which is later exhausted at $2 7 0 ^ { \circ } \mathrm { C }$ . (a) What is the maximum efficiency that such a heat engine can have? (b) Since $2 7 0 ^ { \circ } \mathrm { C }$ steam is still quite hot, a second steam engine is sometimes operated using the exhaust of the first. What is the maximum efficiency of the second engine if its exhaust has a temperature of $1 5 0 ^ { \circ } \mathrm { C } ?$ (c) What is the overall efficiency of the two engines? (d) Show that this is the same efficiency as a single Carnot engine operating between $4 5 0 ^ { \circ } \mathrm { C }$ and $1 5 0 ^ { \circ } \mathrm { C }$ . Explicitly show how you follow the steps in the ProblemSolving Strategies for Thermodynamics.
+
+33. A coal-fired electrical power station has an efficiency of $3 8 \%$ . The temperature of the steam leaving the boiler is $5 5 0 ^ { \circ } \mathrm { C }$ . What percentage of the maximum efficiency does this station obtain? (Assume the temperature of the environment is $2 0 ^ { \circ } \mathrm { C } .$ .)
+
+34. Would you be willing to financially back an inventor who is marketing a device that she claims has $2 5 \kappa \mathsfit { ] }$ of heat transfer at $6 0 0 ~ \mathsf { K }$ , has heat transfer to the environment at $3 0 0 ~ \mathsf { K }$ , and does 12 kJ of work? Explain your answer.
+
+35. Unreasonable Results (a) Suppose you want to design a steam engine that has heat transfer to the environment at $2 7 0 ^ { \circ } \mathrm { C }$ and has a Carnot efficiency of 0.800. What temperature of hot steam must you use? (b) What is unreasonable about the temperature? (c) Which premise is unreasonable?
+
+36. Unreasonable Results Calculate the cold reservoir temperature of a steam engine that uses hot steam at $4 5 0 ^ { \circ } \mathrm { C }$ and has a Carnot efficiency of 0.700. (b) What is unreasonable about the temperature? (c) Which premise is unreasonable?
+
+# 15.5 Applications of Thermodynamics: Heat Pumps and Refrigerators
+
+37. What is the coefficient of performance of an ideal heat pump that has heat transfer from a cold temperature of $- 2 5 . 0 ^ { \circ } \mathrm { C }$ to a hot temperature of $4 0 . 0 ^ { \circ } \mathrm { C } ?$   
+38. Suppose you have an ideal refrigerator that cools an environment at $- 2 0 . 0 ^ { \circ } \mathrm { C }$ and has heat transfer to another environment at $5 0 . 0 ^ { \circ } \mathrm { C }$ . What is its coefficient of performance?   
+39. What is the best coefficient of performance possible for a hypothetical refrigerator that could make liquid nitrogen at $- 2 0 0 ^ { \circ } \mathrm { C }$ and has heat transfer to the environment at $3 5 . 0 ^ { \circ } \mathrm { C } ?$
+
+40. In a very mild winter climate, a heat pump has heat transfer from an environment at $5 . 0 0 ^ { \circ } \mathrm { C }$ to one at $3 5 . 0 ^ { \circ } \mathrm { C }$ . What is the best possible coefficient of performance for these temperatures? Explicitly show how you follow the steps in the Problem-Solving Strategies for Thermodynamics.
+
+41. (a) What is the best coefficient of performance for a heat pump that has a hot reservoir temperature of $5 0 . 0 ^ { \circ } \mathrm { C }$ and a cold reservoir temperature of $- 2 0 . 0 ^ { \circ } \mathrm { C } ?$ (b) How much heat transfer occurs into the warm environment if $3 . 6 0 \times 1 0 ^ { 7 }$ of work $( 1 0 . 0 \mathrm { k W \cdot h } )$ is put into it? (c) If the cost of this work input is $/ \mathrm { k W } \cdot \mathrm { h }$ , how does its cost compare with the direct heat transfer achieved by burning natural gas at a cost of 85.0 cents per therm. (A therm is a common unit of energy for natural gas and equals $1 . 0 5 5 \times 1 0 ^ { 8 } \mathrm { ~ J } .$ )
+
+42. (a) What is the best coefficient of performance for a refrigerator that cools an environment at $- 3 0 . 0 ^ { \circ } \mathrm { C }$ and has heat transfer to another environment at $4 5 . 0 ^ { \circ } \mathrm { C } ?$ (b) How much work in joules must be done for a heat transfer of $4 1 8 6 \mathsf { k } \mathsf { J }$ from the cold environment? (c) What is the cost of doing this if the work costs 10.0 cents per $3 . 6 0 \times 1 0 ^ { 6 } .$ (a kilowatt-hour)? (d) How many kJ of heat transfer occurs into the warm environment? (e) Discuss what type of refrigerator might operate between these temperatures.   
+43. Suppose you want to operate an ideal refrigerator with a cold temperature of $- 1 0 . 0 ^ { \circ } \mathrm { C }$ , and you would like it to have a coefficient of performance of 7.00. What is the hot reservoir temperature for such a refrigerator?   
+44. An ideal heat pump is being considered for use in heating an environment with a temperature of $2 2 . 0 ^ { \circ } \mathrm { C }$ . What is the cold reservoir temperature if the pump is to have a coefficient of performance of 12.0?   
+45. A 4-ton air conditioner removes $5 . 0 6 \times 1 0 ^ { 7 }$ J (48,000 British thermal units) from a cold environment in $1 . 0 0 \mathfrak { h }$ . (a) What energy input in joules is necessary to do this if the air conditioner has an energy efficiency rating $( E E R )$ of 12.0? (b) What is the cost of doing this if the work costs 10.0 cents per $3 . 6 0 \times 1 0 ^ { 6 }$ (one kilowatt-hour)? (c) Discuss whether this cost seems realistic. Note that the energy efficiency rating $( E E R )$ of an air conditioner or refrigerator is defined to be the number of British thermal units of heat transfer from a cold environment per hour divided by the watts of power input.
+
+46. Show that the coefficients of performance of refrigerators and heat pumps are related by $C O P _ { \mathrm { r e f } } = C O P _ { \mathrm { h p } } - 1$ . Start with the definitions of the $C O P s$ and the conservation of energy relationship between $Q _ { \mathrm { h } }$ , $Q _ { \mathrm { c } }$ , and $W$ .
+
+# 15.6 Entropy and the Second Law of Thermodynamics: Disorder and the Unavailability of Energy
+
+47. (a) On a winter day, a certain house loses $5 . 0 0 \times 1 0 ^ { 8 }$ of heat to the outside (about 500,000 Btu). What is the total change in entropy due to this heat transfer alone, assuming an average indoor temperature of $2 1 . 0 ^ { \circ } \mathrm { C }$ and an average outdoor temperature of $5 . 0 0 ^ { \circ } \mathrm { C } ?$ (b) This large change in entropy implies a large amount of energy has become unavailable to do work. Where do we find more energy when such energy is lost to us?   
+48. On a hot summer day, $4 . 0 0 \times 1 0 ^ { 6 }$ of heat transfer into a parked car takes place, increasing its temperature from $3 5 . 0 ^ { \circ } \mathrm { C }$ to $4 5 . 0 ^ { \circ } \mathrm { C }$ . What is the increase in entropy of the car due to this heat transfer alone?   
+49. A hot rock ejected from a volcano’s lava fountain cools from $1 1 0 0 ^ { \circ } \mathrm { C }$ to $4 0 . 0 ^ { \circ } \mathrm { C }$ , and its entropy decreases by $9 5 0 \mathsf { \exists / K }$ . How much heat transfer occurs from the rock?   
+50. When $1 . 6 0 \times 1 0 ^ { 5 }$ of heat transfer occurs into a meat pie initially at $2 0 . 0 ^ { \circ } \mathrm { C }$ , its entropy increases by $4 8 0 \mathsf { { J } / \mathsf { K } }$ . What is its final temperature?   
+51. The Sun radiates energy at the rate of $3 . 8 0 x 1 0 ^ { 2 6 }$ from its $5 5 0 0 ^ { \circ } \mathrm { C }$ surface into dark empty space (a negligible fraction radiates onto Earth and the other planets). The effective temperature of deep space is $- 2 7 0 ^ { \circ } \mathrm { C } .$ . (a) What is the increase in entropy in one day due to this heat transfer? (b) How much work is made unavailable?   
+52. (a) In reaching equilibrium, how much heat transfer occurs from $1 . 0 0 \mathsf { k g }$ of water at $4 0 . 0 ^ { \circ } \mathrm { C }$ when it is placed in contact with $1 . 0 0 \mathsf { k g }$ of $2 0 . 0 ^ { \circ } \mathrm { C }$ water in reaching equilibrium? (b) What is the change in entropy due to this heat transfer? (c) How much work is made unavailable, taking the lowest temperature to be $2 0 . 0 ^ { \circ }$ ? Explicitly show how you follow the steps in the Problem-Solving Strategies for Entropy.   
+53. What is the decrease in entropy of $2 5 . 0 \ g$ of wate that condenses on a bathroom mirror at a temperature of $3 5 . 0 ^ { \circ } \mathrm { C }$ , assuming no change in temperature and given the latent heat of vaporization to be $2 4 5 0 \mathsf { k } \mathsf { 3 } / \mathsf { k } \mathsf { g } \colon$   
+54. Find the increase in entropy of $\displaystyle 1 . 0 0 { \mathsf { k g } }$ of liquid nitrogen that starts at its boiling temperature, boils, and warms to $2 0 . 0 ^ { \circ } \mathrm { C }$ at constant pressure.   
+55. A large electrical power station generates 1000 MW of electricity with an efficiency of $3 5 . 0 \%$ . (a) Calculate the heat transfer to the power station, $Q _ { \mathrm { h } }$ , in one day. (b) How much heat transfer $Q _ { \mathrm { c } }$ occurs to the environment in one day? (c) If the heat transfer in the cooling towers is from $3 5 . 0 ^ { \circ } \mathrm { C }$ water into the local air mass, which increases in temperature from $1 8 . 0 ^ { \circ } \mathrm { C }$ to $2 0 . 0 ^ { \circ } \mathrm { C }$ , what is the total increase in entropy due to this heat transfer? (d) How much energy becomes unavailable to do work because of this increase in entropy, assuming an $1 8 . 0 ^ { \circ } \mathrm { C }$ lowest temperature? (Part of $Q _ { \mathrm { c } }$ could be utilized to operate heat engines or for simply heating the surroundings, but it rarely is.)   
+56. (a) How much heat transfer occurs from $2 0 . 0 \mathsf { k g }$ of $9 0 . 0 ^ { \circ } \mathrm { C }$ water placed in contact with $2 0 . 0 \mathsf { k g }$ of $1 0 . 0 ^ { \circ } \mathrm { C }$ water, producing a final temperature of $5 0 . 0 ^ { \circ } \mathrm { C } ?$ (b) How much work could a Carnot engine do with this heat transfer, assuming it operates between two reservoirs at constant temperatures of $9 0 . 0 ^ { \circ } \mathrm { C }$ and $1 0 . 0 ^ { \circ } \mathbf { C } ?$ (c) What increase in entropy is produced by mixing $2 0 . 0 \mathsf { k g }$ of $9 0 . 0 ^ { \circ } \mathrm { C }$ water with $2 0 . 0 \mathsf { k g }$ of $1 0 . 0 ^ { \circ } \mathrm { C }$ water? (d) Calculate the amount of work made unavailable by this mixing using a low temperature of $1 0 . 0 ^ { \circ } \mathrm { C } _ { \mathrm { ; } }$ , and compare it with the work done by the Carnot engine. Explicitly show how you follow the steps in the Problem-Solving Strategies for Entropy. (e) Discuss how everyday processes make increasingly more energy unavailable to do work, as implied by this problem.
+
+
+
+# 15.7 Statistical Interpretation of Entropy and the Second Law of Thermodynamics: The Underlying Explanation
+
+57. Using Table 15.4, verify the contention that if you toss 100 coins each second, you can expect to get 100 heads or 100 tails once in $2 \times 1 0 ^ { 2 2 }$ years; calculate the time to two-digit accuracy.   
+58. What percent of the time will you get something in the range from 60 heads and 40 tails through 40 heads and 60 tails when tossing 100 coins? The total number of microstates in that range is $1 . 2 2 \times 1 0 ^ { 3 0 }$ . (Consult Table 15.4.)
+
+59. (a) If tossing 100 coins, how many ways (microstates) are there to get the three most likely macrostates of 49 heads and 51 tails, 50 heads and 50 tails, and 51 heads and 49 tails? (b) What percent of the total possibilities is this? (Consult Table 15.4.)
+
+60. (a) What is the change in entropy if you start with 100 coins in the 45 heads and 55 tails macrostate, toss them, and get 51 heads and 49 tails? (b) What if you get 75 heads and 25 tails? (c) How much more likely is 51 heads and 49 tails than 75 heads and 25 tails? (d) Does either outcome violate the second law of thermodynamics?
+
+61. (a) What is the change in entropy if you start with 10 coins in the 5 heads and 5 tails macrostate, toss them, and get 2 heads and 8 tails? (b) How much more likely is 5 heads and 5 tails than 2 heads and 8 tails? (Take the ratio of the number of microstates to find out.) (c) If you were betting on 2 heads and 8 tails would you accept odds of 252 to 45? Explain why or why not.
+
+62. (a) If you toss 10 coins, what percent of the time will you get the three most likely macrostates (6 heads and 4 tails, 5 heads and 5 tails, 4 heads and 6 tails)? (b) You can realistically toss 10 coins and count the number of heads and tails about twice a minute. At that rate, how long will it take on average to get either 10 heads and 0 tails or 0 heads and 10 tails?
+
+63. (a) Construct a table showing the macrostates and all of the individual microstates for tossing 6 coins. (Use Table 15.5 as a guide.) (b) How many macrostates are there? (c) What is the total number of microstates? (d) What percent chance is there of tossing 5 heads and 1 tail? (e) How much more likely are you to toss 3 heads and 3 tails than 5 heads and 1 tail? (Take the ratio of the number of microstates to find out.)
+
+64. In an air conditioner, 12.65 MJ of heat transfer occurs from a cold environment in $1 . 0 0 \mathfrak { h }$ . (a) What mass of ice melting would involve the same heat transfer? (b) How many hours of operation would be equivalent to melting $9 0 0 ~ \mathsf { k g }$ of ice? (c) If ice costs 20 cents per kg, do you think the air conditioner could be operated more cheaply than by simply using ice? Describe in detail how you evaluate the relative costs.

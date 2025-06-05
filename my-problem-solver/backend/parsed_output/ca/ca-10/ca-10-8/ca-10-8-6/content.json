@@ -1,0 +1,13 @@
+[
+    {
+        "type": "text",
+        "text": "10.8.6 Processor with Support for Exceptions ",
+        "text_level": 1,
+        "page_idx": 465
+    },
+    {
+        "type": "text",
+        "text": "Figure 10.34 shows an abridged diagram of the data path with support for exceptions. We have added an exception unit that takes inputs from all the pipeline registers. Whenever, an instruction detects an exception, or an interrupt is detected, the exception unit is notified. The exception unit proceeds to mark an instruction as the last instruction. It waits till the marked instruction leaves the pipeline, and concurrently converts all the instructions fetched after the marked instruction to bubbles. Finally, when the marked instruction reaches the RW stage, the exception unit stores the PC, or $N P C$ (next PC) value in the $o l d P C$ register. It also saves the flags field in the instruction packet to the oldF lags register. We add four registers namely oldP C, oldSP , oldF lags, and flags. The ALU immediately updates the flags register if it processes a cmp instruction. The RW stage can also write to the flags register. These four registers are bundled with the regular register file. We call the new structure as the register unit (shown in Figure 10.34). We do not show the multiplexers to choose between the inputs from the register file, and the special registers. We assume that the multiplexers are embedded inside the register unit. ",
+        "page_idx": 465
+    }
+]

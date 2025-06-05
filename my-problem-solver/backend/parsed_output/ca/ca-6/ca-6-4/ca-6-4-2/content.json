@@ -1,0 +1,60 @@
+[
+    {
+        "type": "text",
+        "text": "6.4.2 Load and Store Instructions ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "table",
+        "img_path": "images/b4190e46c5b1485748a7ff04ba2643de646c301a7d0f34882d7c1ab93d9a8821.jpg",
+        "table_caption": [
+            "Table 6.14: Single precision load and store instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>flw rd, imm(rs1)</td><td>flw f1, 48(sp)</td><td>f1 \u2190 mem[48 + sp]</td></tr><tr><td>fsw rs2, imm(rs1)</td><td>fsw f1, 48(sp)</td><td>mem[48 + sp] \u2190 f1</td></tr></table></body></html>\n\n",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the basic floating point load and store instructions in Table 6.14. They load and store values from memory, respectively. They do not perform type conversion. The f cvt instruction and its variants can be used to perform type conversion, as we shall see later. ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "The key idea in RISC-V is the same as in x86, which is that floating point immediates cannot be directly loaded into registers. Their contents need to be stored in memory first and then the 32-bit floating point value can be loaded into a floating point register. In this sense, this part of the ISA is less powerful than its integer counterpart. However, this does not cause much of a performance loss in practice because most of the time we do not face the need for loading floating point immediates, other than while loading built-in constants such as $\\pi$ and $e$ . In this case, we can use the assembler pseudoinstruction $l a$ to store the contents of the constant to memory and then load the address of the starting memory address to a register (refer to Example 115). The floating point load and store instructions otherwise are quite similar to their integer counterparts in RISC-V. ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Example 115 ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Load the value of a constant val into a floating point register fs1. ",
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 249
+    },
+    {
+        "type": "text",
+        "text": "val: . float 3.14   \n. main :   \nla a1 , val   \nflw fs1 , 0( a1) ",
+        "page_idx": 249
+    },
+    {
+        "type": "table",
+        "img_path": "images/09a93c125ad8bcf766230eff893990cd3d76cef276f955862daafc2d9f06fe26.jpg",
+        "table_caption": [
+            "Table 6.15: Floating point arithmetic instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>fadd.s rd, rs1, rs2</td><td>fadd.s f1, f2, f3</td><td>f1 \u2190 f2+ f3</td></tr><tr><td>fsub.s rd, rs1, rs2</td><td>fsub.s f1, f2, f3</td><td>f1\u2190 f2-f3</td></tr><tr><td>fmul.s rd, rs1, rs2</td><td>fmul.s f1, f2, f3</td><td>f1\u2190f2\u00d7 f3</td></tr><tr><td>fdiv.s rd, rs1, rs2</td><td>fdiv.s f1, f2, f3</td><td>f1 \u2190 f2\u00f7 f3</td></tr><tr><td>fmin.s rd, rs1, rs2</td><td>fmin.s f1, f2, f3</td><td>f1 \u2190 min(f2,f3)</td></tr><tr><td>fmax.s rd, rsl, rs2</td><td>fmax.s f1, f2, f3</td><td>f1 \u2190 max(f2, f3)</td></tr><tr><td>fsqrt.s rd, rs1</td><td>fsqrt.s f1, f2</td><td>f1\u2190\u221af2</td></tr></table></body></html>\n\n",
+        "page_idx": 250
+    }
+]

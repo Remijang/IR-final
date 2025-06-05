@@ -1,0 +1,54 @@
+[
+    {
+        "type": "text",
+        "text": "11.1.2 Memory Access Patterns ",
+        "text_level": 1,
+        "page_idx": 509
+    },
+    {
+        "type": "text",
+        "text": "Before considering the technical topic of patterns in memory accesses, let us consider a simple practical problem that your author is facing at this point of time. He unfortunately, has a lot of books on his desk that are not organized. Not only are these books cluttering up his desk, it is also hard to search for a book when required. Hence, he needs to organize his books better and also keep his desk clean. He observes that he does not require all the books all the time. For example, he needs books on computer architecture very frequently; however, he rarely reads his books on distributed systems. Hence, it makes sense for him to move his books on distributed systems to the shelf beside his desk. Unfortunately, it is a small shelf, and there are still a lot of books on his desk. He observes that he can further classify the books in the small shelf. He has some books on philosophy that he never reads. These can be moved to the large cabinet in the corner of the room. This will create more space in the shelf, and also help him clean up his desk. What is the fundamental insight here? It is that your author does not read all his books with the same frequency. There are some books that he reads very frequently; hence, they need to be on his desk. Then there is another class of books that he reads infrequently; hence, they need to be in the small shelf beside his desk. Lastly, he has many books that he reads extremely infrequently. He can safely keep them in the large cabinet. Pattern 1:He reads a small set of books very frequently, and the rest of the books rather infrequently. Hence, if he keeps the frequently accessed set of books on computer architecture on his desk, and the large infrequent set of books in the shelf and the cabinet, he has solved his problems. ",
+        "page_idx": 509
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "Well, not quite. This was true for last semester, when he was teaching the computer architecture course. However, in the current semester, he is teaching a course on distributed systems. Hence, he does not refer to his architecture books anymore. It thus makes sense for him to bring his distributed systems books to his desk. However, there is a problem. What happens to his architecture books that are already there on his desk. Well, the simple answer is that they need to be moved to the shelf. They can occupy the slots vacated by the distributed systems books. In the interest of time, it makes sense for your author to bring a set of distributed systems books on to his desk, because in very high likelihood, he will need to refer to numerous books in that area. It does not make sense to fetch just one book on distributed systems. Hence, as a general rule we can conclude that if we require a certain book, then most likely we will require other books in the same subject. Pattern 2:If your author requires a certain book, then most likely he will require other books in the same subject area in the near future. ",
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "We can think of patterns 1 and 2, as general laws that are applicable to everybody. Instead of books, if we consider TV channels, then also both the patterns apply. We do not watch all TV channels equally frequently. Secondly, if a user has tuned in to a news channel, then most likely she will browse through other news channels in the near future. In fact this is how retail stores work. They typically keep spices and seasonings close to vegetables. This is because it is highly likely that a user who has just bought vegetables will want to buy spices also. However, they keep bathroom supplies and electronics far away. ",
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "Pattern 1 is called temporal locality. This means that users will tend to reuse the same item in a given time interval. Pattern 2 is called spatial locality. It means that if a user has used a certain item, then she will tend to use similar items in the near future. ",
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "Definition 97 ",
+        "text_level": 1,
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "Temporal Locality It is a concept that states that if a resource is accessed at some point of time, then most likely it will be accessed again in a short time interval. ",
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "Spatial Locality It is a concept that states that if a resource is accessed at some point of time, then most likely similar resources will be accessed in the near future. ",
+        "page_idx": 510
+    },
+    {
+        "type": "text",
+        "text": "The question that we need to ask is \u2013 \u201cIs there temporal and spatial locality in memory accesses?\u201d. If there is some degree of temporal and spatial locality, then we can possibly do some critical optimizations that will help us solve the twin problems of large memory requirement, and low latency. In computer architecture, we typically rely on such properties such as temporal and spatial locality to solve our problems. ",
+        "page_idx": 510
+    }
+]

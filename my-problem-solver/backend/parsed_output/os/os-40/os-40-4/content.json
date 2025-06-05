@@ -1,0 +1,88 @@
+[
+    {
+        "type": "text",
+        "text": "40.4 Directory Organization ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In vsfs (as in many file systems), directories have a simple organization; a directory basically just contains a list of (entry name, inode number) pairs. For each file or directory in a given directory, there is a string and a number in the data block(s) of the directory. For each string, there may also be a length (assuming variable-sized names). ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "For example, assume a directory dir (inode number 5) has three files in it (foo, bar, and foobar is a pretty longname), with inode numbers 12, 13, and 24 respectively. The on-disk data for dir might look like: ",
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "images/799ae7e404f28be325ff9a842140fbd24c642aebb0e6e1844bcdae81dd466156.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>inum</td><td>reclen</td><td>strlen</td><td>name</td></tr><tr><td>5</td><td>12</td><td>2</td><td></td></tr><tr><td>2</td><td>12</td><td>3</td><td></td></tr><tr><td>12</td><td>12</td><td>4</td><td>foo</td></tr><tr><td>13</td><td>12</td><td>4</td><td>bar</td></tr><tr><td>24</td><td>36</td><td>28</td><td>foobar_is_a_pretty_longname</td></tr></table></body></html>\n\n",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In this example, each entry has an inode number, record length (the total bytes for the name plus any left over space), string length (the actual length of the name), and finally the name of the entry. Note that each directory has two extra entries, . “dot” and .. “dot-dot”; the dot directory is just the current directory (in this example, dir), whereas dot-dot is the parent directory (in this case, the root). ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Deleting a file (e.g., calling unlink()) can leave an empty space in the middle of the directory, and hence there should be some way to mark that as well (e.g., with a reserved inode number such as zero). Such a delete is one reason the record length is used: a new entry may reuse an old, bigger entry and thus have extra space within. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: LINKED-BASED APPROACHES",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Another simpler approach in designing inodes is to use a linked list. Thus, inside an inode, instead of having multiple pointers, you just need one, to point to the first block of the file. To handle larger files, add another pointer at the end of that data block, and so on, and thus you can support large files. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "As you might have guessed, linked file allocation performs poorly for some workloads; think about reading the last block of a file, for example, or just doing random access. Thus, to make linked allocation work better, some systems will keep an in-memory table of link information, instead of storing the next pointers with the data blocks themselves. The table is indexed by the address of a data block $D$ ; the content of an entry is simply $D$ ’s next pointer, i.e., the address of the next block in a file which follows $D$ . A null-value could be there too (indicating an end-of-file), or some other marker to indicate that a particular block is free. Having such a table of next pointers makes it so that a linked allocation scheme can effectively do random file accesses, simply by first scanning through the (in memory) table to find the desired block, and then accessing (on disk) it directly. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Does such a table sound familiar? What we have described is the basic structure of what is known as the file allocation table, or FAT file system. Yes, this classic old Windows file system, before NTFS [C94], is based on a simple linked-based allocation scheme. There are other differences from a standard UNIX file system too; for example, there are no inodes per se, but rather directory entries which store metadata about a file and refer directly to the first block of said file, which makes creating hard links impossible. See Brouwer [B02] for more of the inelegant details. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "You might be wondering where exactly directories are stored. Often, file systems treat directories as a special type of file. Thus, a directory has an inode, somewhere in the inode table (with the type field of the inode marked as “directory” instead of “regular file”). The directory has data blocks pointed to by the inode (and perhaps, indirect blocks); these data blocks live in the data block region of our simple file system. Our on-disk structure thus remains unchanged. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We should also note again that this simple linear list of directory entries is not the only way to store such information. As before, any data structure is possible. For example, XFS $\\left[ { \\mathsf { S } } { + } { 9 6 } \\right]$ stores directories in B-tree form, making file create operations (which have to ensure that a file name has not been used before creating it) faster than systems with simple lists that must be scanned in their entirety. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: FREE SPACE MANAGEMENT ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "There are many ways to manage free space; bitmaps are just one way. Some early file systems used free lists, where a single pointer in the super block was kept to point to the first free block; inside that block the next free pointer was kept, thus forming a list through the free blocks of the system. When a block was needed, the head block was used and the list updated accordingly. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Modern file systems use more sophisticated data structures. For example, SGI’s XFS $\\left[ { \\mathsf { S } } { + } { \\mathsf { 9 6 } } \\right]$ uses some form of a B-tree to compactly represent which chunks of the disk are free. As with any data structure, different timespace trade-offs are possible. ",
+        "page_idx": 9
+    }
+]

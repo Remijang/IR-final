@@ -1,0 +1,42 @@
+[
+    {
+        "type": "text",
+        "text": "11.2.4 The insert Operation ",
+        "text_level": 1,
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "In this section, we shall discuss the protocol to insert a block in a cache. This operation is invoked when a block arrives from a lower level. We need to first take a look at all the ways of the set that a given block is mapped to, and see if there are any empty entries. If there are empty entries then we can choose one of the entries arbitrarily, and populate it with the contents of the given block. If we do not find any empty entries, we need to invoke the replace and evict operations to choose and remove an already existing block from the set. ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "We need to maintain some extra status information to figure out if a given entry is empty or non-empty. In computer architecture parlance, these states are also known as invalid and valid, respectively. We need to store just 1 extra bit in the tag array to indicate the status of a block. It is known as the valid bit. We shall use the tag array for saving additional information regarding an entry, because it is smaller and typically faster than the data array. ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "The structure of an entry in the tag array with the addition of the valid bit is shown in Figure 11.11. ",
+        "page_idx": 529
+    },
+    {
+        "type": "image",
+        "img_path": "images/556b5638f1d46c1ca4490260394dac15adc260fe6245dacc1e4013abbfc8ed00.jpg",
+        "img_caption": [
+            "Figure 11.11: An entry in the tag array with the modified, and valid bits "
+        ],
+        "img_footnote": [],
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "The cache controller needs to check the valid bits of each of the tags while searching for invalid entries. Note that all the entries of a cache are invalid initially. If an invalid entry is found, then the corresponding entry in the data array can be populated with the contents of the block. The entry subsequently becomes valid. However, if there is no invalid entry, then we need to replace one entry with the given block that needs to be inserted into the cache. ",
+        "page_idx": 529
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 530
+    }
+]

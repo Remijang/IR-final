@@ -1,0 +1,78 @@
+[
+    {
+        "type": "text",
+        "text": "39.3 Creating Files ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "We’ll start with the most basic of operations: creating a file. This can be accomplished with the open system call; by calling open() and passing it the O CREAT flag, a program can create a new file. Here is some example code to create a file called “foo” in the current working directory: ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: THE C R E A T() SYSTEM CALL ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The older way of creating a file is to call creat(), as follows: ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "// option: add second flag to set permissions int fd $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ creat(\"foo\"); ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "You can think of creat() as open() with the following flags: O CREAT | O WRONLY | O TRUNC. Because open() can create a file, the usage of creat() has somewhat fallen out of favor (indeed, it could just be implemented as a library call to open()); however, it does hold a special place in UNIX lore. Specifically, when Ken Thompson was asked what he would do differently if he were redesigning UNIX, he replied: “I’d spell creat with an e.” ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The routine open() takes a number of different flags. In this example, the second parameter creates the file (O CREAT) if it does not exist, ensures that the file can only be written to (O WRONLY), and, if the file already exists, truncates it to a size of zero bytes thus removing any existing content (O TRUNC). The third parameter specifies permissions, in this case making the file readable and writable by the owner. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "One important aspect of open() is what it returns: a file descriptor. A file descriptor is just an integer, private per process, and is used in UNIX systems to access files; thus, once a file is opened, you use the file descriptor to read or write the file, assuming you have permission to do so. In this way, a file descriptor is a capability [L84], i.e., an opaque handle that gives you the power to perform certain operations. Another way to think of a file descriptor is as a pointer to an object of type file; once you have such an object, you can call other “methods” to access the file, like read() and write() (we’ll see how to do so below). ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "As stated above, file descriptors are managed by the operating system on a per-process basis. This means some kind of simple structure (e.g., an array) is kept in the proc structure on UNIX systems. Here is the relevant piece from the xv6 kernel $\\left[ \\mathrm { C K + } 0 8 \\right]$ : ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "struct proc { struct file \\*ofile[NOFILE]; // Open files   \n}; ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "A simple array (with a maximum of NOFILE open files), indexed by the file descriptor, tracks which files are opened on a per-process basis. Each entry of the array is actually just a pointer to a struct file, which will be used to track information about the file being read or written; we’ll discuss this further below. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "TIP: USE S T R A C E (AND SIMILAR TOOLS) ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The strace tool provides an awesome way to see what programs are up to. By running it, you can trace which system calls a program makes, see the arguments and return codes, and generally get a very good idea of what is going on. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The tool also takes some arguments which can be quite useful. For example, $- \\mathtt { f }$ follows any fork’d children too; -t reports the time of day at each call; $- \\in$ trace $: =$ open,close,read,write only traces calls to those system calls and ignores all others. There are many other flags; read the man pages and find out how to harness this wonderful tool. ",
+        "page_idx": 4
+    }
+]

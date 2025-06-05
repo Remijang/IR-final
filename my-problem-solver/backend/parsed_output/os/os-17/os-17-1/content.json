@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "17.1 Assumptions ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Most of this discussion will focus on the great history of allocators found in user-level memory-allocation libraries. We draw on Wilson’s excellent survey $\\ [ \\mathsf { W } + 9 5 ]$ but encourage interested readers to go to the source document itself for more details1. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We assume a basic interface such as that provided by malloc() and free(). Specifically, void \\*malloc(size t size) takes a single parameter, size, which is the number of bytes requested by the application; it hands back a pointer (of no particular type, or a void pointer in C lingo) to a region of that size (or greater). The complementary routine void free(void \\*ptr) takes a pointer and frees the corresponding chunk. Note the implication of the interface: the user, when freeing the space, does not inform the library of its size; thus, the library must be able to figure out how big a chunk of memory is when handed just a pointer to it. We’ll discuss how to do this a bit later on in the chapter. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The space that this library manages is known historically as the heap, and the generic data structure used to manage free space in the heap is some kind of free list. This structure contains references to all of the free chunks of space in the managed region of memory. Of course, this data structure need not be a list per se, but just some kind of data structure to track free space. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We further assume that primarily we are concerned with external fragmentation, as described above. Allocators could of course also have the problem of internal fragmentation; if an allocator hands out chunks of memory bigger than that requested, any unasked for (and thus unused) space in such a chunk is considered internal fragmentation (because the waste occurs inside the allocated unit) and is another example of space waste. However, for the sake of simplicity, and because it is the more interesting of the two types of fragmentation, we’ll mostly focus on external fragmentation. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We’ll also assume that once memory is handed out to a client, it cannot be relocated to another location in memory. For example, if a program calls malloc() and is given a pointer to some space within the heap, that memory region is essentially “owned” by the program (and cannot be moved by the library) until the program returns it via a corresponding call to free(). Thus, no compaction of free space is possible, which would be useful to combat fragmentation2. Compaction could, however, be used in the OS to deal with fragmentation when implementing segmentation (as discussed in said chapter on segmentation). ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Finally, we’ll assume that the allocator manages a contiguous region of bytes. In some cases, an allocator could ask for that region to grow; for example, a user-level memory-allocation library might call into the kernel to grow the heap (via a system call such as sbrk) when it runs out of space. However, for simplicity, we’ll just assume that the region is a single fixed size throughout its life. ",
+        "page_idx": 2
+    }
+]

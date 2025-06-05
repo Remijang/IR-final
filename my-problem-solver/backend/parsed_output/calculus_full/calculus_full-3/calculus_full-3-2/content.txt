@@ -1,0 +1,155 @@
+3.2 Maximum and Minimum Problems
+
+Our goal is to learn about  from  : We begin with two quick questions. If  is positive, what does that say about  If the slope is negative, how is that reflected in the function? Then the third question is the critical one:
+
+How do you identify a maximum or minimum? Normal answer: The slope is zero.
+
+This may be the most important application of calculus, to reach  :
+
+Take the easy q¡uestions first. Suppose  is positive for every  between  and  : All tangent lines slope upward. The function  is increasing as  goes from a to  .
+
+3B If  then  is increasing. ¡If  then f .x/ is decreasing.
+
+To define increasing a nd decreasing, look at any two points  : “Increasing” requires  : “Decreasing” requires  positive slope does not mean a positive function. The function itself can be positive or negative.
+
+EXAMPLE 1  has slope  : This slope is positive when  and negative when  : The function increases after  and decreases before  :
+
+Wesay that without computing  at any point! The parabola in Figure 3.3 goes down to its minimum at  and up again.
+
+EXAMPLE 2  has the same slope. Its graph is shifted up by 5, a number that disappears in  : All functions with slope  are parabolas  , shifted up or down according to  : Some parabolas cross the  axis (those crossings are solutions to  : Other parabolas stay above the axis. The solutions to  are complex numbers and we don’t see them. The special parabola  grazes the axis at  : It has a “double zero,” where  :
+
+EXAMPLE 3 Suppose  : This slope is positive beyond  and up to  at  ). And  is positive again between 2 and 3: At  , this slope is zero and  changes direction.
+
+Here  is a fifth-degree polynomial, because  is fourth-degree. The graph of  goes up-down-up-down-up. It might cross the  axis five times.  must cross at least once (like this one). When complex numbers are allowed, every fifth-degree polynomial has five roots.
+
+You may feel that “positive slope implies increasing function” is obvious—perhaps it is. But there is still something delicate. Starting from  at every single point, we have to deduce  at pairs of points. That is a “local to global” question, to be handled by the Mean Value Theorem. It could also wait for the Fundamental Theorem of Calculus: The difference  equals the area under the graph of  . That area is positive, so  exceeds  :
+
+MAXIMA AND MINIMA
+
+Which  makes  as large as possible? Where is the smallest  Without calculus we are reduced to computing values of  and comparing. With calculus, the information is in  :
+
+Suppose the maximum or minimum is at a particular point  : It is possible that the graph has a corner—and no derivative. But if  exists, it must be zero. The tangent line is level. The parabolas in Figure 3.3 change from decreasing to increasing. The slope changes from negative to positive. At this crucial point the slope is zero.
+
+3C Local Maximum or Minimum Suppose the maximum or minimum occurs at a point  inside an interval where  and  are defined. Then  :
+
+The word¡“local” allows the possibility that in ot¤her intervals,  goes hig¤her or lower. We only look near  , and we use the definition of  :
+
+Start with  : If  is the maximum, this difference is negative or zero. T he step  can be forward or backward¥:
+
+Both arguments apply. Both conclusions  and  are correct. Thus  :
+
+Maybe Richard Feynman said it best. He showed his friends a plastic curve that was made in a special way—“no matter how you turn it, the tangent at the lowest point is horizontal.” They checked it out. It was true.
+
+Surely You’re Joking, Mr. Feynman! is a good book (but rough on mathematicians).
+
+EXAMPLE 3 (continued) Look back at Figure 3.3b. The points that stand out are not the “ups” or “downs” but the “turns.” Those are stationary points, where  : We see two maxima and two minima. None of them are absolute maxima or minima, because  starts at  and ends at  :
+
+3.2 Maximum and Minimum Problems
+
+EXAMPLE 4  has slope  : That derivative is zero when  equals  , at the two points  and  : To decide between minimum and maximum (local or absolute), the first step is to evaluate  at these stationary points. We find  and  :
+
+Now look at large  : The function goes down to  in both directions. (You can mentally substitute  and  . For large  dominates  :
+
+Conclusion  is an absolute maximum.  is not a maximum or minimum (local or absolute). We have to recognize this exceptional possibility, that a curve (or a car) can pause for an instant .  / and continue in the same direction. The reason is the “double zero” in  , from its double factor  :
+
+EXAMPLE 5 Define  for  : Its derivative  is zero at  : At that point  is the minimum value. Every combination like  or  is larger than  : Figure 3.4 shows that the maximum of  is 
+
+Important The maximum always occurs at a stationary point (where  1 or a rough point (no derivative) or an endpoint of the domain. These are the three types of critical points. All maxima and minima occur at critical points! At every other point  or  : Here is the procedure:
+
+1. Solve  to find the stationary points  :   
+2. Compute  at every critical point—stationary point, rough point, endpoint.   
+3. Take the maximum and minimum of those critical values of  : EXAMPLE 6 (Absolute value  The minimum is zero at a rough point.   
+The maximum is at an endpoint. There are no stationary points.
+
+The derivative of  is never zero. Figure 3.4 shows the maximum and minimum on the interval  : This is typical of piecewise linear functions.
+
+Question Could the minimum be zero when the function never reaches  Answer Yes,  approaches but never reaches zero as  :
+
+Remark 1  and  are avoided when  is continuous on a closed interval  : Then  reaches its maximum and its minimum (Extreme Value Theorem). But  and  are too important to rule out. You test  by considering large  : You recognize  by going above every finite value.
+
+Remark 2 Note the difference between critical points (specified by  ) and critical values (specified by  . The example  had the minimum point  and the minimum value  :
+
+MAXIMUM AND MINIMUM IN APPLICATIONS
+
+To find a maximum or minimum, solve  : The slope is zero at the top and bottom of the graph. The idea is clear—and then check rough points and endpoints. But to be honest, that is not where the problem starts.
+
+In a real application, the first step (often the hardest) is to choose the unknown and find the function. It is we ourselves who decide on  and  : The equation  comes in the middle of the problem, not at the beginning. I will start on a new example, with a question instead of a function.
+
+EXAMPLE 7 Where should you get onto an expressway for minimum driving time, if the expressway speed is  and ordinary driving speed is  ?
+
+I know this problem well—it comes up every morning. The Mass Pike goes to MIT and I have to join it somewhere. There is an entrance near Route 128 and another entrance further in. I used to take the second one, now I take the first. Mathematics should decide which is faster—some mornings I think they are maxima.
+
+Most models are simplified, to focus on the key idea. We will allow the expressway to be entered at any point  (Figure 3.5). Instead of two entrances (a discrete problem) we have a continuous choice (a calculus problem). The trip has two parts, at speeds 30 and 60:
+
+a distance  up to the expressway, in  hours a distance  on the expressway, in  hours
+
+Problem Minimize 
+
+We have the function  : Now comes calculus. The first term uses the power rule: The deriva1tive of  is  : Here  has  :
+
+To solve  , multiply by 60 and square both sides:
+
+Thus  : This yields two candidates,  and  : But a negative  would mean useless driving on the expressway. In fact  is not zero at  : That false root entered when we squared  :
+
+I notice something surprising. The stationary point  does not depend on  : The total time includes the constant  , which disappeared in  : Somehow  must enter the answer, and this is a warning to go carefully. The minimum might occur at a rough point or an endpoint. Those are the other critical points of  , and our drawing may notabe realistic. Certainly we expect  , or we are entering the expressway beyond MIT.
+
+Continue with calculus. Compute the driving time  for an entrance at  :
+
+The square root of  is  : We combined  and divided by  : Is this station ary value  a minimum? You must look also at endpoints:
+
+The comparison  should be automatic. Entering at  was a candidate and calculus didn’t choose it. The derivative is not zero at  : It is not smart to go perpendicular to the expressway.
+
+The second comparison has  : We drive directly to MIT at speed 30: T|his option has to be taken seriously. In fact it is optimal when  is small or  is large.
+
+This choice  can arise mathematically in two ways. If all entrances are between 0 and  , then  is an endpoint. If we can enter beyond MIT, then  is a rough poin?t. The graph in Figure 3.5c has a corner at  , where the derivative jumps. The reas¤on is that distance on the expressway is the absolute value  never negative.
+
+Either way  is a critical point. The optimal  is the smaller of  and  .
+
+if  W stationary point wins, enter at  ; total time  if  W no stationary point, drive directly to MIT, time 
+
+The heart of this subject is in “word problems.” All the calculus is in a few lines, computing  and solving  : The formulation took longer. Step 1 usually does:
+
+1. Express the quantity to be minimized or maximized as a function  : The variable  has to be selected.
+
+2. Compute  , solve  , check critical points for  and 
+
+A picture of the problem (and the graph of  makes all the difference.
+
+EXAMPLE 7 (continued) Choose  as an angle instead of a distance. Figure 3.6 shows the triangle with angle  and side  : The driving distance to the expressway is  : The distance on the expressway is  tan  : Dividing by the speeds 30 and 60, the driving time has a nice form:
+
+The derivatives of sec  and tan  go into  :
+
+Now set  , divide by  , and multiply by  :
+
+This answer is beautiful. The angle  is  That optimal angle  radians) has sin  : The triangle with side  and hypotenuse  is a 30–60–90 right triangle.
+
+I don’t know whether you prefer  or trigonometry. The minimum is exactly as before—either at  or going directly to MIT.
+
+EXAMPLE 8 In mechanics, nat¡ure chooses minimum energy. A spring is pulled dow n by a mass, the energy is  , and  gives equilibrium. It is a philosophical question why so many laws of physics involve minimum energy or minimum time—which makes the mathematics easy.
+
+The energy has two terms—for the spring and the mass. The spring energy is  —positive in stretching  is downward) and also positive in compression  : The potential energy of the mass is taken as  —decreasing as the mass goes down. The balance is at the minimum of  :
+
+I apologize for giving you such a small problem, but it makes a crucial point. When  is quadratic, the equilibrium equation  is linear.
+
+Graphically,  is at the bottom of the parabola. Physically,  is a balance of forces—the spring force against the weight. Hooke’s law for the spring force is elastic constant  times displacement  :
+
+EXAMPLE 9 Derivative of cost  marginal cost (our first management example).
+
+The paper to print  copies of this book might cost  dollars. The derivative is  : This is the marginal cost of paper for each additional book. If  increases by one book, the cost  increases by  3$ : The marginal cost is like the velocity and the total cost is like the distance.
+
+Marginal cost is in doll ars per book. Total cost is in dollars. On the plus side, the income is  and the marginal income is  : To apply calculus, we overlook the restriction to whole numbers.
+
+Suppose the number of books increases by  The cost goes up by  : The income goes up by  : If we skip all other costs, then profit  income  cost  . In most cases  increases to a maximum and falls back.
+
+At the high point on the profit curve, the marginal profit is zero:
+
+Profit is maximized when marginal income  equals marginal cost  .
+
+This basic rule of economics comes directly from calculus, and we give an example:
+
+ setup cost 900, print cost  ; volume savings    
+ sales 600 per advertisement, subtract  for diminishing returns
+
+optimal decis 
+
+The next section shows how to verify that this profit is a maximum not a minimum. The first exercises ask you to solve  : Later exercises also look for  :

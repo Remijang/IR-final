@@ -1,0 +1,19 @@
+# 43.10 Determining Block Liveness  
+
+We address the mechanism first. Given a data block $D$ within an ondisk segment $S ,$ LFS must be able to determine whether $D$ is live. To do so, LFS adds a little extra information to each segment that describes each block. Specifically, LFS includes, for each data block $D$ , its inode number (which file it belongs to) and its offset (which block of the file this is). This information is recorded in a structure at the head of the segment known as the segment summary block.  
+
+Given this information, it is straightforward to determine whether a block is live or dead. For a block $D$ located on disk at address $\ A ,$ look in the segment summary block and find its inode number $N$ and offset $T$ . Next, look in the imap to find where $N$ lives and read $N$ from disk (perhaps it is already in memory, which is even better). Finally, using the offset $T _ { \cdot }$ , look in the inode (or some indirect block) to see where the inode thinks the Tth block of this file is on disk. If it points exactly to disk address $A$ , LFS can conclude that the block $D$ is live. If it points anywhere else, LFS can conclude that $D$ is not in use (i.e., it is dead) and thus know that this version is no longer needed. Here is a pseudocode summary:  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+(N, T) $\mathbf { \Sigma } = \mathbf { \Sigma }$ SegmentSummary[A];   
+inode $\mathbf { \Sigma } = \mathbf { \Sigma }$ Read(imap[N]);   
+if (inode[T] $\mathrm { ~  ~ \omega ~ } = \mathrm { ~  ~ \mathbb ~ { ~ A ~ } ~ }$ ) // block D is alive   
+else // block D is garbage  
+
+Here is a diagram depicting the mechanism, in which the segment summary block (marked $S S$ ) records that the data block at address $\mathbf { \nabla } A 0 \mathbf { \Omega }$ is actually a part of file $k$ at offset 0. By checking the imap for $k ,$ you can find the inode, and see that it does indeed point to that location.  
+
+![](images/e3d527656934c70a27e1864aa463f65226f13f54369b859a96ca4e023d16f8e3.jpg)  
+
+There are some shortcuts LFS takes to make the process of determining liveness more efficient. For example, when a file is truncated or deleted, LFS increases its version number and records the new version number in the imap. By also recording the version number in the on-disk segment, LFS can short circuit the longer check described above simply by comparing the on-disk version number with a version number in the imap, thus avoiding extra reads.  
+

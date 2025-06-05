@@ -1,0 +1,28 @@
+# 49.6 From Protocol To Distributed File System  
+
+Hopefully you are now getting some sense of how this protocol is turned into a file system across the client-side file system and the file server. The client-side file system tracks open files, and generally translates application requests into the relevant set of protocol messages. The server simply responds to protocol messages, each of which contains all of the information needed to complete the request.  
+
+For example, let us consider a simple application which reads a file. In the diagram (Figure 49.5), we show what system calls the application makes, and what the client-side file system and file server do in responding to such calls.  
+
+A few comments about the figure. First, notice how the client tracks all relevant state for the file access, including the mapping of the integer file descriptor to an NFS file handle as well as the current file pointer. This enables the client to turn each read request (which you may have noticed do not specify the offset to read from explicitly) into a properly-formatted read protocol message which tells the server exactly which bytes from the file to read. Upon a successful read, the client updates the current file position; subsequent reads are issued with the same file handle but a different offset.  
+
+Second, you may notice where server interactions occur. When the file is opened for the first time, the client-side file system sends a LOOKUP request message. Indeed, if a long pathname must be traversed (e.g., /home/remzi/foo.txt), the client would send three LOOKUPs: one to look up home in the directory /, one to look up remzi in home, and finally one to look up foo.txt in remzi.  
+
+Third, you may notice how each server request has all the information needed to complete the request in its entirety. This design point is critical to be able to gracefully recover from server failure, as we will now discuss in more detail; it ensures that the server does not need state to be able to respond to the request.  
+
+<html><body><table><tr><td>Client</td><td>Server</td></tr><tr><td>fd = open("/foo", ...), Send LOOKUP (rootdir FH, "foo")</td><td>Receive LOOKUP request look for "foo" in root dir return foo's FH + attributes</td></tr><tr><td>Receive LOOKUP reply allocate file desc in open file table store foo's FH in table store current file position (0) return file descriptor to application</td><td></td></tr><tr><td>read(fd, buffer, MAX); Index into open file table with fd get NFS file handle (FH) use current file position as offset Send READ (FH, offset=0, count=MAX)</td><td>Receive READ request use FH to get volume/inode num read inode from disk (or cache). compute block location (using offset)</td></tr><tr><td>Receive READ reply update file position (+bytes read) set current file position = MAX return data/error code to app</td><td>read data from disk (or cache) return data to client.</td></tr><tr><td colspan="2">read(fd, buffer, MAX); Same except offset=MAX and set current file position = 2*MAX</td></tr></table></body></html>  
+
+read(fd, buffer, MAX); Same except offse ${ \tt = } 2 ^ { * } \mathrm { M A X }$ and set current file position $= 3 ^ { * } \mathrm { M A X }$  
+
+# close(fd);  
+
+Just need to clean up local structures Free descriptor $\prime \prime \mathrm { f d } ^ { \prime \prime }$ in open file table (No need to talk to server)  
+
+Figure 49.5: Reading A File: Client-side And File Server Actions  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+TIP: IDEMPOTENCY IS POWERFUL  
+
+Idempotency is a useful property when building reliable systems. When an operation can be issued more than once, it is much easier to handle failure of the operation; you can just retry it. If an operation is not idempotent, life becomes more difficult.  
+

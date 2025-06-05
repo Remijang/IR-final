@@ -1,0 +1,111 @@
+[
+    {
+        "type": "text",
+        "text": "1.7.3 Towards a Modern Machine with Registers and Stacks ",
+        "text_level": 1,
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "Many extensions to the basic Von-Neumann machine have been proposed in literature. In fact this has been a hot field of study for the last half century. We discuss three important variants of Von Neumann machines that augment the basic model with registers, hardware stacks, and accumulators. The register-based design is by far the most commonly used today. However, some aspects of stack-based machines and accumulators have crept into modern register-based processors also. It would be worthwhile to take a brief look at them before we move on. ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "Von-Neumann Machine with Registers ",
+        "text_level": 1,
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "The term \u201cregister machine\u201d refers to a class of machines that in the most general sense contain an unbounded number of named storage locations called registers. These registers can be accessed randomly, and all instructions use register names as their operands. The CPU accesses the registers, fetches the operands, and then processes them. However, in this section, we look at a hybrid class of machines that augment a standard Von Neumann machine with registers. A register is a storage location that can hold a symbol. These are the same set of symbols that are stored in memory. For example, they can be integers. ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to motivate the use of registers. The memory is typically a very large structure. In modern processors, the entire memory can contain billions of storage locations. Any practical implementation of a memory of this size is fairly slow in practice. There is a general rule of thumb in hardware, \u201clarge is slow, and small is fast.\u201d Consequently, to enable fast operation, every processor has a small set of registers that can be quickly accessed. The number of registers is typically between 8 and 64. Most of the operands in arithmetic and branch operations are present in these registers. Since programs tend to use a small set of variables repeatedly at any point of time, using registers saves many memory accesses. However, it sometimes becomes necessary to bring in memory locations into registers or write back values in registers to memory locations. In those cases, we use dedicated load and store instructions that transfer values between memory and registers. Most programs have a majority of pure register instructions. The number of load and store instructions are typically about a third of the total number of executed instructions. ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "Let us give an example. Assume that we want to add the cubes of the numbers in the memory locations $b$ and $c$ , and we want to save the result in the memory location $a$ . A machine with registers would need the following instructions. Assume that $r 1$ , $r 2$ , and $r 3$ are the names of registers. Here, we are not using any specific ISA (the explanation is generic and conceptual). ",
+        "page_idx": 38
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 39
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { 1 \\colon { \\mathrm { ~ r ~ 1 ~ } } = { \\mathrm { ~ m e m ~ } } [ { \\mathrm { b } } ] \\qquad / / \\ { \\mathrm { ~ l ~ o a d ~ } } { \\mathrm { ~ b } } } \\\\ { 2 \\colon { \\mathrm { ~ r ~ 2 ~ } } = { \\mathrm { ~ m e m ~ } } [ { \\mathrm { c } } ] \\qquad / \\ \\langle \\ \\mathrm { ~ 1 ~ o a d ~ } { \\mathrm { ~ c } } } \\\\ { 3 \\colon { \\mathrm { ~ r ~ 3 ~ } } = { \\mathrm { ~ r ~ 1 ~ } } * { \\mathrm { ~ r ~ 1 ~ } } / \\ \\langle \\ \\mathrm { ~ c o m p u t e ~ } { \\mathrm { ~ b } } \\cdot 2 } \\\\ { 4 \\colon { \\mathrm { ~ r ~ 4 ~ } } = { \\mathrm { ~ r ~ 1 ~ } } * { \\mathrm { ~ r ~ 3 ~ } } \\notin \\ / \\ \\langle \\ \\mathrm { ~ c o m p u t e ~ } { \\mathrm { ~ b } } \\cdot 3 } \\\\ { 5 \\colon { \\mathrm { ~ r ~ 5 ~ } } = { \\mathrm { ~ r ~ 2 ~ } } * { \\mathrm { ~ r ~ 2 ~ } } \\ / \\ \\langle \\ \\mathrm { ~ c o m p u t e ~ } \\ { \\mathrm { ~ c } } \\cdot 2 } \\\\ { 6 \\colon \\ { \\mathrm { ~ r ~ 6 ~ } } = { \\mathrm { ~ r ~ 2 ~ } } * { \\mathrm { ~ r ~ 5 ~ } } \\ / \\ \\langle \\ \\mathrm { ~ c o m p u t e ~ } \\ { \\mathrm { ~ c } } \\cdot 3 } \\\\ { 7 \\colon { \\mathrm { ~ r ~ 7 ~ } } = { \\mathrm { ~ r 4 ~ } } + { \\mathrm { ~ r 6 ~ } } \\ / \\ \\langle \\ \\mathrm { ~ c o m p u t e ~ } { \\mathrm { ~ b } } \\cdot 3 * { \\mathrm { ~ c } } \\cdot 3 } \\\\ { 4 \\colon { \\mathrm { ~ m e m ~ } } [ { \\mathrm { a } } ] \\ = { \\mathrm { ~ r 7 ~ } } \\ / \\ \\langle \\ \\mathrm { ~ s a v e ~ } { \\mathrm { ~ t h e ~ } } { \\mathrm { ~ r e s u l t } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Here, mem is an array representing memory. We need to first load the values into registers, then perform arithmetic computations, and then save the result back in memory. We can see in this example that we are saving on memory accesses by using registers. If we increase the complexity of the computations, we will save on even more memory accesses. Thus, our execution with registers will get even faster. The resulting processor organization is shown in Figure 1.13. ",
+        "page_idx": 39
+    },
+    {
+        "type": "image",
+        "img_path": "images/36fa443386a20bcc23e70fa573e6ddbc7ba9bf69fffae0643af2399140c2396b.jpg",
+        "img_caption": [
+            "Figure 1.13: Von Neumann machine with registers "
+        ],
+        "img_footnote": [],
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "Von-Neumann Machine with a Hardware Stack ",
+        "text_level": 1,
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "A stack is a standard data structure that obeys the semantics \u2013 last in, first out. Readers are requested to look up a book on data structures such as [Lafore, 2002] for more information. A stack-based machine has a stack implemented in hardware. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "First, it is necessary to insert values from the memory into the stack. After that arithmetic functions operate on the top $k$ elements of the stack. These values get replaced by the result of the computation. For example, if the stack contains the values 1 and 2 at the top, they get removed and replaced by 3. Note that here arithmetic operations do not require any operands. If an add operation takes two operands, then they do not need to be explicitly specified. The operands are implicitly specified as the top two elements in the stack. Likewise, the location of the result also does not need to be specified. It needs to be inserted at the top of the stack. Even though, generating instructions for such a machine is difficult and flexibility is an issue, the instructions can be very compact. Most instructions other than load and store do not require any operands. We can thus produce very dense machine code. Systems in which the size of the program is an issue can use a stack-based organization. They are also easy to verify since they are relatively simpler systems. ",
+        "page_idx": 39
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "A stack supports two operations \u2013 push and pop. Push pushes an element to the top of the stack. Pop removes an element from the top of the stack. Let us now try to compute $w = x + y / z - u * v$ using a stack-based Von Neumann machine, we have: ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "1: push u // load u   \n2: push v // load v   \n3: multiply $/ / \\ u * \\tau$   \n4: push z // load y   \n5: push y // load z   \n6: divide // y/z   \n7: subtract // y/z - u\\*v   \n8: push x // load x   \n9: add // x + y/z - u\\*v   \n10: pop w // store result in w ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "It is clearly visible that scheduling a computation to work on a stack is difficult. There will be many redundant loads and stores. Nonetheless, machines that are meant to evaluate long mathematical expressions, and machines for which program size is an issue, typically opt for stacks. There are few practical implementations of stack-based machines such as Burroughs Large Systems, UCSD Pascal, and HP 3000 (classic). The Java language assumes a hypothetical stack-based machine during the process of compilation. Since a stack-based machine is simple, Java programs can virtually run on any hardware platform. When we run a compiled Java program, then the Java Virtual Machine(JVM) dynamically converts the Java program into another program that can run on a machine with registers. ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Accumulator-Based Machines ",
+        "text_level": 1,
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Accumulator-based machines use a single register called an accumulator. Each instruction takes a single memory location as an input operand. For example, an add operation adds the value in the accumulator to the value in the memory address and then stores the result back in the accumulator. Early machines in the fifties that could not accommodate a register file used to have accumulators. Accumulators were able to reduce the number of memory accesses and speed up the program. ",
+        "page_idx": 40
+    },
+    {
+        "type": "text",
+        "text": "Some aspects of accumulators have crept into the Intel x86 set of processors that are the most commonly used processors for desktops and laptops as of 2012. For multiplication and division of large numbers, these processors use the register eax as an accumulator. For other generic instructions, any register can be specified as an accumulator. ",
+        "page_idx": 40
+    }
+]

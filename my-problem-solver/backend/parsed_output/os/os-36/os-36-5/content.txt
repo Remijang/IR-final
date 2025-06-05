@@ -1,0 +1,10 @@
+36.5 More Efficient Data Movement With DMA
+Unfortunately, there is one other aspect of our canonical protocol that requires our attention. In particular, when using programmed I/O (PIO) to transfer a large chunk of data to a device, the CPU is once again overburdened with a rather trivial task, and thus wastes a lot of time and effort that could better be spent running other processes. This timeline illustrates the problem:  
+CPU11111ccc2222211Disk11111
+In the timeline, Process 1 is running and then wishes to write some data to the disk. It then initiates the ${ \mathrm { I } } / { \mathrm { O } } ,$ which must copy the data from memory to the device explicitly, one word at a time (marked $\mathrm { ~  ~ \bar { ~ } { ~ C ~ } ~ }$ in the diagram). When the copy is complete, the $\mathrm { I } / \mathrm { O }$ begins on the disk and the CPU can finally be used for something else.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+THE CRUX: HOW TO LOWER PIO OVERHEADS With PIO, the CPU spends too much time moving data to and from devices by hand. How can we offload this work and thus allow the CPU to be more effectively utilized?  
+The solution to this problem is something we refer to as Direct Memory Access (DMA). A DMA engine is essentially a very specific device within a system that can orchestrate transfers between devices and main memory without much CPU intervention.  
+DMA works as follows. To transfer data to the device, for example, the OS would program the DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to. At that point, the OS is done with the transfer and can proceed with other work. When the DMA is complete, the DMA controller raises an interrupt, and the OS thus knows the transfer is complete. The revised timeline:  
+ 
+From the timeline, you can see that the copying of data is now handled by the DMA controller. Because the CPU is free during that time, the OS can do something else, here choosing to run Process 2. Process 2 thus gets to use more CPU before Process 1 runs again.  

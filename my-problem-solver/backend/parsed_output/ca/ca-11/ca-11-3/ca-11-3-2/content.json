@@ -1,0 +1,117 @@
+[
+    {
+        "type": "text",
+        "text": "11.3.2 Cache Misses ",
+        "text_level": 1,
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Classification of Cache Misses ",
+        "text_level": 1,
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Let us first try to categorize the different kinds of misses in a cache. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "The first category of misses is known as compulsory misses or cold misses. These misses happen, when data is loaded into a cache for the first time. Since the data values are not there in the cache, a miss is bound to happen. The second category of cache misses are known as capacity misses. We have a capacity miss, when the amount of memory required by a program is more than the size of the cache. For example, let us assume that a program repeatedly accesses all the elements of an array. The size of the array is equal to 1 MB, and the size of the L2 cache is 512 KB. In this case, there will be capacity misses in the L2 cache, because it is too small to hold all the data. The set of blocks that a program accesses in a typical interval of time is known as its working set. We can thus alternatively say that capacity misses happen when the size of the cache is smaller than the working set of the program. Note that the definition of the working set is slightly imprecise because the length of the interval is considered rather subjectively. However, the connotation of the time interval is that it is a small interval compared to the total time of execution of the program. Nevertheless, it is large enough to ensure that the behavior of the system achieves a steady state. The last category of misses are known as conflict misses. These misses occur in direct mapped and set associative caches. Let us consider a 4 way set associative cache. If there are 5 blocks that map to the same set in the working set of a program, then we are bound to have cache misses. This is because the number of blocks accessed is larger than the maximum number of entries that can be part of a set. These misses are known as conflict misses. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Definition 107   \nThe memory locations accessed by a program in a short interval of time comprise the working set of the program at that point of time. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "The categorization of misses into these three categories \u2013 compulsory, capacity, and conflict \u2013 is also known as the three \u2019C\u2019s. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Reduction of the Miss Rate ",
+        "text_level": 1,
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "To sustain a high IPC, it is necessary to reduce the cache miss rate. We need to adopt different strategies to reduce the different kinds of cache misses. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "Let us start out with compulsory misses. We need a method to predict the blocks that will be accessed in the future, and fetch the blocks in advance. Typically, schemes that leverage spatial locality serve as effective predictors. Hence, increasing the block size should prove beneficial in reducing the number of compulsory misses. However, increasing the block size beyond a certain limit can have negative consequences also. It reduces the number of blocks that can be saved in a cache, and secondly the additional benefit might be marginal. Lastly, it will take more time to read and transfer bigger blocks from the lower levels of the memory system. Hence, designers avoid very large block sizes. Any value between 32-128 bytes is reasonable. ",
+        "page_idx": 537
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Modern processors typically have sophisticated predictors that try to predict the addresses of blocks that might be accessed in the future based on the current access pattern. They subsequently fetch the predicted blocks from the lower levels of the memory hierarchy in an attempt to reduce the miss rate. For example, if we are sequentially accessing the elements of a large array, then it is possible to predict the future accesses based on the access pattern. Sometimes we access elements in an array, where the indices differ by a fixed value. For example, we might have an algorithm that accesses every fourth element in an array. In this case also, it is possible to analyze the pattern and predict future accesses because the addresses of consecutive accesses differ by the same value. Such a unit is known as a hardware prefetcher. It is present in most modern processors, and uses sophisticated algorithms to \u201cprefetch\u201d blocks and consequently reduce the miss rate. Note that the hardware prefetcher should not be very aggressive. Otherwise, it will tend to displace more useful data from the cache than it brings in. ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Definition 108 ",
+        "text_level": 1,
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "A hardware prefetcher is a dedicated hardware unit that predicts the memory accesses in the near future, and fetches the corresponding data blocks from the lower levels of the memory system. ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider capacity misses. The only effective solution is to increase the size of the cache. Unfortunately, the cache design that we have presented in this book requires the size of the cache to be equal to a power of two (in bytes). It is possible to violate this rule by using some advanced techniques. However, by and large most of the caches in commercial processors have a size that is a power of two. Hence, increasing the size of a cache is tantamount to at least doubling its size. Doubling the size of a cache requires twice the area, slows it down, and increases the power consumption. Here again, prefetching can help if used intelligently and judiciously. ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "The classical solution to reduce the number of conflict misses is to increase the associativity of a cache. However, increasing the associativity of a cache increases the latency and power consumption of the cache also. Consequently, it is necessary for designers to carefully balance the additional hit rate of a set associative cache, with the additional latency. Sometimes, it is the case that there are conflict misses in a few sets in the cache. In this case, we can have a small fully associative cache known as the victim cache along with the main cache. Any block that is displaced from the main cache, can be written to the victim cache. The cache controller needs to first check the main cache, and if there is a miss, then it needs to check the victim cache, before proceeding to the lower level. A victim cache at level $i$ can thus filter out some of the requests that go to level $( i + 1 )$ . ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "Note that along with hardware techniques, it is possible to write programs in a \u201ccache friendly\u201d way. These methods can maximize temporal and spatial locality. It is also possible for the compiler to optimize the code for a given memory system. Secondly, the compiler can insert prefetching code such that blocks can be prefetched into the cache before they are actually used. Discussion of such techniques are beyond the scope of this book. ",
+        "page_idx": 538
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "Let us now quickly mention two rules of thumb. Note that these rules are found to approximately hold empirically, and are by no means fully theoretically justified. The first is known as the Square Root Rule [Hartstein et al., 2006]. It says that the miss rate is inversely proportional to the square root of the cache size. ",
+        "page_idx": 539
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathit { m i s s r a t e } \\propto \\frac { 1 } { \\sqrt { \\mathit { c a c h e s i z e } } } \\quad \\quad \\mathrm { [ S q u a r e R o o t R u l e ] }\n$$",
+        "text_format": "latex",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "Hartstein et al. [Hartstein et al., 2006] try to find a theoretical justification for this rule, and explain the basis of this rule by using results from probability theory. From their experimental results, they arrive at a generic version of this rule that says that the exponent of the cache size in the Square Root Rule varies from -0.3 to -0.7. ",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "The other rule is known as the \u201cAssociativity Rule\u201d. It states that the effect of doubling associativity is almost the same as doubling the cache size with the original associativity. For example, the miss rate of a 64 KB 4-way associative cache is almost the same as that of a 128 KB 2-way associative cache. ",
+        "page_idx": 539
+    },
+    {
+        "type": "text",
+        "text": "We would further like to caution the reader that the Associativity Rule and the Square Root Rule are just thumb rules, and do not hold exactly. They can be used as mere conceptual aids. We can always construct examples that violate these rules. ",
+        "page_idx": 539
+    }
+]

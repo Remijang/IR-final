@@ -1,0 +1,168 @@
+13.6 Maxima, Minima, and Saddle Points
+
+The outstanding equation of differential calculus is also the simplest:  : The slope is zero and the tangent line is horizontal. Most likely we are at the top or bottom of the graph—a maximum or a minimum. This is the point that the engineer or manager or scientist or investor is looking for—maximum stress or production or velocity or profit. With more variables in  and  ; the problem becomes more realistic. The question still is: How to locate the maximum and minimum?
+
+The answer is in the partial derivatives. When the graph is level, they are zero. Deriving the equations  and  is pure mathematics and pure pleasure. Applying them is the serious part. We watch out for saddle points, and also for a minimum at a boundary point—this section takes extra time. Remember the steps for  in one-variable calculus:
+
+1. The leading candidates are stationary points (where  .   
+2. The other candidates are rough points (no derivative) and endpoints  ).   
+3. Maximum vs. minimum is decided by the sign of the second derivative.
+
+In two dimensions, a stationary point requires  and  : The tangent line becomes a tangent plane. The endpoints  and  are replaced by a boundary curve. In practice boundaries contain about  of the minima and  of the work.
+
+Finally there are three second derivatives  ; and  : They tell how the graph bends away from the tangent plane—up at a minimum, down at a maximum, both ways at a saddle point. This will be determined by comparing  with  :
+
+STATIONARY POINT  HORIZONTAL TANGENT  ZERO DERIVATIVES
+
+Suppose  has a minimum at the point  . This may be an absolute minimum or only a local minimum. In both cases  near the point. For an absolute minimum, this inequality holds wherever  is defined. For a local minimum, the inequality can fail far away from  : The bottom of your foot is an absolute minimum, the end of your finger is a local minimum. We assume for now that  is an interior point of the domain of  At a boundary point, we cannot expect a horizontal tangent and zero derivatives.
+
+Main conclusion: At a minimum or maximum (absolute or local) a nonzero derivative is impossible. The tangent plane would tilt. In some direction  would decrease. Note that the minimum point is  ; and the minimum value is 
+
+13J If derivatives exist at an interior minimum or maximum, they are zero:  (1) For a function  of three variables, add the third equation  :
+
+The reasoning goes back to the one-variable case. That is because we look along the lines  and  : The minimum of  is at the point where the lines meet. So this is also the minimum along each line separately.
+
+Moving in the  direction along  ; we find  : Moving in the  direction,  at the same point. The slope in every direction is zero. In other words grad  :
+
+Graphically,  is the low point of the surface  : Both cross sections in Figure 13.16 touch bottom. The phrase “if derivatives exist” rules out the vertex of a cone, which is a rough point. The absolute value  has a minimum without  ; and so does the distance  : The rough point is  :
+
+EXAMPLE 1 Minimize the quadratic  : To locate the minimum (or maximum), set  and  :
+
+Notice what’s important: There are two equations for two unknowns  and  . Since  is quadratic, the equations are linear. Their solution is  (the stationary point). This is actually a minimum, but to prove that you need to read further.
+
+The constant 1 affects the minimum value  —but not the minimum point. The graph shifts up by 1: The linear terms  affect  and  : They move the minimum away from  : The quadratic part  makes the surface curve upwards. Without that curving part, a plane has its minimum and maximum at boundary points.
+
+EXAMPLE 2 (Steiner’s problem) Find the point tahat is nearest to three given points.
+
+This example is worth your attention. We are locating an airport close to three cities. Or we are choosing a house close to three jobs. The problem is to get as near as possible to the corners of a triangle. The best point depends on the meaning of “near.”
+
+The distance to the first corner  is  : The distances to the other corners  and  are  and  : Depending on whether cost equals (distance) or .distance/2 or  , our problem will be:
+
+The second problem is the easiest, when  and  and  are quadratics:
+
+Solving  gives  : Then  gives   : The best point is the centroid of the triangle (Figure 13.17a). It is the nearest point to the corners when the cost is .distance/2: Note how squaring makes the derivatives linear. Least squares dominates an enormous part of applied mathematics.
+
+The real “Steiner problem” is to minimize  : We are laying down Broad Bs from the corners, with cost proportional to length. The equations  and  look complicated because of square roots. But the nearest point in Figure 13.17b has a remarkable property, which you will appreciate.
+
+CBalculus takes derivativeBs of  : The  derivative leaves  : Divide both sides by  :
+
+This gradient is a unit vector. The sum of  and  is  1: This was already in Section 13.4: Distance increases with slope 1 away from the center. The gradient of  (call it  ) is a unit vector from the center point  :
+
+Similarly the gradients of  and  are unit vectors  and  : They point directly away from the other corners of the triangle. The total cost is  ; so we add the gradients. The equations  and  combine into the vector equation
+
+The three unit vectors add to zero! Moving away from one corner brings us closer to another. The nearest point to the three corners is where those movements cancel. This is the meaning of “grad  at the minimum.”
+
+It is unusual for three unit vectors to add to zero—this can only happen in one way. The three directions must form angles of  : The best point has this property, which is repeated in Figure 13.18a. The unit vectors cancel each other. At the “Steiner point,” the roads to the corners make  angles. This optimal point solves the problem, except for one more possibility.
+
+The other possibility is a minimum at a rough point. The graph of the distance function  is a cone. It has a sharp point at the center  : All three corners of the triangle are rough points for  ; so all of them are possible minimizers.
+
+Suppose the angle at a corner exceeds  : Then there is no Steiner point. Inside the triangle, the angle would become even wider. The best point must be a rough point—one of the corners. The winner is the corner with the wide angle. In the figure that means  : Then the sum  comes from the two shortest edges.
+
+Summary The solution is at a  point or a wide-angle corner. That is the theory.   
+The real problem is to compute the Steiner point—which I hope you will do.
+
+Remark 1 Steiner’s problem for four points is surprising. We don’t minimize  —there is a better problem. Connect the four points with roads, minimizing their total length, and allow the roads to branch. A typical solution is in Figure 13.18c. The angles at the branch points are  : There are at most two branBch  pBoints (two less thanthe number of corners).
+
+Remark 2 For other powers  ; t hBe cost is  : The  derivative is
+
+The key equations are still  and  : Solving them requires a computer and an algorithm. To share the work fairly, I will supply the algorithm (Newton’s method) if you supply the computer. Seriously, this is a terrific example. It is typical of real problems—we know  and  but not the point where they are zero. You can calculate that nearest point, which changes as  changes. You can also discover new mathematics, about how that point moves. I will collect all replies I receive to Problems 38 and 39:
+
+MINIMUM OR MAXIMUM ON THE BOUNDARY
+
+Steiner’s problem had no boundaries. The roads could go anywhere. But most applications have restrictions on  and  ; like  or  or  : The minimum with these restrictions is probably higher than the absolute minimum. There are three possibilities:
+
+.1/ stationary point  .2/ rough point .3/ boundary point
+
+That third possibility requires us to maximize or minimize  along the boundary.
+
+EXAMPLE 3 Minimize  in the half-plane  0:
+
+The minimum in Example 1 was  : It occurred at  : This point is still allowed. It satisfies the restriction  : So the minimum is not moved.
+
+EXAMPLE 4 Minimize the same  restricted to the lower half-plane  :
+
+Now the absolute minimum at  is not allowed. There are no rough points. We look for a minimum on the boundary line  in Figure 13.19a. Set  ; so  depends only on  : Then choose the best  :
+
+The minimum is at  and  ; where  : This is up from  :
+
+EXAMPLE 5 Minimize the same  on or outside the circle  :
+
+One possibility is  and  : But this is at  ; inside the circle. The other possibility is a minimum at aboundary point, on the circle.
+
+To follow this boundary we can set  : The function  gets complicated, and  is worse. There is a way to avoid square roots: Set  and  : Then  is a function of the angle  :
+
+Now  locates a minimum or maximum along the boundary. The first factor .  / is zero when  : The second factor is zero when cos  ; or  : Those points on the circle are the candidates. Problem 24 sorts them out, and Section 13.7 finds the minimum in a new way—using “Lagrange multipliers.” Minimization on a boundary is a serious problem—it gets difficult quickly—and multipliers are ultimately the best solution.
+
+MAXIMUM VS. MINIMUM VS. SADDLE POINT
+
+How to separate the maximum from the minimum? When possible, try all candidates and decide. Compute  at every stationary point and other critical point (maybe also out at infinity), and compare. Calculus offers another approach, based on second derivatives.
+
+With one variable the second derivative test was simple:  at a minimum,  at an inflection point,  at a m¡aximum. This¡is a local test, which may not give a global answer. But it decides whether the slope is increasing (bottom of the graph) or decreasing (top of the graph). We now find a similar test for  :
+
+The new test involves all three second derivatives. It applies where  and  : The tangent plane is horizontal. We ask whether the graph of  goes above or below that plane. The tests  and  guarantee a minimum in the  an dB  direcBtion sB, but there are other directions.
+
+EXAMPLE 6  has  ;  ;  (minimum or not?)
+
+All second derivatives are positive—but wait and see. The stationary point is  ; where  and  are both zero. Our function is the sum of  ; which goes upward, and  which has a saddle. The second derivatives must decide whether  or  is stronger.
+
+Along the  axis, where  and  ; our point is at the bottom. The minimum in the  direction is at  : Similarly for the  direction. But  is not  minimum point for the whole function, because of  :
+
+Try  : Then  ; which is negative. The graph goes below the  plane in that direction. The stationary point at  is a saddle point.
+
+EXAMPLE 7  has  (minimum or not?)
+
+The second derivatives 2; 1; 2 are again positive. The graph curves up in the  and  directions. But there is a big difference from Example 6:  is reduced from 10 to 1: It is the size of  (not its sign!) that makes the difference. The extra terms  in Example 1 moved the stationary point to  : The second derivatives are still 2¡; 1; 2; and they pass the tes t for a minimum:
+
+For a direct proof, split  into two parts by “completing the square:”
+
+That algebra can be checked (notice the  ). It is the conclusion that’s important:
+
+if  and  ; both parts are positive: minimum at  if  and  ; both parts are negative: maximum at  if  ; the parts have opposite signs: saddle point at  :
+
+Since the test involves the square of  ; its sign has no importance. Example 6 had  and a saddle point.Example 7 had  and a minimum. Reversing to  yields a maximum. So does  :
+
+Now comes the final step, from  to a general function  : For all functions, quadratics or not, it is the second order terms that we test.
+
+EXAMPLE 8  has a stationary point at  :
+
+The first derivatives are  and sin  ; both zero. The second derivatives are  and  and  : We only use the derivatives at the stationary point. The first derivatives are zero, so the second order terms come to the front in the series for  :
+
+There is a minimum at the origin. The quadratic part  goes upward. The  and  terms are too small to protest. Eventually those terms get large, but near a stationary point it is the quadratic that counts. We didn’t need the whole series, because from  and  we knew it would start with  :
+
+13L The test in 13K applies to the second derivatives  of any  at any stationary point. At all points the test decides whether the graph is concave up, concave down, or “indefinite.”
+
+EXAMPLE 9  has  and  : The stationary point is  :
+
+The second derivatives at that point are  ; and  : The test  makes this a saddle point. Look at the infinite series:
+
+No linear term because  : The origin is a stationary point. No  or  term (only  ): The stationary point is a saddle point.
+
+At  we find  . The graph is concave up at that point—but it’s not a minimum since the first derivatives are not zero.
+
+The series begins with the constant term—not important. Then come the linear terms—extremely important. Those terms are decided by first derivatives, and they give the tangent plane. It is only at stationary points—when the linear part disappears and the tangent plane is horizontal—that second derivatives take over. Around any basepoint, these constant-linear-quadratic terms are the start of the Taylor series.
+
+THE TAYLOR SERIES
+
+We now put together the whole infinite series. It is a “Taylor series”—which means it is a power series that matches all derivatives of  (at the basepoint). For one variable, the powers were  when the basepoint was 0: For two variables, the powers are  times  when the basepoint is  : Chapter 10 multiplied the nth derivative  by  Š Now every mixed derivative  is computed at the basepoint (subscript  ).
+
+We multiply those numbers by  to match each derivative of  :
+
+13M When the baBsepoint is  ; the TayBlor series is Ba Bdouble sum  : The term  has the same mixed derivative at  as  : The seriesBis
+
+The derivatives of this series agree with the derivatives of  at the basepoint.
+
+The first three terms are the linear approximation to  : They give the tangent plane at the basepoint. The  term has  and  ; so  : The  term has  ; and  : The quadratic p art  is in control when the linear part is zero.
+
+EXAMPLE 10 All derivatives of  equal one at the origin. The Taylor series is
+
+This happens to have  ; the special case that was omitted in 13M and 13N.  is the two-dimensional version of an inflection point. The second derivatives fail to decide the concavity. When  ; the decision is passed up to the higher derivatives. But in ordinary practice, the Taylor series is stopped after the quadratics.
+
+If the basepoint moves to  ; the powers become  —and all derivatives are computed at this new basepoint.
+
+Final questionW How would you compute a minimum numerically? One good way is to solve  and  : These are the functions  and  of Newton’s method (Section 13.3). At the current point  ; the derivatives of  and  give linear equations for the steps  and  : Then the nextpoint   comes from those steps. The input is  ; the output is the new point, and the linear equations are
+
+When the sBeco nBd derivatives of  are Bavailable, use Newton’s method.
+
+When the problem is too complicated to go beyond first derivatives, here is an alternative—steepest descent. The goal is to move down the graph of  ; like a boulder rolling down a mountain. The steepest direction at any point is given by the gradient, with a minus sign to go down instead of up. So move in the direction  and  :
+
+The question is: How far to move? Like a boulder, a steep start may not aim directly toward the minimum. The stepsize  is monitored, to end the step when the function  starts upward again (Problem 54). At the end of each step, compute first derivatives and start again in the new steepest direction.

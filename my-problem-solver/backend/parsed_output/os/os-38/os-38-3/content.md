@@ -1,0 +1,12 @@
+# 38.3 How To Evaluate A RAID  
+
+As we will soon see, there are a number of different approaches to building a RAID. Each of these approaches has different characteristics which are worth evaluating, in order to understand their strengths and weaknesses.  
+
+Specifically, we will evaluate each RAID design along three axes. The first axis is capacity; given a set of $N$ disks each with $B$ blocks, how much useful capacity is available to clients of the RAID? Without redundancy, the answer is ${ \dot { N } } \cdot B$ ; in contrast, if we have a system that keeps two copies of each block (called mirroring), we obtain a useful capacity of $( N \cdot B ) / 2$ . Different schemes (e.g., parity-based ones) tend to fall in between.  
+
+The second axis of evaluation is reliability. How many disk faults can the given design tolerate? In alignment with our fault model, we assume only that an entire disk can fail; in later chapters (i.e., on data integrity), we’ll think about how to handle more complex failure modes.  
+
+Finally, the third axis is performance. Performance is somewhat challenging to evaluate, because it depends heavily on the workload presented to the disk array. Thus, before evaluating performance, we will first present a set of typical workloads that one should consider.  
+
+We now consider three important RAID designs: RAID Level 0 (striping), RAID Level 1 (mirroring), and RAID Levels 4/5 (parity-based redundancy). The naming of each of these designs as a “level” stems from the pioneering work of Patterson, Gibson, and Katz at Berkeley $\scriptstyle { \left[ { \mathrm { P } } + 8 8 \right] }$ .  
+

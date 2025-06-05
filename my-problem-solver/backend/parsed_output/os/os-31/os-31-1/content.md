@@ -1,0 +1,41 @@
+# 31.1 Semaphores: A Definition  
+
+A semaphore is an object with an integer value that we can manipulate with two routines; in the POSIX standard, these routines are sem wait() and sem post()1. Because the initial value of the semaphore determines its behavior, before calling any other routine to interact with the semaphore, we must first initialize it to some value, as the code in Figure 31.1 does.  
+
+1 #include <semaphore.h>   
+2 sem_t s;   
+3 sem_init(&s, 0, 1);  
+
+In the figure, we declare a semaphore s and initialize it to the value 1 by passing 1 in as the third argument. The second argument to sem init() will be set to 0 in all of the examples we’ll see; this indicates that the semaphore is shared between threads in the same process. See the man page for details on other usages of semaphores (namely, how they can be used to synchronize access across different processes), which require a different value for that second argument.  
+
+After a semaphore is initialized, we can call one of two functions to interact with it, sem wait() or sem post(). The behavior of these two functions is seen in Figure 31.2.  
+
+For now, we are not concerned with the implementation of these routines, which clearly requires some care; with multiple threads calling into sem wait() and sem post(), there is the obvious need for managing these critical sections. We will now focus on how to use these primitives; later we may discuss how they are built.  
+
+We should discuss a few salient aspects of the interfaces here. First, we can see that sem wait() will either return right away (because the value of the semaphore was one or higher when we called sem wait()), or it will cause the caller to suspend execution waiting for a subsequent post. Of course, multiple calling threads may call into sem wait(), and thus all be queued waiting to be woken.  
+
+Second, we can see that sem post() does not wait for some particular condition to hold like sem wait() does. Rather, it simply increments the value of the semaphore and then, if there is a thread waiting to be woken, wakes one of them up.  
+
+Third, the value of the semaphore, when negative, is equal to the number of waiting threads [D68b]. Though the value generally isn’t seen by users of the semaphores, this invariant is worth knowing and perhaps can help you remember how a semaphore functions.  
+
+1 int sem_wait(sem_t \*s) {   
+2 decrement the value of semaphore s by one   
+3 wait if value of semaphore s is negative   
+4 }   
+5   
+6 int sem_post(sem_t \*s) {   
+7 increment the value of semaphore s by one   
+8 if there are one or more threads waiting, wake one   
+9 }  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+1 sem_t m;   
+2 sem_init(&m, 0, X); // init to X; what should X be?   
+3   
+4 sem_wait(&m);   
+5 // critical section here   
+6 sem_post(&m);  
+
+Don’t worry (yet) about the seeming race conditions possible within the semaphore; assume that the actions they make are performed atomically. We will soon use locks and condition variables to do just this.  
+

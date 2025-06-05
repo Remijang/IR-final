@@ -1,0 +1,127 @@
+8.1 Areas and Volumes by Slices
+
+This section starts with areas between curves. Then it moves to volumes, where the strips become slices. We are weighing a loaf of bread by adding the weights of the slices. The discussion is dominated by examples and figures—the theory is minimal. The real problem is to set up the right integral. At the end we look at a different way of cutting up volumes, into thin shells. All formulas are collected into final table.
+
+Figure 8.1 shows the area between two curves. The upper curve is the graph of  : The lower curve is the graph of  : The strip height is   ; from one curve down to the other. The width is  (speaking informally again). The total area is the integral of “top minus bottom”:
+
+EXAMPLE 1 The upper curve is  (straight line). The lower curve is  (parabola). The area lies between the points where those curves intersect.
+
+One crossing is at  ; the other is at  : The area isan integral from 0 to 2:
+
+EXAMPLE 2 Find the area between the circle  and the  line   :
+
+First question: Which area and what limits ? Start with the pie-shaped wedge in Figure 8.1b. The area begins at the  axis and ends where the circle meets the line. At the intersection point we have  :
+
+from  squaring gives  and then  :
+
+Thus  : The endpoint is at  : Now integrate the strip height  :
+
+The area is  (one eighth of the circle). To integrate  we apply the techniques of Chap?ter 7: Set  ; convert to  ; convert back using  : It is harder than expected, for a familiar shape.
+
+Remark Suppose the problem is to find the whole area between the circle and the line. The figure shows  at two points, which are  (already used) and also  : Instead of starting at  ; which gave  of a circle, we now include the area to the left.
+
+Main point: Integrating from  to  will give the wrong answer. It misses the part of the circle that bulges out over itself, at the far left. In that part, the strips have height  instead of  : The figure is essential, to get the correct area of this half-circle.
+
+HORIZONTAL STRIPS INSTEAD OF VERTICAL STRIPS
+
+There is more than one way to slice a region. Vertical slices give  integrals. Horizontal slices give  integrals. We have a free choice, and sometimes the  integral is better.
+
+Figure 8.2 shows a unit parallelogram, with base 1 and height 1: To find its area from vertical slices, three separate integrals are necessary. You should see why! With horizontal slices of length 1 and thickness  ; the area is just  :
+
+EXAMPLE 3 Find the area under  (or beyond  ) out to  :
+
+The  integral from vertical slices is in Figure  . The  integral is in Figure 8.2d. The area is a choice between two equal integrals (I personally would choose  ):
+
+8.1 Areas and Volumes by Slices
+
+VOLUMES BY SLICES
+
+For the first time in this book, we now look at volumes. The regions are three-dimensional solids. There are three coordinates  —and many ways to cut up a solid.
+
+Figure 8.3 shows one basic way—using slices. The slices have thickness  ; like strips in the plane. Instead of the height  of a strip, we now have the area  of  cross-section. This area is different for different slices:  depends on  : The volume of the slice is its area times its thickness:  : The volume of the whole solid is the integral:
+
+Note An actual slice does not have the same area on both sides! Its thickness is  . Its volume is approximately  (but not exactly). In the limit, the thickness approaches zero and the sum of volumes approaches the integral.
+
+For a cylinder all slices are the same. Figure 8.3b shows a cylinder—not circular. The area is a fixed number  ; so integration is trivial. The volume is  times  . The letter  ; which stands for height, reminds us that the cylinder often stands on its end. Then the slices are horizontal and the  integral or  integral goes from 0 to  :
+
+When the cross-section is a circle, the cylinder has volume  :
+
+EXAMPLE 4 The triangular wedge in Figure 8.3b has constant cross-sections with area  : The volume is  :
+
+EXAMPLE 5 For the triangular pyramid in Figure 8.3c, the area  drops from 6 to 0: It is a general rule for pyramids or cones that their volume has an extra factor  (comparedto cylinders). The volume is now  instead of  : For a cone with base area  ; the volume is  : Tapering the area to zero leaves only  of the volume.
+
+Why the»  Triangles s»liced from the pyramid have shorter sides. Starting from 3 and 4; the side lengths  and  dropto zero at  : The area is  : Notice: The side lengths go down linearly, the area drops quadratically. The factor  really comes from integrating  to get  :
+
+EXAMPLE 6 A half-sphere of radius  has known volume  : Its cross-sections are semicircles. The key relation is  ; for the right triangle in Figure 8.4a. The area of the semicircle is  : So we integrate  :
+
+EXAMPLE 7 Find the volume of the same half-sphere using horizontal slices (Figure 8.4b). The sphere still has radius  : The new right triangle gives   : Since we have full circles the area is  : Notice that this is  not  : But the  integral starts at zero:
+
+SOLIDS OF REVOLUTION
+
+Cones and spheres and circular cylinders are “solids of revolution.” Rotating a horizontal line around the  axis gives a cylinder. Rotating a sloping line gives a cone. Rotating a semicircle gives a sphere. If a circle is moved away from the axis, rotation produces a torus (a doughnut). The»rotation of any»curve  produces a solid of revolution.
+
+The volume of that solid is made easier because every cross-section is a circle. All slices are pancakes (or pizz?as). Rotating the cu?rve  around the  axis gives disks of radius  ; so the area is  : We add the slices:
+
+EXAMPLE 8 Rotating  with  prod?uces a “headlight” (Figure 8.5a):
+
+If the same curve is rotated around the  axis, it makes a champagne glass. The slices are horizontal. The area of a slice is  not  : When  this area is  : Integrating from  to  gives the champagne volume  :
+
+EXAMPLE 9 The headlight has a hole down the center (Figure 8.5b). Volume 
+
+The hole has radius  of the  solid is removed, up to the point where  reaches 1: After that, from  to  ; each cross-section is a disk with a hole. The disk has radius  and the hole has radius  : The slice is a flat ring or a “washer.” Its area is the full disk minus the area of the hole:
+
+This is the area  in the method of washers. Its integral is thevolume:
+
+Please notice: The washer area is not  . It is  :
+
+EXAMPLE 10 (Doughnut sliced into washers) Rotate a circle of radius  around the  axis. The center of the circle stays out at a distance  : Show that the volume of the dou?ghnut (or torus) is  :
+
+The outside half of the circle rotates to give the outside of the doughnut. The inside half gives the hole. The baiggest slice (through thae center plane) has oauter radius  and inner radius  :
+
+Shifting over by  ; the outer radius is  and the inner radius is  : Figure 8.5c shows a slice (a washer) with area  :
+
+Now integrate over the washers to find the volume of the doughnut:
+
+That integral  is the area of a semicircle. When we set  sin  the area is  : Not for the last time do we meet  :
+
+The hardest part is visualizing the washers, because a doughnut usually breaks the other way. A better description is a bagel, sliced the long way to be buttered.
+
+VOLUMES BY CYLINDRICAL SHELLS
+
+Finally we look at a different way of cutting up a solid of revolution. So far it was cut into slices. The slices were perpendicular to the axis of revolution. Now the cuts are parallel to the axis, and each piece is a thin cylindrical shell. The new formula gives the same volume, but the integral to be computed might be easier.
+
+Figure 8.6a shows a solid cone. A shell is inside it. The inner radius is  and the outer radius is  : The shell is an outer cylinder minus an inner cylinder:
+
+The term that matters is  : The shell volume is essentially  (the distance around) times  (the thickness) times  (the height). The volume of the solid comes from putting together the thin shells:
+
+This is the central formula of the shell method. The rest is examples.
+
+Remark on this volume formula It is completely typical of integration that  and  disappear. The reason is this. The number of shells grows like  : Terms of order  add up to a volume of order  (approaching zero). The linear term involving  or  is the one to get right. Its limit gives the integral  : The key is to build the solid out of shells—and to find the area or volume of each piece.
+
+EXAMPLE 11 Find the volume of a cone (base area  ; height  ) cut into shells.
+
+A tall shell at the center has  near  : A short shell at the outside has  near zero. In between the shell height  decreases linearly, reaching zero at  : The height in Figure 8.6a is  : Integrating over all shells gives the volume of the cone (with the expected  ):
+
+EXAMPLE 12 Bore a hole of radius  through a sp?here of radius  :
+
+The hole removes all points out to  ; where the shells begin. The height of the shell is  : (The key is the right triangle inFigure 8.6b. The height upward is  —this is half the he?ight of the shell.) Therefore the sphere-withhole has
+
+With  we almost see  : Multiplying  is an extra factor  :
+
+We can find limits on  ; or we can put back  :
+
+If  (the hole is as big as the sphere) this volume is zero. If  (no hole) we have  for the complete sphere.
+
+Question What if the sphere-with-hole is cut into slices instead of shells ? Answer Horizontal slices are washers (Problem 66). Vertical slices are not good.
+
+EXAMPLE 13 »R?otate the parabola  around the  ?axis to form a bowl.
+
+We go out to  (andup to  ). Theshells in Figure 8.6c have height  : The bowl (or paraboloid) is the same as the headlight in Example 8, but we have shells not slices:
+
+Which to use, slices or shells ? Start with a vertical line going up to  : Rotating the line around the  axis produces a slice (a circular disk). The radius is cos  : Rotating the line around the  axis produces a shell (the outside of a cylinder). The height is cos  : See Figure 8.7 for the slice and the shell. For volumes we just integrate  (the slice volume) or  (the shell volume).
+
+This is the normal choice—slices through the  axis and shells around the  axis. Then  gives the disk radius and the shell height. The slice is a washer instead of a disk if there is also an inner radius  : No problem—just integrate small volumes.
+
+What if you use slices for rotation around the  axis ? The disks are in Figure 8.7b, and their radius is  : This is  in the example. It is  in general. You have to solve  to find  in terms of  : Similarly for shells around the  axis: The length of the shell is  : Integrating may be difficult or impossible.
+
+When  is rotated around the  axis, here are the choices for volume:

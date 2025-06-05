@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "28.9 Compare-And-Swap ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Another hardware primitive that some systems provide is known as the compare-and-swap instruction (as it is called on SPARC, for example), or compare-and-exchange (as it called on $\\times 8 6$ ). The C pseudocode for this single instruction is found in Figure 28.4. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The basic idea is for compare-and-swap to test whether the value at the address specified by ptr is equal to expected; if so, update the memory location pointed to by ptr with the new value. If not, do nothing. In either case, return the original value at that memory location, thus allowing the code calling compare-and-swap to know whether it succeeded or not. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "With the compare-and-swap instruction, we can build a lock in a manner quite similar to that with test-and-set. For example, we could just replace the lock() routine above with the following: ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "1 void lock(lock_t \\*lock) {   \n2 while (CompareAndSwap(&lock->flag, 0, 1) == 1)   \n3 ; // spin   \n4 } ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The rest of the code is the same as the test-and-set example above. This code works quite similarly; it simply checks if the flag is 0 and if so, atomically swaps in a 1 thus acquiring the lock. Threads that try to acquire the lock while it is held will get stuck spinning until the lock is finally released. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "If you want to see how to really make a C-callable $\\times 8 6$ -version of compare-and-swap, the code sequence (from [S05]) might be useful2. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Finally, as you may have sensed, compare-and-swap is a more powerful instruction than test-and-set. We will make some use of this power in the future when we briefly delve into topics such as lock-free synchronization [H91]. However, if we just build a simple spin lock with it, its behavior is identical to the spin lock we analyzed above. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 10
+    }
+]

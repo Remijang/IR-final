@@ -1,0 +1,37 @@
+7.4.5 Programmable Logic Arrays
+
+It turns out that we can make a combinational logic circuit out of a memory cell similar to a PROM cell very easily. Such devices are known as programmable logic arrays, or PLAs. PLAs are used to implement complex logic functions consisting of tens or hundreds of minterms in practice. The advantage of a PLA over a hardwired circuit made up of logic gates is that a PLA is flexible. We can change the Boolean logic implemented by the PLA at run time. In comparison, a circuit made in silicon can never change its logic. Secondly, designing and programming a PLA is simpler, and there are a lot of software tools to design and work with PLAs. Lastly, a PLA can have multiple outputs, and it can thus implement multiple Boolean functions very easily. This additional flexibility comes at a cost, and the cost is performance.
+
+Let us now consider an example. Let us assume that we wish to implement the Boolean function  using a PLA. Let us break the Boolean expression into a set of minterms (see Section 2.1.6). We thus have:
+
+Since, we have three variables  , and  ) here, we have 8 possible minterms. Let us thus have a PLA with 8 rows that generates the values of all the possible minterms. Let each row correspond to a minterm. Let us design the PLA in such a way that a row has an output equal to 1 if the corresponding minterm evaluates to 1. We can compute the result of the entire Boolean expression by computing the logical OR of the values of all the minterms that we are interested in. For this specific example  , we are interested in 3 out of 8 minterms.
+
+Hence, we need a mechanism to filter these 3 minterms and compute a logical OR of their values.
+
+Let us start out with the design of a PLA cell.
+
+PLA Cell
+
+The PLA cell shown in Figure 7.34(a) is in principle similar to a basic PROM cell. If the value (  ) at the gate is equal to 1, then the NMOS transistor is in the ON state. As a result of this, the voltage difference between the source and drain terminals of the NMOS transistor is very small. In other words, we can simplistically assume that the voltage of the result line is equal to the voltage of the signal,  . If (  ), the NMOS transistor is in the OFF state. The result line is floating, and it maintains its precharged voltage. In this case, we propose to infer a logical 1.
+
+Let us now construct a row of PLA cells where each PLA cell is connected to an input wire at its source terminal as shown in Figure 7.34(b). The inputs are numbered  . The drains of all the NMOS transistors are connected to the result line. The gates of the transistors of the PLA cells are connected to a set of enable signals,  . If any of the enable signals is equal to 0, then that specific transistor is disabled, and we can think of it as being logically removed from the PLA array.
+
+Let us consider all the PLA cells that are enabled (gate voltage is equal to a logical 1). If any of the source inputs  is equal to 0, then the voltage of the result line will be driven to 0. We assume that we precharge the result line to a voltage corresponding to logical 1 at the beginning. Now, if none of the input voltages is equal to 0, then the value of the result line will be equal to a logical 1. We can thus conclude that the Boolean function computed by a row of PLA cells is equal to  (assuming that all the cells are enabled). For example, if we want to compute the value of the minterm,  , then we need to set  ,  ,  , and  . The Boolean value represented by the result line will be equal to  .
+
+In this manner, we can evaluate the values of all the minterms by connecting the source terminals of PLA cells to the input bits. Up till now we have not considered the case of Boolean variables in minterms in their complemented form such as  . For the minterm,  , we need to make the following connections. We need to connect 4 PLA cells to the result line, where their source terminals are connected to the signals  ,  ,  , and  , respectively. We need to generate,  , and  by complementing the values of  and  using inverters.
+
+Array of PLA Cells
+
+Let us now create an array of PLA cells as shown in Figure 7.35. Each row corresponds to a minterm. For our 3 variable example, each row consists of 6 columns. We have 2 columns for each variable (original and complemented). For example, the first two columns correspond to  and  , respectively. In any row, only one of these two columns contains a PLA cell. This is because  and  cannot both be true at the same time. In the first row, we compute the value of the minterm,  . Hence, the first row contains PLA cells in the columns corresponding to  ,  , and  . We make similar connections in the rest of the rows for the remaining minterms. This part of the PLA array is known as the AND plane because we are computing a logical AND of the values (original or complemented) of variables. The AND plane of the PLA array is independent of the Boolean functions that we wish to compute. Given the inputs, it calculates the value of all possible minterms.
+
+Now, we need to compute the logical OR of the minterms that we are interested in. For example, in Equation 7.12, we are interested in the logical OR of 3 minterms. To compute the OR function, we use another PLA array known as the OR plane. However, there is a small problem here. A row of PLA cells is designed to compute a logical AND of all the inputs. We can use DeMorgan’s theorem to compute the OR of inputs using a PLA array. Let us use the following relationship:
+
+Thus, to compute the logical OR of  , we need to complement each input, compute the logical AND of all the complemented inputs, and compute the complement of the result. A similar computation needs to be performed in the OR plane of the PLA array. In Figure 7.35, we have inverters to compute the logical negation of each minterm. Then, we compute their logical AND using a column of PLA cells (similar to a row of PLA cells). In this case, only the PLA cells that correspond to minterms in the Boolean expression need to be enabled (shown as an arrow in Figure 7.35). The rest of the PLA cells in each column are disabled. Finally, we compute the logical negation of the result line, to get the value of the Boolean function.
+
+Note that we can have multiple output lines in the OR plane, and thus we can compute the values of multiple Boolean functions in parallel. In Figure 7.35 we also compute the value of  in the second output line. For the result lines, and the output lines, we assume an array of sense amplifiers that perform appropriate voltage conversions. For the sake of simplicity, we do not show them in the figure.
+
+The important point to remember here is that the OR plane is programmable. As shown in Figure 7.35, we compute the logical OR of a set of result lines by setting the gate voltage of the connecting PLA cell to a logical 1. At any point of time, we can change the connections to the output lines by changing the gate voltages, and we can thus change the Boolean expression that is computed by the PLA.
+
+Way Point 4
+
+We have assembled the arsenal required to implement circuits to perform complex arithmetic operations. Using our set of logic gates, flip-flops, memories, and arithmetic circuits(to be studied in Chapter 8), we are ready to implement a full-fledged processor.

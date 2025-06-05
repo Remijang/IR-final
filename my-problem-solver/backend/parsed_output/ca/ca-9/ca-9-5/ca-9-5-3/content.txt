@@ -1,0 +1,9 @@
+9.5.3 Register File
+
+We had combined the decode unit and the register file, into one unit called the operand fetch unit of the hardwired processor. However, we prefer to keep the register file separate in the microprogrammed processor. This is because in the hardwired processor it was accessed right after decoding the instruction. However, this might not be the case in the microprogrammed processor. It might need to be accessed possibly several times during the execution of an instruction.
+
+The register file has two source registers – regSrc, and regData. The regSrc register contains the number of the register that needs to be accessed. In the case of a write operation, the  register contains the value to be written. The args values are directly read from the bus. They contain the commands to the register file. We assume that there are dedicated wires in the shared bus to carry the arguments (args) values. They take different values, where each value corresponds to a unique operation of a unit. The value 00...0 is a distinguished value that corresponds to a nop (no operation).
+
+The arguments to the register file, are very simple – read, write, and nop. If the args specify a write operation, then the value in regData is written to the register specified by the regSrc register. If a read operation is specified, then the register specified by regSrc is read and its value is stored in the register, regV al (register value).
+
+To access the register file it is thus necessary to write the number of the register to the regSrc register, write the value to be written to the regData register if required, and finally specify the appropriate arguments. The assumption is that after 1 cycle the operation is complete. In the case of a read operation, the value is available in the regV al register.

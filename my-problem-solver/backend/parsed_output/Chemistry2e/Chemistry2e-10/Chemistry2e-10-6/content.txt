@@ -1,0 +1,576 @@
+10.6 Lattice Structures in Crystalline Solids
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Describe the arrangement of atoms and ions in crystalline structures • Compute ionic radii using unit cell dimensions • Explain the use of X-ray diffraction measurements in determining crystalline structures
+
+Over  of naturally occurring and man-made solids are crystalline. Most solids form with a regular arrangement of their particles because the overall attractive interactions between particles are maximized, and the total intermolecular energy is minimized, when the particles pack in the most efficient manner. The regular arrangement at an atomic level is often reflected at a macroscopic level. In this module, we will explore some of the details about the structures of metallic and ionic crystalline solids, and learn how these structures are determined experimentally.
+
+The Structures of Metals
+
+We will begin our discussion of crystalline solids by considering elemental metals, which are relatively simple because each contains only one type of atom. A pure metal is a crystalline solid with metal atoms packed closely together in a repeating pattern. Some of the properties of metals in general, such as their malleability and ductility, are largely due to having identical atoms arranged in a regular pattern. The different properties of one metal compared to another partially depend on the sizes of their atoms and the specifics of their spatial arrangements. We will explore the similarities and differences of four of the most common metal crystal geometries in the sections that follow.
+
+Unit Cells of Metals
+
+The structure of a crystalline solid, whether a metal or not, is best described by considering its simplest repeating unit, which is referred to as its unit cell. The unit cell consists of lattice points that represent the locations of atoms or ions. The entire structure then consists of this unit cell repeating in three dimensions, as illustrated in Figure 10.46.
+
+Let us begin our investigation of crystal lattice structure and unit cells with the most straightforward structure and the most basic unit cell. To visualize this, imagine taking a large number of identical spheres, such as tennis balls, and arranging them uniformly in a container. The simplest way to do this would be to make layers in which the spheres in one layer are directly above those in the layer below, as illustrated in Figure 10.47. This arrangement is called simple cubic structure, and the unit cell is called the simple cubic unit cell or primitive cubic unit cell.
+
+In a simple cubic structure, the spheres are not packed as closely as they could be, and they only “fill” about  of the volume of the container. This is a relatively inefficient arrangement, and only one metal (polonium, Po) crystallizes in a simple cubic structure. As shown in Figure 10.48, a solid with this type of arrangement consists of planes (or layers) in which each atom contacts only the four nearest neighbors in its layer; one atom directly above it in the layer above; and one atom directly below it in the layer below. The number of other particles that each particle in a crystalline solid contacts is known as its coordination number. For a polonium atom in a simple cubic array, the coordination number is, therefore, six.
+
+In a simple cubic lattice, the unit cell that repeats in all directions is a cube defined by the centers of eight atoms, as shown in Figure 10.49. Atoms at adjacent corners of this unit cell contact each other, so the edge length of this cell is equal to two atomic radii, or one atomic diameter. A cubic unit cell contains only the parts of these atoms that are within it. Since an atom at a corner of a simple cubic unit cell is contained by a total of eight unit cells, only one-eighth of that atom is within a specific unit cell. And since each simple cubic unit cell has one atom at each of its eight “corners,” there is  atom within one simple cubic unit cell.
+
+EXAMPLE 10.14
+
+Calculation of Atomic Radius and Density for Metals, Part 1
+
+The edge length of the unit cell of alpha polonium is  .
+
+(a) Determine the radius of a polonium atom.   
+(b) Determine the density of alpha polonium.
+
+Solution
+
+Alpha polonium crystallizes in a simple cubic unit cell:
+
+(a) Two adjacent Po atoms contact each other, so the edge length of this cell is equal to two Po atomic radii:   Therefore, the radius of Po is 
+
+(b) Density is given by  The density of polonium can be found by determining the density of its unit cell (the mass contained within a unit cell divided by the volume of the unit cell). Since a Po unit cell contains one-eighth of a Po atom at each of its eight corners, a unit cell contains one Po atom.
+
+The mass of a Po unit cell can be found by:
+
+ The volume of a Po unit cell can be found by:
+
+(Note that the edge length was converted from pm to cm to get the usual volume units for density.) Therefore, the density of 
+
+Check Your Learning
+
+The edge length of the unit cell for nickel is  . The density of Ni is  . Does nickel crystallize in a simple cubic structure? Explain.
+
+Answer:
+
+No. If Ni was simple cubic, its density would be given by:   
+   
+   
+Since the actual density of Ni is not close to this, Ni does not form a simple cubic structure.
+
+Most metal crystals are one of the four major types of unit cells. For now, we will focus on the three cubic unit cells: simple cubic (which we have already seen), body-centered cubic unit cell, and face-centered cubic unit cell—all of which are illustrated in Figure 10.50. (Note that there are actually seven different lattice systems, some of which have more than one type of lattice, for a total of 14 different types of unit cells. We leave the more complicated geometries for later in this module.)
+
+Some metals crystallize in an arrangement that has a cubic unit cell with atoms at all of the corners and an atom in the center, as shown in Figure 10.51. This is called a body-centered cubic (BCC) solid. Atoms in the corners of a BCC unit cell do not contact each other but contact the atom in the center. A BCC unit cell contains two atoms: one-eighth of an atom at each of the eight corners  atom from the corners) plus one atom from the center. Any atom in this structure touches four atoms in the layer above it and four atoms in the layer below it. Thus, an atom in a BCC structure has a coordination number of eight.
+
+Atoms in BCC arrangements are much more efficiently packed than in a simple cubic structure, occupying about  of the total volume. Isomorphous metals with a BCC structure include K, Ba, Cr, Mo, W, and Fe at room temperature. (Elements or compounds that crystallize with the same structure are said to be isomorphous.)
+
+Many other metals, such as aluminum, copper, and lead, crystallize in an arrangement that has a cubic unit cell with atoms at all of the corners and at the centers of each face, as illustrated in Figure 10.52. This arrangement is called a face-centered cubic (FCC) solid. A FCC unit cell contains four atoms: one-eighth of an atom at each of the eight corners  atom from the corners) and one-half of an atom on each of the six faces  atoms from the faces). The atoms at the corners touch the atoms in the centers of the adjacent faces along the face diagonals of the cube. Because the atoms are on identical lattice points, they have identical environments.
+
+Atoms in an FCC arrangement are packed as closely together as possible, with atoms occupying  of the volume. This structure is also called cubic closest packing (CCP). In CCP, there are three repeating layers of hexagonally arranged atoms. Each atom contacts six atoms in its own layer, three in the layer above, and three in the layer below. In this arrangement, each atom touches 12 near neighbors, and therefore has a coordination number of 12. The fact that FCC and CCP arrangements are equivalent may not be immediately obvious, but why they are actually the same structure is illustrated in Figure 10.53.
+
+Because closer packing maximizes the overall attractions between atoms and minimizes the total intermolecular energy, the atoms in most metals pack in this manner. We find two types of closest packing in simple metallic crystalline structures: CCP, which we have already encountered, and hexagonal closest packing (HCP) shown in Figure 10.54. Both consist of repeating layers of hexagonally arranged atoms. In both types, a second layer (B) is placed on the first layer (A) so that each atom in the second layer is in contact with three atoms in the first layer. The third layer is positioned in one of two ways. In HCP, atoms in the third layer are directly above atoms in the first layer (i.e., the third layer is also type A), and the stacking consists of alternating type A and type B close-packed layers (i.e., ABABAB⋯). In CCP, atoms in the third layer are not above atoms in either of the first two layers (i.e., the third layer is type C), and the stacking consists of alternating type A, type B, and type C close-packed layers (i.e., ABCABCABC⋯). About two–thirds of all metals crystallize in closest-packed arrays with coordination numbers of 12. Metals that crystallize in an HCP structure include Cd, Co, Li, Mg, Na, and Zn, and metals that crystallize in a CCP structure include Ag, Al, Ca, Cu, Ni, Pb, and Pt.
+
+EXAMPLE 10.15
+
+Calculation of Atomic Radius and Density for Metals, Part 2
+
+Calcium crystallizes in a face-centered cubic structure. The edge length of its unit cell is  .
+
+(a) What is the atomic radius of Ca in this structure? (b) Calculate the density of Ca.
+
+Solution
+
+(a) In an FCC structure, Ca atoms contact each other across the diagonal of the face, so the length of the diagonal is equal to four Ca atomic radii  . Two adjacent edges and the diagonal of the face form a right triangle, with the length of each side equal to  and the length of the hypotenuse equal to four Ca atomic radii:
+
+Solving this gives 
+
+(b) Density is given by The density of calcium can be found by determining the density of its unit cell: for example, the mass contained within a unit cell divided by the volume of the unit cell. A facecentered Ca unit cell has one-eighth of an atom at each of the eight corners  atom) and one-half of an atom on each of the six faces  atoms), for a total of four atoms in the unit cell.
+
+The mass of the unit cell can be found by:
+
+1  The volume of a Ca unit cell can be found by:
+
+(Note that the edge length was converted from pm to cm to get the usual volume units for density.) Then, the density of 
+
+Check Your Learning
+
+Silver crystallizes in an FCC structure. The edge length of its unit cell is  .
+
+(a) What is the atomic radius of Ag in this structure? (b) Calculate the density of Ag.
+
+Answer:
+
+(a) 144 pm; (b) 10.5 g/cm3
+
+In general, a unit cell is defined by the lengths of three axes (a,  and  and the angles  , and  between them, as illustrated in Figure 10.55. The axes are defined as being the lengths between points in the space lattice. Consequently, unit cell axes join points with identical environments.
+
+There are seven different lattice systems, some of which have more than one type of lattice, for a total of fourteen different unit cells, which have the shapes shown in Figure 10.56.
+
+The Structures of Ionic Crystals
+
+Ionic crystals consist of two or more different kinds of ions that usually have different sizes. The packing of these ions into a crystal structure is more complex than the packing of metal atoms that are the same size.
+
+Most monatomic ions behave as charged spheres, and their attraction for ions of opposite charge is the same in every direction. Consequently, stable structures for ionic compounds result (1) when ions of one charge are surrounded by as many ions as possible of the opposite charge and (2) when the cations and anions are in contact with each other. Structures are determined by two principal factors: the relative sizes of the ions and the ratio of the numbers of positive and negative ions in the compound.
+
+In simple ionic structures, we usually find the anions, which are normally larger than the cations, arranged in a closest-packed array. (As seen previously, additional electrons attracted to the same nucleus make anions larger and fewer electrons attracted to the same nucleus make cations smaller when compared to the atoms from which they are formed.) The smaller cations commonly occupy one of two types of holes (or interstices) remaining between the anions. The smaller of the holes is found between three anions in one plane and one anion in an adjacent plane. The four anions surrounding this hole are arranged at the corners of a tetrahedron, so the hole is called a tetrahedral hole. The larger type of hole is found at the center of six anions (three in one layer and three in an adjacent layer) located at the corners of an octahedron; this is called an octahedral hole. Figure 10.57 illustrates both of these types of holes.
+
+Depending on the relative sizes of the cations and anions, the cations of an ionic compound may occupy tetrahedral or octahedral holes, as illustrated in Figure 10.58. Relatively small cations occupy tetrahedral holes, and larger cations occupy octahedral holes. If the cations are too large to fit into the octahedral holes, the anions may adopt a more open structure, such as a simple cubic array. The larger cations can then occupy the larger cubic holes made possible by the more open spacing.
+
+There are two tetrahedral holes for each anion in either an HCP or CCP array of anions. A compound that crystallizes in a closest-packed array of anions with cations in the tetrahedral holes can have a maximum cation:anion ratio of 2:1; all of the tetrahedral holes are filled at this ratio. Examples include  ,  , Li2S, and  . Compounds with a ratio of less than 2:1 may also crystallize in a closest-packed array of anions with cations in the tetrahedral holes, if the ionic sizes fit. In these compounds, however, some of the tetrahedral holes remain vacant.
+
+EXAMPLE 10.16
+
+Occupancy of Tetrahedral Holes
+
+Zinc sulfide is an important industrial source of zinc and is also used as a white pigment in paint. Zinc sulfide crystallizes with zinc ions occupying one-half of the tetrahedral holes in a closest-packed array of sulfide ions. What is the formula of zinc sulfide?
+
+Solution
+
+Because there are two tetrahedral holes per anion (sulfide ion) and one-half of these holes are occupied by zinc ions, there must be  or 1, zinc ion per sulfide ion. Thus, the formula is ZnS.
+
+Check Your Learning
+
+Lithium selenide can be described as a closest-packed array of selenide ions with lithium ions in all of the tetrahedral holes. What it the formula of lithium selenide?
+
+Answer:
+
+Li2Se
+
+The ratio of octahedral holes to anions in either an HCP or CCP structure is 1:1. Thus, compounds with cations in octahedral holes in a closest-packed array of anions can have a maximum cation:anion ratio of 1:1. In NiO, MnS, NaCl, and KH, for example, all of the octahedral holes are filled. Ratios of less than 1:1 are observed when some of the octahedral holes remain empty.
+
+EXAMPLE 10.17
+
+Stoichiometry of Ionic Compounds
+
+Sapphire is aluminum oxide. Aluminum oxide crystallizes with aluminum ions in two-thirds of the octahedral holes in a closest-packed array of oxide ions. What is the formula of aluminum oxide?
+
+Solution
+
+Because there is one octahedral hole per anion (oxide ion) and only two-thirds of these holes are occupied, the ratio of aluminum to oxygen must be  :1, which would give  The simplest whole number ratio is 2:3, so the formula is  .
+
+Check Your Learning
+
+The white pigment titanium oxide crystallizes with titanium ions in one-half of the octahedral holes in a closest-packed array of oxide ions. What is the formula of titanium oxide?
+
+Answer:
+
+TiO2
+
+In a simple cubic array of anions, there is one cubic hole that can be occupied by a cation for each anion in the array. In CsCl, and in other compounds with the same structure, all of the cubic holes are occupied. Half of the cubic holes are occupied in  ,  ,  , and  .
+
+Different types of ionic compounds often crystallize in the same structure when the relative sizes of their ions and their stoichiometries (the two principal features that determine structure) are similar.
+
+Unit Cells of Ionic Compounds
+
+Many ionic compounds crystallize with cubic unit cells, and we will use these compounds to describe the general features of ionic structures.
+
+When an ionic compound is composed of cations and anions of similar size in a 1:1 ratio, it typically forms a simple cubic structure. Cesium chloride, CsCl, (illustrated in Figure 10.59) is an example of this, with  and  having radii of  and  , respectively. We can think of this as chloride ions forming a simple cubic unit cell, with a cesium ion in the center; or as cesium ions forming a unit cell with a chloride ion in the center; or as simple cubic unit cells formed by  ions overlapping unit cells formed by  ions. Cesium ions and chloride ions touch along the body diagonals of the unit cells. One cesium ion and one chloride ion are present per unit cell, giving the l:l stoichiometry required by the formula for cesium chloride. Note that there is no lattice point in the center of the cell, and CsCl is not a BCC structure because a cesium ion is not identical to a chloride ion.
+
+We have said that the location of lattice points is arbitrary. This is illustrated by an alternate description of the CsCl structure in which the lattice points are located in the centers of the cesium ions. In this description, the cesium ions are located on the lattice points at the corners of the cell, and the chloride ion is located at the center of the cell. The two unit cells are different, but they describe identical structures.
+
+When an ionic compound is composed of a 1:1 ratio of cations and anions that differ significantly in size, it typically crystallizes with an FCC unit cell, like that shown in Figure  . Sodium chloride, NaCl, is an example of this, with  and  having radii of  and  , respectively. We can think of this as chloride ions forming an FCC cell, with sodium ions located in the octahedral holes in the middle of the cell edges and in the center of the cell. The sodium and chloride ions touch each other along the cell edges. The unit cell contains four sodium ions and four chloride ions, giving the 1:1 stoichiometry required by the formula, NaCl.
+
+FIGURE 10.60 Ionic compounds with anions that are much larger than cations, such as NaCl, usually form an FCC structure. They can be described by FCC unit cells with cations in the octahedral holes.
+
+The cubic form of zinc sulfide, zinc blende, also crystallizes in an FCC unit cell, as illustrated in Figure 10.61. This structure contains sulfide ions on the lattice points of an FCC lattice. (The arrangement of sulfide ions is identical to the arrangement of chloride ions in sodium chloride.) The radius of a zinc ion is only about  of the radius of a sulfide ion, so these small  ions are located in alternating tetrahedral holes, that is, in one half of the tetrahedral holes. There are four zinc ions and four sulfide ions in the unit cell, giving the empirical formula ZnS.
+
+A calcium fluoride unit cell, like that shown in Figure 10.62, is also an FCC unit cell, but in this case, the cations are located on the lattice points; equivalent calcium ions are located on the lattice points of an FCC lattice. All of the tetrahedral sites in the FCC array of calcium ions are occupied by fluoride ions. There are four calcium ions and eight fluoride ions in a unit cell, giving a calcium:fluorine ratio of 1:2, as required by the chemical formula,  . Close examination of Figure 10.62 will reveal a simple cubic array of fluoride ions with calcium ions in one half of the cubic holes. The structure cannot be described in terms of a space lattice of points on the fluoride ions because the fluoride ions do not all have identical environments. The orientation of the four calcium ions about the fluoride ions differs.
+
+Calculation of Ionic Radii
+
+If we know the edge length of a unit cell of an ionic compound and the position of the ions in the cell, we can calculate ionic radii for the ions in the compound if we make assumptions about individual ionic shapes and contacts.
+
+EXAMPLE 10.18
+
+Calculation of Ionic Radii
+
+The edge length of the unit cell of LiCl (NaCl-like structure, FCC) is  or  . Assuming that the lithium ion is small enough so that the chloride ions are in contact, as in Figure  , calculate the ionic radius for the chloride ion.
+
+Note: The length unit angstrom,  , is often used to represent atomic-scale dimensions and is equivalent to  .
+
+Solution
+
+On the face of a LiCl unit cell, chloride ions contact each other across the diagonal of the face:
+
+Drawing a right triangle on the face of the unit cell, we see that the length of the diagonal is equal to four chloride radii (one radius from each corner chloride and one diameter—which equals two radii—from the chloride ion in the center of the face), so  . From the Pythagorean theorem, we have:
+
+which yields:
+
+Solving this gives:
+
+Check Your Learning
+
+The edge length of the unit cell of KCl (NaCl-like structure, FCC) is  . Assuming anion-cation contact along the cell edge, calculate the radius of the potassium ion. The radius of the chloride ion is  .
+
+Answer:
+
+The radius of the potassium ion is 
+
+It is important to realize that values for ionic radii calculated from the edge lengths of unit cells depend on numerous assumptions, such as a perfect spherical shape for ions, which are approximations at best. Hence, such calculated values are themselves approximate and comparisons cannot be pushed too far. Nevertheless, this method has proved useful for calculating ionic radii from experimental measurements such as X-ray crystallographic determinations.
+
+ -Ray Crystallography
+
+The size of the unit cell and the arrangement of atoms in a crystal may be determined from measurements of the difractionof X-rays by the crystal, termed X-ray crystallography. Diffraction is the change in the direction of travel experienced by an electromagnetic wave when it encounters a physical barrier whose dimensions are comparable to those of the wavelength of the light. X-rays are electromagnetic radiation with wavelengths about as long as the distance between neighboring atoms in crystals (on the order of a few Å).
+
+When a beam of monochromatic X-rays strikes a crystal, its rays are scattered in all directions by the atoms within the crystal. When scattered waves traveling in the same direction encounter one another, they undergo interference, a process by which the waves combine to yield either an increase or a decrease in amplitude (intensity) depending upon the extent to which the combining waves’ maxima are separated (see Figure  .
+
+When X-rays of a certain wavelength,  , are scattered by atoms in adjacent crystal planes separated by a distance,  , they may undergo constructive interference when the difference between the distances traveled by the two waves prior to their combination is an integer factor,  , of the wavelength. This condition is satisfied when the angle of the diffracted beam,  is related to the wavelength and interatomic distance by the equation:
+
+This relation is known as the Bragg equation in honor of W. H. Bragg, the English physicist who first explained this phenomenon. Figure 10.64 illustrates two examples of diffracted waves from the same two crystal planes. The figure on the left depicts waves diffracted at the Bragg angle, resulting in constructive interference, while that on the right shows diffraction and a different angle that does not satisfy the Bragg condition, resulting in destructive interference.
+
+LINK TO LEARNING
+
+Visit this site (http://openstax.org/l/16bragg) for more details on the Bragg equation and a simulator that allows you to explore the effect of each variable on the intensity of the diffracted wave.
+
+An X-ray diffractometer, such as the one illustrated in Figure 10.65, may be used to measure the angles at which X-rays are diffracted when interacting with a crystal as described earlier. From such measurements, the Bragg equation may be used to compute distances between atoms as demonstrated in the following example exercise.
+
+EXAMPLE 10.19
+
+Using the Bragg Equation
+
+In a diffractometer, X-rays with a wavelength of  were used to produce a diffraction pattern for copper. The first order diffraction  ) occurred at an angle  . Determine the spacing between the diffracting planes in copper.
+
+Solution
+
+The distance between the planes is found by solving the Bragg equation,  , for  .
+
+This gives: 
+
+Check Your Learning
+
+A crystal with spacing between planes equal to  diffracts X-rays with a wavelength of 0.147 nm. What is the angle for the first order diffraction?
+
+Answer: 
+
+Portrait of a Chemist
+
+X-ray Crystallographer Rosalind Franklin
+
+The discovery of the structure of DNA in 1953 by Francis Crick and James Watson is one of the great achievements in the history of science. They were awarded the 1962 Nobel Prize in Physiology or Medicine, along with Maurice Wilkins, who provided experimental proof of DNA’s structure. British chemist Rosalind Franklin made invaluable contributions to this monumental achievement through her work in measuring X-ray diffraction images of DNA. Early in her career, Franklin’s research on the structure of coals proved helpful to the British war effort. After shifting her focus to biological systems in the early 1950s, Franklin and doctoral student Raymond Gosling discovered that DNA consists of two forms: a long, thin fiber formed when wet (type “B”) and a short, wide fiber formed when dried (type “A”). Her X-ray diffraction images of DNA (Figure 10.66) provided the crucial information that allowed Watson and Crick to confirm that DNA forms a double helix, and to determine details of its size and structure. Franklin also conducted pioneering research on viruses and the RNA that contains their genetic information, uncovering new information that radically changed the body of knowledge in the field. After developing ovarian cancer, Franklin continued to work until her death in 1958 at age 37. Among many posthumous recognitions of her work, the Chicago Medical School of Finch University of Health Sciences changed its name to the Rosalind Franklin University of Medicine and Science in 2004, and adopted an image of her famous X-ray diffraction image of DNA as its official university logo.
+
+Key Terms
+
+adhesive force force of attraction between molecules of different chemical identities   
+amorphous solid (also, noncrystalline solid) solid in which the particles lack an ordered internal structure   
+body-centered cubic (BCC) solid crystalline structure that has a cubic unit cell with lattice points at the corners and in the center of the cell   
+body-centered cubic unit cell simplest repeating unit of a body-centered cubic crystal; it is a cube containing lattice points at each corner and in the center of the cube   
+boiling point temperature at which the vapor pressure of a liquid equals the pressure of the gas above it   
+Bragg equation equation that relates the angles at which X-rays are diffracted by the atoms within a crystal   
+capillary action flow of liquid within a porous material due to the attraction of the liquid molecules to the surface of the material and to other liquid molecules   
+Clausius-Clapeyron equation mathematical relationship between the temperature, vapor pressure, and enthalpy of vaporization for a substance   
+cohesive force force of attraction between identical molecules   
+condensation change from a gaseous to a liquid state   
+coordination number number of atoms closest to any given atom in a crystal or to the central metal atom in a complex   
+covalent network solid solid whose particles are held together by covalent bonds   
+critical point temperature and pressure above which a gas cannot be condensed into a liquid   
+crystalline solid solid in which the particles are arranged in a definite repeating pattern   
+cubic closest packing (CCP) crystalline structure in which planes of closely packed atoms or ions are stacked as a series of three alternating layers of different relative orientations (ABC)   
+deposition change from a gaseous state directly to a solid state   
+diffraction redirection of electromagnetic radiation that occurs when it encounters a physical barrier of appropriate dimensions   
+dipole-dipole attraction intermolecular attraction between two permanent dipoles   
+dispersion force (also, London dispersion force) attraction between two rapidly fluctuating,
+
+temporary dipoles; significant only when particles are very close together dynamic equilibrium state of a system in which reciprocal processes are occurring at equal rates face-centered cubic (FCC) solid crystalline structure consisting of a cubic unit cell with lattice points on the corners and in the center of each face face-centered cubic unit cell simplest repeating unit of a face-centered cubic crystal; it is a cube containing lattice points at each corner and in the center of each face freezing change from a liquid state to a solid state freezing point temperature at which the solid and liquid phases of a substance are in equilibrium; see also meltingpoint hexagonal closest packing (HCP) crystalline structure in which close packed layers of atoms or ions are stacked as a series of two alternating layers of different relative orientations (AB) hole (also, interstice) space between atoms within a crystal hydrogen bonding occurs when exceptionally strong dipoles attract; bonding that exists when hydrogen is bonded to one of the three most electronegative elements: F, O, or N induced dipole temporary dipole formed when the electrons of an atom or molecule are distorted by the instantaneous dipole of a neighboring atom or molecule instantaneous dipole temporary dipole that occurs for a brief moment in time when the electrons of an atom or molecule are distributed asymmetrically intermolecular force noncovalent attractive force between atoms, molecules, and/or ions interstitial sites spaces between the regular particle positions in any array of atoms or ions ionic solid solid composed of positive and negative ions held together by strong electrostatic attractions isomorphous possessing the same crystalline structure melting change from a solid state to a liquid state melting point temperature at which the solid and liquid phases of a substance are in equilibrium; see also fre zingpoint metallic solid solid composed of metal atoms molecular solid solid composed of neutral molecules held together by intermolecular forces of attraction normal boiling point temperature at which a
+
+liquid’s vapor pressure equals 1 atm (760 torr)   
+octahedral hole open space in a crystal at the center of six particles located at the corners of an octahedron   
+phase diagram pressure-temperature graph summarizing conditions under which the phases of a substance can exist   
+polarizability measure of the ability of a charge to distort a molecule’s charge distribution (electron cloud)   
+simple cubic structure crystalline structure with a cubic unit cell with lattice points only at the corners   
+simple cubic unit cell (also, primitive cubic unit cell) unit cell in the simple cubic structure   
+space lattice all points within a crystal that have identical environments   
+sublimation change from solid state directly to gaseous state   
+supercritical fluid substance at a temperature and pressure higher than its critical point; exhibits properties intermediate between those of gaseous and liquid states   
+surface tension energy required to increase the area, or length, of a liquid surface by a given amount   
+tetrahedral hole tetrahedral space formed by four atoms or ions in a crystal   
+triple point temperature and pressure at which the vapor, liquid, and solid phases of a substance are in equilibrium   
+unit cell smallest portion of a space lattice that is repeated in three dimensions to form the entire lattice   
+vacancy defect that occurs when a position that should contain an atom or ion is vacant   
+van der Waals force attractive or repulsive force between molecules, including dipole-dipole, dipole-induced dipole, and London dispersion forces; does not include forces due to covalent or ionic bonding, or the attraction between ions and molecules   
+vapor pressure (also, equilibrium vapor pressure) pressure exerted by a vapor in equilibrium with a solid or a liquid at a given temperature   
+vaporization change from liquid state to gaseous state   
+viscosity measure of a liquid’s resistance to flow   
+ -ray crystallography experimental technique for determining distances between atoms in a crystal by measuring the angles at which X-rays are diffracted when passing through the crystal
+
+Key Equations
+
+Summary
+
+10.1 Intermolecular Forces
+
+The physical properties of condensed matter (liquids and solids) can be explained in terms of the kinetic molecular theory. In a liquid, intermolecular attractive forces hold the molecules in contact, although they still have sufficient KE to move past each other.
+
+Intermolecular attractive forces, collectively referred to as van der Waals forces, are responsible for the behavior of liquids and solids and are electrostatic in nature. Dipole-dipole attractions result from the electrostatic attraction of the partial negative end of one polar molecule for the partial positive end of another. The temporary dipole that results from the motion of the electrons in an atom can induce a dipole in an adjacent atom and give rise to the London dispersion force. London forces increase with increasing molecular size. Hydrogen bonds are a special type of dipole-dipole attraction that results when hydrogen is bonded to one of the three most electronegative elements: F, O, or N.
+
+10.2 Properties of Liquids
+
+The intermolecular forces between molecules in the liquid state vary depending upon their chemical identities and result in corresponding variations in various physical properties. Cohesive forces between like molecules are responsible for a liquid’s viscosity (resistance to flow) and surface tension
+
+(elasticity of a liquid surface). Adhesive forces between the molecules of a liquid and different molecules composing a surface in contact with the liquid are responsible for phenomena such as surface wetting and capillary rise.
+
+10.3 Phase Transitions
+
+Phase transitions are processes that convert matter from one physical state into another. There are six phase transitions between the three phases of matter. Melting, vaporization, and sublimation are all endothermic processes, requiring an input of heat to overcome intermolecular attractions. The reciprocal transitions of freezing, condensation, and deposition are all exothermic processes, involving heat as intermolecular attractive forces are established or strengthened. The temperatures at which phase transitions occur are determined by the relative strengths of intermolecular attractions and are, therefore, dependent on the chemical identity of the substance.
+
+10.4 Phase Diagrams
+
+The temperature and pressure conditions at which a substance exists in solid, liquid, and gaseous states are summarized in a phase diagram for that substance. Phase diagrams are combined plots of three pressure-temperature equilibrium curves: solid-liquid, liquid-gas, and solid-gas. These curves represent the relationships between phasetransition temperatures and pressures. The point of intersection of all three curves represents the substance’s triple point—the temperature and pressure at which all three phases are in equilibrium. At pressures below the triple point, a substance cannot exist in the liquid state, regardless of its temperature. The terminus of the liquid-gas curve represents the substance’s critical point, the pressure and temperature above which a liquid phase cannot exist.
+
+10.5 The Solid State of Matter
+
+Some substances form crystalline solids consisting of particles in a very organized structure; others form amorphous (noncrystalline) solids with an internal structure that is not ordered. The main types of crystalline solids are ionic solids, metallic solids, covalent network solids, and molecular solids. The properties of the different kinds of crystalline solids are due to the types of particles of which they consist, the arrangements of the particles, and the strengths of the attractions between them. Because their particles experience identical attractions, crystalline solids have distinct melting temperatures; the particles in amorphous solids experience a range of interactions, so they soften gradually and melt over a range of temperatures. Some crystalline solids have defects in the definite repeating pattern of their particles. These defects (which include vacancies, atoms or ions not in the regular positions, and impurities) change physical properties such as electrical conductivity, which is exploited in the silicon crystals used to manufacture computer chips.
+
+10.6 Lattice Structures in Crystalline Solids
+
+The structures of crystalline metals and simple ionic compounds can be described in terms of packing of spheres. Metal atoms can pack in hexagonal closestpacked structures, cubic closest-packed structures, body-centered structures, and simple cubic structures. The anions in simple ionic structures commonly adopt one of these structures, and the cations occupy the spaces remaining between the anions. Small cations usually occupy tetrahedral holes in a closest-packed array of anions. Larger cations usually occupy octahedral holes. Still larger cations can occupy cubic holes in a simple cubic array of anions. The structure of a solid can be described by indicating the size and shape of a unit cell and the contents of the cell. The type of structure and dimensions of the unit cell can be determined by X-ray diffraction measurements.
+
+Exercises
+
+10.1 Intermolecular Forces
+
+1. In terms of their bulk properties, how do liquids and solids differ? How are they similar?   
+2. In terms of the kinetic molecular theory, in what ways are liquids similar to solids? In what ways are liquids different from solids?   
+3. In terms of the kinetic molecular theory, in what ways are liquids similar to gases? In what ways are liquids different from gases?
+
+4. Explain why liquids assume the shape of any container into which they are poured, whereas solids are rigid and retain their shape.
+
+5. What is the evidence that all neutral atoms and molecules exert attractive forces on each other?
+
+6. Open the PhET States of Matter Simulation (http://openstax.org/l/16phetvisual) to answer the following questions: (a) Select the Solid, Liquid, Gas tab. Explore by selecting different substances, heating and cooling the systems, and changing the state. What similarities do you notice between the four substances for each phase (solid, liquid, gas)? What differences do you notice? (b) For each substance, select each of the states and record the given temperatures. How do the given temperatures for each state correlate with the strengths of their intermolecular attractions? Explain. (c) Select the Interaction Potential tab, and use the default neon atoms. Move the Ne atom on the right and observe how the potential energy changes. Select the Total Force button, and move the Ne atom as before. When is the total force on each atom attractive and large enough to matter? Then select the Component Forces button, and move the Ne atom. When do the attractive (van der Waals) and repulsive (electron overlap) forces balance? How does this relate to the potential energy versus the distance between atoms graph? Explain.
+
+7. Define the following and give an example of each: (a) dispersion force (b) dipole-dipole attraction (c) hydrogen bond
+
+8. The types of intermolecular forces in a substance are identical whether it is a solid, a liquid, or a gas. Why then does a substance change phase from a gas to a liquid or to a solid?
+
+9. Why do the boiling points of the noble gases increase in the order 
+
+10. Neon and HF have approximately the same molecular masses. (a) Explain why the boiling points of Neon and HF differ. (b) Compare the change in the boiling points of Ne, Ar, Kr, and Xe with the change of the boiling points of HF, HCl, HBr, and HI, and explain the difference between the changes with increasing atomic or molecular mass.
+
+11. Arrange each of the following sets of compounds in order of increasing boiling point temperature: (a) HCl,  ,  (b)  ,  ,  (c)  ,  ,  (d)  , NO, 
+
+12. The molecular mass of butanol,  , is 74.14; that of ethylene glycol,  , is 62.08, yet their boiling points are  and  , respectively. Explain the reason for the difference.
+
+13. On the basis of intermolecular attractions, explain the differences in the boiling points of  –butane  and chloroethane  , which have similar molar masses.   
+14. On the basis of dipole moments and/or hydrogen bonding, explain in a qualitative way the differences in the boiling points of acetone  ) and 1-propanol  , which have similar molar masses.   
+15. The melting point of  is  . Would you expect the melting point of  to be  ,  , or 185  Explain your answer.   
+16. Silane  , phosphine  , and hydrogen sulfide  melt at  ,  , and  , respectively. What does this suggest about the polar character and intermolecular attractions of the three compounds?   
+17. Explain why a hydrogen bond between two water molecules is weaker than a hydrogen bond between two hydrogen fluoride molecules.
+
+18. Under certain conditions, molecules of acetic acid,  , form “dimers,” pairs of acetic acid molecules held together by strong intermolecular attractions:
+
+Draw a dimer of acetic acid, showing how two  molecules are held together, and stating the type of IMF that is responsible.
+
+19. Proteins are chains of amino acids that can form in a variety of arrangements, one of which is a helix. What kind of IMF is responsible for holding the protein strand in this shape? On the protein image, show the locations of the IMFs that hold the protein together:
+
+C=o… C=O·H-N =O··H-N
+
+20. The density of liquid  is  ; the density of gaseous  at STP is  . Explain the difference between the densities of these two phases.
+
+21. Identify the intermolecular forces present in the following solids: (a)  (b)  (c) 
+
+10.2 Properties of Liquids
+
+22. The test tubes shown here contain equal amounts of the specified motor oils. Identical metal spheres were dropped at the same time into each of the tubes, and a brief moment later, the spheres had fallen to the heights indicated in the illustration.
+
+Rank the motor oils in order of increasing viscosity, and explain your reasoning:
+
+23. Although steel is denser than water, a steel needle or paper clip placed carefully lengthwise on the surface of still water can be made to float. Explain at a molecular level how this is possible.
+
+24. The surface tension and viscosity values for diethyl ether, acetone, ethanol, and ethylene glycol are shown here.
+
+(a) Explain their differences in viscosity in terms of the size and shape of their molecules and their IMFs. (b) Explain their differences in surface tension in terms of the size and shape of their molecules and their IMFs:
+
+25. You may have heard someone use the figure of speech “slower than molasses in winter” to describe a process that occurs slowly. Explain why this is an apt idiom, using concepts of molecular size and shape, molecular interactions, and the effect of changing temperature.   
+26. It is often recommended that you let your car engine run idle to warm up before driving, especially on cold winter days. While the benefit of prolonged idling is dubious, it is certainly true that a warm engine is more fuel efficient than a cold one. Explain the reason for this. (a) As temperature increases, what happens to the surface tension of water? Explain why this occurs, in terms of molecular interactions and the effect of changing temperature.   
+(b) As temperature increases, what happens to the viscosity of water? Explain why this occurs, in terms of molecular interactions and the effect of changing temperature.
+
+28. At  , how high will water rise in a glass capillary tube with an inner diameter of  Refer to Example 10.4 for the required information.
+
+29. Water rises in a glass capillary tube to a height of  . What is the diameter of the capillary tube?
+
+10.3 Phase Transitions
+
+30. Heat is added to boiling water. Explain why the temperature of the boiling water does not change. What does change?
+
+31. Heat is added to ice at  . Explain why the temperature of the ice does not change. What does change?
+
+32. What feature characterizes the dynamic equilibrium between a liquid and its vapor in a closed container?
+
+33. Identify two common observations indicating some liquids have sufficient vapor pressures to noticeabl evaporate?
+
+34. Identify two common observations indicating some solids, such as dry ice and mothballs, have vapor pressures sufficient to sublime?
+
+35. What is the relationship between the intermolecular forces in a liquid and its vapor pressure?
+
+36. What is the relationship between the intermolecular forces in a solid and its melting temperatur
+
+37. Why does spilled gasoline evaporate more rapidly on a hot day than on a cold day?
+
+38. Carbon tetrachloride,  , was once used as a dry cleaning solvent, but is no longer used because it is carcinogenic. At  , the vapor pressure of  is  , and its enthalpy of vaporization is 33.05  . Use this information to estimate the normal boiling point for  .
+
+39. When is the boiling point of a liquid equal to its normal boiling point
+
+40. How does the boiling of a liquid differ from its evaporation?
+
+41. Use the information in Figure 10.24 to estimate the boiling point of water in Denver when the atmospheric pressure is  .
+
+42. A syringe at a temperature of  is filled with liquid ether in such a way that there is no space for any vapor. If the temperature is kept constant and the plunger is withdrawn to create a volume that can be occupied by vapor, what would be the approximate pressure of the vapor produced?
+
+43. Explain the following observations: (a) It takes longer to cook an egg in Ft. Davis, Texas (altitude, 5000 feet above sea level) than it does in Boston (at sea level). (b) Perspiring is a mechanism for cooling the body.
+
+44. The enthalpy of vaporization of water is larger than its enthalpy of fusion. Explain why.
+
+45. Explain why the molar enthalpies of vaporization of the following substances increase in the order   , even though the type of IMF (dispersion) is the same.
+
+46. Explain why the enthalpies of vaporization of the following substances increase in the order   , even though all three substances have approximately the same molar mass.
+
+47. The enthalpy of vaporization of  is  . Would you expect the enthalpy of vaporization of  to be  ,  , or  Discuss the plausibility of each of these answers.
+
+48. The hydrogen fluoride molecule, HF, is more polar than a water molecule,  (for example, has a greater dipole moment), yet the molar enthalpy of vaporization for liquid hydrogen fluoride is lesser than that for water. Explain.
+
+49. Ethyl chloride (boiling point,  is used as a local anesthetic. When the liquid is sprayed on the skin, it cools the skin enough to freeze and numb it. Explain the cooling effect of liquid ethyl chloride.
+
+50. Which contains the compounds listed correctly in order of increasing boiling points? (a)  (b)  (c)  (d)  (e) 
+
+51. How much heat is required to convert  of liquid  at  into steam at 
+
+52. Evaporation of sweat requires energy and thus take excess heat away from the body. Some of the water that you drink may eventually be converted into sweat and evaporate. If you drink a 20-ounce bottle of water that had been in the refrigerator at  , how much heat is needed to convert all of that water into sweat and then to vapor? (Note: Your body temperature is  . For the purpose of solving this problem, assume that the thermal properties of sweat are the same as for water.)
+
+53. Titanium tetrachloride,  , has a melting point of  and has a  . (a) How much energy is required to melt  ? (b) For  , which will likely have the larger magnitude:  or  vaporization? Explain your reasoning.
+
+10.4 Phase Diagrams
+
+54. From the phase diagram for water (Figure 10.31), determine the state of water at:
+
+(a)  and  (b)  and  (c)  and  (d)  and  (e)  and  (f )  and 
+
+55. What phase changes will take place when water is subjected to varying pressure at a constant temperature of  At  At 
+
+56. Pressure cookers allow food to cook faster because the higher pressure inside the pressure cooker increases the boiling temperature of water. A particular pressure cooker has a safety valve that is set to vent steam if the pressure exceeds 3.4 atm. What is the approximate maximum temperature that can be reached inside this pressure cooker? Explain your reasoning.
+
+57. From the phase diagram for carbon dioxide in Figure 10.34, determine the state of  at:
+
+(a)  and  (b)  and  (c)  and  (d)  and  (e)  and  (f )  and 
+
+58. Determine the phase changes that carbon dioxide undergoes as pressure is increased at a constant temperature of (a)  and (b)  If the temperature is held at  At  (See the phase diagram in Figure 10.34.)
+
+59. Consider a cylinder containing a mixture of liquid carbon dioxide in equilibrium with gaseous carbon dioxide at an initial pressure of 65 atm and a temperature of  . Sketch a plot depicting the change in the cylinder pressure with time as gaseous carbon dioxide is released at constant temperature.
+
+60. Dry ice,  , does not melt at atmospheric pressure. It sublimes at a temperature of  . What is the lowest pressure at which  will melt to give  At approximately what temperature will this occur? (See Figure 10.34 for the phase diagram.)   
+61. If a severe storm results in the loss of electricity, it may be necessary to use a clothesline to dry laundry. In many parts of the country in the dead of winter, the clothes will quickly freeze when they are hung on the line. If it does not snow, will they dry anyway? Explain your answer.   
+62. Is it possible to liquefy nitrogen at room temperature (about  )? Is it possible to liquefy sulfur dioxide at room temperature? Explain your answers.   
+63. Elemental carbon has one gas phase, one liquid phase, and two different solid phases, as shown in the phase diagram: (a) On the phase diagram, label the gas and liquid regions.   
+(b) Graphite is the most stable phase of carbon at normal conditions. On the phase diagram, label the graphite phase.   
+(c) If graphite at normal conditions is heated to  while the pressure is increased to  , it is converted into diamond. Label the diamond phase.   
+(d) Circle each triple point on the phase diagram.   
+(e) In what phase does carbon exist at  and    
+(f) If the temperature of a sample of carbon increases from 3000 K to  at a constant pressure of Pa, which phase transition occurs, if any?
+
+10.5 The Solid State of Matter
+
+64. What types of liquids typically form amorphous solids?
+
+65. At very low temperatures oxygen,  , freezes and forms a crystalline solid. Which best describes these crystals? (a) ionic (b) covalent network (c) metallic (d) amorphous (e) molecular crystals
+
+66. As it cools, olive oil slowly solidifies and forms a solid over a range of temperatures. Which best describes the solid?
+
+(a) ionic   
+(b) covalent network   
+(c) metallic   
+(d) amorphous   
+(e) molecular crystals
+
+67. Explain why ice, which is a crystalline solid, has a melting temperature of  , whereas butter, which is an amorphous solid, softens over a range of temperatures.
+
+68. Identify the type of crystalline solid (metallic, network covalent, ionic, or molecular) formed by each of the following substances:
+
+(a)    
+(b) KCl   
+(c) Cu   
+(d)    
+(e) C (diamond)   
+(f )    
+(g)    
+(h)    
+(i) 
+
+69. Identify the type of crystalline solid (metallic, network covalent, ionic, or molecular) formed by each of the following substances:
+
+(a)    
+(b) SiC   
+(c)    
+(d) Fe   
+(e) C (graphite)   
+(f )    
+(g) HCl   
+(h)    
+(i) 
+
+70. Classify each substance in the table as either a metallic, ionic, molecular, or covalent network solid:
+
+72. Identify the following substances as ionic, metallic, covalent network, or molecular solids: Substance A is malleable, ductile, conducts electricity well, and has a melting point of  . Substance B is brittle, does not conduct electricity as a solid but does when molten, and has a melting point of 2072  . Substance C is very hard, does not conduct electricity, and has a melting point of  . Substance D is soft, does not conduct electricity, and has a melting point of  .
+
+73. Substance A is shiny, conducts electricity well, and melts at  . Substance A is likely  : (a) ionic solid (b) metallic solid (c) molecular solid (d) covalent network solid
+
+74. Substance B is hard, does not conduct electricity, and melts at  . Substance B is likely a(n): (a) ionic solid (b) metallic solid (c) molecular solid (d) covalent network solid
+
+10.6 Lattice Structures in Crystalline Solids
+
+75. Describe the crystal structure of iron, which crystallizes with two equivalent metal atoms in a cubic unit cell.
+
+76. Describe the crystal structure of Pt, which crystallizes with four equivalent metal atoms in a cubic unit cell.
+
+77. What is the coordination number of a chromium atom in the body-centered cubic structure of chromium?
+
+78. What is the coordination number of an aluminum atom in the face-centered cubic structure of aluminum?
+
+79. Cobalt metal crystallizes in a hexagonal closest packed structure. What is the coordination number of a cobalt atom?
+
+80. Nickel metal crystallizes in a cubic closest packed structure. What is the coordination number of a nicke atom?
+
+81. Tungsten crystallizes in a body-centered cubic unit cell with an edge length of  . (a) What is the atomic radius of tungsten in this structure? (b) Calculate the density of tungsten.
+
+82. Platinum (atomic radius  crystallizes in a cubic closely packed structure. Calculate the edge length of the face-centered cubic unit cell and the density of platinum.
+
+83. Barium crystallizes in a body-centered cubic unit cell with an edge length of 5.025 Å (a) What is the atomic radius of barium in this structure? (b) Calculate the density of barium.
+
+84. Aluminum (atomic radius  ) crystallizes in a cubic closely packed structure. Calculate the edge length of the face-centered cubic unit cell and the density of aluminum.
+
+85. The density of aluminum is  ; that of silicon is  . Explain why Si has the lower density even though it has heavier atoms.
+
+86. The free space in a metal may be found by subtracting the volume of the atoms in a unit cell from the volume of the cell. Calculate the percentage of free space in each of the three cubic lattices if all atoms in each are of equal size and touch their nearest neighbors. Which of these structures represents the most efficient packing? That is, which packs with the least amount of unused space?
+
+87. Cadmium sulfide, sometimes used as a yellow pigment by artists, crystallizes with cadmium, occupying one-half of the tetrahedral holes in a closest packed array of sulfide ions. What is the formula of cadmium sulfide? Explain your answer.
+
+88. A compound of cadmium, tin, and phosphorus is used in the fabrication of some semiconductors. It crystallizes with cadmium occupying one-fourth of the tetrahedral holes and tin occupying one-fourth of the tetrahedral holes in a closest packed array of phosphide ions. What is the formula of the compound? Explain your answer.
+
+89. What is the formula of the magnetic oxide of cobalt, used in recording tapes, that crystallizes with cobalt atoms occupying one-eighth of the tetrahedral holes and one-half of the octahedral holes in a closely packed array of oxide ions?
+
+90. A compound containing zinc, aluminum, and sulfur crystallizes with a closest-packed array of sulfide ions. Zinc ions are found in one-eighth of the tetrahedral holes and aluminum ions in one-half of the octahedral holes. What is the empirical formula of the compound?
+
+91. A compound of thallium and iodine crystallizes in a simple cubic array of iodide ions with thallium ions in all of the cubic holes. What is the formula of this iodide? Explain your answer.
+
+92. Which of the following elements reacts with sulfur to form a solid in which the sulfur atoms form a closestpacked array with all of the octahedral holes occupied: Li, Na, Be, Ca, or Al?
+
+93. What is the percent by mass of titanium in rutile, a mineral that contains titanium and oxygen, if structure can be described as a closest packed array of oxide ions with titanium ions in one-half of the octahedral holes? What is the oxidation number of titanium?
+
+94. Explain why the chemically similar alkali metal chlorides NaCl and CsCl have different structures, whereas the chemically different NaCl and MnS have the same structure.
+
+95. As minerals were formed from the molten magma, different ions occupied the same cites in the crystals. Lithium often occurs along with magnesium in minerals despite the difference in the charge on their ions. Suggest an explanation.
+
+96. Rubidium iodide crystallizes with a cubic unit cell that contains iodide ions at the corners and a rubidium ion in the center. What is the formula of the compound?
+
+97. One of the various manganese oxides crystallizes with a cubic unit cell that contains manganese ions at the corners and in the center. Oxide ions are located at the center of each edge of the unit cell. What is the formula of the compound?
+
+98. NaH crystallizes with the same crystal structure as NaCl. The edge length of the cubic unit cell of NaH is  . (a) Calculate the ionic radius of  . (The ionic radius of  is  ) (b) Calculate the density of NaH.
+
+99. Thallium(I) iodide crystallizes with the same structure as CsCl. The edge length of the unit cell of TlI is  . Calculate the ionic radius of  . (The ionic radius of I− is  .)
+
+100. A cubic unit cell contains manganese ions at the corners and fluoride ions at the center of each edge. (a) What is the empirical formula of this compound? Explain your answer. (b) What is the coordination number of the  ion? (c) Calculate the edge length of the unit cell if the radius of a  ion is 0.65 A. (d) Calculate the density of the compound.
+
+101. What is the spacing between crystal planes that diffract X-rays with a wavelength of 1.541 nm at an angle  of  (first order reflection)?
+
+102. A diffractometer using X-rays with a wavelength of  produced first order diffraction peak for a crystal angle  . Determine the spacing between the diffracting planes in this crystal.
+
+103. A metal with spacing between planes equal to  diffracts X-rays with a wavelength of 0.2879 nm. What is the diffraction angle for the first order diffraction peak?
+
+104. Gold crystallizes in a face-centered cubic unit cell. The second-order reflection  ) of X-rays for the planes that make up the tops and bottoms of the unit cells is at  . The wavelength of the X-rays is  . What is the density of metallic gold?   
+105. When an electron in an excited molybdenum atom falls from the L to the K shell, an X-ray is emitted. These X-rays are diffracted at an angle of  by planes with a separation of  . What is the difference in energy between the K shell and the L shell in molybdenum assuming a first order diffraction?

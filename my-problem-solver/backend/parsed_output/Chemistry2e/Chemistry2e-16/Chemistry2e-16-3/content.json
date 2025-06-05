@@ -1,0 +1,458 @@
+[
+    {
+        "type": "text",
+        "text": "16.3 The Second and Third Laws of Thermodynamics ",
+        "text_level": 1,
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "\u2022 State and explain the second and third laws of thermodynamics \u2022 Calculate entropy changes for phase transitions and chemical reactions under standard conditions ",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "The Second Law of Thermodynamics ",
+        "text_level": 1,
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "In the quest to identify a property that may reliably predict the spontaneity of a process, a promising candidate has been identified: entropy. Processes that involve an increase in entropy ofthesystem $( \\Delta S > 0 )$ are very often spontaneous; however, examples to the contrary are plentiful. By expanding consideration of entropy changes to include thesur oundings, we may reach a significant conclusion regarding the relation between this property and spontaneity. In thermodynamic models, the system and surroundings comprise everything, that is, the universe, and so the following is true: ",
+        "page_idx": 806
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta S _ { \\mathrm { u n i v } } = \\Delta S _ { \\mathrm { s y s } } + \\Delta S _ { \\mathrm { s u r r } }\n$$",
+        "text_format": "latex",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "To illustrate this relation, consider again the process of heat flow between two objects, one identified as the system and the other as the surroundings. There are three possibilities for such a process: ",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "1. The objects are at different temperatures, and heat flows from the hotter to the cooler object. Thisis alwaysobservedtooc urspontaneously.Designating the hotter object as the system and invoking the definition of entropy yields the following: ",
+        "page_idx": 806
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta S _ { \\mathrm { s y s } } = \\frac { - q _ { \\mathrm { r e v } } } { T _ { \\mathrm { s y s } } } \\qquad \\mathrm { a n d } \\qquad \\Delta S _ { \\mathrm { s u r r } } = \\frac { q _ { \\mathrm { r e v } } } { T _ { \\mathrm { s u r r } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "The magnitudes of $- q _ { \\mathrm { r e v } }$ and $q _ { \\mathrm { r e v } }$ are equal, their opposite arithmetic signs denoting loss of heat by the system and gain of heat by the surroundings. Since $T _ { \\mathrm { s y s } } > T _ { \\mathrm { s u r r } }$ in this scenario, the entropy decreaseof the system will be less than the entropy increaseof the surroundings, and so theentropyoftheuniversewil increase: ",
+        "page_idx": 806
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\left| \\Delta S _ { \\mathrm { s y s } } \\right| < \\left| \\Delta S _ { \\mathrm { s u r r } } \\right| } \\\\ & { \\Delta S _ { \\mathrm { u n i v } } = \\Delta S _ { \\mathrm { s y s } } + \\Delta S _ { \\mathrm { s u r r } } > 0 } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "2. The objects are at different temperatures, and heat flows from the cooler to the hotter object. Thisisnever observedtooc urspontaneously.Again designating the hotter object as the system and invoking the definition of entropy yields the following: ",
+        "page_idx": 806
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta S _ { \\mathrm { s y s } } = \\frac { q _ { \\mathrm { r e v } } } { T _ { \\mathrm { s y s } } } \\qquad \\mathrm { a n d } \\qquad \\Delta S _ { \\mathrm { s u r r } } = \\frac { - q _ { \\mathrm { r e v } } } { T _ { \\mathrm { s u r r } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "The arithmetic signs of $q _ { \\mathrm { r e v } }$ denote the gain of heat by the system and the loss of heat by the surroundings. The magnitude of the entropy change for the surroundings will again be greater than that for the system, but in this case, the signs of the heat changes (that is, thedirectionoftheheatflow) will yield a negative value for $\\Delta S _ { \\mathrm { u n i v } }$ .Thisproces involvesadecreaseintheentropyoftheuniverse. ",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "3. The objects are at essentially the same temperature, $T _ { \\mathrm { s y s } } \\approx T _ { \\mathrm { s u r r } } ,$ , and so the magnitudes of the entropy changes are essentially the same for both the system and the surroundings. In this case, the entropy change of the universe is zero, and the system is atequilibrium. ",
+        "page_idx": 806
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\big | \\dot { \\Delta S } _ { \\mathrm { s y s } } \\big | \\approx \\dot { | \\Delta S _ { \\mathrm { s u r r } } | } } \\\\ & { \\Delta S _ { \\mathrm { u n i v } } = \\Delta S _ { \\mathrm { s y s } } + \\Delta S _ { \\mathrm { s u r r } } = 0 } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "These results lead to a profound statement regarding the relation between entropy and spontaneity known as the second law of thermodynamics: al spontaneouschangescauseanincreaseintheentropyofthe universe.A summary of these three relations is provided in Table 16.1. ",
+        "page_idx": 806
+    },
+    {
+        "type": "text",
+        "text": "The Second Law of Thermodynamics ",
+        "text_level": 1,
+        "page_idx": 807
+    },
+    {
+        "type": "table",
+        "img_path": "images/03ea86e0ba841440ae70c887427277f4243a9f66a29f5c2ff2b61f3b3155eee4.jpg",
+        "table_caption": [
+            "TABLE 16.1 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>\u25b3Suniv>0</td><td>spontaneous</td></tr><tr><td>\u25b3Suniv<0</td><td>nonspontaneous (spontaneous in opposite direction)</td></tr><tr><td>\u25b3Suniv= 0</td><td>atequilibrium</td></tr></table></body></html>\n\n",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "For many realistic applications, the surroundings are vast in comparison to the system. In such cases, the heat gained or lost by the surroundings as a result of some process represents a very small, nearly infinitesimal, fraction of its total thermal energy. For example, combustion of a fuel in air involves transfer of heat from a system (the fuel and oxygen molecules undergoing reaction) to surroundings that are infinitely more massive (the earth\u2019s atmosphere). As a result, $q _ { \\mathrm { s u r r } }$ is a good approximation of $q _ { \\mathrm { r e v } } ,$ , and the second law may be stated as the following: ",
+        "page_idx": 807
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta S _ { \\mathrm { u n i v } } = \\Delta S _ { \\mathrm { s y s } } + \\Delta S _ { \\mathrm { s u r r } } = \\Delta S _ { \\mathrm { s y s } } + { \\frac { q _ { \\mathrm { s u r r } } } { T } }\n$$",
+        "text_format": "latex",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "We may use this equation to predict the spontaneity of a process as illustrated in Example 16.4. ",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 16.4 ",
+        "text_level": 1,
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "Will Ice Spontaneously Melt? ",
+        "text_level": 1,
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "The entropy change for the process ",
+        "page_idx": 807
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } \\mathrm { O } ( s ) \\longrightarrow \\mathrm { H } _ { 2 } \\mathrm { O } ( l )\n$$",
+        "text_format": "latex",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "is $2 2 . 1 \\mathrm { J } / \\mathrm { K }$ and requires that the surroundings transfer $6 . 0 0 \\mathrm { k J }$ of heat to the system. Is the process spontaneous at $- 1 0 . 0 0 ^ { \\circ } \\mathrm { C } ?$ Is it spontaneous at $+ 1 0 . 0 0 ^ { \\circ } \\mathrm { C ? }$ ",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "We can assess the spontaneity of the process by calculating the entropy change of the universe. If $\\Delta S _ { \\mathrm { u n i v } }$ is positive, then the process is spontaneous. At both temperatures, $\\Delta S _ { \\mathrm { s y s } } = 2 2 . 1 \\mathrm { J / K }$ and $q _ { \\mathrm { s u r r } } = - 6 . 0 0 \\mathrm { k J }$ . ",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "At $- 1 0 . 0 0 ^ { \\circ } \\mathrm { C }$ (263.15 K), the following is true: ",
+        "page_idx": 807
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\Delta S _ { \\mathrm { u n i v } } } & { = \\Delta S _ { \\mathrm { s y s } } + \\Delta S _ { \\mathrm { s u r r } } = \\Delta S _ { \\mathrm { s y s } } + \\frac { q _ { \\mathrm { s u r r } } } { T } } \\\\ & { = 2 2 . 1 \\mathrm { J } / \\mathrm { K } + \\frac { - 6 . 0 0 \\times 1 0 ^ { 3 } \\mathrm { J } } { 2 6 3 . 1 5 \\mathrm { K } } = - 0 . 7 \\mathrm { J } / \\mathrm { K } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "$S _ { \\mathrm { u n i v } } < 0$ , so melting is nonspontaneous (notspontaneous) at $- 1 0 . 0 ^ { \\circ } \\mathrm { C } .$ . ",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "At $1 0 . 0 0 ^ { \\circ } \\mathrm { C }$ (283.15 K), the following is true: ",
+        "page_idx": 807
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\Delta S _ { \\mathrm { u n i v } } = \\Delta S _ { \\mathrm { s y s } } + \\frac { q _ { \\mathrm { s u r r } } } { T } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 807
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { { } } & { { } = 2 2 . 1 \\operatorname { J } / \\mathrm { K } + { \\frac { - 6 . 0 0 \\times 1 0 ^ { 3 } \\mathrm { J } } { 2 8 3 . 1 5 \\mathrm { K } } } \\ = + 0 . 9 \\operatorname { J } / \\mathrm { K } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "$ { S _ { \\mathrm { u n i v } } } > 0$ , so melting isspontaneous at $1 0 . 0 0 ^ { \\circ } \\mathrm { C }$ . ",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "Using this information, determine if liquid water will spontaneously freeze at the same temperatures. What can you say about the values of $S _ { \\mathrm { u n i v } } \\mathrm { \\# }$ ? ",
+        "page_idx": 807
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "Entropy is a state function, so $\\Delta S _ { \\mathrm { f r e e z i n g } } = - \\Delta S _ { \\mathrm { m e l t i n g } } = - 2 2 . 1 \\mathrm { J / K }$ and $q _ { \\mathrm { s u r r } } = + 6 . 0 0 \\mathrm { k J }$ . At $- 1 0 . 0 0 ^ { \\circ } \\mathrm { C }$ spontaneous, $+ 0 . 7 J / \\mathrm { K }$ ; at $+ 1 0 . 0 0 ^ { \\circ } \\mathrm { C }$ nonspontaneous, $- 0 . 9 \\mathrm { J } / \\mathrm { K }$ . ",
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "The Third Law of Thermodynamics ",
+        "text_level": 1,
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "The previous section described the various contributions of matter and energy dispersal that contribute to the entropy of a system. With these contributions in mind, consider the entropy of a pure, perfectly crystalline solid possessing no kinetic energy (that is, at a temperature of absolute zero, 0 K). This system may be described by a single microstate, as its purity, perfect crystallinity and complete lack of motion means there is but one possible location for each identical atom or molecule comprising the crystal $( W = 1 )$ ). According to the Boltzmann equation, the entropy of this system is zero. ",
+        "page_idx": 808
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS = k \\ln W = k \\ln ( 1 ) = 0\n$$",
+        "text_format": "latex",
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "This limiting condition for a system\u2019s entropy represents the third law of thermodynamics: theentropyofa pure,perfectcrystalinesubstanceat $O K$ iszero. ",
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "Careful calorimetric measurements can be made to determine the temperature dependence of a substance\u2019s entropy and to derive absolute entropy values under specific conditions. Standard entropies $( S ^ { \\circ } )$ are for one mole of substance under standard conditions (a pressure of 1 bar and a temperature of $2 9 8 . 1 5 \\mathrm { K }$ ; see details regarding standard conditions in the thermochemistry chapter of this text). The standard entropy change $( \\Delta \\pmb { S } ^ { \\circ } )$ for a reaction may be computed using standard entropies as shown below: ",
+        "page_idx": 808
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta S ^ { \\circ } = \\sum \\nu S ^ { \\circ } ( \\mathrm { p r o d u c t s } ) - \\sum \\nu S ^ { \\circ } ( \\mathrm { r e a c t a n t s } )\n$$",
+        "text_format": "latex",
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "where \u03bd represents stoichiometric coefficients in the balanced equation representing the process. For example, $\\Delta S ^ { \\circ }$ for the following reaction at room temperature ",
+        "page_idx": 808
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm \\mathbf { A } + n \\mathbf { B } \\longrightarrow x \\mathbf { C } + y \\mathbf { D } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "is computed as: ",
+        "page_idx": 808
+    },
+    {
+        "type": "equation",
+        "text": "$$\n= [ x S ^ { \\circ } ( \\mathrm { C } ) + y S ^ { \\circ } ( \\mathrm { D } ) ] - [ m S ^ { \\circ } ( \\mathrm { A } ) + n S ^ { \\circ } ( \\mathrm { B } ) ]\n$$",
+        "text_format": "latex",
+        "page_idx": 808
+    },
+    {
+        "type": "text",
+        "text": "A partial listing of standard entropies is provided in Table 16.2, and additional values are provided in Appendix G. The example exercises that follow demonstrate the use of $S ^ { \\circ }$ values in calculating standard entropy changes for physical and chemical processes. ",
+        "page_idx": 808
+    },
+    {
+        "type": "table",
+        "img_path": "images/151cdab6a9ffaedc92f3a64e1c9ca3f3265e4c69a1a1b87f5a9299a42da141de.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Substance</td><td>S\u00b0 (J mol-1 K-1)</td></tr><tr><td>carbon</td><td></td></tr><tr><td>C(s, graphite)</td><td>5.740</td></tr><tr><td>C(s, diamond)</td><td>2.38</td></tr><tr><td>CO(g)</td><td>197.7</td></tr><tr><td>CO2(g)</td><td>213.8</td></tr><tr><td>CH4(g)</td><td>186.3</td></tr><tr><td>C2H4(g)</td><td>219.5</td></tr><tr><td>C2H6(g)</td><td>229.5</td></tr></table></body></html>\n\n",
+        "page_idx": 808
+    },
+    {
+        "type": "table",
+        "img_path": "images/0ccef7f640b0d8d7345721a79caa0d21e433648d67e33576becc0742085cc5f7.jpg",
+        "table_caption": [
+            "TABLE 16.2 Standard entropies for selected substances measured at 1 atm and 298.15 K. (Values are approximately equal to those measured at 1 bar, the currently accepted standard state pressure.) "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>CH3OH(I)</td><td>126.8</td></tr><tr><td>C2H5OH(D)</td><td>160.7</td></tr><tr><td>hydrogen</td><td></td></tr><tr><td>H2(g)</td><td>130.57</td></tr><tr><td>H(g)</td><td>114.6</td></tr><tr><td>H2O(g)</td><td>188.71</td></tr><tr><td>H2O(D)</td><td>69.91</td></tr><tr><td>HCI(g)</td><td>186.8</td></tr><tr><td>H2S(g)</td><td>205.7</td></tr><tr><td colspan=\"2\">oxygen</td></tr><tr><td>02(g)</td><td>205.03</td></tr></table></body></html>\n\n",
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 16.5 ",
+        "text_level": 1,
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Determination of $\\Delta S ^ { \\circ }$ ",
+        "text_level": 1,
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Calculate the standard entropy change for the following process: ",
+        "page_idx": 809
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } \\mathrm { O } ( g ) \\longrightarrow \\mathrm { H } _ { 2 } \\mathrm { O } ( l )\n$$",
+        "text_format": "latex",
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Calculate the entropy change using standard entropies as shown above: ",
+        "page_idx": 809
+    },
+    {
+        "type": "equation",
+        "text": "$$\nA S ^ { \\circ } = ( \\mathrm { { ( 1 \\ m o l ) ( 7 0 . 0 \\mathrm { J } \\ m o l ^ { - 1 } \\ K ^ { - 1 } ) } } - ( \\mathrm { { 1 \\ m o l } ) ( 1 8 8 . 8 \\mathrm { J } \\ m o l ^ { - 1 } \\ K ^ { - 1 } ) } = - 1 1 8 . 8 \\mathrm { { J } / K }\n$$",
+        "text_format": "latex",
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "The value for $\\Delta S ^ { \\circ }$ is negative, as expected for this phase transition (condensation), which the previous section discussed. ",
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Calculate the standard entropy change for the following process: ",
+        "page_idx": 809
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } ( g ) + \\mathrm { C } _ { 2 } \\mathrm { H } _ { 4 } ( g ) \\longrightarrow \\mathrm { C } _ { 2 } \\mathrm { H } _ { 6 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Answer: $- 1 2 0 . 6 \\mathrm { J } \\mathrm { K } ^ { - 1 } \\mathrm { m o l } ^ { - 1 }$ ",
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 16.6 ",
+        "text_level": 1,
+        "page_idx": 809
+    },
+    {
+        "type": "image",
+        "img_path": "images/9e80e02a5b58d18cc448ef24cc4e42c8ae10cf76879c84d7430f3b6e05bf78d9.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Determination of $\\Delta S ^ { \\circ }$ ",
+        "text_level": 1,
+        "page_idx": 809
+    },
+    {
+        "type": "text",
+        "text": "Calculate the standard entropy change for the combustion of methanol, $\\mathrm { C H _ { 3 } O H }$ : ",
+        "page_idx": 809
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { C H } _ { 3 } \\mathrm { O H } ( l ) + 3 \\mathrm { O } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { C O } _ { 2 } ( g ) + 4 \\mathrm { H } _ { 2 } \\mathrm { O } ( l )\n$$",
+        "text_format": "latex",
+        "page_idx": 810
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 810
+    },
+    {
+        "type": "text",
+        "text": "Calculate the entropy change using standard entropies as shown above: ",
+        "page_idx": 810
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta S ^ { \\circ } = \\sum \\nu S ^ { \\circ } ( \\mathrm { p r o d u c t s } ) - \\sum \\nu S ^ { \\circ } ( \\mathrm { r e a c t a n t s } ) \\qquad \\quad \\quad\n$$",
+        "text_format": "latex",
+        "page_idx": 810
+    },
+    {
+        "type": "equation",
+        "text": "$$\n[ 2 \\mathrm { m o l } \\times S ^ { \\circ } ( \\mathrm { C O } _ { 2 } ( g ) ) + 4 \\mathrm { m o l } \\times S ^ { \\circ } ( \\mathrm { H } _ { 2 } \\mathrm { O } ( l ) ) ] - [ 2 \\mathrm { m o l } \\times S ^ { \\circ } ( \\mathrm { C H } _ { 3 } \\mathrm { O H } ( l ) ) + 3 \\mathrm { m o l } \\times S ^ { \\circ } ( \\mathrm { C H } _ { 2 } \\mathrm { O } ( l ) ) ] .\n$$",
+        "text_format": "latex",
+        "page_idx": 810
+    },
+    {
+        "type": "equation",
+        "text": "$$\n= \\{ [ 2 ( 2 1 3 . 8 ) + 4 \\times 7 0 . 0 ] - [ 2 ( 1 2 6 . 8 ) + 3 ( 2 0 5 . 0 3 ) ] \\} = - 1 6 1 . 1 \\mathrm { J / K }\n$$",
+        "text_format": "latex",
+        "page_idx": 810
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 810
+    },
+    {
+        "type": "text",
+        "text": "Calculate the standard entropy change for the following reaction: ",
+        "page_idx": 810
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C a ( O H ) } _ { 2 } ( s ) \\longrightarrow \\mathrm { C a O } ( s ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( l )\n$$",
+        "text_format": "latex",
+        "page_idx": 810
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 810
+    }
+]

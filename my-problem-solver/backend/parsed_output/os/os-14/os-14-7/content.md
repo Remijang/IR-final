@@ -1,0 +1,4 @@
+# 14.7 Summary  
+
+We have introduced some of the APIs dealing with memory allocation. As always, we have just covered the basics; more details are available elsewhere. Read the C book [KR88] and Stevens [SR05] (Chapter 7) for more information. For a cool modern paper on how to detect and correct many of these problems automatically, see Novark et al. $[ \mathsf { N } { + } 0 7 ]$ ; this paper also contains a nice summary of common problems and some neat ideas on how to find and fix them.  
+

@@ -1,0 +1,86 @@
+[
+    {
+        "type": "text",
+        "text": "41.3 Organizing Structure: The Cylinder Group ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The first step was to change the on-disk structures. FFS divides the disk into a number of cylinder groups. A single cylinder is a set of tracks on different surfaces of a hard drive that are the same distance from the center of the drive; it is called a cylinder because of its clear resemblance to the so-called geometrical shape. FFS aggregates $N$ consecutive cylinders into a group, and thus the entire disk can thus be viewed as a collection of cylinder groups. Here is a simple example, showing the four outer most tracks of a drive with six platters, and a cylinder group that consists of three cylinders: ",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/679c94b25cc85a772aa1bc4eba05804c71fcaa04edd49ce4aa4c071f495a44d4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Note that modern drives do not export enough information for the file system to truly understand whether a particular cylinder is in use; as discussed previously [AD14a], disks export a logical address space of blocks and hide details of their geometry from clients. Thus, modern file systems (such as Linux ext2, ext3, and ext4) instead organize the drive into block groups, each of which is just a consecutive portion of the disk’s address space. The picture below illustrates an example where every 8 blocks are organized into a different block group (note that real groups would consist of many more blocks): ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/f9a1c6055d8f6addbd75344e74f3e806becd6943d2ec03fde1060361831ad320.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Whether you call them cylinder groups or block groups, these groups are the central mechanism that FFS uses to improve performance. Critically, by placing two files within the same group, FFS can ensure that accessing one after the other will not result in long seeks across the disk. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "To use these groups to store files and directories, FFS needs to have the ability to place files and directories into a group, and track all necessary information about them therein. To do so, FFS includes all the structures you might expect a file system to have within each group, e.g., space for inodes, data blocks, and some structures to track whether each of those are allocated or free. Here is a depiction of what FFS keeps within a single cylinder group: ",
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/80e6559c23a80d6da9f32c0ee57e7615e32256985072ad949f85e2e0c546ff98.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>S ib db</td><td>Inodes</td><td>Data</td></tr></table></body></html>\n\n",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Let’s now examine the components of this single cylinder group in more detail. FFS keeps a copy of the super block (S) in each group for reliability reasons. The super block is needed to mount the file system; by keeping multiple copies, if one copy becomes corrupt, you can still mount and access the file system by using a working replica. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Within each group, FFS needs to track whether the inodes and data blocks of the group are allocated. A per-group inode bitmap (ib) and data bitmap (db) serve this role for inodes and data blocks in each group. Bitmaps are an excellent way to manage free space in a file system because it is easy to find a large chunk of free space and allocate it to a file, perhaps avoiding some of the fragmentation problems of the free list in the old file system. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Finally, the inode and data block regions are just like those in the previous very-simple file system (VSFS). Most of each cylinder group, as usual, is comprised of data blocks. ",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: FFS FILE CREATION ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "As an example, think about what data structures must be updated when a file is created; assume, for this example, that the user creates a new file /foo/bar.txt and that the file is one block long (4KB). The file is new, and thus needs a new inode; thus, both the inode bitmap and the newlyallocated inode will be written to disk. The file also has data in it and thus it too must be allocated; the data bitmap and a data block will thus (eventually) be written to disk. Hence, at least four writes to the current cylinder group will take place (recall that these writes may be buffered in memory for a while before they take place). But this is not all! In particular, when creating a new file, you must also place the file in the file-system hierarchy, i.e., the directory must be updated. Specifically, the parent directory foo must be updated to add the entry for bar.txt; this update may fit in an existing data block of foo or require a new block to be allocated (with associated data bitmap). The inode of foo must also be updated, both to reflect the new length of the directory as well as to update time fields (such as last-modified-time). Overall, it is a lot of work just to create a new file! Perhaps next time you do so, you should be more thankful, or at least surprised that it all works so well. ",
+        "page_idx": 4
+    }
+]

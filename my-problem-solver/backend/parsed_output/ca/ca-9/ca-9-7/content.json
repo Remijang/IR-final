@@ -1,0 +1,42 @@
+[
+    {
+        "type": "text",
+        "text": "9.7 Shared Bus and Control Signals ",
+        "text_level": 1,
+        "page_idx": 403
+    },
+    {
+        "type": "text",
+        "text": "Let us take a look again at the list of implemented microinstructions in Table 9.8. We observe that each microinstruction has at the most one register read operand, and one register write operand. We typically read from one internal register, and then use it as a part of a computation (addition or comparison), and then write the result to another internal register. ",
+        "page_idx": 403
+    },
+    {
+        "type": "text",
+        "text": "We thus propose the design of a shared bus that actually consists of two buses as shown in Figure 9.23. The first bus is known as the write bus that is connected to all the registers that might potentially write data to the bus. The output of the write bus, the embedded immediate (\u00b5imm) in the microinstruction, and the output of the \u00b5adder are sent to a multiplexer. Recall that the $\\mu$ adder adds the embedded immediate with the contents of a register. Now, this multiplexer chooses one value among the three, and then sends it on the read bus. We refer to this multiplexer as the transfer multiplexer. All the registers that might potentially read a value are connected to the read bus. The PC is connected to both the buses. The $\\mu$ adder has two inputs. One of them is the sign extended immediate that is a part of the microinstruction, and the other is the output of the write bus. ",
+        "page_idx": 403
+    },
+    {
+        "type": "text",
+        "text": "Simultaneously, we compare the value sent on the write bus with the embedded immediate $\\langle \\mu \\mathrm { i m m } \\rangle$ ). The result is contained in the isMBranch signal. The isMBranch signal is required for implementing the mbeq instruction. ",
+        "page_idx": 403
+    },
+    {
+        "type": "text",
+        "text": "To create a flexible data path, we need to add as many interconnections between units as possible. We thus decide to connect every register other than the decode, and flags registers to both the read and write buses. These registers are the input/output registers of the register file (regSrc, regData, and regV al), the ALU registers (A, B, aluResult), and the registers associated with the memory unit (mar, mdr, ldResult). To support branch instructions, it is also necessary to connect the PC to both the buses. ",
+        "page_idx": 403
+    },
+    {
+        "type": "image",
+        "img_path": "images/d7463db280276e76cb452e05ec9179ef5fa45df70caa2c107e6d0a7f91c5eb24.jpg",
+        "img_caption": [
+            "Figure 9.23: The design of the shared bus "
+        ],
+        "img_footnote": [],
+        "page_idx": 404
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 404
+    }
+]

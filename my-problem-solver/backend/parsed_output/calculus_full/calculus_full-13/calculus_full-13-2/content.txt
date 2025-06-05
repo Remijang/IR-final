@@ -1,0 +1,61 @@
+13.2 Partial Derivatives
+
+The central idea of differential calculus is the derivative. A change in  produces a change in  . The ratio  approaches the derivative, or slope, or rate of change. What to do if  depends on both  and  ?
+
+The new idea isBto vary  and  one at a time. First, only  moves. If the function is  , then  is  Ñ. The ratio  is  . The “  derivative” of  is  . For all functions the method is the same: Keep  constant, change  , take the limit of  :
+
+DEFINITION
+
+On the left is a new symbol  . It signals tBhat only  is allowed to vary—  is a partial derivative. The different form  of the same letter (still say  ) is a reminder that  is not the only variable. Another variable  is presentBbut  Bnot moving.
+
+Do not treat  as zero! Treat it as a cBonst aBnt, like 6. Its  derivative is zero. If  then  cos  . If  then 
+
+Spoken aloud,  is still  :” It is a function of  and  . When more is needed, call it “the partial of  with respect to  .” The symbol  is no longer availablBe, since it gives no special indication abBout  . Its replacement  is pronounced “  oBr  sub  ,” which is shorter than  and means the sameBthing.
+
+We may also want to indicate the point  where the derivative is computed:
+
+EXAMPLE 2  (cos  is constant for 
+
+The particular point  is  . The height of thesurface is  . The slope in the  direction is  . At a different point  ;  we find  .
+
+Now keep  constant and vary  . The ratio  approaches  :
+
+This is the slope in the  direction. PleaBse realize that a surface cBan go up in the  direction and down in the  direction. The plane  has  (up) and  (down). We will soon ask what happens in the  direction.
+
+EXAMPLE 3  
+
+The  derivative of  is really one-variable calculus, because  is constant. The exponent drops from  to  , and there is  from the chain rule. This distance function has the curious derivative  .
+
+The graph is a cone. Above the point  the height is  . The partial derivatives are  and  . At that point, Figure 13.5 climbs in the  direction. It is level in the  direction. An actual step  will increase  to  . But this change is of order  and the  derivative is zero.
+
+Figure 13.5 is rather important. It shows how  and  are the ordinary derivatives of  and  . It is natural to call these partial functions. The first has  fixed at  while  varies. The second has  fixed at  while  varies. Their graphs are cross sections down the surface —cut out by the vertical planes  and  . Remember that the level curve is cut out by the horizontal plane  .
+
+The limits of  and  are computed as always. With partial functions we are back to a single variable. The partial derivative is the ordinary derivative of a partialBfun cBtion (constant  or constant  ). For the cone,  exists at all points except  . The figure shows how the cross section down the middle of the cone produces the absolute value function:  . It has one-sided derivatives but not a two-sided derivative.
+
+Similarly  will not exist at the sharp point of the cone. We develop the idea of a continuous function  as needed (the definition is in the exercises). Each partial derivative involves one direction, but limits and continuity involve all directions. The distance function is continuous at  , where it is not differentiable.
+
+Move in the  direction from  . Then  has the partial function  . With  fixed at 3, a parabola opens downward. In the  direction (along  ) the partial function  opens upward. The surface in Figure 13.6 is called a hyperbolic paraboloid, because the level curves  are hyperbolas. Most people call it a saddle, and the special point at the origin is a saddle point. The origin is special for  because both derivatives are zero. The bottom of the  parabola at  is the top of the  parabola. The surface is momentarily flat in all directions. It is the top of a hill and the bottom of a mountain range at the same time. A saddle point is neither a maximum nor a minimum, although both derivatives are zero.
+
+Note Do not think that  must contain  and  to have a saddle point. The function  does just as well. The level curves  are still hyperbolas. The partial functions  and  now give straight lines—which is remarkable. Along the  line  , the function is  and climbing. Along the  line  , the function is  and falling. The graph of  is Figure 13.6 rotated by  .
+
+Example 5 shows more variables. Example 6 shows that the variables may not be named  anBd  . BAlso, the function may not be named  ! Pressure and temperature and volume are  and  and  . The letters change but nothing else:
+
+There is no  because  is a constant from chemistry—not a variable.
+
+Physics produces six variables for a moving body—the coordinates  and the momenta  . Economics and the social sciences do better than that. If there are 26 products there are 26 variables—sometimes 52, to show prices as well as amounts. The profit can be a complicated function of these variables. The partial derivatives are the marginal profits, as one of the 52 variables is changed. A spreadsheet shows the 52 values and the effect of a change. An infinitesimal spreadsheet shows the derivative.
+
+SEBCON BD BDERIVABTIVE
+
+Genius is not essential, to move to second derivatives. The only difficulty is that two first derivatives  and  lead to four second derivatives  and  and  and  . (Two subscripts:  is the  derivative of the  derivative. Other notations are  and  and  and  .) Fortunately  equals  , as we see first by example.
+
+EXAMPLE 7  has  , which has  and  . The function  is linear in  (which explains  ). Its  derivative is   . This has the  derivative  . The mixed derivatives  and  are equal.
+
+In the pure  direction, the second derivative is  . One-variable calculus is sufficient for all these derivatives, because only one variable is moving.
+
+EXAMPLE 8  has  and  . Both “cross derivatives”  and  equal 3. The second derivative in the  direction is  or  . Thus “  is  second  squared.” Similarly  . The only change is from  to  .
+
+If  has continuous second derivatives then  . Problem43 sketches a proof basedon the Mean Value Theorem. For third derivatives almost any example shows that  is different from  .
+
+Question How do you plot a space curve  in a plane? One way is to look parallel to the direction  . On your  screen, plot  and  . The line  goes to the point  !
+
+How do you graph a surface  Use the same  and  . Fix  and let  vary, for curves one way in the surface. Then fix  and vary  , for the other partial function. For a parametric surface like  ,  sin  ,  , vary  and then  . Dick Williamson showed how this draws a one-sided “Möbius strip.”

@@ -1,0 +1,33 @@
+5.4.1 Data Transfer Instructions Load Instruction
+
+Table 5.20 shows the semantics of the floating point load instructions. The most commonly used floating point load instruction is the  instruction. The first variant of the f ld instruction can load a 32-bit floating point value from memory, and push it to the FP stack. We can use our standard addressing modes with integer registers as described in Section 5.2.4 for specifying an address in memory. The second variant can push the contents of an existing FP register on the FP stack. We can alternatively use the fild instruction that can read an integer from memory, convert it to floating point, and push it on the FP stack. Let us consider an example.
+
+Example 85
+
+Push the constant, 2.392, on the FP stack.   
+Answer: We need to first define the constant 2.392 in the data section. In NASM, we do this as follows.
+
+section .data num: dd 2.392
+
+We need to embed this code snippet at the beginning of the assembly file. Here, the declaration “section .data” means that we are declaring the data section. In the data section, we further declare a variable, num, that is a double word (32 bits, specified by dd), and its value is 2.392. Let us now push this value to the FP stack. We need to embed the following code snippet in the main assembly function.
+
+fld dword [num]
+
+The assembler treats num as a memory address. While generating code, it will replace it with its actual address. However, in an assembly program, we can seamlessly treat num as a valid memory address, and its contents can thus be represented as [num]. The fld instruction in this code snippet loads 32 bits (dword) from num to the top of the FP stack.
+
+Exchange Instruction
+
+Table 5.21 shows the format of the floating point exchange instruction,  . It exchanges the contents of two floating point registers. The 1-address format  instruction exchanges the contents of the register specified as the first operand and  . If we do not specify any operands, then the processor exchanges  and  (the top of the stack, and the entry just below the top of the stack).
+
+Store Instructions
+
+Let us now look at the store instructions in Table 5.22. The format is similar to the floating point load instructions. We have three variants of the basic  instruction. The first variant requires a single memory operand. It stores the contents of  in the memory location specified by the memory operand. The second variant requires an FP register operand and stores the contents of  in the FP register.
+
+The third variant uses the ‘p’ suffix which is a generic suffix and is used by many other instructions also. The  instruction initially saves the value contained in  in the memory location specified by the first operand, and then pops the stack. Since the stack size is limited, it is often necessary to pop the stack to create more space. When we are storing  , we are saving a copy of its contents in main memory. Hence, it makes sense to have a variant of the  instruction that can free the entry from the stack by popping it.
+
+x86 has additional support for conversion of floating point values to integers. We can use the  instruction that first converts the contents of  to a signed integer by rounding it and then saves it in the location specified by the memory operand. Note that we always use a modifier (byte/word/dword/qword) for memory operands such that we can specify the number of bytes that need to be transferred. The f ist instruction also supports the ‘p’ suffix (see the semantics of the  instruction in Table 5.22).
+
+Example 86   
+Transfer the contents of st0 to eax by converting the save FP number to an integer. Answer:
+
+fist dword[esp] mov eax, [esp]

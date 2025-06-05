@@ -1,0 +1,26 @@
+9.9.1 Summary
+
+Summary 9
+
+1. We design a processor by dividing it into multiple stages, where the stages are mostly independent of each other. We divide our basic SimpleRisc processor into five stages: instruction fetch(IF), operand fetch(OF), execute (EX), memory access (MA), and register writeback (RW).
+
+2. The roles of these stages are as follows:
+
+(a) The IF stage computes the next PC, and fetches the contents of the instruction, whose address is stored in the PC.   
+(b) In the OF stage, we decode the instruction, and read its operands from the register file. Specifically, we compute the branch target, and expand the embedded immediate in the instruction according to the modifiers.   
+(c) In the EX stage, we compute the branch outcome, branch target, and perform the ALU operations.   
+(d) In the MA stage, we perform loads and stores.   
+(e) Lastly, in the RW stage, we write back the values computed by ALU or load instructions, and the return address for a call instruction to the register file.
+
+3. The data path consists of all the elements for storing, retrieving, and processing information such as the registers, memory elements, and the ALU. In contrast, the control path generates all the signals for controlling the movement of instructions and data.
+
+4. We can use a hardwired control unit that generates all the signals for the control path.
+
+5. For additional flexibility, and portability, we presented the design of a microprogrammed processor. This processor replaces every program instruction by a sequence of microinstructions.
+
+6. We defined 8 microinstructions, and created a microprogrammed data path that connected all the units on a shared bus. Each unit in a microprogrammed data path exposes its input and output ports through registers. We use 19 registers in our design.
+
+7. We subsequently showed implementations in microcode for all the instructions in the SimpleRisc ISA.
+
+8. We designed a shared bus for such processors by interconnecting two physical buses (write bus, and read bus) with a multiplexer. The multiplexer (known as the transfer multiplexer) chooses between the output of the write bus, the output of the µadder, and the micro immediate.   
+9. We showed the design of a µcontrol unit for both vertical and horizontal microprogramming. Vertical microprogramming requires a decode stage for generating all the control signals. In comparison, horizontal microprogramming requires all the control signals to be embedded in the microinstruction.

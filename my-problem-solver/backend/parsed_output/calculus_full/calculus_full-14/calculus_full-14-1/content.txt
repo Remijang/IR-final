@@ -1,0 +1,79 @@
+For single integrals, the interval  is divided into short pieces of length  : For double integrals,  is divided into small rectangles of area  : Above the  th rectangle is a “thin stick” with small volume. That volume is the base area  times the height above it—except that this height  varies from point to point. Therefore we select a point  in the  th rectangle, and compute the volume from the height above that point:
+
+This is the crucial st»ep» for any integral—to see it as a sum of small pieces.
+
+Now take limits:  and  : The height  is nearly constant over each rectangle. (We assume thaÑt  is a continuous function.) The sum approaches a limit, which depends only on the base  and the surface above it. The limit is the volume of the solid, and it is the double integral of  over  :
+
+To reÑpeat: The limÑit is the same for all choices of the rectangles and the points  : The rectangles will not fit exactly into  ; if that base area is curved. The heights are not exact, if the surface  is also curved. But the errors on the sides and top, where the pieces don’t fit and the heights are wrong, approach zero. Those errors are the volume of the “icing” around the solid, which gets thinner as  and  : A careful proof takes more space than we are willing to give. But the properties of the integral need and deserve attention:
+
+1. Linearity:    
+2. Constant comes outside:    
+3.  splits into  and 
+
+In 1 the volume under  has two parts. The “thin sticks” of height  split into thin sticks under  and under  : In 2 the whole volume is stretched upward by  : In 3 the volumes are side by side. As with single integrals, these properties help in computations.
+
+By writing  ; we allow shapes other than rectangles. Polar coordinates have an extra factor  in  : By writing  ; we choose rectangular coordinates and prepare for the splitting that comes now.
+
+The double integral  will now be reduced to single integrals in  and then  : (Or vice versa. Our first integral could equally well be  :) Chapter 8 described the same idea for solids of revolution. First came the area of a slice, which is a single integral. Then came a second integral to add up the slices. For solids formed by revolving a curve, all slices are circular disks—now we expect other shapes.
+
+Figure 14.2 shows a slice of»area  : It cuts through the solid at a fixed value of  : The cut starts at  on one side of  ; and ends at  on the other side. This particular example goes from  to  (  is a rectangle). The area of a slice is the  integral of  : Remember that  is fixed and  goes from c to  :
+
+This is the re»verse of a partial derivative! The integral of  ; with  constant, is  : This “partial integral” is actually called an inner integral. After substituting the limits  and  and subtracting, we have the area  : Now the outer integral adds slices to find the volume  : The answer is a number:
+
+To complete this example, check the volume when the  integral comes first:
+
+The fact that double integrals can be split into single integrals is Fubini’s Theorem.
+
+14A if  is continuous on the rectangle  ; then
+
+The inner integrals are the cross-sectional areas  and  of the slices. The outer integrals add up the volumes  and  : Notice the reversing of limits.
+
+Normally the brackets in (2) are omitted. When the  integral is first,  is written inside  : The limits on  are inside too. I strongly recommend that you compute the inner integral on one line and the outer integral on a separate line.
+
+EXAMPLE 2 Find the volume below the plane  and above the base triangle  :
+
+The triangle  has sides on the  and  axes and the line  : The strips in the  direction have varying lengths. (So do the strips in the  direction.) This is the main point of the example—the base is not a rectangle. The upper limit on the inner integral changes as  changes. The top of the triangle is at  :
+
+Figure 14.3 shows the strips. The region should always be drawn (except for rectangles). Without a figure the limits are hard to find. A sketch of  makes it easy:
+
+The inner integral has variable limits and the outer integral has constant limits:
+
+The volume is negative. Most of the solid is below the  plane. To check the answer  ; d»o the  integral first:  goes from 0 to  : Then  goes from 0 to 1:
+
+Same answer, very probably right. The next example computes 
+
+EXAMPLE 3 The area of  is 
+
+The first has vertical strips. The inner integral equals  : Then the outer integral (of  has limits 0 and 1; and the area is  : It is like an indefinite integral inside a definite integral.
+
+EXAMPLE 4 Reverse the order of integration in 
+
+Solution Draw a figure!?The inner integral goes from the parabola  up to the straight line  : This gives vertical strips. The strips sit side by side between  and  : They stop where  equals  ; and the line meets the parabola.
+
+The problem is to put the  integral first. It goes along horizontal strips. On each line  constant, we need the entry value of  and the exit value of  : From the figure,  goes from  to  : Those are the inner limits. Pay attention also to the outer limits, because they now apply to  : The region starts at  and ends at  : No change in the integrand  —that is the height of the solid:
+
+EXAMPLE 5 Find the volume bounded by the planes  ; and  :
+
+Solution The solid is a tetrahedron (four sides). It goes from  (the  plane) up to the plane  : On that plane  : This is the height function  to be integrated.
+
+Figure 14.4 shows the base  : To find its sides, set  : The sides of  are the lines  and  and  : Taking vertical strips,  is inner:
+
+Question What is the meaning of the inner integr  Answer The first is  ; the area of the slice.  is the solid volume.
+
+Question What if the inner integral  has limits that depend on  ? Answer It can’t. Those limits must be wrong. Find them again.
+
+EXAMPLE 6 Find the mass in a semicircle  if the density is  :
+
+This is a new application of double integrals. The total mass is a sum of small masses  times  ) in rectangles of area  : The rectangles don’t fit perfectly inside the semicircle  ; and the density is not constant in each rectangle—but those problems disappear in the limit. We are left with a double integral:
+
+Set  : Figure 14.4 shows the limits on  and  (try both  and  ):
+
+The first inner integral is  : Substituting the limits gives  : The outer integral of  yields the total mass  :
+
+The second inner integral is  : Substituting the limits on  gives : Then the outer integral is  : Substituting  and  yields 
+
+Remark This same calculation also produces the moment around the  axis, when the density is  : The factor  is the distance to the  axis. The moment is  : Dividing by the area of the semicircle (which is  ) locates the centroid:  by symmetry and
+
+This is the “average height” of points inside the semicircle, found earlier in 8:5:
+
+EXAMPLE 7 Integrate  avoiding the impossible  : This is a famous example where reversing the order makes the calculation possible. The base  is the triangle in Figure 14.4 (note that  goes from  to 1). In the opposite order  goes from  . Then  cos  contains the factor  that we need:

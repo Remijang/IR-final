@@ -1,0 +1,14 @@
+# CHAPTER 6 Uniform Circular Motion and Gravitation
+
+# CHAPTER OUTLINE
+
+6.1 Rotation Angle and Angular Velocity   
+6.2 Centripetal Acceleration   
+6.3 Centripetal Force   
+6.4 Fictitious Forces and Non-inertial Frames: The Coriolis Force   
+6.5 Newton’s Universal Law of Gravitation   
+6.6 Satellites and Kepler’s Laws: An Argument for Simplicity
+
+INTRODUCTION TO UNIFORM CIRCULAR MOTION AND GRAVITATION Many motions, such as the arc of a bird’s flight or Earth’s path around the Sun, are curved. Recall that Newton’s first law tells us that motion is along a straight line at constant speed unless there is a net external force. We will therefore study not only motion along curves, but also the forces that cause it, including gravitational forces. In some ways, this chapter is a continuation of Dynamics: Newton's Laws of Motion as we study more applications of Newton’s laws of motion.
+
+This chapter deals with the simplest form of curved motion, uniform circular motion, motion in a circular path at constant speed. Studying this topic illustrates most concepts associated with rotational motion and leads to the study of many new topics we group under the name rotation. Pure rotationalmotionoccurs when points in an object move in circular paths centered on one point. Pure translationalmotionis motion with no rotation. Some motion combines both types, such as a rotating hockey puck moving along ice.

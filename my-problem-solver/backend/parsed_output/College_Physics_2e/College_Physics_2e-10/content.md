@@ -1,0 +1,15 @@
+# CHAPTER 10 Rotational Motion and Angular Momentum
+
+# CHAPTER OUTLINE
+
+10.1 Angular Acceleration   
+10.2 Kinematics of Rotational Motion   
+10.3 Dynamics of Rotational Motion: Rotational Inertia   
+10.4 Rotational Kinetic Energy: Work and Energy Revisited   
+10.5 Angular Momentum and Its Conservation   
+10.6 Collisions of Extended Bodies in Two Dimensions   
+10.7 Gyroscopic Effects: Vector Aspects of Angular Momentum
+
+INTRODUCTION TO ROTATIONAL MOTION AND ANGULAR MOMENTUM Why do tornadoes spin at all? And why do tornados spin so rapidly? The answer is that air masses that produce tornadoes are themselves rotating, and when the radii of the air masses decrease, their rate of rotation increases. An ice skater increases her spin in an exactly analogous manner as seen in Figure 10.2. The skater starts her rotation with outstretched limbs and increases her spin by pulling them in toward her body. The same physics describes the exhilarating spin of a skater and the wrenching force of a tornado.
+
+Clearly, force, energy, and power are associated with rotational motion. These and other aspects of rotational motion are covered in this chapter. We shall see that all important aspects of rotational motion either have already been defined for linear motion or have exact analogs in linear motion. First, we look at angular acceleration—the rotational analog of linear acceleration.

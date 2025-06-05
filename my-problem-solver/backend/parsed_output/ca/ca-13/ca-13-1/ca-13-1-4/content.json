@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "13.1.4 Layers in the I/O System ",
+        "text_level": 1,
+        "page_idx": 651
+    },
+    {
+        "type": "text",
+        "text": "Most complex architectures are typically divided into layers such as the architecture of the internet. One layer is mostly independent of the other layer. Hence, we can choose to implement it in any way we want, as long as it adheres to a standard interface. The I/O architecture of a modern computer is also fairly complicated, and it is necessary to divide its functionality into different layers. ",
+        "page_idx": 651
+    },
+    {
+        "type": "text",
+        "text": "We can broadly divide the functionality of the I/O system into four different layers. Note that our classification of the functionality of an I/O system into layers is broadly inspired from the 7 layer OSI model for classifying the functions of wide area networks into layers. We try to conform as much as possible to the OSI model such that readers can relate our notion of layers to concepts that they would study in a course on networking. ",
+        "page_idx": 652
+    },
+    {
+        "type": "text",
+        "text": "Physical Layer The physical layer of a bus primarily defines the electrical specifications of the bus. It is divided into two sublayers namely the transmission sublayer and the synchronization sublayer. The transmission sublayer defines the specifications for transmitting a bit. For example, a bus can be active high (logical 1, if the voltage is high), and another bus can be active low (logical 1, if the voltage is zero). Today\u2019s high speed buses use high speed differential signaling. Here, we use two copper wires to transmit a single bit. A logical 0 or 1 is inferred by monitoring the sign of the difference of voltages between the two wires (similar to the concept of bit lines in SRAM cells). Modern buses extend this idea and encode a logical bit using a combination of electrical signals. The synchronization sublayer specifies the timing of signals, and methods to recover the data sent on the bus by the receiver. ",
+        "page_idx": 652
+    },
+    {
+        "type": "text",
+        "text": "Data Link Layer The data link layer is primarily designed to process logical bits that are read by the physical layer. This layer groups sets of bits into frames, performs error checking, controls the access to the bus, and helps implement I/O transactions. In specific, it ensures that at any point of time, only one entity can transmit signals on the bus, and it implements special features to leverage common message patterns. ",
+        "page_idx": 652
+    },
+    {
+        "type": "text",
+        "text": "Network Layer This layer is primarily concerned with the successful transmission of a set of frames from the processor to an I/O device or vice versa through various chips in the chip set. We uniquely define the address of an I/O device, and consider approaches to embed the addresses of I/O devices in I/O instructions. Broadly we discuss two approaches \u2013 port-based addressing, and memory-mapped addressing. In the latter case, we treat accesses to I/O devices, as regular accesses to designated memory locations. ",
+        "page_idx": 652
+    },
+    {
+        "type": "text",
+        "text": "Protocol Layer The top most layer referred to as the protocol layer is concerned with executing I/O requests end to end. This includes methods for high level communication between the processor, and the I/O devices in terms of the message semantics. For example, I/O devices can interrupt the processor, or the processor can explicitly request the status of each I/O device. Secondly, for transferring data between the processor and devices, we can either transfer data directly or delegate the responsibility of transferring data to dedicated chips in the chipset known as DMA controllers. ",
+        "page_idx": 652
+    },
+    {
+        "type": "text",
+        "text": "Figure 13.5 summaries the 4 layered I/O architecture of a typical processor. ",
+        "page_idx": 652
+    }
+]

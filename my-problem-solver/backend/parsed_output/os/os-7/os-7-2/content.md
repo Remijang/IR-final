@@ -1,0 +1,14 @@
+# 7.2 Scheduling Metrics  
+
+Beyond making workload assumptions, we also need one more thing to enable us to compare different scheduling policies: a scheduling metric. A metric is just something that we use to measure something, and there are a number of different metrics that make sense in scheduling.  
+
+For now, however, let us also simplify our life by simply having a single metric: turnaround time. The turnaround time of a job is defined as the time at which the job completes minus the time at which the job arrived in the system. More formally, the turnaround time $T _ { t u r n a r o u n d }$ is:  
+
+$$
+T _ { t u r n a r o u n d } = T _ { c o m p l e t i o n } - T _ { a r r i v a l }
+$$  
+
+Because we have assumed that all jobs arrive at the same time, for now $T _ { a r r i v a l } = 0$ and hence $T _ { t u r n a r o u n d } \stackrel { \cdot } { = } T _ { c o m p l e t i o n }$ . This fact will change as we relax the aforementioned assumptions.  
+
+You should note that turnaround time is a performance metric, which will be our primary focus this chapter. Another metric of interest is fairness, as measured (for example) by Jain’s Fairness Index [J91]. Performance and fairness are often at odds in scheduling; a scheduler, for example, may optimize performance but at the cost of preventing a few jobs from running, thus decreasing fairness. This conundrum shows us that life isn’t always perfect.  
+

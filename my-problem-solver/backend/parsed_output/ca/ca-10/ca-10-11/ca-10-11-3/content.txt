@@ -1,0 +1,15 @@
+10.11.3 EPIC and VLIW Processors
+
+Now, instead of preparing bundles in hardware, we can prepare them in software. The compiler has far more visibility into the code, and can perform extensive analyses to create multiinstruction bundles. The Itanium  processor designed by Intel and HP was a very iconic processor, which was based on similar principles.
+
+Let us first start out by defining the terms – EPIC and VLIW.
+
+Definition 94
+
+VLIW  Very Long Instruction Word: Compilers create bundles of instructions that do not have dependencies between them. The hardware executes the instructions in each bundle in parallel. The complete onus of correctness is on the compiler. EPIC  Explicitly Parallel Instruction Computing: This paradigm extends VLIW computing. However, in this case the hardware ensures that the execution is correct regardless of the code generated
+
+by the compiler.
+
+EPIC/VLIW processors require very smart compilers to analyze programs and create bundles of instructions. For example, if a processor has 4 pipelines, then each bundle contains 4 instructions. The compilers create bundles such that there are no dependencies across instructions in a bundle. The broader aim of designing EPIC/VLIW processors is to move all the complexity to software. Compilers arrange the bundles in a way such that we can minimize the amount of interlock, forwarding, and instruction handling logic required in the processor.
+
+However, in hindsight, such processors failed to deliver on their promise because the hardware could not be made as simple as the designers had originally planned for. A high performance processor still needed a fair amount of complexity in hardware, and required some sophisticated architectural features. These features increased the complexity and power consumption of hardware.

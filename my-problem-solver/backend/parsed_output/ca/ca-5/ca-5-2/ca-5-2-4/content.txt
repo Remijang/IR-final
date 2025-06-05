@@ -1,0 +1,29 @@
+5.2.4 Addressing Modes
+
+Addressing Modes for Specifying Immediates
+
+The best thing about x86 is that there are no size restrictions on immediates. Immediates can be as large as the size of the register. For example, in a 32-bit system, the size of the immediate can be as large as 32 bits. Depending upon the assembly language, we can specify immediates in the hex format (0x...), binary format (e.g., 10101b), or in decimal. Most of the time programmers prefer the hex or decimal formats. For hexadecimal numbers most assemblers allow us to specify the number with the standard 0x prefix. Additionally, we can specify a number with the h/H suffix. For example,  is the same as  . For negative numbers, we need to simply put a ‘-’ before the number.
+
+Addressing Modes for Specifying Registers
+
+All registers in x86 are addressed by their names. For example, the general purpose registers on a 32-bit machine are addressed as eax, ebx . . . edi, according to the rules mentioned in
+
+Section 5.2.1. We can use 16-bit register names in 32-bit mode, and we can use 16 and 32-bit register addressing in 64-bit mode. Note that we cannot do the reverse. For example, we cannot use 64-bit register names in 32-bit mode.
+
+Addressing Modes for Memory Operands
+
+x86 supports a variety of addressing modes for main memory. In specific, it supports the register-indirect, base-offset, base-index, and base-index-offset addressing modes as mentioned in Section 3.2.5. In addition, it also supports a new addressing mode called the base-scaledindex-offset addressing mode that scales the index by a constant factor. Let us elaborate.
+
+Equation 5.1 shows the generic format of a memory address in the 32-bit version of x86. The interesting aspect of x86 memory addressing is that all of these fields are optional. Hence, it is possible to have numerous addressing modes.
+
+Let us first consider the addressing modes that require a base register. With the base register, we can optionally specify a segment register. If we do not specify a segment register, then the hardware assumes default segments (  for data, ss for stack, and cs for code). We can subsequently specify an index. The index is contained in another register (excluding  ). We can optionally multiply the index with a power of 2 (1, 2, 4, or 8). Lastly, we can specify a 32-bit offset known as the displacement. The memory address is computed using Equation 5.1.
+
+Now, let us look at addressing modes that do not require a base register. We can just use an index register and optionally scale it by 1, 2, 4, or 8. For example, we can specify that we want to access the memory address equal to  . This approach uses the scaled-index addressing mode. We can optionally add a fixed offset (known as the displacement) to the address.
+
+Lastly, it is possible to specify the entire 32-bit address in the displacement field, and not specify any register at all. This approach is typically used in the operating system code to directly operate on memory addresses. Regular assembly programmers need to strictly avoid such direct memory addressing because most of the time we are not aware of the exact memory addresses. For example, the starting address of the stack pointer is typically allocated at run time in modern systems, and tends to vary across runs. Secondly, this is not a portable and elegant approach. It is only meant for operating system writers.
+
+Let us explain with examples (see Table 5.2).
+
+Definition 42
+
+In the x86 ISA, the fixed offset used while specifying the effective address of a memory operand, is known as the displacement.

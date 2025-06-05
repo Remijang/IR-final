@@ -1,0 +1,17 @@
+# 49.1 A Basic Distributed File System  
+
+We now will study the architecture of a simplified distributed file system. A simple client/server distributed file system has more components than the file systems we have studied so far. On the client side, there are client applications which access files and directories through the clientside file system. A client application issues system calls to the client-side file system (such as open(), read(), write(), close(), mkdir(), etc.) in order to access files which are stored on the server. Thus, to client applications, the file system does not appear to be any different than a local (disk-based) file system, except perhaps for performance; in this way, distributed file systems provide transparent access to files, an obvious goal; after all, who would want to use a file system that required a different set of APIs or otherwise was a pain to use?  
+
+The role of the client-side file system is to execute the actions needed to service those system calls. For example, if the client issues a read() request, the client-side file system may send a message to the server-side file system (or, as it is commonly called, the file server) to read a particular block; the file server will then read the block from disk (or its own in-memory cache), and send a message back to the client with the requested data. The client-side file system will then copy the data into the user buffer supplied to the read() system call and thus the request will complete. Note that a subsequent read() of the same block on the client may be cached in client memory or on the client’s disk even; in the best such case, no network traffic need be generated.  
+
+![](images/1f51fdd944ac7e4496a4e0738103a8cf81c796904808955518db28dbb8ca0b36.jpg)  
+Figure 49.2: Distributed File System Architecture  
+
+From this simple overview, you should get a sense that there are two important pieces of software in a client/server distributed file system: the client-side file system and the file server. Together their behavior determines the behavior of the distributed file system. Now it’s time to study one particular system: Sun’s Network File System (NFS).  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+# ASIDE: WHY SERVERS CRASH  
+
+Before getting into the details of the NFSv2 protocol, you might be wondering: why do servers crash? Well, as you might guess, there are plenty of reasons. Servers may simply suffer from a power outage (temporarily); only when power is restored can the machines be restarted. Servers are often comprised of hundreds of thousands or even millions of lines of code; thus, they have bugs (even good software has a few bugs per hundred or thousand lines of code), and thus they eventually will trigger a bug that will cause them to crash. They also have memory leaks; even a small memory leak will cause a system to run out of memory and crash. And, finally, in distributed systems, there is a network between the client and the server; if the network acts strangely (for example, if it becomes partitioned and clients and servers are working but cannot communicate), it may appear as if a remote machine has crashed, but in reality it is just not currently reachable through the network.  
+

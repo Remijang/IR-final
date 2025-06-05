@@ -1,0 +1,122 @@
+[
+    {
+        "type": "text",
+        "text": "10.9.2 Performance of an Ideal Pipelined Processor ",
+        "text_level": 1,
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "Let us look at the three terms in the performance equation (Equation 10.3), and consider them one by one. Let us first consider the number of instructions. ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "Number of Instructions ",
+        "text_level": 1,
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "The number of instructions in a program is dependent on the intelligence of the compiler. A really smart compiler can reduce instructions by choosing the right set of instructions from the ",
+        "page_idx": 469
+    },
+    {
+        "type": "text",
+        "text": "ISA, and by using smart code transformations. For example, programmers typically have some code, which can be categorized as dead code. This code has no effect on the final output. A smart compiler can remove all the dead code that it can find. Another source of additional instructions is the code to spill and restore registers. Compilers often perform function inlining for very small functions. This optimization dynamically removes such functions and pastes their code in the code of the calling function. For small functions, this is a very useful optimization since we are getting rid of the code to spill and restore registers. There are many more compiler optimizations that help in reducing code size. The reader is referred to [Aho et al., 2006, Muchnick, 1997] for a detailed discussion on compiler design. For the rest of this section, we shall assume that the number of instructions is a constant. Let us exclusively focus on the hardware aspect. ",
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Computing the Total Number of Cycles ",
+        "text_level": 1,
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Let us assume an ideal pipeline that does not need to insert any bubbles, or stalls. It will be able to complete one instruction every cycle, and thus will have a CPI of 1. Let us assume a program containing $n$ instructions, and let the pipeline have $k$ stages. Let us compute the total number of cycles it will take for all the $n$ instructions to leave the pipeline. ",
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Let the first instruction enter the pipeline in cycle 1. It leaves the pipeline in cycle $k$ . Henceforth, one instruction will leave the pipeline every cycle. Thus, after $( n - 1 )$ cycles, all the instructions would have left the pipeline. The total number of cycles is therefore, $n + k - 1$ . The CPI is equal to: ",
+        "page_idx": 470
+    },
+    {
+        "type": "equation",
+        "text": "$$\nC P I = { \\frac { n + k - 1 } { n } }\n$$",
+        "text_format": "latex",
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Note that the CPI tends to $^ { 1 }$ , as $n$ tends to $\\infty$ . ",
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Relationship with the Frequency ",
+        "text_level": 1,
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Let the maximum amount of time that an instruction takes to finish its execution on a single cycle processor be $t _ { m a x }$ . This is also known as the total amount of algorithmic work. We are ignoring the delays of pipeline registers while computing $t _ { m a x }$ . Now, let us divide the data path into $k$ pipeline stages. We need to add $k - 1$ pipeline registers. Let the delay of a pipeline register be $l$ . If we assume that all the pipeline stages are balanced (do the same amount of work, and take the same amount of time), then the time that the slowest instruction will take to finish its work in a stage is equal to $\\textstyle { \\frac { t _ { m a x } } { k } }$ . The total time per stage is equal to the circuit delay and the delay of a pipeline register. ",
+        "page_idx": 470
+    },
+    {
+        "type": "equation",
+        "text": "$$\nt _ { s t a g e } = \\frac { t _ { m a x } } { k } + l\n$$",
+        "text_format": "latex",
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Now, the minimum clock cycle time has to be equal to the delay of a pipeline stage. This is because, the assumption while designing a pipeline is that each stage takes exactly one clock cycle. We thus have the minimum clock cycle time $\\left( t _ { c l k } \\right)$ , or the maximum frequency $( f )$ equal to: ",
+        "page_idx": 470
+    },
+    {
+        "type": "equation",
+        "text": "$$\nt _ { c l k } = \\frac { 1 } { f } = \\frac { t _ { m a x } } { k } + l\n$$",
+        "text_format": "latex",
+        "page_idx": 470
+    },
+    {
+        "type": "text",
+        "text": "Performance of a Pipeline ",
+        "text_level": 1,
+        "page_idx": 471
+    },
+    {
+        "type": "text",
+        "text": "Let us now compute the performance of this pipeline, and make a simplistic assumption that performance is equal to (f / CPI) because the number of instructions is a constant(n). ",
+        "page_idx": 471
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c c } { P = \\frac { f } { C P I } } \\\\ { = \\frac { \\frac { \\frac { 1 } { \\frac { n \\times 3 } { n + l } } } { n + 1 } } { n } } \\\\ { = \\frac { n } { ( t _ { m a x } / k + l ) \\times ( n + k - 1 ) } } \\\\ { = \\frac { n } { ( ( n - 1 ) t _ { m a x } / k + ( t _ { m a x } + l n - l ) + l k } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 471
+    },
+    {
+        "type": "text",
+        "text": "Let us try to maximize performance by choosing the right value of $k$ . We have: ",
+        "page_idx": 471
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { \\displaystyle \\frac { \\partial \\left( ( n - 1 ) t _ { m a x } / k + ( t _ { m a x } + l n - l ) + l k \\right) } { \\partial k } = 0 } } \\\\ { { \\displaystyle \\Rightarrow - \\frac { ( n - 1 ) t _ { m a x } } { k ^ { 2 } } + l = 0 } } \\\\ { { \\displaystyle \\Rightarrow k = \\sqrt { \\frac { ( n - 1 ) t _ { m a x } } { l } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 471
+    },
+    {
+        "type": "text",
+        "text": "Equation 10.8 provides a theoretical estimate of the optimal number of pipeline stages as a function of the latch delay $( l )$ , the total algorithmic work $( t _ { m a x } )$ , and the number of instructions $( n )$ . Let us gauge the trends predicted by this equation. The first is that as we increase the number of instructions, we can afford more pipeline stages. This is because the startup delay of $k$ cycles, gets nullified when there are more instructions. Secondly, as we increase the amount of algorithmic work $( t _ { m a x } )$ , we need a deeper pipeline. More is the number of pipeline stages, less is the amount of work we need to do per stage. We can thus have a higher frequency and a higher instruction throughput. Lastly, the optimal number of stages is inversely proportional to $\\sqrt { l }$ . As we increase the latch delay, we start wasting more time inserting and removing data from latches. Hence, it is necessary to adjust the number of pipeline stages with the latch delay. If the latches are very slow, we need to reduce the number of pipeline stages also such that we do not waste a lot of time in adding, and removing data from pipeline latches. ",
+        "page_idx": 471
+    },
+    {
+        "type": "text",
+        "text": "Sadly, an ideal pipeline does not exist in practice. This means that they do not have a CPI equal to $( n + k - 1 ) / n$ . Almost all programs have dependencies between instructions, and thus it becomes necessary to insert bubbles in the pipeline. Inserting bubbles increases the CPI from the ideal CPI computed in Equation 10.4. Equation 10.8 provides us with interesting insights. However, the reader needs to note that it is hypothetical. It predicts that the optimal number of stages approaches infinity, for very large programs. This is unfortunately not the case in practical scenarios. ",
+        "page_idx": 471
+    }
+]

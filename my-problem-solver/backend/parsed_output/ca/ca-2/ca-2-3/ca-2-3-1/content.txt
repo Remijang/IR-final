@@ -1,0 +1,9 @@
+2.3.1 Sign-Magnitude-Based Representation
+
+We can reserve a bit for representing the sign of a number. If it is equal to 0, then the number is positive, else it is negative. This is known as the sign-magnitude representation. Let us consider an  -bit integer. We can use the MSB as the designated signed bit, and use the rest of the number to represent the number’s magnitude. The magnitude of a number is represented using  bits. This is a simple and intuitive representation. In this representation, the range of the magnitude of an  -bit integer is from 0 till  . Hence, the number system has a range equal to  . Note that there are two zeros – a positive zero  and a negative zero  .
+
+Formally, the mapping function –  – where  is a number in the range of the number system, is shown in Equation 2.8.
+
+For example, if we consider a 4-bit number system, then we can represent the number -2 as  . Here, the MSB is 1 (represents a negative number), and the magnitude of the number is 010, which represents 2.
+
+The issues with this system are that it is difficult to perform arithmetic operations such as addition, subtraction, and multiplication. For example in our 4-bit number system, -  , can be represented as  . If we naively do simple unsigned addition, then the result is 1100, which is actually -6. This is the wrong result. We need to use a more difficult approach to add numbers.

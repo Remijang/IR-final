@@ -1,0 +1,64 @@
+27.4 Multiple Slit Diffraction
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Discuss the pattern obtained from diffraction grating.   
+• Explain diffraction grating effects.
+
+An interesting thing happens if you pass light through a large number of evenly spaced parallel slits, called a diffraction grating. An interference pattern is created that is very similar to the one formed by a double slit (see Figure 27.16). A diffraction grating can be manufactured by scratching glass with a sharp tool in a number of precisely positioned parallel lines, with the untouched regions acting like slits. These can be photographically mass produced rather cheaply. Diffraction gratings work both for transmission of light, as in Figure 27.16, and for reflection of light, as on butterfly wings and the Australian opal in Figure 27.17 or the CD pictured in the opening photograph of this chapter. In addition to their use as novelty items, diffraction gratings are commonly used for spectroscopic dispersion and analysis of light. What makes them particularly useful is the fact that they form a sharper pattern than double slits do. That is, their bright regions are narrower and brighter, while their dark regions are darker. Figure 27.18 shows idealized graphs demonstrating the sharper pattern. Natural diffraction gratings occur in the feathers of certain birds. Tiny, finger-like structures in regular patterns act as reflection gratings, producing constructive interference that gives the feathers colors not solely due to their pigmentation. This is called iridescence.
+
+colors at different angles. (credits: (a) Opals-On-Black.com, via Flickr (b) whologwhy, Flickr)
+
+The analysis of a diffraction grating is very similar to that for a double slit (see Figure 27.19). As we know from our discussion of double slits in Young's Double Slit Experiment, light is diffracted by each slit and spreads out after passing through. Rays traveling in the same direction (at an angle  relative to the incident direction) are shown in the figure. Each of these rays travels a different distance to a common point on a screen far away. The rays start in phase, and they can be in or out of phase when they reach a screen, depending on the difference in the path lengths traveled. As seen in the figure, each ray travels a distance  sin  different from that of its neighbor, where  is the distance between slits. If this distance equals an integral number of wavelengths, the rays all arrive in phase, and constructive interference (a maximum) is obtained. Thus, the condition necessary to obtain constructive interference for a diffraction grating is
+
+where  is the distance between slits in the grating,  is the wavelength of light, and  is the order of the maximum. Note that this is exactly the same equation as for double slits separated by  . However, the slits are usually closer in diffraction gratings than in double slits, producing fewer maxima at larger angles.
+
+reach a common point on a screen (not shown). Each ray travels a distance  sin  different from that of its neighbor.
+
+Where are diffraction gratings used? Diffraction gratings are key components of monochromators used, for example, in optical imaging of particular wavelengths from biological or medical samples. A diffraction grating can be chosen to specifically analyze a wavelength emitted by molecules in diseased cells in a biopsy sample or to help excite strategic molecules in the sample with a selected frequency of light. Another vital use is in optical fiber technologies where fibers are designed to provide optimum performance at specific wavelengths. A range of diffraction gratings are available for selecting specific wavelengths for such use.
+
+Take-Home Experiment: Rainbows on a CD
+
+The spacing  of the grooves in a CD or DVD can be well determined by using a laser and the equation  sin  ，for  . However, we can still make a good estimate of this spacing by using white light and the rainbow of colors that comes from the interference. Reflect sunlight from a CD onto a wall and use your best judgment of the location of a strongly diffracted color to find the separation  .
+
+EXAMPLE 27.3
+
+Calculating Typical Diffraction Grating Effects
+
+Diffraction gratings with 10,000 lines per centimeter are readily available. Suppose you have one, and you send a beam of white light through it to a screen  away. (a) Find the angles for the first-order diffraction of the shortest and longest wavelengths of visible light (380 and  ). (b) What is the distance between the ends of the rainbow of visible light produced on the screen for first-order interference? (See Figure 27.20.)
+
+Strategy
+
+The angles can be found using the equation
+
+once a value for the slit spacing  has been determined. Since there are 10,000 lines per centimeter, each line is
+
+separated by of a centimeter. Once the angles are found, the distances along the screen can be found using simple trigonometry.
+
+Solution for (a)
+
+The distance between slits is  or  . Let us call the two angles  for violet  and  for red  . Solving the equation  sin  for  ,
+
+where  for first order and  . Substituting these values gives
+
+Thus the angle  is
+
+Similarly,
+
+Thus the angle  is
+
+Notice that in both equations, we reported the results of these intermediate calculations to four significant figures to use with the calculation in part (b).
+
+Solution for (b)
+
+The distances on the screen are labeled and  in Figure 27.20. Noting that  , we can solve for and  . That is,
+
+and
+
+The distance between them is therefore
+
+Discussion
+
+The large distance between the red and violet ends of the rainbow produced from the white light indicates the potential this diffraction grating has as a spectroscopic tool. The more it can spread out the wavelengths (greater dispersion), the more detail can be seen in a spectrum. This depends on the quality of the diffraction grating—it must be very precisely made in addition to having closely spaced lines.

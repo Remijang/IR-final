@@ -1,0 +1,5 @@
+7.2.4 Demultiplexer
+
+A demultiplexer takes as input a  -bit binary number, a 1-bit input, and transfers the input to one of  output lines. The block diagram is shown in Figure 7.12. Demultiplexers are used in the design of memory cells, where it is necessary for the input to reflect in exactly one of the output lines.
+
+The operation is similar to that of a multiplexer. Instead of having multiple inputs, we have just 1 input. Like the case of the multiplexer, we first enable the appropriate AND gate with a decoder. Then the second stage consists of an array of AND gates, where each gate reflects the input bit at its output if it is enabled by the decoder. Recall that an AND gate is enabled if one of its inputs is a logical 1; in this case the output is equal to the value of the other input.

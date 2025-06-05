@@ -1,0 +1,35 @@
+12.7.1 Summary
+
+Summary 12
+
+1. Processor frequency and performance is beginning to saturate.
+
+2. Concomitantly, the number of transistors per chip is roughly doubling very two years as per the original predictions of Gordon Moore. This empirical law is known as the Moore’s Law.   
+3. The additional transistors are not being utilized to make a processor larger, or more complicated. They are instead being used to add more processors on chip. Each such processor is known as a core, and a chip with multiple cores is known as a multicore processor.   
+4. We can have multiprocessor systems where the processors are connected over the network. In this case the processors do not share any resources between them, and such multiprocessors are known as loosely coupled multiprocessors. In comparison, multicore processors, and most small sized server processors that have multiple processors on the same motherboard, share resources such as the I/O devices, and the main memory. Programs running on multiple processors in these systems might also share a part of their virtual address space. These systems are thus referred to as strongly coupled multiprocessors.   
+5. Multiprocessor systems can be used to run multiple sequential programs simultaneously, or can be used to run parallel programs. A parallel program contains many subprograms that run concurrently. The sub-programs co-operate among themselves to achieve a bigger task. When sub-programs share their virtual memory space, they are known as threads.   
+6. Parallel programs running on strongly coupled multiprocessors typically communicate values between themselves by writing to a shared memory space. In comparison, programs running on loosely coupled multiprocessors communicate by passing messages between each other.
+
+7. Most parallel programs have a sequential section, and a parallel section. The parallel section can be divided into smaller units and distributed among the processors of a multiprocessor system. If we have  processors, then we ideally expect the parallel section to show a speedup of  times. An equation describing this relationship is known as the Amdahl’s Law. The speedup,  is given by:
+
+8. The Flynn’s taxonomy classifies computing systems into four types : SISD (single instruction, single data), SIMD (single instruction, multiple data), MISD (multiple instruction, single data), and MIMD (multiple instruction, multiple data).
+
+9. The memory system in modern shared memory MIMD processors is in reality very complex. Coherence and consistency are two important aspects of the behavior of the memory system.
+
+10. Coherence refers to the rules that need to be followed for accessing the same memory location. Coherence dictates that a write is never lost, and all writes to the same location are seen in the same order by all the processors.
+
+11. Consistency refers to the behavior of the memory system with respect to different memory locations. If memory accesses from the same thread get reordered by the memory system (as is the case with modern processors), many counter-intuitive behaviors as possible. Hence, most of the time we reason in terms of the sequentially consistent memory model that prohibits reordering of messages sent to the memory system by the same thread. In practice, multiprocessors follow a weak consistency model that allows arbitrary reorderings between accesses that access different memory addresses. We can still write correct programs because such models define synchronization instructions (example: fence) that try to enforce an ordering between memory accesses when required.
+
+12. We can either have a large shared cache, or multiple private caches (one for each core or set of cores). Shared caches can be made more performance and power efficient by dividing it into a set of subcaches known as banks. For a set of private caches to logically function as one large shared cache, we need to implement cache coherence.
+
+(a) The snoopy cache coherence protocol connects all the processors to a shared bus. (b) The MSI write-update protocol works by broadcasting every write to all the cores. (c) The MSI write-invalidate protocol guarantees coherence by ensuring that only one cache can write to a block at any single point of time.
+
+13. To further improve performance, we can implement a multithreaded processor that shares a pipeline across many threads. We can either quickly switch between threads (fine and coarse-grained multithreading), or execute instructions from multiple threads in the same cycle using a multi-issue processor (simultaneous multithreading).
+
+14. SIMD processors follow a different approach. They operate on arrays of data at once. Vector processors have a SIMD instruction set. Even though, they are obsolete now, most modern processors have vector instructions in their ISA.
+
+(a) Vector arithmetic/logical instructions fetch their operands from the vector register file, and operate on large vectors of data at once.   
+(b) Vector load-store operations can either assume that data is stored in contiguous memory regions, or assume that data is scattered in memory.   
+(c) Instructions on a branch path are implemented as predicated instructions in vector ISAs.
+
+15. Processors and memory elements are connected through an interconnection network. The basic properties of an interconnection network are the diameter (worst case endto-end delay), and the bisection bandwidth (number of links that need to be snapped to partition the network equally). We discussed several topologies: chain, ring, fat tree, mesh, torus, folded torus, hypercube, and butterfly.

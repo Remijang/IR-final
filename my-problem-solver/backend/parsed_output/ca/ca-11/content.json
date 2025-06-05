@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "11 The Memory System ",
+        "text_level": 1,
+        "page_idx": 507
+    },
+    {
+        "type": "text",
+        "text": "Up till now, we have considered the memory system to be one large array of bytes. This abstraction was good enough for designing an instruction set, studying assembly language, and even for designing a basic processor with a complicated pipeline. However, from a practical standpoint, this abstraction will need to be further refined to design a fast memory system. In our basic SimpleRisc pipeline presented in Chapter 9 and 10, we have assumed that it takes 1 cycle to access both data and instruction memory. We shall see in this chapter, that this is not always true. In fact, we need to make significant optimizations in the memory system to come close to the ideal latency of 1 cycle. We need to introduce the notion of a \u201ccache\u201d and a hierarchical memory system to solve the dual problems of having large memory capacity, and low latency. ",
+        "page_idx": 507
+    },
+    {
+        "type": "text",
+        "text": "Secondly, up till now we have been assuming that only one program runs on our system. However, most processors typically run multiple programs on a time shared basis. For example, if there are two programs, $A$ and $B$ , a modern desktop or laptop typically runs program $A$ for a couple of milliseconds, executes $B$ for a few milliseconds, and subsequently switches back and forth. In fact as your author is writing this book, there are a host of other programs running on his system such as a web browser, an audio player, and a calendar application. In general, a user does not perceive any interruptions, because the time scale at which the interruptions happen is much lower than what the human brain can perceive. For example, a typical video displays a new picture 30 times every second, or alternatively one new picture every 33 milliseconds. The human brain creates the illusion of a smoothly moving object by piecing the pictures together. If the processor finishes the job of processing the next picture in a video sequence, before 33 milliseconds, then it can execute a part of another program. The human brain will not be able to tell the difference. The point here is that without our knowledge, the processor in cooperation with the operating system switches between multiple programs many times a second. The operating system is itself a specialized program that helps the processor manage itself, and other programs. Windows and Linux are examples of popular operating systems. ",
+        "page_idx": 507
+    },
+    {
+        "type": "text",
+        "text": "We shall see that we require special support in the memory system to support multiple programs. If we do not have this support, then multiple programs can overwrite each other\u2019s data, which is not desired behavior. Secondly, we have been living with the assumption that we have practically an infinite amount of memory. This is also not true. The amount of memory that we have is finite, and it can get exhausted by large memory intensive programs. Hence, we should have a mechanism to still run such large programs. We shall introduce the concept of virtual memory to solve both of these issues \u2013 running multiple programs, and handling large memory intensive programs. ",
+        "page_idx": 507
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 508
+    },
+    {
+        "type": "text",
+        "text": "To summarize, we observe that we need to design a memory system that is fast, and is flexible enough to support multiple programs with very large memory requirements. ",
+        "page_idx": 508
+    }
+]

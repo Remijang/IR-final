@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "36.6 Methods Of Device Interaction ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Now that we have some sense of the efficiency issues involved with performing I/O, there are a few other problems we need to handle to incorporate devices into modern systems. One problem you may have noticed thus far: we have not really said anything about how the OS actually communicates with the device! Thus, the problem: ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "THE CRUX: HOW TO COMMUNICATE WITH DEVICES How should the hardware communicate with a device? Should there be explicit instructions? Or are there other ways to do it? ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Over time, two primary methods of device communication have developed. The first, oldest method (used by IBM mainframes for many years) is to have explicit I/O instructions. These instructions specify a way for the OS to send data to specific device registers and thus allow the construction of the protocols described above. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "For example, on $\\times 8 6$ , the in and out instructions can be used to communicate with devices. For example, to send data to a device, the caller specifies a register with the data in it, and a specific port which names the device. Executing the instruction leads to the desired behavior. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Such instructions are usually privileged. The OS controls devices, and the OS thus is the only entity allowed to directly communicate with them. Imagine if any program could read or write the disk, for example: total chaos (as always), as any user program could use such a loophole to gain complete control over the machine. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The second method to interact with devices is known as memorymapped I/O. With this approach, the hardware makes device registers available as if they were memory locations. To access a particular register, the OS issues a load (to read) or store (to write) the address; the hardware then routes the load/store to the device instead of main memory. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "There is not some great advantage to one approach or the other. The memory-mapped approach is nice in that no new instructions are needed to support it, but both approaches are still in use today. ",
+        "page_idx": 7
+    }
+]

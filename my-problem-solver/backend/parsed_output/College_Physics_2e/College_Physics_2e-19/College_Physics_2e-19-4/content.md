@@ -1,0 +1,45 @@
+# 19.4 Equipotential Lines
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Explain equipotential lines and equipotential surfaces.   
+• Describe the action of grounding an electrical appliance.   
+• Compare electric field and equipotential lines.
+
+We can represent electric potentials (voltages) pictorially, just as we drew pictures to illustrate electric fields. Of course, the two are related. Consider Figure 19.8, which shows an isolated positive point charge and its electric field lines. Electric field lines radiate out from a positive charge and terminate on negative charges. While we use blue arrows to represent the magnitude and direction of the electric field, we use green lines to represent places where the electric potential is constant. These are called equipotential lines in two dimensions, or equipotentialsurfaces in three dimensions. The term equipotentialis also used as a noun, referring to an equipotential line or surface. The potential for a point charge is the same anywhere on an imaginary sphere of radius $r$ surrounding the charge. This is true since the potential for a point charge is given by $V = k Q / r$ and, thus, has the same value at any point that is a given distance $r$ from the charge. An equipotential sphere is a circle in the two-dimensional view of Figure 19.8. Since the electric field lines point radially away from the charge, they are perpendicular to the equipotential lines.
+
+It is important to note that equipotentiallinesarealwaysperpendiculartoelectricfieldlines. No work is required to move a charge along an equipotential, since $\Delta V = 0$ . Thus the work is
+
+$$
+W = - \Delta \mathrm { P E } = - q \Delta V = 0 .
+$$
+
+Work is zero if force is perpendicular to motion. Force is in the same direction as $\mathbf { E }$ , so that motion along an equipotential must be perpendicular to . More precisely, work is related to the electric field by
+
+$$
+\begin{array} { r } { W = F d \cos \theta = q E d \cos \theta = 0 . } \end{array}
+$$
+
+Note that in the above equation, $E$ and $F$ symbolize the magnitudes of the electric field strength and force, respectively. Neither $q$ nor $\mathbf { E }$ nor $d$ is zero, and so $\theta$ must be 0, meaning $\theta$ must be $9 0 ^ { \circ }$ . In other words, motion along an equipotential is perpendicular to .
+
+One of the rules for static electric fields and conductors is that the electric field must be perpendicular to the surface of any conductor. This implies that a conductorisanequipotentialsurfaceinstaticsituations. There can be no voltage difference across the surface of a conductor, or charges will flow. One of the uses of this fact is that a conductor can be fixed at zero volts by connecting it to the earth with a good conductor—a process called grounding. Grounding can be a useful safety tool. For example, grounding the metal case of an electrical appliance ensures that it is at zero volts relative to the earth.
+
+# Grounding
+
+A conductor can be fixed at zero volts by connecting it to the earth with a good conductor—a process called grounding.
+
+Because a conductor is an equipotential, it can replace any equipotential surface. For example, in Figure 19.8 a charged spherical conductor can replace the point charge, and the electric field and potential surfaces outside of it will be unchanged, confirming the contention that a spherical charge distribution is equivalent to a point charge at its center.
+
+Figure 19.9 shows the electric field and equipotential lines for two equal and opposite charges. Given the electric field lines, the equipotential lines can be drawn simply by making them perpendicular to the electric field lines. Conversely, given the equipotential lines, as in Figure 19.10(a), the electric field lines can be drawn by making them perpendicular to the equipotentials, as in Figure 19.10(b).
+
+One of the most important cases is that of the familiar parallel conducting plates shown in Figure 19.11. Between the plates, the equipotentials are evenly spaced and parallel. The same field could be maintained by placing conducting plates at the equipotential lines at the potentials shown.
+
+An important application of electric fields and equipotential lines involves the heart. The heart relies on electrical signals to maintain its rhythm. The movement of electrical signals causes the chambers of the heart to contract and relax. When a person has a heart attack, the movement of these electrical signals may be disturbed. An artificial pacemaker and a defibrillator can be used to initiate the rhythm of electrical signals. The equipotential lines around the heart, the thoracic region, and the axis of the heart are useful ways of monitoring the structure and functions of the heart. An electrocardiogram (ECG) measures the small electric signals being generated during the activity of the heart. More about the relationship between electric fields and the heart is discussed in Energy Stored in Capacitors.
+
+# PHET EXPLORATIONS
+
+# Charges and Fields
+
+Move point charges around on the playing field and then view the electric field, voltages, equipotential lines, and more. It's colorful, it's dynamic, it's free.

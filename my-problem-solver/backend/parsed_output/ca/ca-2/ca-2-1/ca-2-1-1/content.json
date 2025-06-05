@@ -1,0 +1,68 @@
+[
+    {
+        "type": "text",
+        "text": "2.1.1 Basic Operators ",
+        "text_level": 1,
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "A simple Boolean variable can take two values \u2013 0 or 1. It corresponds to two states of a system. For example, it can represent the fact that a light bulb is off(0) or on(1). It is easy to represent a Boolean variable in an electronic circuit. If the voltage on a wire is $0$ , then we are representing a logical 0. If the voltage is equal to the supply voltage $V _ { d d }$ , then we are representing a logical 1. We shall have an opportunity to read more about electronic circuits in Chapter 7. ",
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a simple Boolean variable, $A$ . Let us assume that $A$ represents the fact that a light bulb is on. If $A = 1$ , then the bulb is on, else it is off. Then the logical complement or negation of $A$ , represented by $\\overline { { A } }$ , represents the fact that the bulb is off. If $\\overline { { A } } = 1$ , then the bulb is off, otherwise, it is on. The logical complement is known as the NOT operator. Any Boolean operator can be represented by the means of a truth table, which lists the outputs of the operator for all possible combinations of inputs. The truth table for the NOT operator is shown in Table 2.1. ",
+        "page_idx": 51
+    },
+    {
+        "type": "table",
+        "img_path": "images/1562b8155fd8e836c58aa12f20479b01cef1d46be10a1930edabe528425cf076.jpg",
+        "table_caption": [
+            "Table 2.1: Truth table for the NOT operator "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td></tr><tr><td>A 0</td><td>A 1</td></tr><tr><td>1</td><td>0</td></tr></table></body></html>\n\n",
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider multiple Boolean variables. Let us consider the three bulbs in a typical traffic light \u2013 red, yellow, green. Let their states at a given time $t$ be represented by the Boolean variables \u2013 R, Y, and G \u2013 respectively. At any point of time, we want one and only one of the lights to be on. Let us try to represent the first condition (one light on) symbolically using Boolean logic. We need to define the OR operator that represents the fact that either of the operands is equal to 1. For example, $A$ OR $B$ , is equal to 1, if $A = 1$ or $B = 1$ . Two symbols for the OR operator are used in literature \u2013 \u2019 $+$ \u2019 and \u2019 \u2019. In most cases \u2019+\u2019 is preferred. The reader needs to be aware that \u2019+\u2019 is not the same as the addition operator. The correct connotation for this operator needs to be inferred from the context. Whenever, there is a confusion, we will revert to the \u2228 operator in this book. By default, we will use the \u2019+\u2019 operator to represent Boolean OR. Thus, condition 1 is: $R + Y + G = 1$ . The truth table for the OR operator is shown in Table 2.2. ",
+        "page_idx": 51
+    },
+    {
+        "type": "table",
+        "img_path": "images/5581cb9e0152bb8805afdd81ca07f1dff3a25d5c8d3c35ac4e698577aea8d0c0.jpg",
+        "table_caption": [
+            "Table 2.2: Truth table for the OR operator "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"4\"></td></tr><tr><td></td><td>A</td><td>B</td><td>A OR B</td></tr><tr><td></td><td>0</td><td>0</td><td>0</td></tr><tr><td></td><td>0</td><td>1</td><td>1</td></tr><tr><td></td><td>1</td><td>0</td><td>1</td></tr><tr><td></td><td>1</td><td>1</td><td>1</td></tr></table></body></html>\n\n",
+        "page_idx": 51
+    },
+    {
+        "type": "text",
+        "text": "Now, let us try to formalize condition 2. This states that only one light needs to be on. We can alternatively say that it is not possible to find a pair of bulbs that are on together. We need to define a new operator called the AND operator (represented by \u2019.\u2019 or $' \\wedge '$ ). $A$ AND $B$ is equal to 1, when both $A$ and $B$ are 1. The truth table for the AND operator is shown in Table 2.3. Now, $R . Y$ represents the fact that both the red and yellow bulbs are on. This is not possible. Considering all such pairs, we have condition 2 as: $R . Y + R . G + G . Y = 0$ . This formula represents the fact that no two pairs of bulbs are on simultaneously. ",
+        "page_idx": 51
+    },
+    {
+        "type": "table",
+        "img_path": "images/4c8d7946d5ed3594a5220e73fa2e8f81fb46a96ca551ad7e84b0c6d3e8d281fa.jpg",
+        "table_caption": [
+            "Table 2.3: Truth table for the AND operator "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td><td>A AND B</td></tr><tr><td>A 0</td><td>B 0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table></body></html>\n\n",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "We thus observe that it is possible to represent complex logical statements using a combination of Boolean variables and operators. We can say that NOT, AND, and OR, are basic operators. Let us derive a set of operators from them. ",
+        "page_idx": 52
+    }
+]

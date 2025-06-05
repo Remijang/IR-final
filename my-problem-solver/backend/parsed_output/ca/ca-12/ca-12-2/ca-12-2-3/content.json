@@ -1,0 +1,64 @@
+[
+    {
+        "type": "text",
+        "text": "12.2.3 Amdahl\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 578
+    },
+    {
+        "type": "text",
+        "text": "We have just taken a look at examples for adding a set of $n$ numbers in parallel using both the paradigms namely shared memory and message passing. We divided our program into two parts \u2013 a sequential part and a parallel part (refer to Figure 12.3). In the parallel part of the execution, each thread completed the work assigned to it, and created a partial result. In the sequential part, the root or master or parent thread initialized all the variables and data structures, and spawned all the child threads. After all the child threads completed (or joined), the parent thread aggregated the results produced by all the child threads. This process of aggregating results is also known as reduction. The process of initializing variables, and reduction, are both sequential. ",
+        "page_idx": 578
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to derive the speedup of a parallel program vis-a-vis its sequential counterpart. Let us consider a program that takes $T _ { s e q }$ units of time to execute. Let $f _ { s e q }$ be the fraction of time that it spends in its sequential part, and $1 - f _ { s e q }$ be the fraction of time that it spends in its parallel part. The sequential part is unaffected by parallelism; however, the parallel part gets equally divided among the processors. If we consider a system of $P$ processors, then the parallel part is expected to have a speedup of $P \\times$ . Thus, the time $( T _ { p a r } )$ that the parallel version of the program takes is equal to: ",
+        "page_idx": 578
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT _ { p a r } = T _ { s e q } \\times \\left( f _ { s e q } + \\frac { 1 - f _ { s e q } } { P } \\right)\n$$",
+        "text_format": "latex",
+        "page_idx": 578
+    },
+    {
+        "type": "text",
+        "text": "Alternatively, the speedup ( $S$ ) is given by: ",
+        "page_idx": 578
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS = \\frac { T _ { s e q } } { T _ { p a r } } = \\frac { 1 } { f _ { s e q } + \\frac { 1 - f _ { s e q } } { P } }\n$$",
+        "text_format": "latex",
+        "page_idx": 578
+    },
+    {
+        "type": "text",
+        "text": "Equation 12.2 is known as the Amdahl\u2019s Law. It is a theoretical estimate (or rather the upper bound in most cases) of the speedup that we expect with additional parallelism. ",
+        "page_idx": 579
+    },
+    {
+        "type": "image",
+        "img_path": "images/197292021b79b667e517067f83a6a76d220e6c82071c938cc32d8d96506e6a44.jpg",
+        "img_caption": [
+            "Figure 12.4: Speedup (S) vs number of processors (P) "
+        ],
+        "img_footnote": [],
+        "page_idx": 579
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.4 plots the speedups as predicted by Amdahl\u2019s Law for three values of $f _ { s e q }$ (10%, $5 \\%$ , and $2 \\%$ ). We observe that with an increasing number of processors the speedup gradually saturates and tends to the limiting value, $1 / f _ { s e q }$ . We observe diminishing returns as we increase the number of processors beyond a certain point. For example, for $f _ { s e q } = 5 \\%$ , there is no appreciable difference in speedups between a system with 35 processors, and a system with 200 processors. We approach similar limits for all three values of $f _ { s e q }$ . The important point to note here is that increasing speedups by adding additional processors has its limits. We cannot expect to keep getting speedups indefinitely by adding more processors, because we are limited by the length of the sequential sections in programs. ",
+        "page_idx": 579
+    },
+    {
+        "type": "text",
+        "text": "To summarize, we can draw two inferences. The first is that to speed up a program it is necessary to have as much parallelism as possible. Hence, we need to have a very efficient parallel programming library, and parallel hardware. However, parallelism has its limits, and it is not possible to increase the speedup appreciably beyond a certain limit. The speedup is limited by the length of the sequential section in the program. To reduce the sequential section, we need to adopt approaches both at the algorithmic level, and at the system level. We need to design our algorithms in such a way that the sequential section is as short as possible. For example, in Examples 149, and 150, we can also perform the initialization in parallel (reduces the length of the sequential section). Secondly, we need a fast processor that can minimize the time it takes to execute the sequential section. ",
+        "page_idx": 579
+    },
+    {
+        "type": "text",
+        "text": "We looked at the latter requirement (designing fast processors) in Chapters 9, 10, and 11 Now, let us look at designing fast and power efficient hardware for the parallel section. ",
+        "page_idx": 579
+    }
+]

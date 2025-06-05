@@ -1,0 +1,71 @@
+[
+    {
+        "type": "text",
+        "text": "10.10.5 The $E D ^ { 2 }$ Metric ",
+        "text_level": 1,
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "Now, let us try to integrate performance, and energy into one model. The performance of a program is given by the performance equation (Equation 10.3). Let us simplistically assume that the time a program takes, or its delay ( $D$ ) is inversely proportional to the frequency. Again, this is not strictly correct because the IPC is dependent on the frequency. We cannot appreciate the relationship between IPC and frequency right now, because we do not have adequate background. However, we shall touch this topic in Section 11.3, and see that there are components to the IPC that are frequency dependent such as the latency of main memory. In any case, let us move ahead with the approximation that $D \\propto 1 / f$ . ",
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "Let us compare two processor designs for the same program. One design dissipates $E _ { 1 }$ Joules for the execution of the entire program, and it takes $D _ { 1 }$ units of time. The second design dissipates $E _ { 2 }$ Joules, and takes $D _ { 2 }$ units of time. How do we say, which design is better? It is possible that the second design is slightly faster but dissipates 3 times more energy per cycle. There has to be a common metric. ",
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "To derive a common metric, we need to either make the performance the same ( $D _ { 1 } = D _ { 2 }$ ), and then compare the energy, or make the energy the same ( $E _ { 1 } ~ = ~ E _ { 2 }$ ), and compare the performance. To ensure that $D _ { 1 } = D _ { 2 }$ we need to either speed up one design or slowdown the other one. To achieve this, we can use a standard technique called dynamic voltage-frequency scaling (DVFS). ",
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "According to the DVFS technique, to scale up the frequency by a factor of $\\kappa _ { 1 }$ , we scale the voltage by a factor of $\\kappa _ { 2 }$ . Typically, we assume that $\\kappa _ { 1 } = \\kappa _ { 2 }$ . For example, to double the frequency, we double the voltage also. Note that with a higher frequency and consequent lower clock cycle time, we need to ensure that signals can rise and fall quickly. To ensure quicker signal transition, we increase the voltage such that it takes less time for a signal to rise and fall by $\\Delta V$ volts. This fact can be proved by considering the basic capacitor charging and discharging equations. From our point of view, we need to appreciate the fact that the voltage and frequency need to be scaled together. ",
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "Definition 89 ",
+        "text_level": 1,
+        "page_idx": 486
+    },
+    {
+        "type": "text",
+        "text": "DVFS is a technique that is used to adjust the voltage and frequency of a processor at run time. If we scale the frequency by a factor of $\\kappa _ { 1 }$ , then we need to scale the voltage by a factor of \u03ba2. In most cases, we assume that $\\kappa _ { 1 } = \\kappa _ { 2 }$ . ",
+        "page_idx": 486
+    },
+    {
+        "type": "text",
+        "text": "Now, let us try to equalize the execution time of designs 1 and 2, and compare the energy. We have made the following assumptions: $D \\propto 1 / f$ , and $f \\propto V$ . Thus, $D \\propto 1 / V$ . To make the delays equal we need to scale the delay of design 2 by $D _ { 1 } / D _ { 2 }$ , or alternatively we need to scale its voltage and frequency by $D _ { 2 } / D _ { 1 }$ . After equalizing the delay, let the energy dissipation of design 2 be $E _ { 2 } ^ { \\prime }$ . Since $E \\propto \\alpha V ^ { 2 }$ , we have: ",
+        "page_idx": 486
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { E _ { 2 } ^ { \\prime } = E _ { 2 } \\times \\displaystyle \\frac { V _ { 1 } ^ { 2 } } { V _ { 2 } ^ { 2 } } } \\\\ { = E _ { 2 } \\times \\displaystyle \\frac { f _ { 1 } ^ { 2 } } { f _ { 2 } ^ { 2 } } } \\\\ { = E _ { 2 } \\times \\displaystyle \\frac { D _ { 2 } ^ { 2 } } { D _ { 1 } ^ { 2 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 486
+    },
+    {
+        "type": "text",
+        "text": "Now, let us compare $E _ { 1 }$ and $E _ { 2 } ^ { \\prime }$ . ",
+        "page_idx": 486
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { c } { { E _ { 2 } ^ { \\prime } < = > E _ { 1 } } } \\\\ { { \\Leftrightarrow E _ { 2 } \\times \\displaystyle \\frac { D _ { 2 } ^ { 2 } } { D _ { 1 } ^ { 2 } } < = > E _ { 1 } } } \\\\ { { \\Leftrightarrow E _ { 2 } D _ { 2 } ^ { 2 } < = > E _ { 1 } D _ { 1 } ^ { 2 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 486
+    },
+    {
+        "type": "text",
+        "text": "In this case, we observe that comparing $E _ { 2 } ^ { \\prime }$ and $E _ { 1 }$ is tantamount to comparing $E _ { 2 } D _ { 2 } ^ { 2 }$ , and $E _ { 1 } D _ { 1 } ^ { 2 }$ . Since $E \\propto V ^ { 2 } ( \\propto 1 / D ^ { 2 } )$ , $E D ^ { 2 } = \\kappa$ . Here, $\\kappa$ is a constant that arises out of the different constants of proportionality. It is thus a property that is independent of the voltage and frequency of the system. It is related to the activity factor, and the capacitance of the circuits, and is inherent to the design. Consequently, the $E D ^ { 2 }$ metric is used as an effective baseline metric to compare two designs. ",
+        "page_idx": 486
+    },
+    {
+        "type": "text",
+        "text": "Designers aim to reduce the $E D ^ { 2 }$ metric of a design as much as possible. This ensures that irrespective of the DVFS settings, a design with a lower value of $E D ^ { 2 }$ is a much better design than other designs that have a higher $E D ^ { 2 }$ metric. Note that a lot of performance enhancing schemes do not prove to be effective because they do not show any benefit with regard to the $E D ^ { 2 }$ metric. They do increase performance, but also disproportionately increase the energy dissipation. Likewise, a lot of power reduction schemes are impractical because they increase the delay, and the $E D ^ { 2 }$ metric increases. Consequently, whenever we need to jointly optimize energy/power and performance we use the $E D ^ { 2 }$ metric to evaluate candidate designs. ",
+        "page_idx": 486
+    }
+]

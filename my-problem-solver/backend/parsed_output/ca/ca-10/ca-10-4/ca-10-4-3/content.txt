@@ -1,0 +1,19 @@
+10.4.3 Control Hazards
+
+Let us now look at another type of hazards that arise when we have branch instructions in the pipeline. Let us consider the following code snippet.
+
+[1]: beq .foo [2]: mov r1, 4 [3]: add r2, r4, r3 .foo: [100]: add r4, r1, r2
+
+Let us show the pipeline diagram for the first three instructions in Figure 10.13.
+
+Here, the outcome of the branch is decided in cycle 3, and is communicated to the fetch unit. The fetch unit starts fetching the correct instruction from cycle 4. Now, if the branch is taken, then instructions 2, and 3, should not be executed. Sadly, there is no way of knowing in cycles 2 and 3, about the outcome of the branch. Hence, these instructions will be fetched, and will be a part of the pipeline. If the branch is taken, then there is a possibility that instructions 2 and 3 might corrupt the state of the program, and consequently introduce an error. Instructions 2 and 3, are known as instructions on the wrong path. This scenario is known as a control hazard.
+
+Definition 69
+
+The instructions that would have been executed if the branch instruction had an outcome that is different from its real outcome, are said to be on the wrong path. For example, instructions succeeding a branch instruction in the program, are on the wrong path, if the branch is taken.
+
+Definition 70
+
+A control hazard represents the possibility of erroneous execution in a pipeline because instructions on the wrong path of a branch can possibly get executed and save their results in memory, or in the register file.
+
+To avoid a control hazard, it is necessary to identify instructions on the wrong path, and ensure that their results do not get committed to the register file, and memory. There should be a way to nullify such instructions, or avoid them altogether.

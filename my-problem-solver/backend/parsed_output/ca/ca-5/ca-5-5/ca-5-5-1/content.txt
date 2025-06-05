@@ -1,0 +1,51 @@
+5.5.1 High Level View of x86 Instruction Encoding
+
+The first set of 1-4 bytes are used to encode the prefix of the instruction. The rep prefix is one such example of a prefix. There are many other kinds of prefixes that can be encoded in the first group of 1-4 bytes.
+
+The next 1-3 bytes are used for encoding the opcode. Recall that the entire x86 ISA has hundreds of instructions. Secondly, the opcode also encodes the format of operands. For example, the add instruction can either have its first operand as a memory operand, or have its second operand as a memory operand. This information is also a part of the opcode.
+
+The next two bytes are optional. The first byte is known as the ModR/M byte, which specifies the address of the source and destination registers, and the second byte is known as the SIB (scale-index-base) byte. This byte records the parameters for the base-scaled-index and base-scaled-index-offset addressing modes. A memory address might optionally have a displacement (also referred to as the offset in this book) that can be as large as 32 bits. We can thus optionally have 4 more bytes in an instruction to record the value of the displacement. Lastly, some x86 instructions accept an immediate as an operand. The immediate can also be as large as 32 bits. Hence, the last field, which is again optional, is used to specify an immediate operand.
+
+Let us now discuss the ModR/M and SIB bytes in more detail.
+
+ModR/M Byte
+
+The ModR/M byte has three fields as shown in Figure 5.5.
+
+The two MSB bits of the ModR/M byte contain the Mod field. The Mod field indicates the addressing mode of the instruction. It can take 4 values as shown in Table 5.28.
+
+The Mod field indicates the addressing mode of one of the operands. It can either be a register or a memory operand. If it is a memory operand, then we have three options. We
+
+Table 5.29: Register encoding
+
+can either have no displacement (Mod = 00), an 8-bit displacement  ), or a 32-bit displacement (Mod=10). If it is a register operand, then the Mod field has a value of 11.
+
+The important point to note is that for all the memory address modes, if the R/M bits are equal to 100, then we need to use the information in the SIB byte for computing the effective memory address.
+
+The Reg field encodes the second operand if it is a register. Since both the operands cannot be memory operands, we use the Mod and R/M bits for encoding one of the operands that might be a memory operand (source or destination), and use the  field for encoding the other operand, which has to be a register. The encoding for the registers is shown in Table 5.29.
+
+For floating point instructions, the default register operand is always  . Some instructions accept another FP register operand. For such instructions, we use register direct addressing (Mod = 11). We use the R/M bits for specifying the id of the additional FP register. We use 3 bits to encode the index of the register. For example,  is encoded as 000, and  is encoded as 110. For the rest of the instructions that either assume default operands, or have a single memory operand, we use the same format as defined for integer instructions.
+
+SIB Byte
+
+The SIB byte is used to specify the base and index registers (possibly with scaling). For example, it can be used to encode memory operands of the form [eax + ecx\*4]. Recall that to use the SIB byte it is essential to set the Mod field in the ModR/M register to 100. This indicates to the processor that the SIB byte follows the ModR/M byte.
+
+The structure of the SIB byte is shown in Figure 5.6.
+
+The SIB byte has three fields – scale, index, and base. The effective memory address (before considering the displacement) is equal to  . The base and index fields point to integer registers. Both of them are 3 bits each (can encode up to 8 registers), and use the encoding shown in Table 5.29. The two MSB bits are used to specify the scale. We can have four values for the scale in x86 instructions namely 1 (00), 2 (01), 4 (10), and 8 (11).
+
+Rules for Encoding Memory Operands
+
+Note that some rules need to be followed while encoding memory operands. The esp register cannot be an index, and if the value of the Mod field is 00, then ebp cannot be a valid base register. Recall that if we set the R/M bits to 101 (id of ebp), when the Mod field is 00, then the memory address is only a displacement. Or, in other words we can use memory direct addressing here by directly specifying its address.
+
+If (  ), then in the SIB byte ebp cannot be a valid base register. If we specify the base register as ebp in the SIB byte, then the processor calculates the effective memory address based on the value of the scale and the index.
+
+Example 90
+
+Encode the instruction add ebx, [edx  ecx\*2 + 32]. Assume that the opcode for the add instruction is 0x03.
+
+Answer: Let us calculate the value of the ModR/M byte. In this case, our displacement fits within 8 bits. Hence, we can set the Mod bits equal to 01 (corresponding to an 8-bit displacement). We need to use the SIB byte, because we have a scale, and an index. Thus, we set the R/M bits to 100. The destination register is ebx. Its code is 011 (according to Table 5.29). Thus, the ModR/M byte is 01011100 (equal to 0x5C).
+
+Now, let us calculate the value of the SIB byte. The scale is equal to 2. This is encoded   
+as 01. The index is ecx (001), and the base is edx (010). Hence, the SIB byte is: 01 001   
+ . The last byte is the displacement, which is equal to 0x20. Thus, the encoding of the instruction is 03 5C 4A 20 in hex.

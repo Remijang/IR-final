@@ -1,0 +1,87 @@
+10.4 The Taylor Series for  , sin  , and cos 
+
+This section goes back from numbers to functions. Instead of  it deals with  : The sum is  function of  . The geometric series has all  (including  , the constant term) and its sum is  : The derivatives of  match the derivatives of  Now we choose the  differently, to match a different function.
+
+The new function is  : All its derivatives are  : At  , this function and its derivatives equal 1: To match these 1’s, we move factorials into the denominators. Term by term the series is
+
+ has the correct nth derivative  /: From the derivatives at  ; we have built back the function! At  the right side is  and the left side is  : At  the series gives  , which is 
+
+The same term-by-term idea works for differential equations, as follows.
+
+EXAMPLE 1 Solve  starting from  at  :
+
+Solution The zeroth derivative at  is the function itself :  : Then the equation  gives  and  : The alternating derivatives  are matched by the alternating series for  :
+
+ (the c2orrect solution to  ):
+
+EXAMPLE 2 Solve  starting from  and  (the answer is cos  ).
+
+Solution The equationgives  (again at  ). The derivative of the equation gives  : Then  : The even derivatives are alternately  and  , the odd derivatives are zero. This is matched by a series of even powers, which constructs cos  :
+
+The first terms  came earlier in the book. Now we have the whole alternating series. It converges absolutely for all  , by comparison with the series for  (odd powers are dropped). The partial sums in Figure 10.4 reach further and further before they lose touch with cos  :
+
+If we wanted plus signs instead of plus-minus, we could average  and  : The differential equation for cosh  is  , to give plus signs:
+
+TAYLOR SERIES
+
+The idea of matching derivatives by powers is becoming central to this chapter. The derivatives are given at a basepoint (say  ). They are numbers  The derivative  will be the  th derivative of  , i8f we choose  to be  Then the series  has the same derivatives at the basepoint as  :
+
+The first terms give the linear and quadratic approximations that we know well. The  term was mentioned earlier (but not used). Now we have all the terms—an “infinite approximation” that is intended to equal  :
+
+Two things are needed. First, the series must converge. Second, the function must do what the series predicts, away from  : Those are true for  and cos  and sin  ; the series equals the function. We proceed on that basis.
+
+The Taylor series with special basepoint  is also called the “Maclaurin series.”
+
+EXAMPLE 3 Find the Taylor series for  around  :
+
+Solution The numbers  are the values of  ,  ,   at  : Those values are  : All even derivatives are zero. To find the coefficients in the Taylor series, divide by the factorials:
+
+EXAMPLE 4 Find the Taylor series for  around  :
+
+Solution This function starts at  : Its derivative is  , so  5: The second derivative is  , so  : The next three derivatives are  After that all derivatives are zero. Therefore the Taylor series stops after the  term:
+
+You may recognize 1, 5, 10, 10, 5, 1: They are the binomial coefficients, which appear in Pascal’s triangle (Section 2.2). By matching derivatives, we see why 0Š; 1Š; 2Š; : are needed in the denominators.
+
+There is no doubt that  is the nicest basepoint. But Taylor series can be constructed around other points  : The principle is the same—match derivatives by powers—but now the powers to use are  : The derivatives  are computed at the new basepoint  :
+
+The Taylor series begins with  : This is the tangent approximation at  : The whole “2infinite approximation” is centered at a— at that point it has the same derivatives as  :
+
+EXAMPLE 5 Find the Taylor series for  around  :
+
+Solution At  , the function is  : Its first derivative  is  : We compute the  th derivative, divide by  , and multiply by  :
+
+That Taylor series (which stops at  ) should agree with  : It does. We could rewrite  as  , and take its fifth power directly. Then 32; 16; 8; 4; 2; 1 will multiply the usual coefficients  to give our Taylor coefficients 32; 80; 80; 40; 10; 1: The series stops as it will stop for any polynomial—because the high derivatives are zero.
+
+EXAMPLE 6 Find the Taylor series for  around the basepoint  :
+
+Solution At  the function and all its derivatives equal  : Therefore the Taylor series has that constant factor (note the powers of  , not  ):
+
+DEFINING THE FUNCTION BY ITS SERIES
+
+Usually, we define sin  and cos  from the sides of a triangle. But we could start instead with the series. Define sin  by equation (2). The logic goes backward, but it is still correct:
+
+First, prove that the series converges. Second, prove properties like  : Third, connect the definitions by series to the sides of a triangle.
+
+We don’t plan to do all this. The usual definition was good enough. But note first: There is no problem with convergence. The series for sin  and cos  and  all have terms  : The factorials make the series converge for all  : The general rule for  times  can be based on the series. Equation (6) is typical:  is multiplied by powers of  : Those powers add to  : So the series proves that  : That is just one example of the multiplication  :
+
+Term by term, multiplication gives the series for  : Term by term, differentiating the series for  gives  : Term by term, the derivative of sin  is cos  :
+
+We don’t need the famous limit  , by which geometry gave us the derivative. The identities of trigonometry becom?e identities of infinite series. We could even define  as the first positive  at which  equals zero. But it is certainly not obvious that this sine series returns to zero—much less that the point of return is near 3:14:
+
+The function that will be defined by infinite series is  . This is the exponential of the imaginary number  (a multiple of  . The result  is a complex number, and our goal is to identify it. (We will be confirming Section 9.4.) The technique is to treat  like all other numbers, real or complex, and simply put it into the series:
+
+Now use  :The even powers are  ,  ,  We are just multiplying  by  to get 1: The odd powers are  ,  Therefore  splits into a real part (with no  ’s) and an imaginary part (multiplying  ):
+
+You recognize those series. They are cos  and sin  : Therefore:
+
+The real part is  and the imaginary part is  : Those coordinates pick out the point  in the “complex plane.” Its distance from the origin  is  , because  : Its angle is  , as shown in Figure 10.5. The number  is  ; at the distance  and the angle  : It is on the real axis to the left of zero. If  is multiplied by  or  or any  , the result is a complex number at a distance  from the origin:
+
+With ei , a negative number has a logarithm. The logarithm of 1 is imaginary (it is  , since  ). A negative number also has fractional powers. The fourth root of  is  : More important for calculus: The derivative of  is  . That sounds old and familiar, but at  it was never allowed.
+
+Complex numbers tie up the loose ends left by the limitations of real numbers.
+
+The formula  sin  has been called “one of the greatest mysteries of undergraduate mathematics.” Writers have used desperate methods to avoid infinite series. That proof in (10) may b e the clearest (I remember sending it to a prisoner studying calculus) but here is a way to start from  :
+
+ different proof of Euler’s formula Any complex number is   sin  / for some  and  : Take the  derivative of both sides, and substitute for  :
+
+Comparing the real parts and also the imaginary parts, we need  and  : The starting values  and  are known from  : Therefore  is always 1 and  is  : Substituting into the first sentence of the proof, we have Euler’s formula  :

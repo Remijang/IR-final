@@ -1,0 +1,409 @@
+# 13.6 Humidity, Evaporation, and Boiling
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Explain the relationship between vapor pressure of water and the capacity of air to hold water vapor.   
+• Explain the relationship between relative humidity and partial pressure of water vapor in the air.   
+• Calculate vapor density using vapor pressure.   
+• Calculate humidity and dew point.
+
+The expression “it’s not the heat, it’s the humidity” makes a valid point. We keep cool in hot weather by evaporating sweat from our skin and water from our breathing passages. Because evaporation is inhibited by high humidity, we feel hotter at a given temperature when the humidity is high. Low humidity, on the other hand, can cause discomfort from excessive drying of mucous membranes and can lead to an increased risk of respiratory infections.
+
+When we say humidity, we really mean relative humidity. Relative humidity tells us how much water vapor is in the air compared with the maximum possible. At its maximum, denoted as saturation, the relative humidity is $100 \%$ , and evaporation is inhibited. The amount of water vapor in the air depends on temperature. For example, relative humidity rises in the evening, as air temperature declines, sometimes reaching the dew point. At the dew point temperature, relative humidity is $100 \%$ , and fog may result from the condensation of water droplets if they are small enough to stay in suspension. Conversely, if you wish to dry something (perhaps your hair), it is more effective to blow hot air over it rather than cold air, because, among other things, the increase in temperature increases the energy of the molecules, so the rate of evaporation increases.
+
+The amount of water vapor in the air depends on the vapor pressure of water. The liquid and solid phases are continuously giving off vapor because some of the molecules have high enough speeds to enter the gas phase; see Figure 13.31(a). If a lid is placed over the container, as in Figure 13.31(b), evaporation continues, increasing the pressure, until sufficient vapor has built up for condensation to balance evaporation. Then equilibrium has been achieved, and the vapor pressure is equal to the partial pressure of water in the container. Vapor pressure increases with temperature because molecular speeds are higher as temperature increases. Table 13.5 gives representative values of water vapor pressure over a range of temperatures.
+
+Relative humidity is related to the partial pressure of water vapor in the air. At $100 \%$ humidity, the partial pressure is equal to the vapor pressure, and no more water can enter the vapor phase. If the partial pressure is less than the vapor pressure, then evaporation will take place, as humidity is less than $100 \%$ . If the partial pressure is greater than the vapor pressure, condensation takes place. In everyday language, people sometimes refer to the capacity of air to “hold” water vapor, but this is not actually what happens. The water vapor is not held by the air. The amount of water in air is determined by the vapor pressure of water and has nothing to do with the properties of air.
+
+
+
+# EXAMPLE 13.12
+
+# Calculating Density Using Vapor Pressure
+
+Table 13.5 gives the vapor pressure of water at $2 0 . 0 ^ { \circ } \mathrm { C }$ as $2 . 3 3 \times 1 0 ^ { 3 }$ Use the ideal gas law to calculate the density of water vapor in $\mathrm { g } / \mathrm { m } ^ { 3 }$ that would create a partial pressure equal to this vapor pressure. Compare the result with the saturation vapor density given in the table.
+
+# Strategy
+
+To solve this problem, we need to break it down into a two steps. The partial pressure follows the ideal gas law,
+
+$$
+P V = n R T ,
+$$
+
+where is the number of moles. If we solve this equation for $n / V$ to calculate the number of moles per cubic meter, we can then convert this quantity to grams per cubic meter as requested. To do this, we need to use the molecular mass of water, which is given in the periodic table.
+
+# Solution
+
+1. Identify the knowns and convert them to the proper units:
+
+a. temperature $T = 2 0 ^ { \circ } \mathrm { C } { = } 2 9 3 \mathrm { \ K }$ b. vapor pressure $P$ of water at $2 0 ^ { \circ } \mathrm { C }$ is $2 . 3 3 \times 1 0 ^ { 3 }$ Pa c. molecular mass of water is $1 8 . 0 \mathrm { g / m o l }$
+
+2. Solve the ideal gas law for $n / V$ .
+
+$$
+{ \frac { n } { V } } = { \frac { P } { R T } }
+$$
+
+3. Substitute known values into the equation and solve for $n / V$ .
+
+$$
+{ \frac { n } { V } } = { \frac { P } { R T } } = { \frac { 2 . 3 3 \times 1 0 ^ { 3 } { \mathrm { ~ P a } } } { ( 8 . 3 1 { \mathrm { ~ J / m o l } } \cdot { \mathrm { K } } ) ( 2 9 3 { \mathrm { ~ K } } ) } } = 0 . 9 5 7 { \mathrm { ~ m o l / m } } ^ { 3 }
+$$
+
+4. Convert the density in moles per cubic meter to grams per cubic meter.
+
+$$
+\rho = \left( 0 . 9 5 7 { \frac { \mathrm { m o l } } { \mathrm { m } ^ { 3 } } } \right) \left( { \frac { 1 8 . 0 ~ \mathrm { g } } { \mathrm { m o l } } } \right) = 1 7 . 2 ~ \mathrm { g / m } ^ { 3 }
+$$
+
+# Discussion
+
+The density is obtained by assuming a pressure equal to the vapor pressure of water at $2 0 . 0 ^ { \circ } \mathrm { C }$ . The density found is identical to the value in Table 13.5, which means that a vapor density of $1 7 . 2 \ : \mathrm { g } / \mathrm { m } ^ { 3 }$ at $2 0 . 0 ^ { \circ } \mathrm { C }$ creates a partial pressure of $2 . 3 3 \times 1 0 ^ { 3 } \ : ]$ equal to the vapor pressure of water at that temperature. If the partial pressure is equal to the vapor pressure, then the liquid and vapor phases are in equilibrium, and the relative humidity is $100 \%$ . Thus, there can be no more than $\boldsymbol { 1 7 . 2 \mathrm { g } }$ of water vapor per $\mathrm { m } ^ { 3 }$ at $2 0 . 0 ^ { \circ } \mathrm { C }$ , so that this value is the saturation vapor density at that temperature. This example illustrates how water vapor behaves like an ideal gas: the pressure and density are consistent with the ideal gas law (assuming the density in the table is correct). The saturation vapor densities listed in Table 13.5 are the maximum amounts of water vapor that air can hold at various temperatures.
+
+# Percent Relative Humidity
+
+We define percent relative humidity as the ratio of vapor density to saturation vapor density, or
+
+$$
+= { \frac { \mathrm { v a p o r ~ d e n s i t y } } { \mathrm { s a t u r a t i o n ~ v a p o r ~ d e n s i t y } } } \times 1 0 0
+$$
+
+We can use this and the data in Table 13.5 to do a variety of interesting calculations, keeping in mind that relative humidity is based on the comparison of the partial pressure of water vapor in air and ice.
+
+# EXAMPLE 13.13
+
+# Calculating Humidity and Dew Point
+
+(a) Calculate the percent relative humidity on a day when the temperature is $2 5 . 0 ^ { \circ } \mathrm { C }$ and the air contains $9 . 4 0 ~ \mathsf { g }$ of water vapor per $\mathrm { m } ^ { 3 }$ . (b) At what temperature will this air reach $100 \%$ relative humidity (the saturation density)? This temperature is the dew point. (c) What is the humidity when the air temperature is $2 5 . 0 ^ { \circ } \mathrm { C }$ and the dew point is $- 1 0 . 0 ^ { \circ } \mathrm { C } ?$
+
+# Strategy and Solution
+
+(a) Percent relative humidity is defined as the ratio of vapor density to saturation vapor density.
+
+The first is given to be $9 . 4 0 \mathrm { g } / \mathrm { m } ^ { 3 }$ , and the second is found in Table 13.5 to be $2 3 . 0 \mathrm { g } / \mathrm { m } ^ { 3 }$ . Thus,
+
+$$
+{ \mathrm { p e r c e n t ~ r e l a t i v e ~ h u m i d i t y } } = { \frac { 9 . 4 0 ~ { \mathrm { g / m } } ^ { 3 } } { 2 3 . 0 ~ { \mathrm { g / m } } ^ { 3 } } } \times 1 0 0 = 4 0 . 9 . { \% }
+$$
+
+(b) The air contains $9 . 4 0 ~ \mathrm { g } / \mathrm { m } ^ { 3 }$ of water vapor. The relative humidity will be $100 \%$ at a temperature where $9 . 4 0 \mathrm { g } / \mathrm { m } ^ { 3 }$ is the saturation density. Inspection of Table 13.5 reveals this to be the case at $1 0 . 0 ^ { \circ } \mathrm { C }$ , where the relative humidity will be $100 \%$ . That temperature is called the dew point for air with this concentration of water vapor.
+
+(c) Here, the dew point temperature is given to be $- 1 0 . 0 ^ { \circ } \mathrm { C }$ . Using Table 13.5, we see that the vapor density is $2 . 3 6 \ : \mathrm { g } / \mathrm { m } ^ { 3 }$ , because this value is the saturation vapor density at $- 1 0 . 0 ^ { \circ } \mathrm { C }$ . The saturation vapor density at $2 5 . 0 ^ { \circ } \mathrm { C }$ is seen to be $2 3 . 0 \mathrm { g } / \mathrm { m } ^ { 3 }$ . Thus, the relative humidity at $2 5 . 0 ^ { \circ } \mathrm { C }$ is
+
+$$
+= { \frac { 2 . 3 6 \mathrm { g / m ^ { 3 } } } { 2 3 . 0 \mathrm { g / m ^ { 3 } } } } \times 1 0 0 = 1 0 . 3 \% .
+$$
+
+# Discussion
+
+The importance of dew point is that air temperature cannot drop below $1 0 . 0 ^ { \circ } \mathrm { C }$ in part (b), or $- 1 0 . 0 ^ { \circ } \mathrm { C }$ in part (c), without water vapor condensing out of the air. If condensation occurs, considerable transfer of heat occurs (discussed in Heat and Heat Transfer Methods), which prevents the temperature from further dropping. When dew points are below $0 ^ { \circ } \mathrm { C } ,$ , freezing temperatures are a greater possibility, which explains why farmers keep track of the dew point. Low humidity in deserts means low dew-point temperatures. Thus condensation is unlikely. If the temperature drops, vapor does not condense in liquid drops. Because no heat is released into the air, the air temperature drops more rapidly compared to air with higher humidity. Likewise, at high temperatures, liquid droplets do not evaporate, so that no heat is removed from the gas to the liquid phase. This explains the large range of temperature in arid regions.
+
+Why does water boil at $1 0 0 ^ { \circ } \mathrm { C } ?$ You will note from Table 13.5 that the vapor pressure of water at $1 0 0 ^ { \circ } \mathrm { C }$ is $1 . 0 1 \times 1 0 ^ { 5 } ~ \mathrm { P a }$ , or 1.00 atm. Thus, it can evaporate without limit at this temperature and pressure. But why does it form bubbles when it boils? This is because water ordinarily contains significant amounts of dissolved air and other impurities, which are observed as small bubbles of air in a glass of water. If a bubble starts out at the bottom of the container at $2 0 ^ { \circ } \mathrm { C } ,$ , it contains water vapor (about $2 . 3 0 \%$ ). The pressure inside the bubble is fixed at 1.00 atm (we ignore the slight pressure exerted by the water around it). As the temperature rises, the amount of air in the bubble stays the same, but the water vapor increases; the bubble expands to keep the pressure at 1.00 atm. At $1 0 0 ^ { \circ } \mathrm { C }$ , water vapor enters the bubble continuously since the partial pressure of water is equal to 1.00 atm in equilibrium. It cannot reach this pressure, however, since the bubble also contains air and total pressure is 1.00 atm. The bubble grows in size and thereby increases the buoyant force. The bubble breaks away and rises rapidly to the surface—we call this boiling! (See Figure 13.32.)
+
+
+
+# CHECK YOUR UNDERSTANDING
+
+Freeze drying is a process in which substances, such as foods, are dried by placing them in a vacuum chamber and lowering the atmospheric pressure around them. How does the lowered atmospheric pressure speed the drying process, and why does it cause the temperature of the food to drop?
+
+# Solution
+
+Decreased the atmospheric pressure results in decreased partial pressure of water, hence a lower humidity. So evaporation of water from food, for example, will be enhanced. The molecules of water most likely to break away from the food will be those with the greatest velocities. Those remaining thus have a lower average velocity and a lower temperature. This can (and does) result in the freezing and drying of the food; hence the process is aptly named freeze drying.
+
+# PHET EXPLORATIONS
+
+# States of Matter
+
+Watch different types of molecules form a solid, liquid, or gas. Add or remove heat and watch the phase change.   
+Change the temperature or volume of a container and see a pressure-temperature diagram respond in real time.   
+Relate the interaction potential to the forces between molecules.
+
+Click to view content (https://openstax.org/books/college-physics-2e/pages/13-6-humidity-evaporation-andboiling)
+
+# Glossary
+
+absolute zero the lowest possible temperature; the temperature at which all molecular motion ceases   
+Avogadro’s number $N _ { \mathrm { A } }$ , the number of molecules or atoms in one mole of a substance; $N _ { \mathrm { A } } = 6 . 0 2 \times 1 0 ^ { 2 3 }$ particles/mole   
+Boltzmann constant $k$ , a physical constant that relates energy to temperature; $k = 1 . 3 8 \times 1 0 ^ { - 2 3 } \mathrm { J } / \mathrm { K }$   
+Celsius scale temperature scale in which the freezing point of water is $0 ^ { \circ } \mathrm { C }$ and the boiling point of water is $1 0 0 ^ { \circ } \mathrm { C }$   
+coefficient of linear expansion $\alpha$ , the change in length, per unit length, per $1 ^ { \circ } \mathrm { C }$ change in temperature; a constant used in the calculation of linear expansion; the coefficient of linear expansion depends on the material and to some degree on the temperature of the material   
+coefficient of volume expansion $\beta$ , the change in volume, per unit volume, per $1 ^ { \circ } \mathrm { C }$ change in temperature   
+critical point the temperature above which a liquid cannot exist   
+critical pressure the minimum pressure needed for a liquid to exist at the critical temperature   
+critical temperature the temperature above which a liquid cannot exist   
+Dalton’s law of partial pressures the physical law that states that the total pressure of a gas is the sum of partial pressures of the component gases   
+degree Celsius unit on the Celsius temperature scale   
+degree Fahrenheit unit on the Fahrenheit temperature scale   
+dew point the temperature at which relative humidity is $100 \%$ ; the temperature at which water starts to condense out of the air   
+Fahrenheit scale temperature scale in which the freezing point of water is $3 2 ^ { \circ } \mathrm { F }$ and the boiling point of water is $2 1 2 ^ { \circ } \mathrm { F }$   
+ideal gas law the physical law that relates the pressure and volume of a gas to the number of gas molecules or number of moles of gas and the temperature of the gas   
+Kelvin scale temperature scale in which $0 \mathsf { K }$ is the lowest possible temperature, representing absolute zero   
+mole the quantity of a substance whose mass (in grams) is equal to its molecular mass   
+partial pressure the pressure a gas would create if it occupied the total volume of space available   
+percent relative humidity the ratio of vapor density to saturation vapor density   
+phase diagram a graph of pressure vs. temperature of a particular substance, showing at which pressures and temperatures the three phases of the substance occur   
+PVdiagram a graph of pressure vs. volume   
+relative humidity the amount of water in the air relative to the maximum amount the air can hold   
+saturation the condition of $100 \%$ relative humidity   
+sublimation the phase change from solid to gas   
+temperature the quantity measured by a thermometer   
+thermal energy $\overline { { \mathrm { K E } } }$ , the average translational kinetic energy of a molecule   
+thermal equilibrium the condition in which heat no longer flows between two objects that are in contact; the two objects have the same temperature   
+thermal expansion the change in size or volume of an object with change in temperature   
+thermal stress stress caused by thermal expansion or contraction   
+triple point the pressure and temperature at which a substance exists in equilibrium as a solid, liquid, and gas   
+vapor a gas at a temperature below the boiling temperature   
+vapor pressure the pressure at which a gas coexists with its solid or liquid phase   
+zeroth law of thermodynamics law that states that if two objects are in thermal equilibrium, and a third object is in thermal equilibrium with one of those objects, it is also in thermal equilibrium with the other object
+
+
+
+# Section Summary
+
+# 13.1 Temperature
+
+• Temperature is the quantity measured by a thermometer.   
+• Temperature is related to the average kinetic energy of atoms and molecules in a system.   
+• Absolute zero is the temperature at which there is no molecular motion.
+
+• There are three main temperature scales: Celsius, Fahrenheit, and Kelvin. Temperatures on one scale can be converted to temperatures on another scale using the following equations: $T \mathrm { { o } _ { F } } = \frac { 9 } { 5 } T \mathrm { { o } _ { C } } + 3 2$
+
+$\begin{array} { c c c } { { T \mathrm { { e } _ { C } = \displaystyle \frac { 5 } { 9 } ( T \mathrm { { e } _ { F } - 3 2 ) } } } } \\ { { T \mathrm { { K } _ { K } = \it { T \mathrm { { e } _ { C } + 2 7 3 . 1 5 } } } } } \\ { { T \mathrm { { e } _ { C } = \it { T \mathrm { { K } } - 2 7 3 . 1 5 } } } } \end{array}$   
+• Systems are in thermal equilibrium when they have the same temperature.   
+Thermal equilibrium occurs when two bodies are in contact with each other and can freely exchange energy.   
+The zeroth law of thermodynamics states that when two systems, A and B, are in thermal   
+equilibrium with each other, and B is in thermal equilibrium with a third system, C, then A is also in thermal equilibrium with C.
+
+# 13.2 Thermal Expansion of Solids and Liquids
+
+• Thermal expansion is the increase, or decrease, of the size (length, area, or volume) of a body due to a change in temperature.   
+• Thermal expansion is large for gases, and relatively small, but not negligible, for liquids and solids.   
+• Linear thermal expansion is $\Delta L = \alpha L \Delta T _ { \ l }$ ， where $\Delta L$ is the change in length $L$ , $\Delta T$ is the change in temperature, and $\alpha$ is the coefficient of linear expansion, which varies slightly with temperature.   
+• The change in area due to thermal expansion is $\Delta A = 2 \alpha A \Delta T$ ， where $\Delta A$ is the change in area.   
+• The change in volume due to thermal expansion is $\Delta V = \beta V \Delta T$ where $\beta$ is the coefficient of volume expansion and $\beta \approx 3 \alpha$ . Thermal stress is created when thermal expansion is constrained.
+
+# 13.3 The Ideal Gas Law
+
+• The ideal gas law relates the pressure and volume of a gas to the number of gas molecules and the temperature of the gas.   
+• The ideal gas law can be written in terms of the number of molecules of gas: $P V = N k T ,$ where $P$ is pressure, $V$ is volume, $T$ is temperature, $N$ is number of molecules, and $k$ is the Boltzmann constant $k = 1 . 3 8 \times 1 0 ^ { - 2 3 } \mathrm { J } ,$ /K.   
+• A mole is the number of atoms in a $\mathtt { 1 2 - g }$ sample of carbon-12.   
+The number of molecules in a mole is called Avogadro’s number $N _ { \mathrm { A } }$ , $N _ { \mathrm { A } } = 6 . 0 2 \times 1 0 ^ { 2 3 } ~ \mathrm { m o l } ^ { - 1 } .$   
+• A mole of any substance has a mass in grams equal to its molecular weight, which can be determined from the periodic table of elements.   
+• The ideal gas law can also be written and solved in terms of the number of moles of gas: $P V = n R T ,$ where $n$ is number of moles and $R$ is the universal gas constant, $R = 8 . 3 1 { \mathrm { J / m o l } } \cdot { \mathrm { K } } .$ . The ideal gas law is generally valid at temperatures well above the boiling temperature.
+
+
+
+# 13.4 Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature
+
+Kinetic theory is the atomistic description of gases as well as liquids and solids.   
+• Kinetic theory models the properties of matter in terms of continuous random motion of atoms and molecules.   
+The ideal gas law can also be expressed as $P V = { \frac { 1 } { 3 } } N m { \overline { { v ^ { 2 } } } } ,$ where $P$ is the pressure (average force per unit area), $V$ is the volume of gas in the container, $N$ is the number of molecules in the container, $m$ is the mass of a molecule, and $\overline { { v ^ { 2 } } }$ is the average of the molecular speed squared.   
+Thermal energy is defined to be the average translational kinetic energy $\overline { { \mathrm { K E } } }$ of an atom or molecule.   
+The temperature of gases is proportional to the average translational kinetic energy of atoms and molecules. ${ \overline { { \mathrm { K E } } } } = { \frac { 1 } { 2 } } m { \overline { { v ^ { 2 } } } } = { \frac { 3 } { 2 } } k T$ or ${ \sqrt { \overline { { v ^ { 2 } } } } } = v _ { \mathrm { r m s } } = { \sqrt { \frac { 3 k T } { m } } } .$   
+• The motion of individual molecules in a gas is random in magnitude and direction. However, a gas of many molecules has a predictable distribution of molecular speeds, known as the Maxwel-Boltzman distribution.
+
+# 13.5 Phase Changes
+
+• Most substances have three distinct phases: gas, liquid, and solid.   
+• Phase changes among the various phases of matter depend on temperature and pressure.   
+• The existence of the three phases with respect to pressure and temperature can be described in a phase diagram.   
+• Two phases coexist (i.e., they are in thermal equilibrium) at a set of pressures and temperatures. These are described as a line on a phase diagram. The three phases coexist at a single pressure and temperature. This is known as the triple point and is described by a single point on a phase diagram.   
+• A gas at a temperature below its boiling point is called a vapor.   
+• Vapor pressure is the pressure at which a gas coexists with its solid or liquid phase.   
+Partial pressure is the pressure a gas would create if it existed alone.   
+Dalton’s law states that the total pressure is the
+
+
+
+sum of the partial pressures of all of the gases present.
+
+# 13.6 Humidity, Evaporation, and Boiling
+
+• Relative humidity is the fraction of water vapor in a gas compared to the saturation value.   
+• The saturation vapor density can be determined from the vapor pressure for a given temperature.   
+• Percent relative humidity is defined to be percent relative humidity $\ c =$ vapor density 1 $\times 1 0 0$ . saturation vapor density   
+• The dew point is the temperature at which air reaches $100 \%$ relative humidity.
+
+# Conceptual Questions
+
+# 13.1 Temperature
+
+1. What does it mean to say that two systems are in thermal equilibrium?   
+2. Give an example of a physical property that varies with temperature and describe how it is used to measure temperature.   
+3. When a cold alcohol thermometer is placed in a hot liquid, the column of alcohol goes downslightly before going up. Explain why.   
+4. If you add boiling water to a cup at room temperature, what would you expect the final equilibrium temperature of the unit to be? You will need to include the surroundings as part of the system. Consider the zeroth law of thermodynamics.
+
+# 13.2 Thermal Expansion of Solids and Liquids
+
+5. Thermal stresses caused by uneven cooling can easily break glass cookware. Explain why Pyrex®, a glass with a small coefficient of linear expansion, is less susceptible.   
+6. Water expands significantly when it freezes: a volume increase of about $9 \%$ occurs. As a result of this expansion and because of the formation and growth of crystals as water freezes, anywhere from $10 \%$ to $30 \%$ of biological cells are burst when animal or plant material is frozen. Discuss the implications of this cell damage for the prospect of preserving human bodies by freezing so that they can be thawed at some future date when it is hoped that all diseases are curable.   
+7. One method of getting a tight fit, say of a metal peg in a hole in a metal block, is to manufacture the peg slightly larger than the hole. The peg is then inserted when at a different temperature than the block. Should the block be hotter or colder than the peg during insertion? Explain your answer.   
+8. Does it really help to run hot water over a tight metal lid on a glass jar before trying to open it? Explain your answer.   
+9. Liquids and solids expand with increasing temperature, because the kinetic energy of a body’s atoms and molecules increases. Explain why some materials shrinkwith increasing temperature.
+
+
+
+# 13.3 The Ideal Gas Law
+
+10. Find out the human population of Earth. Is there a mole of people inhabiting Earth? If the average mass of a person is $6 0 ~ \mathsf { k g }$ , calculate the mass of a mole of people. How does the mass of a mole of people compare with the mass of Earth?   
+11. Under what circumstances would you expect a gas to behave significantly differently than predicted by the ideal gas law?   
+12. A constant-volume gas thermometer contains a fixed amount of gas. What property of the gas is measured to indicate its temperature?
+
+# 13.4 Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature
+
+13. How is momentum related to the pressure exerted by a gas? Explain on the atomic and molecular level, considering the behavior of atoms and molecules.
+
+# 13.5 Phase Changes
+
+14. A pressure cooker contains water and steam in equilibrium at a pressure greater than atmospheric pressure. How does this greater pressure increase cooking speed?   
+15. Why does condensation form most rapidly on the coldest object in a room—for example, on a glass of ice water?   
+16. What is the vapor pressure of solid carbon dioxide (dry ice) at $- 7 8 . 5 ^ { \mathrm { { o } } } \mathrm { { C ? } }$   
+17. Can carbon dioxide be liquefied at room temperature $( 2 0 ^ { \circ } \mathrm { C } ) ?$ If so, how? If not, why not? (See Figure 13.33.)   
+18. Oxygen cannot be liquefied at room temperature by placing it under a large enough pressure to force its molecules together. Explain why this is.   
+19. What is the distinction between gas and vapor?
+
+
+
+# 13.6 Humidity, Evaporation, and Boiling
+
+20. Because humidity depends only on water’s vapor pressure and temperature, are the saturation vapor densities listed in Table 13.5 valid in an atmosphere of helium at a pressure of $1 . 0 1 \times 1 0 ^ { 5 } ~ \mathrm { N } / \mathrm { m } ^ { 2 }$ , rather than air? Are those values affected by altitude on Earth?   
+21. Why does a beaker of $4 0 . 0 ^ { \circ } \mathrm { C }$ water placed in a vacuum chamber start to boil as the chamber is evacuated (air is pumped out of the chamber)? At what pressure does the boiling begin? Would food cook any faster in such a beaker?   
+22. Why does rubbing alcohol evaporate much more rapidly than water at STP (standard temperature and pressure)?
+
+# Problems & Exercises
+
+# 13.1 Temperature
+
+1. What is the Fahrenheit temperature of a person with a $3 9 . 0 ^ { \circ } \mathrm { C }$ fever?   
+2. Frost damage to most plants occurs at temperatures of $2 8 . 0 ^ { \circ } \mathrm { F }$ or lower. What is this temperature on the Kelvin scale?   
+3. To conserve energy, room temperatures are kept at $6 8 . 0 ^ { \circ } \mathrm { F }$ in the winter and $7 8 . 0 ^ { \circ } \mathrm { F }$ in the summer. What are these temperatures on the Celsius scale?   
+4. A tungsten light bulb filament may operate at 2900 K. What is its Fahrenheit temperature? What is this on the Celsius scale?   
+5. The surface temperature of the Sun is about 5750 K. What is this temperature on the Fahrenheit scale?   
+6. One of the hottest temperatures ever recorded on the surface of Earth was $1 3 4 ^ { \circ } \mathrm { F }$ in Death Valley, CA. What is this temperature in Celsius degrees? What is this temperature in Kelvin?   
+7. (a) Suppose a cold front blows into your locale and drops the temperature by 40.0 Fahrenheit degrees. How many degrees Celsius does the temperature decrease when there is a $4 0 . 0 ^ { \circ } \mathrm { F }$ decrease in temperature? (b) Show that any change in temperature in Fahrenheit degrees is nine-fifths the change in Celsius degrees.   
+8. (a) At what temperature do the Fahrenheit and Celsius scales have the same numerical value? (b) At what temperature do the Fahrenheit and Kelvin scales have the same numerical value?
+
+
+
+# 13.2 Thermal Expansion of Solids and Liquids
+
+9. The height of the Washington Monument is measured to be ${ \mathsf { 1 7 0 } } { \mathsf { m } }$ on a day when the temperature is $3 5 . 0 ^ { \circ } \mathrm { C }$ . What will its height be on a day when the temperature falls to $- 1 0 . 0 ^ { \circ } \mathrm { C } ?$ Although the monument is made of limestone, assume that its thermal coefficient of expansion is the same as marble’s.
+
+10. How much taller does the Eiffel Tower become at the end of a day when the temperature has increased by $1 5 ^ { \circ } \mathrm { C } ?$ Its original height is $3 2 1 \mathrm { m }$ and you can assume it is made of steel.
+
+11. What is the change in length of a 3.00-cm-long column of mercury if its temperature changes from $3 7 . 0 ^ { \circ } \mathrm { C }$ to $4 0 . 0 ^ { \circ } \mathrm { C }$ , assuming the mercury is unconstrained?
+
+12. How large an expansion gap should be left between steel railroad rails if they may reach a maximum temperature $3 5 . 0 ^ { \circ } \mathrm { C }$ greater than when they were laid? Their original length is $_ { 1 0 . 0 \mathsf { m } }$ .   
+13. You are looking to purchase a small piece of land in Hong Kong. The price is “only” $\$ 60,000$ per square meter! The land title says the dimensions are $2 0 \mathrm { m } \times 3 0 \mathrm { m }$ By how much would the total price change if you measured the parcel with a steel tape measure on a day when the temperature was $2 0 ^ { \circ } \mathrm { C }$ above normal?   
+14. Global warming will produce rising sea levels partly due to melting ice caps but also due to the expansion of water as average ocean temperatures rise. To get some idea of the size of this effect, calculate the change in length of a column of water $1 . 0 0 { \mathsf { k m } }$ high for a temperature increase of $1 . 0 0 ^ { \circ } \mathrm { C }$ Note that this calculation is only approximate because ocean warming is not uniform with depth.   
+15. Show that $6 0 . 0 \mathsf { L }$ of gasoline originally at $1 5 . 0 ^ { \circ } \mathrm { C }$ will expand to 61.1 L when it warms to $3 5 . 0 ^ { \circ } \mathrm { C }$ as claimed in Example 13.4.   
+16. (a) Suppose a meter stick made of steel and one made of invar (an alloy of iron and nickel) are the same length at $0 ^ { \circ } \mathrm { C }$ . What is their difference in length at $2 2 . 0 ^ { \circ } \mathrm { C } ?$ (b) Repeat the calculation for two $3 0 . 0 \cdot 0 \cdot 0$ -long surveyor’s tapes.   
+17. (a) If a $5 0 0 - m L$ glass beaker is filled to the brim with ethyl alcohol at a temperature of $5 . 0 0 ^ { \circ } \mathrm { C }$ how much will overflow when its temperature reaches $2 2 . 0 ^ { \circ } \mathrm { C } ?$ (b) How much less water would overflow under the same conditions?   
+18. Most automobiles have a coolant reservoir to catch radiator fluid that may overflow when the engine is hot. A radiator is made of copper and is filled to its $1 6 . 0 \ L - L$ capacity when at $1 0 . 0 ^ { \circ } \mathrm { C }$ What volume of radiator fluid will overflow when the radiator and fluid reach their $9 5 . 0 ^ { \circ } \mathrm { C }$ operating temperature, given that the fluid’s volume coefficient of expansion is $\beta = 4 0 0 \times 1 0 ^ { - 6 } / { } ^ { \circ } \mathrm { C } ?$ Note that this coefficient is approximate, because most car radiators have operating temperatures of greater than $9 5 . 0 ^ { \circ } \mathrm { C }$   
+19. A physicist makes a cup of instant coffee and notices that, as the coffee cools, its level drops $3 . 0 0 \mathrm { m m }$ in the glass cup. Show that this decrease cannot be due to thermal contraction by calculating the decrease in level if the $3 5 0 \mathrm { c m } ^ { 3 }$ of coffee is in a $7 . 0 0 \mathrm { - c m }$ -diameter cup and decreases in temperature from $9 5 . 0 ^ { \circ } \mathrm { C }$ to $4 5 . 0 ^ { \circ } \mathrm { C }$ . (Most of the drop in level is actually due to escaping bubbles of air.)   
+20. (a) The density of water at $0 ^ { \circ } \mathrm { C }$ is very nearly $1 0 0 0 \mathrm { k g } / \mathrm { m } ^ { 3 }$ (it is actually $9 9 9 . 8 4 \mathrm { k g } / \mathrm { m } ^ { 3 }$ ), whereas the density of ice at $0 ^ { \circ } \mathrm { C }$ is $9 1 7 \mathrm { k g } / \mathrm { m } ^ { 3 }$ . Calculate the pressure necessary to keep ice from expanding when it freezes, neglecting the effect such a large pressure would have on the freezing temperature. (This problem gives you only an indication of how large the forces associated with freezing water might be.) (b) What are the implications of this result for biological cells that are frozen?   
+21. Show that $\beta \approx 3 \alpha ,$ by calculating the change in volume $\Delta V$ of a cube with sides of length $L$ .
+
+
+
+# 13.3 The Ideal Gas Law
+
+22. The gauge pressure in your car tires is $2 . 5 0 \times 1 0 ^ { 5 } \ \mathrm { N } / \mathrm { m } ^ { 2 }$ at a temperature of $3 5 . 0 ^ { \circ } \mathrm { C }$ when you drive it onto a ferry boat to Alaska. What is their gauge pressure later, when their temperature has dropped to $- 4 0 . 0 ^ { \circ } \mathrm { C } ?$   
+23. Convert an absolute pressure of $7 . 0 0 \times 1 0 ^ { 5 } ~ \mathrm { N / m } ^ { 2 }$ to gauge pressure in $\mathrm { { l b } } / \mathrm { { i n } } ^ { 2 }$ (This value was stated to be just less than $9 0 . 0 1 \mathrm { b } / \mathrm { i n } ^ { 2 }$ in Example 13.9. Is it?)   
+24. Suppose a gas-filled incandescent light bulb is manufactured so that the gas inside the bulb is at atmospheric pressure when the bulb has a temperature of $2 0 . 0 ^ { \circ } \mathrm { C }$ . (a) Find the gauge pressure inside such a bulb when it is hot, assuming its average temperature is $6 0 . 0 ^ { \circ } \mathrm { C }$ (an approximation) and neglecting any change in volume due to thermal expansion or gas leaks. (b) The actual final pressure for the light bulb will be less than calculated in part (a) because the glass bulb will expand. What will the actual final pressure be, taking this into account? Is this a negligible difference?
+
+25. To test a balloon, it is placed in a lab and filled with helium. The temperature of the helium is $1 0 . 0 ^ { \circ } \mathrm { C }$ and the pressure is 1.00 atmosphere. The pressure in the lab is maintained. Assume the membrane of the balloon provides a negligible inward pressure, so it is not considered significant. (a) What is the pressure inside the balloon if the helium is replaced with helium that is at $- 5 0 . 0 ^ { \circ } \mathrm { C } ?$ and the balloon is filled until it has a volume of 20.0 times its original volume? (b) What is the gauge pressure? (Assume the pressure in the lab remains at 1.00 atmosphere during the experiment.)
+
+26. Confirm that the units of are those of energy for each value of $R$ : (a) $8 . 3 1 ~ \mathrm { J / m o l \cdot K }$ , (b) $1 . 9 9 \mathrm { c a l / m o l \cdot K }$ , and (c) $0 . 0 8 2 1 \mathrm { L } \cdot \mathrm { a t m } / \mathrm { m o l } \cdot \mathrm { K } .$   
+27. In the text, it was shown that $N / V = 2 . 6 8 \times 1 0 ^ { 2 5 } \ \mathrm { m } ^ { - 3 }$ for gas at STP. (a) Show that this quantity is equivalent to $N / V = 2 . 6 8 \times 1 0 ^ { 1 9 } ~ \mathrm { c m } ^ { - 3 }$ as stated. (b) About how many atoms are there in one $\mu \mathrm { m } ^ { 3 }$ (a cubic micrometer) at STP? (c) What does your answer to part (b) imply about the separation of atoms and molecules?   
+28. Calculate the number of moles in the $2 . 0 0 \cdot \mathsf { L }$ volume of air in the lungs of the average person. Note that the air is at $3 7 . 0 ^ { \circ } \mathrm { C }$ (body temperature).   
+29. An airplane passenger has $1 0 0 \mathrm { c m } ^ { 3 }$ of air in his stomach just before the plane takes off from a sea-level airport. What volume will the air have at cruising altitude if cabin pressure drops to $7 . 5 0 \times 1 0 ^ { 4 } \ \mathrm { N / m } ^ { 2 } \$   
+30. (a) What is the volume (in $\mathrm { k m } ^ { 3 }$ ) of Avogadro’s number of sand grains if each grain is a cube and has sides that are $1 . 0 \mathsf { m m }$ long? (b) How many kilometers of beaches in length would this cover if the beach averages $1 0 0 ~ \mathsf { m }$ in width and $_ { 1 0 . 0 \mathsf { m } }$ in depth? Neglect air spaces between grains.   
+31. An expensive vacuum system can achieve a pressure as low as $1 . 0 0 \times 1 0 ^ { - 7 } \ \mathrm { N } / \mathrm { m } ^ { 2 }$ at $2 0 ^ { \circ } \mathrm { C }$ . How many atoms are there in a cubic centimeter at this pressure and temperature?   
+32. The number density of gas atoms at a certain location in the space above our planet is about $1 . 0 0 \times 1 0 ^ { 1 1 } ~ \mathrm { m } ^ { - 3 }$ and the pressure is $2 . 7 5 \times 1 0 ^ { - 1 0 } \ \mathrm { N } / \mathrm { m } ^ { 2 }$ in this space. What is the temperature there?   
+33. A bicycle tire has a pressure of at a temperature of $1 8 . 0 ^ { \circ } \mathrm { C }$ and contains 2.00 L of gas. What will its pressure be if you let out an amount of air that has a volume of $1 0 0 \mathrm { c m } ^ { 3 }$ at
+
+atmospheric pressure? Assume tire temperature and volume remain constant.
+
+34. A high-pressure gas cylinder contains $5 0 . 0 \mathsf { L }$ of toxic gas at a pressure of $1 . 4 0 \times 1 0 ^ { 7 } \ \mathrm { N } / \mathrm { m } ^ { 2 }$ and a temperature of $2 5 . 0 ^ { \circ } \mathrm { C }$ . Its valve leaks after the cylinder is dropped. The cylinder is cooled to dry ice temperature $( - 7 8 . 5 ^ { \circ } \mathrm { C } )$ to reduce the leak rate and pressure so that it can be safely repaired. (a) What is the final pressure in the tank, assuming a negligible amount of gas leaks while being cooled and that there is no phase change? (b) What is the final pressure if one-tenth of the gas escapes? (c) To what temperature must the tank be cooled to reduce the pressure to 1.00 atm (assuming the gas does not change phase and that there is no leakage during cooling)? (d) Does cooling the tank appear to be a practical solution?   
+35. Find the number of moles in 2.00 L of gas at $3 5 . 0 ^ { \circ } \mathrm { C }$ and under $7 . 4 1 \times 1 0 ^ { 7 } \ \mathrm { N / m } ^ { 2 }$ of pressure.   
+36. Calculate the depth to which Avogadro’s number of table tennis balls would cover Earth. Each ball has a diameter of $3 . 7 5 \mathsf { c m }$ . Assume the space between balls adds an extra $2 5 . 0 \%$ to their volume and assume they are not crushed by their own weight.   
+37. (a) What is the gauge pressure in a $2 5 . 0 ^ { \circ } \mathrm { C }$ car tire containing $3 . 6 0 \mathrm { \ m o l }$ of gas in a 30.0 L volume? (b) What will its gauge pressure be if you add 1.00 L of gas originally at atmospheric pressure and $2 5 . 0 ^ { \circ } \mathrm { C } ?$ Assume the temperature returns to $2 5 . 0 ^ { \circ } \mathrm { C }$ and the volume remains constant.   
+38. (a) In the deep space between galaxies, the density of atoms is as low as $1 0 ^ { 6 }$ atoms $/ \mathrm { m } ^ { 3 }$ and the temperature is a frigid $2 . 7 \mathsf { K }$ . What is the pressure? (b) What volume (in $\mathrm { m } ^ { 3 }$ ) is occupied by 1 mol of gas? (c) If this volume is a cube, what is the length of its sides in kilometers?
+
+# 13.4 Kinetic Theory: Atomic and Molecular Explanation of Pressure and Temperature
+
+39. Some incandescent light bulbs are filled with argon gas. What is $v _ { \mathrm { r m s } }$ for argon atoms near the filament, assuming their temperature is $2 5 0 0 ~ \mathsf { K ? }$   
+40. Average atomic and molecular speeds $\mathrm { \Delta } \cdot \mathrm { \Delta } v _ { \mathrm { r m s } } )$ are large, even at low temperatures. What is $v _ { \mathrm { r m s } }$ for helium atoms at $5 . 0 0 \mathsf { K }$ , just one degree above helium’s liquefaction temperature?   
+41. (a) What is the average kinetic energy in joules of hydrogen atoms on the $5 5 0 0 ^ { \circ } \mathrm { C }$ surface of the Sun? (b) What is the average kinetic energy of helium atoms in a region of the solar corona where the temperature is $6 . 0 0 \times 1 0 ^ { 5 }$ ?
+
+42. The escape velocity of any object from Earth is $1 1 . 2 \mathsf { k m } / \mathsf { s }$ . (a) Express this speed in $\mathsf { m } / \mathsf { s }$ and $\mathsf { k m } /$ h. (b) At what temperature would oxygen molecules (molecular mass is equal to $3 2 . 0 ~ \mathsf { g } / \$ mol) have an average velocity $v _ { \mathrm { r m s } }$ equal to Earth’s escape velocity of $1 1 . 1 \mathsf { k m } / \mathsf { s ? }$
+
+43. The escape velocity from the Moon is much smaller than from Earth and is only $2 . 3 8 { \sf k m / s }$ . At what temperature would hydrogen molecules (molecular mass is equal to $2 . 0 1 6 \ : \mathrm { g / m o l } )$ have an average velocity $v _ { \mathrm { r m s } }$ equal to the Moon’s escape velocity?
+
+44. Nuclear fusion, the energy source of the Sun, hydrogen bombs, and fusion reactors, occurs much more readily when the average kinetic energy of the atoms is high—that is, at high temperatures. Suppose you want the atoms in your fusion experiment to have average kinetic energies of $6 . 4 0 \times 1 0 ^ { - 1 4 } .$ . What temperature is needed?
+
+45. Suppose that the average velocity $\left( v _ { \mathrm { r m s } } \right)$ of carbon dioxide molecules (molecular mass is equal to $4 4 . 0 \ : \mathrm { g / m o l ) }$ in a flame is found to be $1 . 0 5 \times 1 0 ^ { 5 } ~ \mathrm { m / s }$ . What temperature does this represent?
+
+46. Hydrogen molecules (molecular mass is equal to $2 . 0 1 6 \ : \mathrm { g / m o l ) }$ have an average velocity $v _ { \mathrm { r m s } }$ equal to $1 9 3 ~ \mathsf { m } / \mathsf { s }$ . What is the temperature?
+
+47. Much of the gas near the Sun is atomic hydrogen. Its temperature would have to be $1 . 5 \times 1 0 ^ { 7 } \mathrm { ~ \AA ~ }$ for the average velocity $v _ { \mathrm { r m s } }$ to equal the escape velocity from the Sun. What is that velocity?
+
+48. There are two important isotopes of uranium— and ; these isotopes are nearly identical chemically but have different atomic masses. Only $^ { 2 3 5 } \mathrm { U }$ is very useful in nuclear reactors. One of the techniques for separating them (gas diffusion) is based on the different average velocities $v _ { \mathrm { r m s } }$ of uranium hexafluoride gas, $\mathrm { U F } _ { 6 }$ . (a) The molecular masses for $^ { 2 3 5 } \mathrm { U } \mathrm { U } \mathrm { F } _ { 6 }$ and $^ { 2 3 8 } \mathrm { U } \mathrm { U } \mathrm { F } _ { 6 }$ are $3 4 9 . 0 \mathrm { g / m o l }$ and $3 5 2 . 0 ~ \mathrm { g / m o l }$ , respectively. What is the ratio of their average velocities? (b) At what temperature would their average velocities differ by $\mathsf { 1 . 0 0 } \mathsf { m } / \mathsf { s } \ ?$ (c) Do your answers in this problem imply that this technique may be difficult?
+
+# 13.6 Humidity, Evaporation, and Boiling
+
+49. Dry air is $7 8 . 1 \%$ nitrogen. What is the partial pressure of nitrogen when the atmospheric pressure is $1 . 0 1 \times 1 0 ^ { 5 } \ \mathrm { N } / \mathrm { m } ^ { 2 } ?$
+
+50. (a) What is the vapor pressure of water at $2 0 . 0 ^ { \circ } \mathrm { C } ?$ (b) What percentage of atmospheric pressure does this correspond to? (c) What percent of $2 0 . 0 ^ { \circ } \mathrm { C }$ air is water vapor if it has $100 \%$ relative humidity? (The density of dry air at $2 0 . 0 ^ { \circ } \mathrm { C }$ is $1 . 2 0 \mathrm { k g } / \mathrm { m } ^ { 3 }$ .)
+
+51. Pressure cookers increase cooking speed by raising the boiling temperature of water above its value at atmospheric pressure. (a) What pressure is necessary to raise the boiling point to $1 2 0 . 0 ^ { \circ } \mathrm { C } ?$
+
+(b) What gauge pressure does this correspond to?
+
+52. (a) At what temperature does water boil at an altitude of $1 5 0 0 \mathrm { m }$ (about 5000 ft) on a day when atmospheric pressure is $8 . 5 9 \times 1 0 ^ { 4 } ~ \mathrm { N / m } ^ { 2 } \ ?$ (b) What about at an altitude of $3 0 0 0 \mathrm { m }$ (about 10,000 ft) when atmospheric pressure is $7 . 0 0 \times 1 0 ^ { 4 } \ \mathrm { N / m } ^ { 2 } \$
+
+53. What is the atmospheric pressure on top of Mt. Everest on a day when water boils there at a temperature of $7 0 . 0 ^ { \circ } \mathrm { C } ?$
+
+54. At a spot in the high Andes, water boils at $8 0 . 0 ^ { \circ } \mathrm { C } ,$ , greatly reducing the cooking speed of potatoes, for example. What is atmospheric pressure at this location?
+
+55. What is the relative humidity on a $2 5 . 0 ^ { \circ } \mathrm { C }$ day when the air contains $1 8 . 0 \mathrm { g } / \mathrm { m } ^ { 3 }$ of water vapor?
+
+56. What is the density of water vapor in $\mathrm { g } / \mathrm { m } ^ { 3 }$ on a hot dry day in the desert when the temperature is $4 0 . 0 ^ { \circ } \mathrm { C }$ and the relative humidity is $6 . 0 0 \%?$
+
+57. A deep-sea diver should breathe a gas mixture that has the same oxygen partial pressure as at sea level, where dry air contains $2 0 . 9 \%$ oxygen and has a total pressure of $1 . 0 1 \times 1 0 ^ { 5 } ~ \mathrm { N } / \mathrm { m } ^ { 2 }$ . (a) What is the partial pressure of oxygen at sea level? (b) If the diver breathes a gas mixture at a pressure of $2 . 0 0 \times 1 0 ^ { 6 } ~ \mathrm { N } / \mathrm { m } ^ { 2 }$ , what percent oxygen should it be to have the same oxygen partial pressure as at sea level?
+
+58. The vapor pressure of water at $4 0 . 0 ^ { \circ } \mathrm { C }$ is $7 . 3 4 \times 1 0 ^ { 3 } \ \mathrm { N } / \mathrm { m } ^ { 2 }$ . Using the ideal gas law, calculate the density of water vapor in $\mathrm { g } / \mathrm { m } ^ { 3 }$ that creates a partial pressure equal to this vapor pressure. The result should be the same as the saturation vapor density at that temperature $( 5 1 . 1 \ \mathrm { g } / \mathrm { m } ^ { 3 } )$ ).
+
+59. Air in human lungs has a temperature of $3 7 . 0 ^ { \circ } \mathrm { C }$ and a saturation vapor density of $4 4 . 0 \mathrm { g } / \mathrm { m } ^ { 3 }$ . (a) If 2.00 L of air is exhaled and very dry air inhaled, what is the maximum loss of water vapor by the person? (b) Calculate the partial pressure of water vapor having this density, and compare it with the vapor pressure of .
+
+60. If the relative humidity is $9 0 . 0 \%$ on a muggy summer morning when the temperature is $2 0 . 0 ^ { \circ } \mathrm { C }$ , what will it be later in the day when the temperature is $3 0 . 0 ^ { \circ } \mathrm { C }$ , assuming the water vapor density remains constant?
+
+61. Late on an autumn day, the relative humidity is $4 5 . 0 \%$ and the temperature is $2 0 . 0 ^ { \circ } \mathrm { C }$ . What will the relative humidity be that evening when the temperature has dropped to $1 0 . 0 ^ { \circ } \mathrm { C }$ , assuming constant water vapor density?
+
+62. Atmospheric pressure atop Mt. Everest is $3 . 3 0 \times 1 0 ^ { 4 } ~ \mathrm { N / m } ^ { 2 }$ . (a) What is the partial pressure of oxygen there if it is $2 0 . 9 \%$ of the air? (b) What percent oxygen should a mountain climber breathe so that its partial pressure is the same as at sea level, where atmospheric pressure is $1 . 0 1 \times 1 0 ^ { 5 } ~ \mathrm { N / m ^ { 2 } } \ ?$ (c) One of the most severe problems for those climbing very high mountains is the extreme drying of breathing passages. Why does this drying occur?
+
+63. What is the dew point (the temperature at which $100 \%$ relative humidity would occur) on a day when relative humidity is $3 9 . 0 \%$ at a temperature of $2 0 . 0 ^ { \circ } \mathrm { C } ?$
+
+64. On a certain day, the temperature is $2 5 . 0 ^ { \circ } \mathrm { C }$ and the relative humidity is $9 0 . 0 \%$ . How many grams of water must condense out of each cubic meter of air if the temperature falls to $1 5 . 0 ^ { \circ } \mathrm { C } ?$ Such a drop in temperature can, thus, produce heavy dew or fog.
+
+65. Integrated Concepts The boiling point of water increases with depth because pressure increases with depth. At what depth will fresh water have a boiling point of $1 5 0 ^ { \circ } \mathrm { C }$ , if the surface of the water is at sea level?
+
+66. Integrated Concepts (a) At what depth in fresh water is the critical pressure of water reached, given that the surface is at sea level? (b) At what temperature will this water boil? (c) Is a significantly higher temperature needed to boil water at a greater depth?
+
+67. Integrated Concepts
+
+To get an idea of the small effect that temperature has on Archimedes’ principle, calculate the fraction of a copper block’s weight that is supported by the buoyant force in $0 ^ { \circ } \mathrm { C }$ water and compare this fraction with the fraction supported in $9 5 . 0 ^ { \circ } \mathrm { C }$ water.
+
+68. Integrated Concepts If you want to cook in water at $1 5 0 ^ { \circ } \mathrm { C } _ { \mathrm { ; } }$ you need a pressure cooker that can withstand the necessary pressure. (a) What pressure is required for the boiling point of water to be this high? (b) If the lid of the pressure cooker is a disk $2 5 . 0 \mathsf { c m }$ in diameter, what force must it be able to withstand at this pressure?
+
+69. Unreasonable Results (a) How many moles per cubic meter of an ideal gas are there at a pressure of $1 . 0 0 \times 1 0 ^ { 1 4 } \mathrm { \ : N / m } ^ { 2 }$ and at $0 ^ { \circ } { \bf C } ?$ (b) What is unreasonable about this result? (c) Which premise or assumption is responsible?
+
+70. Unreasonable Results (a) An automobile mechanic claims that an aluminum rod fits loosely into its hole on an aluminum engine block because the engine is hot and the rod is cold. If the hole is $1 0 . 0 \%$ bigger in diameter than the $2 2 . 0 ^ { \circ } \mathrm { C }$ rod, at what temperature will the rod be the same size as the hole? (b) What is unreasonable about this temperature? (c) Which premise is responsible?
+
+71. Unreasonable Results The temperature inside a supernova explosion is said to be $2 . 0 0 \times 1 0 ^ { 1 3 } \mathrm { ~ K ~ }$ . (a) What would the average velocity $v _ { \mathrm { r m s } }$ of hydrogen atoms be? (b) What is unreasonable about this velocity? (c) Which premise or assumption is responsible?
+
+72. Unreasonable Results Suppose the relative humidity is $80 \%$ on a day when the temperature is $3 0 . 0 ^ { \circ } \mathrm { C }$ . (a) What will the relative humidity be if the air cools to $2 5 . 0 ^ { \circ } \mathrm { C }$ and the vapor density remains constant? (b) What is unreasonable about this result? (c) Which premise is responsible?

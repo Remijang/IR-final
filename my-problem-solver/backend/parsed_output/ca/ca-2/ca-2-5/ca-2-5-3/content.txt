@@ -1,0 +1,3 @@
+2.5.3 UTF-16 and UTF-32
+
+UTF-8 has been superseded by UTF-16, and UTF-32. UTF-16 uses either 2 byte or 4 byte encodings to represents all the Unicode characters. It is primarily used by Java and the Windows operating system. UTF-32 encodes all characters using exactly 32 bits. It is rarely used since it is an inefficient encoding.

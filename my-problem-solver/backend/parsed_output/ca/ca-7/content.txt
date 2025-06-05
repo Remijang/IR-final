@@ -1,0 +1,15 @@
+Logic Gates, Registers, and Memories
+
+We are ready to design a real computer now. Before we start, let us quickly take a glance at some of the main requirements and constraints for designing a computer as described in the last few chapters.
+
+Way Point 3
+
+A computer needs a central processing unit, set of registers, and a large amount of memory.   
+• A computer needs to support a complete, concise, generic, and simple instruction set.   
+• SimpleRisc is a representative instruction set. To implement it, we need to primarily have support for logical operations, arithmetic computations, register and memory accesses.
+
+Figure 7.1 shows a plan for the next few chapters. In this chapter, we shall look at designing simple circuits for logical operations, registers, and basic memory cells. We shall consider arithmetic units such as adders, multipliers, and dividers in Chapter 8, and subsequently combine the basic elements to form advanced elements such as the central processing unit, and an advanced memory system in Chapters 9, 10, and 11.
+
+Before, we proceed further, let us warn the reader that this chapter is meant to give only a brief introduction to the design and operation of logic circuits. This chapter takes a cursory look at digital logic, and focuses on introducing the broad ideas. A rigorous treatment of digital logic is beyond the scope of this book. The interested reader is referred to seminal texts on digital logic [Taub and Schilling, 1977, Lin, 2011, Wakerly, 2000]. This chapter is primarily meant for two types of readers. The first type of readers are expected to have taken an introductory course on digital logic, and they can use this chapter to refresh their knowledge. The readers in the second category are presumed to have little or no background in digital electronics. We provide enough information for them to appreciate the nuances of digital circuits, and their operation. They can use this knowledge to understand the circuits required to perform computer arithmetic, and implement complex processors.
+
+For implementing logical operations such as bitwise AND, OR, shifts, and register/memory cells, we typically use silicon-based circuits today. Note that this was not always the case. The earliest computers in the  century were made from mechanical parts. Till the sixties, they were made of vacuum tubes. It is only after the discovery of the transistor and integrated circuit technology that computer processors started getting manufactured using silicon. However, this might be a passing trend. It is perfectly possible in the future that we will have computers made of other materials.

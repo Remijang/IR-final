@@ -1,0 +1,35 @@
+8.2.2 Iterative Multiplier
+
+In this section, we present the design of an iterative multiplier (see Figure 8.11) that multiplies two signed 32-bit numbers to produce a 64-bit result. We cannot treat the numbers as unsigned anymore and the algorithm thus gets slightly complicated. We use a 33-bit register  , and a 32-bit register  as shown in Figure 8.11. The multiplier is loaded into  at the beginning. The multiplicand is stored separately in register  . The size of the register  is equal to 33 bits, and we store the multiplicand in it by extending its sign by 1 position. The two registers  and  are treated as one large register for the purposes of shifting. If we perform a right shift on  and  , then the value shifted out of  , becomes the MSB of  . We have an adder that adds the multiplicand to the current value of  , and updates  .  is initialized to 0. Let us represent the multiplicand by  , the multiplier by  , and the product by  . We need to compute  .
+
+The algorithm used by the iterative multiplier is very similar to the multiplication algorithm that we learned in elementary school. We need to consider each bit of the multiplier in turn and add a shifted version of the multiplicand to the partial product if the bit is 1. The algorithm
+
+is as follows:
+
+Let us now try to understand how this algorithm works. We iterate for 32 times to consider each bit of the multiplier. The multiplier is initially loaded into register  .
+
+Now, if the LSB of  is 1 (Line 4), then we add the multiplicand  to  and save the result in  . This basically means that if a bit in the multiplier is equal to 1, then we need to add the multiplicand to the already accumulated partial product. The partial product is a running sum of the shifted values of the multiplicands. It is initialized to 0. In the iterative algorithm, the part of  that does not contain the multiplier, contains the partial product. We then shift  one step to the right (Line 12). The reason for this is as follows. In each step we actually need to shift the multiplicand 1 bit to the left and add it to the partial product. This is the same as not shifting the multiplicand but shifting the partial product 1 bit to the right assuming that we do not lose any bits. The relative displacement between the multiplicand and the partial product remains the same.
+
+If in any iteration of the algorithm, we find the LSB of  to be  , then nothing needs to be done. We do not need to add the value of the multiplicand to the partial product. We simply need to shift  one position to the right using an arithmetic right shift operation.
+
+Note that till the last step we assume that the multiplier is positive. If in the last step we see that the multiplier is not positive (MSB is 1), then we need to subtract the multiplicand from  (Line 9). This follows directly from Theorem 2.3.4.2. The theorem states that the value of the multiplier  in the 2’s complement notation is equal to  . Here  is the  bit of the multiplier,  . In the first  iterations, we effectively multiply the multiplicand with in=−1 Mi2i−1. In the last iteration, we take a look at the MSB of the multiplier,  . If it is  , then we need not do anything. If it is 1, then we need to subtract  from the partial product. Since the partial product is shifted to the right by  positions with respect to the multiplicand, the multiplicand is effectively shifted  positions to the left with respect to the partial product. To subtract  to the partial product, we need to simply subtract  from register  , which is our last step.
+
+Important Point 9
+
+We assume that register  is 33 bits wide. We did this to avoid overflows while adding or subtracting  from  . Let us consider  and  again.  because  is essentially a 32-bit number. For our induction hypothesis, let us assume that  (true for the base case,  ). Thus,  . Hence, if we store both the numbers and their sum in 33-bit registers, we will never have overflows while adding or subtracting them. Note that we could have had overflows, if we had used just 32 bits. Now, after the shift operation, the value in  is divided by 2. Since  is assigned to  , and we have established that  , we can prove that  . Thus, our induction hypothesis holds, and we can thus conclude that during the operation of our algorithm, we shall never have an overflow. The absolute value of the product can at the most be  . Hence, the product can fit in 64 bits (proved in Section 8.2.1), and we thus need to only consider the lower 64 bits of the U V register.
+
+Examples
+
+Example 124
+
+Multiply  using an iterative multiplier. Assume a 4-bit binary 2’s complement number system. Let 2  ) be the multiplicand and let 3 (00112) be the multiplier. For each iteration show the values of  and  just before the right shift on Line 12, and just after the right shift.
+
+Answer:
+
+Example 125
+
+Multiply  using an iterative multiplier. Assume a 4-bit binary 2’s complement number system. Let   be the multiplicand and let   ) be the multiplier. For each iteration show the values of  and  just before the right shift on Line 12, and just after the right shift.
+
+Time Complexity
+
+If we are performing  -bit multiplication, then there are  iterations of the loop, and each iteration performs one addition at the most. This takes  time. Hence, the total time required is  .

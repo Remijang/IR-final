@@ -1,0 +1,664 @@
+[
+    {
+        "type": "text",
+        "text": "12.3 Rate Laws ",
+        "text_level": 1,
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "Explain the form and function of a rate law   \nUse rate laws to calculate reaction rates   \nUse rate and concentration data to identify reaction orders and derive rate laws ",
+        "page_idx": 620
+    },
+    {
+        "type": "text",
+        "text": "As described in the previous module, the rate of a reaction is often affected by the concentrations of reactants. Rate laws (sometimes called diferentialratelaws) or rate equations are mathematical expressions that describe the relationship between the rate of a chemical reaction and the concentration of its reactants. As an example, consider the reaction described by the chemical equation ",
+        "page_idx": 620
+    },
+    {
+        "type": "equation",
+        "text": "$$\na A + b B \\longrightarrow p r o d u c t s\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "where aand $b$ are stoichiometric coefficients. The rate law for this reaction is written as: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { r a t e } } = k \\left[ A \\right] ^ { m } \\left[ B \\right] ^ { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "in which [A] and $[ B ]$ represent the molar concentrations of reactants, and $k$ is the rate constant, which is specific for a particular reaction at a particular temperature. The exponents $m$ and $n$ are the reaction orders and are typically positive integers, though they can be fractions, negative, or zero. The rate constant $k$ and the reaction orders $m$ and $n$ must be determined experimentally by observing how the rate of a reaction changes as the concentrations of the reactants are changed. The rate constant $k$ is independent of the reactant concentrations, but it does vary with temperature. ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "The reaction orders in a rate law describe the mathematical dependence of the rate on reactant concentrations. Referring to the generic rate law above, the reaction is $m$ order with respect to $A$ and $n$ order with respect to $B .$ For example, if $m = 1$ and $n = 2$ , the reaction is first order in $A$ and second order in $B$ . The overall reaction order is simply the sum of orders for each reactant. For the example rate law here, the reaction is third order overall $( 1 + 2 = 3 )$ ). A few specific examples are shown below to further illustrate this concept. ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "The rate law: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k \\left[ \\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 } \\right]\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "describes a reaction that is first order in hydrogen peroxide and first order overall. The rate law: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k \\left[ { \\bf C } _ { 4 } { \\bf H } _ { 6 } \\right] ^ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "describes a reaction that is second order in $\\mathrm { C _ { 4 } H _ { 6 } }$ and second order overall. The rate law: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k \\left[ \\mathrm { H } ^ { + } \\right] \\left[ \\mathrm { O H } ^ { - } \\right]\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "describes a reaction that is first order in $\\mathrm { H ^ { + } }$ , first order in $\\mathrm { O H ^ { - } }$ , and second order overall. ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.3 ",
+        "text_level": 1,
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "Writing Rate Laws from Reaction Orders ",
+        "text_level": 1,
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "An experiment shows that the reaction of nitrogen dioxide with carbon monoxide: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { N O } _ { 2 } ( g ) + \\mathrm { C O } ( g ) \\longrightarrow \\mathrm { N O } ( g ) + \\mathrm { C O } _ { 2 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "is second order in $\\mathrm { N O } _ { 2 }$ and zero order in CO at $1 0 0 ^ { \\circ } \\mathrm { C }$ . What is the rate law for the reaction? ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "The reaction will have the form: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { r a t e } } = k [ { \\mathrm { N O } } _ { 2 } ] ^ { m } [ { \\mathrm { C O } } ] ^ { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "The reaction is second order in $\\mathrm { N O } _ { 2 }$ ; thus $m = 2$ . The reaction is zero order in CO; thus $n = 0$ . The rate law is: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k [ \\mathrm { N O } _ { 2 } ] ^ { 2 } [ \\mathrm { C O } ] ^ { 0 } = k [ \\mathrm { N O } _ { 2 } ] ^ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "Remember that a number raised to the zero power is equal to 1, thus $[ \\mathrm { C O } ] ^ { 0 } = 1$ , which is why the CO concentration term may be omitted from the rate law: the rate of reaction is solely dependent on the concentration of $\\mathrm { N O } _ { 2 }$ . A later chapter section on reaction mechanisms will explain how a reactant\u2019s concentration can have no effect on a reaction rate despite being involved in the reaction. ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "The rate law for the reaction: ",
+        "page_idx": 621
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { H } _ { 2 } ( g ) + 2 \\mathrm { N O } ( g ) \\longrightarrow \\mathrm { N } _ { 2 } \\mathrm { O } ( g ) + \\mathrm { H } _ { 2 } \\mathrm { O } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "has been determined to be rate $\\begin{array} { r } { \\mathbf { \\Sigma } = k [ \\mathrm { N O } ] ^ { 2 } [ \\mathrm { H } _ { 2 } ] . } \\end{array}$ . What are the orders with respect to each reactant, and what is the ",
+        "page_idx": 621
+    },
+    {
+        "type": "text",
+        "text": "overall order of the reaction? ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "order in $\\mathsf { N O } = 2$ ; order in $\\mathrm { H } _ { 2 } = 1$ ; overall order $= 3$ ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "In a transesterification reaction, a triglyceride reacts with an alcohol to form an ester and glycerol. Many students learn about the reaction between methanol $\\mathrm { ( C H _ { 3 } O H ) }$ and ethyl acetate $\\mathrm { ( C H _ { 3 } C H _ { 2 } O C O C H _ { 3 } ) }$ as a sample reaction before studying the chemical reactions that produce biodiesel: ",
+        "page_idx": 622
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C H _ { 3 } O H + C H _ { 3 } C H _ { 2 } O C O C H _ { 3 } } \\longrightarrow \\mathrm { C H _ { 3 } O C O C H _ { 3 } } + \\mathrm { C H _ { 3 } C H _ { 2 } O H }\n$$",
+        "text_format": "latex",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "The rate law for the reaction between methanol and ethyl acetate is, under certain conditions, determined to be: ",
+        "page_idx": 622
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k \\left[ \\mathrm { C H } _ { 3 } \\mathrm { O H } \\right]\n$$",
+        "text_format": "latex",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "What is the order of reaction with respect to methanol and ethyl acetate, and what is the overall order of reaction? ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "order in $\\mathrm { C H _ { 3 } O H } = 1$ ; order in $\\mathrm { C H _ { 3 } C H _ { 2 } O C O C H _ { 3 } } = 0$ ; overall order $= 1$ ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "A common experimental approach to the determination of rate laws is the method of initial rates. This method involves measuring reaction rates for multiple experimental trials carried out using different initial reactant concentrations. Comparing the measured rates for these trials permits determination of the reaction orders and, subsequently, the rate constant, which together are used to formulate a rate law. This approach is illustrated in the next two example exercises. ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.4 ",
+        "text_level": 1,
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Determining a Rate Law from Initial Rates ",
+        "text_level": 1,
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Ozone in the upper atmosphere is depleted when it reacts with nitrogen oxides. The rates of the reactions of nitrogen oxides with ozone are important factors in deciding how significant these reactions are in the formation of the ozone hole over Antarctica (Figure 12.8). One such reaction is the combination of nitric oxide, NO, with ozone, ${ { \\mathrm O } _ { 3 } }$ : ",
+        "page_idx": 622
+    },
+    {
+        "type": "image",
+        "img_path": "images/3b165d9f64a609af39da31c7d0382262ef57a72af95bd4aafeee6dd0efc205e3.jpg",
+        "img_caption": [
+            "FIGURE 12.8 A contour map showing stratospheric ozone concentration and the \u201cozone hole\u201d that occurs over Antarctica during its spring months. (credit: modification of work by NASA) "
+        ],
+        "img_footnote": [],
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { N O } ( g ) + \\mathrm { O } _ { 3 } ( g ) \\longrightarrow \\mathrm { N O } _ { 2 } ( g ) + \\mathrm { O } _ { 2 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "This reaction has been studied in the laboratory, and the following rate data were determined at $2 5 ~ ^ { \\circ } \\mathrm { C }$ ",
+        "page_idx": 623
+    },
+    {
+        "type": "table",
+        "img_path": "images/82d0f11bdd4730703aa96d10726086fb4ef9874e2a5efeb8219df3945dfaff5a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>[NO] (mol/L)</td><td>[O3] (mol/L)</td><td>\u25b3[NO2] (molL-1 s-1) \u25b3t</td></tr><tr><td>1</td><td>1.00 \u00d7 10-6</td><td>3.00 \u00d710-6</td><td>6.60 \u00d710-5</td></tr><tr><td>2</td><td>1.00 \u00d710-6</td><td>6.00 \u00d710-6</td><td>1.32 \u00d710-4</td></tr><tr><td>3</td><td>1.00 \u00d710-6</td><td>9.00 \u00d710-6</td><td>1.98 \u00d710-4</td></tr><tr><td>4</td><td>2.00 \u00d710-6</td><td>9.00 \u00d710-6</td><td>3.96\u00d710-4</td></tr><tr><td>5</td><td>3.00 \u00d710-6</td><td>9.00 \u00d710-6</td><td>5.94\u00d710-4</td></tr></table></body></html>\n\n",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "Determine the rate law and the rate constant for the reaction at $2 5 ^ { \\circ } \\mathrm { C } .$ . ",
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 623
+    },
+    {
+        "type": "text",
+        "text": "The rate law will have the form: ",
+        "page_idx": 623
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { r a t e } } = k [ { \\mathrm { N O } } ] ^ { m } \\left[ \\mathbf { O } _ { 3 } \\right] ^ { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Determine the values of m, n, and $k$ from the experimental data using the following three-part process: ",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Step 1. ",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Determinethevalueof mfromthedatainwhich[NO]variesand $I O _ { 3 } ]$ isconstant.In the last three experiments, [NO] varies while $\\left[ 0 _ { 3 } \\right]$ remains constant. When [NO] doubles from trial 3 to 4, the rate doubles, and when [NO] triples from trial 3 to 5, the rate also triples. Thus, the rate is also directly proportional to [NO], and $m$ in the rate law is equal to 1. ",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Step 2. ",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Determinethevalueof nfromdatainwhich $[ O _ { 3 } ]$ variesand[NO]isconstant.In the first three experiments, [NO] is constant and $\\left[ 0 _ { 3 } \\right]$ varies. The reaction rate changes in direct proportion to the change in $\\left[ 0 _ { 3 } \\right]$ . When $\\left[ 0 _ { 3 } \\right]$ doubles from trial 1 to 2, the rate doubles; when $\\left[ 0 _ { 3 } \\right]$ triples from trial 1 to 3, the rate increases also triples. Thus, the rate is directly proportional to $\\left[ 0 _ { 3 } \\right]$ , and $n$ is equal to 1.The rate law is thus: ",
+        "page_idx": 624
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k [ \\mathrm { N O } ] ^ { 1 } [ \\mathrm { O } _ { 3 } ] ^ { 1 } = k [ \\mathrm { N O } ] [ \\mathrm { O } _ { 3 } ]\n$$",
+        "text_format": "latex",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Step 3.   \nDeterminethevalueof k fromonesetofconcentrationsandthecor espondingrate. The data from trial 1 are used below: ",
+        "page_idx": 624
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { k } & { = { \\frac { \\mathrm { r a t e } } { [ \\mathrm { N O } ] \\left[ { \\mathrm { O } } _ { 3 } \\right] } } } \\\\ & { = { \\frac { 6 . 6 0 \\times 1 0 ^ { - 5 } { \\frac { \\mathrm { m o r t } - 1 } { \\mathrm { m o } 1 \\times 1 0 ^ { - 6 } { \\mathrm { m o l } } { \\mathrm { L } } ^ { - 1 } ) } } } { \\left( 1 . 0 0 \\times 1 0 ^ { - 6 } { \\frac { { \\mathrm { m o l } } { \\mathrm { L } } ^ { - 1 } } { \\mathrm { m o l } } { \\mathrm { o l } } { \\mathrm { s } } } ^ { - 1 } \\right) ( 3 . 0 0 \\times 1 0 ^ { - 6 } { \\mathrm { m o l } } { \\mathrm { L } } ^ { - 1 } ) } } } \\\\ & { = 2 . 2 0 \\times 1 0 ^ { 7 } { \\mathrm { L } } { \\mathrm { m o l } } ^ { - 1 } { \\mathrm { s } } ^ { - 1 } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Acetaldehyde decomposes when heated to yield methane and carbon monoxide according to the equation: ",
+        "page_idx": 624
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C H } _ { 3 } \\mathrm { C H O } ( g ) \\longrightarrow \\mathrm { C H } _ { 4 } ( g ) + \\mathrm { C O } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Determine the rate law and the rate constant for the reaction from the following experimental data: ",
+        "page_idx": 624
+    },
+    {
+        "type": "table",
+        "img_path": "images/6ee8ae40fedd044f59bfdb637b2f5f9c149160305ee3d79c0b41078b90f38e4f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>[CH3CHO] (mol/L)</td><td>\u25b3[CH3CHO] (molL-1 s-1) \u25b3t</td></tr><tr><td>1</td><td>1.75 \u00d7 10-3</td><td>2.06 \u00d7 10-11</td></tr><tr><td>2</td><td>3.50 \u00d710-3</td><td>8.24\u00d7 10-11</td></tr><tr><td>3</td><td>7.00 \u00d710-3</td><td>3.30 \u00d7 10-10</td></tr></table></body></html>\n\n",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Answer: rate $= k [ \\mathrm { C H } _ { 3 } \\mathrm { C H O } ] ^ { 2 }$ with $k = 6 . 7 3 \\times 1 0 ^ { - 6 } \\mathrm { L / m o l / s }$ ",
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.5 ",
+        "text_level": 1,
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Determining Rate Laws from Initial Rates ",
+        "text_level": 1,
+        "page_idx": 624
+    },
+    {
+        "type": "text",
+        "text": "Using the initial rates method and the experimental data, determine the rate law and the value of the rate constant for this reaction: ",
+        "page_idx": 624
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { N O } ( g ) + \\mathrm { C l } _ { 2 } ( g ) \\longrightarrow 2 \\mathrm { N O C l } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 624
+    },
+    {
+        "type": "table",
+        "img_path": "images/4d8ef009bd22c12b37132a3e267e5c8ba4c69d47135587191062c20643abd317.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>[NO] (mol/L)</td><td>[Cl2] (mol/L)</td><td>\u25b3[NO] (molL-1 s-1) \u25b3t</td></tr><tr><td>1</td><td>0.10</td><td>0.10</td><td>0.00300</td></tr><tr><td>2</td><td>0.10</td><td>0.15</td><td>0.00450</td></tr><tr><td>3</td><td>0.15</td><td>0.10</td><td>0.00675</td></tr></table></body></html>\n\n",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "The rate law for this reaction will have the form: ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { r a t e } } = k { \\big [ } { \\mathrm { N O } } { \\big ] } ^ { m } [ { \\mathrm { C l } } _ { 2 } ] ^ { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "As in Example 12.4, approach this problem in a stepwise fashion, determining the values of $m$ and $\\boldsymbol { n }$ from the experimental data and then using these values to determine the value of $k$ . In this example, however, an explicit algebraic approach (vs. the implicit approach of the previous example) will be used to determine the values of $m$ and $\\boldsymbol { n }$ : ",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Step 1.   \nDeterminethevalueof mfromthedatainwhich[NO]variesand $I C l _ { 2 } ]$ isconstant. Write the ratios with the subscripts $x$ and yto indicate data from two different trials: ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\mathrm { r a t e } _ { x } } { \\mathrm { r a t e } _ { y } } } = { \\frac { k [ \\mathrm { N O } ] _ { x } ^ { m } [ \\mathrm { C l } _ { 2 } ] _ { x } ^ { n } } { k [ \\mathrm { N O } ] _ { y } ^ { m } [ \\mathrm { C l } _ { 2 } ] _ { y } ^ { n } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Using the third trial and the first trial, in which $\\left[ \\mathrm { C l } _ { 2 } \\right]$ does not vary, gives: ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\operatorname { r a t e } 3 } { \\operatorname { r a t e } 1 } } = { \\frac { 0 . 0 0 6 7 5 } { 0 . 0 0 3 0 0 } } = { \\frac { k ( 0 . 1 5 ) ^ { m } ( 0 . 1 0 ) ^ { n } } { k ( 0 . 1 0 ) ^ { m } ( 0 . 1 0 ) ^ { n } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Canceling equivalent terms in the numerator and denominator leaves: ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 0 . 0 0 6 7 5 } { 0 . 0 0 3 0 0 } } = { \\frac { ( 0 . 1 5 ) ^ { m } } { ( 0 . 1 0 ) ^ { m } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "which simplifies to: ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 . 2 5 = ( 1 . 5 ) ^ { m }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Use logarithms to determine the value of the exponent $m$ : ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { \\ln ( 2 . 2 5 ) } & { = } & { m \\ln ( 1 . 5  } \\\\ {  { \\frac { \\ln ( 2 . 2 5 ) } { \\ln ( 1 . 5 ) } } } & { = } & { m } \\\\ { 2 } & { = } & { m } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Confirm the result ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 . 5 ^ { 2 } = 2 . 2 5\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Step 2.   \nDeterminethevalueof nfromdatainwhich $I C l _ { 2 } ]$ variesand[NO]isconstant. ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\operatorname { r a t e } 2 } { \\operatorname { r a t e } 1 } } = { \\frac { 0 . 0 0 4 5 0 } { 0 . 0 0 3 0 0 } } = { \\frac { k ( 0 . 1 0 ) ^ { m } ( 0 . 1 5 ) ^ { n } } { k ( 0 . 1 0 ) ^ { m } ( 0 . 1 0 ) ^ { n } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "Cancelation gives: ",
+        "page_idx": 625
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 0 . 0 0 4 5 } { 0 . 0 0 3 0 } } = { \\frac { ( 0 . 1 5 ) ^ { n } } { ( 0 . 1 0 ) ^ { n } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 625
+    },
+    {
+        "type": "text",
+        "text": "which simplifies to: ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 . 5 = ( 1 . 5 ) ^ { n }\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Thus nmust be 1, and the form of the rate law is: ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k [ \\mathrm { N O } ] ^ { m } [ \\mathrm { C l } _ { 2 } ] ^ { n } = k [ \\mathrm { N O } ] ^ { 2 } [ \\mathrm { C l } _ { 2 } ]\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Step 3. ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Determinethenumericalvalueoftherateconstantk withap ropriateunits.The units for the rate of a reaction are $\\mathrm { { m o l } / L / s }$ . The units for $k$ are whatever is needed so that substituting into the rate law expression affords the appropriate units for the rate. In this example, the concentration units are $\\mathrm { m o l } ^ { 3 } / \\mathrm { L } ^ { 3 }$ . The units for $k$ should be $\\mathrm { m o l } ^ { - 2 } \\mathrm { L } ^ { 2 } / \\mathrm { s }$ so that the rate is in terms of $\\mathrm { \\ m o l / L / s }$ . ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "To determine the value of $k$ once the rate law expression has been solved, simply plug in values from the first experimental trial and solve for $k \\mathrm { . }$ ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { 0 . 0 0 3 0 0 { \\bmod { \\mathrm { L } } } ^ { - 1 } \\ \\mathbf { s } ^ { - 1 } } & { = } & { k { \\bigl ( } 0 . 1 0 { \\bmod { \\mathrm { L } } } ^ { - 1 } { \\bigr ) } ^ { 2 } { \\bigl ( } 0 . 1 0 { \\bmod { \\mathrm { L } } } ^ { - 1 } { \\bigr ) } ^ { 1 } } \\\\ { k } & { = } & { 3 . 0 { \\bmod { \\mathrm { } } } ^ { - 2 } \\ \\mathbf { L } ^ { 2 } \\mathbf { s } ^ { - 1 } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Use the provided initial rate data to derive the rate law for the reaction whose equation is: ",
+        "page_idx": 626
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { O C l } ^ { - } ( a q ) + \\mathrm { I } ^ { - } ( a q ) \\longrightarrow \\mathrm { O I } ^ { - } ( a q ) + \\mathrm { C l } ^ { - } ( a q )\n$$",
+        "text_format": "latex",
+        "page_idx": 626
+    },
+    {
+        "type": "table",
+        "img_path": "images/5e6a0cf7ee119021193bbab7197bd89c2bbac8db87a9b40f6ef2355bb8337fe6.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>[OCI-] (mol/L)</td><td>[I-] (mol/L)</td><td>Initial Rate (mol/L/s)</td></tr><tr><td>1</td><td>0.0040</td><td>0.0020</td><td>0.00184</td></tr><tr><td>2</td><td>0.0020</td><td>0.0040</td><td>0.00092</td></tr><tr><td>3</td><td>0.0020</td><td>0.0020</td><td>0.00046</td></tr></table></body></html>\n\n",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Determine the rate law expression and the value of the rate constant $k$ with appropriate units for this reaction. ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "rate $\\begin{array} { r } { \\frac { 2 } { 3 } = \\frac { 0 . 0 0 0 9 2 } { 0 . 0 0 0 4 6 } = \\frac { k ( 0 . 0 0 2 0 ) ^ { x } ( 0 . 0 0 4 0 ) ^ { y } } { k ( 0 . 0 0 2 0 ) ^ { x } ( 0 . 0 0 2 0 ) ^ { y } } } \\end{array}$   \nrate   \n$2 . 0 0 = 2 . 0 0 ^ { y }$   \n$y = 1$   \nrate $\\begin{array} { r } { \\frac { 1 } { 2 } = \\frac { 0 . 0 0 1 8 4 } { 0 . 0 0 0 9 2 } = \\frac { k ( 0 . 0 0 4 0 ) ^ { x } ( 0 . 0 0 2 0 ) ^ { y } } { k ( 0 . 0 0 2 0 ) ^ { x } ( 0 . 0 0 4 0 ) ^ { y } } } \\end{array}$   \nrate   \n$\\textstyle 2 . 0 0 \\ = \\ { \\frac { 2 ^ { x } } { 2 ^ { y } } }$   \n$\\begin{array} { l l l } { 2 . 0 0 } & { = } & { { \\frac { 2 ^ { x } } { 2 ^ { 1 } } } } \\end{array}$   \n$4 . 0 0 ~ = ~ 2 ^ { x }$   \nX = 2   \nSubstituting the concentration data from trial 1 and solving for $k$ yields:   \n$\\begin{array} { r c l } { { \\mathrm { r a t e } } } & { { = } } & { { k \\left[ \\mathrm { O C l ^ { - } } \\right] ^ { 2 } \\left[ \\mathrm { I ^ { - } } \\right] ^ { 1 } } } \\\\ { { \\mathrm { 0 . 0 0 1 8 4 } } } & { { = } } & { { k ( 0 . 0 0 4 0 ) ^ { 2 } ( 0 . 0 0 2 0 ) ^ { 1 } } } \\\\ { { k } } & { { = } } & { { 5 . 7 5 \\times 1 0 ^ { 4 } \\mathrm { m o l ^ { - 2 } L ^ { 2 } s ^ { - 1 } } } } \\end{array}$ ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "Reaction Order and Rate Constant Units ",
+        "text_level": 1,
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "In some of our examples, the reaction orders in the rate law happen to be the same as the coefficients in the ",
+        "page_idx": 626
+    },
+    {
+        "type": "text",
+        "text": "chemical equation for the reaction. This is merely a coincidence and very often not the case. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Rate laws may exhibit fractional orders for some reactants, and negative reaction orders are sometimes observed when an increase in the concentration of one reactant causes a decrease in reaction rate. A few examples illustrating these points are provided: ",
+        "page_idx": 627
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } & { \\mathrm { N O _ { 2 } } + \\mathrm { C O } \\longrightarrow \\mathrm { N O } + \\mathrm { C O _ { 2 } } \\qquad \\mathrm { r a t e } = k [ \\mathrm { N O _ { 2 } } ] ^ { 2 } } \\\\ & { \\mathrm { C H _ { 3 } C H O } \\longrightarrow \\mathrm { C H _ { 4 } } + \\mathrm { C O } \\qquad \\mathrm { r a t e } = k [ \\mathrm { C H _ { 3 } C H O } ] ^ { 2 } } \\\\ & { \\mathrm { 2 N _ { 2 } O _ { 5 } } \\longrightarrow \\mathrm { N O _ { 2 } } + \\mathrm { O _ { 2 } } \\qquad \\mathrm { r a t e } = k \\left[ \\mathrm { N _ { 2 } O _ { 5 } } \\right] } \\\\ & { \\mathrm { 2 N O _ { 2 } } + \\mathrm { F _ { 2 } } \\longrightarrow \\mathrm { 2 N O _ { 2 } F } \\qquad \\mathrm { r a t e } = k [ \\mathrm { N O _ { 2 } } ] \\mathrm { \\Delta } [ \\mathrm { F _ { 2 } } ] } \\\\ & { \\mathrm { 2 N O _ { 2 } C l } \\longrightarrow \\mathrm { 2 N O _ { 2 } } + \\mathrm { C l _ { 2 } } \\qquad \\mathrm { r a t e } = k \\left[ \\mathrm { N O _ { 2 } C l } \\right] } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "It is important to note that ratelawsaredeterminedbyexperimentonlyandarenotreliablypredictedby reactionstoichiometry. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "The units for a rate constant will vary as appropriate to accommodate the overall order of the reaction. The unit of the rate constant for the second-order reaction described in Example 12.4 was determined to be $\\mathrm { L } \\mathrm { m o l } ^ { - 1 } \\mathrm { s } ^ { - 1 }$ For the third-order reaction described in Example 12.5, the unit for $k$ was derived to be $\\mathrm { L } ^ { 2 } \\mathrm { m o l } ^ { - 2 } \\mathrm { s } ^ { - 1 }$ Dimensional analysis requires the rate constant unit for a reaction whose overall order is $x$ to be $\\mathrm { L } ^ { x - 1 } \\mathrm { m o l } ^ { 1 - x } \\mathrm { s } ^ { - 1 }$ Table 12.1 summarizes the rate constant units for common reaction orders. ",
+        "page_idx": 627
+    },
+    {
+        "type": "table",
+        "img_path": "images/1f291a8e46286ef0b117763e69aa7d67448e4f4c83f31970beb458d1453fa9c5.jpg",
+        "table_caption": [
+            "Rate Constant Units for Common Reaction Orders ",
+            "TABLE 12.1 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Overall Reaction Order (x)</td><td>Rate Constant Unit (Lx-1 mol1-\u00d7 s-1)</td></tr><tr><td>0 (zero)</td><td>molL-1s-1</td></tr><tr><td>1 (first)</td><td>s1</td></tr><tr><td>2 (second)</td><td>L mol-1 s-1</td></tr><tr><td>3 (third)</td><td>L\u00b2 mol-\u00b2 s-1</td></tr></table></body></html>\n\n",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Note that the units in this table were derived using specific units for concentration $\\mathrm { { ( m o l / L ) } }$ and time (s), though any valid units for these two properties may be used. ",
+        "page_idx": 627
+    }
+]

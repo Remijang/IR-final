@@ -1,0 +1,202 @@
+6.3 Growth and Decay in Science and Economics
+
+The derivative of  has taken time and effort. The result was  ; which means that  . That computation brought others with it, virtually for free—the derivatives of  and  and  : But I want to stay with  —which is the most important differential equation in applied mathematics.
+
+Compare  with  . The first only asks for an antiderivative of  : We quickly find  : The second has  equal to  itself—which we rewrite as  : The integral is in  : Then  itself is  : Notice that the first solution is  1a constant, and the second solution is  times a constant.
+
+There is a way to graph slope  versus slope  : Figure 6.7 shows “tangent arrows,” which give the slope at each  and  : For parabolas, the arrows grow steeper as  grows—because  : For exponentials, the arrows grow steeper as  grows—the equation is  : Now the arrows are connected by  : A differential equation gives a field of arrows (slopes). Its solution is a curve that stays tangent to the arrows—then the curve has the right slope.
+
+A field of arrows can show many solutions at once (this comes in a differential equations course). Usually a single  is not sacred. To understand the equation we start from many  —on the left the parabolas stay parallel, on the right the heights stay proportional. For  all solution curves go to zero.
+
+From  it is a short step to  : To make  appear in the derivative, put  into the exponent. The derivative of  is  ; which is  times  : We have reached the key equation, which comes with an initial condition—a starting value  :
+
+A small change:  has switched to  : In most applications time is the natural variable, rather than space. The factor  becomes the “growth rate” or “decay rate”—and  converts to ect :
+
+The last step is to match the initial condition. The problem requires  at  : Our  starts from  : The consta1nt of integration is needed now—the solutions are  : By choosing  , we match the initial condition and solve equation (1). The formula to remember is  :
+
+6I The exponential law  solves  starting from  :
+
+The rate of growth or decay is  : May I call your attention to a basic fact ? The formula  contains three quantities  : If two of them are given, plus one additional piece of information, the third is determined. Manyapplications have one of these three forms: find  , find  , find  :
+
+1. Find the doubling time  if  : At that time  equals  :
+
+The question asks for an exponent  The answer involves logarithms. If a cell grows at a continuous rate of  per day, it takes about :  days to double in size. (Note that :7 is close to ln 2:) If a savings account earns  continuous interest, it doubles in 7 years.
+
+In this problem we knew  : In the next problem we know  :
+
+2. Find the decay constant  for carbon-14 if  in  years.
+
+After the half-life  , the factor  equals  : Now  is negative   :
+
+Question 1 was about growth. Question 2 was about decay. Both answers found  as the ratio  : Then  is its logarithm. Note how  sticks to  :  has the units of time,  has the units of “1=time:”
+
+Main point: The doubling time is  , because  : The time to multiply by  is  : The time to multiply by 10 is  : The time to divide by  is  , when a negative  brings decay.
+
+3. Find the initial value  if  and  :
+
+All we do is run the process backward. Start from 5 and go back to  : With time reversed,  becomes  : The product of  and  is 1—growth forward and decay backward.
+
+Equally important is  : Go forward to time  and go on to  :
+
+Ever step  ; at the start or later, multiplies by the same  : This uses the fundamental property of exponentials, that  :
+
+EXAMPL¡E 1 Population growth from birth rate  and death rate  (both constant):
+
+The population in this model is  : It grows when  (which makes  ). One estimate of the growth rate is  =year:
+
+The earth’s population doubles in about 
+
+First comment: W1 e predict the future based on  : We count the past population to find  : Changes in  are a serious problem for this model.
+
+Second comment:  is not a whole number. You may prefer to think of bacteria instead of people. (This section begins a m1ajor application of mathematics to economics and the life sciences.) Malthus based his theory of human population on this equation  —and with large numbers a fraction of a person doesn’t matter so much. To use calculus we go from discrete to continuous. The theory must fail when  is very large, since populations cannot grow exponentially forever. Section 6.5 introduces the logistic equation  , with a competition term  to slow the growth.
+
+Third comment: The dimensions of  are “1=time.” The dictionary gives birth rate  number of births per person in a unit of time. It is a relative rate—people divided by people and time. The product  is dimensionless and  makes sense (also dimensionless). Some texts replace  by  (lambda). Then  is the growth time or decay time or drug elimination time or diffusion time.
+
+EXAMPLE 2 Radioactive dating A gram of charcoal from the cave paintings in France gives 0:97 disintegrations per minute. A gram of living wood gives 6:68 disintegrations per minute. Find the age of those Lascaux paintings.
+
+The charcoal stopped adding radiocarbon when it was burned (at  ). The amount has decayed to  : In living wood this amount is still  ; because cosmic rays maintain the balance. Their ratio is  Knowing the decay rate  from Question 2 above, we know the present time  :
+
+Here is a related problem—the age of uranium. Right now there is 140 times as much U-238 as U-235. Nearly equal amounts were created, with half-lives of  and  years. Question: How long since uranium was created ? Answer: Find  by substituting  and  :
+
+EXAMPLE 3 Calculus in Economics: price inflation and the value of money
+
+We begin with two inflation rates—a continuous rate and an annual rate. For the price change  over a year, use the annual rate:
+
+Calculus applies the continuous rate to each instant  : The price change is  :
+
+Dividing by  , this is a differential equation for the price:
+
+The solution is  : Set  : Then  and the annual rate is 
+
+When you ask a bank what interest they pay, they give both rates:  and  : The higher one they call the “effective rate.” It comes from compounding (and depends how often they do it). If the compounding is continuous, every  brings an increase of  —and  is near 1:0833:
+
+Section 6.6 returns to compound interest. The interval drops from a month to a day to a second. That leads to  , and in the limit to  : Here we compute the effect of  continuous interest:
+
+Future value A dollar now has the same value as  dollars in  years.   
+Present value A dollar in  years has the same value as  dollars now.   
+Doubling time Prices double .  / in  years.
+
+With no compounding, the doubling time is 20 years. Simple interest adds on 20 times  : With continuous compounding the time is reduced by the factor ln  , regardless of the interest rate.
+
+EXAMPLE 4 In 1626 the Indians sold Manhattan for  248 \%\ is multiplied by  : After  years the multiplier is  and the  24$ has grown to 115 trillion dollars. With that much money they could buy back the land and pay off the national debt.
+
+This seems farfetched. Possibly there is a big flaw in the model. It is absolutely true that Ben Franklin left money to Boston and Philadelphia, to be invested for 200 years. In 1990 it yielded millions (not trillions, that takes longer). Our next step is a new model.
+
+Question How can you estimate  with a  24\log _ { 1 0 } e = . 4 3 41 0 ^ { 1 2 . 7 }$ or more than a trillion.
+
+GROWTH OR DECAY WITH A SOURCE TERM
+
+The equation  will be given a new term. Up to now, all growth or decay has started from  : No deposit or withdrawal was made later. The investment grew by itself—a pure exponential. The new term s allows you to add or subtract from the account. It is a “source”—or a “sink” if  is negative. The source  adds  , proportional to  but not to  :
+
+Constant source: 
+
+Notice  on both sides! My first guess  failed completely. Its derivative is  again, which is not  : The class suggested  : But its derivative  is still not  : We tried other ways to produce 5 in  : This idea is doomed to failure. Finally we thought of  . That has  as required.
+
+Important:  is not  . Set  to find  : The source contributes  5:
+
+The solution is  : That is the same as  :
+
+ multiplies the growt8h term  that starts at zero.  grows8as before.
+
+EXAMPLE 5  has  : This is  :
+
+That final term from the source is still positive. The other term  decays to zero. The limit as  . A negative  leads to a steady state  :
+
+Based on these examples with  and  , we can find  for any  and  .
+
+The source could be a deposit of  1000y _ { 0 } =\ : Or we can withdraw funds at  200,d y / d t\ or removes  200$ continuously— not all at once.
+
+Note again that  is not a solution. Its derivative is  : The combination  is also not a solution (but closer). The analysis of  will be our main achievement for differential equations (in this section). The equation is not restricted to finance—far from it—but that produces excellent examples.
+
+I propose to find  in four ways. You may feel that one way is enough.  The first way is the fastest—only thr1ee lines—but please give the others a chance. There is no point in preparing for real problems if we don’t solve them.
+
+Solution by Method 1 (fast way) Substitute the combination  : The solution has this form—exponential plus constant. From two facts we find  and  :
+
+the equation  gives  the initial value at  gives  :
+
+The first line has  on both sides. Subtraction leaves  , or  : Then the second line becomes  :
+
+With  this is the old solution  (no source). The example with  and  produced  : Separating the source term gives  :
+
+Solution by Method 2 (slow way) The input  produces the output  : After  years any deposit is multiplied by  : That also applies to deposits made after the account is opened. If the deposit enters»at time  , the growing time is only  : Therefore the multiplying factor is only  : This growth factor applies to the small deposit (amount  ) made between time  and  :
+
+Now add up all outputs at time  : The output from  is  : The small deposit  near time  grows to  : The total is an integral:
+
+This principle of Duhamel would still apply when the source  varies with time. Here  is constant, and the integral divides by  :
+
+That agrees with the source term from Method 1; at the end of equat1ion (8). There we looked for “exponential plus constant,” here we added up outputs.
+
+Method 1 was easier. It succeeded because we knew the form  —with “undetermined coefficients.” Method 2 is more complete. The form for  is part of the output, not the input. The source  is a continuous supply of new deposits, all growing separately.1 Section6:5 startsfrom scratch, by directly integrating  :
+
+Remark Method 2 is often described in terms of an integrating factor. First write the equation as  : Then multiply by a magic factor that makes integration possible:
+
+The integrating factor produced a perfect derivative in line 1: I prefer Duhamel’s idea, that all inputs  and  grow the same way. Either method gives formula (8) for  :
+
+THE MATHEMATICS OF FINANCE (AT A CONTINUOUS RATE)
+
+The question from finance is this: What inputs give what outputs ? The inputs can come at the start by  , or continuously by  : The output can be paid at the end or continuously. There are six basic questions, two of which are already answered.
+
+The future value is  from a deposit of  : To produce  in the future, deposit the present value  : Questions 3–6 involve the source term s. We fix the continuous rateat  per year .  /, and start the accountfrom  : The answers come fast from equation (8).
+
+Question 3 With deposits of  1000y$ after 20 years ?
+
+One big deposit yields  : The same 20; 000 via  yields  34,400$ :
+
+Notice a small by-product (for mathematicians). When the interest rate is  , our formulÑa  tuÑrns into  : We are absolutely sure that depositing  1000\ after 20 years. But this is not obvious from  : By l’Hôpital’s rule we take  -derivatives in the fraction:
+
+Question 4 What continuous deposit of  per year yields  20,000$ after 20 years ?
+
+Deposits of  582\ : A single deposit of   7,360\ at the end. Better to be rich at  :
+
+Questions 1 and 2 had  (no source). Questions 3 and 4 had  (no initial deposit). Now we come to  : In 5, everything is paid out by an annuity. In  , everything is paid up on a loan.
+
+Question 5 What deposit  provides  1000y = 0$ :
+
+Substituting  ;  ;  gives  : If you win  20,000\ : Even less if the interest rate is above  :
+
+Question 6 What payments  will clear a loan of  20,000$ in 20 years ?
+
+Unfortunately,  exceeds  1000\ to buy your car (and pay tuition). It also gives up the interest on that money. You pay that back too, but you don’thave to stay even at every moment. Instead you repay at a constant rate for 20 years. Your payments mostly cover interest at the start and principal at the end. After  years you are even and your debt is  :
+
+This is like Question 5 (also  ), but now we know  and we want  :
+
+The loan is  , the rate is  year; the time is  years.   
+Substituting in the formula for  , your payments are  1582$ per year.
+
+Puzzle How is  1582s = \ for deposits ?  582 \ and  20,000 0$ :
+
+That difference of exactly 1000 cannot be an accident. 1582 and 582 came from
+
+Why ? Here is the real reason. Instead of repaying 1582 we can pay only 1000 (to keep even with the interest on 20; 000). The other 582 goes into a separate account. After 20 years the continuous 582 has built up to 20; 000 (including interest as in Question 4). From that account we pay back the loan.
+
+Section 6.6 deals with daily compounding—which differs from continuous compounding by only a few cents. Yearly compounding differs by a few dollars.
+
+TRANSIENTS VS. STEADY STATE
+
+Suppose there is decay instead of growth. The constant  is negative and  dies out. That is the “transient” term, which disappears as  : What is leftÑis the “steady state.” We denote that limit by  :
+
+Without a source,  is zero (total decay). When  is present,  :
+
+At this steady state, the source  exactly balances the decay  : In other words  : From the leftside of the differential equation, this means  : There is no change. That is why  is steady.
+
+Notice that  d8epends on the source and on  —but not on  :
+
+EXAMPLE 6 8Suppose Bermuda has a birth rate  and death rate  : The net decay rate is  : There is also immigration from outside, of  =year: The initial population might be  thousand or  million, but that number has no effect on  : The steady state is independent of  :
+
+In this case  The population grows to 120;000 if  is smaller. It decays to 120; 000 if  is larger.
+
+EXAMPLE 7 
+
+This is back to physics. The temperature of a body is  : The temperature around it is  : Then  starts at  and approaches  , following Newton’s rule:8The rate is proportional to  . The bigger the difference, the faste8r heat flows.
+
+The equation has  where b8efore we had  : That fits with  : For the solution, replace  by  in formula (8). Or use this new method:
+
+Solution by M8ethod 3 The8new idea is to look at the diff8erence  . Its derivative is  , since  is constant. But  is  —this is our equation. The difference starts from  , and grows or decays as a pure exponential:
+
+This solves the law of cooling. We repeat Method 3 using the letters  and  :
+
+Moving  to the right side recovers formula (8). There is a constant term and an exponential term. In a differential equations course, those are the “particular solution” and the “h8omogeneous solution.” In a calculus course, it’s time to stop.
+
+EXAMPLE 8 In a  room, Newton’s corpse is found with a temperature of  : A day later the body registers  : When did he stop integrating (at  ) ?
+
+Solution Here  and  : Newton’s equation (13) is  70: Then  at  gives  : The rate of cooling is  : Death occurred when  or  : The time was  half a day earlier.

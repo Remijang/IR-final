@@ -1,0 +1,123 @@
+3.3 Vector Addition and Subtraction: Analytical Methods
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Understand the rules of vector addition and subtraction using analytical methods.   
+• Apply analytical methods to determine vertical and horizontal component vectors.   
+• Apply analytical methods to determine the magnitude and direction of a resultant vector.
+
+Analytical methods of vector addition and subtraction employ geometry and simple trigonometry rather than the ruler and protractor of graphical methods. Part of the graphical technique is retained, because vectors are still represented by arrows for easy visualization. However, analytical methods are more concise, accurate, and precise than graphical methods, which are limited by the accuracy with which a drawing can be made. Analytical methods are limited only by the accuracy and precision with which physical quantities are known.
+
+Resolving a Vector into Perpendicular Components
+
+Analytical techniques and right triangles go hand-in-hand in physics because (among other things) motions along perpendicular directions are independent. We very often need to separate a vector into perpendicular components. For example, given a vector like in Figure 3.24, we may wish to find which two perpendicular vectors,  and  , add to produce it.
+
+ and  are defined to be the components of  along the  and  axes. The three vectors ,  , and  form a right triangle:
+
+Note that this relationship between vector components and the resultant vector holds only for vector quantities (which include both magnitude and direction). The relationship does not apply for the magnitudes alone. For example, if  east,  north, and  north-east, then it is true that the vectors  . However, it is nottrue that the sum of the magnitudes of the vectors is also equal. That is,
+
+Thus,
+
+If the vector is known, then its magnitude  (its length) and its angle  (its direction) are known. To find  and  , its  and  -components, we use the following relationships for a right triangle.
+
+and
+
+Suppose, for example, that  is the vector representing the total displacement of the person walking in a city considered in Kinematics in Two Dimensions: An Introduction and Vector Addition and Subtraction: Graphical Methods.
+
+Then  blocks and  , so that
+
+Calculating a Resultant Vector
+
+If the perpendicular components  and  of a vector are known, then can also be found analytically. To find
+
+the magnitude  and direction  of a vector from its perpendicular components  and  , relative to the  -axis, we use the following relationships:
+
+Note that the equation  is just the Pythagorean theorem relating the legs of a right triangle to the length of the hypotenuse. For example, if  and  are 9 and 5 blocks, respectively, then  blocks, again consistent with the example of the person walking in a city. Finally, the direction is  , as before.
+
+Determining Vectors and Vector Components with Analytical Methods
+
+Equations  cos  and  sin  are used to find the perpendicular components of a vector—that is, to go from  and  to  and  . Equations  and  are used to find a vector from its perpendicular components—that is, to go from  and  to  and  . Both processes are crucial to analytical methods of vector addition and subtraction.
+
+Adding Vectors Using Analytical Methods
+
+To see how to add vectors using perpendicular components, consider Figure 3.28, in which the vectors and are added to produce the resultant .
+
+If and represent two legs of a walk (two displacements), then  is the total displacement. The person taking the walk ends up at the tip of There are many ways to arrive at the same point. In particular, the person could have walked first in the  -direction and then in the  -direction. Those paths are the  and y-components of the resultant,  and  . If we know  and  , we can find  and  using the equations  and  . When you use the analytical method of vector addition, you can determine the components or the magnitude and direction of a vector.
+
+Step1.Identifythe  andy-axesthatwil beusedintheproblem.Then,findthecomponentsofeachvectortobe ad edalongthechosenperpendicularaxes. Use the equations  cos  and  sin  to find the components. In Figure 3.29, these components are  ,  , and  . The angles that vectors and  make with the  -axis are  and  , respectively.
+
+Step2.Findthecomponentsoftheresultantalongeachaxisbyad ingthecomponentsoftheindividualvectors alongthataxis.That is, as shown in Figure 3.30,
+
+and
+
+Components along the same axis, say the  -axis, are vectors along the same line and, thus, can be added to one another like ordinary numbers. The same is true for components along the  axis. (For example, a 9-block eastward walk could be taken in two legs, the first 3 blocks east and the second 6 blocks east, for a total of 9, because they are along the same direction.) So resolving vectors into components along common axes makes it easier to add them. Now that the components of are known, its magnitude and direction can be found.
+
+Step3.Togetthemagnitude oftheresultant,usethePythagoreantheorem:
+
+Step4.Togetthedirectionoftheresultantrelativetothe  -axis:
+
+The following example illustrates this technique for adding vectors using perpendicular components.
+
+EXAMPLE 3.3
+
+Adding Vectors Using Analytical Methods
+
+Add the vector to the vector shown in Figure 3.31, using perpendicular components along the  and y-axes. The  and  are along the east–west and north–south directions, respectively. Vector represents the first leg of a walk in which a person walks  in a direction  north of east. Vector represents the second leg, a displacement of  in a direction  north of east.
+
+Strategy
+
+The components of and  along the  and y-axes represent walking due east and due north to get to the same ending point. Once found, they are combined to produce the resultant.
+
+Solution
+
+Following the method outlined above, we first find the components of  and  along the  and y-axes. Note that  ,  ,  , and  . We find the  -components by using  cos  , which gives
+
+and
+
+Similarly, the y-components are found using  :
+
+and
+
+The  and y-components of the resultant are thus
+
+and
+
+3.21
+
+Now we can find the magnitude of the resultant by using the Pythagorean theorem:
+
+3.22
+
+so that
+
+3.23
+
+Finally, we find the direction of the resultant:
+
+3.24
+
+Thus,
+
+3.25
+
+Discussion
+
+This example illustrates the addition of vectors using perpendicular components. Vector subtraction using perpendicular components is very similar—it is just the addition of a negative vector.
+
+Subtraction of vectors is accomplished by the addition of a negative vector. That is,  . Thus, the methodforthesubtractionofvectorsusingperpendicularcomponentsisidenticaltothatforad ition. The components of are the negatives of the components of . The  and  -components of the resultant  are thus
+
+and
+
+and the rest of the method outlined above is identical to that for addition. (See Figure 3.33.)
+
+Analyzing vectors using perpendicular components is very useful in many areas of physics, because perpendicular quantities are often independent of one another. The next module, Projectile Motion, is one of many in which using perpendicular components helps make the picture clear and simplifies the physics.
+
+PHET EXPLORATIONS
+
+Vector Addition
+
+Learn how to add vectors. Drag vectors onto a graph, change their length and angle, and sum them together. The magnitude, angle, and components of each vector can be displayed in several formats.
+
+Click to view content (https://openstax.org/books/college-physics-2e/pages/3-3-vector-addition-and-subtractionanalytical-methods)

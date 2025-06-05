@@ -1,0 +1,141 @@
+2.2 Powers and Polynomials
+
+This section has two main goals. One is to find the derivatives of  and  and  (and more generally  . The power or exponent  is at first a positive integer. Later we allow  and  and every  :
+
+The other goal is different. While computing these derivatives, we look aheadto their applications. In using calculus, we meet equations with derivatives in them— “differential equations.” It is too early to solve those equations. But it is not too early to see the purpose of what we are doing. Our examples come from economics and biology.
+
+With  , the derivative of  is  : With  , the slope of  is  : Those are two pieces in a beautiful pattern, which it will be a pleasure to discover. We begin with  and its derivative  , before jumping to  :
+
+EXAMPLE 1 If  then 
+
+Step 1: Cancel  : Step 2: Divide by  : Step  goes to zero.
+
+That is straightforward, and you see the crucial step. The power  yields four separate terms  : (Notice 1, 3, 3, 1:) After  is subtracted, we can divide by  : At the limit .  / we have  :
+
+For  the plan is the same. A step of size  leads to  : One reason for algebra is to calculate powers like  , and if you have forgotten the binomial formula we can recapture its main point. Start with  :
+
+Multiplying the four  ’s gives  : Multiplying the four  ’s gives  : These are the easy terms, but not the crucial ones. The subtraction .x C h/4 x4 will remove x4, and the limiting step  will wipe out  (even after division by  ). The products th at matter are those with exactly one  . In E xample 1 with  , this key term was  : Division by  left  :
+
+With only one  , there are n places it  can co me from. Equation (1) has four  ’s in parentheses, and four ways to produce  : Therefore the key term is  : (Division by  leaves  :) In general there are  parentheses and  ways to produce  , so the binomial formula contains  :
+
+2B For  ; the derivat ive of  is  :
+
+Subtract  from (2). Divide by  : The key term is  : The rest disappears as  :
+
+The terms replaced by the dots involve  and  and higher powers. After dividing by  , they still have at least one factor  : All those terms vanish as  approaches zero.
+
+EXAMPLE 2  : This is  in detail.
+
+Subtract  , divide by  , let  : The derivative is  : The coefficients 1; 4; 6; 4; 1 are in Pascal’s triangle below. For  the next row is  .
+
+Remark The missing terms in the binomial formula (replaced by the dots) contain all the products  : An  or an  comes from each parenthesis. The binomial coefficient “n choose  is the number of ways to choose  ’s out of n parentheses. It involves  factorial, which is  : Thus  : These are numbers that gamblers know and love:
+
+In the last row, the coefficient of  is  : For the  term, with  , there are  ways to choose two  ’s. Notice that  equals 16; which is  : Each rowof Pascal’s triangle adds to a power of 2:
+
+Choosing 6 numbers out of 49 in a lottery, the odds are  to 1: That number is  choose  It is the coefficient of  in  : If  times  tickets are bought, the expected number of winners is  : The chance of no winner is  : The chance of one winner is  : See Section 8:4:
+
+Florida’s lottery in September 1990 (these rules) had six winners out of 109, 163, 978 tickets.
+
+DERIVATIVES OF POLYNOMIALS
+
+Now we have an infinite list of functions and their derivatives:
+
+The deri?vative of  is1  times the next lower power  : That rule extends beyond these integers 1;2;3;4;5 to all powers:
+
+Remember that  means  and  means  : Negative powers lead to decreasing functions, approaching zero as  gets large. Their slopes have minus signs.
+
+Question What are the derivatives of  and  and  Answer  and  and  : Maybe  is a little unusual. Pascal’s triangle can’t deal with this fractional power, but the formula stays firm: After  comes  . The complete binomial formulais in Section 10:5:
+
+That list is a good start, but plenty of functions are left. What comes next is really simple. A tremendous number of new functions are “linear combinations” like
+
+2 Derivatives
+
+What are their derivatives ? The answers are kno1wn for  and  , and we want to multiply by 6 or divide by 2 or add or subtract. Do the same to the derivatives:
+
+2C The derivative of  times  is  times  :   
+2D The derivative of  is  :
+
+Th1e number  can be any constant. We can add (or subtract) any functions. The rules allow any combination of  and  : The derivative of  is  :
+
+The reasoninÑg is direct. Wh1en  is multiplied by  , so is  : The difference  is also multiplied by  : All averages  contain  , so their limit is  : The only incomplete step is the last one (the limit). We still have to say what “limit” means.
+
+Rule 2D is similar. Adding  means adding  : Now divide by  : In the limit as  we reach  —because a limit of sums is a sum of limits. Any example is easy and so is the proof—it is the definition of limit that needs care (Section 2:6).
+
+You can now find the derivative of every polynomial. A “polynomial” is a combination of  —for example  : That particular polynomial has slope  : Note that the derivative of 9 is zero! A constant just raises or lowers the graph, without changing its slope. It alters the mileage before starting the car.
+
+The disappearance of constants is one of the nice things in differential calculus. The reappearance of those constants is one of the headaches in integral calculus. When you find  from  , the starting mileage doesn’t matter. The constant in  has no effect on  : (  is measured by a trip meter;  comes from a stopwatch.) To find distance from velocity, you need to know the mileage at the start.
+
+A LOOK AT DIFFERENTIAL EQUATIONS (FIND  FROM  )
+
+We know that  has the derivative  : Starting with the function, we found its slope. Now reverse that process. Start with the slope and find the function. This is what science does all the time—and it seems only reasonable to say so.
+
+Begin with  : The slope is given, the function  is not given.
+
+Question Can you go backward to reach  ?   
+Answer Almost but not quite. You are only entitled to say that  : The constant  is the starting value of  (when  ). Then the differential equation  is solved.
+
+Every time you find a derivative, you can go backward to solve a differential equation. The function  has the slope  : In reverse, the slope  produces  —and all the other functions  , shifted up and down. After going from distance  to velocity  , we return to  : But there is a lot more to differential equations. Here are two crucial points:
+
+1. We reach  by way of  , but we have no system to go backward. With  we are lost. What function has this derivative ?
+
+2. Many equations have the same solution  : Economics has  : Geometry has  : These equations involve  as well as  : Function and slope are mixed together! This is typical of differential equations.
+
+To summarize: Chapters 2-4 compute and use derivatives. Chapter 5 goes in reverse. Integral calculus discovers the function from its slope. Given  we find  : Then Chapter 6 solves the differential equation  , function mixed with slope. Calculus moves from derivatives to integrals to differential equations.
+
+This discussion of the purpose of calculus should mention a specific example. Differential equations are applied to an epidemic (like AIDS). In most epidemics the number of cases grows exponentially. The peak is quickly reached by  , and the epidemic dies down. Amazingly, exponential growth is not happening with AIDS—the best fit to the data through 1988 is a cubic polynomial (Los Alamos Science, 1989):
+
+The number of cases fits a cubic within 
+
+This is dramatically different from other epidemics. Instead of  we have  : Before this book is printed, we may know what has been preventing  (fortunately). Eventually the curve will turn away from a cubic—I hope that mathematical models will lead to knowledge that saves lives.
+
+Added in proof : In 1989 the curve for the U.S. dropped from  to  :
+
+MARGINAL COST AND ELASTICITY IN ECONOMICS
+
+First point about economics: The marginal cost and marginal income are crucially important. The average cost of making automobiles may be  10,000\ cost of the next car that decides whether Ford makes it. “The average describes the past, the marginal predicts the future.” For bank deposits or work hours or wheat, which come in smaller units, the amounts are continuous variables. Then the word “marginal” says one thing: Take the derivative.
+
+The average pay over all the hours we ever worked may be low. We wouldn’t work another hour for that! This average is rising, but the pay for each additional hour rises faster—possibly it jumps. When  10\ =hour after a 40-hour week, a 50-hour week pays  550\ =hour. The marginal income is  15$ =hour—the overtime rate.
+
+Concentrate next on cost. Let  be the cost of producing  tons of steel. The cost of  tons is  : The extra cost is the difference  : Divide by  , the number of extra tons. The ratio  is the average cost per extra ton. When  is an ounce instead of a ton, we are near the marginal cost  :
+
+Example: When the cost is  , the average cost is  : The marginal cost is  : Figure 2.4 has increasing slope—an example of “diminishing returns to scale.”
+
+This raises another point about economics. The units are arbitrary. In yen per kilogram the numbers look different. The way to correct for arbitrary units is to work with percentage change or relative change. An increase of  tons is a relative increase of  : A cost increase  is a relative increase of  : Those are dimensionless, the same in tons=tons or dollars=dollars or yen=yen.
+
+A third example is the demand  at price  . Now  is negative. But again the units are arbitrary. The demand is in liters or gallons, the price is in dollars or pesos.
+
+Relative changes are better. When the price goes up by  , the demand may drop by  : If that ratio stays the same for small increases, the elasticity of demand is  :
+
+Actually this number should be  : The price rose, the demand dropped. In our definition, the elasticity will be 1 : In conversation between economists the minus sign is left out (I hope not forgotten).
+
+DEFINITION The elasticity of the demand function  is
+
+Elasticity is “marginal” divided by “average.”  is also relative change in  divided by relative change in  : Sometimes  is the same at all prices—this important case is discussed below.
+
+EXAMPLE 4 Suppose the demand is  when the price is  : The derivative  comes fro|m |ca¡lculus. The division  is only algebra. The ratio is  :
+
+For the demand  , the elasticity is 
+
+All demand curves are compared with this one. The demand is inelastic when  : It is elastic when  : The demand  is inelastic  /, while  is elastic .  /: The power  , whose derivative we know, is the function with constant elasticity  :
+
+It is because  sets the standard that we could come so early to economics.
+
+In the special case when  , consumers spend the same at all prices. Price  times quantity  remains constant at  :
+
+EXAMPLE 5 The supply curve has  —supply increases with price. Now the baseline case is  : The slope is  and the average is  : The elasticity is  :
+
+Compare  with  and  : A constant supply is “perfectly inelastic.” The power  is zero and the slope is zero:  : No more is available when the harvest is over. Whatever the price, the farmer cannot suddenly grow more wheat. Lack of elasticity makes farm economics difficult.
+
+The other extreme  is “perfectly elastic.” The supply is unlimited at a fixed price  : Once this seemed true of water and timber. In reality the steep curve  constant is leveling off to a flat curve  constant. Fixed price is changing¡to fixed supply,  is becoming  , and the supply of water follows a “gamma curve” shaped like  :
+
+EXAMPLE 6 Demand is an increasing function of income—more income, more demand. The income elasticity is  : A luxury has  (elastic). Doubling your income more than doubles the demand for caviar. A necessity has  (inelastic). The demand for bread does not double. Please recognize how the central ideas of calculus provide a language for the central ideas of economics.
+
+Important note on supply  demand This is the basic equation of microeconomics. Where the supply curve meets the demand curve, the economy finds the equilibrium price. Supply  demand assumes perfect competition. With many suppliers, no one can raise the price. If someone tries, the customers go elsewhere.
+
+The opposite case is a monopoly—no competition. Instead of many small producers of wheat, there is one producer of electricity. An airport is a monopolist (and maybe the National Football League). If the price is raised, some demand remains.
+
+Price fixing occurs when several producers act like a monopoly-which antitrust laws try to prevent. The price is not set by supply  demand. The calculus problem is different—to maximize profit. Section 3:2 locates the maximum where the marginal profit (the slope!) is zero.
+
+Question on income elasticity From an income of  10,000\ : The income elasticity of savings is  : Out of the next dollar what fraction do you save ?
+
+Answer The savings is  because  : The number  must give   , so  is  : Then the slope  is   : This is the marginal savings, ten cents on the dollar. Average savings is  ; marginal savings is  ; and  .

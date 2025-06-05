@@ -1,0 +1,12 @@
+7.2.5 Encoder
+
+Let us now consider a circuit with the reverse logic as that of a decoder. Its block diagram is shown in Figure 7.13. The circuit has  inputs, and  outputs. One of the  inputs is assumed to be 1, and the rest are assumed to be 0. The output bits provide the binary encoding of the input that is equal to 1. For example in an 8-input, 3-output encoder, if the fifth line is equal to 1, then the output is equal to 100 (count starts from 0).
+
+Let us construct a simple 4-2 encoder (4 inputs, 2 output bits). Let us number the bits  ,  , and  . If bit  is equal to 1, then the output should be equal to the binary encoding of  . Let us designate the output as  , with two bits  , and  . We have the following equations for  , and  .
+
+The intuition behind these equations is that the LSB of a 2-bit number is equal to 1, when it is equal to 01(1), or 11(3). The MSB is equal to 1, when it is equal to 10(2), or  . We can extend this logic to create a generic (n log(n))-bit encoder. The circuit diagram of a 4-2-bit encoder is shown in Figure 7.14.
+
+Example 119   
+Write the equations for an 8-3-bit encoder. Assume that the inputs are  , and the outputs are  ,  , and  .
+
+Answer:

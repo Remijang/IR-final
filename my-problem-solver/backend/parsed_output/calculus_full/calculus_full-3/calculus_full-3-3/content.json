@@ -1,0 +1,370 @@
+[
+    {
+        "type": "text",
+        "text": "3.3 Second Derivatives: Bending and Acceleration ",
+        "text_level": 1,
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "When $f ^ { \\prime } ( x )$ is positive, $f ( x )$ is increasing. When $d y / d x$ is negative, $y ( x )$ is decreasing. That is clear2, but what about the second derivative? From looking at the curve, can you decide the sign of $f ^ { \\prime \\prime } ( x )$ or $d ^ { 2 } y / d x ^ { 2 } ?$ The answer is yes and the key is in the bending. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "A straight line doesn\u2019t bend. The slope of $y = m x + b$ is $m$ (a constant). The second derivative is zero. We have to go to curves, to see a changing slope. Changes in the derivative show up in $f ^ { \\prime \\prime } ( x )$ : ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "The slope $2 x$ gets larger even when the parabola is fallin2g. T\u0001he sign of $f$ or $f ^ { \\prime }$ is not revealed by $f ^ { \\prime \\prime }$ : The second derivative tells about change in slope. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "A function with $f ^ { \\prime \\prime } ( x ) > 0$ is concave up. It bends upward as the slope increases. It is also called convex. A function with decreasing slope\u2014this means $f ^ { \\prime \\prime } ( x ) < 0$ \u2014is concave down. Note how cos $x$ and $1 + \\cos x$ and even $1 + { \\frac { 1 } { 2 } } x + \\cos { \\cdot }$ change from concave down to concave up at $x = \\pi / 2$ : At that point $f ^ { \\prime \\prime } { = } - \\cos x$ changes from negative to positive. The extra $1 + { \\frac { 1 } { 2 } } x$ tilts the graph but the bending is the same. ",
+        "page_idx": 164
+    },
+    {
+        "type": "image",
+        "img_path": "images/42ce6c7391c3e776e177cc3772727a04efc1ca99e102e1196bcb110ae8076c0e.jpg",
+        "img_caption": [
+            "Fig. 3.72 \u00a1Increasing slope $\\ b =$ concave up . $( f ^ { \\prime \\prime } > 0 )$ :2Co\u00a0ncave down is $f ^ { \\prime \\prime } { < } 0$ : Inflection point $f ^ { \\prime \\prime } { = } 0$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "Here is another way to2see the sign of $f ^ { \\prime \\prime }$ : Watch the tangent lines.When the curve is concave up, the tangent stays below it. A linear approximation is too low. This section computes a qua\u0001dratic approximation\u2014which includes the term with $f ^ { \\prime \\prime } { > } 0$ : When the curve bends down $( f ^ { \\prime \\prime } < 0 )$ , the opposite happens\u2014the tangent lin2es\u00a1are above the curve. The linear approximation is too high, and $f ^ { \\prime \\prime }$ lowers it. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "In physical motion, $f ^ { \\prime \\prime } ( t )$ is the acceleration\u2014in units of distance= $( \\mathrm { t i m e } ) ^ { 2 }$ : Acceleration is rate of change of velocity. The oscillation $\\sin 2 t$ has $v = 2 \\cos 2 t$ (maximum speed 2) and $a = - 4 \\sin 2 t$ (maximum acceleration 4). ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "An increasing p1opulation means $f ^ { \\prime } > 0$ : An increasing growth rate means $f ^ { \\prime \\prime } > 0$ . Those are different. The rate can slow down while the growth continues. ",
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "MAXIMUM VS. MINIMUM ",
+        "text_level": 1,
+        "page_idx": 164
+    },
+    {
+        "type": "text",
+        "text": "Remember that $f ^ { \\prime } ( x ) = 0$ locates a stationary point. That may be a minimum or a maximum. The second derivative decides! Instead of computing $f ( x )$ at many points, we compute $f ^ { \\prime \\prime } ( x )$ at one point\u2014the stationary point. It is a minimum if $f ^ { \\prime \\prime } ( x ) > 0$ : ",
+        "page_idx": 164
+    },
+    {
+        "type": "table",
+        "img_path": "images/38b0a30532dff61a79749e4e92ef99608f31c76dc417f2388adbef19c6c4f970.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>3D When f'(x) = O and f\"(x) > O, there is a local minimum at x. When f'(x) = O and f\"(x) < O, there is a local maximum at x.</td></tr></table></body></html>\n\n",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "To the left of a minimum, the curve is falling. After the minimum, the curve rises. The slope has changed from negative to positive. Th1e graph ben2ds upward and $f ^ { \\prime \\prime } ( x ) > 0$ : ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "At a maximum the slope drops from positive to negative. In the exceptional case, when $f ^ { \\prime } ( x ) = 0$ and also $f ^ { \\prime \\prime } ( x ) = 0$ , anything can happen. An example is $x ^ { 3 }$ , which pauses at $x = 0$ and continues up (its slope is $3 x ^ { 2 } \\geqslant 0$ ). However $x ^ { 4 }$ pauses and goes down (with a very flat graph)\u0001. ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "We emphasize that the information from $f ^ { \\prime } ( x )$ and $f ^ { \\prime \\prime } ( x )$ is only \u201clocal.\u201d To be certain of an absolute minimum or maximum, we need information over2the whole domain. ",
+        "page_idx": 165
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ^ { \\prime } ( x ) = 3 x ^ { 2 } - 2 x \\quad { \\mathrm { a n d } } \\quad f ^ { \\prime \\prime } ( x ) = 6 x - 2 .\n$$",
+        "text_format": "latex",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "To2find the maximum and=or minimum, solve $3 x ^ { 2 } - 2 x = 0$ : The stationary points are $x = 0$ and $\\textstyle x = { \\frac { 2 } { 3 } }$ . At those points we need the second derivative. It is $f ^ { \\prime \\prime } ( 0 ) = - 2$ (local maximum) and $f ^ { \\prime \\prime } \\left( { \\frac { 2 } { 3 } } \\right) = + 2$ (local minimum). ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "Between the maximum\u0000 a\u0001nd minimum is the inflection point. That is where $f ^ { \\prime \\prime } ( x ) = 0$ . The curve changes from concave down to concave up. This example has $f ^ { \\prime \\prime } { = } 6 x - 2$ , so the inflection point is at $\\begin{array} { r } { x = \\frac { 1 } { 3 } } \\end{array}$ : ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "INFLECTION POINTS ",
+        "text_level": 1,
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "In mathematics it is a special event when a function passes through zero. When the function is $f$ , its gr3aph crosses4the axis. When the function is $f ^ { \\prime }$ , the tangent line is horizontal. When $f ^ { \\prime \\prime }$ goes through zero, we have an infl1ection point. ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "The direction of bending changes at a2n inflection point. Your eye picks that out in a graph. For an instant the graph is straight (straight lines have $f ^ { \\prime \\prime } { = } 0 \\rangle$ ). It is easy to see crossing points and stationary points and inflection points. Very few people can recognize where $f ^ { \\prime \\prime \\prime } = 0$ or $f ^ { \\prime \\prime \\prime } = 0 .$ I am not sure if those points have names. ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "There is a genuine maximum or minimum when $f ^ { \\prime } ( x )$ changes sig2n. Similarly, there is a genuine inflection point when $f ^ { \\prime \\prime } ( x )$ cha2nges sign. The graph is concave down on one side of an inflection point and concave 2up on the other side. $\\dagger$ The tangents are above the curve on one side and below it on the other side. At an inflection point, the tangent line crosses the curve (Figure 3.7b). ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "Notice that a para\u0001bola $y = a x ^ { 2 } + b x + c$ \u0001has no inflection points: $y ^ { \\prime \\prime }$ is constant. A cubic curve has one inflection point, because $f ^ { \\prime \\prime }$ is linear. A fourth-degree curve might or might not have i?nflection points\u2014?the quadratic? $f ^ { \\prime \\prime } ( x )$ mi?ght or might not cross the axis. ",
+        "page_idx": 165
+    },
+    {
+        "type": "table",
+        "img_path": "images/735dba2942e9214b2c1a7df37f8cdafdc03d87e17093889a8b43ef8bd56b7efd.jpg",
+        "table_caption": [
+            "EXAMPLE 2 $\\ x ^ { 4 } - 2 x ^ { 2 }$ is $\\boldsymbol { \\mathsf { W } }$ -shaped, $4 x ^ { 3 } - 4 x$ has two bumps, $1 2 x ^ { 2 } - 4$ is U-shaped. The table shows the signs at the important values of $x$ : "
+        ],
+        "table_footnote": [
+            "$\\dagger$ That rules out $f ( x ) = x ^ { 4 }$ , which has $f ^ { \\prime \\prime } { = } 1 2 x ^ { 2 } > 0$ on both sides of zero. Its tangent line is the $\\mathbf { \\boldsymbol { x } }$ axis. The line stays below the graph\u2014so no inflection point "
+        ],
+        "table_body": "\n\n<html><body><table><tr><td>X</td><td>1\u221a2</td><td>-1 -1/\u221a3</td><td>0</td><td>1/3 1</td></tr><tr><td>f(x)</td><td>0</td><td>1 1 0</td><td>0,0 0</td><td>1 1 0</td></tr><tr><td>f(x) f\"(x)</td><td></td><td>+ 0</td><td>1 1 0</td><td>0</td></tr></table></body></html>\n\n",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "Between zeros of $f ( x )$ come zeros of $f ^ { \\prime } ( x )$ (stationary points). Between zeros of $f ^ { \\prime } ( x )$ come zeros of $f ^ { \\prime \\prime } ( x )$ (inflection points). In this example $f ( x )$ has a double zero at the origin, so a single zero of $f ^ { \\prime }$ is caught there. It is a local maximum, since $f ^ { \\prime \\prime } ( 0 ) < 0$ : ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Inflection points are important\u2014not just for mathematics. We know the world population will keep rising. We don\u2019t know if the rate of growth will slow down. Remember: The rate of growth stops growing at the inflection point. Here is the 1990 report of the UN Population Fund. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "The next ten years will decide whether the world population trebles or merely doubles before it finally stops growing. This may decide the future of the earth as a habitation for humans. The population, now 5:3 billion, is increasing by a quarter of a million every day. Between 90 and 100 million people will be added every year during the 1990s; a billion people\u2014a whole China\u2014over the decade. The fastest growth will come in the poorest countries. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "A few years ago it seemed as if the rate of population growth was slowing\u008e everywhere except in Africa and parts of South Asia. The world\u2019s population seemed set to stabilize around 10:2 billion towards the end of the next century. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Today, the situation looks less promising. The world has overshot the marker points of the 1984 \u201cmost likely\u201d medium projection. It is now on course for an eventual total that will be closer to 11 billion than to 10 billion. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "If fertility reductions continue to be slower than projected, the mark could be missed again. In that case the world could be headed towards a total of up to 14 billion people. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Starting with a census, the UN follows each age group in each country. They estimate the death rate and fertility rate2\u2014the medium estimates are published. This report is saying that we are not on track with the estimate. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Section 6.5 will come bac2k to population, with an equation that predicts 10 billion. It assumes 2we are now at the inflection point. But China\u2019s second census just started on July 1, 1990: When it\u2019s finished we will know if the inflection point is still ahead. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "You now understand the meaning of $f ^ { \\prime \\prime } ( x )$ :Its sign gives the direction of bending\u2014 the change in the slope. The rest of this section computes how much the curve bends\u2014using the size of $f ^ { \\prime \\prime }$ and not just its sign. We find quadratic approximations based on $f ^ { \\prime \\prime } ( x )$ : In some courses they are optional\u2014the main points are highlighted. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "CENTERED DIFFERENCES AND SECOND DIFFERENCES ",
+        "text_level": 1,
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Calculus begins with average velocities, computed on either side of $x$ : ",
+        "page_idx": 166
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { f ( x + \\Delta x ) - f ( x ) } { \\Delta x } } \\quad { \\mathrm { a n d } } \\quad { \\frac { f ( x ) - f ( x - \\Delta x ) } { \\Delta x } } \\quad { \\mathrm { a r e ~ c l o s e ~ t o ~ } } f ^ { \\prime } ( x )\n$$",
+        "text_format": "latex",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "We never mentioned it, but a better approximation to $f ^ { \\prime } ( x )$ comes from averaging those two averages. This produces a centered difference, which is based on $x + \\Delta x$ and $x - \\Delta x$ : It divides by $2 \\Delta x$ : ",
+        "page_idx": 166
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ^ { \\prime } ( x ) \\approx { \\frac { 1 } { 2 } } \\left[ { \\frac { f ( x + \\Delta x ) - f ( x ) } { \\Delta x } } + { \\frac { f ( x ) - f ( x - \\Delta x ) } { \\Delta x } } \\right] = { \\frac { f ( x + \\Delta x ) - f ( x - \\Delta x ) } { 2 \\Delta x } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "We claim this is better. The test is to try it on powers of $x$ ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "For $f ( x ) = x$ these ratios all give $f ^ { \\prime } = 1$ (exactly). For $f ( x ) = x ^ { 2 }$ , only the centered difference correctly gives $f ^ { \\prime } = 2 x$ : The one-sided ratio gave $2 x + \\Delta x$ (in Chapter 1 it was $2 t + h )$ . It is only \u201cfirst-order accurate.\u201d But centering leaves no error. We are averaging $2 x + \\Delta x$ with $2 x - \\Delta x$ : Thus the centered difference is \u201csecond-order accurate.\u201d ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "I ask now: What ratio converges to the second derivative? One answer is to take differen\u0001ces of the first derivative. Certainly $\\Delta f ^ { \\prime } / \\Delta x$ approac\u0001hes $f ^ { \\prime \\prime }$ : But we want a ratio involving $f$ itself. A natural idea is to take differences of differ\u00d1ences, which brings us to \u201csecond differences\u201d: ",
+        "page_idx": 167
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { { f ( x + \\Delta x ) - f ( x ) } } { \\Delta x } } - { \\frac { f ( x ) - f ( x - \\Delta x ) } { \\Delta x } } = { \\frac { f ( x + \\Delta x ) - 2 f ( x ) + f ( x - \\Delta x ) } { ( \\Delta x ) ^ { 2 } } } \\to { \\frac { d ^ { 2 } f } { d { x ^ { 2 } } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "On the top, the difference of the d2ifference is $\\Delta ( \\Delta f ) = \\Delta ^ { 2 } f .$ It corresponds to $d ^ { 2 } f .$ On the bottom, $( \\Delta x ) ^ { 2 }$ corresponds to $d x ^ { 2 }$ . This explains the way we place the 2\u2019s in $d ^ { 2 } f / d x ^ { 2 }$ : To say it differently: $d x$ is squared, $d f$ is not squared\u2014as in distance= $( \\mathrm { t i m e } ) ^ { 2 }$ ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Note that $( \\Delta x ) ^ { 2 }$ becomes much smaller than $\\Delta x$ : If we divide $\\Delta f$ by $( \\Delta x ) ^ { 2 }$ , the ratio blows up. It is the extra cancellation in the second difference $\\Delta ^ { 2 } f$ that allows the limit to exist. That limit is $f ^ { \\prime \\prime } ( x )$ : ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Application The great majority of equations can\u2019t be solved exactly. A typical case is $f ^ { \\prime \\prime } ( x ) = - \\sin f ( x )$ (the pendulum equation). To compute a solution, I would replace $f ^ { \\prime \\prime } ( x )$ by the second difference in equation (3). Approximations at points spaced by $\\Delta x$ are a very large part of scientific computing. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "To test the accuracy of these differences, here is an experim\u0001ent on $f ( x ) =$ sin $x + \\cos x$ : The table shows the errors at $x = 0$ from formulas .1\u0001/, .2/, .3/: ",
+        "page_idx": 167
+    },
+    {
+        "type": "table",
+        "img_path": "images/fc277bdbd71ea28c9e867fdb1ee9ba2546a018462cbec4fccf0207cc4918106f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>step length\u25b3x</td><td>one-sided errors</td><td>centered errors</td><td>second difference errors</td></tr><tr><td>1/4</td><td>.1347</td><td>.0104</td><td>-.0052</td></tr><tr><td>1/8</td><td>.0650</td><td>.0026</td><td>-.0013</td></tr><tr><td>1/16</td><td>.0319</td><td>.0007</td><td>-.0003</td></tr><tr><td>1/32</td><td>.0158</td><td>.0002</td><td>-.0001</td></tr></table></body></html>\n\n",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "The one-sided errors are cut in half when $\\Delta x$ is cut in half. The other columns decrease like $( \\Delta x ) ^ { 2 }$ : Each reduction divides those errors by 4. The errors from one-sided differences are $O ( \\Delta x )$ and the errors from centered differences are $O ( \\Delta x ) ^ { 2 }$ . ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "The \u201cbig $\\mathit { O } ^ { \\prime \\prime }$ notation When the errors are of order $\\Delta x$ , we write $E = O ( \\Delta x )$ : This means that $E \\leqslant C \\Delta x$ for some constant $C$ : We don\u2019t compute $C$ \u2014in fact we don\u2019t want to deal with it. The statement \u201cone-sided errors are Oh of delta $x ^ { \\prime \\prime }$ captures what is im1 portant\u0001. The main point of the other columns is $E = O ( \\Delta x ) ^ { 2 }$ . ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "LINEAR APPROXIMATION VS. QUADRATIC APPROXIMATION ",
+        "text_level": 1,
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "The second derivative gives a tremendous improvement over linear approximation $f ( a ) + f ^ { \\prime } ( a ) ( x - a )$ : A tangent line starts out close to the curve, but the line has no way to bend. After a while it overshoots or undershoots the true function (see Figure 3.8). That is especially clear for the model $f ( x ) = x ^ { 2 }$ , when the tangent is the $x$ axis and the parabola curves upward. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "You can almost guess the term with bending. It should involve $f ^ { \\prime \\prime }$ , and also $( \\Delta x ) ^ { 2 }$ : It might be exactly $f ^ { \\prime \\prime } ( x )$ times $( \\Delta x ) ^ { 2 }$ but it is not. The model function $x ^ { 2 }$ has $f ^ { \\prime \\prime } { = } 2$ : There must be\u0013a factor $\\frac { 1 } { 2 }$ to cancel\u0001that 2: ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "3E The quadratic approximation to a smooth function $f ( x )$ near $x = a$ is $\\begin{array} { r } { f ( x ) \\approx f ( a ) + f ^ { \\prime } ( a ) ( x - a ) + \\frac { 1 } { 2 } f ^ { \\prime \\prime } ( a ) ( x - a ) ^ { 2 } . } \\end{array}$ ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "At th4e basepoint this is $f ( a ) = f ( a )$ : The derivatives also agree at $x = a$ : Furthermore the second derivatives agree. On both sides of .4/, the second derivative at $x = a$ is $f ^ { \\prime \\prime } ( a )$ : ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "The quadratic approximation bends with the function. It is not the absolutely final word, because there is a cubic term ${ \\scriptstyle { \\frac { 1 } { 6 } } } f ^ { \\prime \\prime \\prime } ( a ) ( x - a ) ^ { 3 }$ and a fourth-degree term $\\textstyle { \\frac { 1 } { 2 4 } } f ^ { \\prime \\prime \\prime } ( a ) ( x - a ) ^ { 4 }$ and so on. The whole infinite sum is a \u201cTaylor series.\u201d Equation (4) carries that series through the quadratic te\u0013rm\u2014which for practical purposes gives a terrific approximation. You will see that in numerical experiments. ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "Two things to mention. First, equation (4) shows 1why $f ^ { \\prime \\prime } > 0$ brings the curve above the tangent line. The linear part gives the line, while the quadratic part is positive and bends upward. Secon\u0013d, equati\u0001on (4)\u0001comes from2 .2/ and .3/: Where one-sided differences give $f ( x + \\Delta x ) \\approx f ( x ) + f ^ { \\prime } ( x ) \\Delta x$ , centered 2differences give the quadratic: ",
+        "page_idx": 168
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\mathrm { f r o m } ( 2 ) : } & { f ( x + \\Delta x ) \\approx f ( x - \\Delta x ) + 2 f ^ { \\prime } ( x ) \\Delta x } \\\\ { \\mathrm { f r o m } ( 3 ) : } & { f ( x + \\Delta x ) \\approx 2 f ( x ) - f ( x - \\Delta x ) + f ^ { \\prime \\prime } ( x ) ( \\Delta x ) ^ { 2 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "Add and divide by 2: The r\u0013esult is $\\begin{array} { r } { f ( x + \\Delta x ) \\approx f ( x ) + f ^ { \\prime } ( x ) \\Delta x + \\frac { 1 } { 2 } f ^ { \\prime \\prime } ( x ) ( \\Delta x ) ^ { 2 } . } \\end{array}$ This is correct through $( \\Delta x ) ^ { 2 }$ and misses by $( \\Delta x ) ^ { 3 }$ , as examples show: ",
+        "page_idx": 168
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { ( x + \\Delta x ) ^ { 3 } \\approx ( x ^ { 3 } ) + ( 3 x ^ { 2 } ) ( \\Delta x ) + \\frac { 1 } { 2 } ( 6 x ) ( \\Delta x ) ^ { 2 } + \\mathrm { e r r o r } ( \\Delta x ) ^ { 3 } . } } \\\\ { { \\nonumber } } \\\\ { { ( 1 + x ) ^ { n } \\approx 1 + n x + \\frac { 1 } { 2 } n ( n - 1 ) x ^ { 2 } . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "The first derivative at $x = 0$ is $n$ : The second derivative is $n ( n - 1 )$ : The cubic term would be ${ \\scriptstyle { \\frac { 1 } { 6 } } } n ( n - l ) ( n - 2 ) x ^ { 3 }$ : We are just producing the binomial expansion! ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 ${ \\frac { 1 } { 1 - x } } \\approx 1 + x + x ^ { 2 } = { \\mathrm { s t a r t ~ o f ~ a ~ g e o m e t r i c ~ s e r i e s } } .$ ",
+        "page_idx": 168
+    },
+    {
+        "type": "image",
+        "img_path": "images/48ab2fc92c509a450473ae18934f3811e3c9a9a0c6d70acdf4f7ddc1125d6e43.jpg",
+        "img_caption": [
+            "Fig. 3.8 "
+        ],
+        "img_footnote": [],
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "$1 / ( 1 - x )$ has derivative $1 / ( 1 - x ) ^ { 2 }$ : Its\u0013sec\u0001ond derivative is $2 / ( 1 - x ) ^ { 3 }$ : At $x = 0$ those equal 1; 1; 2: The factor $\\frac { 1 } { 2 }$ cancels the 2, which leaves 1; 1; 1: This exp\u0001lains $1 + x + x ^ { 2 }$ : ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "The next terms are $x ^ { 3 }$ and $x ^ { 4 }$ : The whole series is $1 / ( 1 - x ) = 1 + x + x ^ { 2 } + x ^ { 3 } + \\cdots$ ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "Numerical experiment $1 / { \\sqrt { 1 + x } } \\approx 1 - { \\frac { 1 } { 2 } } x + { \\frac { 3 } { 8 } } x ^ { 2 }$ is tested for accuracy. Dividing $x$ by 2 almost divides the erro\u0001r by 8: If we only keep the linear part $1 - { \\frac { 1 } { 2 } } x$ the error is only divided by 4: Here\u0013are the error\u0001s at $\\begin{array} { r } { x = \\frac { 1 } { 4 } , \\frac { 1 } { 8 } } \\end{array}$ and $\\scriptstyle { \\frac { 1 } { 1 6 } }$ : ",
+        "page_idx": 168
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { { \\mathrm { l i n e a r ~ a p p r o x i m a t i o n } } \\left( \\operatorname { e r r o r } \\approx { \\frac { 3 } { 8 } } x ^ { 2 } \\right) : } & { . 0 1 9 4 \\quad . 0 0 5 3 \\quad . 0 0 1 4 } \\\\ { { \\mathrm { q u a d r a t i c ~ a p p r o x i m a t i o n } } \\left( \\operatorname { e r r o r } \\approx { \\frac { - 5 } { 1 6 } } x ^ { 3 } \\right) : - . 0 0 4 0 1 } & { - . 0 0 0 5 5 \\quad - . 0 0 0 0 7 } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 168
+    }
+]

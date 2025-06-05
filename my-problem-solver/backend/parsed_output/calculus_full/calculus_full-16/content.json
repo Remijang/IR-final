@@ -1,0 +1,115 @@
+[
+    {
+        "type": "text",
+        "text": "CHAPTER 16 ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "Mathematics after Calculus ",
+        "text_level": 1,
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "I would like this book to do more than help you pass calculus. (I hope it does that too.) After calculus you will have choices\u2014Which mathematics course to take next ? \u2014 and these pages aim to serve as a guide. Part of the answer depends on where you are going\u2014toward engineering or management or teaching or science or another career where mathematics plays a part. The rest of the answer depends on where the courses are going. This chapter can be a useful reference, to give a clearer idea than course titles can do: ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "Linear Algebra Differential Equations Discrete Mathematics Advanced Calculus (with Fourier Series) Numerical Methods Statistics ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "Pure mathematics is often divided into analysis and algebra and geometry. Those parts come together in the \u201cmathematical way of thinking\u201d\u2014a mixture of logic and ideas. It is a deep and creative subject\u2014here we make a start. ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "Two main courses after calculus are linear algebra and differential equations. I hope you can take both. To help you later, Sections 16:1 and 16:2 organize them by examples. First a few words to compare and contrast those two subjects. ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "Linear algebra is about systems of equations. There are $n$ variables to solve for. A change in one affects the others. They can be prices or velocities or currents or concentrations\u2014outputs from any model with interconnected parts. ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "Linear algebra makes only one assumption\u2014the model must be linear. A change in one variable produces proportional changes in all variables. Practically every subject begins that way. (When it becomes nonlinear, we solve by a sequence of linear equations. Linear programming is nonlinear because we require $x \\geqslant 0$ :) Elsewhere I wrote that \u201cLinear algebra has become as basic and as applicable as calculus, and fortunately it is easier.\u201d I recommend taking it. ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "A differential equation is continuous (from calculus), where a matrix equation is discrete (from algebra). The rate $d y / d t$ is determined by the present state $y$ \u2014which changes by following that rule. Section 16:2 solves $y ^ { \\prime } { = } c y + s ( t )$ for economics and life sciences, and $y ^ { \\prime \\prime } + b y ^ { \\prime } + c y = f ( t )$ for physics and engineering. Please keep it and refer to it. ",
+        "page_idx": 692
+    },
+    {
+        "type": "text",
+        "text": "A third key direction is discrete mathematics. Matrices are a part, networks and algorithms are a bigger part. Derivatives are not a part\u2014this is closer to algebra. It is needed in computer science. Some people have a knack for counting the ways a computer can send ten messages in parallel\u2014and for finding the fastest way. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "Typical question: Can 25 states be matched with 25 neighbors, so one state in each pair has an even number of letters ? New York can pair with New Jersey, Texas with Oklahoma, California with Arizona. We need rules for Hawaii and Alaska. This matching question doesn\u2019t sound mathematical, but it is. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "Section 16:3 selects four topics from discrete mathematics, so you can decide if you want more. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "Go back for a moment to calculus and differential equations. A completely realistic problem is seldom easy, but we can solve models. (Developing a good model is a skill in itself.) One method of solution involves complex numbers: ",
+        "page_idx": 693
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l l l } { \\mathrm { a n y ~ f u n c t i o n } } & { u ( x + i y ) } & { { \\mathrm { s o l v e s } } } & { u _ { x x } + u _ { y y } = 0 } & { { \\mathrm { ( L a p l a c e ~ e q u a t i o n ) } } } \\\\ { \\mathrm { a n y ~ f u n c t i o n } } & { e ^ { i k ( x + c t ) } } & { { \\mathrm { s o l v e s } } } & { u _ { t t } - c ^ { 2 } u _ { x x } = 0 } & { { \\mathrm { ( w a v e ~ e q u a t i o n ) } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "From those building blocks we assemble solutions. For the wave equation, a signal starts at $t = 0$ : It is a combination of pure oscillations $e ^ { i k x }$ : The coefficients in that combination make up the Fourier transform\u2014to tell how much of each frequency is in the signal. A lot of engineers and scientists would rather know those Fourier coefficients than $f ( x )$ : ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "A Fourier series breaks the signal into $\\Sigma a _ { k } \\cos k x$ or $\\Sigma b _ { k } \\sin k x$ or $\\Sigma c _ { k } e ^ { i k x }$ : These sums can be infinite (like power series). Instead of values of $f ( x )$ ; or derivatives at the basepoint, the function is described by $a _ { k } , b _ { k } , c _ { k }$ : Everything is computed by the \u201cFast Fourier Transform.\u201d This is the greatest algorithm since Newton\u2019s method. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "A radio signal is near one frequency. A step function has many frequencies. A delta function has every frequency in the same amount: $\\ \\delta ( x ) = \\Sigma$ cos $k x$ : Channel 4 can\u2019t broadcast a perfect step function. You wouldn\u2019t want to hear a delta function. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "We mentioned computing. For nonlinear equations this means Newton\u2019s method. For $A x = b$ it means elimination\u2014algorithms take the place of formulas. Exact solutions are gone\u2014speed and accuracy and stability become essential. It seems right to make scientific computing a part of applied mathematics, and teach the algorithms with the theory. My text Introduction to Applied Mathematics is one step in this direction, trying to present advanced calculus as it is actually used. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "We cannot discuss applications and forget statistics. Our society produces oceans of data\u2014somebody has to draw conclusions. To decide if a new drug works, and if oil spills are common or rare, and how often to have a checkup, we can\u2019t just guess. I am astounded that the connection between smoking and health was hidden for centuries. It was in the data! Eventually the statisticians uncovered it. Professionals can find patterns, and the rest of us can understand (with a little mathematics) what has been found. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "One purpose in studying mathematics is to know more about your own life. Calculus lights up a key idea: Functions. Shapes and populations and heart signals and profits and growth rates, all are given by functions. They change in time. They have integrals and derivatives. To understand and use them is a challenge\u2014 mathematics takes effort. A lot of people have contributed, in whatever way they could\u2014as you and I are doing. We may not be Newton or Leibniz or Gauss or Einstein, but we can share some part of what they created. ",
+        "page_idx": 693
+    },
+    {
+        "type": "text",
+        "text": "Table of Integrals ",
+        "text_level": 1,
+        "page_idx": 694
+    },
+    {
+        "type": "text",
+        "text": "1 r undx D au.|nC|1/ except for \u0001dux D lnau All the integrals 1\u0001- 17 inv|ol|ve $u = a x + b$   \n2 r xun dx D a2u.nC22/ a2.nC1/ bunC1 except for r\u0001 x dx u x b ln u a a2 and r x dx b \u0001C ln u a2u a2   \n3 r x2udx D 13 u2 2b?u ?Cb2 ln u ?4 r x2u2d?x\u0001D 1?3 \u0000u 2b ln u ? bu2 \u0001 5 r x2\u00013dx D 13 ln u C 2ub b2   \n6 r $\\begin{array} { r l r l r l r l } { u } & { { } \\quad - a ^ { 3 } \\lfloor 2 } & { } & { \\quad \\textnormal { a v a i v } \\textnormal { a v a i } | \\alpha | \\jmath } & { } & { u ^ { 2 } \\quad - \\ } & { a ^ { 3 } \\lfloor \\alpha } & { \\textnormal { a s i n } | \\alpha | \\jmath } & { } & { u ^ { \\prime } \\quad \\textnormal {  { J } } } & { u ^ { 3 } \\quad - \\ } & { a ^ { 3 } \\lfloor \\alpha \\rfloor \\ u | \\ u | \\textit { i } \\cdot \\ u } \\\\ { \\frac { d x } { x u } = \\frac { 1 } { b } \\ln | \\frac { x } { u } | } & { { } \\quad 7 } & { } & { \\quad \\int \\ \\frac { d x } { x ^ { 2 } u } = - \\frac { 1 } { b x } + \\frac { a } { b ^ { 2 } } \\ln | \\frac { u } { x } | } & { } & { \\quad 8 } & { \\quad \\int \\frac { d x } { x u ^ { 2 } } = \\frac { 1 } { b u } - \\frac { 1 } { b ^ { 2 } } \\ln | \\frac { u } { x } | } & { } & { { } \\quad 9 } & { \\quad \\int \\frac { d x } { x ^ { 2 } u ^ { 2 } } = - \\frac { b + 2 a x } { b ^ { 2 } x u } + \\frac { 1 } { b ^ { 2 } } \\ln | \\frac { u } { x } | } & { } \\end{array}$ C 2b3a ln xu   \n10 $\\begin{array} { r } { \\sqrt { u } d x = \\frac { 2 } { 3 a } u ^ { 3 / 2 } \\qquad 1 1 \\ \\int x \\sqrt { u } d x = \\frac { 2 ( 3 a x - 2 b ) } { 1 5 a ^ { 2 } } u ^ { 3 / 2 } \\qquad 1 2 \\ \\int x ^ { 2 } \\sqrt { u } d x = \\frac { 2 ( 1 5 a ^ { 2 } x ^ { 2 } - 1 2 a b x + 8 b ^ { 2 } ) } { 1 0 5 a ^ { 3 } } u ^ { 3 / 2 } } \\end{array}$   \n16 13 $\\begin{array} { r l } &  \\begin{array} { r l r l } & { \\frac { 1 } { \\sqrt { 2 } } \\rho _ { \\mathrm { S } } ^ { \\lambda } + 2 \\sqrt { 2 } \\kappa ^ { \\lambda } - 1 \\displaystyle \\frac { \\lbrace \\sqrt { 2 } \\kappa ^ { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } } &  1 \\leq \\frac { \\lbrace \\sqrt { 2 } \\kappa ^ { 2 } - \\alpha ^ { 2 } \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } & { \\sqrt { 2 } } & { 1 \\leq \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } \\rho _ { \\mathrm { S } } ^ { \\lambda } - 2 \\sqrt { 2 } \\kappa ^ { 2 } \\rho _ { \\mathrm { S } } ^ { \\lambda } } \\\\ &  \\frac { 1 } { \\sqrt { 2 } } \\rho _ { \\mathrm { S } } ^ { \\lambda } - \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } }  \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } & { 1 \\leq \\sqrt { 2 } } & { \\sqrt { 2 } } & { \\sqrt { 2 } } & { \\sqrt { 2 } } \\\\ & { \\frac { 1 } { \\sqrt { 2 } } \\rho _ { \\mathrm { S } } ^ { \\lambda } + 2 \\sqrt { 2 } } & { - \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } }  \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } & { 1 } & { \\sqrt { 2 } } & { \\sqrt { 2 } } & { 1 } \\end{array}  } \\\\ &  \\quad \\times \\frac { \\sqrt { 2 } \\kappa ^ { 2 } + \\sqrt { 2 } } { \\sqrt { 2 } } & { \\sqrt { 2 } } & { \\frac { \\sqrt { 2 } } { \\sqrt { 2 } }  \\kappa ^ { 2 } + \\sqrt { 2 } \\kappa ^ { 2 }  } &  \\frac { \\sqrt { 2 } } { \\sqrt { 2 } }  \\frac { \\sqrt { 2 } \\kappa ^ { 2 } + \\sqrt { 2 } \\kappa ^ { 2 } + \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } & { \\frac { \\sqrt { 2 } } { \\sqrt { 2 } }  \\kappa ^ { 2 } - \\sqrt { 2 } \\kappa ^ { 2 } + \\sqrt { 2 } \\kappa ^ { 2 }  } &  \\frac { \\sqrt { 2 } } { \\sqrt { 2 } }  \\kappa ^ { 2 }  - \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } \\kappa ^ { 2 } + \\sqrt { 2 } \\kappa ^ { 2 } + \\sqrt { 2 } } \\\\ &  \\frac { 1 } { \\sqrt { 2 } } \\rho _ { \\mathrm { S } } ^ { \\lambda } - \\frac { \\sqrt { 2 } \\kappa ^ { 2 } } { \\sqrt { 2 } } & { 1 } & { \\sqrt { 2 } } &  \\frac { \\sqrt { 2 } } { \\sqrt { 2 } } \\rho _ { \\mathrm { S } } ^ { \\lambda } - \\sqrt  \\end{array}$   \n18   \n20   \n22 r   \n24 r   \n26 r   \n28 r   \n30   \n33 1 xa   \n35 r 1 ln aC a2 x2   \n38 $\\textstyle \\int { \\frac { x ^ { 2 } d x } { \\sqrt { a ^ { 2 } - x ^ { 2 } } } } = - { \\frac { x } { 2 } } { \\sqrt { a ^ { 2 } - x ^ { 2 } } } + { \\frac { a ^ { 2 } } { 2 } } \\sin ^ { - 1 } { \\frac { x } { a } } \\qquad 3 9 \\int ( a ^ { 2 } - x ^ { 2 } ) ^ { 3 / 2 } d x = { \\frac { x } { 8 } } ( 5 a ^ { 2 } - 2 x ^ { 2 } ) { \\sqrt { a ^ { 2 } - x ^ { 2 } } } + { \\frac { 3 a ^ { 4 } } { 8 } } \\operatorname { s a n h } ( a \\to - x ^ { 2 } )$ in 1 xa   \n$\\begin{array} { r l r } { \\int \\frac { d x } { b + c \\sin a x } = \\frac { - 2 } { a \\sqrt { b ^ { 2 } - c ^ { 2 } } } \\tan ^ { - 1 } \\left[ \\sqrt { \\frac { b - c } { b + c } } \\tan \\left( \\frac { \\pi } { 4 } - \\frac { a x } { 2 } \\right) \\right] , b ^ { 2 } > c ^ { 2 } } & { { } } & { 4 1 \\int \\frac { d x } { 1 + \\sin a x } = - \\frac { 1 } { a } \\tan \\left( \\frac { \\pi } { 4 } - \\frac { a x } { 2 } \\right) } \\end{array}$ \uff09   \n42 $\\begin{array} { r } { \\int \\frac { d x } { b + c \\sin a x } = \\frac { - 1 } { a \\sqrt { c ^ { 2 } - b ^ { 2 } } } \\ln \\left| \\frac { c + b \\sin a x + \\sqrt { c ^ { 2 } - b ^ { 2 } } \\cos a x } { b + c \\sin a x } \\right| , b ^ { 2 } < c ^ { 2 } \\qquad 4 3 \\ \\int \\frac { d x } { 1 - \\sin a x } = \\frac { 1 } { a } \\tan \\left( \\frac { \\pi } { 4 } + \\frac { a x } { 2 } \\right) } \\end{array}$   \n44 $\\begin{array} { r } { \\int \\frac { d x } { b + c \\cos a x } \\mathrm { ~ = ~ } \\frac { 2 } { a \\sqrt { b ^ { 2 } - c ^ { 2 } } } \\tan ^ { - 1 } \\left[ \\sqrt { \\frac { b - c } { b + c } } \\tan \\frac { a x } { 2 } \\right] , b ^ { 2 } > c ^ { 2 } \\qquad \\mathrm { ~ 4 5 ~ } \\int \\frac { d x } { 1 + \\cos a x } \\mathrm { ~ = ~ } \\frac { 1 } { a } \\tan \\frac { a x } { 2 } } \\end{array}$   \n$\\begin{array} { r } { \\int \\frac { d x } { b + c \\cos a x } = \\frac { 1 } { a \\sqrt { c ^ { 2 } - b ^ { 2 } } } \\ln { \\left| \\frac { c + b \\cos a x + \\sqrt { c ^ { 2 } - b ^ { 2 } } \\sin a x } { b + c \\cos a x } \\right| } , ~ b ^ { 2 } < c ^ { 2 } \\qquad 4 7 \\ \\int \\frac { d x } { 1 - \\cos a x } = - \\frac { 1 } { a } \\cot \\frac { a x } { 2 } } \\end{array}$   \n50 48 ${ \\begin{array} { r l r l } & { \\sin ^ { - 1 } a x d x = x \\sin ^ { - 1 } a x + { \\frac { 1 } { a } } { \\sqrt { 1 - a ^ { 2 } x ^ { 2 } } } } & { \\qquad } & { 4 9 \\ \\int x ^ { n } \\sin ^ { - 1 } a x d x = { \\frac { x ^ { n + 1 } } { n + 1 } } \\sin ^ { - 1 } a x - { \\frac { a } { n + 1 } } \\int { \\frac { x ^ { n - 1 } } { \\sqrt { 1 - a } } } } \\\\ & { \\cdot \\tan ^ { - 1 } a x d x = x \\tan ^ { - 1 } a x - { \\frac { 1 } { 2 a } } \\ln ( 1 + a ^ { 2 } x ^ { 2 } ) } & { \\qquad } & { 5 1 \\ \\int x ^ { n } \\tan ^ { - 1 } a x d x = { \\frac { x ^ { n + 1 } } { n + 1 } } \\tan ^ { - 1 } a x - { \\frac { a } { n + 1 } } \\int { \\frac { x ^ { n + 1 } } { 1 + a } } } \\end{array} }$ 49 r xn sin 1 ax dx D xnC1 sin 1 ax naC\u00011 r x1nC1a2dx2   \n52 r $\\begin{array} { r l r l r } { \\dot { \\mathrm {  ~ \\mu ~ } } ^ { a x } d x = \\frac { e ^ { a x } } { a } } & { } & { 5 3 \\int { x } e ^ { a x } d x = \\frac { e ^ { a x } } { a ^ { 2 } } ( a x - 1 ) } & { } & { 5 4 \\int { x } ^ { 2 } e ^ { a x } d x = \\frac { e ^ { a x } } { a ^ { 3 } } ( a ^ { 2 } x ^ { 2 } - 2 a x + 2 ) \\left( b ^ { a x } \\mathrm { i } _ { \\mathrm { \\bf S } } e ^ { a ( \\mathrm { \\bf I n } b ) x } \\right) } \\end{array}$ /   \n55 r x ldnxax D ln ln ax Not elementary: r ex2 dx, r ex ln x dx, r dn x , r ex dx, r sinx x dx, r sinx1 x dx ",
+        "page_idx": 694
+    }
+]

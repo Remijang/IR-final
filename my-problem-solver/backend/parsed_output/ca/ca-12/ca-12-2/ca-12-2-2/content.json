@@ -1,0 +1,176 @@
+[
+    {
+        "type": "text",
+        "text": "12.2.2 Shared Memory vs Message Passing ",
+        "text_level": 1,
+        "page_idx": 573
+    },
+    {
+        "type": "text",
+        "text": "Let us now explain the methods of programming multiprocessors. For ease of explanation, let us draw an analogy here. Consider a group of workers in a factory. They co-operatively perform a task by communicating with each other orally. A supervisor often issues commands to the group of workers, and then they perform their work. If there is a problem, a worker indicates it by raising an alarm. Immediately, other workers rush to his assistance. In this small and simple setting, all the workers can hear each other, and see each other\u2019s actions. This proximity enables them to accomplish complex tasks. ",
+        "page_idx": 573
+    },
+    {
+        "type": "text",
+        "text": "We can alternatively consider another model, where workers cannot necessarily see or hear each other. In this case, they need to communicate with each other through a system of messages. Messages can be passed through letters, phone calls, or emails. In this setting, if a worker discovers a problem, he needs to send a message to his supervisor such that she can come and rectify the problem. Workers need to be typically aware of each other\u2019s identities, and explicitly send messages to all or a subset of them. It is not possible anymore to shout loudly, and communicate with everybody at the same time. However, there are some advantages of this system. We can support many more workers because they do not have to be co-located. Secondly, since there are no constraints on the location of workers, they can be located at different parts of the world, and be doing very different things. This system is thus far more flexible, and scalable. ",
+        "page_idx": 573
+    },
+    {
+        "type": "text",
+        "text": "Inspired by these real life scenarios, computer architects have designed a set of protocols for multiprocessors following different paradigms. The first paradigm is known as shared memory, where all the individual programs see the same view of the memory system. If program $A$ changes the value of $x$ to 5, then program $B$ immediately sees the change. The second setting is known as message passing. Here multiple programs communicate among each other by passing messages. The shared memory paradigm is more suitable for strongly coupled multiprocessors, and the message passing paradigm is more suitable for loosely coupled multiprocessors. Note that it is possible to implement message passing on a strongly coupled multiprocessor. Likewise, it is also possible to implement an abstraction of a shared memory on an otherwise loosely coupled multiprocessor. This is known as distributed shared memory [Keleher et al., 1994]. However, this is typically not the norm. ",
+        "page_idx": 573
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 574
+    },
+    {
+        "type": "text",
+        "text": "Shared Memory ",
+        "text_level": 1,
+        "page_idx": 574
+    },
+    {
+        "type": "text",
+        "text": "Let us try to add $n$ numbers in parallel using a multiprocessor. The code for it is shown in Example 149. We have written the code in C++ using the OpenMP language extension. ",
+        "page_idx": 574
+    },
+    {
+        "type": "text",
+        "text": "Example 149 Write a shared memory program to add a set of numbers in parallel. ",
+        "page_idx": 574
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us assume that all the numbers are already stored in an array called numbers. The array numbers has SIZE entries. Assume that the number of parallel sub-programs that can be launched is equal to $N$ . ",
+        "page_idx": 574
+    },
+    {
+        "type": "image",
+        "img_path": "images/9aaff2b61d0b799881d7e74ae08b8aec2bb176d1bf90e337597f15a4906f05db.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 574
+    },
+    {
+        "type": "text",
+        "text": "It is easy to mistake the code for a regular sequential program, except for the directive #pragma omp parallel. This is the only extra semantic difference that we have added in our parallel program. It launches each iteration of this loop as a separate sub-program. Each such sub-program is known as a thread. A thread is defined as a sub-program that shares its address space with other threads. It communicates with them by modifying the values of memory locations in the shared memory space. Each thread has its own set of local variables that are not accessible to other threads. ",
+        "page_idx": 574
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 575
+    },
+    {
+        "type": "text",
+        "text": "The number of iterations, or the number of parallel threads that get launched is a system parameter that is set in advance. It is typically equal to the number of processors. In this case, it is equal to N. Thus, N copies of the parallel part of the code are launched in parallel. Each copy runs on a separate processor. Note that each of these copies of the program can access all the variables that have been declared before the invocation of the parallel section. For example, they can access partialSums, and the numbers arrays. Each processor invokes the function omp get thread num, which returns the id of the thread. Each thread uses the thread id to find the range of the array that it needs to add. It adds all the entries in the relevant portion of the array, and saves the result in its corresponding entry in the partialSums array. Once all the threads have completed their job, the sequential section begins. This piece of sequential code can run on any processor. This decision is made dynamically at runtime by the operating system, or the parallel programming framework. To obtain the final result it is necessary to add all the partial sums in the sequential section. ",
+        "page_idx": 575
+    },
+    {
+        "type": "text",
+        "text": "Definition 120 ",
+        "text_level": 1,
+        "page_idx": 575
+    },
+    {
+        "type": "text",
+        "text": "A thread is a sub-program that shares its address space with other threads. It has a dedicated program counter, and a local stack that it can use to define its local variables. We refer to a thread as a software thread to distinguish it from a hardware thread that we shall define later. ",
+        "page_idx": 575
+    },
+    {
+        "type": "text",
+        "text": "A graphical representation of the computation is shown in Figure 12.3. A parent thread spawns a set of child threads. They do their own work, and finally join when they are done. The parent thread takes over, and aggregates the partial results. ",
+        "page_idx": 575
+    },
+    {
+        "type": "text",
+        "text": "There are several salient points to note here. The first is that each thread has its separate stack. A thread can use its stack to declare its local variables. Once it finishes, all the local variables in its stack are destroyed. To communicate data between the parent thread and the child threads, it is necessary to use variables that are accessible to both the threads. These variables need to be globally accessible by all the threads. The child threads can freely modify these variables, and even use them to communicate among each other also. They are additionally free to invoke the operating system, and write to external files and network devices. Once, all the threads have finished executing, they perform a join operation, and free their state. The parent thread takes over, and finishes the role of aggregating the results. Here, join is an example of a synchronization operation between threads. There can be many other types of synchronization operations between threads. The reader is referred to [Culler et al., 1998] for a detailed discussion on thread synchronization. All that the reader needs to understand is that there are a set of complicated constructs that threads can use to perform very complex tasks co-operatively. Adding a set of numbers is a very simple example. Multithreaded programs can be used to perform other complicated tasks such as matrix algebra, and even solve differential equations in parallel. ",
+        "page_idx": 575
+    },
+    {
+        "type": "image",
+        "img_path": "images/e0ea13bb8284ef41f7f7887841dfd817508cfbdc64de88ca0e70513783d93cc8.jpg",
+        "img_caption": [
+            "Figure 12.3: Graphical representation of the program to add numbers in parallel "
+        ],
+        "img_footnote": [],
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "Message Passing ",
+        "text_level": 1,
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "Let us now briefly look at message passing. Note that message-passing-based loosely coupled systems are not the main focus area of this book. Hence, we shall just give the reader a flavor of message passing programs. Note that in this case, each program is a separate entity and does not share code, or data with other programs. It is a process, where a process is defined as a running instance of a program. Typically, it does not share its address space with any other process. ",
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "Definition 121 ",
+        "text_level": 1,
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "$A$ process represents the running instance of a program. Typically, it does not share its address space with any other process. ",
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "Let us now quickly define our message passing semantics. We shall primarily use two functions, send and receive as shown in Table 12.2. The $s e n d ( p i d , v a l )$ function is used to send an integer $( v a l )$ to the process whose id is equal to pid. The $r e c e i v e ( p i d )$ is used to receive an integer sent by a process whose id is equal to pid. If pid is equal to ANYSOURCE, then the receive function can return with the value sent by any process. Our semantics is on the lines of the popular parallel programming framework, MPI (Message Passing Interface) [Snir et al., 1995]. MPI calls have many more arguments, and their syntax is much more complicated than our simplistic framework. Let us now consider the same example of adding $n$ numbers in parallel in Example 150. ",
+        "page_idx": 576
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 577
+    },
+    {
+        "type": "table",
+        "img_path": "images/56f22b9c4a5751e328b657a5e0acd90501ec9cae9c30948e32a2a154a0aa7cf6.jpg",
+        "table_caption": [
+            "Table 12.2: send and receive calls "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Function</td><td>Semantics</td></tr><tr><td>send (pid, val)</td><td>Send the integer,val, to the process with an id equal to pid</td></tr><tr><td>receive (pid)</td><td>(1) Receive an integer from process pid (2) The function blocks till it gets the value (3) If the pid is equal to ANYSOURCE, then the receive function returns with the value sent by any process</td></tr></table></body></html>\n\n",
+        "page_idx": 577
+    },
+    {
+        "type": "text",
+        "text": "Example 150 ",
+        "text_level": 1,
+        "page_idx": 577
+    },
+    {
+        "type": "text",
+        "text": "Write a message-passing-based program to add a set of numbers in parallel. Make appropriate assumptions. ",
+        "page_idx": 577
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us assume that all the numbers are stored in the array, numbers, and this array is available with all the N processors. Let the number of elements in the numbers array be SIZE. For the sake of simplicity, let us assume that SIZE is divisible by $N$ . ",
+        "page_idx": 577
+    },
+    {
+        "type": "text",
+        "text": "/\\* start all the parallel processes \\*/   \nSpawnAllParallelProcesses();   \n/\\* For each process execute the following code \\*/   \nint myId $\\mathbf { \\sigma } = \\mathbf { \\sigma }$ getMyProcessId();   \n/\\* compute the partial sums \\*/   \n$| \\ i n t \\ s t a r t { I d x } \\ = \\ m y { I d } \\ * \\ S { I Z E } { \\sim } { I N } ,$ \uff1b   \nint endIdx $\\mathbf { \\tau } = \\mathbf { \\tau }$ startIdx $^ +$ SIZE/N;   \nint partialSum = 0;   \nfor(int jdx = startIdx; jdx < endIdx; jdx++)   \npartialSum $\\scriptstyle + =$ numbers[jdx];   \n/\\* All the non-root nodes send their partial sums to the root \\*/ ",
+        "page_idx": 577
+    },
+    {
+        "type": "image",
+        "img_path": "images/1720b830c435ae154c234844d4a7f8fd865abb5b4494200bb5f9ae7f5e2d32fb.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 578
+    }
+]

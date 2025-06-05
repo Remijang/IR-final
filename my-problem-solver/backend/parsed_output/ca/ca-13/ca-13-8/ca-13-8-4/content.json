@@ -1,0 +1,218 @@
+[
+    {
+        "type": "text",
+        "text": "13.8.4 Flash Memory ",
+        "text_level": 1,
+        "page_idx": 717
+    },
+    {
+        "type": "text",
+        "text": "Hard disks, and optical drives are fairly bulky, and need to be handled carefully because they contain sensitive mechanical parts. An additional shortcoming of optical storage media is that they are very sensitive to scratches and other forms of minor accidental damage. Consequently, these devices are not ideally suited for portable and mobile applications. We need a storage device that does not consist of sensitive mechanical parts, can be carried in a pocket, can be attached to any computer, and is extremely durable. Flash drives such as USB pen drives satisfy all these requirements. A typical pen drive can fit in a wallet, can be attached to all kinds of devices, and is extremely robust and durable. It does not lose its data when it is disconnected from the computer. We have flash-based storage devices in most portable devices, medical devices, industrial electronics, disk caches in high-end servers, and small data storage devices. Flash memory is an example of an EEPROM (Electrically Erasable Programmable Read Only Memory) or EPROM (Erasable Programmable Read Only Memory). Note that traditionally EPROM-based memories used ultraviolet light for erasing data. They have been superseded by flash-based devices. ",
+        "page_idx": 717
+    },
+    {
+        "type": "table",
+        "img_path": "images/ce5a2aa2770fd71e6f16ac75eb933373755365f2d8105c4c1a40cbe4e5a3fecd.jpg",
+        "table_caption": [
+            "Table 13.9: Comparison between CD, DVD, and Blu-ray disks "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>CD</td><td>DVD</td><td>Blu-ray</td></tr><tr><td>Generation</td><td>1st</td><td>2nd</td><td>3rd</td></tr><tr><td>Capacity</td><td>700 MB</td><td>4.7 GB</td><td>25 GB</td></tr><tr><td>Uses</td><td>Audio</td><td>Video</td><td>High definition Video</td></tr><tr><td>Laser wavelength</td><td>780 nm</td><td>650 nm</td><td>405 nm</td></tr><tr><td>Raw 1X transfer rate</td><td>153KB/s</td><td>1.39 MB/s</td><td>4.5 MB/s</td></tr></table></body></html>\n\n",
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "Let us look at flash-based technology in this section. The basic element of storage is a floating gate transistor. ",
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "The Floating Gate Transistor ",
+        "text_level": 1,
+        "page_idx": 718
+    },
+    {
+        "type": "image",
+        "img_path": "images/710f1ee539861fe66349c0966372c618758d953f3932bb4835b41b2bff2c41cd.jpg",
+        "img_caption": [
+            "Figure 13.41: A floating gate transistor "
+        ],
+        "img_footnote": [],
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "Figure 13.41 shows a floating gate transistor. The figure shows a regular NMOS transistor with two gates instead of one. The gate on top is known as the control gate, and is equivalent to the gate in normal MOS transistors. The gate below the control gate is known as the floating gate. It is surrounded on all sides by an $S i O _ { 2 }$ -based electrical insulation layer. Hence, the floating gate is electrically isolated from the rest of the device. By some means if we are able to implant a certain amount of charge in the floating gate, then the floating gate will maintain its potential for a very long time. In practice, there is a negligible amount of current flow between the floating gate and the rest of the components in the floating gate transistor under normal conditions. Let us consider two scenarios. In the first scenario, the floating gate is not charged. In this case, the floating gate transistor acts as a regular NMOS transistor. However, if the floating gate has accumulated electrons containing negative charge, then we have a negative potential gradient between the channel and the control gate. Recall that to create an n-type channel in the transistor, it is necessary to apply a positive voltage to the gate, where this voltage is greater than the threshold voltage. In this case the threshold voltage is effectively higher because of the accumulation of electrons in the floating gate. In other words, to induce a channel in the substrate, we need to apply a larger positive voltage at the control gate. ",
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Let the threshold voltage when the floating gate is not charged with electrons be $V _ { T }$ , and let the threshold voltage when the floating gate contains negative charge be $V _ { T } ^ { + }$ \uff08 $V _ { T } ^ { + } > V _ { T }$ ). If we apply a voltage that is in between $V _ { T }$ and $V _ { T } ^ { + }$ to the control gate, then the NMOS transistor conducts current if no charge is stored in the floating gate (threshold voltage is $V _ { T }$ ). If the threshold voltage of the transistor is equal to $V _ { T } ^ { + }$ , then the transistor remains in the off state. It thus does not conduct any current. We typically assume that the default state (no charge on the floating gate) corresponds to the 1 state. When the floating gate is charged with electrons, we assume that the transistor is in the 0 state. When we set the voltage at the control gate to a value between $V _ { T }$ and $V _ { T } ^ { + }$ , we enable the floating gate transistor. ",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Now, to write a value of 0 or program the transistor, we need to deposit electrons in the floating gate. This can be done by applying a strong positive voltage to the control gate, and a smaller positive voltage to the drain terminal. Since there is a positive potential difference between the drain and source, a channel gets established between the drain and source. The control gate has an even higher voltage, and thus the resulting electric field pulls electrons from the n-type channel and deposits some of them in the floating gate. ",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Similarly, to erase the stored 0 bit, we apply a strong negative voltage between the control gate and the source terminal. The resulting electric field pulls the electrons away from the floating gate into the substrate, and source terminal. At the end of this process, the floating gate loses all its negative charge, and the flash device comes back to its original state. It now stores a logical 1. ",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "To summarize, programming a flash cell means writing a logical 0, and erasing it means writing a logical 1. There are two fundamental ways in which we can arrange such floating gate transistors to make a basic flash memory cell. These methods are known as NOR flash and NAND flash, respectively. ",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "NOR Flash ",
+        "text_level": 1,
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Figure 13.42 shows the topology of a two transistor NOR flash cell that saves 2 bits. Each floating gate transistor is connected to a bit line on one side, and to the ground on the other side. Each of the control gates is connected to distinct word lines. After we enable a floating gate transistor it pulls the bit line low if it stores a logical 1, otherwise it does not have any effect because it is in the off state. Thus, the voltage transition in the bit line is logically the reverse of the value stored in the transistor. The bit line is connected to a sense amplifier that senses its voltage, flips the bit, and reports it as the output. Similarly, for writing and erasing we need to set the word lines, bit lines, and source lines to appropriate voltages. The advantage of NOR flash is that it is very similar to a traditional DRAM cell. We can build an array of NOR flash cells similar to a DRAM array. The array-based layout allows us to access each individual location in the array uniquely. ",
+        "page_idx": 719
+    },
+    {
+        "type": "image",
+        "img_path": "images/2753fbef983527e6734ea6f86558fdec5a94d0d1b35cdabc565ceb346de15ba6.jpg",
+        "img_caption": [
+            "Figure 13.42: NOR Flash Cell "
+        ],
+        "img_footnote": [],
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "NAND Flash ",
+        "text_level": 1,
+        "page_idx": 720
+    },
+    {
+        "type": "image",
+        "img_path": "images/4fc8c2e537335887a203c75b36ce961b9db66774f035f3f7a4569d243bfda90b.jpg",
+        "img_caption": [
+            "Figure 13.43: NAND Flash Cell "
+        ],
+        "img_footnote": [],
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "A NAND flash cell has a different topology. It consists of a set of NMOS floating gate transistors in series similar to series connections in CMOS NAND gates (refer to Figure 13.43). There are two dedicated transistors at both ends known as the bit line select transistor, and ground select transistor. A typical array of transistors connected in the NAND configuration contains 8 or 16 transistors. To read the value saved in a certain transistor in a NAND flash array, there are three steps. The first step is to enable the ground select, and bit line transistors. The second step is to turn on the rest of the floating gate transistors other than the one we wish to read by setting their word line voltages to $V _ { T } ^ { + }$ . Lastly, we read a specific transistor by setting its word line voltage to some value between $V _ { T }$ and $V _ { T } ^ { + }$ . If the cell is not programmed (contains a 1), it drives the bit line low, otherwise it does not change the voltage on the bit line. Sense amplifiers infer the value of the logical bit saved in the transistor. Such arrays of floating gate transistors known as NAND flash cells are connected in a configuration similar to NOR flash cells. ",
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "This scheme might look complicated at the outset; however, it has a lot of advantages. Consequently, most of the flash devices in use today use NAND flash memories instead of NOR flash memories. The bit storage density is much higher. A typical NAND flash cell uses a lesser number of wires than a NOR flash cell because all the floating gate transistors are directly connected to each other, and there is just one connection to the bit line and ground terminal. Hence, NAND flash memories have at least $4 0 \u2013 6 0 \\%$ higher density as compared to NOR flash cells. Let us thus only consider NAND flash memories from now on, and refrain from discussing NOR flash memories. ",
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "Blocks and Pages ",
+        "text_level": 1,
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "The most important point to note here is that a (NAND) flash memory device is not a memory device, it is a storage device. Memory devices provide byte level access. In comparison, storage devices typically provide block level access, where one block can be hundreds of kilobytes long. Due to temporal and spatial locality in accesses to storage media, the working set of most programs is restricted to a few blocks. Secondly, to reduce the number of accesses to storage devices, most operating systems have in-memory storage caches such as hard disk caches. Most of the time, the operating system reads and writes to the in-memory caches. This reduces the I/O access time. ",
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "However, after certain events it is necessary to synchronize the cache with the underlying storage device. For example, after executing a sync() system call in Linux, the hard disk cache writes its updates to the hard disk. Depending on the semantics of the operating system, and file system, writes are sent to the underlying storage media after a variety of events. For example, when we right-click the icon for a USB drive in the \u201cMy Computer\u201d screen on Windows and select the eject option, the operating system ensures that all the outstanding write requests are sent to the USB device. Most of the time users simply unplug a USB device. This practice can occasionally lead to data corruption, and unfortunately your author has committed this mistake several times. This is because, when we pull out a USB drive, some uncommitted changes are still present in the in-memory cache. Consequently, the USB pen drive contains stale and possibly half-written data. ",
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "Data in NAND flash devices is organized in the granularity of pages and blocks. A page of data typically contains 512 \u2013 4096 bytes (in powers of 2). Most NAND flash devices can typically read or write data at the granularity of pages. Each page additionally has extra bits for error correction based on CRC codes. A set of pages are organized into a block. Blocks can contain $3 2 - 1 2 8 \\$ pages, and their total size ranges from 16-512 KB. Most NAND flash devices can erase data at the level of blocks. Let us now look at some salient points of NAND flash devices. ",
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "Program/Erase Cycles ",
+        "text_level": 1,
+        "page_idx": 722
+    },
+    {
+        "type": "text",
+        "text": "Writing to a flash device essentially means writing a logical 0 bit since by default each floating gate transistor contains a logical 1. In general, after we have written data to a block, we cannot write data again to the same block without performing additional steps. For example, if we have written 0110 to a set of locations in a block, we cannot write 1001 to the same set of locations without erasing the original data. This is because, we cannot convert a 0 to a 1, without erasing data. Erasing is a slow operation, and consumes a lot of power. Hence, the designers of NAND flash memories decided to erase data at large granularities, i.e., at the granularity of a block. We can think of accesses to flash memory as consisting of a program phase, where data is written, and an erase phase, where the data stored in all the transistors of the block is erased. In other words, after the erase phase, each transistor in the block contains a logical 1. We can have an indefinite number of read accesses between the program phase, and the erase phase. A pair of program and erase operations is known as a program/erase cycle, or P/E cycle. ",
+        "page_idx": 722
+    },
+    {
+        "type": "text",
+        "text": "Unfortunately, flash devices can endure a finite number of P/E cycles. As of 2013, this number is between 100,000 to 1 million. This is because each P/E cycle damages the silicon dioxide layer surrounding the floating gate. There is a gradual breakdown of this layer, and ultimately after hundreds of thousands of P/E cycles it does not remain an electrical insulator anymore. It starts to conduct current, and thus a flash cell loses its ability to hold charge. This gradual damage to the insulator layer is known as wear and tear. To mitigate this problem, designers use a technique called wear leveling. ",
+        "page_idx": 722
+    },
+    {
+        "type": "text",
+        "text": "Wear Leveling ",
+        "text_level": 1,
+        "page_idx": 722
+    },
+    {
+        "type": "text",
+        "text": "The main objective of wear leveling is to ensure that accesses are symmetrically distributed across blocks. If accesses are non-uniformly distributed, then the blocks that receive a large number of requests will wear out faster, and develop faults. Since data accesses follow both temporal and spatial locality we expect a small set of blocks to be accessed most often. This is precisely the behavior that we wish to prevent. Let us further elaborate with an example. Consider a pen drive that contains songs. Most people typically do not listen to all the songs in a round robin fashion. Instead, they most of the time listen to their favorite songs. This means that a few blocks that contain their favorite songs are accessed most often, and these blocks will ultimately develop faults. Hence, to maximize the lifetime of the flash device, we need to ensure that all the blocks are accessed with roughly the same frequency. This is the best case scenario, and is known as wear leveling. ",
+        "page_idx": 722
+    },
+    {
+        "type": "text",
+        "text": "The basic idea of wear leveling is that we define a logical address and a physical address for a flash device. A physical address corresponds to the address of a block within the flash device. The logical address is used by the processor and operating system to refer to data in the flash drive. We can think of the logical address as virtual memory, and the physical address as physical memory. Every flash device contains a circuit that maps logical addresses to physical addresses. Now, we need to ensure that accesses to blocks are uniformly distributed. Most flash devices have an access counter associated with each block. This counter is incremented once every P/E cycle. Once the access count for a block exceeds the access counts of other blocks by a predefined threshold, it is time to swap the contents of the frequently accessed block with another less frequently accessed block. Flash devices use a separate temporary block for implementing the swap. First the contents of block 1 are copied to it. Subsequently, block 1 is erased, and the contents of block 2 are copied to block 1. The last step is to erase block 2, and copy the contents of the temporary block to it. Optionally, at the end, we can erase the contents of the temporary block. By doing such periodic swaps, flash devices ensure that no single block wears out faster than others. The logical to physical block mapping needs to be updated to reflect the change. ",
+        "page_idx": 722
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 723
+    },
+    {
+        "type": "text",
+        "text": "Definition 163 ",
+        "text_level": 1,
+        "page_idx": 723
+    },
+    {
+        "type": "text",
+        "text": "A technique to ensure that no single block wears out faster than other blocks is known as wear leveling. Most flash devices implement wear leveling by swapping the contents of $a$ block that is frequently accessed with a block that is less frequently accessed. ",
+        "page_idx": 723
+    },
+    {
+        "type": "text",
+        "text": "Read Disturbance ",
+        "text_level": 1,
+        "page_idx": 723
+    },
+    {
+        "type": "text",
+        "text": "Another reliability issue in flash memories is known as read disturbance. If we read the contents of one page continuously, then the neighboring transistors in each NAND cell start getting programmed. Recall that the control gate voltage of the neighboring transistors needs to be greater than $V _ { T } ^ { + }$ such that they can pass current. In this case, the voltage of the gate is not as high as the voltage that is required to program a transistor, and it also lasts for a shorter duration. Nonetheless, a few electrons do accumulate in the floating gate. After thousands of read accesses to just one transistor, the neighboring transistors start accumulating negative charge in their floating gates, and ultimately get programmed to store a 0 bit. ",
+        "page_idx": 723
+    },
+    {
+        "type": "text",
+        "text": "To mitigate this problem, most designs have a read counter with each page or block. If the read counter exceeds a certain threshold, then the flash controller needs to move the contents of the block to another location. Before copying the data, the new block needs to be erased. Subsequently, we transfer the contents of the old block to the new block. In the new block, all the transistors that are not programmed start out with a negligible amount of negative charge in their floating gates. As the number of read accesses to the new block increases, transistors start getting programmed. Before we reach a threshold, we need to migrate the block again. ",
+        "page_idx": 723
+    }
+]

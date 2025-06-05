@@ -1,0 +1,48 @@
+# 28.10 Load-Linked and Store-Conditional  
+
+Some platforms provide a pair of instructions that work in concert to help build critical sections. On the MIPS architecture [H93], for example, the load-linked and store-conditional instructions can be used in tandem to build locks and other concurrent structures. The C pseudocode for these instructions is as found in Figure 28.5. Alpha, PowerPC, and ARM provide similar instructions [W09].  
+
+The load-linked operates much like a typical load instruction, and simply fetches a value from memory and places it in a register. The key difference comes with the store-conditional, which only succeeds (and updates the value stored at the address just load-linked from) if no intervening store to the address has taken place. In the case of success, the storeconditional returns 1 and updates the value at ptr to value; if it fails, the value at ptr is not updated and 0 is returned.  
+
+As a challenge to yourself, try thinking about how to build a lock using load-linked and store-conditional. Then, when you are finished, look at the code below which provides one simple solution. Do it! The solution is in Figure 28.6.  
+
+The lock() code is the only interesting piece. First, a thread spins waiting for the flag to be set to 0 (and thus indicate the lock is not held). Once so, the thread tries to acquire the lock via the store-conditional; if it succeeds, the thread has atomically changed the flag’s value to 1 and thus can proceed into the critical section.  
+
+Note how failure of the store-conditional might arise. One thread calls lock() and executes the load-linked, returning 0 as the lock is not held. Before it can attempt the store-conditional, it is interrupted and another thread enters the lock code, also executing the load-linked instruction,  
+
+1 int LoadLinked(int \*ptr) {   
+2 return \*ptr;   
+3 }   
+4   
+5 int StoreConditional(int \*ptr, int value) {   
+6 if (no update to \*ptr since LL to this addr) {   
+7 \*ptr $\mathbf { \Sigma } = \mathbf { \Sigma }$ value;   
+8 return 1; // success!   
+9 } else {   
+10 return 0; // failed to update   
+11 }   
+}   
+1 void lock(lock_t \*lock) {   
+2 while (1) {   
+3 while (LoadLinked(&lock->flag) $\scriptstyle \mathbf { \alpha = } \ 1$ )   
+4 ; // spin until it’s zero   
+5 if (StoreConditional(&lock->flag, 1) $\scriptstyle \mathbf { \alpha = } \ 1$ )   
+6 return; // if set-to-1 was success: done   
+7 // otherwise: try again   
+8 }   
+9 }   
+10   
+11 void unlock(lock_t \*lock) {   
+12 lock->flag $\mathit { \Theta } = \mathit { \Theta } 0$ ;   
+13 }  
+
+and also getting a 0 and continuing. At this point, two threads have each executed the load-linked and each are about to attempt the storeconditional. The key feature of these instructions is that only one of these threads will succeed in updating the flag to 1 and thus acquire the lock; the second thread to attempt the store-conditional will fail (because the other thread updated the value of flag between its load-linked and storeconditional) and thus have to try to acquire the lock again.  
+
+In class a few years ago, undergraduate student David Capel suggested a more concise form of the above, for those of you who enjoy short-circuiting boolean conditionals. See if you can figure out why it is equivalent. It certainly is shorter!  
+
+1 void lock(lock_t \*lock) {   
+2 while (LoadLinked(&lock->flag) ||   
+3 !StoreConditional(&lock->flag, 1))   
+4 ; // spin   
+5 }  
+

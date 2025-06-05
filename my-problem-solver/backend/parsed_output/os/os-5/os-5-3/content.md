@@ -1,0 +1,50 @@
+# 5.3 Finally, The exec() System Call  
+
+A final and important piece of the process creation API is the exec() system call3. This system call is useful when you want to run a program that is different from the calling program. For example, calling fork()  
+
+1 #include <stdio.h>   
+2 #include <stdlib.h>   
+3 #include <unistd.h>   
+4 #include <string.h>   
+5 #include <sys/wait.h>   
+6   
+7 int main(int argc, char \*argv[]) {   
+8 printf("hello (pid:%d)\n", (int) getpid());   
+9 int rc $\mathbf { \Sigma } = \mathbf { \Sigma }$ fork();   
+10 if ( $\yen 123,456,7$ ) { // fork failed; exit   
+11 fprintf(stderr, "fork failed\n");   
+12 exit(1);   
+13 } else if $\mathrm { ~ \ : ~ \ : ~ } ^ { \prime } \subset \mathrm { ~ \ : ~ = ~ \ : ~ 0 ~ }$ ) { // child (new process)   
+14 printf("child (pid:%d)\n", (int) getpid());   
+15 char \*myargs[3];   
+16 myargs[0] $\mathbf { \Sigma } = \mathbf { \Sigma }$ strdup("wc"); // program: "wc"   
+17 myargs[1] $\mathbf { \Sigma } = \mathbf { \Sigma }$ strdup("p3.c"); // arg: input file   
+18 myargs[2] $\mathbf { \Sigma } = \mathbf { \Sigma }$ NULL; // mark end of array   
+19 execvp(myargs[0], myargs); // runs word count   
+20 printf("this shouldn’t print out");   
+21 } else { // parent goes down this path   
+22 int rc_wait $\mathbf { \Sigma } = \mathbf { \Sigma }$ wait(NULL);   
+23 printf("parent of %d (rc_wait:%d) (pid:%d)\n",   
+24 rc, rc_wait, (int) getpid());   
+25 }   
+26 return 0;   
+27 }  
+
+in p2.c is only useful if you want to keep running copies of the same program. However, often you want to run a different program; exec() does just that (Figure 5.3).  
+
+In this example, the child process calls execvp() in order to run the program wc, which is the word counting program. In fact, it runs wc on the source file p3.c, thus telling us how many lines, words, and bytes are found in the file:  
+
+prompt> ./p3   
+hello (pid:29383)   
+child (pid:29384) 29 107 1030 p3.c   
+parent of 29384 (rc_wait:29384) (pid:29383)   
+prompt>  
+
+The fork() system call is strange; its partner in crime, exec(), is not so normal either. What it does: given the name of an executable (e.g., wc), and some arguments (e.g., p3.c), it loads code (and static data) from that  
+
+# TIP: GETTING IT RIGHT (LAMPSON’S LAW)  
+
+As Lampson states in his well-regarded “Hints for Computer Systems Design” [L83], “Get it right. Neither abstraction nor simplicity is a substitute for getting it right.” Sometimes, you just have to do the right thing, and when you do, it is way better than the alternatives. There are lots of ways to design APIs for process creation; however, the combination of fork() and exec() are simple and immensely powerful. Here, the UNIX designers simply got it right. And because Lampson so often “got it right”, we name the law in his honor.  
+
+executable and overwrites its current code segment (and current static data) with it; the heap and stack and other parts of the memory space of the program are re-initialized. Then the OS simply runs that program, passing in any arguments as the argv of that process. Thus, it does not create a new process; rather, it transforms the currently running program (formerly p3) into a different running program (wc). After the exec() in the child, it is almost as if $\mathtt { p 3 }$ .c never ran; a successful call to exec() never returns.  
+

@@ -1,0 +1,9 @@
+10.10.4 Modeling Temperature\*
+
+Modeling the temperature on a chip is a fairly complex problem, and requires a fair amount of background in thermodynamics and heat transfer. Let us state a basic result here, and move on.
+
+Let us divide the area of a silicon die into a grid. Let us number the grid points  . Let the power vector  represent the total power dissipated by each grid point. Similarly, let the temperature of each grid point be represented by the vector  . Power and temperature are typically related by the following linear equation for a large number of grid points.
+
+ is known as the ambient temperature – it is the temperature of the surrounding air.  is an  matrix, and is also known as the thermal resistance matrix. According to Equation 10.25 the change in temperature  , and the power consumption are linearly related to each other.
+
+Note that  , and  is a function of temperature. Hence, Equations 10.24, and 10.25 form a feedback loop. We thus need to assume an initial value of temperature, compute the leakage power, estimate the new temperature, compute the leakage power, and keep iterating till the values converge.

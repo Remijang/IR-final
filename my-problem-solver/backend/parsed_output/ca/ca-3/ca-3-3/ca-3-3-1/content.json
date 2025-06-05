@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.1 Different Instruction Sets ",
+        "text_level": 1,
+        "page_idx": 109
+    },
+    {
+        "type": "text",
+        "text": "In Chapter 1, we looked at properties of different instruction sets including necessary, and desirable properties. In this book, we shall describe two real instruction sets namely the $A R M$ instruction set and x86 instruction set. ARM stands for \u201cAdvanced RISC Machines\u201d. It is an iconic company based out of Cambridge, UK. As of 2012, around 90% of mobile devices including the Apple iPhone, and iPad, run on ARM-based processors. Similarly, as of 2012, more than $9 0 \\%$ of the desktops and laptops run on Intel- or AMD-based x86 processors. ARM is a RISC instruction set, and x86 is a CISC instruction set. ",
+        "page_idx": 109
+    },
+    {
+        "type": "text",
+        "text": "There are many other instruction sets tailored for a wide variety of processors. Another popular instruction set for mobile computers is the MIPS instruction set. MIPS-based processors are also used in a wide variety of processors used in automobiles, and industrial electronics. ",
+        "page_idx": 109
+    },
+    {
+        "type": "table",
+        "img_path": "images/1be99143b8a0af70352ead86cd2caafa295acf3826377375c94a969b9d06e237.jpg",
+        "table_caption": [
+            "Table 3.1: List of instruction sets "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>ISA</td><td>Type</td><td>Year</td><td>Vendor</td><td>Bits</td><td>Endianness</td><td>Registers</td></tr><tr><td>VAX</td><td>CISC</td><td>1977</td><td>DEC</td><td>32</td><td>little</td><td>16</td></tr><tr><td rowspan=\"2\"> SPARC</td><td>RISC</td><td>1986</td><td>Sun</td><td>32</td><td>big</td><td>32</td></tr><tr><td>RISC</td><td>1993</td><td>Sun</td><td>64</td><td>bi</td><td>32</td></tr><tr><td rowspan=\"2\">PowerPC</td><td>RISC</td><td>1992</td><td>Apple,IBM,Motorola</td><td>32</td><td>bi</td><td>32</td></tr><tr><td>RISC</td><td>2002</td><td>Apple,IBM</td><td>64</td><td>bi</td><td>32</td></tr><tr><td rowspan=\"2\">PA-RISC</td><td>RISC</td><td>1986</td><td>HP</td><td>32</td><td>big</td><td>32</td></tr><tr><td>RISC</td><td>1996</td><td>HP</td><td>64</td><td>big</td><td>32</td></tr><tr><td rowspan=\"2\">m68000</td><td>CISC</td><td>1979</td><td>Motorola</td><td>16</td><td>big</td><td>16</td></tr><tr><td>CISC</td><td>1979</td><td>Motorola</td><td>32</td><td>big</td><td>16</td></tr><tr><td rowspan=\"2\">MIPS</td><td>RISC</td><td>1981</td><td>MIPS</td><td>32</td><td>bi</td><td>32</td></tr><tr><td>RISC</td><td>1999</td><td>MIPS</td><td>64</td><td>bi</td><td>32</td></tr><tr><td>Alpha</td><td>RISC</td><td>1992</td><td>DEC</td><td>64</td><td>bi</td><td>32</td></tr><tr><td rowspan=\"3\">x86</td><td>CISC</td><td>1978</td><td>Intel,AMD</td><td>16</td><td>little</td><td>8</td></tr><tr><td>CISC</td><td>1985</td><td>Intel,AMD</td><td>32</td><td>little</td><td>8</td></tr><tr><td>CISC</td><td>2003</td><td>Intel,AMD</td><td>64</td><td>64 little</td><td>16</td></tr><tr><td rowspan=\"2\">ARM</td><td>RISC</td><td>1985</td><td>ARM</td><td>32</td><td>bi (little default)</td><td>16</td></tr><tr><td>RISC</td><td>2011</td><td>ARM</td><td>64</td><td>bi (little default)</td><td>31</td></tr></table></body></html>\n\n",
+        "page_idx": 109
+    },
+    {
+        "type": "text",
+        "text": "For large servers, typically IBM (PowerPC), Sun (now Oracle)(UltraSparc), or HP (PARISC) processors are used. Each of these processor families has its own instruction set. These instruction sets are typically RISC instruction sets. Most ISAs share simple instructions such as add, subtract, multiply, shifts, and load/store instructions. However, beyond this simple set, they use many more specialized instructions. As we shall see in the next few chapters, choosing the right set of instructions in an ISA is dependent on the target market of the processor, the nature of the workload, and many design time constraints. Table 3.1 shows a list of popular instruction sets. The SimpleRisc ISA is conceptually the closest to ARM and MIPS; however, it has some significant differences also. ",
+        "page_idx": 110
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+        "type": "text",
+        "text": "8.4.2 Rounding ",
+        "text_level": 1,
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "In Example 131, let us assume that we were allowed only two mantissa bits. Then, there would have been a need to discard all the mantissa bits other than the two most significant ones. The result would have been 1.00. To incorporate the effect of the discarded bits, it might have been necessary to round the result. For example, let us consider decimal numbers. If we wish to round 9.99 to the nearest integer, then we should round it to 10. Similarly, if we wish to round 9.05 to the nearest integer, then we should round it to 9. Likewise, it is necessary to introduce rounding schemes while doing floating point operations such that the final result can properly reflect the value contained in the discarded bits. ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "Let us first introduce some terminology. Let us consider the sum of the significands after we have normalized the result. Let us divide the sum into two parts: $( \\widehat { P } + R ) \\times 2 ^ { - 2 3 } ( R < 1 )$ . Here, $\\widehat { P }$ is the significand of the temporary result in $W$ multiplied by $2 ^ { 2 3 }$ .bIt is an integer, which migh bneed to be further rounded. $R$ is a residue (beyond 23 bits) that will be discarded. It is less than 1. The aim is to modify $\\hat { P }$ appropriately to take into account the value of $R$ . Now, there are two ways in which $\\widehat { P }$ ca be modified because of rounding. Either we can leave $\\widehat { P }$ as it is, or we can increment $\\hat { P }$ by 1. Leaving $\\widehat { P }$ as it is also known as truncation. This is be abuse we are truncating or disc bding the residu ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "The IEEE 754 format supports four rounding modes as shown in Table 8.6. An empty entry corresponds to truncating the result. We only show the conditions in which we need to increment $\\widehat { P }$ . ",
+        "page_idx": 346
+    },
+    {
+        "type": "text",
+        "text": "We gi bexamples in decimal (base 10) in the next few subsections for the ease of understanding. Exactly the same operations can be performed on binary numbers. Our aim is to round ${ \\widehat { P } } + R$ to an integer. There are four possible ways of doing this in the IEEE 754 format. ",
+        "page_idx": 346
+    },
+    {
+        "type": "table",
+        "img_path": "images/6fa546068da04ea8f89f07b7213fe15c71c2e4fbbea2e24244577f648c8c53df.jpg",
+        "table_caption": [
+            "Table 8.6: IEEE 754 rounding modes "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"2\">Rounding Mode</td><td colspan=\"2\">Condition for incrementing the significand</td></tr><tr><td colspan=\"2\">Sign of the result (+ve)</td></tr><tr><td></td><td></td><td>Sign of the result (-ve)</td></tr><tr><td>Truncation Round to +</td><td>R>0</td><td></td></tr><tr><td>Round to -0</td><td></td><td>R>0</td></tr><tr><td>Round to Nearest</td><td>(R>0.5)|(R=0.5 ^LSB(P)=1)</td><td>(R>0.5)I(R=0.5^LSB(P)=1)</td></tr><tr><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"3\">P (significand of the temporary result multiplied by 223) \u3002^ (logical AND),R (residue)</td></tr></table></body></html>\n\n",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Truncation ",
+        "text_level": 1,
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "This is the simplest rounding mode. This rounding mode simply truncates the residue. For example, in truncation-based rounding, if $\\widehat { P } + R = 1 . 5$ , then we will discard 0.5, and we are left with 1. Likewise, truncating -1.5 will giv bus -1. This is the easiest to implement in hardware, and is the least accurate out of the four methods. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Round to $+ \\infty$ ",
+        "text_level": 1,
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "In this rounding mode, we always round a number to the larger integer. For example, if $\\widehat { P } + R = 1 . 2$ , we round it to 2. If $\\widehat { P } + R = - 1 . 2$ , we round it to -1. The idea here is to check the sbign bit and the residue. If the nbumber is positive, and the residue is non-zero, then we need to increment $\\widehat { P }$ , or alternatively the LSB of the significand. Otherwise, in all the other cases (either $R = 0$ obr the number is negative), it is sufficient to truncate the residue. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Round to $- \\infty$ ",
+        "text_level": 1,
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "This is the reverse of rounding to $+ \\infty$ . In this case, we round 1.2 to 1, and -1.2 to -2. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "Round to Nearest ",
+        "text_level": 1,
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "This rounding mode is the most complicated, and is also the most common. Most processors use this rounding mode as the default. In this case, we try to minimize the error by rounding $\\widehat { P }$ to the nearest possible value. If $R > 0 . 5$ , then the nearest integer is $\\widehat { P } + 1$ . For example, wbe need to round 3.6 to 4, and -3.6 to -4. Similarly, if $R < 0 . 5$ , then w nbeed to truncate the residue. For example, we need to round 3.2 to 3, and -3.2 to -3. ",
+        "page_idx": 347
+    },
+    {
+        "type": "text",
+        "text": "The special case arises when $R = 0 . 5$ . In this case, we would like to round $\\widehat { P }$ to the nearest even integer. For example, we will round 3.5 to 4, and 4.5 to also 4. This is mo bof a convention than a profound mathematical concept. To translate this requirement in our terms, we need to take a look at the LSB of $\\hat { P }$ . If it is $0$ , then $\\hat { P }$ is even, and we do not need to do anything more. However, if $L S B ( \\widehat { P } ) = 1$ , then $\\widehat { P }$ is odd, bnd we need to increment it by 1. ",
+        "page_idx": 347
+    }
+]

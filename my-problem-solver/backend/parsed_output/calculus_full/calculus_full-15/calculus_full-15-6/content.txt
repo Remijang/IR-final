@@ -1,0 +1,139 @@
+15.6 Stokes’ Theorem and the Curl of F
+
+For the Divergence Theorem, the surface was closed.  was the boundary of  . Now the surface is not closed and  has its own boundary—a curve called  . We are back near the original setting for Green’s Theorem (region bounded by curve, double integral equal to work integral). But Stokes’ Theorem, also called Stokes’s Theorem, iBs in  tBhree-dBime nBsional space. There is a curved surface  bounded by a space curve  . This is our first integral around a space curve.
+
+The move to three dimensions brings a change in the vector field. The plane field  becomes a space field  . The work  now includes  . The critical quantity in the double integral (it was  must change too. We called this scalar quantity “curl  ,” but in reality it is only the thirdcomponent of a vector. Stokes’ Theorem needs all three components of that vector—which is curl  .
+
+DEFINITION The curl of a vector field  is the vector field
+
+The symbol  stands for a determinant that yields those six derivatives:
+
+The three products i  and j  and  have plus signs. The three products like k  , down to the left, have minus signs. TherBe is a Bcyclic symmetry. This determinant helps the memory, even if it looks and is illegal. A determinant is not supposed to have a row of vectors, a row of operators, and a row of functions.
+
+EXAMPLE 1 The plane field  has  and  and  . Only two terms survive: curl  . Back to Green.
+
+EXAMPLE 2 The cross product  is a spin field S. Its axis is thefixed vector  . The flow in Figure 15.23 turns around a, and its components are
+
+Our favorite spin field  has  and its axis is  .
+
+BThe divBergence ofB a spinB field is  . Note how the divergence uses  while the curl uses  and  . The curl of S is the vector 2a:
+
+This example begins to reveal the meaning of the curl. It measures the spin! The direction of curl  is the axis of rotation—in this case along a. The magnitude of
+
+curl  is twice the speed of rotation. In this case  and the angular velocity is  .
+
+EXAMPLE 3 (!!) Every gradient field  k has curl  :
+
+Always  equBals  . ThBey cancel.BAlsoB  and  .BSo curl grad  .
+
+EXAMPLE 4 (twin of Example 3) The divergence of curl  is also automatically zero:
+
+Again the mixed derivatives give  and  and  . The terms cancel in pairs. In “curl grad” and “div curl”, everything is arranged to give zero.
+
+15N The curl of the gradient of every  is curl grad  . The divergence of the curl of every  is div curl  .
+
+The spin field S has no divergence. The position field  has no curl.  is the gradient of  . S is the curl of a suitable  . Then div  div curl  and curl  curl grad  are automatically zero.
+
+You correctly believe that curl  measures the “spin” of the field. You may expect that curl  is curl  . Also correct. Finally you may think that a field of parallel vectors has no spin. That is wrong. Example 5 has parallel vectors, but their different lengths produce spin.
+
+EXAMPLE 5 The field  in the  direction has curl  in the  direction.
+
+If you put a wheel in the  plane, this field will turn it. The velocity  at the top of the wheel is greater than  at the bottom (Figure 15.23c). So the top goes faster and the wheel rotates. The axis of rotation is curl  . The turning speed is  , because this curl has magnitude 1.
+
+Another velocity field  produces the same spin: curl  . The flow is in the  direction, it varies in the  direction, and the spin is in the  direction. Also interesting is  . The two “shear fields” add to a perfect spin field  , whose curl is 2j.
+
+15.6 Stokes’ Theorem and the Curl of F
+
+THE MEANING OF CURL F
+
+Example 5 put a paddlewheel into the flow. This is possible for any vector field  , and it gives insight into curl  . The turning of the wheel (if it turns) depends on its location  . The turning also depends on the orientation of the wheel. We could put it into a spin field, and if the wheel axis  is perpendicular to the spin axis a, the wheel won’t turn! The general rule for turning speed is this: the angular velocity of the wheel is  . This is the “directional spin,” just as .grad  was the “directional derivative”—and  is a unit vector like u.
+
+There is no spin anywhere in a gradient field. It is irrotational: curl grad  .
+
+The pure spin field  h |as curl  . The angular velocity is  (note that  cancels 2). This turning is everywhere, not just at the origin. If you put a penny on a compact disk, it turns once when the disk rotates once. That spin is “around itself,” and it is the same whether the penny is at the center or not.
+
+The turning speed is greatest when the wheel axis  lines up with the spin axis a. Then  is the full length  . The gra|dient g|ives the direction of fastest growth, and the curl gives the direction of fastest turning:
+
+maximum growth rate of  is grad  in the direction of grad  maximum rotation rate of  is  in the direction of curl F.
+
+STOKES’ THEOREM
+
+Finally we come to the big theorem. It will be like Green’s Theorem—a line integral equals a surface integral. The line integral is still the work  around a curve. The surface integral in Green’s Theorem is  . The surface is flat (in the  plane). Its normal direction is  , and we now recognize  as the  component of the curl. Green’s Theorem uses only this component because the normal direction is always  . For Stokes’ Theorem on a curved surface, we need all three components of curl  .
+
+Figure 15.24 shows a hat-shaped surface  and its boundary  (a closed curve). Walking in the positive direction around  , with your head pointing in the direction of n, the surface is on your left. You may be standing straight up  in Green’s Theorem). You may even be upside down .  is allowed/. In that case you must go the other way around  , to keep th¾e two sides »of»equation (6) equal. The surface is still on the left. A Möbius strip is not allowed, because its normal direction cannot be established. The unit vector  determines the “counterclockwise direction” along  .
+
+15O .Stokes’ Theorem/
+
+The right side adds up small spins in the surface. The left side is the total circulation (or work) around  . That is not easy to visualize—this may be the hardest theorem in the book—but notice one simple conclusion.  curl  then  . This applies above all to gradient fields—as we know.
+
+A gradient field has no curl, by (4). A gradient field does no work, by (6). In three dimensions as in two dimensions, gradient fields are conservative fields. They will be the focus of this section, after we outline a proof (or two proofs) of Stokes’ Theorem.
+
+The first proof shows why the theorem is true. The second proof shows that it really is true (and how to compute). You may prefer the first.
+
+First proof Figure 15.24 has a triangle  attached to atriangle  . Later there can be more triangles.  will be piecewise flat, close to a curved surface. Two triangles are enough to make the point. In the plane of each triangle (they have different n’s) Green’s Theorem is known:
+
+Now add. The right sides give  over the two triangles. On the left, the integral over  cancels the’integral over  . The “crosscut” disappears. That leaves  . This line integral goes around the outer boundary  —which is the left side of Stokes’ Theorem.
+
+Second proof Now the surface can be curved. A new proof may seem excessive, but it brings f¶ormulas you co¶uld compute with. From  we have
+
+For nd  , see equation 15.4.11. With this  , the line integral in Stokes’ Theorem is
+
+The dot product of curl  and  gives the surface integral  :
+
+To prove  , change  in Green’s Theorem to  . Also change  to  . Then  is Green’s Theorem down on the shadow (Problem 47). This proves Stokes’ Theorem up on  . Notice how Green’s Theorem (flat surface) was the key to both proofs of Stokes’ Theorem (curved surface).
+
+EXAMPLE 6 Stokes’ Theorem in electricity and magnetism yields Faraday’s Law.
+
+Stokes’ Theorem is not heavily used for calculations—equation (8) shows why. But the spin or curl or vorticity of a flow is absolutely basic in fluid mechanics. The other important application, coming now, is to electric fields. Faraday’s Law is to Gauss’s Law as Stokes’ Theorem is to the Divergence Theorem.
+
+Suppose the curve  is an actual wire. We can produce current along  by varying the magnetic field  . The flux  , passing within  and changing in time, creates an electric field  that doe’s work:
+
+That is physics. It may be true, it may be an appBrox iBmation.N Bow c Bomes mathematics (surely true), which turns this integral form into a differential equation. Information at points is more convenient than information around curves. Stokes converts the line integral of  into the surface integral of curl  :
+
+These are equal for any curve  , however small. So the right sides are equal for any surface  . We squeeze to a point. The right hand sides give one of Maxwell’s equations:
+
+COBNSE BRVATIVE FIELDS AND POTENTIAL FUNCTIONS
+
+The chapter ends with our constant and important question: Which fields do no work around closed curves? Remember test  for plane curves and plane vector fields:
+
+if  theBn F  iBs conservative and  grad  and 
+
+Now allow a three-dimensional field like  . Does it do work around a space curve?  is it a gradient field? That will require  and  and  . We have three equations for one function  . Normally they can’t be solved. When test  is passed (now it is the threedimensional test: curl  ) they can be solved. This example passes test  , and  is  .
+
+15  is a conservative field if it has these properties:
+
+A. The work  around every closed path in space is zero.   
+B. The work  depends on  and  , not on the path in space.   
+C.  is a gradientñfield:ñ  and  and  .   
+D. The components satisfy  , and  (curl Fis zero).
+
+A field with one of these properties has them all.  is the quick test.
+
+A detailed proof of  is not needed. Only notice how  : curl grBad  Bis always zeñro. The newest part is  curl  then  . But thaBt is  Bnot news. It is Stokes’BThe Boremñ.
+
+The interesting problem is to solve the three equations for  , when test  is passed. The example above had
+
+ plus any function   plus any function   can be zero.
+
+The first step leaves an arbitrary  to fix thesecond step. The second step leaves an arbitrary  to fix the third step (not needed here). Assembling the three steps,  . Please recognize thBat th Be “fix-up” is only possible when curl  . Test  must be passed.
+
+EXAMPLE 7 Is  the gradient of any 
+
+Test  says no. This  is a spin field  . Its curl is  , which is not zero. A search for  is bound to fail, but we can try. To match  , we must have  . The  derivative is  : That never matches  , so  can’t exist.
+
+EXAMPLEB8  BWhat cBhoic eBof  makes  conservative? Find  .
+
+Solution We need curl  , by test D. First check  . Also
+
+ passes all tests. To find  we can solve the three equations, or notice that  is successful. Its gradient is  .
+
+A third method defines  as the work to reach  from  . The path doesn’t matter. For practice we integrate  along the straight line  :
+
+EXAMPLE 9 Why is div curl g¾rad  automa»tic»ally zero (in two ways)?
+
+Solution First, curl grad  is zero (always). Second, div curl  is zero (always).   
+Those are the key identities of ve¾ctor calculus. »W»e end with a review.
+
+The first form of Green’s Theorem leads to Stokes’ Theorem. The second form becomes the Divergence Theorem. You may ask, why not go to three dimensions in the first place? The last two theorems contain the first two (take  and a flat surface). We could have reduced this chapter to two theorems, not four. I admit that, but a fundamental principle is involved: “It is easier to generalize than to specialize.”
+
+For the same reason  came before partial derivatives and the gradient.

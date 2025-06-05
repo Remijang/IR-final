@@ -1,0 +1,41 @@
+# 44.3 Basic Flash Operations  
+
+Given this flash organization, there are three low-level operations that a flash chip supports. The read command is used to read a page from the flash; erase and program are used in tandem to write. The details:  
+
+• Read (a page): A client of the flash chip can read any page (e.g., 2KB or 4KB), simply by specifying the read command and appropriate page number to the device. This operation is typically quite fast, 10s of microseconds or so, regardless of location on the device, and (more or less) regardless of the location of the previous request (quite unlike a disk). Being able to access any location uniformly quickly means the device is a random access device.   
+• Erase (a block): Before writing to a page within a flash, the nature of the device requires that you first erase the entire block the page lies within. Erase, importantly, destroys the contents of the block (by setting each bit to the value 1); therefore, you must be sure that any data you care about in the block has been copied elsewhere (to memory, or perhaps to another flash block) before executing the erase. The erase command is quite expensive, taking a few milliseconds to complete. Once finished, the entire block is reset and each page is ready to be programmed.   
+• Program (a page): Once a block has been erased, the program command can be used to change some of the 1’s within a page to $0 ^ { \prime } \mathrm { s } ,$ and write the desired contents of a page to the flash. Programming a page is less expensive than erasing a block, but more costly than reading a page, usually taking around 100s of microseconds on modern flash chips.  
+
+One way to think about flash chips is that each page has a state associated with it. Pages start in an INVALID state. By erasing the block that a page resides within, you set the state of the page (and all pages within that block) to ERASED, which resets the content of each page in the block but also (importantly) makes them programmable. When you program a page, its state changes to VALID, meaning its contents have been set and can be read. Reads do not affect these states (although you should only read from pages that have been programmed). Once a page has been programmed, the only way to change its contents is to erase the entire block within which the page resides. Here is an example of states transition after various erase and program operations within a 4-page block:  
+
+iiii Initial: pages in block are invalid (i) Erase() $$ EEEE State of pages in block set to erased (E) Program(0) $$ VEEE Program page 0; state set to valid (V) Program(0) $$ error Cannot re-program page after programming Program(1) $$ VVEE Program page 1 Erase() $$ EEEE Contents erased; all pages programmable  
+
+# A Detailed Example  
+
+Because the process of writing (i.e., erasing and programming) is so unusual, let’s go through a detailed example to make sure it makes sense. In this example, imagine we have the following four 8-bit pages, within a 4-page block (both unrealistically small sizes, but useful within this example); each page is VALID as each has been previously programmed.  
+
+<html><body><table><tr><td>Page 0</td><td>Page 1</td><td>Page 2</td><td>Page 3</td></tr><tr><td>00011000</td><td>11001110</td><td>00000001</td><td>00111111</td></tr><tr><td>VALID</td><td>VALID</td><td>VALID</td><td>VALID</td></tr></table></body></html>  
+
+Now say we wish to write to page 0, filling it with new contents. To write any page, we must first erase the entire block. Let’s assume we do so, thus leaving the block in this state:  
+
+<html><body><table><tr><td>Page 0</td><td>Page 1</td><td>Page 2</td><td>Page 3</td></tr><tr><td>11111111</td><td>11111111</td><td>11111111</td><td>11111111</td></tr><tr><td>ERASED</td><td>ERASED</td><td>ERASED</td><td>ERASED</td></tr></table></body></html>  
+
+Good news! We could now go ahead and program page 0, for example with the contents 00000011, overwriting the old page 0 (contents 00011000) as desired. After doing so, our block looks like this:  
+
+<html><body><table><tr><td>Page 0</td><td>Page 1</td><td>Page 2</td><td>Page 3</td></tr><tr><td>00000011</td><td>11111111</td><td>11111111</td><td>11111111</td></tr><tr><td>VALID</td><td>ERASED</td><td>ERASED</td><td>ERASED</td></tr></table></body></html>  
+
+And now the bad news: the previous contents of pages 1, 2, and 3 are all gone! Thus, before overwriting any page within a block, we must first move any data we care about to another location (e.g., memory, or elsewhere on the flash). The nature of erase will have a strong impact on how we design flash-based SSDs, as we’ll soon learn about.  
+
+# Summary  
+
+To summarize, reading a page is easy: just read the page. Flash chips do this quite well, and quickly; in terms of performance, they offer the potential to greatly exceed the random read performance of modern disk drives, which are slow due to mechanical seek and rotation costs.  
+
+Writing a page is trickier; the entire block must first be erased (taking care to first move any data we care about to another location), and then the desired page programmed. Not only is this expensive, but frequent repetitions of this program/erase cycle can lead to the biggest reliability problem flash chips have: wear out. When designing a storage system with flash, the performance and reliability of writing is a central focus. We’ll soon learn more about how modern SSDs attack these issues, delivering excellent performance and reliability despite these limitations.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+Figure 44.2: Raw Flash Performance Characteristics   
+
+
+<html><body><table><tr><td>Device</td><td>Read</td><td>Program</td><td>Erase</td></tr><tr><td></td><td>(s)</td><td>(s)</td><td>(s)</td></tr><tr><td>SLC</td><td>25</td><td>200-300</td><td>1500-2000</td></tr><tr><td>MLC</td><td> 50</td><td>600-900</td><td>~3000</td></tr><tr><td>TLC</td><td>~75</td><td>~900-1350</td><td>~4500</td></tr></table></body></html>  
+

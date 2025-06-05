@@ -1,0 +1,17 @@
+7.4.3 Dynamic RAM (DRAM)
+
+Let us now take a look at a memory technology that uses just one transistor to save a bit. It is thus very dense, area, and power efficient. However, it is also much slower than SRAMs and latches. It is suitable for large off-chip memories.
+
+A basic DRAM(dynamic RAM) cell is shown in Figure 7.30. The gate of the single transistor is connected to the word line, which enables or disables it. One of the terminals is connected to a capacitor that stores charge. If the bit stored is a logical 1, then the capacitor is fully charged. Otherwise, it is not charged.
+
+Thus, reading and writing values is very easy. We need to first set the word line such that the capacitor can be accessed. To read the value we need to sense the voltage on the bit line. If it is at ground potential, then the cell stores 0, else if it is close to the supply voltage, then the cell stores 1. Similarly, to write a value, we need to set the bit line (BL) to the appropriate voltage, and set the word line. The capacitor will get charged or discharged accordingly.
+
+However, in the case of DRAMs, everything does not come for free. Let us assume that the capacitor is charged to a voltage equal to the supply voltage. In practice, the capacitor will gradually leak some charge through the dielectric, and the transistor. This current is very small, but the total loss of charge over a large duration of time can be significant and can ultimately discharge the capacitor. To prevent this, it is necessary to periodically refresh the value of a DRAM cell. We need to read it and write the data value back. This also needs to be done after a read operation because the capacitor loses some charge while charging the bit line. Let us now try to make an array of DRAM cells.
+
+Array of DRAM Cells
+
+We can construct an array of DRAM cells (see Figure 7.31) the same way that we created an array of SRAM cells. There are three differences. The first is that there is one bit line instead of two. Second, we also have a dedicated refresh circuit connected to the bit lines. This is used after read operations, and is also invoked periodically. Finally, in this case the sense amplifiers appear before the column mux/demux. The sense amplifiers additionally cache the data for the entire DRAM row (also called a DRAM page). They ensure that subsequent accesses to the same DRAM row are fast because they can be serviced directly from the sense amplifiers.
+
+Let us now briefly discuss the timing aspects of modern DRAMs. In the good old days, DRAM memory was accessed asynchronously. This means that the DRAM modules did not make any timing guarantees. However, nowadays, every DRAM operation is synchronized with a system clock. Hence, today’s DRAM chips are synchronous DRAM chips (SDRAM chips). Figure 13.26 in Chapter 13 shows the timing diagram of a simple SDRAM chip for a read access.
+
+Synchronous DRAM memories typically use the DDR4 or DDR5 standards as of today. DDR stands for Double Data Rate. Devices using the earliest standard, DDR1, send 8-byte data packets to the processor on both the rising and falling edges of the clock. This is known as double pumped operation. The peak data rate of DDR1 is 1.6 GB/s. Subsequent DDR generations extend DDR1 by transferring data at a higher frequency. For example, DDR2 has twice the data rate as DDR1 devices (3.2 GB/s). DDR3 further doubles the peak transfer rate by using a higher bus frequency, and has been in use since 2007 (peak rate of 6.4 GB/s).

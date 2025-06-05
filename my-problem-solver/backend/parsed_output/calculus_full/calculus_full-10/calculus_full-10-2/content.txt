@@ -1,0 +1,150 @@
+10.2 Convergence Tests: Positive Series
+
+This is the third time we ha ve stopped the calculations to deal with the definitions. Chapter 2 said what a derivative is. Chapter 5 said what an integral is. Now we say what the sum of a series is—if it exists. In all three cases a limit is involved. That is the formal, careful, cautious part of mathematics, which decides if the active and progressive parts make sense.
+
+The series 21 C 41 C  converges to 1. The series  diverges to infinity. The series 1 21 C 13 converges to  . When we speak about convergence or divergence of a series, we are really speaking about convergence or divergence of its “partial sums.”
+
+DEFINITION 1 The partial sum  of the series  stops at 
+
+Thus  is part of the total sum. The example  has partial sums
+
+Those add up larger and larger parts of the series—what is the sum of the whole series ? The answer is: The series  converges to 1 because its partial sums  converge to 1. The series  converges to  when its partial sums—going further and further out—approach this limit  . Add the  ’s, not the  ’s.
+
+DEFINITION 2 The sum of a series is the limit of its partial sums  .
+
+We repeat: if the limit exists. The numbers  may have no limit. When the partial sums jump around, the whole series has no sum. Then the series does not converge. When the partial sums approach  , the distant terms  are approaching zero. More than that, the sum of distant terms is approaching zero.
+
+The new idea .  / has been converted to the old idea  /.
+
+EXAMPLE 1 The geometric series  converges to 
+
+The partial sums  areÑ:1; :11; :111; :1111. They are approaching  . Note again the differÑence between the series of  ’s and the sequence of  . TheÑseries  diverges because the sequence of  ’s is 1; 2; 3; : : : : A sharper example is the harmonic series:  diverges because its partial sums  eventually go past every numberÑ  : We saw that in 2:6 and will see it again here.
+
+Do not confuse  with  : You cannot be sure that a series converges, just on the basis that  : The harmonic series is the best example:  but still  : This makes infinite series into a delicate game, which mathematicians enjoy. The line between divergence and convergence is hard to find and easy to cross. A slight push will speed up  and make the  converge. Even though  does not by itself guarantee convergence, it is the first requirement:
+
+10A If a series converges .  then its terms must approach zero  :
+
+Proof Suppose  approaches  (as required by convergence). Then also  approaches  , and the difference  approaches zero. That difference is  : So  :
+
+EXAMPLE 1 (continued) For the geometric series  , the test  0 is the same as  : The  test is failed if  , beÑcause the powers of  don’t go to zero. Automatically the series diverges. The test is passed if  : But to prove convergence, we cannot rely on  . It is the partial sums that must converge:
+
+|For  other se|rie|s, first check that  (otherwise there is no chance of convergence). The  will not have the special form  —so we need sharper tests.
+
+The geometric series stays in our mind for this reason. Many convergence tests are comparisons with that series. The right comparison gives enough information: If  and  and : : : ; then  converges faster than  More generally, the terms in  may be smaller than   Provided  , the second series converges. Then  also converges. We move now to convergence by comparison or divergence bPy comparison.
+
+Throughout the rest of this section, all numbers  are assumed positive.
+
+COMPARISON TEST AND INTEGRAL TEST
+
+In practice it is rare to compute the partial sums  : Usually a simple formula can’t be found. We may never know the exact limit  : But it is still possible to decide convergence—whether there is a sum—by comparison with another series that is known to converge.
+
+10B (Comparison test) Suppose that  and  converges. Then  converges.
+
+The smaller terms  add to a smaller sum:  is below  and must converge. On  the other hand suppose  an dP  : TPhis comparison forces  : A series diverges if it is above  nPother divergent series.
+
+Note that a series of positive terms can only diverge “to infinity.” It cannot oscillate, because each term moves it forward. Either the  creep up on  , passing every number below it, or they pass all numbers and diverge. If an increasing sequence  is bounded above, it must converge. The line of real numbers is complete, and has no holes.
+
+The harmonic series  diverges to infinity.   
+A comparison series is 1 C 1 C 1 C 1 C 1 C 1  The harmonic series   
+is larger. But this compariso2n se4ries 4is re8ally  18 18 because    
+ 
+
+The comparison series diverges. The harmonic series, above , must also diverge.
+
+To apply the comparison test, we need something to compare with. In Example 2, we thought of another series. It was convenient because of those  ’s. But a different series will need a different comparison, and where will it come from ? There is an automatic way to think of a comparison series. It comes from the integral test.
+
+Allow me to apply the integral test to the same example. To understand the integral test, look at the areas in Figure 10.2. The test compares rectangles with curved areas.
+
+EXAMPLE 2 (again) Compare  : with the area under the curve  . Every term  is the area of a rectangle. We are comparing it with a curved area  : Both areas are between  and  , and the rectangle is above the curve. So  :
+
+Here is the point. Those  ’s look complicated, but we can add them up. The sum  is the whole area, from 1 to  : It equals  —we know the integral of  : We also know that the logarithm goes to infinity.
+
+The rectangular area  is above the curved area. By comparison of areas, the harmonic series diverges to infinity—a little faster than  :
+
+Remark The integral of  has another advantage over the series with  ’s. First, the integral test was automatic. From  in the series, we went to  in the integral. Second, the comparison is closer. Instead of adding only  when the number of terms is doubled, the true partial sums grow like ln»  : To prove that, put rectangles under the curve.
+
+Rectangles below the curve give an area below the integral. Figure  omits the first rectangle, to get under the curve. Then we have the opposite to the first comparison—the sum is now smaller than the integral:
+
+Adding 1 to both sides,  is below  . From the previous test,  is above  . That is a narrow space—we have an excellent estimate of  : The sum of  and the integral of  diverge together. Problem 43 will show that the difference between  and ln  approaches “Euler’s constant,” which is 
+
+Main point: Rectangular area is  : Curved area is close. W e are using integrals to help with sums (it used to be the opposite).
+
+Question If a computer adds a million terms every second for a million years, how large is the partial sum of the harmonic series ?
+
+Answer The number of terms is  : Therefore  is less than ln  : By the integral test  ; the partial sum after a million years has not reached 46:
+
+For other series,  changes to a different function  : At  this function must equal  : Also  must be decreasing. Then a rectangle of height  is above the graph to the right of  , and below the graph to the left of  : The series and the integral box each other in: left sum  integral  right sum. The reasoning is the same as it was for  and  : There is finite area in the rectangles when there is finite area under the curve.
+
+When we can’t add the  ’s, we integrate  and compare areas:
+
+10C (Integral test) If  is decreasing and  agrees with  , then 8 a1 Ca2 Ca3 C and y.x/ dx bot8h converg»e 8or both diverge: 1
+
+EXAMPLE 3 The “  -serie  converges if  Integrate 
+
+In Figure  , the area is finite if  : The integral equals  which is  : Finite area means convergent seri?es. If  is the first term, add 1 to the c?urved area:
+
+The borderline case  is the harmonic series (divergent). By the comparison test, every  also produces divergence. Thus  diverges by comparison with  (and also by comparison with  ). Section 7.5 on improper integrals runs parallel to this section on “improper sums” (infinite series).
+
+Notice the special cases  and  : The series  converges. Euler found  as its sum. The series  also converges. That is proved by comparing  with  or with  : But the sum for  is unknown.
+
+Extra credit problem The sum of the  -series leads to the most important problem in pure mathematics. The “zeta function” is  , so  and  is unknown. Riemann studied the complex numbers  where  (there are infinitely many). He conjectured that thereal part of those  is always  . That has been tested for the first billion zeros, but never proved.
+
+COMPARISON WITH THE GEOMETRIC SERIES
+
+We can compare any new series  with  : Remember that the first million terms have nothing to do with convergence. It is further out, as  , that the comparison stands or falls. We still assume that  :
+
+10D (Ratio test) If  approache¡s a limit  , the series converges.   
+10E (Root test) If the  th root  approaches  , the series converges.
+
+Roughly speaking, these tests make  comparable with  —therefore convergent. The tests also establish divergence if  : They give no decision when  : Unfortunately  is the most important and the hardest case.
+
+10 Infinite Series
+
+On the other hand, you will now see that the ratio test is fairly easy.
+
+EXAMPLE 4 The geometric series  has ratio exactly  : The  th root is alsoÑex8actly  : So  : There is convergence if  (known) and divergence if  (also known). The divergence of  is too delicate (!) for the ratio test and root test, because  :
+
+EXAMPLE 5 The  -series has  and  : The limit as  is  , for every  : The ratio test does not feel the difference between  (convergence) and  (divergence) or even  (extreme divergence). Neither does the root test. So the integral test is sharper.
+
+EXA|M |PL E 6 A combination of  -series and geometric series can now be decided:
+
+It is  that decides convergence, not  . The powers  are stronger than any  . The factorials  ! will now prove stronger than any  :
+
+EXAMPLE 7 The exponential series  converges for all  :
+
+The terms of this series are  ! The ratio between neighboring terms is
+
+With  , this ratio test gives convergence of  The s um is  . With  , the larger series  also converges. We knoPw this sum too—it is  : Also the sum of  Pconverges for any  and  : Again  —the ratio test is not even close. The factorials take over; and give convergence.
+
+Here is the proof of convergence when the ratios approach  . Choose  halfway from  to 1: Then  : Eventually the ratios go below  and stay below:
+
+Mu ltiply the first two inequalities. Then multiply all three:
+
+Therefore  is less than  : Since  ; comparison with the geometric series gives convergence.
+
+EXAMPLE 8 The series  is ideal for the root test. The  th root is  : Its limit is  : ConvergencePis even faster than for  The root test is easily explained, since  yields  and  is cloPse to  : So we compare with the geometric series.
+
+SUMMARY FOR POSITIVE SERIES
+
+The convergence of geometric series and  -series and exponential series is settled.   
+I will put these  ’s in a line, going from most divergent to most convergent.
+
+The crossover to convergence is after  :
+
+You should know that this crossover is not as sharp as it looks. On the convergent side,  comes before all those  -series. On the divergent side,  and  belong after  : For any divergent (or convergent) series, there is another that diverges (or converges) more slowly.
+
+Thus there is no hope of an ultimate all-purpose comparison test. But comparison is the best method available. Every series in that line can be compared with its neighbors, and o ther series can be placed in between. It is a topic that is understood best by examples.
+
+EXAMPLE 9  diverges because  diverges. The comparison uses ln  :
+
+The indefinite integrals are  and  : The first goes to zero as  ; the integral and series b oth converge. The second inte gral  goesto infinity— very slowly but it gets there. So the second series diverges. These examples squeeze new series into the line, closer to the crossover.
+
+The constant 1 in this denominator has no effect—and again in the next example.
+
+ is  times  , so both series diverge. Two series behave in the same wPay if the ratios  approach  . Examples  have  and  : That leads to our final test:
+
+10F (Limit comparison test) If the ratio  approaches a positive limit  , th¡en  and  either both diverge or both converge.
+
+Reason:  is smaller than  , and larger than  , at least when  is large. So the two series behave in the same way. For example  converges for  , not for  : It behaves like  (here  ). The tail end of a series (large  ) controls convergence. The froPnt end (small  ) controls most of the sum.
+
+There are many more series to be investigated by comparison.

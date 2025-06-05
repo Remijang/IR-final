@@ -1,0 +1,297 @@
+24.4 Energy in Electromagnetic Waves
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Explain how the energy and amplitude of an electromagnetic wave are related. • Given its power output and the heating area, calculate the intensity of a microwave oven’s electromagnetic field, as well as its peak electric and magnetic field strengths
+
+Anyone who has used a microwave oven knows there is energy in electromagnetic waves. Sometimes this energy i obvious, such as in the warmth of the summer sun. Other times it is subtle, such as the unfelt energy of gamma rays which can destroy living cells.
+
+Electromagnetic waves can bring energy into a system by virtue of their electric and magnetic fields. These fields can exert forces and move charges in the system and, thus, do work on them. If the frequency of the electromagnetic wave is the same as the natural frequencies of the system (such as microwaves at the resonant frequency of water molecules), the transfer of energy is much more efficient.
+
+Connections: Waves and Particles
+
+The behavior of electromagnetic radiation clearly exhibits wave characteristics. But we shall find in later modules that at high frequencies, electromagnetic radiation also exhibits particle characteristics. These particle characteristics will be used to explain more of the properties of the electromagnetic spectrum and to introduce the formal study of modern physics.
+
+Another startling discovery of modern physics is that particles, such as electrons and protons, exhibit wave characteristics. This simultaneous sharing of wave and particle properties for all submicroscopic entities is one of the great symmetries in nature.
+
+But there is energy in an electromagnetic wave, whether it is absorbed or not. Once created, the fields carry energy away from a source. If absorbed, the field strengths are diminished and anything left travels on. Clearly, the larger the strength of the electric and magnetic fields, the more work they can do and the greater the energy the electromagnetic wave carries.
+
+A wave’s energy is proportional to its amplitude squared  or  ). This is true for waves on guitar strings, for water waves, and for sound waves, where amplitude is proportional to pressure. In electromagnetic waves, the amplitude is the maximum field strength of the electric and magnetic fields. (See Figure 24.22.)
+
+Thus the energy carried and the intensity  of an electromagnetic wave is proportional to  and  . In fact, for a continuous sinusoidal electromagnetic wave, the average intensity  is given by
+
+where  is the speed of light,  is the permittivity of free space, and  is the maximum electric field strength;   
+intensity, as always, is power per unit area (here in  ).
+
+The average intensity of an electromagnetic wave  can also be expressed in terms of the magnetic field strength by using the relationship  , and the fact that  , where  is the permeability of free space. Algebraic manipulation produces the relationship
+
+where  is the maximum magnetic field strength.
+
+One more expression for  in terms of both electric and magnetic field strengths is useful. Substituting the fact that  , the previous expression becomes
+
+Whichever of the three preceding equations is most convenient can be used, since they are really just different versions of the same principle: Energy in a wave is related to amplitude squared. Furthermore, since these equations are based on the assumption that the electromagnetic waves are sinusoidal, peak intensity is twice the average; that is,  .
+
+EXAMPLE 24.4
+
+Calculate Microwave Intensities and Fields
+
+On its highest power setting, a certain microwave oven projects  of microwaves onto a 30.0 by  area. (a) What is the intensity in  (b) Calculate the peak electric field strength  in these waves. (c) What is the peak magnetic field strength  2
+
+Strategy
+
+In part (a), we can find intensity from its definition as power per unit area. Once the intensity is known, we can use the equations below to find the field strengths asked for in parts (b) and (c).
+
+Solution for (a)
+
+Entering the given power into the definition of intensity, and noting the area is 0.300 by  , yields
+
+Here  , so that
+
+Note that the peak intensity is twice the average:
+
+Solution for (b)
+
+To find  , we can rearrange the first equation given above for  to give
+
+Entering known values gives
+
+Solution for (c)
+
+Perhaps the easiest way to find magnetic field strength, now that the electric field strength is known, is to use the relationship given by
+
+Entering known values gives
+
+Discussion
+
+As before, a relatively strong electric field is accompanied by a relatively weak magnetic field in an electromagnetic wave, since  , and  is a large number.
+
+PHET EXPLORATIONS
+
+Explore the effect of different types of radiation on various molecules. Choose the type of radiation and the molecules to see how they interact.
+
+Click to view content (https://openstax.org/l/28Moleculeslight)
+
+Glossary
+
+amplitude the height, or magnitude, of an electromagnetic wave   
+amplitude modulation (AM) a method for placing information on electromagnetic waves by modulating the amplitude of a carrier wave with an audio signal, resulting in a wave with constant frequency but varying amplitude   
+carrier wave an electromagnetic wave that carries a signal by modulation of its amplitude or frequency   
+electric field a vector quantity (E); the lines of electric force per unit charge, moving radially outward from a positive charge and in toward a negative charge   
+electric field lines a pattern of imaginary lines that extend between an electric source and charged objects in the surrounding area, with arrows pointed away from positively charged objects and toward negatively charged objects. The more lines in the pattern, the stronger the electric field in that region   
+electric field strength the magnitude of the electric field, denoted E-field   
+electromagnetic spectrum the full range of wavelengths or frequencies of electromagnetic radiation   
+electromagnetic waves radiation in the form of waves of electric and magnetic energy   
+electromotive force (emf) energy produced per unit charge, drawn from a source that produces an electrical current   
+extremely low frequency (ELF) electromagnetic radiation with wavelengths usually in the range of 0 to  , but also about 1kHz   
+frequency the number of complete wave cycles (updown-up) passing a given point within one second (cycles/second)   
+frequency modulation (FM) a method of placing information on electromagnetic waves by modulating the frequency of a carrier wave with an audio signal, producing a wave of constant amplitude but varying frequency   
+gamma ray ( ray); extremely high frequency electromagnetic radiation emitted by the nucleus of an atom, either from natural nuclear decay or induced nuclear processes in nuclear reactors and weapons. The lower end of the -ray frequency range overlaps the upper end of the X-ray range, but rays can have the highest frequency of any electromagnetic radiation   
+hertz an SI unit denoting the frequency of an electromagnetic wave, in cycles per second   
+infrared radiation (IR) a region of the electromagnetic spectrum with a frequency range that extends from just below the red region of the visible light spectrum up to the microwave region, or from  to    
+intensity the power of an electric or magnetic field per unit area, for example, Watts per square meter   
+magnetic field a vector quantity (B); can be used to determine the magnetic force on a moving charged particle   
+magnetic field lines a pattern of continuous, imaginary lines that emerge from and enter into opposite magnetic poles. The density of the lines indicates the magnitude of the magnetic field   
+magnetic field strength the magnitude of the magnetic field, denoted B-field   
+maximum field strength the maximum amplitude an electromagnetic wave can reach, representing the maximum amount of electric force and/or magnetic flux that the wave can exert   
+Maxwell’s equations a set of four equations that comprise a complete, overarching theory of electromagnetism   
+microwaves electromagnetic waves with wavelengths in the range from 1 mm to 1 m; they can be produced by currents in macroscopic circuits and devices   
+oscillate to fluctuate back and forth in a steady beat   
+radar a common application of microwaves. Radar can determine the distance to objects as diverse as clouds and aircraft, as well as determine the speed of a car or the intensity of a rainstorm   
+radio waves electromagnetic waves with wavelengths in the range from 1 mm to  ; they are produced by currents in wires and circuits and by astronomical phenomena   
+resonant a system that displays enhanced oscillation when subjected to a periodic disturbance of the same frequency as its natural frequency   
+RLCcircuit an electric circuit that includes a resistor, capacitor and inductor   
+speed of light in a vacuum, such as space, the speed of light is a constant    
+standing wave a wave that oscillates in place, with nodes where no motion happens   
+thermal agitation the thermal motion of atoms and molecules in any object at a temperature above absolute zero, which causes them to emit and absorb radiation   
+transverse wave a wave, such as an electromagnetic wave, which oscillates perpendicular to the axis along the line of travel   
+TV video and audio signals broadcast on electromagnetic waves   
+ultra-high frequency (UHF) TV channels in an even higher frequency range than VHF, of 470 to 1000 MHz   
+ultraviolet radiation (UV) electromagnetic radiation in the range extending upward in frequency from violet light and overlapping with the lowest X-ray frequencies, with wavelengths from  down to about    
+very high frequency (VHF) TV channels utilizing frequencies in the two ranges of 54 to 88 MHz and 174 to    
+visible light the narrow segment of the electromagnetic spectrum to which the normal human eye responds   
+wavelength the distance from one peak to the next in a wave   
+X-ray invisible, penetrating form of very high frequency electromagnetic radiation, overlapping both the ultraviolet range and the -ray range
+
+Section Summary
+
+24.1 Maxwell’s Equations: Electromagnetic Waves Predicted and Observed
+
+• Electromagnetic waves consist of oscillating electric and magnetic fields and propagate at the speed of light . They were predicted by Maxwell, who also showed that  where  is the permeability of free space and  is the permittivity of free space.   
+• Maxwell’s prediction of electromagnetic waves resulted from his formulation of a complete and symmetric theory of electricity and magnetism, known as Maxwell’s equations.   
+• These four equations are paraphrased in this text, rather than presented numerically, and encompass the major laws of electricity and magnetism. First is Gauss’s law for electricity, second is Gauss’s law for magnetism, third is Faraday’s law of induction, including Lenz’s law, and fourth is Ampere’s law in a symmetric formulation that adds another source of magnetism—changing electric fields.
+
+24.2 Production of Electromagnetic Waves
+
+• Electromagnetic waves are created by oscillating charges (which radiate whenever accelerated) and have the same frequency as the oscillation.   
+• Since the electric and magnetic fields in most electromagnetic waves are perpendicular to the direction in which the wave moves, it is ordinarily a transverse wave. The strengths of the electric and magnetic parts of the wave are related by  which implies that the magnetic field  is very weak relative to the electric field  .
+
+24.3 The Electromagnetic Spectrum
+
+• The relationship among the speed of propagation,
+
+wavelength, and frequency for any wave is given by  , so that for electromagnetic waves,  ， where  is the frequency,  is the wavelength, and  is the speed of light.   
+The electromagnetic spectrum is separated into many categories and subcategories, based on the frequency and wavelength, source, and uses of the electromagnetic waves. Any electromagnetic wave produced by currents in wires is classified as a radio wave, the lowest frequency electromagnetic waves. Radio waves are divided into many types, depending on their applications, ranging up to microwaves at their highest frequencies.   
+• Infrared radiation lies below visible light in frequency and is produced by thermal motion and the vibration and rotation of atoms and molecules. Infrared’s lower frequencies overlap with the highest-frequency microwaves.   
+• Visible light is largely produced by electronic transitions in atoms and molecules, and is defined as being detectable by the human eye. Its colors vary with frequency, from red at the lowest to violet at the highest.   
+• Ultraviolet radiation starts with frequencies just above violet in the visible range and is produced primarily by electronic transitions in atoms and molecules.   
+• X-rays are created in high-voltage discharges and by electron bombardment of metal targets. Their lowest frequencies overlap the ultraviolet range but extend to much higher values, overlapping at the high end with gamma rays. Gamma rays are nuclear in origin and are defined to include the highest-frequency electromagnetic radiation of any type.
+
+24.4 Energy in Electromagnetic Waves
+
+• The energy carried by any wave is proportional to its amplitude squared. For electromagnetic waves,
+
+this means intensity can be expressed as  where  is the average intensity in  , and  is the maximum electric field strength of a continuous sinusoidal wave. • This can also be expressed in terms of the maximum magnetic field strength  as
+
+   
+and in terms of both electric and magnetic fields as   
+   
+The three expressions for  are all equivalent.
+
+Conceptual Questions
+
+24.2 Production of Electromagnetic Waves
+
+1. The direction of the electric field shown in each part of Figure 24.5 is that produced by the charge distribution in the wire. Justify the direction shown in each part, using the Coulomb force law and the definition of  , where  is a positive test charge.   
+2. Is the direction of the magnetic field shown in Figure 24.6 (a) consistent with the right-hand rule for current (RHR-2) in the direction shown in the figure?   
+3. Why is the direction of the current shown in each part of Figure 24.6 opposite to the electric field produced by the wire’s charge separation?   
+4. In which situation shown in Figure 24.23 will the electromagnetic wave be more successful in inducing a current in the wire? Explain.
+
+5. In which situation shown in Figure 24.24 will the electromagnetic wave be more successful in inducing a current in the loop? Explain.
+
+6. Should the straight wire antenna of a radio be vertical or horizontal to best receive radio waves broadcast by a vertical transmitter antenna? How should a loop antenna be aligned to best receive the signals? (Note that the direction of the loop that produces the best reception can be used to determine the location of the source. It is used for that purpose in tracking tagged animals in nature studies, for example.)   
+7. Under what conditions might wires in a DC circuit emit electromagnetic waves?   
+8. Give an example of interference of electromagnetic waves.   
+9. Figure 24.25 shows the interference pattern of two radio antennas broadcasting the same signal. Explain how this is analogous to the interference pattern for sound produced by two speakers. Could this be used to make a directional antenna system that broadcasts preferentially in certain directions? Explain.
+
+10. Can an antenna be any length? Explain your answer.
+
+24.3 The Electromagnetic Spectrum
+
+11. If you live in a region that has a particular TV station, you can sometimes pick up some of its audio portion on your FM radio receiver. Explain how this is possible. Does it imply that TV audio is broadcast as FM?   
+12. Explain why people who have the lens of their eye removed because of cataracts are able to see lowfrequency ultraviolet.   
+13. How do fluorescent soap residues make clothing look “brighter and whiter” in outdoor light? Would this be effective in candlelight?   
+14. Give an example of resonance in the reception of electromagnetic waves.   
+15. Illustrate that the size of details of an object that can be detected with electromagnetic waves is related to their wavelength, by comparing details observable with two different types (for example, radar and visible light or infrared and X-rays).   
+16. Why don’t buildings block radio waves as completely as they do visible light?   
+17. Make a list of some everyday objects and decide whether they are transparent or opaque to each of the types of electromagnetic waves.   
+18. Your friend says that more patterns and colors can be seen on the wings of birds if viewed in ultraviolet light. Would you agree with your friend? Explain your answer.   
+19. The rate at which information can be transmitted on an electromagnetic wave is proportional to the frequency of the wave. Is this consistent with the fact that laser telephone transmission at visible frequencies carries far more conversations per optical fiber than conventional electronic transmission in a wire? What is the implication for ELF radio communication with submarines?   
+20. Give an example of energy carried by an electromagnetic wave.   
+21. In an MRI scan, a higher magnetic field requires higher frequency radio waves to resonate with the nuclear type whose density and location is being imaged. What effect does going to a larger magnetic field have on the most efficient antenna to broadcast those radio waves? Does it favor a smaller or larger antenna?   
+22. Laser vision correction often uses an excimer laser that produces 193-nm electromagnetic radiation. This wavelength is extremely strongly absorbed by the cornea and ablates it in a manner that reshapes the cornea to correct vision defects. Explain how the strong absorption helps concentrate the energy in a thin layer and thus give greater accuracy in shaping the cornea. Also explain how this strong absorption limits damage to the lens and retina of the eye.
+
+Problems & Exercises
+
+24.1 Maxwell’s Equations: Electromagnetic Waves Predicted and Observed
+
+1. Verify that the correct value for the speed of light  is obtained when numerical values for the permeability and permittivity of free space (  and  ) are entered into the equation    
+2. Show that, when SI units for  and  are entered, the units given by the right-hand side of the equation in the problem above are  .
+
+24.2 Production of Electromagnetic Waves
+
+3. What is the maximum electric field strength in an electromagnetic wave that has a maximum magnetic field strength of  (about 10 times the Earth’s)?   
+4. The maximum magnetic field strength of an electromagnetic field is  . Calculate the maximum electric field strength if the wave is traveling in a medium in which the speed of the wave is  .
+
+5. Verify the units obtained for magnetic field strength  in Example 24.1 (using the equation  ) are in fact teslas (T).
+
+24.3 The Electromagnetic Spectrum
+
+6. (a) Two microwave frequencies are authorized for use in microwave ovens: 900 and  . Calculate the wavelength of each. (b) Which frequency would produce smaller hot spots in foods due to interference effects?   
+7. (a) Calculate the range of wavelengths for AM radio given its frequency range is 540 to  . (b) Do the same for the FM frequency range of 88.0 to 108 MHz.   
+8. A radio station utilizes frequencies between commercial AM and FM. What is the frequency of a 11.12-m-wavelength channel?   
+9. Find the frequency range of visible light, given that it encompasses wavelengths from 380 to 760 nm.   
+10. Combing your hair leads to excess electrons on the comb. How fast would you have to move the comb up and down to produce red light?
+
+11. Electromagnetic radiation having a  wavelength is classified as infrared radiation. What is its frequency?
+
+12. Approximately what is the smallest detail observable with a microscope that uses ultraviolet light of frequency 
+
+13. A radar used to detect the presence of aircraft receives a pulse that has reflected off an object × after it was transmitted. What is the distance from the radar station to the reflecting object?
+
+14. Some radar systems detect the size and shape of objects such as aircraft and geological terrain. Approximately what is the smallest observable detail utilizing 500-MHz radar?
+
+15. Determine the amount of time it takes for X-rays of frequency  to travel (a)  and (b) 1 cm.
+
+16. If you wish to detect details of the size of atoms (about  with electromagnetic radiation, it must have a wavelength of about this size. (a) What is its frequency? (b) What type of electromagnetic radiation might this be?
+
+17. If the Sun suddenly turned off, we would not know it until its light stopped coming. How long would that be, given that the Sun is  away?
+
+18. Distances in space are often quoted in units of light years, the distance light travels in one year. (a) How many meters is a light year? (b) How many meters is it to Andromeda, the nearest large galaxy, given that it is  light years away? (c) The most distant galaxy yet discovered is  light years away. How far is this in meters?
+
+19. A certain  power line radiates an electromagnetic wave having a maximum electric field strength of  . (a) What is the wavelength of this very low frequency electromagnetic wave? (b) What is its maximum magnetic field strength?
+
+20. During normal beating, the heart creates a maximum  potential across  of a person’s chest, creating a 1.00-Hz electromagnetic wave. (a) What is the maximum electric field strength created? (b) What is the corresponding maximum magnetic field strength in the electromagnetic wave? (c) What is the wavelength of the electromagnetic wave?
+
+21. (a) The ideal size (most efficient) for a broadcast antenna with one end on the ground is one-fourth the wavelength ( ) of the electromagnetic radiation being sent out. If a new radio station has such an antenna that is  high, what frequency does it broadcast most efficiently? Is this in the AM or FM band? (b) Discuss the analogy of the fundamental resonant mode of an air column closed at one end to the resonance of currents on an antenna that is one-fourth their wavelength.
+
+22. (a) What is the wavelength of 100-MHz radio waves used in an MRI unit? (b) If the frequencies are swept over a  range centered on 100 MHz, what is the range of wavelengths broadcast?
+
+23. (a) What is the frequency of the 193-nm ultraviolet radiation used in laser eye surgery? (b) Assuming the accuracy with which this EM radiation can ablate the cornea is directly proportional to wavelength, how much more accurate can this UV be than the shortest visible wavelength of light?
+
+24. TV-reception antennas for VHF are constructed with cross wires supported at their centers, as shown in Figure 24.26. The ideal length for the cross wires is one-half the wavelength to be received, with the more expensive antennas having one for each channel. Suppose you measure the lengths of the wires for particular channels and find them to be 1.94 and  long, respectively. What are the frequencies for these channels?
+
+25. Conversations with astronauts on lunar walks had an echo that was used to estimate the distance to the Moon. The sound spoken by the person on Earth was transformed into a radio signal sent to the Moon, and transformed back into sound on a speaker inside the astronaut’s space suit. This sound was picked up by the microphone in the space suit (intended for the astronaut’s voice) and sent back to Earth as a radio echo of sorts. If the round-trip time was 2.60 s, what was the approximate distance to the Moon, neglecting any delays in the electronics?
+
+26. Lunar astronauts placed a reflector on the Moon’s surface, off which a laser beam is periodically reflected. The distance to the Moon is calculated from the round-trip time. (a) To what accuracy in meters can the distance to the Moon be determined, if this time can be measured to 0.100 ns? (b) What percent accuracy is this, given the average distance to the Moon is 
+
+27. Radar is used to determine distances to various objects by measuring the round-trip time for an echo from the object. (a) How far away is the planet Venus if the echo time is 1000 s? (b) What is the echo time for a car  from a Highway Police radar unit? (c) How accurately (in nanoseconds) must you be able to measure the echo time to an airplane  away to determine its distance within 
+
+28. Integrated Concepts (a) Calculate the ratio of the highest to lowest frequencies of electromagnetic waves the eye can see, given the wavelength range of visible light is from 380 to  . (b) Compare this with the ratio of highest to lowest frequencies the ear can hear.
+
+29. Integrated Concepts (a) Calculate the rate in watts at which heat transfer through radiation occurs (almost entirely in the infrared) from  of the Earth’s surface at night. Assume the emissivity is 0.90, the temperature of the Earth is  , and that of outer space is  . (b) Compare the intensity of this radiation with that coming to the Earth from the Sun during the day, which averages about  , only half of which is absorbed. (c) What is the maximum magnetic field strength in the outgoing radiation, assuming it is a continuous wave?
+
+24.4 Energy in Electromagnetic Waves
+
+30. What is the intensity of an electromagnetic wave with a peak electric field strength of 
+
+31. Find the intensity of an electromagnetic wave having a peak magnetic field strength of  .
+
+32. Assume the helium-neon lasers commonly used in student physics laboratories have power outputs of  (a) If such a laser beam is projected onto a circular spot  in diameter, what is its intensity? (b) Find the peak magnetic field strength. (c) Find the peak electric field strength.
+
+33. An AM radio transmitter broadcasts  of power uniformly in all directions. (a) Assuming all of the radio waves that strike the ground are completely absorbed, and that there is no absorption by the atmosphere or other objects, what is the intensity  away? (Hint: Half the power will be spread over the area of a hemisphere.) (b) What is the maximum electric field strength at this distance?
+
+34. Suppose the maximum safe intensity of microwaves for human exposure is taken to be  . (a) If a radar unit leaks 10.0 W of microwaves (other than those sent by its antenna) uniformly in all directions, how far away must you be to be exposed to an intensity considered to be safe? Assume that the power spreads uniformly over the area of a sphere with no complications from absorption or reflection. (b) What is the maximum electric field strength at the safe intensity? (Note that early radar units leaked more than modern ones do. This caused identifiable health problems, such as cataracts, for people who worked near them.)
+
+35. A  -diameter university communications satellite dish receives TV signals that have a maximum electric field strength (for one channel) of  . (See Figure 24.27.) (a) What is the intensity of this wave? (b) What is the power received by the antenna? (c) If the orbiting satellite broadcasts uniformly over an area of  (a large fraction of North America), how much power does it radiate?
+
+36. Lasers can be constructed that produce an extremely high intensity electromagnetic wave for a brief time—called pulsed lasers. They are used to ignite nuclear fusion, for example. Such a laser may produce an electromagnetic wave with a maximum electric field strength of  for a time of 1.00 ns. (a) What is the maximum magnetic field strength in the wave? (b) What is the intensity of the beam? (c) What energy does it deliver on a  area?
+
+37. Show that for a continuous sinusoidal electromagnetic wave, the peak intensity is twice the average intensity  ), using either the fact that  , or  , where rms means average (actually root mean square, a type of average).
+
+38. Suppose a source of electromagnetic waves radiates uniformly in all directions in empty space where there are no absorption or interference effects. (a) Show that the intensity is inversely proportional to  , the distance from the source squared. (b) Show that the magnitudes of the electric and magnetic fields are inversely proportional to  .
+
+39. Integrated Concepts An  circuit with a 5.00-pF capacitor oscillates in such a manner as to radiate at a wavelength of  . (a) What is the resonant frequency? (b) What inductance is in series with the capacitor?
+
+40. Integrated Concepts What capacitance is needed in series with an  inductor to form a circuit that radiates a wavelength of 
+
+41. Integrated Concepts Police radar determines the speed of motor vehicles using the same Doppler-shift technique employed for ultrasound in medical diagnostics. Beats are produced by mixing the double Dopplershifted echo with the original frequency. If  microwaves are used and a beat frequency of  is produced, what is the speed of the vehicle? (Assume the same Dopplershift formulas are valid with the speed of sound replaced by the speed of light.)
+
+42. Integrated Concepts Assume the mostly infrared radiation from a heat lamp acts like a continuous wave with wavelength  . (a) If the lamp’s 200-W output is focused on a person’s shoulder, over a circular area 25.0 cm in diameter, what is the intensity in  (b) What is the peak electric field strength? (c) Find the peak magnetic field strength. (d) How long will it take to increase the temperature of the 4.00-kg shoulder by  , assuming no other heat transfer and given that its specific heat is 
+
+43. Integrated Concepts On its highest power setting, a microwave oven increases the temperature of  of spaghetti by  in  . (a) What was the rate of power absorption by the spaghetti, given that its specific heat is  (b) Find the average intensity of the microwaves, given that they are absorbed over a circular area  in diameter. (c) What is the peak electric field strength of the microwave? (d) What is its peak magnetic field strength?
+
+44. Integrated Concepts Electromagnetic radiation from a 5.00-mW laser is concentrated on a  area. (a) What is the intensity in  (b) Suppose a  static charge is in the beam. What is the maximum electric force it experiences? (c) If the static charge moves at  , what maximum magnetic force can it feel?
+
+45. Integrated Concepts
+
+A 200-turn flat coil of wire  in diameter acts as an antenna for FM radio at a frequency of  . The magnetic field of the incoming electromagnetic wave is perpendicular to the coil and has a maximum strength of  . (a) What power is incident on the coil? (b) What average emf is induced in the coil over one-fourth of a cycle? (c) If the radio receiver has an inductance of  , what capacitance must it have to resonate at 
+
+46. Integrated Concepts If electric and magnetic field strengths vary sinusoidally in time, being zero at  , then  sin  and  sin  . Let  here. (a) When are the field strengths first zero? (b) When do they reach their most negative value? (c) How much time is needed for them to complete one cycle?
+
+47. Unreasonable Results A researcher measures the wavelength of a 1.20-GHz electromagnetic wave to be  . (a) Calculate the speed at which this wave propagates. (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent?
+
+48. Unreasonable Results The peak magnetic field strength in a residential microwave oven is  . (a) What is the intensity of the microwave? (b) What is unreasonable about this result? (c) What is wrong about the premise?
+
+49. Unreasonable Results An  circuit containing a 2.00-H inductor oscillates at such a frequency that it radiates at a  wavelength. (a) What is the capacitance of the circuit? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent?
+
+50. Unreasonable Results
+
+An  circuit containing a 1.00-pF capacitor oscillates at such a frequency that it radiates at a 300-nm wavelength. (a) What is the inductance of the circuit? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent?
+
+51. Create Your Own Problem Consider electromagnetic fields produced by high voltage power lines. Construct a problem in which you calculate the intensity of this electromagnetic radiation in  based on the measured magnetic field strength of the radiation in a home near the power lines. Assume these magnetic field strengths are known to average less than a  . The intensity is small enough that it is difficult to imagine mechanisms for biological damage due to it. Discuss how much energy may be radiating from a section of power line several hundred meters long and compare this to the power likely to be carried by the lines. An idea of how much power this is can be obtained by calculating the approximate current responsible for  fields at distances of tens of meters.
+
+52. Create Your Own Problem Consider the most recent generation of residential satellite dishes that are a little less than half a meter in diameter. Construct a problem in which you calculate the power received by the dish and the maximum electric field strength of the microwave signals for a single channel received by the dish. Among the things to be considered are the power broadcast by the satellite and the area over which the power is spread, as well as the area of the receiving dish.
+
+53. Critical Thinking (a) Find the magnetic field strength when the electric field strength is 1,250  . (b) If  is increased, would  be increased, decreased, or remain the same? (c) By what factor would the change in part b be, if any?

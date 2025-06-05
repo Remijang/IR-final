@@ -1,0 +1,13 @@
+3.3.4 Arithmetic Instructions
+
+SimpleRisc has 6 arithmetic instructions – add, sub, mul, div, mod, and cmp. The connotations of add, sub, and mul are self explanatory (also see Table 3.3). For arithmetic instructions, we assume that the first operand in the list of operands is the destination register. The second operand is the first source operand, and the third operand is the second source operand. The first and second operands need to be registers, whereas the last operand (second source register) can be an immediate value.
+
+Example 26   
+Write assembly code in SimpleRisc to compute:  , and save the result in  . Answer:
+
+The div instruction divides the first source operand by the second source operand, computes the quotient, and saves it in the destination register. For example, it will compute  to be 4. The mod instruction computes the remainder of a division. For example, it will compute 30 mod 7 as 2.
+
+Example 27   
+Write assembly code in SimpleRisc to compute: 31 / 29 - 50, and save the result in  . Answer:
+
+The cmp instruction is a 2-address instruction that takes two source operands. The first source operand needs to be a register, and the second one can be an immediate or a register. It compares both the operands by subtracting the second from the first. If the operands are equal, or in other words the result of the subtraction is zero, then it sets  to 1. Otherwise,  is set to 0. If the first operand is greater than the second operand, then the result of the subtraction will be positive. In this case, the cmp instruction sets  to 1, otherwise it sets it to 0. We will require these flags when we implement branch instructions.

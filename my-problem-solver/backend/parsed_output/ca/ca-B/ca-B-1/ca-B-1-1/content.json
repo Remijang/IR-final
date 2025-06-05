@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "B.1.1 Graphics Applications ",
+        "text_level": 1,
+        "page_idx": 754
+    },
+    {
+        "type": "text",
+        "text": "We can divide modern graphics applications into two types. The first type is automatic image synthesis. For example, picture a complex scene in a game, where a character is running with a machine gun on a moonlit night. In this case, the programmer is not manually setting the value of every pixel to a given color. This process is too slow and time consuming. None of our interactive games would work, if this method was used. Instead, the programmer writes a program at the level of high level objects. For example, she can define a scene with a set of objects like roads, plants, and obstacles. She can define a character, and the artifacts that he carries such as a machine gun, a knife, and a cloak. The programmer writes a program in terms of these objects. Additionally, she specifies a set of rules that define the interactions of such objects. For example, she might specify that if a character collides with a wall, then the character turns around and runs in the other direction. Along with defining objects, and the semantics of objects, it is essential to define the sources of light in a scene. In this case, the programmer needs to specify the intensity of light in a moonlit night. The illumination of the character and the background are then automatically calculated by dedicated graphics software and hardware. ",
+        "page_idx": 754
+    },
+    {
+        "type": "text",
+        "text": "Sadly, the graphics hardware does not understand the language of complex objects, and characters. Hence, most graphics toolkits have graphics libraries to break down complex structures into a set of basic shapes. Most shapes in computer graphics applications are broken down into a set of triangles. All operations such as object collision, movement, lighting, shadows, and illumination, are converted to basic operations on triangles. However, graphics libraries do not use the regular processor to process these triangles and ultimately create an array of pixels to be displayed on a computer screen. Once, the programmer\u2019s intent has been translated to operations on basic shapes, the graphics libraries send the code to a dedicated graphics processor that does the rest of the processing. The graphics processor generates a complex scene from data and rules supplied by the user. It operates on shapes specified by edges and vertices. Most of the time these shapes are triangles in 2D space, or tetrahedra in 3D space. A graphics processor also calculates the effect of lighting, object position, and depth while generating the final image. Once, the graphics processor has generated the final image, it sends it to the display device. If we are playing a computer game, then this process needs to be done at least 50-100 times every second. ",
+        "page_idx": 754
+    },
+    {
+        "type": "text",
+        "text": "To summarize, we observe that since generating complex graphics scenes is difficult, and slow, programmers operate on a high-level description of objects. Subsequently, graphics libraries convert the programmer\u2019s directives into operations on basic shapes, and send the set of shapes, and rules for operating on them to the graphics processor. The graphics processor generates the final scene by operating on the basic shapes, and then converting them to an array of pixels. ",
+        "page_idx": 754
+    },
+    {
+        "type": "text",
+        "text": "The second important application of graphics processors is to display animated content such as videos. A high definition video has millions of pixels per scene. To reduce the storage requirements, most high definition videos are heavily compressed (encoded). Hence, a computer needs to decode or decompress a video, compute the array of pixels 50-100 times per second, and display them on screen. This is a very compute intensive process, and can tie up the resources of a CPU. Hence, video decoding is also typically offloaded to the graphics processor that contains specialized units for handling videos. ",
+        "page_idx": 754
+    },
+    {
+        "type": "text",
+        "text": "Almost all modern computer systems contain a graphics processor, and it is referred to as the GPU (Graphics Processing Unit). A modern GPU contains more than 64-128 cores, and thus is designed for extensive parallel processing. ",
+        "page_idx": 755
+    }
+]

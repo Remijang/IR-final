@@ -1,0 +1,38 @@
+[
+    {
+        "type": "text",
+        "text": "8.4.4 Addition of Numbers with Opposite Signs ",
+        "text_level": 1,
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Now let us look at the problem of adding two floating point numbers, $A$ and $B$ , to produce $C$ They have opposite signs. Again let us make the assumption that $E _ { A } \\geq E _ { B }$ . ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "The first step is to load the register $W$ with the significand of $B ( P _ { B } )$ along with a leading 0. Since the signs are different, in effect we are subtracting the significand of $B$ (shifted by some places) from the significand of $A$ . Hence, we can take the 2\u2019s complement of $W$ that contains $P _ { B }$ with a leading 0 bit, and then shift it to the right by $E _ { A } - E _ { B }$ places. This value is written back to the register $W$ . Note that the shift needs to be an arithmetic right shift here such that the value is preserved. Secondly, the order of operations (shift and 2\u2019s complement) is not important. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "We can now add the significand of $A$ ( $P _ { A }$ ) to $W$ . If the resulting value is negative, then we need to take its 2\u2019s complement, and set the sign of the result accordingly. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "Next, we need to normalize the result. It is possible that $P _ { W } < 1$ . In this case, we need to shift $W$ to the left till $1 \\leq P _ { W } < 2$ . Most implementations of the floating point standard, use an extra bit called the guard bit, along with the round and sticky bits. They set the MSB of the residue to the guard bit, the next bit to the round bit, and the OR of the rest of the bits to the sticky bits. During the process of shifting a number left, they shift in the guard bit first, and then shift in 0s. At the end of the algorithm, it is necessary to set the round bit equal to the guard bit, and OR the sticky bit with the round bit such that our original semantics is maintained. This added complexity is to optimize for the case of a left shift by 1 position. If we did not have the guard bit, then we needed to shift the round bit into $W$ , and we would thus lose the round bit forever. ",
+        "page_idx": 348
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "Once $W$ is normalized and the exponent $( E )$ is updated, we need to round the result as per Table 8.6. This process might lead to another round of normalization. ",
+        "page_idx": 349
+    }
+]

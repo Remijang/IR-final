@@ -1,0 +1,176 @@
+12.7.2 Further Reading
+
+The reader should start by reading the relevant sections in advanced textbooks on computer architecture. The first recommendation is the textbook written by your author on advanced computer architecture [Sarangi, ]. Other textbooks [Culler et al., 1998, Hwang, 2003, Baer, 2010, Jacob, 2009] in this space can also be consulted, especially the book by Jacob [Jacob, 2009] for details of the memory system.
+
+For parallel programming, the reader can start with Michael Quinn’s book on parallel programming with OpenMP and MPI [Quinn, 2003]. The formal MPI specifications are available at http://www.mpi-forum.org. For an advanced study of cache coherence the reader can start with the survey on coherence protocols by Stenstrom [Stenstrom, 1990], and then look at one of the earliest practical implementations [Borrill, 1987]. The most popular reference for memory consistency models is a tutorial by Adve and Gharachorloo [Adve and Gharachorloo, 1996], and a paper published by the same authors [Gharachorloo et al., 1992]. For a different perspective on memory consistency models in terms of ordering, and atomicity, readers can refer to [Arvind and Maessen, 2006]. [Guiady et al., 1999] looks at memory models from the point of view of performance. [Peterson et al., 1991] and [russell, 1978] describe two fully functional SIMD machines. For interconnection networks the reader can refer to [Jerger and Peh, 2009].
+
+Exercises
+
+Overview of Multiprocessor Systems
+
+Ex. 1 — Differentiate between strongly coupled, and loosely coupled multiprocessors.
+
+Ex. 2 — Differentiate between shared memory, and message-passing-based multiprocessors.
+
+Ex. 3 — Why is the evolution of multicore processors a direct consequence of Moore’s Law?
+
+Ex. 4 — The fraction of the potentially parallel section in a program is 0.6. What is the maximum speedup that we can achieve over a single core processor, if we run the program on a quad-core processor?
+
+Ex. 5 — You need to run a program, 60% of which is strictly sequential, while the rest 40% can be fully parallelized over a maximum of 4 cores. You have 2 machines:
+
+(a) A single core machine running at 3.2 GHz (b) A 4-core machine running at 2.4 GHz
+
+Which machine is better if you have to minimize the total time taken to run the program? Assume that the two machines have the same IPC per thread and only differ in the clock frequency and the number of cores.
+
+\* Ex. 6 — Consider a program, which has a sequential and a parallel portion. The sequential portion is 40% and the parallel portion is  . Using Amdahl’s law, we can compute the speedup with  processors, as  . However, increasing the number of cores increases the cost of the entire system. Hence, we define a utility function,  , of the form:
+
+The buyer wishes to maximize  . What is the optimal number of processors,  ?
+
+Ex. 7 — Define the terms: SISD, SIMD, MISD, and MIMD. Give an example of each type of machine.
+
+Ex. 8 — What are the two classes of MIMD machines introduced in this book?
+
+Coherence and Consistency
+
+Ex. 9 — What are the axioms of cache coherence?
+
+Ex. 10 — Define sequential and weak consistency.
+
+Ex. 11 — Is the outcome (t1,t2) = (2,1) allowed in a system with coherent memory?
+
+Thread 1:
+
+Thread 2:
+
+Ex. 12 — Assume that all the global variables are initialized to 0, and all variables local to a thread start with ‘t’. What are the possible values of  for a sequentially consistent system, and a weakly consistent system? (source [Adve and Gharachorloo, 1996])
+
+Thread 1:
+
+Ex. 13 — Is the outcome  possible in a sequentially consistent system?
+
+Thread 1:
+
+Ex. 14 — Is the outcome  possible in a sequentially consistent system? (source [Adve and Gharachorloo, 1996])
+
+Thread 3: Thread 4: Thread 1: Thread 2:
+
+z = 1;     
+ ;
+
+\* Ex. 15 — Is the outcome  ) allowed in a system with coherent memory and atomic writes? Consider both sequential and weak consistency?
+
+Thread 1:
+
+Thread 2: Thread 3:
+
+ . 16 — Consider the following code snippet for implementing a critical section. A critical section is a region of code that can only be executed by one thread at any single point of time. Assume that we have two threads with ids 0 and 1, respectively. The function  returns the id of the current thread.
+
+Is it possible for two threads to be in the critical section at the same point of time?
+
+Ex. 17 — In the snoopy protocol, why do we write back data to the main memory upon an  to  transition?
+
+Ex. 18 — Assume that two nodes desire to transition from the  state to the  state at exactly the same point of time. How will the snoopy protocol ensure that only one of these nodes enters the  state, and finishes its write operation? What happens to the other node?
+
+Ex. 19 — The snoopy protocol clearly has an issue with scalability. If we have 64 cores with a private cache per core, then it will take a long time to broadcast a message to all the caches. Can you propose solutions to circumvent this problem?
+
+Ex. 20 — Let us assume a cache coherent multiprocessor system. The L1 cache is private and the coherent L2 cache is shared across the processors. Let us assume that the system issues a lot of I/O requests. Most of the I/O requests perform DMA (Direct Memory Access) from main memory. It is possible that the I/O requests might overwrite some data that is already present in the caches. In this case we need to extend the cache coherence protocol that also takes I/O accesses into account. Propose one such protocol.
+
+Ex. 21 — Let us define a new state in the traditional  states-based snoopy protocol. The new  state refers to the “exclusive” state, in which a processor is sure that no other cache contains the block in a valid state. Secondly, in the  state, the processor hasn’t modified the block yet. What is the advantage of having the  state? How are evictions handled in the  state?
+
+Ex. 22 — Show the state transition diagrams for an MSI protocol with a directory. You need to show the following:
+
+1.Structure of the directory   
+2.State transition diagram for events received from the host processor.   
+3.State transition diagram for events received from the directory.   
+4.State transition diagram for an entry in the directory (if required).
+
+Ex. 23 — Assume that we have a system with private L1 and L2 caches. The L1 layer is not coherent. However, the L2 layer maintains cache coherence. How do we modify our  snoopy protocol to support cache coherence for the entire system?
+
+Ex. 24 — In the snoopy write-invalidate protocol, when should a processor actually perform the write operation? Should it perform the write as soon as possible, or should it wait for the write-invalidate message to reach all the caches? Explain your answer.
+
+\* Ex. 25 — Assume that a processor wants to perform an atomic exchange operation between two memory locations  and  .  and  cannot be allocated to registers. How will you modify the  coherence protocol to support this operation? Before proceeding with the answer think about what are the things that can go wrong. An exchange is essentially equivalent to the following sequence of operations: (1) temp = a; (2) a = b; (3) b = temp. If a read arrives between operations (2) and (3) it might get the wrong value of b. We need to prevent this situation.
+
+\*\* Ex. 26 — Assume that we want to implement an instruction called  . The  instruction takes  (known and bounded) memory locations as arguments, a set of  old values, and a set of  new values. Its pseudo-code is shown below. We assume here that mem is a hypothetical array representing the entire memory space.
+
+ multiple compare and set \*/   
+boolean MCAS(int memLocs[], int oldValues[], int newValues[]){ /\* compare \*/ for(  ; i < k; i++) { if(mem[memLocs[i]] !  oldValues[i]) { return false; } } /\* set \*/ for(  ; i < k; i++) { mem[memLocs[i]]  newValues[i]; } return true;   
+}
+
+The challenge is to implement this instruction such that it appears to execute instantaneously. Let us look at some subtle cases. Assume that we want to write (4,5,6) to three memory locations if their previous contents are (1,2,3). It is possible that after writing 4, and 5, there is a small delay. During this time another thread reads the three memory locations, and concludes that their values are 4,5, and 3, respectively. This result is incorrect because it violates our assumption that  executes instantaneously. We should either read (1,2,3) or (4,5,6).
+
+Now, let us look at the case of reading the three memory locations. Let us say that their initial values are 1,2, and 0. Our  instruction reads the first two locations and since they are equal to the old values, proceeds to the third location. Before reading it, a store operation from another thread changes the values of the three locations as follows.  . Subsequently, the  instruction takes a look at the third memory location and finds it to be 3. Note that the three memory locations were never equal to (1,2,3). We thus arrive at a wrong conclusion.
+
+How should we fix these problems? We want to implement an  instruction purely in hardware, which provides an illusion of instantaneous execution. It should be free of deadlocks, and should complete in a finite amount of time. How can we extend our coherence protocols to implement it?
+
+\*\*\* Ex. 27 — Assume a processor that has a sequentially consistent(SC) memory. We implement SC by making each thread wait for a memory request to complete before issuing the next request. Now, assume that we modify the architecture by allowing a processor to read a value that the immediately preceding instruction has written without waiting for it to complete. Prove that the memory system still follows SC.
+
+\*\*\* Ex. 28 — Assume a processor with a weak consistency model. Let us run a “properly labeled” program on it. A properly labeled(PL) program does not allow conflicting accesses (read-write, write-read, or write-write) to a shared variable at the same time. For example, the following code sequence is not properly labeled because it allows  to be modified concurrently.
+
+Thread 1:
+
+Thread 2:
+
+  In reality, the coherence protocol orders one write access before the other. Nevertheless, both the threads try to modify  concurrently at the programmer’s level. This is precisely the behavior that we wish to avoid.
+
+In a PL program, two threads do not try to modify  at the same time. This is achieved by having two magic instructions known as lock and unlock. Only one thread can lock a memory location at any point of time. If another thread tries to lock the location before it is unlocked, then it stalls till the lock is free. If multiple threads are waiting on the same lock, only one of them is given the lock after a unlock instruction. Secondly, both the lock and unlock instructions have a built-in fence operation, and all the lock and unlock instructions execute in program order. The PL version of our program is as follows:
+
+Thread 1:
+
+Thread 2:
+
+lock(x)  unlock(x)
+
+We can thus think of a lock-unlock block as a sequential block that can only be executed by one thread at a given time. Moreover, assume that a lock-unlock block can only have one memory instruction inside it.
+
+Now, prove that all PL programs running on a weakly consistent machine have a sequentially consistent execution. In other words we can interleave the memory accesses of all the threads such that they appear to be executed by a single cycle processor that switches among the threads. [HINT: Construct access graphs for your system, and prove that they are acyclic.]
+
+Multithreading
+
+Ex. 29 — What is the difference between a fine grained and coarse grained multithreaded machine?
+
+Ex. 30 — Describe a simultaneous multithreaded (SMT) processor in detail.
+
+Ex. 31 — Describes the steps that we need to take to ensure that an SMT processor executes correctly.
+
+Ex. 32 — Assume a mix of workloads in a 4-way SMT processor. 2 threads are computationally intensive, 1 thread is I/O intensive, and the last thread sleeps for a long time. Design an efficient instruction selection scheme.
+
+Interconnection Networks
+
+Ex. 33 — What is the bisection bandwidth and diameter of a 2D  mesh?
+
+Ex. 34 — What is the bisection bandwidth and diameter of a 3D  mesh?
+
+Ex. 35 — What is the diameter of a ring containing  nodes? Give a precise answer that holds for even and odd  .
+
+Ex. 36 — What is the bisection bandwidth and diameter of a hypercube of order  .
+
+Ex. 37 — What is the bisection bandwidth and diameter of an  , 3D torus?
+
+Ex. 38 — What is the bisection bandwidth and diameter of a clique of  nodes (  is even)? In a clique, all pairs of nodes are connected.
+
+ Ex. 39 — Assume we have an  mesh. There are  routers, and each processor is connected to one router. Note that at any point of time, a router can only store 1 message. It will discard a message only if the message gets stored in another router. In our previous example, router  will keep the message until it has been delivered and stored at a neighboring router such as  . Now, an interesting deadlock situation can develop. Let us assume the following scenario.
+
+•(1,1) wants to send a message to (1,2).   
+•(1,2) wants to send a message to (2,2).   
+ (2,2) wants to send a message to (2,1).   
+ (2,1) wants to send a message to (1,1).
+
+In this case all the four nodes have 1 message each. They are not able to forward the packet to the next node, because the next node already stores a packet, and is thus busy. Since there is a cyclic wait, we have a deadlock. Design a message routing protocol between a source and destination node that is provably deadlock free.
+
+Vector Processors
+
+Ex. 40 — What is the advantage of vector processors over scalar processors?
+
+Ex. 41 — Why are vector load-store instructions easy to implement in systems that have caches with large block sizes?
+
+Ex. 42 — How can we efficiently implement a scatter-gather-based load-store unit?
+
+Ex. 43 — What is a predicated instruction, and how does it help speed up a vector processor?
+
+\* Ex. 44 — Assume that we have a processor with a 32 entry vector register file. We wish to add two arrays that have 17 entries each. How can we implement this operation, with the SimpleRisc vector instructions introduced in the chapter? Feel free to introduce new vector instructions if required.
+
+\* Ex. 45 — Design a dedicated SIMD hardware unit to sort  integers in roughly  time steps by using the bubble sort algorithm. You have a linear array of  processors connected end to end. Each processor is capable of storing two integers, and has some logic inside it. Design the logic for each processor and explain the overall working of the system.
+
+Design Problems
+
+Ex. 46 — Write a program to sort a billion integers using OpenMP and MPI. Ex. 47 — Implement a distributed shared memory system on a cluster of computers connected via an Ethernet LAN.

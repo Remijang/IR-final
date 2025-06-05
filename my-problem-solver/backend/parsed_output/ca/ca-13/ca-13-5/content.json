@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "13.5 Network Layer ",
+        "text_level": 1,
+        "page_idx": 682
+    },
+    {
+        "type": "text",
+        "text": "In Sections 13.2,13.3, and 13.4, we studied how to design a full duplex bus. In specific, we looked at signaling, signal encoding, timing, framing, error checking, and transaction related issues. Now, we have arrived at a point, where we can assume I/O buses that correctly transfer messages between end points, and ensure timely and correct delivery. Let us now look at the entire chipset, which is essentially a large network of I/O buses. ",
+        "page_idx": 682
+    },
+    {
+        "type": "text",
+        "text": "The problems that we intend to solve in this section, are related to I/O addressing. For example, if the processor wishes to send a message to a USB port, then it needs to have a way of uniquely addressing the USB port. Subsequently, the chipset needs to ensure that it properly routes the message to the appropriate I/O device. Similarly, if a device such as the keyboard, needs to send the ASCII code (see Section 2.5) of the key pressed to the processor, it needs to have a method of addressing the processor. We shall look at routing messages in the chipset in this section. ",
+        "page_idx": 682
+    }
+]

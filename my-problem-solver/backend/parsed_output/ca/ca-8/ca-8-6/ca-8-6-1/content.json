@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "8.6.1 Simple Division ",
+        "text_level": 1,
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "The major difference between integer and floating point division is that floating point division does not have a remainder. It only has a quotient. Let us try to divide $A$ by $B$ to obtain $C$ . ",
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "We initialize the algorithm by setting the $W$ register to contain the significand $( P _ { A } )$ of $A$ . The $E$ register is initialized as $E _ { A } - E _ { B } + b i a s$ . This is done because in division, we subtract the exponents. Hence, in their biased representation we need to subtract $E _ { B }$ from $E _ { A }$ , and we need to add the value of the bias back. Computing the sign of the result is also trivial in this case. ",
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "We start out by dividing $P _ { A }$ by $P _ { B }$ . The rest of the steps are the same as that of multiplication (see Section 8.5). We normalize the result, round it, and then renormalize if necessary. ",
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "The time complexity of this operation is the same as the time complexity of the restoring or non-restoring algorithms. It is equal to $O ( n l o g ( n ) )$ . It turns out that for the case of floating point division, we can do much better. ",
+        "page_idx": 351
+    }
+]

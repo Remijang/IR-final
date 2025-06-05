@@ -1,0 +1,27 @@
+4.2.8 Conditional Instructions
+
+Now, that we have a fairly good idea of basic branch instructions, let us elaborate some special features of ARM assembly. These features help make the process of coding very efficient. Let us consider the instructions beq and bne again. We note that they are variants of the basic  instruction. They are distinguished by their suffixes – eq and  . The former denotes equality, and the latter denotes inequality. These suffixes are known as condition codes
+
+ARM Condition Codes
+
+Let us first consider the list of condition codes shown in Table 4.12. There are 16 condition codes in ARM. Each condition code has a unique number, and suffix. For example, the condition code with suffix eq has a number equal to 0. Every condition code is associated with a unique condition. For example,  is associated with equality. To test if the condition holds, the ARM processor takes a look at the CPSR flags. The last column in Table 4.12 shows the values of the flags that need to be set for the condition to hold.
+
+The eq and  conditions can be tested by considering the  flag alone. The expectation is that an earlier cmp or subs instruction would have set these flags. If the comparison resulted in an equality, then the  flag would be set to 1.
+
+As described in Section 4.2.3, if a subtraction of unsigned numbers leads to a borrow, then the carry flag is set to 0. This condition is also known as an unsigned underflow. If there is no borrow, then the carry flag is set to 1. Consequently, if the comparison between unsigned numbers concludes that the first number is greater than or equal to the second number, then the  needs to be set to 1. Likewise, if the carry flag is set to 0, then we can say that the first operand is smaller than the second operand (unsigned comparison). These two conditions are captured by the  and  condition codes, respectively.
+
+The next four condition codes check if a number is positive or negative, and if there has been an overflow. These conditions can be trivially evaluated by considering the values of  (negative) and  (overflow) flags, respectively. hi denotes unsigned higher. In this case, we need to additionally test the  flag. Likewise for  (unsigned lower or equal), we need to test the  flag, along with the  flag.
+
+ARM has four condition codes for signed numbers –  ,  ,  , and  . The  condition code simply tests the  flag. It should be equal to 0. This means that a preceding cmp or subs instruction has subtracted two numbers, where the first operand was greater than or equal to the second operand. For the  instruction, we need to consider the  flag also. Similarly, the less than condition codes –  and  – work. The conditions for the flags are given in Table 4.12.
+
+Note that for signed numbers, we have not considered the possibility of an overflow in Table 4.12. Theorem 2.3.4.1 outlines the precise conditions for detecting an overflow. We leave the process of augmenting the conditions to consider overflow as an exercise for the reader. Lastly, the al(always) condition code means that the instruction is not associated with any condition. It executes according to its default specification. Hence, it is not required to explicitly specify the al condition since it is the default.
+
+Conditional Variants of Normal Instructions
+
+Condition codes are not just restricted to branches. We can use condition codes with normal instructions such as add and sub also. For example, the instruction addeq performs an addition if the  flag in the f lags register is set to true. It means that the last time that the flags were set (most likely by a cmp instruction), the instruction must have concluded an equality. However, if the last comparison instruction concluded that its operands are unequal, then the ARM processor treats the addeq instruction as a nop instruction (no operation). We shall see in Chapter 10 that by using such conditional instructions, we can increase the performance of an advanced processor. Let us consider an example that uses the addeq instruction.
+
+Example 47
+
+Write a program in ARM assembly to count the number of 1s in a 32-bit number stored in r1. Save the result in r4.
+
+Answer:

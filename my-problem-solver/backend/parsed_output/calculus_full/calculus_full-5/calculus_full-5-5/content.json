@@ -1,0 +1,401 @@
+[
+    {
+        "type": "text",
+        "text": "5.5 The Definite Integral ",
+        "text_level": 1,
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "The integral of $v ( x )$ is an antiderivative $f ( x )$ plus a constant $C$ . This section takes two steps. First, we choose $C$ . Second, we construct $f ( x )$ . The object is to define the integral\u2014in the most frequent case when a suitable $f ( x )$ is not directly known. ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "The indefinite integral contains $^ { 6 6 } { + } C$ .\u201d The constant is not settled because $f ( x ) + C$ has the same slope for every $C$ . When we care only about the derivative, $C$ makes no difference. When the goal is a number\u2014a definite integral\u2014 $C$ can be assigned a definite value at the starting point. ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "For mileage traveled, we subtract the reading at the start. This section does the same for area. Distance is $f ( t )$ and area is $f ( x )$ \u0001\u2014while the definite integral is $f ( b ) - f ( a )$ . Don\u2019t pay attention to $t$ or $x$ , pay attention to the great formula of integral calculus: ",
+        "page_idx": 265
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { a } ^ { b } v ( t ) d t = \\int _ { a } ^ { b } v ( x ) d x = f ( b ) - f ( a ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "Viewpoint $1 { : }$ When $f$ is known, the equation gives the area from $a$ to $b$ . ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "Viewpoint 2 W When $f$ is not known, the equation defines $f$ from the area. ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "For a typical $v ( x )$ , we can\u2019t find $f ( x )$ by guessing or substitution. But still $v ( x )$ has an \u201carea\u201d under its graph\u2014and this yields the desired integral $f ( x )$ . ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "Most of this section is theoretical, leading to the definition of the integral. You may think we should have defined integrals before computing them\u2014which is logically true. But the idea of area (and the use of rectangles) was already pretty clear in our first examples. Now we go much further. Every continuous function $v ( x )$ has an integral (also some discontinuous functions). Then the Fundamental Theorem completes the circle: The integral leads back to $d f / d x = v ( x )$ . The area up to $x$ is the antiderivative that we couldn\u2019t otherwise discover. ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "THE CONSTANT OF INTEGRATION\u0001 ",
+        "text_level": 1,
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "Our goal is to turn $f ( x ) + C$ into a definite integral\u2014 the area between $a$ and $b$ . The first requirement is to have are $a = z e r o$ at the start: ",
+        "page_idx": 265
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( a ) + C = { \\mathrm { s t a r t i n g ~ a r e a } } = 0 \\quad { \\mathrm { s o } } \\quad C = - f ( a ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "For the area up to $x$ (moving endpoint, indefinite integral), use $t$ as the dummy variable: ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "the area from a ${ \\begin{array} { r l } { \\textit { t o x i s } \\int _ { a } ^ { x } v ( t ) d t { = } f ( x ) { - } f ( a ) } & { ( i n d e f i n i t e i n t e g r a l ) } \\\\ { t o b i s \\int _ { a } ^ { b } v ( x ) d x { = } f ( b ) { - } f ( a ) } & { ( d e f i n i t e i n t e g r a l ) } \\end{array} }$ the area from a ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The area under the graph of $5 ( x + 1 ) ^ { 4 }$ from $a$ to $b$ has $f ( x ) = ( x + 1 ) ^ { 5 }$ : ",
+        "page_idx": 265
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { a } ^ { b } 5 ( x + 1 ) ^ { 4 } d x = ( x + 1 ) ^ { 5 } \\Big ] _ { a } ^ { b } = ( b + 1 ) ^ { 5 } - ( a + 1 ) ^ { 5 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "The calculation has two separate steps\u2014first find $f ( x )$ , then substitute $b$ and $a$ . After the first step, check that $d f / d x$ is $v$ . The upper limit in the second step gives plus ",
+        "page_idx": 265
+    },
+    {
+        "type": "text",
+        "text": "$f ( b )$ , the lower limit gives mi\u0001nus $f ( a )$ . Notice the brackets (or th\u0001e vertical bar): ",
+        "page_idx": 266
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( x ) \\big ] _ { a } ^ { b } = f ( b ) - f ( a ) \\quad x ^ { 3 } | _ { 1 } ^ { 2 } = 8 - 1 \\quad \\big [ \\cos x \\big ] _ { 0 } ^ { 2 t } = \\cos 2 t - 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "Changing the example to $f ( x ) = ( x + 1 ) ^ { 5 } - 1$ gives an equally good antiderivative\u2014 and now $f ( 0 ) = 0$ . But $f ( b ) - f ( a )$ stays the same, because the $^ { - 1 }$ disappears: ",
+        "page_idx": 266
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left[ ( x + 1 ) ^ { 5 } - 1 \\right] _ { a } ^ { b } = ( ( b + 1 ) ^ { 5 } - 1 ) - ( ( a + 1 ) ^ { 5 } - 1 ) = ( b + 1 ) ^ { 5 } - ( a + 1 ) ^ { 5 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 When $v = 2 x$ sin $x ^ { 2 }$ we recognize $f = - \\cos x ^ { 2 }$ . The area from 0 to 3 is ",
+        "page_idx": 266
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\scriptstyle \\int _ { 0 } ^ { 3 } 2 x \\sin x ^ { 2 } d x = - \\cos x ^ { 2 } \\displaystyle \\int _ { 0 } ^ { 3 } = - \\cos 9 + \\cos 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "The upper limit copies the minus sign. The lower limit gives $- ( - \\cos 0 )$ , which is $+ \\cos 0$ . That e\u00bbxample shows the \u00bbright form for sol\u00bbving exercises on definite integrals. ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "Example 2 jumped directly to $f ( x ) = - \\cos x ^ { 2 }$ . But most problems involving the chain rule go more slowly\u2014by substitution. Set $u = x ^ { 2 }$ , with $d u / d x = 2 x$ : ",
+        "page_idx": 266
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { 3 } 2 x \\sin x ^ { 2 } d x = \\int _ { 0 } ^ { 3 } \\sin u { \\frac { d u } { d x } } d x = \\int _ { ? } ^ { ? } \\sin u d u .\n$$",
+        "text_format": "latex",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "We need new limits when u replaces $x ^ { 2 }$ . Those limits on $u$ are $a ^ { 2 }$ and $b ^ { 2 }$ . (In this case $\\scriptstyle a ^ { 2 } = 0 ^ { 2 }$ an\u00bbd $b ^ { 2 } = 3 ^ { 2 } = 9 .$ .) If $x$ go\u00bbes from a to $b$ , then $u$ goes from $u ( a )$ to $u ( b )$ . ",
+        "page_idx": 266
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { a } ^ { b } v ( u ( x ) ) { \\frac { d u } { d x } } d x = \\int _ { u ( a ) } ^ { u ( b ) } v ( u ) d u = f ( u ( b ) ) - f ( u ( a ) ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 266
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { x = 0 } ^ { 1 } ( x ^ { 2 } + 5 ) ^ { 3 } x d x = \\int _ { u = 5 } ^ { 6 } u ^ { 3 } { \\frac { d u } { 2 } } = { \\frac { u ^ { 4 } } { 8 } } { \\Bigg ] } _ { 5 } ^ { 6 } = { \\frac { 6 ^ { 4 } } { 8 } } - { \\frac { 5 ^ { 4 } } { 8 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "In this case $u = x ^ { 2 } + 5$ . Therefore $d u / d x = 2 x$ (or $d u = 2 x d x$ for differentials). We have to account for the missing 2. The integral is ${ \\textstyle \\frac { 1 } { 8 } } u ^ { 4 }$ . The limits on $u = x ^ { 2 } + 5$ are $u ( 0 ) = 0 ^ { 2 } + 5$ and $u ( 1 ) = 1 ^ { 2 } + 5$ . That is why the $u$ -integral goes from 5 to 6. The alternative is to find $\\begin{array} { r } { f ( x ) = \\frac { 1 } { 8 } ( x ^ { 2 } + 5 ) ^ { 4 } } \\end{array}$ in one jump (and check it). ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 $\\int _ { 0 } ^ { 1 } \\ d \\mathbf { 0 }$ sin $x ^ { 2 } d x = ? ?$ (no elementary function gives this integral). ",
+        "text_level": 1,
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "If we try cos $x ^ { 2 }$ , the chain rule produces an extra $2 x$ \u2014no adjustment will work. Does sin $x ^ { 2 }$ still have an antiderivative? Yes! Every continuous $v ( x )$ has an $f ( x )$ . Whether $f ( x )$ has an algebraic formula or not, we can write it as $\\int v ( x ) d x$ . To define that integral, we now take the limit of rectangular a\u0004r\u0004e\u0004as. ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "INTEGRALS AS LIMITS OF \u201cRIEMANN SUMS\u201d ",
+        "text_level": 1,
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "We have come to the definition of the integral. The chapter started with the integrals of $x$ and $x ^ { 2 }$ , from formulas for $1 + \\cdots + n$ and $1 ^ { 2 } + \\cdots + n ^ { 2 }$ . We will not go back to those formulas. But for other functions, too irregular to find exact sums, the rectangular areas also approach a limit. ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "That limit is the integral. This definition is a major step in the theory of calculus. It can be studied in detail, or understood in principle. The truth is that the definition is not so painful\u2014you virtually know it already. ",
+        "page_idx": 266
+    },
+    {
+        "type": "text",
+        "text": "Problem Integrate the continuous function $v ( x )$ over the i\u0001nterval $[ a , b ]$ .   \nStep 1 Split $[ a , b ]$ into $n$ subintervals $[ a , x _ { 1 } ] , [ x _ { 1 } , x _ { 2 } ] , \\dotsc , [ x _ { n - 1 } , b ]$ . ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "The \u201cmeshpoints\u201d $x _ { 1 } , x _ { 2 } , \\ldots$ divide up the interval from $a$ to $b$ . The endpoints are $x _ { 0 } = a$ and $x _ { n } = b$ . The length of subinterval $k$ is $\\Delta x _ { k } = x _ { k } - x _ { k - 1 }$ . In that smaller interval, the minimum of $v ( x )$ is $m _ { k }$ . The maximum is $M _ { k }$ . ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "Now construct rectangles. The \u201clower rectangle\u201d over interval $k$ has height $m _ { k }$ . The \u201cupper rectangle\u201d re\u00a5aches to $M _ { k }$ . Since $v$ is c\u0004o\u0004 \u0004ntinuous, there are points $x _ { \\mathrm { m i n } }$ and $x _ { \\mathrm { m a x } }$ where $v = m _ { k }$ and $v = M _ { k }$ (extreme value theorem). The graph of $v ( x )$ is in between. ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "Important: The area under $v ( x )$ contains the area $\\cdot _ { s } , \\cdot _ { \\ l }$ of the lower rectangles: ",
+        "page_idx": 267
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { a } ^ { b } v ( x ) d x \\geqslant m _ { 1 } \\Delta x _ { 1 } + m _ { 2 } \\Delta x _ { 2 } + \\cdots + m _ { n } \\Delta x _ { n } = s . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "The area under $v ( x )$ is contained in the area $\\mathbf { \\nabla } \\cdot S ^ { \\mathbf { \\nabla } , \\mathbf { \\mu } }$ of the upper rectangles: ",
+        "page_idx": 267
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { a } ^ { b } v ( x ) d x \\leqslant M _ { 1 } \\Delta x _ { 1 } + M _ { 2 } \\Delta x _ { 2 } + \\cdots + M _ { n } \\Delta x _ { n } = S . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "The lower sum $s$ and the upper sum $S$ were computed earlier in special cases\u2014 when $v$ was $x$ or $x ^ { 2 }$ and the spacings $\\Delta x$ were equal. Figure $5 . 9 \\mathrm { a }$ shows why $s \\leqslant$ area $\\leqslant S$ . ",
+        "page_idx": 267
+    },
+    {
+        "type": "image",
+        "img_path": "images/19e02f2e49d0cdfe738965cba051758dedaac36adc4ae0909fac257227e9ff4e.jpg",
+        "img_caption": [
+            "Fig. 5.9 Area of lower rectangles $= s$ : Upper sum $S$ includes top pieces. Riemann sum $S ^ { * }$ is in between. "
+        ],
+        "img_footnote": [],
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "Notice an important fact. When a new dividing point $x ^ { \\prime }$ is added, the lower sum increases. The minimum in on\u00a4e piec\u00a4e can\u00a4be gre\u00a4ater (see second figure) than the original $m _ { k }$ . Similarly the upper sum decreases. The maximum in one piece can be below the overall maximum. As new points are added, $s$ goes up and $S$ comes down. So the sums come closer together: ",
+        "page_idx": 267
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l r } { s \\leqslant s ^ { \\prime } \\leqslant } & { { } \\leqslant S ^ { \\prime } \\leqslant S . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "I have left space in between for the curved area\u2014the integral of $v ( x )$ . ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "Now add more and more meshpoints in such a way that $\\Delta x _ { \\mathrm { m a x } } \\to 0$ . The lower sums increase and the upper sums decrease. They never pass each other. If $v ( x )$ is continuous, those sums close in on a single number $A$ . That number is the definite integral\u2014the area under the graph. ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "DEFINITION The area $A$ is the common limit of the lower and upper sums: ",
+        "page_idx": 267
+    },
+    {
+        "type": "equation",
+        "text": "$$\ns \\to A { \\mathrm { ~ a n d ~ } } S \\to A { \\mathrm { ~ a s ~ } } \\Delta x _ { \\mathrm { m a x } } \\to 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "This limit $A$ exists for all continuous $v ( x )$ , and also for some discontinuous functions.   \nWhen it exists, $A$ is the \u201cRiemann integral\u201d of $v ( x )$ from $a$ to $b$ . ",
+        "page_idx": 267
+    },
+    {
+        "type": "text",
+        "text": "5.5 The Definite Integral ",
+        "text_level": 1,
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "REMARKS ON THE INTEGRAL ",
+        "text_level": 1,
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "As for derivatives, so for integrals: The definition involves a limit. Calculus is built on limits, and we always add \u201cif the limit exists.\u201d That is the delicate point. I hope the next five remarks (increasingly technical) will help to distinguish functions that are Riemann integrable from functions that are not. ",
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "Remark 1 The sums $s$ and $S$ may fail to approach the same limit. A standard example has $V ( x ) = 1$ at all fractions $x = p / q$ , and $V ( x ) = 0$ at all other points. Every interval contains rational points (fractions) and irrational points (nonrepeating decimals). Therefore $m _ { k } = 0$ and $M _ { k } = 1$ . The lower sum is always $s = 0$ . The upper sum is always $S = b - a$ (the sum of 1\u2019s times $\\Delta x$ \u2019s). The gap in equation (7) stays open. This function $V ( x )$ is not Riemann integrable. The area under its graph is not defined (at least by Rieman\u00d1n\u2014see Remark 5). ",
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "Remark 2 The step function $U ( x )$ is discontinuous but still integrable. On every interval the minimum $m _ { k }$ equals the maximum $M _ { k }$ \u2014except on the\u00d1interval cont\u00d1aining the jump. That jump interval has $m _ { k } = 0$ and $M _ { k } = 1$ . But when we multiply by $\\Delta x _ { k }$ , and require $\\Delta x _ { \\mathrm { m a x } } \\to 0$ \u00d1, the difference between $s$ and $S$ goes to zero. The area under a step function is clear\u2014the rectangles fit exactly. ",
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "Remark 3 With patience another key step could be proved: If $s \\to A$ and $S \\to A$ for one sequence of meshp\u0006oints, then this limit $A$ is approached by every choice of meshpoints with $\\Delta x _ { \\mathrm { m a x } } \\to 0$ . The integral is the lower bound of all upper sums $S$ , and it is the upper bound of all possible $s$ \u2014provided those bounds are equal. The gap must close, to\u0006 define t\u0006he integral. ",
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "The same limit $A$ is approached by \u201cin-between rectangles.\u201d The height $v ( x _ { k } ^ { * } )$ can be computed at any point $x _ { k } ^ { * }$ in subinterval $k$ . See Fig\u0006ures $5 . 9 \\mathrm { c }$ and 5.10. Then th\u0006e total rectangular area is a \u201cRiemann sum\u201d between $s$ and $S$ : ",
+        "page_idx": 268
+    },
+    {
+        "type": "equation",
+        "text": "$$\nS ^ { * } = v ( x _ { 1 } ^ { * } ) \\Delta x _ { 1 } + v ( x _ { 2 } ^ { * } ) \\Delta x _ { 2 } + \\cdots + v ( x _ { n } ^ { * } ) \\Delta x _ { n } .\n$$",
+        "text_format": "latex",
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "We cannot tell whether the true area is above or below $S ^ { * }$ . Very often $A$ is closer to $S ^ { * }$ than to $s$ or $S$ . The midpoint rule takes $x ^ { * }$ in the middle of its interval (Figure 5.10), and Section 5.8 will establish its extra accuracy. The extreme sums $s$ and $S$ are used in the definition while $S ^ { * }$ is used in computation. ",
+        "page_idx": 268
+    },
+    {
+        "type": "image",
+        "img_path": "images/70277300d5697482963c02d585ded25e14c6af25f36560da473c53bb81d26024.jpg",
+        "img_caption": [
+            "Fig. 5.10 Various positions for $x _ { k } ^ { * }$ in the base. The rectangles have\u0006he\u0001ight $v ( x _ { k } ^ { * } )$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "Remark 4 Every continuous fun\u0004c\u0004ti\u0004on is Riemann in\u0001tegrable. The proof is optional (in my class), but it belongs here for reference. It starts with continuity at $x ^ { * }$ : \u201cFor any \" there is a $\\delta$ . . . .\u201d When the rectangles sit between $x ^ { * } - \\delta$ and ${ x ^ { * } } + \\delta$ , the bounds $M _ { k }$ and $m _ { k }$ differ by less than $2 \\varepsilon$ . Multiplying by the base $\\Delta x _ { k }$ , the areas differ by less than $2 \\varepsilon ( \\Delta x _ { k } )$ . Combining all rectangles, the upper and lower sums differ by less than $2 \\varepsilon ( \\Delta x _ { 1 } + \\Delta x _ { 2 } + \\cdots + \\Delta x _ { n } ) = 2 \\varepsilon ( b - a )$ . ",
+        "page_idx": 268
+    },
+    {
+        "type": "text",
+        "text": "5 Integrals ",
+        "text_level": 1,
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "As $\\varepsilon \\to 0$ we conclude that $S$ comes arbitrarily close to $s$ . They squeeze in on a single number $A$ . The Riemann sums approach the Riemann integral, $i f v$ is continuous. ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "Two problems are hidden by that reasoning. One is at the end, where $S$ and $s$ come together. We have to know that the line of real numbers has no \u201choles,\u201d so there is a number $A$ to which these sequences converge. That is true. ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "Any increasing sequence, if it is bounded above, approaches a limit. ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "The decreasing sequence $S$ , bounded below, converges to the same limit. So $A$ exists. ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "The other problem is about continuity. We assumed without saying so that the width 2\u0131 is the same around every point $x ^ { * }$ . We did not allow for the possibility that $\\delta$ might approach zero where $v ( x )$ is rapidly changing\u2014in which case an infinite number of rectangles could be needed. Our reasoning requires that ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "$v ( x )$ is uniformly continuous: \u0131 depends on \" but not on the position of $x ^ { * }$ . ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "For each $\\varepsilon$ t\u0006here is a $\\delta$ that works at all points in the i\u0006nterval. A continuous function on a closed interval is uniformly continuous. This fact (proof omitted) makes the reasoning correct, and $v ( x )$ is integrable. ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "On an infinite interval, even $v = { x } ^ { 2 }$ is not uniformly continuous. It changes across a subinterval by $( x ^ { * } + \\delta ) ^ { 2 } - ( x ^ { * } - \\delta ) ^ { 2 } = 4 x ^ { * } \\delta$ . As $x ^ { * }$ gets larger, $\\delta$ must get smaller\u2014 to keep $4 x ^ { * } \\delta$ below $\\varepsilon$ . No single $\\delta$ succeeds at all $x ^ { * }$ . But on a finite interval $[ 0 , b ]$ , the choice $\\delta = \\varepsilon / 4 b$ works everywhere\u2014so $v = x ^ { 2 }$ is uniformly continuous. ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "Remark 5 If those four remarks were fairly optional, this one is totally at your discretion. Modern mathematics needs to integrate the zero-one function $V ( x )$ in the first remark. Somehow $V$ has more 0\u2019s than 1\u2019s. The fractions (where $V ( x ) = 1 { \\frac { } { } }$ ) can be put in a list, but the irrational numbers (where $V ( x ) = 0 )$ are \u201cuncountable.\u201d The integral ought to be zero, but Riemann\u2019s upper sums all involve $M _ { k } = 1$ . ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "Lebesgue dis\u0004c\u0004o\u0004vered a major improvement. He allowed infinitely many subintervals (smaller and smaller). Then all fractions can be covered with intervals of total width $\\varepsilon$ : (Amazing, when the fractions are packed so densely.) The idea is to cover $1 / q , 2 / q , \\dots , q / q$ by narrow intervals of total width $\\varepsilon / 2 ^ { q }$ . Combining all $q = 1 , 2 , 3 , \\ldots$ ; the total width to cover all fractions is no more than ${ \\widehat { \\varepsilon } } { \\left( { \\frac { 1 } { 2 } } + { \\frac { 1 } { 4 } } + { \\frac { 1 } { 8 } } + \\cdots \\right) } = \\varepsilon$ .raSriyn, cthe $V ( x ) = 0$ uevienrtyewgrhaelr\u201de  eslsze,rothaesudpepsieresd.um $S$ is only $\\varepsilon$ $\\varepsilon$ ",
+        "page_idx": 269
+    },
+    {
+        "type": "text",
+        "text": "That completes a fair amount of theory, possibly more than you want or need\u2014 but it is satisfying to get things straight. The definition of the integral is still being studied by experts (and so is the derivative, again to allow more functions). By contrast, the properties of the integral are used by everybody. Therefore the next section turns from definition to properties, collecting the rules that are needed in applications. They are very straightforward. ",
+        "page_idx": 269
+    }
+]

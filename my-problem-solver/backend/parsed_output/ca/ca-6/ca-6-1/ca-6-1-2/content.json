@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "6.1.2 View of Registers ",
+        "text_level": 1,
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "RV32I contains 32 registers that are each 32-bits wide. The registers are named $x 0$ to $x 3 1$ . $x 0$ is hardwired to zero (refer to Table 6.2). There is a dedicated $p c$ register that exposes the program counter. The architecture per se does not define a fixed calling convention. However, over time a convention has emerged and developers are mostly using the calling convention shown in Table 6.2. Note that saved registers are preserved across function calls (callee saved), whereas temporary registers (caller saved) are not preserved. ",
+        "page_idx": 230
+    },
+    {
+        "type": "text",
+        "text": "RISC-V uses a standard memory addressing model (similar to other RISC machines). It started out being a little-endian ISA, but now big-endian and bi-endian modes are also supported. ",
+        "page_idx": 230
+    },
+    {
+        "type": "table",
+        "img_path": "images/27eb21ead39feb9312a9e9309b61d641e39b0c2d4c6d0d24a39df7906c84222b.jpg",
+        "table_caption": [
+            "Table 6.2: RISC-V registers and their assembler mnemonics "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td><td></td><td></td></tr><tr><td>Register</td><td>Mnemonic</td><td>Description</td><td></td></tr><tr><td>x0</td><td>zero</td><td>Hard-wired to zero</td><td></td></tr><tr><td>x1</td><td>ra</td><td>Return address</td><td></td></tr><tr><td>x2</td><td>sp</td><td>Stack pointer</td><td></td></tr><tr><td>x3</td><td>gp</td><td>Global pointer</td><td></td></tr><tr><td>x4</td><td>tp</td><td>Thread pointer (thread-local storage)</td><td></td></tr><tr><td>x5-7</td><td>t0-2</td><td>Temporary registers</td><td></td></tr><tr><td>x8</td><td>s0/fp</td><td>Saved register/frame pointer</td><td></td></tr><tr><td>x9</td><td>s1</td><td>Saved register</td><td></td></tr><tr><td>x10-11</td><td>a0-1</td><td>Function arguments/return values</td><td></td></tr><tr><td>x12-17</td><td>a2-7</td><td>Function arguments</td><td></td></tr><tr><td>x18-27</td><td>s2-11</td><td>Saved registers</td><td></td></tr><tr><td>x28 -31</td><td>t3-6</td><td>Temporary registers</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 231
+    },
+    {
+        "type": "text",
+        "text": "Given the machine model, let us now explain the instructions supported by the RV32I ISA. Note that this is our fourth chapter on low-level assembly languages. Hence, the treatment will be brief. ",
+        "page_idx": 231
+    }
+]

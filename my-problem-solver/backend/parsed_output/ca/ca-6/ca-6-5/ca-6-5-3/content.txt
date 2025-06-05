@@ -1,0 +1,13 @@
+6.5.3 Floating Point Instructions
+
+Figure 6.4 shows the encoding of the  and  instructions.  instructions are encoded in the I format. The funct3 instruction is replaced with the width field (amount of data that is loaded). Similarly, the  instruction is encoded using the S format. The only change is that the funct3 field is replaced with the  .
+
+Figure 6.5 shows the encoding format of floating point arithmetic instructions (variation of the R format). All such instructions take one floating point destination register and one or two source registers as inputs. The format is the same for all variants. The rm field encodes the rounding mode and the f mt field represents the precision (32-bit, 64-bit, 16-bit, 128-bit).
+
+The opcode field is typically the same for all common floating point arithmetic instructions. The funct5 field stores the code for the specific type of instruction. For instructions like fqrt that do not have the second source register, the  field is set to 0.
+
+The same format is also used by the floating point conversion instructions (fcvt.w.s and  .
+
+This format is also used by floating point comparison instructions. The rm field in this case stores the following comparison conditions:  ,  and  . The funct5 field stores a code for floating point comparison  .
+
+Figure 6.6 shows the encoding format of the fmadd and fmsub instructions. Instead of the f unct5 field, the third source register rs3 is stored in its place. The rest remains the same.

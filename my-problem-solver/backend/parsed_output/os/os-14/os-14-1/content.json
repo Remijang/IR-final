@@ -1,0 +1,48 @@
+[
+    {
+        "type": "text",
+        "text": "14.1 Types of Memory ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "In running a C program, there are two types of memory that are allocated. The first is called stack memory, and allocations and deallocations of it are managed implicitly by the compiler for you, the programmer; for this reason it is sometimes called automatic memory. ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Declaring memory on the stack in C is easy. For example, let’s say you need some space in a function func() for an integer, called x. To declare such a piece of memory, you just do something like this: ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "void func() { int x; // declares an integer on the stack   \n} ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The compiler does the rest, making sure to make space on the stack when you call into func(). When you return from the function, the compiler deallocates the memory for you; thus, if you want some information to live beyond the call invocation, you had better not leave that information on the stack. ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "It is this need for long-lived memory that gets us to the second type of memory, called heap memory, where all allocations and deallocations are explicitly handled by you, the programmer. A heavy responsibility, no doubt! And certainly the cause of many bugs. But if you are careful and pay attention, you will use such interfaces correctly and without too much trouble. Here is an example of how one might allocate an integer on the heap: ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "void func() { int $\\star { \\bf { x } } = ( \\mathrm { { i n t } } \\star )$ ) malloc(sizeof(int));   \n} ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "A couple of notes about this small code snippet. First, you might notice that both stack and heap allocation occur on this line: first the compiler knows to make room for a pointer to an integer when it sees your declaration of said pointer $( \\mathrm { i n t } ^ { - } \\star \\mathbf { x } )$ ; subsequently, when the program calls malloc(), it requests space for an integer on the heap; the routine returns the address of such an integer (upon success, or NULL on failure), which is then stored on the stack for use by the program. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Because of its explicit nature, and because of its more varied usage, heap memory presents more challenges to both users and systems. Thus, it is the focus of the remainder of our discussion. ",
+        "page_idx": 1
+    }
+]

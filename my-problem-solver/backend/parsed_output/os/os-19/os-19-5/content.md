@@ -1,0 +1,36 @@
+# 19.5 TLB Issue: Context Switches  
+
+With TLBs, new issues arise when switching between processes (and hence address spaces). Specifically, the TLB contains virtual-to-physical translations that are only valid for the currently running process; these translations are not meaningful for other processes. As a result, when switching from one process to another, the hardware or OS (or both) must be careful to ensure that the about-to-be-run process does not accidentally use translations from some previously run process.  
+
+To understand this situation better, let’s look at an example. When one process (P1) is running, it assumes the TLB might be caching translations that are valid for it, i.e., that come from P1’s page table. Assume, for this example, that the 10th virtual page of P1 is mapped to physical frame 100.  
+
+In this example, assume another process (P2) exists, and the OS soon might decide to perform a context switch and run it. Assume here that the 10th virtual page of P2 is mapped to physical frame 170. If entries for both processes were in the TLB, the contents of the TLB would be:  
+
+<html><body><table><tr><td>VPN</td><td>PFN</td><td>valid</td><td>prot</td></tr><tr><td>10</td><td>100</td><td>1</td><td>rwx</td></tr><tr><td rowspan="3">10</td><td></td><td>0</td><td rowspan="3">rwx</td></tr><tr><td>170</td><td>1</td></tr><tr><td></td><td>0</td></tr></table></body></html>  
+
+In the TLB above, we clearly have a problem: VPN 10 translates to either PFN 100 (P1) or PFN 170 (P2), but the hardware can’t distinguish which entry is meant for which process. Thus, we need to do some more work in order for the TLB to correctly and efficiently support virtualization across multiple processes. And thus, a crux:  
+
+# THE CRUX:  
+
+HOW TO MANAGE TLB CONTENTS ON A CONTEXT SWITCH When context-switching between processes, the translations in the TLB for the last process are not meaningful to the about-to-be-run process. What should the hardware or OS do in order to solve this problem?  
+
+There are a number of possible solutions to this problem. One approach is to simply flush the TLB on context switches, thus emptying it before running the next process. On a software-based system, this can be accomplished with an explicit (and privileged) hardware instruction; with a hardware-managed TLB, the flush could be enacted when the page-table base register is changed (note the OS must change the PTBR on a context switch anyhow). In either case, the flush operation simply sets all valid bits to 0, essentially clearing the contents of the TLB.  
+
+By flushing the TLB on each context switch, we now have a working solution, as a process will never accidentally encounter the wrong translations in the TLB. However, there is a cost: each time a process runs, it must incur TLB misses as it touches its data and code pages. If the OS switches between processes frequently, this cost may be high.  
+
+To reduce this overhead, some systems add hardware support to enable sharing of the TLB across context switches. In particular, some hardware systems provide an address space identifier (ASID) field in the TLB. You can think of the ASID as a process identifier (PID), but usually it has fewer bits (e.g., 8 bits for the ASID versus 32 bits for a PID).  
+
+If we take our example TLB from above and add ASIDs, it is clear processes can readily share the TLB: only the ASID field is needed to differentiate otherwise identical translations. Here is a depiction of a TLB with the added ASID field:  
+
+<html><body><table><tr><td>VPN</td><td>PFN</td><td>valid</td><td>prot</td><td>ASID</td></tr><tr><td>10</td><td>100</td><td>1</td><td>rwx</td><td>1</td></tr><tr><td>10</td><td>170</td><td>0 1 0</td><td>rwx</td><td>2</td></tr></table></body></html>  
+
+Thus, with address-space identifiers, the TLB can hold translations from different processes at the same time without any confusion. Of course, the hardware also needs to know which process is currently running in order to perform translations, and thus the OS must, on a context switch, set some privileged register to the ASID of the current process.  
+
+As an aside, you may also have thought of another case where two entries of the TLB are remarkably similar. In this example, there are two entries for two different processes with two different VPNs that point to the same physical page:  
+
+<html><body><table><tr><td>VPN</td><td>PFN</td><td>valid</td><td>prot</td><td>ASID</td></tr><tr><td>10</td><td>101</td><td>1 0</td><td>r-x</td><td>1</td></tr></table></body></html>  
+
+This situation might arise, for example, when two processes share a page (a code page, for example). In the example above, Process 1 is sharing physical page 101 with Process 2; P1 maps this page into the 10th page of its address space, whereas P2 maps it to the 50th page of its address space. Sharing of code pages (in binaries, or shared libraries) is useful as it reduces the number of physical pages in use, thus reducing memory overheads.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+

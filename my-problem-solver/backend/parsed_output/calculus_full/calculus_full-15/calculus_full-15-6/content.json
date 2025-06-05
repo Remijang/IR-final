@@ -1,0 +1,467 @@
+[
+    {
+        "type": "text",
+        "text": "15.6 Stokes\u2019 Theorem and the Curl of F ",
+        "text_level": 1,
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "For the Divergence Theorem, the surface was closed. $S$ was the boundary of $V$ . Now the surface is not closed and $S$ has its own boundary\u2014a curve called $C$ . We are back near the original setting for Green\u2019s Theorem (region bounded by curve, double integral equal to work integral). But Stokes\u2019 Theorem, also called Stokes\u2019s Theorem, iBs in  tBhree\u0001-dBime nBsional space. There is a curved surface $S$ bounded by a space curve $C$ . This is our first integral around a space curve. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "The move to three dimensions brings a change in the vector field. The plane field $\\mathbf { F } ( x , y ) = M \\mathbf { i } + N \\mathbf { j }$ becomes a space field $\\mathbf { F } ( x , y , z ) = M \\mathbf { i } + N \\mathbf { j } + P \\mathbf { k }$ . The work $M d x + N d y$ now includes $P d z$ . The critical quantity in the double integral (it was $\\hat { \\sigma } N / \\hat { \\sigma } x - \\hat { \\sigma } M / \\hat { \\sigma } y )$ must change too. We called this scalar quantity \u201ccurl $\\mathbf { F }$ ,\u201d but in reality it is only the third\u0001component of a v\u0001ector. Stokes\u2019 The\u0001orem needs all three components of that vector\u2014which is curl $\\mathbf { F }$ . ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "DEFINITION The curl of a vector fie\u0007ld $\\mathbf { F } ( x , y , z ) = M \\mathbf { i } + N \\mathbf { j } + P \\mathbf { k }$ is the vector field ",
+        "page_idx": 684
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { c u r l } \\mathbf { F } = \\left( { \\frac { \\partial P } { \\partial y } } - { \\frac { \\partial N } { \\partial z } } \\right) \\mathbf { i } + \\left( { \\frac { \\partial M } { \\partial z } } - { \\frac { \\partial P } { \\partial x } } \\right) \\mathbf { j } + \\left( { \\frac { \\partial N } { \\partial x } } - { \\frac { \\partial M } { \\partial y } } \\right) \\mathbf { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "The symbol $\\nabla \\times \\mathbf { F }$ stands for a determi\u0007nant that yields those si\u0007x derivatives: ",
+        "page_idx": 684
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { c u r l } { \\mathbf { F } } = \\nabla \\times { \\mathbf { F } } = \\left| \\begin{array} { c c c } { \\mathbf { i } } & { \\mathbf { j } } & { \\mathbf { k } } \\\\ { \\partial / \\partial x } & { \\partial / \\partial y } & { \\partial / \\partial z } \\\\ { M } & { N } & { P } \\end{array} \\right| .\n$$",
+        "text_format": "latex",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "The three products i $\\partial / \\partial y \\ P$ and j $\\partial / \\partial z \\ M$ and $\\textbf { k } \\partial / \\partial x \\textbf { } N$ have plus signs. The three products like k $\\partial / \\partial y \\ M$ , down to the left, have minus signs. TherBe is a Bcyclic symmetry. This determinant helps the memory, even if it looks and is illegal. A determinant is not supposed to have a row of vectors, a row of operators, and a row of functions. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The plane field $M ( x , y ) \\mathbf { i } + N ( x , y ) \\mathbf { j }$ has $P = 0$ and $\\partial M / \\partial z = 0$ and $\\partial N / \\partial z = 0$ . Only two terms survive: curl ${ \\bf F } = ( \\hat { \\sigma } N / \\hat { \\sigma } x - \\hat { \\sigma } M / \\hat { \\sigma } y ) { \\bf k }$ . Back to Green. ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "EXAMPL\u0002E 2 \u0007The cross prod\u0007uct $\\mathbf { a } \\times \\mathbf { R }$ is a spin field S\u0001. Its axis is the\u0001fixed vector $\\mathbf { a } = a _ { 1 } \\mathbf { i } + a _ { 2 } \\mathbf { j } + a _ { 3 } \\mathbf { k }$ . The flow\u0007 in Figure 15.23 turns around a, and its components are ",
+        "page_idx": 684
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { S } = \\mathbf { a } \\times \\mathbf { R } = { \\left| \\begin{array} { l l l } { \\mathbf { i } } & { \\mathbf { j } } & { \\mathbf { k } } \\\\ { a _ { 1 } } & { a _ { 2 } } & { a _ { 3 } } \\\\ { x } & { y } & { z } \\end{array} \\right| } = ( a _ { 2 } z - a _ { 3 } y ) \\mathbf { i } + ( a _ { 3 } x - a _ { 1 } z ) \\mathbf { j } + ( a _ { 1 } y - a _ { 2 } x ) \\mathbf { k } .\n$$",
+        "text_format": "latex",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "Our fav\u0001orite spin field $- y \\mathbf { i } + x \\mathbf { j }$ has $( a _ { 1 } , a _ { 2 } , a _ { 3 } ) = ( 0 , 0 , 1 )$ and its axis is $\\mathbf a = \\mathbf k$ . ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "BThe divBergence ofB a spinB field is $M _ { x } + N _ { y } + P _ { z } = 0 + 0 + 0$ . Note how the divergence uses $M _ { x }$ while the curl uses $N _ { x }$ and $P _ { x }$ . The curl of S is the vector 2a: ",
+        "page_idx": 684
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\bigg ( \\frac { \\partial P } { \\partial y } - \\frac { \\partial N } { \\partial z } \\bigg ) \\mathbf { i } + \\bigg ( \\frac { \\partial M } { \\partial z } - \\frac { \\partial P } { \\partial x } \\bigg ) \\mathbf { j } + \\bigg ( \\frac { \\partial N } { \\partial x } - \\frac { \\partial M } { \\partial y } \\bigg ) \\mathbf { k } = 2 a _ { 1 } \\mathbf { i } + 2 a _ { 2 } \\mathbf { j } + 2 a _ { 3 } \\mathbf { k } = 2 \\mathbf { a } .\n$$",
+        "text_format": "latex",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "This example begins to reveal the meaning of the curl. It measures the spin! The direction of curl $\\mathbf { F }$ is the axis of rotation\u2014in this case along a. The magnitude of ",
+        "page_idx": 684
+    },
+    {
+        "type": "text",
+        "text": "curl $\\mathbf { F }$ is twice the speed of rotation. In this case ${ \\big | } \\mathrm { c u r l } \\ \\mathbf { F } { \\big | } = 2 { \\big | } \\mathbf { a } { \\big | }$ and the angular velocity is $\\left. \\mathbf { a } \\right.$ . ",
+        "page_idx": 685
+    },
+    {
+        "type": "image",
+        "img_path": "images/0c9598424107dde1f3507bf835d8848b4335f28ff7184167cd372d246ba55097.jpg",
+        "img_caption": [
+            "Fig. 15.23 SpiBn fiBeld $\\mathbf { S } = \\mathbf { a } \\times \\mathbf { R }$ , positioBn fiBeld $\\mathbf { R }$ ,BvelBocity field (sBheBar field) $\\mathbf { N } = z \\mathbf { i }$ , any field $\\mathbf { F }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 (!!) Every gradient field $\\mathbf { F } = \\partial f / \\partial x \\ \\mathbf { i } + \\partial f / \\partial y \\ \\mathbf { j } + \\partial f / \\partial z$ k has curl $\\mathbf { F } = \\mathbf { 0 }$ : ",
+        "page_idx": 685
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { c u r l } \\mathbf { F } = \\left( { \\frac { \\partial } { \\partial y } } { \\frac { \\partial f } { \\partial z } } - { \\frac { \\partial } { \\partial z } } { \\frac { \\partial f } { \\partial y } } \\right) \\mathbf { i } + \\left( { \\frac { \\partial } { \\partial z } } { \\frac { \\partial f } { \\partial x } } - { \\frac { \\partial } { \\partial x } } { \\frac { \\partial f } { \\partial z } } \\right) \\mathbf { j } + \\left( { \\frac { \\partial } { \\partial x } } { \\frac { \\partial f } { \\partial y } } - { \\frac { \\partial } { \\partial y } } { \\frac { \\partial f } { \\partial x } } \\right) \\mathbf { k } = \\mathbf { 0 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "Always $f _ { y z }$ equBals $f _ { z y }$ . ThBey cancel.BAlsoB $f _ { x z } = f _ { z x }$ and $f _ { y x } = f _ { x y }$ .BSo curl grad $f = \\mathbf { 0 }$ . ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 (twin of Example 3) The divergence of curl $\\mathbf { F }$ is also automatically zero: ",
+        "page_idx": 685
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname { d i v } \\operatorname { c u r l } \\mathbf { F } = { \\frac { \\hat { \\mathcal { O } } } { { \\hat { \\mathcal { O } } } x } } \\left( { \\frac { { \\hat { \\mathcal { O } } } P } { \\partial y } } - { \\frac { { \\hat { \\mathcal { O } } } N } { { \\hat { \\mathcal { O } } } z } } \\right) + { \\frac { \\hat { \\mathcal { O } } } { { \\hat { \\mathcal { O } } } y } } \\left( { \\frac { { \\hat { \\mathcal { O } } } M } { { \\hat { \\mathcal { O } } } z } } - { \\frac { { \\hat { \\mathcal { O } } } P } { { \\hat { \\mathcal { O } } } x } } \\right) + { \\frac { \\hat { \\mathcal { O } } } { { \\hat { \\mathcal { O } } } z } } \\left( { \\frac { { \\hat { \\mathcal { O } } } N } { { \\hat { \\mathcal { O } } } x } } - { \\frac { { \\hat { \\mathcal { O } } } M } { { \\hat { \\mathcal { O } } } y } } \\right) = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "Again the mixed derivatives give $P _ { x y } = P _ { y x }$ and $N _ { x z } = N _ { z x }$ and $M _ { z y } = M _ { y z }$ . The terms cancel in pairs. In \u201ccurl grad\u201d and \u201cdiv curl\u201d, everything is arranged to give zero. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "15N The curl of the gradient of every $f ( x , y , z )$ is curl grad $\\boldsymbol { f } = \\nabla \\times \\nabla f = \\mathbf { 0 }$ . The divergence of the curl of every $\\mathbf { F } ( x , y , z )$ is div curl $\\mathbf { F } = \\nabla \\cdot \\nabla \\times \\mathbf { F } = 0$ . ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "The spin field S has no divergence. The position field $\\mathbf { R }$ has no curl. $\\mathbf { R }$ is the gradient of $f = { \\textstyle \\frac { 1 } { 2 } } ( x ^ { 2 } + y ^ { 2 } + z ^ { 2 } )$ . S is the curl of a suitable $\\mathbf { F }$ . Then div $\\mathbf { S } =$ div curl $\\mathbf { F }$ and curl $\\mathbf { R } =$ curl grad $f$ are automatically zero. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "You correctly believe that curl $\\mathbf { F }$ measures the \u201cspin\u201d of the field. You may expect that curl $( \\mathbf { F } + \\mathbf { G } )$ is curl $\\mathbf { F } + \\mathrm { c u r l } \\mathbf { G }$ . Also correct. Finally you may think that a field of parallel vectors has no spin. That is wrong. Example 5 has parallel vectors, but their different lengths produce spin. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 The field $\\mathbf { V } = z \\mathbf { i }$ in the $x$ direction has curl $\\mathbf { V } = \\mathbf { j }$ in the $y$ direction. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "If you put a wheel in the $x z$ plane, this field will turn it. The velocity $z \\mathbf { i }$ at the top of the wheel is greater than $z \\mathbf { i }$ at the bottom (Figure 15.23c). So the top goes faste\u0001r and the wheel rotates. The axis of rotation is curl $\\mathbf { V } = \\mathbf { j }$ . The turning speed is $\\frac { 1 } { 2 }$ , because this curl has magnitude 1. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "Another velocity field $\\mathbf { v } = - x \\mathbf { k }$ produces the same spin: curl $\\mathbf { v } = \\mathbf { j }$ . The flow is in the $z$ direction, it varies in the $x$ direction, and the spin is in the $y$ direction. Also interesting is $\\mathbf { V } + \\mathbf { v }$ . The two \u201cshear fields\u201d add to a perfect spin field $\\mathbf { S } = z \\mathbf { i } - x \\mathbf { k }$ , whose curl is 2j. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "15.6 Stokes\u2019 Theorem and the Curl of F ",
+        "text_level": 1,
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "THE MEANING OF CURL F ",
+        "text_level": 1,
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "Example 5 put a paddl\u0004ewheel into the flow. This is possible for any vect\u0004or field $\\mathbf { F }$ , and it gives insight into curl $\\mathbf { F }$ . The turning of the wheel (if it turns) depends on its location $( x , y , z )$ . The turning also depends on the orientation of the wheel. We could put it into a spin field, and if the wheel axis $\\mathbf { n }$ is perpendicular to the spin axis a, the wheel won\u2019t turn! The general rule for turning speed is this: the angular velocity of the wheel is $\\scriptstyle { \\frac { 1 } { 2 } } ( \\mathbf { c u r l } \\mathbf { F } ) \\cdot \\mathbf { n }$ . This is the \u201cdirectional spin,\u201d just as .grad $f ) \\cdot { \\mathbf { u } }$ was the \u201cdirectional derivative\u201d\u2014and $\\mathbf { n }$ is a unit vector like u. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "There is no spin anywhere in a gradient field. It is irrotational: curl grad $f = \\mathbf { 0 }$ . ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "The p\u0004ure spin field $\\mathbf { a } \\times \\mathbf { R }$ h |as curl $\\mathbf { F } = 2 \\mathbf { a }$ . The angular velocity is $\\mathbf { a } \\cdot \\mathbf { n }$ (note that $\\frac { 1 } { 2 }$ cancels 2). This turning is everywhere, not just at the origin. If you put a penny on a compact disk, it turns once when the disk rotates once. That spin is \u201caround itself,\u201d and it is the same whether the penny is at the center or not. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "The turning speed is greatest when the wheel axis $\\mathbf { n }$ lines up with the spin axis a. Then $\\mathbf { a } \\cdot \\mathbf { n }$ is the full length $\\left. \\mathbf { a } \\right.$ . The gra|dient g|ives the direction of fastest growth, and the curl gives the direction of fastest turning: ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "maximum growth rate of $f$ is grad $f |$ in the direction of grad $f$ maximum rotation rate of $\\mathbf { F }$ is ${ \\frac { 1 } { 2 } } \\left| \\operatorname { c u r l } \\mathbf { F } \\right|$ in the direction o\u0004f curl F. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "STOKES\u2019 THEOREM ",
+        "text_level": 1,
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "Finally we come to the big theorem. It will be like Green\u2019s Theorem\u2014a line integral equals a surface integral. The line integral is still the work $\\oint \\mathbf { F } \\cdot d \\mathbf { R }$ around a curve. The surface integral in Green\u2019s Theorem is $\\iint ( N _ { x } - M _ { y } ) \\dot { d x } d y$ . The surface is flat (in the $x y$ plane). Its normal direction is $\\mathbf { k }$ , and we now recognize $N _ { x } - M _ { y }$ as the $\\mathbf { k }$ component of the curl. Green\u2019s Theorem uses only this component because the normal direction is always $\\mathbf { k }$ . For Stokes\u2019 Theorem on a curved surface, we need all three components of curl $\\mathbf { F }$ . ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "Figure 15.24 shows a hat-shaped surface $S$ and its boundary $C$ (a closed curve). Walking in the positive direction around $C$ , with your head pointing in the direction of n, the surface is on your left. You may be standing straight up $\\mathbf { \\tilde { n } = k }$ in Green\u2019s Theorem). You may even be upside down . $\\mathbf { { \\dot { n } } = - k }$ is allowed/. In that case you must go the other way around $C$ , to keep th\u00bee two sides \u00bbof\u00bbequation (6) equal. The surface is still on the left. A M\u00f6bius strip is not allowed, because its normal direction cannot be established. The unit vector $\\mathbf { n }$ determines the \u201ccounterclockwise direction\u201d along $C$ . ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "15O .Stokes\u2019 Theorem/ ",
+        "page_idx": 686
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\oint _ { c } \\mathbf { F } \\cdot d \\mathbf { R } = \\int \\int _ { s } \\left( \\operatorname { c u r l } \\mathbf { F } \\right) \\cdot \\mathbf { n } d S .\n$$",
+        "text_format": "latex",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "The right side adds up small spins in the surface. The left side is the total circulation (or work) around $C$ . That is not easy to visualize\u2014this may be the hardest theorem in the book\u2014but notice one simple conclusion. $\\pmb { I f }$ curl $\\mathbf { F } = \\mathbf { 0 }$ then $\\oint \\mathbf { F } \\cdot d \\mathbf { R } = 0$ . This applies above all to gradient fields\u2014as we know. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "A gradient field has no curl, by (4). A gradient field does no work, by (6). In three dimensions as in two dimensions, gradient fields are conservative fields. They will be the focus of this section, after we outline a proof (or two proofs) of Stokes\u2019 Theorem. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "The first proof shows why the theorem is true. The second proof shows that it really is true (and how to compute). You may prefer the first. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "First proof Figu\u0004re 15.24 has a trian\u0004gle $A B C$ attached to a\u0004triangle $A C D$ . La\u0004ter there can be more triangles. $S$ will be piecewise flat, close to a curved surface. Two triangles are enough to make the point. In the plane of each triangle (they have different n\u2019s) Green\u2019s Theorem is known: ",
+        "page_idx": 687
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\oint _ { \\substack { A B + B C + C A } } \\mathbf { F } \\cdot d \\mathbf { R } = \\iint \\mathbf { \\Phi } \\operatorname { c u r l } \\mathbf { F } \\cdot \\mathbf { n } d S \\oint \\mathbf { \\Phi } \\mathbf { F } \\cdot d \\mathbf { R } = \\iint \\operatorname { c u r l } \\mathbf { F } \\cdot \\mathbf { n } d S .\n$$",
+        "text_format": "latex",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Now add. The right sides give $\\iint \\mathrm { c u r l } \\mathbf { F } { \\cdot } \\mathbf { n } d S$ over the two triangles. On the left, the integral over $C A$ cancels the\u2019integral over $A C$ . The \u201ccrosscut\u201d disappears. That leaves $A B + B C + C D + D A$ . This line integral goes around the outer boundary $C$ \u2014which is the left side of Stokes\u2019 Theorem. ",
+        "page_idx": 687
+    },
+    {
+        "type": "image",
+        "img_path": "images/3be064f6dcec267a28b9f53145e00967d6611424dd8ceec367e9f6e57d19ce26.jpg",
+        "img_caption": [
+            "Fig. 15.24 Surfaces $S$ and boundary curves $C$ . Change in $\\mathbf { B } $ curl $\\mathbf { E } $ current in $C$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Second proof Now the surface can be curved. A new proof may seem excessive, but it brings f\u00b6ormulas you co\u00b6uld compute with. From $z = f ( x , y )$ we have ",
+        "page_idx": 687
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd z = \\hat { \\sigma } f / \\hat { \\sigma } x ~ d x + \\hat { \\sigma } f / \\hat { \\sigma } y ~ d y \\quad \\mathrm { a n d } \\quad \\mathbf { n } d S = ( - \\hat { \\sigma } f / \\hat { \\sigma } x \\mathbf { i } - \\hat { \\sigma } f / \\hat { \\sigma } y \\mathbf { j } + \\mathbf { k } ) d x ~ d y .\n$$",
+        "text_format": "latex",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "For nd $S$ , see equation 15.4.11. With this $d z$ , the line integral in Stokes\u2019 Theorem is ",
+        "page_idx": 687
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\oint _ { C } \\mathbf { F } \\cdot d \\mathbf { R } = \\oint _ { \\mathrm { \\tiny ~ s h a d o w o f ~ C } } M d x + N d y + P ( \\partial f / \\partial x ~ d x + \\partial f / \\partial y ~ d y ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "The dot product of curl $\\mathbf { F }$ and ${ \\bf n } d S$ gives the surface integral $\\iint _ { \\mathrm { \\tiny ~ S } } \\mathrm { c u r l } \\mathbf { F } \\cdot \\mathbf { n } d S$ : ",
+        "page_idx": 687
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int \\displaylimits _ { \\mathrm { I o w o f } } ^ { \\infty } [ ( P _ { y } - N _ { z } ) ( - \\partial f / \\partial x ) + ( M _ { z } - P _ { x } ) ( - \\partial f / \\partial y ) + ( N _ { x } - M _ { y } ) ] d x d y .\n$$",
+        "text_format": "latex",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "To prove ${ ( 7 ) = ( 8 ) }$ , change $M$ in Green\u2019s Theorem to $M + P \\hat { \\sigma } f / \\partial x$ . Also change $N$ to $N + P \\partial f / \\partial y$ . Then $( 7 ) = ( 8 )$ is Green\u2019s Theorem down on the shadow (Problem 47). This proves Stokes\u2019 Theorem up on $S$ . Notice how Green\u2019s Theorem (flat surface) was the key to both proofs of Stokes\u2019 Theorem (curved surface). ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 Stokes\u2019 Theorem in electricity and magnetism yields Faraday\u2019s Law. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Stokes\u2019 Theorem is not heavily used for calculations\u2014equation (8) shows why. But the spin or curl or vorticity of a flow is absolutely basic in fluid mechanics. The other important application, coming now, is to electric fields. Faraday\u2019s Law is to Gauss\u2019s Law as Stokes\u2019 Theorem is to the Divergence Theorem. ",
+        "page_idx": 687
+    },
+    {
+        "type": "text",
+        "text": "Suppose the curve $C$ is an actual wire. We can produce current along $C$ by varying the magnetic field $\\mathbf { B } ( t )$ . The flux $\\varphi = \\iint \\mathbf { B } \\cdot \\mathbf { n } d S$ , passing within $C$ and changing in time, creates an electric field $\\mathbf { E }$ that doe\u2019s work: ",
+        "page_idx": 688
+    },
+    {
+        "type": "equation",
+        "text": "$$\nF a r a d a y ^ { \\prime } s L a w \\ ( \\mathrm { i n t e g r a l ~ f o r m } ) : \\mathrm { w o r k } = \\oint _ { C } \\mathbf { E } \\cdot d \\mathbf { R } = - d \\varphi / d t .\n$$",
+        "text_format": "latex",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "That is physic\u0004s. It may be tru\u0004e, it may be an a\u0001ppBrox iBmation.\u0001N Bow c Bom\u0004es mathematics (surely true), which turns this integral form into a differential equation. Information at points is more convenient than information around curves. Stokes converts the line integral of $\\mathbf { E }$ into the surface integral of curl $\\mathbf { E }$ : ",
+        "page_idx": 688
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\oint _ { C } \\mathbf { E } \\cdot d \\mathbf { R } = \\iint _ { S } \\subset \\mathrm { c u r l } ~ \\mathbf { E } \\cdot \\mathbf { n } d S ~ \\mathrm { a n d ~ a l s o } ~ - \\hat { \\sigma } \\varphi / \\hat { \\sigma } t = \\iint _ { S } - ( \\hat { \\sigma } \\mathbf { B } / \\hat { \\sigma } t ) \\cdot \\mathbf { n } d S .\n$$",
+        "text_format": "latex",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "These are equal for any curve $C$ , however small. So the right sides are equal for any surface $S$ . We squeeze to a point. The right hand sides give one of Maxwell\u2019s equations: ",
+        "page_idx": 688
+    },
+    {
+        "type": "equation",
+        "text": "$$\nF a r a d a y ^ { \\prime } s L a w ( \\mathrm { d i f f e r e n t i a l ~ f o r m } ) \\colon \\mathrm { c u r l ~ } \\mathbf { E } = - \\hat { \\sigma } \\mathbf { B } / \\hat { \\sigma } t .\n$$",
+        "text_format": "latex",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "COBNSE BRVATIVE FIELDS AND POTENTIAL FUNCTIONS ",
+        "text_level": 1,
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "The chapter ends with our constant and important question: Which fields do no work around closed curves? Remember test $\\mathbf { D }$ for plane curves and plane vector fields: ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "if $\\partial M / \\partial y = \\partial N / \\partial x$ theBn F  iBs conservative and ${ \\bf F } =$ grad $f$ and $\\oint \\mathbf { F } \\cdot d \\mathbf { R } = 0 .$ ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "Now allow a three-dimensional field like $\\mathbf { F } = 2 x y \\ \\mathbf { i } + ( x ^ { 2 } + z ) \\mathbf { j } + y \\mathbf { k }$ . Does it do work around a space curve? $O r$ is it a gradient field? That will require $\\partial f / \\partial x = 2 x y$ and ${ \\partial f } / { \\partial y } = x ^ { 2 } + z$ and $\\partial f / \\partial z = y$ . We have three equations for one function $f ( x , y , z )$ . Normally they can\u2019t be solved. When test $\\mathbf { D }$ is passed (now it is the threedimensional test: curl $\\mathbf { F } = \\mathbf { 0 }$ ) they can be solved. This example passes test $\\mathbf { D }$ , and $f$ is $x ^ { 2 } y + y z$ . ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "15 $\\mathrm { ~ \\bf ~ { ~ P ~ } ~ } ( x , y , z ) = M \\mathbf { i } + N \\mathbf { j } + P \\mathbf { k }$ is a conservative field if it has these properties: ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "A. The work $\\oint \\mathbf { F } \\cdot d \\mathbf { R }$ around every closed path in space is zero.   \nB. The work $\\int _ { P } ^ { Q } \\mathbf { F } \\cdot d \\mathbf { R }$ depends on $P$ and $\\boldsymbol { Q }$ , not on the path in space.   \nC. $\\mathbf { F }$ is a gradient\u00f1field:\u00f1 $M = \\partial f / \\partial x$ and $N =  { \\partial } f /  { \\partial } y$ and $P = \\partial f / \\partial z$ .   \nD. The components satisfy $M _ { y } = N _ { x } , M _ { z } = P _ { x }$ , and $N _ { z } = P _ { y }$ (curl F\u0004is zero). ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "A field with one of these properties has them all. $\\mathbf { D }$ is the quick test. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "A detailed proof of $\\mathbf { A } \\Rightarrow \\mathbf { B } \\Rightarrow \\mathbf { C } \\Rightarrow \\mathbf { D } \\Rightarrow \\mathbf { A }$ is not needed. Only notice how $\\mathbf C \\Rightarrow \\mathbf D$ : curl grBad $\\mathbf { F }$ Bis always ze\u00f1ro. The newest part is $\\mathbf { D } \\Rightarrow \\mathbf { A } . \\pmb { I } f$ curl $\\mathbf { F } = \\mathbf { 0 }$ then $\\oint \\mathbf { F } \\cdot d \\mathbf { R } = 0$ . But thaBt is  Bnot news. It is Stokes\u2019BThe Borem\u00f1. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "The interesting problem is to solve the three equations for $f$ , when test $\\mathbf { D }$ is passed. The example above had ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "$\\partial f / \\partial x = 2 x y \\Rightarrow f = \\int 2 x y d x = x ^ { 2 } y$ plus any function $C ( y , z )$ $\\partial f / \\partial y = x ^ { 2 } + z = x ^ { 2 } + \\partial C / \\partial y \\Rightarrow C = y z$ plus any function $c ( z )$ $\\partial f / \\partial z = y = y + d c / d z \\Rightarrow c ( z )$ can be zero. ",
+        "page_idx": 688
+    },
+    {
+        "type": "text",
+        "text": "The first step leaves an arbi\u0001trary $C ( y , z )$ to fix the\u0001second step. The second step leaves an arbitrary $c ( z )$ to fix the third step (not needed here). Assembling the three steps, $f = x ^ { 2 } y + C = x ^ { 2 } y + y z + c = x ^ { 2 } y + y z$ . Please recognize thBat th Be \u201cfix-up\u0001\u201d is only possible when curl $\\mathbf { F } = \\mathbf { 0 }$ . Test $\\mathbf { D }$ must be passed. ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 7 Is $\\mathbf { F } = ( z - y ) \\mathbf { i } + ( x - z ) \\mathbf { j } + ( y - x ) \\mathbf { k }$ the gradient of any $f ?$ ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "Test $\\mathbf { D }$ says no. This $\\mathbf { F }$ is a spin field $\\mathbf { a } \\times \\mathbf { R }$ . Its curl is ${ 2 \\mathbf { a } } = ( 2 , 2 , 2 )$ , which is not zero. A search for $f$ is bound to fail, but we can try. To match ${ \\partial f } / { \\partial x } = z - y$ , we must have $f = z x - y x + C ( y , z )$ . The $y$ derivative is $- x + \\partial C / \\partial y$ : That never matches $N = x - z$ , so $f$ can\u2019t exist. ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLEB8  BWhat cBhoic eBof $P$ makes $\\mathbf { F } = y z ^ { 2 } \\mathbf { i } + x z ^ { 2 } \\mathbf { j } + P \\mathbf { k }$ conservative? Find $f$ . ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "Solution We need curl $\\mathbf { F } = 0$ , by test D. First check $\\partial M / \\partial y = z ^ { 2 } = \\partial N / \\partial x$ . Also ",
+        "page_idx": 689
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\partial P / \\partial x = \\partial M / \\partial z = 2 y z \\quad \\mathrm { ~ a n d ~ } \\quad \\partial P / \\partial y = \\partial N / \\partial z = 2 x z . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "$P = 2 x y z$ passes all tests. To find $f$ we can solve the three equations, or notice that $f = x y z ^ { 2 }$ is successful. Its gradient is $\\mathbf { F }$ . ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "A third method defines $f ( x , y , z )$ as the work to reach $( x , y , z )$ from $( 0 , 0 , 0 )$ . The path doesn\u2019t matter. For practice we integrate $\\mathbf { F } \\cdot d \\mathbf { R } = M d x + N d y + P d z$ along the straight line $( x t , y t , z t )$ : ",
+        "page_idx": 689
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( x , y , z ) = \\int _ { 0 } ^ { 1 } ( y t ) ( z t ) ^ { 2 } ( x d t ) + ( x t ) ( z t ) ^ { 2 } ( y d t ) + 2 ( x t ) ( y t ) ( z t ) ( z d t ) = x y z ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9 Why is div curl g\u00berad $f$ automa\u00bbtic\u00bbally zero (in two ways)? ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "Solution First, curl grad $f$ is zero (always). Second, div curl $\\mathbf { F }$ is zero (always).   \nThose are the key identities of ve\u00bector calculus. \u00bbW\u00bbe end with a review. ",
+        "page_idx": 689
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l r l } { G r e e n ` ~ T h e o r e m : } & { } & { \\displaystyle \\oint \\mathbf { F } \\cdot d \\mathbf { R } } & { = \\displaystyle \\iint ( \\hat { e } N / \\partial x - \\hat { e } M / \\hat { e } y ) d x ~ d y } \\\\ { \\oint \\mathbf { F } \\cdot \\mathbf { n } d s } & { = \\displaystyle \\iint ( \\hat { e } M / \\hat { e } x + \\hat { e } N / \\hat { e } y ) d x ~ d y } \\\\ { D i v e r g e n c e ~ T h e o r e m : } & { } & { \\displaystyle \\iint \\mathbf { F } \\cdot \\mathbf { n } d S } & { = \\displaystyle \\iint \\int ( \\hat { e } M / \\partial x + \\hat { e } N / \\partial y + \\hat { e } P / \\hat { e } z ) d x ~ d y ~ d z } \\\\ { S t o k e s ^ { \\prime } ~ T h e o r e m : } & { } & { \\displaystyle \\oint \\mathbf { F } \\cdot d \\mathbf { R } } & { = \\displaystyle \\iint \\exp \\mathbf { I } . \\mathbf { F } \\cdot \\mathbf { n } d S . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "The first form of Green\u2019s Theorem leads to Stokes\u2019 Theorem. The second form becomes the Divergence Theorem. You may ask, why not go to three dimensions in the first place? The last two theorems contain the first two (take $P = 0$ and a flat surface). We could have reduced this chapter to two theorems, not four. I admit that, but a fundamental principle is involved: \u201cIt is easier to generalize than to specialize.\u201d ",
+        "page_idx": 689
+    },
+    {
+        "type": "text",
+        "text": "For the same reason $d f / d x$ came before partial derivatives and the gradient. ",
+        "page_idx": 689
+    }
+]

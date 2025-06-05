@@ -1,0 +1,11 @@
+4.4 Encoding the Instruction Set
+
+Let us now see how to convert ARM assembly instructions to a sequence of 0s and 1s. Each ARM instruction is represented using 32 bits. We need to encode the instruction type, values of conditional fields, register numbers, and immediate operands using these 32 bits only.
+
+Let us take a look at the generic format of ARM instructions. For every instruction we need to initially encode at least two pieces of information – condition codes (see Table 4.12), and the format of the instruction (data processing, branch, load/store, or others). Table 4.12 defines 15 conditions on each instruction. It will take 4 bits to represent this information.
+
+Important Point 6
+
+To uniquely encode a set of  elements, we need at least  bits. We can assign each element a number between 0 and  . We can represent these numbers in the binary format. The number of bits required is equal to the number of bits needed to represent the largest number,  . If we have  bits, then the largest number that we can represent is  . However,  might be a fraction. Hence, we need to use  bits.
+
+ARM has four types of instructions – data processing (add/ subtract/ multiply/ compare), load/store, branch, and miscellaneous. We need 2 bits to represent this information. These bits determine the type of the instruction. Figure 4.4 shows the generic format for instructions in ARM.

@@ -1,0 +1,123 @@
+6.1 An Overview
+
+There is a good chance you have met logarithms. They turn multiplication into addition, which is a lot simpler. They are the basis for slide rules (not so important) and for graphs on log paper (very important). Logarithms are mirror images of exponentials—and those I know you have met.
+
+Start with exponentials. The numbers 10 and  and  are basic to the decimal system. For completeness I also include  ; which is “ten to the zeroth power” or 1: The logarithms of those numbers are the exponents. The logarithms of 1 and 10 and 100 and 1000 are 0 and 1 and 2 and 3: These are logarithms “to base 10,” because the powers are powers of 10:
+
+Question When the base changes from 10 to  , what is the logarithm of 1 ?
+
+Answer Since  ,  is always zero. To base  , the logarithm of  is  : Negative powers are also needed. The number  is positive, but its exponent  can be negative. The first examples are  and  , which are the same as  and  : The logarithms are the exponents  and  :
+
+Multiplying 1000 times  gives  : Adding logarithms gives  0: Always  times  equals  : In particular  times  produces five tens:
+
+The law for  times  extends to all exponents, as in  times  : Furthermore the law applies to all bases (we restrict the base to  and  ). In every case multiplication of numbers is addition of exponents.
+
+Historical note In the days of slide rules, 1:2 and 1:3 were multipliedby sliding one edge across to 1:2 and reading the answer under 1:3: A slide rule made in Germany would give the third digit in 1:56: Its photograph shows the numbers on a log scale. The distance from 1 to 2 equals the distance from 2 to 4 and from 4 to 8: By sliding the edges, you add distances and multiply numbers.
+
+Division goes the other way. Notice how  matches  : To divide 1:56 by 1:3, look back along line  for the answer 1:2:
+
+The second figure, though smaller, is the important one. When  increases by  is multiplied by 2. Adding to x multiplies  : This rule easily gives  ; but look ahead to calculus—which doesn’t stay with whole numbers.
+
+Calculus will add  : Then  is multiplied by  : This number is near 1: If  then  —the tenth root of 2: To find the slope, we have to consider  . The limit is near  , but the exact number will take time.
+
+Base Change Bases other than 10 and exponents other than  are needed for applications. The population of the world  years from now is predicted to grow by a factor close to  : Certainly  does not need to be a whole number of years. And certainly the base 1:02 should not be 10 (or we are in real trouble). This prediction will be refined as we study the differential equations for growth. It can be rewritten to base 10 if that is preferred (but look at the exponent):
+
+When the base changes from 1:02 to 10, the exponent is multiplied—as we now see. For practice, start with base  and change to base  : The logarithm to base  will be written “log :” Everything comes from the rule that logarithm  exponent:
+
+Now raise both sides to the power  : You see the change in the exponent:
+
+Finally set  : Its logarithm to base  is  : Its logarithm to base  is the exponent on the right hand side:  : Now replace  by  :
+
+We absolutely need this ability to change the base. An example with  is
+
+The rule behind base changes is  : When the  th power is raised to the  th power, the exponents multiply. The square of the cube is the sixth power:
+
+Another base will soon be more important than 10—here are the rules for base changes:
+
+6B To change numbers, powers, and logarithms from base  to base  , use 
+
+The first is the definition. The second is the  th power of the first. The third is the logarithm of the second (remember  is  ). An important case is  :
+
+EXAMPLE  means  : Then 
+
+This completes the algebra of logarithms. The addition rules 6A came from  : The multiplication rule 6B came from  : We still need to define  and  for all real numbers  . When  is a fraction, the definition is easy. The square root of  is  times  /: When  is not a fraction, as in  ; the graph suggests one way to fill in the hole.
+
+We could define 2 as the limit of 23; 231=10; 2314=100; As the fractions  approach  , the powers  approach  : This makes  into a continuous function, with the desired properties  and  —whether  and  and  are integers or not. But the  ’s and  ’s of continuity are not attractive, and we eventually choose (in Section 6:4) a smoother approach based on integrals.
+
+It is time to draw graphs. In principle one graph should do the job for both functions, because  means the same as  : These are inverse functions. What one function does, its inverse undoes. The logarithm of  is  :
+
+In the opposite direction, the exponential of the logarithm of  is  :
+
+This holds for every base  , and it is valuable to see  and  on the same graph. Figure 6.2a shows  and  : Their mirror images in the  line give the logarithms to base 2 and base 4, which are in the right graph.
+
+When  is negative,  is still positive. If the first graph is extended to the left, it stays above the  axis. Sketch it in with your pencil. Also extend the second graph down, to be the mirror image. Don’t cross the vertical axis.
+
+6.1 An Overview
+
+There are interesting relations within the left figu8re. All exponentials start at 1, bec8ause  is always 1: At the height  , one graph is above  (because  . The other graph is above  (because  ). Why does  in one graph equal  in the other ? This is the base change for powers, since  :
+
+The figure on the right shows the mirror image—the logarithm. All logarithms start from zero at  : The graphs go down to  at  : (Roughly speaking  is zero.) Again  in one graph corresponds to  in the other (base change for logarithms). Both logarithms climb slowly, since the exponentials climb so fast.
+
+The number  is between 3 and 4, because 10 is between  and  : The slope of  is proportional to  —which never happened for  : But there are two practical difficulties with those graphs:
+
+1.  and  increase too fast. The curves turn virtually straight up. 2. The most important fact about  is the value of  —and the base doesn’t stand out in the graph.
+
+There is also another point. In many problems we don’t know the function  : We are looking for it! All we have are measured values of  (with errors mixed in). When the values are plotted on a graph, we want to discover  :
+
+Fortunately there is a solution. Scale the y axis differently. On ordinary graphs, each unit upward adds a fixed amount to  : On a log scale each unit multiplies  by a fixed amount. The step from  to  is the same length as the step from 3 to 6 or 10 to 20:
+
+On a log scale,  is not halfway between 10 and 12: And  is not there at all. Each step down divides by a fixed amount—we never reach zero. This is completely satisfactory for  , which also never reaches zero.
+
+Figure 6.3 is on semilog paper (also known as log-linear), with an ordinary  axis. The graph of  is a straight line. To see why, take logarithms of that equation:
+
+The relation between  and log  is linear. It is really  that is plotted, so the graph is straight. The markings on the  axis allow you to enter  without looking up its logarithm—you get an ordinary graph of  against  :
+
+Figure 6.3 shows two examples. One graph is an exact plot of  : It goes upward with slope 1; because a unit across has the same length as multiplication by 10 going up.  has slope 1 and  (which is  ) will have slope  . The crucial number  can be measured directly as the slope.
+
+The second graph in Figure 6.3 is more typical of actual practice, in which we start with measurements and look for  : Here are the data points:
+
+We don’t know in advancewhether these values fit the model  : The graph is strong evidence that they do. The points lie close to a line with negative slope— indicating  and  : The slope down is half of the earlier slope up, so the model is consistent with
+
+When  reaches  drops by a factor of 10: At  we see  :
+
+Another model—a power  instead of an exponential—also stands out with logarithmic scaling. This time we use log-log paper, with both axes scaled. The logarithm of  gives a linear relation between log  and  :
+
+The exponent  becomes the slope on log-log paper. The base?  makes no difference. We just measure the slope, and a straight line is a lot more attractive than a power curve.
+
+The graphs in Figure 6.4 have slopes 3 and  and  : They represent  and  and  : To find the  ’s, look at one point on the line. At  the height is 8; so adjust the  ’s to make this happen: The functions are  and  and  : On semilog paper those graphs would not be straight!
+
+You can buy log paper or create it with computer graphics.
+
+This is a calculus book. We have to ask about slopes. The algebra of exponents is done, the rules are set, and on log paper the graphs are straight. Now come limits.
+
+The central question is the derivative. What is  when  What is  when  is the logarithm  Those questions are closely related, because  and  are inverse functions. If one slope can be found, the other is known from  : The problem is to find one of them, and the exponential comes first.
+
+You will now see that those questions have quick (and beautiful) answers, except for a mysterious constant. There is a multiplying factor  which needs more time.
+
+6.1 An Overview
+
+I think it is worth separating out the part that can be done immediately, leaving  in  and  in  : Then Section 6:2 discovers  by studying the special number called  (but  ).
+
+6C The derivative of  is a multiple  : The number  depends on the base  :
+
+The product and power and chain rules do not yield this derivative. We are pushed all the way back to the original definition, the limit of  :
+
+Key idea: Split  inÑto  times  : ThenÑthe crucial quantity  factors out. More than that,  comes outside the limit because it does not depend on  : The remaining limit, inside the brackets, is the number  that we don’t yet know:
+
+This equation is central to the whole chapter:  equals  which equals  : The rate of change of  is proportional to  . The slope increases in the same way that  increases (except for the factor  ). A typical example is money in a bank, where interest is proportional to the principal. The rich get richer, and the poor get slightly richer. We will come back to compound interest, and identify  and  :
+
+The inverse function is  : Now the unknown factor is  :
+
+6D The slope of  is  with the same  (depending on  ).
+
+Proof I 
+
+That proof was like a Russian toast, powerful but too quick! We go more carefully:
+
+The logarithm gives another way to find  : From its slope we can discover  : This is the way that finally works (next section).
+
+Final remark It is extremely satisfying to meet an  whose derivative is  : At last the  power” has an antiderivative. Remember that 
+
+1/ is a failure when  : The derivative of  (a constant) does not produce  We had no integral for  , and the logarithm fills that gap. If  is replaced by  or  (all dummy variables) then
+
+The base  can be chosen so that  : Then the derivative is  : This final touch comes from the magic choice  —the highlight of Section 6.2.

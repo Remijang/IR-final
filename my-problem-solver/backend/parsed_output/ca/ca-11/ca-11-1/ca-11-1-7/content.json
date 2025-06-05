@@ -1,0 +1,135 @@
+[
+    {
+        "type": "text",
+        "text": "11.1.7 Exploiting Temporal Locality \u2013 Hierarchical Memory System ",
+        "text_level": 1,
+        "page_idx": 514
+    },
+    {
+        "type": "text",
+        "text": "Let us reconsider the way in which we tried to exploit temporal locality for our simple example with books. If your author decides to look at a new topic, then he brings the set of books associated with that topic to his desk. The books that were already there on his desk, are moved to the shelf, and to create space in the shelf, some books are shifted to the cabinet. This behavior is completely consistent with the notion of stack distance as shown in Figure 11.1. ",
+        "page_idx": 514
+    },
+    {
+        "type": "text",
+        "text": "We can do the same with memory systems also. Akin to a desk, shelf, and cabinet, let us define a storage location for memory values. Let us call it a cache. Each entry in the cache conceptually contains two fields \u2013 memory address, and value. Like your author\u2019s office, let us define a hierarchy of caches as shown in Figure 11.3. ",
+        "page_idx": 514
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 515
+    },
+    {
+        "type": "text",
+        "text": "Definition 98 $A$ cache contains a set of values for different memory locations. ",
+        "page_idx": 515
+    },
+    {
+        "type": "image",
+        "img_path": "images/66f06295c395e2fbcda762b8a3527adacdf472378728bbeb374d9b0b3c6ca595.jpg",
+        "img_caption": [
+            "Figure 11.3: Memory hierarchy "
+        ],
+        "img_footnote": [],
+        "page_idx": 515
+    },
+    {
+        "type": "text",
+        "text": "Definition 99 The main memory (physical memory) is a large array that contains values for all the memory locations used by the processor. It is typically made of DRAM cells. Nowadays, non-volatile memory cells are also being used to construct off-chip main memories. ",
+        "page_idx": 515
+    },
+    {
+        "type": "text",
+        "text": "The L1 cache corresponds to the desk, the L2 cache corresponds to the shelf, and the main memory corresponds to the cabinet. The L1 cache is typically a small SRAM array (8-64 KB). The L2 cache is a larger SRAM array (128 KB - 4 MB). Some processors such as the Intel Sandybridge processor have another level of caches called the L3 cache (4 MB $^ +$ ). Below the L2/L3 cache, there is a large DRAM array containing all the memory locations. This is known as the main memory or physical memory. Note that in the example with books, a book could either exclusively belong to the shelf or the cabinet. However, in the case of memory values, we need not follow this rule. In fact, we shall see later that it is easier to maintain a subset of values of the L2 cache in the L1 cache, and so on. This is known as a system with inclusive caches. We thus have \u2013 $v a l u e s ( L 1 ) \\subset v a l u e s ( L 2 ) \\subset v a l u e s ( m a i n ~ m e m o r y )$ \u2013 for an inclusive cache hierarchy. Alternatively, we can have exclusive caches, where a higher level cache does not necessarily contain a subset of values in the lower level cache. Inclusive caches are by far used universally in all processors. This is because of the ease of design, simplicity, and some subtle correctness issues that we shall discuss in Chapter 12. Some advanced processors (as of 2025) use exclusive caches, especially when they stand to benefit from flexible data placement. ",
+        "page_idx": 515
+    },
+    {
+        "type": "text",
+        "text": "Definition 100 A memory system in which the set of memory values contained in the cache at the $n ^ { t h }$ level is a subset of all the values contained in the cache at the $( n + 1 ) ^ { t h }$ level, is known as an inclusive cache hierarchy. A memory system that does not follow strict inclusion is referred to as an exclusive cache hierarchy. ",
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the cache hierarchy as shown in Figure 11.3. Since the L1 cache is small, it is faster to access. The access time is typically 1-2 cycles. The L2 cache is larger and typically takes 5-15 cycles to access. The main memory is much slower because of its large size and use of DRAM cells. The access times are typically very high and are between 100-300 cycles. The memory access protocol is similar to the way your author accesses his books. ",
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "The memory access protocol is as follows. Whenever, there is a memory access (load or store), the processor first checks in the L1 cache. Note that each entry in the cache conceptually contains both the memory address and value. If the data item is present in the L1 cache, we declare a cache hit, otherwise we declare a cache miss. If there is a cache hit, and the memory request is a read, then we need to just return the value to the processor. If the memory request is a write, then the processor writes the new value to the cache entry. It can then propagate the changes to the lower levels, or resume processing. We shall look at different methods for performing a cache write in detail when we discuss write policies in Section 11.2.3. Note that if there is a cache miss, then further processing is required. ",
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "Definition 101 ",
+        "text_level": 1,
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "Cache hit Whenever a memory location is present in a cache, the event is known as a cache hit. ",
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "Cache miss Whenever a memory location is not present in a cache, the event is known as a cache miss. ",
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "In the event of an L1 cache miss, the processor needs to access the L2 cache and search for the data item. If an item is found (cache hit), then the protocol is the same as the L1 cache. Since, we consider inclusive caches in this book, it is necessary to fetch the data item to the L1 cache. If there is an L2 miss, then we need to access the lower level. The lower level can be another L3 cache, or can be the main memory. At the lowest level, i.e., the main memory, we are guaranteed to not have a miss, because we assume that the main memory contains an entry for all the memory locations. ",
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "Performance Benefit of a Hierarchical Memory System ",
+        "text_level": 1,
+        "page_idx": 516
+    },
+    {
+        "type": "text",
+        "text": "Instead of having a single flat memory system, processors use a hierarchical memory system to maximize performance. A hierarchical memory system is meant to provide the illusion of a large memory with an ideal single cycle latency. ",
+        "page_idx": 516
+    },
+    {
+        "type": "table",
+        "img_path": "images/c99e828b036710d13445d9212d43f435dd5a1efbe1f4bd01f00d89ab39f3143d.jpg",
+        "table_caption": [
+            "Example 147 Find the average memory access latency for the following configurations. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"3\">Configuration 1</td></tr><tr><td>Level</td><td>Miss Rate(%)</td><td>Latency</td></tr><tr><td>L1</td><td>10</td><td>1</td></tr><tr><td>L2</td><td>10</td><td>10</td></tr><tr><td>Main Memory</td><td>0</td><td>100</td></tr><tr><td></td><td>Configuration 2</td><td></td></tr><tr><td>Main Memory</td><td>0</td><td>100</td></tr></table></body></html>\n\n",
+        "page_idx": 517
+    },
+    {
+        "type": "text",
+        "text": "Answer: Let us consider the first configuration. Here, $9 0 \\%$ of the accesses hit in the L1 cache. Hence, their memory access time is 1 cycle. Note that even the accesses that miss in the L1 cache still incur the 1 cycle delay, because we do not know if an access will hit or miss in the cache. Subsequently, $9 0 \\%$ of the accesses that go to the $L \\mathcal { 2 }$ cache hit in the cache. They incur a 10-cycle delay. Finally, the remaining accesses $( 1 \\% )$ hit in the main memory, and incur an additional delay. The average memory access time(T) is thus: ",
+        "page_idx": 517
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT = 1 + 0 . 1 * ( 1 0 + 0 . 1 * 1 0 0 ) = 1 + 1 + 1 = 3\n$$",
+        "text_format": "latex",
+        "page_idx": 517
+    },
+    {
+        "type": "text",
+        "text": "Thus, the average memory latency of a hierarchical memory system such as configuration 1 is 3 cycles. ",
+        "page_idx": 517
+    },
+    {
+        "type": "text",
+        "text": "Configuration 2 is a flat hierarchy, which uses the main memory for all its accesses. The average memory access time is 100 cycles. ",
+        "page_idx": 517
+    },
+    {
+        "type": "text",
+        "text": "There is thus a speedup of $\\mathit { 1 0 0 / 3 } = \\mathit { 3 3 . 3 }$ times using a hierarchical memory system. ",
+        "page_idx": 517
+    },
+    {
+        "type": "text",
+        "text": "Let us consider an example (see Example 147). It shows that the performance gain using a hierarchical memory system is 33.33 times that of a flat memory system with a single level hierarchy. The performance improvement is a function of the hit rates of different caches and their latencies. Moreover, the hit rate of a cache is dependent on the stack distance profile of the program, and the cache management policies. Likewise, the cache access latency is dependent on the cache manufacturing technology, design of the cache, and the cache management schemes. We need to mention that optimizing cache accesses has been a very important topic in computer architecture research for the past two decades. Researchers have published thousands of papers in this area. We shall only cover some basic mechanisms in this book. The interested reader can take a look at Section 11.5.2 for appropriate references. ",
+        "page_idx": 517
+    }
+]

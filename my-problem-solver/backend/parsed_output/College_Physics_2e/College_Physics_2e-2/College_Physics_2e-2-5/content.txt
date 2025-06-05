@@ -1,0 +1,295 @@
+2.5 Motion Equations for Constant Acceleration in One Dimension
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Calculate displacement of an object that is not accelerating, given initial position and velocity. Calculate final velocity of an accelerating object, given initial velocity, acceleration, and time. Calculate displacement and final position of an accelerating object, given initial position, initial velocity, time, and acceleration.
+
+We might know that the greater the acceleration of, say, a car moving away from a stop sign, the greater the displacement in a given time. But we have not developed a specific equation that relates acceleration and displacement. In this section, we develop some convenient equations for kinematic relationships, starting from the definitions of displacement, velocity, and acceleration already covered.
+
+Notation: 
+
+First, let us make some simplifications in notation. Taking the initial time to be zero, as if time is measured with a stopwatch, is a great simplification. Since elapsed time is  , taking  means that  , the final time on the stopwatch. When initial time is taken to be zero, we use the subscript 0 to denote initial values of position and velocity. That is,  istheinitialpositionand  istheinitialvelocity. We put no subscripts on the final values. That is,  isthefinaltime,  isthefinalposition, and  isthefinalvelocity. This gives a simpler expression for elapsed time—now,  . It also simplifies the expression for displacement, which is now  . Also, it simplifies the expression for change in velocity, which is now  . To summarize, using the simplified notation, with the initial time taken to be zero,
+
+wherethesubscript0denotesaninitialvalueandtheabsenceofasubscriptdenotesafinalvalue in whatever motion is under consideration.
+
+We now make the important assumption that ac elerationisconstant. This assumption allows us to avoid using calculus to find instantaneous acceleration. Since acceleration is constant, the average and instantaneous accelerations are equal. That is,
+
+so we use the symbol for acceleration at all times. Assuming acceleration to be constant does not seriously limit the situations we can study nor degrade the accuracy of our treatment. For one thing, acceleration isconstant in a great number of situations. Furthermore, in many other situations we can accurately describe motion by assuming a constant acceleration equal to the average acceleration for that motion. Finally, in motions where acceleration changes drastically, such as a car accelerating to top speed and then braking to a stop, the motion can be considered in separate parts, each of which has its own constant acceleration.
+
+Solving for Displacement  and Final Position  from Average Velocity when Acceleration ( ) is Constant
+
+To get our first two new equations, we start with the definition of average velocity:
+
+Substituting the simplified notation for  and  yields
+
+Solving for  yields
+
+where the average velocity is
+
+The equation r eflects the fact that, when acceleration is constant,  is just the simple average of the initial and final velocities. For example, if you steadily increase your velocity (that is, with constant acceleration) from 30 to  , then your average velocity during this steady increase is  . Using the equation  to check this, we see that
+
+which seems logical.
+
+EXAMPLE 2.8
+
+Calculating Displacement: How Far does the Jogger Run?
+
+A jogger runs down a straight stretch of road with an average velocity of  for 2.00 min. What is his final position, taking his initial position to be zero?
+
+Strategy
+
+Draw a sketch.
+
+The final position  is given by the equation
+
+To find  , we identify the values of  ,  , and  from the statement of the problem and substitute them into the equation.
+
+Solution
+
+1. Identify the knowns.  ,  , and  .
+
+2. Enter the known values into the equation.
+
+Discussion
+
+Velocity and final displacement are both positive, which means they are in the same direction.
+
+The equation  gives insight into the relationship between displacement, average velocity, and time. It shows, for example, that displacement is a linear function of average velocity. (By linear function, we mean that displacement depends on  rather than on  raised to some other power, such as  . When graphed, linear functions look like straight lines with a constant slope.) On a car trip, for example, we will get twice as far in a given time if we average  than if we average  .
+
+Solving for Final Velocity
+
+We can derive another useful equation by manipulating the definition of acceleration.
+
+Substituting the simplified notation for  and  gives us
+
+Solving for  yields
+
+EXAMPLE 2.9
+
+Calculating Final Velocity: An Airplane Slowing Down after Landing
+
+An airplane lands with an initial velocity of  and then decelerates at  for  . What is its final velocity?
+
+Strategy
+
+Draw a sketch. We draw the acceleration vector in the direction opposite the velocity vector because the plane is decelerating.
+
+Solution
+
+1. Identify the knowns.  ,  ,  .   
+2. Identify the unknown. In this case, it is final velocity,  .   
+3. Determine which equation to use. We can calculate the final velocity using the equation  .
+
+4. Plug in the known values and solve.
+
+Discussion
+
+The final velocity is much less than the initial velocity, as desired when slowing down, but still positive. With jet engines, reverse thrust could be maintained long enough to stop the plane and start moving it backward. That would be indicated by a negative final velocity, which is not the case here.
+
+In addition to being useful in problem solving, the equation  gives us insight into the relationships among velocity, acceleration, and time. From it we can see, for example, that
+
+• final velocity depends on how large the acceleration is and how long it lasts   
+• if the acceleration is zero, then the final velocity equals the initial velocity  , as expected (i.e., velocity is constant)   
+• if is negative, then the final velocity is less than the initial velocity
+
+(All of these observations fit our intuition, and it is always useful to examine basic equations in light of our intuition and experiences to check that they do indeed describe nature accurately.)
+
+Making Connections: Real-World Connection
+
+An intercontinental ballistic missile (ICBM) has a larger average acceleration than the Space Shuttle and achieves a greater velocity in the first minute or two of flight (actual ICBM burn times are classified—short-burntime missiles are more difficult for an enemy to destroy). But the Space Shuttle obtains a greater final velocity, so that it can orbit the earth rather than come directly back down as an ICBM does. The Space Shuttle does this by accelerating for a longer time.
+
+Solving for Final Position When Velocity is Not Constant  )
+
+We can combine the equations above to find a third equation that allows us to calculate the final position of an object experiencing constant acceleration. We start with
+
+Adding  to each side of this equation and dividing by 2 gives
+
+Since  for constant acceleration, then
+
+Now we substitute this expression for  into the equation for displacement,  , yielding
+
+EXAMPLE 2.10
+
+Calculating Displacement of an Accelerating Object: Dragsters
+
+Dragsters can achieve average accelerations of  . Suppose such a dragster accelerates from rest at this rate for 5.56 s. How far does it travel in this time?
+
+Strategy
+
+Draw a sketch.
+
+We are asked to find displacement, which is  if we take  to be zero. (Think about it like the starting line of a race. It can be anywhere, but we call it 0 and measure all other positions relative to it.) We can use the equation  once we identify  ,  , and  from the statement of the problem.
+
+Solution
+
+1. Identify the knowns. Starting from rest means that  ,  is given as  and  is given as 5.56 s.
+
+2. Plug the known values into the equation to solve for the unknown  :
+
+Since the initial position and velocity are both zero, this simplifies to
+
+Substituting the identified values of  and  gives
+
+yielding
+
+Discussion
+
+If we convert  to miles, we find that the distance covered is very close to one quarter of a mile, the standard distance for drag racing. So the answer is reasonable. This is an impressive displacement in only  , but topnotch dragsters can do a quarter mile in even less time than this.
+
+What else can we learn by examining the equation  We see that:
+
+• displacement depends on the square of the elapsed time when acceleration is not zero. In Example 2.10, the dragster covers only one fourth of the total distance in the first half of the elapsed time   
+• if acceleration is zero, then the initial velocity equals average velocity  and  becomes 
+
+Solving for Final Velocity when Velocity Is Not Constant  )
+
+A fourth useful equation can be obtained from another algebraic manipulation of previous equations.
+
+If we solve  for  , we get
+
+Substituting this and  into  , we get
+
+EXAMPLE 2.11
+
+Calculating Final Velocity: Dragsters
+
+Calculate the final velocity of the dragster in Example 2.10 without using information about time.
+
+Strategy
+
+Draw a sketch.
+
+The equation  is ideally suited to this task because it relates velocities, acceleration, and displacement, and no time information is required.
+
+Solution
+
+1. Identify the known values. We know that  , since the dragster starts from rest. Then we note that  (this was the answer in Example 2.10). Finally, the average acceleration was given to be  .
+
+2. Plug the knowns into the equation  and solve for  .
+
+Thus
+
+To get  , we take the square root:
+
+Discussion
+
+ is about  or about  , but even this breakneck speed is short of the record for the quarter mile. Also, note that a square root has two values; we took the positive value to indicate a velocity in the same direction as the acceleration.
+
+An examination of the equation  can produce further insights into the general relationships among physical quantities:
+
+• The final velocity depends on how large the acceleration is and the distance over which it acts • For a fixed deceleration, a car that is going twice as fast doesn’t simply stop in twice the distance—it takes much further to stop. (This is why we have reduced speed zones near schools.)
+
+Putting Equations Together
+
+In the following examples, we further explore one-dimensional motion, but in situations requiring slightly more algebraic manipulation. The examples also give insight into problem-solving techniques. The box below provides easy reference to the equations needed.
+
+EXAMPLE 2.12
+
+Calculating Displacement: How Far Does a Car Go When Coming to a Halt?
+
+On dry concrete, a car can decelerate at a rate of  , whereas on wet concrete it can decelerate at only  . Find the distances necessary to stop a car moving at  (about  (a) on dry concrete and (b) on wet concrete. (c) Repeat both calculations, finding the displacement from the point where the driver sees a traffic light turn red, taking into account his reaction time of 0.500 s to get his foot on the brake.
+
+Strategy
+
+Draw a sketch.
+
+In order to determine which equations are best to use, we need to list all of the known values and identify exactly what we need to solve for. We shall do this explicitly in the next several examples, using tables to set them off.
+
+Solution for (a)
+
+1. Identify the knowns and what we want to solve for. We know that  ;  ;  (  is negative because it is in a direction opposite to velocity). We take  to be 0. We are looking for displacement  , or  .
+
+2. Identify the equation that will help up solve the problem. The best equation to use is
+
+This equation is best because it includes only one unknown,  . We know the values of all the other variables in this equation. (There are other equations that would allow us to solve for  , but they require us to know the stopping time,  , which we do not know. We could use them but it would entail additional calculations.)
+
+3. Rearrange the equation to solve for  .
+
+4. Enter known values.
+
+Thus,
+
+Solution for (b)
+
+This part can be solved in exactly the same manner as Part A. The only difference is that the deceleration is  . The result is
+
+Solution for (c)
+
+Once the driver reacts, the stopping distance is the same as it is in Parts A and B for dry and wet concrete. So to answer this question, we need to calculate how far the car travels during the reaction time, and then add that to the stopping time. It is reasonable to assume that the velocity remains constant during the driver’s reaction time.
+
+1. Identify the knowns and what we want to solve for. We know that  ; treaction  ;    
+We take  to be 0. We are looking for .
+
+2. Identify the best equation to use.
+
+ works well because the only unknown value is  , which is what we want to solve for.
+
+3. Plug in the knowns to solve the equation.
+
+This means the car travels  while the driver reacts, making the total displacements in the two cases of dry and wet concrete  greater than if he reacted instantly.
+
+4. Add the displacement during the reaction time to the displacement when braking.
+
+a.  when dry b.  when wet
+
+Discussion
+
+The displacements found in this example seem reasonable for stopping a fast-moving car. It should take longer to stop a car on wet rather than dry pavement. It is interesting that reaction time adds significantly to the displacements. But more important is the general approach to solving problems. We identify the knowns and the quantities to be determined and then find an appropriate equation. There is often more than one way to solve a problem. The various parts of this example can in fact be solved by other methods, but the solutions presented above are the shortest.
+
+EXAMPLE 2.13
+
+Calculating Time: A Car Merges into Traffic
+
+Suppose a car merges into freeway traffic on a  -long ramp. If its initial velocity is  and it accelerates at  , how long does it take to travel the  up the ramp? (Such information might be useful to a traffic engineer.)
+
+Strategy
+
+Draw a sketch.
+
+We are asked to solve for the time . As before, we identify the known quantities in order to choose a convenient physical relationship (that is, an equation with one unknown,  .
+
+Solution
+
+1. Identify the knowns and what we want to solve for. We know that  ;  ; and  . 2. We need to solve for . Choose the best equation.  works best because the only unknown in the equation is the variable  for which we need to solve.
+
+3. We will need to rearrange the equation to solve for  . In this case, it will be easier to plug in the knowns first.
+
+4. Simplify the equation. The units of meters  cancel because they are in each term. We can get the units of seconds (s) to cancel by taking  , where  is the magnitude of time and s is the unit. Doing so leaves
+
+5. Use the quadratic formula to solve for  .
+
+(a) Rearrange the equation to get 0 on one side of the equation.
+
+This is a quadratic equation of the form
+
+where the constants are  ，  ,and  .
+
+(b) Its solutions are given by the quadratic formula:
+
+This yields two solutions for  , which are
+
+In this case, then, the time is  in seconds, or
+
+A negative value for time is unreasonable, since it would mean that the event happened 20 s before the motion began. We can discard that solution. Thus,
+
+Discussion
+
+Whenever an equation contains an unknown squared, there will be two solutions. In some problems both solutions are meaningful, but in others, such as the above, only one solution is reasonable. The 10.0 s answer seems reasonable for a typical freeway on-ramp.
+
+With the basics of kinematics established, we can go on to many other interesting examples and applications. In the process of developing kinematics, we have also glimpsed a general approach to problem solving that produces both correct answers and insights into physical relationships. Problem-Solving Basics discusses problem-solving basics and outlines an approach that will help you succeed in this invaluable task.
+
+Making Connections: Take-Home Experiment—Breaking News
+
+We have been using SI units of meters per second squared to describe some examples of acceleration or deceleration of cars, runners, and trains. To achieve a better feel for these numbers, one can measure the braking deceleration of a car doing a slow (and safe) stop. Recall that, for average acceleration,  . While traveling in a car, slowly apply the brakes as you come up to a stop sign. Have a passenger note the initial speed in miles per hour and the time taken (in seconds) to stop. From this, calculate the deceleration in miles per hour per second. Convert this to meters per second squared and compare with other decelerations mentioned in this chapter. Calculate the distance traveled in braking.
+
+CHECK YOUR UNDERSTANDING
+
+A rocket accelerates at a rate of  during launch. How long does it take the rocket to reach a velocity of 400 m/s?
+
+Solution
+
+To answer this, choose an equation that allows you to solve for time  , given only  ,  , and  .
+
+Rearrange to solve for  .

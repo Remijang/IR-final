@@ -1,0 +1,26 @@
+10.11.2 Multiple Issue In-Order Pipeline
+
+In our simple pipeline, we executed only one instruction per cycle. However, this is not a strict necessity. We can design a processor such as the original Intel Pentium that had two parallel pipelines. This processor could execute two instructions simultaneously in one cycle. These pipeline have extra functional units such that instructions in both the pipelines can be executed without any significant structural hazards. This strategy increases the IPC. However, it also makes the processor more complex. Such a processor is said to contain a multiple issue in-order pipeline, because we can issue multiple instructions to the execution units in the same cycle. A processor, which can execute multiple instructions per cycle is also known as a superscalar processor.
+
+Secondly, this processor is known as an in-order processor, because it executes instructions in program order. The program order is the order of execution of dynamic instances of instructions as they appear in the program. For example, a single cycle processor, or our pipelined processor, executes instructions in program order.
+
+Definition 92
+
+A processor that can execute multiple instructions per cycle is known as a superscalar processor.
+
+Definition 93 An in-order processor executes instructions in program order. The program order is defined as the order of dynamic instances of instructions that is the same as that is perceived if we execute each instruction of the program sequentially.
+
+Now, we need to look for dependencies and potential hazards across both the pipelines. Secondly, the forwarding logic is also far more complex, because results can be forwarded from either pipeline. The original Pentium processor released by Intel had two pipelines namely the  pipe and the  pipe. The  pipe could execute any instruction, whereas the  pipe was limited to only simple instructions. Instructions were fetched as 2-instruction bundles. The earlier instruction in the bundle was sent to the  pipe, and the later instruction was sent to the  pipe. This strategy allowed the parallel execution of those instructions.
+
+Let us try to conceptually design a simple processor on the lines of the original Pentium processor with two pipelines  and  . We envisage a combined instruction and operand fetch unit that forms  -instruction bundles, and dispatches them to both the pipelines for execution simultaneously. However, if the instructions do not satisfy some constraints, then this unit forms a 1-instruction bundle, and sends it to the  pipeline. Whenever, we form such bundles, we can broadly adhere to some generic rules. We should avoid having two instructions that have a RAW dependence. In this case, the pipeline will stall.
+
+Secondly, we need to be particularly careful about memory instructions because dependencies across them cannot be discovered till the end of the EX stage. Let us assume that the first instruction in a bundle is a store instruction, and the second instruction is a load instruction, and they happen to access the same memory address. We need to detect this case, at the end of the EX stage, and forward the value from the store to the load. For the reverse case, when the first instruction is a load instruction, and the second is a store to the same address, we need to stall the store instruction till the load completes. If both the instructions in a bundle store to the same address, then the earlier instruction is redundant, and can be converted into a nop. We thus need to design a processor that adheres to these rules, and has a complex interlock and forwarding logic.
+
+Let us show a simple example.
+
+Example 146   
+Draw a pipeline diagram for the following SimpleRisc assembly code assuming a 2 issue in-order pipeline.
+
+[1]: add r1, r2, r3 [2]: add r4, r5, r6 [3]: add r9, r8, r8 [4]: add r10, r9, r8 [5]: add r3, r1, r2 [6]: ld r6, 10[r1] [7]: st r6, 10[r1]
+
+Answer: Here, the pipeline diagram contains two entries for each stage, because two instructions can be in a stage at the same time. We start out by observing that we can execute instructions [1] and [2] in parallel. However, we cannot execute instructions [3] and [4] in parallel. This is because instruction [3] writes to r9, and instruction [4] has r9 as a source operand. We cannot execute both the instructions in the same cycle, because the value of r9 is produced in the EX stage, and is also required in the EX stage. We thus insert a bubble. We proceed to execute [4], and [5] in parallel. We can use forwarding to get the value of r9 in the case of instruction [4]. Lastly, we observe that we cannot execute instructions [6] and [7] in parallel. They access the same memory address. The load needs to complete before the store starts. We thus insert another bubble.

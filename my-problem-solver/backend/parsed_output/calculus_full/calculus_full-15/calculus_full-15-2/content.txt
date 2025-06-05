@@ -1,0 +1,163 @@
+15.2 Line Integrals
+
+A line integral is an integral along a curve. It can equal an area, but that is a special case and not typical. Instead of area, here are two important line integrals in physics and engineering:
+
+In the first integral,  is a force field. In the second integral,  is a flow field. Work is done in the direction of movement, so we integrate  . Flow is measured through the curve  , so we integrate  . Here  is the unit tangent vector, and  is the force component along the curve. Similarly  is the unit normal vector, at right angles with  . Then  is the component of flow perpendicular to the curve.
+
+We will write those integrals in several forms. They may never be as comfortable as  , but eventually we get them under control. I mention these applications early, so you can see where we are going. This section concentrates on work, and flow comes later. (It is also called flux—the Latin word for flow.) You recognize  as the step along the curve, corresponding to  on the  axis. Where  gives the length of an interval (it equals  ),  is the length of the curve.
+
+EXAMPLE 1 Flight from Atlanta to Los Angeles on a straight line and a semicircle.
+
+According to Delta Airlines, the distance straight west is 2000 miles. Atlanta is at  and Los Angeles is at  , with the origin halfway between. The semicircle route  has radius 1000. This is not a great circle route. It is more of a “flat circle,” which goes north past Chicago. No plane could fly it (it probably goes into space).
+
+The equation for the semicircle is  . Parametrically this path is  . For a line integaral the parameter is better. The plane leaves Atlanta at  and reaches L.A. at  ,more than  three hours later. On the straight 2000-mile path, Delta could almost do it. Around the semicircle  , the distance is  miles and the speed has to be 1000 miles pe rhour. Remember that speed is distance  divided by time  :
+
+The tangent vector to  is proportional to  Bu»t  is a unit ve»ctor, so we divide by 1000—»which is the speed.
+
+Suppose the wind bl ows due east with force  . The componentsare  and zero. For  constant, compute the dot product  and the work  :
+
+Work is force times distance moved. It is negative, because the wind acts against the movement. You may point out that the work could have been found more simply—go 2000 miles and multiply by  would object that this straight route is a different path. But you claim that the path doesn’t matter—the work of the wind is  on every path. I concede that this time you are right (but not always).
+
+Most line integrals depend on the path. Those that don’t are crucially important. For a gradient field, we only need to know the starting point  and the finish  .
+
+15B When  is the gradient of a potential function  , the work  depends only on the endpoints  and  . The work is the change in  :
+
+When  , its components  and  zero are the partial derivatives of  . To compute the line integral, just evaluate  at the endpoints. Atlanta has  , Los Angeles has  , and the potential function  is like an antiderivative:
+
+May I give a rough explanation of the work integral  It becomes clearer when the small movement T  is written as  j. The work is the dot product with  :
+
+The infinitesimal work is  . The total work is  . This is the Fundamental Theorem for a line integral. Only one warning: When  is not the gradient of any  (Example 2), the Theorem does not apply.
+
+EXAMPLE 2 Fly these paths against the non-constant force field  .   
+Compute the work.
+
+There is no force on the straight path where  . Along the  axis the wind does no work. But the se micircle goes up where  and the windis strong:
+
+This work is enormous (and unrealistic). But the calculations make an important point— everything is converted to the parameter  . The second point is that  is not a gradient field. First reason: The work was zero on the straight path and nonzero on the semicircle. Second reason: No function has  and  . (The first makes  depend on  and the second forbids it. This  is called a shear force.) Without a potential we cannot substitute  and  —and the work depends on the path.
+
+THE DEFINITION OF LINE INTEGRALS
+
+We go back to the start, to define  . We can think of  as a function  along the path, and define its integral as a limit of sums:
+
+The points  lie on the curve  . The last point  is  ; the first point  is  . The step  is the distance to  from the previous point. As the steps get small .  the straight pieces follow the curve. Exactly as in Section 8:2, the special case  gives the arc length. As long as  is piecewise continuous (jumps allowed) and the path is piecewise smooth (corners allowed), the limit exists and defines the line integral.
+
+When  is the density of a wire, the line integral is the total mass. When  is  , the integra»l is the work. »But nobody does the calculation by formula (5). We now introduce a parameter  —which could be the time, or the arc length  , or the distance  along the base.
+
+The differential ds becomes  . Everything changes over to  :
+
+The curve starts when  , runs through the points  , and ends when  . The square root in the integral is the speed  . In three dimensions the points on  are  and  is in the square root.
+
+EXAMPLE 3 T?he points on a coil spring are  . Find the mass of two complete turns (from  to  ) if the density is  .
+
+Solution The key is  2.   
+Thus  . To find the mass, integrate the mass per unit length which is  :
+
+That is a line integral in three-dimensional space. It shows how to introduce  . But it misses the main point of this section, because it contains no vector field  . This section is about work, not just mass.
+
+DIFFERENT FORMS OF THE WORK INTEGRAL
+
+The work integral  can be written in a better way. The force is   . A small step along the curve is  . Work is force times distance, but it is only the force component along the path that counts. The dot product  finds that component automatically.
+
+15C The vector to a point on  is  . Then d R D T ds D dx i C dy j W
+
+Along a space curve the work is 
+
+The product  is (force in  direction)(movement in  direction). This is zero if either factor is zero. When the only force is gravity, pushing a piano takes no work. It is friction that hurts. Carrying the piano up the stairs brings in  , and the total work is the piano weight  times the change in  .
+
+To connect the new  with the old  , remember the tangent vector T. It is  . Therefore T ds is  . The best for computations is  , because the unit vector T has a division by  . Later we multiply by this square root, in converting  to  . It makes no sense to compute the square root, divide by it, and then multiply by it. That is avoided in the improved form  .
+
+EXAMPLE 4 Vector field  , path from  to  : Find the work.
+
+Note 1 This  is the spin field S. It goes around the origin, while  goes outward. Their dot product is  . This does not mean that  . The force is perpendicular to  , but not to the change in  . The work to move from  to  ,  axis to  axis, is not zero.
+
+Note 2 We have not described the path  . That must be done. The spin field is not a gradient field, and the work along a straight line does not equal the work on a quarter-circle:
+
+Calculation of work Change  to the parameter  :
+
+General method The path is given by  and  . Substitute those into  and  —then  is a function of  . Also find  and  . Integrate  from the starting time  to the finish.
+
+For practice, take the path down the  axis to the origin .  /. Then go up the  axis  . The starting time at  is  . The turning time at the origin is  . The finishing time at  is  . The integral has two parts because this new path has two parts:
+
+Note 3 The answer depended on the path, for this spin field  . The answer did not depend on the choice of parameter. If we follow the same path at a different speed, the work is the same. We ca nchoo se another parameter  , since  and  both equal  . Traveling twice as fast on the straight path  ;  / we finish at  instead of  . The work is still 1:
+
+C»ONSERVATION OF TOTAL ENERGY (KINETIC C POTENTIAL)
+
+When a force field does work on a mass  , it normally gives that mass a new velocity. Newton’s Law is  . (It is a vector law. Why write out three components?) The work  is
+
+The work equals the change in the kinetic energy  . But for a gradient field the work is also the change in potential—wit |h  a| minus sign from physics:
+
+Comparing .8/ with .9/, the combination  is the same at  and  . The total energy, kinetic plus potential, is conserved.
+
+INDEPENDENCE OF PATH: GRADIENT FIELDS
+
+The work of the spin field S depends on the path. Example 4 took three paths— straight line, quarter-circle, bent line. The work was 1,  , and 0, different on each path. This happens for more than  of all vector fields. It does not happen for the most important fields. Mathematics and physics concentrate on very special fields—for which the work depends only on the endpoints. We now explain what happens, when the integral is independent of the path.
+
+Suppose you integrate from  to  on one path, and back to  on another path. Combined,that is a closed path from  to  (Figure 15:7). But a backward integral is the negative of a forward integral, since  switches sign. If the integrals from  to  are equal, the integral around the closed path is zero:
+
+closed path 1 back path 2 path 1 path 2
+
+The circle on the first integral indicates a closed path. Later we will drop the  .
+
+Not all closed path integrals are zero! For most fields F, different paths yield dwifofrek eanrtouwnodrka. Fclors“ecdonpsatehrvcaotinvse”rvfiees desn,earlglyp.aTthseybiiegldqtuhesstiaomneisw:orHko.wThteondzecriode which fields are conservative, without trying all paths? Here is the crucial information about conservative fields, in a plane region  with no holes:
+
+15D  is a conservative field if it has these properties:
+
+A. The work  around every closed path is zero.   
+B. The work  depends only on  and  , not on the path.   
+C. F is a gradient field:  and  for some potential  .   
+D. The components satisfy  .   
+A field with one of these properties has them all.  is the quick test.
+
+These statements  bring everything together for conservative fields (alias gradient fields). A closed path goes one way to  and back the other way to  . The work cancels, and statements  and  are equivalent. We now connect them to C. Note: Test  says that the “curl” of  is zero. That can wait for Green’s Theorem in the next section—the full discussion of the curl comes in 15:6.
+
+First,  gradient field  grad  is conservative. The work isB  , by the fBund aBmental theorem for line integrals. It depends only on the endpoints and not the path. Therefore statement C leads back to B.
+
+Our job is in the other direction, to show that conservative fields  are gradients. Assume that the work integral depends only on the endpoints. We must construct a potential  , so that  is its gradient. In other words,  must be  and  must be  .
+
+Fix the pointP:Define  the work to reach  :Then F equals grad  :
+
+Check the reasoning. At the starting point  is zero. At every other point  is the work  to reach that point. All paths from  to  give the same  , because the field is assumed conservative. After two examples we prove that grad  agrees with  —the construction succeeds.
+
+EXA»MPLE 5 Find  when  . We want  and  :
+
+Solution 1 Choose  . Integrate  along to  and up to  :
+
+Certainly  meets the requirements:  and  . Thus  grad  . Note that  in the first integral (on the  axis). Then  in the second integra»l (  is fixed). The integrals add to  .
+
+Solution 2 Integrate  on the straight line  from  to  :
+
+Most authors use Solution 1. I use Solution 2. Most students use Solution 3:
+
+Solution 3 Directly solve  and then fix up  :
+
+In this example  already has the correct derivative  . No additional function of  is necessary. When we integrate with respect to  ,the constant of integration (usually  ) becomes a function  .
+
+You will get practice in finding  . This is only possible for conservative fields! I tested  and  in advan»ce (using D) to be sure that  .
+
+EXAMPLE 6 Look for  when  is the spin field  .
+
+Attempted solution 1 Integrate  from  to  to  :
+
+Attempted solution 2 Integrate  on the line  frBom  to 1:
+
+BAtte Bmpted solution 3 Directly solve  and try to fix up  :
+
+The  derivative of this  is  . That does not agree with the required  . Conclusion: The spin field  is not conservative. There is no  . Test  gives  and  .
+
+To finish this section, we move from examples to a proof. The potential  is defined as the work to reach  . We must show that its partial derivatives are  and  .BTh iBs seems reasonable from the formula  , but we have to think it througBh.
+
+Remember statement  , that all paths give the same  . Take a path that goes from  toB the Bleft of  . It comes in to  on a line  constant (so  ). As the path reaches  , we are only integrating  . The derivative of this integral, at  , is  . That is the Fundamental Theorem of Calculus.
+
+To show that  , take a different path. Go from  to a point below  . The path comes up to  on a vertical line (so  ). Near  we are only integrating  , so  .
+
+The requirement that the region must have no holes will be critical for test D.
+
+15.2 Line Integrals
+
+EXAMPLE 7 Find f .x; y/ D r .0x;0/ x dx C y dy: Test D is passed: N= x D 0 D  :
+
+Solution 1  is added to r .0x;0/ y dy D 21 y2.
+
+Solution 2 
+
+Solution 3  gives  . Then  needs   .

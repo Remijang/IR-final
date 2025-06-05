@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "1.5.3 Generic \u2013 Instructions should Capture the Common Case ",
+        "text_level": 1,
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Most of the common instructions in programs are simple arithmetic instructions such as add, subtract, multiply, divide. The most common logical instructions are logical and, or, exclusiveor, and not. Hence, it makes sense to dedicate an instruction to each of these common operations. ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "It is not a good idea to have instructions that implement a very rarely used computation. For example, it might not make sense to implement an instruction that computes $s i n ^ { - 1 } ( x )$ . It is possible to provide dedicated library functions that compute $s i n ^ { - 1 } ( x )$ using existing mathematical techniques such as Taylor series expansion. Since this function is rarely used by most programs, they will not be adversely affected if this function takes a relatively long time to execute. ",
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 23
+    }
+]

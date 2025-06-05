@@ -1,0 +1,152 @@
+[
+    {
+        "type": "text",
+        "text": "9.9.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Processor design is very heavily studied in courses on computer architecture. Readers should first start with Chapter 10 that discusses pipelining. Chapter 10 is a sequel to the current chapter. The reader can then take a look at the \u201cFurther Reading\u201d section (Section 10.12.2) in Chapter 10. In general, for basic processor design, the reader can also consult other books on computer architecture [Mano, 2007, Stallings, 2010, Henessey and Patterson, 2010] to get a different perspective. The books by Morris Mano [Mano, 2007], and Carl Hamacher [Hamacher et al., 2001] consider different flavors of microprogramming, and define their own semantics. If the reader is interested in the history of microprogramming per se, then she can consult books dedicated to the design and history of microprogramming [Carter, 1995, Husson, 1970]. The PTLSim [Yourst, 2007] simulator translates x86 instructions into micro-instructions, and simulates these microinstructions on a data path similar to that of commercial processors. Readers can take a look at the code of this simulator, and appreciate the nuances of processing and executing microinstructions. ",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Hardwired Processor Design ",
+        "text_level": 1,
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 We have divided a SimpleRisc processor into 5 distinct units. List them, and describe their functions.   \nEx. 2 \u2014 Explain the terms \u2013 data path and control path?   \nEx. 3 \u2014 How does having a lesser number of instruction formats help in the process of decoding an instruction?   \nEx. 4 \u2014 Draw the circuit for calculating the value of the 32-bit immediate, from the first 18 bits of the instruction. Take the modifiers into account.   \nEx. 5 \u2014 Why is it necessary for the register file in our SimpleRisc processor to have 2 read ports, and 1 write port? ",
+        "page_idx": 410
+    },
+    {
+        "type": "text",
+        "text": "Ex. 6 \u2014 Why do we need 2 multiplexers in the OF stage of the processor? What are their functions? ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 7 \u2014 Let us propose to compute the branch outcome and target in the OF stage. Describe the design of the OF stage with this functionality. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 8 \u2014 For the ALU we use a multiplexer with numerous inputs. How can we implement this multiplexer with transmission gates? (show a circuit diagram, and explain why your idea will work) ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 Draw a circuit for implementing the cmp instruction. It should show the circuit for subtraction, and the logic for updating the flags. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 How do we implement the call instruction in our processor? ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 Draw the circuit diagram for computing the isW b signal. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 12 \u2014 Why do we use the isAdd control signal for the load, and store instructions also? ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Microprogramming ",
+        "text_level": 1,
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 Compare a hardwired control unit and a microprogrammed control unit. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 14 \u2014 Draw the block diagram of a microprogrammed processor. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 15 \u2014 Why do we need the mswitch instruction? ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 16 \u2014 Describe the microcode implementation of the load and store instructions. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 17 \u2014 Write a program in microassembly to check if a number in register $r 2$ is a perfect square. Save the Boolean result in register, r0. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 18 \u2014 Write a program in microassembly to check if the value in register $r 2$ is a palindrome. A palindrome reads the same from both sides. For example, the 8-bit number, 11011011 is a palindrome. Save the Boolean result in register, r0. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 19 \u2014 Write a program in microassembly to check if the value in register $r 2$ can be expressed as a sum of two cubes in two different ways. For example, 1729, is one such number. $1 7 2 9 = 1 2 ^ { 3 } + 1 ^ { 3 } = 1 0 ^ { 3 } + 9 ^ { 3 }$ . Save the Boolean result in register, r0. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 Outline the design of the shared bus, and microprogrammed data path. Explain the functionalities of each of its components. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 21 \u2014 Draw a detailed diagram of the $\\mu$ control unit along with the transfer multiplexer in a vertically microprogrammed processor. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 22 \u2014 Draw a detailed diagram of the $\\mu$ control unit along with the transfer multiplexer in a horizontally microprogrammed processor. ",
+        "page_idx": 411
+    },
+    {
+        "type": "text",
+        "text": "Ex. 23 \u2014 Compare the trade-offs between horizontal and vertical microprogramming. ",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Ex. 24 \u2014 Implement the hardwired SimpleRisc processor using Logisim, which is an educational tool for designing and simulating digital circuits. It is freely available at http: //ozark.hendrix.edu/\\~burch/logisim. Try to support all the instructions, and the modifiers. ",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Ex. 25 \u2014 Now, try to implement a horizontally microprogrammed processor using Logisim.   \nThis project has two parts.   \na)Write a microassembler that can translate microassembly instructions to their machine encodings. Use this microassembler to generate the microcode for all the instructions in the SimpleRisc ISA.   \nb)Create a data path and control path in Logisim for a horizontally microprogrammed processor. This processor should be able to directly execute the code generated by the microassembler.   \nc)Run regular SimpleRisc programs on this processor.   \nd)Implement custom SimpleRisc instructions such as multiply-add ( $a \\gets b * c + d$ ), or instructions to find the square of a number on this processor. ",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 412
+    },
+    {
+        "type": "text",
+        "text": "Ex. 26 \u2014 Implement the basic hardwired processor in a high-level description language such as VHDL. You can use the freely available open source tool GNU HDL (http://gna.org/ projects/ghdl/) to implement and simulate your circuit. ",
+        "page_idx": 412
+    }
+]

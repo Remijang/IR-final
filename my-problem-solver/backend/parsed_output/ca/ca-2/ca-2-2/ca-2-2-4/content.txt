@@ -1,0 +1,22 @@
+2.2.4 Sizes of Integers
+
+Note that up till now we have only considered positive integers. We shall consider negative integers in Section 2.3. Such positive integers are known as unsigned integers in high level programming languages such as C or C++. Furthermore, high level languages define three types of unsigned integers – short (2 bytes), int (4 bytes), long long int (8 bytes). A short unsigned integer is represented using 16 bits. Hence, it can represent all the integers from 0 to  (for a proof, see Example 12). Likewise, a regular 32-bit unsigned integer can represent numbers from 0 till  . The ranges of each data type are given in Table 2.11.
+
+Example 12 Calculate the range of unsigned 2-byte short integers.
+
+Answer: A short integer is represented by 16 bits. The smallest short integer is represented by 16 zeros. It has a decimal value equal to 0. The largest short integer is represented by all 1s. Its value, V , is equal to  . Hence, the range of unsigned short integers is 0 to  .
+
+Example 13 Calculate the range of an n-bit integer.
+
+Answer: 0 to  .
+
+Example 14
+
+We need to represent a set of decimal numbers from 0 till  . What is the minimum number of binary bits that we require?
+
+Answer: Let us assume that we use n binary bits. The range of numbers that we can represent is 0 to  . We note that  needs to be at least as large as m. Thus, we have:
+
+Hence, the minimum number of bits that we require is  .
+
+Important Point 5   
+For the more mathematically inclined, we need to prove that for an n-bit integer, there is a one to one mapping between the set of n bit binary numbers, and the decimal numbers, 0 to  . In other words, every n-bit binary number has a unique decimal representation. We leave this as an exercise for the reader.

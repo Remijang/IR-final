@@ -1,0 +1,38 @@
+[
+    {
+        "type": "text",
+        "text": "28.12 Too Much Spinning: What Now? ",
+        "text_level": 1,
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Our hardware-based locks are simple (only a few lines of code) and they work (you could even prove that if you’d like to, by writing some code), which are two excellent properties of any system or code. However, in some cases, these solutions can be quite inefficient. Imagine you are running two threads on a single processor. Now imagine that one thread (thread 0) is in a critical section and thus has a lock held, and unfortunately gets interrupted. The second thread (thread 1) now tries to acquire the lock, but finds that it is held. Thus, it begins to spin. And spin. Then it spins some more. And finally, a timer interrupt goes off, thread 0 is run again, which releases the lock, and finally (the next time ",
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "1 typedef struct __lock_t {   \n2 int ticket;   \n3 int turn;   \n4 } lock_t;   \n5   \n6 void lock_init(lock_t \\*lock) {   \n7 lock->ticket $\\mathit { \\Theta } = \\mathit { \\Theta } 0$ ;   \n8 lock->turn = 0;   \n9 }   \n10   \n11 void lock(lock_t \\*lock) {   \n12 int myturn $\\mathbf { \\tau } = \\mathbf { \\tau }$ FetchAndAdd(&lock->ticket);   \n13 while (lock->turn ! $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ myturn)   \n14 ; // spin   \n15 }   \n16   \n17 void unlock(lock_t \\*lock) {   \n18 lock->turn $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ lock->turn + 1;   \n19 } ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "it runs, say), thread 1 won’t have to spin so much and will be able to acquire the lock. Thus, any time a thread gets caught spinning in a situation like this, it wastes an entire time slice doing nothing but checking a value that isn’t going to change! The problem gets worse with $N$ threads contending for a lock; $N - \\bar { 1 }$ time slices may be wasted in a similar manner, simply spinning and waiting for a single thread to release the lock. And thus, our next problem: ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "THE CRUX: HOW TO AVOID SPINNING ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "How can we develop a lock that doesn’t needlessly waste time spinning on the CPU? ",
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Hardware support alone cannot solve the problem. We’ll need OS support too! Let’s now figure out just how that might work. ",
+        "page_idx": 13
+    }
+]

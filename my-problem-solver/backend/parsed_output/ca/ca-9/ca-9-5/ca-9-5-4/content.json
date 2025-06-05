@@ -1,0 +1,22 @@
+[
+    {
+        "type": "text",
+        "text": "9.5.4 ALU ",
+        "text_level": 1,
+        "page_idx": 386
+    },
+    {
+        "type": "image",
+        "img_path": "images/8f5f030a83689f5d2441e826208bd8ab984889d86b903eb18d6f09b6b8a35c0c.jpg",
+        "img_caption": [
+            "Figure 9.20: The ALU in a microprogrammed processor "
+        ],
+        "img_footnote": [],
+        "page_idx": 386
+    },
+    {
+        "type": "text",
+        "text": "The structure of the ALU is shown in Figure 9.20. It has two input registers, $A$ and $B$ . The ALU performs actions on the values contained in registers, $A$ and $B$ . The nature of the operation is specified by the args value. For example, if it specifies an add operation, then the ALU adds the values contained in registers, $A$ and $B$ . If it specifies a subtract operation, then the value in $B$ is subtracted from the value contained in $A$ . For the cmp instruction, the ALU updates the flags. Recall that in SimpleRisc we use two flags that specify the equality, and greater than conditions. They are saved in the registers $f l a g s . E$ and $f l a g s . G T$ , respectively. The result of the ALU operation is then saved in the register aluResult. Here also, we assume that the ALU takes 1 cycle to execute after the args values are specified on the bus. ",
+        "page_idx": 386
+    }
+]

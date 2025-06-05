@@ -1,0 +1,4 @@
+# 39.2 The File System Interface  
+
+Let’s now discuss the file system interface in more detail. We’ll start with the basics of creating, accessing, and deleting files. You may think this is straightforward, but along the way we’ll discover the mysterious call that is used to remove files, known as unlink(). Hopefully, by the end of this chapter, this mystery won’t be so mysterious to you!  
+

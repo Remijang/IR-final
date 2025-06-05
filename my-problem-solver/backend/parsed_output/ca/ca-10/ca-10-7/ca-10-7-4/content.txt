@@ -1,0 +1,35 @@
+10.7.4 Implementation of a Pipeline with Forwarding
+
+Now, let us come to the most important part of our discussion. Let us design a pipeline with forwarding. We shall first design the data path, and then briefly look at the control path. To implement a data path that supports forwarding, we need to make minor changes to our pipeline stages. These changes will allow the functional units to use their default input values, as well as outputs of subsequent stages in the pipeline. The basic idea is to use a multiplexer before every input to a functional unit. The role of this multiplexer is to select the right input. Let us now look at each of the pipeline stages. Note that we do not need to make any changes to the IF stage because it does not send or receive any forwarded value.
+
+OF Stage with Forwarding
+
+The OF stage with support for forwarding is shown in Figure 10.25. The multiplexers in our baseline pipeline without forwarding are colored with a lighter color. Whereas, the additional multiplexers added to enable forwarding are colored with a darker color. We shall use this convention for the rest of our discussion on forwarding. Let us focus on the two new multiplexers in the OF stage.
+
+We only show those multiplexers that are relevant to our discussion on forwarding. We need to choose between the first operand read from the register file, and the value forwarded from the RW stage. We thus add a multiplexer  to help us choose between these two inputs. Likewise, we need to choose between the second operand read from the register file, and the value forwarded from the RW stage. To implement forwarding, we add a multiplexer  to make a choice between the value fetched from the register file, and the value forwarded from the RW stage (see Figure 10.25). Multiplexer  , which is a part of our baseline design chooses between the second register operand and the immediate computed from the contents of the instruction. Recall that the three fields in the instruction packet that save the results of the OF stage are as follows.  saves the value of the first register operand, op2 saves the value of the second register operand (  register in case of a store), and  saves the value of the second operand of the instruction (register or immediate). Recall that we had decided to read all the values that might be required by any instruction in the interest of time. For example, the not instruction does not require the first register operand. Nevertheless, we still read it because we do not have enough time to take a decision about whether to read or not read the register operands.
+
+EX Stage with Forwarding
+
+Figure 10.26 shows the modified EX stage. The three inputs that the EX stage gets from the OF stage are  (first ALU operand),  (second ALU operand), and op2 (second register operand). For  and  , we add two multiplexers,  , and  , to choose between the values computed in the OF stage, and the values forwarded from the MA and RW stages, respectively. For the op2 field, which possibly contains the store value, we do not need  forwarding. This is because the store value is required in the MA stage, and thus we can use  forwarding. This observation allows us to reduce one forwarding path. Hence, multiplexer  has two inputs (default and the value forwarded from the  stage).
+
+MA Stage with Forwarding
+
+Figure 10.27 shows the MA stage with additional support for forwarding. The memory address is computed in the EX stage, and saved in the aluResult field of the instruction packet. The memory unit directly uses this value for the address. However, in the case of a store, the value that needs to be stored  can possibly be forwarded from the RW stage. We thus add multiplexer  , which chooses between the op2 field in the instruction packet and the value forwarded from the RW stage. The rest of the circuit remains the same.
+
+RW Stage with Forwarding
+
+Finally, Figure 10.28 shows the RW stage. Since this is the last stage, it does not use any forwarded value. However, it sends the value that it writes to the register file to the MA, EX,
+
+and OF stages, respectively.
+
+Putting it All Together
+
+Figure 10.29 puts all the pieces together and shows the pipeline with support for forwarding. To summarize, we need to add 6 multiplexers, and make some extra interconnections between units to pass the forwarded values. We envision a dedicated forwarding unit that computes the control signals for the multiplexers (not shown in the diagram). Other than these small changes, no other major change needs to be done to the data path.
+
+We have been using an abridged diagram (similar to Figure 10.29) in our discussions on forwarding. The reader needs to note that the actual circuit has become fairly complicated now.
+
+Along with the augmentations to the data path, we need to also add a dedicated forwarding unit to generate the control signals for the multiplexers. A detailed picture of the pipeline is shown in Figure 10.30.
+
+Let us now add the interlock logic to our pipeline. We need the interlock logic for both the Data-Lock and Branch-Lock conditions. Note that now we have successfully handled all
+
+RAW hazards other than the load-use hazard. In the case of a load-use hazard, we need to stall for only 1 cycle. This significantly simplifies our Data-Lock circuit. If there is a load instruction in the EX stage, then we need to check if there is a RAW data dependence between the load instruction, and the instruction in the OF stage. The only RAW hazard that we do not need to consider here is a load-store dependence, where the load writes to a register that contains the store value. We do not need to stall because we can forward the value to be stored from the RW to the MA stage. For all other data dependencies, we need to stall the pipeline by 1 cycle by introducing a bubble. This will take care of the load-use hazard. The circuit for ensuring the Branch-Lock condition remains the same. Here also, we need to inspect the instruction in the EX stage, and if it is a taken branch, we need to invalidate the instructions in the IF and OF stages. Lastly, the reader should note that interlocks always take precedence over forwarding.

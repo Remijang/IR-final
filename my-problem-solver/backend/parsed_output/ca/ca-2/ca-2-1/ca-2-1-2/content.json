@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "2.1.2 Derived Operators ",
+        "text_level": 1,
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Two simple operators namely NAND and NOR are very useful. NAND is the logical complement of AND (truth table in Table 2.4) and NOR is the logical complement of OR (truth table in Table 2.5). ",
+        "page_idx": 52
+    },
+    {
+        "type": "table",
+        "img_path": "images/d4edec6671cf3e8036893a0f503e224fb2f587e9928092d31453cd1457a170c4.jpg",
+        "table_caption": [
+            "Table 2.4: Truth table for the NAND operator "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>A</td><td>B</td><td>A NAND B</td></tr><tr><td></td><td>0</td><td>0</td><td>1</td></tr><tr><td></td><td>0</td><td>1</td><td>1</td></tr><tr><td></td><td>1</td><td>0</td><td>1</td></tr><tr><td></td><td>1</td><td>1</td><td>0</td></tr></table></body></html>\n\n",
+        "page_idx": 52
+    },
+    {
+        "type": "table",
+        "img_path": "images/fbda6653b8123071ab226040b2e26e4499090427f1bd5dcdfa8322f494b94483.jpg",
+        "table_caption": [
+            "Table 2.5: Truth table for the NOR operator "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td><td>A NOR B</td></tr><tr><td>A 0</td><td>B 0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>0</td></tr></table></body></html>\n\n",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "NAND and NOR are very important operators because they are known as universal operators. We can use just the NAND operator or just the NOR operator to construct any other operator. For more details the reader can refer to Kohavi and Jha [Kohavi and Jha, 2009]. ",
+        "page_idx": 52
+    },
+    {
+        "type": "text",
+        "text": "Let us now define the XOR operator that stands for exclusive-or. A XOR $B$ is equal to 1, when $A = 1 , B = 0$ , or $A = 0 , B = 1$ . The truth table is shown in Table 2.6. They symbol for XOR is $\\bigoplus$ . The reader can readily verify that $A \\oplus B = A . { \\overline { { B } } } + { \\overline { { A } } } . B$ by constructing truth tables. ",
+        "page_idx": 52
+    }
+]

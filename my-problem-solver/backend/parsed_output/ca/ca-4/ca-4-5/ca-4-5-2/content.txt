@@ -1,0 +1,84 @@
+4.5.2 Further Reading
+
+We have presented an overview of the major features of ARM’s assembly language. The reader can refer to ARM’s assembly language manual [arm, 2000] for more details.
+
+We have deliberately left out some advanced features. A subset of ARM cores support Thumb-1 and Thumb-2 instructions. These instructions are based on a subset of general purpose instructions and have implicit operands. They are used to decrease the size of compiled code. Some ARM processors have extensive support for floating point instructions (VFP instruction set), and SIMD instructions (execute an instruction on multiple integers/floating point numbers in one go). However, we have not discussed these extensions for the sake of brevity. Some other sophisticated features of ARM processors are security extensions that prevent malicious programs or users from stealing data. Since 2013 ARM processors (conforming to the ARMv8- A architecture) have started using a new 64-bit ARM ISA called A64. The reader can refer to the books by Joseph Yiu [Yiu, 2011, Yiu, 2009], William Hohl [Hohl, 2009], and J. R. Gibson [Gibson, 2011] for a detailed discussion on the ARM instruction set and its latest extensions. Needless to say the reader can always find up-to-date documentation at ARM’s website http://www.arm.com.
+
+Exercises
+
+Basic ARM Instructions
+
+Ex. 1 — Translate the following code in C to the ARM instruction set using a minimum number of instructions. Assume the variables  ,  ,  ,  and  are 32-bit integers and stored in  ,  ,  ,  and  , respectively.
+
+(a)  ;   
+(b)  ; d=a+b;   
+(c)  ;  ;   
+(d)  ;   
+(e)  ;  ;
+
+Ex. 3 — Answer the following:
+
+(a) Write the smallest possible ARM assembly program to load the constant 0xEFFFFFF2 into register  .  Write the smallest possible ARM assembly program to load the constant 0xFFFD67FF into register  .
+
+ . 4 — Using valid ARM assembly instructions, load the constant, 0xFE0D9FFF, into register  . Try to do to it with a minimum number of instructions. DO NOT use pseudoinstructions or assembler directives.
+
+Ex. 5 — Can you give a generic set of ARM instructions or a methodology using which you can load any 32-bit immediate value into a register? Try to minimize the number of instructions.
+
+Ex. 6 — Convert the following C program to ARM assembly. Store the integer,  , in register  . Assume that the starting address of array  is saved in register  , and the starting address of array  is saved in register  .
+
+\*\* Ex. 7 — Consider the instruction, mov lr, pc. Why does this instruction add 8 to the PC, and use that value to set the value of  ? When is this behavior helpful?
+
+Assembly Language Programming
+
+For all the questions below, assume that two specialized functions,  and  , are available. The  function divides the contents of  by the contents of  , and saves the result in  . Similarly, the  function is used to divide  by  , and save the remainder in  . Note that in this case both the functions perform integer division.
+
+Ex. 8 — Write an ARM assembly language program to compute the 2’s complement of a number stored in  .
+
+Ex. 9 — Write an ARM assembly language program that subtracts two 64-bit integers stored in four registers.
+
+Assumptions:
+
+Assume that you are subtracting    
+ is stored in register,  and  . The MSB is in  , and the LSB is in  .  is stored in register,  and  . The MSB is in  , and the LSB is in  . •Place the final result in  , and  .
+
+Ex. 10 — Write an assembly program to add two 96-bit numbers  and  using the minimum number of instructions.  is stored in three registers  ,  and  with the higher byte in  and the lower byte in  .  is stored in registers  ,  and  with the higher byte in  and the lower byte in  . Place the final result in  8(higher byte),  and  10(lower byte).
+
+Ex. 11 — Write an ARM assembly instruction code to count the number of 1’s in a 32-bit number.
+
+Ex. 12 — Given a 32-bit integer in  , write an ARM assembly program to count the number of 1 to 0 transitions in it.
+
+\* Ex. 13 — Write an ARM assembly program that checks if a 32-bit number is a palindrome. Assume that the input is available in  . The program should set  to 1 if it is a palindrome, otherwise  should have 0. A palindrome is a number which is the same when read from both sides. For example, 1001 is a 4-bit palindrome.
+
+Ex. 14 — Design an ARM Assembly Language program that will examine a 32-bit value stored in  and count the number of contiguous sequences of 1s. For example, the value:
+
+01110001000111101100011100011111
+
+contains six sequences of 1s. Write the final value in register  . Use conditional instructions as much as possible.
+
+ Ex. 15 — In some cases, we can rotate an integer to the right by positions (less than  or equal to 31) so that we obtain the same number. For example: an 8-bit number 01010101 can be right rotated by 2, 4, or 6 places to obtain the same number. Write an ARM assembly program to efficiently count the number of ways we can rotate a number to the right such that the result is equal to the original number.
+
+Ex. 16 — Write an ARM assembly program to load and store an integer from memory, where the memory saves it in the big endian format.
+
+Ex. 17 — Write an ARM assembly program to find out if a number is prime using a recursive algorithm.
+
+\* Ex. 18 — Suppose you decide to take your ARM device to some place with a high amount of radiation, which can cause some bits to flip, and consequently corrupt data. Hence, you decide to store a single bit checksum, which stores the parity of all the other bits, at the least significant position of the number (essentially you can now store only 31 bits of data in a register). Write an ARM assembly program, which adds two numbers taking care of the checksum. Assume that no bits flip while the program is running.
+
+ . 19 — Let us encode a 16-bit number by using 2 bits to represent 1 bit. We shall represent logical 0 by 01, and logical 1 by 10. Now let us assume that a 16-bit number is encoded and stored in a 32-bit register  . Write a program in ARM assembly to convert it back into a 16-bit number, and save the result in  . Note that 00 and 11 are invalid inputs and indicate an error. The program should set  to 1 in case of an error; otherwise,  should be 0.
+
+ Ex. 20 — Write an ARM assembly program to convert a 32-bit number to its 12 bit immediate form, if possible, with first 4 bits for rotation and next 8 bits for the payload. If the conversion is possible, set  to 1 and store the result in  , otherwise,  should be set to 0. Assume that the input number is available in register  .
+
+ Ex. 21 — Suppose you are given a 32-bit binary number. You are told that the number has exactly one bit equal to 1; the rest of the bits are 0. Provide a fast algorithm to find the location of that bit. Implement the algorithm in ARM assembly. Assume the input to be available in  . Store the result in  .
+
+\*\*\* Ex. 22 — Write an ARM assembly language program to find the greatest common divisor of two binary numbers  and  . Assume the two inputs (positive integers) to be available in  and  . Store the result in  . [HINT: The gcd of two even numbers  and  is 
+
+ARM Instruction Encoding
+
+Ex. 23 — How are immediate values encoded in the ARM ISA?
+
+Ex. 24 — Encode the following ARM instructions. Find the opcodes for instructions from the ARM architecture manual [arm, 2000].
+
+i) add r3, r1, r2 ii) ldr r1, [r0, r2] iii) str r0, [r1, r2, lsl #2]
+
+Design Problems
+
+Ex. 25 — Run your ARM programs on an ARM emulator such as the QEMU (www.qemu.org) emulator, or arm-elf-run (available at www.gnuarm.com).

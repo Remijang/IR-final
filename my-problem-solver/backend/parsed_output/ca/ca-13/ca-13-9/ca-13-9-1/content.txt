@@ -1,0 +1,60 @@
+13.9.1 Summary
+
+Summary 13
+
+1. The I/O system connects the processor to the I/O devices. The processor and all the chips for processing I/O data (chipset), are attached to a printed circuit board known as the motherboard. The motherboard also contains ports (hardware connectors) for attaching I/O devices.
+
+(a) The most important chips in the chipset are known as the North Bridge and Soutbridge chips in Intel-based systems.   
+(b) The North Bridge chip connects the processor to the graphics card, and main memory.   
+(c) The South Bridge chip is connected to the North Bridge chip and a host of I/O and storage devices such as the keyboard, mouse, hard disk, and network card.
+
+2. Most operating system define two basic I/O operations namely read and write. An I/O request typically passes from the application to the I/O device through the kernel, device driver, the processor, and elements of the I/O system.
+
+3. We divide the functionality of the I/O system into 4 layers.
+
+(a) The physical layer defines the electrical specifications, signaling and timing protocols of a bus. It is further divided into two sublayers namely the transmission sublayer, and the synchronization sublayer.   
+(b) The data link layer gets a sequence of logical bits from the physical layer, and then performs the tasks of framing, buffering, and error correction. If multiple devices want to access the bus, then the process of scheduling the requests is known as arbitration. The data link layer implements arbitration, and also has support for I/O transactions (sequence of messages between sender and receiver), and split transactions (transactions divided into multiple mini transactions).   
+(c) The network layer helps to route data from the processor to I/O devices and back.   
+(d) The protocol layer is concerned with implementing an entire I/O request end-toend.
+
+4. Physical Layer:
+
+(a) Transmission Sublayer Protocols: active high, active low, return to zero (RZ), non return to zero (NRZ), non return to zero inverted (NRZI), and Manchester encoding.   
+(b) Synchronization Sublayer Protocols: synchronous (same clock for both ends), mesochronous (fixed phase delay), plesiochronous (slow drift in the clock), source synchronous (clock passed along with the data), and asynchronous (2-phase handshake, and 4-phase handshake).
+
+5. Data Link Layer
+
+(a) Framing protocols: bit stuffing, pauses, bit count   
+(b) Error Detection/ Correction: parity, SEC, SECDED, CRC   
+(c) Arbitration: centralized, daisy chain (supports priority, and notion of tokens)   
+(d) Transaction: single transaction (example, DRAM bus), split transaction (break a transaction into smaller transactions)
+
+6. Network Layer
+
+(a) Port-Mapped I/O: Each I/O port is mapped to a set of registers that have unique addresses. The in and out instructions are used to read and write data to the ports, respectively.   
+(b) Memory-Mapped I/O: Here, we map the I/O ports to the virtual address space.
+
+7. Protocol Layer:
+
+(a) Polling: Keep querying the device for a change in its state.   
+(b) Interrupts: The device sends a message to the processor, when its status changes.   
+(c) DMA (Direct Memory Access): Instead of transferring data from an I/O device to main memory by issuing I/O instructions, the device driver instructs the DMA engine to transfer a chunk of data between I/O devices and main memory. The DMA engine interrupts the processor after it is done.
+
+9. Storage Devices: Hard Disk
+
+(a) In a hard disk we encode data by changing the relative orientations of tiny magnets on the surface of the platter.   
+(b) We group a set of typically 512 bytes into a sector. On a platter, sectors are arranged in concentric circles known as tracks.   
+(c) The head of a hard disk first needs to move to the right track (seek time), then wait for the correct sector to arrive under the head (rotational latency). Finally, we need to transfer the data to the processor after post processing (transfer latency).
+
+10. Storage Devices: Optical disc
+
+(a) The surface of an optical disc contains flat region (lands), and depressions (pits). The pits have lower reflectivity.   
+(b) Optical discs rotate on a spindle similar to a platter in a hard disk. The optical head focuses a laser light on the surface of the disc, and then an array of photodetectors analyzes the reflected light. A transition between a pit and a land (or vice versa) indicates a logical 1. Otherwise, we read a logical 0.   
+(c) CDs (compact discs) are first generation optical discs, DVDs are second generation optical discs, and Blu-Ray discs are third generation optical discs.
+
+11. Storage Devices: Flash Memory
+
+(a) Flash memory contains a floating gate transistor that has two gates – control and floating. If the floating gate has accumulated electrons then the transistor stores a logical 0 (else it stores a logical 1).   
+(b) We program (set to 0) a floating gate transistor by applying a high positive voltage pulse to the control gate. Likewise, we erase the value when we apply a pulse with the opposite polarity.   
+(c) Floating gate transistors can be connected in the NAND and NOR configurations. The NAND configuration has much higher density and is thus more commonly used.   
+(d) While designing flash devices we need to perform wear leveling, and take the phenomenon of read disturbance into account.

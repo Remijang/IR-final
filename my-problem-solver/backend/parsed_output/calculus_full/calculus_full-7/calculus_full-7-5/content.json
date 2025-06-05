@@ -1,0 +1,240 @@
+[
+    {
+        "type": "text",
+        "text": "7.5 Improper Integrals ",
+        "text_level": 1,
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "\u201cImproper\u201d means that some part of $\\textstyle \\int _ { a } ^ { b } y ( x ) d x$ becomes infinite. It might be $b$ or $a$ or the function $y$ : The region under the graph reach8es infinitely f\u0001ar8\u2014to the right or left or up or down. (Those come from $b = \\infty$ and $a = - \\infty$ and $y  \\infty$ and $y  - \\infty .$ ) Nevertheless the integral may \u201cconverge.\u201d Just because the region is infinite, it is not automatic that the area is infinite. That is the point of this section\u2014to?decide when improper integrals have proper answers. ",
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "The first examples show finite area when $b = \\infty$ ; then $a = - \\infty$ ; then $y = 1 / \\sqrt { x }$ at $x = 0$ : The areas in Figure 7.6 are 1; 1; 2: ",
+        "page_idx": 378
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 1 } ^ { \\infty } { \\frac { d x } { x ^ { 2 } } } = - { \\frac { 1 } { x } } \\int _ { 1 } ^ { \\infty } = 1 \\quad \\int _ { - \\infty } ^ { 0 } e ^ { x } d x = e ^ { x } \\int _ { - \\infty } ^ { 0 } = 1 \\quad \\int _ { 0 } ^ { 1 } { \\frac { d x } { \\sqrt { x } } } = 2 { \\sqrt { x } } \\bigg ] _ { 0 } ^ { 1 } = 2 .\n$$",
+        "text_format": "latex",
+        "page_idx": 378
+    },
+    {
+        "type": "image",
+        "img_path": "images/67672c242a7c53c488f2697c2ea9f20adada894a9d451f84bdf112ba09516a80.jpg",
+        "img_caption": [
+            "Fig. 7.6 The shaded areas are finite but the regions go to infinity. "
+        ],
+        "img_footnote": [],
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "In practice we substitute the dangerous limits and watch what happens. When the integral is $- 1 / x$ ; substituting $b = \\infty$ gives \u201c $- 1 / \\infty = 0$ :\u201d When the integral is $e ^ { x }$ ; substituting\u00bb $a = - \\infty$ gives $\\mathbf { \\partial } ^ { \\cdot } e ^ { - \\infty } = 0$ :\u201d I think t\u00bbhat is fair, and I know i\u00bbt is successful. But it is not completely precise. ",
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "The strict rules involve a limi\u00d1t.8Calculus sneaks up\u00018on $1 / \\infty$ and $e ^ { - \\infty }$ just as it sneaks up on $0 / 0$ : Instead of swallowing an infinite region all at once, the formal definitions push out to the limit: ",
+        "page_idx": 378
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { a } ^ { \\infty } y ( x ) d x = \\operatorname* { l i m } _ { b \\to \\infty } \\int _ { a } ^ { b } y ( x ) d x \\qquad \\int _ { - \\infty } ^ { b } y ( x ) d x = \\operatorname* { l i m } _ { a \\to - \\infty } \\int _ { a } ^ { b } y ( x ) d x .\n$$",
+        "text_format": "latex",
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "The conclusion is the same. The first examples\u00bbc8onverged to \u00011; 1;82: Now come two more examples going out to $b = \\infty$ : ",
+        "page_idx": 378
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { \\displaystyle \\mathrm { T h e ~ a r e a ~ u n d e r ~ } 1 / x \\mathrm { ~ i s ~ } i n f u n i t e \\cdot \\int _ { 1 } ^ { \\infty } \\frac { d x } { x } = \\ln { x } \\bigg ] _ { 1 } ^ { \\infty } = \\infty } \\\\ { \\displaystyle \\mathrm { T h e ~ a r e a ~ u n d e r ~ } 1 / x ^ { p } \\mathrm { ~ i s ~ } f u n i t e \\mathrm { ~ i f ~ } p > 1 : \\int _ { 1 } ^ { \\infty } \\frac { d x } { x ^ { p } } = \\frac { x ^ { 1 - p } } { 1 - p } \\bigg ] _ { 1 } ^ { \\infty } = \\frac { 1 } { p - 1 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "The area under $1 / x$ is like $1 + { \\textstyle \\frac { 1 } { 2 } } + { \\textstyle \\frac { 1 } { 3 } } + { \\textstyle \\frac { 1 } { 4 } } + \\cdots$ , which is also infinite. In fact the sum approximates the integral\u2014the curved area is close to the rectangular area. They go together (slowly to infinity). ",
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "A larger $p$ brings the graph more quickly to zero. Figure $7 . 7 \\mathrm { a }$ shows a finite area $1 / ( p - 1 ) = 1 0 0$ : The region is still infinite, but we can cover it with strips cut out of a square! The borderline for finite area is $p = 1 . \\mathrm { ~ I ~ }$ call it the borderline, but $p = 1$ is strictly on the side of divergence. ",
+        "page_idx": 378
+    },
+    {
+        "type": "text",
+        "text": "The borderline is also $p = 1$ when the function climbs the $y$ axis. A\u00a0t $x = 0$ ; the graph of $y = 1 / x ^ { p }$ goes to infinity. For $p = 1$ ; the area under $1 / x$ is again infinite. But at $x = 0$ it is a s\u0001mall $p$ (m8eaning $p < 1$ ) that produces finite area: ",
+        "page_idx": 379
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { 1 } { \\frac { d x } { x } } = \\ln x \\bigg ] _ { 0 } ^ { 1 } = \\infty \\qquad \\int _ { 0 } ^ { 1 } { \\frac { d x } { x ^ { p } } } = { \\frac { x ^ { 1 - p } } { 1 - p } } \\bigg ] _ { 0 } ^ { 1 } = { \\frac { 1 } { 1 - p } } \\quad \\mathrm { i f ~ } p < 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "Loosely speaking \u201c $ \\ln 0 = \\infty$ :\u201d Strictly speaking we integrate from the point $x = a$ near zero, to get $\\textstyle \\int _ { a } ^ { 1 } d x / x = - \\ln a$ : As $a$ approaches zero, the area shows itself as infinite. For $y = 1 / x ^ { 2 }$ ; which blows up faster, the area $- 1 / x ] _ { 0 } ^ { 1 }$ is again infinite. ",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "For $y = 1 / \\sqrt { x }$ ; the area from 0 to 1 is 2: In that case $\\begin{array} { r } { p = \\frac { 1 } { 2 } } \\end{array}$ : For $p = 9 9 / 1 0 0$ the area is $1 / ( 1 - p ) = 1 0 0$ : Approaching $p = 1$ the borderline in Figure 7.7 seems clear. But that cutoff is not as sharp as it looks. ",
+        "page_idx": 379
+    },
+    {
+        "type": "image",
+        "img_path": "images/85b7eb5b1acdc05f9bdf9350236ea0d3c0c48386e90280ebf8c40b3e7fb2e4d2.jpg",
+        "img_caption": [
+            "Fig. 7.7 G8raphs of $1 / x ^ { p }$ on both sides of $p = 1 . \\mathrm { ~ I ~ }$ drew the same curves! "
+        ],
+        "img_footnote": [],
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "Narrower borderline Under the graph of $1 / x$ ; the area is infinite. When we divide by ln $x$ or $( \\ln x ) ^ { 2 }$ ; the borderline is somewhere in between. One has infinite area (going out to $x = \\infty$ ), the other area is finite: ",
+        "page_idx": 379
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { e } ^ { \\infty } { \\frac { d x } { x ( \\ln x ) } } = \\ln ( \\ln x ) \\int _ { e } ^ { \\infty } = \\infty \\qquad \\int _ { e } ^ { \\infty } { \\frac { d x } { x ( \\ln x ) ^ { 2 } } } = - { \\frac { 1 } { \\ln x } } \\biggr ] _ { e } ^ { \\infty } = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "The first is $\\int d u / u$ with $u = \\ln x$ : The logarithm of ln $x$ does eventually make it to infinity. At $x = 1 0 ^ { 1 0 }$ ; the l8ogarithm is near 23 an8d $\\ln ( \\ln x )$ is near 3: That is slow! Even slower is $\\ln ( \\ln ( \\ln x ) )$ in Problem 11: No function is exactly on the borderline. ",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "The second integral in equation (4) is convergent (to 1). It is $\\int d u / u ^ { 2 }$ with $u =$ ln $x$ : At first I wrote it with $x$ going from zero to infinity. That gave an answer I couldn\u2019t believe: ",
+        "page_idx": 379
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 0 } ^ { \\infty } { \\frac { d x } { x ( \\ln x ) ^ { 2 } } } = - { \\frac { 1 } { \\ln x } } \\Biggr ] _ { 0 } ^ { \\infty } = 0\n$$",
+        "text_format": "latex",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "There must be a mistake, because we are integrating a positive functi\u00d1on.8The area can\u2019t be zero. It is8true tha\u0001t $1 / \\ln b$ goes to zero a8s $b \\to \\infty$ : It is also true that $1 / \\ln a$ goes to zero as $a \\to 0$ : But there is another infinity in this integral. The trouble is at $x = 1$ ; where ln $x$ is zero and the area is infinite. ",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 The factor $e ^ { - x }$ overrides any power $x ^ { p }$ (but only as $x \\to \\infty$ ). ",
+        "page_idx": 379
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\textstyle \\int _ { 0 } ^ { \\infty } x ^ { 5 0 } e ^ { - x } d x = 5 0 ! \\quad { \\mathrm { b u t } } \\quad \\int _ { 0 } ^ { \\infty } x ^ { - 1 } e ^ { - x } d x = \\infty .\n$$",
+        "text_format": "latex",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "The first integral is .50/.49/.48/ .1/: It comes from fifty integrations by parts (not recommended). Changing 50 to $\\frac { 1 } { 2 }$ ; the integral defines $\\bar { } ^ { 1 } \\bar { } \\frac { 1 } { 2 }$ factorial:\u201d The product ",
+        "page_idx": 379
+    },
+    {
+        "type": "text",
+        "text": "7.5 Improper Integrals ",
+        "text_level": 1,
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "${ \\frac { 1 } { 2 } } { \\Big ( } - { \\frac { 1 } { 2 } } { \\Big ) } { \\Big ( } - { \\frac { 3 } { 2 } } { \\Big ) } \\cdots$ has no way to stop, but somehow $\\textstyle { \\frac { 1 } { 2 } } !$ is $\\scriptstyle { \\frac { 1 } { 2 } } { \\sqrt { \\pi } }$ : See Problem 28: Th\u0000e int\u0001e\u0000gral $\\textstyle \\int _ { 0 } ^ { \\infty } x ^ { 0 } e ^ { - x } d x = 1$ is the rea\u0001son behind \u201czero factorial\u201d ${ \\bf \\bar { \\Psi } } = 1$ : That seems the most surprising of all. ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "The area under $e ^ { - x } / x$ is $( - 1 ) ! = \\infty$ : The factor $e ^ { - x }$ is absolutely no help at $x =$ 0: That is an example (the first of many) in which we do not know an antiderivative\u2014 but still we get a decision. To integrate $e ^ { - x } / x$ we ne\u00a4ed a computer. But to decide that an improper integral is infinite (in this case) or finite (in other cases), we rely on the following comparison test: ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "7C (Comparison test) Suppose that $0 \\leqslant u ( x ) \\leqslant v ( x )$ : Then the area under u.x is smaller than the area under $v ( x )$ : $\\int u ( x ) d x < \\infty$ if $\\int v ( x ) d x < \\infty$ if $\\int u ( x ) d x = \\infty$ then $\\int v ( x ) d x = \\infty$ : ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "Comparison can decide if the area is finite. We don\u2019t get the exact area, but we learn about one function from the other. The trick is to construct a simple function (like $1 / x ^ { p } )$ which is on one side of the given function\u2014and stays close to it: ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 $\\int _ { 1 } ^ { \\infty } { \\frac { d x } { x ^ { 2 } + 4 x } } { \\mathrm { ~ c o n v e r g e s ~ b y ~ c o m p a r i s o n ~ w i t h ~ } } \\int _ { 1 } ^ { \\infty } { \\frac { d x } { x ^ { 2 } } } = 1 .$   \nEXAMPLE 3 $\\int _ { 1 } ^ { \\infty } { \\frac { d x } { \\sqrt { x } + 1 } } { \\mathrm { ~ d i v e r g e s ~ b y ~ c o m p a r i s o n ~ w i t h ~ } } \\int _ { 1 } ^ { \\infty } { \\frac { d x } { 2 { \\sqrt { x } } } } = \\infty .$   \nEXAMPLE 4 $\\int _ { 0 } ^ { 1 } { \\frac { d x } { x ^ { 2 } + 4 x } } { \\mathrm { ~ d i v e r g e s ~ b y ~ c o m p a r i s o n ~ w i t h ~ } } \\int _ { 0 } ^ { 1 } { \\frac { d x } { 5 x } } = \\infty .$   \nEXAMPLE 5 $\\int _ { 0 } ^ { 1 } { \\frac { d x } { \\sqrt { x } + 1 } } { \\mathrm { ~ c o n v e r g e s ~ b y ~ c o m p a r i s o n ~ w i t h ~ } } \\int _ { 0 } ^ { 1 } { \\frac { d x } { 1 } } = 1 .$ ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "In Examples 2 and 5, the integral on the right is larger than the integral on the left. Removing $_ { 4 x }$ and $\\sqrt { x }$ increased the area. Therefore the integrals on the left are somewhere between\u00bb0 and 1: ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "In Examples 3 and 4, \u0001we increased the denominators. \u0001The integrals on the right are smaller, but still they diverge. So the integrals on the left diverge. The idea of comparing functions is seen in the next examples and Figure 7.8. ",
+        "page_idx": 380
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 $\\int _ { 0 } ^ { \\infty } e ^ { - x ^ { 2 } } d x \\ \\mathrm { i s \\ b e l o w } \\int _ { 0 } ^ { 1 } 1 \\ d x + \\int _ { 1 } ^ { \\infty } e ^ { - x } d x = 1 + 1 .$   \nEXAMPLE 7 $\\int _ { 1 } ^ { e } { \\frac { d x } { \\ln x } } { \\mathrm { ~ i s ~ a b o v e } } \\int _ { 1 } ^ { e } { \\frac { d x } { x \\ln x } } = \\infty .$   \nEXAMPLE 8 $\\int _ { 0 } ^ { 1 } { \\frac { d x } { \\sqrt { x - x ^ { 2 } } } } { \\mathrm { ~ i s ~ b e l o w } } \\int _ { 0 } ^ { 1 } { \\frac { d x } { \\sqrt { x } } } + \\int _ { 0 } ^ { 1 } { \\frac { d x } { \\sqrt { 1 - x } } } = 2 + 2 .$ ",
+        "page_idx": 380
+    },
+    {
+        "type": "image",
+        "img_path": "images/e282233f1f40e98d6880b5071d585e9a04cfbb5861837a6e3669db548fa2c349.jpg",
+        "img_caption": [
+            "Fig. 7.8 Comparing $u ( x )$ to $v ( x )$ : $\\textstyle \\int _ { 1 } ^ { e } d x / \\ln x = \\infty$ and $\\textstyle \\int _ { 0 } ^ { 1 } d x / { \\sqrt { x - x ^ { 2 } } } < 4$ : But $\\infty - \\infty \\neq 0$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 381
+    },
+    {
+        "type": "text",
+        "text": "There are two situations not yet mentioned, and both are quite common. The first is an integral all the way from $a = - \\infty$ to $b = + \\infty$ \u00d1: \u0001T8hat is split into tw\u00d1o8parts, and each part must converge. By definition, the limits at $- \\infty$ and $+ \\infty$ are kept separate: ",
+        "page_idx": 381
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { - \\infty } ^ { \\infty } y ( x ) d x = \\int _ { - \\infty } ^ { 0 } y ( x ) d x + \\int _ { 0 } ^ { \\infty } y ( x ) d x = \\operatorname* { l i m } _ { a \\to - \\infty } \\int _ { a } ^ { 0 } y ( x ) d x + \\operatorname* { l i m } _ { b \\to \\infty } \\int _ { 0 } ^ { b } y ( x ) d x .\n$$",
+        "text_format": "latex",
+        "page_idx": 381
+    },
+    {
+        "type": "text",
+        "text": "The bell-shaped curve y D e8 x2 covers a finite area (exactly $\\sqrt { \\pi } )$ .8The region extends to infinity in both dir8ect\u0001io8ns, and the separate areas are $\\scriptstyle { \\frac { 1 } { 2 } } { \\dot { \\sqrt { \\pi } } }$ : But notice: ",
+        "page_idx": 381
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\int _ { - \\infty } ^ { \\infty } x d x i s n o t d e f i n e d e \\nu e n t h o u g h \\int _ { - b } ^ { b } x d x = 0 f o r e \\nu e r y b . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 381
+    },
+    {
+        "type": "text",
+        "text": "The area under $y = x$ is $+ \\infty$ on one side of zero. The area is $- \\infty$ on the other side. We cannot accept $\\infty - \\infty = 0$ . The two areas must be separately finite, and in this case they are not. ",
+        "page_idx": 381
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9 $1 / x$ has balancing regions left and right8of $x = 0$ : Compute $\\int _ { - 1 } ^ { 1 } d x / x$ : ",
+        "page_idx": 381
+    },
+    {
+        "type": "text",
+        "text": "This integral does not exist. There is no answer, even for the region in Figure $7 . 8 \\mathrm { c }$ . (They are mirror images because $1 / x$ is an odd function.) You may feel that the combined integral from $^ { - 1 }$ to 1 should be zero. Cauchy agreed with that\u2014his \u201cprincipal value integral\u201d is zero. But the rules say no: $\\infty - \\infty$ is not zero. ",
+        "page_idx": 381
+    }
+]

@@ -1,0 +1,9 @@
+11.4.2 The “Overlap” and “Size” Problems
+
+Let us summarize all our discussion up till now. We basically want to solve two problems.
+
+Overlap Problem Programmers and compilers write a program assuming that they own the entire memory space, and they can write to any location at will. Unfortunately, the same assumption is made by all processes that are simultaneously active. Unless steps are taken, they may end up inadvertently writing to each other’s memory space and corrupting each other’s data. In fact, given that they use the same memory map, the chances of this happening in a naive system are extremely high. The hardware somehow needs to ensure that different processes are isolated from each other. This is the overlap problem.
+
+Size Problem Occasionally we need to run processes that require more memory than the available physical memory. It is desirable if some space in other storage media such as the hard disk can be repurposed for storing the memory footprint of a process. This is known as the size problem.
+
+Any implementation of virtual memory needs to effectively solve the size and overlap problems.

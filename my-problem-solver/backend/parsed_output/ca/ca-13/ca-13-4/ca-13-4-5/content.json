@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "13.4.5 Split Transaction Buses ",
+        "text_level": 1,
+        "page_idx": 681
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at split transaction buses that try to rectify the shortcomings of transaction oriented buses. Here, we do not assume a strict sequence of messages between different nodes. For example, for the DRAM and memory controller example, we break the message transfer into two smaller transactions. First, the memory controller sends the memory request to the DRAM. The DRAM module buffers the message, and proceeds with the memory access. Subsequently, it sends a separate message to the memory controller with the data from memory. The interval between both the message sequences can be arbitrarily large. Such a bus is known as a split transaction bus, which breaks a larger transaction into smaller and shorter individual message sequences. ",
+        "page_idx": 681
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 682
+    },
+    {
+        "type": "text",
+        "text": "The advantage here is simplicity and portability. All our transfers are essentially unidirectional. We send a message, and then we do not wait for its reply by locking the bus. The sender proceeds with other messages. Whenever, the receiver is ready with the response, it sends a separate message. Along with simplicity, this method also allows us to connect a variety of receivers to the bus. We just need to define a simple message semantics, and any receiver circuit that conforms with the semantics can be connected to the bus. We cannot use this bus to do complicated operations such as overlapping multiple requests, and responses, and fine grained timing control. For such requirements, we can always use a bus that supports transactions. ",
+        "page_idx": 682
+    }
+]

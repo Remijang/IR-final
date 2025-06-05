@@ -1,0 +1,42 @@
+[
+    {
+        "type": "text",
+        "text": "8.4 Attempt #3: Better Accounting ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "We now have one more problem to solve: how to prevent gaming of our scheduler? The real culprit here, as you might have guessed, are Rules 4a and 4b, which let a job retain its priority by relinquishing the CPU before its allotment expires. So what should we do? ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "TIP: AVOID VOO-DOO CONSTANTS (OUSTERHOUT’S LAW) Avoiding voo-doo constants is a good idea whenever possible. Unfortunately, as in the example above, it is often difficult. One could try to make the system learn a good value, but that too is not straightforward. The frequent result: a configuration file filled with default parameter values that a seasoned administrator can tweak when something isn’t quite working correctly. As you can imagine, these are often left unmodified, and thus we are left to hope that the defaults work well in the field. This tip brought to you by our old OS professor, John Ousterhout, and hence we call it Ousterhout’s Law. ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/ae4f7df699e567f7a9a3a6977e70c52cb406fa610f2ea9a4db38ea4981fa337c.jpg",
+        "img_caption": [
+            "Figure 8.5: Without (Left) and With (Right) Gaming Tolerance "
+        ],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "The solution here is to perform better accounting of CPU time at each level of the MLFQ. Instead of forgetting how much of its allotment a process used at a given level when it performs $\\mathrm { { I / O } , }$ the scheduler should keep track; once a process has used its allotment, it is demoted to the next priority queue. Whether it uses its allotment in one long burst or many small ones should not matter. We thus rewrite Rules 4a and 4b to the following single rule: ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "• Rule 4: Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is reduced (i.e., it moves down one queue). ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s look at an example. Figure 8.5 shows what happens when a workload tries to game the scheduler with the old Rules 4a and 4b (on the left) as well the new anti-gaming Rule 4. Without any protection from gaming, a process can issue an I/O before its allotment ends, thus staying at the same priority level, and dominating CPU time. With better accounting in place (right), regardless of the I/O behavior of the process, it slowly moves down the queues, and thus cannot gain an unfair share of the CPU. ",
+        "page_idx": 7
+    }
+]

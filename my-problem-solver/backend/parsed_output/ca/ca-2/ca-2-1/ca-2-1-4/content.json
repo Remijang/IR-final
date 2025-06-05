@@ -1,0 +1,73 @@
+[
+    {
+        "type": "text",
+        "text": "2.1.4 De Morgan\u2019s Laws ",
+        "text_level": 1,
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "There are two De Morgan\u2019s laws that can be readily verified by constructing truth tables for the LHS and RHS. ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { A + B } } } = { \\overline { { A } } } . { \\overline { { B } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "The NOT of $( A + B )$ is equal to the AND of the complements of $A$ and $B$ . ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\overline { { A B } } } = { \\overline { { A } } } + { \\overline { { B } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "The NOT of $( A . B )$ is equal to the OR of the complements of $A$ and $B$ . ",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Example 5 Prove the consensus theorem: $X . Y + \\overline { { { X } } } . Z + Y . Z = X . Y + \\overline { { { X } } } . Z .$ . ",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { X . Y + { \\overline { { X } } } . Z + Y . Z = X . Y + { \\overline { { X } } } . Z + ( X + { \\overline { { X } } } ) . Y . Z } \\\\ { = X . Y + { \\overline { { X } } } . Z + X . Y . Z + { \\overline { { X } } } . Y . Z } \\\\ { = X . Y . ( 1 + Z ) + { \\overline { { X } } } . Z . ( 1 + Y ) } \\\\ { = X . Y + { \\overline { { X } } } . Z } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Example 6 ",
+        "text_level": 1,
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Prove the theorem: $( X + Z ) . ( { \\overline { { X } } } + Y ) = X . Y + { \\overline { { X } } } . Z$ . ",
+        "page_idx": 54
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 54
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { ( X + Z ) . ( { \\overline { { X } } } + Y ) = X . { \\overline { { X } } } + X . Y + Z . { \\overline { { X } } } + Z . Y } \\\\ { } & { } \\\\ { = 0 + X . Y + { \\overline { { X } } } . Z + Y . Z \\ } \\\\ { } & { } \\\\ { } & { = X . Y + { \\overline { { X } } } . Z + Y . Z \\ } \\\\ { } & { } \\\\ { } & { = X . Y + { \\overline { { X } } } . Z { \\pmod { E x a m p l e \\ 5 } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 54
+    }
+]

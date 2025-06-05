@@ -1,0 +1,45 @@
+[
+    {
+        "type": "text",
+        "text": "5.4.3 Instructions for Special Functions ",
+        "text_level": 1,
+        "page_idx": 213
+    },
+    {
+        "type": "table",
+        "img_path": "images/7902ca4aecb3b2bd830d05dd7fdc32a7bdb52effed27e1d51c1b0c2719726c55.jpg",
+        "table_caption": [
+            "Table 5.25: Floating point instructions for special functions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td></td><td></td></tr><tr><td>Semantics</td><td>Example fabs</td><td>Explanation</td></tr><tr><td>fabs</td><td></td><td>st0 \u2190|st0|</td></tr><tr><td>fsqrt fcos</td><td>fsqrt fcos</td><td>st0 \u2190 \u221ast0</td></tr><tr><td>fsin</td><td>fsin</td><td>st0 \u2190 cos(st0) st0 \u2190 sin(st0)</td></tr></table></body></html>\n\n",
+        "page_idx": 213
+    },
+    {
+        "type": "text",
+        "text": "The richness of the x86 ISA is that it supports trigonometric functions, and complex mathematical operations such as the square root and log operations (not covered in this book). Table 5.25 shows the x86 instructions for computing the values of special functions. The $f a b s$ function computes the absolute value of $s t 0$ , the fsqrt function computes the square root, the $f c o s$ and $f s i n$ functions compute the sine and cosine of the value stored in $s t 0$ , respectively. All of these instructions use $s t 0$ as their default operand, and also write the result back to $s t 0$ . ",
+        "page_idx": 214
+    },
+    {
+        "type": "text",
+        "text": "Example 88 ",
+        "text_level": 1,
+        "page_idx": 214
+    },
+    {
+        "type": "text",
+        "text": "Compute the geometric mean of two integers stored in eax and ebx. Save the result (in 64 bits) in $e s p + 4$ . ",
+        "page_idx": 214
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 214
+    },
+    {
+        "type": "text",
+        "text": "; load the inputs to the FP stack   \nmov [esp], eax   \nmov [esp+4], ebx   \nfild dword [esp]   \nfild dword[esp + 4]   \n; compute the geometric mean   \nfmul st0, st1   \nfsqrt   \n; save the result (converted to 64 bits) to [esp+4]   \n; use the qword identifier   \nfstp qword [esp + 4] ",
+        "page_idx": 214
+    }
+]

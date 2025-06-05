@@ -1,0 +1,106 @@
+[
+    {
+        "type": "text",
+        "text": "12.4.4 Physical View of Memory ",
+        "text_level": 1,
+        "page_idx": 595
+    },
+    {
+        "type": "text",
+        "text": "Overview ",
+        "text_level": 1,
+        "page_idx": 595
+    },
+    {
+        "type": "text",
+        "text": "We have looked at two important aspects of the logical view of a memory system for multiprocessors namely coherence and consistency. We need to implement a memory system that respects both of these properties. In this section, we shall study the design space of multiprocessor memory systems, and provide an overview of the design alternatives. We shall observe that there are two ways of designing a cache for a multiprocessor memory system. The first design is called a shared cache, where a single cache is shared among multiple processors. The second design uses a set of private caches, where each processor or set of processors typically have a private cache. All the private caches co-operate to provide the illusion of a shared cache. This is known as cache coherence. ",
+        "page_idx": 595
+    },
+    {
+        "type": "text",
+        "text": "We shall study the design of shared caches in Section 12.4.5, and private caches in Section 12.4.6. Subsequently, we shall briefly look at ensuring memory consistency in Section 12.4.7. We shall conclude that an efficient implementation of a given consistency model such as sequential or weak consistency is difficult, and is thus a subject of study in an advanced computer architecture course. In this book, we propose a simple solution to this problem, and request the reader to look at research papers for more information. The casual reader can skip most of this section without any loss in continuity. Later on we shall summarize the main results, observations and insights. ",
+        "page_idx": 595
+    },
+    {
+        "type": "text",
+        "text": "Design of a Multiprocessor Memory System \u2013 Shared and Private Caches ",
+        "text_level": 1,
+        "page_idx": 595
+    },
+    {
+        "type": "text",
+        "text": "Let us start out by considering the first level cache. We can give every processor its individual instruction cache. Instructions represent read-only data, and typically do not change during the execution of the program. Since sharing is not an issue here, each processor can benefit from its small private instruction cache. The main problem is with the data caches. There are two possible ways to design a data cache. We can either have a shared cache, or a private cache. A shared cache is a single cache that is accessible to all the processors. A private cache is accessible to either only one processor, or a set of processors. It is possible to have a hierarchy of shared caches, or a hierarchy of private caches as shown in Figure 12.8. We can even have combinations of shared and private caches in the same system. ",
+        "page_idx": 595
+    },
+    {
+        "type": "image",
+        "img_path": "images/328cd042be4263623d11e92f3cf4c4b0dc3c8b4d780ce9e4ab7e3caa5c842ee6.jpg",
+        "img_caption": [
+            "Figure 12.8: Examples of systems with shared and private caches "
+        ],
+        "img_footnote": [],
+        "page_idx": 595
+    },
+    {
+        "type": "text",
+        "text": "Let us now evaluate the trade-offs between a shared and private cache. A shared cache is accessible to all the processors, and contains a single entry for a cached memory location. The communication protocol is simple, and is like any regular cache access. The additional complexity arises mainly from the fact that we need to properly schedule the requests coming from different individual processors. However, at the cost of simplicity, a shared cache has its share of problems. To service requests coming from all the processors, a shared cache needs to have a lot of read and write ports for handling requests simultaneously. Unfortunately, the size of a cache increases approximately as a square of the number of ports [Tarjan et al., 2006]. Additionally, the shared cache needs to accommodate the working sets of all the currently running threads. Hence, shared caches tend to become very large and slow. Because of physical constraints, it becomes difficult to place a shared cache close to all the processors. In comparison, private caches are typically much smaller, service requests for fewer cores, and have a lower number of read/write ports. Hence, they can be placed close to their associated processors. A private cache is thus much faster because it can be placed closer to a processor and is also much smaller in size. ",
+        "page_idx": 596
+    },
+    {
+        "type": "text",
+        "text": "To solve the problems with shared caches, designers often use private caches, especially in the higher levels of the memory hierarchy. A private cache can only be accessed by either one processor, or a small set of processors. They are small, fast, and consume lower power. The major problem with private caches is that they need to provide the illusion of a shared cache to the programmer. For example, let us consider a system with two processors, and a private data cache associated with each processor. If one processor writes to a memory address, $x$ , the other processor needs to be aware of the write. However, if it only accesses its private cache, then it will never be aware of a write to address $x$ . This means that a write to address $x$ is lost, and thus the system is not coherent. Hence, there is a need to tie the private caches of all the processors such that they look like one unified shared cache, and observe the rules of coherence. Coherence in the context of caches, is popularly known as cache coherence. Maintaining cache coherence represents an additional source of complexity for private caches, and limits the scalability of this approach. It works well for small private caches. However, for larger private caches, the overhead of maintaining coherence becomes prohibitive. For large lower level caches, the shared cache is more appropriate. Secondly, there is typically some data replication across multiple private caches. This wastes space. ",
+        "page_idx": 596
+    },
+    {
+        "type": "text",
+        "text": "Definition 128 ",
+        "text_level": 1,
+        "page_idx": 596
+    },
+    {
+        "type": "text",
+        "text": "Coherence in the context of a set of private caches is known as cache coherence. ",
+        "page_idx": 596
+    },
+    {
+        "type": "text",
+        "text": "By implementing a cache coherence protocol, it is possible to convert a set of disjoint private caches to appear as a shared cache to software. Let us now outline the major trade-offs between shared and private caches in Table 12.3. ",
+        "page_idx": 596
+    },
+    {
+        "type": "text",
+        "text": "From the table it is clear that the first level cache should ideally be private because we desire low latency and high throughput. However, the lower levels need to be larger in size. They service significantly fewer requests, and thus they should comprise shared caches. Let us now describe the design of coherent private caches, and large shared caches. To keep matters simple we shall only consider a single level private cache, and not consider hierarchical private caches. They introduce additional complexity, and are best covered in an advanced textbook on computer architecture. ",
+        "page_idx": 596
+    },
+    {
+        "type": "table",
+        "img_path": "images/c23898825dc8cbad5c10f80616da4446dff2b26d85d18140ada2dc9d269d4630.jpg",
+        "table_caption": [
+            "Table 12.3: Comparison of shared and private caches "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Attribute</td><td>Private Cache</td><td>Shared Cache</td></tr><tr><td>Area</td><td>low</td><td>high</td></tr><tr><td>Speed</td><td>fast</td><td>slow</td></tr><tr><td>Proximity to the processor</td><td>near</td><td>far</td></tr><tr><td>Scalability in size</td><td>low</td><td>high</td></tr><tr><td>Data replication</td><td>yes</td><td>no</td></tr><tr><td>Complexity</td><td>high (needs cache coherence)</td><td>low</td></tr></table></body></html>\n\n",
+        "page_idx": 597
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 597
+    },
+    {
+        "type": "text",
+        "text": "Let us discuss the design of shared caches first because they are simpler. Before proceeding further, let us review where we stand. ",
+        "page_idx": 597
+    },
+    {
+        "type": "text",
+        "text": "Way Point 11 ",
+        "text_level": 1,
+        "page_idx": 597
+    },
+    {
+        "type": "text",
+        "text": "1. We defined a set of correctness requirements for caches in Section 12.4.1. They were termed as coherence and consistency.   \n2. In a nutshell, both the concepts place constraints on reordering memory requests in the memory system. The order and semantics of requests to the same memory location is referred to as coherence, and the semantics of requests to different memory locations by the same thread is referred to as consistency.   \n3. For ensuring that a memory system is consistent with a certain model of memory, we need to ensure that the hardware follows a set of rules with regard to reordering memory requests issued by the same program. This can be ensured by having additional circuitry that stalls all the memory requests, till a set of memory requests issued in the past complete. Secondly, programmer support is also required for making guarantees about the correctness of a program.   \n4. There are two approaches for designing caches \u2013 shared or private. A shared cache has a single physical location for each memory location. Consequently, maintaining coherence is trivial. However, it is not a scalable solution because of high contention, and high latency.   \n5. Consequently, designers often use private caches at least for the L1 level. In this case, we need to explicitly ensure cache coherence. ",
+        "page_idx": 597
+    }
+]

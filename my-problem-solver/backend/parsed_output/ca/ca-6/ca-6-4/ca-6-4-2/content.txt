@@ -1,0 +1,16 @@
+6.4.2 Load and Store Instructions
+
+Let us now look at the basic floating point load and store instructions in Table 6.14. They load and store values from memory, respectively. They do not perform type conversion. The f cvt instruction and its variants can be used to perform type conversion, as we shall see later.
+
+The key idea in RISC-V is the same as in x86, which is that floating point immediates cannot be directly loaded into registers. Their contents need to be stored in memory first and then the 32-bit floating point value can be loaded into a floating point register. In this sense, this part of the ISA is less powerful than its integer counterpart. However, this does not cause much of a performance loss in practice because most of the time we do not face the need for loading floating point immediates, other than while loading built-in constants such as  and  . In this case, we can use the assembler pseudoinstruction  to store the contents of the constant to memory and then load the address of the starting memory address to a register (refer to Example 115). The floating point load and store instructions otherwise are quite similar to their integer counterparts in RISC-V.
+
+Example 115
+
+Load the value of a constant val into a floating point register fs1.
+
+Answer:
+
+val: . float 3.14   
+. main :   
+la a1 , val   
+flw fs1 , 0( a1)

@@ -1,0 +1,11 @@
+9.5.6 Overview of the Data Path
+
+Let us now add all the individual units, and take a look at the entire data path as shown in Figure 9.22. Along with all the units that we just described, we have added an extra unit, which is the microprogrammed control unit (  control unit). Its role is to execute a set of microinstructions corresponding to each program instruction, and orchestrate the flow of data values across the different units in the data path of the microprogrammed processor. It is mainly responsible for the execution of microinstructions, data transfers across the different units, and for transferring control to the correct program instruction by updating the PC. Note that we have also added an extra connection between the ir register and the  control unit to transfer the opcode of the instruction. We require the  control unit to load the appropriate set of microinstructions corresponding to the program instruction. By design, we do not wish to make the value of the opcode available to other units. This is because, we have a set of microinstructions for each opcode, and there is no reason why other units should require the value of the opcode.
+
+Definition 63
+
+The microcontrol unit, also referred to as the µcontrol unit is a dedicated piece of hardware that is responsible for the execution of a set of microinstructions corresponding to each program instruction. Its role is to fetch the appropriate set of microinstructions from a dedicated microprogram memory, and execute them in sequence. A register called the micro PC (µpc) points to the currently executing microinstruction.
+
+We envision a microprogram memory that is a part of the  control unit. It contains the set of microinstructions corresponding to each program instruction. It is thus necessary for the  control unit to jump to the starting address of the set of microinstructions corresponding to each program instruction. We also need a microPC that points to the current microinstruction being executed.
+
+Before discussing the design and implementation of the  control unit, let us first look at programming, or rather microprogramming our new processor. We need to design a microassembly language that will help us write programs for it.

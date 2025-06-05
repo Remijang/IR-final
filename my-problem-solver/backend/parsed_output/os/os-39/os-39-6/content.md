@@ -1,0 +1,36 @@
+# 39.6 Shared File Table Entries: fork() And dup()  
+
+In many cases (as in the examples shown above), the mapping of file descriptor to an entry in the open file table is a one-to-one mapping. For example, when a process runs, it might decide to open a file, read it, and then close it; in this example, the file will have a unique entry in the open file table. Even if some other process reads the same file at the same time, each will have its own entry in the open file table. In this way, each logical  
+
+int main(int argc, char \*argv[]) { int fd $\mathbf { \Sigma } = \mathbf { \Sigma }$ open("file.txt", O_RDONLY); assert(fd $> = ~ 0$ ); int rc $\mathbf { \Sigma } = \mathbf { \Sigma }$ fork(); if ( $\mathrm { ~ \ : ~ \ : ~ } . _ { \mathrm { ~ C ~ C ~ } } = = \mathrm { ~ ~ 0 ~ }$ ) { rc $\mathbf { \Sigma } = \mathbf { \Sigma }$ lseek(fd, 10, SEEK_SET); printf("child: offset %d\n", rc); } else if ( $\because 0$ ) { (void) wait(NULL); printf("parent: offset %d\n", (int) lseek(fd, 0, SEEK_CUR)); } return 0;   
+}  
+
+# Figure 39.2: Shared Parent/Child File Table Entries (fork-seek.c)  
+
+reading or writing of a file is independent, and each has its own current offset while it accesses the given file.  
+
+However, there are a few interesting cases where an entry in the open file table is shared. One of those cases occurs when a parent process creates a child process with fork(). Figure 39.2 shows a small code snippet in which a parent creates a child and then waits for it to complete. The child adjusts the current offset via a call to lseek() and then exits. Finally the parent, after waiting for the child, checks the current offset and prints out its value.  
+
+When we run this program, we see the following output:  
+
+prompt> ./fork-seek child: offset 10 parent: offset 10 prompt>  
+
+Figure 39.3 shows the relationships that connect each process’s private descriptor array, the shared open file table entry, and the reference from it to the underlying file-system inode. Note that we finally make use of the reference count here. When a file table entry is shared, its reference count is incremented; only when both processes close the file (or exit) will the entry be removed.  
+
+Sharing open file table entries across parent and child is occasionally useful. For example, if you create a number of processes that are cooperatively working on a task, they can write to the same output file without any extra coordination. For more on what is shared by processes when fork() is called, please see the man pages.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+![](images/7bf9c3b536e92c15fb9b3cbbc4674e635197be259aff9fd44dca03a45b051cfa.jpg)  
+Figure 39.3: Processes Sharing An Open File Table Entry   
+Figure 39.4: Shared File Table Entry With dup() (dup.c)  
+
+One other interesting, and perhaps more useful, case of sharing occurs with the dup() system call (and its cousins, dup2() and dup3()).  
+
+The dup() call allows a process to create a new file descriptor that refers to the same underlying open file as an existing descriptor. Figure 39.4 shows a small code snippet that shows how dup() can be used.  
+
+The dup() call (and, in particular, dup2()) is useful when writing a UNIX shell and performing operations like output redirection; spend some time and think about why! And now, you are thinking: why didn’t they tell me this when I was doing the shell project? Oh well, you can’t get everything in the right order, even in an incredible book about operating systems. Sorry!  
+
+int main(int argc, char \*argv[]) { int fd $\mathbf { \Sigma } = \mathbf { \Sigma }$ open("README", O_RDONLY); assert(fd $> = ~ 0$ ); int fd2 $\mathbf { \Sigma } = \mathbf { \Sigma }$ dup(fd); // now fd and fd2 can be used interchangeably return 0;   
+}  
+

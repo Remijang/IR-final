@@ -1,0 +1,134 @@
+12.1 The Position Vector
+
+This chapter is about “vector functions.” The vector  is constant. The vector  is moving. It is a function of the parameter  , which often represents time. At each time  , the position vector  locates the moving body:
+
+Our example has  ;  ;  . As  varies, these points trace out a curve in space. The parameter  tells when the body passes each point on the curve. The constant vector  is the position vector  at the instant  .
+
+What are the questions to be asked ? Every student of calculus knows the first question: Find the derivative. If something moves, the Navy salutes it and we differentiate it. At each instant, the body moving along the curve has a speed and a direction. This information is contained in another vector function—the velocity vector  which is the derivative of  :
+
+Since i; j; k are fixed vectors, their derivatives are zero. In polar coordinates i and  are replaced by moving vectors. Then the velocity  has more terms from the product rule (Section 12:4).
+
+Two important cases are uniform motion along a line and around a circle. We study those motions in detail  constant on line,  tangent to circle). This section also finds the speed and distanÑce and acceleÑration for any motion  .
+
+Equation (2) is the computing rule for the velocity  . It is not the definition of  , which goes back to basics and does not depend on coordinates:
+
+We repeat:  is a vector so  is a vector so  is a vector. All three vectors are in Figure 12.1  is not a vector!). This figure reveals the key fact about the geometry: The velocity  is tangent to the curve.
+
+The vector  goes from one point on the curve to a nearby point. Dividing by  changes its length, not its direction. That direction lines up with the tangent to the curve, as the points come closer.
+
+This curve swings upward as  increases. When  the velocity is  . The tangent is along the  axis, since the  and  components are zero. When  the velocity is  , and the curve is climbing.
+
+For the shadow on the  plane, drop the  component. Position on the shadow is  . Velocity along the shadow is  . The shadow is a plane curve.
+
+EXAMPLE 2 Uniform motion in a straight line: the velocity vector v is constant. The speed and direction don’t change. The position vector moves with  :
+
+That is the equation of a line in vaector form. Certainly  . The starting point  is given. The velocity  is also given. Separating the  and  components, equation (3) for a line is
+
+The speed along the line is  : The direction of the line is the unit vector  . We have three equations for  , and eliminating  leaves two equations. The parameter  equals  from equation (4). It also equals  and  . So these ratios equal each other, and  is gone:
+
+An example is  . In this case  —the line goes through the origin. Another point on the line is  . Because  is gone, we cannot say when we reach that point and how fast we are going. The equations  give the same line. Without  we can’t know the velocity   .
+
+EXAMPLE 3 Find an equation for the line through  and  .
+
+Solution We have choices!  can go to any point on the line. The velocity  can be any multiple of the vector from  to  . The decision on  controls where we start, and v controls our speed.
+
+The vector from  to  is  . Those numbers 1; 1; 2 come from subtracting 0; 2; 1 from 1; 3; 3. We choose this vector  as a first  , and double it for a second v. We choose the vector  as a first start and  as a second start. Here are two different expressions for the same line—they are  and  :
+
+The vector  gives  ;  ;  . The vector  is at a different point on the same line at the same time:  ;  ;  .
+
+If I pick  in  and  in  , the point is  . We arrive there at different times. You are seeing how parameters work, to tell “where” and also “when.” If  goes from  to  , all points on one line are also on the other line. The path is the same, but the “twins” are going at different speeds.
+
+Question 1 When do these twins meet ? When does  ? Answer They meet at  , when  .
+
+Question 2 What is an equation for the segment between  and  (not beyond) ? Answer In the equation for  , let  go from 0 to 1 (not beyond):
+
+At  we start from  . At  we reach  .
+
+Question 3 What is an equation for the line with out theparameter  ? Answer Solve equations (6) for  or use .5/:  .
+
+Question 4 Which point on the line is closest to the origin ? Answer The derivative of  is  . This derivative is zero at  . So the closest point is  .
+
+Question 5 Where does the line meet the plane  ? Answer Equation (6) gives  .So  . The meeting point is  .
+
+Question 6 What line goes through  perpendicular to the plane  1 ?   
+Answer The normal vector to the plane is  . That is v. The position vector to  is  . Then  .
+
+COMPARING LINES AND PLANES
+
+A line has one parameter or two equations. We give the starting point and velocity:  . That tells directly which points are on the line. Or we eliminate  to find the two equations in .5/.
+
+A plane has one equation or two parameters! The equation is  . That tells us indirectly which points are on the plane. (Instead of knowing  ; weknow the equation they satisfy. Instead of directions  and  in the plane, we are told the perpendicular direction  :/ With parameters, the line contains  and the plane contains  . A plane looks worse with parameters  and  ), a line looks better.
+
+Questions 5 and 6 connected lines to planes. Here are two more. See Problems  :
+
+Question 7 When is the line  parallel to the plane ? When is it perpendicular ?
+
+Answer The test is  . The test is  .
+
+EXAMPLE 4 Find the plane containing  and the line of points  . That vector  will be in the plane.
+
+Solution The vector  goes along the line. The vector  goes from  to  . Their cross product is
+
+The plane  has this normal  and contains the point .1; 2; 1/.
+
+SPEED, |D I|RECTION, DISTANCE, ACCELERATION
+
+We go back to the curve traced out by  . The derivative  is the velocity vector along that curve. The spee |d  |is the magnitude of  :
+
+The direction of the velocity vector is  . This is a unit vector, since  is divided by its length. The unit tangent vector  is denoted by  .
+
+The tangent vector is constant for lines. It changes direction for curves.
+
+EXAMPLE 5 (important) Find v and  and T for steady motion around a circle:
+
+Solution The positionavector is  sin !t j. The velocity is
+
+ .tangent, not unit tangent/
+
+The speed is the radius  times the angular velocity  :
+
+The unit tangent vector is  divided by  :
+
+Think next about the distance traveled. Distance along a curve is always denoted by  (called arc le|ng |th). I don’t know why we use  —certainly n|ot as  the initial for speed. In fact speed is distance divided by time. The ratio  gives average speed;  is ins|ta |ntaneous speed. We are back to Chapter 1 and Section 8:3, the relation of speed to distance:
+
+Notice that  and  and  are scalars. The d|irect|ion vector is  :
+
+In Figure 12.3, the chord length (straight) is  . The arc length (curved) is  . As  and  approach zero, the ratio  approaches  .
+
+Think finally about the acceleration vector  . It is the rate of change of velocity (not the rate of change of speed):
+
+For steady motion along a line, as in  , there is no acceleration. The second derivatives are all zero. For steady motion around a circle, there is acceleration. In driving a car, you accelerate with the gas pedal or the brake. You also accelerate by turning the wheel. It is the velocity vector that changes, not the speed.
+
+EXAMPLE 6 Find the distance  and acceleration  for circular motion.
+
+Solution The speed in Example 5 is  . After integrating, the distance is  . At time  we have gone through an angle of  . The radius is  , so the distance traveled agrees with  times  . Note that the dimension of  is  (Angles are dimensionless.) At time  we have gone once around the circle— to  not back to  .
+
+The acceleration is  . Remember 
+
+That direction is opposite to  . This is a special motion, with no action on the gas pedal or the brake. All the acceleration is from turning. The magnitude is  , with the correct dimension of diastance=(time)2.
+
+EXAMPLE 7 Find v?and  and a around the helix  .
+
+Solution The velocity is  . The speed is
+
+Then distance is  . At time  , a half turn iscomplete. The distance along the shadow is  (a half circle). The distance along the helix is  , because of its  slope.
+
+The unit tangent vector is velocity=speed, and the acceleration is  :
+
+EXAMPLE 8 Find  and  and a around the ellipse  .
+
+Solution Take derivatives:  and  . This is the speed  . For the distance  , something bad happens (or something normal). The speed is not simplified by  We cannot integrate  to find a formula for  . The square root defeats us.
+
+The acceleration  still points to the center. This is not the Earth going around the sun. The path is an ellipse but the speed is wrong. See Section 12:4 (the pound note) for a terrible erro|r  |in the position of the sun.
+
+12A The basic formulas for motion along a curve are
+
+Suppose we know the acceleration  and the initial velocity  and position  . Then  and  are also known. We integrate each component:
+
+THE CURVE OF A BASEBALL
+
+There is a nice discussion of curve balls in the calculus book by Edwards and Penney. We summarize it here (optionally). The ball leaves the pitcher’s hand five feet off the ground:  . The initial velocity is  (120 ft=sec is more than 80 miles per hour). The acceleration is  from gravity, plus a new term from spin. If the spin is aro und the  axis, and the ball goes along the  axis, then this acceleration is in the  direction. ( It comes from the crossproduct  there is a pressure difference on the sides of the ball.) A good pitcher can achieve  . The batter integrates as fast as he can:
+
+Notice the  . The effect of spin is small at first, then suddenly bigger (as every batter knows). So is the effect of gravity—the ball starts to dive. At  , the i component is 60 feet and the ball reaches the batter. The  component is 1 foot and the  component is 2 feet—the curve goes low over the outside corner.
+
+ , when the batter saw the ball halfway, the j component was zero. It looked as if it was coming right over the plate.

@@ -1,0 +1,751 @@
+[
+    {
+        "type": "text",
+        "text": "6.6 Powers Instead of Exponentials ",
+        "text_level": 1,
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "You may remember our first look at $e$ . It is the special base for which $e ^ { x }$ has slope 1 at $x = 0$ . That led to the great equation of exponential growth: The derivative of $e ^ { x }$ equals $e ^ { x }$ . But our look at the actual number $e = 2 . 7 1 8 2 8 \\dots$ was very short. It appeared as the limit of $( 1 + 1 / n ) ^ { n }$ . This seems an unnatural way to write down such an important number. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "I want to show how $( 1 + 1 / n ) ^ { n }$ and $( 1 + x / n ) ^ { n }$ arise naturally. They give discrete growth in finite steps\u2014with applications to compound interest. Loans and life insurance and money market funds use the discrete form of $y ^ { \\prime } = c y + s$ . (We include extra information about bank rates, hoping this may be useful some day.) The applications in science and engineering are equally important. Scientific computing, like accounting, has difference equations in parallel with differential equations. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "Knowing that this section will be full of formulas,  I\u0001would like to jump ahead and tell you the best one. It is an infinite series for $e ^ { x }$ . What makes the series beautiful is that its derivative is itself. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "Start with $y = 1 + x$ . This has $y = 1$ and $y ^ { \\prime } = 1$ at $x = 0$ . But $y ^ { \\prime \\prime }$ is zero, not one. Such a simple function doesn\u2019t stand a chance! No polynomial can be its own derivative, because the highest power $x ^ { n }$ drops down to $n x ^ { n - 1 }$ . The only way is to have no highest power. We are forced to consider infinitely many terms\u2014a power series\u2014to achieve \u201cderivative equals function.\u201d ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "To produce the derivative $1 + x$ ; we need $\\textstyle 1 + x + { \\frac { 1 } { 2 } } x ^ { 2 }$ : Then ${ \\frac { 1 } { 2 } } x ^ { 2 }$ is the derivative of ${ \\scriptstyle { \\frac { 1 } { 6 } } } x ^ { 3 }$ ; which is the derivative of ${ \\textstyle { \\frac { 1 } { 2 4 } } } x ^ { 4 }$ : The best way is to write the whole series at once: ",
+        "page_idx": 337
+    },
+    {
+        "type": "equation",
+        "text": "$$\nI n f i n i t e s e r i e s \\quad e ^ { x } = 1 + x + \\textstyle { \\frac { 1 } { 2 } } x ^ { 2 } + \\textstyle { \\frac { 1 } { 6 } } x ^ { 3 } + \\textstyle { \\frac { 1 } { 2 4 } } x ^ { 4 } + \\cdots .\n$$",
+        "text_format": "latex",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "This must be the greatest power series ever discovered.\u0013Its derivative is itself: ",
+        "page_idx": 337
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd e ^ { x } / d x = 0 + 1 + x + { \\textstyle { \\frac { 1 } { 2 } } } x ^ { 2 } + { \\textstyle { \\frac { 1 } { 6 } } } x ^ { 3 } + \\dots = e ^ { x } .\n$$",
+        "text_format": "latex",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "The derivative of each term is the term before it. The integral of each term is the one after it (so $\\textstyle \\int e ^ { x } d x = e ^ { x } + C )$ . The approximation $e ^ { x } \\approx 1 + x$ appears in the first two terms. Other properties like $( e ^ { x } ) ( e ^ { x } ) = e ^ { 2 x }$ are not so obvious. (Multiplying series is hard but interesting.) $I t$ is no t\u0001even c\u0001lear why the sum is 2:718 : : : when $x = 1$ . Somehow $1 + 1 + { \\frac { 1 } { 2 } } + { \\frac { 1 } { 6 } } + \\cdots$ equals $e$ : That is where $( 1 + 1 / n ) ^ { n }$ will come in. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "Notice that $x ^ { n }$ is divided by the product $1 \\cdot 2 \\cdot 3 \\cdot \\cdots n$ : This is $^ { * * } n$ factorial.\u201d Thus $x ^ { 4 }$ is divided by $1 \\cdot 2 \\cdot 3 \\cdot 4 = 4 ! = 2 4$ ; and $x ^ { 5 }$ is divided by $5 ! = 1 2 0$ : The derivative of $x ^ { 5 } / 1 2 0$ is $x ^ { 4 } / 2 4$ ; because 5 from the derivative cancels 5 from the factorial. In general $x ^ { n } / n !$ has derivative $x ^ { n - 1 } / ( n - 1 ) !$ Surprisingly 0\u0160 is 1: ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "Chapter 10 emphasizes that $x ^ { n } / n !$ becomes extremely small as $n$ increases. The infinite series adds up to a finite number\u2014which is $e ^ { x }$ : We turn now to discrete growth, which produces the same series in the limit. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "This headline was on page one of the New York Times for May 27; 1990: ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "213 Years After Loan, Uncle Sam is Dunned ",
+        "text_level": 1,
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "San Antonio, May 26\u2014More than 200 years ago, a wealthy Pennsylvania merchant named Jacob DeHaven lent $\\$ 450,000$ to the Continental Congress to rescue the troops at Valley Forge. That loan was apparently never repaid. ",
+        "page_idx": 337
+    },
+    {
+        "type": "text",
+        "text": "So Mr. DeHaven\u2019s descendants are taking the United States Government to court to collect what they believe they are owed. The total: $\\$ 141$ billion if the interest is compounded daily at 6 percent, the going rate at the time. If compounded yearly, the bill is only $\\$ 98$ billion. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "The thousands of family members scattered around the country say they are not being greedy. \u201cIt\u2019s not the money\u2014it\u2019s the principle of the thing,\u201d said Carolyn Cokerham, a DeHaven on her father\u2019s side who lives in San Antonio. \u201cYou have to wonder whether there would even be a United States if this man had not made the sacrifice that he did. He gave everything he had.\u201d ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "The descendants say that they are willing to be flexible about the amount of settlement. But they also note that interest is accumulating at $\\$ 190$ a second. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "\u201cNone of these people have any intention of bankrupting the Government,\u201d said Jo Beth Kloecker, a lawyer from Stafford, Texas. Fresh out of law school, Ms. Kloecker accepted the case for less than the customary 30 percent contingency. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "It is unclear how many descendants there are. Ms. Kloecker estimates that based on 10 generations with four children in each generation, there could be as many as half a million. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "The initial suit was dismissed on the ground that the statute of limitations is six years for a suit against the Federal Government. The family\u2019s appeal asserts that this violates Article 6 of the Constitution, which declares as valid all debts owed by the Government before the Constitution was adopted. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Mr. DeHaven died penniless in 1812: He had no children. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "COMPOUND INTEREST ",
+        "text_level": 1,
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "The idea of compound interest can be applied right away. Suppose you invest $\\$ 1000$ at a rate of $100 \\%$ (hard to do). If this is the annual rate, the interest after a year is another $\\$ 1000$ : You receive $\\$ 2000$ in all. But if the interest is compounded you receive more: ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "after six months: Interest of $\\$ 500$ is reinvested to give $\\$ 1500$ end of year: New interest of $\\$ 750$ ( $50 \\%$ of 1500) gives $\\$ 2250$ total. ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "The bank multiplied twice by 1:5 (1000 to 1500 to 2250). Compounding quarterly multiplies four times by 1:25 (1 for principal, :25 for interest): ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "after one quarter the total is $1 0 0 0 + ( . 2 5 ) ( 1 0 0 0 ) { = } 1 2 5 0$ after two quarters the total is $1 2 5 0 + ( . 2 5 ) ( 1 2 5 0 ) { = } 1 5 6 2 . 5 0$ after nine months the total is $1 5 6 2 . 5 0 + ( . 2 5 ) ( 1 5 6 2 . 5 0 ) = 1 9 5 3 . 1 2$ after a full year the total is $1 9 5 3 . 1 2 + ( . 2 5 ) ( 1 9 5 3 . 1 2 ) = 2 4 4 1 . 4 1$ ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Each step multiplies by $1 + ( 1 / n )$ ; to add one $n$ th\u0002of a year\u2019s interest\u2014still at $100 \\%$ : ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "quarterly conversion: $( 1 + 1 / 4 ) ^ { 4 } \\times 1 0 0 0 ~ = 2 4 4 1 . 4 1$ monthly conversion: $( 1 + 1 / 1 2 ) ^ { 1 2 } \\times 1 0 0 0 { = } 2 6 1 3 . 0 4$ daily conversion: $( 1 + 1 / 3 6 5 ) ^ { 3 6 5 } \\times 1 0 0 0 = 2 7 1 4 . 5 7 .$ ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "Many banks use 360 days in a year, although computers have made that obsolete. Very few banks use minutes (525; 600 per year). Nobody compounds every second . $( n = 3 1 , 5 3 6 , 0 0 0 )$ : But some banks offer continuous compounding. This is the limiting case . $( n  \\infty )$ / that produces $e$ : ",
+        "page_idx": 338
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\bigg ( } 1 + { \\frac { 1 } { n } } { \\bigg ) } ^ { n } \\times 1 0 0 0 \\ a p p r o a c h e s \\ e \\times 1 0 0 0 = 2 7 1 8 . 2 8 .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "1. Quick method for $( 1 + 1 / n ) ^ { n }$ : Take its logarithm. Use $\\ln ( 1 + x ) \\approx x$ with $x =$ $\\underline { { 1 } }$ : ",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln \\left( 1 + { \\frac { 1 } { n } } \\right) ^ { n } = n \\ln \\left( 1 + { \\frac { 1 } { n } } \\right) \\approx n \\left( { \\frac { 1 } { n } } \\right) = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "As $1 / n$ gets smaller, this approximation gets better. The limit is 1: Conclusion: $( 1 + 1 / n ) ^ { n }$ approaches the number whose logarithm is 1: Sections 6:2 and 6:4 define the same number (which is $e$ ). ",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "2. Slow method for $( 1 + 1 / n ) ^ { n }$ : Multiply out all the\u0004terms. Then \u0004let $n  \\infty$ . ",
+        "text_level": 1,
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "This is a brutal use of the binomial theorem. It involves nothing smart like logarithms, but the result is a fantastic new formula for $e$ : ",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { P r a c t i c e ~ f o r ~ } } n = 3 : \\quad \\left( 1 + { \\frac { 1 } { 3 } } \\right) ^ { 3 } = 1 + 3 \\left( { \\frac { 1 } { 3 } } \\right) + { \\frac { 3 \\cdot 2 } { 1 \\cdot 2 } } \\left( { \\frac { 1 } { 3 } } \\right) ^ { 2 } + { \\frac { 3 \\cdot 2 \\cdot 1 } { 1 \\cdot 2 \\cdot 3 } } \\left( { \\frac { 1 } { 3 } } \\right) ^ { 3 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Binomial theorem for any positive integer $n$ : ",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left( 1 + { \\frac { 1 } { n } } \\right) ^ { n } = 1 + n \\left( { \\frac { 1 } { n } } \\right) + { \\frac { n ( n - 1 ) } { 1 \\cdot 2 } } \\left( { \\frac { 1 } { n } } \\right) ^ { 2 } + { \\frac { n ( n - 1 ) ( n - 2 ) } { 1 \\cdot 2 \\cdot 3 } } \\left( { \\frac { 1 } { n } } \\right) ^ { 3 } + \\cdots + \\left( { \\frac { 1 } { n } } \\right) ^ { n } .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Each term in equ\u0004ati\u0004on\u0004(4) approaches a limit as $n \\to \\infty$ : Typical terms are ",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { n ( n - 1 ) } { 1 \\cdot 2 } \\left( \\frac { 1 } { n } \\right) ^ { 2 } \\to \\frac { 1 } { 1 \\cdot 2 } \\qquad \\mathrm { a n d } \\qquad \\frac { n ( n - 1 ) ( n - 2 ) } { 1 \\cdot 2 \\cdot 3 } \\left( \\frac { 1 } { n } \\right) ^ { 3 } \\to \\frac { 1 } { 1 \\cdot 2 \\cdot 3 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Next comes $1 / 1 \\cdot 2 \\cdot 3 \\cdot 4$ : The su8m of all those limits in (4) is our new formula for $e$ : ",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\operatorname* { l i m } { \\left( 1 + { \\frac { 1 } { n } } \\right) ^ { n } } = 1 + 1 + { \\frac { 1 } { 1 \\cdot 2 } } + { \\frac { 1 } { 1 \\cdot 2 \\cdot 3 } } + { \\frac { 1 } { 1 \\cdot 2 \\cdot 3 \\cdot 4 } } + \\cdots = e .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "In summation notation this is $\\Sigma _ { k = 0 } ^ { \\infty } 1 / k ! = e$ : The factorials give fast convergence: ",
+        "page_idx": 339
+    },
+    {
+        "type": "equation",
+        "text": "$$\n1 + 1 + . 5 + . 1 6 6 6 7 + . 0 4 1 6 7 + . 0 0 8 3 3 + . 0 0 1 3 9 + . 0 0 0 2 0 + . 0 0 0 0 2 = 2 . 7 1 8 2 8 .\n$$",
+        "text_format": "latex",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Those nine terms give an accuracy that was not reached by $n = 3 6 5$ compoundings. A limit is still involved (to add up the whole series). You never see e without a limit! It can be defined by derivatives or integrals or powers $( 1 + 1 / n ) ^ { n }$ or by an infinite series. Something goes to zero or infinity, and care is required. ",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "All terms in equation (4) are below (or equal to) the corresponding terms in (5). The power $( 1 + 1 / n ) ^ { n }$ approaches e from below. There is a steady increase with $n$ : Faster compounding yields more interest. Continuous compounding at $100 \\%$ yields $e$ ; as each term in (4) moves up to its limit in (5). ",
+        "page_idx": 339
+    },
+    {
+        "type": "text",
+        "text": "Remark Change $( 1 + 1 / n ) ^ { n }$ to $( 1 + x / n ) ^ { n }$ : Now the binomial theorem produces ex: ",
+        "page_idx": 340
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left( 1 + { \\frac { x } { n } } \\right) ^ { n } = 1 + n \\left( { \\frac { x } { n } } \\right) + { \\frac { n ( n - 1 ) } { 1 \\cdot 2 } } \\left( { \\frac { x } { n } } \\right) ^ { 2 } + \\cdots { \\mathrm { ~ a p p r o a c h e s ~ } } 1 + x + { \\frac { x ^ { 2 } } { 1 \\cdot 2 } } + \\cdots .\n$$",
+        "text_format": "latex",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "Please recognize $e ^ { x }$ on the right side! It is the infinite power series in equation (1). The next term is $x ^ { 3 } / 6$ ( $x$ can be positive or negative). This is a final formula for $e ^ { x }$ : ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "6L The limit of $( 1 + x / n ) ^ { n }$ is $e ^ { x }$ : At $x = 1$ we find $e$ : ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "The logarithm of that power is $n$ $\\iota \\ln ( 1 + x / n ) \\approx n ( x / n ) = x .$ : The power approaches $e ^ { x }$ : To summarize: The quick method proves $( 1 + 1 / n ) ^ { n } \\to e$ by logarithms. The slow method (multiplying out every term) led to the infinite series. Together they show the agreement of all our definitions of $e$ : ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "DIFFERENCE EQUATIONS VS. DIFFERENTIAL EQUATIONS ",
+        "text_level": 1,
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "We have the chance to see an important part of applied mathematics. This is not a course on differential equations, and it cannot become a course on difference equations. But it is a course with a purpose\u2014we aim to use what we know. Our main application of $e$ was to solve $y ^ { \\prime } = c y$ and $y ^ { \\prime } { = } c y + s$ : Now we solve the corresponding difference equations. ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "Above all, the goal is to see the connections. The purpose of mathematics is to understand and explain patterns. The path from \u201cdiscrete to continuous\u201d is beautifully illustrated by these equations. Not every class will pursue them to the end, but I cannot fail to show the pattern in a difference equation: ",
+        "page_idx": 340
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny ( t + 1 ) = a y ( t ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "Each step multiplies by the same number $a$ : The starting value $y _ { 0 }$ is followed by $a y _ { 0 } , a ^ { 2 } y _ { 0 }$ , and ${ \\bar { a } } ^ { 3 } y _ { 0 }$ : The solution at discrete times $t = 0 , 1 , 2 , \\ldots$ is $y ( t ) = a ^ { t } y _ { 0 }$ : ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "This formula $a ^ { t } y _ { 0 }$ replaces the continuous solution $e ^ { c t } y _ { 0 }$ of the differential equation. ",
+        "page_idx": 340
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\overbrace  \\underbrace { \\mathrm { g r o w i n g } } _ { \\mathrm { o s c i l l a k o } } \\int \\underbrace { \\mathrm { e } ^ { - \\mathrm { o s c i l l a t i o n } } } _ { - 1 } \\mathrm { d e c a y } \\underbrace { \\mathrm { e } ^ { - \\pi } \\mathrm { g r o w t h } } _ { \\textit { o s c i l l a k o } } \\cdots \\mathrm { d }\n$$",
+        "text_format": "latex",
+        "page_idx": 340
+    },
+    {
+        "type": "image",
+        "img_path": "",
+        "img_caption": [
+            "Fig. 6.17 Growth for $| a | > 1$ ; decay for $| a | < 1$ : Growth factor $a$ compares to $e ^ { c }$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "A source or sink (birth or death, deposit or withdrawal) is like $y ^ { \\prime } = c y + s$ : ",
+        "page_idx": 340
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny ( t + 1 ) = a y ( t ) + s .\n$$",
+        "text_format": "latex",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "Each step multiplies by $a$ and adds $s$ : The first outputs are ",
+        "page_idx": 340
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny \\left( 1 \\right) = a y _ { 0 } + s , \\quad y \\left( 2 \\right) = a ^ { 2 } y _ { 0 } + a s + s , \\quad y \\left( 3 \\right) = a ^ { 3 } y _ { 0 } + a ^ { 2 } s + a s + s .\n$$",
+        "text_format": "latex",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "We saw this pattern for differential equations\u2014every input $s$ becomes a new starting point. It is multiplied by powers of $a$ : Since $s$ enters later than $y _ { 0 }$ ; the powers ",
+        "page_idx": 340
+    },
+    {
+        "type": "text",
+        "text": "stop at $t - 1$ : Algebra turns the sum into a clean formula by adding the geometric series: ",
+        "page_idx": 341
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny ( t ) = a ^ { t } y _ { 0 } + s \\left[ a ^ { t - 1 } + a ^ { t - 2 } + \\cdots + a + 1 \\right] = a ^ { t } y _ { 0 } + s ( a ^ { t } - 1 ) / ( a - 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 Interest at $8 \\%$ from annual IRA deposits of $s = \\$ 2000$ (here $y _ { 0 } = 0$ ). ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "The first deposit is at year $t = 1$ : In a year it is multiplied by $a = 1 . 0 8$ ; because $8 \\%$ is added. At the same time a new $s = 2 0 0 0$ goes in. At $t = 3$ the first deposit has be\u0001en multiplied by $( 1 . 0 8 ) ^ { 2 }$ ; the second by 1:08; and there is another $s = 2 0 0 0$ : After year $t$ ; ",
+        "page_idx": 341
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny ( t ) = 2 0 0 0 ( 1 . 0 8 ^ { t } - 1 ) / ( 1 . 0 8 - 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "With $t = 1$ this is 2000: With $t = 2$ it is 2000 . $( 1 . 0 8 + 1 ) \\$ \u2014two deposits. Notice how $a - 1$ (the interest rate :08) appears in the denominator. ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Approach to steady state when $| a | < 1 .$ Compare with $c < 0$ : ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "With $a > 1$ ; everything has been increasing. That corresponds to $c > 0$ in the differential equation (which is growth). But things die, and money\u0001is spent\u0001, so $a$ can be smaller than one. In that case $a ^ { t } y _ { 0 }$ approaches zero\u2014the starting balance disappears. Wh\u00d1at8happens if there is also a source ? Every year half of the balance $y ( t )$ is spent and a new $\\$ 2000$ is deposited. Now $\\begin{array} { r } { a = \\frac { 1 } { 2 } } \\end{array}$ : ",
+        "page_idx": 341
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { y ( t + 1 ) = \\frac { 1 } { 2 } y ( t ) + 2 0 0 0 \\quad \\mathrm { y i e l d s } \\quad y ( t ) = \\left( \\frac { 1 } { 2 } \\right) ^ { t } y _ { 0 } + 2 0 0 0 \\Big [ \\big ( \\left( \\frac { 1 } { 2 } \\right) ^ { t } - 1 \\big ) / \\left( \\frac { 1 } { 2 } - 1 \\right) \\Big ] . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "The limit as $t \\to \\infty$ is an equilibrium point. As $\\begin{array} { l } { \\left( { \\frac { 1 } { 2 } } \\right) ^ { t } } \\end{array}$ goes to z8ero, $y ( t )$ stabilizes to ",
+        "page_idx": 341
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { \\infty } = 2 0 0 0 { \\bigl ( } 0 - 1 { \\bigr ) } / { \\bigl ( } { \\textstyle } { \\frac { 1 } { 2 } } - 1 { \\bigr ) } = 4 0 0 0 = s t e a d y s t a t e .\n$$",
+        "text_format": "latex",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "Why8is 40\u000100 steady ? Because half is lost an8d the new 2000 makes it up again. The iteration is $y _ { n + 1 } = { \\frac { 1 } { 2 } } y _ { n } + 2 0 0 0$ : Its fixed point is\u0001where $y _ { \\infty } = { \\textstyle \\frac { 1 } { 2 } } y _ { \\infty } \\dot { + } 2 0 0 0$ . ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "In general the steady equation is $y _ { \\infty } = a y _ { \\infty } + s$ : Solving for $y _ { \\infty }$ gives $s / ( 1 - a )$ : Compare with the steady differential equation $y ^ { \\prime } = c y + s = 0$ : ",
+        "page_idx": 341
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { \\infty } = - { \\frac { s } { c } } ( { \\mathrm { d i f f e r e n t i a l ~ e q u a t i o n } } ) \\quad \\nu s . \\quad y _ { \\infty } = { \\frac { s } { 1 - a } } ( { \\mathrm { d i f f e r e n c e ~ e q u a t i o n } } ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Demand equals supply when the price is right. ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "Difference equations are basic to economics. Decisions are made\u0001every year (by a farmer) or every day (by a bank) or every minute (by the stock market). There are three assumptions: ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "1. Supply next time depends on price this time: $S ( t + 1 ) = c P ( t )$ :   \n2. Demand next time depends on price next time: $D ( t + 1 ) = - d P ( t + 1 ) + b$ :   \n3. Demand next time equals supply next time: $D ( t + 1 ) = S ( t + 1 )$ : ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "Comment on 3: the price sets itself to make $d e m a n d = s u p p l y$ . The demand slope $- d$ is negative. The supply slope $c$ is\u0001posit8ive. Those l8ines interse8ct at the competitive price, where supply equals demand. To find the difference equation, substitute 1 and 2 into 3: ",
+        "page_idx": 341
+    },
+    {
+        "type": "equation",
+        "text": "",
+        "text_format": "latex",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "If the price starts above $P _ { \\infty }$ ; the difference equation brings it down. If below, the price goes up. When the price is $P _ { \\infty }$ ; it stays there. This is not news\u2014economic ",
+        "page_idx": 341
+    },
+    {
+        "type": "text",
+        "text": "theory depends on approach to a steady state. But convergence only occurs if $c < d$ : If supply is less sensitive than demand, the economy is stable. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Blow-up example: $c = 2$ , $b = d = 1$ : The difference equation is $- P ( t + 1 ) + 1 =$ $2 P ( t )$ : From $P ( 0 ) = 1$ the price oscillates as it grows: $P = - 1 , 3 , - 5 , 1 1 , . . . .$ ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Stable example: $c = 1 / 2 , \\ b = d = 1$ : The price moves from $P ( 0 ) = 1$ to $P ( \\infty ) = 2 / 3$ : ",
+        "page_idx": 342
+    },
+    {
+        "type": "equation",
+        "text": "$$\n- P ( t + 1 ) + 1 = { \\frac { 1 } { 2 } } P ( t ) \\mathrm { y i e l d s } P = 1 , { \\frac { 1 } { 2 } } , { \\frac { 3 } { 4 } } , { \\frac { 5 } { 8 } } , \\dots , \\mathrm { a p p r o a c h i n g } { \\frac { 2 } { 3 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Increasing $d$ gives greater stability. That is the effect of price supports. For $d = 0$ (fixed demand regardless of price) the economy is out of control. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "THE MATHEMATICS OF FINANCE ",
+        "text_level": 1,
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "It would be a pleasure to make this supply-demand model more realistic\u2014with curves, not straight lines. Stability depends on the slope\u2014calculus enters. But we also have to be realistic about class time. I believe the most practical application is to solve the fundamental problems of finance. Section 6.3 answered six questions about continuous interest. We now answer the same six questions when the annual rate is $x = . 0 5 = 5 \\%$ and interest is compounded n times a year. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "First we compute effective rates, higher than :05 because of compounding: ",
+        "page_idx": 342
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { \\mathrm { c o m p o u n d e d ~ } q u a r t e r l y } \\displaystyle \\left( 1 + \\frac { . 0 5 } { 4 } \\right) ^ { 4 } = 1 . 0 5 0 9 ~ \\left[ e f f e c t i v e ~ r a t e . 0 5 0 9 = 5 . 0 9 \\% \\right] } \\\\ { { \\mathrm { c o m p o u n d e d ~ } c o n t i n u o u s l y } \\quad { { e } ^ { . 0 5 } = 1 . 0 5 1 3 } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Now come the six questions. Next to the new answer (discrete) we write the old answer (continuous). One is algebra, the other is calculus. The time period is 20 years, so simple interest on $y _ { 0 }$ would produce $( . 0 5 ) ( 2 0 ) ( y _ { 0 } ) .$ That equals $y _ { 0 }$ \u2014money doubles in 20 years at $5 \\%$ simple interest. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Questions 1 and 2 ask for the future value $y$ and present value $y _ { 0 }$ with compound interest n times a year: ",
+        "page_idx": 342
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l r l } & { \\mathbf { 1 } . \\ y \\ { \\mathrm { g r o w i n g ~ f r o m } } \\ y _ { 0 } \\colon } & & { y = \\left( 1 + { \\frac { . 0 5 } { n } } \\right) ^ { 2 0 n } \\ y _ { 0 } \\qquad } & & { y = e ^ { ( . 0 5 ) ( 2 0 ) } y _ { 0 } } \\\\ & { } & & { } \\\\ & { \\qquad 2 . \\ \\scriptstyle { \\mathrm { d e p o s i t ~ } } y _ { 0 } { \\mathrm { ~ t o ~ r e a c h ~ } } y \\colon } & & { y _ { 0 } = \\left( 1 + { \\frac { . 0 5 } { n } } \\right) ^ { - 2 0 n } \\ y } & & { y _ { 0 } = e ^ { - ( . 0 5 ) ( 2 0 ) } y } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Each step multiplies by $a = ( 1 + . 0 5 / n )$ : There are $2 0 n$ \u0004 \u0004steps in 20 years. Time goes backward in Question 2. We divide by the growth factor instead of multiplying. The future value is greater than the present value (unless the inte\u0001rest rate is negative!). As $n \\to \\infty$ the discrete $y$ on the left approaches the continuous $y$ on the right. ",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Questions 3 and 4 connect $y$ to $s$ (with $y _ { 0 } = 0$ at the start). As soon as each $s$ is deposited, it starts growing. Then $y = s + a s + a ^ { 2 } s + \\cdots$ ",
+        "page_idx": 342
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l r l } & { \\mathrm { 3 . ~ y ~ g r o w i n g ~ f r o m ~ d e p o s i t s } s \\colon } & & { y = s \\Biggl [ \\frac { ( 1 + . 0 5 / n ) ^ { 2 0 n } - 1 } { . 0 5 / n } \\Biggr ] } & & { y = s \\Biggl [ \\frac { e ^ { ( . 0 5 ) ( 2 0 ) } - 1 } { . 0 5 } \\Biggr ] } \\\\ & { \\mathrm { 4 . ~ d e p o s i t s ~ } s \\mathrm { ~ t o ~ r e a c h ~ } y \\colon } & & { s = y \\Biggl [ \\frac { . 0 5 / n } { ( 1 + . 0 5 / n ) ^ { 2 0 n } - 1 } \\Biggr ] } & & { s = y \\Biggl [ \\frac { . 0 5 } { e ^ { ( . 0 5 ) ( 2 0 ) } - 1 } \\Biggr ] } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 342
+    },
+    {
+        "type": "text",
+        "text": "Questions 5 and 6 connect $y _ { 0 }$ to $s$ : This time $y$ is zero\u2014there is nothing left at the end. Everything is paid. The deposit $y _ { 0 }$ is just enough to allow payments of $s$ : This is an annuity, where the bank earns interest on your $y _ { 0 }$ while it pays you $s$ $\\dot { n }$ times a year for 20 years). So your deposit in Question 5 is less than $2 0 n s$ : ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "Question 6 is the opposite\u2014a loa\u0001n. At the start you borrow\u0001 $y _ { 0 }$ (instead of giving the bank $y _ { 0 }$ ). You can\u0001earn interest on it as you pay it back.\u0001Therefore your payments have to total more than $y _ { 0 }$ : This is the calculation for car loans and mortgages. ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "5: Annuity: Deposit $y _ { 0 }$ to receive $2 0 n$ payments of $s$ : ",
+        "page_idx": 343
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny _ { 0 } = s \\Bigg [ \\frac { 1 - ( 1 + . 0 5 / n ) ^ { - 2 0 n } } { . 0 5 / n } \\Bigg ] \\qquad y _ { 0 } = s \\Bigg [ \\frac { 1 - e ^ { - ( . 0 5 ) ( 2 0 ) } } { . 0 5 } \\Bigg ]\n$$",
+        "text_format": "latex",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "6: Loan: Repay $y _ { 0 }$ with $2 0 n$ payments of $s$ : ",
+        "page_idx": 343
+    },
+    {
+        "type": "equation",
+        "text": "$$\ns = y _ { 0 } \\biggl [ \\frac { . 0 5 / n } { 1 - ( 1 + . 0 5 / n ) ^ { - 2 0 n } } \\biggr ] \\qquad s = y _ { 0 } \\biggl [ \\frac { . 0 5 } { 1 - e ^ { - ( . 0 5 ) ( 2 0 ) } } \\biggr ]\n$$",
+        "text_format": "latex",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "Questions $^ { 2 , 4 , 6 }$ are the inverses of 1; 3; 5: Notice the pattern: There are three numbers $y , y _ { 0 }$ ; and $s$ : One of them is zero each time. If all three are present, go back to equation (9). ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "The algebra for these lines is in the exercises. $I t$ is not calculus because $\\Delta t$ is not $d t$ . All factors in brackets $\\big [ \\begin{array} { l l } \\end{array} \\big ]$ are listed in tables, and the banks keep copies. It might also be helpful to kn\u0002ow the\u0003ir symbols. If a bank has interest rate $i$ per period over $N$ periods, then in our notation $a = 1 + i = 1 + . 0 5 / n$ and $t = N = 2 0 n$ : ",
+        "page_idx": 343
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { ; ~ o f ~ } } s = \\ S 1 \\left( \\operatorname* { l i n e } 3 \\right) : y ( N ) = s _ { N \\left. i \\right. } = \\left[ ( 1 + i ) ^ { N } - 1 \\right] / i\n$$",
+        "text_format": "latex",
+        "page_idx": 343
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\dot { s } = \\mathfrak { H } \\left( \\operatorname { l i n e } \\mathfrak { H } \\right) : y _ { 0 } = a _ { N } ] _ { i } = \\left[ 1 - ( 1 + i ) ^ { - N } \\right] / i\n$$",
+        "text_format": "latex",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "To tell the truth, I never knew the last two formulas until writing this book. The mortgage on my home has $N = ( 1 2 ) ( 2 5 )$ monthly payments with interest rate $i = . 0 7 / 1 2$ : In 1972 the present value was $\\$ 42,000$ amount borrowed. I am now going to see if the bank is honest.\u008e ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "Remark In many loans, the bank computes interest on the amount paid back instead of the amount received. This is called discounting. A loan of $\\$ 1000$ at $5 \\%$ for one year costs $\\$ 50$ interest. Normally you receive $\\$ 1000$ and pay back $\\$ 1050$ : With discounting you receive $\\$ 950$ (called the proceeds) and you pay back $\\$ 1000$ : The true interest rate is higher than $5 \\%$ \u2014because the $\\$ 50$ interest is paid on the smaller amount $\\$ 950$ : In this case the \u201cdiscount rate\u201d is $5 0 / 9 5 0 = 5 . 2 6 \\%$ : ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "SCIENTIFIC COMPUTING: DIFFERENTIAL EQUATIONS BY DIFFERENCE EQUATIONS ",
+        "text_level": 1,
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "In biology and business, most events are discrete. In engineering and physics, time and space are continuous. Maybe at some quantum level it\u2019s all the same, but the ",
+        "page_idx": 343
+    },
+    {
+        "type": "text",
+        "text": "equations of physics (starting with Newton\u2019s law $F = m a$ ) are differential equations.   \nThe great contribution of calculus is to model the rates of change we see in nature.   \nBut to solve that model with a computer, it needs to be made digital and discrete. ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "These paragraphs work with $d y / d t = c y$ : It is t\u0001he test equation that all analysts use, as soon as a new computing method is proposed. Its solution is $y = e ^ { c t }$ ; starting from $y _ { 0 } = 1$ : Here we test Euler\u2019s method (nearly ancient, and not well thought of). He replaced $d y / d t$ by $\\Delta y / \\Delta t$ : ",
+        "page_idx": 344
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { E u l e r ^ { * } s . M e t h o d } \\qquad \\varliminf _ { \\Delta t } - y ( t ) = c y ( t ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "The left side is $d y / d t$ ; in the limit $\\Delta t \\to 0$ : We stop earlier, when $\\Delta t > 0$ ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "The problem is to solve (13). Multiplying by $\\Delta t$ ; the equation is ",
+        "page_idx": 344
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny ( t + \\Delta t ) = ( 1 + c \\Delta t ) y ( t ) \\qquad ( \\mathrm { w i t h } y ( 0 ) = 1 ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "Each step multiplies by $a = 1 + c \\Delta t$ ; so $n$ steps multiply by $a ^ { n }$ : ",
+        "page_idx": 344
+    },
+    {
+        "type": "equation",
+        "text": "$$\ny = a ^ { n } = ( 1 + c \\Delta t ) ^ { n } { \\mathrm { ~ a t ~ t i m e } } n \\Delta t .\n$$",
+        "text_format": "latex",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "This is growth or decay, depending on $a$ : The correct $e ^ { c t }$ is growth or decay, depending on $c$ : The question is whether $a ^ { n }$ and $e ^ { c t }$ stay close. Can one of them grow while the other decays ? We expect the difference equation to copy $y ^ { \\prime } = c y$ ; but we might be wrong. ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "A good example is $y ^ { \\prime } = - y$ :\u0001Then $c = - 1$ and $y = e ^ { - t }$ \u2014the true solution decays. The calculator gives the following answers $a ^ { n }$ for $n = 2 , 1 0 , 2 0$ : ",
+        "page_idx": 344
+    },
+    {
+        "type": "table",
+        "img_path": "images/e80782a8a8f65e5dd518bfb68eb5c077a04115d1fff034576d24fdb2f50294f5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>\u25b3t</td><td>a=1+c\u25b3t</td><td>a2</td><td>a10</td><td>a20</td></tr><tr><td>3</td><td>-2</td><td>4</td><td>1024</td><td>1048576</td></tr><tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>1/10</td><td>.90</td><td>.81</td><td>.35</td><td>.12</td></tr><tr><td>1/20</td><td>.95</td><td>.90</td><td>.60</td><td>.36</td></tr></table></body></html>\n\n",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "The big step $\\Delta t = 3$ shows total instability (top row). The numbers blow\u0001up when they should decay. The row with $\\Delta t = 1$ is equally useless (all zeros). In practice the magnitude of $c \\Delta t$ must come down to .10 or .05: For accurate calculations it would have to be even smaller, unless we change to a better difference equation. That is the right thing to do. ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "Notice\u0001the two reasonable numb\u0001ers. They are :35 and :3\u00016; appro\u00d1aching $e ^ { - 1 } = . 3 7$ : They come from $n = 1 0$ (with $\\Delta t = 1 / 1 0$ ) and $n = 2 0$ (with $\\Delta t = 1 / 2 0 \\$ ). Those have the same clock time $n \\Delta t = 1$ : ",
+        "page_idx": 344
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left( 1 - { \\frac { 1 } { 1 0 } } \\right) ^ { 1 0 } = . 3 5 \\qquad \\left( 1 - { \\frac { 1 } { 2 0 } } \\right) ^ { 2 0 } = . 3 6 \\qquad \\left( 1 - { \\frac { 1 } { n } } \\right) ^ { n } \\to e ^ { - 1 } = . 3 7 .\n$$",
+        "text_format": "latex",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "The main diagonal of the table is executing $( 1 + x / n ) ^ { n } \\to e ^ { x }$ in the case $x = - 1$ : ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "Final question: How quickly are :35 and :36 converging to $e ^ { - 1 } = . 3 7 \\cdot 2$ With $\\Delta t = . 1 0$ the error is :02: With $\\Delta t = . 0 5$ the error is :01: Cutting the time step in half cuts the error in half. We are not keeping enough digits to be sure, but the ",
+        "page_idx": 344
+    },
+    {
+        "type": "text",
+        "text": "error seems close to $\\scriptstyle { \\frac { 1 } { 5 } } \\Delta t$ : To test that, apply the \u201cquick method\u201d and estimate $a ^ { n } = ( 1 - \\Delta t ) ^ { n }$ from its logarithm: ",
+        "page_idx": 345
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\ln ( 1 - \\Delta t ) ^ { n } = n \\ln ( 1 - \\Delta t ) \\approx n \\Big [ - \\Delta t - \\frac 1 2 \\big ( \\Delta t \\big ) ^ { 2 } \\Big ] = - 1 - \\frac 1 2 \\Delta t . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "The clock time is $n \\Delta t = 1$ : Now take exponentials of the far left and right: ",
+        "page_idx": 345
+    },
+    {
+        "type": "equation",
+        "text": "$$\na ^ { n } = ( 1 - \\Delta t ) ^ { n } \\approx e ^ { - 1 } e ^ { - \\Delta t / 2 } \\approx e ^ { - 1 } \\big ( 1 - { \\textstyle \\frac { 1 } { 2 } } \\Delta t \\big ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "The difference between $a ^ { n }$ and $e ^ { - 1 }$ is the last term $\\scriptstyle { \\frac { 1 } { 2 } } \\Delta t e ^ { - 1 }$ : Everything comes down to one question: Is that error the same as $\\begin{array} { r } { \\frac { 1 } { 5 } \\Delta t \\mathrm { ~ ? ~ } } \\end{array}$ The answer is yes, beca\u0013use $e ^ { - 1 } / 2$ is $1 / 5$ : If w\u0001e keep only one digit, the prediction is perfect! ",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "That took an hour to work out, and I hope it takes longer than $\\Delta t$ to read. I wanted you to see in use the properties of ln $x$ and $e ^ { x }$ : The exact property ln $a ^ { n } = n$ ln $a$ came first. In the middle of (15) was the key approximation $\\ln ( 1 + x ) \\approx x - { \\textstyle { \\frac { 1 } { 2 } } } x ^ { 2 }$ ; with $x = - \\Delta t$ : That $x ^ { 2 }$ term uses the second derivative (Section 6.4). At the very end came $e ^ { x } \\approx 1 + x$ : ",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "A linear approximation shows convergence: $( 1 + x / n ) ^ { n } \\to e ^ { x }$ : A quadratic shows the error: proportional to $\\Delta t = 1 / n$ : It is like using rectangles for areas, with error proportional to $\\Delta x$ : This minimal accuracy was enough to define the integral, and here it is enough to define $e$ : It is completely unacceptable\u0001for scientific computing. ",
+        "page_idx": 345
+    },
+    {
+        "type": "text",
+        "text": "The trapezoidal rule, for integrals or for $y ^ { \\prime } = c y$ ; has errors of order $( \\bar { \\Delta x } ) ^ { 2 }$ and $( \\Delta t ) ^ { 2 }$ : All good software goes further than that. Euler\u2019s first-order method could not predict the weather before it happens. ",
+        "page_idx": 345
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\cdot { \\frac { d y } { d t } } = F ( y , t ) : \\quad { \\frac { y \\left( t + \\Delta t \\right) - y ( t ) } { \\Delta t } } = F ( y ( t ) , t ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 345
+    }
+]

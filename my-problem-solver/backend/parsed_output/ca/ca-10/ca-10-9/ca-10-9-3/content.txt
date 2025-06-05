@@ -1,0 +1,63 @@
+10.9.3 Performance of a Non-Ideal Pipeline
+
+Mathematical Characterization
+
+We need to incorporate the effect of stalls in the CPI equation. Let us assume that the number of instructions (  ) is very large. Let the ideal CPI be  . In our case,  . We have:
+
+Example 140
+
+Assume that the ideal CPI is 1. Assume that  of the instructions suffer a load-use hazard, and  of the instructions are taken branches. Find the CPI of the program. Answer: We need to insert 1 bubble for a load-use hazard, and 2 bubbles for a taken branch. Thus, the average number of bubbles that we need to insert per instruction is equal to:  . Thus,
+
+Example 141
+
+Compare the performance of two programs,  and  . Assume that the ideal CPI for both of them is 1. For  ,  of the instructions have a load-use hazard, and  of its instructions are taken branches. For  ,  of the instructions have a load-use hazard, and  of its instructions are taken branches.
+
+Answer:
+
+The CPI of  is less than the CPI of  . Hence,  is faster.
+
+The final CPI is equal to the sum of the ideal CPI and number of mean stall cycles per instruction. The mean stall cycles per instruction is equal to the product of the average stall rate per instruction multiplied by the average number of bubbles that we need to insert per stall (stall penalty). The stall rate term is typically a function of the nature of dependencies across instructions in a program. The stall penalty term is also typically dependent on the design of the pipeline, and its forwarding paths. In our case, we need to stall for at most one cycle for RAW hazards, and for 2 cycles for taken branches. However, pipelines with more stages might have different behaviors. Let us now try to model this pipeline mathematically.
+
+We assume that the stall rate is only dependent on the program, and the stall penalty is proportional to the number of stages in a pipeline. This assumption is again not completely correct. However, it is good enough for developing a coarse mathematical model. The reason, we assume that stall penalty is proportional to the number of stages is because, we assume that we create deeper pipelines by essentially splitting the stages of our simple pipeline further. For example, we can pipeline the functional units. Let us assume that we divide each stage, into two sub-stages. Then, we need to stall for 2 cycles on a load-use hazard, and stall for 4 cycles for a taken branch.
+
+Let us thus assume that  , where  and  are constants, and  is the number of pipeline stages.  is equal to the average number of stalls per instruction (stall rate). We assume that the stall penalty  , or alternatively, stall penalty = ck, where  is the constant of proportionality.
+
+We thus have:
+
+To maximize performance, we need to minimize the denominator. We get:
+
+Equation 10.11 is more realistic than Equation 10.8. It is independent of the number of instructions. The implicit assumption is that the number of instructions tends to infinity, because in most programs, we execute billions of instructions. Akin to Equation 10.8, the optimal number of pipeline stages is proportional to  , and inversely proportional to  . Additionally,  . This means that as the penalty for a stall increases, or the number of stall events per instruction increase, we need to use less pipeline stages.
+
+Let us now find the performance for the optimal number of pipeline stages. In Equation 10.10, we assume that  . Thus,  . Hence, we have:
+
+Implications of Equation 10.11 and Equation 10.12
+
+Let us now study the different implications of the result regarding the optimal number of pipeline stages.
+
+Implication 1
+
+The crucial implication of these results is that for programs with a lot of dependencies, we should use processors with a fewer pipeline stages. Inversely, for programs that have high IPC (fewer dependencies across instructions), we should use processors that have deeper pipelines.
+
+Implication 2
+
+Let us compare two versions of our pipeline. One version uses interlocks for all dependencies, and the other uses forwarding. For the pipeline with forwarding, the stall penalty is much lower. Consequently, the value of the constant,  , is smaller in the case of the pipeline with forwarding turned on. This means that a pipeline with forwarding ideally requires more pipeline stages for optimal performance. As a general rule, we can conclude that as we increase the amount of forwarding in a pipeline, we should make it deeper.
+
+Implication 3
+
+The optimal number of pipeline stages is directly proportional to  . If we have faster latches, we can support deeper pipelines. Secondly, with the progress of technology,  is not changing significantly [ITRS, 2011], because both logic gates, and latches are getting faster (roughly equally). Hence, the optimal number of pipeline stages for a processor has remained almost the same for at least the last 5 years.
+
+Implication 4
+
+As we increase  ,  ,  , and  the ideal performance goes down as per Equation 10.12. The latch delay can be a very sensitive parameter, especially, for processors that are designed to run workloads with few dependencies. In this case,  , and  , will have relatively small values, and Equation 10.12 will be dominated by the value of the latch delay.
+
+Example 142
+
+Find the optimal number of pipeline stages for the following configuration.  ,   ,  .
+
+Answer: We have:
+
+The ideal CPI is 1 for both the programs. Let  of the load instructions suffer from a load-use hazard. Assume that the frequency of  is  , and the frequency of  is 1.5. Here, the units of the frequency are not relevant. Compare the performance of  and  . Answer:
+
+We thus have:
+
+The performance of  can be expressed as  (arbitrary units). Similarly, the performance of  is equal to  (arbitrary units). Hence,  is faster than  . We shall often use the term, arbitrary units, a.u., when the choice of units is irrelevant.

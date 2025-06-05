@@ -1,0 +1,38 @@
+9.2.3 Operand Fetch Unit
+
+SimpleRisc Instruction Format
+
+Let us quickly recapitulate our knowledge about the SimpleRisc instruction format. The list of SimpleRisc instructions is shown in Table 9.2 along with their opcodes, and instruction format. SimpleRisc is a simple and regular instruction set. It has three classes of instruction formats as shown in Table 9.3. The instruction formats are branch, register, and immediate. The add, sub, mul, div, mod, and, or, cmp, not, lsl, lsr, asr, and mov instructions can have either the register or the immediate format. This is decided by the  bit (  bit) in the instruction. The cmp instruction does not have a destination register. The mov and not instructions have only one source operand. For further details, the reader can refer to Table 9.2, or Section 3.3.
+
+The Operand Fetch Unit
+
+The operand fetch unit has two important functions – (1) calculate the values of the immediate operand and the branch target by unpacking the offset embedded in the instruction, and (2) read the source registers.
+
+Computation of the Immediate Operand and the Branch Target
+
+Figure 9.5 shows the circuit for calculating the immediate operand, and the branch target. To calculate the immediate operand, we need to first extract the imm field (bits 1-18) from the instruction. Subsequently, we extract the lower 16 bits, and create a 32-bit constant in accordance with the modifiers (bit 17, and 18). When no modifier is specified, we extend the sign of the 16-bit number to make it a 32-bit number. For the  modifier, we fill the top 16 bits with 0s, and for the  modifier, we shift the 16-bit number, 16 positions to the left. The newly constructed 32-bit value is termed as immx.
+
+Similarly, we can compute the signal, branchT arget (branch target for all types of branches excluding ret). We need to first extract the 27 bit offset (bits 1 to 27) from the instruction. Note that these 27 bits represent the offset in terms of memory words as described in Section 3.3.14. Thus, we need to shift the offset to the left by 2 bits to make it a 29 bit number, and then extend its sign to make it a 32-bit number. Since we use PC-relative addressing in SimpleRisc , to obtain the branch target we need to add the shifted offset to the PC. The branch target can either be derived from the instruction (branchT arget signal), as we have just described, or in the case of a ret instruction, the branch target is the contents of the ra register. In this case, the ra register comes from the register file. We choose between both the values in the next stage, and compute branchP C.
+
+There is a need to make an important observation here. We are calculating branchT arget and immx for all instructions. However, any instruction in the SimpleRisc format will only require at the most one of these fields (branchT arget or immx). The other field will have junk
+
+values. Nevertheless, it does not hurt to pre-compute both the values in the interest of speed.   
+It is necessary to ensure that the correct value is used in the later stages of processing.
+
+Reading the Registers
+
+In parallel, we can read the values of the source registers as shown. Here, also we follow the same strategy. We read more than what we require. Critics might argue that this approach wastes power. However, there is a reason for doing so. Extra circuitry is required to decide if a given operand is actually required. This has an adverse impact in terms of area, and time. The operand fetch unit becomes slower. Hence, we prioritize the case of simplicity, and read all the operands that might be required.
+
+The circuit for reading the values of source registers is shown in Figure 9.6. The register file has 16 registers, two read ports, and one write port (not shown in the figure). A port is a point of connection (an interface) in a hardware structure, and is used for the purpose of either entering inputs, or reading outputs. We can have a read port (exclusively for reading data), a write port (exclusively for writing data), and a read-write port (can be used for both reading and writing).
+
+Definition 59
+
+ port is a point of connection in a hardware structure, and is used for the purpose of either entering inputs, or reading outputs. We can have a read port (exclusively for reading data), a write port (exclusively for writing data), and a read-write port (can be used for both reading and writing).
+
+For the first register operand, op1, we have two choices. For ALU, and memory instructions, we need to read the first source register, rs1 (bits 19 to 22). For the ret instruction, we need to read the value of the return address register,  . To choose between the contents of the field, rs1, in the instruction and  , we use a multiplexer. The multiplexer is controlled by a signal, isRet. If isRet (is return) is equal to 1, then we choose  , otherwise we choose rs1. This value is an input to the register file’s first read port. We term the output of the first read port as op1 (operand 1).
+
+We need to add a similar multiplexer for the second read port of the register file too. For all the instructions other than the store instruction, the second source register is specified by the  (bits 15 to 18) field in the instruction. However, the store instruction is an exception. It contains a source register in rd (bits 23 to 26). Recall that we had to make this bitter choice at the cost of introducing a new instruction format. Since we have a very consistent instruction format (see Table 9.3) the process of decoding is very simple. To extract different fields of the instruction (rs1, rs2, opcode, and imm) we do not need additional logic elements. We need to save each bit of the instruction in a latch, and then route the wires appropriately.
+
+Coming back to our original problem of choosing the second register operand, we observe that we need to choose the right source register –  or  . The corresponding multiplexer is controlled by the isSt (is store) signal. We can quickly find out if the instruction is a store by using a set of logic gates to verify if the opcode is equal to 01111. The result of the comparison is used to set the isSt signal. The corresponding output of the register file is termed as op2 (operand 2).
+
+Lastly, it is necessary to send the opcode (5 bits), and the immediate bit (1 bit) to the control unit such that it can generate all the control signals. The complete circuit for the operand fetch unit is shown in Figure 9.7. op1, op2, branchT arget, and immx are passed to the execute unit.

@@ -1,0 +1,69 @@
+4.2.1 Simple Data Processing Instructions
+
+Register Transfer Instructions
+
+The simplest type of assembly instructions transfer the value of one register into another, or store a constant in a register. There are two instructions in this class – mov and mvn. Their semantics are shown in Table 4.2. Note that we always prefix an immediate with ‘#’ in ARM assembly.
+
+The register-based mov instruction simply moves the contents of  to register  . Alternatively, it can store an immediate in a register. In Table 4.2, the mvn instruction flips every bit in the 32-bit register  , and then transfers the contents of the result to  . The  symbol represents logical complement. For example, the complement of the 4-bit binary value, 0110, is 1001. The mov and mvn instructions take two inputs. These instructions are examples of 2-address format instructions in ARM.
+
+Arithmetic Instructions
+
+The simplest instructions in this class are add, sub, rsb (reverse subtract). Their semantics are given in Table 4.3. The second operand can also be an immediate.
+
+Example 37
+
+Write an ARM assembly program to compute:  . Save the result in r1.
+
+Answer: Simple yet suboptimal solution.
+
+mov r1, #4   
+mov r2, #5   
+add r3, r1, r2   
+mov r4, #19   
+sub r1, r3, r4
+
+Optimal solution.
+
+mov r1, #4   
+add r1, r1, #5   
+sub r1, r1, #19
+
+Logical Instructions
+
+ARM’s bitwise logical instructions are shown in Table 4.4. and computes a bit-wise AND, eor computes an exclusive OR, orr computes a regular bit-wise OR, and the bic(bit-clear) instruction clears off the bits in  that are specified in  . Like arithmetic instructions, the second operand can be an immediate.
+
+Example 38
+
+Write an ARM assembly program to compute:  , where  and  are 1 bit Boolean values. Assume that  and  . Save the result in  .
+
+Answer:
+
+mov r0, #0x0   
+orr r0, r0, #0x1   
+mvn r0, r0
+
+Multiplication Instructions
+
+We shall introduce four multiply instructions with varying degrees of complexity. The fundamental issue with multiplication is that if we are multiplying two 32-bit numbers, then the result will require 64 bits. The reason is that the largest unsigned 32-bit number is  . Consequently, when we try to square this number, our result is approximately  . We would thus need a maximum of 64 bits.
+
+ARM has two 32-bit multiplication instructions that truncate the result to 32 bits – mul and mla. They ignore the rest of the bits. mul multiplies the values in two registers and stores the result in a third register. mla (multiply and accumulate) is in the 4-address format. It multiplies the values of two registers, and adds the result to the value stored in a third register (see Table 4.5). The advantage of the  instruction is that it makes it possible to represent code sequences of the form (  ) with one instruction. Such instructions are extremely useful when it comes to implementing linear algebra kernels such as matrix multiplication.
+
+In this chapter, we shall introduce two instructions that store the entire 64-bit result in two registers. The smull and umull instructions perform signed and unsigned multiplication, respectively, on two 32-bit values to produce a 64-bit result. Their semantics is shown in Table 4.5. r0 contains the lower 32 bits, and  contains the upper 32 bits.
+
+For all the multiply instructions that we have introduced, all the operands need to be registers. Secondly, the first source register, should not be the same as the destination register.
+
+Example 39
+
+Compute  , and save the result in r3.
+
+Answer:
+
+/\* load test values \*/   
+mov  , #12   
+mov r1, #1
+
+/\* perform the logical computation \*/ mul r4, r0, r0 @ 12\*12 mla r3, r4, r0, r1 @ 12\*12\*12 + 1
+
+Division Instructions
+
+Newer versions of the ARM ISA have introduced two integer division instructions, sdiv and udiv. The former is used for signed division and the latter is used for unsigned division (see Table 4.6). Both of them compute the quotient. The remainder can be computed by subtracting the product of the divisor and the quotient from the dividend.

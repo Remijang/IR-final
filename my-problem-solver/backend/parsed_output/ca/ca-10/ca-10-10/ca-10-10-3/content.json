@@ -1,0 +1,82 @@
+[
+    {
+        "type": "text",
+        "text": "10.10.3 Leakage Power ",
+        "text_level": 1,
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Note that dynamic power is not the only power dissipation mechanism in processors. Static or leakage power is a major component of the power dissipation profile of high-performance processors. It accounts for roughly $2 0 \u2013 4 0 \\%$ of the total processor power budget. ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "The main insight is as follows. We have been assuming that a transistor does not allow any current to flow through it when it is in the off state. This is not strictly correct. No structure is a perfect insulator in practice. There is a small amount of current flow across its terminals, even in the off state. We can have many other sources of such current leakage across other interfaces that are ideally not supposed to pass current. Such sources of current are together referred to as leakage current, and the associated power dissipation is known as leakage power. ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Definition 88 ",
+        "text_level": 1,
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Leakage current is the minimal amount of current that flows across two terminals of a circuit element that are ideally supposed to be completely electrically isolated from each other. For example, we do not expect any current flow between the drain and the source of an NMOS transistor in the off state. However, a small amount of current does flow, and this is known as the sub-threshold leakage current. When leakage current flows across a resistive element, it dissipates leakage power. Leakage power is static in nature and is dissipated all the time irrespective of the level of activity in a circuit. ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "There are different mechanisms for leakage power dissipation such as sub-threshold leakage, and gate induced drain leakage. Researchers typically use the following equation from the BSIM3 model [Cheng and Hu, 1999] for leakage power (primarily captures sub-threshold leakage): ",
+        "page_idx": 483
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { P } _ { l e a k } = A \\times \\nu _ { T } ^ { 2 } \\times e ^ { \\frac { V _ { G S } - V _ { t h } - V _ { o f f } } { n \\times \\nu _ { T } } } \\left( 1 - e ^ { \\frac { - V _ { D S } } { \\nu _ { T } } } \\right)\n$$",
+        "text_format": "latex",
+        "page_idx": 484
+    },
+    {
+        "type": "table",
+        "img_path": "images/ef1d8f9cb57cad04ddde9d30841ca10da8739ef9aaa2905059ad98ab1b21cd83.jpg",
+        "table_caption": [
+            "Table 10.3: Definition of variables in Equation 10.22 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Definition (SI units)</td></tr><tr><td>Variable</td><td>Area dependent constant of proportionality</td></tr><tr><td>A</td><td>Thermal voltage (kT/q)</td></tr><tr><td>VT k</td><td>Boltzmann's constant (1.38 \u00d7 10-23) (SI units)</td></tr><tr><td></td><td>1.6 \u00d7 10-19</td></tr><tr><td>q</td><td></td></tr><tr><td>T</td><td>Temperature (in Kelvins)</td></tr><tr><td>VGS Vth</td><td>Voltage between the gate and source Threshold voltage.It is also dependent on temperature.</td></tr><tr><td></td><td>1 Vt =-2.5mV/K</td></tr><tr><td>Voff</td><td>Offset voltage</td></tr><tr><td>n</td><td>Sub-threshold swing coefficient</td></tr><tr><td>VDs</td><td>Voltage between the drain and source</td></tr></table></body></html>\n\n",
+        "page_idx": 484
+    },
+    {
+        "type": "text",
+        "text": "Table 10.3 defines the variables used in Equation 10.22. Note that the leakage power is dependent on temperature via the variable $\\nu _ { T } = k T / q$ . To show the temperature dependence, we can simplify Equation 10.22 to obtain Equation 10.23. ",
+        "page_idx": 484
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { P } _ { l e a k } \\propto T ^ { 2 } \\times e ^ { A / T } \\times \\left( 1 - e ^ { B / T } \\right)\n$$",
+        "text_format": "latex",
+        "page_idx": 484
+    },
+    {
+        "type": "text",
+        "text": "In Equation 10.23, $A$ and $B$ are constants, and can be derived from Equation 10.22. Around 10 years ago (as of 2002), when the transistor threshold voltages used to be higher (around 500 mV), leakage power was exponentially dependent on temperature. Hence, a small increase in temperature would translate to a large increase in leakage power. However, nowadays, the threshold voltages are between $\\mathrm { 1 0 0 - 1 5 0 ~ m V }$ . Consequently, the relationship between temperature and leakage has become approximately linear [Sarangi et al., 2014]. ",
+        "page_idx": 484
+    },
+    {
+        "type": "text",
+        "text": "The important point to note here is that leakage power is dissipated all the time by all the transistors in a circuit. The amount of leakage current might be very small; but when we consider the cumulative effect of billions of transistors, the total amount of leakage power dissipation is sizable, and can even become a large fraction of the dynamic power. Consequently, designers try to control temperature to keep leakage power under control. ",
+        "page_idx": 484
+    },
+    {
+        "type": "text",
+        "text": "Hence, the total power, $\\mathcal { P } _ { t o t }$ , is given by: ",
+        "page_idx": 484
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { P } _ { t o t } = \\mathcal { P } _ { d y n } + \\mathcal { P } _ { l e a k }\n$$",
+        "text_format": "latex",
+        "page_idx": 484
+    }
+]

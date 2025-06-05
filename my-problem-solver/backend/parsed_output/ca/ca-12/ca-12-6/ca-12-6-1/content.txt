@@ -1,0 +1,19 @@
+12.6.1 Overview
+
+Let us now consider the problem of interconnecting different processing and memory elements. Typically, multicore processors use a checkerboard design. Here, we divide the set of processors into tiles. A tile typically consists of a set of 2-4 processors. A tile has its private caches (L1 and possibly L2). It also contains a part of the shared last level cache (L2 or L3). The part of the shared last level cache that is a part of a given tile is known as a slice . Typically, a slice consists of 2-4 banks (see Section 12.4.5). Additionally, a tile, or a group of tiles might share a memory controller in modern processors. The role of the memory controller is to co-ordinate the transfer of data between the on-chip caches, and the main memory. Figure 12.20 shows a representative layout of a 32 core multiprocessor. The cores have a darker color as compared to the cache banks. We use a tile size of 2 (2 processors and 2 cache banks), and assume that the shared L2 cache has 32 cache banks evenly distributed across the tiles. Moreover, each tile has a dedicated memory controller, and a structure called a router.
+
+A router is a specialized unit, and is defined in Definition 136.
+
+Definition 136
+
+1. A router sends messages originating from processors or caches in its tile to other tiles through the on chip network.   
+2. The routers are interconnected with each other via an on-chip network.   
+3. A message travels from the source router to the destination router (of a remote tile) via a series of routers. Each router on the way forwards the message to another router, which is closer to the destination.   
+4. Finally, the router associated with the destination tile forwards the message to a processor or cache in the remote tile.   
+5. Adjacent routers are connected via a link. A link is a set of passive copper wires that are used to transmit messages (more details in Chapter 13).   
+6. A router typically has many incoming links, and many outgoing links. One set of incoming and outgoing links connect it to processors and caches in its tile. Each link has a unique identifier.   
+7. A router has a fairly complicated structure, and typically consists of a 3 to 5-stage pipeline. Most designs typically dedicate pipeline stages to buffering a message, computing the id of the outgoing link, arbitrating for the link, and sending the message over the outgoing link.   
+8. The arrangement of routers and links is referred to as the on chip network, or network on chip. It is abbreviated as the NOC.   
+9. Let us refer to each router connected to the NOC as a node. Nodes communicate with each other by sending messages.
+
+During the course of the execution of a program, it sends billions of messages over the NOC. The NOC carries coherence messages, LLC (last level cache) request/response messages, and messages between caches, and memory controllers. The operating system also uses the NOC to send messages to cores for loading and unloading threads. Due to the high volume of messages, large parts of the NOC often experience a sizable amount of congestion. Hence, it is essential to design NOCs that reduce congestion to the maximum extent possible, are easy to design and manufacture, and ensure that messages quickly reach their destination. Let us define two important properties of an NOC namely bisection bandwidth and diameter.

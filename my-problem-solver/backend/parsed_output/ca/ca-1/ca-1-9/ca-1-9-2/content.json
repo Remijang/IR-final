@@ -1,0 +1,118 @@
+[
+    {
+        "type": "text",
+        "text": "1.9.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "The field of computer architecture is a very exciting and fast moving field. The reader can refer to the books by Jan Bergstra [Bergstra and Middelburg, 2012] and Gilreath [Gilreath and Laplante, 2003] to learn more about the theory of instruction set completeness and classes of instructions. The book on formal languages by Hopcroft, Motwani, and Ulmann [Hopcroft et al., 2006] provides a good introduction to Turing machines and theoretical computer science in general. To get a historical perspective, readers can refer to the original reports written by Alan Turing [Carpenter and Doran, 1986] and John von Neumann [von Neumann, 1945]. ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "Processor and Instruction Set ",
+        "text_level": 1,
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Find out the model and make of at least 5 processors in devices around you. The devices can include desktops, laptops, cell phones, and tablet PCs. ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "Ex. 2 \u2014 Make a list of peripheral I/O devices for computers. Keyboards are mice are common devices. Search for uncommon devices. (HINT: joysticks, game controllers, fax machines) ",
+        "page_idx": 44
+    },
+    {
+        "type": "text",
+        "text": "Ex. 3 \u2014 What are the four properties of an instruction set? ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 4 \u2014 Design an instruction set for a simple processor that needs to perform the following   \noperations: 1.Add two registers 2.Subtract two registers   \nEx. 5 \u2014 Design an instruction set for a simple processor that needs to perform the following   \noperations: 1.Add two registers 2.Save a register to memory 3.Load a register from memory 4.Divide a value in a register by two ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 6 \u2014 Design an instruction set to perform the basic arithmetic operations \u2013 add, subtract, multiply, and divide. Assume that all the instructions can have just one operand. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 7 \u2014 Consider the sbn instruction that subtracts the second operand from the first operand, and branches to the instruction specified by the label (third operand), if the result is negative. Write a small program using only the sbn instruction to compute the factorial of a positive number. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 8 \u2014 Write a small program using only the sbn instruction to test if a number is prime. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Theoretical Aspects of an ISA\\* ",
+        "text_level": 1,
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 Explain the design of a modified Turing machine. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 Prove that the sbn instruction is Turing complete. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 Prove that a machine with memory load, store, branch, and subtract instructions is Turing complete. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 12 \u2014 Find out other models of universal machines from the internet and compare them with Turing Machines. ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Practical Machine Models ",
+        "text_level": 1,
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 What is the difference between the Harvard architecture and Von Neumann architecture? ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "Ex. 14 \u2014 What is a register machine?   \nEx. 15 \u2014 What is a stack machine?   \nEx. 16 \u2014 Write a program to compute $\\mathbf { a } + \\mathbf { b } + \\mathbf { c } - \\mathbf { d }$ on a stack machine.   \nEx. 17 \u2014 Write a program to compute $\\mathbf { a } + \\mathbf { b } + ( \\mathbf { c } - \\mathbf { d } ) * \\mathbf { 3 }$ on a stack machine.   \nEx. 18 \u2014 Write a program to compute $( { \\bf a } + { \\bf b } / { \\bf c } ) * ( { \\bf c } - { \\bf d } ) + { \\bf e }$ on a stack machine.   \n\\*\\* Ex. 19 \u2014 Try to search the internet, and find answers to the following questions. 1.When is having a separate instruction memory more beneficial? 2.When is having a combined instruction and data memory more beneficial? ",
+        "page_idx": 45
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 46
+    },
+    {
+        "type": "text",
+        "text": "Part I ",
+        "text_level": 1,
+        "page_idx": 47
+    }
+]

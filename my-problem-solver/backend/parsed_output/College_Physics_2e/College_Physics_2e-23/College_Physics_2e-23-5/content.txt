@@ -1,0 +1,82 @@
+23.5 Electric Generators
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Calculate the emf induced in a generator.   
+• Calculate the peak emf which can be induced in a particular generator system.
+
+Electric generators induce an emf by rotating a coil in a magnetic field, as briefly discussed in Induced Emf and Magnetic Flux. We will now explore generators in more detail. Consider the following example.
+
+EXAMPLE 23.3
+
+Calculating the Emf Induced in a Generator Coil
+
+The generator coil shown in Figure 23.19 is rotated through one-fourth of a revolution (from  to  ) in  . The 200-turn circular coil has a  radius and is in a uniform  magnetic field. What is the average emf induced?
+
+Strategy
+
+We use Faraday’s law of induction to find the average emf induced over a time  :
+
+We know that  and  , and so we must determine the change in flux  to find emf.
+
+Solution
+
+Since the area of the loop and the magnetic field strength are constant, we see that
+
+Now,  , since it was given that  goes from  to  . Thus  , and
+
+The area of the loop is  . Entering this value gives
+
+Discussion
+
+This is a practical average value, similar to the  used in household power.
+
+The emf calculated in Example 23.3 is the average over one-fourth of a revolution. What is the emf at any given instant? It varies with the angle between the magnetic field and a perpendicular to the coil. We can get an expression for emf as a function of time by considering the motional emf on a rotating rectangular coil of width  and height  in a uniform magnetic field, as illustrated in Figure 23.20.
+
+Charges in the wires of the loop experience the magnetic force, because they are moving in a magnetic field. Charges in the vertical wires experience forces parallel to the wire, causing currents. But those in the top and bottom segments feel a force perpendicular to the wire, which does not cause a current. We can thus find the induced emf by considering only the side wires. Motional emf is given to be  , where the velocity vis perpendicular to the magnetic field  . Here the velocity is at an angle  with  , so that its component perpendicular to  is  sin  (see Figure 23.20). Thus in this case the emf induced on each side is  sin  , and they are in the same direction. The total emf around the loop is then
+
+This expression is valid, but it does not give emf as a function of time. To find the time dependence of emf, we assume the coil rotates at a constant angular velocity  . The angle  is related to angular velocity by  , so that
+
+Now, linear velocity  is related to angular velocity  by  . Here  , so that  , and
+
+Noting that the area of the loop is  , and allowing for  loops, we find that
+
+is the emf induced in a generator coil of  turns and area  rotating at a constant angular velocity  in a uniform magnetic field  . This can also be expressed as
+
+where
+
+is the maximum (peak) emf. Note that the frequency of the oscillation is  , and the period is  .Figure 23.21 shows a graph of emf as a function of time, and it now seems reasonable that AC voltage is sinusoidal.
+
+The fact that the peak emf,  , makes good sense. The greater the number of coils, the larger their area, and the stronger the field, the greater the output voltage. It is interesting that the faster the generator is spun (greater  ), the greater the emf. This is noticeable on bicycle generators—at least the cheaper varieties. One of the authors as a juvenile found it amusing to ride his bicycle fast enough to burn out his lights, until he had to ride home lightless one dark night.
+
+Figure 23.22 shows a scheme by which a generator can be made to produce pulsed DC. More elaborate arrangements of multiple coils and split rings can produce smoother DC, although electronic rather than mechanical means are usually used to make ripple-free DC.
+
+EXAMPLE 23.4
+
+Calculating the Maximum Emf of a Generator
+
+Calculate the maximum emf,  , of the generator that was the subject of Example 23.3.
+
+Strategy
+
+Once  , the angular velocity, is determined,  can be used to find  . All other quantities are
+
+known.
+
+Solution
+
+Angular velocity is defined to be the change in angle per unit time:
+
+One-fourth of a revolution is  radians, and the time is  ; thus,
+
+ is exactly 1000 rpm. We substitute this value for  and the information from the previous example into  , yielding
+
+Discussion
+
+The maximum emf is greater than the average emf of  found in the previous example, as it should be.
+
+In real life, electric generators look a lot different than the figures in this section, but the principles are the same. The source of mechanical energy that turns the coil can be falling water (hydropower), steam produced by the burning of fossil fuels, or the kinetic energy of wind. Figure 23.23 shows a cutaway view of a steam turbine; steam moves over the blades connected to the shaft, which rotates the coil within the generator.
+
+Generators illustrated in this section look very much like the motors illustrated previously. This is not coincidental. In fact, a motor becomes a generator when its shaft rotates. Certain early automobiles used their starter motor as a generator. In Back Emf, we shall further explore the action of a motor as a generator.

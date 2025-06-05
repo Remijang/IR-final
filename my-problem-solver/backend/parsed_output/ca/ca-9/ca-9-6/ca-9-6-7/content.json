@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "9.6.7 ld and st instructions ",
+        "text_level": 1,
+        "page_idx": 397
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at the load instruction. We need to transfer the value of the first source register to the ALU. Then we transfer the value of the immediate to the second ALU register ( $B$ ), and initiate the add operation to calculate the effective address. Once the effective address has been calculated, it is available in the aluResult register. Subsequently, we move the contents of the aluResult register to the memory address register (mar), and initiate a load operation. The result is available in the ldResult register in the next cycle. We write the loaded value to the register specified by rd in the next two cycles. ",
+        "page_idx": 397
+    },
+    {
+        "type": "text",
+        "text": "ld instruction /\\* transfer rs1 to register A \\*/ 2 mmov regSrc, rs1, <read> 3 mmov A, regVal /\\* calculate the effective address \\*/ 6 mmov B, immx, <add> /\\* ALU operation \\*/ /\\* perform the load \\*/ 9 mmov mar, aluResult, <load> 10 11 /\\* write the loaded value to the register file \\*/ 12 mmov regData, ldResult 13 mmov regSrc, rd, <write> 14 15 /\\* jump to the beginning \\*/ 16 mb .begin ",
+        "page_idx": 397
+    },
+    {
+        "type": "text",
+        "text": "The microcode for the store instruction is similar to that of the load instruction. We first calculate the effective memory address and store it in the mar register. Then we read the value of the $^ { r d }$ register that contains the data to be stored (Line 10). We save this in the mdr register, and issue the store (Line 11). ",
+        "page_idx": 398
+    },
+    {
+        "type": "text",
+        "text": "st instruction /\\* transfer rs1 to register A \\*/ 2 mmov regSrc, rs1, <read> 3 mmov A, regVal 4 5 /\\* calculate the effective address \\*/ 6 mmov B, immx, <add> /\\* ALU operation \\*/ 7 /\\* perform the store \\*/ 9 mmov mar, aluResult 10 mmov regSrc, rd, <read> 11 mmov mdr, regVal, <store> 12 13 /\\* jump to the beginning \\*/ 14 mb .begin ",
+        "page_idx": 398
+    }
+]

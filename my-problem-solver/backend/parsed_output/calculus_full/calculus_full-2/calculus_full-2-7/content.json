@@ -1,0 +1,284 @@
+[
+    {
+        "type": "text",
+        "text": "2.7 Continuous Functions ",
+        "text_level": 1,
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "This will be a brief section. It was originally included with limits, but the combination was too long. We are still concerned with the limit of $f ( x )$ as $x \\to a$ , but a new number is involved. That number is $f ( a )$ , the value of $f$ at $x = a$ . For a \u201climit,\u201d $x$ approached $a$ but never reached it\u2014so $f ( a )$ was ignored. For a \u201ccontinuous function,\u201d this final number $f ( a )$ must be right. ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "May I summarize the usual (good) situation as $x$ approaches $a$ ? ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "1. The nu $\\begin{array} { r l } & { \\mathrm { ~ \\ m b e r ~ } f ( a ) \\mathrm { ~ e x i s t s ~ \\quad } ( f \\mathrm { ~ i s ~ d e f n e d ~ a t ~ } a ) } \\\\ & { \\mathrm { ~ \\ n i t ~ o f ~ } f ( x ) \\mathrm { ~ e x i s t s ~ \\quad } \\mathrm { ( i t ~ w a s ~ c a l l e d ~ } L ) } \\\\ & { \\mathrm { ~ \\ n i t ~ } L \\mathrm { ~ e q u a l s ~ } f ( a ) \\quad ( f ( a ) \\mathrm { ~ i s ~ t h e ~ r i g h t ~ v a l u e ) } } \\end{array}$   \n2. The li   \n3. The li ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "In such a case, $f ( x )$ is continuous at $x = a$ : These requirements are often written in a single line: $f ( x ) \\to f ( a )$ as $x \\to a$ : By way of contrast, start with four functions that are not continuous at $x = 0$ : ",
+        "page_idx": 142
+    },
+    {
+        "type": "image",
+        "img_path": "images/38e41ef2a06fb4b203cb500c504d01c88b064b3e78c2a44d06c6159f3d5fdc12.jpg",
+        "img_caption": [
+            "Fig. 2.20 Four types of discontinuity (others are possible) at $x = 0$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "In Figure 2.20, the first function would be continuous if it had $f ( 0 ) = 0$ : But it has $f ( 0 ) = 1$ : After changing $f ( 0 )$ to\u00d1the right value, the problem is gone. The discontinuity is removable. Examples 2; 3; 4 are m\u00d1ore important and more serious. There is no \u201ccorrect\u201d value for $f ( 0 )$ : ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "2. $f ( x ) =$ step function (jump from 0 to 1 at $x = 0$ )   \n3. $f ( x ) = 1 / x ^ { 2 }$ (infinite limit as $x \\to 0$ )   \n4. $f ( x ) = \\sin ( 1 / x )$ (infinite oscillation as $x \\to 0$ ). ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "The graphs show how the limit fails to exist. The step function has a jump discontinuity. It has one-sided limits, from the left and right. It does not have an ordinary (two-sided) limit. The limit from the left $( x \\to 0 ^ { - }$ ) is 0: The limit from the right $( x \\to 0 ^ { + }$ ) is 1: Another step function is $x / | x |$ , which jumps from $^ { - 1 }$ to 1: ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "In the graph of $1 / x ^ { 2 }$ , the only reasonable limit is $L = + \\infty$ : I cannot go on record as saying that this limit e\u00d1xis\u0001ts. Officially, it doesn\u2019t\u2014but w\u00d1e often write it anyway: $1 / x ^ { 2 }  \\infty$ as $x \\to 0$ : This means that $1 / x ^ { 2 }$ goes (and stays) above every $L$ as $x \\to 0$ : ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "In the same unofficial way we write one-sided limits for $f ( x ) = 1 / x$ : ",
+        "page_idx": 142
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { F r o m ~ t h e ~ l e f t , ~ } } \\operatorname* { l i m } _ { x \\to 0 ^ { - } } { \\frac { 1 } { x } } = - \\infty . \\quad { \\mathrm { F r o m ~ t h e ~ r i g h t , ~ } } \\operatorname* { l i m } _ { x \\to 0 ^ { + } } { \\frac { 1 } { x } } = + \\infty .\n$$",
+        "text_format": "latex",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "Remark $1 / x$ has a \u201cpole\u201d at $x = 0$ : So has $1 / x ^ { 2 }$ (a double pole). The function $1 / ( x ^ { 2 } - x )$ has poles at $x = 0$ and $x = 1$ : In each case the denominator goes to zero and the function goes to $+ \\infty$ or $- \\infty$ : Similarly $1 / \\sin x$ has a pole at every multiple of $\\pi$ (where sin $x$ is zero). Except for $1 / x ^ { 2 }$ these poles are \u201csimple\u201d\u2014the functions are completely smooth at $x = 0$ when we multiply them by $x$ : ",
+        "page_idx": 142
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "$1 / x ^ { 2 }$ has a double pole, since it needs multiplication by $x ^ { 2 }$ (not just $x$ ). A ratio of polynomials $P ( x ) / Q ( x )$ has poles where $Q = 0$ , provided any common factors like $( x + 1 ) / ( x + 1 )$ are removed first. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Jumps and poles are the most basic discontinuities, but others can occur. The fourth graph shows that $\\sin ( 1 / x )$ has no limit as $x \\to 0$ : This function does not blow up; the sine never exceeds 1: At $\\begin{array} { r } { x = \\frac { 1 } { 3 } } \\end{array}$ and $\\textstyle { \\frac { 1 } { 4 } }$ and $\\scriptstyle { \\frac { 1 } { 1 0 0 0 } }$ it equals sin 3 and sin 4 and sin 1000: Those numbers are positive and negative and ( ? ). As $x$ gets small and $1 / x$ gets large, the sine oscillates faster and faster. Its graph won\u2019t stay in a small\u00d1box of height\u00d1 $\\varepsilon$ , no matter how narrow the box. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "CONTINUOUS FUNCTIONS ",
+        "text_level": 1,
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "DEFINITION $f$ is \u201ccontinuous at $x = a ^ { , , }$ if $f ( a )$ is defined and $f ( x ) \\to f ( a )$ as $x \\to a$ : If $f$ is continuous at every point where it is defined, it is a continuous function. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "Objection The definition makes $f ( x ) = 1 / x$ a continuous function! It is not defined at $x = 0$ , so its continuity can\u2019t fail. The logic requires us to accept this, but we don\u2019t have to like it. Certainly there is no $f ( 0 )$ that would make $1 / x$ continuous at $x = 0$ : ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "It is amazing but true that the definition of \u201ccontinuous function\u201d is still debated (Mathematics Teacher, May 1989). You see the reason\u2014we speak about a discontinuity of $1 / x$ , and at the same time call it a continuous function. The definition misses the difference between $1 / x$ and $( \\sin x ) / x$ : The function $f ( x ) = ( \\sin x ) / x$ can be made continuous at all $x$ . Just set $f ( 0 ) = 1$ : ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "We call a function \u201ccontinuable\u201d if its definition can be extended to all $x$ in a way that makes it continuous. Thus $( \\sin x ) / x$ and $\\sqrt { x }$ are continuable. The functions $1 / x$ and tan $x$ are not continuable. This suggestion may not end the debate, but I hope it is helpful. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 sin $x$ and cos $x$ and all polynomials $P ( x )$ are continuous functions. ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 The absolute value $| x |$ is continuous. Its slope jumps (not continuable). ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 Any rational function $P ( x ) / Q ( x )$ is continuous except where $Q = 0$ : ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 The function that jumps between 1 at fractions and 0 at non-fractions is discontinuous everywhere. There is a fraction between every pair of non-fractions and vice versa. (Somehow there are many more non-fractions.) ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 The function $0 ^ { x ^ { 2 } }$ is zero for every $x$ , except that $0 ^ { 0 }$ is not defined. So define it as zero and this function is continuous. But see the next paragraph where $0 ^ { 0 }$ has to be 1: ",
+        "page_idx": 143
+    },
+    {
+        "type": "text",
+        "text": "We could fill the book with proofs of continuity, but usually the situation is clear. \u201cA function is continuous if you can draw its graph without lifting up your pen.\u201d At a jump, or an infinite limit, or an infinite oscillation, there is no way across the discontinuity except to start again on the other side. The function $x ^ { \\prime \\prime }$ is continuous for $n > 0$ : It is not continuable f\u0001or $n < 0$ : The function $x ^ { 0 }$ equals 1 for every $x$ , except that $0 ^ { 0 }$ is not defined. This time continuity requires $0 ^ { 0 } = \\bar { 1 }$ : ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "The interesting examples are the close ones\u2014we have seen two of them: ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 ${ \\frac { \\sin x } { x } } \\quad { \\mathrm { a n d } } \\quad { \\frac { 1 - \\cos x } { x } } \\quad { \\mathrm { a r e ~ b o t h ~ c o n t i n u a b l e ~ a t ~ } } x = 0 .$ ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "Those were crucial for the slope of sin\u0001 $x$ : The first approaches 1 and the second approaches 0: Strictly speaking we must give these functions the correct values (1 and 0) at the limiting point $x = 0$ \u2014which of course we do. ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "It is important to know what happens when the denominators change to $x ^ { 2 }$ : ",
+        "page_idx": 144
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\sin x } { x ^ { 2 } } } \\quad { \\mathrm { b l o w s ~ u p ~ b u t ~ } } { \\frac { 1 - \\cos x } { x ^ { 2 } } } { \\mathrm { ~ h a s ~ t h e ~ l i m i t ~ } } { \\frac { 1 } { 2 } } { \\mathrm { ~ a t ~ } } x = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "Since $( \\sin x ) / x$ approaches 1, dividing by another $x$ gives a function like $1 / x$ : There is a simp\u0001le pole. It is an\u0001example of $0 / 0$ , in which the zero from $x ^ { 2 }$ is reached more quickly than the zero from sin $x$ : The \u201crace\u0004 to zero\u201d pro\u00d1duces almost all i\u00d1nteresting problems about limits. ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "For $1 - \\cos x$ and $x ^ { 2 }$ the race is almost even. Their ratio is 1 to 2: ",
+        "page_idx": 144
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 - \\cos x } { x ^ { 2 } } } = { \\frac { 1 - \\cos ^ { 2 } x } { x ^ { 2 } ( 1 + \\cos x ) } } = { \\frac { \\sin ^ { 2 } x } { x ^ { 2 } } } \\cdot { \\frac { 1 } { 1 + \\cos x } }  { \\frac { 1 } { 1 + 1 } } \\quad { \\mathrm { a s } } \\quad x  0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "This answer $\\frac { 1 } { 2 }$ will b\u0001e found again (m1ore easily) by \u201cl\u2019H\u00f4pital\u2019s rule.\u201d Here I emphasize not the answer but the problem. A central question of differential calculus is to know how fast the limit is approached. The speed of approach is exactly the information in the derivative. ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "These three examples are all continuous at $x = 0$ : The race is controlled by the slope\u2014because $f ( x ) - f ( 0 )$ i8s nea\u00d8rly $f ^ { \\prime } ( 0 )$ times $x$ : ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "derivative of sin $x$ is 1 $$ sin $x$ decreases like $x$ derivative of $\\sin ^ { 2 } x$ is 0 $$ $\\sin ^ { 2 } x$ decreases faster than $x$ derivative o|f $x ^ { 1 / 3 }$ is $\\begin{array} { r l r } { \\infty } & { { }  } & { x ^ { 1 / 3 } } \\end{array}$ x1=3 decreases more slowly than x: ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "DIFFERENTIABLE FUNCTIONS ",
+        "text_level": 1,
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "The absolute value $| x |$ is continuous at $x = 0$ but has no derivative. The same is true for $x ^ { 1 / 3 }$ : Asking for a derivative is more than ask\u00d1ing for continu\u00d1ity. The reason is fundamental, and carries us back to the key definitions: ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "$C o n t i n u o u s { \\mathrm { ~ a t ~ x : ~ } } f ( x + \\Delta x ) - f ( x ) { \\longrightarrow } 0 { \\mathrm { ~ a s ~ } } \\Delta x {  } 0$ $D e r i \\nu a t i \\nu e { \\mathrm { ~ a t ~ x : ~ } } \\quad { \\xrightarrow { f ( x + \\Delta x ) - f ( x ) } } f ^ { \\prime } ( x ) { \\mathrm { ~ a s ~ } } \\Delta x \\to 0 .$ ",
+        "page_idx": 144
+    },
+    {
+        "type": "text",
+        "text": "2 Derivatives ",
+        "text_level": 1,
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "In the first case, $\\Delta f$ goes to zero (maybe slowly). In the second case, $\\Delta f$ goes to zero as fast as $\\Delta x$ (because $\\Delta f / \\Delta x$ has a limit). That requirement is stronger: ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "2I At\u00d1a point where $f ( x )$ has a derivative, the function must be continuous.   \nBut $f ( x )$ can be continuous with no derivative. ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Proof The limit of $\\Delta f = ( \\Delta x ) ( \\Delta f / \\Delta x )$ is $( 0 ) ( d f / d x ) = 0$ : So $f ( x + \\Delta x ) -$ $f ( x )  0$ : ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "The continuous function $x ^ { 1 / 3 }$ has no derivative at $x = 0$ , because ${ \\frac { 1 } { 3 } } x ^ { - 2 / 3 }$ blows up. The absolute value $\\left| x \\right|$ has no derivative because its slope jumps. The remarkable function $\\textstyle { \\frac { 1 } { 2 } } \\cos 3 x + { \\frac { 1 } { 4 } } \\cos 9 x + \\cdots$ is continuous at all points and has a derivative at no points. You can draw its graph without lifting your pen (but not easily\u2014it turns at every point). To most people, it belongs with space-filling curves and unmeasurable areas\u2014in a box of curiosities. Fractals used to go into the same box! They are beau\u00d1tif8ul shapes\u00d1, with boundaries that have no tangents. The theory of fractals is very alive, for good mathematical reasons, and we touch on it in Section 3:7: ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "I hope you have a clear idea of these basic definitions of calculus: ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "1 Limit . $\\textstyle n \\to \\infty$ or $x \\to a$ / 2 Continuity (at $x = a$ ) 3 Derivative (at $x = a$ ). ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Those go back to $\\varepsilon$ and $\\delta$ , but it is seldom necessary to follow them so far. In the same way that economics describes many transactions, or history describes many events, a function comes from many values $f ( x )$ : A few points may be special, like market crashes or wars or discontinuities. At other points $d f / d x$ is the best guide to the function. ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "This chapter ends with two essential facts about a continuous function on a closed interval. The interval is $a \\leqslant x \\leqslant b$ , written simply as $[ a , b ] . \\dagger$ At the endpoints $a$ and $b$ we require $f ( x )$ to approach $f ( a )$ and $f ( b )$ : ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Extreme Value Property A continuous function on the finite interval $[ a , b ]$ has a maximum value $M$ and a minimum value $m$ : There are points $x _ { \\mathrm { m a x } }$ and $x _ { \\mathrm { m i n } }$ in $[ a , b ]$ where it reaches those values: ",
+        "page_idx": 145
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf ( x _ { \\mathrm { m a x } } ) = M \\geqslant f ( x ) \\geqslant f ( x _ { \\mathrm { m i n } } ) = m \\mathrm { ~ f o r ~ a l l ~ } x \\mathrm { ~ i n ~ } [ a , b ] .\n$$",
+        "text_format": "latex",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Int\u00a0erm\u00a4ediate Value Property If the number $F$ is between $f ( a )$ and $f ( b )$ , there is a point $c$ between $a$ and $b$ where $f ( c ) = F$ : Thus if $F$ is between the minimum $m$ and the maximum $M$ , there is a point $c$ between $x _ { \\mathrm { m i n } }$ and $x _ { \\mathrm { m a x } }$ where $f ( c ) = F$ : ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Examples show why we require closed intervals and continuous functions. For $0 < x \\leqslant 1$ the function $f ( x ) = x$ never reaches its minimum (zero). If we close the interval by defining $f ( 0 ) = 3$ (discontinu\u00a5ous) the minimum is still not reached. Because of the jump, the intermediate value $F = 2$ is also not reached. The idea of continuity was inescapable, after Cauchy defined the idea of a limit. ",
+        "page_idx": 145
+    }
+]

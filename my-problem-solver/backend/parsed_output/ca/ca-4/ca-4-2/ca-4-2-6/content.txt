@@ -1,0 +1,26 @@
+4.2.6 Simple Branch Instructions
+
+An ISA with just data processing instructions is very weak. We need branch instructions such that we can implement if-statements and for-loops. ARM programs primarily use three branch
+
+instructions to do most of their work. They are:  , beq, bne. Their semantics are given in Table 4.9.
+
+Example 44
+
+Write an ARM assembly program to compute the factorial of a positive number  ) stored in r0. Save the result in r1.
+
+Answer:
+
+C int val = get_input(); int idx; int prod = 1; for (idx = 1; idx <= val ; idx++) {  • }
+
+ARM assembly mov r1, #1 /\* prod = 1 \*/ mov r3, #1 /\* idx = 1 \*/ .loop: mul r1, r3, r1 /\* prod = prod \* idx \*/ cmp r3, r0 /\* compare idx, with the input (num) \*/ add r3, r3, #1 /\* idx ++ \*/ bne .loop /\* loop condition \*/
+
+Let us now see, how we can use the power of branches to write some powerful programs. Let us consider the factorial function. In Example 44, we show a small program to compute the factorial of a natural number.  is a counter that is initialized to 0. We keep on incrementing it till it matches  .  represents the product. We iteratively multiply the value of  with  . At the end of the set of iterations,  contains the factorial of the value given in  .
+
+Example 45
+
+Write an assembly program to find out if a natural number stored in r0 is a perfect square.   
+Save the Boolean result in r1.
+
+Answer:
+
+Let us show the example of another program to test if a number is a perfect square (see Example 45).  contains the result of the operation. If the number is a perfect square we set  to 1, else we set  to 0. The main loop is between lines 3 and 9. Here, we increment the value of  iteratively, and test if its square equals  . If it does, we jump to .square, set  to  , and jump to .exit. Here, we print the value (code not shown), and exit the program. We assume a hypothetical label – .exit – that is present at the end of the program (also shown in the code). The exit condition of the loop is Line 9, where we consider the result of the comparison of  and  . If  is equal to  , then  cannot contain a perfect square because  is at least equal to 2 at the end of any iteration.

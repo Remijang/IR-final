@@ -1,0 +1,11 @@
+4.4.2 Load-Store Instructions
+
+A simple load or store instruction can be represented as : (ldr str) rd, [rs, (immediate/shifter operand)]. We require additional syntax for pre- and post-indexed addressing (see Section 4.3.1). The format for the encoding of load and store instructions is shown in Figure 4.8.
+
+The semantics of the bits I, P, U, B, W, and L is shown in Table 4.17. In this case, the I bit has reverse semantics as compared to the case of data processing instructions. If it is 1, then the last 12 bits represent a shifter operand, otherwise they represent an immediate value.  represents the advanced addressing mode – pre or post, and W determines if the advanced addressing mode is used or a simple addressing mode is used. We can either add the offset from the base register or we can subtract it from the base register. This is specified by the U bit. The B bit determines the granularity of the transfer – byte level or word level. Lastly, the L bit determines if the instruction is a load or a store.
+
+These six bits  capture all the different variants of the load and store instructions. The rest of the format is the same as the data processing instruction other than the encoding of immediates. Immediates in memory instructions do not follow the (rot  payload) format. The 12-bit immediate field represents an unsigned number between 0 and 4095.
+
+We thus observe that like SimpleRisc , the designers of the ARM instruction set have tried to stick to the same instruction format with minor variations.
+
+Question 6 What is the necessity for having the U bit? Answer: Negative numbers such as -4 or -8 cannot be represented in ARM’s 12-bit format for specifying offsets in memory instructions. However, we might need to use addresses with a negative displacement, especially when they are relative to the frame pointer or the stack pointer. The U bit allows us to represent an immediate such as -4 as +4. It additionally instructs the processor to subtract the displacement from the base register.

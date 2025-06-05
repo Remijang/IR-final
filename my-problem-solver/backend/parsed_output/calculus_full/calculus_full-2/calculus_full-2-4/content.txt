@@ -1,0 +1,107 @@
+2.4 The Derivative of the Sine and Cosine
+
+This section does two things. One is to compute the derivat2ivesof sin  and cos  : The other is to explain why these functions are so important. The1y desc2ribe oscillation, which will be expressed in words and equations. You will see a “differential equation.” It involves the derivative of an unknown function  :
+
+The differential equation will say that the second derivative—the derivative of the derivative—is equal and opposite to  : In symbols this is  : Distance in one direction leads to acceleration in the other direction. That makes  and  and  all oscillate. The solutions to  are sin  and cos  and all their combinations.
+
+We begin with the slope. The derivative of  is  : There is no reason for that to be a mystery, but I still find it beautiful.Chapter 1 followed a ball around a circle; the shadow went up and dÑown. Its height was sin  and its velocity was cos  : We now find that derivative by the standard method of limits, when  :
+
+The sine is harder to work with than  or  : Where we had  or  , we now have  : This calls for one of the basic “addition formulas” from trigonometry, reviewed in Section 1:5W
+
+Equation (2) puts  in a new form:
+
+The ratio splits into two simpler pieces on the right. Algebra and trigonometry got us this far, and now comes thecalculus problem. What happens as  It is no longer easy to divideÑby  : (I will not even mention thÑe unspeakable crime of writing  :) There are two critically important limits—the first is zero and the second is one:
+
+The careful reader will object that limits have not been defined! You may further object to computing these limits separately, before combining them into equation (4). Nevertheless—following the principle of ideas now, rigor later—I would like to proceed. It is entirely true that the limit of (4) comes from the two limits in (5):
+
+The secant slope  has approached the tangent slope  :
+
+2G The derivative of  is  :
+
+We cannot pass over the crucial step—the two limits in (5). They contain the real ideas. Both ratios become  if we just substitute  . Remember that the cosine of a zero angle is 1, and the sine of a zero angle is 0: Figure 2.8a shows a small angle  (as near to zero as we could reasonably draw). The edge of length sin  is close to zero, and the edÑge of length cÑos  is near 1:ÑFig8ure 2.8b shows how the ratio of sin  to  (both headed for zero) gives the slope of the sine curve at the start.
+
+When two functions approach zero, their ratio might do anything. We might have
+
+No clue comes from  : When matters is whether the top or bottom goes to zero more quickly. Roughly speaking, we want to show that  is like  and  is like  :
+
+Time out The graph of sin  is in Figure 2.9 (in black). The graph of  sits just beside it (in red). The height difference is  when the shift distance is  :
+
+Now divide by that small number  (or  ). The second figure shows  : It is close to cos  : (Look how it starts—it is not quite cos  :) Mathematics will prove that the limit is cos  exactly, when  : Curiously, the reasoning concentrates on only one point .  /: The slope at that point is cos  :
+
+We now prove this: sin  divided by  goes to 1: The sine curve starts with slope 1: By the addition formula for  , this answer at one point will lead to the slope cos  at all points.
+
+Question Why does the graph of  shift left from  when  Answer When  , the shifted graph is already showing  : In Figure 2.9a, the red graph is shifted left from the black graph. The red graph shows sin  when the black graph shows sin 0:
+
+There are several ways to find this limit. The direct approach is to let a computer draw a graph. Figure 2.10a is very convincing. The function  approaches 1 at the key point  . So does  : In practice, the only danger is that you might get a message like “undefined function” and no graph. (The machine may refuse to divide by zero at  : Probably you can get around that.) Because of the importance of this limit, I want to give a mathematical proof that it equals 1:
+
+Figure 2.10b indicates, but still only graphically, that sin  stays below  : (The first graph shows that too;  is below 1:) We als¡o see that tan  stays above  : Remember that the tangent is the ratio of sine to cosine. Dividing by the cosine is enough to push the tangent above  : The crucial inequalities (to be proved when  is small and positive) are
+
+Since tan  , those are the same as
+
+What happens as  goes to zero ? The ratio  is squeezed between cos  and 1. But cos  is approaching 1! The squeeze as  leaves only one possibility for  , which is caught in be tween: The ratio  approaches 1.
+
+Figure 2.10 shows that “squeeze play.” If two functions approach the same limit, so does any function caught in between. This is proved at the end of Section 2:6:
+
+For negative values of  , which are absolutely allowed, the result is the same. To the left of zero,  reverses sign and sin  reverses sign. The ratio  is unchanged. (The sine is an odd function:  ) The ratio is an even function, symmetric around zero and approaching 1 from both sides.
+
+The proof depends on sin  , which is displayed by the graph but not explained. We go back to right triangles.
+
+Figure 2.11a shows why si n  : The straight line  has length  : The circular arc must be longer, because the shortest distance between two points is a straight line.  The arc  has length  : (Important: When the radius is 1, the arc length equals the angle. The full circumference is  and the full angle is also  :) The straight distance  is less than the circular distance  ; so sin  .
+
+Figure 2.11b shows why  : This time we look at areas. The triangular area is  : Inside that triangle is the shaded sector of the circle.
+
+Its area is  times the area of the whole circle (because the angle is that fraction of the whole angle). The circle has area  , so multiplication by  gives  for the area of the sector. Comparing with the triangle around it,  tan  :
+
+The inequalities sin  are now proved. The squeeze in equation (8) produces  : Q.E.D. Problem 13 shows how to prove sin  from areas.
+
+Note All angles  and  are being measured in radians. In degrees, cos  is not the derivative of sin  . A degree is much less than a radian, and  is reduced by the factor  :
+
+This second limit is different. We will show that  shrinks to zero more quickly than  : Cosines are connected to sines by  : We start from the known fact sin  and work it into a form involving cosines:
+
+Note that everything is positive. Divide through by  and also by  :
+
+Our ratio is caught in the middle. The right side goes to zero because  . This is another “squeeze”—there is no escape. Our ratio goes to zero.
+
+For cos  or for negative  , the signs changebut minus zero is still zero. This confirms equation (6). The slope of sin  is cos  :
+
+Remark Equation (10) also shows that  is approximately  : The 2 comes from  : This is a basic purpose of calculus—to find simple approximations like  : A “tangent parabola”  is close to the top of the cosine curve.
+
+THE DERIVATIVE OF THE COSINE
+
+This will be easy. The quick way to differentiate cos  is to shift the sine curve by  : That yields the cosine curve (solid line in Figure 2.12b). The derivative also shifts by  (dotted line). The derivative of cos  .
+
+Notice how the dotted line (the slope) goes below zero when the solid line turns downward. The slope equals zero when the solid line is level. Increasing functions have positive slopes. Decreasing functions have negative slopes. That is important, and we return to it.
+
+There is more information in  than “function rising” or “function falling.” The slope tells how quickly the function goes up or down. It gives the rate of change. The slope of  canbe computed in the normal way, as the limit of  :
+
+The first line came from formula (3) for  : The second line took limits, reaching 0 and 1 as before. This confirms the graphical proof that the slope of cos  is  :
+
+THE SECOND DERIVATIVES OF THE SINE AND COSINE
+
+We now introduce the derivative of the derivative. That is the second derivative of the original function. It tells how fast the slope is changing, not how fast  itself is changing. The second derivative is the “rate of change of the velocity.” A straight line has constant slope (constant velocity), so its second derivative is zero:
+
+The parab2ola  has slope  (linear) which has slope 2 (constant). Similarly
+
+There stands the notation  for the second derivative. A short form is  or  : (This is pronounced  double prime or  double prime). Example: The second derivative of  is  :
+
+In the distance-velocity problem,  is acceleration. It tells how fast  is changing, while  tells how fast  is changing.Where  was distance=time, the second derivative is distance=  : The acceleration du2e to gravity is about  or  , which means that  increases by 32 ft=sec in one second. It does not mean that the distance increases by 32 feet!
+
+The graph of  increases at the start. Its derivative cos  is positive. However t2he¡second derivati1ve is  : The curve is bending down while going up. 2The arch is “conca1ve down” because  is negative.
+
+At  the curve reaches zero and goes negative. The second derivative becomes positive. Now the curve bends upward. The lower arch is “concave up.”
+
+Chapter 3 studies these things properly—here we get an advance look for sin  :
+
+The remarkable fact about the sine and cosine is that  : That is unusual and special: acceleratio  : The greater the distance, the greater the force pulling back:
+
+Question Does  mean that the distance  is decreasing ? Answer No. Absolutely not! It means that  is decreasing, not necessarily  : At the start of the sine curve,  is still increasing but  :
+
+2 Applications of the Derivative
+
+Sines and cosines give simple harmonic motion—up and down, forward and back, out and in, tension and compression. Stretch a spring, and the restoring force pulls it back. Push a swing up, and gravity brings it down. These motions are controlled by a differential equation:
+
+All solutions are combinatioÑns of the sine and coÑsine:  sinÑ  cos t:
+
+This is not a course on differential equations. But you have to see the purpose of calculus. It models events by equations. It models oscillation by equation (12). Your heart fills and empties. Balls bounce. Current alternates. The economy goes up and down:
+
+We can’t live without oscillations (or differential equations).

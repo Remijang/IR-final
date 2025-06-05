@@ -1,0 +1,55 @@
+[
+    {
+        "type": "text",
+        "text": "CHAPTER 7 ",
+        "text_level": 1,
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Techniques of Integration ",
+        "text_level": 1,
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Chapter 5 introduced the integral as a limit of sums. The calculation of areas was started\u2014by hand or computer. Chapter 6 opened a different door. Its new functions $e ^ { x }$ and $\\ln x$ led to differential equations. You might say that all along we have been solving the special differential equation $d f / d x = v ( x )$ . The solution is $f = \\int v ( x ) d x$ . But the step to $d y / d x = c y$ was a breakthrough. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "The truth is that we are able to do remarkable things. Mathematics has a language, and you are learning to speak it. A short time ago the symbols $d y / d x$ and $\\int v ( x ) d x$ were a mystery. (My own class was not too sure about $v ( x )$ itself\u2014the symbol for a function.) It is easy to forget how far we have come, in looking ahead to what is next. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "I do want to look ahead. For integrals there are two steps to take\u2014more functions and more applications. By using mathematics we make it live. The applications are most complete whe\u00bbn we know the int\u00bbegral. This short chapter will widen (very much) the range of functions we can integ\u0001rate. A com\u0001puter wit\u0001h symbolic algebra widens it more. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Up to now, integration depended on recognizing derivatives. If $v ( x ) = \\sec ^ { 2 } { x }$ then $f ( x ) = \\tan x$ . To integrate tan $x$ we use a substitution: ",
+        "page_idx": 352
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int { \\frac { \\sin x } { \\cos x } } d x = - \\int { \\frac { d u } { u } } = - \\ln u = - \\ln \\cos x .\n$$",
+        "text_format": "latex",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "What we need now are techniques for other integrals, to change them around until we can attack them. Two examples are $\\int x \\cos x d x$ and $\\int { \\sqrt { 1 - x ^ { 2 } } } d x$ , which are not immediately recognizable. With integration by parts, and a new substitution, they become simple. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Those examples indicate where this chapter starts and stops. With reasonable effort (and the help of tables, which is fair) you can integrate important functions. With intense effort you could integrate even more functions. In older books that extra exertion was made\u2014it tended to dominate the cours1e. They\u0001had integrals like $\\textstyle \\int ( x + 1 ) d x / { \\sqrt { 2 x ^ { 2 } - 6 x + 4 } }$ , which we could work on if we had to. Our time is too valuable for that! Like long division, the ideas are for us and their intricate elaboration is for the computer. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Integration by parts comes first. Then we do new substitutions. Partial fractions is a useful idea (already applied to the logistic equation $y ^ { \\prime } { = } c y - b y ^ { 2 } )$ . In the last section $x$ goes to infinity or $y ( x )$ goes to infinity\u2014but the area stays finite. These improper integrals are quite common. Chapter 8 brings the applications. ",
+        "page_idx": 352
+    }
+]

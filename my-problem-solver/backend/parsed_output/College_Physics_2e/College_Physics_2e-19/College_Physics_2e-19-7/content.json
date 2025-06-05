@@ -1,0 +1,673 @@
+[
+    {
+        "type": "text",
+        "text": "19.7 Energy Stored in Capacitors ",
+        "text_level": 1,
+        "page_idx": 862
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 862
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 862
+    },
+    {
+        "type": "text",
+        "text": "List some uses of capacitors.   \n\u2022 Express in equation form the energy stored in a capacitor.   \n\u2022 Explain the function of a defibrillator. ",
+        "page_idx": 862
+    },
+    {
+        "type": "text",
+        "text": "Most of us have seen dramatizations in which medical personnel use a defibrillator to pass an electric current through a patient\u2019s heart to get it to beat normally. (Review Figure 19.22.) Often realistic in detail, the person applying the shock directs another person to \u201cmake it 400 joules this time.\u201d The energy delivered by the defibrillator is stored in a capacitor and can be adjusted to fit the situation. SI units of joules are often employed. Less dramatic is the use of capacitors in microelectronics, such as certain handheld calculators, to supply energy when batteries are charged. (See Figure 19.22.) Capacitors are also used to supply energy for flash lamps on cameras. ",
+        "page_idx": 862
+    },
+    {
+        "type": "image",
+        "img_path": "images/35c5379afb04e05b2cd4e70924e21aab2921f0df9592994f4b868fb6028004cd.jpg",
+        "img_caption": [
+            "FIGURE 19.22 Energy stored in the large capacitor is used to preserve the memory of an electronic calculator when its batteries are charged. (credit: Kucharek, Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "Energy stored in a capacitor is electrical potential energy, and it is thus related to the charge $Q$ and voltage $V$ on the capacitor. We must be careful when applying the equation for electrical potential energy $\\Delta \\mathrm { P E } = q \\Delta V$ to a capacitor. Remember that $\\Delta \\mathrm { P E }$ is the potential energy of a charge $q$ going through a voltage $\\Delta V$ . But the capacitor starts with zero voltage and gradually comes up to its full voltage as it is charged. The first charge placed on a capacitor experiences a change in voltage $\\Delta V = 0$ , since the capacitor has zero voltage when uncharged. The final charge placed on a capacitor experiences $\\Delta V = V$ , since the capacitor now has its full voltage $V$ on it. The average voltage on the capacitor during the charging process is $V / 2$ , and so the average voltage experienced by the full charge $q$ is $V / 2$ . Thus the energy stored in a capacitor, $E _ { \\mathrm { { c a p } } }$ , is ",
+        "page_idx": 863
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { \\mathrm { c a p } } = { \\frac { Q V } { 2 } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "where $Q$ is the charge on a capacitor with a voltage $V$ applied. (Note that the energy is not $Q V ,$ but $Q V / 2 .$ ) Charge and voltage are related to the capacitance $C$ of a capacitor by $Q = C V ,$ , and so the expression for $E _ { \\mathrm { { c a p } } }$ can be algebraically manipulated into three equivalent expressions: ",
+        "page_idx": 863
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { \\mathrm { c a p } } = { \\frac { Q V } { 2 } } = { \\frac { C V ^ { 2 } } { 2 } } = { \\frac { Q ^ { 2 } } { 2 C } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "where $Q$ is the charge and $V$ the voltage on a capacitor $C$ . The energy is in joules for a charge in coulombs, voltage in volts, and capacitance in farads. ",
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "Energy Stored in Capacitors ",
+        "text_level": 1,
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "The energy stored in a capacitor can be expressed in three ways: ",
+        "page_idx": 863
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { \\mathrm { c a p } } = { \\frac { Q V } { 2 } } = { \\frac { C V ^ { 2 } } { 2 } } = { \\frac { Q ^ { 2 } } { 2 C } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "where $Q$ is the charge, $V$ is the voltage, and $C$ is the capacitance of the capacitor. The energy is in joules for a charge in coulombs, voltage in volts, and capacitance in farads. ",
+        "page_idx": 863
+    },
+    {
+        "type": "text",
+        "text": "In a defibrillator, the delivery of a large charge in a short burst to a set of paddles across a person\u2019s chest can be a lifesaver. The person\u2019s heart attack might have arisen from the onset of fast, irregular beating of the heart\u2014cardiac or ventricular fibrillation. The application of a large shock of electrical energy can terminate the arrhythmia and allow the body\u2019s pacemaker to resume normal patterns. Today it is common for ambulances to carry a defibrillator, which also uses an electrocardiogram to analyze the patient\u2019s heartbeat pattern. Automated external defibrillators (AED) are found in many public places (Figure 19.23). These are designed to be used by lay persons. The device automatically diagnoses the patient\u2019s heart condition and then applies the shock with appropriate energy and waveform. CPR is recommended in many cases before use of an AED. ",
+        "page_idx": 863
+    },
+    {
+        "type": "image",
+        "img_path": "images/c192fed99bc75da9b804144296b1a7e14b98dddad4896862c43594212b6669b0.jpg",
+        "img_caption": [
+            "FIGURE 19.23 Automated external defibrillators are found in many public places. These portable units provide verbal instructions for use in the important first few minutes for a person suffering a cardiac attack. (credit: Owain Davies, Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 19.11 ",
+        "text_level": 1,
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "Capacitance in a Heart Defibrillator ",
+        "text_level": 1,
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "A heart defibrillator delivers $4 . 0 0 \\times 1 0 ^ { 2 }$ of energy by discharging a capacitor initially at $1 . 0 0 \\times 1 0 ^ { 4 }$ . What is its capacitance? ",
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "We are given $E _ { \\mathrm { c a p } }$ and $V$ , and we are asked to find the capacitance $C$ . Of the three expressions in the equation for $E _ { \\mathrm { { c a p } } }$ , the most convenient relationship is ",
+        "page_idx": 864
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { \\mathrm { c a p } } = { \\frac { C V ^ { 2 } } { 2 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "Solving this expression for $C$ and entering the given values yields ",
+        "page_idx": 864
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { C } & { = } & { { \\frac { 2 E _ { \\mathrm { c a p } } } { V ^ { 2 } } } = { \\frac { 2 ( 4 . 0 0 \\times 1 0 ^ { 2 } { \\mathrm { J } } ) } { ( 1 . 0 0 \\times 1 0 ^ { 4 } { \\mathrm { V } } ) ^ { 2 } } } = 8 . 0 0 \\times 1 0 ^ { - 6 } { \\mathrm { F } } } \\\\ & { = } & { 8 . 0 0 \\mu { \\mathrm { F } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "This is a fairly large, but manageable, capacitance at $1 . 0 0 \\times 1 0 ^ { 4 } \\mathrm { ~ V ~ }$ . ",
+        "page_idx": 864
+    },
+    {
+        "type": "text",
+        "text": "Glossary ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "capacitance amount of charge stored per unit volt   \ncapacitor a device that stores electric charge   \ndefibrillator a machine used to provide an electrical shock to a heart attack victim's heart in order to restore the heart's normal rhythmic pattern   \ndielectric an insulating material   \ndielectric strength the maximum electric field above which an insulating material begins to break down and conduct   \nelectric potential potential energy per unit charge   \nelectron volt the energy given to a fundamental charge accelerated through a potential difference of one volt   \nequipotential line a line along which the electric potential is constant   \ngrounding fixing a conductor at zero volts by connecting it to the earth or ground   \nmechanical energy sum of the kinetic energy and potential energy of a system; this sum is a constant   \nparallel plate capacitor two identical conducting plates separated by a distance   \npolar molecule a molecule with inherent separation of charge   \npotential difference (or voltage) change in potential energy of a charge moved from one point to another, divided by the charge; units of potential difference are joules per coulomb, known as volt   \nscalar physical quantity with magnitude but no direction   \nvector physical quantity with both magnitude and direction ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "Section Summary ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "19.1 Electric Potential Energy: Potential Difference ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Electric potential is potential energy per unit charge.   \n\u2022 The potential difference between points A and B, $V _ { \\mathrm { B } } - V _ { \\mathrm { A } }$ , defined to be the change in potential energy of a charge $q$ moved from A to B, is equal to the change in potential energy divided by the charge, Potential difference is commonly called voltage, represented by the symbol $\\Delta V$ . $\\Delta V = { \\frac { \\Delta { \\mathrm { P E } } } { q } } $ and $\\Delta \\mathrm { P E } = q \\Delta V$   \nAn electron volt is the energy given to a fundamental charge accelerated through a potential difference of $\\mathsf { 1 } \\mathsf { V } .$ In equation form, $1 \\ \\mathrm { e V } \\ =$ $\\big ( 1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { C } \\big ) ( 1 \\mathrm { V } ) =$ $\\bigg ( 1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { C } \\bigg ) ( 1 \\mathrm { J } / \\mathrm { C } )$ \u4e8c $1 . 6 0 \\times 1 0 ^ { - 1 9 } \\mathrm { ~ J } .$   \n\u2022 Mechanical energy is the sum of the kinetic energy and potential energy of a system, that is, $\\mathrm { K E + P E }$ This sum is a constant. ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "19.2 Electric Potential in a Uniform Electric Field ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The voltage between points A and B is $\\begin{array} { r } { V _ { \\mathrm { A B } } = \\bar { E } d } \\\\ { E = \\frac { V _ { \\mathrm { A B } } } { d } \\int ( \\mathrm { u n i f o r m } E \\cdot \\mathrm { f i e l d o n l y } ) , } \\end{array}$ where $d$ is the distance from A to B, or the distance between the plates. In equation form, the general relationship between voltage and electric field is ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "$E = - { \\frac { \\Delta V } { \\Delta s } } ,$   \nwhere $\\Delta s$ is the distance over which the change in potential, $\\Delta V$ , takes place. The minus sign tells us that $\\mathbf { E }$ points in the direction of decreasing   \npotential.) The electric field is said to be the   \ngradient(as in grade or slope) of the electric   \npotential. ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "19.3 Electrical Potential Due to a Point Charge ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Electric potential of a point charge is $V = k Q / r$ . \u2022 Electric potential is a scalar, and electric field is a vector. Addition of voltages as numbers gives the voltage due to a combination of point charges, whereas addition of individual fields as vectors gives the total electric field. ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "19.4 Equipotential Lines ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "\u2022 An equipotential line is a line along which the electric potential is constant.   \n\u2022 An equipotential surface is a three-dimensional version of equipotential lines.   \n\u2022 Equipotential lines are always perpendicular to electric field lines. The process by which a conductor can be fixed at zero volts by connecting it to the earth with a good conductor is called grounding. ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "19.5 Capacitors and Dielectrics ",
+        "text_level": 1,
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "\u2022 A capacitor is a device used to store charge. \u2022 The amount of charge $Q$ a capacitor can store depends on two major factors\u2014the voltage applied ",
+        "page_idx": 865
+    },
+    {
+        "type": "text",
+        "text": "and the capacitor\u2019s physical characteristics, such as its size.   \n\u2022 The capacitance $C$ is the amount of charge stored per volt,or $C = { \\frac { Q } { V } } .$   \n\u2022 The capacitance of a parallel plate capacitor is $\\begin{array} { r } { C = \\varepsilon _ { 0 } \\frac { A } { d } } \\end{array}$ , when the plates are separated by air or free space. $\\varepsilon _ { 0 }$ is called the permittivity of free space.   \n\u2022 A parallel plate capacitor with a dielectric between its plates has a capacitance given by $C = \\kappa \\varepsilon _ { 0 } \\ { \\frac { A } { d } } ,$ where $\\kappa$ is the dielectric constant of the material.   \n\u2022 The maximum electric field strength above which an insulating material begins to break down and conduct is called dielectric strength. ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.6 Capacitors in Series and Parallel ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "Total capacitance in series ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "Conceptual Questions ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.1 Electric Potential Energy: Potential Difference ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "1. Voltage is the common word for potential difference. Which term is more descriptive, voltage or potential difference?   \n2. If the voltage between two points is zero, can a test charge be moved between them with zero net work being done? Can this necessarily be done without exerting a force? Explain.   \n3. What is the relationship between voltage and energy? More precisely, what is the relationship between potential difference and electric potential energy?   \n4. Voltages are always measured between two points. Why?   \n5. How are units of volts and electron volts related? How do they differ? ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.2 Electric Potential in a Uniform Electric Field ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "6. Discuss how potential difference and electric field strength are related. Give an example.   \n7. What is the strength of the electric field in a region where the electric potential is constant?   \n8. Will a negative charge, initially at rest, move toward higher or lower potential? Explain why. $\\begin{array} { r } { \\frac { 1 } { C _ { \\mathrm { S } } } = \\frac { 1 } { C _ { 1 } } + \\frac { 1 } { C _ { 2 } } + \\frac { 1 } { C _ { 3 } } + \\dots } \\end{array}$   \n\u2022 Total capacitance in parallel   \n$C _ { \\mathfrak { p } } = C _ { 1 } + C _ { 2 } + C _ { 3 } + \\dots$   \nIf a circuit contains a combination of capacitors in series and parallel, identify series and parallel parts, compute their capacitances, and then find the total. ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.7 Energy Stored in Capacitors ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Capacitors are used in a variety of devices, including defibrillators, microelectronics such as calculators, and flash lamps, to supply energy.   \n\u2022 The energy stored in a capacitor can be expressed in three ways: $E _ { \\mathrm { c a p } } = { \\frac { Q { \\stackrel { . } { V } } } { 2 } } = { \\frac { C V ^ { 2 } } { 2 } } = { \\frac { Q ^ { 2 } } { 2 C } } ,$ where $Q$ is the charge, $V$ is the voltage, and $C$ is the capacitance of the capacitor. The energy is in joules when the charge is in coulombs, voltage is in volts, and capacitance is in farads. ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.3 Electrical Potential Due to a Point Charge ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "9. In what region of space is the potential due to a uniformly charged sphere the same as that of a point charge? In what region does it differ from that of a point charge?   \n10. Can the potential of a non-uniformly charged sphere be the same as that of a point charge? Explain. ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.4 Equipotential Lines ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "11. What is an equipotential line? What is an equipotential surface?   \n12. Explain in your own words why equipotential lines and surfaces must be perpendicular to electric field lines.   \n13. Can different equipotential lines cross? Explain. ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "19.5 Capacitors and Dielectrics ",
+        "text_level": 1,
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "14. Does the capacitance of a device depend on the applied voltage? What about the charge stored in it?   \n15. Use the characteristics of the Coulomb force to explain why capacitance should be proportional to the plate area of a capacitor. Similarly, explain why capacitance should be inversely proportional to the separation between plates.   \n16. Give the reason why a dielectric material increases capacitance compared with what it would be with air between the plates of a capacitor. What is the independent reason that a dielectric material also allows a greater voltage to be applied to a capacitor? (The dielectric thus increases $C$ and permits a greater $V$ .)   \n17. How does the polar character of water molecules help to explain water\u2019s relatively large dielectric constant? (Figure 19.18)   \n18. Sparks will occur between the plates of an airfilled capacitor at lower voltage when the air is humid than when dry. Explain why, considering the polar character of water molecules.   \n19. Water has a large dielectric constant, but it is rarely used in capacitors. Explain why.   \n20. Membranes in living cells, including those in humans, are characterized by a separation of charge across the membrane. Effectively, the membranes are thus charged capacitors with important functions related to the potential difference across the membrane. Is energy required to separate these charges in living membranes and, if so, is its source the metabolization of food energy or some other source? ",
+        "page_idx": 866
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 867
+    },
+    {
+        "type": "image",
+        "img_path": "images/175b9aba2cd94ba35a0e76e78082458519c5b039268848c55bbf12390cc8ba77.jpg",
+        "img_caption": [
+            "FIGURE 19.24 The semipermeable membrane of a cell has different concentrations of ions inside and out. Diffusion moves the $\\mathrm { K ^ { + } }$ (potassium) and $\\mathrm { C l ^ { - } }$ (chloride) ions in the directions shown, until the Coulomb force halts further transfer. This results in a layer of positive charge on the outside, a layer of negative charge on the inside, and thus a voltage across the cell membrane. The membrane is normally impermeable to $\\mathrm { N a ^ { + } }$ (sodium ions). "
+        ],
+        "img_footnote": [],
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "19.6 Capacitors in Series and Parallel ",
+        "text_level": 1,
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "21. If you wish to store a large amount of energy in a capacitor bank, would you connect capacitors in series or parallel? Explain. ",
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "19.7 Energy Stored in Capacitors ",
+        "text_level": 1,
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "22. How does the energy contained in a charged capacitor change when a dielectric is inserted, assuming the capacitor is isolated and its charge is constant? Does this imply that work was done?   \n23. What happens to the energy stored in a capacitor connected to a battery when a dielectric is inserted? Was work done in the process? ",
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "Problems & Exercises ",
+        "text_level": 1,
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "19.1 Electric Potential Energy: Potential Difference ",
+        "text_level": 1,
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "1. Find the ratio of speeds of an electron and a negative hydrogen ion (one having an extra electron) accelerated through the same voltage, assuming non-relativistic final speeds. Take the mass of the hydrogen ion to be $1 . 6 7 \\times 1 0 ^ { - 2 7 } { \\mathrm { ~ k g } }$   \n2. An evacuated tube uses an accelerating voltage of $4 0 ~ \\mathsf { k V }$ to accelerate electrons to hit a copper plate and produce $\\mathsf { x }$ rays. Non-relativistically, what would be the maximum speed of these electrons?   \n3. A bare helium nucleus has two positive charges and a mass of $6 . 6 4 \\times 1 0 ^ { - 2 7 } { \\mathrm { ~ k ~ } }$ (a) Calculate its kinetic energy in joules at $2 . 0 0 \\%$ of the speed of light. (b) What is this in electron volts? (c) What voltage would be needed to obtain this energy?   \n4. Integrated Concepts Singly charged gas ions are accelerated from rest through a voltage of ${ 1 3 . 0 \\ V } .$ At what temperature will the average kinetic energy of gas molecules be the same as that given these ions?   \n5. Integrated Concepts The temperature near the center of the Sun is thought to be 15 million degrees Celsius $\\left( 1 . 5 \\times 1 0 ^ { 7 } ^ { \\circ } \\mathrm { C } \\right)$ . Through what voltage must a singly charged ion be accelerated to have the same energy as the average kinetic energy of ions at this temperature?   \n6. Integrated Concepts (a) What is the average power output of a heart defibrillator that dissipates 400 J of energy in 10.0 ms? (b) Considering the high-power output, why doesn\u2019t the defibrillator produce serious burns? ",
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 867
+    },
+    {
+        "type": "text",
+        "text": "7. Integrated Concepts ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "A lightning bolt strikes a tree, moving 20.0 C of charge through a potential difference of $1 . 0 0 \\times 1 0 ^ { 2 } \\mathrm { M V }$ . (a) What energy was dissipated? (b) What mass of water could be raised from $1 5 ^ { \\circ } \\mathrm { C }$ to the boiling point and then boiled by this energy? (c) Discuss the damage that could be caused to the tree by the expansion of the boiling steam. ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "8. Integrated Concepts ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "A $\\boldsymbol { \\mathsf { 1 2 . 0 \\vee } }$ battery-operated bottle warmer heats $5 0 . 0 \\ g$ of glass, $2 . 5 0 \\times 1 0 ^ { 2 } \\ \\mathrm { : }$ of baby formula, and $2 . 0 0 \\times 1 0 ^ { 2 }$ of aluminum from $2 0 . 0 ^ { \\circ } \\mathrm { C }$ to $9 0 . 0 ^ { \\circ } \\mathrm { C }$ . (a) How much charge is moved by the battery? (b) How many electrons per second flow if it takes 5.00 min to warm the formula? (Hint: Assume that the specific heat of baby formula is about the same as the specific heat of water.) ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "9. Integrated Concepts A battery-operated car utilizes a $\\boldsymbol { \\mathsf { 1 2 . 0 \\vee } }$ system. Find the charge the batteries must be able to move in order to accelerate the $7 5 0 \\ k \\ g$ car from rest to $2 5 . 0 \\mathsf { m } / \\mathsf { s }$ , make it climb a $2 . 0 0 \\times 1 0 ^ { 2 }$ high hill, and then cause it to travel at a constant $2 5 . 0 ~ \\mathsf { m } / \\mathsf { s }$ by exerting a $5 . 0 0 \\times 1 0 ^ { 2 } \\mathrm { ~ N ~ }$ force for an hour. ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "10. Integrated Concepts Fusion probability is greatly enhanced when appropriate nuclei are brought close together, but mutual Coulomb repulsion must be overcome. This can be done using the kinetic energy of hightemperature gas ions or by accelerating the nuclei toward one another. (a) Calculate the potential energy of two singly charged nuclei separated by $1 . 0 0 \\times 1 0 ^ { - 1 2 } \\ \\mathrm { { 1 } }$ by finding the voltage of one at that distance and multiplying by the charge of the other. (b) At what temperature will atoms of a gas have an average kinetic energy equal to this needed electrical potential energy? ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "11. Unreasonable Results (a) Find the voltage near a 10.0 cm diameter metal sphere that has 8.00 C of excess positive charge on it. (b) What is unreasonable about this result? (c) Which assumptions are responsible? ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "12. Construct Your Own Problem Consider a battery used to supply energy to a cellular phone. Construct a problem in which you determine the energy that must be supplied by the battery, and then calculate the amount of charge it must be able to move in order to supply this energy. Among the things to be considered are the energy needs and battery voltage. You may need to look ahead to interpret manufacturer\u2019s battery ratings in ampere-hours as energy in joules. ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "19.2 Electric Potential in a Uniform Electric Field ",
+        "text_level": 1,
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "13. Show that units of $\\mathsf { V } / \\mathsf { m }$ and ${ \\mathsf { N } } / { \\mathsf { C } }$ for electric field strength are indeed equivalent. ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "14. What is the strength of the electric field between two parallel conducting plates separated by 1.00 cm and having a potential difference (voltage) between them of $1 . 5 0 \\times 1 0 ^ { 4 }$ ?   \n15. The electric field strength between two parallel conducting plates separated by 4.00 cm is $7 . 5 0 \\times 1 0 ^ { 4 } \\ \\mathrm { V / m }$ . (a) What is the potential difference between the plates? (b) The plate with the lowest potential is taken to be at zero volts. What is the potential 1.00 cm from that plate (and $3 . 0 0 \\mathsf { c m }$ from the other)?   \n16. How far apart are two conducting plates that have an electric field strength of $4 . 5 0 \\times 1 0 ^ { 3 } \\ \\mathrm { V / m }$ between them, if their potential difference is 15.0 kV?   \n17. (a) Will the electric field strength between two parallel conducting plates exceed the breakdown strength for air $( 3 . 0 \\times 1 0 ^ { 6 } \\ \\mathrm { V / m } )$ if the plates are separated by $2 . 0 0 \\ : \\mathrm { m m }$ and a potential difference of $5 . 0 \\times 1 0 ^ { 3 }$ is applied? (b) How close together can the plates be with this applied voltage?   \n18. The voltage across a membrane forming a cell wall is $8 0 . 0 \\mathsf { m V }$ and the membrane is $9 . 0 0 \\ : \\mathsf { n m }$ thick. What is the electric field strength? (The value is surprisingly large, but correct. Membranes are discussed in Capacitors and Dielectrics and Nerve Conduction\u2014Electrocardiograms.) You may assume a uniform electric field.   \n19. Membrane walls of living cells have surprisingly large electric fields across them due to separation of ions. (Membranes are discussed in some detail in Nerve Conduction\u2014Electrocardiograms.) What is the voltage across an $8 . 0 0 \\mathsf { n m }$ \u2013thick membrane if the electric field strength across it is 5.50 MV/ m? You may assume a uniform electric field.   \n20. Two parallel conducting plates are separated by $1 0 . 0 \\mathsf { c m }$ , and one of them is taken to be at zero volts. (a) What is the electric field strength between them, if the potential $8 . 0 0 \\mathsf { c m }$ from the zero volt plate (and $2 . 0 0 \\mathsf { c m }$ from the other) is 450 V? (b) What is the voltage between the plates?   \n21. Find the maximum potential difference between two parallel conducting plates separated by 0.500 cm of air, given the maximum sustainable electric field strength in air to be $3 . 0 \\times 1 0 ^ { 6 } \\ \\mathrm { V / m }$ .   \n22. A doubly charged ion is accelerated to an energy of $3 2 . 0 \\mathrm { k e V }$ by the electric field between two parallel conducting plates separated by $2 . 0 0 \\mathsf { c m }$ . What is the electric field strength between the plates?   \n23. An electron is to be accelerated in a uniform electric field having a strength of $2 . 0 0 \\times 1 0 ^ { 6 } \\ \\mathrm { V / m }$ . (a) What energy in keV is given to the electron if it is accelerated through $0 . 4 0 0 \\mathsf { m } ?$ (b) Over what distance would it have to be accelerated to increase its energy by $5 0 . 0 \\mathsf { G e V ? }$ ",
+        "page_idx": 868
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "19.3 Electrical Potential Due to a Point Charge ",
+        "text_level": 1,
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "24. A $0 . 5 0 0 { \\mathsf { c m } }$ diameter plastic sphere, used in a static electricity demonstration, has a uniformly distributed $4 0 . 0 { \\mathsf { p c } }$ charge on its surface. What is the potential near its surface?   \n25. What is the potential $0 . 5 3 0 \\times 1 0 ^ { - 1 0 } \\mathrm { ~ n ~ }$ from a proton (the average distance between the proton and electron in a hydrogen atom)?   \n26. (a) A sphere has a surface uniformly charged with 1.00 C. At what distance from its center is the potential 5.00 MV? (b) What does your answer imply about the practical aspect of isolating such a large charge?   \n27. How far from a $1 . 0 0 \\mu \\mathrm { C }$ point charge will the potential be 100 V? At what distance will it be $2 . 0 0 \\times 1 0 ^ { 2 }$ V?   \n28. What are the sign and magnitude of a point charge that produces a potential of $- 2 . 0 0 \\mathrm { V }$ at a distance of $\\mathsf { 1 . 0 0 } \\mathsf { m m ? }$   \n29. If the potential due to a point charge is $5 . 0 0 \\times 1 0 ^ { 2 }$ at a distance of $1 5 . 0 \\mathsf { m }$ , what are the sign and magnitude of the charge?   \n30. In nuclear fission, a nucleus splits roughly in half. (a) What is the potential $2 . 0 0 \\times 1 0 ^ { - 1 4 }$ from a fragment that has 46 protons in it? (b) What is the potential energy in MeV of a similarly charged fragment at this distance?   \n31. A research Van de Graaff generator has a $2 . 0 0 \\cdot \\mathsf { m }$ - diameter metal sphere with a charge of $5 . 0 0 \\mathsf { m c }$ on it. (a) What is the potential near its surface? (b) At what distance from its center is the potential 1.00 MV? (c) An oxygen atom with three missing electrons is released near the Van de Graaff generator. What is its energy in MeV at this distance?   \n32. An electrostatic paint sprayer has a $0 . 2 0 0 - \\mathsf { m }$ - diameter metal sphere at a potential of $2 5 . 0 \\mathsf { k V }$ that repels paint droplets onto a grounded object. (a) What charge is on the sphere? (b) What charge must a 0.100-mg drop of paint have to arrive at the object with a speed of $1 0 . 0 \\mathrm { m } / \\mathsf { s } ?$   \n33. In one of the classic nuclear physics experiments at the beginning of the 20th century, an alpha particle was accelerated toward a gold nucleus, and its path was substantially deflected by the Coulomb interaction. If the energy of the doubly charged alpha nucleus was $5 . 0 0 ~ \\mathsf { M e V }$ , how close to the gold nucleus (79 protons) could it come before being deflected?   \n34. (a) What is the potential between two points situated $1 0 \\mathsf { c m }$ and $2 0 \\mathsf { c m }$ from a $3 . 0 \\mu \\mathrm { C }$ point charge? (b) To what location should the point at 20 cm be moved to increase this potential difference by a factor of two?   \n35. Unreasonable Results (a) What is the final speed of an electron accelerated from rest through a voltage of 25.0 MV by a negatively charged Van de Graaff terminal? (b) What is unreasonable about this result? (c) Which assumptions are responsible? ",
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "19.4 Equipotential Lines ",
+        "text_level": 1,
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "36. (a) Sketch the equipotential lines near a point charge $+ q$ . Indicate the direction of increasing potential. (b) Do the same for a point charge $- 3 q$   \n37. Sketch the equipotential lines for the two equal positive charges shown in Figure 19.25. Indicate the direction of increasing potential. ",
+        "page_idx": 869
+    },
+    {
+        "type": "image",
+        "img_path": "images/63ded4bea2b7c11701aae85bc08eada130cbe36fc7b01cc8ca353720e951d3ad.jpg",
+        "img_caption": [
+            "FIGURE 19.25 The electric field near two equal positive charges is directed away from each of the charges. "
+        ],
+        "img_footnote": [],
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "38. Figure 19.26 shows the electric field lines near two charges $q _ { 1 }$ and $q _ { 2 }$ , the first having a magnitude four times that of the second. Sketch the equipotential lines for these two charges, and indicate the direction of increasing potential. ",
+        "page_idx": 869
+    },
+    {
+        "type": "text",
+        "text": "39. Sketch the equipotential lines a long distance from the charges shown in Figure 19.26. Indicate the direction of increasing potential. ",
+        "page_idx": 870
+    },
+    {
+        "type": "image",
+        "img_path": "images/0f52c425799c13c12759bba27909a8a5e4e7c205ae68b5ffbd93c906dcef1ba9.jpg",
+        "img_caption": [
+            "FIGURE 19.26 The electric field near two charges. "
+        ],
+        "img_footnote": [],
+        "page_idx": 870
+    },
+    {
+        "type": "text",
+        "text": "40. Sketch the equipotential lines in the vicinity of two opposite charges, where the negative charge is three times as great in magnitude as the positive. See Figure 19.26 for a similar situation. Indicate the direction of increasing potential.   \n41. Sketch the equipotential lines in the vicinity of the negatively charged conductor in Figure 19.27. How will these equipotentials look a long distance from the object? ",
+        "page_idx": 870
+    },
+    {
+        "type": "image",
+        "img_path": "images/b807fe7fd64125dd5a4745fe17fbdbecf0bc79d8b0206bb962c517222cd35843.jpg",
+        "img_caption": [
+            "FIGURE 19.27 A negatively charged conductor. "
+        ],
+        "img_footnote": [],
+        "page_idx": 870
+    },
+    {
+        "type": "text",
+        "text": "42. Sketch the equipotential lines surrounding the two conducting plates shown in Figure 19.28, given the top plate is positive and the bottom plate has an equal amount of negative charge. Be certain to indicate the distribution of charge on the plates. Is the field strongest where the plates are closest? Why should it be? ",
+        "page_idx": 870
+    },
+    {
+        "type": "image",
+        "img_path": "images/68905b33868423ab01f9cab69aa955ac4f7bba02bb7e1ce8d98ed25c260e4b9e.jpg",
+        "img_caption": [
+            "FIGURE 19.28 "
+        ],
+        "img_footnote": [],
+        "page_idx": 870
+    },
+    {
+        "type": "text",
+        "text": "43. (a) Sketch the electric field lines in the vicinity of the charged insulator in Figure 19.29. Note its non-uniform charge distribution. (b) Sketch equipotential lines surrounding the insulator. Indicate the direction of increasing potential. ",
+        "page_idx": 870
+    },
+    {
+        "type": "image",
+        "img_path": "images/d20f7f43012983068579cc628406b84f5a0ec9c8e4e85be9e921df186bdb2096.jpg",
+        "img_caption": [
+            "FIGURE 19.29 A charged insulating rod such as might be used in a classroom demonstration. "
+        ],
+        "img_footnote": [],
+        "page_idx": 870
+    },
+    {
+        "type": "text",
+        "text": "44. The naturally occurring electrical field on the ground to an open sky point $3 . 0 0 \\mathrm { ~ m ~ }$ above is 1.13 $\\times 1 0 ^ { 2 } \\mathsf { N } / \\mathsf { C }$ . This open point in the sky is at a greater electric potential than the ground. (a) Calculate the electric potential at this height. (b) Sketch electric field and equipotential lines for this scenario. Calculate the electric potential at this height. (c) Sketch electric field and equipotential lines for this scenario. ",
+        "page_idx": 870
+    },
+    {
+        "type": "text",
+        "text": "45. The lesser electric ray (Narcinebancrofti) maintains an incredible charge on its head and a charge equal in magnitude but opposite in sign on its tail (Figure 19.30). (a) Sketch the equipotential lines surrounding the ray. (b) Sketch the equipotentials when the ray is near a ship with a conducting surface. (c) How could this charge distribution be of use to the ray? ",
+        "page_idx": 870
+    },
+    {
+        "type": "image",
+        "img_path": "images/3c674b8eae70479570dcd972102c30dd79bc1cf30b510bad7c209716175ac97e.jpg",
+        "img_caption": [
+            "FIGURE 19.30 Lesser electric ray (Narcinebancrofti) (credit: National Oceanic and Atmospheric Administration, NOAA's Fisheries Collection). "
+        ],
+        "img_footnote": [],
+        "page_idx": 870
+    },
+    {
+        "type": "text",
+        "text": "19.5 Capacitors and Dielectrics ",
+        "text_level": 1,
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "46. What charge is stored in a $1 8 0 \\mu \\mathrm { F }$ capacitor when $\\boldsymbol { \\mathsf { 1 2 0 \\vee } }$ is applied to it? ",
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "47. Find the charge stored when $5 . 5 0 \\mathrm { V }$ is applied to an 8.00 pF capacitor.   \n48. What charge is stored in the capacitor in Example 19.8?   \n49. Calculate the voltage applied to a $2 . 0 0 \\mu \\mathrm { F }$ capacitor when it holds $3 . 1 0 \\mu \\mathrm { C }$ of charge.   \n50. What voltage must be applied to an 8.00 nF capacitor to store $0 . 1 6 0 ~ \\mathrm { m C }$ of charge?   \n51. What capacitance is needed to store $3 . 0 0 \\mu \\mathrm { C }$ of charge at a voltage of 120 V?   \n52. What is the capacitance of a large Van de Graaff generator\u2019s terminal, given that it stores $8 . 0 0 \\mathsf { m C }$ of charge at a voltage of 12.0 MV?   \n53. Find the capacitance of a parallel plate capacitor having plates of area $5 . 0 0 \\mathrm { m } ^ { 2 }$ that are separated by $0 . 1 0 0 \\mathrm { m m }$ of Teflon.   \n54. (a)What is the capacitance of a parallel plate capacitor having plates of area $1 . 5 0 \\mathrm { m } ^ { 2 }$ that are separated by $0 . 0 2 0 0 \\mathrm { m m }$ of neoprene rubber? (b) What charge does it hold when $9 . 0 0 \\mathrm { \\ : V }$ is applied to it?   \n55. Integrated Concepts A prankster applies $4 5 0 \\vee$ to an $8 0 . 0 \\mu \\mathrm { F }$ capacitor and then tosses it to an unsuspecting victim. The victim\u2019s finger is burned by the discharge of the capacitor through $0 . 2 0 0 \\textrm { g }$ of flesh. What is the temperature increase of the flesh? Is it reasonable to assume no phase change?   \n56. Unreasonable Results (a) A certain parallel plate capacitor has plates of area $4 . 0 0 \\mathrm { m } ^ { 2 }$ , separated by $0 . 0 1 0 0 \\mathrm { m m }$ of nylon, and stores 0.170 C of charge. What is the applied voltage? (b) What is unreasonable about this ",
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "result? (c) Which assumptions are responsible or inconsistent? ",
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "19.6 Capacitors in Series and Parallel ",
+        "text_level": 1,
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "57. Find the total capacitance of the combination of capacitors in Figure 19.31. ",
+        "page_idx": 871
+    },
+    {
+        "type": "image",
+        "img_path": "images/1b10aa50d426f4910c3e9e38c03bf7692d121fad1887a7efedbec389c8bf56bd.jpg",
+        "img_caption": [
+            "FIGURE 19.31 A combination of series and parallel connections of capacitors. "
+        ],
+        "img_footnote": [],
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "58. Suppose you want a capacitor bank with a total capacitance of 0.750 F and you possess numerous $\\mathsf { 1 . 5 0 m F }$ capacitors. What is the smallest number you could hook together to achieve your goal, and how would you connect them?   \n59. What total capacitances can you make by connecting a ${ 5 . 0 0 \\mu \\mathrm { F } }$ and an $8 . 0 0 \\mu \\mathrm { F }$ capacitor together?   \n60. Find the total capacitance of the combination of capacitors shown in Figure 19.32. ",
+        "page_idx": 871
+    },
+    {
+        "type": "image",
+        "img_path": "images/d84748f865a1f3edeed8951a23b158e4960366ea57323400ba82600d2148fdfe.jpg",
+        "img_caption": [
+            "FIGURE 19.32 A combination of series and parallel connections of capacitors. "
+        ],
+        "img_footnote": [],
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "61. Find the total capacitance of the combination of capacitors shown in Figure 19.33. ",
+        "page_idx": 871
+    },
+    {
+        "type": "image",
+        "img_path": "images/f9c6505fe4284fe8997923289ff49e30d50672503493d05a063dcd61fde59cbd.jpg",
+        "img_caption": [
+            "FIGURE 19.33 A combination of series and parallel connections of capacitors. "
+        ],
+        "img_footnote": [],
+        "page_idx": 871
+    },
+    {
+        "type": "text",
+        "text": "62. Unreasonable Results ",
+        "page_idx": 872
+    },
+    {
+        "type": "text",
+        "text": "(a) An $8 . 0 0 \\mu \\mathrm { F }$ capacitor is connected in parallel to another capacitor, producing a total capacitance of ${ 5 . 0 0 \\mu \\mathrm { F } }$ . What is the capacitance of the second capacitor? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 872
+    },
+    {
+        "type": "text",
+        "text": "19.7 Energy Stored in Capacitors ",
+        "text_level": 1,
+        "page_idx": 872
+    },
+    {
+        "type": "text",
+        "text": "63. (a) What is the energy stored in the $1 0 . 0 \\mu \\mathrm { F }$ capacitor of a heart defibrillator charged to $9 . 0 0 \\times 1 0 ^ { 3 }$ ? (b) Find the amount of stored charge.   \n64. In open heart surgery, a much smaller amount of energy will defibrillate the heart. (a) What voltage is applied to the $8 . 0 0 \\mu \\mathrm { F }$ capacitor of a heart defibrillator that stores 40.0 J of energy? (b) Find the amount of stored charge.   \n65. A $1 6 5 \\mu \\mathrm { F }$ capacitor is used in conjunction with a motor. How much energy is stored in it when 119 V is applied?   \n66. Suppose you have a $9 . 0 0 \\mathrm { \\ : V }$ battery, a $2 . 0 0 \\mu \\mathrm { F }$ capacitor, and a $7 . 4 0 \\mu \\mathrm { F }$ capacitor. (a) Find the charge and energy stored if the capacitors are connected to the battery in series. (b) Do the same for a parallel connection.   \n67. A nervous physicist worries that the two metal shelves of his wood frame bookcase might obtain a high voltage if charged by static electricity, perhaps produced by friction. (a) What is the capacitance of the empty shelves if they have area $1 . 0 0 \\times 1 0 ^ { 2 } ~ \\mathrm { m } ^ { 2 }$ and are 0.200 m apart? (b) What is the voltage between them if opposite charges of magnitude 2.00 nC are placed on them? (c) To show that this voltage poses a small hazard, calculate the energy stored.   \n68. Show that for a given dielectric material the maximum energy a parallel plate capacitor can store is directly proportional to the volume of dielectric ( $= A \\cdot d )$ . Note that the applied voltage is limited by the dielectric strength.   \n69. Construct Your Own Problem Consider a heart defibrillator similar to that discussed in Example 19.11. Construct a problem in which you examine the charge stored in the capacitor of a defibrillator as a function of stored energy. Among the things to be considered are the applied voltage and whether it should vary with energy to be delivered, the range of energies involved, and the capacitance of the defibrillator. You may also wish to consider the much smaller energy needed for defibrillation during open-heart surgery as a variation on this problem. ",
+        "page_idx": 872
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 872
+    },
+    {
+        "type": "text",
+        "text": "70. Unreasonable Results (a) On a particular day, it takes $9 . 6 0 \\times 1 0 ^ { 3 }$ of electric energy to start a truck\u2019s engine. Calculate the capacitance of a capacitor that could store that amount of energy at $\\textstyle { 1 2 . 0 } \\lor .$ (b) What is unreasonable about this result? (c) Which assumptions are responsible? ",
+        "page_idx": 872
+    }
+]

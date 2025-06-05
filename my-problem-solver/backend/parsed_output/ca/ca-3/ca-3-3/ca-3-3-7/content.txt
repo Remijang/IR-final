@@ -1,0 +1,7 @@
+3.3.7 Data Transfer Instructions: ld and st
+
+SimpleRisc has two data transfer instructions –  and  . The load instruction loads values from memory into registers, and the store instruction saves values in registers to memory locations. Examples and semantics are shown in Table 3.6.
+
+Let us consider the load instruction:  . Here, we are computing the memory address as the sum of the contents of  and the number 12. The  instructions accesses this memory address, fetches the stored integer and stores it in  . We assume that the computed memory address points to the first stored byte of the integer. Since we assume a little endian representation, the memory address contains the LSB. The details are shown in Figure 3.7(a).
+
+The store operation does the reverse. It stores the value of  into the memory address (r2  . Refer to Figure 3.7(b).

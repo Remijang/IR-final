@@ -1,0 +1,35 @@
+# 13.1 Chemical Equilibria
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+• Describe the nature of equilibrium systems • Explain the dynamic nature of a chemical equilibrium
+
+The convention for writing chemical equations involves placing reactant formulas on the left side of a reaction arrow and product formulas on the right side. By this convention, and the definitions of “reactant” and “product,” a chemical equation represents the reaction in question as proceeding from left to right. Reversible reactions, however, may proceed in both forward (left to right) and reverse (right to left) directions. When the rates of the forward and reverse reactions are equal, the concentrations of the reactant and product species remain constant over time and the system is at equilibrium. The relative concentrations of reactants and products in equilibrium systems vary greatly; some systems contain mostly products at equilibrium, some contain mostly reactants, and some contain appreciable amounts of both.
+
+
+
+Figure 13.2 illustrates fundamental equilibrium concepts using the reversible decomposition of colorless dinitrogen tetroxide to yield brown nitrogen dioxide, an elementary reaction described by the equation:
+
+$$
+\mathrm { N } _ { 2 } \mathrm { O } _ { 4 } ( g )  2 \mathrm { N O } _ { 2 } ( g )
+$$
+
+Note that a special double arrow is used to emphasize the reversible nature of the reaction.
+
+For this elementary process, rate laws for the forward and reverse reactions may be derived directly from the reaction stoichiometry:
+
+$$
+\begin{array} { r } { \mathrm { r a t e } _ { f } = k _ { f } [ \mathrm { N } _ { 2 } \mathrm { O } _ { 4 } ] } \\ { \mathrm { r a t e } _ { r } = k _ { r } [ \mathrm { N O } _ { 2 } ] ^ { 2 } } \end{array}
+$$
+
+As the reaction begins $( t = 0 )$ , the concentration of the $\mathrm { N } _ { 2 } \mathrm { O } _ { 4 }$ reactant is finite and that of the $\mathrm { N O } _ { 2 }$ product is zero, so the forward reaction proceeds at a finite rate while the reverse reaction rate is zero. As time passes, $\mathrm { N } _ { 2 } \mathrm { O } _ { 4 }$ is consumed and its concentration falls, while $\mathrm { N O } _ { 2 }$ is produced and its concentration increases (Figure 13.2b). The decreasing concentration of the reactant slows the forward reaction rate, and the increasing product concentration speeds the reverse reaction rate (Figure 13.2c). This process continues until the forwardandreversereactionratesbecomeequal, at which time the reaction has reached equilibrium, as characterized by constant concentrations of its reactants and products (shaded areas of Figure 13.2b and Figure 13.2c). It’s important to emphasize that chemical equilibria are dynamic; a reaction at equilibrium has not “stopped,” but is proceeding in the forward and reverse directions at the same rate. This dynamic nature is essential to understanding equilibrium behavior as discussed in this and subsequent chapters of the text.
+
+Physical changes, such as phase transitions, are also reversible and may establish equilibria. This concept was introduced in another chapter of this text through discussion of the vapor pressure of a condensed phase (liquid or solid). As one example, consider the vaporization of bromine:
+
+$$
+\mathbf { B r } _ { 2 } ( l )  \mathbf { B r } _ { 2 } ( g )
+$$
+
+When liquid bromine is added to an otherwise empty container and the container is sealed, the forward process depicted above (vaporization) will commence and continue at a roughly constant rate as long as the exposed surface area of the liquid and its temperature remain constant. As increasing amounts of gaseous bromine are produced, the rate of the reverse process (condensation) will increase until it equals the rate of vaporization and equilibrium is established. A photograph showing this phase transition equilibrium is provided in Figure 13.4.

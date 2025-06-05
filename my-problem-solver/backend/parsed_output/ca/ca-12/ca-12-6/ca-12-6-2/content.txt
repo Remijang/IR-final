@@ -1,0 +1,19 @@
+12.6.2 Bisection Bandwidth and Network Diameter
+
+Bisection Bandwidth
+
+Let us consider a network topology where the vertices are the nodes, and the edges between the vertices are the links. Suppose there is a link failure, or for some other reason such as congestion, a link is unavailable, then it should be possible to route messages through alternate paths. For example, let us consider a network arranged as a ring. If one link fails, then we can always send a message through the other side of the ring. If we were sending the message in a clockwise fashion, we can send it in an anti-clockwise fashion. However, if there are two link failures, it is possible that the network can get disconnected into two equal parts. We would thus like to maximize the number of link failures that are required to completely disconnect the network into sizable large parts (possibly equal). Let us refer to the number of such failures as the bisection bandwidth. The bisection bandwidth is a measure of the reliability of the network. It is precisely defined as the minimum number of links that need to fail to partition the network into two equal parts.
+
+There can be an alternative interpretation of the bisection bandwidth. Let us assume that nodes in one half of the network are trying to send messages to nodes in the other half of the network. Then the number of messages that can be simultaneously sent is at least equal to the bisection bandwidth. Thus, the bisection bandwidth is also a measure of the bandwidth of a network.
+
+Definition 137
+
+The bisection bandwidth is defined as the minimum number of link failures that are required to partition a network into two equal parts.
+
+Network Diameter
+
+We have discussed reliability, and bandwidth. Now, let us focus on latency. Let us consider pairs of nodes in the network. Let us subsequently consider the shortest path between each pair of nodes. Out of all of these shortest paths, let us consider the path that has the maximum length. The length of this path is an upper bound on the proximity of nodes in the network, and is known as the diameter of the network. Alternatively, we can interpret the diameter of a network as an estimate of the worst case latency between any pair of nodes.
+
+Definition 138
+
+Let us consider all pairs of nodes, and compute the shortest path between each pair. The length of the longest such path is known as the network diameter. It is a measure of the worst case latency of the network.

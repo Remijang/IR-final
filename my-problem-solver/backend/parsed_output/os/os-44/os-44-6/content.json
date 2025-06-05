@@ -1,0 +1,23 @@
+[
+    {
+        "type": "text",
+        "text": "44.6 FTL Organization: A Bad Approach ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "The simplest organization of an FTL would be something we call direct mapped. In this approach, a read to logical page $N$ is mapped directly to a read of physical page $N$ . A write to logical page $N$ is more complicated; the FTL first has to read in the entire block that page $N$ is contained within; it then has to erase the block; finally, the FTL programs the old pages as well as the new one. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "As you can probably guess, the direct-mapped FTL has many problems, both in terms of performance as well as reliability. The performance problems come on each write: the device has to read in the entire block (costly), erase it (quite costly), and then program it (costly). The end result is severe write amplification (proportional to the number of pages in a block) and as a result, terrible write performance, even slower than typical hard drives with their mechanical seeks and rotational delays. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Even worse is the reliability of this approach. If file system metadata or user file data is repeatedly overwritten, the same block is erased and programmed, over and over, rapidly wearing it out and potentially losing data. The direct mapped approach simply gives too much control over wear out to the client workload; if the workload does not spread write load evenly across its logical blocks, the underlying physical blocks containing popular data will quickly wear out. For both reliability and performance reasons, a direct-mapped FTL is a bad idea. ",
+        "page_idx": 6
+    }
+]

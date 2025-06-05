@@ -1,0 +1,64 @@
+[
+    {
+        "type": "text",
+        "text": "10.12.1 Summary ",
+        "text_level": 1,
+        "page_idx": 497
+    },
+    {
+        "type": "text",
+        "text": "Summary 10 1. We observe that large parts of our basic SimpleRisc processor are idle while processing an instruction. For example, the IF stage is idle, when the instruction is in the MA stage. 2. We thus propose the notion of \u201cpipelining\u201d. Here, we execute 5 instructions simultaneously (1 in each stage). At the negative edge of the clock, all the instructions proceed to the next stages simultaneously, the instruction in the RW stage completes its execution, and a new instruction enters the IF stage. 3. To design a pipeline we split the data path into five parts (1 stage per part), and add pipeline registers between subsequent stages. A pipeline register stores the instruction packet (instruction contents, control signals, source operands and intermediate results). 4. Each pipeline stage reads operands for its functional units from its corresponding pipeline register at the beginning of a clock cycle. It processes them, and writes the results to the pipeline register between the given stage and its adjacent stage, before the end of the clock cycle. 5. We can have RAW hazards, and control hazards in our pipeline because we cannot ascertain data dependencies and branch outcomes before fetching subsequent instructions. 6. We can avoid RAW, and control hazards using pure software solutions. We can introduce nop instructions between producer and consumer instructions, and after branch instructions. Alternatively, we can reorder instructions to minimize the addition of nop instructions, and use delayed branching. 7. In the absence of software solutions, we can use pipeline interlocks to avoid hazards by stalling and canceling instructions. 8. An efficient method of minimizing stall cycles is forwarding. (a) If a later stage contains the value of an operand, then we can forward the value from the producer stage to the consumer stage. We can thus bypass the register file. (b) This allows us to avoid hazards because a consumer instruction can quickly get its operands from other pipeline stages. ",
+        "page_idx": 497
+    },
+    {
+        "type": "text",
+        "text": "(c) To detect dependencies, and implement forwarding we propose a dedicated forwarding unit. Furthermore, it is necessary to augment, every functional unit with multiplexers to choose between the default inputs, and forwarded inputs. Forwarding eliminates all the data hazards, other than the load-use hazard. ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "9. Modern processors have interrupts and exceptions that require us to save the state of a program, and branch to an interrupt handler. We need to implement precise exceptions such that we can return to the exact same point at which we had stopped the execution of our original program. ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "10. Performance of a processor with respect to a program is defined to be proportional to the inverse of the time required to execute the program. ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "11. The performance equation is as follows: ",
+        "page_idx": 498
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP \\propto \\frac { I P C \\times f } { \\# i n s t s }\n$$",
+        "text_format": "latex",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "IPC (instructions per cycle), f(frequency), #insts (number of dynamic instructions) ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "12. The performance of a processor is dependent on the manufacturing technology, architecture, and compiler optimizations. In specific, a pipelined processor has higher performance as compared to a single cycle processor, because it allows us to increase the frequency roughly as many times as the number of stages. There is a consequent loss in IPC, and wastage of time due to the latch delay. Hence, it is necessary to choose an optimal pipelining strategy. ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "13. The clock frequency is limited by power and temperature constraints. ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "(a) There are two power dissipation mechanisms in modern processors namely dynamic power and leakage power. Dynamic power is dissipated due to the switching activity in circuits. It is proportional to $\\alpha C V ^ { 2 } f$ , where $\\alpha$ is the activity factor, $C$ is the lumped circuit capacitance, $V$ is the supply voltage, and $f$ is the frequency.   \n(b) Leakage power or static power is dissipated due to the flow of current through the terminals of a transistor, when it is in the off state. Leakage power is a superlinear function of the current temperature.   \n(c) Power and temperature for different points on a chip are typically related by a set of linear equations.   \n(d) Dynamic voltage-frequency scaling is a technique to dynamically modify the voltage and frequency of a processor. We typically assume that the frequency is proportional to voltage.   \n(e) We use the $E D ^ { 2 }$ metric to simultaneously compare the power and performance of competing processor designs. ",
+        "page_idx": 498
+    },
+    {
+        "type": "text",
+        "text": "14. Some advanced techniques for speeding up a processor are branch prediction, superscalar execution, EPIC/VLIW processors, and out-of-order pipelines. ",
+        "page_idx": 498
+    }
+]

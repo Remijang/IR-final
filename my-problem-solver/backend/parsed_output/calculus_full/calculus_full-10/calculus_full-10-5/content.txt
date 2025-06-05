@@ -1,0 +1,87 @@
+This section studies the properties of a power series. When the basepoint is zero, the powers are  . The series is  . When the basepoint is  , the powers are  . We want to know when and where (and how quickly) the series converges to the underlying function. For  and cos  and sin  there is convergence for all  —but that is certainly not true for  . The convergence is best when the function is smooth.
+
+First I emphasize that power series are not the only series. For many applications they are not the best choice. An alternative is a sum of sines,  sin  . That is a “Fourier sine series”, which treats all  ’s equally instead of picking on a basepoint. A Fourier series allows jumps and corners in the graph—it takes the rough with the smooth. By contrast a power series is terrific near its basepoint, and gets worse as you move away. The Taylor coefficients  are totally determined at the basepoint—where all derivatives are computed. Remember the rule for Taylor series:
+
+A remarkable fact is the convergence in a symmetric interval around  .
+
+10M A power series  either converges for all  , or it converges only at the basepoint  , or else it has a radius of convergence  :
+
+The series  converges for all  (the sum is  ). The series  converges for no  (except  ). The geometric series  converges absolutel|y for  1 and diverges for  . Its radius of convergence is  . Note that its sum  is perfectly good for  —the function is all right but the series has given up. If something goes wrong at the distance  , a power series can’t get past that point.
+
+When the basepoint is  , the interval of convergence shifts over to  : The series converges for  between  and  (symmetric around  ). We cannot say in advance whether the endpoints  give divergence or convergence (absolute or conditional). Inside the interval, an easy comparison test will now prove convergence.
+
+PROOF OF 10M Supp|ose  conv||erges |at a p|articul|ar point  . The proof will show that  converges when  is less than the number  . Thus convergence at  gives convergence at all closer points  (I mean closer to the basepoint 0). Proof: Since  converges, its terms approach zero. Eventually  and then
+
+Our series  is absolutely convergent by comparison with the geometric series for  , which converges since  .
+
+EXAMPLE 1 The series  has radius of convergence  .
+
+The ratio test and root test are best for power series. The ratios between terms approach  (and so does the  th root of  ):
+
+The ratio test gives convergence if  , which means  .
+
+EXAMPLE 2 The sine series  has  (it converges everywhere).
+
+The ratio of  to  is  . This approaches  .
+
+EXAMPLE 3 The series  has radius  around its basepoint  5.
+
+The ratios between terms approach  (The fractions  go toward 1.) There is absolute convergence if  . This is the interval  , symmetric around the basepoint. This series happens to converge at the endpoints 4 and 6, because of the factor  . That factor decides the delicate question—convergence at the endpoints—but all powers of  give the same interval of convergence  .
+
+CONVERGENCE TO THE FUNCTION: REMAINDER TERM AND RADIUS 
+
+Remember that a Taylor series starts with a function  . The derivatives at the basepoint produce the series. Suppose the series converges: Does it converge to the function ? This is a question about the remainder  , which is the difference between  and the partial sum  . The remainder  is the error if we stop the series, ending with the  th derivative term  .
+
+10N Suppose  has an  st derivative from the basepoint  out to  . Then for some point  in between (position not known) the remainder at  equals
+
+The error in stopping at the  th derivativ1e is controlled by t2he  st derivative.
+
+You will guess, correctly, that the unknown point  comes from the Mean Value Theorem. For  the proof is at the end of Section 3.8. That was the error  in linear approximation:
+
+For every  , the proof compares  with  . Their  derivatives are  and  The generalized Mean Value Theorem says that the ratio of  to  equals the ratio of those derivatives, at the right point  . That is equation (2). The details can stay in Section 3.8 and Problem 23, because the main point is what we want. The error is exactly like the next term  , except that the  derivative is at  instead of the basepoint  .
+
+EXAMPLE 4 When  is  , the  st derivative is  . Therefore the error is
+
+At  and  , the error is  . The right side is  The unknown point is  . Thus  lies between the basepoint  and the error point  , as required. The series converges to the function, because  .
+
+In practice,  is the number of derivatives to be calculated. We may aim for an error  below  . Unfortunately, the high derivative in formula .2/ is awkward to estimate (except for  ). And high derivatives in formula .1/ are difficult to compute. Most real calculations use only a few terms of a Taylor series. For more accuracy we move the basepoint closer, or switch to another series.
+
+There is a direct connection between the function and the convergence radius  . A hint came for  . The function blows up at  —which also ends the convergence interval for the series. Another hint comes for  , if we expand around  :
+
+This geometric series converges for  . Convergence s|to|ps  at the end point  —exactly where  blows up. The failure of the function stops the convergence of the series. But note that  , which never seems to fail, also has convergence radius  :
+
+When you see the reason, you will know why  is a “radius.” There is a circle, and the function fails at the edge of the circle. The circle contains complex numbers as well as real numbers. The imaginary points  and  are at the edge of the circle. The function fails at those points because  .
+
+Complex numbers are pulling the strings, out of sight. The circle of convergence reaches out to the nearest “singularity” of  , real or imaginary or complex. For  , the singularities at  and  make  . If we expand around  , the distance to  and  is  . If we change to  , which blows up at  , the radius of convergence of  is  .
+
+THE BINOMIAL SERIES
+
+We close this chapter with one more series. It is the Taylor series for  , around the basepoint  . A typical power is  , where we want the terms in
+
+The slow way is to square both sides, which gives  on the right. Since  is on the left,  is needed to remove the  term. Eventually  can be found. The fast way is to match the derivatives of  :
+
+At  those derivatives are  . Dividing by 1Š; 2Š; 3Š gives
+
+These are the binomial coefficients when the power is  .
+
+Notice the differencefrom thebinomials in Chapter 2. For those, thepower  was a positive integer. The series  stopped at  . The coefficients for  were  : : : : For fractional  or negative  those later coefficients are not zero, and wefind them from the derivativesof  :
+
+Dividing by  at  , the binomial coefficients are
+
+For  that last binomial coefficient is  . It gives the final  at the end of  . For other values of  , the binomial series never stops.  converges for  :
+
+When  ;|: : : the?binomial coefficient  counts the number of ways to select a group of  friends out of a group of  friends. If you have 20 friends, you can choose 2 of them in  way8s.
+
+Suppose  is not a positive integer. What goes wrong with  , to stop the convergence at  The failure is at  . If  is negative,  blow up. If  is positive, as in  , the higher derivatives blow up. Only for a positive integer  does the convergence radius move out to  . In that case the series for  stops at  , and  never fails.
+
+A power series is a function in a new form. It is not a simple form, but sometimes it is the only form. To compute  we have to sum the series. To square  we have to multiply series. But the operations of calculus—derivative and integral—are easier. That explains why power series help to solve differential equations, which are a rich source of new funct ions. (Numerically the series are not always so good.) I shoul|d have said that the derivative and integral are easy for each separate term  —and fortunately the convergence radius of the whole series is not changed.
+
+If  has convergence radius  , so do its derivative and its integral:  also converge for 
+
+EXAMPLE 5 The series for  and its derivative  and its integral  all have  (because they all have trouble at  ). The series are  and  and  .
+
+10 Infinite Series
+
+EXAMPLE 6 We can integrate  (previously impossible) by integrating every term in its series:
+
+This always converges .r D /. The derivative of ex2 was never a problem.

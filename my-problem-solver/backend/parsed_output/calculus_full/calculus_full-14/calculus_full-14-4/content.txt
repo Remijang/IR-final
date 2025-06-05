@@ -1,0 +1,113 @@
+14.4 Cylindrical and Spherical Coordinates
+
+Cylindrical coordinates are good for describing solids that are symmetric around an axis. The solid is three-dimensional, so there are three coordinates  :
+
+r : out from the axis : around the axis¤ z: along the axis.
+
+This is a mixture of polar coordinates  in a plane, plus  upward. You will not find  difficult to work with. Start with a cylinder centered on the  axis:
+
+solid cylinder W  flat bottom and top  half-cylinder W  Integration over this half-cylinder is  . These limits on  are especially simple. Two other axially symmetric solids are almost as convenient:
+
+I would not use cylindrical coordinates for a box. Or a tetrahedron.
+
+The integral needs one thing more—the volume  . The movements  and  and  give a “curved box” in  space, drawn in Figure 14.15c. The base is a polar rectangle, with area  . The new part is the height  . The volume of the curved box is  . Then  goes in the blank space in the triple integral—the stretching factor is  . There are six orders of integration (we give two):
+
+EXAMPLE 1 (Volume of the half-cylinder). The integral of  from 0 to 1 is  The  integral is  and the  integral is 3. The volume is  .
+
+EXAMPLE 2 The surface  encloses the cone in Figure 14.16. Find its volume.
+
+First solution Since  goes out to  , the integral of  is  . The  integral is  (a full rotation). Stop there for a moment.
+
+We have reached  . This is the area of a slice at height  . The slice is a circle, its radius is  , its area is  . The  integral adds those slices to give  . That is correct, but it is not the only way to compute the volume.
+
+Second solution Do the  and  integrals first. Since  goes up to  , and  goes around to  , those integrals produce  . Stop again— this must be the area of something.
+
+After the  and  integrals we have a shell at radius  . The height is  (the outer shells are shorter). This height times  gives the area around the shell. The choice between shells and slices is exactly as in Chapter 8: Different orders of integration give different ways to cut up the solid.
+
+The volume of the shell is area times thickness  . The volume of the complete cone is the integral of shell volumes:  .
+
+Third solution Do the  and  integrals first:  . Then the  integral is  , which gives  times  . This is the volume  —but what is 
+
+The third cone is cut into wedges. The volume of a wedge is  . It is quite common to do the  integral last, especially when it just multiplies by  . It is not so common to think of wedges.
+
+Question Is the volume  equal to an area  times a thickness  ? Answer No! The triangle in the third cone has area  not  . Thickness is never  .
+
+This cone is typical of a solid of revolution. The axis is in the  direction. The  integral yields  , whether it comes first, second, or third. The  integral goes out to a radius  , which is 1 for the cylinder and  for the cone. The integral  is  area of circular slice. This leaves the  integral  . That is our old volume formula  from Chapter 8; where the slices were cut through the  axis.
+
+EXAMPLE 3 The moment of inertia around the  axis is  . The extra  is .distance to axis/2. For the cone this tr?iple integral is  .
+
+EXAMPLE 4 The moment around the  axis is  . For the cone this is  . The average distance  is .moment/=.volume/  .
+
+EXAMPLE 5 A sphere of radius  has the boundary  , in cylindrical coordinates. The outer limit on the  integral is  . That is not acceptable in difficult problems. To avoid it we now change to coordinates that are natural for a sphere.
+
+SPHERICAL COORDINATES
+
+The Earth is a solid sphere (or near enough). On its surface we use two coordinates— latitude and longitude. To dig inward or fly outward, there is a third coordinate—the distance  from the center. This Greek letter rho replaces  to avoid confusion with cylindrical coordinates. Where  is measured from the  axis,  is measured from the origin. Thus  and  .
+
+The angle  is the same as before. It goes from 0 to  . It is the longitude, which increases as you travel east arou¤nd t¤he Equator.
+
+The angle  is new. It equals 0 at the North Pole and  (not  ) at the South Pole. It is the polar angle, measured down from the  axis. The Equator has a latitude of 0 but a polar angle of  (halfway down). Here are some typical shapes:
+
+The angle  is constant on a cone from the origin. It cuts the surface in a circle (Figure 14.17b), but not a great circle. The angle  is constant along a half-circle from pole to pole. The distance  is constant on each inner sphere, starting at the center  and moving out to  .
+
+In spherical coordinates the volume integral is  . To explain that surprising factor  , start with  and  sin  . In spherical coordinates  is  sin  and  is  cos  —see the triangle in the figure. So substitute  sin  for  :
+
+Remember those two steps,  to  to  . We check that  :
+
+The volume integral is explained by Figure 14.17c. That shows a “spherical box” with right angles and curved edges. Two edges are  and  . The third edge is horizontal. The usual  becomes  sin  : Multiplying those lengths gives  .
+
+Th»e vol»um»e of the box is  This is a distance cubed, from  .
+
+EXAMPLE 6 A solid ball of radius  has known volume  . Notice the limits:
+
+Question What is the volume above the cone in Figure 14.17 ?
+
+Answer The  integral stops at  . The volume is  .
+
+EXAMPLE 7 The surface area of a sphere is  . Forget the  integral:
+
+After those examples from geometry, here is the real thing from science. I want to compute one of the most important triple integrals in physics—“the gravitational attraction of a solid sphere.” For some reason Isaac Newton had trouble with this integral. He refused to publish his masterpiece on astronomy until he had solved it. I think he didn’t use spherical coordinates—and the integral is not easy even now.
+
+The answer that Newton finally found is beautiful. The sphere acts as if all its mass were concentrated at the center. At an outside point  , the force of gravity is proportional to  . The force from a uniform solid sphere equals the force from a point mass, at every outside point  . That is exactly what Newton wanted and needed, to explain the solar system and to prove Kepler’s laws.
+
+Here is the difficulty. Some parts of the sphere are closer than  , some parts are farther away. The actual distance  , from the outside point  to a typical inside point, is shown in Figure 14.18. The average distance  to all points in the sphere is not  . But what Newton needed was a different average, and by good luck or some divine calculus it works perfectly: The average of  is  . This gives the potential energy:
+
+A small volume  at the distance  contributes  to the potential (Section 8:6; with density 1). The integral adds the contributions from the whole sphere. Equation (2) says that the potential at  is not changed when the sphere is squeezed to the center. The potential equals the whole volume divided by the single distance  .
+
+Important point: The average of  is  and not  . The average of  and  is not  . Smaller point: I wrote “sphere” where I should have written “ball.” The sphere is solid:  . What about the force ? For the small volume it is proportional to  (this is the inverse square law). But force is a vector, pulling the outside point toward  —not toward the center of the sphere. The figure shows the geometry and the symmetry. We want the z component of the force. (By symmetry the overall  and  components are zero.) The angle between the force vector and the  axis is  , so for the  component we multiply by cos  . The total force comes from the integral that Newton discovered:
+
+I will compute the integral (2) and leave you the privilege of solving (3). I mean that word seriously. If you have come this far, you deserve the pleasure of doing what at one time only Isaac Newton could do. Problem 26 offers a suggestion (just the law of cosines) but the integral is yours.
+
+The law of cosines also helps with (2). For?the triangle in the figure it gives  Call this whole quantity  . We do the surface integral first .  and  with  fixed/. Then  and  and?  :
+
+ came from the»  integral. The integral of  is  . Since cos  at the upper limit,  is  . The square root of  is  . At the lower limit cos  and  . This is another perfect square— its square root is  . The surface integral (4) with fixed  is
+
+Last comes the  integral:  . This proves formula (2): potential equals volume of the sphere divided by  .
+
+Note 1 Physicists are also happy about equation (5). The average of  is  not only over the solid sphere but over each spherical shell of area  . The shells can have different densities, as they do in the Earth, and still Newton is correct. This also applies to the force integral (3)—each separate shell acts as if its mass were concentrated at the center. Then the final  integral yields this property for the solid sphere.
+
+Note 2 Physicists also know that force is minus the derivative of potential. The derivative of (2) with respect to  produces the force integral (3). Problem 27 explains this shortcut to Equation (3).
+
+EXAMPLE 8 Everywhere inside a hollow sphere the force of gravity is zero.
+
+When  is smaller than  , the lower limit  in the integral (4) changes from  to  . That way the square root stays positive. This changes the answer in (5) to  , so the potential no longer depends on  . The potential is constant inside the hollow shell. Since the force comes from its derivative, the force is zero.
+
+A more intuitive proof is in the second figure. The infinitesimal areas on the surface are proportional to  and  . But the distances to those areas are  and  , so the forces involve  and  (the inverse square law). Therefore the two areas exert equal and opposite forces on the inside point, and they cancel each other. The total force from the shell is zero.
+
+I believe this zero integral is the reason that the inside of a car is safe from lightning. Of course a car is not a sphere. But electric charge distributes itself to keep the surface at constant potential. The potential stays constant inside—therefore no force. The tires help to prevent conduction of current (and electrocution of driver).
+
+P.S. Don’t just step out of the car. Let a metal chain conduct the charge to the ground. Otherwise you could be the conductor.
+
+CHANGE OF COORDINATES—STRETCHING FACTOR 
+
+Once more we look to calculus for a formula. We need the volume of a small curved box in any  coordinate system. The  box and the  box have right angles, and their volumes were read off from the geometry (stretching factors  and  in Figures 14.15 and 14.17). Now we change from  to other coordinates uvw—which are chosen to fit the problem.
+
+Going from  to  , the area  was a 2 by 2 determinant. In three dimensions the determinant is 3 by 3. The matrix is always the “Jacobian matrix,” containing first derivatives. There were four derivatives from  to  , now there are nine from  to  .
+
+Remember that a 3 by 3 determinant is the sum of six terms (Section 11:5). One term in  is  , along the main diagonal. This comes from pure stretching, and the other five terms allow for rotation. The best way to exhibit the formula is for spherical coordinates—where the nine derivatives are easy but the determinant is not:
+
+EXAMPLE 9 Find the factor  for  sin  cos  ;  sin  sin  ;  .
+
+The determinant has six terms, but two are zero—because of the zero in the corner. The other four terms are  and  and  and  Add the first two (note  1 and separately add the second two. Then add the sums to reach  .
+
+Geometry already gave this answer. For most  variables, use the determinant.

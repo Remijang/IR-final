@@ -1,0 +1,61 @@
+5.1 The Idea of the Integral
+
+This chapter is about the idea of integration, and also about the technique of integration. We explain how it is done in principle, and then how it is done in practice. Integration is a problem of adding up infinitely many things, each of which is infinitesimally small. Doing the addition is not recommended. The whole point of calculus is to offer a better way.
+
+The problem of integration is to find a limit of sums. The key is to work backward from a limit of differences (which is the derivative). We can integrate  if  turns up as the derivative of another function  . The integral of  is  . The integral of  is  . Basically,  is an “antiderivative”. The list of  ’s will grow much longer (Section 5:4 is crucial). A selection is inside the cover of this book. If we don’t find a suitable  , numerical integration can still give an excellent answer.
+
+I could go directly to the formulas for integrals, which allow you to compute areas under the most amazing curves. (Area is the clearest example of adding up infinitely many infinitely thin rectangles, so it always comes first. It is certainly not the only problem that integral calculus can solve.) But I am really unwilling just to write down formulas, and skip over all the ideas. Newton and Leibniz had an absolutely brilliant intuition, and there is no reason why we can’t share it.
+
+They started with something simple. We will do the same.
+
+SUMS AND DIFFERENCES
+
+Integrals and derivatives can be mostly explained by working (very briefly) with sums and differences. Instead of functions, we have  ordinary numbers. The key idea is nothing more than a basic fact of algebra. In the limit as  , it becomes the basic fact of calculus. The step of “going to the limit” is the essential difference between algebra and calculus! It has to be taken, in order to add up infinitely many infinitesimals—but we start out this side of it.
+
+To see what happens before the limiting step, we need two sets of n numbers. The first set will be  , where  suggests velocity. The second set of numbers will be  ; where  recalls the idea of distance. You might think  would be a better symbol for distance, but that is needed for the  and  of calculus.
+
+A first example has  :
+
+The relation between the  ’s and  ’s is seen in that example. When you are given 1;3;6;10; how do you produce  taking differences. The difference between 10 and 6 is 4. Subtracting  is 3. The difference  is  . Each  is the difference between two  ’s:
+
+This is the discrete form of the derivative. I admit to a small difficulty at  , from the fact that there is no  . The first  should be  , and the natural idea is to agree that  is zero. This need for a starting point will come back to haunt us (or help us) in calculus.
+
+Now look again at those same numbers—but start with  . From  how do you produce  taking sums. The first two  ’s add to 3, which is  . The first three  ’s add to  . The sum of all four  ’s is  . Taking sums is the opposite of taking differences.
+
+That idea from algebra is the key to calculus. The sum  involves all the numbers  . The difference  involves only the two numbers  . The fact that one reverses the other is the “Fundamental Theorem.” Calculus will change sums to integrals and differences to derivatives—but why not let the key idea come through now?
+
+5A Fundamental Theorem of Calculus (before limits):
+
+The differences of the  ’s add up to  . All  ’s in between are canceled, leaving only the last  and the starting  . The sum “telescopes”:
+
+The number  is canceled by  . Similarly  cancels  and  cancels  Eventually  and  are left. When  is zero, the sum is the final  .
+
+That completes the algebra. We add the v’s by finding the  ’s.
+
+Question How do you add the odd numbers  (the  ’s)? Answer They are the differences between 0; 1; 4; 9; : : :: These  ’s are squares. By the Fundamental Theorem, the sum of 50 odd numbers is  .
+
+The tricky part is to discover the right  ’s! Their differences must produce the  ’s. In calculus, the tricky part is to find the right  . Its derivative must produce  . It is remarkable how often  can be found—more often for integrals than for sums. O?ur n?ext s?tep is to u?nderstand how the integral is a limit of sums.
+
+SUMS APPROACH INTEGRALS
+
+Suppose you start a successful company. The rate of income is increasing. After  years, the income per year is  million dollars. In the first four years you reach  ; and  million dollars. Those numbers are displayed in a bar graph (Figure 5.1a, for investors). I realize that most start-up companies make losses, but your company is an exception. If the example is too good to be true, please keep reading.
+
+The graph shows four rectangles, of heights  . Since the base of each rectangle is one year, those numbers are also the areas of the rectangles. One investor, possibly weak in arithmetic, asks a simple question: What is the total income for all four years? There are two ways to answer, and I will give both.
+
+The first answer is  . Addition gives 6:15 million dollars. Figure 5.1b shows this total—which is reached at year 4. This is exactly like velocities and distances, but now  is the income per year and  is the total income. Algebraically,  is still  .
+
+The second answer comes from geometry. The total income is the total area of the rectangles. We are emphasizing the correspondence between addition and area. That point may seem obvious, but it becomes important when a second investor (smarter than the first) asks a harder question.
+
+Here is the problem. The incomes as stated are false. The company did not make a million dollars the first year. After three months, when  was  ; the rate of income was only  . The bar graph showed  f?or the wh?ole year, but t?hat was an overstatement. The income in three months was not more than  times  ; the rate multiplied by the time.
+
+All other quarters and years were also overstated. Figure 5.2a is closer to reality, with 4 years divided into 16 quarters. It gives a new estimate for total income.
+
+Again there are two ways to find the total. We add  , remembering to multiply them all by  (because each rate applies to  year). This is also the area of the 16 rectangles. The area approach is better because the  is automatic. Each rectangle has base  ; so that factor enters each area. The total area is now 5:56 million dollars, closer to the truth.
+
+You see what is coming. The next step divides time into weeks. After one week the rate  only  . That is the height of the first rectangle—its base is   . There is a rectangle for every week. Then a hard-working investor divides time into days, and the base of each rectangle is  . At that point there are  rectangles, or 1461 because of leap year, with a total area below  million dollars. The calculation is elementary but?depress?ing—adding?up thousands of square roots, each multiplied by  from the base. There has to be a better way.
+
+The better way, in fact the best waÑy, is calculus. The whole idea is to allow for continuous change: The geometry problem is to find the area under the square root curve. That question cannot be answered by arithmetic, because it involves a limit. The rectangles have base  and heights  . There are  rectangles—more and more terms from thinner and thinner rectangles. The area is the limit of the sum as  .
+
+This limiting area is the “integral.” We are looking for a number below 
+
+Algebra (area of n rectangles): Compute  by finding  ’s. Key idea: If  , then the sum is  . Calculus (area under curve): Compute the limit of  Key idea: If  then area  integral to be explained next.

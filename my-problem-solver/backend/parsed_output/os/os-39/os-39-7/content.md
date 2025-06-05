@@ -1,0 +1,19 @@
+# 39.7 Writing Immediately With fsync()  
+
+Most times when a program calls write(), it is just telling the file system: please write this data to persistent storage, at some point in the future. The file system, for performance reasons, will buffer such writes in memory for some time (say 5 seconds, or 30); at that later point in time, the write(s) will actually be issued to the storage device. From the perspective of the calling application, writes seem to complete quickly, and only in rare cases (e.g., the machine crashes after the write() call but before the write to disk) will data be lost.  
+
+However, some applications require something more than this eventual guarantee. For example, in a database management system (DBMS), development of a correct recovery protocol requires the ability to force writes to disk from time to time.  
+
+To support these types of applications, most file systems provide some additional control APIs. In the UNIX world, the interface provided to applications is known as fsync(int fd). When a process calls fsync() for a particular file descriptor, the file system responds by forcing all dirty (i.e., not yet written) data to disk, for the file referred to by the specified file descriptor. The fsync() routine returns once all of these writes are complete.  
+
+Here is a simple example of how to use fsync(). The code opens the file foo, writes a single chunk of data to it, and then calls fsync() to ensure the writes are forced immediately to disk. Once the fsync() returns, the application can safely move on, knowing that the data has been persisted (if fsync() is correctly implemented, that is).  
+
+int fd $\mathbf { \Sigma } = \mathbf { \Sigma }$ open("foo", O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR);   
+assert( $\mathrm { ~ \chi ~ } _ { \mathrm { d } } \ > \ - 1 )$ );   
+int rc $\mathbf { \Sigma } = \mathbf { \Sigma }$ write(fd, buffer, size);   
+assert $\displaystyle ( \mathtt { r c \ = - s i z e } )$ ;   
+rc = fsync(fd);   
+assert $\scriptstyle ( \ \mathtt { r c } \ \mathtt { = } \ 0$ );  
+
+Interestingly, this sequence does not guarantee everything that you might expect; in some cases, you also need to fsync() the directory that contains the file foo. Adding this step ensures not only that the file itself is on disk, but that the file, if newly created, also is durably a part of the directory. Not surprisingly, this type of detail is often overlooked, leading to many application-level bugs $[ \mathrm { \bar { P } } + 1 3 , \mathrm { P } + 1 4 ]$ .  
+

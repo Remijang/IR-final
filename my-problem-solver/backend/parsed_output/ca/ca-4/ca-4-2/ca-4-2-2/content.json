@@ -1,0 +1,152 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.2 Advanced Data-Processing Instructions ",
+        "text_level": 1,
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the generic format of 3-address data-processing instructions. ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "instruction <destination register> <register operand 1> <operand 2> ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Likewise, the generic format for 2 address data processing instructions is instruction <register operand 1> <operand 2> ",
+        "page_idx": 145
+    },
+    {
+        "type": "text",
+        "text": "Up till now, we have been slightly quiet about $<$ operand $2 >$ . It can be a register operand, an immediate, or a special class of operands called \u2013 shifter operands. The first two classes are intuitive. Let us describe shifter operands in this section. Their generic format is shown in Figure 4.1. ",
+        "page_idx": 145
+    },
+    {
+        "type": "image",
+        "img_path": "images/a19bdfe9c3744d56432a684f07e812d493991ad893ccc423fda3bdbccf67d7fd.jpg",
+        "img_caption": [
+            "Figure 4.1: Format of shifter operands "
+        ],
+        "img_footnote": [],
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "A shifter operand contains two parts. This first part is a register, and the latter part specifies an operation to be performed on the value in the register. The ARM instruction set defines four such operations \u2013 lsl (logical shift left), lsr (logical shift right), asr (arithmetic shift right), and ror (rotate right). These operations are collectively called shift and rotate instructions. ",
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "Shift and Rotate Instructions ",
+        "text_level": 1,
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "A logical left shift operation is shown in Figure 4.1. In this example, we are shifting the value 10110 one place to the left. We need to shift in an extra 0 at the LSB position. The final result is equal to 01100. A left shift operation is present in most programming languages including C and Java. It is denoted by the following symbol: $\\ll$ . Note that shifting a word (4 byte number) by $k$ positions to the left is equivalent to multiplying it by $2 ^ { k }$ . This is in fact a quick way of multiplying a number by a power of 2. ",
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the right shift operation. Unlike the left shift operation, this operation comes in two variants. Let us first consider the case of unsigned numbers. Here, we treat a word as a sequence of 32 bits. In this case, if we shift the bits 1 position to the right, we fill the MSB with a 0. This operation is known as \u2013 logical shift right (see Figure 4.1). Note that shifting a number right by $k$ places is usually the same as dividing it by $2 ^ { k }$ . The right shift operation in C or Java is $\\gg$ . ",
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "If we consider a signed number, then we need to use the arithmetic right shift $( a s r )$ operation. This operation preserves the sign bit. If we shift a number right using $a s r$ by one position, then we fill the MSB with the previous value of the MSB. This ensures that if we shift a negative number to the right, the number still remains negative. In a four bit number system, if we shift 1010 to the right by 1 place using $a s r$ , then we get 1101. The original number is -6, and the shifted number is equal to -3. We thus see that arithmetic right shift divides a signed number by a power of two. Note that using the right shift operations for odd numbers is tricky. Let us consider the representation of -5 in a 4-bit number system. It is 1011. After performing an arithmetic right shift, the result is equal to 1101, which is equal to -3 in decimal. Whether we consider - $- 5 / 2 = - 3$ as a correct answer or not depends on the semantics of the programming language. ",
+        "page_idx": 146
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "The right rotate operation performs a right shift on the number. However, it fills the MSB with the number shifted out from the rightmost end. In Figure 4.1, if we right rotate 10110, we get 01011. In this case we have moved the previous LSB (0) to the new MSB. Note that ror (right rotate) by 32 positions gives us the original value. ARM provides a special connotation for ror #0. It performs a right shift. It moves the value of the carry flag to the MSB, and then sets the shifted out LSB to the carry flag. This is also referred to as the rrx operation. This operation does not take any arguments. ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "Using Shifter Operands ",
+        "text_level": 1,
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "A shifter operand of the form \u2013 r1, lsl #2 \u2013 means that we shift the value in r1 by 2 places to the left. Note that the value in r1 is not affected in this process. Likewise, an operand of the form \u2013 r1, lsr r3 \u2013 means that we shift the value in r1 to the right by the value specified in r3. We can now use the shifter operand as a valid second operand. See examples 40, and 41. ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "Example 40   \nWrite ARM assembly code to compute: $r 1 = r 2 / 4$ . Assume that the number stored in r1 is divisible by 4. ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "mov r1, r2, asr #2 ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "Example 41 Write ARM assembly code to compute: $\\boldsymbol { r } \\boldsymbol { \\mathcal { I } } = \\boldsymbol { r } \\boldsymbol { \\mathcal { Z } } + \\boldsymbol { r } \\boldsymbol { \\mathcal { B } } \\times \\boldsymbol { \\mathcal { 4 } }$ . ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "add r1, r2, r3, lsl #2 ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "Addressing Modes ",
+        "text_level": 1,
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "We have now seen different formats of operands. An operand can either be a register, an immediate, or a shifted register. ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "We have up till now seen three addressing modes: ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "1. register addressing mode: Example, r1, r2, r3 ",
+        "page_idx": 147
+    },
+    {
+        "type": "text",
+        "text": "2. immediate addressing mode: Example, #1, #2 ",
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "3. scaled-register addressing mode: Example, (r1, lsl #2), (r1, lsl r2) ",
+        "page_idx": 148
+    }
+]

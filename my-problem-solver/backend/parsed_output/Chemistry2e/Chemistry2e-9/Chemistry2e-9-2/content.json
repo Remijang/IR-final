@@ -1,0 +1,825 @@
+[
+    {
+        "type": "text",
+        "text": "9.2 Relating Pressure, Volume, Amount, and Temperature: The Ideal Gas Law ",
+        "text_level": 1,
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Identify the mathematical relationships between the various properties of gases \u2022 Use the ideal gas law, and related gas laws, to compute the values of various gas properties under specified conditions ",
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "During the seventeenth and especially eighteenth centuries, driven both by a desire to understand nature and a quest to make balloons in which they could fly (Figure 9.9), a number of scientists established the relationships between the macroscopic physical properties of gases, that is, pressure, volume, temperature, and amount of gas. Although their measurements were not precise by today\u2019s standards, they were able to determine the mathematical relationships between pairs of these variables (e.g., pressure and temperature, pressure and volume) that hold for an idealgas\u2014a hypothetical construct that real gases approximate under certain conditions. Eventually, these individual laws were combined into a single equation\u2014the idealgas law\u2014that relates gas quantities for gases and is quite accurate for low pressures and moderate temperatures. We will consider the key developments in individual relationships (for pedagogical reasons not quite in historical order), then put them together in the ideal gas law. ",
+        "page_idx": 438
+    },
+    {
+        "type": "image",
+        "img_path": "images/c5f3257d1e6d44ade61275b547d454c53e3591729d994918c92b696540eeec11.jpg",
+        "img_caption": [
+            "FIGURE 9.9 In 1783, the first (a) hydrogen-filled balloon flight, (b) manned hot air balloon flight, and (c) manned hydrogen-filled balloon flight occurred. When the hydrogen-filled balloon depicted in (a) landed, the frightened villagers of Gonesse reportedly destroyed it with pitchforks and knives. The launch of the latter was reportedly viewed by 400,000 people in Paris. "
+        ],
+        "img_footnote": [],
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "Pressure and Temperature: Amontons\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 438
+    },
+    {
+        "type": "text",
+        "text": "Imagine filling a rigid container attached to a pressure gauge with gas and then sealing the container so that no gas may escape. If the container is cooled, the gas inside likewise gets colder and its pressure is observed to decrease. Since the container is rigid and tightly sealed, both the volume and number of moles of gas remain constant. If we heat the sphere, the gas inside gets hotter (Figure 9.10) and the pressure increases. ",
+        "page_idx": 438
+    },
+    {
+        "type": "image",
+        "img_path": "images/d752b7f3f9fd475d22dc21207cdf58dab1f1301b1cc7ec7f944fc3a820fcf75d.jpg",
+        "img_caption": [
+            "FIGURE 9.10 The effect of temperature on gas pressure: When the hot plate is off, the pressure of the gas in the sphere is relatively low. As the gas is heated, the pressure of the gas in the sphere increases. "
+        ],
+        "img_footnote": [],
+        "page_idx": 439
+    },
+    {
+        "type": "text",
+        "text": "This relationship between temperature and pressure is observed for any sample of gas confined to a constant volume. An example of experimental pressure-temperature data is shown for a sample of air under these conditions in Figure 9.11. We find that temperature and pressure are linearly related, and if the temperature is on the kelvin scale, then $P$ and $T$ are directly proportional (again, when volumeandmolesofgasareheld constant); if the temperature on the kelvin scale increases by a certain factor, the gas pressure increases by the same factor. ",
+        "page_idx": 439
+    },
+    {
+        "type": "image",
+        "img_path": "images/f18d0a3043242c7db2b4f86342d55693917f4a46b7666a6623e558596ae84abf.jpg",
+        "img_caption": [
+            "FIGURE 9.11 For a constant volume and amount of air, the pressure and temperature are directly proportional, provided the temperature is in kelvin. (Measurements cannot be made at lower temperatures because of the condensation of the gas.) When this line is extrapolated to lower pressures, it reaches a pressure of 0 at $- 2 7 3 ^ { \\circ } \\mathsf { C }$ , which is 0 on the kelvin scale and the lowest possible temperature, called absolute zero. "
+        ],
+        "img_footnote": [],
+        "page_idx": 439
+    },
+    {
+        "type": "text",
+        "text": "Guillaume Amontons was the first to empirically establish the relationship between the pressure and the temperature of a gas (\\~1700), and Joseph Louis Gay-Lussac determined the relationship more precisely (\\~1800). Because of this, the $P \\mathrm { - } T$ relationship for gases is known as either Amontons\u2019s law or Gay-Lussac\u2019s law. Under either name, it states that thepres ureofagivenamountofgasisdirectlyproportionaltoits temperatureonthekelvinscalewhenthevolumeisheldconstant. Mathematically, this can be written: ",
+        "page_idx": 439
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP \\propto T { \\mathrm { o r } } P = { \\mathrm { c o n s t a n t } } \\times T { \\mathrm { o r } } P = k \\times T\n$$",
+        "text_format": "latex",
+        "page_idx": 439
+    },
+    {
+        "type": "text",
+        "text": "where $\\propto$ means \u201cis proportional to,\u201d and $k$ is a proportionality constant that depends on the identity, amount, and volume of the gas. ",
+        "page_idx": 439
+    },
+    {
+        "type": "text",
+        "text": "For a confined, constant volume of gas, the ratio $\\textstyle { \\frac { P } { T } }$ is therefore constant (i.e., $\\begin{array} { r } { \\frac { P } { T } = k ) } \\end{array}$ . If the gas is initially in \u201cCondition $1 ^ { \\prime \\prime }$ (with $P = P _ { 1 }$ and $T = T _ { 1 } )$ ), and then changes to \u201cCondition $2 ^ { \\prime \\prime }$ (with $P = P _ { 2 }$ and $T = T _ { 2 } )$ ), we have that and which reduces to $\\begin{array} { r } { { \\frac { P _ { 1 } } { T _ { 1 } } } = { \\frac { P _ { 2 } } { T _ { 2 } } } } \\end{array}$ This equation is useful for pressure-temperature calculations for a confined gas at constant volume. Note that temperatures must be on the kelvin scale for any gas law calculations (0 on the kelvin scale and the lowest possible temperature is called absolute zero). (Also note that there are at least three ways we can describe how the pressure of a gas changes as its temperature changes: We can use a table of values, a graph, or a mathematical equation.) ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.5 ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "image",
+        "img_path": "images/12cc3bfa1e62ea9e0e550cef01d39abee4eeaa5c946cefb3fc6ab9f10a5cdea8.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "Predicting Change in Pressure with Temperature ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "A can of hair spray is used until it is empty except for the propellant, isobutane gas. ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "(a) On the can is the warning \u201cStore only at temperatures below $1 2 0 ^ { \\circ } \\mathrm { F }$ $4 8 . 8 ^ { \\circ } \\mathrm { C } )$ . Do not incinerate.\u201d Why? (b) The gas in the can is initially at $2 4 ^ { \\circ } \\mathrm { C }$ and $3 6 0 \\mathrm { k P a }$ , and the can has a volume of $3 5 0 \\mathrm { m L }$ . If the can is left in a car that reaches $5 0 ^ { \\circ } \\mathrm { C }$ on a hot day, what is the new pressure in the can? ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "(a) The can contains an amount of isobutane gas at a constant volume, so if the temperature is increased by heating, the pressure will increase proportionately. High temperature could lead to high pressure, causing the can to burst. (Also, isobutane is combustible, so incineration could cause the can to explode.) ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "(b) We are looking for a pressure change due to a temperature change at constant volume, so we will use Amontons\u2019s/Gay-Lussac\u2019s law. Taking $P _ { 1 }$ and $T _ { 1 }$ as the initial values, $T _ { 2 }$ as the temperature where the pressure is unknown and $P _ { 2 }$ as the unknown pressure, and converting $^ { \\circ } \\mathrm { C }$ to K, we have: ",
+        "page_idx": 440
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { P _ { 1 } } { T _ { 1 } } } = { \\frac { P _ { 2 } } { T _ { 2 } } } { \\mathrm { ~ w h i c h ~ m e a n s ~ t h a t ~ } } { \\frac { 3 6 0 \\mathrm { k P a } } { 2 9 7 \\mathrm { K } } } = { \\frac { P _ { 2 } } { 3 2 3 \\mathrm { K } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "Rearranging and solving gives: $\\begin{array} { r } { P _ { 2 } = \\frac { 3 6 0 \\mathrm { { k P a } \\times 3 2 3 \\mathrm { { + } } } } { 2 9 7 \\mathrm { { + } } } = 3 9 0 \\mathrm { { k P a } } } \\end{array}$ ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "A sample of nitrogen, $\\Nu _ { 2 }$ , occupies $4 5 . 0 \\mathrm { m L }$ at $2 7 ^ { \\circ } \\mathrm { C }$ and 600 torr. What pressure will it have if cooled to $- 7 3 ^ { \\circ } \\mathrm { C }$ while the volume remains constant? ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "Answer: 400 torr ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "Volume and Temperature: Charles\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "If we fill a balloon with air and seal it, the balloon contains a specific amount of air at atmospheric pressure, let\u2019s say 1 atm. If we put the balloon in a refrigerator, the gas inside gets cold and the balloon shrinks (although both the amount of gas and its pressure remain constant). If we make the balloon very cold, it will shrink a great deal, and it expands again when it warms up. ",
+        "page_idx": 440
+    },
+    {
+        "type": "image",
+        "img_path": "images/6b702ded35f40b441ef423a47af43e874b6f789221b43a67360e8957685cf183.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "LINK TO LEARNING ",
+        "text_level": 1,
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "This video (http://openstax.org/l/16CharlesLaw) shows how cooling and heating a gas causes its volume to decrease or increase, respectively. ",
+        "page_idx": 440
+    },
+    {
+        "type": "text",
+        "text": "These examples of the effect of temperature on the volume of a given amount of a confined gas at constant pressure are true in general: The volume increases as the temperature increases, and decreases as the temperature decreases. Volume-temperature data for a 1-mole sample of methane gas at 1 atm are listed and graphed in Figure 9.12. ",
+        "page_idx": 440
+    },
+    {
+        "type": "table",
+        "img_path": "images/e23caf5297805d4609f865460de1d8af3297ff9b7837d5768cd35192757f9c92.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Temperature (C)</td><td>Temperature (K)</td><td>Volume (L)</td></tr><tr><td>-3</td><td>270</td><td>22</td></tr><tr><td>-23</td><td>250</td><td>21</td></tr><tr><td>-53</td><td>220</td><td>18</td></tr><tr><td>-162</td><td>111</td><td>9</td></tr></table></body></html>\n\n",
+        "page_idx": 441
+    },
+    {
+        "type": "image",
+        "img_path": "images/fe73e73c0e10b66b6a500413b6077d856cc4fa520d08094a2727e231a989835c.jpg",
+        "img_caption": [
+            "FIGURE 9.12 The volume and temperature are linearly related for 1 mole of methane gas at a constant pressure of 1 atm. If the temperature is in kelvin, volume and temperature are directly proportional. The line stops at $\\boldsymbol { \\mathsf { 1 1 1 } } \\mathsf { K }$ because methane liquefies at this temperature; when extrapolated, it intersects the graph\u2019s origin, representing a temperature of absolute zero. "
+        ],
+        "img_footnote": [],
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "The relationship between the volume and temperature of a given amount of gas at constant pressure is known as Charles\u2019s law in recognition of the French scientist and balloon flight pioneer Jacques Alexandre C\u00e9sar Charles. Charles\u2019s law states that thevolumeofagivenamountofgasisdirectlyproportionaltoits temperatureonthekelvinscalewhenthepres ureisheldconstant. ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Mathematically, this can be written as: ",
+        "page_idx": 441
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV \\propto T \\mathrm { o r } V = \\mathrm { c o n s t a n t } \\cdot T \\mathrm { o r } V = k { \\cdot } T \\mathrm { o r } V _ { 1 } / T _ { 1 } = V _ { 2 } / T _ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "with $k$ being a proportionality constant that depends on the amount and pressure of the gas. ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "For a confined, constant pressure gas sample, $\\frac { V } { T }$ is constant (i.e., the ratio $= k ,$ ), and as seen with the $P - T$ relationship, this leads to another form of Charles\u2019s law: $\\begin{array} { r } { { \\frac { V _ { 1 } } { T _ { 1 } } } = { \\frac { V _ { 2 } } { T _ { 2 } } } } \\end{array}$ ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.6 ",
+        "text_level": 1,
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Predicting Change in Volume with Temperature ",
+        "text_level": 1,
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "A sample of carbon dioxide, $\\mathrm { C O } _ { 2 }$ , occupies $0 . 3 0 0 \\mathrm { L }$ at $1 0 ^ { \\circ } \\mathrm { C }$ and 750 torr. What volume will the gas have at $3 0 ^ { \\circ } \\mathrm { C }$ and 750 torr? ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Because we are looking for the volume change caused by a temperature change at constant pressure, this is a job for Charles\u2019s law. Taking $V _ { 1 }$ and $T _ { 1 }$ as the initial values, $T _ { 2 }$ as the temperature at which the volume is unknown and $V _ { 2 }$ as the unknown volume, and converting $^ { \\circ } \\mathrm { C }$ into K we have: ",
+        "page_idx": 441
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { V _ { 1 } } { T _ { 1 } } } = { \\frac { V _ { 2 } } { T _ { 2 } } } { \\mathrm { ~ w h i c h ~ m e a n s ~ t h a t ~ } } { \\frac { 0 . 3 0 0 \\mathrm { L } } { 2 8 3 \\mathrm { K } } } = { \\frac { V _ { 2 } } { 3 0 3 \\mathrm { K } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Rearranging and solving gives: $\\begin{array} { r } { V _ { 2 } = \\frac { 0 . 3 0 0 \\mathrm { L } \\times 3 0 3 \\mathrm { \\# } } { 2 8 3 \\mathrm { \\# } } = 0 . 3 2 1 \\mathrm { L } } \\end{array}$ ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "This answer supports our expectation from Charles\u2019s law, namely, that raising the gas temperature (from 283 K to 303 K) at a constant pressure will yield an increase in its volume (from 0.300 L to 0.321 L). ",
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 441
+    },
+    {
+        "type": "text",
+        "text": "A sample of oxygen, $\\mathrm { O _ { 2 } }$ , occupies $3 2 . 2 \\mathrm { m L }$ at $3 0 ^ { \\circ } \\mathrm { C }$ and 452 torr. What volume will it occupy at $- 7 0 { } ^ { \\circ } \\mathrm { C }$ and the same pressure? ",
+        "page_idx": 441
+    },
+    {
+        "type": "image",
+        "img_path": "images/a386cca57c4118896d2a6a84388cdae10b53854d3d1c9f8e797ccdf319d3679e.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.7 ",
+        "text_level": 1,
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Measuring Temperature with a Volume Change ",
+        "text_level": 1,
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Temperature is sometimes measured with a gas thermometer by observing the change in the volume of the gas as the temperature changes at constant pressure. The hydrogen in a particular hydrogen gas thermometer has a volume of $1 5 0 . 0 \\mathrm { c m } ^ { 3 }$ when immersed in a mixture of ice and water $( 0 . 0 0 ^ { \\circ } \\mathrm { C } )$ . When immersed in boiling liquid ammonia, the volume of the hydrogen, at the same pressure, is $1 3 1 . 7 \\mathrm { c m } ^ { 3 }$ . Find the temperature of boiling ammonia on the kelvin and Celsius scales. ",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "A volume change caused by a temperature change at constant pressure means we should use Charles\u2019s law. Taking $V _ { 1 }$ and $T _ { 1 }$ as the initial values, $T _ { 2 }$ as the temperature at which the volume is unknown and $V _ { 2 }$ as the unknown volume, and converting $^ { \\circ } \\mathrm { C }$ into K we have: ",
+        "page_idx": 442
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { V _ { 1 } } { T _ { 1 } } } = { \\frac { V _ { 2 } } { T _ { 2 } } } { \\mathrm { ~ w h i c h ~ m e a n s ~ t h a t ~ } } { \\frac { 1 5 0 . 0 { \\mathrm { c m } } ^ { 3 } } { 2 7 3 . 1 5 \\mathrm { K } } } = { \\frac { 1 3 1 . 7 { \\mathrm { c m } } ^ { 3 } } { T _ { 2 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Rearrangement gives $\\begin{array} { r } { T _ { 2 } = \\frac { 1 3 1 . 7 \\ - \\mathrm { e m } ^ { 3 } \\times 2 7 3 . 1 5 \\mathrm { K } } { 1 5 0 . 0 \\ - \\mathrm { e m } ^ { 3 } } = 2 3 9 . 8 \\mathrm { K } } \\end{array}$ ",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Subtracting 273.15 from 239.8 K, we find that the temperature of the boiling ammonia on the Celsius scale is $- 3 3 . 4 ^ { \\circ } \\mathrm { C }$ . ",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "What is the volume of a sample of ethane at $4 6 7 \\mathrm { K }$ and 1.1 atm if it occupies $4 0 5 \\mathrm { m L }$ at 298 K and 1.1 atm? ",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Answer: $6 3 5 \\mathrm { m L }$ ",
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "Volume and Pressure: Boyle\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 442
+    },
+    {
+        "type": "text",
+        "text": "If we partially fill an airtight syringe with air, the syringe contains a specific amount of air at constant temperature, say $2 5 ^ { \\circ } \\mathrm { C } .$ . If we slowly push in the plunger while keeping temperature constant, the gas in the syringe is compressed into a smaller volume and its pressure increases; if we pull out the plunger, the volume increases and the pressure decreases. This example of the effect of volume on the pressure of a given amount of a confined gas is true in general. Decreasing the volume of a contained gas will increase its pressure, and increasing its volume will decrease its pressure. In fact, if the volume increases by a certain factor, the pressure decreases by the same factor, and vice versa. Volume-pressure data for an air sample at room temperature are graphed in Figure 9.13. ",
+        "page_idx": 442
+    },
+    {
+        "type": "image",
+        "img_path": "images/a08fe8dc360be6e7675cedbe5353aa2b2f135e6bff465c38b830ba20aca0cc93.jpg",
+        "img_caption": [
+            "FIGURE 9.13 When a gas occupies a smaller volume, it exerts a higher pressure; when it occupies a larger volume, it exerts a lower pressure (assuming the amount of gas and the temperature do not change). Since $P$ and $V$ are inversely proportional, a graph of $\\textstyle { \\frac { 1 } { P } }$ vs. Vis linear. "
+        ],
+        "img_footnote": [],
+        "page_idx": 443
+    },
+    {
+        "type": "text",
+        "text": "Unlike the $P \\mathrm { - } T$ and $V \u2013 T$ relationships, pressure and volume are not directly proportional to each other. Instead, $P$ and $V$ exhibit inverse proportionality: Increasing the pressure results in a decrease of the volume of the gas. Mathematically this can be written: ",
+        "page_idx": 443
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP \\propto 1 / V \\mathrm { o r } P = k { \\cdot } 1 / V \\mathrm { o r } P { \\cdot } V = k \\mathrm { o r } P _ { 1 } V _ { 1 } = P _ { 2 } V _ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 443
+    },
+    {
+        "type": "text",
+        "text": "with $k$ being a constant. Graphically, this relationship is shown by the straight line that results when plotting the inverse of the pressure $\\left( { \\frac { 1 } { P } } \\right)$ versus the volume $( \\hat { V } )$ , or the inverse of volume $\\left( { \\frac { 1 } { V } } \\right)$ versus the pressure $( P )$ . Graphs with curved lines are difficult to read accurately at low or high values of the variables, and they are more difficult to use in fitting theoretical equations and parameters to experimental data. For those reasons, scientists often try to find a way to \u201clinearize\u201d their data. If we plot $P$ versus $V _ { ; }$ , we obtain a hyperbola (see Figure 9.14). ",
+        "page_idx": 443
+    },
+    {
+        "type": "image",
+        "img_path": "images/5403fe3525eecf48795779fe43c8bccef10ba9b253e468192c9ccafa00435923.jpg",
+        "img_caption": [
+            "FIGURE 9.14 The relationship between pressure and volume is inversely proportional. (a) The graph of $P$ vs. Vis a hyperbola, whereas (b) the graph of $\\left( { \\frac { 1 } { P } } \\right)$ vs. Vis linear. "
+        ],
+        "img_footnote": [],
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "The relationship between the volume and pressure of a given amount of gas at constant temperature was first published by the English natural philosopher Robert Boyle over 300 years ago. It is summarized in the statement now known as Boyle\u2019s law: Thevolumeofagivenamountofgasheldatconstanttemperatureis inverselyproportionaltothepres ureunderwhichitismeasured. ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.8 ",
+        "text_level": 1,
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "Volume of a Gas Sample ",
+        "text_level": 1,
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "The sample of gas in Figure 9.13 has a volume of $1 5 . 0 \\mathrm { m L }$ at a pressure of 13.0 psi. Determine the pressure of the gas at a volume of $7 . 5 \\mathrm { m L }$ , using: ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "(a) the P-Vgraph in Figure 9.13 (b) the $\\textstyle { \\frac { 1 } { P } }$ vs. Vgraph in Figure 9.13 (c) the Boyle\u2019s law equation Comment on the likely accuracy of each method. ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "(a) Estimating from the $P \\mathrm { - } V$ graph gives a value for $P$ somewhere around 27 psi.   \n(b) Estimating from the $\\textstyle { \\frac { 1 } { P } }$ versus $V$ graph give a value of about 26 psi.   \n(c) From Boyle\u2019s law, we know that the product of pressure and volume $( P V )$ for a given sample of gas at a constant temperature is always equal to the same value. Therefore we have $P _ { 1 } V _ { 1 } = k$ and $P _ { 2 } V _ { 2 } = k$ which means that $P _ { 1 } V _ { 1 } = P _ { 2 } V _ { 2 }$ . ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "Using $P _ { 1 }$ and $V _ { 1 }$ as the known values 13.0 psi and $1 5 . 0 \\mathrm { m L }$ , $P _ { 2 }$ as the pressure at which the volume is unknown, and $V _ { 2 }$ as the unknown volume, we have: ",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { 1 } V _ { 1 } = P _ { 2 } V _ { 2 } { \\mathrm { ~ o r ~ } } 1 3 . 0 { \\mathrm { p s i } } \\ \\times \\ 1 5 . 0 { \\mathrm { m L } } = P _ { 2 } \\times 7 . 5 { \\mathrm { m L } }\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "Solving: ",
+        "page_idx": 444
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP _ { 2 } = { \\frac { 1 3 . 0 { \\mathrm { p s i } } \\times 1 5 . 0 { \\mathrm { m E } } } { 7 . 5 { \\mathrm { m E } } } } = 2 6 { \\mathrm { p s i } }\n$$",
+        "text_format": "latex",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "It was more difficult to estimate well from the $P -$ Vgraph, so (a) is likely more inaccurate than (b) or (c). The calculation will be as accurate as the equation and measurements allow. ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "The sample of gas in Figure 9.13 has a volume of $3 0 . 0 \\mathrm { m L }$ at a pressure of 6.5 psi. Determine the volume of the gas at a pressure of 11.0 psi, using: ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "(a) the P-Vgraph in Figure 9.13 ",
+        "page_idx": 444
+    },
+    {
+        "type": "text",
+        "text": "(b) the $\\textstyle { \\frac { 1 } { P } }$ vs. Vgraph in Figure 9.13 ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "(c) the Boyle\u2019s law equation ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Comment on the likely accuracy of each method. ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "(a) about $1 7 \\mathrm { - } 1 8 \\mathrm { m L }$ ; (b) $\\mathrm { \\sim } 1 8 \\mathrm { m L }$ ; (c) $1 7 . 7 \\mathrm { m L }$ ; it was more difficult to estimate well from the P-Vgraph, so (a) is likely more inaccurate than (b); the calculation will be as accurate as the equation and measurements allow ",
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Chemistry in Everyday Life ",
+        "text_level": 1,
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Breathing and Boyle\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "What do you do about 20 times per minute for your whole life, without break, and often without even being aware of it? The answer, of course, is respiration, or breathing. How does it work? It turns out that the gas laws apply here. Your lungs take in gas that your body needs (oxygen) and get rid of waste gas (carbon dioxide). Lungs are made of spongy, stretchy tissue that expands and contracts while you breathe. When you inhale, your diaphragm and intercostal muscles (the muscles between your ribs) contract, expanding your chest cavity and making your lung volume larger. The increase in volume leads to a decrease in pressure (Boyle\u2019s law). This causes air to flow into the lungs (from high pressure to low pressure). When you exhale, the process reverses: Your diaphragm and rib muscles relax, your chest cavity contracts, and your lung volume decreases, causing the pressure to increase (Boyle\u2019s law again), and air flows out of the lungs (from high pressure to low pressure). You then breathe in and out again, and again, repeating this Boyle\u2019s law cycle for the rest of your life (Figure 9.15). ",
+        "page_idx": 445
+    },
+    {
+        "type": "image",
+        "img_path": "images/ba19c33c68154cbdd1a5002bdaf87732e9db187323ef4ab0e5d983eb5b85f0e3.jpg",
+        "img_caption": [
+            "FIGURE 9.15 Breathing occurs because expanding and contracting lung volume creates small pressure differences between your lungs and your surroundings, causing air to be drawn into and forced out of your lungs. "
+        ],
+        "img_footnote": [],
+        "page_idx": 445
+    },
+    {
+        "type": "text",
+        "text": "Moles of Gas and Volume: Avogadro\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The Italian scientist Amedeo Avogadro advanced a hypothesis in 1811 to account for the behavior of gases, stating that equal volumes of all gases, measured under the same conditions of temperature and pressure, contain the same number of molecules. Over time, this relationship was supported by many experimental observations as expressed by Avogadro\u2019s law: Foraconfinedgas,thevolume(V)andnumberofmoles $( n )$ are directlyproportionalifthepres ureandtemperaturebothremainconstant. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "In equation form, this is written as: ",
+        "page_idx": 446
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { V \\propto n \\mathrm { o r } V = k \\times n \\mathrm { o r } \\frac { V _ { 1 } } { n _ { 1 } } = \\frac { V _ { 2 } } { n _ { 2 } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Mathematical relationships can also be determined for the other variable pairs, such as $P$ versus $n$ , and $n$ versus $T$ . ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "LINK TO LEARNING ",
+        "text_level": 1,
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Visit this interactive PhET simulation (http://openstax.org/l/16IdealGasLaw) to investigate the relationships between pressure, volume, temperature, and amount of gas. Use the simulation to examine the effect of changing one parameter on another while holding the other parameters constant (as described in the preceding sections on the various gas laws). ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The Ideal Gas Law ",
+        "text_level": 1,
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "To this point, four separate laws have been discussed that relate pressure, volume, temperature, and the number of moles of the gas: ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Boyle\u2019s law: $P V =$ constant at constant Tand $n$ \u2022 Amontons\u2019s law: $\\begin{array} { l } { { \\frac { P } { T } } = } \\end{array}$ constant at constant $V$ and $\\boldsymbol { n }$ \u2022 Charles\u2019s law: ${ \\frac { V } { T } } =$ constant at constant $P$ and $\\boldsymbol { n }$ \u2022 Avogadro\u2019s law: ${ \\frac { V } { n } } = { }$ constant at constant $P$ and $T$ ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Combining these four laws yields the ideal gas law, a relation between the pressure, volume, temperature, and number of moles of a gas: ",
+        "page_idx": 446
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP V = n R T\n$$",
+        "text_format": "latex",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "where $P$ is the pressure of a gas, $V$ is its volume, $n$ is the number of moles of the gas, $T$ is its temperature on the kelvin scale, and $R$ is a constant called the ideal gas constant or the universal gas constant. The units used to express pressure, volume, and temperature will determine the proper form of the gas constant as required by dimensional analysis, the most commonly encountered values being 0.08206 L atm $\\mathrm { m o l } ^ { - 1 } \\mathrm { K } ^ { - 1 }$ and $8 . 3 1 4 \\mathrm { k P a L }$ $\\mathrm { m o l } ^ { - 1 } \\mathrm { K } ^ { - 1 }$ . ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "Gases whose properties of $P , V ,$ , and $T$ are accurately described by the ideal gas law (or the other gas laws) are said to exhibit idealbehavioror to approximate the traits of an ideal gas. An ideal gas is a hypothetical construct that may be used along with kineticmoleculartheoryto effectively explain the gas laws as will be described in a later module of this chapter. Although all the calculations presented in this module assume ideal behavior, this assumption is only reasonable for gases under conditions of relatively low pressure and high temperature. In the final module of this chapter, a modified gas law will be introduced that accounts for the non-idealbehavior observed for many gases at relatively high pressures and low temperatures. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "The ideal gas equation contains five terms, the gas constant $R$ and the variable properties $P , V , n$ , and $T .$ Specifying any four of these terms will permit use of the ideal gas law to calculate the fifth term as demonstrated in the following example exercises. ",
+        "page_idx": 446
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.9 ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Using the Ideal Gas Law ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Methane, $\\mathrm { C H } _ { 4 }$ , is being considered for use as an alternative automotive fuel to replace gasoline. One gallon of gasoline could be replaced by $6 5 5 { \\mathrm { g } }$ of $\\mathrm { C H } _ { 4 }$ . What is the volume of this much methane at $2 5 ^ { \\circ } \\mathrm { C }$ and 745 torr? ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "We must rearrange $P V = n R T$ to solve for $\\begin{array} { r } { V \\colon V = \\frac { n R T } { P } } \\end{array}$ ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "If we choose to use $R = 0 . 0 8 2 0 6 \\mathrm { L }$ atm $\\mathrm { m o l } ^ { - 1 } \\mathrm { K } ^ { - 1 }$ , then the amount must be in moles, temperature must be in kelvin, and pressure must be in atm. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Converting into the \u201cright\u201d units: ",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\nn = 6 5 5 \\underline { { \\star } } \\mathrm { C H } _ { 4 } \\times \\frac { 1 \\mathrm { m o l } } { 1 6 . 0 4 3 \\underline { { \\star } } \\mathrm { C H } _ { 4 } } = 4 0 . 8 \\mathrm { m o l }\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT = 2 5 ^ { \\circ } \\mathbf { C } + 2 7 3 = 2 9 8 \\mathbf { K }\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\nP = 7 4 5 { \\mathrm { \\ t o t { \\# } } } \\times { \\frac { 1 { \\mathrm { \\ a t m } } } { 7 6 0 \\not = \\not \\ = 6 9 8 0 { \\mathrm { ~ a t m } } } } = 0 . 9 8 0 { \\mathrm { ~ a t m } }\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV = { \\frac { n R T } { P } } = { \\frac { ( 4 0 . 8 - \\mathrm { r m e d } ) ( 0 . 0 8 2 0 6 \\mathrm { L } - \\mathrm { a t m m o l } ^ { - 1 } \\mathbf { \\tilde { \\mathbf { K } } } ^ { - 1 } ) ( 2 9 8 \\mathbf { \\cdot } \\mathbf { K } ) } { 0 . 9 8 0 - \\mathrm { a t m } } } = 1 . 0 2 \\times 1 0 ^ { 3 } \\mathbf { L }\n$$",
+        "text_format": "latex",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "It would require 1020 L (269 gal) of gaseous methane at about 1 atm of pressure to replace 1 gal of gasoline. It requires a large container to hold enough methane at 1 atm to replace several gallons of gasoline. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Calculate the pressure in bar of 2520 moles of hydrogen gas stored at $2 7 ^ { \\circ } \\mathrm { C }$ in the $1 8 0 \\mathrm { - L }$ storage tank of a modern hydrogen-powered car. ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Answer: 350 bar ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "If the number of moles of an ideal gas are kept constant under two different sets of conditions, a useful mathematical relationship called the combined gas law is obtained: $\\begin{array} { r } { { \\frac { P _ { 1 } V _ { 1 } } { T _ { 1 } } } = { \\frac { P _ { 2 } V _ { 2 } } { T _ { 2 } } } } \\end{array}$ using units of atm, L, and K. Both sets of conditions are equal to the product of $n \\times R$ (where $n =$ the number of moles of the gas and $R$ is the ideal gas law constant). ",
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 9.10 ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "Using the Combined Gas Law ",
+        "text_level": 1,
+        "page_idx": 447
+    },
+    {
+        "type": "text",
+        "text": "When filled with air, a typical scuba tank with a volume of $1 3 . 2 \\mathrm { L }$ has a pressure of 153 atm (Figure 9.16). If the water temperature is $2 7 ^ { \\circ } \\mathrm { C }$ , how many liters of air will such a tank provide to a diver\u2019s lungs at a depth of approximately 70 feet in the ocean where the pressure is 3.13 atm? ",
+        "page_idx": 447
+    },
+    {
+        "type": "image",
+        "img_path": "images/18b49451eab84377660dc81a02ad114d14869790c8494096814e1098b7e65f02.jpg",
+        "img_caption": [
+            "FIGURE 9.16 Scuba divers use compressed air to breathe while underwater. (credit: modification of work by Mark Goodchild) "
+        ],
+        "img_footnote": [],
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Letting 1represent the air in the scuba tank and 2represent the air in the lungs, and noting that body temperature (the temperature the air will be in the lungs) is $3 7 ^ { \\circ } \\mathrm { C }$ , we have: ",
+        "page_idx": 448
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { P _ { 1 } V _ { 1 } } { T _ { 1 } } } = { \\frac { P _ { 2 } V _ { 2 } } { T _ { 2 } } } \\longrightarrow { \\frac { ( 1 5 3 \\mathrm { a t m } ) ( 1 3 . 2 \\mathrm { L } ) } { ( 3 0 0 \\mathrm { K } ) } } = { \\frac { ( 3 . 1 3 \\mathrm { a t m } ) ( V _ { 2 } ) } { ( 3 1 0 \\mathrm { K } ) } }\n$$",
+        "text_format": "latex",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Solving for $V _ { 2 }$ : ",
+        "page_idx": 448
+    },
+    {
+        "type": "equation",
+        "text": "$$\nV _ { 2 } = { \\frac { \\left( 1 5 3 - { \\mathrm { a t m } } \\right) \\left( 1 3 . 2 \\mathrm { L } \\right) \\left( 3 1 0 + \\mathrm { K } \\right) } { \\left( 3 0 0 + \\mathrm { K } \\right) \\left( 3 . 1 3 - { \\mathrm { a t m } } \\right) } } = 6 6 7 \\mathrm { L }\n$$",
+        "text_format": "latex",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "(Note: Be advised that this particular example is one in which the assumption of ideal gas behavior is not very reasonable, since it involves gases at relatively high pressures and low temperatures. Despite this limitation, the calculated volume can be viewed as a good \u201cballpark\u201d estimate.) ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "A sample of ammonia is found to occupy $0 . 2 5 0 \\mathrm { L }$ under laboratory conditions of $2 7 ^ { \\circ } \\mathrm { C }$ and 0.850 atm. Find the volume of this sample at $0 { } ^ { \\circ } \\mathrm { C }$ and 1.00 atm. ",
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Chemistry in Everyday Life ",
+        "text_level": 1,
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "The Interdependence between Ocean Depth and Pressure in Scuba Diving ",
+        "text_level": 1,
+        "page_idx": 448
+    },
+    {
+        "type": "text",
+        "text": "Whether scuba diving at the Great Barrier Reef in Australia (shown in Figure 9.17) or in the Caribbean, divers must understand how pressure affects a number of issues related to their comfort and safety. ",
+        "page_idx": 448
+    },
+    {
+        "type": "image",
+        "img_path": "images/0ff2d91baf29e2ed393d28bf59a78059386998acb53cd306b8295aaffe584b5a.jpg",
+        "img_caption": [
+            "FIGURE 9.17 Scuba divers, whether at the Great Barrier Reef or in the Caribbean, must be aware of buoyancy, pressure equalization, and the amount of time they spend underwater, to avoid the risks associated with pressurized gases in the body. (credit: Kyle Taylor) "
+        ],
+        "img_footnote": [],
+        "page_idx": 449
+    },
+    {
+        "type": "text",
+        "text": "Pressure increases with ocean depth, and the pressure changes most rapidly as divers reach the surface. The pressure a diver experiences is the sum of all pressures above the diver (from the water and the air). Most pressure measurements are given in units of atmospheres, expressed as \u201catmospheres absolute\u201d or ATA in the diving community: Every 33 feet of salt water represents 1 ATA of pressure in addition to 1 ATA of pressure from the atmosphere at sea level. As a diver descends, the increase in pressure causes the body\u2019s air pockets in the ears and lungs to compress; on the ascent, the decrease in pressure causes these air pockets to expand, potentially rupturing eardrums or bursting the lungs. Divers must therefore undergo equalization by adding air to body airspaces on the descent by breathing normally and adding air to the mask by breathing out of the nose or adding air to the ears and sinuses by equalization techniques; the corollary is also true on ascent, divers must release air from the body to maintain equalization. Buoyancy, or the ability to control whether a diver sinks or floats, is controlled by the buoyancy compensator (BCD). If a diver is ascending, the air in their BCD expands because of lower pressure according to Boyle\u2019s law (decreasing the pressure of gases increases the volume). The expanding air increases the buoyancy of the diver, and they begin to ascend. The diver must vent air from the BCD or risk an uncontrolled ascent that could rupture the lungs. In descending, the increased pressure causes the air in the BCD to compress and the diver sinks much more quickly; the diver must add air to the BCD or risk an uncontrolled descent, facing much higher pressures near the ocean floor. The pressure also impacts how long a diver can stay underwater before ascending. The deeper a diver dives, the more compressed the air that is breathed because of increased pressure: If a diver dives 33 feet, the pressure is 2 ATA and the air would be compressed to one-half of its original volume. The diver uses up available air twice as fast as at the surface. ",
+        "page_idx": 449
+    },
+    {
+        "type": "text",
+        "text": "Standard Conditions of Temperature and Pressure ",
+        "text_level": 1,
+        "page_idx": 449
+    },
+    {
+        "type": "text",
+        "text": "We have seen that the volume of a given quantity of gas and the number of molecules (moles) in a given volume of gas vary with changes in pressure and temperature. Chemists sometimes make comparisons against a standard temperature and pressure (STP) for reporting properties of gases: $2 7 3 . 1 5 \\mathrm { K }$ and 1 atm (101.325 kPa).1 At STP, one mole of an ideal gas has a volume of about 22.4 L\u2014this is referred to as the standard molar volume (Figure 9.18). ",
+        "page_idx": 449
+    },
+    {
+        "type": "image",
+        "img_path": "images/873556971265f812420d0abfd3b11f19cf63f06ff87ac856df79018bbac8b806.jpg",
+        "img_caption": [
+            "FIGURE 9.18 Regardless of its chemical identity, one mole of gas behaving ideally occupies a volume of ${ \\sim } 2 2 . 4 \\ L$ at STP. "
+        ],
+        "img_footnote": [],
+        "page_idx": 450
+    }
+]

@@ -1,0 +1,113 @@
+20.5 Alternating Current versus Direct Current
+
+LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Explain the differences and similarities between AC and DC current.   
+• Calculate rms voltage, current, and average power.   
+• Explain why AC current is used for power transmission.
+
+Alternating Current
+
+Most of the examples dealt with so far, and particularly those utilizing batteries, have constant voltage sources. Once the current is established, it is thus also a constant. Direct current (DC) is the flow of electric charge in only one direction. It is the steady state of a constant-voltage circuit. Most well-known applications, however, use a timevarying voltage source. Alternating current (AC) is the flow of electric charge that periodically reverses direction. If the source varies periodically, particularly sinusoidally, the circuit is known as an alternating current circuit. Examples include the commercial and residential power that serves so many of our needs. Figure 20.14 shows graphs of voltage and current versus time for typical DC and AC power. The AC voltages and frequencies commonly used in homes and businesses vary around the world.
+
+Figure 20.15 shows a schematic of a simple circuit with an AC voltage source. The voltage between the terminals fluctuates as shown, with the AC voltage given by
+
+where  is the voltage at time  ,  is the peak voltage, and  is the frequency in hertz. For this simple resistance circuit,  , and so the AC current is
+
+where  is the current at time  , and  is the peak current. For this example, the voltage and current are said to be in phase, as seen in Figure 20.14(b).
+
+Current in the resistor alternates back and forth just like the driving voltage, since  . If the resistor is a fluorescent light bulb, for example, it brightens and dims 120 times per second as the current repeatedly goes through zero. A  flicker is too rapid for your eyes to detect, but if you wave your hand back and forth between your face and a fluorescent light, you will see a stroboscopic effect evidencing AC. The fact that the light output fluctuates means that the power is fluctuating. The power supplied is  Using the expressions for  and  above, we see that the time dependence of power is  , as shown in Figure 20.16.
+
+Making Connections: Take-Home Experiment—AC/DC Lights
+
+Wave your hand back and forth between your face and a fluorescent light bulb. Do you observe the same thing with the headlights on your car? Explain what you observe. Warning:Donotlo kdirectlyatverybrightlight.
+
+We are most often concerned with average power rather than its fluctuations—that 60-W light bulb in your desk lamp has an average power consumption of  , for example. As illustrated in Figure 20.16, the average power  is
+
+This is evident from the graph, since the areas above and below the  line are equal, but it can also be proven using trigonometric identities. Similarly, we define an average or rms current  and average or rms voltage  to be, respectively,
+
+and
+
+where rms stands for root mean square, a particular kind of average. In general, to obtain a root mean square, the particular quantity is squared, its mean (or average) is found, and the square root is taken. This is useful for AC, since the average value is zero. Now,
+
+which gives
+
+as stated above. It is standard practice to quote  , and  rather than the peak values. For example, most household electricity is  AC, which means that  is  . The common 10-A circuit breaker will interrupt a sustained  greater than 10 A. Your  microwave oven consumes  , and so on. You can think of these rms and average values as the equivalent DC values for a simple resistive circuit.
+
+To summarize, when dealing with AC, Ohm’s law and the equations for power are completely analogous to those for DC, but rms and average values are used for AC. Thus, for AC, Ohm’s law is written
+
+The various expressions for AC power  are
+
+and
+
+EXAMPLE 20.9
+
+Peak Voltage and Power for AC
+
+(a) What is the value of the peak voltage for 120-V AC power? (b) What is the peak power consumption rate of a 60.0-W AC light bulb?
+
+Strategy
+
+We are told that  is  and  is 60.0 W. We can use  to find the peak voltage, and we can manipulate the definition of power to find the peak power from the given average power.
+
+Solution for (a)
+
+Solving the equation  for the peak voltage  and substituting the known value for  gives
+
+Discussion for (a)
+
+This means that the AC voltage swings from  to  and back 60 times every second. An equivalent DC voltage is a constant  .
+
+Solution for (b)
+
+Peak power is peak current times peak voltage. Thus,
+
+We know the average power is 60.0 W, and so
+
+Discussion
+
+So the power swings from zero to 120 W one hundred twenty times per second (twice each cycle), and the power averages 60 W.
+
+Why Use AC for Power Distribution?
+
+Most large power-distribution systems are AC. Moreover, the power is transmitted at much higher voltages than the 120-V AC  in most parts of the world) we use in homes and on the job. Economies of scale make it cheaper to build a few very large electric power-generation plants than to build numerous small ones. This necessitates sending power long distances, and it is obviously important that energy losses en route be minimized. High voltages can be transmitted with much smaller power losses than low voltages, as we shall see. (See Figure 20.17.) For safety reasons, the voltage at the user is reduced to familiar values. The crucial factor is that it is much easier to increase and decrease AC voltages than DC, so AC is used in most large power distribution systems.
+
+EXAMPLE 20.10
+
+Power Losses Are Less for High-Voltage Transmission
+
+(a) What current is needed to transmit 100 MW of power at  (b) What is the power dissipated by the transmission lines if they have a resistance of  (c) What percentage of the power is lost in the transmission lines?
+
+Strategy
+
+We are given  ,  , and the resistance of the lines is  . Using these givens, we can find the current flowing (from  and then the power dissipated in the lines  , and we take the ratio to the total power transmitted.
+
+Solution
+
+To find the current, we rearrange the relationship  and substitute known values. This gives
+
+Solution
+
+Knowing the current and given the resistance of the lines, the power dissipated in them is found from  . Substituting the known values gives
+
+Solution
+
+The percent loss is the ratio of this lost power to the total or input power, multiplied by 100:
+
+Discussion
+
+One-fourth of a percent is an acceptable loss. Note that if 100 MW of power had been transmitted at  , then a current of 4000 A would have been needed. This would result in a power loss in the lines of  , or  rather than  . The lower the voltage, the more current is needed, and the greater the power loss in the fixedresistance transmission lines. Of course, lower-resistance lines can be built, but this requires larger and more expensive wires. If superconducting lines could be economically produced, there would be no loss in the
+
+transmission lines at all. But, as we shall see in a later chapter, there is a limit to current in superconductors, too. In short, high voltages are more economical for transmitting power, and AC voltage is much easier to raise and lower, so that AC is used in most large-scale power distribution systems.
+
+It is widely recognized that high voltages pose greater hazards than low voltages. But, in fact, some high voltages, such as those associated with common static electricity, can be harmless. So it is not voltage alone that determines a hazard. It is not so widely recognized that AC shocks are often more harmful than similar DC shocks. Thomas Edison thought that AC shocks were more harmful and set up a DC power-distribution system in New York City in the late 1800s. There were bitter fights, in particular between Edison and George Westinghouse and Nikola Tesla, who were advocating the use of AC in early power-distribution systems. AC has prevailed largely due to transformers and lower power losses with high-voltage transmission.
+
+PHET EXPLORATIONS
+
+Generator
+
+Generate electricity with a bar magnet! Discover the physics behind the phenomena by exploring magnets and how you can use them to make a bulb light.
+
+Click to view content (https://openstax.org/l/28gen).

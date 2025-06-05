@@ -1,0 +1,19 @@
+6.4.3 Floating Point Arithmetic Instructions
+
+Table 6.15 shows the floating point arithmetic instructions. They are of the form inst .s. The “.s” suffix corresponds to single precision floating point instructions. The “.d” suffix corresponds to double precision floating point instructions. The instructions fadd.s, fsub.s, fmul.s, fdiv.s, fmin.s,  and  have their usual meanings. Note that we do not have variants that accept immediates directly as source operands. In the case of floating point instructions, immediates can only be loaded using  instructions or converted from integers. Refer to Example 116.
+
+Example 116
+
+Compute  , and store the result in f a0.
+
+Answer:
+
+# declare the constants   
+pi: . float 3.14   
+e: . float 2.72   
+. main :   
+# load them into floating point registers la a1 , pi flw fs1 , 0( a1) la a2 , e flw fs2 , 0( a2) fadd .s ft1 , fs1 , fs2 # pi + e fmul .s ft2 , fs1 , fs2 # pi \* e fadd .s ft3 , ft1 , ft2 # pi + e + pi \* e fsqrt .s fa0 , ft3 # sqrt (pi + e + pi\*e)
+
+To support operations such as dot products, matrix multiplication, and similar operations,
+
+RISC-V supports a few fused arithmetic instructions such as the fused addition and subtraction operations (refer to Table 6.16). The fused add instruction  takes three register source operands as arguments. It multiplies the first two and adds the product to the third. On similar lines, the fused subtract instruction subtracts the third source operand from the product of the first two register-based source operands.

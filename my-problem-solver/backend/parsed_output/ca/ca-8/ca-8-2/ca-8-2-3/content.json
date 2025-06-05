@@ -1,0 +1,208 @@
+[
+    {
+        "type": "text",
+        "text": "8.2.3 Booth Multiplier ",
+        "text_level": 1,
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "The iterative multiplier is a simple algorithm, yet it is slow. It is definitely not as fast as addition. Let us try to speed it up by making a simple alteration. This trick will not change the asymptotic time complexity of the algorithm. However, in practice the process of multiplication will become significantly faster. This algorithm is known as the Booth multiplication algorithm and has been used for designing fast multipliers in a lot of processors. ",
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "We observe that if a bit in the multiplier is 0, then nothing needs to be done other than a shift in the iterative multiplier. The complexity arises when a bit is 1. Let us assume that the multiplier contains a run of 1s. It is of the form - 0000111100. Let the run of 1s be from the $i ^ { t h }$ to the $j ^ { t h }$ position ( $i \\leq j$ ). The value of the multiplier $M$ is thus: ",
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 327
+    },
+    {
+        "type": "equation",
+        "text": "$$\nM = \\sum _ { k = i } ^ { k = j } 2 ^ { k - 1 } = 2 ^ { j } - 2 ^ { i - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 327
+    },
+    {
+        "type": "text",
+        "text": "Now, the iterative multiplier will perform $j - i + 1$ additions. This is not required as we can see from Equation 8.10. We just need to do one subtraction when we are considering the $i ^ { t h }$ bit, and do one addition when we are considering the $( j + 1 ) ^ { t h }$ bit. We can thus replace $j - i + 1$ additions with one addition and one subtraction. This insight allows us to reduce the number of additions if there are long runs of 1s in the 2\u2019s complement notation of the multiplier. If the multiplier is a small negative number, then it fits this pattern. It will have a long run of 1s especially in the most significant positions. Even otherwise, most of the numbers that we encounter will at least have some runs of 1s. The worst case arises, when we have a number of the form: 010101... . This is a very rare case. ",
+        "page_idx": 327
+    },
+    {
+        "type": "text",
+        "text": "If we consider our basic insight again, then we observe that we need to consider bit pairs consisting of the previous and the current multiplier bit. Depending on the bit pair we need to perform a certain action. Table 8.4 shows the actions that we need to perform. ",
+        "page_idx": 327
+    },
+    {
+        "type": "table",
+        "img_path": "images/d330d547cef15e8117c0c53dd99c3155a4f4620838244bab1ed439b3b6e683de.jpg",
+        "table_caption": [
+            "Table 8.4: Actions in the Booth multiplier "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>(current value,previous value)</td><td>Action</td></tr><tr><td>0,0</td><td>-</td></tr><tr><td>1,0</td><td>subtract multiplicand from U</td></tr><tr><td>1,1</td><td></td></tr><tr><td>0,1</td><td>add multiplicand to U</td></tr></table></body></html>\n\n",
+        "page_idx": 327
+    },
+    {
+        "type": "text",
+        "text": "If the current and previous bits are (0,0), respectively, then we do not need to do anything. We need to just shift $U V$ and continue. Similarly, if the bits are (1,1), nothing needs to be done. However, if the current bit is 1, and the previous bit was 0, then a run of 1s is starting. We thus need to subtract the value of the multiplicand from $U$ . Similarly, if the current bit is 0, and the previous bit was 1, then a run of 1s has just ended. In this case, we need to add the value of the multiplicand to $U$ . ",
+        "page_idx": 327
+    },
+    {
+        "type": "table",
+        "img_path": "images/1eca5e620b507ae04ec436ebb6872ee6ad5483b027cd05bcc78a676552e3f295.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Algorithm 2: Booth's Algorithm to multiply two 32-bit numbers to produce a 64-bit result</td></tr><tr><td>Data: Multiplier in V,U = O, Multiplicand in N</td></tr><tr><td>Result: The lower 64 bits of UV contain the result 1i\u21900</td></tr><tr><td>2 prevBit \u21900</td></tr><tr><td>3 for i< 32 do</td></tr><tr><td>4 i\u2190i+1</td></tr><tr><td>5 currBit \u2190LSB of V</td></tr><tr><td>6 if (currBit,prevBit\uff09=(1,0) then</td></tr><tr><td>7 U\u2190U-N</td></tr><tr><td>8 end</td></tr><tr><td>9 else if (currBit,prevBit) = (0,1) then</td></tr><tr><td>10 U\u2190U+N</td></tr><tr><td>11 end</td></tr><tr><td>12 prevBit \u2190 currBit</td></tr><tr><td>13 UV \u2190 UV >1 (arithmetic right shift)</td></tr><tr><td>14 end</td></tr></table></body></html>\n\n",
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "The Booth\u2019s algorithm is shown in Algorithm 2. Here, also, we assume that $U$ is 33 bits wide, and $V$ is 32 bits wide. We iterate for 32 times, and consider bit pairs (current bit, previous bit). For (0,0) and (1,1), we do not need to perform any action, else we need to perform an addition and subtraction. ",
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "Proof of Correctness\\* ",
+        "text_level": 1,
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "Let us try to prove that the Booth\u2019s algorithm produces the same result as the iterative algorithm for a positive multiplier. ",
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "There are two cases. The multiplier ( $M$ ) can either be positive or negative. Let us consider the case of the positive multiplier first. The MSB of a positive multiplier is 0. Now, let us divide the multiplier into several sequences of contiguous 0s and 1s. For example, if the number is of the form: 000110010111. The sequences are: 000, 11, 00, 1, 0, and 111. For a run of 0s, both the multipliers (Booth\u2019s and iterative) produce the same result because they simply shift the $U V$ register 1 step to the right. ",
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "For a sequence of continuous 1s, both the multipliers also produce the same result because the Booth multiplier replaces a sequence of additions with an addition and a subtraction according to Equation 8.10. The only special case arises for the MSB bit, when the iterative multiplier may subtract the multiplicand. In this case, the MSB is 0, and thus no special cases arise. Each run of continuous 0s and 1s in the multiplier is accounted for in the partial product correctly. Therefore, we can conclude that the final result of the Booth multiplier is the same as that of a regular iterative multiplier. ",
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider a negative multiplier $M$ . Its MSB is 1. According to Theorem 2.3.4.2, $\\begin{array} { r } { M = - 2 ^ { n - 1 } + \\sum _ { i = 1 } ^ { n - 1 } M _ { i } 2 ^ { i - 1 } } \\end{array}$ . Let $\\begin{array} { r } { M ^ { \\prime } = \\sum _ { i = 1 } ^ { n - 1 } M _ { i } 2 ^ { i - 1 } } \\end{array}$ . Hence, for a negative multiplier $( M )$ : ",
+        "page_idx": 328
+    },
+    {
+        "type": "equation",
+        "text": "$$\nM = M ^ { \\prime } - 2 ^ { n - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 328
+    },
+    {
+        "type": "text",
+        "text": "$M ^ { \\prime }$ is a positive number (MSB is 0). Note that till we consider the MSB of the multiplier, the Booth\u2019s algorithm does not know if the multiplier is equal to $M$ or $M ^ { \\prime }$ . ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "Now, let us split our argument into two cases. Let us consider the MSB bit ( $n ^ { t h }$ bit), and the $( n - 1 ) ^ { t h }$ bit. This bit pair can either be 10, or 11. ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "Case 10: Let us divide the multiplier $M$ into two parts as shown in Equation 8.11. The first part is a positive number $M ^ { \\prime }$ , and the second part is $- 2 ^ { n - 1 }$ , where $M = M ^ { \\prime } - 2 ^ { n - 1 }$ . Since the two MSB bits of the binary representation of $M$ are 10, we can conclude that the binary representation of $M ^ { \\prime }$ contains 00 as its two MSB bits. Recall that the binary representation of $M$ and $M ^ { \\prime }$ contain the same set of $n - 1$ least significant bits, and the MSB of $M ^ { \\prime }$ is always 0. ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "Since the Booth multiplier was proven to work correctly for positive multipliers, we can conclude that the Booth multiplier correctly computes the partial product as $N \\times M ^ { \\prime }$ in the first $( n - 1 )$ iterations. The proof of this fact is as follows. Till the end of $( n - 1 )$ iterations, we are not sure if the MSB is 0 or 1. Hence, we do not know if we are multiplying $N$ with $M$ or $M ^ { \\prime }$ . The partial product will be the same in both the cases. If we were multiplying $N$ with $M ^ { \\prime }$ , then no action will be taken in the last step because the two MSB bits of $M ^ { \\prime }$ are 00. This means that in the second last step ( $( n - 1 )$ iterations), the partial product contains $N M ^ { \\prime }$ . We can similarly prove that the partial product computed by the iterative multiplier after $( n - 1 )$ iterations is equal to $N M ^ { \\prime }$ because the MSB of $M ^ { \\prime }$ is $0$ . ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "Hence, till this point, both the algorithms compute the same partial product, or alternatively have the same contents in the $U$ and $V$ registers. In the last step, both the algorithms find out that the MSB is 1. The iterative algorithm subtracts the multiplicand( $N$ ) from $U$ , or alternatively subtracts $N \\times 2 ^ { n - 1 }$ from the partial product. The reason that we treat the multiplicand as shifted by $n - 1$ places is because the partial product in the last iteration spans the entire $U$ register and $n - 1$ bits of the $V$ register. Now, when we add or subtract the multiplicand( $N$ ) to $U$ , effectively, we are adding $N$ shifted by $n - 1$ places to the left. Hence, the iterative multiplier correctly computes the product as $M ^ { \\prime } N { - } 2 ^ { n - 1 } N = M N$ (see Equation 8.11). The Booth multiplier also does the same in this case. It sees a $0  1$ transition. It subtracts $N$ from $U$ , which is exactly the same step as taken by the iterative multiplier. Thus, the operation of the Booth multiplier is correct in this case (same result as the iterative multiplier). ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "Case 11: Let us again consider the point at the beginning of the $n ^ { t h }$ iteration. At this point of time, the partial product computed by the iterative algorithm is $M ^ { \\prime } N$ , whereas the partial product computed by the Booth multiplier is different because the two MSB bits of $M ^ { \\prime }$ are 0 and 1, respectively. Let us assume that we were originally multiplying $N$ with $M ^ { \\prime }$ , then the MSB would have been 0, and this fact would have been discovered in the last iteration. The Booth\u2019s algorithm would have then added $2 ^ { n - 1 } N$ to obtain the final result in the last step because of a $1  0$ transition. Hence, after the $( n - 1 ) ^ { t h }$ iteration, the partial product of the Booth multiplier is equal to $M ^ { \\prime } N - 2 ^ { n - 1 } N$ . Note that till the last iteration, the Booth multiplier does not know whether the multiplier is $M$ or $M ^ { \\prime }$ . ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "Now, let us take a look at the last iteration. In this iteration both the algorithms find out that the MSB is 1. The iterative multiplier subtracts $2 ^ { n - 1 } N$ from the partial product, and correctly computes the final product as $M N = M ^ { \\prime } N - 2 ^ { n - 1 } N$ . The Booth multiplier finds the current and previous bit to be 11, and thus does not take any action. Hence, its final product is equal to the partial product computed at the end of the $( n - 1 ) ^ { t h }$ iteration, which is equal to $M ^ { \\prime } N - 2 ^ { n - 1 } N$ . Therefore, in this case also the outputs of both the multipliers match. ",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "We have thus proved that the Booth multiplier works for both positive and negative multi",
+        "page_idx": 329
+    },
+    {
+        "type": "text",
+        "text": "pliers. ",
+        "page_idx": 330
+    },
+    {
+        "type": "text",
+        "text": "Important Point 10 ",
+        "text_level": 1,
+        "page_idx": 330
+    },
+    {
+        "type": "text",
+        "text": "Here, we use a 33-bit $U$ register to avoid overflows. Let us show an example of an overflow, if we had used a 32-bit U register. Assume that we are trying to multiply $- 2 ^ { 3 1 }$ (multiplicand) with -1(multiplier). We will need to compute $0 - N$ in the first step. The value of $U$ should be equal to $2 ^ { 3 1 }$ ; however, this number cannot be represented with 32 bits. Hence, we have an overflow. We do not have this issue when we use a 33-bit $U$ register. Moreover, we can prove that with a 33-bit U register, the additions or subtractions in the algorithm will never lead to an overflow (similar to the proof for iterative multiplication). ",
+        "page_idx": 330
+    },
+    {
+        "type": "text",
+        "text": "Example 126 ",
+        "text_level": 1,
+        "page_idx": 331
+    },
+    {
+        "type": "text",
+        "text": "Multiply $2 \\times 3$ using a Booth multiplier. Assume a 4-bit binary 2\u2019s complement number system. Let 3 (00112) be the multiplicand and let 2 $\\mathrm { ( 0 0 1 0 _ { 2 } ) }$ be the multiplier. For each iteration show the values of $U$ and V just before and after the right shift. ",
+        "page_idx": 331
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 331
+    },
+    {
+        "type": "image",
+        "img_path": "images/acda9235b4ecf8af37ed7cc0ff88371340b742ac7ec39ace2aa46405aa31578c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 331
+    },
+    {
+        "type": "text",
+        "text": "Example 127 ",
+        "text_level": 1,
+        "page_idx": 331
+    },
+    {
+        "type": "text",
+        "text": "Multiply $3 \\times ( - 2 )$ using a Booth multiplier. Assume a 4-bit binary 2\u2019s complement number system. Let 3 (00112) be the multiplicand and let -2 (11102) be the multiplier. For each iteration show the values of $U$ and V just before and after the right shift. ",
+        "page_idx": 331
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 331
+    },
+    {
+        "type": "image",
+        "img_path": "images/3aecb84ed464b82ea97b8031691fdb848d1eb63c3d06d38f172ec172980ee1ac.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 332
+    },
+    {
+        "type": "image",
+        "img_path": "",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 332
+    }
+]

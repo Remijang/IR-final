@@ -1,0 +1,79 @@
+1.5 A Review of Trigonometry
+
+Trigonometry begins with a right triangle. The size of the triangle is not as important as the angles. We focus on one particular angle—call it  —and on the ratios between the three sides  : The ratios don’t change if the triangle is scaled to another size. Three sides give six ratios, which are the basic functions of trigonometry:
+
+Of course those six ratios are not independent. The three on the right come directly from the three on the left. And the tangent is the sine divided by the cosine:
+
+Note that “tangent of anangle” and “tangent to a circle” and “tangent line to a graph” are different uses of the same word. As the cosine of  goes to zero, the tangent of  goes to infinity. The side  becomes zero,  approaches  ; and the triangle is infinitely steep. The sine of  is  :
+
+Triangles have a serious limitation. They are excellent for angles up to  ; and they are OK up to  ; but after that they fail. We cannot put a  angle into a triangle. Therefore we change now to a circle.
+
+Angles are measured from the positive  axis (counterclockwise). Thus  is straight up,  is to the left, and  is in the same direction as  : (Then  is the same as  :) Each angle yields a point on the circle of radius  : The coordinates  and  of that point can be negative (but never  ). As the point goes around the circle, the six ratios cos  ; sin  ; tan  trace out six graphs. The cosine waveform is the same as the sine waveform—just shifted by  :
+
+One more change comes with the move to a circle. Degrees are out. Radians are in. The distance around the whole circle is  : The distance around to other points is  : We measure the angle by that multiple  . For a half-circle the distance is  ,
+
+1.5 A Review of Trigonometry
+
+so the angle is  radians—which is  : A quarter-circle is  radians or  : The distance around to angle  is  times  .
+
+When  this is the ultimate in simplicity: The distanceis  : A  angle is  of a circle and  radians—and the length of the circular arc is  : Similarly for  :
+
+An angle going clockwise is negative. The angle  is  and takes us  of the wrong way around the circle. What is the effect on the six functions ?
+
+Certainly the radius  is not changed when we go to  : Also  is not changed (see Figure 1.20a). But  reverses sign, because  is below the axis when  is above. This change in  affects  and  but not  :
+
+The cosine is even (no change). The sine and tangent are odd (change sign).
+
+The same point is  of the right way around. Therefore  of  radians (or  ) gives the same direction as  radians or  : A difference of  makes no difference to  . Thus sin  and cos  and the other four functions have period  : We can go five times or a hundred times around the circle, adding  or  to the angle, and the six functions repeat themse?lves.
+
+EXAMPLE Evaluate the six trigonometric?functions at  (or  ).
+
+This angle is shown in Figure 1.20a (where  ). The ratios are
+
+Those numbers illustrate basic facts about the sizes of four functions:
+
+The tangent and cotangent can fall anywhere, as long as cot  :
+
+The numbers reveal more. The tangent  is the ratio of sine to cosine. The secant  is  : Their squares are 3 and 4 (differing by 1). That may not seem remarkable, but it is. There are three relationships in the squares of those six numbers, and they are the key identities of trigonometry:
+
+Everything flows from the Pythagoras formula  : Dividing by  gives  : That is  : Dividing by  gives the second identity, which is  : Dividing by  gives the third. All three will be needed throughout the book—and the first one has to be unforgettable.
+
+DISTANCES AND ADDITION FORMULAS
+
+To compute the distance between points we stay with Pythagoras. The points are in Figure 1.21a. They are known by their  and  coordinates, and  is the distance between them. The third point completes a right triangle.
+
+1 Introduction to Calculus
+
+For the  distance along the bottom we don’t need help. It is  (or  since distances can’t be negative). The distance up the side is  : Pythagoras immediately gives the distance  :
+
+By applying this distance formula in two identical circles, we discover the cosine of  : (Subtracting angles is important.) In Figure 1.21b, the distance squared is
+
+Figure 1.21c shows the same circle and triangle (but rotated). The same distance squared is
+
+Now multiply out the squares in equations (2) and (3). Whenever  appears, replace it by 1: The distances are the same, so  :
+
+After canceling  and then  , we have the “addition formula” for  :
+
+The easiest is  : Then cos  and sin  : The equations reduce to cos  :
+
+To go from (4) to (5) in all cases, replace  by  : No change in cos  , but a “minus” appears with the sine. In the special case  , we have cos   : This is a much-used formula for cos  :
+
+I am constantly using  , to switch between sines and cosines.
+
+We also need addition formulas and double-angle formulas for the sine of  and  and  : For that we connect sine to cosine, rather than  to .cosine/2: The
+
+1.5 A Review of Trigonometry
+
+connection goes back to the ratio  in our original triangle. This is the sine of the angle  and also the cosine of the complementary angle  :
+
+The complementary angle is  because the two angles add to  (a right angle). By making this connection in Problem 19; formulas (4–5–6) move from cosines to sines:
+
+I want to stop with these ten formulas, even if more are possible. Trigonometry is full of identities that connect its six functions—basically because all those functions come from a single right triangle. The  ratios and the equation?  can be rewritten in many ways. But you have now seen the formulas that are needed by ca1culus.  They give derivatives in Chapter 2 and integrals in Chapter 5: And it is typical of our subject to add something of its own—a limit in which an angle approaches zero. The essence of calculus is in that limit.
+
+Review of the ten formulas Figure 1.22 shows  :
+
+Question 1 Draw graphs for equations  ,  sin  ,  ,  , and mark three points.
+
+Question 2 Which of the six trigonometric functions are infinite at what angles ?
+
+Question 3 Draw rough graphs or computer graphs of  and sin  sin  from 0 to  :

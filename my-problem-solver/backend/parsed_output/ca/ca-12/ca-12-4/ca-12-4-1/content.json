@@ -1,0 +1,42 @@
+[
+    {
+        "type": "text",
+        "text": "12.4.1 Logical Point of View ",
+        "text_level": 1,
+        "page_idx": 581
+    },
+    {
+        "type": "text",
+        "text": "Figure 12.5 shows a logical view of a shared memory MIMD multiprocessor. Each processor is connected to the memory system that saves both code and data. The program counter of each processor points to the location of the instruction that it is executing. This is in the code section of memory. This section is typically read-only, and thus is not affected by the fact that we have multiprocessors. ",
+        "page_idx": 581
+    },
+    {
+        "type": "image",
+        "img_path": "images/621ecd6f0610a5b7e1ef22daa9fe20d20f5b9381debca5016976e52fd15284e8.jpg",
+        "img_caption": [
+            "Figure 12.5: Logical view of a multiprocessor system "
+        ],
+        "img_footnote": [],
+        "page_idx": 582
+    },
+    {
+        "type": "text",
+        "text": "The main challenge in implementing a shared memory multiprocessor is in correctly handling data accesses. Figure 12.5 shows a scheme in which each computing processor is connected to the memory, and it is treated as a black box. If we are considering a system of processes with different virtual address spaces, then there is no problem. Each processor can work on its private copy of data. Since the memory footprints are effectively disjoint, we can easily run a set of parallel processes in this system. However, the main complexity arises when we are looking at shared memory programs that have multiple threads, and there is data sharing across threads. Note that we can also share memory across processes by mapping different virtual pages to the same physical frame as described in Section 11.4.6. We shall treat this scenario as a special case of parallel multi-threaded software. ",
+        "page_idx": 582
+    },
+    {
+        "type": "text",
+        "text": "A set of parallel threads typically share their virtual and physical address spaces. However, threads do have private data also, which is saved in their stacks. There are two methods to implement disjoint stacks. The first is that all the threads can have identical virtual address spaces, and different stack pointers can start at different points in the virtual address space. We need to further ensure that the size of the stack of a thread is not large enough to overlap with the stack of another thread. Another approach is to map the stack portion of the virtual address space of different threads to different memory frames. Thus, each thread can have different entries in its page table for the stack portion, yet have common entries for the rest of the sections of the virtual address space such as code, read-only data, constants, and heap variables. ",
+        "page_idx": 582
+    },
+    {
+        "type": "text",
+        "text": "In any case, the main problems of complexity of parallel software are not because of code that is read-only, or local variables that are not shared across threads. The main problem is due to data values that are potentially shared across multiple threads. This is what gives the power to parallel programs, and also makes them very complex. In the example that we showed for adding a set of numbers in parallel, we can clearly see the advantage that we obtain by sharing values and results of computation through shared memory. ",
+        "page_idx": 582
+    },
+    {
+        "type": "text",
+        "text": "However, sharing values across threads is not that simple. It is actually a rather profound topic, and advanced texts on computer architecture[Sarangi, ] devote several chapters to this topic. We shall briefly look at two important topics in this area namely coherence and memory consistency. Coherence is also known as cache coherence, when we refer to it in the context of caches. However, the reader needs to be aware that coherence is just not limited to caches, it is a generic term. ",
+        "page_idx": 582
+    }
+]

@@ -1,0 +1,11 @@
+6.5.2 Control Flow Instructions
+
+Let us now look at the instruction formats for encoding control flow instructions. There are two formats in this space: the B and J formats. Refer to Figure 6.3 and Table 6.20.
+
+All the conditional instructions like beq, bne and  are implemented using the B format. Recall that such instructions take two source registers. They are compared and then based on the results of the comparison, a taken/not-taken decision is made. The instruction uses PC offset-based addressing, where the offset is encoded in the immediate field.
+
+The immediate is encoded in a special manner in the B format. The offset needs to be a multiple of 2 (limitation of the ISA). This means that its LSB is 0. Given that this bit is fixed, there is no need to represent it. In other words the  bit is set to 0 and thus need not be represented. The format thus stores the rest of the 4 bits in the first 5-bit field. Note that as compared to the S format, the immediate bits 4..1 are stored in exactly the same positions. This makes extracting these bits very easy and there is consequently no need to design additional decoder hardware to handle these bits differently in the B format. Given that the  bit is not stored, its corresponding position can be used to store the  bit.
+
+The rest of the immediate bits are stored in the most significant bit positions. The most significant 7 bits store the  bit and the bits 10..5. We thus store 13 immediate bits: 12 of them are explicitly stored and the least significant immediate bit is assumed to be 0. This format can thus encode an offset between -4096 and 4095 (  KB). This offset is sign-extended and added to the PC.
+
+Next, consider the J format. It takes a single destination register and a 20-bit immediate as its arguments. The immediate here encodes an offset that is a multiple of 2 (akin to the B format). There is no need to store the LSB, which is set to 0. Like the B format, there is a need to store 20 bits. The order of storing the bits from the most significant position to the least significant position is as follows: bit 20, bits 10..1, bit 11, bits 19..12. Given that we encode 21 bits in this format (20 explicitly and 1 implicitly), we can represent an offset range that is within  of the current PC.

@@ -1,0 +1,24 @@
+[
+    {
+        "type": "text",
+        "text": "10.8.2 Exceptions ",
+        "text_level": 1,
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "Interrupts are not the only kind of events sent to the processor. Sometimes some actions of the program can generate interrupts. For example, if a program accesses an illegal memory address, then it is necessary to take corrective action. The memory system typically sends an interrupt to the processor. The processor in turn invokes the interrupt handler routine, which in turn calls dedicated modules in the operating system. Note that in this book, we shall use the terms interrupt handler and exception handler interchangeably. These modules either take some corrective action, or terminate the program. Such interrupts that are generated as a result of actions of the executing program are called exceptions. Readers familiar with languages such as Java can relate to the concept of exceptions. For example, in Java if we access an illegal array index such as -1, an exception is generated, and the processor jumps to a pre-specified location to take corrective action. ",
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "Definition 78 ",
+        "text_level": 1,
+        "page_idx": 458
+    },
+    {
+        "type": "text",
+        "text": "An exception is a special event that is generated when the executing program typically performs an erroneous action, and it becomes necessary to take corrective action. ",
+        "page_idx": 458
+    }
+]

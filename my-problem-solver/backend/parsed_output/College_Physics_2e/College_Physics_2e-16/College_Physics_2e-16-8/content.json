@@ -1,0 +1,117 @@
+[
+    {
+        "type": "text",
+        "text": "16.8 Forced Oscillations and Resonance ",
+        "text_level": 1,
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 718
+    },
+    {
+        "type": "text",
+        "text": "Observe resonance of a paddle ball on a string. \u2022 Observe amplitude of a damped harmonic oscillator. ",
+        "page_idx": 718
+    },
+    {
+        "type": "image",
+        "img_path": "images/b2ea564877d22f83adc4884a505c25bb3d3dcbc216e30bb5fab6e7b02a849b56.jpg",
+        "img_caption": [
+            "FIGURE 16.23 You can cause the strings in a piano to vibrate simply by producing sound waves from your voice. (credit: Matt Billings, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Sit in front of a piano sometime and sing a loud brief note at it with the dampers off its strings. It will sing the same note back at you\u2014the strings, having the same frequencies as your voice, are resonating in response to the forces from the sound waves that you sent to them. Your voice and a piano\u2019s strings is a good example of the fact that objects\u2014in this case, piano strings\u2014can be forced to oscillate but oscillate best at their natural frequency. In this section, we shall briefly explore applying a periodicdrivingforceacting on a simple harmonic oscillator. The driving force puts energy into the system at a certain frequency, not necessarily the same as the natural frequency of the system. The natural frequency is the frequency at which a system would oscillate if there were no driving and no damping force. ",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Most of us have played with toys involving an object supported on an elastic band, something like the paddle ball suspended from a finger in Figure 16.24. Imagine the finger in the figure is your finger. At first you hold your finger steady, and the ball bounces up and down with a small amount of damping. If you move your finger up and down slowly, the ball will follow along without bouncing much on its own. As you increase the frequency at which you move your finger up and down, the ball will respond by oscillating with increasing amplitude. When you drive the ball at its natural frequency, the ball\u2019s oscillations increase in amplitude with each oscillation for as long as you drive it. The phenomenon of driving a system with a frequency equal to its natural frequency is called resonance. A system being driven at its natural frequency is said to resonate. As the driving frequency gets progressively higher than the resonant or natural frequency, the amplitude of the oscillations becomes smaller, until the oscillations nearly disappear and your finger simply moves up and down with little effect on the ball. ",
+        "page_idx": 719
+    },
+    {
+        "type": "image",
+        "img_path": "images/07413b7e92ec4d2078c4e32da08b8f8f11fc28471e6d520bdae50c83dd132d62.jpg",
+        "img_caption": [
+            "FIGURE 16.24 The paddle ball on its rubber band moves in response to the finger supporting it. If the finger moves with the natural frequency $f _ { 0 }$ of the ball on the rubber band, then a resonance is achieved, and the amplitude of the ball\u2019s oscillations increases dramatically. At higher and lower driving frequencies, energy is transferred to the ball less efficiently, and it responds with lower-amplitude oscillations. "
+        ],
+        "img_footnote": [],
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "Figure 16.25 shows a graph of the amplitude of a damped harmonic oscillator as a function of the frequency of the periodic force driving it. There are three curves on the graph, each representing a different amount of damping. All three curves peak at the point where the frequency of the driving force equals the natural frequency of the harmonic oscillator. The highest peak, or greatest response, is for the least amount of damping, because less energy is ",
+        "page_idx": 719
+    },
+    {
+        "type": "text",
+        "text": "removed by the damping force. ",
+        "page_idx": 720
+    },
+    {
+        "type": "image",
+        "img_path": "images/f4643acd199c8a542c0bbc520d8261a4b5b8db6db192be658b77f958b572a2fc.jpg",
+        "img_caption": [
+            "FIGURE 16.25 Amplitude of a harmonic oscillator as a function of the frequency of the driving force. The curves represent the same oscillator with the same natural frequency but with different amounts of damping. Resonance occurs when the driving frequency equals the natural frequency, and the greatest response is for the least amount of damping. The narrowest response is also for the least damping. "
+        ],
+        "img_footnote": [],
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "It is interesting that the widths of the resonance curves shown in Figure 16.25 depend on damping: the less the damping, the narrower the resonance. The message is that if you want a driven oscillator to resonate at a very specific frequency, you need as little damping as possible. Little damping is the case for piano strings and many other musical instruments. Conversely, if you want small-amplitude oscillations, such as in a car\u2019s suspension system, then you want heavy damping. Heavy damping reduces the amplitude, but the tradeoff is that the system responds at more frequencies. ",
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "These features of driven harmonic oscillators apply to a huge variety of systems. When you tune a radio, for example, you are adjusting its resonant frequency so that it only oscillates to the desired station\u2019s broadcast (driving) frequency. The more selective the radio is in discriminating between stations, the smaller its damping. Magnetic resonance imaging (MRI) is a widely used medical diagnostic tool in which atomic nuclei (mostly hydrogen nuclei) are made to resonate by incoming radio waves (on the order of ${ \\mathsf { 1 0 0 M H z } } )$ . A child on a swing is driven by a parent at the swing\u2019s natural frequency to achieve maximum amplitude. In all of these cases, the efficiency of energy transfer from the driving force into the oscillator is best at resonance. Speed bumps and gravel roads prove that even a car\u2019s suspension system is not immune to resonance. In spite of finely engineered shock absorbers, which ordinarily convert mechanical energy to thermal energy almost as fast as it comes in, speed bumps still cause a large-amplitude oscillation. On gravel roads that are corrugated, you may have noticed that if you travel at the \u201cwrong\u201d speed, the bumps are very noticeable whereas at other speeds you may hardly feel the bumps at all. Figure 16.26 shows a photograph of a famous example (the Tacoma Narrows Bridge) of the destructive effects of a driven harmonic oscillation. The Millennium Bridge in London was closed for a short period of time for the same reason while inspections were carried out. ",
+        "page_idx": 720
+    },
+    {
+        "type": "text",
+        "text": "In our bodies, the chest cavity is a clear example of a system at resonance. The diaphragm and chest wall drive the oscillations of the chest cavity which result in the lungs inflating and deflating. The system is critically damped and the muscular diaphragm oscillates at the resonant value for the system, making it highly efficient. ",
+        "page_idx": 720
+    },
+    {
+        "type": "image",
+        "img_path": "images/1a42f8b98bf0b1c4d8edd15c4e09c869efbd04db3fd227143576f8ebab826a71.jpg",
+        "img_caption": [
+            "FIGURE 16.26 In 1940, the Tacoma Narrows Bridge in Washington state collapsed. Heavy cross winds drove the bridge into oscillations at its resonant frequency. Damping decreased when support cables broke loose and started to slip over the towers, allowing increasingly greater amplitudes until the structure failed (credit: PRI's Studio360, via Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "A famous magic trick involves a performer singing a note toward a crystal glass until the glass shatters. Explain why the trick works in terms of resonance and natural frequency. ",
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 721
+    },
+    {
+        "type": "text",
+        "text": "The performer must be singing a note that corresponds to the natural frequency of the glass. As the sound wave is directed at the glass, the glass responds by resonating at the same frequency as the sound wave. With enough energy introduced into the system, the glass begins to vibrate and eventually shatters. ",
+        "page_idx": 721
+    }
+]

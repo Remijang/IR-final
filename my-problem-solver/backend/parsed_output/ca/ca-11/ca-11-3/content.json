@@ -1,0 +1,47 @@
+[
+    {
+        "type": "text",
+        "text": "11.3 The Memory System ",
+        "text_level": 1,
+        "page_idx": 534
+    },
+    {
+        "type": "text",
+        "text": "We now have a fair understanding of the working of a cache, and all its constituent operations. A memory system is built using a hierarchy of caches as mentioned in Section 11.1.7. The memory system as a whole supports two basic operations: read, and write, or alternatively, load and store. ",
+        "page_idx": 534
+    },
+    {
+        "type": "image",
+        "img_path": "images/e4136872e984e2351b9b389c9f21fad367a203ae06f868ff823ae945e62a244a.jpg",
+        "img_caption": [
+            "Figure 11.15: The memory system "
+        ],
+        "img_footnote": [],
+        "page_idx": 534
+    },
+    {
+        "type": "text",
+        "text": "We have two caches at the highest level \u2013 the data cache (also referred to as the d-cache), and the instruction cache (also referred to as the i-cache). Almost all the time, both of them contain different sets of memory locations. The protocol for accessing the i-cache and d-cache is the same. Hence, to avoid repetition let us just focus on the d-cache from now on. The reader needs to just remember that accesses to the instruction cache follow the same sequence of steps. ",
+        "page_idx": 534
+    },
+    {
+        "type": "text",
+        "text": "The processor starts by accessing the i-cache or d-cache for code and data, respectively. Given that their designs are quite similar, we subsequently don\u2019t differentiate between them. We shall use the generic term \u201cL1 cache\u201d to refer to either one of them. If there is an L1 hit, then the processor usually receives the value within 1-2 cycles. Otherwise, the request needs to go to the L2 cache (typically shared for both code and data), or possibly even lower levels such as the main memory. In this case, the request can take tens or hundreds of cycles. In this section, we shall look at the system of caches in totality, and treat them as one single black box referred to as the memory system. ",
+        "page_idx": 534
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "If we consider inclusive caches, which is the convention in most commercial systems, the total size of the memory system is equal to the size of the main memory. For example, if a system has 1 GB of main memory, then the size of the memory system is equal to 1 GB. It is possible that internally, the memory system might have a hierarchy of caches for improving performance. However, they do not add to the total storage capacity, because they only contain subsets of the data contained in main memory. Moreover, the memory access logic of the processor also views the entire memory system as a single unit, conceptually modeled as a large array of bytes. This is also known as the physical memory system, or the physical address space. ",
+        "page_idx": 535
+    },
+    {
+        "type": "text",
+        "text": "Definition 105   \nThe physical address space consists of the set of all memory locations contained in the caches, and main memory. ",
+        "page_idx": 535
+    }
+]

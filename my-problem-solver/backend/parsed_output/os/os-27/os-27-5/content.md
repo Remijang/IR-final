@@ -1,0 +1,10 @@
+# 27.5 Compiling and Running  
+
+All of the code examples in this chapter are relatively easy to get up and running. To compile them, you must include the header pthread.h in your code. On the link line, you must also explicitly link with the pthreads library, by adding the -pthread flag.  
+
+For example, to compile a simple multi-threaded program, all you have to do is the following:  
+
+prompt> gcc -o main main.c -Wall -pthread  
+
+As long as main.c includes the pthreads header, you have now successfully compiled a concurrent program. Whether it works or not, as usual, is a different matter entirely.  
+

@@ -1,0 +1,18 @@
+2 The Language of Bits
+
+A computer does not understand words or sentences like human beings. It understands only a sequence of 0s and 1s. We shall see in the rest of this book that it is very easy to store, retrieve and process billions of 0s and 1s. Secondly, existing technologies to implement computers using silicon transistors are very compatible with the notion of processing 0s and 1s. A basic silicon transistor is a switch that can set the output to a logical 0 or 1, based on the input. The silicon transistor is the basis of all the electronic computers that we have today right from processors in mobile phones to processors in supercomputers. Some early computers made in the late nineteenth century processed decimal numbers. They were mostly mechanical in nature. It looks like for the next few decades, students of computer architecture need to study the language of 0s and 1s in great detail.
+
+Now, let us define some simple terms. A variable that can be either 0 or 1, is called a bit. A set of 8 bits is called a byte.
+
+Definition 12 Bit: A variable that can have two values: 0 or 1.
+
+Definition 13
+
+Byte: A sequence of 8 bits.
+
+In this chapter, we shall look at expressing different concepts in terms of bits. The first question is, “ what can we do with our notion of bits?”. Well it turns out that we can do everything that we could have done if our basic circuits were able to process normal decimal numbers. We can divide the set of operations into two major types – logical and arithmetic. Logical operations express concepts of the form, “the red light is on AND the yellow light is on”, or “the bank account is closed if the user is inactive AND the account is a current account.” Arithmetic operations refer to operations such as addition, multiplication, subtraction, and division.
+
+We shall first look at logical operations using bits in Section 2.1. Then, we shall look at methods to represent positive integers using 0s and 1s in Section 2.2. A representation of a number using 0s and 1s is also known as a binary representation. We shall then look at representing negative integers in Section 2.3, representing floating point numbers(numbers with a decimal point) in Section 2.4, and representing regular text in Section 2.5. Arithmetic operations using binary values will be explained in detail in Chapter 8.
+
+Definition 14   
+Representation of numbers or text using a sequence of 0s and 1s is known as a binary representation.

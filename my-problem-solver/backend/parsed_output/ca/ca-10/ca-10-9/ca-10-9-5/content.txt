@@ -1,0 +1,52 @@
+10.9.5 Inter-Relationship between Performance, the Compiler, Architecture, and Technology
+
+Let us now summarize our discussion by looking at the relationships between performance, compiler design, processor architecture, and manufacturing technology. Let us consider the performance equation again (see Equation 10.14) (let us assume arbitrary units for performance and replace the proportional sign by an equality).
+
+If our final aim is to maximize performance, then we need to maximize the frequency  , and the IPC. Simultaneously, we need to minimize the number of dynamic instructions  . There are three knobs that are under our control namely the processor architecture, manufacturing technology, and the compiler. Note that we loosely use the term “architecture”
+
+here. We wish to use the term “architecture” to refer to the actual organization and design of the processor. However, in literature, it is common to use the term “architecture” to refer to both the ISA, and the design of a processor. Hence, we use the same terminology here. Let us look at each of our knobs in detail.
+
+The Compiler
+
+By using smart compiler technology we can reduce the number of dynamic instructions, and also reduce the number of stalls. This will improve the IPC. Let us consider two examples: Examples 144 and 145. Here, we remove one stall cycle by reordering the add and  instructions. On similar lines, compilers typically analyze hundreds of instructions, and optimally reorder them to reduce stalls as much as possible.
+
+Example 144   
+Reorder the following piece of code without violating the correctness of the program to reduce stalls.
+
+add r1, r2, r3 ld r4, 10[r5] sub r1, r4, r2
+
+Answer: We have a load-use hazard here, between the ld and sub instructions. We can reorder the code as follows.
+
+ld r4, 10[r5] add r1, r2, r3 sub r1, r4, r2
+
+Now, we do not have any load-use hazards, and the logic of the program remains the same.
+
+Example 145   
+Reorder the following piece of code without violating the correctness of the program to reduce   
+stalls. Assume delayed branches with 2 delay slots
+
+add r1, r2, r3 ld r4, 10[r5] sub r1, r4, r2 add r8, r9, r10 b .foo
+
+Answer:
+
+add r1, r2, r3 ld r4, 10[r5] b .foo sub r1, r4, r2 add r8, r9, r10
+
+We eliminate the load-use hazard, and optimally used the delay slots.
+
+The Architecture
+
+We have designed an advanced architecture in this chapter by using pipelining. Note that pipelining by itself, does not increase performance. In fact because of stalls, pipelining reduces the IPC of a program as compared to a single cycle processor. The main benefit of pipelining is that it allows us to run the processor at a higher frequency. The minimum cycle time reduces from  for a single cycle pipeline to  for a  -stage pipelined machine. Since we complete the execution of a new instruction every cycle unless there are stalls, we can execute a set of instructions much faster on a pipelined machine. The instruction execution throughput is much higher.
+
+Important Point 16
+
+The main benefit of pipelining is that it allows us to run the processor at a higher frequency. By running the processor at a higher frequency, we can ensure a higher instruction throughput (more instructions complete their execution per second). Pipelining by itself, reduces the IPC of a program as compared to a single cycle processor, and it also increases the time it takes to process any single instruction.
+
+Techniques such as delayed branches, and forwarding help increase the IPC of a pipelined machine. We need to focus on increasing the performance of complex pipelines through a variety of techniques. The important point to note here is that architectural techniques affect both the frequency (via the number of pipeline stages), and the IPC (via the optimizations such as forwarding and delayed branches).
+
+Manufacturing Technology
+
+Manufacturing technology affects the speed of transistors, and in turn the speed of combinational logic blocks, and latches. Transistors are steadily getting smaller and faster. Consequently, the total algorithmic work  and the latch delay (l), are also steadily reducing. Hence, it is possible to run processors at higher frequencies leading to improvements in performance (also see Equation 10.12). Manufacturing technology exclusively affects the frequency at which we can run a processor. It does not have any effect on the IPC, or the number of instructions.
+
+We can thus summarize our discussion in Figure 10.35.
+
+Note that the overall picture is not as simple as we describe in this section. We need to consider power and complexity issues also. Typically, implementing a pipeline beyond 20 stages is very difficult because of the increase in complexity. Secondly, most modern processors have severe power and temperature constraints. This problem is also known as the power wall. It is often not possible to ramp up the frequency, because we cannot afford the increase in power consumption. As a thumb rule, power increases as the cube of frequency. Hence, increasing the frequency by  increases the power consumption by more than  , which is prohibitively large. Designers are thus increasingly avoiding deeply pipelined designs that run at very high frequencies.

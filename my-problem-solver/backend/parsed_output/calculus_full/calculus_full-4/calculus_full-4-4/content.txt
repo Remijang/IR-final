@@ -1,0 +1,73 @@
+4.4 Inverses of Trigonometric Functions
+
+Mathematics is built on basic functions like the sine, and on basic ideas like the inverse. Therefore  is totally natural to invert the sine function. The graph of  is a mirror image of  : This is a case where we pay close attention to the domains, since the sine goes up and down infinitely often. We only want one piece of that curve, in Figure 4.9.
+
+For the bold line the domain is restricted. The angle  lies between  and  . On that interval the sine is increasing, so each  comes from exactly one angle  . If the whole sine curve is allowed, infinitely many angles would have sin  : The sine function could not have an inverse. By restricting to an interval where sin  is increasing, we make the function invertible.
+
+The inverse function brings  back to  : It is  (theinverse sine):
+
+The inverse starts with a number  between  and 1: It produces an angle   —the angle whose sine is  . The angle  is between  and  , with the required sine. Historically  was called the “arc sine” of  , and arcsin is used in computing. The mathematical notation is  : This has nothing to do with  .
+
+The figure shows the  angl¤e  : Its sine is  : The invers¤e sin¤e of  is  . Again: The symbol  stands for the angle whose sine is 1 (this angle is  ). We are seeing  :
+
+EXAMPLE 1 (important) If sin  find a formula for cos  :
+
+Solution We are given the sine, we want the cosine. The key to this problem must be  : When the sine is  , the cosine is the square root of  :
+
+This formula is crucial for computing derivatives. We use it immediately.
+
+4 Derivatives by the Chain Rule
+
+THE DERIVATIVE OF THE INVERSE SINE
+
+The calculus problem is to find the slope of the inverse functioan  The chain rule gives (slope of inverse function)  =(slope of original function). Certainly the slope of sin  is cos  : To switch from  to  , use equation (2):
+
+This derivative  gives a new  pair that is extremely valuable in calculus:
+
+Inverse functions will soon produce two more pairs, from the derivatives of  and  : The table at the end lists all the essential facts.
+
+EXAMPLE 2 The slope of  at  is infinite:  : Explain.
+
+At  the graph of  is horizontal. The slope is zero. So its mirror image is vertical. The slope  is an extreme case of the chain rule.
+
+Question What is  Answer  : I just changed letters.
+
+THE INVERSE COSINE AND ITS DERIVATIVE
+
+Whatever is done for thesine can be done for the cosine. But the domain and range have to be watched. The graph cannot be allowed to go up and down. Each  from  to 1 should be the cosine of only one angle  : That puts  between 0 and  : Then the cosine is steadily decreasing and  has an inverse:
+
+The cosine of the angle  is the number  : The inverse cosine of  is the angle  : Those both expressthe same fact, that cos  :
+
+For the slope of  , we could copy the calculation that succeeded for  : The chain rule could be applied as in (3). But there is a faster way, because of a special relation between cos  and  : Those angles always add to a right angle:
+
+Figure  shows the angles and Figure 4.10c shows the graphs. The sum is  (the dotted line), and its derivative is zero. So the derivatives of  and  must add to zero. Those derivatives have opposite sign. There is a minus for the inverse cosine, and its graph goes downward:
+
+Question How can two functions  and  have the same derivative? Answer  must be the same as  : Equation (5) gives  :
+
+THEINVER SE TANGENT AND ITS DERIVATIVE
+
+The tangent is sin  : The inverse tangent is not  : The inverse function produces the angle whose tangent is  : Figure 4.11 shows that angle, which is between  and  : The tangent can be any number, but the inverse tangent is in the open interval  : (The interval is “open” because its endpoints are not included.) The tangents of  and  are not defined.
+
+The slope of  is  : What is the slope of   the secant squared equals 2: The slopes  and  multiply to give 1:
+
+Important Soon will come the following question. What function has the derivative  One reason for reading this section is to learn the answer. The function is in equation (8)—if we change letters. It is  that has slope  .
+
+INVERSE COTANGENT, INVERSE SECANT, INVERSE COSECANT
+
+There is no way we can avoid completing this miserable list! But it can be painless. The idea is to use  for  and  and  :
+
+In the middle equation, replace sec  bay  and tan  by  : Cahoose the sign for positive slope (compare Figure| 4|.11). That gives the middle eq|ua|tion in(10):
+
+The derivatives of  and  and  are
+
+Note about the inverse secant When  is negative there is a choice for  : We selected the angle inthe second quadrant (between  and  ). Its cosine is negative, so its secant is negative. This choice makes  , which matches sec  : It also makes  an increasing function, where  is a decreasing function. So we needed the absolute value  in the derivative.
+
+Some mathematical tables make a different choice. The angle  could be in the third quadrant (between  and  ). Then the slope omits the absolute value.
+
+Summary For the six inverse functions it is only necessary to learn three derivatives. The other three just have minus signs, as we saw for  and  : Each inverse function and its “cofunction” add to  , so their derivatives add to zero. Here are the six functio|ns| f¤or quick reference, with the threeanew derivatives.
+
+4.4 Inverses of Trigonometric Functions
+
+If  or  then  : For  and  the opposite is true; we must have  : The graph of  misses all the points  : Also, that graph misses  —where the cosine is zero. The secant of  would be  (impossible). Similarly  misses  , because  cannot be  : The asterisks in the table are to remove those points  and  :
+
+The column of derivatives is what we need and use in calculus.

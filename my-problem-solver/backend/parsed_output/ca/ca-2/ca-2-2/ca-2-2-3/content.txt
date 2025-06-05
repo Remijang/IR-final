@@ -1,0 +1,15 @@
+2.2.3 Adding Binary Numbers
+
+Adding binary numbers is as simple as adding decimal numbers. For adding decimal numbers, we start from the rightmost position and add digit by digit. If the sum exceeds 10, then we write the unit’s digit at the respective position in the result, and carry the value at the ten’s place to the next position in the result. We can do something exactly similar for binary numbers.
+
+Let us start out by trying to add two 1-bit binary numbers,  and  . Table 2.9 shows the different combinations of numbers and results. We observe that for two bits, a carry is generated only when the input operands are both equal to 1. This carry bit needs to be added to the bits in the higher position. At that position, we need to add three bits – two input operand bits and a carry bit. This is shown in Figure 2.5. In this figure, the input operand bits are designated as  and  . The input carry bit is designated as  . The result will have two bits in it. The least significant bit (right most bit) is known as the sum, and the output carry is referred to as Cout.
+
+Table 2.10 shows the results for the different combinations of input and carry bits.
+
+Table 2.10: A truth table that represents the addition of three bits
+
+Let us now try to add two n-bit binary numbers. Our addition needs to proceed exactly the same ways as decimal numbers. We add the values at a position, compute the result, and carry a value to the next (more significant) position. Let us explain with an example (see Example 11).
+
+Example 11 Add the two binary numbers, 1011 and 0011.
+
+Answer: The process of addition is shown in the figure, and the values of the intermediate values of the carry bits are shown in shaded boxes. Let us now verify if the result of the addition is correct. The two numbers expressed in the decimal number system are 11 and 3.  . The binary representation of 14 is 1110. Thus, the computation is correct.

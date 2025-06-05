@@ -1,0 +1,79 @@
+[
+    {
+        "type": "text",
+        "text": "13.4.4 Transaction-Oriented Buses ",
+        "text_level": 1,
+        "page_idx": 679
+    },
+    {
+        "type": "text",
+        "text": "Up till now, we have been only focusing on unidirectional communication, where only one node can transmit to the other nodes at any single point of time. Let us now consider more realistic buses. In reality, most high performance I/O buses are not multidrop buses. Multidrop buses potentially allow multiple transmitters, albeit not at the same point of time. Modern I/O buses are instead point-to-point buses, which typically have two end points. Secondly, an I/O bus typically consists of two physical buses such that we can have bidirectional communication. For example, if we have an I/O bus connecting nodes $A$ and $B$ . Then it is possible for them to send messages to each other simultaneously. ",
+        "page_idx": 679
+    },
+    {
+        "type": "text",
+        "text": "Some early systems had a bus that connected the processor directly to the memory. In this case, the processor was designated as the master, because it could only initiate the transfer of a bus message. The memory was referred to as the slave, which could only respond to requests. Nowadays, the notion of a master and a slave has become diluted. However, the notion of concurrent bidirectional communication is still common. A bidirectional bus is known as a duplex bus or full duplex bus. In comparison, we can have a half duplex bus, which only allows one side to transmit at any point of time. ",
+        "page_idx": 679
+    },
+    {
+        "type": "text",
+        "text": "Definition 152 ",
+        "text_level": 1,
+        "page_idx": 680
+    },
+    {
+        "type": "text",
+        "text": "Full Duplex Bus It is a bus that allows both of the nodes connected at its endpoints to transmit data at the same time. ",
+        "page_idx": 680
+    },
+    {
+        "type": "text",
+        "text": "Half Duplex Bus It only allows one of its endpoints to transmit at any point of time. ",
+        "page_idx": 680
+    },
+    {
+        "type": "image",
+        "img_path": "images/9c1dafdfaf72d0515f0ab9cfca39ff46b5fb6160179345074ced32febe2ace01.jpg",
+        "img_caption": [
+            "Figure 13.26: DRAM read timing "
+        ],
+        "img_footnote": [],
+        "page_idx": 680
+    },
+    {
+        "type": "text",
+        "text": "Let us look at a typical scenario of duplex communication between the memory controller chip, and the DRAM module in Figure 13.26. Figure 13.26 shows the sequence and timing of messages for a memory read operation. In practice, we have two buses. The first bus connects the memory controller to the DRAM module. It consists of address lines (lines to carry the memory address), and lines to carry dedicated control signals. The control signals indicate the timing of operations, and the nature of operation that needs to be performed on the DRAM arrays. The second bus connects the DRAM module to the memory controller. This contains data lines (lines to carry the data read from the DRAM), and timing lines (lines to convey timing information). ",
+        "page_idx": 680
+    },
+    {
+        "type": "text",
+        "text": "The protocol is as follows. The memory controller starts out by asserting the RAS (row address strobe) signal. The RAS signal activates the decoder that sets the values of the word lines. Simultaneously, the memory controller places the address of the row on the address lines. It has an estimate of the time $\\left( t _ { r o w } \\right)$ it takes for the DRAM module to buffer the row address. After $t _ { r o w }$ units of time, it asserts the CAS signal (column address strobe), and places the address of the columns in the DRAM array on the bus. It also enables the read signal indicating to the DRAM module that it needs to perform a read access. Subsequently, the DRAM module reads the contents of the memory locations and transfers it to its output buffers. It then asserts the ready signal, and places the data on the bus. However, at this point of time, the memory controller is not idle. It begins to place the row address of the next request on the bus. Note that the timing of a DRAM access is very intricate. Often the processing of consecutive messages is overlapped. For example, we can proceed to decode the row address of the $( n + 1 ) ^ { t h }$ request, when the $n ^ { t h }$ request is transferring its data. This reduces the DRAM latency. However, to support this functionality, we need a duplex bus, and a complex sequence of messages. ",
+        "page_idx": 680
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 681
+    },
+    {
+        "type": "text",
+        "text": "Let us note a salient feature of the basic DRAM access protocol that we showed in Figure 13.26. Here, the request and response are very strongly coupled with each other. The source (memory controller) is aware of the intricacies of the destination (DRAM module), and there is a strong interrelationship between the nature and timing of the messages sent by both the source and destination. Secondly, the I/O link between the memory controller and the DRAM module is locked for the duration of the request. We cannot service any intervening request between the original request and response. Such a sequence of messages is referred to as a bus transaction. ",
+        "page_idx": 681
+    },
+    {
+        "type": "text",
+        "text": "Definition 153 ",
+        "text_level": 1,
+        "page_idx": 681
+    },
+    {
+        "type": "text",
+        "text": "$A$ bus transaction is defined as a sequence of messages on a duplex or multidrop bus by more than one node, where there is a strong relationship between the messages in terms of timing and semantics. It is in general not possible to send another unrelated sequence of messages in the middle, and then resume sending the original sequence of messages. The bus is locked for the entire duration. ",
+        "page_idx": 681
+    },
+    {
+        "type": "text",
+        "text": "There are pros and cons of transaction oriented buses. The first is complexity. They make a lot of assumptions regarding the timing of the receiver. Hence, the message transfer protocol becomes very specific to each type of receiver. This is detrimental to portability. It becomes very difficult to plug in a device that has different message semantics. Moreover, it is possible that the bus might get locked for a long duration, with idle periods. This wastes bandwidth. However, in some scenarios such as the example that we showed, transaction-oriented buses perform very well and are preferred over other types of buses. ",
+        "page_idx": 681
+    }
+]

@@ -1,0 +1,5 @@
+7.3.6 D Flip-flop
+
+Instead of having a dedicated S(set) and R (reset) signal, we can make our life easy by making one the complement of the other. However, in this case, we will not have a method of maintaining the value. The input will get reflected at the output at every negative clock edge. In a lot of cases, this is sufficient, and we do not need dedicated logic to either maintain or toggle the values. In this case, we can use the simplistic D flip-flop as shown in Figure 7.21. It is basically a SR flip-flop where  .
+
+Note that the second input (to the lower NAND gate) is equal to  . When  is equal to 1, the second input is equal to  . When  is 0, the flip-flop maintains the previous values and does not accept new data.

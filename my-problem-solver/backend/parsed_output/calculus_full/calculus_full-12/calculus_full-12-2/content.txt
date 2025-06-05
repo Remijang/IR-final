@@ -1,0 +1,73 @@
+12.2 Plane Motion: Projectiles and Cycloids
+
+The previous section started with  : From this position vector we computed  and a: Now we find  itself, from more basic information. The laws of physics govern projectiles, and the motion of a wheel produces a cycloid (which enters problems in robotics). The projectiles fly without friction, so the only force is gravity.
+
+These motions occur in a plane. The two components of position will be  (across) and  (up). A projectile moves as  changes, so we look for  and  : We are shooting a basketball or firing a gun or peacefully watering the lawn, and we have to aim in the right direction (not directly at the target). If the hose delivers water at 10 meters=second; can you reach the car 12 meters away ?
+
+The usual initial position is  : Some flights start higher, at  : The initial velocity is  ; where  is the speed and  is the angle with the horizontal. The acceleration from gravity is purely vertical:  : So the horizontal velocity stays at its initial value. The upward velocity decreases by  :
+
+The horizontal distance  is steadily increasing. The height  increases and then decreases. To find the position, integrate the velocities (for a high start add  to  ):
+
+This path is a parabola. But it is not written as  : It could be, if we eliminated  : Then we would lose track of time. The parabola is  , with no parameter, where we have  and  :
+
+Basic question: Where does the projectile hit the ground ? For the parabola, we solve  : That gives the position  : For the projectile we solve  : That gives the time it hits the ground, not the place. If that time is  ; then  gives the place.
+
+The information is there. It takes two steps insteadof one, but we learn more.
+
+EXAMPLE 1 Water leaves the hose at 10 meters=second (this is  ). It starts up at the angle  : Find the time  when  is zero again, and find where the projectile lands.
+
+Solution The flight ends when  : The flight time is  : At that time, the horizontal distance is
+
+The projectile (or water from the hose) hits the ground at  : To simplify, replace 200 cos  sin  by  : Since  meters=  ; we can’t reach the car:
+
+The range  is at most 100=9:8: This is less than 12:
+
+The range is greatest when sin  . To reach 12 meters we could stand on a ladder (Problem 14). To hit a baseball against air resistance, the best angle is nearer to  : Figure 12.5 shows symmetric parabolas (no air resistance) and unsymmetric flight paths that drop more steeply.
+
+12B The flight time  and the horizontal range  are reached when  , which means  :  and  :
+
+EXAMPLE 2 What are the correct angles  for a given range  and given  ?
+
+Solution The range is  : This determines the sine of  —but two angles can have the same sine. We might find  or  : The starting angles  and  in Figure 12.5 give the same sin  and the same range  : The flight times contain sin  and are different.
+
+By calculus, the maximum height occurs when  : Then  , which means that  : This is half of the total flight time  —the time going up equals the time coming down. The value of  at this halfway time  is
+
+EXAMPLE 3 If a ski jumper goes 90 meters down a  slope, after taking off at 28 meters=second; find equations for the flight time and the ramp angle  :
+
+Solution The jumper lands at the point  ;  sin  (minus sign for obvious reasons). The basic equation (2) is  ;   : Those are two equations for  and  : Note that  is not  , the flight time to  :
+
+Conclusion The position of a projectile involves three parameters  , and  : Three pieces of information determine the flight (almost). The reason for the word almost is the presence of sin  and cos  : Some flight requirements cannot be met (reaching a car at 12 meters). Other requirements can be met in two ways (when the car is close). The equation sin  is more likely to have no solution or two solutions than exactly one solution.
+
+Watch for the three pieces of information in each problem. When a football starts at  meters=second and hits the ground at  meters, the third fact is This is like a lawyer who is asked the fee and says  1000$ for three questions. “Isn’t that steep ? ” says the client. “Yes,” says the lawyer, “now what’s your last question ? ”
+
+CYCLOIDS
+
+A projectile’s path is a parabola. To compute it, eliminate  from the equations for  and  : Problem 5 finds  , a parabola through the origin. The path of a point on a wheel seems equally simple, but eliminating  is virtually impossible. The cycloid is a curve that really needs and uses a parameter.
+
+To trace out a cycloid, roll a circle of radius a along the  axis. Watch the point that starts at the bottom of the circle. It comes back to the bottom at  , after a complete turn of the circle. The path in between is shown in Figure 12.6. After a century of looking for the  equation, a series of great scientists (Galileo, Christopher Wren, Huygens, Bernoulli, even Newton and l’Hôpital) found the right way to study a cycloid—by introducing a parameter. We will call it  ; it could also be t:
+
+The parameter is the angle  throughwhich the circle turns. (This angle is not at the origin, like  in polar coordinates.) The circle rolls a distance  , radius times angle, along the  axis. So the center of the circle is at  ;  : To account for the segment  , subtract  sin  from  and  cos  from  :
+
+At  the position is  : At  the position is  : In between, the slope of the cycloid comes from the chain rule:
+
+This is infinite at  : The point on the circle starts staraight upward and the cycloid has a cusp. Note how all calculations use the parameter  : We go?quickly:
+
+Question 1 Find the area under one arch of the cycloid .  to  /: Answer The area is  : This equals 
+
+Question 2 Find the length of the arch, using  Answer  : Now substitute  : The square root is  : The length is  :
+
+Question 3 If the cycloid is turned over (  is downward), find the tiame to slide to the bottom. The slider starts with  at  :
+
+Answer Kinetic plus potential energy is  (?it starts from zero and can’t change). So the speed is  : This is  and we know  :
+
+Check dimensions?:  distancea;  distance=.ti?mes/2;  : That is the shortest sliding time for any curve. The cycloid solves the “brachistochrone problem,” which minimizes the time?down curves from  to  (Figure 12.6). You might think a straight path would be quicker—it is certainly shorter. A straight line has the equation  , so the sliding time is
+
+This is larger than the cycloid time  : It is better to start out vertically and pick up speed early, even if the path is longer.
+
+Instead of publishing his solution, John Bernoulli turned this problem into an international challenge: Prove that the cycloid gives the fastest slide. Most mathematicians couldn’t do it. The problem reached Isaac Newton (this was later in his life). As you would expect, Newton solved it. For some reason he sent back his proof with no name. But when Bernoulli received the answer, he was not fooled for a moment: “I recognize the lion by his claws.”
+
+What is also amazing is a further property of the cycloid: The time to  is the same if you begin anywhere along the path. Starting from rest at  instead of  , the bottom is reached at the same time. This time Bernoulli got carried away: “You will be petrified with astonishment when I say...”.
+
+There are other beautiful curves, closely related to the cycloid. For an epicycloid, the circl e rolls around the outside of another circle. For a hypocycloid, the rolling circle is inside the fixed circle. The astroid is the special case with radii in the ratio 1 to 4: It is the curved star in Problem 34, where  and  :
+
+The cycloid even solves the old puzzle: What point moves backward when a train starts forward ? The train wheels have a flange that extends below the track, and  at the bottom of the flange.

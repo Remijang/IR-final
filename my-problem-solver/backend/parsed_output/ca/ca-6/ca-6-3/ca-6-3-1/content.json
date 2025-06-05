@@ -1,0 +1,241 @@
+[
+    {
+        "type": "text",
+        "text": "6.3.1 Conditional Branches ",
+        "text_level": 1,
+        "page_idx": 237
+    },
+    {
+        "type": "text",
+        "text": "Unlike SimpleRisc and ARM, RISC-V does not have a flags register that stores the result of the last comparison. The arguments for the comparison are typically specified directly in the branch instruction itself along with the branch target. ",
+        "page_idx": 237
+    },
+    {
+        "type": "text",
+        "text": "Set-less-than (slt) Instruction ",
+        "text_level": 1,
+        "page_idx": 237
+    },
+    {
+        "type": "text",
+        "text": "However, sometimes there is a need to store the result of a comparison. RISC-V thus provides a flexible mechanism to achieve this. In a conventional RISC ISA, the flags register is implicit, whereas it is more explicit in RISC-V. Such a class of instructions is shown in Table 6.8. ",
+        "page_idx": 237
+    },
+    {
+        "type": "table",
+        "img_path": "images/7baa6a47c603e10e376db25c5e8f8101e8917424722599398e3a12319737e682.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>slt rd, rs1,rs2 slti rd, rsl, imm</td><td>slt x1, x2, x3</td><td>if (x2 < x3) set x1 to 1</td></tr><tr><td></td><td>slti x1, x2, 5</td><td>if (x2 < 5) set xl to 1</td></tr><tr><td>sltu rd, rsl,rs2</td><td>sltu xl, x2, x3</td><td> if (x2 <unsigned x3) set xl to 1</td></tr><tr><td>sltui rd, rs1, imm</td><td>sltui xl, x2, 5</td><td> if (x2 <unsigned 5) set x1 to 1</td></tr></table></body></html>\n\n",
+        "page_idx": 237
+    },
+    {
+        "type": "text",
+        "text": "Table 6.8: The $s l t$ family of instructions. The destination register is by default set to 0. ",
+        "page_idx": 237
+    },
+    {
+        "type": "text",
+        "text": "Table 6.8 shows the slt family of instructions. They compare the values of two registers, or a register and an immediate. If the first source operand is less than the second source operand, then the destination register\u2019s value is set to 1. Otherwise, it remains 0. The conditional branch instructions can then directly compare this register with zero and decide the outcome of the branch instruction: taken or not-taken. ",
+        "page_idx": 237
+    },
+    {
+        "type": "text",
+        "text": "Example 101 Write RISC-V assembly code to set t2 if $2 < 5$ . ",
+        "page_idx": 237
+    },
+    {
+        "type": "table",
+        "img_path": "images/e67546a090ca3cf1f412fbd22b0d358db558796a4706d7c7c6672ad0d130307e.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Answer:</td></tr><tr><td>addi t0\uff0c zero, 2</td><td>#</td><td>t0 =</td><td></td></tr><tr><td>addi t1\uff0c zero,</td><td>5</td><td># t1</td><td>2 = 5</td><td></td><td></td></tr><tr><td>st t2\uff0c</td><td>t0\uff0c t1</td><td>#</td><td>t2 =</td><td>(t0 < t1)</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 238
+    },
+    {
+        "type": "text",
+        "text": "Example 102 ",
+        "text_level": 1,
+        "page_idx": 238
+    },
+    {
+        "type": "text",
+        "text": "Add two long 64-bit values stored in $\\langle t 1 , t 0 \\rangle$ and $\\langle t 3 , t 2 \\rangle$ . Store the result in $\\langle t 5 , t 4 \\rangle$ . Answer: ",
+        "page_idx": 238
+    },
+    {
+        "type": "table",
+        "img_path": "images/76443791d095bd0459b11f0334d33c1f2f7101a5207ef22f29da245a179c31ad.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td># initialize the registers</td></tr><tr><td>addi t2\uff0czero, -1 addi t3\uff0czero, 2</td></tr><tr><td>addi tO\uff0czero, 1</td></tr><tr><td>addi t1\uff0c zero, 0</td></tr><tr><td></td></tr><tr><td># add <t5,t4> <t1,t0> + <t3,t2></td></tr><tr><td>add t4\uff0c t0\uff0c t2 # add lower 32 bits</td></tr><tr><td></td></tr><tr><td>add t5\uff0ct1\uff0ct3 # add upper 32 bits</td></tr><tr><td>sltu t6\uff0ct4\uff0ct0 # t6 stores the carry</td></tr><tr><td>add t5\uff0c t5\uff0c t6 # add the carry</td></tr><tr><td></td></tr></table></body></html>\n\n",
+        "page_idx": 238
+    },
+    {
+        "type": "text",
+        "text": "Branch Instructions ",
+        "text_level": 1,
+        "page_idx": 238
+    },
+    {
+        "type": "table",
+        "img_path": "images/e49bb5f72957e707f3dda30c38f4e63e18350b5e274aa3665e60748353266f53.jpg",
+        "table_caption": [
+            "Table 6.9: Conditional branch Instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>beq rs1, rs2, label</td><td>beq x1, x2, .foo</td><td>Branch to the . foo label if x1 = x2</td></tr><tr><td>bne rs1,rs2, label</td><td>bne x1, x2,.foo</td><td>Branch to the .foo label if x1 \u2260 x2</td></tr><tr><td>bge rs1, rs2,label</td><td>bge x1, x2, .fo0</td><td>Branch to the .foo label if x1 \u2265 x2</td></tr><tr><td>blt rs1,rs2,label</td><td>blt x1,x2\uff0c.foo</td><td>Branch to the .foo label if x1 < x2</td></tr><tr><td>bgeu rs1,rs2,label</td><td>bgeu x1, x2, .fo0</td><td>Similar to bge, considers unsigned values.</td></tr><tr><td>bltu rsl,rs2,label</td><td>bltu x1, x2, .foo</td><td>Similar to blt,considers unsigned values.</td></tr></table></body></html>\n\n",
+        "page_idx": 238
+    },
+    {
+        "type": "text",
+        "text": "The conditional branch instructions in RISC-V are shown in Table 6.9. The instructions take two register arguments and compare them. The result of the comparison is immediately used to decide the direction of the branch. ",
+        "page_idx": 238
+    },
+    {
+        "type": "text",
+        "text": "Table 6.9 shows the beq, bne, bge and blt instructions that have their usual meanings. The third argument is a label that represents the branch target. Along with these signed comparison instructions, RISC-V has comparison instructions to compare unsigned integers: bgeu and bltu. ",
+        "page_idx": 238
+    },
+    {
+        "type": "text",
+        "text": "Recall that ARM also has similar instructions that are implemented with the help of custom flags. ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Example 103 ",
+        "text_level": 1,
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Write a RISC-V assembly program to compute the factorial of a positive number (> 1) stored in a1. Save the result in a0. ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": ". main : addi a0 , zero , 1 # prod = 1 addi t0 , zero , 1 # index = 1   \n. loop : mul a0 , a0 , t0 # prod = prod \\* index addi t0 , t0 , 1 # index ++ bge a1 , t0 , . loop # loop condition # a0 stores the factorial ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Example 104 ",
+        "text_level": 1,
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Write an assembly program to add the numbers from 1 to 10. Store the result in s0. ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": ". main : ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "addi t0 , zero , 1 # initialize t0 to 1 addi s0 , zero , 0 # result (s0) = 0 addi t1 , zero , 10 # loop end value ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": ". loop : ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "add s0 , s0 , t0 # add to the result addi t0 , t0 , 1 # increment the counter bge t1 , t0 , . loop # loop condition ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "# s0 has the sum ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Example 105 ",
+        "text_level": 1,
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Write an assembly program to test if a number stored in a1 is prime or not. Save the Boolean result in a0. ",
+        "page_idx": 239
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 240
+    },
+    {
+        "type": "text",
+        "text": "# input in a1 , return value in a0   \n. main : addi t0 , zero , 2 # starting divisor   \n. loop : rem t1 , a1 , t0 # find the remainder (t1) beq t1 , zero , . notPrime addi t0 , t0 , 1 # increment the divisor bne t0 , a1 , . loop # loop back addi a0 , zero , 1 # number is prime jal x0 , .end   \n. notPrime : addi a0 , zero , 0   \n.end: # a0 contains the result ",
+        "page_idx": 240
+    },
+    {
+        "type": "text",
+        "text": "Example 106 Write an assembly program to find the number of ones in a 32-bit number stored in a1. ",
+        "page_idx": 240
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 240
+    },
+    {
+        "type": "text",
+        "text": ". main : ",
+        "page_idx": 240
+    },
+    {
+        "type": "text",
+        "text": "$\\begin{array} { c } { { a d d i } } \\\\ { { a d d i } } \\\\ { { a d d i } } \\\\ { { a d d i } } \\end{array}$ $\\begin{array} { l l } { t 0 , } & { z e r o , 0 } \\\\ { t 1 , } & { z e r o , 3 2 } \\\\ { t 2 , } & { z e r o , 1 } \\\\ { a O , } & { z e r o , 0 } \\end{array}$ # counter , t0 = 0 # maximum possible ones # $\\scriptstyle t 2 \\ = \\ 1$ # will contain the result (a0 = 0)   \n. loop : andi t3 , a1 , 1 # check the LSB of the argument a1 srli a1 , a1 , 1 # shift the argument by 1 step beq t3 , t2 , .inc # jump to .inc if the LSB is 1   \n. lret : addi t0 , t0 , 1 # increment the counter beq t1 , t0 , .end # exit the loop jal zero , . loop # loop back   \n.inc: addi a0 , a0 , 1 # increment the count of 1s jal zero , . lret # resume the next iteration ",
+        "page_idx": 240
+    },
+    {
+        "type": "image",
+        "img_path": "images/3e4ccdec0290a29d855b2376f146aef2345aa7c6be874f0cc668ea9ca19a126d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 241
+    },
+    {
+        "type": "text",
+        "text": "Example 107 ",
+        "text_level": 1,
+        "page_idx": 241
+    },
+    {
+        "type": "text",
+        "text": "Write an assembly program to check if a natural number stored in a1 is a perfect square or not. Save the Boolean result in a0. ",
+        "page_idx": 241
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 241
+    },
+    {
+        "type": "text",
+        "text": ". main : # input number in a1 addi a1 , zero , 101 addi a0 , zero , 0 # assuming result (a0) = false addi t1 , zero , 1 # counter (t0) = 1   \n. loop : mul t2 , t1 , t1 # square -> compare beq t2 , a1 , . square # It is a square addi t1 , t1 , 1 # increment the counter blt a1 , t2 , .end jal zero , . loop # loop back   \n. square : addi a0 , a0 , 1 # result = 1   \n.end: # result in a0 ",
+        "page_idx": 241
+    }
+]

@@ -1,0 +1,131 @@
+[
+    {
+        "type": "text",
+        "text": "44.7 A Log-Structured FTL ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "For these reasons, most FTLs today are log structured, an idea useful in both storage devices (as we’ll see now) and file systems above them (e.g., in log-structured file systems). Upon a write to logical block $N$ , the device appends the write to the next free spot in the currently-beingwritten-to block; we call this style of writing logging. To allow for subsequent reads of block $N$ , the device keeps a mapping table (in its memory, and persistent, in some form, on the device); this table stores the physical address of each logical block in the system. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s go through an example to make sure we understand how the basic log-based approach works. To the client, the device looks like a typical disk, in which it can read and write 512-byte sectors (or groups of sectors). For simplicity, assume that the client is reading or writing 4-KB sized chunks. Let us further assume that the SSD contains some large number of 16-KB sized blocks, each divided into four 4-KB pages; these parameters are unrealistic (flash blocks usually consist of more pages) but will serve our didactic purposes quite well. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Assume the client issues the following sequence of operations: ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "• Write(100) with contents a1   \n• Write(101) with contents a2   \n• Write(2000) with contents b1   \n• Write(2001) with contents b2 ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "These logical block addresses (e.g., 100) are used by the client of the SSD (e.g., a file system) to remember where information is located. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Internally, the device must transform these block writes into the erase and program operations supported by the raw hardware, and somehow record, for each logical block address, which physical page of the SSD stores its data. Assume that all blocks of the SSD are currently not valid, and must be erased before any page can be programmed. Here we show the initial state of our SSD, with all pages marked INVALID (i): ",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/b08ddd9edecebd6e768022c47591f2f260980c3f7d8ef762e05b24be21bedbde.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "When the first write is received by the SSD (to logical block 100), the FTL decides to write it to physical block 0, which contains four physical pages: 0, 1, 2, and 3. Because the block is not erased, we cannot write to it yet; the device must first issue an erase command to block 0. Doing so leads to the following state: ",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/0c0e78c1fa0e987b1372eaae8c3d960730828acd062f934e2afba794fb0e0742.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Block 0 is now ready to be programmed. Most SSDs will write pages in order (i.e., low to high), reducing reliability problems related to program disturbance. The SSD then directs the write of logical block 100 into physical page 0: ",
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/48f866c5227b38cf7bfa7739bdbbbde8a0cde46b93c0254487ca0b838e4eb933.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "But what if the client wants to read logical block 100? How can it find where it is? The SSD must transform a read issued to logical block 100 into a read of physical page 0. To accommodate such functionality, when the FTL writes logical block 100 to physical page 0, it records this fact in an in-memory mapping table. We will track the state of this mapping table in the diagrams as well: ",
+        "page_idx": 8
+    },
+    {
+        "type": "table",
+        "img_path": "images/abfd8b96523387e73761477d6fa92b81ab9ef806e9fbbc00380356ddcc67b363.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Table: 100 +0</td><td colspan=\"12\">Memory</td></tr><tr><td rowspan=\"3\">Block: Page:</td><td colspan=\"4\">0</td><td colspan=\"4\">1 04 05 06 07</td><td colspan=\"4\">2 08 09 10 11</td><td rowspan=\"3\">Flash Chip</td></tr><tr><td colspan=\"4\">00 01 02 03</td><td colspan=\"4\"></td><td colspan=\"4\"></td></tr><tr><td>a1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Content:</td><td></td><td>E</td><td>E</td><td>E</td><td>i</td><td>i</td><td>i</td><td>i</td><td>i</td><td>i</td><td>i</td><td></td></tr><tr><td>State:</td><td>v</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>i</td></tr></table></body></html>\n\n",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Now you can see what happens when the client writes to the SSD. The SSD finds a location for the write, usually just picking the next free page; it then programs that page with the block’s contents, and records the logical-to-physical mapping in its mapping table. Subsequent reads simply use the table to translate the logical block address presented by the client into the physical page number required to read the data. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Let’s now examine the rest of the writes in our example write stream: 101, 2000, and 2001. After writing these blocks, the state of the device is: ",
+        "page_idx": 8
+    },
+    {
+        "type": "table",
+        "img_path": "images/1334102358c771f2d6434de13c423bf6ca496ff3d932a37c333d84d011f864c8.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Table:</td><td colspan=\"4\">100 +0</td><td colspan=\"4\">101 >1</td><td colspan=\"2\">2000->2</td><td colspan=\"4\">2001-3</td><td>Memory</td><td colspan=\"2\"></td></tr><tr><td>Block:</td><td></td><td></td><td>0</td><td></td><td></td><td></td><td></td><td>1</td><td></td><td></td><td></td><td>2</td><td></td><td></td><td>Flash</td></tr><tr><td>Page:</td><td>00 01</td><td></td><td></td><td>02 03</td><td></td><td></td><td>04 05 06 07</td><td></td><td></td><td></td><td></td><td></td><td>08 09 10 11</td><td></td><td></td></tr><tr><td>Content:</td><td>a1</td><td>a2</td><td>b1</td><td>b2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>State:</td><td>v</td><td>v</td><td>v</td><td></td><td></td><td>i</td><td>i</td><td>i</td><td>i</td><td></td><td>i</td><td>i</td><td>i</td><td>i</td><td>Chip</td></tr></table></body></html>\n\n",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The log-based approach by its nature improves performance (erases only being required once in a while, and the costly read-modify-write of the direct-mapped approach avoided altogether), and greatly enhances reliability. The FTL can now spread writes across all pages, performing what is called wear leveling and increasing the lifetime of the device; we’ll discuss wear leveling further below. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: FTL MAPPING INFORMATION PERSISTENCE ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "You might be wondering: what happens if the device loses power? Does the in-memory mapping table disappear? Clearly, such information cannot truly be lost, because otherwise the device would not function as a persistent storage device. An SSD must have some means of recovering mapping information. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The simplest thing to do is to record some mapping information with each page, in what is called an out-of-band (OOB) area. When the device loses power and is restarted, it must reconstruct its mapping table by scanning the OOB areas and reconstructing the mapping table in memory. This basic approach has its problems; scanning a large SSD to find all necessary mapping information is slow. To overcome this limitation, some higher-end devices use more complex logging and checkpointing techniques to speed up recovery; learn more about logging by reading chapters on crash consistency and log-structured file systems [AD14a]. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Unfortunately, this basic approach to log structuring has some downsides. The first is that overwrites of logical blocks lead to something we call garbage, i.e., old versions of data around the drive and taking up space. The device has to periodically perform garbage collection (GC) to find said blocks and free space for future writes; excessive garbage collection drives up write amplification and lowers performance. The second is high cost of in-memory mapping tables; the larger the device, the more memory such tables need. We now discuss each in turn. ",
+        "page_idx": 9
+    }
+]

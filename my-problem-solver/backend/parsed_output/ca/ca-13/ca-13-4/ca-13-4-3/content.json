@@ -1,0 +1,99 @@
+[
+    {
+        "type": "text",
+        "text": "13.4.3 Arbitration ",
+        "text_level": 1,
+        "page_idx": 676
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the problem of bus arbitration. The word \u201carbitration\u201d literally means \u201cresolution of disputes.\u201d Let us consider a multidrop bus, where we can potentially have multiple transmitters. Now, if multiple transmitters are interested in sending a value over the bus, we need to ensure that only one transmitter can send a value on the bus at any point of time. Thus, we need an arbitration policy to choose a device that can send data over the bus. If we have point-to-point buses, where we have one sender and one receiver, then arbitration is not required. If we have messages of different types waiting to be transmitted, then we need to schedule the transmission of messages on the link with respect to some optimality criteria. ",
+        "page_idx": 676
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 677
+    },
+    {
+        "type": "text",
+        "text": "Definition 151 ",
+        "text_level": 1,
+        "page_idx": 677
+    },
+    {
+        "type": "text",
+        "text": "We need to ensure that only one transmitter sends values on the bus at any point of time. Secondly, we need to ensure that there is fairness, and a transmitter does not need to wait for an indefinite amount of time for getting access to the bus. Furthermore, different devices connected to a bus, typically have different priorities. It is necessary to respect these priorities also. For example, the graphics card, should have more priority than the hard disk. If we delay the messages to the graphics card, the user will perceive jitter on her screen, and this will lead to a bad user experience. We thus need a bus allocation policy that is fair to all the transmitters, and is responsive to the needs of the computer system. This bus allocation policy is popularly known as the arbitration policy. ",
+        "page_idx": 677
+    },
+    {
+        "type": "text",
+        "text": "We envision a dedicated structure known as an arbiter, which performs the job of bus arbitration. All the devices are connected to the bus, and to the arbiter. They indicate their willingness to transmit data by sending a message to the arbiter. The arbiter chooses one of the devices. There are two topologies for connecting devices to an arbiter. We can either use a star like topology, or we can use a daisy chain topology. Let us discuss both the schemes in the subsequent sections. ",
+        "page_idx": 677
+    },
+    {
+        "type": "text",
+        "text": "Star Topology ",
+        "text_level": 1,
+        "page_idx": 677
+    },
+    {
+        "type": "text",
+        "text": "In this centralized protocol, we have a single central entity called the arbiter. It is a dedicated piece of circuitry that accepts bus-request requests from all the devices that are desirous of transmitting on the bus. It enforces priorities and fairness policies, and grants the right to individual devices to send data on the bus. Specifically, after a request finishes, the arbiter takes a look at all the current requests, and then asserts the bus grant signal for the device that is selected to send data. The selected device subsequently becomes the bus master and gets exclusive control of the bus. It can then configure the bus appropriately, and transmit data. An overview the system is shown in Figure 13.24. ",
+        "page_idx": 677
+    },
+    {
+        "type": "text",
+        "text": "We can follow two kinds of approaches to find out when a current request has finished. The first approach is that every device connected to the bus transmits for a given number of cycles, $n$ . In this case, after $n$ cycles have elapsed, the arbiter can automatically presume that the bus is free, and it can schedule another request. However, this might not always be the case. We might have different speeds of transmission, and different message sizes. In this case, it is the responsibility of each transmitting device to let the arbiter know that it is done. We envision an additional signal bus release. Every device has a dedicated line to the arbiter that is used to send the bus release signal. Once it is done with the process of transmitting, it asserts this line (sets it equal to 1). Subsequently, the arbiter allocates the bus to another device. It typically follows standard policies such as round-robin or FIFO. ",
+        "page_idx": 677
+    },
+    {
+        "type": "image",
+        "img_path": "images/85fa6071afa72e7bd2e69b33d6dd048a93c866b668ac3c29d3907da780aa99f3.jpg",
+        "img_caption": [
+            "Figure 13.24: Centralized arbiter-based architecture "
+        ],
+        "img_footnote": [],
+        "page_idx": 678
+    },
+    {
+        "type": "image",
+        "img_path": "images/e90f0a57c370d3af23a0f2d275783c7c3f610975926e76fe509189196c6411f0.jpg",
+        "img_caption": [
+            "Figure 13.25: Daisy chain architecture "
+        ],
+        "img_footnote": [],
+        "page_idx": 678
+    },
+    {
+        "type": "text",
+        "text": "Daisy Chain Based Arbitration ",
+        "text_level": 1,
+        "page_idx": 678
+    },
+    {
+        "type": "text",
+        "text": "If we have multiple devices connected to a single bus, the arbiter needs to be aware of all of them, and their relative priorities. Moreover, as we increase the number of devices connected to the bus, we start having high contention at the arbiter, and it becomes slow. Hence, we wish to have a scheme, where we can easily enforce priorities, guarantee some degree of fairness, and not incur slowdowns in making bus allocation decisions as we increase the number of connected devices. The daisy chain bus was proposed with all of these requirements in mind. ",
+        "page_idx": 678
+    },
+    {
+        "type": "text",
+        "text": "Figure 13.25 shows the topology of a daisy-chain-based bus. The topology resembles a linear chain, with the arbiter at one end. Each device other than the last one has two connections. The protocol starts as follows. A device starts out by asserting its bus request lines. The bus request lines of all the devices are connected in a wired OR fashion. The request line that goes to the arbiter essentially computes a logical OR of all the bus request lines. Subsequently, the arbiter passes a token to the device connected to it if it has the token. Otherwise, we need to wait till the arbiter gets the release signal. Once a device gets the token, it becomes the bus master. It can transmit data on the bus if required. After transmitting messages, each device passes the token to the next device on the chain. This device also follows the same protocol. It transmits data if it needs to, otherwise, it just passes the token. Finally, the token reaches the end of the chain. The last device on the chain asserts the bus release signal, and destroys the token. The release signal is a logical OR of all the bus release signals. Once, the arbiter observes the release signal to be asserted, it creates a token. It re-inserts this token into the daisy chain after it sees the request line set to 1. ",
+        "page_idx": 678
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 679
+    },
+    {
+        "type": "text",
+        "text": "There are several subtle advantages to this scheme. The first is that we have an implicit notion of priority. The device that is connected to the arbiter has the highest priority. Gradually, as we move away form the arbiter the priority decreases. Secondly, the protocol has a degree of fairness because after a high priority device has relinquished the token, it cannot get it back again, until all the low priority devices have gotten the token. Thus, it is not possible for a device to wait indefinitely. Secondly, it is easy to plug in and remove devices to the bus. We never maintain any individual state of a device. All the communication to the arbiter is aggregated, and we only compute OR functions for the bus request, and bus release lines. The only state that a device has to maintain is the information regarding its relative position in the daisy chain, and the address of its immediate neighbor. ",
+        "page_idx": 679
+    },
+    {
+        "type": "text",
+        "text": "We can also have purely distributed schemes that avoid a centralized arbiter completely. In such schemes, all the nodes take decisions independently. However, such schemes are rarely used, and thus we shall refrain from discussing them. ",
+        "page_idx": 679
+    }
+]

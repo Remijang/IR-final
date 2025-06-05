@@ -1,0 +1,125 @@
+[
+    {
+        "type": "text",
+        "text": "54.4 Authentication By What You Know ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Authentication by what you know is most commonly performed by using passwords. Passwords have a long (and largely inglorious) history in computer security, going back at least to the CTSS system at MIT in the early 1960s [MT79]. A password is a secret known only to the party to be authenticated. By divulging the secret to the computer’s operating system when attempting to log in, the party proves their identity. (You should be wondering about whether that implies that the system must also know the password, and what further implications that might have. We’ll get to that.) The effectiveness of this form of authentication depends, obviously, on several factors. We’re assuming other people don’t know the party’s password. If they do, the system gets fooled. We’re assuming that no one else can guess it, either. And, of course, that the party in question must know (and remember) it. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Let’s deal with the problem of other people knowing a password first. Leaving aside guessing, how could they know it? Someone who already knows it might let it slip, so the fewer parties who have to know it, the fewer parties we have to worry about. The person we’re trying to authenticate has to know it, of course, since we’re authenticating this person based on the person knowing it. We really don’t want anyone else to be able to authenticate as that person to our system, so we’d prefer no third parties know the password. Thinking broadly about what a “third party” means here, that also implies the user shouldn’t write the password down on a slip of paper, since anyone who steals the paper now knows the password. But there’s one more party who would seem to need to know the password: our system itself. That suggests another possible vulnerability, since the system’s copy of our password might leak out3. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "TIP: AVOID STORING SECRETS ",
+        "text_level": 1,
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Storing secrets like plaintext passwords or cryptographic keys is a hazardous business, since the secrets usually leak out. Protect your system by not storing them if you don’t need to. If you do need to, store them in a hashed form using a strong cryptographic hash. If you can’t do that, encrypt them with a secure cipher. (Perhaps you’re complaining to yourself that we haven’t told you about those yet. Be patient.) Store them in as few places, with as few copies, as possible. Don’t forget temporary editor files, backups, logs, and the like, since the secrets may be there, too. Remember that anything you embed into an executable you give to others will not remain secret, so it’s particularly dangerous to store secrets in executables. In some cases, even secrets only kept in the heap of an executing program have been divulged, so avoid storing and keeping secrets even in running programs. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Interestingly enough, though, our system does not actually need to know the password. Think carefully about what the system is doing when it checks the password the user provides. It’s checking to see if the user knows it, not what that password actually is. So if the user provides us the password, but we don’t know the password, how on earth could our system do that? ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "You already know the answer, or at least you’ll slap your forehead and say ${ } ^ { \\prime \\prime } \\mathrm { I }$ should have thought of that” once you hear it. Store a hash of the password, not the password itself. When the user provides you with what he or she claims to be the password, hash the claim and compare it to the stored hashed value. If it matches, you believe he or she knows the password. If it doesn’t, you don’t. Simple, no? And now your system doesn’t need to store the actual password. That means if you’re not too careful with how you store the authentication information, you haven’t actually lost the passwords, just their hashes. By their nature, you can’t reverse hashing algorithms, so the adversary can’t use the stolen hash to obtain the password. If the attacker provides the hash, instead of the password, the hash itself gets hashed by the system, and a hash of a hash won’t match the hash. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "There is a little more to it than that. The benefit we’re getting by storing a hash of the password is that if the stored copy is leaked to an attacker, the attacker doesn’t know the passwords themselves. But it’s not quite enough just to store something different from the password. We also want to ensure that whatever we store offers an attacker no help in guessing what the password is. If an attacker steals the hashed password, he or she should not be able to analyze the hash to get any clues about the password itself. There is a special class of hashing algorithms called cryptographic hashes that make it infeasible to use the hash to figure out what the password is, other than by actually passing a guess at the password through the hashing algorithm. One unfortunate characteris",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "tic of cryptographic hashes is that they’re hard to design, so even smart people shouldn’t try. They use ones created by experts. That’s what modern systems should do with password hashing: use a cryptographic hash that has been thoroughly studied and has no known flaws. At any given time, which cryptographic hashing algorithms meet those requirements may vary. At the time of this writing, SHA-3 $\\left[ { \\mathrm { B } } { + } 0 9 \\right]$ is the US standard for cryptographic hash algorithms, and is a good choice. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Let’s move on to the other problem: guessing. Can an attacker who wants to pose as a user simply guess the password? Consider the simplest possible password: a single bit, valued 0 or 1. If your password is a single bit long, then an attacker can try guessing ${ } ^ { \\prime \\prime } 0 ^ { \\prime \\prime }$ and have a $5 0 / 5 0$ chances of being right. Even if wrong, if a second guess is allowed, the attacker now knows that the password is $^ { \\prime \\prime } 1 ^ { \\prime \\prime }$ and will correctly guess that. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Obviously, a one bit password is too easy to guess. How about an 8 bit password? Now there are 256 possible passwords you could choose. If the attacker guesses 256 times, sooner or later the guess will be right, taking 128 guesses (on average). Better than only having to guess twice, but still not good enough. It should be clear to you, at this point, that the length of the password is critical in being resistant to guessing. The longer the password, the harder to guess. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "But there’s another important factor, since we normally expect human beings to type in their passwords from keyboards or something similar. And given that we’ve already ruled out writing the password down somewhere as insecure, the person has to remember it. Early uses of passwords addressed this issue by restricting passwords to letters of the alphabet. While this made them easier to type and remember, it also cut down heavily on the number of bit patterns an attacker needed to guess to find someone’s password, since all of the bit patterns that did not represent alphabetic characters would not appear in passwords. Over time, password systems have tended to expand the possible characters in a password, including upper and lower case letters, numbers, and special characters. The more possibilities, the harder to guess. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "So we want long passwords composed of many different types of characters. But attackers know that people don’t choose random strings of these types of characters as their passwords. They often choose names or familiar words, because those are easy to remember. Attackers trying to guess passwords will thus try lists of names and words before trying random strings of characters. This form of password guessing is called a dictionary attack, and it can be highly effective. The dictionary here isn’t Websters (or even the Oxford English Dictionary), but rather is a specialized list of words, names, meaningful strings of numbers (like $\" 1 2 \\bar { 3 } 4 5 6 ^ { \\prime \\prime } .$ ), and other character patterns people tend to use for passwords, ordered by the probability that they will be chosen as the password. A good dictionary attack can figure out $9 0 \\%$ of the passwords for a typical site [G13]. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "If you’re smart in setting up your system, an attacker really should not be able to run a dictionary attack on a login process remotely. With any care at all, the attacker will not guess a user’s password in the first five or ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: PASSWORD VAULTS ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "One way you can avoid the problem of choosing passwords is to use what’s called a password vault or key chain. This is an encrypted file kept on your computer that stores passwords. It’s encrypted with a password of its own. To get passwords out of the vault, you must provide the password for the vault, reducing the problem of remembering a different password for every site to remembering one password. Also, it ensures that attackers can only use your passwords if they not only have the special password that opens the vault, but they have access to the vault itself. Of course, the benefits of securely storing passwords this way are limited to the strength of the passwords stored in the vault, since guessing and dictionary attacks will still work. Some password vaults will generate strong passwords for you – not very memorable ones, but that doesn’t matter, since it’s the vault that needs to remember it, not you. You can also find password vaults that store your passwords in the cloud. If you provide them with cleartext versions of your password to store them, however, you are sharing a password with another entity that doesn’t really need to know it, thus taking a risk that perhaps you shouldn’t take. If the cloud stores only your encrypted passwords, the risk is much lower. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "six guesses (alas, sometimes no care is taken and the attacker will), and there’s no good reason your system should allow a remote user to make 15,000 guesses at an account’s password without getting it right. So by either shutting off access to an account when too many wrong guesses are made at its password, or (better) by drastically slowing down the process of password checking after a few wrong guesses (which makes a long dictionary attack take an infeasible amount of time), you can protect the account against such attacks. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "But what if the attacker stole your password file? Since we assume you’ve been paying attention, it contains hashes of passwords, not passwords itself. But we also assume you paid attention when we told you to use a widely known cryptographic hash, and if you know it, so does the person who stole your password file. If the attacker obtained your hashed passwords, the hashing algorithm, a dictionary, and some compute power, the attacker can crank away at guessing your passwords at their leisure. Worse, if everyone used the same cryptographic hashing algorithm (which, in practice, they probably will), the attacker only needs to run each possible password through the hash once and store the results (essentially, the dictionary has been translated into hashed form). So when the attacker steals your password file, he or she would just need to do string comparisons to your hashed passwords and the newly created dictionary of hashed passwords, which is much faster. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "There’s a simple fix: before hashing a new password and storing it in your password file, generate a big random number (say 32 or 64 bits) and concatenate it to the password. Hash the result and store that. You also need to store that random number, since when the user tries to $\\log$ ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "in and provides the correct password, you’ll need to take what the user provided, concatenate the stored random number, and run that through the hashing algorithm. Otherwise, the password hashed by itself won’t match what you stored. You typically store the random number (which is called a salt) in the password file right next to the hashed password. This concept was introduced in Robert Morris and Ken Thompson’s early paper on password security [MT79]. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Why does this help? The attacker can no longer create one translation of passwords in the dictionary to their hashes. What is needed is one translation for every possible salt, since the password files that were stolen are likely to have a different salt for every password. If the salt is 32 bits, that’s $\\dot { 2 } ^ { 3 2 }$ different translations for each word in the dictionary, which makes the approach of pre-computing the translations infeasible. Instead, for each entry in the stolen password file, the dictionary attack must freshly hash each guess with the password’s salt. The attack is still feasible if you have chosen passwords badly, but it’s not nearly as cheap. Any good system that uses passwords and cares about security stores cryptographically hashed and salted passwords. If yours doesn’t, you’re putting your users at risk. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "There are other troubling issues for the use of passwords, but many of those are not particular to the OS, so we won’t fling further mud at them here. Suffice it to say that there is a widely held belief in the computer security community that passwords are a technology of the past, and are no longer sufficiently secure for today’s environments. At best, they can serve as one of several authentication mechanisms used in concert. This idea is called multi-factor authentication, with two-factor authentication being the version that gets the most publicity. You’re perhaps already familiar with the concept: to get money out of an ATM, you need to know your personal identification number (PIN). That’s essentially a password. But you also need to provide further evidence of your identity... ",
+        "page_idx": 8
+    }
+]

@@ -1,0 +1,15 @@
+10.1.2 Overview of Pipelining
+
+Let us try to find an analogy to the problem of idleness in a simple single-cycle processor as we just discussed. Let us go back to our original example of the car factory. If we assume, that we start making a car, after the previous car has been completely manufactured, then we have a similar problem. When we are assembling the engine of a car, the paint shop is idle. Likewise, when we are painting a car, the engine shop is idle. Clearly, car factories cannot operate this way. They thus typically overlap the manufacturing stages of different cars. For example, when car  is in the paint shop, car  is in the engine shop. Subsequently, these cars move to the next stage of manufacturing and another new car enters the assembly line.
+
+We can do something very similar here. When one instruction is in the EX stage, the next instruction can be in the OF stage, and the subsequent instruction can be in the IF stage. In fact, if we have 5 stages in our processor, where we simplistically assume that each stage roughly takes the same amount of time, we can assume that we have 5 instructions simultaneously being processed at the same time. Each instruction undergoes processing in a different unit of the processor. Similar to a car in an assembly line, an instruction moves from stage to stage in the processor. This strategy ensures that we do not have any idle units in our processor because all the different units in a processor are busy at any point in time.
+
+In this scheme, the life cycle of an instruction is as follows. It enters the IF stage in cycle  , enters the OF stage in cycle  , EX stage in cycle  , MA stage in cycle  , and finally it finishes its execution in the RW stage in cycle  . This strategy is known as pipelining, and a processor that implements pipelining is known as a pipelined processor. The sequence of five stages (IF, OF, EX, MA, RW) conceptually laid out one after the other is known as the pipeline (similar to the car assembly line). Figure 10.1 shows the organization of a pipelined data path.
+
+In Figure 10.1, we have divided the data path into five stages, where each stage processes a separate instruction. In the next cycle, each instruction passes on to the next stage as shown in the figure.
+
+Definition 65
+
+The notion of dividing a processor into a set of stages where the stages are ordered one after the other, and simultaneously process a set of instructions by assigning an instruction to each stage, is known as pipelining. The implicit assumption here is that it takes the same amount of time for each stage to complete its work. After this time quanta is over, each instruction moves to the subsequent stage.
+
+The conceptual layout of stages where one stage is laid out after the other is known as  pipeline, and a processor that incorporates pipelining is known as a pipelined processor.

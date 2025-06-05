@@ -1,0 +1,9 @@
+# CHAPTER 20 Phylogenies and the History of Life
+
+INTRODUCTION This bee and Echinaceaflower (Figure 20.1) could not look more different, yet they are related, as are all living organisms on Earth. By following pathways of similarities and changes—both visible and genetic—scientists seek to map the evolutionary past of how life developed from single-celled organisms to the tremendous collection of creatures that have germinated, crawled, floated, swum, flown, and walked on this planet.
+
+# Chapter Outline
+
+20.1 Organizing Life on Earth   
+20.2 Determining Evolutionary Relationships   
+20.3 Perspectives on the Phylogenetic Tree

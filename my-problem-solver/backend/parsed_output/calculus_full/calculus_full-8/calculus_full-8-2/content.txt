@@ -1,0 +1,71 @@
+8.2 Length of a Plane Curve
+
+The graph of  is a curve in the  plane. How long is that curve ? A definite integral needs endpoints, and we specify  and  : The first problem is to know what “length function” to integrate.
+
+The distance along a curve is the arc length. To set up an integral, we break the problem into small pieces. Roughly speaking, small pieces of a smooth curve are nearly straight. We know the exact length  of a straight piece, and Figure 8.8 shows how it comes close to a curved piece.
+
+Here is the unofficial reasoning that gives the length of the curve. A straight piece has  : Within that right triangle, the height  is the slope  times  : This secant slope isaclose to the slope of the curve. Thus  is approximately  :
+
+Now add these pieces and make them smaller. The infinitesimal triangle has  : Think of  as  and integrate:
+
+E?XAMPLE 1 Keep  a?nd  : Watch out for  and  :
+
+This answer is just above 9: A straight line from  to  has exact length  : Note  : Since  is just below 9; the curve is surprisingly straight.
+
+You may not approve of those numbers (or the reasoning behind them). We can fix the reasoning, but n?othing can be d?one ab?out the numbers. This example  had to be chosen carefully to make the integration possible at all. The length integral is difficult because of the square root. In most cases we integrate numerically.
+
+EXAMPLE 2 The straight line  from  to  has  :
+
+We return briefly to the reasoning. The curve is the graph of  : Each piece contains at least one point where secant slope equals tangent slope:  :
+
+The Mean Value Theorem applies when the slope is continuous—this is required for a smooth curve. The straight length  is exactly  : Adding the  pieces gives the length of the broken line (close to the curve):
+
+As  and  this approaches the integral that gives arc length.
+
+EXAMPLE 3 Fiand the length of the first quarter of the circle  :
+
+Here  : From Figure  , the integral goes from  to  :
+
+The antiderivative is  : It equals  at  : This length  is a quarter of the full circumference  :
+
+EXAMPLE 4 Compute the distance around a quarter of the ellipse  :
+
+The equation is  and the slope is  is
+
+That integral can’t be done in closed form. The length of an ellipse can only be computed numerically. The denominator is zero at  , so a blind application of the trapezoidal rule or Simpson’s rule would give length  : The midpoint rule gives length  with thousands of intervals.
+
+LENGTH OF A CURVE FROM PARAMETRIC EQUATIONS:  AND 
+
+We have met the unit circle in two forms. One is  : The other is  ,  : Since  , this point goes around the correct circle. One advantage of the “parameter”  is to give extra information—it tells where the point is and also when. In Chapter 1, the parameter was the time and also the angle— because we moved around the circle with speed 1:
+
+Using  is a natural way to give the position of a particle or a spacecraft. We can recover the velocity if we know  and  at every time  : An equation  tells the shape of the path,not the speed along it.
+
+Chapter 12 deals with parametric equations for curves. Here we concentrate on the path length—which allows you to see the idea of a parameter  without too much detail. We give  as a function of  and  as a function of  : The curve is still approximated by straight pieces, and each piece has  : But instead of using  ; we approximate  and  separately:
+
+8B The length of a parametric curve is an integral with respect to  :
+
+EXAMPLE 5 Find the length of the quarter-circle using  and  :
+
+The integral is simpler than  , and there is one new advantage. We can integrate around a whole circle with no trouble. Parametric equations allow a path to close up or?even cross itself. The time  keeps going and the point  keeps moving. In contrast, curves  are limited to one  for each  :
+
+EXAMPLE 6 Find the length of the quarter-ellipse:  and  :
+
+On this path  is  (same ellipse). The non-parametric equation  comes from eliminating  : We keep  :
+
+This integral (7) must equal (5). If one cannot be done, neither can the other. They are related by  , but (7) does not blow up at the endpoints. The trapezoidal rule gives 1:9101 with less than 100 intervals. Section 5.8 mentioned that calculators automatically do a substitution that makes (5) more like (7).
+
+EXAMPLE 7 The path  ,  goes from  to  : Stop at  :
+
+To find this path without the parameter  , first solve for  : Then substitute into the equation for  : The non-parametric form (with  eliminated) is the same curve  as in Example 1.
+
+The length from the  -integral equals the length from the  -integral. This is Problem 22.
+
+EXAMPLE 8 Special choice of parameter:  is  : The curve becomes  , 
+
+If  then  : The square root in (6) is the same as the square root in (4). Thus the non-parametric form  is a special case of the parametric form—just take  :
+
+Compare  ,  with  ,  : Same curve, same length, different speed.
+
+EXAMPLE 9 Define “speed” by 
+
+When a ball is thrown straight upward,  is zero. But the speed is not  : It is  : The speed is positive downward as well as upward.

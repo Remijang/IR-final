@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "12.1.2 Implications of the Moore\u2019s Law ",
+        "text_level": 1,
+        "page_idx": 571
+    },
+    {
+        "type": "text",
+        "text": "Note that the Moore\u2019s law is an empirical law. Owing to the fact that it has predicted trends correctly for the last forty years, it is widely quoted in technical literature. It directly predicts a miniaturization in the transistor size. A smaller transistor is more power efficient and faster. Designers were traditionally using these benefits to design bigger processors with extra transistors. They were using the additional transistor budget to add complexity to different units, increase cache sizes, increase the issue width, and the number of functional units. Secondly, the number of pipeline stages were also steadily increasing till about 2002, and there was an accompanying increase in the clock frequency also. However, after 2002 there was a radical change in the world of computer architecture. Suddenly, power and temperature became major concerns. The processor power consumption figures started to exceed 100 W, and on chip temperatures started to exceed $1 0 0 ^ { \\circ } C$ . These constraints effectively put an end to the scaling in complexity, and clock frequencies of processors. ",
+        "page_idx": 571
+    },
+    {
+        "type": "text",
+        "text": "Instead, designers started to pack more cores per chip without changing its basic design. This ensured that the number of transistors per core remained constant, and according to Moore\u2019s law the number of cores doubled once every two years. This started the era of multicore processors, and processor vendors started doubling the number of cores on chip. As of 2012, we have processors that have 8-10 cores per chip. The number of cores per chip are expected to reach 32 or 64 in the next 5 to 10 years (by 2020). A large multiprocessor today has multiple cores per chip, and multiple chips per system. For example, your author is at the moment writing this book on a 32 core server. It has 4 chips, and each chip has 8 cores. ",
+        "page_idx": 571
+    },
+    {
+        "type": "text",
+        "text": "Along with regular multicore processors, there has been another important development. Instead of having 4 large cores per chip, there are architectures that have 64-256 very small cores on a chip such as graphics processors. These processors also follow the Moore\u2019s law, and are doubling their cores every 2 years. Such processors are increasingly being used in computer graphics, numerical and scientific computing. It is also possible to split the resources of a processor to make it support two program counters, and run two programs at the same time. Such processors are known as multithreaded processors. Note that it is not possible to cover the entire design space of multiprocessors in this book. This is the topic of a book on advanced architecture, and the reader can consult [Hwang, 2003, Hennessy and Patterson, 2012, Culler et al., 1998] for a detailed description of different kinds of multiprocessors. ",
+        "page_idx": 571
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 572
+    },
+    {
+        "type": "text",
+        "text": "In this chapter, we wish to make the reader aware of the broad trends in multiprocessor design. We shall first look at multiprocessing from the point of view of software. Once we establish the software requirements, we shall proceed to design hardware to support multiprocessing. We shall broadly consider multicore, multithreaded, and vector processors in this chapter. ",
+        "page_idx": 572
+    }
+]

@@ -1,0 +1,491 @@
+[
+    {
+        "type": "text",
+        "text": "11.1 Vectors and Dot Products ",
+        "text_level": 1,
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "In a plane, every point is described by two numbers. We measure across by $x$ and up by $y$ . Starting from the origin we reach the point with coordinates $( x , y )$ . I want to describe this movement by a vector\u2014the straight line that starts at $( 0 , 0 )$ and ends at $( x , y )$ . This vector $\\mathbf { v }$ has a direction, which goes from $( 0 , 0 )$ to $( x , y )$ and not the other way. ",
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "In a picture, the vector is shown by an arrow. In algebra, $\\mathbf { v }$ is given by its two components. For a column vector, write $x$ above $y$ : ",
+        "page_idx": 477
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { v } = { \\left[ \\begin{array} { l } { x } \\\\ { y } \\end{array} \\right] } \\quad ( x { \\mathrm { ~ a n d ~ } } y { \\mathrm { ~ a r e ~ t h e ~ c o m p o n e n t s ~ o f ~ } } \\mathbf { v } ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "Note that $\\mathbf { v }$ i\u0001s printed in boldface; its com\u0001ponents $x$ and $y$ are in lightface. $\\dagger$ The vector $- \\mathbf { v }$ in the opposite direction changes signs. Adding $\\mathbf { v }$ to $- \\mathbf { v }$ gives the zero vector (different from the zero number and also in boldface): ",
+        "page_idx": 477
+    },
+    {
+        "type": "equation",
+        "text": "$$\n- \\mathbf { v } = { [ - x ] } - { [ - y ] }  [ \\begin{array} { l l } { \\quad } & { { \\mathrm { a n d } } \\quad } & { \\mathbf { v } - \\mathbf { v } = { [ \\begin{array} { l } { x - x } \\\\ { y - y } \\end{array} ] } = { [ \\begin{array} { l } { 0 } \\\\ { 0 } \\end{array} ] } = \\mathbf { 0 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "Notice how vector addition or subtraction is done separately on the $x$ \u2019s and $y$ \u2019s: ",
+        "page_idx": 477
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { v } + \\mathbf { w } = { \\left[ \\begin{array} { l } { 3 } \\\\ { 1 } \\end{array} \\right] } + { \\left[ \\begin{array} { l } { - 1 } \\\\ { 2 } \\end{array} \\right] } = { \\left[ \\begin{array} { l } { 2 } \\\\ { 3 } \\end{array} \\right] } .\n$$",
+        "text_format": "latex",
+        "page_idx": 477
+    },
+    {
+        "type": "image",
+        "img_path": "images/4aed21c6443f13e82477c2b996479e05a7b4e63a82b9fc61631385af7cdd23e4.jpg",
+        "img_caption": [
+            "Fig. 11.3 Parallelogram for $\\mathbf { v } + \\mathbf { w }$ , stretching for 2v, signs reversed for $- \\mathbf { v }$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "The vector $\\mathbf { v }$ has components $v _ { 1 } = 3$ and $v _ { 2 } = 1$ . (I write $v _ { 1 }$ for the first component and $v _ { 2 }$ for the second component. I also write $x$ and $y$ , which is fine for two components.) The vector w has $w _ { 1 } = - 1$ and $w _ { 2 } = 2$ . To add the vectors, add the components. To draw this addition, place the start of w at the end of v. Figure 11.3 shows how w starts where $\\mathbf { v }$ ends. ",
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "VECTORS WITHOUT COORDINATES ",
+        "text_level": 1,
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "In that head-to-tail addition of $\\mathbf { v } + \\mathbf { w }$ , we did something new. The vector $\\mathbf { w }$ was moved away from the origin. Its length and direction were not changed! The new arrow is parallel to the old arrow\u2014only the starting point is different. The vector is the same as before. ",
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "A vector can be defined without an origin and without $x$ and $y$ axes. The purpose of axes is to give the components\u2014the separate distances $x$ and $y$ . Those numbers are necessary for calculations. But $x$ and $y$ coordinates are not necessary for head-totail addition $\\mathbf { v } + \\mathbf { w }$ , or for stretching to $2 \\mathbf { v }$ , or for linear combinations $2 \\mathbf { v } + 3 \\mathbf { w }$ . Some applications depend on coordinates, others don\u2019t. ",
+        "page_idx": 477
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "Generally speaking, physics works without axes\u2014it is \u201ccoordinate-free.\u201d A velocity has direction and magnitude, but it is not tied to a point. A force also has direction and magnitude, but it can act anywhere\u2014not only at the origin. In contrast, a vector that gives the prices of five stocks is not floating in space. Each component has a meaning\u2014there are five axes, and we know when prices are zero. After examples from geometry and physics (no axes), we return to vectors with coordinates. ",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 (Geometry) Take any four-sided figure in space. Connect the midpoints   \nof the four straight sides. Remarkable fact: Those four midpoints lie in the same plane. More than that, they form a parallelogram. ",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "Frankly, this is amazing. Figure $1 1 . 4 \\mathrm { a }$ cannot do justice to the problem, because it is printed on a flat page. Imagine the vectors A and $\\mathbf { D }$ coming upward. $\\mathbf { B }$ and C go down at different angles. Notice how easily we indicate the four sides as vectors, not caring about axes or origin. ",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "I will prove that $\\mathbf { V } = \\mathbf { W }$ . That shows that the midpoints form a parallelogram. ",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "What is V ? It starts halfway along A and ends halfway along B. The small triangle at the bottom shows $\\begin{array} { r } { { \\bf V } = \\frac { 1 } { 2 } { \\bf A } + \\frac { 1 } { 2 } { \\bf B } } \\end{array}$ . This is vector addition\u2014the tail of $\\scriptstyle { \\frac { 1 } { 2 } } \\mathbf { B }$ is at the head of $\\textstyle { \\frac { 1 } { 2 } } \\mathbf { A }$ . Together they equal the shortcut V. For the same reason $\\mathbf { W } = \\textstyle { \\frac { 1 } { 2 } } \\mathbf { C } + \\frac { 1 } { 2 } \\mathbf { D }$ . The heart of the proof is to see these relationships. ",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "One step is left. Why is $\\begin{array} { r } { \\frac { 1 } { 2 } \\mathbf { A } + \\frac { 1 } { 2 } \\mathbf { B } } \\end{array}$ equal to ${ \\textstyle \\frac { 1 } { 2 } } \\mathbf { C } + { \\frac { 1 } { 2 } } \\mathbf { D } ?$ In other words, why is $\\mathbf { A } + \\mathbf { B }$ equal to $\\mathbf { C } + \\mathbf { D } ?$ (I multiplied by 2.) When the right question is asked, the answer jumps out. A head-to-tail addition $\\mathbf { A } + \\mathbf { B }$ brings us to the point $R$ . Also $\\mathbf { C } + \\mathbf { D }$ brings us to $R$ . The proof comes down to one line: ",
+        "page_idx": 478
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { A } + \\mathbf { B } = P R = \\mathbf { C } + \\mathbf { D } . { \\mathrm { ~ T h e n ~ } } \\mathbf { V } = { \\frac { 1 } { 2 } } \\mathbf { A } + { \\frac { 1 } { 2 } } \\mathbf { B } { \\mathrm { ~ } } \\operatorname { e q u a l s } \\mathbf { \\Delta W } = { \\frac { 1 } { 2 } } \\mathbf { C } + { \\frac { 1 } { 2 } } \\mathbf { D } .\n$$",
+        "text_format": "latex",
+        "page_idx": 478
+    },
+    {
+        "type": "image",
+        "img_path": "images/d5435c0af4da330f908f29a45b9ae95255262da896b0ddb0ec20df38a81f60d3.jpg",
+        "img_caption": [
+            "Fig. 11.4 Four midpoints form a parallelogram . $\\mathbf { \\Delta } ( \\mathbf { V } = \\mathbf { W } )$ /. Three medians meet at $P$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 (Also geometry) In any triangle, draw lines from the corners to the midpoints of the opposite sides. To prove by vectors: Those three lines meet at $\\pmb { a }$ point. Problem 38 finds the meeting point in Figure 11.4c. Problem 37 says that the three vectors add to zero. ",
+        "page_idx": 478
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 3 (Medicine) An electrocardiogram shows the sum of many small vectors, the voltages in the wall of the heart. What happens to this sum\u2014the heart vector V\u2014in two cases that a cardiologist is watching for ? ",
+        "page_idx": 479
+    },
+    {
+        "type": "text",
+        "text": "Case 1. Part of the heart is dead (infarction).   \nCase 2. Part of the heart is abnormally thick (hypertrophy). ",
+        "page_idx": 479
+    },
+    {
+        "type": "text",
+        "text": "A heart attack kills part of the muscle. A defective valve, or hypertension, overworks it. In case 1 the cells die from the cutoff of blood (loss of oxygen). In case 2 the heart wall can triple in size, from excess pressure. The causes can be chemical or mechanical. The effect we see is electrical. ",
+        "page_idx": 479
+    },
+    {
+        "type": "text",
+        "text": "The machine is adding small vectors and \u201cprojecting\u201d them in twelve directions. ",
+        "text_level": 1,
+        "page_idx": 479
+    },
+    {
+        "type": "text",
+        "text": "The leads on the arms, left leg, and chest give twelve directions in the body. Each graph shows the component of V in one of those directions. Three of the projections\u2014 two in the vertical plane, plus lead 2 for front-back\u2014produce the \u201cmean QRS vector\u201d in Figure 11.5. That is the sum $\\mathbf { V }$ when the ventricles start to contract. The left ventricle is larger, so the heart vector normally points down and to the left. ",
+        "page_idx": 479
+    },
+    {
+        "type": "image",
+        "img_path": "images/06c7d0613f9811520bc82f6593c52069ae4ab7cf70ebb5478841d5ada2ec0d69.jpg",
+        "img_caption": [
+            "Fig. 11.5 V is a sum of small voltage vectors, at the moment of depolarization. "
+        ],
+        "img_footnote": [],
+        "page_idx": 479
+    },
+    {
+        "type": "image",
+        "img_path": "images/9156cdc7d7b4ed2616c5570a4ead369fb21c94ccc7f776a112025eedc8ba4360.jpg",
+        "img_caption": [
+            "Fig. 11.6 Changes in V show dead muscle and overworked muscle. "
+        ],
+        "img_footnote": [],
+        "page_idx": 479
+    },
+    {
+        "type": "text",
+        "text": "We come soon to projections, but here the question is about $\\mathbf { V }$ itself. How does the ECG identify the problem ? ",
+        "page_idx": 479
+    },
+    {
+        "type": "text",
+        "text": "Case 1W Heart attack The dead cells make no contribution to the electrical potential. Some small vectors are missing. Therefore the sum V turns away from the infarcted part.   \nCase 2W Hypertrophy The overwork increases the contribution to the potential. Some vectors are larger than normal. Therefore $\\mathbf { V }$ turns toward the thickened part. ",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "When $\\mathbf { V }$ points in an abnormal direction, the ECG graphs locate the problem. The $P , Q , R , S , T$ waves on separate graphs can all indicate hypertrophy, in different regions of the heart. Infarctions generally occur in the left ventricle, which needs the greatest blood supply. When the supply of oxygen is cut back, that ventricle feels it first. The result can be a heart attack $\\ l =$ myocardial infarction $\\ b =$ coronary occlusion). Section 11.2 shows how the projections on the ECG point to the location. ",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "First come the basic facts about vectors\u2014components, lengths, and dot products. ",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "COORDINATE VECTORS AND LENGTH ",
+        "text_level": 1,
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "To compute with vectors we need axes and coordinates. The picture of the heart is \u201ccoordinate-free,\u201d but calculations require numbers. A vector is known by its components. The unit vectors along the axes are i and j in the plane and i; j; k in space: ",
+        "page_idx": 480
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { i n ~ 2 D } } \\mathbf { : } \\quad \\mathbf { i } = { \\left[ \\begin{array} { l } { 1 } \\\\ { 0 } \\\\ { 0 } \\end{array} \\right] } , \\ \\mathbf { j } = { \\left[ \\begin{array} { l } { 0 } \\\\ { 1 } \\\\ { 1 } \\end{array} \\right] } \\qquad { \\mathrm { i n ~ 3 D } } \\mathbf { : } \\quad \\mathbf { i } = { \\left[ \\begin{array} { l } { 1 } \\\\ { 0 } \\\\ { 0 } \\end{array} \\right] } , \\ \\mathbf { j } = { \\left[ \\begin{array} { l } { 0 } \\\\ { 1 } \\\\ { 0 } \\\\ { 0 } \\end{array} \\right] } , \\ \\mathbf { k } = { \\left[ \\begin{array} { l } { 0 } \\\\ { 1 } \\\\ { 0 } \\\\ { 0 } \\end{array} \\right] } .\n$$",
+        "text_format": "latex",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "Notice how easily we moved into three dimensions! The only change is that vectors have three components. The combinations of i and j (or i, j, k) produce all vectors $\\mathbf { v }$ in the plane (and all vectors $\\mathbf { V }$ in space): ",
+        "page_idx": 480
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { v } = 3 \\mathbf { i } + \\mathbf { j } = { \\left[ \\begin{array} { l l } { 3 } \\\\ { 1 } \\\\ { 1 } \\end{array} \\right] } \\quad \\mathbf { V } = \\mathbf { i } + 2 \\mathbf { j } - 2 \\mathbf { k } = { \\left[ \\begin{array} { l } { 1 } \\\\ { 2 } \\\\ { - 2 } \\end{array} \\right] } .\n$$",
+        "text_format": "latex",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "Those vectors are also written $\\mathbf { v } = ( 3 , 1 )$ and $\\mathbf { V } = ( 1 , 2 , - 2 )$ . The components of the vector are also the coordinates of a point. (The vector goes from the origin to the point.) This relation between point and vector is so close that we allow them the same notation: $P = ( x , y , z )$ and $\\mathbf { v } = ( x , y , z ) = x \\mathbf { i } + y \\mathbf { j } + z \\mathbf { k }$ . ",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "The sum $\\mathbf { v } + \\mathbf { V }$ is totally meaningless. Those vectors live in different dimensions. ",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "From the components we find the length. The length of $( 3 , 1 )$ is ${ \\sqrt { 3 ^ { 2 } + 1 ^ { 2 } } } = { \\sqrt { 1 0 } }$ . This comes directbly from a ribght triangle. Inbthree dimensions, $\\mathbf { V }$ has a third component t|o |be squared and added. The le|ng|th of ${ \\bf V } = ( x , y , z )$ \u0001is $| \\mathbf { V } | = { \\sqrt { x ^ { 2 } + y ^ { 2 } + z ^ { 2 } } }$ . ",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "Vertical bars indicate length, which takes the place of absolute value. The length of $\\mathbf { v } = 3 \\mathbf { i } + \\mathbf { j }$ is the distance from the point $( 0 , 0 )$ to the point $( 3 , 1 )$ : ",
+        "page_idx": 480
+    },
+    {
+        "type": "equation",
+        "text": "$$\n| \\mathbf { v } | = { \\sqrt { v _ { 1 } ^ { 2 } + v _ { 2 } ^ { 2 } } } = { \\sqrt { 1 0 } } \\qquad | \\mathbf { V } | = { \\sqrt { 1 ^ { 2 } + 2 ^ { 2 } + ( - 2 ) ^ { 2 } } } = 3 .\n$$",
+        "text_format": "latex",
+        "page_idx": 480
+    },
+    {
+        "type": "text",
+        "text": "A unit vector is a vector of length one. Dividing $\\mathbf { v }$ and $\\mathbf { V }$ by their lengths produces unit vectors in the same directions: ",
+        "page_idx": 480
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { \\mathbf { v } } { | \\mathbf { v } | } } = { \\left[ \\begin{array} { l } { 3 / { \\sqrt { 1 0 } } } \\\\ { 1 / { \\sqrt { 1 0 } } } \\end{array} \\right] } \\qquad { \\mathrm { a n d } } \\qquad { \\frac { \\mathbf { V } } { | \\mathbf { V } | } } = { \\left[ \\begin{array} { l } { ~ 1 / 3 } \\\\ { ~ 2 / 3 } \\\\ { - 2 / 3 } \\end{array} \\right] } \\quad { \\mathrm { a r e ~ u n } }\n$$",
+        "text_format": "latex",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "11A Each nonzero vector has a positive length $| \\mathbf { v } |$ . The direction of v is given by a unit vector $\\mathbf u = \\mathbf v / | \\mathbf v |$ . The length times direction equals $\\mathbf { v }$ . ",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "A unit vector in the plane is determined by its angle $\\theta$ with the $x$ axis: ",
+        "page_idx": 481
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { u } = { \\left[ \\begin{array} { l } { \\cos \\theta } \\\\ { \\sin \\theta } \\end{array} \\right] } = ( \\cos \\theta ) \\mathbf { i } + ( \\sin \\theta ) \\mathbf { j } { \\mathrm { ~ i s ~ a ~ u n i t ~ v e c t o r : ~ } } | \\mathbf { u } | ^ { 2 } = \\cos ^ { 2 } \\theta + \\sin ^ { 2 } \\theta = 1 .\n$$",
+        "text_format": "latex",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "In 3-space the components of a unit vector are its \u201cdirection cosines\u201d: ",
+        "page_idx": 481
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { U } = ( \\cos \\alpha ) \\mathbf { i } + ( \\cos \\beta ) \\mathbf { j } + ( \\cos \\gamma ) \\mathbf { k } ; \\quad \\alpha , \\beta , \\gamma = \\mathrm { a n g l e s ~ w i t h } x , y , z \\mathrm { a x e s . }\n$$",
+        "text_format": "latex",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "Then $\\cos ^ { 2 } \\alpha + \\cos ^ { 2 } \\beta + \\cos ^ { 2 } \\gamma = 1$ . We are doing algebra with numbers while we are doing geometry with vectors. It was the great contribution of Descartes to see how to study algebra and geometry at the same time. ",
+        "page_idx": 481
+    },
+    {
+        "type": "image",
+        "img_path": "images/558bf961426f6dfa99d48d4a44065d0b6e4c6b4472e0c920dc3f06176104d7e2.jpg",
+        "img_caption": [
+            "Fig. 11.7 Coordinate vectors i;j;k. Perpendicular vectors $\\mathbf { v \\cdot w } = ( 6 ) ( 1 ) + ( - 2 ) ( 3 ) = 0$ . "
+        ],
+        "img_footnote": [],
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "THE DOT PRODUCT OF TWO VECTORS ",
+        "text_level": 1,
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "There are two basic operations on vectors. First, vectors are added $( \\mathbf { v } + \\mathbf { w } )$ . Second, a vector is multiplied by a scalar .7v or $- 2 \\mathbf { w } )$ /. That leaves a natural question\u2014how do you multiply two vectors ? The main part of the answer is\u2014|y o|u don\u2019t.|B|ut there is an extremely important operation that begins with two vectors and produces a number. It is usu\u0004ally i|nd |i|cat|ed by a dot between the vectors, as in $\\mathbf { v } \\cdot \\mathbf { w }$ , so it is called the dot product. ",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "DEFINITION 1 The dot product multiplies the lengths $| \\mathbf { v } |$ times $\\big | \\mathbf { w } \\big |$ times a cosine: ",
+        "page_idx": 481
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { v } \\cdot \\mathbf { w } = | \\mathbf { v } | | \\mathbf { w } | \\cos \\theta , \\qquad \\theta = { \\mathrm { a n g l e ~ b e t w e e n ~ } } \\mathbf { v } { \\mathrm { ~ a n d ~ } } \\mathbf { w } .\n$$",
+        "text_format": "latex",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE $\\left[ { 3 } \\right] \\mathrm { { h a s \\ l e n g t h \\ 3 , } } \\left[ { 2 } \\right] .$ has length $\\sqrt { 8 }$ , the angle is $4 5 ^ { \\circ }$ : ",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "The dot product is $| \\mathbf { v } | | \\mathbf { w } | \\cos \\theta = ( 3 ) ( { \\sqrt { 8 } } ) ( 1 / { \\sqrt { 2 } } )$ , which simplifies to 6: The square roots in the lengths are \u201ccanceled\u201d by square roots in the cosine. For computing $\\mathbf { v } \\cdot \\mathbf { w }$ , a second and much simpler way involves no square roots in the first place. ",
+        "page_idx": 481
+    },
+    {
+        "type": "text",
+        "text": "DEFINITION 2 The dot product v w multiplies component by component and adds: ",
+        "page_idx": 482
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { v } \\cdot \\mathbf { w } = v _ { 1 } w _ { 1 } + v _ { 2 } w _ { 2 } \\quad { \\bigg [ } { 3 } { \\bigg ] } \\cdot { \\bigg [ } { 2 } { \\bigg ] } = ( 3 ) ( 2 ) + ( 0 ) ( 2 ) = 6 .\n$$",
+        "text_format": "latex",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "The first form $\\mathbf { \\left| v \\right| } \\mathbf { \\left| w \\right| } \\cos \\theta$ is coordinate-free. The second form $v _ { 1 } w _ { 1 } + v _ { 2 } w _ { 2 }$ computes with coor\u0004dinates|. R||ema|rk 4 explains why these two forms are equal. ",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "11B The dot product or scalar product or inner product of three-dimensional vectors is ",
+        "page_idx": 482
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { V } \\cdot \\mathbf { W } = \\left| \\mathbf { V } \\right| \\left| \\mathbf { W } \\right| \\cos \\theta = V _ { 1 } W _ { 1 } + V _ { 2 } W _ { 2 } + V _ { 3 } W _ { 3 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "If the \u0004vectors are perpendicular then $\\theta = 9 0 ^ { \\circ }$ and c\u0004os $\\theta = 0$ and $\\mathbf { V } \\cdot \\mathbf { W } = 0$ . ",
+        "page_idx": 482
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\begin{array} { r } { \\left[ \\begin{array} { l } { 1 } \\\\ { 2 } \\\\ { 3 } \\\\ { 3 } \\end{array} \\right] \\cdot \\left[ \\begin{array} { l } { 4 } \\\\ { 5 } \\\\ { 6 } \\\\ { 6 } \\end{array} \\right] = 3 2 ( n o t p e r p e n d i c u l a r ) \\quad \\left[ \\begin{array} { l } { 2 } \\\\ { 2 } \\\\ { - 1 } \\end{array} \\right] \\cdot \\left[ \\begin{array} { l } { - 1 } \\\\ { 2 } \\\\ { 2 } \\end{array} \\right] = 0 ( p e r p e n d i c u l a r ) . } \\end{array} } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "These dot products 32 and 0 equal $\\mathbf { \\lvert { V } \\rvert } \\mathbf { \\lvert { W } \\rvert } \\cos \\theta$ . In the second one, cos $\\theta$ must be zero. The angle is $\\pi / 2$ or $- \\pi / 2$ \u2014in either case a right angle. Fortunately the cosine is the same for $\\theta$ and $- \\theta$ , so we need not decide the sign of $\\theta$ . ",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "Remark 1 When $\\mathbf { V } = \\mathbf { W }$ the angle is zero but not the cosine! In this case cos $\\theta = 1$ and $\\mathbf { V } \\cdot \\mathbf { V } = | \\mathbf { V } | ^ { 2 }$ . The dot product of $\\mathbf { V }$ with itself is the length squar\u0004ed: ",
+        "page_idx": 482
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { V } \\cdot \\mathbf { V } = ( V _ { 1 } , V _ { 2 } , V _ { 3 } ) \\cdot ( V _ { 1 } , V _ { 2 } , V _ { 3 } ) = V _ { 1 } ^ { 2 } + V _ { 2 } ^ { 2 } + V _ { 3 } ^ { 2 } = | \\mathbf { V } | ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "Remark 2 The dot product of $\\mathbf { i } = ( 1 , 0 , 0 )$ with ${ \\bf j } = ( 0 , 1 , 0 )$ is $\\mathbf { i } \\cdot \\mathbf { j } = 0$ . The axes \u0004are perpe\u0004ndicular. Simila\u0004rly $\\mathbf { i } \\cdot \\mathbf { k } = 0$ and $\\mathbf { j } \\cdot \\mathbf { k } = 0$ . Tho\u0004se are u\u0004nit vect\u0004ors: $\\mathbf { i } \\cdot \\mathbf { i } = \\mathbf { j } \\cdot \\mathbf { j } = \\mathbf { k } \\cdot \\mathbf { k } = 1$ . ",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "Remark 3 The dot product has three properties that keep the algebra simple: ",
+        "page_idx": 482
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { , ~ } } \\nabla \\cdot \\mathbf { W } = \\mathbf { W } \\cdot \\mathbf { V } \\qquad 2 \\cdot \\mathbf { \\sigma } ( c \\mathbf { V } ) \\cdot \\mathbf { W } = c ( \\mathbf { V } \\cdot \\mathbf { W } ) \\qquad 3 \\cdot \\mathbf { \\sigma } ( \\mathbf { U } + \\mathbf { V } ) \\cdot \\mathbf { W } = \\mathbf { U } \\cdot \\mathbf { W } + \\mathbf { V } \\cdot \\mathbf { W }\n$$",
+        "text_format": "latex",
+        "page_idx": 482
+    },
+    {
+        "type": "text",
+        "text": "When $\\mathbf { V }$ is doubled . $( c = 2$ / the dot product is doubled. When $\\mathbf { V }$ is split into i; j; k components, the dot product splits in three pieces. The same applies to $\\mathbf { W }$ , since $\\mathbf { V } \\cdot \\mathbf { W } = \\mathbf { W } \\cdot \\mathbf { V }$ . The nine dot products of i; j; k are zeros and ones, and a giant splitting of both $\\mathbf { V }$ and $\\mathbf { W }$ gives back the correct $\\mathbf { V } \\cdot \\mathbf { W }$ : ",
+        "page_idx": 482
+    },
+    {
+        "type": "image",
+        "img_path": "images/12e6f89b5a1943322f2d9f7153ded68dc28c0838fb91097e5c3ec9bec37d7a6f.jpg",
+        "img_caption": [
+            "Fig. 11.8 Length squared $\\mathbf { \\sigma } = \\left( \\mathbf { V } - \\mathbf { W } \\right) \\cdot \\left( \\mathbf { V } - \\mathbf { W } \\right)$ , from coordinates and the cosine law. "
+        ],
+        "img_footnote": [],
+        "page_idx": 482
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathbf { V } \\cdot \\mathbf { W } = V _ { 1 } \\mathbf { i } \\cdot W _ { 1 } \\mathbf { i } + V _ { 2 } \\mathbf { j } \\cdot W _ { 2 } \\mathbf { j } + V _ { 3 } \\mathbf { k } \\cdot W _ { 3 } \\mathbf { k } + \\mathrm { s i x ~ z e r o e s } = V _ { 1 } W _ { 1 } + V _ { 2 } W _ { 2 } + V _ { 3 } W _ { 3 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Remark 4 The two f|orm\u0001s of|the |dot| pro|duc|t a\u0001re |eq|u| al.|This comes from computing $| \\mathbf { V } - \\mathbf { W } | ^ { 2 }$ by coordinates and also by the \u201claw of cosines\u201d: ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "with coordinates $\\begin{array} { r l } & { | \\mathbf { V } - \\mathbf { W } | ^ { 2 } = ( V _ { 1 } - W _ { 1 } ) ^ { 2 } + ( V _ { 2 } - W _ { 2 } ) ^ { 2 } + ( V _ { 3 } - W _ { 3 } ) ^ { 2 } } \\\\ & { | \\mathbf { V } - \\mathbf { W } | ^ { 2 } = | \\mathbf { V } | ^ { 2 } + | \\mathbf { W } | ^ { 2 } - 2 | \\mathbf { V } | | \\mathbf { W } | \\cos \\theta . } \\end{array}$ from cosine law ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Compare those two lines. Line 1 contains $V _ { 1 } ^ { 2 }$ and $V _ { 2 } ^ { 2 }$ and $V _ { 3 } ^ { 2 }$ . Their sum matches $| \\mathbf { V } | ^ { 2 }$ in the cosine law. Also $\\dot { W _ { 1 } ^ { 2 } } + \\dot { W _ { 2 } ^ { 2 } } + \\dot { W _ { 3 } ^ { 2 } }$ matches $| \\mathbf { W } | ^ { 2 }$ . Therefore the terms containing $- 2$ are the same (you can mentally cancel the $- 2$ ). The definitions agree: ",
+        "page_idx": 483
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { - 2 ( { \\cal V } _ { 1 } { \\cal W } _ { 1 } + { \\cal V } _ { 2 } { \\cal W } _ { 2 } + { \\cal V } _ { 3 } { \\cal W } _ { 3 } ) \\ e q u a l s - 2 | { \\bf V } | | { \\bf W } | \\cos \\theta \\ e q u a l s - 2 { \\bf V } \\cdot { \\bf W } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "The cosine law is coordinate-free. It applies to all triangles (even in $n$ dimensions). Its vector form in Figure 11.8 is $| \\mathbf { V } - \\bar { \\mathbf { W } } | ^ { 2 } = | \\mathbf { V } | ^ { 2 } - 2 \\mathbf { V } \\cdot \\mathbf { W } + | \\mathbf { W } | ^ { 2 }$ . This application to $\\mathbf { V } \\cdot \\mathbf { W }$ is its brief moment of glory. ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Remark 5 The dot product is the best way to compute the cosine of $\\theta$ : ",
+        "page_idx": 483
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\cos \\theta = { \\frac { \\mathbf { V } \\cdot \\mathbf { W } } { | \\mathbf { V } | | \\mathbf { W } | } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Here are examples of $\\mathbf { V }$ and $\\mathbf { W }$ with\u0004 a range of angles from 0 to $\\pi$ : ",
+        "page_idx": 483
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { \\mathbf { i } { \\mathrm { ~ a n d ~ } } 3 \\mathbf { i } { \\mathrm { ~ h a v e ~ t h e ~ s a m e ~ d i r e c t i o n } } } & { \\cos \\theta = 1 } & { \\theta = 0 } \\\\ { \\mathbf { i } \\cdot ( \\mathbf { i } + \\mathbf { j } ) = 1 { \\mathrm { ~ i s ~ p o s i t i v e } } } & { \\cos \\theta = 1 / { \\sqrt { 2 } } } & { \\theta = \\pi / 4 } \\\\ { \\mathbf { i } { \\mathrm { ~ a n d ~ } } \\mathbf { j } { \\mathrm { ~ a r e ~ p e r p e n d i c u l a r . ~ } } \\mathbf { i } \\cdot \\mathbf { j } = 0 } & { \\cos \\theta = 0 } & { \\theta = \\pi / 2 } \\\\ { \\mathbf { i } \\cdot ( - \\mathbf { i } + \\mathbf { j } ) = - 1 { \\mathrm { ~ i s ~ n e g a t i v e } } } & { \\cos \\theta = - 1 / { \\sqrt { 2 } } } & { \\theta = 3 \\pi / 4 } \\\\ { \\mathbf { i } { \\mathrm { ~ a n d ~ } } - 3 \\mathbf { i } { \\mathrm { ~ h a v e ~ o p p o s i t e ~ d i r e c t i o n s } } } & { \\cos \\theta = - 1 } & { \\theta = \\pi } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "Remark 6 The Cauchy-Schwarz inequality $| \\mathbf { V } \\cdot \\mathbf { W } | \\leqslant | \\mathbf { V } | | \\mathbf { W } |$ comes from $| \\cos \\theta | \\leqslant 1$ . ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "The left side is $| \\mathbf { V } | | \\mathbf { W } | | \\cos \\theta |$ .\u00a4It| n|ever| ex|ceed |s th|e|rig|ht| side $\\mathbf { | \\nabla V | | \\mathbf { W } } |$ . This is a key inequality in mathematics, from which so many others follow: ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "|Ge\u0004ome|tr\u00a4ic| m|e|an $\\sqrt { x y } \\leqslant$ arithmetic mean ${ \\frac { 1 } { 2 } } ( x + y )$ (true for any $x \\geqslant 0$ and $y \\geqslant 0$ ).   \nTriangle inequality $| \\mathbf { V } + \\mathbf { W } | \\leqslant | \\mathbf { V } | + | \\mathbf { W } |$ $( | \\mathbf { V } | , | \\mathbf { W } | , | \\mathbf { V } + \\mathbf { W } |$ are lengths of sides). ",
+        "page_idx": 483
+    },
+    {
+        "type": "text",
+        "text": "These and other examples are in Problems 39 to 44: The Schwarz inequality $| \\mathbf { V } \\cdot \\mathbf { W } | \\leqslant | \\mathbf { V } | | \\mathbf { W } |$ becomes an equality when $| \\cos \\theta | = 1$ and the vectors are ",
+        "page_idx": 483
+    }
+]

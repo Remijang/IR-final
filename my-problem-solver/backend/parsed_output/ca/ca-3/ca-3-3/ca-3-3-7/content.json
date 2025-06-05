@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.7 Data Transfer Instructions: ld and st ",
+        "text_level": 1,
+        "page_idx": 113
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has two data transfer instructions \u2013 ${ \\mathrm { l o a d } } ( l d )$ and $\\mathrm { s t o r e } ( s t )$ . The load instruction loads values from memory into registers, and the store instruction saves values in registers to memory locations. Examples and semantics are shown in Table 3.6. ",
+        "page_idx": 113
+    },
+    {
+        "type": "table",
+        "img_path": "images/39d2afa754ee7829f02be7989a39bd158e83b9c49de80ea5438e5876868b348e.jpg",
+        "table_caption": [
+            "Table 3.6: Semantics of load-store instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>ld reg, imm[reg]</td><td>ld r1, 12[r2]</td><td>rl \u2190[r2+12]</td></tr><tr><td> st reg, imm[reg]</td><td>st r1, 12[r2]</td><td>[r2+12]\u2190r1</td></tr></table></body></html>\n\n",
+        "page_idx": 113
+    },
+    {
+        "type": "text",
+        "text": "Let us consider the load instruction: $l d \\ r 1 , 1 2 [ r 2 ]$ . Here, we are computing the memory address as the sum of the contents of $r 2$ and the number 12. The ${ \\it l d }$ instructions accesses this memory address, fetches the stored integer and stores it in $r 1$ . We assume that the computed memory address points to the first stored byte of the integer. Since we assume a little endian representation, the memory address contains the LSB. The details are shown in Figure 3.7(a). ",
+        "page_idx": 113
+    },
+    {
+        "type": "text",
+        "text": "The store operation does the reverse. It stores the value of $r 1$ into the memory address (r2 $+ ~ 1 2 )$ . Refer to Figure 3.7(b). ",
+        "page_idx": 113
+    }
+]

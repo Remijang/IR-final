@@ -1,0 +1,19 @@
+11.1.4 Characterizing Temporal Locality
+
+Let us describe a method called the method of stack distances to characterize temporal locality in programs.
+
+Stack Distance
+
+We maintain a stack of data addresses accessed by the program. For each memory instruction (load/store), we search for the corresponding address in the stack. The position at which the entry is found (if found) is termed the ”stack distance”. Here, the distance is measured from the top of the stack. The top of the stack has distance equal to zero, whereas the  entry has a stack distance equal to 99. Whenever, we detect an entry in the stack we remove it, and push it to the top of the stack.
+
+If the memory address is not found, then we make a new entry and push it to the top of the stack. Typically, the depth of the stack is bounded. It has length,  . If the number of entries in the stack exceeds  because of the addition of a new entry, then we need to remove the entry at the bottom of the stack. Secondly, while adding a new entry, the stack distance is not defined. Note that since we consider bounded stacks, there is no way of differentiating between a new entry, and an entry that was there in the stack, but had to be removed because it was at the bottom of the stack. Hence, in this case we take the stack distance to be equal to  (bound on the depth of the stack).
+
+Note that the notion of stack distance gives us an indication of temporal locality. If the accesses have high temporal locality, then the mean stack distance is expected to be lower. Conversely, if memory accesses have low temporal locality, then the mean stack distance will be high. We can thus use the distribution of stack distances as a measure of the amount of temporal locality in a program.
+
+Experiment to Measure Stack Distance
+
+We perform a simple experiment with the SPEC2006 benchmark, Perlbench, which runs different Perl programs 1. We maintain counters to keep track of the stack distance. The first million memory accesses serve as a warm-up period. During this time the stack is maintained, but the counters are not incremented. For the next million memory accesses, the stack is maintained, and the counters are also incremented. Figure 11.1 shows a histogram of the stack distance. The size of the stack is limited to 1000 entries. It is sufficient to capture an overwhelming majority of memory accesses.
+
+We observe that most of the accesses have a very low stack distance. A stack distance between 0-9 is the most common value. Approximately 27% of all the accesses are in this bin. In fact, more than two thirds of the memory accesses have a stack distance less than 100. Beyond 100, the distribution tapers off, yet remains fairly steady. The distribution of stack distances is typically said to follow a heavy tailed distribution. This means that the distribution is heavily skewed towards smaller stack distances; however, large stack distances are not uncommon. The tail of the distribution continues to be non-zero for large stack distances. We observe a similar behavior here.
+
+Trivia 3 Researchers have tried to approximate the stack distance using the log-normal distribution.

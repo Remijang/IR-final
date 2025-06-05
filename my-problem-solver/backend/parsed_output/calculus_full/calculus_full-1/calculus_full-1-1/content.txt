@@ -1,0 +1,84 @@
+The right way to begin a calculus book is with calculus. This chapter will jump directly into the two problems that the subject was invented to solve. You will see what the questions are, and you will see an important part of the answer. There are plenty of good things left for the other chapters, so why not get started ?
+
+The book begins with an example that is familiar to everybody who drives a car. It is calculus in action—the driver sees it happening. The example is the relation between the speedometer and the odometer. One measures the speed (or velocity); the other measures the distance traveled. We will write  for the velocity, and  for how far the car has gone. The two instruments sit together on the dashboard:
+
+Notice that the units of measurement are different for  and  The distance  is measured in kilometers or miles (it is easier to say miles). The velocity  is measured in  or miles per hour. A unit of time enters the velocity but not the distance. Every formula to compute  from  will have  divided by time.
+
+The central question of calculus is the relation between v and 
+
+Can you find  if you know  and vice versa, and how ? If we know the velocity over the whole history of the car, we should be able to compute the total distance traveled. In other words, if the speedometer record is complete but the odometer is missing, its information could be recovered. One way to do it (without calculus) is to put in a new odometer and drive the car all over again at the right speeds. That seems like a hard way; calculus may be easier. But the point is that the information is there. If we know everything about  ; there must be a method to find 
+
+What happens in the opposite direction, when  is known ? If you have a complete record of distance, could you recover the complete velocity ? In principle you could drive the car, repeat the history, and read off the speed. Again there must be a better way.
+
+The whole subject of calculus is built on the relation between v and  The question we are raising here is not some kind of joke, after which the book will get serious and the mathematics will get started. On the contrary, I am serious now—and the mathematics has already started. We need to know how to find the velocity from a record of the distance. (That is called differentiation, and it is the central idea of differential calculus.) We also want to compute the distance from a history of the velocity. (That is integration, and it is the goal of integral calculus.)
+
+Differentiation goes from  to  ; integration goes from  to  : We look first at examples in which these pairs can be computed and understood.
+
+CONSTANT VELOCITY
+
+Suppose the velocity is fixed at  (miles per hour). Then  increases at this constant rate. After two hours the distance is  (miles). After four hours  and after  hours  : We say that  increases linearly with time— its graph is a straight line.
+
+Notice that this example starts the car at full velocity. No time is spent picking up speed. (The velocity is a “step function.”) Notice also that the distance starts at zero; the car is new. Those decisions make the graphs of  and  as neat as possible. One is the horizontal line  : The other is the sloping line  : This  ,   relation needs algebra but not calculus:
+
+The opposite is also true. When  increases linearly,  is constant. The division by time gives the slope. The distance is  miles when the time is  hours. Later  miles at  hours. At both points, the ratio  is 60 miles=hour. Geometrically, the velocity is the slope of the distance graph:
+
+The slope of the  -graph gives the v-graph. Figure 1.3 shows two more possibilities:
+
+1. The distance starts at 20 instead of 0: The distance formula changes from 60t to  : The number 20 cancels when we compute change in distance—so the slope is still 60:   
+2. When  is negative, the graph of  goes downward. The car goes backward and the slope of  is  :
+
+I don’t think speedometers go below zero. But driving backwards, it’s not that safe to watch. If you go fast enough, Toyota says they measure “absolute values”—the speedometer reads  when the velocity is  : For the odometer, as far as I know it just stops. It should go backward. 
+
+VELOCITY vs. DISTANCE: SLOPE vs. AREA
+
+How do you compute  from  ? The point of the question is to see  on the graphs. We want to start with the graph of  and discover the graph of  Amazingly, the opposite of slope is area.
+
+The distance  is the area under the  -graph. When  is constant, the region under the graph is a rectangle. Its height is  , its width is  , and its area is  times  : This is integration, to go from  to  by computing the area. We are glimpsing two of the central facts of calculus.
+
+1A The slope of the  -graph gives the velocity v. The area under the v-graph gives the distance 
+
+That is certainly not obvious, and I hesitated a long time before I wrote it down in this first section. The best way to understand it is to look first at more examples. The whole point of calculus is to deal with velocities that arenot constant, and from now on  has several values.
+
+EXAMPLE (Forward and back) There is a motion that you will understand right away. The car goes forward with velocity  ; and comes back at the same speed. To say it more correctly, the velocity in the second part is  If the forward part lasts until  , and the backward part continues to  , the car will come back where it started. The total distance after both parts will be  :
+
+The  -graph shows velocities  and  The distance starts up with slope  and reaches  : Then the car starts backward. The distance goes down with slope  and returns to  at  :
+
+Notice what that means. The total area “under” the  -graph is zero! A negative velocity makes the distance graph go downward (negative slope). The car is moving backward. Area below the axis in the  -graph is counted as negative.
+
+FUNCTIONS
+
+This forward-back example gives practice with a crucially important idea—the concept of a “function.” We seize this golden opportunity to explain functions:
+
+The number  is the value of the function v at the time t .
+
+The time  is the input to the function. The velocity  at that time is the output. Most people say  of  when t'hey read  : T he number  of  is the velocity when  : The forward-back example has  and  : The function contains the whole history, li'%ke a memory bank that has a record of  at each  :
+
+It is simple to convert forward-back motion into a formula. Here is  :
+
+The right side contains the instructions for finding  : The input  is converted into the output  or  : The velocity  depends on  : In this case the function is “discontinuous,” because the needle jumps at  : The velocity is not defined at that instant. There is no  : (You might argue that  is zero at the jump, but that leads to trouble.) The graph of  has a corner, and we can’t give its slope.
+
+The problem also involves a second function, n¤ame¤ly the distance. The principle behind  is the same:  is the distance at time  : It is the net distance forward, and again the instructions change at  : In the forward motion,  equals  as before. In the backward half, a calculation is built into the formula for  :
+
+At the switching time the right side gives two instructions (one on each line). This would be bad except that they agree:  The distance function is “continuous.” There is no jump in  ; even when there is a jump in  : After  the distance decreases because of  : At  the second instruction correctly gives  :
+
+1.1 Velocity and Distance
+
+Notice something more. The functions were given by graphs before they were given by formulas. The graphs tell you  and  at every time t—sometimes more clearly than the formulas. The values  and  can also be given by tables or equations or a set of instructions. (In some way all functions are instructions—the function tells how to find  at time  :) Part of knowing  is knowing all its inputs and outputs—its domain and range:
+
+The domain of a function is the set of inputs. The range is the set of outputs.
+
+The domain of  consists of all times  : The range consists of all distances  (The range of  contains only the two velocities  and  We mention now, and repeat later, that every “linear” function has a formula  : Its graph is a line and  is the slope. The constant  moves the line up and down. It adjusts the line to go through any desired starting point.
+
+SUMMARY: MORE ABOUT FUNCTIONS
+
+May I collect together the ideas brought out by this example ? We had two functions  and  One was velocity, the other was distance. Each function had a domain, and a range, and m&ost importantÑa graph. For the  -grÑaph we studied the.slope (which agreed with  ). For the  -grapÑh we studied the areaÑ(which agreed with  ). Calculus produces functions in pairs, aÑnd the best thing a bÑook can do early is to show you more of them.
+
+Note about the definition of a function. The idea behind the symbol  is absolutely crucial to mathematics. Words don’t do it justice! By definition, a function is a “rule” that assigns one member of the range to each member of the domain. Or, a function is a set of pairs  with no  appearing twice. (These are “ordered pairs” because we write  before  :) Both of those definitions are correct—but somehow they are too passive.
+
+In practice what matters is the active part. The number  is produced from the number  : We read a graph, plug into a formula, solve an equation, run a computer program. The input  is “mapped” to the output  , which changes as  changes. Calculus is about the rate of change. This rate is our other function  :
+
+It is quite hard at the beginning, and not automatic, to see the difference between  and  : Those are both new functions, created out of the original  : In  , we subtract 2 from all the distances. That moves the whole graph down. In  , we subtract 2 fro¤m th¤e time.¤That m¤oves the graph over to the right. Figure 1.5 shows both movements, starting from  : The formula to find  is  , which is  :
+
+A graphing calculator also moves the graph, when you change the viewing window. You can pick any rectangle  : The screen shows that part of the graph. But on the calculator, the function  remains the same. It is the axes that get renumbered. In our figures the axes stay the same and the function is changed.
+
+There are two more basic ways to change a function. (We are always creating new functions—that is what mathematics is all about.) Instead of subtracting or adding, we can multiply the distance by 2: Figure 1.6 shows  : And instead of shifting the time, we can speed it up. The function becomes  : Everything happens twice as fast (and takes half as long). On the calculator those changes correspond to a “zoom” —on the  axis or the  axis. We soon come back to zooms.

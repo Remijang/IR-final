@@ -1,0 +1,34 @@
+[
+    {
+        "type": "text",
+        "text": "5.6 Useful Tools ",
+        "text_level": 1,
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "There are many command-line tools that are useful as well. For example, using the ps command allows you to see which processes are running; read the man pages for some useful flags to pass to ps. The tool top is also quite helpful, as it displays the processes of the system and how much CPU and other resources they are eating up. Humorously, many times when you run it, top claims it is the top resource hog; perhaps it is a bit of an egomaniac. The command kill can be used to send arbitrary ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: THE SUPERUSER (ROOT) ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "A system generally needs a user who can administer the system, and is not limited in the way most users are. Such a user should be able to kill an arbitrary process (e.g., if it is abusing the system in some way), even though that process was not started by this user. Such a user should also be able to run powerful commands such as shutdown (which, unsurprisingly, shuts down the system). In UNIX-based systems, these special abilities are given to the superuser (sometimes called root). While most users can’t kill other users processes, the superuser can. Being root is much like being Spider-Man: with great power comes great responsibility [QI15]. Thus, to increase security (and avoid costly mistakes), it’s usually better to be a regular user; if you do need to be root, tread carefully, as all of the destructive powers of the computing world are now at your fingertips. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "signals to processes, as can the slightly more user friendly killall. Be sure to use these carefully; if you accidentally kill your window manager, the computer you are sitting in front of may become quite difficult to use. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Finally, there are many different kinds of CPU meters you can use to get a quick glance understanding of the load on your system; for example, we always keep MenuMeters (from Raging Menace software) running on our Macintosh toolbars, so we can see how much CPU is being utilized at any moment in time. In general, the more information about what is going on, the better. ",
+        "page_idx": 9
+    }
+]

@@ -1,0 +1,21 @@
+10.7.2 Forwarding Paths in a Pipeline
+
+Let us discuss the basic tenets of forwarding that we shall broadly aim to follow.
+
+1. We add a forwarding path between a later stage and an earlier stage. 2. We forward a value as late as possible in the pipeline. For example, if a given value is not required in a given stage, and it is possible to get the value in a later stage from the producer instruction, then we wait to get the forwarded value in the later stage.
+
+Note that both of these basic tenets do not affect the correctness of programs. They simply allow us to eliminate redundant forwarding paths. Let us now systematically look at all the forwarding paths that we require in our pipeline.
+
+RW → MA : Let us consider the MA stage. It needs a forwarding path from the RW stage. Let us consider the code snippet shown in Figure 10.20 Here, instruction [2] needs the value of  in the MA stage (cycle 5), and instruction [1] fetches the value of  from memory by the end of cycle 4. Thus, it can forward its value to instruction [2] in cycle 5.
+
+ : The code snippet shown in Figure 10.21 shows a load instruction that fetches the value of register  by the end of cycle 4, and a subsequent ALU instruction that requires the value of  in cycle 5. It is possible to forward the value because we are not going backwards in time.
+
+ The code snippet shown in Figure 10.22 shows an ALU instruction that computes the value of register  by the end of cycle 3, and a consecutive ALU instruction that requires the value of  in cycle 4. In this case also, it is possible to forward the data by adding an interconnection (forwarding path) between the MA and EX stages.
+
+ : Typically the OF stage does not need forwarding paths because it does not have any functional units. Hence, it does not need to use a value immediately. We can thus forward the value later according to tenet 2. However, the only exception is forwarding from the RW stage. We cannot forward the value later because the instruction will not be there in the pipeline. Hence, it is necessary to add a forwarding path from the RW to the OF stage. An example of a code snippet that requires  forwarding is shown in Figure 10.23. Instruction [1] produces the value of  by reading its value from memory by the end of cycle 4. It then writes the value of  to the register file in cycle 5. Meanwhile, instruction [4] tries to read the value of  in the OF stage in cycle 5. Unfortunately, there is a conflict here. Hence, we propose to resolve the conflict by adding a forwarding path between the RW and OF stages. Thus, we prohibit instruction [4] from reading the register file for the value of  . Instead, instruction [4] gets the value of  from instruction [1] using the  forwarding path.
+
+Important Point 15
+
+Forwarding from the RW to the OF stage is a very tricky operation. This is because the instruction in the RW stage is writing to the register file, and the instruction in the OF stage is also reading from the register file. If the value of the register is the same in these two instructions, then it is typically not possible to perform both the operations (read and write) in the same cycle. This is because reading and writing to the same SRAM cell can lead to incorrect operation of the circuit, and it is hard to ensure correctness. Consequently, it is a standard practice to allow the write from RW to go through, and cancel the register read operation issued by the instruction in the OF stage. Thus, this read operation does not go to the register file. Instead, the instruction in the OF stage gets the value of the register through the forwarding path. This strategy ensures that we do not have any remote chances of leaving data in an inconsistent state in the register file. The instruction in the OF stage also gets the right value of the operands.
+
+It is not necessary to add the following forwarding paths: MA OF, and  . This is because, we can use the following forwarding paths (  ), and  ) instead. In accordance with tenet 2, we need to avoid redundant forwarding paths. Hence, we do not add the forwarding paths to the OF stage from the MA and EX stages. We do not add forwarding paths to the IF stage because at this stage, we have not decoded the instruction, and thus we do not know about its operands.

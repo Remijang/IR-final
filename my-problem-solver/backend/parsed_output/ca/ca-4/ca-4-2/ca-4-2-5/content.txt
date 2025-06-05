@@ -1,0 +1,29 @@
+4.2.5 Data Processing Instructions that use CPSR Flags
+
+There are three simple data processing instructions that use the CPSR flags in their computation. They are sbc, rsc, and adc.
+
+Let us now motivate this section with an example. Our basic ARM instruction format does not support 64-bit registers. Consequently, if we desire to implement the long data type that uses 64 bits, we need to use two registers. Let us assume that one long value is present in registers,  , and  . Here,  contains the upper 32 bits, and  contains the lower 32 bits. Let the second long value be present in registers  , and  . Let us now try to add these two long values to produce a 64-bit result, and save it in registers,  and  . See Example 42.
+
+Example 42 Add two long values stored in  and  .
+
+Answer:
+
+adds r5, r1, r3   
+adc r6, r2, r4
+
+The (adds) instruction adds the values in r1 and r3. adc(add with carry) adds r2, r4, and the value of the carry flag. This is exactly the same as normal addition.
+
+Example 43 shows how to subtract the values.
+
+Example 43
+
+Subtract two long values stored in r2,r1 and r4,r3.
+
+Answer:
+
+subs r5, r1, r3   
+sbc r6, r2, r4
+
+subs subtracts the value of r3 from the value in r1. sbc(subtract with carry) subtracts the value in r4 from the value in r2. Additionally, if the previous instruction resulted in a borrow (carry equal to 0), then it also subtracts the carry bit. This is the same as normal subtraction.
+
+We list the semantics of the instructions in Table 4.8. Note that in the case of a subtraction the carry flag is set to 0, when there is a borrow. The  operation flips a 0 to 1, and vice versa. Lastly, rsc stands for – reverse subtract with carry.

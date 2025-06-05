@@ -1,0 +1,150 @@
+# 29.1 Concurrent Counters  
+
+One of the simplest data structures is a counter. It is a structure that is commonly used and has a simple interface. We define a simple nonconcurrent counter in Figure 29.1.  
+
+# Simple But Not Scalable  
+
+As you can see, the non-synchronized counter is a trivial data structure, requiring a tiny amount of code to implement. We now have our next challenge: how can we make this code thread safe? Figure 29.2 shows how we do so.  
+
+1 typedef struct counter_t {   
+2 int value;   
+3 } counter_t;   
+4   
+5 void init(counter_t \*c) {   
+6 c->value $\mathit { \Theta } = \mathit { \Theta } 0$ ;   
+7 }   
+8   
+9 void increment(counter_t $\star { \mathsf { c } }$ ) {   
+10 c->value++;   
+11 }   
+12   
+13 void decrement(counter_t $\star { } C$ ) {   
+14 c->value--;   
+15 }   
+16   
+17 int get(counter_t \*c) {   
+18 return c->value;   
+19 }  
+
+This concurrent counter is simple and works correctly. In fact, it follows a design pattern common to the simplest and most basic concurrent data structures: it simply adds a single lock, which is acquired when calling a routine that manipulates the data structure, and is released when returning from the call. In this manner, it is similar to a data structure built with monitors [BH73], where locks are acquired and released automatically as you call and return from object methods.  
+
+At this point, you have a working concurrent data structure. The problem you might have is performance. If your data structure is too slow, you’ll have to do more than just add a single lock; such optimizations, if needed, are thus the topic of the rest of the chapter. Note that if the data structure is not too slow, you are done! No need to do something fancy if something simple will work.  
+
+To understand the performance costs of the simple approach, we run a benchmark in which each thread updates a single shared counter a fixed number of times; we then vary the number of threads. Figure 29.5 shows the total time taken, with one to four threads active; each thread updates the counter one million times. This experiment was run upon an iMac with four Intel 2.7 GHz i5 CPUs; with more CPUs active, we hope to get more total work done per unit time.  
+
+From the top line in the figure (labeled ’Precise’), you can see that the performance of the synchronized counter scales poorly. Whereas a single thread can complete the million counter updates in a tiny amount of time (roughly 0.03 seconds), having two threads each update the counter one million times concurrently leads to a massive slowdown (taking over 5 seconds!). It only gets worse with more threads.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+1 typedef struct __counter_t {   
+2 int value;   
+3 pthread_mutex_t lock;   
+4 } counter_t;   
+5   
+6 void init(counter_t $\star { \bf { C } }$ ) {   
+7 c->value $\mathit { \Theta } = \mathit { \Theta } 0$ ;   
+8 Pthread_mutex_init(&c->lock, NULL);   
+9 }   
+10   
+11 void increment(counter_t $\star \mathsf { C }$ ) {   
+12 Pthread_mutex_lock(&c->lock);   
+13 c->value++;   
+14 Pthread_mutex_unlock(&c->lock);   
+15 }   
+16   
+17 void decrement(counter_t $\star { \bf { C } }$ ) {   
+18 Pthread_mutex_lock(&c->lock);   
+19 c->value--;   
+20 Pthread_mutex_unlock(&c->lock);   
+21 }   
+22   
+23 int get(counter_t $\star { \bf { C } }$ ) {   
+24 Pthread_mutex_lock(&c->lock);   
+25 int rc $\mathbf { \Sigma } = \mathbf { \Sigma }$ c->value;   
+26 Pthread_mutex_unlock(&c->lock);   
+27 return rc;   
+28 }  
+
+Ideally, you’d like to see the threads complete just as quickly on multiple processors as the single thread does on one. Achieving this end is called perfect scaling; even though more work is done, it is done in parallel, and hence the time taken to complete the task is not increased.  
+
+# Scalable Counting  
+
+Amazingly, researchers have studied how to build more scalable counters for years [MS04]. Even more amazing is the fact that scalable counters matter, as recent work in operating system performance analysis has shown $\left[ \mathsf { B } { + } 1 0 \right]$ ; without scalable counting, some workloads running on Linux suffer from serious scalability problems on multicore machines.  
+
+Many techniques have been developed to attack this problem. We’ll describe one approach known as an approximate counter [C06].  
+
+The approximate counter works by representing a single logical counter via numerous local physical counters, one per CPU core, as well as a single global counter. Specifically, on a machine with four CPUs, there are four local counters and one global one. In addition to these counters, there are also locks: one for each local counter1, and one for the global counter.  
+
+![](images/48664f4c1b280f700a7f5ddc0d0894f82bae90c264d585b5a76d2365dd454cbf.jpg)  
+Figure 29.3: Tracing the Approximate Counters  
+
+The basic idea of approximate counting is as follows. When a thread running on a given core wishes to increment the counter, it increments its local counter; access to this local counter is synchronized via the corresponding local lock. Because each CPU has its own local counter, threads across CPUs can update local counters without contention, and thus updates to the counter are scalable.  
+
+However, to keep the global counter up to date (in case a thread wishes to read its value), the local values are periodically transferred to the global counter, by acquiring the global lock and incrementing it by the local counter’s value; the local counter is then reset to zero.  
+
+How often this local-to-global transfer occurs is determined by a threshold $S$ . The smaller $S$ is, the more the counter behaves like the non-scalable counter above; the bigger $S$ is, the more scalable the counter, but the further off the global value might be from the actual count. One could simply acquire all the local locks and the global lock (in a specified order, to avoid deadlock) to get an exact value, but that is not scalable.  
+
+To make this clear, let’s look at an example (Figure 29.3). In this example, the threshold $S$ is set to 5, and there are threads on each of four CPUs updating their local counters $L _ { 1 } \ldots L _ { 4 }$ . The global counter value $( G )$ is also shown in the trace, with time increasing downward. At each time step, a local counter may be incremented; if the local value reaches the threshold $S$ , the local value is transferred to the global counter and the local counter is reset.  
+
+The lower line in Figure 29.5 (labeled ’Approximate’, on page 6) shows the performance of approximate counters with a threshold $S$ of 1024. Performance is excellent; the time taken to update the counter four million times on four processors is hardly higher than the time taken to update it one million times on one processor.  
+
+1 typedef struct _counter_t {   
+2 int global; // global count   
+3 pthread_mutex_t glock; // global lock   
+4 int local[NUMCPUS]; // per-CPU count   
+5 pthread_mutex_t llock[NUMCPUS]; // ... and lock   
+6 int threshold; // update freq   
+7 } counter_t;   
+8   
+9 // init: record threshold, init locks, init values   
+10 // of all local counts and global count   
+11 void init(counter_t $\star { \bf { C } }$ , int threshold) {   
+12 c->threshold $\mathbf { \Sigma } = \mathbf { \Sigma }$ threshold;   
+13 c->global $\mathit { \Theta } = \mathit { \Theta } 0$ ;   
+14 pthread_mutex_init(&c->glock, NULL);   
+15 int i;   
+16 for ( $\mathrm { ~ \textit ~ { ~ i ~ } ~ } = \mathrm { ~ \textit ~ { ~ 0 ~ } ~ }$ ; i $\prec$ NUMCPUS; ${ \dot { \bf \underline { { 1 } } } } + +$ ) {   
+17 c->local[i] $\mathit { \Theta } = \mathit { \Theta } 0$ ;   
+18 pthread_mutex_init(&c->llock[i], NULL);   
+19 }   
+20 }   
+21   
+22 // update: usually, just grab local lock and update   
+23 // local amount; once it has risen ’threshold’,   
+24 // grab global lock and transfer local values to it   
+25 void update(counter_t $\star { \bf { C } }$ , int threadID, int amt) {   
+26 int cpu $\mathbf { \Sigma } = \mathbf { \Sigma }$ threadID % NUMCPUS;   
+27 pthread_mutex_lock(&c->llock[cpu]);   
+28 c->local[cpu] $+ =$ amt;   
+29 if (c->local[cpu] $> =$ c->threshold) {   
+30 // transfer to global (assumes amt $> 0$ )   
+31 pthread_mutex_lock(&c->glock);   
+32 c->global $+ =$ c->local[cpu];   
+33 pthread_mutex_unlock(&c->glock);   
+34 c->local[cpu] $\mathit { \Theta } = \mathit { \Theta } 0$ ;   
+35 }   
+36 pthread_mutex_unlock(&c->llock[cpu]);   
+37 }   
+38   
+39 // get: just return global amount (approximate)   
+40 int get(counter_t $\star { \bf { C } }$ ) {   
+41 pthread_mutex_lock(&c->glock);   
+42 int $\mathrm { v a l ~ \mathsf { \Omega } = \mathsf { \Omega } c \mathsf { - } \mathsf { > } g l o b a l }$ ;   
+43 pthread_mutex_unlock(&c->glock);   
+44 return val; // only approximate!   
+45 }  
+
+![](images/dcf2e2ed24a7e97009f1af84dfcd0b4de69549e5cf22d17f05dfc3d9acc15333.jpg)  
+Figure 29.5: Performance of Traditional vs. Approximate Counters  
+
+![](images/7cd085de98cb80ea28bf0cc65b299ccd3808e86ba8f488a3882b8b5ebbf7c0d2.jpg)  
+Figure 29.6: Scaling Approximate Counters  
+
+Figure 29.6 shows the importance of the threshold value $S$ , with four threads each incrementing the counter 1 million times on four CPUs. If $S$ is low, performance is poor (but the global count is always quite accurate); if $S$ is high, performance is excellent, but the global count lags (by at most the number of CPUs multiplied by $S$ ). This accuracy/performance tradeoff is what approximate counters enable.  
+
+A rough version of an approximate counter is found in Figure 29.4 (page 5). Read it, or better yet, run it yourself in some experiments to better understand how it works.  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+TIP: MORE CONCURRENCY ISN’T NECESSARILY FASTER If the scheme you design adds a lot of overhead (for example, by acquiring and releasing locks frequently, instead of once), the fact that it is more concurrent may not be important. Simple schemes tend to work well, especially if they use costly routines rarely. Adding more locks and complexity can be your downfall. All of that said, there is one way to really know: build both alternatives (simple but less concurrent, and complex but more concurrent) and measure how they do. In the end, you can’t cheat on performance; your idea is either faster, or it isn’t.  
+

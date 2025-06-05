@@ -1,0 +1,84 @@
+6.3.1 Conditional Branches
+
+Unlike SimpleRisc and ARM, RISC-V does not have a flags register that stores the result of the last comparison. The arguments for the comparison are typically specified directly in the branch instruction itself along with the branch target.
+
+Set-less-than (slt) Instruction
+
+However, sometimes there is a need to store the result of a comparison. RISC-V thus provides a flexible mechanism to achieve this. In a conventional RISC ISA, the flags register is implicit, whereas it is more explicit in RISC-V. Such a class of instructions is shown in Table 6.8.
+
+Table 6.8: The  family of instructions. The destination register is by default set to 0.
+
+Table 6.8 shows the slt family of instructions. They compare the values of two registers, or a register and an immediate. If the first source operand is less than the second source operand, then the destination register’s value is set to 1. Otherwise, it remains 0. The conditional branch instructions can then directly compare this register with zero and decide the outcome of the branch instruction: taken or not-taken.
+
+Example 101 Write RISC-V assembly code to set t2 if  .
+
+Example 102
+
+Add two long 64-bit values stored in  and  . Store the result in  . Answer:
+
+Branch Instructions
+
+The conditional branch instructions in RISC-V are shown in Table 6.9. The instructions take two register arguments and compare them. The result of the comparison is immediately used to decide the direction of the branch.
+
+Table 6.9 shows the beq, bne, bge and blt instructions that have their usual meanings. The third argument is a label that represents the branch target. Along with these signed comparison instructions, RISC-V has comparison instructions to compare unsigned integers: bgeu and bltu.
+
+Recall that ARM also has similar instructions that are implemented with the help of custom flags.
+
+Example 103
+
+Write a RISC-V assembly program to compute the factorial of a positive number (> 1) stored in a1. Save the result in a0.
+
+Answer:
+
+. main : addi a0 , zero , 1 # prod = 1 addi t0 , zero , 1 # index = 1   
+. loop : mul a0 , a0 , t0 # prod = prod \* index addi t0 , t0 , 1 # index ++ bge a1 , t0 , . loop # loop condition # a0 stores the factorial
+
+Example 104
+
+Write an assembly program to add the numbers from 1 to 10. Store the result in s0.
+
+Answer:
+
+. main :
+
+addi t0 , zero , 1 # initialize t0 to 1 addi s0 , zero , 0 # result (s0) = 0 addi t1 , zero , 10 # loop end value
+
+. loop :
+
+add s0 , s0 , t0 # add to the result addi t0 , t0 , 1 # increment the counter bge t1 , t0 , . loop # loop condition
+
+# s0 has the sum
+
+Example 105
+
+Write an assembly program to test if a number stored in a1 is prime or not. Save the Boolean result in a0.
+
+Answer:
+
+# input in a1 , return value in a0   
+. main : addi t0 , zero , 2 # starting divisor   
+. loop : rem t1 , a1 , t0 # find the remainder (t1) beq t1 , zero , . notPrime addi t0 , t0 , 1 # increment the divisor bne t0 , a1 , . loop # loop back addi a0 , zero , 1 # number is prime jal x0 , .end   
+. notPrime : addi a0 , zero , 0   
+.end: # a0 contains the result
+
+Example 106 Write an assembly program to find the number of ones in a 32-bit number stored in a1.
+
+Answer:
+
+. main :
+
+  # counter , t0 = 0 # maximum possible ones #  # will contain the result (a0 = 0)   
+. loop : andi t3 , a1 , 1 # check the LSB of the argument a1 srli a1 , a1 , 1 # shift the argument by 1 step beq t3 , t2 , .inc # jump to .inc if the LSB is 1   
+. lret : addi t0 , t0 , 1 # increment the counter beq t1 , t0 , .end # exit the loop jal zero , . loop # loop back   
+.inc: addi a0 , a0 , 1 # increment the count of 1s jal zero , . lret # resume the next iteration
+
+Example 107
+
+Write an assembly program to check if a natural number stored in a1 is a perfect square or not. Save the Boolean result in a0.
+
+Answer:
+
+. main : # input number in a1 addi a1 , zero , 101 addi a0 , zero , 0 # assuming result (a0) = false addi t1 , zero , 1 # counter (t0) = 1   
+. loop : mul t2 , t1 , t1 # square -> compare beq t2 , a1 , . square # It is a square addi t1 , t1 , 1 # increment the counter blt a1 , t2 , .end jal zero , . loop # loop back   
+. square : addi a0 , a0 , 1 # result = 1   
+.end: # result in a0

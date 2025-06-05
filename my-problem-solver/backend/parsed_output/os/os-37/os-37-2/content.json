@@ -1,0 +1,37 @@
+[
+    {
+        "type": "text",
+        "text": "37.2 Basic Geometry ",
+        "text_level": 1,
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Let’s start to understand some of the components of a modern disk. We start with a platter, a circular hard surface on which data is stored persistently by inducing magnetic changes to it. A disk may have one or more platters; each platter has 2 sides, each of which is called a surface. These platters are usually made of some hard material (such as aluminum), and then coated with a thin magnetic layer that enables the drive to persistently store bits even when the drive is powered off. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The platters are all bound together around the spindle, which is connected to a motor that spins the platters around (while the drive is powered on) at a constant (fixed) rate. The rate of rotation is often measured in rotations per minute (RPM), and typical modern values are in the 7,200 RPM to 15,000 RPM range. Note that we will often be interested in the time of a single rotation, e.g., a drive that rotates at 10,000 RPM means that a single rotation takes about 6 milliseconds (6 ms). ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Data is encoded on each surface in concentric circles of sectors; we call one such concentric circle a track. A single surface contains many thousands and thousands of tracks, tightly packed together, with hundreds of tracks fitting into the width of a human hair. ",
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "To read and write from the surface, we need a mechanism that allows us to either sense (i.e., read) the magnetic patterns on the disk or to induce a change in (i.e., write) them. This process of reading and writing is accomplished by the disk head; there is one such head per surface of the drive. The disk head is attached to a single disk arm, which moves across the surface to position the head over the desired track. ",
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/c49d80cbc182a618740e5106e1bcb3eea6df51c48766b2325f058a926efe27d0.jpg",
+        "img_caption": [
+            "Figure 37.2: A Single Track Plus A Head "
+        ],
+        "img_footnote": [],
+        "page_idx": 2
+    }
+]

@@ -1,0 +1,104 @@
+# 10.2 The Cell Cycle
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+Describe the three stages of interphase   
+Discuss the behavior of chromosomes during karyokinesis/mitosis Explain how the cytoplasmic content is divided during cytokinesis Define the quiescent $\mathsf { G } _ { 0 }$ phase
+
+The cell cycle is an ordered series of events involving cell growth and cell division that produces two new daughter cells. Cells on the path to cell division proceed through a series of precisely timed and carefully regulated stages of growth, DNA replication, and nuclear and cytoplasmic division that ultimately produces two identical (clone) cells. The cell cycle has two major phases: interphase and the mitotic phase (Figure 10.5). During interphase, the cell grows and DNA is replicated. During the mitotic phase, the replicated DNA and cytoplasmic contents are separated, and the cell cytoplasm is typically partitioned by a third process of the cell cycle called cytokinesis. We should note, however, that interphase and mitosis (karyokinesis) may take place without cytokinesis, in which case cells with multiple nuclei (multinucleate cells) are produced.
+
+# Interphase
+
+During interphase, the cell undergoes normal growth processes while also preparing for cell division. In order for a cell to move from interphase into the mitotic phase, many internal and external conditions must be met. The three stages of interphase are called $G _ { \imath } , S ,$ and $G _ { 2 }$ .
+
+# $\pmb { \mathsf { G } } _ { \mathbf { 1 } }$ Phase (First Gap)
+
+The first stage of interphase is called the $\pmb { G } _ { 1 }$ phase (first gap) because, from a microscopic point of view, little change is visible. However, during the ${ \bf G } _ { 1 }$ stage, the cell is quite active at the biochemical level. The cell is accumulating the building blocks of chromosomal DNA and the associated proteins as well as accumulating sufficient energy reserves to complete the task of replicating each chromosome in the nucleus.
+
+# S Phase (Synthesis of DNA)
+
+Throughout interphase, nuclear DNA remains in a semi-condensed chromatin configuration. In the S phase, DNA replication can proceed through the mechanisms that result in the formation of identical pairs of DNA molecules—sister chromatids—that are firmly attached to the centromeric region. The centrosome is also duplicated during the S phase. The two centrosomes of homologous chromosomes will give rise to the mitotic spindle, the apparatus that orchestrates the movement of chromosomes during mitosis. For example, roughly at the center of each animal cell, the centrosomes are associated with a pair of rod-like objects, the centrioles, which are positioned at right angles to each other. Centrioles help organize cell division. We should note, however, that centrioles are not present in the centrosomes of other eukaryotic organisms, such as plants and most fungi.
+
+
+
+# $\ G _ { 2 }$ Phase (Second Gap)
+
+In the $\mathbf { G } _ { 2 }$ phase, the cell replenishes its energy stores and synthesizes proteins necessary for chromosome manipulation and movement. Some cell organelles are duplicated, and the cytoskeleton is dismantled to provide resources for the mitotic phase. There may be additional cell growth during $\boldsymbol { \mathrm { ~ G } } _ { 2 }$ . The final preparations for the mitotic phase must be completed before the cell is able to enter the first stage of mitosis.
+
+# The Mitotic Phase
+
+The mitotic phase is a multistep process during which the duplicated chromosomes are aligned, separated, and move into two new, identical daughter cells. The first portion of the mitotic phase is called karyokinesis, or nuclear division. As we have just seen, the second portion of the mitotic phase (and often viewed as a process separate from and following mitosis) is called cytokinesis—the physical separation of the cytoplasmic components into the two daughter cells.
+
+# LINK TO LEARNING
+
+Revisit the stages of mitosis at this site (http://openstax.org/l/Cell_cycle_mito) .
+
+# Karyokinesis (Mitosis)
+
+Karyokinesis, also known as mitosis, is divided into a series of phases—prophase, prometaphase, metaphase, anaphase, and telophase—that result in the division of the cell nucleus (Figure 10.6).
+
+Which of the following is the correct order of events in mitosis?
+
+a. Sister chromatids line up at the metaphase plate. The kinetochore becomes attached to the mitotic spindle. The nucleus reforms and the cell divides. Cohesin proteins break down and the sister chromatids separate.   
+b. The kinetochore becomes attached to the mitotic spindle. Cohesin proteins break down and the sister chromatids separate. Sister chromatids line up at the metaphase plate. The nucleus reforms and the cell divides.   
+c. The kinetochore becomes attached to the cohesin proteins. Sister chromatids line up at the metaphase plate. The kinetochore breaks down and the sister chromatids separate. The nucleus reforms and the cell divides.   
+d. The kinetochore becomes attached to the mitotic spindle. Sister chromatids line up at the metaphase plate. Cohesin proteins break down and the sister chromatids separate. The nucleus reforms and the cell divides.
+
+Prophase (the “first phase”): the nuclear envelope starts to dissociate into small vesicles, and the membranous organelles (such as the Golgi complex [Golgi apparatus] and the endoplasmic reticulum), fragment and disperse toward the periphery of the cell. The nucleolus disappears (disperses) as well, and the centrosomes begin to move to opposite poles of the cell. Microtubules that will form the mitoticspindleextend between the centrosomes, pushingthemfartherapartas the microtubule fibers lengthen. The sister chromatids begin to coil more tightly with the aid of condensin proteins and now become visible under a light microscope.
+
+
+
+Prometaphase (the “first change phase”): Many processes that began in prophase continue to advance. The remnants of the nuclear envelope fragment further, and the mitotic spindle continues to develop as more microtubules assemble and stretch across the length of the former nuclear area. Chromosomes become even more condensed and discrete. Each sister chromatid develops a protein structure called a kinetochore in its centromeric region (Figure 10.7). The proteins of the kinetochore attract and bind to the mitotic spindle microtubules. As the spindle microtubules extend from the centrosomes, some of these microtubules come into contact with and firmly bind to the kinetochores. Once a mitotic fiber attaches to a chromosome, the chromosome will be oriented until the kinetochores of sister chromatids face the op ositepoles. Eventually, all the sister chromatids will be attached via their kinetochores to microtubules from opposing poles. Spindle microtubules that do not engage the chromosomes are called polar microtubules. These microtubules overlap each other midway between the two poles and contribute to cel elongation. Astral microtubules are located near the poles, aid in spindle orientation, and are required for the regulation of mitosis.
+
+Metaphase (the “change phase”): All the chromosomes are aligned in a plane called the metaphase plate, or the equatorial plane, roughly midway between the two poles of the cell. The sister chromatids are still tightly attached to each other by cohesin proteins. At this time, the chromosomes are maximally condensed.
+
+Anaphase (“upward phase”): The cohesin proteins degrade, and the sister chromatids separate at the centromere. Each chromatid, now called a single chromosome, is pulled rapidly toward the centrosome to which its microtubule is attached. The cell becomes visibly elongated (oval shaped) as the polar microtubules slide against each other at the metaphase plate where they overlap.
+
+Telophase (the “distance phase”): the chromosomes reach the opposite poles and begin to decondense(unravel), relaxing once again into a stretched-out chromatin configuration. The mitotic spindles are depolymerized into tubulin monomers that will be used to assemble cytoskeletal components for each daughter cell. Nuclear envelopes form around the chromosomes, and nucleosomes appear within the nuclear area.
+
+# Cytokinesis
+
+Cytokinesis, or “cell motion,” is sometimes viewed as the second main stage of the mitotic phase, during which cell division is completed via the physical separation of the cytoplasmic components into two daughter cells However, as we have seen earlier, cytokinesis can also be viewed as a separate phase, which may or may not take place following mitosis. If cytokinesis does take place, cell division is not complete until the cell components have been apportioned and completely separated into the two daughter cells. Although the stages of mitosis are similar for most eukaryotes, the process of cytokinesis is quite different for eukaryotes that have cell walls, such as plant cells.
+
+In animal cells, cytokinesis typically starts during late anaphase. A contractile ring composed of actin filaments forms just inside the plasma membrane at the former metaphase plate. The actin filaments pull the equator of the cell inward, forming a fissure. This fissure is called the cleavage furrow. The furrow deepens as the actin ring contracts, and eventually the membrane is cleaved in two (Figure 10.8).
+
+
+
+In plant cells, a new cell wall must form between the daughter cells. During interphase, the Golgi apparatus accumulates enzymes, structural proteins, and glucose molecules prior to breaking into vesicles and dispersing throughout the dividing cell. During telophase, these Golgi vesicles are transported on microtubules to form a phragmoplast(a vesicular structure) at the metaphase plate. There, the vesicles fuse and coalesce from the center toward the cell walls; this structure is called a cell plate. As more vesicles fuse, the cell plate enlarges until it merges with the cell walls at the periphery of the cell. Enzymes use the glucose that has accumulated between the membrane layers to build a new cell wall. The Golgi membranes become parts of the plasma membrane on either side of the new cell wall (Figure 10.8).
+
+# ${ \pmb G _ { 0 } }$ Phase
+
+Not all cells adhere to the classic cell-cycle pattern in which a newly formed daughter cell immediately enters the preparatory phases of interphase, closely followed by the mitotic phase, and cytokinesis. Cells in ${ \bf G } _ { \circ }$ phase are not actively preparing to divide. The cell is in a quiescent (inactive) stage that occurs when cells exit the cell cycle. Some cells enter ${ { \bf { G } } _ { \circ } }$ temporarily due to environmental conditions such as availability of nutrients, or stimulation by growth factors. The cell will remain in this phase until conditions improve or until an external signal triggers the onset of ${ \bf G } _ { 1 }$ . Other cells that never or rarely divide, such as mature cardiac muscle and nerve cells, remain in ${ { \bf { G } } _ { \circ } }$ permanently.
+
+# SCIENTIFIC METHOD CONNECTION
+
+# Determine the Time Spent in Cell-Cycle Stages
+
+Problem: How long does a cell spend in interphase compared to each stage of mitosis?
+
+Background: A prepared microscope slide of whitefish blastula cross-sections will show cells arrested in various stages of the cell cycle. (Note: It is not visually possible to separate the stages of interphase from each other, but the mitotic stages are readily identifiable.) If 100 cells are examined, the number of cells in each identifiable cell-cycle stage will give an estimate of the time it takes for the cell to complete that stage.
+
+Problem Statement: Given the events included in all of interphase and those that take place in each stage of mitosis, estimate the length of each stage based on a 24-hour cell cycle. Before proceeding, state your hypothesis.
+
+Test your hypothesis: Test your hypothesis by doing the following:
+
+1. Place a fixed and stained microscope slide of whitefish blastula cross-sections under the scanning objective of a light microscope.   
+2. Locate and focus on one of the sections using the low-power objective of your microscope. Notice that the section is a circle composed of dozens of closely packed individual cells.   
+3. Switch to the medium-power objective and refocus. With this objective, individual cells are clearly visible, but the chromosomes will still be very small.   
+4. Switch to the high-power objective and slowly move the slide left to right, and up and down to view all the cells in the section (Figure 10.9). As you scan, you will notice that most of the cells are not undergoing mitosis but are in the interphase period of the cell cycle.   
+5. Practice identifying the various stages of the cell cycle, using the drawings of the stages as a guide (Figure 10.6).   
+6. Once you are confident about your identification, begin to record the stage of each cell you encounter as you scan left to right, and top to bottom across the blastula section.   
+7. Keep a tally of your observations and stop when you reach 100 cells identified.   
+8. The larger the sample size (total number of cells counted), the more accurate the results. If possible, gather and record group data prior to calculating percentages and making estimates.
+
+
+
+Record your observations: Make a table similar to Table 10.1 within which to record your observations.
+
+# Results of Cell Stage Identification
+
+Analyze your data/report your results: To find the length of time whitefish blastula cells spend in each stage, multiply the percent (recorded as a decimal) by 24 hours. Make a table similar to Table 10.2 to illustrate your data.
+
+# Estimate of Cell Stage Length
+
+Draw a conclusion: Did your results support your estimated times? Were any of the outcomes unexpected? If so, discuss those events in that stage that may have contributed to the calculated time.

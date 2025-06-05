@@ -1,0 +1,286 @@
+[
+    {
+        "type": "text",
+        "text": "11.2.2 Cache Lookup and Cache Design ",
+        "text_level": 1,
+        "page_idx": 520
+    },
+    {
+        "type": "text",
+        "text": "As outlined in Section 11.2.1, we wish to design an 8 KB cache with a block size of 64 bytes for a 32-bit system. To do an efficient cache lookup, we need to find an efficient way to find out if the 26 bit block address exists among the 128 entries in the cache. There are thus two problems here. The first problem is to quickly locate a given entry, and the second is to perform a read/write operation. Instead of using a single SRAM array to solve both the problems, it is a better idea to split it into two arrays as shown in Figure 11.5. ",
+        "page_idx": 520
+    },
+    {
+        "type": "text",
+        "text": "In a typical design, a cache entry is saved in two SRAM-based arrays. One SRAM array known as the tag array, contains information pertaining to the block address, and the other SRAM array known as the data array contains the data for the block. The tag array contains a tag that uniquely identifies a block. The tag is typically a part of the block address, and depends on the type of the cache. Along with the tag and data arrays, there is a dedicated cache controller that executes the cache access algorithm. ",
+        "page_idx": 520
+    },
+    {
+        "type": "text",
+        "text": "Fully Associative(FA) Cache ",
+        "text_level": 1,
+        "page_idx": 520
+    },
+    {
+        "type": "text",
+        "text": "Let us first consider a very simple way of locating a block. We can check each of the 128 entries in the cache possibly simultaneously to see if the block address is equal to the block address in the cache entry. This cache is known as a fully associative cache or a content addressable cache. The phrase \u201cfully associative\u201d means that a given block can be associated with any entry in the cache. ",
+        "page_idx": 520
+    },
+    {
+        "type": "text",
+        "text": "Each cache entry in a fully associative(FA) cache thus needs to contain two fields \u2013 tag and data. In this case, we can set the tag to be equal to the block address. Since the block address is unique to each block, it fits the definition of a tag. Block data refers to the contents of the block (64 bytes in this case). The block address requires 26 bits, and the block data requires 64 bytes, in our running example. The search operation needs to span the entire cache, and once an entry is located, we need to either read out the data, or write a new value. ",
+        "page_idx": 520
+    },
+    {
+        "type": "image",
+        "img_path": "images/7d435736c2ed7db0cfb409ed197f0078a2e4f78f9335942feafa341fb632806d.jpg",
+        "img_caption": [
+            "Figure 11.5: Structure of a cache "
+        ],
+        "img_footnote": [],
+        "page_idx": 521
+    },
+    {
+        "type": "image",
+        "img_path": "images/ee33f661d5cecc1657ab620ef505f7b6a4403d3da61a6b07778fabc65a260621.jpg",
+        "img_caption": [
+            "Figure 11.6: A fully associative cache "
+        ],
+        "img_footnote": [],
+        "page_idx": 521
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 521
+    },
+    {
+        "type": "text",
+        "text": "Let us first take a look at the tag array. Each tag in this case is equal to the 26 bit block address. After a memory request reaches a cache, the first step is to compute the tag by extracting the 26 most significant bits. Then, we need to match the extracted tag with each entry in the tag array using a set of comparators. If there is no match, then we can declare a cache miss and service it. However, if there is a cache hit, then we need to use the number of the entry that matches the tag to access the data entry. For example, in our 8 KB cache that contains 128 entries, it is possible that the $5 3 ^ { r d }$ entry in the tag array matches the tag. In this case, the cache controller needs to fetch the $5 3 ^ { r d }$ entry from the data array in the case of a read access, or write to the $5 3 ^ { r d }$ entry in the case of a write access. ",
+        "page_idx": 521
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "There are two ways to implement the tag array in a fully associative cache. Either we can design it as a normal SRAM array in which the cache controller iterates through each entry, and compares it with the given tag. Or, we can use a CAM array (see Section 7.4.2) that has comparators in every row. They can compare the value of the tag with the data stored in the row and produce an output (1 or 0) depending on the result of the comparison. A CAM array typically uses an encoder to compute the number of the row that matches the result. A CAM implementation of the tag array of a fully associative cache is more common, primarily because sequentially iterating through the array is very time consuming. ",
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "Figure 11.6 illustrates this concept. We enable each row of the CAM array by setting the corresponding word line to 1. Subsequently, the embedded comparators in the CAM cells compare the contents of each row with the tag, and generate an output. We use an OR gate to determine if any of the outputs is equal to 1. If at least one output is 1, then we have a cache hit; otherwise, we have a cache miss. Each of these output wires are also connected to an encoder that generates the index of the row that has a match. We use this index to access the data array and read the data for the block. In the case of a write, we write to the block, instead of reading it. ",
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "A fully associative cache is very useful for small structures (typically 2-32 entries). However, it is not possible to use CAM arrays for larger structures. The area and power overheads of comparison, and encoding are very high. It is also not possible to sequentially iterate through every entry of an SRAM implementation of the tag array. This is very time consuming. Hence, we need to find a better way for locating data in larger structures. ",
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "Direct Mapped(DM) Cache ",
+        "text_level": 1,
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "We saw that in a fully associative cache, we can store any block at any location in the cache. This scheme is very flexible; however, it cannot be used when the cache has a large number of entries primarily because of prohibitive area and power overheads. Instead of allowing a block to be stored anywhere in the cache, let us assign only one fixed location for a given block. This can be done as follows. ",
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "In our running example, we have an 8 KB cache with 128 entries. Let us restrict the placement of 64 byte blocks in the cache. For each block, let us assign a unique location in the tag array at which the tag corresponding to its address can be stored. We can generate such a unique location as follows. Let us consider the address of a block $A$ , and the number of entries in our cache (128), and compute $A \\% 1 2 8$ . The $\\%$ operator computes the remainder of the division of $A$ by 128. Since $A$ is a binary value, and 128 is a power of 2, computing the remainder is very easy. We need to extract just the 7 LSB bits out of the 26-bit block address. These 7 bits can then be used to access the tag array. We can then compare the value of the tag saved in the tag array with the tag computed from the block address to determine if we have a hit or a miss. ",
+        "page_idx": 522
+    },
+    {
+        "type": "text",
+        "text": "Instead of saving the block address in the tag array as we did for a fully associative cache, we can slightly optimize its design. We observe that 7 out of the 26 bits in the block address are used to access the tag in the tag array. This means that all the blocks that can possibly be mapped to a given entry in the tag array will have their last 7 bits common. Hence, these 7 bits need not explicitly be saved as a part of the tag. We need to only save the remaining 19 bits of the block address that can vary across blocks. Thus, a tag in a direct mapped implementation of our cache needs to contain 19 bits only. ",
+        "page_idx": 523
+    },
+    {
+        "type": "image",
+        "img_path": "images/211018a4ee3ae49225386333b884781b6402d07b8fc74fa911e62ed54080f020.jpg",
+        "img_caption": [
+            "Figure 11.7: A direct mapped cache "
+        ],
+        "img_footnote": [],
+        "page_idx": 523
+    },
+    {
+        "type": "text",
+        "text": "Figure 11.7 describes this concept graphically. We divide a 32-bit address into three parts. The most significant 19 bits comprise the tag, the next 7 bits are referred to as the index (index in the tag array), and the remaining 6 bits point to the offset of the byte in the block. The rest of the access protocol is conceptually similar to that of a fully associative cache. In this case, we use the index to access the corresponding location in the tag array. We read the contents and compare it with the computed tag. If they are equal, then we declare a cache hit, otherwise, we declare a cache miss. Subsequently, in the case of a cache hit, we use the index to access the data array. In this case, we use the cache hit/miss result, to enable/disable the data array. ",
+        "page_idx": 523
+    },
+    {
+        "type": "text",
+        "text": "Way Point 10 ",
+        "text_level": 1,
+        "page_idx": 523
+    },
+    {
+        "type": "text",
+        "text": "Up till now we have taken a look at the fully associative and direct mapped caches. ",
+        "page_idx": 523
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The fully associative cache is a very flexible structure since a block can be saved in any entry in the cache. However, it has higher latency and power consumption. Since a given block can potentially be allocated in more entries of the cache, it has a higher hit rate than the direct mapped cache. ",
+        "page_idx": 523
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The direct mapped cache on the other hand is a faster and less power consuming structure. Here, a block can reside in only one entry in the cache. Thus, the expected hit rate of this cache is less than that of a fully associative cache. ",
+        "page_idx": 523
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "We thus observe that there is a tradeoff between power, latency, and hit rate between the fully associative and direct mapped caches. ",
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "Set Associative Cache ",
+        "text_level": 1,
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "A fully associative cache is more power consuming because we need to search for a block in all the entries of the cache. In comparison, a direct mapped cache is faster and power efficient because we need to check just one entry. However, it clearly has a lower hit rate, and that is not acceptable either. Hence, let us try to combine both the paradigms. ",
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "Let us design a cache in which a block can potentially reside in any one of a set of multiple entries in a cache. Let us associate a set of entries in the cache with a block address. Like a fully associative cache, we will have to check all the entries in the set before declaring a hit or a miss. This approach combines the advantages of both the fully associative and direct mapped schemes. If a set contains 4 or 8 entries, then we do not have to use an expensive CAM structure, nor, do we have to sequentially iterate through all the entries. We can simply read out all the entries of the set from the tag array in parallel and compare all of them with the tag part of the block address in parallel. If there is a match, then we can read the corresponding entry from the data array. Since multiple blocks can be associated with a set, we call this design a set associative cache. The number of blocks in a set is known as the associativity of the cache. Secondly, each entry in a set is known as a way. ",
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "Definition 103 ",
+        "text_level": 1,
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "Associativity The number of blocks contained in a set is defined as the associativity of the cache. ",
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "Way Each entry in a set is known as also known as a way. ",
+        "page_idx": 524
+    },
+    {
+        "type": "image",
+        "img_path": "images/3a14ed92e4b446f69b68bf25cdf8fb298e56e8e0b49039b7aa19a9c368e2ac05.jpg",
+        "img_caption": [
+            "Figure 11.8: Division of a block address into sets "
+        ],
+        "img_footnote": [],
+        "page_idx": 524
+    },
+    {
+        "type": "text",
+        "text": "Let us now describe a simple method to group cache entries into sets for our simple example, in which we considered a 32-bit memory system with an 8-KB cache and 64-byte blocks. As shown in Figure 11.8, we first remove the lowest 6 bits from the 32-bit address because these specify the address of a byte within a block. The remaining 26 bits specify the block address. Our 8-KB cache has a total of 128 entries. If we want to create sets containing 4 entries each, then we need to divide all the cache entries into sets of 4 entries. There will be $3 2 ( 2 ^ { 5 } )$ such sets. ",
+        "page_idx": 525
+    },
+    {
+        "type": "text",
+        "text": "In a direct mapped cache, we devoted the lowest 7 bits out of the 26 bit block address to specify the index of the entry in the cache. We can now split these 7 bits into two parts as shown in Figure 11.8. One part contains 5 bits and indicates the address of the set, and the second part containing 2 bits is ignored. The group of 5 bits indicating the address of the set is known as the set index. ",
+        "page_idx": 525
+    },
+    {
+        "type": "text",
+        "text": "After computing the set index, $i$ , we need to access all the elements belonging to the set in the tag array. We can arrange the tag array as follows. If the number of blocks in a set is $S$ , then we can group all the entries belonging to a set contiguously. For the $i ^ { t h }$ set, we need to access the elements $i S$ , $( i S + 1 ) \\dots ( i S + S - 1 )$ in the tag array. ",
+        "page_idx": 525
+    },
+    {
+        "type": "text",
+        "text": "For each entry in the tag array, we need to compare the tag saved in the entry to the tag part of the block address. If there is a match, then we can declare a hit. The notion of a tag in a set associative cache is rather tricky. As shown in Figure 11.8, it consists of the bits that are not a part of the index. In the case of our running example, it is the (21=26-5) MSB bits of the block address. The logic for deciding the number of tag bits is as follows. ",
+        "page_idx": 525
+    },
+    {
+        "type": "text",
+        "text": "Each set is specified by a 5-bit set index. These 5 bits are common to all the blocks that can be potentially mapped to the given set. We need to use the rest of the bits (26-5=21) to distinguish between the different blocks that are mapped to the same set. Thus, a tag in a set associative cache has a size between that of a direct mapped cache (19) and a fully associative cache (26). ",
+        "page_idx": 525
+    },
+    {
+        "type": "image",
+        "img_path": "images/adcd1df25246d4edb5e14192896916d999a6c4c590d941133fd876c10ee3e3f3.jpg",
+        "img_caption": [
+            "Figure 11.9: A set associative cache "
+        ],
+        "img_footnote": [],
+        "page_idx": 525
+    },
+    {
+        "type": "text",
+        "text": "Figure 11.9 shows the design of a set associative cache. We first compute the set index from the address of the block. For our running example, we use bits 7-11. Subsequently, we use the set index to generate the indices of its corresponding four entries in the tag array using the tag array index generator. Then, we access all the four entries in the tag array in parallel, and read their values. It is not necessary to use a CAM array here. We can use a single multiport (multiple input, output) SRAM array. Next, we compare each element with the tag, and generate an output (0 or 1). If any of the outputs is equal to 1 (determined by an OR gate), then we have a cache hit. Otherwise, we have a cache miss. We use an encoder to find the index of the tag in the set that matched. Since, we are assuming a 4-way associative cache, the output of the encoder is between 00 and 11. Subsequently, we use a multiplexer to choose the index of the matching entry in the tag array. This index, can now be used to access the data array. The corresponding entry in the data array contains the data for the block. We can either read it or write to it. ",
+        "page_idx": 525
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 526
+    },
+    {
+        "type": "text",
+        "text": "We can perform a small optimization here, for read operations. Note that in the case of a read operation, the access to the data array and tag array can proceed in parallel. If a set has 4 ways, then while we are computing a tag match, we can read the 4 data blocks corresponding to the 4 ways of the set. Subsequently, in the case of a cache hit, and after we have computed the matching entry in the tag array, we can choose the right data block using a multiplexer. In this case, we are effectively overlapping some or all of the time required to read the blocks from the data array with the tag computation, tag array access, and match operations. We leave the resulting circuit as an exercise to the reader. ",
+        "page_idx": 526
+    },
+    {
+        "type": "text",
+        "text": "To conclude, we note that the set associative cache is by far the most common design for caches. It has acceptable power consumption values and latencies for even very large caches. The associativity of a set associative cache is typically 2, 4 or 8. A set with an associativity of $K$ is also known as a $K - w a y$ associative cache. ",
+        "page_idx": 526
+    },
+    {
+        "type": "text",
+        "text": "Important Point 17 We need to answer a profound question while designing a set associative cache. What should be the relative ordering of the set index bits and the ignored bits? Should the ignored bits be towards the left (MSB) of the index bits, or towards the right (LSB) of the index bits? In Figure 11.8, we have chosen the former option. What is the logic behind this?   \nAnswer: If we have the ignored bits to the left(MSB) of the index bits, then contiguous blocks map to different sets. However, for the reverse case in which the ignored bits are to the right(LSB) of the index bits, contiguous blocks map to the same set. Let us call the former scheme NON-CONT, and the latter scheme CONT. We have chosen NON-CONT in our design.   \nLet us consider two arrays, A, and B. Let the sizes of A and $B$ be significantly smaller than the size of the cache. Moreover, let some of their constituent blocks map to the same group of sets. The figure below shows a conceptual map of the regions of the cache that store both the arrays for the CONT and NON-CONT schemes. We observe that even though, we have sufficient space in the cache, it is not possible to save both the arrays in the cache concurrently using the CONT scheme. Their memory footprints overlap in a region of the cache, and it is not possible to save data for both the programs simultaneously in the cache. However, the NON-CONT scheme tries to uniformly distribute the blocks across all the sets. Thus, it is possible to save both the arrays in the cache at the same time. ",
+        "page_idx": 526
+    },
+    {
+        "type": "image",
+        "img_path": "images/785b4a15d38f83d6dbfceaa22e1a3667532dd60a7ca36fc3133be2b7de012429.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 527
+    },
+    {
+        "type": "text",
+        "text": "This is a frequently occurring pattern in programs. The CONT scheme reserves an entire area of the cache, and thus it is not possible to accommodate other data structures that map to conflicting sets. However, if we distribute the data in the cache, then we can accommodate many more data structures and reduce conflicts. ",
+        "page_idx": 527
+    },
+    {
+        "type": "table",
+        "img_path": "images/ef4d41efde6d6e6ac1dfd1980e98b5a854bed15fd837d11253bdb9be84053623.jpg",
+        "table_caption": [
+            "Example 148 A cache has the following parameters in a 32-bit system. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Parameter</td><td>Value</td></tr><tr><td>Size Associativity Block Size</td><td>N K B</td></tr></table></body></html>\n\n",
+        "page_idx": 527
+    },
+    {
+        "type": "text",
+        "text": "What is the size of the tag? ",
+        "page_idx": 527
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 527
+    },
+    {
+        "type": "text",
+        "text": "The number of bits required to specify a byte within a block is $\\begin{array} { r } { l o g ( B ) } \\end{array}$ .   \n\u2022 The number of blocks is equal to $N / B$ , and the number of sets is equal to $N / ( B K )$ .   \n\u2022 Thus, the number of set index bits is equal to: $l o g ( N ) - l o g ( B ) - l o g ( K )$ .   \nThe remaining number of bits are tag bits. It is equal to: $3 2 - ( l o g ( N ) - l o g ( B ) -$ $l o g ( K ) + l o g ( B ) ) = 3 2 - l o g ( N ) + l o g ( K )$ . ",
+        "page_idx": 527
+    }
+]

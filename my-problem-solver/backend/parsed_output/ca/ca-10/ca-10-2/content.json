@@ -1,0 +1,13 @@
+[
+    {
+        "type": "text",
+        "text": "10.2 Design of a Simple Pipeline ",
+        "text_level": 1,
+        "page_idx": 416
+    },
+    {
+        "type": "text",
+        "text": "Let us now design a simple pipeline. Our main aim in this section is to split the data path of the single-cycle processor into five stages and ensure that five instructions can be processed concurrently (one instruction in each stage). We need to also ensure the seamless movement of instructions between the pipeline stages. Note that the problem of designing a pipeline in general is very complex, and we will explore some major nuances in the next few sections. For this section, let us not consider any dependencies between instructions, or consider any correctness issues. We shall look at these issues in detail in Section 10.4. Let us reiterate that at the moment, we want to design a simple pipeline that needs to have the capability to process five instructions simultaneously, and ensure that they move to the subsequent stage every new cycle. ",
+        "page_idx": 416
+    }
+]

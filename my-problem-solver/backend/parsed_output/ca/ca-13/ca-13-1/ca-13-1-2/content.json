@@ -1,0 +1,57 @@
+[
+    {
+        "type": "text",
+        "text": "13.1.2 Requirements of the I/O System ",
+        "text_level": 1,
+        "page_idx": 647
+    },
+    {
+        "type": "table",
+        "img_path": "images/e2e0f9c71a1db8bf32de720b5653a38041cf9a66cd0a2287167b7ec48daa4f6d.jpg",
+        "table_caption": [
+            "Table 13.1: List of I/O devices along with bandwidth requirements (as of 2012) "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Device</td><td>Bus Technology</td><td>Bandwidth</td><td>Typical Values</td></tr><tr><td>Video display via graphics card</td><td>PCI Express (version 4)</td><td>High</td><td>1-10 GB/s</td></tr><tr><td>Hard disks</td><td>ATA/SCSI/SAS</td><td>Medium</td><td>150-600 MB/s</td></tr><tr><td>Network card (wired/wireless)</td><td>PCI Express</td><td>Medium</td><td>10-100 MB/s</td></tr><tr><td>USB devices</td><td>USB</td><td>Medium</td><td>60-625 MB/s</td></tr><tr><td>DVD audio/video</td><td>PCI</td><td>Medium</td><td>1-4 MB/s</td></tr><tr><td>Speaker/Microphone</td><td>AC'97/Intel High. Def. Audio</td><td>Low</td><td>100 KB/s to 3 MB/s</td></tr><tr><td>Keyboard/Mouse</td><td>USB/PCI</td><td>Very Low</td><td>10-100 B/s</td></tr></table></body></html>\n\n",
+        "page_idx": 647
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to design the architecture of the I/O system. Let us start out by listing out all the devices that we want to support, and their bandwidth requirements in Table 13.1. The component that requires the maximum amount of bandwidth is the display device (monitor, projector, TV). It is attached to a graphics card. The graphics card contains the graphics processor that processes image and video data. ",
+        "page_idx": 647
+    },
+    {
+        "type": "image",
+        "img_path": "images/949b216cfd17df853993ef179d51fbdccb12d67e18fc56b3c4942946dabd6401.jpg",
+        "img_caption": [
+            "Figure 13.3: Photograph of a network card This article uses material from the Wikipedia article \u201cNetwork Interface Controller\u201d [nic, ], which is released under the Creative Commons Attribution-Share-Alike License 3.0 [ccl, ] "
+        ],
+        "img_footnote": [],
+        "page_idx": 647
+    },
+    {
+        "type": "text",
+        "text": "Note that we shall use the term card often in the discussion of I/O devices. A card is a printed circuit board(PCB), which can be attached to the $\\mathrm { I } / \\mathrm { O }$ system of a computer to implement a specific functionality. For example, a graphics card helps us process images and videos, a sound card helps us process high definition audio, and a network card helps us connect to the network. The picture of a network card is shown in Figure 13.3. We can see a set of chips interconnected on a printed circuit board. There are a set of ports that are used to connect external devices to the card. ",
+        "page_idx": 647
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 648
+    },
+    {
+        "type": "text",
+        "text": "Definition 141   \n$A$ card is a printed circuit board(PCB), which can be attached to the I/O system of a computer to implement a specific functionality. ",
+        "page_idx": 648
+    },
+    {
+        "type": "text",
+        "text": "Along with the graphics card, the other high bandwidth device that needs to be connected to the CPU is the main memory. The main memory bandwidth is of the order of $1 0 { - } 2 0 ~ \\mathrm { G B / s }$ . Hence, we need to design an I/O system that gives special treatment to the main memory and the graphics card. ",
+        "page_idx": 648
+    },
+    {
+        "type": "text",
+        "text": "The rest of the devices have a relatively lower bandwidth. The bandwidth requirement of the hard disk, USB devices, and the network card is limited to 500-600 MB/s. The keyboard, mouse, CD-DVD drives, and audio peripherals have an extremely minimal bandwidth requirement (< 3 4 MB/s). ",
+        "page_idx": 648
+    }
+]

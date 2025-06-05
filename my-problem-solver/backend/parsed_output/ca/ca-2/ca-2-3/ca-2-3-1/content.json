@@ -1,0 +1,34 @@
+[
+    {
+        "type": "text",
+        "text": "2.3.1 Sign-Magnitude-Based Representation ",
+        "text_level": 1,
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "We can reserve a bit for representing the sign of a number. If it is equal to 0, then the number is positive, else it is negative. This is known as the sign-magnitude representation. Let us consider an $n$ -bit integer. We can use the MSB as the designated signed bit, and use the rest of the number to represent the number\u2019s magnitude. The magnitude of a number is represented using $n - 1$ bits. This is a simple and intuitive representation. In this representation, the range of the magnitude of an $n$ -bit integer is from 0 till $2 ^ { n - 1 } - 1$ . Hence, the number system has a range equal to $\\pm ( 2 ^ { n - 1 } - 1 )$ . Note that there are two zeros \u2013 a positive zero $( 0 0 \\ldots 0 )$ and a negative zero $( 1 0 \\ldots 0 )$ . ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "Formally, the mapping function \u2013 $\\mathcal { F } ( u )$ \u2013 where $u$ is a number in the range of the number system, is shown in Equation 2.8. ",
+        "page_idx": 67
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathcal { F } ( u ) = S g n B i t ( u ) \\times 2 ^ { n - 1 } + \\mid u \\mid\n$$",
+        "text_format": "latex",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "For example, if we consider a 4-bit number system, then we can represent the number -2 as $1 0 1 0 _ { 2 }$ . Here, the MSB is 1 (represents a negative number), and the magnitude of the number is 010, which represents 2. ",
+        "page_idx": 67
+    },
+    {
+        "type": "text",
+        "text": "The issues with this system are that it is difficult to perform arithmetic operations such as addition, subtraction, and multiplication. For example in our 4-bit number system, - $2 + 2$ , can be represented as $1 0 1 0 + 0 0 1 0$ . If we naively do simple unsigned addition, then the result is 1100, which is actually -6. This is the wrong result. We need to use a more difficult approach to add numbers. ",
+        "page_idx": 67
+    }
+]

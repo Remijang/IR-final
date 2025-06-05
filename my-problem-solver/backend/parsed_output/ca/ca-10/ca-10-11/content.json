@@ -1,0 +1,29 @@
+[
+    {
+        "type": "text",
+        "text": "10.11 Advanced Techniques\\* ",
+        "text_level": 1,
+        "page_idx": 487
+    },
+    {
+        "type": "text",
+        "text": "Way Point 8 ",
+        "text_level": 1,
+        "page_idx": 487
+    },
+    {
+        "type": "text",
+        "text": "We designed a complete single cycle processor for the SimpleRisc instruction set in Section 9.1. This processor had a hardwired control unit.   \n\u2022 We designed a more flexible variant of our SimpleRisc processor using a microprogrammed control unit. This required a bus-based data path along with a new set of microinstructions, and microassembly-based code snippets for each program instruction.   \nWe observed that pipelining could significantly enhance the speed of our processors. However, a pipelined processor suffers from hazards that can be significantly eliminated by a combination of software techniques, pipeline interlocks, and forwarding. ",
+        "page_idx": 487
+    },
+    {
+        "type": "text",
+        "text": "In this section, we shall take a brief look at advanced techniques for implementing processors. Note that this section is by no means self contained, and its primary purpose is to give the reader pointers for additional study. We shall cover a few of the broad paradigms for substantially increasing performance. These techniques are adopted by state-of-the-art processors. ",
+        "page_idx": 487
+    },
+    {
+        "type": "text",
+        "text": "Modern processors typically execute multiple instructions in the same cycle using very deep pipelines (12-20 stages), and employ advanced techniques to eliminate hazards in the pipeline. Let us look at some common approaches. ",
+        "page_idx": 487
+    }
+]

@@ -1,0 +1,57 @@
+10.3 Convergence Tests: All Series
+
+This section finally allows the numbers  to be negative. The geometric series  is certainly allowed. So is the series  . If we change all signs to  , the geo |met|ric series would still converge (to the larger sum 2). This is the first test, to bring b|ac|k a positive series by taking the absolute value  of every term.
+
+DEFINITION The series  is “absolutely convergent” if  is convergent.
+
+Changing a negative number from  |to  increases the sum. Main point: The smaller series  is sure to converge if  converges.
+
+10G If  converges then  converges (absolutely). But  might converge, as in the series for  , even if  diverges to infinity.
+
+EXAMPLE 1 Start with the positive series  . Change any signs to minus. Then the new series converges (absolutely). The right choice of signs will make it converge to any number between  and 1.
+
+EXA|MP|LE82 Start with the alternating series  which converges to ln 2.|Ch|ange to plus signs. The new series  diverges to infinity. The origin|al a|lternating series was not absolutely con |verg|ent. It was only “conditio n|all|y convergent.” A series can converge (conditionally) by a careful choice of signs—even if  .
+
+ converges then  converges. Here is a quick proof. The numbers  are either zero (if  is negative) or  . By comparison with  , which converges,  must converge. Now subtract the convergent series  . The difference  also converges, completing the proof. All tests for positive series (integral, ratio, comparison, : : :) apply immediatelyto absolute convergence, because we switch to  .
+
+EXAMPLE 3 Start with the geometric series  which converges to  . Change any of those signs to minus. Then the new series must converge (absolutely). But the sign changes cannot achieve all sums between  and  . This time the sums belong to the famous (and very thin) Cantor set of Section 3.7.
+
+EXAMPLE 4 (looking ahead) Suppose  converges for a particular number  . The|n for e |ve ry  nearer to zero, it converges absolutely. This will be proved and used in Section 10:6 on power series, where it is the most important step in the theory.
+
+EXAMPLE 5 Since  converges, so does  . That second series has irregular signs, but it converges absolutely by comparison with the first series (since  . Probably  does not converge, because the tangent does not stay bounded like the cosine.
+
+ALTERNATING SERIES
+
+The series  converges to ln 2. That was stated without proof. This is an example of an alternating series, in which the signs alternate between plus and minus. There is the additional property that the absolute values  ; : : : decrease to zero. Those two facts—decrease to z¤ero with altÑernating signs—guarantee convergence.
+
+10H An alternating series  converges (at least conditionally, maybe not absolutely) if every  and  .
+
+The best proof is in Figure 10.3. Look at  . It is below  , because  (with plus sign) is smaller than  (with minus sign). The sum of five terms is less than the
+
+sum of three terms, because  is smaller than  . These partial sums  with an odd number of terms are decreasing.
+
+Now look at two terms  , then four terms, then six terms. Adding on  increases the sum (because  ). Similarly  is greater than  (because it includes  which is positive). So the sums  are increasing.
+
+The difference between  and  is the single number  . It is required by 10H to approach zero. Therefore the decreasing sequence  ; : : : approaches the same limit  as the increasing sequence  ; : : :: Theseries converges to  , which always lies between  and  .
+
+This plus-minus pattern is special but important. The positive series  may not converge. The alternating series is  .
+
+EXAMPLE 6 The alternating series  is conditionally convergent (to  ). The absolute values decrease to zero. Is this series absolutely convergent ? No. With plus signs,  diverges like the harmonic series.
+
+EXAMPLE 7 The alternating series  is not convergent at all. Which requirement in 10H is not met ? The partial sums  all equal 1 and  all equal 0—but they don’t approach the saÑme limit  .
+
+MULTIPLYING AND REARRANGING SERIES
+
+In Section 10:1 we added and subtracted and multiplied series. Certainly addition and subtraction are safe. If one series has partial sums  and the other has partial sums  , then addition gives partial sums  . But multiplication is more dangerous, because the order of the multiplication can make a difference. More exactly, the order of terms is important when the series are conditionally convergent. For absolutely convergent series, the order makes no difference. We can rearrange their terms and multiply them in any order, and the sum and product comes out right:
+
+10I Suppose  converges absolutely. If  is any reordering of the  ’s, then  . In the new order  also converges absolutely. 10J Suppose  and  converges absolutely. Then the infinitely many terms  in their product add (in any order) to  .
+
+Rather than proving 10I and 10J, we show what happens when there is only conditional convergence. Our favorite is  , converging conditionally to  . By rearranging, it will converge conditionally to anything! Suppose the desired sum is 1000. Take positive terms  until they pass 1000. Then add negative terms 21 41 until the subtotal drops below 1000. Then new positive terms bring it above 1000, and so on. All terms are eventually used, since at least one new term is needed at each step. The limit is  .
+
+We also get strange products, when series fail to converge absolutely:
+
+On the left the series converge (conditionally). The alternating terms go to zero. On the right the series diverges. Its terms in parentheses don’t even approach zero, and the product is completely wrong.
+
+I close by emphasizing that it is absolute convergence that matters. The most important series are power series  . Like the geometric series (with all  1) there is absolute convergence over an interval of  ’s. They give functions of  , which is what calculus needs and wants.
+
+We go next to the series for  , which is absolutely convergent everywhere. From the viewpoint of convergence tests it is too easy—the danger is gone. But from the viewpoint of calculus and its applications,  is unconditionally the best.

@@ -1,0 +1,259 @@
+[
+    {
+        "type": "text",
+        "text": "8.7.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "For more details on the different algorithms for computer arithmetic, the reader can refer to classic texts such as the books by Israel Koren [Koren, 2001], Behrooz Parhami [Parhami, 2009], and Brent and Zimmermann [Brent and Zimmermann, 2010]. We have not covered the SRT division algorithm. It is used in a lot of modern processors. The reader can find good descriptions of this algorithm in the references. The reader is also advised to look at algorithms for multiplying large integers. The Karatsuba and Sc\u00a8onhage-Strassen algorithms are the most popular algorithms in this area. The area of approximate adders is gaining in prominence. These adders add two numbers by assuming certain properties such as a bound on the maximum number of positions a carry propagates. It is possible that they can occasionally make a mistake. Hence, they have additional circuitry to detect and correct errors. With high probability such adders can operate in $O ( l o g ( l o g ( n ) )$ time. Verma et al. [Verma et al., 2008] describe one such scheme. ",
+        "page_idx": 356
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Addition ",
+        "text_level": 1,
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Design a circuit to find the 1\u2019s complement of a number using half adders only. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Ex. 2 \u2014 Design a circuit to find the 2\u2019s complement of a number using half adders and logic gates. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Ex. 3 \u2014 Assume that the latency of a full adder is 2ns, and that of a half adder is 1ns. What is the latency of a 32-bit ripple carry adder? ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 4 \u2014 Design a carry-select adder to add two n-bit numbers in $O ( { \\sqrt { n } } )$ time, where the sizes of the blocks are $1 , 2 , . . . , m$ , respectively. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Ex. 5 \u2014 Explain the operation of a carry lookahead adder. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 6 \u2014 Suppose there is an architecture which supports numbers in base 3 instead of base 2. Design a Carry Lookahead Adder for this system. Assume that you have a simple full-adder which adds numbers in base 3. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 7 \u2014 Most of the time, a carry does not propagate till the end. In such cases, the correct output is available much before the worst case delay. Modify a ripple carry adder to consider such cases and set an output line to high as soon as the correct output is available. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 8 \u2014 Design a fast adder, which uses only the propagate function, and simple logic operations. It should NOT use the generate function. What is its time and space complexity? ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Ex. 9 \u2014 Design a hardware structure to compute the sum of $m$ , $n$ bit numbers. Make it run as fast as possible. Show the design of the structure. Compute a tight bound on its asymptotic time complexity. [NOTE: Computing the time complexity is not as simple as it seems]. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 10 \u2014 You are given a probabilistic adder, which adds two numbers and yields the output ensuring that each bit is correct with probability, $a$ . In other words, a bit in the output may be wrong with probability, $( 1 - a )$ , and this event is independent of other bits being incorrect. How will you add two numbers using probabilistic adders ensuring that each output bit is correct with at least a probability of $b$ , where $b > a$ ? ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "\\*\\*\\* Ex. 11 \u2014 How frequently does the carry propagate to the end for most numbers? Answer: Very infrequently. In most cases, the carry does not propagate beyond a couple of bits. Let us design an approximately correct adder. The insight is that a carry does not propagate by more than $k$ positions most of the time. Formally, we have: ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Assumption 1: While adding two numbers, the largest length of a chain of propagates is at most $k$ . ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Design an optimal adder in this case that has time complexity $O ( l o g k )$ assuming that Assumption 1 holds all the time. Now design a circuit to check if assumption 1 has ever been violated. ",
+        "page_idx": 357
+    },
+    {
+        "type": "text",
+        "text": "Verma et al. [Verma et al., 2008] proved that $k$ is equal to $O ( l o g ( n ) )$ with very high probability. You will observe that we have an exactly correct adder, which requires $O ( l o g ( l o g ( n ) ) )$ time steps (most of the time) !!! ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "\\*\\*\\* Ex. 12 \u2014 Let us consider two n-bit binary numbers, $A$ , and $B$ . Further, assume that the probability of a bit being equal to $1$ is $p$ in $A$ , and $q$ in $B$ . Let us consider $( A + B )$ as one large chunk(block).   \n(a) What are the expected values of generate and propagate functions of this block as $n$ tends to $\\infty$ ?   \n(b) If $\\textstyle p = q = { \\frac { 1 } { 2 } }$ , what are the values of these functions?   \n(c) What can we infer from the answer to part (b) regarding the fundamental limits of binary addition? ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Multiplication ",
+        "text_level": 1,
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Ex. 13 \u2014 Write a program in assembly language (any variant) to multiply two unsigned 32-bit numbers given in registers $r 0$ and $r 1$ and store the product in registers $r 2$ (LSB) and r3 (MSB). Instead of using the multiply instruction, simulate the algorithm of the iterative multiplier. ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Ex. 14 \u2014 Extend the solution to Exercise 13 for 32-bit signed integers. ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 15 \u2014 Normally, in the Booth\u2019s algorithm, we consider the current bit, and the previous bit. Based on these two values, we decide whether we need to add or subtract a shifted version of the multiplicand. This is known as the radix-2 Booth\u2019s algorithm, because we are considering two bits at one time. There is a variation of Booth\u2019s algorithm, called radix-4 Booth\u2019s algorithm in which we consider 3 bits at a time. Is this algorithm faster than the original radix-2 Booth\u2019s algorithm? How will you implement this algorithm ? ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 16 \u2014 Assume that in the sizes of the $U$ and $V$ registers are 32 bits in a 32-bit Booth multiplier. Is it possible to have an overflow? Answer the question with an example. [HINT: Can we have an overflow in the first iteration itself?] ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 17 \u2014 Prove the correctness of the Booth multiplier in your own words. ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Ex. 18 \u2014 Explain the design of the Wallace tree multiplier. What is its asymptotic time complexity? ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "\\*\\* Ex. 19 \u2014 Design a Wallace tree multiplier to multiply two signed 32-bit numbers, and save the result in a 32-bit register. How do we detect overflows in this case? ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Division ",
+        "text_level": 1,
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "Ex. 20 \u2014 Implementation of division using an assembly program. i) Write an assembly program for restoring division. ",
+        "page_idx": 358
+    },
+    {
+        "type": "text",
+        "text": "ii) Write an assembly program for non-restoring division. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 21 \u2014 Design an $O ( l o g ( n ) ^ { k } )$ time algorithm to find out if a number is divisible by 3.   \nTry to minimize $k$ . \\* Ex. 22 \u2014 Design an $O ( l o g ( n ) ^ { k } )$ time algorithm to find out if a number is divisible by 5.   \nTry to minimize $k$ . ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 23 \u2014 Design a fast algorithm to compute the remainder of the division of an unsigned number by a number of the form $( 2 ^ { m } + 1 )$ . What is its asymptotic time complexity? ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 24 \u2014 Design a fast algorithm to compute the remainder of the division of an unsigned number by a number of the form $( 2 ^ { m } - 1 )$ . What is its asymptotic time complexity? ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "$^ { * * }$ Ex. 25 \u2014 Design an $O ( l o g ( u v ) ^ { 2 } )$ algorithm to find the greatest common divisor of two binary numbers $u$ and $v$ . [HINT: The gcd of two even numbers $u$ and $v$ is $2 * g c d ( u / 2 , v / 2 ) ]$ ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Floating Point Arithmetic ",
+        "text_level": 1,
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 26 \u2014 Give the simplest possible algorithm to compare two 32-bit IEEE 754 floating point numbers. Do not consider $\\pm \\infty$ , NAN, and (negative 0). Prove that your algorithm is correct. What is its time complexity ? ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 27 \u2014 Design a circuit to compute $\\lceil l o g _ { 2 } ( n ) \\rceil$ . What is its asymptotic time complexity? Assume $n$ is an integer. How can we use this circuit to convert $n$ to a floating point number? ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 28 \u2014 $A$ and $B$ , are saved in the computer as $A ^ { \\prime }$ and $B ^ { \\prime }$ . Neglecting any further truncation or roundoff errors, show that the relative error of the product is approximately the sum of the relative errors of the factors. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 29 \u2014 Explain floating point addition with a flowchart. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 30 \u2014 Explain floating point multiplication with a flowchart. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 31 \u2014 Can we use regular floating point division for dividing integers also? If not, then how can we modify the algorithm for performing integer division? ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "Ex. 32 \u2014 Describe in detail how the \u201cround to nearest\u201d rounding mode is implemented. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "\\*\\*\\* Ex. 33 \u2014 We wish to compute the square root of a floating point number in hardware using the Newton-Raphson method. Outline the details of an algorithm, prove it, and compute its computational complexity. Follow the following sequence of steps. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "1.Find an appropriate objective function.   \n2.Find the equation of the tangent, and the point at which it intersects the x-axis.   \n3.Find an error function.   \n4.Calculate an appropriate initial guess for $x$ .   \n5.Prove that the magnitude of the error is less than 1.   \n6.Prove that the error decreases at least by a constant factor per iteration.   \n7.Evaluate the asymptotic complexity of the algorithm. ",
+        "page_idx": 359
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Ex. 34 \u2014 Implement an adder and a multiplier in a hardware description language such as VHDL or Verilog. ",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Ex. 35 \u2014 Extend your design for implementing floating point addition and multiplication. ",
+        "page_idx": 360
+    },
+    {
+        "type": "text",
+        "text": "Ex. 36 \u2014 Read about the SRT division algorithm, comment on its computational complexity, and try to implement it in VHDL/Verilog. ",
+        "page_idx": 360
+    }
+]

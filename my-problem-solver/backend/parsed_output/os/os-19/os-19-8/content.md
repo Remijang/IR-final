@@ -1,0 +1,12 @@
+# 19.8 Summary  
+
+We have seen how hardware can help us make address translation faster. By providing a small, dedicated on-chip TLB as an address-translation cache, most memory references will hopefully be handled without having to access the page table in main memory. Thus, in the common case,  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+the performance of the program will be almost as if memory isn’t being virtualized at all, an excellent achievement for an operating system, and certainly essential to the use of paging in modern systems.  
+
+However, TLBs do not make the world rosy for every program that exists. In particular, if the number of pages a program accesses in a short period of time exceeds the number of pages that fit into the TLB, the program will generate a large number of TLB misses, and thus run quite a bit more slowly. We refer to this phenomenon as exceeding the TLB coverage, and it can be quite a problem for certain programs. One solution, as we’ll discuss in the next chapter, is to include support for larger page sizes; by mapping key data structures into regions of the program’s address space that are mapped by larger pages, the effective coverage of the TLB can be increased. Support for large pages is often exploited by programs such as a database management system (a DBMS), which have certain data structures that are both large and randomly-accessed.  
+
+One other TLB issue worth mentioning: TLB access can easily become a bottleneck in the CPU pipeline, in particular with what is called a physically-indexed cache. With such a cache, address translation has to take place before the cache is accessed, which can slow things down quite a bit. Because of this potential problem, people have looked into all sorts of clever ways to access caches with virtual addresses, thus avoiding the expensive step of translation in the case of a cache hit. Such a virtuallyindexed cache solves some performance problems, but introduces new issues into hardware design as well. See Wiggins’s fine survey for more details [W03].  
+

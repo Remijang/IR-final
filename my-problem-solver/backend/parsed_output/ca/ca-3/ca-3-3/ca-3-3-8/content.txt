@@ -1,0 +1,7 @@
+3.3.8 Unconditional Branch Instructions
+
+SimpleRisc has one unconditional branch instruction,  , which makes the program counter jump to the address corresponding to a label in the code. It takes a single operand, which is a label in the program. Its semantics is shown in Table 3.7.
+
+Let us explain its operation with the help of a simple example, as shown below.
+
+In this example, we add the values of  , and  , and then save the result in  . After that, the processor jumps to the code pointed to by the label, .  . It proceeds to execute the code after the label, .f oo. It starts out by executing the instruction add  . It then proceeds to execute subsequent instructions.

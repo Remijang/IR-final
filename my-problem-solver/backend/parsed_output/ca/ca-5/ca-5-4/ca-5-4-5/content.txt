@@ -1,0 +1,3 @@
+5.4.5 Stack Cleanup Instructions
+
+Table 5.27 shows two instructions for cleaning up the FP stack. The  instruction sets the status of the register specified as an operand to empty. Using f f ree to free all the registers is a quick solution. For freeing the entire stack we need to invoke the ffree instruction iteratively. For deleting the entire FP stack, a cleaner solution is to use the f init instruction that does not take any arguments. It resets the FP unit, frees all the registers, and resets the stack pointer. The finit instruction ensures that an unrelated function can start from a clean state.

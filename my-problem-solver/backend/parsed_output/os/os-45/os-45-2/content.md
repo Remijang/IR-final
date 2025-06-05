@@ -1,0 +1,12 @@
+# 45.2 Handling Latent Sector Errors  
+
+Given these two new modes of partial disk failure, we should now try to see what we can do about them. Let’s first tackle the easier of the two, namely latent sector errors.  
+
+CRUX: HOW TO HANDLE LATENT SECTOR ERRORS How should a storage system handle latent sector errors? How much extra machinery is needed to handle this form of partial failure?  
+
+As it turns out, latent sector errors are rather straightforward to handle, as they are (by definition) easily detected. When a storage system tries to access a block, and the disk returns an error, the storage system should simply use whatever redundancy mechanism it has to return the correct data. In a mirrored RAID, for example, the system should access the alternate copy; in a RAID-4 or RAID-5 system based on parity, the system should reconstruct the block from the other blocks in the parity group. Thus, easily detected problems such as LSEs are readily recovered through standard redundancy mechanisms.  
+
+The growing prevalence of LSEs has influenced RAID designs over the years. One particularly interesting problem arises in RAID-4/5 systems when both full-disk faults and LSEs occur in tandem. Specifically, when an entire disk fails, the RAID tries to reconstruct the disk (say, onto a hot spare) by reading through all of the other disks in the parity group and recomputing the missing values. If, during reconstruction, an LSE is encountered on any one of the other disks, we have a problem: the reconstruction cannot successfully complete.  
+
+To combat this issue, some systems add an extra degree of redundancy. For example, NetApp’s RAID-DP has the equivalent of two parity disks instead of one $[ { \mathsf { C } } { + } 0 4 ]$ . When an LSE is discovered during reconstruction, the extra parity helps to reconstruct the missing block. As always, there is a cost, in that maintaining two parity blocks for each stripe is more costly; however, the log-structured nature of the NetApp WAFL file system mitigates that cost in many cases [HLM94]. The remaining cost is space, in the form of an extra disk for the second parity block.  
+

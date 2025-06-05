@@ -1,0 +1,56 @@
+# 26.2 An Example: Thread Creation  
+
+Let’s get into some of the details. Say we wanted to run a program that creates two threads, each of which does some independent work, in this case printing $^ { \prime \prime } \mathrm { A } ^ { \prime \prime }$ or $\prime \prime \mathrm { B ^ { \prime \prime } }$ . The code is shown in Figure 26.2 (page 4).  
+
+The main program creates two threads, each of which will run the function mythread(), though with different arguments (the string A or B). Once a thread is created, it may start running right away (depending on the whims of the scheduler); alternately, it may be put in a “ready” but not “running” state and thus not run yet. Of course, on a multiprocessor, the threads could even be running at the same time, but let’s not worry about this possibility quite yet.  
+
+1 #include <stdio.h>   
+2 #include <assert.h>   
+3 #include <pthread.h>   
+4 #include "common.h"   
+5 #include "common_threads.h"   
+6   
+7 void \*mythread(void \*arg) {   
+8 printf("%s\n", (char $\star$ ) arg);   
+9 return NULL;   
+10 }   
+11   
+12 int   
+13 main(int argc, char \*argv[]) {   
+14 pthread_t p1, p2;   
+15 int rc;   
+16 printf("main: begin\n");   
+17 Pthread_create(&p1, NULL, mythread, "A");   
+18 Pthread_create(&p2, NULL, mythread, "B");   
+19 // join waits for the threads to finish   
+20 Pthread_join(p1, NULL);   
+21 Pthread_join(p2, NULL);   
+22 printf("main: end\n");   
+23 return 0;   
+24 }  
+
+After creating the two threads (let’s call them T1 and T2), the main thread calls pthread join(), which waits for a particular thread to complete. It does so twice, thus ensuring T1 and T2 will run and complete before finally allowing the main thread to run again; when it does, it will print “main: end” and exit. Overall, three threads were employed during this run: the main thread, T1, and T2.  
+
+Let us examine the possible execution ordering of this little program. In the execution diagram (Figure 26.3, page 5), time increases in the downwards direction, and each column shows when a different thread (the main one, or Thread 1, or Thread 2) is running.  
+
+Note, however, that this ordering is not the only possible ordering. In fact, given a sequence of instructions, there are quite a few, depending on which thread the scheduler decides to run at a given point. For example, once a thread is created, it may run immediately, which would lead to the execution shown in Figure 26.4 (page 5).  
+
+We also could even see $\prime \prime _ { \mathrm { { B ^ { \prime \prime } } } }$ printed before $^ { \prime \prime } { \mathrm { A } } ^ { \prime \prime } .$ , if, say, the scheduler decided to run Thread 2 first even though Thread 1 was created earlier; there is no reason to assume that a thread that is created first will run first. Figure 26.5 (page 6) shows this final execution ordering, with Thread 2 getting to strut its stuff before Thread 1.  
+
+As you might be able to see, one way to think about thread creation  
+
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+![](images/9584d19189bcb0667ecc844ff0e6fe284723af08fc9deca105deb760af641123.jpg)  
+Figure 26.3: Thread Trace (1)  
+
+![](images/c67a22622e7f2b28dc5cd8bcbc13919cbba9665a338797010d5774bded0b870b.jpg)  
+Figure 26.4: Thread Trace (2)  
+
+is that it is a bit like making a function call; however, instead of first executing the function and then returning to the caller, the system instead creates a new thread of execution for the routine that is being called, and it runs independently of the caller, perhaps before returning from the create, but perhaps much later. What runs next is determined by the OS scheduler, and although the scheduler likely implements some sensible algorithm, it is hard to know what will run at any given moment in time.  
+
+As you also might be able to tell from this example, threads make life complicated: it is already hard to tell what will run when! Computers are hard enough to understand without concurrency. Unfortunately, with concurrency, it simply gets worse. Much worse.  
+
+![](images/b7c8d27245249b8e135a0175ca851a4cef5c6435f28b6a8fb1f75498a9ca0fe5.jpg)  
+Figure 26.5: Thread Trace (3)  
+

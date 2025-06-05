@@ -1,0 +1,111 @@
+7.1 Integration by Parts
+
+There are two major ways to manipulate integrals (with the hope of making them easier). Substitutions are based on the chain rule, and more are ahead. Here we present the other method, based on the product rule. The reverse of the product rule, to find integrals not derivatives, is integration by parts.
+
+We have mentioned  and  . Now is the right time to compute them (plus more examples). You will see how  is exchanged for  a definite improvement. Also  is exchanged for  . The difference between the harder integral and the easier integral is a known term—that is the point.
+
+One note before starting: Integration by parts is not just a trick with no meaning. On the contrary, it expresses basic physical laws of equilibrium and force balance. It is a foundation for the theory of differential equations (and even delta functions). The final paragraphs, which are completely optional, illustrate those points too.
+
+We begin with the product rule for the derivative of  times  :
+
+Integrate both sides. On the right, integration brings back  . On the left are two integrals, and one of them moves to the other side (with a minus sign):
+
+That is the key to this section—not too impressive at first, but very powerful. It is integration by parts (  and  are the parts). In practice we write it without  ’s:
+
+7A The integration by parts formula is 
+
+The problem of integrating  is changed into the problem of integrating  . There is a minus sign to remember, and there is the “integrated term”  . In the definite integral, that product  is evaluated at the endpoints  and  :
+
+The key is in choosing  and  .The goal of that choice is to make  easier than  . This is best seen by examples.
+
+EXAMPLE 1 For  choose  and  (so  ):
+
+I used the basic formula (3). Instead of working with  (searching for an antiderivative), we now work with the right hand side. There  times  is 1. The integral of 1 is  . Including the minus sign and theintegrated term  ln  and the constant  , the answer is
+
+For safety, take the derivative. The product rule gives ln  , which is ln  . The area under  from 2 to 3 is  .
+
+To repeat: We exchanged the integral of ln  for the integral of 1.
+
+EXAMPLE 2 For r  choose  and  (so  ):
+
+Again the right side has a simple integral, which completes the solution:
+
+Note The new integral is not always simpler. We could have chosen  and  . Then  . Integration using those parts give the true but useless result
+
+The last integral is harder instead of easier  is worse than  ). In the forward direction this is no help. But in the opposite direction it simplifies  . The idea in choosing  and  is this: Try to give u a nice derivative and  a nice integral.
+
+EXAMPLE 3 For  choose  and  (s  ):
+
+The integral of  is no better and no worse than the integral of  . But we never see  without thinking of  . So substitute for  :
+
+The last integral on the right joins its twin on the left, and  :
+
+Dividing by 2 gives the answer, which is definitely not  . Add any  :
+
+Question Integrate  from 0 to  . Why should the area be  ?
+
+Answer The definite integral is  .This does give  . That area can also be found by common sense, starting from  . The area under 1 is  . The areas under  and  are the same. So each one is  .
+
+EXAMPLE 4 Ev»aluate  by choosing  and  :
+
+The last integral has  below and almost has  above:
+
+Substituting back into (9) gives  as  . All the familiar inverse functions can be integrated by parts (take  , and add “  at the end).
+
+Our final example shows how two integrations by parts may be needed, when the first one only simplifies the problem half way.
+
+EXAMPLE 5 For  choose  and  (  ):
+
+The last integral involves  . This is better than  , but it still needs work:
+
+Finally  is alone. After two integrations by parts, we reach  . In equation (11), the integral of  is  . Substituting back into (10),
+
+These five examples are in the list of prime candidates for integration by parts:
+
+This concludes the presentation of the method—brief and straightforward. Figure 7.1a shows how the areas  and  fill out the difference between the big area  and the smaller area  .
+
+In the movie Stand and Deliver, the Los Angeles teacher Jaime Escalante computed  with two integrations by parts. His success was through exercises—plus insight in choosing  and  . (Notice the difference from  That falls the other way—to a substitution.) The class did extremely well on the Advanced Placement Exam. If you saw the movie, you remember that the examiner didn’t believe it was possible. I spoke to him long after, and he confirms that practice was the key.
+
+THE DELTA FUNCTION
+
+From the most familiar functions we move to the least familiar. The delta function is the derivative of a step function. The step function  jumps from 0 to 1 at  . We write  , recognizing as we do it that there is no genuine derivative at the jump. The delta function is the limit of higher and higher spikes— from the “burst of speed” in Section 1.2. They approach an infinite spike concentrated at a single point (where  jumps). This “non-function” may be unconventional—it is certainly optional»—but it is import»ant enough to come back to.
+
+The slope  is zero except at  , where the step function jumps. Thus  except at that one point, where the delta function has a “spike.” We cannot give a value for  at  , but  know its integral across the jump. On every interval from  to  , the integral of  brings back  :
+
+“The area under the infinitely tall and infinitely thin spike  equals 1.”
+
+7.1 Integration by Parts
+
+So far so good. The integral of  is  . We now integrate by parts for a crucial purpose—to find the area under  . This is an ordinary function times the delta function. In some sense  times  equals  times  —because away from  the product is always zero. Thus  equals  , and sin  .
+
+The area under  is  —which integration by parts will prove:
+
+7B The integral of  times  is 
+
+The area is  because the spike is multiplied by  —the value of the smooth function  at the spike. But multiplying infinity is dangerous, to say the least. (Two times infi»nity is infinity). We cannot deal direc»tly with the delta function.  is only known by its integrals! As long as the applications produce integrals (as they do), we can avoid the fact that  is not a true function.
+
+The integral of  is computed “by parts:”
+
+Remember that  or  . The right side of (14) is our area  :
+
+When  , this answer matches  . We give three examples:
+
+A nightmare question occurs to me. What is the derivative of the delta function ?
+
+INTEGRATION BY PARTS IN ENGINEERING
+
+Physics and engineering and economics frequently involve products. Work is force times distance. Power is voltage times current. Income is price times quantity. When there are several forces orcurrents or sales, we add the products. When there are infinitely many, we integrate (probably by parts).
+
+I start with differential equations for the displacement  at point  in a bar:
+
+This describes a hanging bar pulled down by a force  . Each point  moves through a distance  . The top of the bar is fixed, so  . The stretching in the bar is  . The internal force created by stretching is  . (This is Hooke’s law.) Equation (16) is a balance of forces on the small piece of the bar in Figure 7.2.
+
+EXAMPLE 6 Suppose  , a constant force per unit length. We can solve (16):
+
+Th»e constants  and  a»re settled at the endpoints (as usual f»or integrals). At  we are given  so  . At  we are given  so  . Then  and  give force and displacement in the bar.
+
+To see integration by parts, multiply  by  and integrate:
+
+The left side is force times displacement, or external work. The last term is internal force times stretching—or internal work. The integrated term has  —the fixed support does no work. It also has  , the work by the hanging weight. The balance of forces has been replaced by a balance of work.
+
+This is a touch of engineering mathematics, and here is the main point. Integration by parts makes physical sense! When  is multiplied by other functions— called test functions or virtual displacements—then equation (18) becomes the principle of virtual work. It is absolutely basic to mechanics.

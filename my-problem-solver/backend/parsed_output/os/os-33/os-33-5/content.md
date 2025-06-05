@@ -1,0 +1,10 @@
+# 33.5 A Problem: Blocking System Calls  
+
+Thus far, event-based programming sounds great, right? You program a simple loop, and handle events as they arise. You don’t even need to think about locking! But there is an issue: what if an event requires that you issue a system call that might block?  
+
+For example, imagine a request comes from a client into a server to read a file from disk and return its contents to the requesting client (much like a simple HTTP request). To service such a request, some event handler will eventually have to issue an open() system call to open the file, followed by a series of read() calls to read the file. When the file is read into memory, the server will likely start sending the results to the client.  
+
+Both the open() and read() calls may issue I/O requests to the storage system (when the needed metadata or data is not in memory already), and thus may take a long time to service. With a thread-based server, this is no issue: while the thread issuing the I/O request suspends (waiting for the $\mathrm { I } / \mathrm { O }$ to complete), other threads can run, thus enabling the server to make progress. Indeed, this natural overlap of I/O and other computation is what makes thread-based programming quite natural and straightforward.  
+
+With an event-based approach, however, there are no other threads to run: just the main event loop. And this implies that if an event handler issues a call that blocks, the entire server will do just that: block until the call completes. When the event loop blocks, the system sits idle, and thus is a huge potential waste of resources. We thus have a rule that must be obeyed in event-based systems: no blocking calls are allowed.  
+

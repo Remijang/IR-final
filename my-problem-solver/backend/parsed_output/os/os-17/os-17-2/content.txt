@@ -1,0 +1,69 @@
+17.2 Low-level Mechanisms
+Before delving into some policy details, we’ll first cover some common mechanisms used in most allocators. First, we’ll discuss the basics of splitting and coalescing, common techniques in most any allocator. Second, we’ll show how one can track the size of allocated regions quickly and with relative ease. Finally, we’ll discuss how to build a simple list inside the free space to keep track of what is free and what isn’t.  
+Splitting and Coalescing
+A free list contains a set of elements that describe the free space still remaining in the heap. Thus, assume the following 30-byte heap:  
+ 
+The free list for this heap would have two elements on it. One entry describes the first 10-byte free segment (bytes 0-9), and one entry describes the other free segment (bytes 20-29):  
+ 
+As described above, a request for anything greater than 10 bytes will fail (returning NULL); there just isn’t a single contiguous chunk of memory of that size available. A request for exactly that size (10 bytes) could be satisfied easily by either of the free chunks. But what happens if the request is for something smaller than 10 bytes?  
+Assume we have a request for just a single byte of memory. In this case, the allocator will perform an action known as splitting: it will find a free chunk of memory that can satisfy the request and split it into two. The first chunk it will return to the caller; the second chunk will remain on the list. Thus, in our example above, if a request for 1 byte were made, and the allocator decided to use the second of the two elements on the list to satisfy the request, the call to malloc() would return 20 (the address of the 1-byte allocated region) and the list would end up looking like this:  
+ 
+In the picture, you can see the list basically stays intact; the only change is that the free region now starts at 21 instead of 20, and the length of that free region is now just $9 ^ { 3 }$ . Thus, the split is commonly used in allocators when requests are smaller than the size of any particular free chunk.  
+A corollary mechanism found in many allocators is known as coalescing of free space. Take our example from above once more (free 10 bytes, used 10 bytes, and another free 10 bytes).  
+Given this (tiny) heap, what happens when an application calls free(10), thus returning the space in the middle of the heap? If we simply add this free space back into our list without too much thinking, we might end up with a list that looks like this:  
+ 
+Note the problem: while the entire heap is now free, it is seemingly divided into three chunks of 10 bytes each. Thus, if a user requests 20 bytes, a simple list traversal will not find such a free chunk, and return failure.  
+What allocators do in order to avoid this problem is coalesce free space when a chunk of memory is freed. The idea is simple: when returning a free chunk in memory, look carefully at the addresses of the chunk you are returning as well as the nearby chunks of free space; if the newlyfreed space sits right next to one (or two, as in this example) existing free chunks, merge them into a single larger free chunk. Thus, with coalescing, our final list should look like this:  
+ 
+Indeed, this is what the heap list looked like at first, before any allocations were made. With coalescing, an allocator can better ensure that large free extents are available for the application.  
+
+Figure 17.1: An Allocated Region Plus Header  
+
+Figure 17.2: Specific Contents Of The Header  
+Tracking The Size Of Allocated Regions
+You might have noticed that the interface to free(void $\star \mathsf { p t r } )$ ) does not take a size parameter; thus it is assumed that given a pointer, the malloc library can quickly determine the size of the region of memory being freed and thus incorporate the space back into the free list.  
+To accomplish this task, most allocators store a little bit of extra information in a header block which is kept in memory, usually just before the handed-out chunk of memory. Let’s look at an example again (Figure 17.1). In this example, we are examining an allocated block of size 20 bytes, pointed to by ptr; imagine the user called malloc() and stored the results in ptr, e.g., $\mathtt { p t r } \ = \ \mathtt { m a l l o c } \left( 2 0 \right) \ ,$ ;.  
+The header minimally contains the size of the allocated region (in this case, 20); it may also contain additional pointers to speed up deallocation, a magic number to provide additional integrity checking, and other information. Let’s assume a simple header which contains the size of the region and a magic number, like this:  
+typedef struct { int size; int magic; 
+} header_t;  
+The example above would look like what you see in Figure 17.2. When the user calls free(ptr), the library then uses simple pointer arithmetic to figure out where the header begins:  
+void free(void *ptr) { header_t *hptr $\mathbf { \Sigma } = \mathbf { \Sigma }$ (header_t *) ptr - 1;  
+After obtaining such a pointer to the header, the library can easily determine whether the magic number matches the expected value as a sanity check (assert(hptr->magic $\begin{array} { r l } { = = } & { { } 1 2 3 4 5 6 7 } \end{array}$ )) and calculate the total size of the newly-freed region via simple math (i.e., adding the size of the header to size of the region). Note the small but critical detail in the last sentence: the size of the free region is the size of the header plus the size of the space allocated to the user. Thus, when a user requests $N$ bytes of memory, the library does not search for a free chunk of size $N$ ; rather, it searches for a free chunk of size $N$ plus the size of the header.  
+Embedding A Free List
+Thus far we have treated our simple free list as a conceptual entity; it is just a list describing the free chunks of memory in the heap. But how do we build such a list inside the free space itself?  
+In a more typical list, when allocating a new node, you would just call malloc() when you need space for the node. Unfortunately, within the memory-allocation library, you can’t do this! Instead, you need to build the list inside the free space itself. Don’t worry if this sounds a little weird; it is, but not so weird that you can’t do it!  
+Assume we have a 4096-byte chunk of memory to manage (i.e., the heap is 4KB). To manage this as a free list, we first have to initialize said list; initially, the list should have one entry, of size 4096 (minus the header size). Here is the description of a node of the list:  
+typedef struct __node_t { int size; struct __node_t *next; 
+} node_t;  
+Now let’s look at some code that initializes the heap and puts the first element of the free list inside that space. We are assuming that the heap is built within some free space acquired via a call to the system call mmap(); this is not the only way to build such a heap but serves us well in this example. Here is the code:  
+// mmap() returns a pointer to a chunk of free space 
+node_t *head $\mathbf { \Sigma } = \mathbf { \Sigma }$ mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_ANON|MAP_PRIVATE, -1, 0); 
+head->size $\mathbf { \Sigma } = \mathbf { \Sigma }$ 4096 - sizeof(node_t); 
+head->next $\mathbf { \Sigma } = \mathbf { \Sigma }$ NULL;  
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+Figure 17.3: A Heap With One Free Chunk  
+
+Figure 17.4: A Heap: After One Allocation  
+After running this code, the status of the list is that it has a single entry, of size 4088. Yes, this is a tiny heap, but it serves as a fine example for us here. The head pointer contains the beginning address of this range; let’s assume it is 16KB (though any virtual address would be fine). Visually, the heap thus looks like what you see in Figure 17.3.  
+Now, let’s imagine that a chunk of memory is requested, say of size 100 bytes. To service this request, the library will first find a chunk that is large enough to accommodate the request; because there is only one free chunk (size: 4088), this chunk will be chosen. Then, the chunk will be split into two: one chunk big enough to service the request (and header, as described above), and the remaining free chunk. Assuming an 8-byte header (an integer size and an integer magic number), the space in the heap now looks like what you see in Figure 17.4.  
+Thus, upon the request for 100 bytes, the library allocated 108 bytes out of the existing one free chunk, returns a pointer (marked ptr in the figure above) to it, stashes the header information immediately before the allocated space for later use upon free(), and shrinks the one free node in the list to 3980 bytes (4088 minus 108).  
+
+Figure 17.5: Free Space With Three Chunks Allocated  
+Now let’s look at the heap when there are three allocated regions, each of 100 bytes (or 108 including the header). A visualization of this heap is shown in Figure 17.5.  
+As you can see therein, the first 324 bytes of the heap are now allocated, and thus we see three headers in that space as well as three 100- byte regions being used by the calling program. The free list remains uninteresting: just a single node (pointed to by head), but now only 3764  
+OPERATINGSYSTEMS[VERSION 1.10]  
+
+Figure 17.6: Free Space With Two Chunks Allocated  
+bytes in size after the three splits. But what happens when the calling program returns some memory via free()?  
+In this example, the application returns the middle chunk of allocated memory, by calling free(16500) (the value 16500 is arrived upon by adding the start of the memory region, 16384, to the 108 of the previous chunk and the 8 bytes of the header for this chunk). This value is shown in the previous diagram by the pointer sptr.  
+The library immediately figures out the size of the free region, and then adds the free chunk back onto the free list. Assuming we insert at the head of the free list, the space now looks like this (Figure 17.6).  
+
+Figure 17.7: A Non-Coalesced Free List  
+Now we have a list that starts with a small free chunk (100 bytes, pointed to by the head of the list) and a large free chunk (3764 bytes). Our list finally has more than one element on it! And yes, the free space is fragmented, an unfortunate but common occurrence.  
+One last example: let’s assume now that the last two in-use chunks are freed. Without coalescing, you end up with fragmentation (Figure 17.7).  
+As you can see from the figure, we now have a big mess! Why? Simple, we forgot to coalesce the list. Although all of the memory is free, it is chopped up into pieces, thus appearing as a fragmented memory despite not being one. The solution is simple: go through the list and merge neighboring chunks; when finished, the heap will be whole again.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+Growing The Heap
+We should discuss one last mechanism found within many allocation libraries. Specifically, what should you do if the heap runs out of space? The simplest approach is just to fail. In some cases this is the only option, and thus returning NULL is an honorable approach. Don’t feel bad! You tried, and though you failed, you fought the good fight.  
+Most traditional allocators start with a small-sized heap and then request more memory from the OS when they run out. Typically, this means they make some kind of system call (e.g., sbrk in most UNIX systems) to grow the heap, and then allocate the new chunks from there. To service the sbrk request, the OS finds free physical pages, maps them into the address space of the requesting process, and then returns the value of the end of the new heap; at that point, a larger heap is available, and the request can be successfully serviced.  

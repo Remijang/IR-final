@@ -1,0 +1,64 @@
+[
+    {
+        "type": "text",
+        "text": "5.4.4 Compare Instruction ",
+        "text_level": 1,
+        "page_idx": 214
+    },
+    {
+        "type": "table",
+        "img_path": "images/cf80dbcee58b02de16a62f4154b0148a97858472c41be3d08fda8de4684e10f0.jpg",
+        "table_caption": [
+            "Table 5.26: Floating point compare instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>fcomi reg, reg</td><td>fcomi st0,st1</td><td>compare stO and stl\uff0cand set the eflags register (first register has to be st0)</td></tr><tr><td>fcomip reg, reg</td><td>fcomi st0,st1</td><td>compare stO and stl\uff0cand set the eflags register; pop the FP stack</td></tr></table></body></html>\n\n",
+        "page_idx": 214
+    },
+    {
+        "type": "text",
+        "text": "The x86 ISA has many compare instructions. In this section, we shall present only one compare instruction called fcomi that compares two floating point values saved in registers, and sets the eflags register. Table 5.26 shows the semantics of the fcomi instruction with and without the \u2018p\u2019 suffix. Once, the ef lags register is set, we can use regular branch instructions for implementing control flow within the program. Note that in x86 we need to use the condition codes for unsigned comparison in this case. Most of the time programmers make the mistake of using the condition codes for signed comparison such as $l$ , $l e$ , $g$ , or $g e$ for testing the results of floating point comparison. This leads to wrong results. We should instead use the $a$ (above) and $b$ (below) condition codes. ",
+        "page_idx": 214
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider an example (Example 89) that computes the value of $s i n ( 2 \\theta )$ , and verifies if it is equal to $2 s i n ( \\theta ) c o s ( \\theta )$ . The readers should recall from their high school trigonometry class that both these expressions are actually equal, and one can be derived from the other. Example 89 experimentally verifies this fact for any given value of $\\theta$ . We compute the value of $s i n ( 2 \\theta )$ and $2 s i n ( \\theta ) c o s ( \\theta )$ , and compare them using $f c o m i$ . Note that floating point arithmetic is approximate (see Section 2.4.6). Hence, the correct way to compare floating point numbers is to first subtract them, compute the absolute value of the difference, and compare the difference with a threshold. The threshold is typically a small number ( $1 0 ^ { - 5 }$ in our case). If the difference is less than a threshold, we can infer equality. ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "Example 89 ",
+        "text_level": 1,
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "Compare $s i n ( 2 \\theta )$ and $2 s i n ( \\theta ) c o s ( \\theta )$ . Verify that they have the same value for any given value of $\\theta$ . Assume that theta is stored in the data section at the label theta, and the threshold for floating point comparison is stored at label threshold. Save the result in eax (1 if equal, and $\\boldsymbol { \\theta }$ if unequal). ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "$\\begin{array} { r l } &  \\begin{array} { r l } & { \\Biggl [ \\frac { 1 } { \\mathrm { ( 5 ) } \\times ( 5 ) } \\exp ( 4 \\pi \\mathrm { S u t ~ C u t ~ C u t ~ ( 2 ) } \\cdot \\mathrm { ~ A u t ~ C u t ~ C u t ~ C u t ~ } \\cdot \\mathrm { ~ A u t ~ C u t ~ C u t ~ } \\cdot \\mathrm { ~ C u t ~ C u t ~ C u t ~ } ) } \\\\ & { \\Biggl [ \\frac { 1 } { \\mathrm { ( 5 ) } \\times ( 5 ) } \\exp ( 1 \\pi \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } \\Biggr ] } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl ] \\times \\mathrm { ~ R e t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\\\ & { \\Biggl ] \\times \\mathrm { ~ R e t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } \\\\ & { \\Biggl [ \\sqrt { \\mathrm { S u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t ~ C u t } } } \\end{array} \\end{array}$ ",
+        "page_idx": 215
+    },
+    {
+        "type": "text",
+        "text": "fld dword [threshold]   \nfcomi st0, st1 ; compare   \nja .equal   \nmov eax, 0   \njmp .exit   \n.equal: mov eax, 1   \n.exit: ",
+        "page_idx": 216
+    },
+    {
+        "type": "text",
+        "text": "After the end of a function, it is time to clean up the floating point registers, and stack such that another function can use them. Let us conclude this section by taking a look at the cleanup instructions. ",
+        "page_idx": 216
+    }
+]

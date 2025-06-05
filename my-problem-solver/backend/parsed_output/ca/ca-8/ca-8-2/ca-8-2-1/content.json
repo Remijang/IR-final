@@ -1,0 +1,62 @@
+[
+    {
+        "type": "text",
+        "text": "8.2.1 Overview ",
+        "text_level": 1,
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the classic problem of binary multiplication. Similar to addition, let us first look at the most naive way of multiplying two decimal numbers. Let us try to multiply 13 times 9. In this case, 13 is known as the multiplicand and 9 is known as the multiplier, and 117 is the product. ",
+        "page_idx": 321
+    },
+    {
+        "type": "image",
+        "img_path": "images/781b0994109312b6aa2a1fc34801f1cba734552525a7ab548ef18456f64a685a.jpg",
+        "img_caption": [
+            "Figure 8.10: Multiplication in decimal and binary "
+        ],
+        "img_footnote": [],
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Figure 8.10(a) shows the multiplication in the decimal number system, and Figure 8.10(b) shows the multiplication in binary. Note that multiplying two binary numbers can be done exactly the same way as decimal numbers. We need to consider each bit of the multiplier from the least significant position to the most significant position. If the bit is 1, then we write the value of the multiplicand below the line, otherwise we write 0. For each multiplier bit, we shift the multiplicand progressively one bit to the left. The reason for this is that each multiplier bit represents a higher power of two. We call each such value a partial sum (see Figure 8.10(b)). If the multiplier has $m$ bits, then we need to add $m$ partial sums to obtain the product. In this case the product is 117 in decimal and 1110101 in binary. The reader can verify that they actually represent the same number. Let us define another term called the partial product for ease of representation later. It is the sum of a contiguous sequence of partial sums. ",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Definition 56 ",
+        "text_level": 1,
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Partial sum It is equal to the value of the multiplicand left shifted by a certain number of bits, or it is equal to 0. ",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Partial product It is the sum of a set of partial sums. ",
+        "page_idx": 321
+    },
+    {
+        "type": "image",
+        "img_path": "images/f557086de779a2431368030d434e8cf9016ad6045281ba15a56a95236c827942.jpg",
+        "img_caption": [
+            "Figure 8.11: Iterative Multiplier "
+        ],
+        "img_footnote": [],
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "In this example, we have considered unsigned numbers. What about signed numbers? In Section 2.3.4, we proved that multiplying two 2\u2019s complement signed $n$ -bit binary numbers, and constraining the result to $n$ bits without any concern for overflows, is not different from unsigned multiplication. We need to just multiply the 2\u2019s complement numbers without bothering about the sign. The result will be correct. ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the issue of overflows in multiplication. If we are multiplying two signed 32-bit values, the product can be as large as $( 2 ^ { - 3 1 } ) ^ { 2 } = 2 ^ { - 6 2 }$ . There will thus be an overflow if we try to save the result in 32 bits. We need to keep this in mind. If we desire precision, then it is best to allot 64 bits for storing the result of 32-bit multiplication. Let us now look at a naive approach for multiplying two 32-bit numbers by using an iterative multiplier. ",
+        "page_idx": 322
+    }
+]

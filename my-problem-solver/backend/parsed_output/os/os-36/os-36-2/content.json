@@ -1,0 +1,27 @@
+[
+    {
+        "type": "text",
+        "text": "36.2 A Canonical Device ",
+        "text_level": 1,
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Let us now look at a canonical device (not a real one), and use this device to drive our understanding of some of the machinery required to make device interaction efficient. From Figure 36.3 (page 4), we can see that a device has two important components. The first is the hardware interface it presents to the rest of the system. Just like a piece of software, hardware must also present some kind of interface that allows the system software to control its operation. Thus, all devices have some specified interface and protocol for typical interaction. ",
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The second part of any device is its internal structure. This part of the device is implementation specific and is responsible for implementing the abstraction the device presents to the system. Very simple devices will have one or a few hardware chips to implement their functionality; more complex devices will include a simple CPU, some general purpose memory, and other device-specific chips to get their job done. For example, modern RAID controllers might consist of hundreds of thousands of lines of firmware (i.e., software within a hardware device) to implement its functionality. ",
+        "page_idx": 2
+    },
+    {
+        "type": "image",
+        "img_path": "images/e5dd6801379a80441f70672f2f001113d4041ecb3893c116d1133aa7a7e3d28d.jpg",
+        "img_caption": [
+            "Figure 36.3: A Canonical Device "
+        ],
+        "img_footnote": [],
+        "page_idx": 3
+    }
+]

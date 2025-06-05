@@ -1,0 +1,199 @@
+0.3 The Exponential 
+
+The great function that calculus creates is the exponential  : There are different ways to reach this function, and Section 6.2 of this textbook mentions five ways. Here I will describe the approach to  that I now like best. It uses the derivative of  ; the first thing we learn.
+
+In all approaches, a “limiting step” will be involved. So the amazing number  is not seen in algebra (  is not a fraction). The question is where to take that limiting step, and my answer starts with this truly remarkable fact: When  is Function .1/, it is also Function .2/.
+
+The exponential function  solves the equation  :
+
+The function equals its slope. This is a first example of a differential equation— connecting an unknown function  with its own derivatives. Fortunately  is the most important differential equation—a model that other equations try to follow.
+
+I will add one more requirement, to eliminate solutions like  and  : When  solves our equation, all other functions  solve it too.  and  will appear on both sides of  , and they cancel.) At  ,  will be the “zeroth power” of the positive number  : All zeroth powers are 1. So we want  to equal 1 when  :
+
+Before solving  , look at what this equation means. When  starts from 1 at  , its slope is also 1. So  increases. Therefore  also increases, staying equal to  : So  increases faster. The graph gets steeper as the function climbs higher. This is what “growing exponentially” means.
+
+INTRODUCING 
+
+Exponential growth is quite ordinary and reasonable. When a bank pays interest on your money, the interest is proportional to the amount you have. After the interest is added, you have more. The new interest is based on the higher amount. Your wealth is growing “geometrically,” one step at a time.
+
+At the end of this section on  ; I will come back to continuous compounding— interest is added at every instant instead of every year. That word “continuous” signals that we need calculus. There is a limiting step, from every year or month or day or second to every instant. You don’t get infinite interest, you do get exponentially increasing interest.
+
+I will also describe other ways to introduce  : This is an important question with many answers! I like equation (1) below, because we know the derivative of each power  . If you take their derivatives in equation (1), you get back the same  : amazing. So that sum solves  ; starting from  as we wanted.
+
+The difficulty is that the sum involves every power  : an infinite series. When I go step by step, you will see that those powers are all needed. For this infinite series, I am asking you to believe that everything works. We can add the series to get  ; and we can add all derivatives to see that the slope of  is  :
+
+For me, the advantage of using only the powers  is overwhelming.
+
+I will solve  a step at a time. At the start,  means that  :
+
+After the first change,  has the correct derivative  : But then I had to change  to keep it equal to  : And I can’t stop there:
+
+The extra  gave the correct  in the slope. Then  also had to go into  , to keep it equal to  : Now we need a new term with this derivative  :
+
+The term that gives  has  divided by 6: The derivative of  is  , so I must divide by  (to cancel correctly). Then the derivative of  is  as we wanted. After that comes  divided by 24:
+
+The pattern becomes more clear. The  term is divided by  factorial, which is   : The first five factorials are 1;2;6;24;120: T he derivative of that term  is the previous term  (because the  ’s cancel). As long as we don’t stop, this sum of infinitely many terms does achieve  :
+
+If we substitute  into this series, do the infinitely many terms add to a finite number  ? Yes. The numbers  Š grow much faster than  (or any other  ). So the terms  in this “exponential series” become extremely small as  : Analysis shows that the sum of the series (which is  ) does achieve  :
+
+Note 1 Let me just remember a series that you know,  : If I replace  by  , this becomes the geometric series  and it adds up to  : This is the most important series in mathematics, but it runs into a problem at  : the infinite sum  doesn’t “converge.”
+
+I emphasize that the series for  is always safe, beca use the powers  are divided by the rapidly growing numbers  factorial. This is a great example to meet, long before you learn more about convergence and divergence.
+
+Note 2 Here is another way to look at that series for  : Start with  and take its derivative  times. First get  and then  . Finally the nth derivative is  ; which is  factorial. When we divide by that number, the nth derivative of  is equal to 1:
+
+Now look at  : All its derivatives are still  : They all equal 1 at  : The series is matching every derivative of the function  at the starting point  :
+
+Set  in the exponential series. This tells us the amazing number  :
+
+The first three terms add to 2.5. The first five terms almost reach 2.71. We never reach 2.72. With quite a few terms (how many ? ) you can pass 2.71828. It is certain that  is not a fraction. It never appears in algebra, but it is the key number for calculus.
+
+MULTIPLYING BY ADDING EXPONENTS
+
+We write  in the same way that we write  : Is it true that e times e equals  Up to now,  and  come from setting  and  in the infinite series. The wonderful fact is that for every  , the series produces the “  th power of the number  :” When  , we get  which is  :
+
+If we multiply that series for  by the series for  , we get 1:
+
+The best way is to go straight for all multiplications of  times any power  : The rule of adding exponents says that the answer is  : The series must say this too! When  and  , this rule produces  from  times  :
+
+Add the exponents
+
+We only know  and  from the infinite series. For this all-important rule, we can multiply those series and recognize the answer as the series for  : Make a start:
+
+Certainly you see  : Do you see  in equation .4/ ? No problem:
+
+The step to third degree takes a little longer, but it also succeeds:
+
+ matches the next terms in (4).
+
+For high powers of  we need the binomial theorem (or a healthy trust that mathematics comes out right). When  multiplies  , the coefficient of  will be  times  : Now look for that same term in the series for  :
+
+That binomial number  is known to successful gamblers. It counts the number of ways to choose  aces out of  aces. Out of 4 aces, you could choose 2 aces in  ways. To a mathematician, there are 6 ways to choose 2  ’s out of  . This number 6 will be the coefficient of  in  :
+
+That 6 shows up in the fourth degree term. It is divided by 4! (to produce  . When  multiplies  ,  multiplies  (which also produces  ). All terms are good, but we are not going there—we accept  as now confirmed.
+
+Note A different way to see this rule for  is based on  : Starting from  at  , follow this equation. At the point  , you reach  : Now go an additional distance X to arrive at exCX :
+
+Notice that the additional part starts from  (instead of starting from 1). That starting value  will multiply  in the additional part. So  times  must be the same as  : (This is a “differential equations proof” that the exponents are added. Personally, I was happy to multiply the series and match the terms.)
+
+The rule immediately gives  times  : The answer is  : If we multiply again by  , we find  : This is equal to  : We are finding a new rule for all powers  :
+
+Multiply exponents
+
+This is easy to see for  and then  remains true for all numbers  and  .
+
+That last sentence about “all numbers” is important! Calculus cannot develop properly without working with all exponents (not just whole numbers or fractions). The infinite series (1) defines  for every  and we are on our way. Here is the graph: Function  Function  :
+
+THE EXPONENTIALS  AND 
+
+We know that  and  . But what is the meaning of  ? One way to get close to that number is to replace  by 3:14 which is 314=100: As long as we have a fraction in the exponent, we can live without calculus:
+
+Fractional power 
+
+But this is only “close” to  : And in calculus, we will want the slope of the curve  : The good way is to connect  with  ; whose slope we know (it is  again). So we need to connect 2 with  :
+
+The key number is the logarithm of 2. This is written “ln  and it is the power of  that produces 2: It is specially marked on the graph of  :
+
+Natural logarithm of 2
+
+This number  is about  . A calculator knows it with much higher accuracy.   
+In the graph of  , the number ln 2 on the  axis produces  on the  axis.
+
+This is an example where we want the output  and we ask for the input  : That is the opposite of knowing  and asking for  . “The logarithm  is the inverse of the exponential  :” This idea will be explained in Section 4:3 and in two video lectures—inverse functions are not always simple.
+
+Now  has a meaning for every  : When we have the number ln 2; meeting the requirement  ; we can take the  th power of both sides:
+
+Powers of 2 from power
+
+All powers of  are defined by the infinite series. The new function  also grows exponentially, but not as fast as  (because 2 is smaller than  ). Probably  could have the same graph as  , if I stretched out the  axis. That stretching multiplies the slope by the constant factor ln 2: Here is the algebra:
+
+For any positive number  , the same approach leads to the function  . First, find the natural logarithm  . This is the number (positive or negative) so that  . Then take the  th power of both sides:
+
+When  is  (the perfect choice),  : When  is  , then  : “The logarithm is the exponent.” Thanks to the series that defines  for every  , that exponent can be any number at all.
+
+Allow me to mention Euler’s Great Formula  . The exponent  has become an imaginary number. (You know that  ) If we faithfully use cos  sin  at  and  (where  and  ), we arrive at these amazing facts:
+
+Imaginary exponents
+
+Those equations are not imaginary, they come from the great series for  :
+
+0 Highlights of Calculus
+
+CONTINUOUS COMPOUNDING OF INTEREST
+
+There is a different and important way to reach  and  (not by an infinite series). We solve the key equation  in small steps. As these steps approach zero (a limit is always involved !) the small-step solution becomes the exact  :
+
+I can explain this idea in two different languages. Each step multiplies by  :
+
+1. Compound interest. After each step  , the interest is added to  : Then the next step begins with a larger amount, and  increases exponentially. 2. Finite differences. The continuous  is replaced by small steps  :
+
+This is Euler’s method of approximation.  approaches  as  .
+
+Let me compute compound interest when 1 year is divided into 12 months, and then 365 days. The interest rate is  and you start with  : If you only get interest once, at the end of the year, then you have  2$ :
+
+If interest is added every month, you now get  of  each time (12 times). So  is multiplied each month by  : (The bank adds  for every 1 you have.) Do this 12 times and the final value  2\ :
+
+After 12 months
+
+Now add interest every day. Y.0/ D \$1 is multiplied 365 times by 1C 615:
+
+After 365 days
+
+Very few banks use minutes, and nobody divides the year into  seconds. It would add less than a pennyÑto  2.71N \to \infty\ :
+
+You could invest at the  rate for  years. Now each of the  steps is for  years. Again the bank multiplies at every step by  : The 1 keeps what you have, the  adds the interest in that step. After  steps you are close to  :
+
+A formula for ex
+
+Finally, I will change the interest rate to  : Go for  years at the interest rate  : The differential equation changes from  to  : The exponential function still solves it, but now that solution is  :
+
+Change the rate to a
+
+You can write down the series  and take its derivative:
+
+The derivative of  brings down the extra factor  : So  solves  :
+
+Looking for a function  that equals its own derivative    
+A differential equation! We start at  with    
+Infinite Series    
+Take derivative    
+Term by term  agrees with  Limit step  add up this series   
+ grows much faster than  so the terms get very small   
+At  the number  is called  : Set  in the series to find    
+
+
+GOAL Show that  agrees with  for all  Series gives powers of  Check that the series follows the rule to add exponents as in  Directly multiply series  times  to get   times  produces the right start for   HIGHER TERMS ALSO WORK The series gives us  for EVERY  , not just whole numbers CHECK  SECOND KEY RULE  for every  and 
+
+Another approach to  uses multiplication instead of an infinite sum Start with  1x\mathbb { S } \left( 1 + { \frac { x } { 3 6 5 } } \right) ^ { \mathrm { i } }n\left( 1 + { \frac { x } { n } } \right) ^ { n } \to \ S e ^ { x }n \to \infty{ \frac { \Delta Y } { \Delta x } } = Yn\Delta x{ \frac { d y } { d x } } = y$ :
+
+0 Highlights of Calculus
+
+Practice Questions
+
+1. What is the derivative of  What is the derivative of 
+
+2. How to see that  gets small as  ?
+
+Start with   , possibly big. But we multiply by  which gets small.
+
+3. Why is  the same as  ? Use equation (3) and also use (6).
+
+4. Why is  etween  and  Then  :
+
+5. Can you solve  starting from  at  ?
+
+Why is  the right answer ? Notice how 3; multiplies  :
+
+6. Can you solve  starting from  at  ?
+
+Why is  the right answer ? Notice 5 in the exponent!
+
+7. Why does  approach 1 as  gets smaller ? Use the  series.
+
+8. Draw the graph of  , just by flipping the graph of  across the    
+line  . Remember that  stays positive but  can be negative.   
+9. What is the exact sum of    
+10. If you replace ln 2 by 0:7; what is the sum of those four terms ?   
+11. From Euler’s Great Formula  sin  ; what number is    
+12. How close is  to e ?   
+13. What is the limit of  as  ?

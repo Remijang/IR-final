@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "12.5.5 Design of a Vector Processor ",
+        "text_level": 1,
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "Let us now briefly consider the design of vector processors. We need to add a vector pipeline similar to the scalar pipeline. In specific, the OF stage reads the vector register file for vector operands, and the scalar register file for scalar operands. Subsequently, it buffers the values of operands in the pipeline registers. The EX stage sends scalar operands to the scalar ALU, and sends vector operands to the vector ALU. Similarly, we need to augment the $M A$ stage with vector load and store units. For most processors, the size of a cache block is an integral multiple of the size of a vector register. Consequently, vector load and store units that operate on contiguous data do not need to access multiple cache blocks. Hence, a vector load and store access is almost as fast as a scalar load and store access because the atomic unit of storage in a cache is a block. In both cases (scalar and vector), we read the value of a block and choose the relevant bytes using the column muxes. We need to change the structure of the L1 cache to read in more data at a time. Lastly, the writeback stage writes back scalar data to the scalar register file and vector data to the vector register file. ",
+        "page_idx": 622
+    },
+    {
+        "type": "text",
+        "text": "In a pipelined implementation of a vector processor, the interlock and forwarding logic is complicated. We need to take into account the conflicts between scalar instructions, between vector instructions, and between a scalar and vector instruction. The forwarding logic needs to forward values between different functional unit types, and thus ensure correct execution. Note that vector instructions need not always be as fast as their scalar counterparts. Especially, scatter-gather-based vector load store instructions are slower. Since modern out-of-order pipelines already have dedicated support for processing variable latency instructions, vector instructions can seamlessly plug into this framework. ",
+        "page_idx": 622
+    }
+]

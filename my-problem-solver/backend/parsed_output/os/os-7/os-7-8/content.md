@@ -1,0 +1,22 @@
+# 7.8 Incorporating I/O  
+
+First we will relax assumption 4 — of course all programs perform I/O. Imagine a program that didn’t take any input: it would produce the same output each time. Imagine one without output: it is the proverbial tree falling in the forest, with no one to see it; it doesn’t matter that it ran.  
+
+A scheduler clearly has a decision to make when a job initiates an I/O request, because the currently-running job won’t be using the CPU during the I/O; it is blocked waiting for I/O completion. If the I/O is sent to a hard disk drive, the process might be blocked for a few milliseconds or longer, depending on the current I/O load of the drive. Thus, the scheduler should probably schedule another job on the CPU at that time.  
+
+The scheduler also has to make a decision when the I/O completes. When that occurs, an interrupt is raised, and the OS runs and moves the process that issued the $\mathrm { I } / \dot { \mathrm { O } }$ from blocked back to the ready state. Of course, it could even decide to run the job at that point. How should the OS treat each job?  
+
+To understand this issue better, let us assume we have two jobs, A and $\mathsf { B } ,$ which each need $5 0 ~ \mathrm { m s }$ of CPU time. However, there is one obvious difference: A runs for $1 0 \mathrm { m s }$ and then issues an I/O request (assume here that I/Os each take $1 0 \mathrm { m s }$ ), whereas B simply uses the CPU for $5 0 \mathrm { m s }$ and performs no $\mathrm { I } / \mathrm { O }$ . The scheduler runs A first, then B after (Figure 7.8).  
+
+Assume we are trying to build a STCF scheduler. How should such a scheduler account for the fact that A is broken up into $5 1 0 \mathrm { - m s }$ sub-jobs, whereas B is just a single $5 0 \mathrm { - m s }$ CPU demand? Clearly, just running one job and then the other without considering how to take $\mathrm { i } / \mathrm { O }$ into account makes little sense.  
+
+![](images/f0ba90e2fad908fd19532a676804a189394f574c826ab689258546609b599135.jpg)  
+Figure 7.8: Poor Use Of Resources  
+
+![](images/d829a81545eaed5e4286c27a25782d55b4cffb6dc24ce496901c2d861015dae7.jpg)  
+Figure 7.9: Overlap Allows Better Use Of Resources  
+
+A common approach is to treat each 10-ms sub-job of A as an independent job. Thus, when the system starts, its choice is whether to schedule a 10-ms A or a 50-ms B. With STCF, the choice is clear: choose the shorter one, in this case A. Then, when the first sub-job of A has completed, only B is left, and it begins running. Then a new sub-job of A is submitted, and it preempts B and runs for $1 0 ~ \mathrm { { m s } }$ . Doing so allows for overlap, with the CPU being used by one process while waiting for the I/O of another process to complete; the system is thus better utilized (see Figure 7.9).  
+
+And thus we see how a scheduler might incorporate I/O. By treating each CPU burst as a job, the scheduler makes sure processes that are “interactive” get run frequently. While those interactive jobs are performing I/O, other CPU-intensive jobs run, thus better utilizing the processor.  
+

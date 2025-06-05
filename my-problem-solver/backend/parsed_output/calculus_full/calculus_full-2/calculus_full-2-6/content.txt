@@ -1,0 +1,160 @@
+2.6 Limits
+
+You have seen enough limits to be ready for a definition. It is true that we have survived this far without one, and we could continue. But this seems a reasonable time to define limits more carefully. The goal is to achieve rigor withouÑt rigor mortis.
+
+First you sho uld know that limits of  are by noÑmeans the only limits in mathematics. Here are five completely different examples. TheyÑinvolve  , not  :
+
+1.  (for large  , ignore the 3’s and find  )   
+2.  (start with any  andÑalways  )   
+3.  probability of living to year  (unforÑtunately  )   
+4.  fraction of zeros among the first  digits of   /   
+5.  ;  ;  ; : : : No matter what the remaining deÑcimals are,   
+the a’s converge to a limit. Possibly  , but not likely.
+
+The problem is to say what the limit symbol  really means.
+
+A good starting point is to ask about convergence to zero. When does a sequence of positive numbers approach zero ? What does it mean to write  The numbers  ; must become “small,” but that is too vague. We will propose four definitions of convergence to zero, and I hope the right one will be clear .
+
+1. All the numbers  are below  . That may be enough for practical purposes, but it certainly doesn’t make the  approach zero. 2. The sequence is getting closer to zero—each  is smaller than the preceding  : This test is met by 1:1, 1:01, 1:001, . . . which converges to 1 instead of 0: 3. For any small number you think of, at least one of the  ’s is smaller. That pushes something toward zero, but not necessarily the whole sequence. The condition would be satisfied by  , which does not approach zero. 4. For any small number you think of, the  ’s eventually go below that number and stay below. This is the correct definition.
+
+I want to repeat that. To test for convergence to zero, start with a small number— say  : The  ’s must go below that number. They may come back up and go below again—the first million terms make absolutely no difference. Neither do the next billion, but eventually all terms must go below  : After waiting longer (possibly a lot longer), all terms drop below  : The tail end of the sequence decides everything.
+
+Question 1 Does the sequence  approach 0 ?
+
+Answer Yes, These up and down numbers eventually stay below any  :
+
+2 Derivatives
+
+Question 2 Does  ;  ;  ;  ;  ;  ; : : : approach zero ? Answer No. This sequence goes below  but does not stay below.
+
+There is a recognized symbol for “an arbitrarily small positive number.” By worldwide agreement, it is the Greek letter  (epsilon). Convergence to zero means that the sequence eventually goes below  and stays there. The smaller the  , the tougher the test and the longer we wait. Think of  as the tolerance, and keep reducing it.
+
+To emphasize that  comes from outside, Socrates can choose it. Whatever  he proposes, the  ’s must eventually be smaller. After some  , all the a’s are below the tolerance ". Here is the exact statement:
+
+for any " there is an  such that  if  :
+
+Once you see that idea, the rest is easy. Figure 2.17 has  and then  :
+
+EXAMPLE 1 The sequence 21 ; 4 ; 98 ; : : : starts upward but goes to zero. Notice that  : are squares, and  : : are powers of 2: Eventually  grows faster than  , as in  : The ratio goes below any  :
+
+EXAMPLE 2  approaches zero. These  ’s do not decrease steadily (the mathematical word for steadily is “monotonically”) but still their limit is zero. The choice  produces the right response: Beyond  all terms are below  : So  for that  :
+
+T|heÑsequence  is much sl|owe|r—but it also converges to zero.
+
+Next we allow the numbers  to be negative as well as positive. They can converge upward toward zero, or they can come in from bot|h si|de s. The te¡st still requires the  to go inside any strip near zero (and stay there). But now the strip starts at  :
+
+The distance from zero is the absolute value  . Therefore  means  : The previous test can be applied to  :
+
+for any " there is an  such that  if  .
+
+EXAMPLE 3  ; : : : converges to z|ero beca|us e  converges to zero.
+
+It is a short step to limits other than zero. The limit is  if the numbers  converge to zero. Our final test applies to the absolute value  :
+
+for any " there is an  such that  if  .
+
+This is the definition of convergence! Only a finite number of  ’s are outside any strip around  (Figure 2.18). We write  or  or  :
+
+2.6 Limits
+
+EXAMPLE 4 The numbers 23 ; 54 ; 76 ; : : : converge to L D 1: After subtracting 1 the differences 1 ; 1 ; 1 ; 2 4 6 : : : converge to zero. Those difference are an L :
+
+EXAMPLE 5 The sequence 1;  ;  ;  ; : : : fails to converge.
+
+The distance between terms is getting smaller. But those numbers  go past any proposed limit  : The second term is  : The fourth term adds on  , so  goes past 2: The eighth term has four new fractions  , totaling more than  : Therefore  exceeds  : Eight more terms will add more than 8 times  , so  is beyond 3: The lines in Figure 2.1Ñ8c8are infinitely long, not stopping at any  :
+
+In the language of Chapter 10,Ñthe harmonic series  does not converge. The sum is infinite, because the “partial sums”  go beyond everÑy limit   is past  ). We will come back to infinite series, but this example makes a subtle point: The steps between the  can go to zero while still  :
+
+Thus the condition  is not sufficient for convergence. However this condition is necessary. If we do have convergence, then  : That is a good exercise in the logic of convergence, emphasizing the differe|ncebet |we en “sufficien|t” and “nec|es sary.” We discussthis logic below, after proving that [statement  implies [statement  ]:
+
+Proof Because the  converge, there is a number  beyond which  and also  : Since  is the sum of  and  , its absolute value cannot exceed  : Therefore  approaches zero.
+
+Objection by Socrates: We only got below  and he asked for  : Our reply: If he particularly wants  , we start with  : Then  : But this juggling is not necessary. To stay below  is just as convincing as to stay below  :
+
+THE LOGIC OF “IF” AND “ONLY IF”
+
+The following page is inserted to help with the language of mathÑematics. In ordinary language we might say  will come if you call.” Or we might say  will come only if you call.” That is different! A mathematician might even say  will come  and only  you call.” Our goal is to think through the logic, because it is important and not so fami1iar.
+
+Statement  above implies statement  : Statement  is  ; statement  is  : Mathematics has at leasñt five ways of writing down  , and I though you might like to see them together. It seems excessive to have so many expressions for the same idea, but authors get desperate for a little variety. Here are the five ways that come to mind:
+
+EXAMPLES  [positive numbers are decreasing] then [they converge to a limit].  [sequences  and  converge] then [the sequence  converges]. If  is the integral of  then  is the derivative of  .
+
+Those are all true, but not proved.  is the hypothesis,  is the conclusion.
+
+Now we go in the other direction. (It is called the “converse,” not the inverse.) We exchange  and  . Of course stating the converse does not make it true!  might imply  , or it might not. In the first two examples the converse was false—the  can converge without decreasing, and  can converge when the separate sequences do not. The converse of the third statement is true—and there are five more ways to state it:
+
+ is implied by 
+
+if B then A
+
+ is a necessary condition for 
+
+ is true only if  is true
+
+Those words “necessary” and “sufficient” are not always easy to master. The same is true of the deceptively short phrase “if and only if.” The two statements  and  are completely different and they both require proof. That means two separate proofs. But they can be stated together for convenience (when both are true):
+
+ implies  and  implies 
+
+ isÑequivaôlent to 
+
+ is a necessary and sufficient condition for 
+
+ is true if and only if  is true
+
+RULES FOR LIMITS
+
+Calculus needs a definition of limits, to define  : That derivative contains two limits:  and  : Calculus also needs rules for limits, to prove the sum rule and product rule for derivatives. We started on the definition, and now we start on the rules.
+
+Given two convergent sequences,  and  , other sequences also converge:
+
+Addition:  Subtraction: an bn L M Multipli1cation:  Divis1ion:  .provided  /
+
+We check the multiplication rule, which uses a convenieÑnt identity:
+
+Suppose  beyond some point  , and  beyond some other point  : Then beyond the larger of  and  , the right side of .2/ is small. It is less than  : This proves that .2/ gives  :
+
+An important special case is  : (The sequence of  ’s is  Thus a constant can be brought “outside” the limit, to give lim  lim  :
+
+THE LIMIT OF  AS 
+
+The final step is to replace sequences by functions. Instead of  there is a continuum of values  : The limit is taken as  approaches a specified point  (instead of  ). Example: As  approaches  , the function  approaches  : As  approaches  , the function  approaches  : Those statements are fairly obvious, but we have to say what they mean. Somehow it must be this:
+
+If  is small, then  should be small. As before, the word small does not say everything. We really mean “arbitrarily smal|l,”or “|b elow any  :” T|he differe|nc e  must become as small as anyone wants, when  gets near  : In that case  : Or we write  as  :
+
+The statement is awkward because it involves two limits. The limit  is forcing  : (Previously  forced  :) But it is wrong to expect the same  in both limits. We do not and cannot require that  produces)   may be necessary to push  extremely close to  (closer than  ). We must guarantee that if  is close enough to  , then  :
+
+We have come to the “e ps|ilon-d|el ta definition|” of limits|. First, Socrates chooses  : He has to be shown that  is within  of  , for every  near  : Then somebody else (maybe Plato) replies with a number  : That gives the meaning of “near  :” Plato’s goal is to get  within  of  , by keeping  within  of  :
+
+The input tolerance is  (delta), the output tolerance is  : When Plato can find a  for every  , Socrates concedes that the limit is  :
+
+EXAMPLE Prove that  : In this case  and  :
+
+Socrates asks for  : Plato responds by requiring  : What  should he choose  this case  is exactly 5 times  : So Plato picks  below  (a smaller  is always OK). Whenever  , mult|iplication b|y 5 shows that  :
+
+Remark 1 In Figure 2.19, Socrates chooses the height of the box. It extends above and below  , by the small number  : Second, Plato chooses the width. He must make the box narrow enough for the graph to go out the sides. Then  :
+
+When  has a jump, the box can’t hold it. A step function has no limit as  approaches the jump, because the graph goes through the top or bottom—no matter how thin the box.
+
+Remark 2 The second figure has  , because in taking limits we ignore the final point  . The value  can be anything, with no effect on  : The first figure has more:  equals  : Then a special name applies—  is continuous. The left figure shows a continuous function, the other figures do not.
+
+We soon co |me bac k| to continuous functions.
+
+Remark 3 In the example with  and  , the number 5 was the slope. That choice barely ke1pt the graph in the box—it goes out the corners. A little narrower, say  |, and the graph goes safely out the sides. A reasonable choice is to divide " by  . (We double the slope for safety.) I want to say why this  works—even if the  test is seldom used in practice.
+
+The ratio of  to  is distance up over distance across. This is  , close to the slope  : When the distance across is  , the distance up or down is near  : That equals  for our “reasonable choice” of  —so we are safely below  : This choice solves most exerciÑses. But Example 7 shows that a limit might exist even when the slope is infinitÑe.
+
+EXAMPLE 7 
+
+Notice the plus sign in the symbol  . The number  approaches  only from above. An ordinary limit  requires us to accept  on both sides of 1 (the exact value  is not considered). Since negative numbers are not allowed by the square root, we have a one-sided limit. It is  :
+
+Suppose  is  : Then the response could be  : A number below  has a square root below  : In this case the box must be made extremely narrow,  much smaller than  , because the square root starts with infinite slope.
+
+Those examples show the point of the  definition. (Given  , look for ı: This came from CauchÑy in France, not Socrates in Greece.) We also see its bad feature: The test is not convenient. Mathematicians do not go around proposing  ’s and replying with  . We may live a strange life, but not that strange.
+
+It is easier to establish once and for all that  approaches its obvious limit  : The same is true for other familiar functions:  and sin  and  —except at  : The correct limit  comes by substituting  into the function. Thi¤s is exac¤tly the property of a “continuÑous function.” BefÑore the sÑection on continuous functions, we prove the Squeeze Theorem using  and  :
+
+2H SqueezeTheorem Suppose  for  near  : If   and  as  , then the limit of  is also  :
+
+Proof  is squeezed between  and  : After subtracting   is between  and  : Therefore
+
+For any  , the last two inequalities hold in some region  : So the first one also holds. This proves that  : Values at  are not involved—until we get to continuous functions.

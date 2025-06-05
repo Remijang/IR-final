@@ -1,0 +1,76 @@
+[
+    {
+        "type": "text",
+        "text": "2.2.3 Adding Binary Numbers ",
+        "text_level": 1,
+        "page_idx": 63
+    },
+    {
+        "type": "text",
+        "text": "Adding binary numbers is as simple as adding decimal numbers. For adding decimal numbers, we start from the rightmost position and add digit by digit. If the sum exceeds 10, then we write the unit\u2019s digit at the respective position in the result, and carry the value at the ten\u2019s place to the next position in the result. We can do something exactly similar for binary numbers. ",
+        "page_idx": 63
+    },
+    {
+        "type": "text",
+        "text": "Let us start out by trying to add two 1-bit binary numbers, $A$ and $B$ . Table 2.9 shows the different combinations of numbers and results. We observe that for two bits, a carry is generated only when the input operands are both equal to 1. This carry bit needs to be added to the bits in the higher position. At that position, we need to add three bits \u2013 two input operand bits and a carry bit. This is shown in Figure 2.5. In this figure, the input operand bits are designated as $A$ and $B$ . The input carry bit is designated as $C _ { i n }$ . The result will have two bits in it. The least significant bit (right most bit) is known as the sum, and the output carry is referred to as Cout. ",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Table 2.10 shows the results for the different combinations of input and carry bits. ",
+        "page_idx": 64
+    },
+    {
+        "type": "table",
+        "img_path": "images/1968f7578e56b66cf7c3cc8032a90cf9056c91f9b66da639812625728f6483cb.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"5\"></td></tr><tr><td></td><td>A</td><td>B</td><td>(A+B)2</td><td></td></tr><tr><td></td><td>0 0 1 1</td><td>0 1 0</td><td>00 01 01</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 64
+    },
+    {
+        "type": "image",
+        "img_path": "images/703613dc08dfdeac1ae12128b5b5695609b8a954a563ecf9634c3f9658d6ef1f.jpg",
+        "img_caption": [
+            "Table 2.9: Addition of two binary bits ",
+            "Figure 2.5: Addition of two binary bits and a carry bit "
+        ],
+        "img_footnote": [],
+        "page_idx": 64
+    },
+    {
+        "type": "table",
+        "img_path": "images/8a5133ab2b5240c0848b31105fbc450a3de648ce804dc0b3fa7c1c8fdd997d5d.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>A</td><td>B</td><td>Cin</td><td>Sum</td><td>Cout</td></tr><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr><tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr></table></body></html>\n\n",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Table 2.10: A truth table that represents the addition of three bits ",
+        "page_idx": 64
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to add two n-bit binary numbers. Our addition needs to proceed exactly the same ways as decimal numbers. We add the values at a position, compute the result, and carry a value to the next (more significant) position. Let us explain with an example (see Example 11). ",
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Example 11 Add the two binary numbers, 1011 and 0011. ",
+        "page_idx": 65
+    },
+    {
+        "type": "text",
+        "text": "Answer: The process of addition is shown in the figure, and the values of the intermediate values of the carry bits are shown in shaded boxes. Let us now verify if the result of the addition is correct. The two numbers expressed in the decimal number system are 11 and 3. $1 1 + 3 = 1 4$ . The binary representation of 14 is 1110. Thus, the computation is correct. ",
+        "page_idx": 65
+    },
+    {
+        "type": "image",
+        "img_path": "images/044fb4084d6325d2b68238f34b675be0270e92faf7c4cf2d919c9066b5f0e08d.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 65
+    }
+]

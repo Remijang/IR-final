@@ -1,0 +1,42 @@
+[
+    {
+        "type": "text",
+        "text": "8.5 Multiplication of Floating Point Numbers ",
+        "text_level": 1,
+        "page_idx": 349
+    },
+    {
+        "type": "text",
+        "text": "The algorithm for multiplying floating point numbers is of exactly the same form as the algorithm for generic addition without a few steps. Let us again try to multiply $A \\times B$ to obtain the product $C$ . Again, let us assume without loss of generality that $E _ { A } \\geq E _ { B }$ . ",
+        "page_idx": 349
+    },
+    {
+        "type": "image",
+        "img_path": "images/a1f3688d900db567af2876e174c05c0aaef3678ec62d50b55633fde0d78208ce.jpg",
+        "img_caption": [
+            "Figure 8.18: Flowchart for multiplying two floating point values "
+        ],
+        "img_footnote": [],
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "The flowchart for multiplication is shown in Figure 8.18. We do not have to align the exponents in the case of multiplication. We initialize the algorithm as follows. We load the significand of $B$ into register $W$ . In this case, the width of $W$ is equal to double the size of the operands such that the product can be accommodated. The $E$ register is initialized to $E _ { A } + E _ { B } - b i a s$ . This is because in the case of multiplication, the exponents are added together. We subtract the bias to avoid double counting. Computing the sign of the result is trivial. ",
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "After initialization, we multiply the significand of $A$ with $W$ and save the product in $W$ . The product contains 46 bits after the floating point. We might need to discard some bits to ensure that the final mantissa is 23 bits long. Hence, it might be necessary to normalize the result by shifting it to the right (normal numbers), or shifting it to the left (denormal numbers). ",
+        "page_idx": 350
+    },
+    {
+        "type": "text",
+        "text": "As with the case of addition, we can then proceed to round the result to contain 23 bits in the mantissa, and renormalize if necessary. Since there are a constant number of add operations, the time complexity is equal to the sum of the time complexity of normal multiplication and addition. Both of them are $O ( l o g ( n ) )$ operations. The total time taken is thus $O ( l o g ( n ) )$ . ",
+        "page_idx": 350
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "type": "text",
+        "text": "13.1 Early Systems ",
+        "text_level": 1,
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "From the perspective of memory, early machines didn’t provide much of an abstraction to users. Basically, the physical memory of the machine looked something like what you see in Figure 13.1 (page 2). ",
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The OS was a set of routines (a library, really) that sat in memory (starting at physical address 0 in this example), and there would be one running program (a process) that currently sat in physical memory (starting at physical address 64k in this example) and used the rest of memory. There were few illusions here, and the user didn’t expect much from the OS. Life was sure easy for OS developers in those days, wasn’t it? ",
+        "page_idx": 0
+    }
+]

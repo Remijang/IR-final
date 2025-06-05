@@ -1,0 +1,100 @@
+1.4 Circular Motion
+
+This section introduces completely new distances and velocities—the sines and cosines from trigonometry. As I write that last word, I ask myself how much trigonometry it is essential to know. There will be the basic picture of a right triangle, with sides cos  and sin t and 1: There will also be the crucial equation  , which is Pythagoras’ law  : The squares of two sides add to the square of the hypotenuse (and the 1 is really  ). Nothing else is needed immediately. If you don’t know trigonometry, don’t stop—an important part can be learned now.
+
+You will recognize the wavy graphs of the sine and cosine. We intend to find the slopes of those graphs. That can be done without using the formulas for  and  —which later give the same slopes in a more algebraic way. Here it is only basic things that are needed.  And anyway, how complicated can a triangle be ?
+
+Remark You might think trigonometry is only for surveyors and navigators (people with triangles). Not at all! By far the biggest applications are to rotation and vibration and oscillation. It is fantastic that sines and cosines are so perfect for “repeating motion”—around a circle or up and down.
+
+Our underlying goal is to offer one more example in which the velocity can be computed by common sense. Calculus is mainly an extension of common sense, but here that extension is not needed. We will find the slope of the sine curve. The straight line  was easy and the parabola  was harder. The new example also involves realistic motion, seen every day. We start with circular motion, in which the position is given and the velocity will be found.
+
+A ball goes around a circle of radius one. The center is at  (the origin). The  and  coordinates satisfy  , to keep the ball on the circle. We specify its position in Figure 1.16a by giving its angle with the horizontal. And we make the ball travel with constant speed, by requiring that the angle is equal to the time  : The ball goes counterclockwise. At time 1 it reaches the point where the angle equals 1: The angle is measured in radians rather than degrees, so a full circle is completed at  instead of  :
+
+The ball starts on the  axis, where the angle is zero. Now find it at time  :
+
+This is where trigonometry is useful. The cosine oscillates between 1 and  , as the ball goes from far right to far left and back again. The sine also oscillates between 1 and  , starting from sin  : At time  the sine (the height) increases to one. The cosine is zero and the ball reaches the top point  : At time  the cosine is  and the sine is back to zero—the coordinates are  : At  the circle is complete (the angle is also  ), and x D cos  ; 
+
+Important point: The distance around the circle (its circumference) is  , because the radius is 1: The ball travels a distance  in a time  : The speed equals 1: It remains to find the velocity, which involves not only speed but direction.
+
+Degrees vs. radians A full circle is 360 degrees and  radians. Therefore
+
+Radians were invented to avoid those numbers! The speed is exactly 1; reaching  radians at time  : The speed would be :01745; if the ball only reached  degrees. The ball would complete the circle at time  : We cannot accept the division of the circle into 360 pieces (by whom ? ), which produces these numbers.
+
+To check degree mode vs. radian mode, verify that sin  and sin  :
+
+VELOCITY OF THE BALL
+
+At time  , which direction is the ball going ? Calculus watches the motion between t and  : For a ball on a string, we don’t need calculus—just let go. The direction of motion is tangent to the circle. With no force to keep it on the circle, the ball goes off on a tangent. If the ball is the moon, the force is gravity. If it is a hammer swinging around on a chain, the force is from the center. When the thrower lets go, the hammer takes off—and it is an art to pick the right moment. (I once saw a friend hit by a hammer at MIT. He survived, but the thrower quit track.) Calculus will find that same tangent direction, when the points at  and  come close.
+
+The “velocity triangle” is in Figure 1.16b. It is the same as the position triangle, but rotated through  : The hypotenuse is tangent to the circle, in the direction the ball is moving. Its length equals 1 (the speed). The angle  still appears, but now it is the angle with the vertical. The upward component of velocity is cos  ; when the upward component of position is sin  : That is our common sense calculation, based
+
+1.4 Circular Motion
+
+on a figure rather than a formula. The rest of this section depends on it—and we check  at special points.
+
+At the starting time  , the movement is all upward. The height is sin  and the upward velocity is cos  : At time  , the ball reaches the top. The height is sin  and the upward velocity is cos  : At that instant the ball is not moving up or down.
+
+The horizontal velocity contains a minus sign. At first the ball travels to the left. The value of  is  , but the speed in the  direction is  : Half of trigonometry is in that figure (the good half), and you see how  is so basic. That equation applies to position and velocity, at every time.
+
+Application of plane geometry: The right triangles in Figure 1.16 are the same size and shape. They look congruent and they are—the angle  above the ball equals the angle  at the center. That is because the three angles at the ball add to 
+
+OSCILLATION: UP AND DOWN MOTION
+
+We now use circular motion to study straight-line motion. That line will be the  axis. Instead of a ball going around a circle, a mass will move up and down. It oscillates between  and  : The mass is the “shadow of the ball,” as we explain in a moment.
+
+There is a jumpy oscillation that we do not want, with  and  : That “bang-bang” velocity is like a billiard ball, bouncing between two walls without slowing down. If the distance between the walls is 2; then at  the ball is back to the start. The distance graph is a zigzag (or sawtooth) from Section 1:2:
+
+We prefer a smoother motion. Instead of velocities that jump between  and  , a real oscillation slows down to zero and gradually builds up speed again. The mass is on a spring, which pulls it back. The velocity drops to zero as the spring is fully stretched. Then  is negative, as the mass goes the same distance in the opposite direction. Simple harmonic motion is the most important back and forth motion, while  and  are the most important one-way motions.
+
+How do we describe this oscillation ? The best way is to match it with the ball on the circle. The height of the ball will be the height of the mass. The “shadow of the ball” goes up and down, level with the ball. As the ball passes the top of the circle, the mass stops at the top and starts down. As the ball goes around the bottom, the mass stops and turns back up the  axis. Halfway up (or down), the speed is 1:
+
+Figure 1.17a shows the mass at a typical time  : The height is  , level with the ball. This height oscillates between  and  : But the mass does not move with constant speed. The speed of the mass is changing although the speed of the ball is always 1. The time for a full cycle is still  , but within that cycle the mass speeds up and slows down. The problem is to find the changing velocity  : Since the distance is  , the velocity will be the slope of the sine curve.
+
+THE SLOPE OF THE SINE CURVE
+
+At the top and bottom  and  ) the ball changes direction and  : The slope at the top and bottom of the sine curve is zero.  At time zero, when the ball is going straight up, the slope of the sine curve is  : At  , when the ball and mass and  -graph are going down, the velocity is  : The mass goes fastest at the center. The mass goes slowest (in fact it stops) when the height reaches a maximum or minimum. The velocity triangle yields  at every time  :
+
+To find the upward velocity of the mass, look at the upward velocity of the ball. Those velocities are the same! The mass and ball stay level, and we know  from circular motion: The upward velocity is  :
+
+Figure 1.18 shows the result we want. On the right,  gives the height. On the left is the velocity  : That velocity is the slope of the  -curve. The height and velocity (red lines) are oscillating together, but they are out of phase—just as the position triangle and velocity triangle were at right angles. This is absolutely fantastic, that in calculus the two most famous functions of trigonometry form a pair: The slope of the sine curve is given by the cosine curve.
+
+When the distance is  velocity is  :
+
+Admission of guilt: The slope of sin  was not computedin the standard way. Previously we compared  with  , and divided that distance by  : This average velocity approached the slope  as  became small. For sin  we could have done the same:
+
+This is where we need the formula for  , coming soon. Somehow the ratio in (1) should approach cos  as  : (It does.) The sine and cosine fit the same pattern as  and  —our shortcut was to watch the shadow of motion around a circle.
+
+1.4 Circular Motion
+
+Question 1 What if the ball goes twice as fast, to reach angle 2t at time t ?
+
+Answer The speedis now 2: The time for a full circle is only  : The ball’s position is  and  : The velocity is still tangent to the circle—but the tangent is at angle  where the ball is. Therefore cos  enters the upward velocity and  enters the horizontal velocity. The difference is that the velocity triangle is twice as big. The upward velocity is not cos  but 2 cos 2t: The horizontal velocity is  : Notice these 2’s!
+
+Question 2 What is the area under the cosine curve from  to  ?
+
+You can answer that, if you accept the Fundamental Theorem of Calculus— computing areas is the opposite of computing slopes. The slope of sin  is cos  , so the area under cos  is the increase in sin  : No reason to believe that yet, but we use it anyway.
+
+From sin  to sin  , the increase is 1: Please realize the power of calculus. No other method could compute the area under a cosine curve so fast.
+
+THE SLOPE OF THE COSINE CURVE
+
+I cannot resist uncovering another distance and velocity (another  pair) with no extra work. This time  is the cosine. The time clock starts at the top of the circle. The old time  is now  : The dotted lines in Figure 1.18 show the new start. But the shadow has exactly the same motion—the ball keeps going around the circle, and the mass follows it up and down. The  -graph and  -graph are still correct, both with a time shift of  :
+
+The new  -graph is the cosine. The new  -graph is minus the sine. The slope of the cosine curve follows the negative of the sine curve. That is another famous pair, twins of the first:
+
+When the distance is  ; the velocity is  :
+
+You could see that coming, by watching the ball go left and right (instead of up and down). Its distance across is  : Its velocity across is  : That twin pair completes the calculus in Chapter 1 (trigonometry to come). We review the ideas:
+
+ is the velocity the slope of the distance curve the limit of average velocity over a short time the derivative of  :   
+ is the distance the area under the velocity curve the limit of total distance over many short times the integral of  :
+
+Differential calculus: Compute v from  . Integral calculus: Compute  from v:
+
+With constant velocity,  equals  : With constant acceleration,  and  : In harmonic motion,  and  : One part of our goal is to extend that list—for which we need the tools of calculus. Another and more important part is to put these ideas to use.
+
+Before the chapter ends, may I add a note about the book and the course ? The book is more personal than usual, and I hope readers will approve. What I write is very close to what I would say, if you were in this room. The sentences are spoken before they are written. Calculus is alive and moving forward—it needs to be taught that way.
+
+One new part of the subject has come with the computer. It works with a finite step  , not an “infinitesimal” limit. What it can do, it does quickly—even if it cannot find exact slopes or areas. The result is an overwhelming growth in the range of problems that can be solved. We landed on the moon because  and  were so accurate. (The moon’s orbit has sines and cosines, the spacecraft starts with  and  : Only the computer can account for the atmosphere and the sun’s gravity and the changing mass of the spacecraft.) Modern mathematics is  combination of exact formulas and approximate computations. Neither part can be ignored, and I hope you will see numerically what we derive algebraically. The exercises are to help you master both parts.
+
+The course has made a quick start—not with an abstract discussion of sets or functions or limits, but with the concrete questions that led to those ideas. You have seen a distance function  and a limit  of average velocities. We will meet more functions and more limits (and their definitions!) but it is crucial to study important examples early. There is a lot to do, but the course has definitely begun.

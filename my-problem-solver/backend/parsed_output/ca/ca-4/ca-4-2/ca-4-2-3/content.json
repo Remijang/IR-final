@@ -1,0 +1,65 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.3 Compare Instructions ",
+        "text_level": 1,
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "ARM has four compare instructions \u2013 cmp, cmn, tst, and teq \u2013 in the 2-address format. These instructions compare the values in the two registers and save some properties of the result of the comparison in a dedicated internal register called the CPSR register. Other instructions base their behavior on the values saved in the CPSR register. This is similar to the f lags register in SimpleRisc . ",
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "The CP SR register ",
+        "text_level": 1,
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "The CPSR (Current Program Status Register) maintains some state regarding the execution of the program. It is a 32-bit register like the other registers, and is usually used implicitly. In this book, we are concerned with four bits that it stores in the positions [29-32]. They are N(Negative), Z(Zero), C(Carry), and V(Overflow). These four bits are known as condition code flags, or simply flags. It is similar to the f lags register in SimpleRisc . ",
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "There are two sets of instructions that can set CPSR flags. The first set comprises compare instructions, and the second set includes flag setting variants of generic instructions. In either case, the rules for setting the flags are as follows: ",
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "N (Negative) This flag is set if the result is a 2\u2019s complement-based signed integer. It is set to 1 if the result is negative, and 0 if it is non-negative.   \nZ (Zero) This flag is set to 1 if the result is zero. In a comparison operation, if the operands are equal, then this flag is also set to 1.   \nC (Carry) \u2022 For an addition, the C bit is set to 1 if the result produced a carry. This can happen when there was an overflow while adding the unsigned numbers. For example, if we add -1(11112) and -2(11102), then the result is -3(11012), and there is a carry out at the MSB. Note that there is no real overflow, because -3 can be represented in the number system. However, if the numbers are treated as unsigned numbers, then there is an unsigned overflow. Consequently, we can also say that the carry bit is set if there is an unsigned overflow. For a subtraction, the carry bit is set to 0 if there is an unsigned underflow. For example, if we try to compute $0 - 1$ , then there is no real overflow/underflow. However, $0 0 0 0 _ { 2 } \\mathrm { ~ - ~ } 0 0 0 1 _ { 2 }$ will lead to an unsigned underflow. This basically means that when we subtract these two numbers, we will need to borrow a bit. In this case, we set the $C$ flag to 0. Otherwise, we set it to 1. For logical shift operations, $\\mathrm { C }$ is equal to the last bit shifted out of the result value.   \nV (Overflow) V is set to 1 when an actual signed overflow/underflow occurs. Note that in the ",
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "rest of the book, we might casually refer to both overflow and underflow as just overflow. ",
+        "page_idx": 148
+    },
+    {
+        "type": "text",
+        "text": "Compare Instructions ",
+        "text_level": 1,
+        "page_idx": 149
+    },
+    {
+        "type": "text",
+        "text": "ARM has four compare instructions \u2013 cmp, cmn, tst and teq. All four of them update the CPSR flags. Let us consider the cmp instruction. It is a 2-address instruction that takes two inputs. It essentially subtracts their values and sets the appropriate flags. For example, if the values are equal, then the zero flag is set. Later instructions can take some decisions based on these flags. For example, they might decide if they need to branch, or perform a certain computation based on the value of the zero flag. We show the semantics of all four compare instructions in Table 4.7. ",
+        "page_idx": 149
+    },
+    {
+        "type": "table",
+        "img_path": "images/ecaf88f1686d6feca563912683c1a33d5b02ef0becad9782abe2463596f443f7.jpg",
+        "table_caption": [
+            "Table 4.7: Semantics of compare instructions "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td>cmp reg, (reg/imm)</td><td>cmp rl, r2</td><td>Set flags after computing (r1 - r2)</td></tr><tr><td>cmn reg, (reg/imm)</td><td>cmn rl, r2</td><td>\u4e00 Set flags after computing (r1 + r2)</td></tr><tr><td>tst reg, (reg/imm)</td><td>tst r1,r2</td><td>Set flags after computing r1 AND r2)</td></tr><tr><td>teq reg, (reg/imm)</td><td>teq rl, r2</td><td>Set flags after computing (r1 XOR r2)</td></tr></table></body></html>\n\n",
+        "page_idx": 149
+    },
+    {
+        "type": "text",
+        "text": "cmn computes the flags after adding the register values, tst computes a bitwise AND of the two operands and then sets the flags, and teq tests for equality by computing an XOR (exclusive or) of the operands. For this set of instructions, the second operand can be an immediate also. Note that the compare instructions, are not the only instructions that can set the flags. Let us discuss a generic class of instructions that can set the CPSR flags. ",
+        "page_idx": 149
+    }
+]

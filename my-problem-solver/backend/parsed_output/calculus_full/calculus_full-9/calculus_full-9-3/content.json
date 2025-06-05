@@ -1,0 +1,246 @@
+[
+    {
+        "type": "text",
+        "text": "9.3 Slope, Length, and Area for Polar Curves ",
+        "text_level": 1,
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "The previous sections introduced polar coordinates and polar equations and polar graphs. There was no calculus! We now tackle the problems of area (integral calculus) and slope (differential calculus), when the equation is $r = F ( \\theta )$ . The use of $F$ instead of $f$ is a reminder that the slope is not $d F / d \\theta$ and the area is not $\\int F ( \\theta ) d \\theta$ . ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "Start with area. The region is always divided into small pieces\u2014what is their shape ? Look between the angles $\\theta$ and $\\theta + \\Delta \\theta$ in Figure 9.6a. Inside the curve is a narrow wedge\u2014almost a triangle, with $\\Delta \\theta$ as its small angle. If the radius is constant the wedge is a sector of a circle. It is a piece of pie cut at the extremely narrow angle $\\Delta \\theta$ . The area of that piece is a fraction (the angle $\\Delta \\theta$ divided by the whole angle $2 \\pi$ ) of the whole area $\\pi r ^ { 2 }$ of the circle: ",
+        "page_idx": 432
+    },
+    {
+        "type": "image",
+        "img_path": "images/b4fae6df6a598ddc24e2c3f6ec60f796ba82a7812901b8306ba6a482f9cc1756.jpg",
+        "img_caption": [
+            "Fig. 9.6 Area of a wedge and a circle and an intersection of circles. "
+        ],
+        "img_footnote": [],
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 432
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a o f w e d g e = \\frac { \\Delta \\theta } { 2 \\pi } \\pi r ^ { 2 } = \\frac { 1 } { 2 } r ^ { 2 } \\Delta \\theta = \\frac { 1 } { 2 } \\left[ F ( \\theta ) \\right] ^ { 2 } \\Delta \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "We admit that the exact shape is not circular. The true radius $F ( \\theta )$ varies with $\\theta -$ but in a narrow angle that vari\u00bbation is small\u00bb. When we add up the wedges and let $\\Delta \\theta$ approach zero, the area becomes an integral. ",
+        "page_idx": 432
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a = \\int { \\frac { 1 } { 2 } } r ^ { 2 } d \\theta = \\int { \\frac { 1 } { 2 } } \\left[ F ( \\theta ) \\right] ^ { 2 } d \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 Find the area inside the circle $r = \\cos \\theta$ of radius $\\frac { 1 } { 2 }$ (Figure 9.6). ",
+        "page_idx": 432
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a = \\int _ { 0 } ^ { 2 \\pi } { \\frac { 1 } { 2 } } \\cos ^ { 2 } \\theta d \\theta = { \\frac { \\cos \\theta \\sin \\theta + \\theta } { 4 } } \\Biggr ] _ { 0 } ^ { 2 \\pi } = { \\frac { 2 \\pi } { 4 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "That is wrong! The correct area of a circle of radius $\\textstyle { \\frac { 1 } { 2 } }$ is $\\pi / 4$ . The mistake is that we went twice around the circle as $\\theta$ increased to $2 \\pi$ . Integrating from $\\theta$ to $\\pi$ gives $\\pi / 4$ . ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 2 Find the area between the circles $r = \\cos \\theta$ and $\\begin{array} { r } { r = \\frac { 1 } { 2 } } \\end{array}$ ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "The circles cross at the points where $r = \\cos \\theta$ agrees with $\\begin{array} { r } { r = \\frac { 1 } { 2 } } \\end{array}$ . Figure 9.6 shows these points at $\\pm 6 0 ^ { \\circ }$ , or $\\theta = \\pm \\pi / 3$ . Those are the limits of integration, where cos $\\theta =$ $\\frac { 1 } { 2 }$ . ",
+        "page_idx": 432
+    },
+    {
+        "type": "text",
+        "text": "The integral adds up the diffe\u0001rence between two wedges,one out to $r = \\cos \\theta$ and a smaller one with r D 21 : ",
+        "page_idx": 433
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a = \\int _ { - \\pi / 3 } ^ { \\pi / 3 } { \\frac { 1 } { 2 } } \\left[ ( \\cos \\theta ) ^ { 2 } - \\left( { \\frac { 1 } { 2 } } \\right) ^ { 2 } \\right] d \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "Note tha\u00bbt chopped wedges have area $\\begin{array} { r } { \\frac { 1 } { 2 } ( F _ { 1 } ^ { 2 } - F _ { 2 } ^ { 2 } ) \\Delta \\theta } \\end{array}$ and not ${ \\textstyle \\frac { 1 } { 2 } } ( F _ { 1 } - F _ { 2 } ) ^ { 2 } \\Delta \\theta .$ . ",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "EXAMPL\u0001E 3 Find the area between the cardioid $r = 1 + \\cos \\theta$ and the circle $r = 1$ . ",
+        "page_idx": 433
+    },
+    {
+        "type": "equation",
+        "text": "$$\na r e a = \\int _ { - \\pi / 2 } ^ { \\pi / 2 } { \\frac { 1 } { 2 } } \\left[ ( 1 + \\cos \\theta ) ^ { 2 } - 1 ^ { 2 } \\right] d \\theta \\quad \\left( { \\mathrm { l i m i t s ~ } } \\theta = \\pm { \\frac { \\pi } { 2 } } { \\mathrm { ~ w h e r e ~ } } 1 + \\cos \\theta = 1 \\right)\n$$",
+        "text_format": "latex",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "SLOPE OF A POLAR CURVE ",
+        "text_level": 1,
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "Where is the highest point on the cardioid $r = 1 + \\cos \\theta \\ ?$ What is the slope at $\\theta = \\pi / 4 ?$ Those are not the most important questions in calculus, but still we should know how to answer them. I will describe the method quickly, by switching to rectangular coordinates: ",
+        "page_idx": 433
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = r \\cos \\theta = ( 1 + \\cos \\theta ) \\cos \\theta \\qquad { \\mathrm { a n d } } \\qquad y = r \\sin \\theta = ( 1 + \\cos \\theta ) \\sin \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "For the highest point, maximize $y$ by setting its derivative to zero: ",
+        "page_idx": 433
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd y / d \\theta = ( 1 + \\cos \\theta ) ( \\cos \\theta ) + ( - \\sin \\theta ) ( \\sin \\theta ) = 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "Thus cos $\\theta + \\cos 2 \\theta = 0$ , which happens at $6 0 ^ { \\circ }$ . The height is $y = ( 1 + \\textstyle { \\frac { 1 } { 2 } } ) ( \\sqrt { 3 } / 2 )$ . ",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "For the slope, use the chain rule $d y / d \\theta = ( d y / d x ) ( d x / d \\theta )$ : ",
+        "page_idx": 433
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { d y } { d x } } = { \\frac { d y / d \\theta } { d x / d \\theta } } = { \\frac { ( 1 + \\cos \\theta ) ( \\cos \\theta ) + ( - \\sin \\theta ) ( \\sin \\theta ) } { ( 1 + \\cos \\theta ) ( - \\sin \\theta ) + ( - \\sin \\theta ) \\cos \\theta } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "Equations (3) and (4) avoid the awkward (or impossible) step of eliminating $\\theta$ . Instead of trying to find $y$ as a function of $x$ , we keep $x$ and $y$ as functions of $\\theta$ . At $\\theta = \\pi / 4$ , the ratio in equation (4) yields $d y / d x = - 1 / ( 1 + \\sqrt { 2 } )$ . ",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "Problem 18 finds a general formula for the slope, using $d y / d x = ( d y / d \\theta ) / ( d x / d \\theta )$ . Problem 20 finds a more elegant formula, by looking at the question differently. ",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "LENGTH OF A POLAR CURVE ",
+        "text_level": 1,
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "The length integral always starts with $d s = \\sqrt { ( d x ) ^ { 2 } + ( d y ) ^ { 2 } }$ . A polar curve has $x = r$ cos $\\theta = F ( \\theta ) \\cos \\theta$ and $y = F ( \\theta ) \\sin \\theta$ . Now take derivatives by the product rule: ",
+        "page_idx": 433
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd x = ( F ^ { \\prime } ( \\theta ) \\cos \\theta - F ( \\theta ) \\sin \\theta ) d \\theta \\qquad { \\mathrm { a n d } } \\qquad d y = ( F ^ { \\prime } ( \\theta ) \\sin \\theta + F ( \\theta ) \\cos \\theta ) d \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 433
+    },
+    {
+        "type": "text",
+        "text": "Squaring and adding (note $\\cos ^ { 2 } \\theta + \\sin ^ { 2 } \\theta .$ ) gives the element of length $d s$ : ",
+        "page_idx": 434
+    },
+    {
+        "type": "equation",
+        "text": "$$\nd s = { \\sqrt { \\left[ F ^ { \\prime } ( \\theta ) \\right] ^ { 2 } + \\left[ F ( \\theta ) \\right] ^ { 2 } } } d \\theta .\n$$",
+        "text_format": "latex",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "The figure shows $( d s ) ^ { 2 } = ( d r ) ^ { 2 } + ( r d \\theta ) ^ { 2 }$ , the same formula with different letters.   \nThe total arc length is $\\int d s$ . ",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "The area of a surface of revolution is $\\int 2 \\pi y d s$ (around the $x$ axis) or $\\int 2 \\pi x d s$ (around the $y$ axis). Write $x , y$ , and $d s$ in terms of $\\theta$ and $d \\theta$ . Then integrate. ",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 The circle $r = \\cos \\theta$ has $d s = { \\sqrt { 1 } } d \\theta$ . So its length is $\\pi$ (not $2 \\pi$ !!\u2014 don\u2019t go around twice). Revolved around the $y$ axis the circle yields a doughnut with no hole. Since $x = r$ cos $\\theta = \\cos ^ { 2 } \\theta$ , the surface area of the doughnut is ",
+        "page_idx": 434
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int 2 \\pi x d s = \\int _ { 0 } ^ { \\pi } 2 \\pi \\cos ^ { 2 } \\theta d \\theta = \\pi ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 5 The length of $r = 1 + \\cos \\theta$ is, by symmet\u00bbry, double the integral from 0 to $\\pi$ : ",
+        "page_idx": 434
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { { \\displaystyle \\mathrm { l e n g t h ~ o f ~ c a r d i o i d } = 2 \\int _ { 0 } ^ { \\pi } \\sqrt { ( - \\sin \\theta ) ^ { 2 } + ( 1 + \\cos \\theta ) ^ { 2 } } d \\theta } } \\\\ { { \\displaystyle \\qquad = 2 \\int _ { 0 } ^ { \\pi } \\sqrt { 2 + 2 \\cos \\theta } d \\theta = 4 \\int _ { 0 } ^ { \\pi } \\cos \\displaystyle \\frac { \\theta } { 2 } d \\theta = 8 . } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "We substituted $4 \\cos ^ { 2 } { \\frac { 1 } { 2 } } \\theta$ for $2 + 2 \\cos \\theta$ in the square root. It is possible to skip symmetry and inte\u00bbgrate fro\u00bbm 0 to $2 \\pi$ \u2014but that needs the absolute value $\\scriptstyle { \\big | } \\cos { \\frac { 1 } { 2 } } \\theta { \\big | }$ to maintain a positive square root. ",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 6 The logarithmic spiral $r = e ^ { - \\theta }$ has $d s = { \\sqrt { e ^ { - 2 \\theta } + e ^ { - 2 \\theta } } } d \\theta$ . It spirals to zero as $\\theta$ goes to infinity, and the total length is finite: ",
+        "page_idx": 434
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int d s = \\int _ { 0 } ^ { \\infty } { \\sqrt { 2 } } e ^ { - \\theta } d \\theta = - { \\sqrt { 2 } } e ^ { - \\theta } \\exists _ { 0 } ^ { \\infty } = { \\sqrt { 2 } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 434
+    },
+    {
+        "type": "text",
+        "text": "Revolve this spiral for a mathematical seashell with area $\\int _ { 0 } ^ { \\infty } ( 2 \\pi e ^ { - \\theta } \\cos \\theta ) \\sqrt { 2 } e ^ { - \\theta } d \\theta$ . ",
+        "page_idx": 434
+    },
+    {
+        "type": "image",
+        "img_path": "images/191cf6955e7cd007662e3aab2367e5de4d04b1bec4c0010377be9d5aa82dcdba.jpg",
+        "img_caption": [
+            "Fig. 9.7 "
+        ],
+        "img_footnote": [],
+        "page_idx": 434
+    }
+]

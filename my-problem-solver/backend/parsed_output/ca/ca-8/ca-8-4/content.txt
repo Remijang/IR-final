@@ -1,0 +1,7 @@
+8.4 Floating Point Addition and Subtraction
+
+The problems of floating point addition and subtraction are actually different faces of the same problem.  can be interpreted in two ways. We can say that we are subtracting  from  , or we can say that we are adding  to  . Hence, instead of looking at subtraction separately, let us look at it as a special case of addition. We shall first look at the problem of adding two numbers with the same sign in Section 8.4.1, with opposite signs in Section 8.4.4 and then look at the generic problem of adding two numbers in Section 8.4.5.
+
+Before going further, let us quickly recapitulate our knowledge of floating point numbers
+
+(see Table 8.5).

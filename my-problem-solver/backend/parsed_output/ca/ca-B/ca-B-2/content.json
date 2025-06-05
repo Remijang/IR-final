@@ -1,0 +1,27 @@
+[
+    {
+        "type": "text",
+        "text": "B.2 NVIDIA Tesla Architecture ",
+        "text_level": 1,
+        "page_idx": 756
+    },
+    {
+        "type": "text",
+        "text": "Figure B.2 shows the Tesla architecture. Let us start explaining from the top of the figure. The host CPU sends sequences of commands and data to the graphics processor through a dedicated bus. The dedicated bus then transfers the set of commands and data to buffers on the GPU. Subsequently, the units of the GPU process the information. In Figure B.2 the work flows from top to bottom. Before we start discussing the details of the GPU, the reader needs to understand that the GPU is essentially a set of very simple inorder cores. Additionally, it has a large amount of extra hardware to co-ordinate the execution of complex tasks and allocate work to the set of cores. The GPU also supports a multilevel memory hierarchy, and has specialized units that exclusively perform a few graphics specific operations. ",
+        "page_idx": 756
+    },
+    {
+        "type": "image",
+        "img_path": "images/d168a884888b75087e479a852d4fce4410d9a87c8725bc8d56d1fa297e011086.jpg",
+        "img_caption": [
+            "Figure B.2: NVIDIA Tesla Architecture c [2008] IEEE. Reprinted, with permission. Source [Lindholm et al., 2008] "
+        ],
+        "img_footnote": [],
+        "page_idx": 757
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 757
+    }
+]

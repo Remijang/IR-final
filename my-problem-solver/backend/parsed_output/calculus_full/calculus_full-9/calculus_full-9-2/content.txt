@@ -1,0 +1,79 @@
+9.2 Polar Equations and Graphs
+
+The most important equation in polar coordinates, by far, is  : The angle  does not even appear. The equation looks too easy, but that is the point! The graph is a circle around the origin (the unit circle). Compare with the line  : More important, compare the simplicity of  with the complexity of  : Circles are so common in applications that they created the need for polar coordinates.
+
+This section studies polar curves  : The cardioid is a sentimental favorit e— maybe parabolas are more practical. The cardioid is  ; the parabola is  : Section 12.2 adds cycloids and astroids. A graphics package can draw them and so can we.
+
+Together with the circles  constant go the straight lines  constant. The equation  is a ray out from the origin, at that fixed angle. If we allow  ; as we do in drawing graphs, the one-directional ray changes to a full line. Important: The circles are perpendicular to the rays. We have “orthogonal coordinates”— more interesting than the  grid of perpendicular lines. In principle  could be mixed with  (non-orthogonal), but in practice that never happens.
+
+Other curves are attractive in polar coordinates—we look first at five examples. Sometimes we switchback to  cos  and  sin  ; to recognize the graph.
+
+EXAMPLE 1 The graph of  is the straight line  (because  cos  ).
+
+EXAMPLE 2 The graph of  is the four-petal flower in Figure 9.3.
+
+The points at  and  and  and  are marked on the flower. They all have  : There are three important symmetries—acrossthe  axis, across the  axis, and through the origin. This four-petal curve has them all. So does the vertical flower  —but surprisingly, the tests it passes are different.
+
+(Across the  axis:  ) There are two ways to cross. First, change  to  : The equation  stays the same. Second, change  to  and also  to  : The equation  stays the same. Both flowers have  axis symmetry.
+
+(Across the y axis:  There are two ways to cross. First, change  to  : The equation  stays the same. Secon d, change  to  and  to  : Now  stays the same (the sine is odd). Both curves have  axis symmetry.
+
+(Through the origin) Now we c hange  to  or  to  : The flower equations pass the second test only: cos  and s  : Every equation  passes the first test, since  .
+
+The circle  has  axis symmetry, but not  or  : The spiral  has  axis symmetry, because  is the same equation.
+
+Question What happens if you change  to  and also change  to  Answer Nothing—because  and  are always the same point.
+
+EXAMPLE 3 The graph of  is a spiral of Archimedes—or maybe two spirals.
+
+The spiral adds new points as  increases past  : Our other examples are “periodic”—  gives the same point as  : A periodic curve repeats itself. The spiral moves out by  each time it comes around. If we allow negative angles and negative  ; a second spiral appears.
+
+EXAMPLE 4 The graph of  is a cardioid. It is drawn in Figure  .
+
+The cardioid has no simple  equation. Still the curve is very attractive. It has a cusp at the origin and it is heart-shaped (hence its name). To draw it, plot  cos  at  intervals and connect the points. For this curve  is never negative, since cos  never goes below  :
+
+It is a curious fact that the electrical vector in your heart almost traces out a cardioid. See Section 11.1 about electrocardiograms. If it is a perfect cardioid you are in a little trouble.
+
+EXAMPLE 5 The graph of  cos  is a limaçon (a cardioid when  ).
+
+Limaçon (soft  ) is a French word for snail—not so well known as escargot but just as inedible. (I am only referring to the shell. Excusez-moi!) Figure 9.4 shows how a dimple appears as  increases. Then an inner loop appears beyond  (the cardioid at  is giving birth to a loop). For large  the curve looks more like two circles. The limiting case is a double circle, when the inner loop is the same as the outer loop. Remember that  goes around the circle twice.
+
+We could magnify the limaçon by a factor  ; changing to  : We could rotate  to  : But the real interest is whether these figures arise in applications, and Donald Saari showed me a nice example.
+
+Mars seen from Earth The Earth goes around the Sun and so does Mars. Roughly speaking Mars is  times as far out, and completes its orbit in two Earth years.
+
+We take the orbits as circles:  for Earth and  for Mars. Those equations tell where but not when. With time as a parameter, the coordinates of Earth and Mars are given at every instant  :
+
+At  year, the Earth completes a circle (angle  ) and Mars is halfway. Now the keystep. Subtract to find the position of Mars relative to Earth:
+
+Replacing cos  by  and sin  by 2 sin  cos  ; this is
+
+Seen from the Earth, Mars does a loop in the sky! There are two  ’s for which  (or cos  ). At both times, Mars is two units from Earth  and  ). When we move the origin to that point, the 2 is subtracted away—the  coordinates become  and  sin  with  : That is a limaçon with a loop, like Figure 9.4d.
+
+Note added in proof I didn’t realize that a 3-to-2 ratio is also responsible for heating up two spots on opposite sides of Mercury. From the newspaper of June 13; 1990:
+
+“Astronomers today reported the first observations showing that Mercury has two extremely hot spots. That is because Mercury, the planet closest to the Sun, turns on its axis once every 59:6 days, which is a day on Mercury. It goes around the sun every 88 days, a Mercurian year. With this 3-to-2 ratio between spin and revolution, the Sun appears to stop in the sky and move backward, describing a loop over each of the hot spots.”
+
+CONIC SECTIONS IN POLAR COORDINATES
+
+The exercises include other polar curves, like lemniscates and 200-petal flowers. But get serious. The most important curves are the ellipse and parabola and hyperbola. In Section 3.5 their equations involved  : With one focus at the origin, their polar equations are even better.
+
+9A The graph of  is a conic section with “eccentricity”  : circle if  ellipse if  parabola if  hyperbola if  :
+
+EXAMPLE 6 .  / The graph of  is a parabola. This equation is  or  : Squaring both sides gives  : Canceling  leaves  ; the parabola in Figure 9.5b.
+
+The amplifying factor  blows up all curves, with no change in shape.
+
+EXAMPLE 7 .  / The same steps lead from  to  : Squaring gives  and the  terms do not cancel. Instead we have  : This is the hyperbola in Figure 9.5c, with a focus at  :
+
+The hyperbola  (without the  has its center at  .
+
+EXAMPLE 8 .  The same steps lead from  to  : Squaring gives the ellipse  : Polar equations look at conics in a new way, which happens to match the sun and planets perfectly. The sun at  is not the center of the system, but a focus.
+
+Finally  gives the circle  : Center of circle  .
+
+The directrix The figure shows the line  (the “directrix”) for each curve. All points  on the curve satisfy  : The distñance to the focus is e times the distance to the directrix.  is still the eccentricity, nothing to do with exponentials.) A geometer would start from this property  and const|ruct |the c|urve.| We derive the property from the equation:
+
+The directrix is the line at  : That last equation is exactly  .
+
+Notice how two numbers determine these curves. Here the numbers are  and  : In Section 3.5 they were  and  : (The ellipse was  ) Using  and  we go smoothly from ellipses through parabolas (at  ) and on to hyperbolas. With three more numbers we can move the focus to any point and rotate the curve through any angle. Conics are determined by five numbers.

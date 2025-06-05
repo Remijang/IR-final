@@ -1,0 +1,98 @@
+[
+    {
+        "type": "text",
+        "text": "4.2.8 Conditional Instructions ",
+        "text_level": 1,
+        "page_idx": 154
+    },
+    {
+        "type": "text",
+        "text": "Now, that we have a fairly good idea of basic branch instructions, let us elaborate some special features of ARM assembly. These features help make the process of coding very efficient. Let us consider the instructions beq and bne again. We note that they are variants of the basic $b$ instruction. They are distinguished by their suffixes \u2013 eq and $n e$ . The former denotes equality, and the latter denotes inequality. These suffixes are known as condition codes ",
+        "page_idx": 154
+    },
+    {
+        "type": "text",
+        "text": "ARM Condition Codes ",
+        "text_level": 1,
+        "page_idx": 154
+    },
+    {
+        "type": "text",
+        "text": "Let us first consider the list of condition codes shown in Table 4.12. There are 16 condition codes in ARM. Each condition code has a unique number, and suffix. For example, the condition code with suffix eq has a number equal to 0. Every condition code is associated with a unique condition. For example, $e q$ is associated with equality. To test if the condition holds, the ARM processor takes a look at the CPSR flags. The last column in Table 4.12 shows the values of the flags that need to be set for the condition to hold. ",
+        "page_idx": 154
+    },
+    {
+        "type": "table",
+        "img_path": "images/51816023257fd6bc155697dbde904ac51d6fe41633a8b1d25d7189b79e9eced1.jpg",
+        "table_caption": [
+            "Table 4.12: Condition codes "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Number</td><td></td><td>Suffix Meaning</td><td></td><td>Flag State</td><td></td></tr><tr><td></td><td>0</td><td>eq</td><td>equal</td><td>Z=1</td><td></td></tr><tr><td></td><td>1</td><td>ne</td><td>not equal</td><td>Z=0</td><td></td></tr><tr><td></td><td>2</td><td>cs/hs</td><td>carry set/ unsigned higher or equal</td><td>C=1</td><td></td></tr><tr><td></td><td>3</td><td>cc/lo</td><td>carry clear/unsigned lower</td><td>C=0</td><td></td></tr><tr><td></td><td>4</td><td>mi</td><td>negative/ minus</td><td>N=1</td><td></td></tr><tr><td></td><td>5</td><td>pl</td><td>positive or zero/plus</td><td>N=0</td><td></td></tr><tr><td></td><td>6</td><td>VS</td><td>overflow</td><td>V=1</td><td></td></tr><tr><td></td><td>7</td><td>VC</td><td>no overflow</td><td>V=0</td><td></td></tr><tr><td></td><td>8</td><td>hi</td><td>unsigned higher</td><td>(C=1)^ (Z=0)</td><td></td></tr><tr><td></td><td>9</td><td>ls</td><td>unsigned lower or equal</td><td>(C=0)V (Z=1)</td><td></td></tr><tr><td></td><td>10</td><td>ge</td><td>signed greater than or equal</td><td>N=0</td><td></td></tr><tr><td></td><td>11</td><td>lt</td><td>signed less than</td><td>N=1</td><td></td></tr><tr><td></td><td>12</td><td>gt</td><td>signed greater than</td><td>(Z =0)\u2227(N=0)</td><td></td></tr><tr><td></td><td>13</td><td>le</td><td>signed less than or equal</td><td>(Z=1)V (N=1)</td><td></td></tr><tr><td></td><td>14</td><td>al</td><td>always</td><td></td><td></td></tr><tr><td></td><td>15</td><td>1</td><td>reserved</td><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 155
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 155
+    },
+    {
+        "type": "text",
+        "text": "The eq and $n e$ conditions can be tested by considering the $Z ( \\mathrm { z e r o } )$ flag alone. The expectation is that an earlier cmp or subs instruction would have set these flags. If the comparison resulted in an equality, then the $Z$ flag would be set to 1. ",
+        "page_idx": 155
+    },
+    {
+        "type": "text",
+        "text": "As described in Section 4.2.3, if a subtraction of unsigned numbers leads to a borrow, then the carry flag is set to 0. This condition is also known as an unsigned underflow. If there is no borrow, then the carry flag is set to 1. Consequently, if the comparison between unsigned numbers concludes that the first number is greater than or equal to the second number, then the $C ( \\mathrm { c a r r y \\ f i a g } )$ needs to be set to 1. Likewise, if the carry flag is set to 0, then we can say that the first operand is smaller than the second operand (unsigned comparison). These two conditions are captured by the $h s$ and $l o$ condition codes, respectively. ",
+        "page_idx": 155
+    },
+    {
+        "type": "text",
+        "text": "The next four condition codes check if a number is positive or negative, and if there has been an overflow. These conditions can be trivially evaluated by considering the values of $N$ (negative) and $V$ (overflow) flags, respectively. hi denotes unsigned higher. In this case, we need to additionally test the $Z$ flag. Likewise for $l s$ (unsigned lower or equal), we need to test the $Z$ flag, along with the $C$ flag. ",
+        "page_idx": 155
+    },
+    {
+        "type": "text",
+        "text": "ARM has four condition codes for signed numbers \u2013 $g e ( \\geq )$ , $l e ( \\leq )$ , $g t ( > )$ , and $l t ( < )$ . The $g e$ condition code simply tests the $N$ flag. It should be equal to 0. This means that a preceding cmp or subs instruction has subtracted two numbers, where the first operand was greater than or equal to the second operand. For the $g t$ instruction, we need to consider the $Z$ flag also. Similarly, the less than condition codes \u2013 $l t$ and $l e$ \u2013 work. The conditions for the flags are given in Table 4.12. ",
+        "page_idx": 155
+    },
+    {
+        "type": "text",
+        "text": "Note that for signed numbers, we have not considered the possibility of an overflow in Table 4.12. Theorem 2.3.4.1 outlines the precise conditions for detecting an overflow. We leave the process of augmenting the conditions to consider overflow as an exercise for the reader. Lastly, the al(always) condition code means that the instruction is not associated with any condition. It executes according to its default specification. Hence, it is not required to explicitly specify the al condition since it is the default. ",
+        "page_idx": 156
+    },
+    {
+        "type": "text",
+        "text": "Conditional Variants of Normal Instructions ",
+        "text_level": 1,
+        "page_idx": 156
+    },
+    {
+        "type": "text",
+        "text": "Condition codes are not just restricted to branches. We can use condition codes with normal instructions such as add and sub also. For example, the instruction addeq performs an addition if the $Z$ flag in the f lags register is set to true. It means that the last time that the flags were set (most likely by a cmp instruction), the instruction must have concluded an equality. However, if the last comparison instruction concluded that its operands are unequal, then the ARM processor treats the addeq instruction as a nop instruction (no operation). We shall see in Chapter 10 that by using such conditional instructions, we can increase the performance of an advanced processor. Let us consider an example that uses the addeq instruction. ",
+        "page_idx": 156
+    },
+    {
+        "type": "text",
+        "text": "Example 47 ",
+        "text_level": 1,
+        "page_idx": 156
+    },
+    {
+        "type": "text",
+        "text": "Write a program in ARM assembly to count the number of 1s in a 32-bit number stored in r1. Save the result in r4. ",
+        "page_idx": 156
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 156
+    },
+    {
+        "type": "image",
+        "img_path": "images/920a3e7ccadd3cb3c9f62491494c046252a65fe6d126d97d9744158a718b08b4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 156
+    }
+]

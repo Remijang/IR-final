@@ -1,0 +1,13 @@
+11.1.5 Characterizing Spatial Locality
+
+Address Distance
+
+Akin to stack distance, we define the term address distance. The  address distance is the difference in the memory address of the  memory access, and the closest address in the set of the last  memory accesses. Here, a memory access can be either a load or a store. There is an intuitive reason for defining address distance in this manner. Programs typically access different regions of main memory in the same time interval. For example, an operation on arrays, accesses an array item, then accesses some constants, performs an operation, saves the result, and then moves on the next array entry using a for loop. There is clearly spatial locality here, in the sense that consecutive iterations of a for loop access proximate addresses in an array. However, to quantify it, we need to search for the closest access (in terms of memory addresses) over the last  accesses. Here,  is the number of memory accesses in each iteration of the enclosing loop. We can readily observe that in this case that the address distance turns out to be a small value, and is indicative of high spatial locality. However,  needs to be well chosen. It should not be too small, nor too large. We have empirically found  to be an appropriate value for a large set of programs.
+
+To summarize, we can conclude that if the average address distance is small, then it means that we have high spatial locality in the program. The program tends to access nearby memory addresses with high likelihood in the same time interval. Conversely, if the address distances are high, then the accesses are far apart from each other, and the program does not exhibit spatial locality.
+
+Experiment to Characterize Address Distance
+
+Here, we repeat the same experiment as described in Section 11.1.4 with the SPEC2006 benchmark, Perlbench. We profile the address distance distribution for the first 1 million accesses. Figure 11.2 shows the address distance distribution.
+
+Here also, more than a quarter of the accesses have an address distance between -5 and  , and more than two thirds of the accesses have an address distance between -25 and  . Beyond  , the address distance distribution tapers off. Empirically, this distribution also has a heavy tailed nature.

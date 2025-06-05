@@ -1,0 +1,1036 @@
+[
+    {
+        "type": "text",
+        "text": "28.6 Relativistic Energy ",
+        "text_level": 1,
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "Compute total energy of a relativistic object.   \n\u2022 Compute the kinetic energy of a relativistic object.   \n\u2022 Describe rest energy, and explain how it can be converted to other forms.   \n\u2022 Explain why massive particles cannot reach C. ",
+        "page_idx": 1277
+    },
+    {
+        "type": "image",
+        "img_path": "images/8fb91f818901a49a4aadf5143afe6344946542b56855693fcdddfe5ede969151.jpg",
+        "img_caption": [
+            "FIGURE 28.20 The National Spherical Torus Experiment (NSTX) has a fusion reactor in which hydrogen isotopes undergo fusion to produce helium. In this process, a relatively small mass of fuel is converted into a large amount of energy. (credit: Princeton Plasma Physics Laboratory) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "A tokamak is a form of experimental fusion reactor, which can change mass to energy. Accomplishing this requires an understanding of relativistic energy. Nuclear reactors are proof of the conservation of relativistic energy. ",
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "Conservation of energy is one of the most important laws in physics. Not only does energy have many important forms, but each form can be converted to any other. We know that classically the total amount of energy in a system remains constant. Relativistically, energy is still conserved, provided its definition is altered to include the possibility of mass changing to energy, as in the reactions that occur within a nuclear reactor. Relativistic energy is intentionally defined so that it will be conserved in all inertial frames, just as is the case for relativistic momentum. As a consequence, we learn that several fundamental quantities are related in ways not known in classical physics. All of these relationships are verified by experiment and have fundamental consequences. The altered definition of energy contains some of the most fundamental and spectacular new insights into nature found in recent history. ",
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "Total Energy and Rest Energy ",
+        "text_level": 1,
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "The first postulate of relativity states that the laws of physics are the same in all inertial frames. Einstein showed that the law of conservation of energy is valid relativistically, if we define energy to include a relativistic factor. ",
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "Total Energy ",
+        "text_level": 1,
+        "page_idx": 1277
+    },
+    {
+        "type": "text",
+        "text": "Total energy $E$ is defined to be ",
+        "page_idx": 1277
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE = \\gamma m c ^ { 2 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "where $m$ is mass, $c$ is the speed of light, $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } }$ and $v$ is the velocity of the mass relative to an observer. ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "There are many aspects of the total energy $E$ that we will discuss\u2014among them are how kinetic and potential energies are included in $E$ , and how $E$ is related to relativistic momentum. But first, note that at rest, total energy is not zero. Rather, when $v = 0$ , we have $\\gamma = 1$ , and an object has rest energy. ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Rest Energy ",
+        "text_level": 1,
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Rest energy is ",
+        "page_idx": 1278
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { 0 } = m c ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "This is the correct form of Einstein\u2019s most famous equation, which for the first time showed that energy is related to the mass of an object at rest. For example, if energy is stored in the object, its rest mass increases. This also implies that mass can be destroyed to release energy. The implications of these first two equations regarding relativistic energy are so broad that they were not completely recognized for some years after Einstein published them in 1907, nor was the experimental proof that they are correct widely recognized at first. Einstein, it should be noted, did understand and describe the meanings and implications of his theory. ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 28.6 ",
+        "text_level": 1,
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Calculating Rest Energy: Rest Energy is Very Large ",
+        "text_level": 1,
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Calculate the rest energy of a 1.00-g mass. ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "One gram is a small mass\u2014less than half the mass of a penny. We can multiply this mass, in SI units, by the speed of light squared to find the equivalent rest energy. ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $m = 1 . 0 0 \\times 1 0 ^ { - 3 } ~ \\mathrm { k g }$ ; $c = 3 . 0 0 \\times 1 0 ^ { 8 } \\ \\mathrm { m / s }$   \n2. Identify the unknown. $E _ { 0 }$   \n3. Choose the appropriate equation. $E _ { 0 } = m c ^ { 2 }$   \n4. Plug the knowns into the equation.   \n$\\begin{array} { l l l } { { E _ { 0 } } } & { { = } } & { { m c ^ { 2 } = ( 1 . 0 0 \\times 1 0 ^ { - 3 } \\ \\mathrm { k g } ) ( 3 . 0 0 \\times 1 0 ^ { 8 } \\ \\mathrm { m / s } ) ^ { 2 } } } \\\\ { { } } & { { = } } & { { 9 . 0 0 \\times 1 0 ^ { 1 3 } \\ \\mathrm { k g } \\cdot \\mathrm { m ^ { 2 } / s ^ { 2 } } } } \\end{array}$ ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "5. Convert units. Noting that $1 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } / \\mathrm { s } ^ { 2 } = 1 \\mathrm { J }$ , we see the rest mass energy is ",
+        "page_idx": 1278
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE _ { 0 } = 9 . 0 0 \\times 1 0 ^ { 1 3 } ~ \\mathrm { J } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "This is an enormous amount of energy for a $\\underline { { 1 . 0 0 \\mathrm { - } \\underline { { \\mathfrak { S } } } } }$ mass. We do not notice this energy, because it is generally not available. Rest energy is large because the speed of light $c$ is a large number and $c ^ { 2 }$ is a very large number, so that $m c ^ { 2 }$ is huge for any macroscopic mass. The $9 . 0 0 \\times 1 0 ^ { 1 3 }$ rest mass energy for $\\displaystyle \\boldsymbol { 1 . 0 0 \\mathrm { g } }$ is about twice the energy released by the Hiroshima atomic bomb and about 10,000 times the kinetic energy of a large aircraft carrier. If a way can be found to convert rest mass energy into some other form (and all forms of energy can be converted into one another), then huge amounts of energy can be obtained from the destruction of mass. ",
+        "page_idx": 1278
+    },
+    {
+        "type": "text",
+        "text": "Today, the practical applications of theconversionofmas intoanotherformofenergy, such as in nuclear weapons and nuclear power plants, are well known. But examples also existed when Einstein first proposed the correct form of relativistic energy, and he did describe some of them. Nuclear radiation had been discovered in the previous decade, and it had been a mystery as to where its energy originated. The explanation was that, in certain nuclear processes, a small amount of mass is destroyed and energy is released and carried by nuclear radiation. But the amount of mass destroyed is so small that it is difficult to detect that any is missing. Although Einstein proposed this as the source of energy in the radioactive salts then being studied, it was many years before there was broad recognition that mass could be and, in fact, commonly is converted to energy. (See Figure 28.21.) ",
+        "page_idx": 1279
+    },
+    {
+        "type": "image",
+        "img_path": "images/d429df325a626b25392df9efc8c5cf14f1585c0b97c9b4bae70bc3ecba3713db.jpg",
+        "img_caption": [
+            "FIGURE 28.21 The Sun (a) and the Susquehanna Steam Electric Station (b) both convert mass into energy\u2014the Sun via nuclear fusion, the electric station via nuclear fission. (credits: (a) NASA/Goddard Space Flight Center, Scientific Visualization Studio; (b) U.S. government) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "Because of the relationship of rest energy to mass, we now consider mass to be a form of energy rather than something separate. There had not even been a hint of this prior to Einstein\u2019s work. Such conversion is now known to be the source of the Sun\u2019s energy, the energy of nuclear decay, and even the source of energy keeping Earth\u2019s interior hot. ",
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "Stored Energy and Potential Energy ",
+        "text_level": 1,
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "What happens to energy stored in an object at rest, such as the energy put into a battery by charging it, or the energy stored in a toy gun\u2019s compressed spring? The energy input becomes part of the total energy of the object and, thus, increases its rest mass. All stored and potential energy becomes mass in a system. Why is it we don\u2019t ordinarily notice this? In fact, conservation of mass (meaning total mass is constant) was one of the great laws verified by 19th-century science. Why was it not noticed to be incorrect? The following example helps answer these questions. ",
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 28.7 ",
+        "text_level": 1,
+        "page_idx": 1279
+    },
+    {
+        "type": "image",
+        "img_path": "images/09afbd0596ed3265a9cf7bdc170a602fe9172e8256a8460ade5acd9b8b0b6bd1.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "Calculating Rest Mass: A Small Mass Increase due to Energy Input ",
+        "text_level": 1,
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "A car battery is rated to be able to move 600 ampere-hours of charge at $\\textstyle { 1 2 . 0 \\ V . }$ (a) Calculate the increase in rest mass of such a battery when it is taken from being fully depleted to being fully charged. (b) What percent increase is this, given the battery\u2019s mass is $2 0 . 0 \\mathsf { k g } \\colon$ ",
+        "page_idx": 1279
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "In part (a), we first must find the energy stored in the battery, which equals what the battery can supply in the form of electrical potential energy. Since $\\mathrm { P E } _ { \\mathrm { e l e c } } = q V ,$ , we have to calculate the charge $q$ in , which is the product of the current $I$ and the time . We then multiply the result by 12.0 V. We can then calculate the battery\u2019s increase in mass using $\\Delta E = { \\mathrm { P E } _ { \\mathrm { e l e c } } } = ( \\Delta m ) c ^ { 2 }$ . Part (b) is a simple ratio converted to a percentage. ",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $I \\cdot t = 6 0 0 \\mathrm { A } \\cdot \\mathrm { h } ; V = 1 2 . 0 \\mathrm { V } ; c = 3 . 0 0 \\times 1 0 ^ { 8 } \\mathrm { m } / \\mathrm { s }$   \n2. Identify the unknown.   \n3. Choose the appropriate equation. $\\mathrm { P E } _ { \\mathrm { e l e c } } = ( \\Delta m ) c ^ { 2 }$   \n4. Rearrange the equation to solve for the unknown. $\\Delta m = { \\frac { \\mathrm { P E } _ { \\mathrm { e l e c } } } { c ^ { 2 } } }$ ",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "5. Plug the knowns into the equation. ",
+        "page_idx": 1280
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { \\Delta m } & { = } & { { \\frac { \\mathrm { P E } _ { \\mathrm { { e l e c } } } } { c ^ { 2 } } } } \\\\ & { = } & { { \\frac { q V } { c ^ { 2 } } } } \\\\ & { = } & { { \\frac { ( I t ) V } { c ^ { 2 } } } } \\\\ & { = } & { { \\frac { ( 6 0 0 \\ \\mathrm { A } \\cdot \\mathrm { h } ) ( 1 2 . 0 \\ \\mathrm { V } ) } { ( 3 . 0 0 \\times 1 0 ^ { 8 } ) ^ { 2 } } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Write amperes A as coulombs per second $( \\mathsf { C } / \\mathsf { s } )$ , and convert hours to seconds. ",
+        "page_idx": 1280
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\Delta m } } & { { = } } & { { \\frac { ( 6 0 0 ~ \\mathrm { C / s } \\cdot \\mathrm { h } \\left( \\frac { 3 6 0 0 ~ \\mathrm { s } } { 1 ~ \\mathrm { h } } \\right) ( 1 2 . 0 ~ \\mathrm { J / C } ) } { ( 3 . 0 0 \\times 1 0 ^ { 8 } ~ \\mathrm { m / s } ) ^ { 2 } } } } \\\\ { { } } & { { = } } & { { \\frac { ( 2 . 1 6 \\times 1 0 ^ { 6 } ~ \\mathrm { C } ) ( 1 2 . 0 ~ \\mathrm { J / C } ) } { ( 3 . 0 0 \\times 1 0 ^ { 8 } ~ \\mathrm { m / s } ) ^ { 2 } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Using the conversion $1 \\mathrm { k g } \\cdot \\mathrm { m } ^ { 2 } / \\mathrm { s } ^ { 2 } = 1 \\mathrm { ~ J }$ , we can write the mass as ",
+        "page_idx": 1280
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\Delta m = 2 . 8 8 \\times 1 0 ^ { - 1 0 } \\mathrm { k g } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $\\Delta m = 2 . 8 8 \\times 1 0 ^ { - 1 0 } \\mathrm { k g } ; m = 2 0 . 0 \\mathrm { k g }$   \n2. Identify the unknown. $\\%$ change   \n3. Choose the appropriate equation. $\\%$ increase $\\begin{array} { r l } { \\mathrm { ~ } } & { { } = \\frac { \\Delta m } { m } \\times 1 0 0 \\% } \\end{array}$   \n4. Plug the knowns into the equation. ",
+        "page_idx": 1280
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { \\% { \\mathrm { ~ i n c r e a s e } } } & { = } & { { \\frac { \\Delta m } { m } } \\times 1 0 0 \\% } \\\\ & { = } & { { \\frac { 2 . 8 8 \\times 1 0 ^ { - 1 0 } { \\mathrm { ~ k g } } } { 2 0 . 0 { \\mathrm { ~ k g } } } } \\times 1 0 0 \\% } \\\\ & { = } & { 1 . 4 4 \\times 1 0 ^ { - 9 } \\% . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Both the actual increase in mass and the percent increase are very small, since energy is divided by $c ^ { 2 }$ , a very large number. We would have to be able to measure the mass of the battery to a precision of a billionth of a percent, or 1 part in $1 0 ^ { 1 1 }$ , to notice this increase. It is no wonder that the mass variation is not readily observed. In fact, this change in mass is so small that we may question how you could verify it is real. The answer is found in nuclear processes in which the percentage of mass destroyed is large enough to be measured. The mass of the fuel of a nuclear reactor, for example, is measurably smaller when its energy has been used. In that case, stored energy has been released (converted mostly to heat and electricity) and the rest mass has decreased. This is also the case when you use the energy stored in a battery, except that the stored energy is much greater in nuclear processes, making the change in mass measurable in practice as well as in theory. ",
+        "page_idx": 1280
+    },
+    {
+        "type": "text",
+        "text": "Kinetic Energy and the Ultimate Speed Limit ",
+        "text_level": 1,
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "Kinetic energy is energy of motion. Classically, kinetic energy has the familiar expression $\\scriptstyle { \\frac { 1 } { 2 } } m v ^ { 2 }$ . The relativistic expression for kinetic energy is obtained from the work-energy theorem. This theorem states that the net work on a system goes into kinetic energy. If our system starts from rest, then the work-energy theorem is ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\nW _ { \\mathrm { n e t } } = \\mathrm { K E } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "elativistically, at rest we have rest energy $E _ { 0 } = m c ^ { 2 }$ . The work increases this to the total energy $E = \\gamma m c ^ { 2 }$ . Thus, ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\nW _ { \\mathrm { n e t } } = E - E _ { 0 } = \\gamma m c ^ { 2 } - m c ^ { 2 } = ( \\gamma - 1 ) m c ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "Relativistically, we have $W _ { \\mathrm { n e t } } = \\mathrm { K E } _ { \\mathrm { r e l } }$ . ",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "Relativistic Kinetic Energy ",
+        "text_level": 1,
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "Relativistic kinetic energy is ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { K E } } _ { \\mathrm { r e l } } = ( \\gamma - 1 ) m c ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "When motionless, we have $v = 0$ and ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\gamma = { \\frac { 1 } { \\sqrt { 1 - { \\frac { v ^ { 2 } } { c ^ { 2 } } } } } } = 1 ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "so that ${ \\mathrm { K E } } _ { \\mathrm { r e l } } = 0$ at rest, as expected. But the expression for relativistic kinetic energy (such as total energy and rest energy) does not look much like the classical $\\scriptstyle { \\frac { 1 } { 2 } } m v ^ { 2 }$ . To show that the classical expression for kinetic energy is obtained at low velocities, we note that the binomial expansion for $\\gamma$ at low velocities gives ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\gamma = 1 + { \\frac { 1 } { 2 } } { \\frac { v ^ { 2 } } { c ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "A binomial expansion is a way of expressing an algebraic quantity as a sum of an infinite series of terms. In some cases, as in the limit of small velocity here, most terms are very small. Thus the expression derived for $\\gamma$ here is not exact, but it is a very accurate approximation. Thus, at low velocities, ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\gamma - 1 = { \\frac { 1 } { 2 } } { \\frac { v ^ { 2 } } { c ^ { 2 } } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "Entering this into the expression for relativistic kinetic energy gives ",
+        "page_idx": 1281
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { r e l } } = \\left[ { \\frac { 1 } { 2 } } { \\frac { v ^ { 2 } } { c ^ { 2 } } } \\right] m c ^ { 2 } = { \\frac { 1 } { 2 } } m v ^ { 2 } = \\mathrm { K E } _ { \\mathrm { c l a s s } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "So, in fact, relativistic kinetic energy does become the same as classical kinetic energy when $v < < c$ . ",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "It is even more interesting to investigate what happens to kinetic energy when the velocity of an object approaches the speed of light. We know that becomes infinite as $v$ approaches , so that ${ \\sf K E } _ { \\sf r e l }$ also becomes infinite as the velocity approaches the speed of light. (See Figure 28.22.) An infinite amount of work (and, hence, an infinite amount of energy input) is required to accelerate a mass to the speed of light. ",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "The Speed of Light ",
+        "text_level": 1,
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "No object with mass can attain the speed of light. ",
+        "text_level": 1,
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "So the speed of light is the ultimate speed limit for any particle having mass. All of this is consistent with the fact that velocities less than always add to less than . Both the relativistic form for kinetic energy and the ultimate speed limit being $c$ have been confirmed in detail in numerous experiments. No matter how much energy is put into ",
+        "page_idx": 1281
+    },
+    {
+        "type": "text",
+        "text": "accelerating a mass, its velocity can only approach\u2014not reach\u2014the speed of light. ",
+        "page_idx": 1282
+    },
+    {
+        "type": "image",
+        "img_path": "images/e5107c5611bda6e0988982c266e7cd553c7698a77fa73fb0ca8f65f857f73972.jpg",
+        "img_caption": [
+            "FIGURE 28.22 This graph of $\\mathrm { K E } _ { \\mathrm { r e l } }$ versus velocity shows how kinetic energy approaches infinity as velocity approaches the speed of light. It is thus not possible for an object having mass to reach the speed of light. Also shown is $\\mathrm { K E _ { c l a s s } }$ , the classical kinetic energy, which is similar to relativistic kinetic energy at low velocities. Note that much more energy is required to reach high velocities than predicted classically. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 28.8 ",
+        "text_level": 1,
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "Comparing Kinetic Energy: Relativistic Energy Versus Classical Kinetic Energy ",
+        "text_level": 1,
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "An electron has a velocity $v = 0 . 9 9 0 c$ . (a) Calculate the kinetic energy in MeV of the electron. (b) Compare this with the classical value for kinetic energy at this velocity. (The mass of an electron is $9 . 1 1 \\times 1 0 ^ { - 3 1 } \\mathrm { k g . }$ ) ",
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "The expression for relativistic kinetic energy is always correct, but for (a) it must be used since the velocity is highly relativistic (close to $\\boldsymbol { c } )$ ). First, we will calculate the relativistic factor , and then use it to determine the relativistic kinetic energy. For (b), we will calculate the classical kinetic energy (which would be close to the relativistic value if $v$ were less than a few percent of $c$ ) and see that it is not the same. ",
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "1. Identify the knowns. $v = 0 . 9 9 0 c$ ; $m = 9 . 1 1 \\times 1 0 ^ { - 3 1 } ~ \\mathrm { k g }$   \n2. Identify the unknown. $\\mathrm { K E } _ { \\mathrm { r e l } }$   \n3. Choose the appropriate equation. ${ \\mathrm { K E } } _ { \\mathrm { r e l } } = ( \\gamma - 1 ) m c ^ { 2 }$   \n4. Plug the knowns into the equation.   \nFirst calculate . We will carry extra digits because this is an intermediate calculation. ",
+        "page_idx": 1282
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l } { { \\gamma } ~ = ~ { \\frac { 1 } { \\sqrt { 1 - { \\frac { v ^ { 2 } } { c ^ { 2 } } } } } } } \\\\ { ~ = ~ { \\frac { 1 } { \\sqrt { 1 - { \\frac { ( 1 9 9 0 c ) ^ { 2 } } { c ^ { 2 } } } } } } } \\\\ { ~ = ~ { \\frac { 1 } { \\sqrt { 1 - ( 0 . 9 9 0 ) ^ { 2 } } } } } \\\\ { ~ = ~ 7 . 0 8 8 8 } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "Next, we use this value to calculate the kinetic energy. ",
+        "page_idx": 1282
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { \\mathrm { K E } _ { \\mathrm { r e l } } } & { = } & { ( \\gamma - 1 ) m c ^ { 2 } } \\\\ & { = } & { ( 7 . 0 8 8 8 - 1 ) ( 9 . 1 1 \\times 1 0 ^ { - 3 1 } \\ \\mathrm { k g } ) ( 3 . 0 0 \\times 1 0 ^ { 8 } \\ \\mathrm { m } / \\mathrm { s } ) ^ { 2 } } \\\\ & { = } & { 4 . 9 9 \\times 1 0 ^ { - 1 3 } \\ \\mathrm { J } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1282
+    },
+    {
+        "type": "text",
+        "text": "5. Convert units. ",
+        "page_idx": 1282
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l l } { { \\mathrm { K E } _ { \\mathrm { r e l } } } } & { { = } } & { { ( 4 . 9 9 \\times 1 0 ^ { - 1 3 } { \\mathrm { J } } ) \\Bigl ( \\frac { \\mathrm { ~ 1 ~ M e V } } { { \\mathrm { 1 . 6 0 } } \\times { \\mathrm { 1 0 } } ^ { - 1 3 } { \\mathrm { ~ J } } } \\Bigr ) } } \\\\ { { } } & { { = } } & { { 3 . 1 2 { \\mathrm { M e V } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "1. List the knowns. $v = 0 . 9 9 0 c$ ; $m = 9 . 1 1 \\times 1 0 ^ { - 3 1 } { \\mathrm { ~ k g } }$   \n2. List the unknown.   \n3. Choose the appropriate equation. $\\begin{array} { r } { \\mathrm { K E } _ { \\mathrm { c l a s s } } = \\frac { 1 } { 2 } m v ^ { 2 } } \\end{array}$   \n4. Plug the knowns into the equation. ",
+        "page_idx": 1283
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { \\operatorname { K } \\operatorname { E } _ { \\mathrm { c l a s s } } } & { = } & { { \\frac { 1 } { 2 } } m v ^ { 2 } } \\\\ & { = } & { { \\frac { 1 } { 2 } } ( 9 . 0 0 \\times 1 0 ^ { - 3 1 } \\ \\operatorname { k g } ) ( 0 . 9 9 0 ) ^ { 2 } ( 3 . 0 0 \\times 1 0 ^ { 8 } \\ \\mathrm { m } / \\mathrm { s } ) ^ { 2 } } \\\\ & { = } & { 4 . 0 2 \\times 1 0 ^ { - 1 4 } \\ \\mathrm { J } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "5. Convert units. ",
+        "page_idx": 1283
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\mathrm { K E } _ { \\mathrm { c l a s s } } } } & { { = } } & { { 4 . 0 2 \\times 1 0 ^ { - 1 4 } ~ \\mathrm { J } \\Big ( \\frac { 1 ~ \\mathrm { M e V } } { 1 . 6 0 \\times 1 0 ^ { - 1 3 } ~ \\mathrm { J } } \\Big ) } } \\\\ { { } } & { { = } } & { { 0 . 2 5 1 ~ \\mathrm { M e V } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "As might be expected, since the velocity is $9 9 . 0 \\%$ of the speed of light, the classical kinetic energy is significantly off from the correct relativistic value. Note also that the classical value is much smaller than the relativistic value. In fact, $\\mathrm { K E _ { r e l } / K E _ { c l a s s } } = 1 2 . 4$ here. This is some indication of how difficult it is to get a mass moving close to the speed of light. Much more energy is required than predicted classically. Some people interpret this extra energy as going into increasing the mass of the system, but, as discussed in Relativistic Momentum, this cannot be verified unambiguously. What is certain is that ever-increasing amounts of energy are needed to get the velocity of a mass a little closer to that of light. An energy of $3 M e V$ is a very small amount for an electron, and it can be achieved with present-day particle accelerators. SLAC, for example, can accelerate electrons to over $5 0 \\times 1 0 ^ { 9 } ~ \\mathrm { e V } = 5 0 , 0 0 0 ~ \\mathrm { M e V } .$ . ",
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "Is there any point in getting $v$ a little closer to c than $9 9 . 0 \\%$ or $9 9 . 9 \\% ?$ The answer is yes. We learn a great deal by doing this. The energy that goes into a high-velocity mass can be converted to any other form, including into entirely new masses. (See Figure 28.23.) Most of what we know about the substructure of matter and the collection of exotic short-lived particles in nature has been learned this way. Particles are accelerated to extremely relativistic energies and made to collide with other particles, producing totally new species of particles. Patterns in the characteristics of these previously unknown particles hint at a basic substructure for all matter. These particles and some of their characteristics will be covered in Particle Physics. ",
+        "page_idx": 1283
+    },
+    {
+        "type": "image",
+        "img_path": "images/e0997c7c4f51163b22c2ec841fedf5c5898dc6fcd95e580a1474ae50bba2d35a.jpg",
+        "img_caption": [
+            "FIGURE 28.23 The Fermi National Accelerator Laboratory, near Batavia, Illinois, was a subatomic particle collider that accelerated protons and antiprotons to attain energies up to 1 Tev (a trillion electronvolts). The circular ponds near the rings were built to dissipate waste heat. This accelerator was shut down in September 2011. (credit: Fermilab, Reidar Hahn) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "Relativistic Energy and Momentum ",
+        "text_level": 1,
+        "page_idx": 1283
+    },
+    {
+        "type": "text",
+        "text": "We know classically that kinetic energy and momentum are related to each other, since ",
+        "page_idx": 1283
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { K E } _ { \\mathrm { c l a s s } } = { \\frac { p ^ { 2 } } { 2 m } } = { \\frac { ( m v ) ^ { 2 } } { 2 m } } = { \\frac { 1 } { 2 } } m v ^ { 2 } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "Relativistically, we can obtain a relationship between energy and momentum by algebraically manipulating their definitions. This produces ",
+        "page_idx": 1284
+    },
+    {
+        "type": "equation",
+        "text": "$$\nE ^ { 2 } = ( p c ) ^ { 2 } + ( m c ^ { 2 } ) ^ { 2 } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "where $E$ is the relativistic total energy and $p$ is the relativistic momentum. This relationship between relativistic energy and relativistic momentum is more complicated than the classical, but we can gain some interesting new insights by examining it. First, total energy is related to momentum and rest mass. At rest, momentum is zero, and the equation gives the total energy to be the rest energy $m c ^ { 2 }$ (so this equation is consistent with the discussion of rest energy above). However, as the mass is accelerated, its momentum $p$ increases, thus increasing the total energy. At sufficiently high velocities, the rest energy term $( m c ^ { 2 } ) ^ { 2 }$ becomes negligible compared with the momentum term $( p c ) ^ { 2 }$ ; thus, $E = p c$ at extremely relativistic velocities. ",
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "If we consider momentum $p$ to be distinct from mass, we can determine the implications of the equation $E ^ { 2 } = ( p c ) ^ { 2 } + ( m c ^ { 2 } ) ^ { 2 }$ for a particle that has no mass. If we take $m$ to be zero in this equation, then $E = p c$ , or $p = E / c$ . Massless particles have this momentum. There are several massless particles found in nature, including photons (these are quanta of electromagnetic radiation). Another implication is that a massless particle must travel at speed $c$ and only at speed . While it is beyond the scope of this text to examine the relationship in the equation $E ^ { 2 } = ( p c ) ^ { 2 } + ( m c ^ { 2 } ) ^ { 2 }$ in detail, we can see that the relationship has important implications in special relativity. ",
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "Problem-Solving Strategies for Relativity ",
+        "text_level": 1,
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "1. Examinethesituationtodeterminethatitisneces arytouserelativity. Relativistic effects are related to $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } }$ , the quantitative relativistic factor. If is very close to 1, then relativistic effects are small and differ very little from the usually easier classical calculations.   \n2. Identifyexactlywhatne dstobedeterminedintheproblem(identifytheunknowns).   \n3. Makealistofwhatisgivenorcanbeinferedfromtheproblemasstated(identifytheknowns).Look in particular for information on relative velocity $v$ .   \n4. Makecertainyouunderstandtheconceptualaspectsoftheproblembeforemakinganycalculations. Decide, for example, which observer sees time dilated or length contracted before plugging into equations. If you have thought about who sees what, who is moving with the event being observed, who sees proper time, and so on, you will find it much easier to determine if your calculation is reasonable.   \n5. Determinetheprimarytypeofcalculationtobedonetofindtheunknownsidentifiedabove. You will find the section summary helpful in determining whether a length contraction, relativistic kinetic energy, or some other concept is involved.   \n6. Donotroundof duringthecalculation.As noted in the text, you must often perform your calculations to many digits to see the desired effect. You may round off at the very end of the problem, but do not use a rounded number in a subsequent calculation.   \n7. Checktheanswertose ifitisreasonable:Doesitmakesense?This may be more difficult for relativity, since we do not encounter it directly. But you can look for velocities greater than $c$ or relativistic effects that are in the wrong direction (such as a time contraction where a dilation was expected). ",
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "CHECK YOUR UNDERSTANDING ",
+        "text_level": 1,
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "A photon decays into an electron-positron pair. What is the kinetic energy of the electron if its speed is $0 . 9 9 2 c ?$ ",
+        "page_idx": 1284
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 1285
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { { \\mathrm { K E } } _ { \\mathrm { r e l } } ~ = } & { ( \\gamma - 1 ) m c ^ { 2 } = \\left( { \\frac { 1 } { \\sqrt { 1 - { \\frac { v ^ { 2 } } { c ^ { 2 } } } } } } - 1 \\right) m c ^ { 2 } } \\\\ & { = \\left( { \\frac { 1 } { \\sqrt { 1 - { \\frac { ( 0 . 9 9 2 c ) ^ { 2 } } { c ^ { 2 } } } } } } - 1 \\right) ( 9 . 1 1 \\times 1 0 ^ { - 3 1 } ~ \\mathrm { k g } ) ( 3 . 0 0 \\times 1 0 ^ { 8 } ~ \\mathrm { m } / \\mathrm { s } ) ^ { 2 } = 5 . 6 7 \\times 1 0 ^ { - 1 3 } ~ \\mathrm { J } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1285
+    },
+    {
+        "type": "text",
+        "text": "Glossary   \nclassical velocity addition the method of adding velocities when $v < < c$ ; velocities add like regular numbers in one-dimensional motion: $\\boldsymbol { u } = \\boldsymbol { v } + \\boldsymbol { u } ^ { \\prime }$ , where $v$ is the velocity between two observers, $u$ is the velocity of an object relative to one observer, and $u ^ { \\prime }$ is the velocity relative to the other observer   \nfirst postulate of special relativity the idea that the laws of physics are the same and can be stated in their simplest form in all inertial frames of reference   \ninertial frame of reference a reference frame in which a body at rest remains at rest and a body in motion moves at a constant speed in a straight line unless acted on by an outside force   \nlength contraction $L$ , the shortening of the measured length of an object moving relative to the observer\u2019s frame: $L { = } L _ { 0 } { \\sqrt { 1 - { \\frac { v ^ { 2 } } { c ^ { 2 } } } } } = { \\frac { L _ { 0 } } { \\gamma } }$   \nMichelson-Morley experiment an investigation performed in 1887 that proved that the speed of light in a vacuum is the same in all frames of reference from which it is viewed   \nproper length $L _ { 0 }$ ; the distance between two points measured by an observer who is at rest relative to both of the points; Earth-bound observers measure proper length when measuring the distance between two points that are stationary relative to the Earth   \nproper time $\\Delta t _ { 0 }$ . the time measured by an observer at rest relative to the event being observed: $\\begin{array} { r } { \\Delta t = \\frac { \\Delta t _ { 0 } } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } } = { \\gamma \\Delta t } _ { 0 } } \\end{array}$ , where $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } }$   \nrelativistic Doppler effects a change in wavelength of radiation that is moving relative to the observer; the wavelength of the radiation is longer (called a red shift) than that emitted by the source when the source moves away from the observer and shorter (called a blue shift) when the source moves toward the observer; the shifted wavelength is described by the equation $\\lambda _ { \\mathrm { o b s } } = \\lambda _ { s } \\sqrt { \\frac { 1 + \\frac { u } { c } } { 1 - \\frac { u } { c } } }$ where $\\lambda _ { \\mathrm { o b s } }$ is the observed wavelength, $\\lambda _ { s }$ is the source wavelength, and $u$ is the velocity of the source to the observer   \nrelativistic kinetic energy the kinetic energy of an object moving at relativistic speeds: ${ \\mathrm { K E } } _ { \\mathrm { r e l } } = ( \\gamma - 1 ) m c ^ { 2 }$ , where $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } }$   \nrelativistic momentum $p$ , the momentum of an object moving at relativistic velocity; $p = \\gamma m u$ , where $m$ is the rest mass of the object, $u$ is its velocity relative to an observer, and the relativistic factor $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { u ^ { 2 } } { c ^ { 2 } } } }$   \nrelativistic velocity addition the method of adding velocities of an object moving at a relativistic speed: , where is the relative velocity between two observers, $u$ is the velocity of an object relative to one observer, and $u ^ { \\prime }$ is the velocity relative to the other observer   \nrelativity the study of how different observers measure the same event   \nrest energy the energy stored in an object at rest: $E _ { 0 } = m c ^ { 2 }$   \nrest mass the mass of an object as measured by a person at rest relative to the object   \nsecond postulate of special relativity the idea that the speed of light $c$ is a constant, independent of the source   \nspecial relativity the theory that, in an inertial frame of reference, the motion of an object is relative to the frame from which it is viewed or measured   \ntime dilation the phenomenon of time passing slower to an observer who is moving relative to another observer   \ntotal energy defined as $E = \\gamma m c ^ { 2 }$ , where $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } }$   \ntwin paradox this asks why a twin traveling at a relativistic speed away and then back towards the Earth ages less than the Earth-bound twin. The premise to the paradox is faulty because the traveling twin is accelerating, and special relativity does not apply to accelerating frames of reference ",
+        "page_idx": 1286
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1286
+    },
+    {
+        "type": "text",
+        "text": "Section Summary ",
+        "text_level": 1,
+        "page_idx": 1286
+    },
+    {
+        "type": "text",
+        "text": "28.1 Einstein\u2019s Postulates ",
+        "text_level": 1,
+        "page_idx": 1286
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Relativity is the study of how different observers measure the same event.   \n\u2022 Modern relativity is divided into two parts. Special relativity deals with observers who are in uniform (unaccelerated) motion, whereas general relativity ",
+        "page_idx": 1286
+    },
+    {
+        "type": "text",
+        "text": "includes accelerated relative motion and gravity. Modern relativity is correct in all circumstances and, in the limit of low velocity and weak gravitation, gives the same predictions as classical relativity. An inertial frame of reference is a reference frame in which a body at rest remains at rest and a body ",
+        "page_idx": 1286
+    },
+    {
+        "type": "text",
+        "text": "in motion moves at a constant speed in a straight line unless acted on by an outside force. \u2022 Modern relativity is based on Einstein\u2019s two postulates. The first postulate of special relativity is the idea that the laws of physics are the same and can be stated in their simplest form in all inertial frames of reference. The second postulate of special relativity is the idea that the speed of light $c$ is a constant, independent of the relative motion of the source. The Michelson-Morley experiment demonstrated that the speed of light in a vacuum is independent of the motion of the Earth about the Sun. ",
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "28.2 Simultaneity And Time Dilation ",
+        "text_level": 1,
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "Two events are defined to be simultaneous if an observer measures them as occurring at the same time. They are not necessarily simultaneous to all observers\u2014simultaneity is not absolute. Time dilation is the phenomenon of time passing slower for an observer who is moving relative to another observer.   \n\u2022 Observers moving at a relative velocity $v$ do not measure the same elapsed time for an event. Proper time $\\Delta t _ { 0 }$ is the time measured by an observer at rest relative to the event being observed. Proper time is related to the time $\\Delta t$ measured by an Earth-bound observer by the equation $\\Delta t = \\frac { \\Delta t _ { 0 } } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } } = \\gamma \\Delta t _ { 0 } ,$ where $\\gamma = { \\frac { 1 } { \\sqrt { 1 - { \\frac { v ^ { 2 } } { c ^ { 2 } } } } } } .$   \n\u2022 The equation relating proper time and time measured by an Earth-bound observer implies that relative velocity cannot exceed the speed of light.   \n\u2022 The twin paradox asks why a twin traveling at a relativistic speed away and then back towards the Earth ages less than the Earth-bound twin. The premise to the paradox is faulty because the traveling twin is accelerating. Special relativity does not apply to accelerating frames of reference. Time dilation is usually negligible at low relative velocities, but it does occur, and it has been verified by experiment. ",
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "28.3 Length Contraction ",
+        "text_level": 1,
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "\u2022 All observers agree upon relative speed. \u2022 Distance depends on an observer\u2019s motion. Proper ",
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "length $L _ { 0 }$ is the distance between two points measured by an observer who is at rest relative to both of the points. Earth-bound observers measure proper length when measuring the distance between two points that are stationary relative to the Earth. \u2022 Length contraction $L$ is the shortening of the measured length of an object moving relative to the observer\u2019s frame: $L { = } L _ { 0 } { \\sqrt { 1 - { \\frac { v ^ { 2 } } { c ^ { 2 } } } } } = { \\frac { L _ { 0 } } { \\gamma } } .$ ",
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "28.4 Relativistic Addition of Velocities ",
+        "text_level": 1,
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "With classical velocity addition, velocities add like regular numbers in one-dimensional motion: $\\boldsymbol { u } = \\boldsymbol { v } + \\boldsymbol { u } ^ { \\prime }$ , where $v$ is the velocity between two observers, $u$ is the velocity of an object relative to one observer, and $u ^ { \\prime }$ is the velocity relative to the other observer.   \n\u2022 Velocities cannot add to be greater than the speed of light. Relativistic velocity addition describes the velocities of an object moving at a relativistic speed: $u { = } \\frac { v + u ^ { \\prime } } { 1 + \\frac { v u ^ { \\prime } } { c ^ { 2 } } }$   \n\u2022 An observer of electromagnetic radiation sees relativistic Doppler effects if the source of the radiation is moving relative to the observer. The wavelength of the radiation is longer (called a red shift) than that emitted by the source when the source moves away from the observer and shorter (called a blue shift) when the source moves toward the observer. The shifted wavelength is described by the equation $\\lambda _ { \\mathrm { o b s } } = \\lambda _ { s } \\sqrt { \\frac { 1 + \\frac { u } { c } } { 1 - \\frac { u } { c } } }$ $\\lambda _ { \\mathrm { o b s } }$ is the observed wavelength, $\\lambda _ { s }$ is the source wavelength, and $u$ is the relative velocity of the source to the observer. ",
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "28.5 Relativistic Momentum ",
+        "text_level": 1,
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "\u2022 The law of conservation of momentum is valid whenever the net external force is zero and for relativistic momentum. Relativistic momentum $p$ is classical momentum multiplied by the relativistic factor . $p = \\gamma m u$ , where $m$ is the rest mass of the object, $u$ is its velocity relative to an observer, and the relativistic factor $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { u ^ { 2 } } { c ^ { 2 } } } }$   \n\u2022 At low velocities, relativistic momentum is ",
+        "page_idx": 1287
+    },
+    {
+        "type": "text",
+        "text": "equivalent to classical momentum. \u2022 Relativistic momentum approaches infinity as $u$ approaches . This implies that an object with mass cannot reach the speed of light. Relativistic momentum is conserved, just as classical momentum is conserved. ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "28.6 Relativistic Energy ",
+        "text_level": 1,
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Relativistic energy is conserved as long as we define it to include the possibility of mass changing to energy.   \nTotal Energy is defined as: $E = \\gamma m c ^ { 2 }$ , where $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } } .$   \nRest energy is $E _ { 0 } = m c ^ { 2 }$ , meaning that mass is a form of energy. If energy is stored in an object, its mass increases. Mass can be destroyed to release energy.   \n\u2022 We do not ordinarily notice the increase or ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "Conceptual Questions ",
+        "text_level": 1,
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "28.1 Einstein\u2019s Postulates ",
+        "text_level": 1,
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "1. Which of Einstein\u2019s postulates of special relativity includes a concept that does not fit with the ideas of classical physics? Explain.   \n2. Is Earth an inertial frame of reference? Is the Sun? Justify your response.   \n3. When you are flying in a commercial jet, it may appear to you that the airplane is stationary and the Earth is moving beneath you. Is this point of view valid? Discuss briefly. ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "28.2 Simultaneity And Time Dilation ",
+        "text_level": 1,
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "4. Does motion affect the rate of a clock as measured by an observer moving with it? Does motion affect how an observer moving relative to a clock measures its rate?   \n5. To whom does the elapsed time for a process seem to be longer, an observer moving relative to the process or an observer moving with the process? Which observer measures proper time?   \n6. How could you travel far into the future without aging significantly? Could this method also allow you to travel into the past? ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "28.3 Length Contraction ",
+        "text_level": 1,
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "7. To whom does an object seem greater in length, an observer moving with the object or an observer moving relative to the object? Which observer measures the object\u2019s proper length? ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "decrease in mass of an object because the change in mass is so small for a large increase in energy.   \n\u2022 The relativistic work-energy theorem is $W _ { \\mathrm { n e t } } = E - E _ { 0 } = \\gamma m c ^ { 2 } - m c ^ { 2 } = ( \\gamma - 1 ) m c ^ { 2 }$ .   \n\u2022 Relativistically, $W _ { \\mathrm { n e t } } = \\mathrm { K E } _ { \\mathrm { r e l } }$ , where $\\mathrm { K E } _ { \\mathrm { r e l } }$ is the relativistic kinetic energy.   \n\u2022 Relativistic kinetic energy is ${ \\mathrm { K E } } _ { \\mathrm { r e l } } = ( \\gamma - 1 ) m c ^ { 2 }$ , where $\\gamma = \\frac { 1 } { \\sqrt { 1 - \\frac { v ^ { 2 } } { c ^ { 2 } } } }$ At low velocities, relativistic kinetic energy reduces to classical kinetic energy.   \nNo object with mass can attain the speed of light because an infinite amount of work and an infinite amount of energy input is required to accelerate a mass to the speed of light.   \n\u2022 The equation $E ^ { 2 } = ( p c ) ^ { 2 } + ( m c ^ { 2 } ) ^ { 2 }$ relates the relativistic total energy $E$ and the relativistic momentum $p$ . At extremely high velocities, the rest energy $m c ^ { 2 }$ becomes negligible, and $E = p c$ .   \n8. Relativistic effects such as time dilation and length contraction are present for cars and airplanes. Why do these effects seem strange to us?   \n9. Suppose an astronaut is moving relative to the Earth at a significant fraction of the speed of light. (a) Does he observe the rate of his clocks to have slowed? (b) What change in the rate of Earth-bound clocks does he see? (c) Does his ship seem to him to shorten? (d) What about the distance between stars that lie on lines parallel to his motion? (e) Do he and an Earth-bound observer agree on his velocity relative to the Earth? ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "28.4 Relativistic Addition of Velocities ",
+        "text_level": 1,
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "10. Explain the meaning of the terms \u201cred shift\u201d and \u201cblue shift\u201d as they relate to the relativistic Doppler effect.   \n11. What happens to the relativistic Doppler effect when relative velocity is zero? Is this the expected result?   \n12. Is the relativistic Doppler effect consistent with the classical Doppler effect in the respect that $\\lambda _ { \\mathrm { o b s } }$ is larger for motion away?   \n13. All galaxies farther away than about $5 0 \\times 1 0 ^ { 6 }$ ly exhibit a red shift in their emitted light that is proportional to distance, with those farther and farther away having progressively greater red shifts. What does this imply, assuming that the only source of red shift is relative motion? (Hint: At these large distances, it is space itself that is expanding, but the effect on light is the same.) ",
+        "page_idx": 1288
+    },
+    {
+        "type": "text",
+        "text": "28.5 Relativistic Momentum ",
+        "text_level": 1,
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "14. How does modern relativity modify the law of conservation of momentum?   \n15. Is it possible for an external force to be acting on a system and relativistic momentum to be conserved? Explain. ",
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "28.6 Relativistic Energy ",
+        "text_level": 1,
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "16. How are the classical laws of conservation of energy and conservation of mass modified by modern relativity?   \n17. What happens to the mass of water in a pot when it cools, assuming no molecules escape or are added? Is this observable in practice? Explain.   \n18. Consider a thought experiment. You place an expanded balloon of air on weighing scales outside in the early morning. The balloon stays on the scales and you are able to measure changes in its mass. Does the mass of the balloon change as the day progresses? Discuss the difficulties in carrying out this experiment.   \n19. The mass of the fuel in a nuclear reactor decreases by an observable amount as it puts out energy. Is the same true for the coal and oxygen combined in a conventional power plant? If so, is this observable in practice for the coal and oxygen? Explain.   \n20. We know that the velocity of an object with mass has an upper limit of . Is there an upper limit on its momentum? Its energy? Explain.   \n21. Given the fact that light travels at , can it have mass? Explain.   \n22. If you use an Earth-based telescope to project a laser beam onto the Moon, you can move the spot across the Moon\u2019s surface at a velocity greater than the speed of light. Does this violate modern relativity? (Note that light is being sent from the Earth to the Moon, not across the surface of the Moon.) ",
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "Problems & Exercises ",
+        "text_level": 1,
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "28.2 Simultaneity And Time Dilation ",
+        "text_level": 1,
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "1. (a) What is $\\gamma$ if $v = 0 . 2 5 0 c ?$ (b) If $v = 0 . 5 0 0 c ?$   \n2. (a) What is $\\gamma$ if $v = 0 . 1 0 0 c ?$ (b) If $v = 0 . 9 0 0 c ?$   \n3. Particles called $\\pi$ -mesons are produced by accelerator beams. If these particles travel at $2 . 7 0 \\times 1 0 ^ { 8 } \\ \\mathrm { m / s }$ and live $2 . 6 0 \\times 1 0 ^ { - 8 }$ when at rest relative to an observer, how long do they live as viewed in the laboratory?   \n4. Suppose a particle called a kaon is created by cosmic radiation striking the atmosphere. It moves by you at $0 . 9 8 0 c$ , and it lives $1 . 2 4 \\times 1 0 ^ { - 8 }$ when at rest relative to an observer. How long does it live as you observe it?   \n5. A neutral $\\pi$ -meson is a particle that can be created by accelerator beams. If one such particle lives $1 . 4 0 \\times 1 0 ^ { - 1 6 }$ as measured in the laboratory, and $0 . 8 4 0 \\times 1 0 ^ { - 1 6 }$ when at rest relative to an observer, what is its velocity relative to the laboratory?   \n6. A neutron lives 900 s when at rest relative to an observer. How fast is the neutron moving relative to an observer who measures its life span to be 2065 s?   \n7. If relativistic effects are to be less than $1 \\%$ , then must be less than 1.01. At what relative velocity is $\\gamma = 1 . 0 1 \\ ?$   \n8. If relativistic effects are to be less than $3 \\%$ , then must be less than 1.03. At what relative velocity is $\\gamma = 1 . 0 3 \\ ?$   \n9. (a) At what relative velocity is $\\gamma = 1 . 5 0 ?$ (b) At what relative velocity is $\\gamma = 1 0 0 ?$   \n10. (a) At what relative velocity is $\\gamma = 2 . 0 0 ?$ (b) At what relative velocity is $\\gamma = 1 0 . 0 ?$   \n11. Unreasonable Results (a) Find the value of $\\gamma$ for the following situation. An Earth-bound observer measures $2 3 . 9 \\mathfrak { h }$ to have passed while signals from a high-velocity space probe indicate that $2 4 . 0 \\mathrm { h }$ have passed on board. (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "28.3 Length Contraction ",
+        "text_level": 1,
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "12. A spaceship, $2 0 0 ~ \\mathsf { m }$ long as seen on board, moves by the Earth at $0 . 9 7 0 c$ . What is its length as measured by an Earth-bound observer?   \n13. How fast would a $6 . 0 \\mathsf { m }$ -long sports car have to be going past you in order for it to appear only $5 . 5 ~ \\mathsf { m }$ long? ",
+        "page_idx": 1289
+    },
+    {
+        "type": "text",
+        "text": "14. (a) How far does the muon in Example 28.1 travel according to the Earth-bound observer? (b) How far does it travel as viewed by an observer moving with it? Base your calculation on its velocity relative to the Earth and the time it lives (proper time). (c) Verify that these two distances are related through length contraction $\\scriptstyle \\gamma = 3 . 2 0$ . ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "15. (a) How long would the muon in Example 28.1 have lived as observed on the Earth if its velocity was $0 . 0 5 0 0 c ?$ (b) How far would it have traveled as observed on the Earth? (c) What distance is this in the muon\u2019s frame? ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "16. (a) How long does it take the astronaut in Example 28.2 to travel 4.30 ly at $0 . 9 9 9 4 4 c$ (as measured by the Earth-bound observer)? (b) How long does it take according to the astronaut? (c) Verify that these two times are related through time dilation with $\\gamma { = } 3 0 . 0 0$ as given. ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "17. (a) How fast would an athlete need to be running for a $_ { 1 0 0 - m }$ race to look 100 yd long? (b) Is the answer consistent with the fact that relativistic effects are difficult to observe in ordinary circumstances? Explain. ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "18. Unreasonable Results (a) Find the value of for the following situation. An astronaut measures the length of her spaceship to be $2 5 . 0 \\mathsf { m }$ , while an Earth-bound observer measures it to be $1 0 0 ~ \\mathsf { m }$ . (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "19. Unreasonable Results A spaceship is heading directly toward the Earth at a velocity of $0 . 8 0 0 c$ . The astronaut on board claims that he can send a canister toward the Earth at $1 . 2 0 c$ relative to the Earth. (a) Calculate the velocity the canister must have relative to the spaceship. (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "28.4 Relativistic Addition of Velocities ",
+        "text_level": 1,
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "20. Suppose a spaceship heading straight towards the Earth at $0 . 7 5 0 c$ can shoot a canister at $0 . 5 0 0 c$ relative to the ship. (a) What is the velocity of the canister relative to the Earth, if it is shot directly at the Earth? (b) If it is shot directly away from the Earth?   \n21. Repeat the previous problem with the ship heading directly away from the Earth.   \n22. If a spaceship is approaching the Earth at $0 . 1 0 0 c$ and a message capsule is sent toward it at $0 . 1 0 0 c$ relative to the Earth, what is the speed of the capsule relative to the ship?   \n23. (a) Suppose the speed of light were only $3 0 0 0 \\mathrm { m / s }$ . A jet fighter moving toward a target on the ground at $8 0 0 \\mathrm { m / s }$ shoots bullets, each having a muzzle velocity of $1 0 0 0 \\mathrm { m / s }$ . What are the bullets\u2019 velocity relative to the target? (b) If the speed of light was this small, would you observe relativistic effects in everyday life? Discuss.   \n24. If a galaxy moving away from the Earth has a speed of $1 0 0 0 \\mathrm { k m / s }$ and emits $6 5 6 \\mathrm { n m }$ light characteristic of hydrogen (the most common element in the universe). (a) What wavelength would we observe on the Earth? (b) What type of electromagnetic radiation is this? (c) Why is the speed of the Earth in its orbit negligible here?   \n25. A space probe speeding towards the nearest star moves at $0 . 2 5 0 c$ and sends radio information at a broadcast frequency of $1 . 0 0 \\mathsf { G H z }$ . What frequency is received on the Earth?   \n26. If two spaceships are heading directly towards each other at $0 . 8 0 0 c$ , at what speed must a canister be shot from the first ship to approach the other at $0 . 9 9 9 c$ as seen by the second ship?   \n27. Two planets are on a collision course, heading directly towards each other at $0 . 2 5 0 c$ . A spaceship sent from one planet approaches the second at $0 . 7 5 0 c$ as seen by the second planet. What is the velocity of the ship relative to the first planet?   \n28. When a missile is shot from one spaceship towards another, it leaves the first at $0 . 9 5 0 c$ and approaches the other at $0 . 7 5 0 c$ . What is the relative velocity of the two ships?   \n29. What is the relative velocity of two spaceships if one fires a missile at the other at $0 . 7 5 0 c$ and the other observes it to approach at $0 . 9 5 0 c ?$   \n30. Near the center of our galaxy, hydrogen gas is moving directly away from us in its orbit about a black hole. We receive ${ 1 9 0 0 } \\mathsf { n m }$ electromagnetic radiation and know that it was $\\mathsf { 1 8 7 5 } \\mathsf { n m }$ when emitted by the hydrogen gas. What is the speed of the gas?   \n31. A highway patrol officer uses a device that measures the speed of vehicles by bouncing radar off them and measuring the Doppler shift. The outgoing radar has a frequency of $1 0 0 G H z$ and the returning echo has a frequency $1 5 . 0 \\mathsf { k H z }$ higher. What is the velocity of the vehicle? Note that there are two Doppler shifts in echoes. Be certain not to round off until the end of the problem, because the effect is small.   \n32. Prove that for any relative velocity $v$ between two observers, a beam of light sent from one to the other will approach at speed $c$ (provided that $v$ is less than , of course).   \n33. Show that for any relative velocity $v$ between two observers, a beam of light projected by one directly away from the other will move away at the speed of light (provided that $v$ is less than $c$ , of course).   \n34. (a) All but the closest galaxies are receding from our own Milky Way Galaxy. If a galaxy $1 2 . 0 \\times 1 0 ^ { 9 }$ ly away is receding from us at $0 . 0 . 9 0 0 c$ , at what velocity relative to us must we send an exploratory probe to approach the other galaxy at $0 . 9 9 0 c$ , as measured from that galaxy? (b) How long will it take the probe to reach the other galaxy as measured from the Earth? You may assume that the velocity of the other galaxy remains constant. (c) How long will it then take for a radio signal to be beamed back? (All of this is possible in principle, but not practical.) ",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1290
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1291
+    },
+    {
+        "type": "text",
+        "text": "28.5 Relativistic Momentum ",
+        "text_level": 1,
+        "page_idx": 1291
+    },
+    {
+        "type": "text",
+        "text": "35. Find the momentum of a helium nucleus having a mass of $6 . 6 8 \\times 1 0 ^ { - 2 7 } ~ \\mathrm { k g }$ that is moving at $0 . 2 0 0 c$ .   \n36. What is the momentum of an electron traveling at 0.980c?   \n37. (a) Find the momentum of a $1 . 0 0 \\times 1 0 ^ { 9 } ~ \\mathrm { k g }$ asteroid heading towards the Earth at $3 0 . 0 \\mathrm { k m / s }$ . (b) Find the ratio of this momentum to the classical momentum. (Hint: Use the approximation that $\\gamma = 1 + ( 1 / 2 ) v ^ { 2 } / c ^ { 2 }$ at low velocities.)   \n38. (a) What is the momentum of a $2 0 0 0 \\mathsf { k g }$ satellite orbiting at $4 . 0 0 ~ \\mathsf { k m } / \\mathsf { s ? }$ (b) Find the ratio of this momentum to the classical momentum. (Hint: Use the approximation that $\\gamma = 1 + ( 1 / 2 ) v ^ { 2 } / c ^ { 2 }$ at low velocities.)   \n39. What is the velocity of an electron that has a momentum of $3 . 0 4 \\times 1 0 ^ { - 2 1 } \\mathrm { k g } { \\cdot } \\mathrm { m } / \\mathrm { s } ?$ Note that you must calculate the velocity to at least four digits to see the difference from $c$ .   \n40. Find the velocity of a proton that has a momentum of $4 . 4 8 \\times - 1 0 ^ { - 1 9 } \\ \\mathrm { k g { \\cdot } m / s }$   \n41. (a) Calculate the speed of a $1 . 0 0 \\mathrm { - } \\mu \\mathrm { g }$ particle of dust that has the same momentum as a proton moving at $0 . 9 9 9 c$ . (b) What does the small speed tell us about the mass of a proton compared to even a tiny amount of macroscopic matter?   \n42. (a) Calculate for a proton that has a momentum of $1 . 0 0 \\mathrm { k g \\cdot m / s }$ (b) What is its speed? Such protons form a rare component of cosmic radiation with uncertain origins.   \n28.6 Relativistic Energy   \n43. What is the rest energy of an electron, given its mass is $9 . 1 1 \\times 1 0 ^ { - 3 1 }$ ? Give your answer in joules and MeV.   \n44. Find the rest energy in joules and MeV of a proton, given its mass is $1 . 6 7 \\times 1 0 ^ { - 2 7 } ~ \\mathrm { k g }$ .   \n45. If the rest energies of a proton and a neutron (the two constituents of nuclei) are 938.3 and 939.6 MeV respectively, what is the difference in their masses in kilograms?   \n46. The Big Bang that began the universe is estimated to have released $1 0 ^ { 6 8 }$ of energy. How many stars could half this energy create, assuming the average star\u2019s mass is $4 . 0 0 \\times 1 0 ^ { 3 0 } \\mathrm { k g } ?$   \n47. A supernova explosion of a $2 . 0 0 \\times 1 0 ^ { 3 1 } ~ \\mathrm { k g }$ star produces $1 . 0 0 \\times 1 0 ^ { 4 4 }$ of energy. (a) How many kilograms of mass are converted to energy in the explosion? (b) What is the ratio of mass destroyed to the original mass of the star?   \n48. (a) Using data from Table 7.1, calculate the mass converted to energy by the fission of $\\displaystyle 1 . 0 0 \\ k \\ g$ of uranium. (b) What is the ratio of mass destroyed to the original mass, ?   \n49. (a) Using data from Table 7.1, calculate the amount of mass converted to energy by the fusion of $\\displaystyle 1 . 0 0 \\ k \\ g$ of hydrogen. (b) What is the ratio of mass destroyed to the original mass, ? (c) How does this compare with for the fission of $\\displaystyle 1 . 0 0 \\ k \\ g$ of uranium?   \n50. There is approximately $1 0 ^ { 3 4 }$ of energy available from fusion of hydrogen in the world\u2019s oceans. (a) If $1 0 ^ { 3 3 }$ of this energy were utilized, what would be the decrease in mass of the oceans? Assume that $0 . 0 8 \\%$ of the mass of a water molecule is converted to energy during the fusion of hydrogen. (b) How great a volume of water does this correspond to? (c) Comment on whether this is a significant fraction of the total mass of the oceans.   \n51. A muon has a rest mass energy of $1 0 5 . 7 \\mathsf { M e V } ,$ and it decays into an electron and a massless particle. (a) If all the lost mass is converted into the electron\u2019s kinetic energy, find for the electron. (b) What is the electron\u2019s velocity?   \n52. A $\\pi$ -meson is a particle that decays into a muon and a massless particle. The $\\pi$ -meson has a rest mass energy of $1 3 9 . 6 \\mathsf { M e V } ,$ , and the muon has a rest mass energy of $1 0 5 . 7 \\mathsf { M e V } .$ . Suppose the $\\pi$ -meson is at rest and all of the missing mass goes into the muon\u2019s kinetic energy. How fast will the muon move? ",
+        "page_idx": 1291
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1291
+    },
+    {
+        "type": "text",
+        "text": "53. (a) Calculate the relativistic kinetic energy of a $\\mathtt { 1 0 0 0 - k g }$ car moving at $3 0 . 0 \\ : \\mathrm { m / s }$ if the speed of light were only $4 5 . 0 \\ : \\mathrm { m } / \\mathsf { s }$ . (b) Find the ratio of the relativistic kinetic energy to classical. ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "54. Alpha decay is nuclear decay in which a helium nucleus is emitted. If the helium nucleus has a mass of $6 . 8 0 \\times 1 0 ^ { - 2 7 }$ and is given $5 . 0 0 ~ \\mathsf { M e V }$ of kinetic energy, what is its velocity? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "55. (a) Beta decay is nuclear decay in which an electron is emitted. If the electron is given 0.750 MeV of kinetic energy, what is its velocity? (b) Comment on how the high velocity is consistent with the kinetic energy as it compares to the rest mass energy of the electron. ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "56. A positron is an antimatter version of the electron, having exactly the same mass. When a positron and an electron meet, they annihilate, converting all of their mass into energy. (a) Find the energy released, assuming negligible kinetic energy before the annihilation. (b) If this energy is given to a proton in the form of kinetic energy, what is its velocity? (c) If this energy is given to another electron in the form of kinetic energy, what is its velocity? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "57. What is the kinetic energy in MeV of a $\\pi$ -meson that lives $1 . 4 0 \\times 1 0 ^ { - 1 6 }$ as measured in the laboratory, and $0 . 8 4 0 \\times 1 0 ^ { - 1 6 }$ when at rest relative to an observer, given that its rest energy is 135 MeV? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "58. Find the kinetic energy in MeV of a neutron with a measured life span of 2065 s, given its rest energy is $9 3 9 . 6 ~ \\mathsf { M e V } ,$ , and rest life span is 900s. ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "59. (a) Show that $( p c ) ^ { 2 } / ( m c ^ { 2 } ) ^ { 2 } = \\gamma ^ { 2 } - 1$ . This means that at large velocities $p c > > m c ^ { 2 }$ . (b) Is $E \\approx p c$ when $\\gamma = 3 0 . 0$ , as for the astronaut discussed in the twin paradox? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "60. One cosmic ray neutron has a velocity of $0 . 2 5 0 c$ relative to the Earth. (a) What is the neutron\u2019s total energy in MeV? (b) Find its momentum. (c) Is $E \\approx p c$ in this situation? Discuss in terms of the equation given in part (a) of the previous problem. ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "61. What is for a proton having a mass energy of $9 3 8 . 3 \\mathsf { M e V }$ accelerated through an effective potential of 1.0 TV (teravolt) at Fermilab outside Chicago? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "62. (a) What is the effective accelerating potential for electrons at the Stanford Linear Accelerator, if $\\gamma = 1 . 0 0 \\times 1 0 ^ { 5 }$ for them? (b) What is their total energy (nearly the same as kinetic in this case) in GeV? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "63. (a) Using data from Table 7.1, find the mass destroyed when the energy in a barrel of crude oil is released. (b) Given these barrels contain 200 liters and assuming the density of crude oil is ${ 7 5 0 \\mathrm { k g } } / { \\mathrm { m } ^ { 3 } }$ , what is the ratio of mass destroyed to original mass, ? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "64. (a) Calculate the energy released by the destruction of $\\displaystyle 1 . 0 0 \\ k \\ g$ of mass. (b) How many kilograms could be lifted to a $1 0 . 0 \\mathsf { k m }$ height by this amount of energy? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "65. A Van de Graaff accelerator utilizes a 50.0 MV potential difference to accelerate charged particles such as protons. (a) What is the velocity of a proton accelerated by such a potential? (b) An electron? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "66. Suppose you use an average of $5 0 0 \\mathrm { k W \\cdot h }$ of electric energy per month in your home. (a) How long would $\\displaystyle 1 . 0 0 { \\tt g }$ of mass converted to electric energy with an efficiency of $3 8 . 0 \\%$ last you? (b) How many homes could be supplied at the $5 0 0 \\mathrm { k W \\cdot h }$ per month rate for one year by the energy from the described mass conversion? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "67. (a) A nuclear power plant converts energy from nuclear fission into electricity with an efficiency of $3 5 . 0 \\%$ . How much mass is destroyed in one year to produce a continuous 1000 MW of electric power? (b) Do you think it would be possible to observe this mass loss if the total mass of the fuel is $1 0 ^ { 4 } ~ \\mathrm { k g ? }$ ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "68. Nuclear-powered rockets were researched for some years before safety concerns became paramount. (a) What fraction of a rocket\u2019s mass would have to be destroyed to get it into a low Earth orbit, neglecting the decrease in gravity? (Assume an orbital altitude of $2 5 0 \\mathsf { k m }$ , and calculate both the kinetic energy (classical) and the gravitational potential energy needed.) (b) If the ship has a mass of $1 . 0 0 \\times 1 0 ^ { 5 } ~ \\mathrm { k g }$ (100 tons), what total yield nuclear explosion in tons of TNT is needed? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "69. The Sun produces energy at a rate of $4 . 0 0 \\times 1 0 ^ { 2 6 }$ W by the fusion of hydrogen. (a) How many kilograms of hydrogen undergo fusion each second? (b) If the Sun is $9 0 . 0 \\%$ hydrogen and half of this can undergo fusion before the Sun changes character, how long could it produce energy at its current rate? (c) How many kilograms of mass is the Sun losing per second? (d) What fraction of its mass will it have lost in the time found in part (b)? ",
+        "page_idx": 1292
+    },
+    {
+        "type": "text",
+        "text": "70. Unreasonable Results ",
+        "page_idx": 1293
+    },
+    {
+        "type": "text",
+        "text": "A proton has a mass of $1 . 6 7 \\times 1 0 ^ { - 2 7 } { \\mathrm { ~ k g } }$ . A physicist measures the proton\u2019s total energy to be $5 0 . 0 { \\mathsf { M e V } } .$ . (a) What is the proton\u2019s kinetic energy? (b) What is unreasonable about this result? (c) Which assumptions are unreasonable or inconsistent? ",
+        "page_idx": 1293
+    },
+    {
+        "type": "text",
+        "text": "71. Construct Your Own Problem Consider a highly relativistic particle. Discuss what is meant by the term \u201chighly relativistic.\u201d (Note that, in part, it means that the particle cannot be massless.) Construct a problem in which you calculate the wavelength of such a particle and show that it is very nearly the same as the wavelength of a massless particle, such as a photon, with the same energy. Among the things to be considered are the rest energy of the particle (it should be a known particle) and its total energy, which should be large compared to its rest energy. ",
+        "page_idx": 1293
+    },
+    {
+        "type": "text",
+        "text": "72. Construct Your Own Problem Consider an astronaut traveling to another star at a relativistic velocity. Construct a problem in which you calculate the time for the trip as observed on the Earth and as observed by the astronaut. Also calculate the amount of mass that must be converted to energy to get the astronaut and ship to the velocity travelled. Among the things to be considered are the distance to the star, the velocity, and the mass of the astronaut and ship. Unless your instructor directs you otherwise, do not include any energy given to other masses, such as rocket propellants. ",
+        "page_idx": 1293
+    },
+    {
+        "type": "text",
+        "text": "73. Critical Thinking A space rock with a length of $\\mathsf { 1 } , 0 0 0 . 0 \\mathsf { m }$ is moving through space at exactly 0.6 c. (a) If the space rock is moving toward an observer, what is the contracted length observed? (b) If the space rock is moving away from the observer, what is the contracted length observed? (c) Can the object reach the speed of light? (d) If the object were to stop in the observer\u2019s reference frame, would it be observed to have proper length? ",
+        "page_idx": 1293
+    },
+    {
+        "type": "image",
+        "img_path": "images/3ca099b681dd4b6e79971d8b797f937d582fb3d12c8e75b3c5efffa3e4f36a7e.jpg",
+        "img_caption": [
+            "FIGURE 29.1 A black fly imaged by an electron microscope is as monstrous as any science-fiction creature. (credit: U.S. Department of Agriculture via Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1294
+    }
+]

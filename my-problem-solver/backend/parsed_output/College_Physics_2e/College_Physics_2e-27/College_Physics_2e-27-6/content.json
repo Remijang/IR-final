@@ -1,0 +1,335 @@
+[
+    {
+        "type": "text",
+        "text": "27.6 Limits of Resolution: The Rayleigh Criterion ",
+        "text_level": 1,
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "\u2022 Discuss the Rayleigh criterion. ",
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "Light diffracts as it moves through space, bending around obstacles, interfering constructively and destructively. While this can be used as a spectroscopic tool\u2014a diffraction grating disperses light according to wavelength, for example, and is used to produce spectra\u2014diffraction also limits the detail we can obtain in images. Figure 27.25(a) shows the effect of passing light through a small circular aperture. Instead of a bright spot with sharp edges, a spot with a fuzzy edge surrounded by circles of light is obtained. This pattern is caused by diffraction similar to that produced by a single slit. Light from different parts of the circular aperture interferes constructively and destructively. The effect is most noticeable when the aperture is small, but the effect is there for large apertures, too. ",
+        "page_idx": 1219
+    },
+    {
+        "type": "image",
+        "img_path": "images/75b8fa6d249609d2c3b09c9758eff1207fbc04d2aa108e23c73a5370ad2d905a.jpg",
+        "img_caption": [
+            "FIGURE 27.25 (a) Monochromatic light passed through a small circular aperture produces this diffraction pattern. (b) Two point light sources that are close to one another produce overlapping images because of diffraction. (c) If they are closer together, they cannot be resolved or distinguished. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "How does diffraction affect the detail that can be observed when light passes through an aperture? Figure 27.25(b) shows the diffraction pattern produced by two point light sources that are close to one another. The pattern is similar to that for a single point source, and it is just barely possible to tell that there are two light sources rather than one. If they were closer together, as in Figure 27.25(c), we could not distinguish them, thus limiting the detail or resolution we can obtain. This limit is an inescapable consequence of the wave nature of light. ",
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "There are many situations in which diffraction limits the resolution. The acuity of our vision is limited because light passes through the pupil, the circular aperture of our eye. Be aware that the diffraction-like spreading of light is due to the limited diameter of a light beam, not the interaction with an aperture. Thus light passing through a lens with a diameter $D$ shows this effect and spreads, blurring the image, just as light passing through an aperture of diameter $D$ does. So diffraction limits the resolution of any system having a lens or mirror. Telescopes are also limited by diffraction, because of the finite diameter $D$ of their primary mirror. ",
+        "page_idx": 1219
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "Take-Home Experiment: Resolution of the Eye ",
+        "text_level": 1,
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "Draw two lines on a white sheet of paper (several mm apart). How far away can you be and still distinguish the two lines? What does this tell you about the size of the eye\u2019s pupil? Can you be quantitative? (The size of an adult\u2019s pupil is discussed in Physics of the Eye.) ",
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "Just what is the limit? To answer that question, consider the diffraction pattern for a circular aperture, which has a central maximum that is wider and brighter than the maxima surrounding it (similar to a slit) [see Figure 27.26(a)]. It can be shown that, for a circular aperture of diameter $D$ , the first minimum in the diffraction pattern occurs at $\\theta = 1 . 2 2 ~ \\lambda / D$ (providing the aperture is large compared with the wavelength of light, which is the case for most optical instruments). The accepted criterion for determining the diffraction limit to resolution based on this angle was developed by Lord Rayleigh in the 19th century. The Rayleigh criterion for the diffraction limit to resolution states that twoimagesarejustresolvablewhenthecenterofthedifractionpaternofoneisdirectlyoverthefirst minimumofthedifractionpaternoftheother. See Figure 27.26(b). The first minimum is at an angle of $\\theta = 1 . 2 2 ~ \\lambda / D$ , so that two point objects are just resolvable if they are separated by the angle ",
+        "page_idx": 1220
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = 1 . 2 2 { \\frac { \\lambda } { D } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "where $\\lambda$ is the wavelength of light (or other electromagnetic radiation) and $D$ is the diameter of the aperture, lens, mirror, etc., with which the two objects are observed. In this expression, $\\theta$ has units of radians. ",
+        "page_idx": 1220
+    },
+    {
+        "type": "image",
+        "img_path": "images/dc5b41f0e1301dfcc3a0abd13ce7f5a578f133be14a72ff1c8fdad044d8ceb06.jpg",
+        "img_caption": [
+            "FIGURE 27.26 (a) Graph of intensity of the diffraction pattern for a circular aperture. Note that, similar to a single slit, the central maximum is wider and brighter than those to the sides. (b) Two point objects produce overlapping diffraction patterns. Shown here is the Rayleigh criterion for being just resolvable. The central maximum of one pattern lies on the first minimum of the other. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "Connections: Limits to Knowledge ",
+        "text_level": 1,
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "All attempts to observe the size and shape of objects are limited by the wavelength of the probe. Even the small wavelength of light prohibits exact precision. When extremely small wavelength probes as with an electron microscope are used, the system is disturbed, still limiting our knowledge, much as making an electrical measurement alters a circuit. Heisenberg\u2019s uncertainty principle asserts that this limit is fundamental and ",
+        "page_idx": 1220
+    },
+    {
+        "type": "text",
+        "text": "inescapable, as we shall see in quantum mechanics. ",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 27.5 ",
+        "text_level": 1,
+        "page_idx": 1221
+    },
+    {
+        "type": "image",
+        "img_path": "images/2c939e997d999026082738c4b4bf306978c8de9ed91e02c5d164a289dd1a350b.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Calculating Diffraction Limits of the Hubble Space Telescope ",
+        "text_level": 1,
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "The primary mirror of the orbiting Hubble Space Telescope has a diameter of $2 . 4 0 ~ \\mathrm { m }$ . Being in orbit, this telescope avoids the degrading effects of atmospheric distortion on its resolution. (a) What is the angle between two justresolvable point light sources (perhaps two stars)? Assume an average light wavelength of $5 5 0 \\mathsf { n m }$ . (b) If these two stars are at the 2 million light year distance of the Andromeda galaxy, how close together can they be and still be resolved? (A light year, or ly, is the distance light travels in 1 year.) ",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Strategy ",
+        "text_level": 1,
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "The Rayleigh criterion stated in the equation $\\begin{array} { r } { \\theta = 1 . 2 2 \\frac { \\lambda } { D } } \\end{array}$ gives the smallest possible angle $\\theta$ between point sources, or the best obtainable resolution. Once this angle is found, the distance between stars can be calculated, since we are given how far away they are. ",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Solution for (a) ",
+        "text_level": 1,
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "The Rayleigh criterion for the minimum resolvable angle is ",
+        "page_idx": 1221
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = 1 . 2 2 { \\frac { \\lambda } { D } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Entering known values gives ",
+        "page_idx": 1221
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\theta = 1 . 2 2 \\frac { 5 5 0 \\times 1 0 ^ { - 9 } \\mathrm { ~ m } } { 2 . 4 0 \\mathrm { ~ m } } } \\\\ { = 2 . 8 0 \\times 1 0 ^ { - 7 } \\mathrm { ~ r a d } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Solution for (b) ",
+        "text_level": 1,
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "The distance $s$ between two objects a distance $r$ away and separated by an angle $\\theta$ is $s = r \\theta$ . ",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Substituting known values gives ",
+        "page_idx": 1221
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l l l } { s } & { = } & { ( 2 . 0 \\times 1 0 ^ { 6 } \\ { \\mathrm { l y } } ) ( 2 . 8 0 \\times 1 0 ^ { - 7 } \\ { \\mathrm { r a d } } ) } \\\\ & { = } & { 0 . 5 6 \\ { \\mathrm { l y } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "Discussion ",
+        "text_level": 1,
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "The angle found in part (a) is extraordinarily small (less than $\\boldsymbol { 1 } / 5 0 , 0 0 0$ of a degree), because the primary mirror is so large compared with the wavelength of light. As noticed, diffraction effects are most noticeable when light interacts with objects having sizes on the order of the wavelength of light. However, the effect is still there, and there is a diffraction limit to what is observable. The actual resolution of the Hubble Telescope is not quite as good as that found here. As with all instruments, there are other effects, such as non-uniformities in mirrors or aberrations in lenses that further limit resolution. However, Figure 27.27 gives an indication of the extent of the detail observable with the Hubble because of its size and quality and especially because it is above the Earth\u2019s atmosphere. ",
+        "page_idx": 1221
+    },
+    {
+        "type": "image",
+        "img_path": "images/7d825c45d16cc47772c3e4a3c9723a24c01353424e705b3bff7ad038c9655e66.jpg",
+        "img_caption": [
+            "FIGURE 27.27 These two photographs of the M82 galaxy give an idea of the observable detail using the Hubble Space Telescope compared with that using a ground-based telescope. (a) On the left is a ground-based image. (credit: Ricnun, Wikimedia Commons) (b) The photo on "
+        ],
+        "img_footnote": [],
+        "page_idx": 1221
+    },
+    {
+        "type": "text",
+        "text": "the right was captured by Hubble. (credit: NASA, ESA, and the Hubble Heritage Team (STScI/AURA)) ",
+        "page_idx": 1222
+    },
+    {
+        "type": "text",
+        "text": "The answer in part (b) indicates that two stars separated by about half a light year can be resolved. The average distance between stars in a galaxy is on the order of 5 light years in the outer parts and about 1 light year near the galactic center. Therefore, the Hubble can resolve most of the individual stars in Andromeda galaxy, even though it lies at such a huge distance that its light takes 2 million years for its light to reach us. Figure 27.28 shows another mirror used to observe radio waves from outer space. ",
+        "page_idx": 1222
+    },
+    {
+        "type": "image",
+        "img_path": "images/5caa26884d61aa58fb0a3e6002e7d9d81bbe9e7ab7e8d82e9c242ee32ed64454.jpg",
+        "img_caption": [
+            "FIGURE 27.28 A 305-m-diameter natural bowl at Arecibo in Puerto Rico is lined with reflective material, making it into a radio telescope. It is the largest curved focusing dish in the world. Although $D$ for Arecibo is much larger than for the Hubble Telescope, it detects much longer wavelength radiation and its diffraction limit is significantly poorer than Hubble\u2019s. Arecibo is still very useful, because important information is carried by radio waves that is not carried by visible light. (credit: Tatyana Temirbulatova, Flickr) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1222
+    },
+    {
+        "type": "text",
+        "text": "Diffraction is not only a problem for optical instruments but also for the electromagnetic radiation itself. Any beam of light having a finite diameter $D$ and a wavelength $\\lambda$ exhibits diffraction spreading. The beam spreads out with an angle $\\theta$ given by the equation $\\begin{array} { r } { \\theta = 1 . 2 2 \\frac { \\lambda } { D } } \\end{array}$ . Take, for example, a laser beam made of rays as parallel as possible (angles between rays as close to $\\theta = 0 ^ { \\circ }$ as possible) instead spreads out at an angle $\\theta = 1 . 2 2 ~ \\lambda / D$ , where $D$ is the diameter of the beam and $\\lambda$ is its wavelength. This spreading is impossible to observe for a flashlight, because its beam is not very parallel to start with. However, for long-distance transmission of laser beams or microwave signals, diffraction spreading can be significant (see Figure 27.29). To avoid this, we can increase $D$ . This is done for laser light sent to the Moon to measure its distance from the Earth. The laser beam is expanded through a telescope to make $D$ much larger and $\\theta$ smaller. ",
+        "page_idx": 1222
+    },
+    {
+        "type": "image",
+        "img_path": "images/e209265087410de021f94bb6d2823de9d7115d7923f2470b28c6eef3cf938e1f.jpg",
+        "img_caption": [
+            "FIGURE 27.29 The beam produced by this microwave transmission antenna will spread out at a minimum angle $\\theta = 1 . 2 2 ~ \\lambda / D$ due to diffraction. It is impossible to produce a near-parallel beam, because the beam has a limited diameter. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1222
+    },
+    {
+        "type": "text",
+        "text": "In most biology laboratories, resolution is presented when the use of the microscope is introduced. The ability of a lens to produce sharp images of two closely spaced point objects is called resolution. The smaller the distance $x$ by which two objects can be separated and still be seen as distinct, the greater the resolution. The resolving power of a lens is defined as that distance $x$ . An expression for resolving power is obtained from the Rayleigh criterion. In Figure 27.30(a) we have two point objects separated by a distance $x$ . According to the Rayleigh criterion, resolution is possible when the minimum angular separation is ",
+        "page_idx": 1222
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\theta = 1 . 2 2 { \\frac { \\lambda } { D } } = { \\frac { x } { d } } ,\n$$",
+        "text_format": "latex",
+        "page_idx": 1222
+    },
+    {
+        "type": "text",
+        "text": "where $d$ is the distance between the specimen and the objective lens, and we have used the small angle ",
+        "page_idx": 1222
+    },
+    {
+        "type": "text",
+        "text": "approximation (i.e., we have assumed that $x$ is much smaller than $d$ ), so that $\\theta \\approx \\sin \\theta \\approx \\theta$ ",
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "Therefore, the resolving power is ",
+        "page_idx": 1223
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = 1 . 2 2 { \\frac { \\lambda d } { D } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "Another way to look at this is by re-examining the concept of Numerical Aperture $( N A )$ discussed in Microscopes. There, is a measure of the maximum acceptance angle at which the fiber will take light and still contain it within the fiber. Figure 27.30(b) shows a lens and an object at point P. The $N A$ here is a measure of the ability of the lens to gather light and resolve fine detail. The angle subtended by the lens at its focus is defined to be $\\theta = 2 \\alpha$ . From the figure and again using the small angle approximation, we can write ",
+        "page_idx": 1223
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sin \\alpha = { \\frac { D / 2 } { d } } = { \\frac { D } { 2 d } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "The $N A$ for a lens is $N A = n$ sin $\\alpha$ , where $n$ is the index of refraction of the medium between the objective lens and the object at point P. ",
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "From this definition for $N A$ , we can see that ",
+        "page_idx": 1223
+    },
+    {
+        "type": "equation",
+        "text": "$$\nx = 1 . 2 2 { \\frac { \\lambda d } { D } } = 1 . 2 2 { \\frac { \\lambda } { 2 \\sin \\alpha } } = 0 . 6 1 { \\frac { \\lambda n } { N A } } .\n$$",
+        "text_format": "latex",
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "In a microscope, $N A$ is important because it relates to the resolving power of a lens. A lens with a large $N A$ will be able to resolve finer details. Lenses with larger $N A$ will also be able to collect more light and so give a brighter image. Another way to describe this situation is that the larger the $N A$ , the larger the cone of light that can be brought into the lens, and so more of the diffraction modes will be collected. Thus the microscope has more information to form a clear image, and so its resolving power will be higher. ",
+        "page_idx": 1223
+    },
+    {
+        "type": "image",
+        "img_path": "images/ae4b1978100397a3f689c58c249cafa6ef29e7253c977a8cf329ee3677d62933.jpg",
+        "img_caption": [
+            "FIGURE 27.30 (a) Two points separated by at distance $x$ and a positioned a distance $d$ away from the objective. (credit: Infopro, Wikimedia Commons) (b) Terms and symbols used in discussion of resolving power for a lens and an object at point P. (credit: Infopro, Wikimedia Commons) "
+        ],
+        "img_footnote": [],
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "One of the consequences of diffraction is that the focal point of a beam has a finite width and intensity distribution. Consider focusing when only considering geometric optics, shown in Figure 27.31(a). The focal point is infinitely small with a huge intensity and the capacity to incinerate most samples irrespective of the of the objective lens. For wave optics, due to diffraction, the focal point spreads to become a focal spot (see Figure 27.31(b)) with the size of the spot decreasing with increasing . Consequently, the intensity in the focal spot increases with increasing . The higher the $N A$ , the greater the chances of photodegrading the specimen. However, the spot never becomes a true point. ",
+        "page_idx": 1223
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 1224
+    },
+    {
+        "type": "image",
+        "img_path": "images/4903db5cea0447fbf9582a36138bda9da25767fac1847a8498381eb5fe0505d9.jpg",
+        "img_caption": [
+            "FIGURE 27.31 (a) In geometric optics, the focus is a point, but it is not physically possible to produce such a point because it implies infinite intensity. (b) In wave optics, the focus is an extended region. "
+        ],
+        "img_footnote": [],
+        "page_idx": 1224
+    }
+]

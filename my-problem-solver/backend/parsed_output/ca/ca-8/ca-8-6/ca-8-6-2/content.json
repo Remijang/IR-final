@@ -1,0 +1,55 @@
+[
+    {
+        "type": "text",
+        "text": "8.6.2 Goldschmidt Division ",
+        "text_level": 1,
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "Let us try to simplify the process of division by dividing it into two stages. In the first stage, we compute the reciprocal of the divisor $( 1 / B )$ . In the next stage, we multiply the obtained reciprocal with the dividend $A$ . The product is equal to $A / B$ . Floating point multiplication is an $O ( l o g ( n ) )$ time operation. Hence, let us focus on trying to compute the reciprocal of $B$ . ",
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "Let us also ignore exponents in our discussion because, we just need to flip the sign of the exponent in the reciprocal. Let us only focus on the significand, $P _ { B }$ , and to keep matters simple, let us further assume that $B$ is a normal floating point number. Thus, $1 \\leq P _ { B } < 2$ . We can represent $P _ { B } = 1 + X ( X < 1 )$ . We have: ",
+        "page_idx": 351
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\displaystyle \\frac { 1 } { P _ { B } } = \\frac { 1 } { 1 + X } } & { \\left( P _ { B } = 1 + X , X < 1 \\right) } \\\\ { \\displaystyle } & { = \\frac { 1 } { 1 + 1 - X ^ { \\prime } } \\quad \\left( X ^ { \\prime } = 1 - X , X ^ { \\prime } < 1 \\right) } \\\\ { \\displaystyle } & { = \\frac { 1 } { 2 - X ^ { \\prime } } } \\\\ { \\displaystyle } & { = \\frac { 1 } { 2 } \\times \\frac { 1 } { 1 - X ^ { \\prime } / 2 } } \\\\ { \\displaystyle } & { = \\frac { 1 } { 2 } \\times \\frac { 1 } { 1 - Y } \\quad \\left( Y = X ^ { \\prime } / 2 , Y < 1 / 2 \\right) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 351
+    },
+    {
+        "type": "text",
+        "text": "Let us thus focus on evaluating $1 / ( 1 - Y )$ . We have: ",
+        "page_idx": 351
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } & { { \\frac { 1 } { 1 - Y } } = { \\frac { 1 + Y } { 1 - Y ^ { 2 } } } } \\\\ & { \\qquad = { \\frac { \\left( 1 + Y \\right) \\left( 1 + Y ^ { 2 } \\right) } { 1 - Y ^ { 4 } } } } \\\\ & { \\qquad = \\ldots } \\\\ & { \\qquad = { \\frac { \\left( 1 + Y \\right) \\left( 1 + Y ^ { 2 } \\right) \\ldots \\left( 1 + Y ^ { 1 6 } \\right) } { 1 - Y ^ { 3 2 } } } } \\\\ & { \\qquad \\approx \\left( 1 + Y \\right) \\left( 1 + Y ^ { 2 } \\right) \\ldots \\left( 1 + Y ^ { 1 6 } \\right) } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "We need not proceed anymore. The reason for this is as follows. Since $Y \\ < \\ 1 / 2$ , $Y ^ { n }$ is less than $1 / 2 ^ { n }$ . The smallest mantissa that we can represent in the IEEE 32-bit floating point notation is $1 / 2 ^ { 2 3 }$ . Hence, there is no point in having terms that have an exponent greater than 23. Given the approximate nature of floating point mathematics, the product $( 1 + Y ) ( 1 + Y ^ { 2 } ) \\dots ( 1 + Y ^ { 1 6 } )$ is as close to the real value of $1 / ( 1 - Y )$ as we can get. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the value \u2013 $( 1 + Y ) ( 1 + Y ^ { 2 } ) \\dots ( 1 + Y ^ { 1 6 } )$ . It has 5 add operations that can be done in parallel. To obtain $Y \\dots Y ^ { 1 6 }$ , we can repeatedly multiply each term with itself. For example, to get $Y ^ { 8 }$ , we can multiply $Y ^ { 4 }$ with $Y ^ { 4 }$ and so on. Thus, generating the powers of $Y$ takes 4 multiply operations. Lastly, we need to multiply the terms in brackets \u2013 $( 1 + Y )$ , $( 1 + Y ^ { 2 } ) , ( 1 + Y ^ { 4 } ) , ( 1 + Y ^ { 8 } )$ , and $( 1 + Y ^ { 1 6 } )$ . This will require 4 multiplications. We thus require a total of 8 multiplications and 5 additions. ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "Let us now compute the time complexity. For an $n$ -bit floating point number, let us assume that a fixed fraction of bits represents the mantissa. Thus, the number of bits required to represent the mantissa is $O ( n )$ . Consequently, the number of terms of the form $( 1 + Y ^ { 2 k } )$ that we need to consider is $O ( l o g ( n ) )$ . The total number of additions, and multiplications for finding the reciprocal is also $O ( l o g ( n ) )$ . Since each addition or multiplication takes $O ( l o g ( n ) )$ time, the time complexity of finding the reciprocal of $B$ is equal to $O ( l o g ( n ) ^ { 2 } )$ . Since the rest of the operations such as adjusting the exponents and multiplying the reciprocal with $A$ take $O ( l o g ( n ) )$ time, the total complexity is equal to $O ( l o g ( n ) ^ { 2 } )$ . ",
+        "page_idx": 352
+    },
+    {
+        "type": "text",
+        "text": "We observe that floating point division is asymptotically much faster than normal integer division. This is primarily because floating point mathematics is approximate, whereas integer mathematics is exact. ",
+        "page_idx": 352
+    }
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "type": "text",
+        "text": "53.3 Security Goals and Policies ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "What do we mean when we say we want an operating system, or any system, to be secure? That’s a rather vague statement. What we really mean is that there are things we would like to happen in the system and things we don’t want to happen, and we’d like a high degree of assurance that we get what we want. As in most other aspects of life, we usually end up paying for what we get, so it’s worthwhile to think about exactly what security properties and effects we actually need and then pay only for those, not for other things we don’t need. What this boils down to is that we want to specify the goals we have for the security-relevant behavior of our system and choose defense approaches likely to achieve those goals at a reasonable cost. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Researchers in security have thought about this issue in broad terms for a long time. At a high conceptual level, they have defined three big security-related goals that are common to many systems, including operating systems. They are: ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "• Confidentiality – If some piece of information is supposed to be hidden from others, don’t allow them to find it out. For example, you don’t want someone to learn what your credit card number is – you want that number kept confidential.   \n• Integrity – If some piece of information or component of a system is supposed to be in a particular state, don’t allow an adversary to change it. For example, if you’ve placed an online order for delivery of one pepperoni pizza, you don’t want a malicious prankster to change your order to 1000 anchovy pizzas. One important aspect of integrity is authenticity. It’s often important to be sure not only that information has not changed, but that it was created by a particular party and not by an adversary.   \n• Availability – If some information or service is supposed to be available for your own or others’ use, make sure an attacker cannot prevent its use. For example, if your business is having a big sale, you don’t want your competitors to be able to block off the streets around your store, preventing your customers from reaching you. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "An important extra dimension of all three of these goals is that we want controlled sharing in our systems. We share our secrets with some people and not with others. We allow some people to change our enterprise’s databases, but not just anyone. Some systems need to be made available to a particular set of preferred users (such as those who have paid to play your on-line game) and not to others (who have not). Who’s doing the asking matters a lot, in computers as in everyday life. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Another important aspect of security for computer systems is we often want to be sure that when someone told us something, they cannot later deny that they did so. This aspect is often called non-repudiation. The harder and more expensive it is for someone to repudiate their actions, the easier it is to hold them to account for those actions, and thus the less likely people are to perform malicious actions. After all, they might well get caught and will have trouble denying they did it. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "These are big, general goals. For a real system, you need to drill down to more detailed, specific goals. In a typical operating system, for example, we might have a confidentiality goal stating that a process’s memory space cannot be arbitrarily read by another process. We might have an integrity goal stating that if a user writes a record to a particular file, another user who should not be able to write that file can’t change the record. We might have an availability goal stating that one process running on the system cannot hog the CPU and prevent other processes from getting their share of the CPU. If you think back on what you’ve learned about the process abstraction, memory management, scheduling, file systems, IPC, and other topics from this class, you should be able to think of some other obvious confidentiality, integrity, and availability goals we are likely to want in our operating systems. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "For any particular system, even goals at this level are not sufficiently specific. The integrity goal alluded to above, where a user’s file should not be overwritten by another user not permitted to do so, gives you a hint about the extra specificity we need in our security goals for a particular system. Maybe there is some user who should be able to overwrite the file, as might be the case when two people are collaborating on writing a report. But that doesn’t mean an unrelated third user should be able to write that file, if he is not collaborating on the report stored there. We need to be able to specify such detail in our security goals. Operating systems are written to be used by many different people with many different needs, and operating system security should reflect that generality. What we want in security mechanisms for operating systems is flexibility in describing our detailed security goals. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Ultimately, of course, the operating system software must do its best to enforce those flexible security goals, which implies we’ll need to encode those goals in forms that software can understand. We typically must convert our vague understandings of our security goals into highly specific security policies. For example, in the case of the file described above, we might want to specify a policy like ’users A and B may write to file X, but no other user can write it.’ With that degree of specificity, backed by carefully designed and implemented mechanisms, we can hope to achieve our security goals. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Note an important implication for operating system security: in many cases, an operating system will have the mechanisms necessary to implement a desired security policy with a high degree of assurance in its proper application, but only if someone tells the operating system precisely what that policy is. With some important exceptions (like maintaining a process’s address space private unless specifically directed otherwise), the operating system merely supplies general mechanisms that can implement many specific policies. Without intelligent design of poli",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "ASIDE: SECURITY VS. FAULT TOLERANCE ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "When discussing the process abstraction, we talked about how virtualization protected a process from actions of other processes. For instance, we did not want our process’s memory to be accidentally overwritten by another process, so our virtualization mechanisms had to prevent such behavior. Then we were talking primarily about flaws or mistakes in processes. Is this actually any different than worrying about malicious behavior, which is more commonly the context in which we discuss security? Have we already solved all our problems by virtualizing our resources? ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Yes and no. (Isn’t that a helpful phrase?) Yes, if we perfectly virtualized everything and allowed no interactions between anything, we very likely would have solved most problems of malice. However, most virtualization mechanisms are not totally bulletproof. They work well when no one tries to subvert them, but may not be perfect against all possible forms of misbehavior. Second, and perhaps more important, we don’t really want to totally isolate processes from each other. Processes share some OS resources by default (such as file systems) and can optionally choose to share others. These intentional relaxations of virtualization are not problematic when used properly, but the possibilities of legitimate sharing they open are also potential channels for malicious attacks. Finally, the OS does not always have complete control of the hardware... ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "cies and careful application of the mechanisms, however, what the operating system should or could do may not be what your operating system will do. ",
+        "page_idx": 6
+    }
+]

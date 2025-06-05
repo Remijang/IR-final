@@ -1,0 +1,127 @@
+[
+    {
+        "type": "text",
+        "text": "8.2.2 Iterative Multiplier ",
+        "text_level": 1,
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "In this section, we present the design of an iterative multiplier (see Figure 8.11) that multiplies two signed 32-bit numbers to produce a 64-bit result. We cannot treat the numbers as unsigned anymore and the algorithm thus gets slightly complicated. We use a 33-bit register $U$ , and a 32-bit register $V$ as shown in Figure 8.11. The multiplier is loaded into $V$ at the beginning. The multiplicand is stored separately in register $N$ . The size of the register $N$ is equal to 33 bits, and we store the multiplicand in it by extending its sign by 1 position. The two registers $U$ and $V$ are treated as one large register for the purposes of shifting. If we perform a right shift on $U$ and $V$ , then the value shifted out of $U$ , becomes the MSB of $V$ . We have an adder that adds the multiplicand to the current value of $U$ , and updates $U$ . $U$ is initialized to 0. Let us represent the multiplicand by $N$ , the multiplier by $M$ , and the product by $P$ . We need to compute $P = M N$ . ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "The algorithm used by the iterative multiplier is very similar to the multiplication algorithm that we learned in elementary school. We need to consider each bit of the multiplier in turn and add a shifted version of the multiplicand to the partial product if the bit is 1. The algorithm ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "is as follows: ",
+        "page_idx": 323
+    },
+    {
+        "type": "table",
+        "img_path": "images/5d73bb36d3187f1fa4cddd00e5445a92e9cbe1f6c2858f20436726858fb9909f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td colspan=\"2\">Algorithm 1: Algorithm to multiply two 32-bit numbers and produce a 64-bit result</td></tr><tr><td colspan=\"2\">Data: Multiplier in V,U = O,Multiplicand in N Result: The lower 64 bits of UV contains the product 1i\u21900</td></tr><tr><td colspan=\"2\">2 fori<32do 3 i\u2190i+1 4 if LSB ofV is1 then 5 ifi<32 then 6 U\u2190U+N 7 end</td></tr></table></body></html>\n\n",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to understand how this algorithm works. We iterate for 32 times to consider each bit of the multiplier. The multiplier is initially loaded into register $V$ . ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "Now, if the LSB of $V$ is 1 (Line 4), then we add the multiplicand $N$ to $U$ and save the result in $U$ . This basically means that if a bit in the multiplier is equal to 1, then we need to add the multiplicand to the already accumulated partial product. The partial product is a running sum of the shifted values of the multiplicands. It is initialized to 0. In the iterative algorithm, the part of $U V$ that does not contain the multiplier, contains the partial product. We then shift $U V$ one step to the right (Line 12). The reason for this is as follows. In each step we actually need to shift the multiplicand 1 bit to the left and add it to the partial product. This is the same as not shifting the multiplicand but shifting the partial product 1 bit to the right assuming that we do not lose any bits. The relative displacement between the multiplicand and the partial product remains the same. ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "If in any iteration of the algorithm, we find the LSB of $V$ to be $0$ , then nothing needs to be done. We do not need to add the value of the multiplicand to the partial product. We simply need to shift $U V$ one position to the right using an arithmetic right shift operation. ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "Note that till the last step we assume that the multiplier is positive. If in the last step we see that the multiplier is not positive (MSB is 1), then we need to subtract the multiplicand from $U$ (Line 9). This follows directly from Theorem 2.3.4.2. The theorem states that the value of the multiplier $( M )$ in the 2\u2019s complement notation is equal to $\\textstyle { \\bigl ( } - M _ { n } 2 ^ { n - 1 } + \\sum _ { i = 1 } ^ { n - 1 } M _ { i } 2 ^ { i - 1 } { \\bigr ) }$ . Here $M _ { i }$ is the $i ^ { t h }$ bit of the multiplier, $M$ . In the first $n - 1$ iterations, we effectively multiply the multiplicand with in=\u22121 Mi2i\u22121. In the last iteration, we take a look at the MSB of the multiplier, $M _ { n }$ . If it is $0$ , then we need not do anything. If it is 1, then we need to subtract $2 ^ { n - 1 } \\times N$ from the partial product. Since the partial product is shifted to the right by $n - 1$ positions with respect to the multiplicand, the multiplicand is effectively shifted $n - 1$ positions to the left with respect to the partial product. To subtract $2 ^ { n - 1 } \\times N$ to the partial product, we need to simply subtract $N$ from register $U$ , which is our last step. ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "Important Point 9 ",
+        "text_level": 1,
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "We assume that register $U$ is 33 bits wide. We did this to avoid overflows while adding or subtracting $N$ from $U$ . Let us consider $U$ and $N$ again. $| N | \\leq 2 ^ { 3 1 }$ because $N$ is essentially a 32-bit number. For our induction hypothesis, let us assume that $| U | \\le 2 ^ { 3 1 }$ (true for the base case, $U = 0$ ). Thus, $\\lvert U \\pm N \\rvert \\le 2 ^ { 3 2 }$ . Hence, if we store both the numbers and their sum in 33-bit registers, we will never have overflows while adding or subtracting them. Note that we could have had overflows, if we had used just 32 bits. Now, after the shift operation, the value in $U$ is divided by 2. Since $U \\pm N$ is assigned to $U$ , and we have established that $| U \\pm N | \\le 2 ^ { 3 2 }$ , we can prove that $| U | \\le 2 ^ { 3 1 }$ . Thus, our induction hypothesis holds, and we can thus conclude that during the operation of our algorithm, we shall never have an overflow. The absolute value of the product can at the most be $2 ^ { 3 1 } \\times 2 ^ { 3 1 } = 2 ^ { 6 2 }$ . Hence, the product can fit in 64 bits (proved in Section 8.2.1), and we thus need to only consider the lower 64 bits of the U V register. ",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "Examples ",
+        "text_level": 1,
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Example 124 ",
+        "text_level": 1,
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Multiply $2 \\times 3$ using an iterative multiplier. Assume a 4-bit binary 2\u2019s complement number system. Let 2 $\\mathrm { ( 0 0 1 0 _ { 2 } , }$ ) be the multiplicand and let 3 (00112) be the multiplier. For each iteration show the values of $U$ and $V$ just before the right shift on Line 12, and just after the right shift. ",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "page_idx": 325
+    },
+    {
+        "type": "image",
+        "img_path": "images/4ddf25fcd823229a7d8fae58acc441d39a61c341b991460a9d7345eee6e02591.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Example 125 ",
+        "text_level": 1,
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Multiply $3 \\times ( - 2 )$ using an iterative multiplier. Assume a 4-bit binary 2\u2019s complement number system. Let $\\mathcal { B }$ $\\mathrm { \\langle 0 0 1 1 _ { 2 } , }$ be the multiplicand and let $^ { - 2 }$ $( 1 1 1 0 _ { 2 } ,$ ) be the multiplier. For each iteration show the values of $U$ and $V$ just before the right shift on Line 12, and just after the right shift. ",
+        "page_idx": 325
+    },
+    {
+        "type": "image",
+        "img_path": "images/28fa9b7bdf017ee939b92bf473acd977f1d5b16ae7b276230bfafaad3e48bf59.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 326
+    },
+    {
+        "type": "image",
+        "img_path": "",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "Time Complexity ",
+        "text_level": 1,
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "If we are performing $n$ -bit multiplication, then there are $n$ iterations of the loop, and each iteration performs one addition at the most. This takes $O ( l o g ( n ) )$ time. Hence, the total time required is $O ( n l o g ( n ) )$ . ",
+        "page_idx": 326
+    }
+]

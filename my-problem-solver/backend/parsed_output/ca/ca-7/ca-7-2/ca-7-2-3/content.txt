@@ -1,0 +1,13 @@
+7.2.3 Multiplexer
+
+The block diagram of a multiplexer is shown in Figure 7.10. It takes  input bits and  select bits, and based on the value of the select bits, chooses one input as the output (refer to the line with arrows in Figure 7.10). Multiplexers are heavily used in the design of processors, where we need to choose one output out of a set of inputs. A multiplexer is also known as a mux.
+
+To choose 1 input out of  inputs, we need to specify the identifier of the input. Note that it takes  bits to identify any input uniquely (see Section 4.4). We can number each input using  binary bits. Each input thus has a unique representation. Now, if the select bits match the binary encoding of an input, then the input gets reflected at the output. For example, if the value of the select bits is  , then the value of the output is equal to the value of the  input.
+
+A multiplexer consists of three stages (see Figure 7.11). The first stage is a decoder that takes the  select bits as its input and sets one of the  output lines to a logical 1. Each output line is connected to an AND gate (second stage). Since only one of the output lines is set to 1, only the AND gate corresponding to that output is enabled. This means that the output of this gate is equal to the value of the other input.
+
+In the example in Figure 7.11, the multiplexer has four inputs:  ,  ,  , and  .
+
+Each input is connected to an AND gate. If the select bits are equal to 01, then the AND gate corresponding to the input  is enabled by the decoder. Its output is equal to  . The outputs of the rest of the AND gates are a logical 0 because they are not enabled by the decoder: one of their inputs is a logical 0.
+
+Finally, in the third stage, an OR gate computes the logical OR of all the outputs of the second stage. Note that for the OR gate, the inputs are  zeros and  , where  and  are the values of the select bits, respectively. The final output is thus the value of the input that was selected,  .

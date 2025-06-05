@@ -1,0 +1,19 @@
+4.2.7 Branch and Link Instruction
+
+We can use the simple branch instructions to implement for loops and if statements. However, we need a stronger variant of the branch instruction to implement function calls. Function calls are different from regular branches because we need to remember the point in the program that the function needs to return to. ARM provides the bl (branch-and-link) instruction for this purpose. The semantics of this instruction is shown in Table 4.10.
+
+The  instruction jumps to the function that begins at the specified label. Note that in the ARM ISA, there is no special way for designating the start of a function. Any instruction can in principle be the start of a function. In ARM assembly, the starting instruction of a function needs to have a label assigned to it. Along with branching to the given label, the  instruction also saves the value of the return address, which is equal to the current PC plus 4, into the  register (  14). We need to add 4 over here because the size of an instruction in ARM is exactly equal to 4 bytes.
+
+Once a function starts executing, it is expected that it will preserve the value of the return address saved in the lr register unless it invokes other functions. If a function invokes other functions, it needs to spill and restore registers as mentioned in Section 3.3.10. When we wish to return from a function, we need to move the value in the lr register to the pc register (  15). The PC will point to the instruction at the return address and execution will proceed from that point.
+
+Example 46
+
+Example of an assembly program with a function call.
+
+Let us take a look at Example 46. In this example, we consider a simple piece of C code that calls a function  that returns a constant value of 2. It adds the return value to the variable  to produce  .
+
+In the equivalent ARM code, we define two labels – foo and main. We assume that execution starts from the main label. We map  to  , and set its value equal to 3. Then, we call the function  . Subsequently, we set the value of register  to 2, and return by moving the value in the  register to the PC. When the program returns, it begins execution at the subsequent line in the main function. The register  maintains its value equal to 2 across functions. We add the value in  to the value in  to produce the value for  . It is saved in  .
+
+Nowadays, a simpler method is used to return from a function. We can use the  instruction that jumps to an address contained in a register (semantics shown in Figure 4.11).
+
+We can simplify the assembly code in Example 46 as follows.

@@ -1,0 +1,890 @@
+[
+    {
+        "type": "text",
+        "text": "12.4 Integrated Rate Laws ",
+        "text_level": 1,
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "LEARNING OBJECTIVES ",
+        "text_level": 1,
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "By the end of this section, you will be able to: ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Explain the form and function of an integrated rate law   \nPerform integrated rate law calculations for zero-, first-, and second-order reactions   \n\u2022 Define half-life and carry out related calculations   \n\u2022 Identify the order of a reaction from concentration/time data ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "The rate laws discussed thus far relate the rate and the concentrations of reactants. We can also determine a second form of each rate law that relates the concentrations of reactants and time. These are called integrated rate laws. We can use an integrated rate law to determine the amount of reactant or product present after a period of time or to estimate the time required for a reaction to proceed to a certain extent. For example, an integrated rate law is used to determine the length of time a radioactive material must be stored for its radioactivity to decay to a safe level. ",
+        "page_idx": 627
+    },
+    {
+        "type": "text",
+        "text": "Using calculus, the differential rate law for a chemical reaction can be integrated with respect to time to give an equation that relates the amount of reactant or product present in a reaction mixture to the elapsed time of the reaction. This process can either be very straightforward or very complex, depending on the complexity of the differential rate law. For purposes of discussion, we will focus on the resulting integrated rate laws for first, second-, and zero-order reactions. ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "First-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Integration of the rate law for a simple first-order reaction (rate $= k [ A ] )$ results in an equation describing how the reactant concentration varies with time: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n[ A ] _ { t } = [ A ] _ { 0 } e ^ { - k t }\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "where $[ A ] t$ is the concentration of $A$ at any time t, $[ A ] _ { 0 }$ is the initial concentration of $A$ , and $k$ is the first-order rate constant. ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "For mathematical convenience, this equation may be rearranged to other formats, including direct and indirect proportionalities: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln \\left( { \\frac { [ A ] _ { t } } { [ A ] _ { 0 } } } \\right) = - k t \\qquad { \\mathrm { o r } } \\qquad \\ln \\left( { \\frac { [ A ] _ { 0 } } { [ A ] _ { t } } } \\right) = k t\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "and a format showing a linear dependence of concentration in time: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln [ A ] _ { t } = \\ln [ A ] _ { 0 } - k t\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.6 ",
+        "text_level": 1,
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "The Integrated Rate Law for a First-Order Reaction ",
+        "text_level": 1,
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "The rate constant for the first-order decomposition of cyclobutane, $\\mathrm { C _ { 4 } H _ { 8 } }$ at $5 0 0 ^ { \\circ } \\mathrm { C }$ is $9 . 2 \\times 1 0 ^ { - 3 } \\mathrm { { s ^ { - 1 } } }$ : ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { C } _ { 4 } \\mathrm { H } _ { 8 } \\longrightarrow 2 \\mathrm { C } _ { 2 } \\mathrm { H } _ { 4 }\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "How long will it take for $8 0 . 0 \\%$ of a sample of $\\mathrm { C _ { 4 } H _ { 8 } }$ to decompose? ",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Since the relative change in reactant concentration is provided, a convenient format for the integrated rate law is: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln \\left( { \\frac { [ A ] _ { 0 } } { [ A ] _ { t } } } \\right) = k t\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "The initial concentration of $\\mathrm { C _ { 4 } H _ { 8 } }$ , $[ A ] _ { 0 }$ , is not provided, but the provision that $8 0 . 0 \\%$ of the sample has decomposed is enough information to solve this problem. Let $\\scriptstyle { \\boldsymbol { X } }$ be the initial concentration, in which case the concentration after $8 0 . 0 \\%$ decomposition is $2 0 . 0 \\%$ of $X \\operatorname { o r } 0 . 2 0 0 X .$ .Rearranging the rate law to isolate $t$ and substituting the provided quantities yields: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l } { t } & { = \\ln { \\frac { [ x ] } { [ 0 . 2 0 0 x ] } } \\ \\times \\ { \\frac { 1 } { k } } } \\\\ & { = \\ln 5 \\ \\times \\ { \\frac { 1 } { 9 . 2 \\times 1 0 ^ { - 3 } \\mathrm { { s ^ { - 1 } } } } } } \\\\ & { = 1 . 6 0 9 \\ \\times \\ { \\frac { 1 } { 9 . 2 \\times 1 0 ^ { - 3 } { \\mathrm { s ^ { - 1 } } } } } } \\\\ & { = 1 . 7 \\times 1 0 ^ { 2 } \\ \\mathrm { { s } } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "Iodine-131 is a radioactive isotope that is used to diagnose and treat some forms of thyroid cancer. Iodine-131 decays to xenon-131 according to the equation: ",
+        "page_idx": 628
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { I } { - } 1 3 1 \\longrightarrow \\mathrm { X e } { - } 1 3 1 + \\mathrm { e l e c t r o n }\n$$",
+        "text_format": "latex",
+        "page_idx": 628
+    },
+    {
+        "type": "text",
+        "text": "The decay is first-order with a rate constant of $0 . 1 3 8 { \\mathrm { d } } ^ { - 1 }$ . How many days will it take for $90 \\%$ of the iodine\u2212131 in a 0.500 Msolution of this substance to decay to Xe-131? ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Answer: 16.7 days ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "In the next example exercise, a linear format for the integrated rate law will be convenient: ",
+        "page_idx": 629
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { \\ln [ A ] _ { t } } & { = } & { ( - k ) ( t ) + \\ln [ A ] _ { 0 } } \\\\ { y } & { = } & { m x + b } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "A plot of $\\ln [ A ] _ { t }$ versus $t$ for a first-order reaction is a straight line with a slope of $- k$ and a $y$ -intercept of $\\mathrm { l n } [ A ] _ { 0 }$ . If a set of rate data are plotted in this fashion but do notresult in a straight line, the reaction is not first order in $A$ . ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.7 ",
+        "text_level": 1,
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Graphical Determination of Reaction Order and Rate Constant ",
+        "text_level": 1,
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Show that the data in Figure 12.2 can be represented by a first-order rate law by graphing $\\mathrm { { l n } [ \\mathrm { { H _ { 2 } } \\mathrm { { O _ { 2 } } ] } } }$ versus time Determine the rate constant for the decomposition of $\\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 }$ from these data. ",
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 629
+    },
+    {
+        "type": "table",
+        "img_path": "images/4a90dbc279a8d80adef761d1d41a9e62fb39f6a982261ca719aebb6ce3037995.jpg",
+        "table_caption": [
+            "The data from Figure 12.2 are tabulated below, and a plot of $\\mathrm { { l n } [ \\mathrm { { H _ { 2 } } \\mathrm { { O _ { 2 } } ] } } }$ is shown in Figure 12.9. "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>Time (h)</td><td>[H2O2] (M)</td><td>In[H2O2]</td></tr><tr><td>1</td><td>0.00</td><td>1.000</td><td>0.000</td></tr><tr><td>2</td><td>6.00</td><td>0.500</td><td>-0.693</td></tr><tr><td>3</td><td>12.00</td><td>0.250</td><td>-1.386</td></tr><tr><td>4</td><td>18.00</td><td>0.125</td><td>-2.079</td></tr><tr><td>5</td><td>24.00</td><td>0.0625</td><td>-2.772</td></tr></table></body></html>\n\n",
+        "page_idx": 629
+    },
+    {
+        "type": "image",
+        "img_path": "images/d701b314b405f928f7d1438ab410fa0c70791ff864311ca8dfa391c90a3c2e52.jpg",
+        "img_caption": [
+            "FIGURE 12.9 A linear relationship between $\\mathsf { l n } [ \\mathsf { H } _ { 2 } \\mathsf { O } _ { 2 } ]$ and time suggests the decomposition of hydrogen peroxide is a first-order reaction. "
+        ],
+        "img_footnote": [],
+        "page_idx": 629
+    },
+    {
+        "type": "text",
+        "text": "The plot of $\\mathrm { { l n } [ \\mathrm { { H _ { 2 } } \\mathrm { { O _ { 2 } } ] } } }$ versus time is linear, indicating that the reaction may be described by a first-order rate law. ",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "According to the linear format of the first-order integrated rate law, the rate constant is given by the negative of this plot\u2019s slope. ",
+        "page_idx": 630
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { s l o p e } } = { \\frac { { \\mathrm { c h a n g e ~ i n ~ } } y } { { \\mathrm { c h a n g e ~ i n ~ } } x } } = { \\frac { \\Delta y } { \\Delta x } } = { \\frac { \\Delta \\ln \\left[ { \\mathrm { H } } _ { 2 } { \\mathrm { O } } _ { 2 } \\right] } { \\Delta t } }\n$$",
+        "text_format": "latex",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "The slope of this line may be derived from two values of $\\mathrm { { l n } [ \\mathrm { { H _ { 2 } } \\mathrm { { O _ { 2 } } ] } } }$ at different values of $t$ (one near each end of the line is preferable). For example, the value of $\\mathrm { { l n } [ \\mathrm { { H _ { 2 } } \\mathrm { { O _ { 2 } } ] } } }$ when $t$ is $0 . 0 0 \\mathrm { { h } }$ is 0.000; the value when $t = 2 4 . 0 0 \\mathrm { h }$ is \u22122.772 ",
+        "page_idx": 630
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { { \\mathrm { s l o p e } } } & { = } & { { \\frac { - 2 . 7 7 2 - 0 . 0 0 0 } { 2 4 . 0 0 - 0 . 0 0 ~ \\mathrm { h } } } } \\\\ & { = } & { { \\frac { - 2 . 7 7 2 } { 2 4 . 0 0 ~ \\mathrm { h } } } } \\\\ & { = } & { - 0 . 1 1 6 { \\mathrm { h } } ^ { - 1 } } \\\\ { k } & { = } & { { \\mathrm { - s l o p e } } = - \\left( - 0 . 1 1 6 { \\mathrm { h } } ^ { - 1 } \\right) = 0 . 1 1 6 { \\mathrm { h } } ^ { - 1 } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Graph the following data to determine whether the reaction $A \\longrightarrow B + C$ is first order. ",
+        "page_idx": 630
+    },
+    {
+        "type": "table",
+        "img_path": "images/2a493ad5fef133dd90c6e4a77ea5b095cdbc515a604744c56542e200e5d90116.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>Time (s)</td><td>[A]</td></tr><tr><td>1</td><td>4.0</td><td>0.220</td></tr><tr><td>2</td><td>8.0</td><td>0.144</td></tr><tr><td>3</td><td>12.0</td><td>0.110</td></tr><tr><td>4</td><td>16.0</td><td>0.088</td></tr><tr><td>5</td><td>20.0</td><td>0.074</td></tr></table></body></html>\n\n",
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "The plot of $\\mathrm { l n } [ A ] _ { t }$ vs. tis not linear, indicating the reaction is not first order: ",
+        "page_idx": 630
+    },
+    {
+        "type": "image",
+        "img_path": "images/10a3cb4642fba6f75a9f22e450a779a47e74cfdfd90bb1487c5e9b918f348ae9.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "Second-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 630
+    },
+    {
+        "type": "text",
+        "text": "The equations that relate the concentrations of reactants and the rate constant of second-order reactions can be fairly complicated. To illustrate the point with minimal complexity, only the simplest second-order reactions will be described here, namely, those whose rates depend on the concentration of just one reactant. For these types of reactions, the differential rate law is written as: ",
+        "page_idx": 630
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm { r a t e } = k [ A ] ^ { 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "For these second-order reactions, the integrated rate law is: ",
+        "page_idx": 631
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { [ A ] _ { t } } } = k t + { \\frac { 1 } { [ A ] _ { 0 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "where the terms in the equation have their usual meanings as defined earlier. ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.8 ",
+        "text_level": 1,
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "The Integrated Rate Law for a Second-Order Reaction ",
+        "text_level": 1,
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "The reaction of butadiene gas $( \\mathrm { C } _ { 4 } \\mathrm { H } _ { 6 } )$ to yield $\\mathrm { C } _ { 8 } \\mathrm { H } _ { 1 2 }$ gas is described by the equation: ",
+        "page_idx": 631
+    },
+    {
+        "type": "equation",
+        "text": "$$\n2 \\mathrm { C } _ { 4 } \\mathrm { H } _ { 6 } ( g ) \\longrightarrow \\mathrm { C } _ { 8 } \\mathrm { H } _ { 1 2 } ( g )\n$$",
+        "text_format": "latex",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "This \u201cdimerization\u201d reaction is second order with a rate constant equal to $5 . 7 6 \\times 1 0 ^ { - 2 } \\mathrm { L } \\mathrm { m o l } ^ { - 1 } \\mathrm { m i n } ^ { - 1 }$ under certain conditions. If the initial concentration of butadiene is $0 . 2 0 0 M ,$ , what is the concentration after 10.0 min? ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "For a second-order reaction, the integrated rate law is written ",
+        "page_idx": 631
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { [ A ] _ { t } } } = k t + { \\frac { 1 } { [ A ] _ { 0 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "We know three variables in this equation: $[ A ] _ { 0 } = 0 . 2 0 0 \\mathrm { m o l / L } , k = 5 . 7 6 \\times 1 0 ^ { - 2 } \\mathrm { L / m o l / m i n }$ , and $t = 1 0 . 0$ min. Therefore, we can solve for [A], the fourth variable: ",
+        "page_idx": 631
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { l c l } { { \\frac { 1 } { \\left[ A \\right] _ { t } } } } & { = } & { \\left( 5 . 7 6 \\times 1 0 ^ { - 2 } { \\mathrm { L } } { \\mathrm { m o l } } ^ { - 1 } { \\mathrm { m i n } } ^ { - 1 } \\right) ( 1 0 { \\mathrm { m i n } } ) + { \\frac { 1 } { 0 . 2 0 0 { \\mathrm { m o l } } ^ { - 1 } } } } \\\\ { { \\frac { 1 } { \\left[ A \\right] _ { t } } } } & { = } & { \\left( 5 . 7 6 \\times 1 0 ^ { - 1 } { \\mathrm { L } } { \\mathrm { m o l } } ^ { - 1 } \\right) + 5 . 0 0 { \\mathrm { L } } { \\mathrm { m o l } } ^ { - 1 } } \\\\ { { \\frac { 1 } { \\left[ A \\right] _ { t } } } } & { = } & { 5 . 5 8 { \\mathrm { L } } { \\mathrm { m o l } } ^ { - 1 } } \\\\ { { \\left[ A \\right] _ { t } } } & { = } & { 1 . 7 9 \\times 1 0 ^ { - 1 } { \\mathrm { m o l } } { \\mathrm { L } } ^ { - 1 } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "Therefore $0 . 1 7 9 \\mathrm { m o l / L }$ of butadiene remain at the end of $1 0 . 0 \\mathrm { m i n }$ , compared to the $0 . 2 0 0 \\mathrm { m o l / L }$ that was originally present. ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "If the initial concentration of butadiene is $0 . 0 2 0 0 M ,$ , what is the concentration remaining after 20.0 min? ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "Answer: 0.0195 mol/L ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "The integrated rate law for second-order reactions has the form of the equation of a straight line: ",
+        "page_idx": 631
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { { \\frac { 1 } { \\left[ A \\right] _ { t } } } } & { = } & { k t + { \\frac { 1 } { \\left[ A \\right] _ { 0 } } } } \\\\ { y } & { = } & { m x + b } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "A plot of $\\textstyle { \\frac { 1 } { \\left[ A \\right] _ { t } } }$ versus tfor a second-order reaction is a straight line with a slope of kand a y-intercept of the plot is not a straight line, then the reaction is not second order. ",
+        "page_idx": 631
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.9 ",
+        "text_level": 1,
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "Graphical Determination of Reaction Order and Rate Constant ",
+        "text_level": 1,
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "The data below are for the same reaction described in Example 12.8. Prepare and compare two appropriate data plots to identify the reaction as being either first or second order. After identifying the reaction order, estimate a value for the rate constant. ",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 632
+    },
+    {
+        "type": "table",
+        "img_path": "images/2902e413b6ac86b6fc15a4ae4f4f2ffee6ffafa9c28cdb0fd7812fe81f606ff9.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>Time (s)</td><td>[C4He] (M)</td></tr><tr><td>1</td><td>0</td><td>1.00 \u00d710-2</td></tr><tr><td>2</td><td>1600</td><td>5.04\u00d710-3</td></tr><tr><td>3</td><td>3200</td><td>3.37\u00d710-3</td></tr><tr><td>4</td><td>4800</td><td>2.53 \u00d710-3</td></tr><tr><td>5</td><td>6200</td><td>2.08 \u00d710-3</td></tr></table></body></html>\n\n",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "In order to distinguish a first-order reaction from a second-order reaction, prepare a plot of $\\mathrm { \\ l n { [ C _ { 4 } H _ { 6 } ] } } _ { t }$ versus t and compare it to a plot of $\\frac { 1 } { \\left[ \\mathrm { C } _ { 4 } \\mathrm { H } _ { 6 } \\right] _ { t } }$ versus $t .$ The values needed for these plots follow. ",
+        "page_idx": 632
+    },
+    {
+        "type": "table",
+        "img_path": "images/ddb4600db72d5a3655709b9b301b1553709e87568369c04ad4a3336399d0966e.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td rowspan=\"2\">Time (s)</td><td colspan=\"2\">[c4H6] (M-1) In[C4H6]</td></tr><tr><td>100</td><td>-4.605</td></tr><tr><td>0 1600</td><td>198</td><td>-5.289</td></tr><tr><td>3200</td><td>296</td><td>-5.692</td></tr><tr><td>4800</td><td>395</td><td>-5.978</td></tr><tr><td>6200</td><td>481</td><td>-6.175</td></tr></table></body></html>\n\n",
+        "page_idx": 632
+    },
+    {
+        "type": "text",
+        "text": "The plots are shown in Figure 12.10, which clearly shows the plot of $\\mathrm { l n } [ \\mathrm { C } _ { 4 } \\mathrm { H } _ { 6 } ] _ { t }$ versus tis not linear, therefore the reaction is not first order. The plot of $\\frac { 1 } { \\left[ \\mathrm { C } _ { 4 } \\mathrm { H } _ { 6 } \\right] _ { t } }$ versus $t$ is linear, indicating that the reaction is second order. ",
+        "page_idx": 632
+    },
+    {
+        "type": "image",
+        "img_path": "images/baaa2f4efb24d7c00a4699ad7a11d67e5571e88cee2891cf6acf28a5d3daecde.jpg",
+        "img_caption": [
+            "FIGURE 12.10 These two graphs show first- and second-order plots for the dimerization of $C _ { 4 } H _ { 6 }$ . The linear trend in the second-order plot (right) indicates that the reaction follows second-order kinetics. "
+        ],
+        "img_footnote": [],
+        "page_idx": 633
+    },
+    {
+        "type": "text",
+        "text": "According to the second-order integrated rate law, the rate constant is equal to the slope of the $\\frac { 1 } { \\left[ A \\right] _ { t } }$ versus $t$ plot. Using the data for $t = 0 ~ s$ and $t = 6 2 0 0 s ,$ the rate constant is estimated as follows: ",
+        "page_idx": 633
+    },
+    {
+        "type": "equation",
+        "text": "$$\nk = \\mathrm { s l o p e } = { \\frac { ( 4 8 1 M ^ { - 1 } - 1 0 0 M ^ { - 1 } ) } { ( 6 2 0 0 \\mathrm { s } - 0 \\mathrm { s } ) } } = 0 . 0 6 1 4 \\mathbf { M } ^ { - 1 } \\mathrm { s } ^ { - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 633
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 633
+    },
+    {
+        "type": "text",
+        "text": "Do the following data fit a second-order rate law? ",
+        "page_idx": 633
+    },
+    {
+        "type": "table",
+        "img_path": "images/bda281e36ba477374be1831c99396fafc16da7de39b5df9b44c95dc63be307d4.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Trial</td><td>Time (s)</td><td>[A] (M)</td></tr><tr><td>1</td><td>5</td><td>0.952</td></tr><tr><td>2</td><td>10</td><td>0.625</td></tr><tr><td>3</td><td>15</td><td>0.465</td></tr><tr><td>4</td><td>20</td><td>0.370</td></tr><tr><td>5</td><td>25</td><td>0.308</td></tr><tr><td>6</td><td>35</td><td>0.230</td></tr></table></body></html>\n\n",
+        "page_idx": 633
+    },
+    {
+        "type": "text",
+        "text": "Answer: ",
+        "text_level": 1,
+        "page_idx": 633
+    },
+    {
+        "type": "text",
+        "text": "Yes. The plot of $\\frac { 1 } { \\left[ A \\right] _ { t } }$ vs. $t$ is linear: ",
+        "page_idx": 633
+    },
+    {
+        "type": "image",
+        "img_path": "images/127745f884e4b17fcd2ab5ba89fca9fca0a7a2b344ed0a29bb398cc28ea6a5e0.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 633
+    },
+    {
+        "type": "text",
+        "text": "Zero-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "For zero-order reactions, the differential rate law is: ",
+        "page_idx": 634
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { r a t e } } = k\n$$",
+        "text_format": "latex",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "A zero-order reaction thus exhibits a constant reaction rate, regardless of the concentration of its reactant(s). This may seem counterintuitive, since the reaction rate certainly can\u2019t be finite when the reactant concentration is zero. For purposes of this introductory text, it will suffice to note that zero-order kinetics are observed for some reactions only under certain specific conditions. These same reactions exhibit different kinetic behaviors when the specific conditions aren\u2019t met, and for this reason the more prudent term pseudozero-orderis sometimes used. ",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "The integrated rate law for a zero-order reaction is a linear function: ",
+        "page_idx": 634
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { [ A ] _ { t } } } & { { = } } & { { - k t + [ A ] _ { 0 } } } \\\\ { { y } } & { { = } } & { { m x + b } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "A plot of [A] versus $t$ for a zero-order reaction is a straight line with a slope of $- k$ and a $y$ -intercept of $[ A ] _ { 0 }$ . Figure 12.11 shows a plot of $\\left[ \\mathrm { N H } _ { 3 } \\right]$ versus $t$ for the thermal decomposition of ammonia at the surface of two different heated solids. The decomposition reaction exhibits first-order behavior at a quartz $\\mathrm { ( S i O _ { 2 } ) }$ ) surface, as suggested by the exponentially decaying plot of concentration versus time. On a tungsten surface, however, the plot is linear, indicating zero-order kinetics. ",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.10 ",
+        "text_level": 1,
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "Graphical Determination of Zero-Order Rate Constant ",
+        "text_level": 1,
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "Use the data plot in Figure 12.11 to graphically estimate the zero-order rate constant for ammonia decomposition at a tungsten surface. ",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "The integrated rate law for zero-order kinetics describes a linear plot of reactant concentration, $[ A ] _ { t } ,$ versus time, $t ,$ , with a slope equal to the negative of the rate constant, $- k$ . Following the mathematical approach of previous examples, the slope of the linear data plot (for decomposition on W) is estimated from the graph. Using the ammonia concentrations at $t = 0$ and $t = 1 0 0 0 \\mathrm { s }$ : ",
+        "page_idx": 634
+    },
+    {
+        "type": "equation",
+        "text": "$$\nk = - { \\mathrm { s l o p e } } = - { \\frac { ( 0 . 0 0 1 5 { \\mathrm { m o l } } \\mathrm { L } ^ { - 1 } - 0 . 0 0 2 8 { \\mathrm { m o l } } \\mathrm { L } ^ { - 1 } ) } { ( 1 0 0 0 \\mathrm { s } - 0 \\mathrm { s } ) } } = 1 . 3 \\times 1 0 ^ { - 6 } { \\mathrm { m o l } } { \\mathrm { L } } ^ { - 1 } { \\mathrm { s } } ^ { - 1 }\n$$",
+        "text_format": "latex",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "The zero-order plot in Figure 12.11 shows an initial ammonia concentration of $0 . 0 0 2 8 \\mathrm { m o l } \\mathrm { L } ^ { - 1 }$ decreasing linearly with time for 1000 s. Assuming no change in this zero-order behavior, at what time (min) will the concentration reach $0 . 0 0 0 1 \\mathrm { m o l } \\mathrm { L } ^ { - 1 } \\ ?$ ",
+        "page_idx": 634
+    },
+    {
+        "type": "text",
+        "text": "Answer: 35 min ",
+        "page_idx": 634
+    },
+    {
+        "type": "image",
+        "img_path": "images/312967aabe9ccc0ef135abbdc4e2cb27ec6f485e7396e95888d3fefcbfe9825b.jpg",
+        "img_caption": [
+            "FIGURE 12.11 The decomposition of $N H _ { 3 }$ on a tungsten $( \\mathsf { W } )$ surface is a zero-order reaction, whereas on a quartz $( \\mathsf { S i O } _ { 2 } )$ surface, the reaction is first order. "
+        ],
+        "img_footnote": [],
+        "page_idx": 635
+    },
+    {
+        "type": "text",
+        "text": "The Half-Life of a Reaction ",
+        "text_level": 1,
+        "page_idx": 635
+    },
+    {
+        "type": "text",
+        "text": "The half-life of a reaction $( t _ { 1 / 2 } )$ is the time required for one-half of a given amount of reactant to be consumed. In each succeeding half-life, half of the remaining concentration of the reactant is consumed. Using the decomposition of hydrogen peroxide (Figure 12.2) as an example, we find that during the first half-life (from 0.00 hours to 6.00 hours), the concentration of $\\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 }$ decreases from 1.000 $M$ to $0 . 5 0 0 M .$ During the second half-life (from 6.00 hours to 12.00 hours), it decreases from $0 . 5 0 0 M$ to $0 . 2 5 0 M ;$ during the third half-life, it decreases from $0 . 2 5 0 M$ to $0 . 1 2 5 M .$ The concentration of $\\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 }$ decreases by half during each successive period of 6.00 hours. The decomposition of hydrogen peroxide is a first-order reaction, and, as can be shown, the half-life of a first-order reaction is independent of the concentration of the reactant. However, half-lives of reactions with other orders depend on the concentrations of the reactants. ",
+        "page_idx": 635
+    },
+    {
+        "type": "text",
+        "text": "First-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 635
+    },
+    {
+        "type": "text",
+        "text": "An equation relating the half-life of a first-order reaction to its rate constant may be derived from the integrated rate law as follows: ",
+        "page_idx": 635
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\ln { \\frac { [ A ] _ { 0 } } { \\left[ A \\right] _ { t } } } } } & { { = } } & { { k t } } \\\\ { { t } } & { { = } } & { { \\ln { \\frac { [ A ] _ { 0 } } { \\left[ A \\right] _ { t } } } \\ \\times \\ { \\frac { 1 } { k } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 635
+    },
+    {
+        "type": "text",
+        "text": "Invoking the definition of half-life, symbolized $t _ { 1 / 2 }$ requires that the concentration of $A$ at this point is one-half its initial concentration: $\\begin{array} { r } { t = t _ { 1 / 2 } , [ A ] _ { t } = \\frac { 1 } { 2 } [ A ] _ { 0 } } \\end{array}$ ",
+        "page_idx": 635
+    },
+    {
+        "type": "text",
+        "text": "Substituting these terms into the rearranged integrated rate law and simplifying yields the equation for halflife: ",
+        "page_idx": 636
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{c} { \\begin{array} { l } { { \\displaystyle t _ { 1 / 2 } } } \\\\ { { \\mathrm {  ~ \\ell ~ } } } \\\\ { { \\mathrm {  ~ \\ell ~ } } } \\\\ { { \\displaystyle t _ { 1 / 2 } } } \\end{array} } = \\ln { \\frac { [ A ] _ { 0 } } { { \\frac { 1 } { 2 } } [ A ] _ { 0 } } } \\ \\times \\ { \\frac { 1 } { k } }  \\\\ { ~ } \\\\ { { \\mathrm {  ~ \\ell ~ } } } \\\\ { { \\displaystyle t _ { 1 / 2 } } } \\end{array} \n$$",
+        "text_format": "latex",
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "This equation describes an expected inverse relation between the half-life of the reaction and its rate constant, $k .$ . Faster reactions exhibit larger rate constants and correspondingly shorter half-lives. Slower reactions exhibit smaller rate constants and longer half-lives. ",
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.11 ",
+        "text_level": 1,
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Calculation of a First-order Rate Constant using Half-Life ",
+        "text_level": 1,
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Calculate the rate constant for the first-order decomposition of hydrogen peroxide in water at $4 0 ^ { \\circ } \\mathrm { C }$ , using the data given in Figure 12.12. ",
+        "page_idx": 636
+    },
+    {
+        "type": "image",
+        "img_path": "images/61cda510720dd48099bd701bcee7f7eac5af93398f14f32fdc84552e86eabdb7.jpg",
+        "img_caption": [
+            "FIGURE 12.12 The decomposition of ${ \\sf H } _ { 2 } { \\sf O } _ { 2 }$ $( 2 \\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 } \\longrightarrow 2 \\mathrm { H } _ { 2 } \\mathrm { O } + \\mathrm { O } _ { 2 } )$ at $4 0 ^ { \\circ } \\mathsf { C }$ is illustrated. The intensity of th color symbolizes the concentration of ${ \\sf H } _ { 2 } { \\sf O } _ { 2 }$ at the indicated times; ${ \\sf H } _ { 2 } { \\sf O } _ { 2 }$ is actually colorless. "
+        ],
+        "img_footnote": [],
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Inspecting the concentration/time data in Figure 12.12 shows the half-life for the decomposition of $\\mathrm { H } _ { 2 } \\mathrm { O } _ { 2 }$ is $2 . 1 6 \\times 1 0 ^ { 4 } \\mathrm { s } ;$ : ",
+        "page_idx": 636
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r c l } { t _ { 1 / 2 } } & { = } & { { \\frac { 0 . 6 9 3 } { k } } } \\\\ { k } & { = } & { { \\frac { 0 . 6 9 3 } { t _ { 1 / 2 } } } = { \\frac { 0 . 6 9 3 } { 2 . 1 6 \\times 1 0 ^ { 4 } { \\mathrm { s } } } } = 3 . 2 1 \\times 1 0 ^ { - 5 } { \\mathrm { s } } ^ { - 1 } } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "The first-order radioactive decay of iodine-131 exhibits a rate constant of $0 . 1 3 8 { \\mathrm { d } } ^ { - 1 }$ . What is the half-life for this decay? ",
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Answer: 5.02 d. ",
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Second-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 636
+    },
+    {
+        "type": "text",
+        "text": "Following the same approach as used for first-order reactions, an equation relating the half-life of a secondorder reaction to its rate constant and initial concentration may be derived from its integrated rate law: ",
+        "page_idx": 636
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { [ A ] _ { t } } } = k t + { \\frac { 1 } { [ A ] _ { 0 } } }\n$$",
+        "text_format": "latex",
+        "page_idx": 636
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\frac { 1 } { [ A ] } } - { \\frac { 1 } { [ A ] _ { 0 } } } = k t\n$$",
+        "text_format": "latex",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "Restrict tto t1/2 ",
+        "page_idx": 637
+    },
+    {
+        "type": "equation",
+        "text": "$$\nt = t _ { 1 / 2 }\n$$",
+        "text_format": "latex",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "define $[ A ] _ { t }$ as one-half $[ A ] _ { 0 }$ ",
+        "page_idx": 637
+    },
+    {
+        "type": "equation",
+        "text": "$$\n[ A ] _ { t } = { \\frac { 1 } { 2 } } [ A ] _ { 0 }\n$$",
+        "text_format": "latex",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "and then substitute into the integrated rate law and simplify: ",
+        "page_idx": 637
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\frac { 1 } { \\frac { 1 } { 2 } [ A ] _ { 0 } } ~ - ~ \\frac { 1 } { [ A ] _ { 0 } } } } & { { = } } & { { k t _ { 1 / 2 } } } \\\\ { { } } & { { } } & { { } } \\\\ { { \\frac { 2 } { [ A ] _ { 0 } } ~ - ~ \\frac { 1 } { [ A ] _ { 0 } } } } & { { = } } & { { k t _ { 1 / 2 } } } \\\\ { { } } & { { } } & { { } } \\\\ { { \\frac { 1 } { [ A ] _ { 0 } } ~ = } } & { { k t _ { 1 / 2 } } } \\\\ { { } } & { { } } & { { } } \\\\ { { t _ { 1 / 2 } ~ = } } & { { \\frac { 1 } { k [ A ] _ { 0 } } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "For a second-order reaction, $t _ { 1 / 2 }$ is inversely proportional to the concentration of the reactant, and the half-life increases as the reaction proceeds because the concentration of reactant decreases. Unlike with first-order reactions, the rate constant of a second-order reaction cannot be calculated directly from the half-life unless the initial concentration is known. ",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "Zero-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "As for other reaction orders, an equation for zero-order half-life may be derived from the integrated rate law: ",
+        "page_idx": 637
+    },
+    {
+        "type": "equation",
+        "text": "$$\n[ A ] = - k t + [ A ] _ { 0 }\n$$",
+        "text_format": "latex",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "Restricting the time and concentrations to those defined by half-life: $t = t _ { 1 / 2 }$ and $[ A ] = { \\frac { [ A ] _ { 0 } } { 2 } }$ Substituting these terms into the zero-order integrated rate law yields: ",
+        "page_idx": 637
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { { \\frac { [ \\mathrm { A } ] _ { 0 } } { 2 } } } & { { = } } & { { - k t _ { 1 / 2 } + [ \\mathrm { A } ] _ { 0 } } } \\\\ { { k t _ { 1 / 2 } } } & { { = } } & { { \\frac { [ \\mathrm { A } ] _ { 0 } } { 2 } } } \\\\ { { t _ { 1 / 2 } } } & { { = } } & { { \\frac { [ \\mathrm { A } ] _ { 0 } } { 2 k } } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "As for all reaction orders, the half-life for a zero-order reaction is inversely proportional to its rate constant.   \nHowever, the half-life of a zero-order reaction increases as the initial concentration increases. ",
+        "page_idx": 637
+    },
+    {
+        "type": "text",
+        "text": "Equations for both differential and integrated rate laws and the corresponding half-lives for zero-, first-, and second-order reactions are summarized in Table 12.2. ",
+        "page_idx": 637
+    },
+    {
+        "type": "table",
+        "img_path": "images/fb6379c1afe780bd34190e04f4e2fdeeb7c72cb119be6a260abd86bdd967de41.jpg",
+        "table_caption": [
+            "Summary of Rate Laws for Zero-, First-, and Second-Order Reactions ",
+            "TABLE 12.2 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Zero-Order</td><td>First-Order</td><td>Second-Order</td></tr><tr><td>rate law</td><td>rate = k</td><td>rate = k[A]</td><td>rate = k[A]\u00b2</td></tr><tr><td>units of rate constant</td><td>Ms-1</td><td>s-1</td><td>M1s-1</td></tr><tr><td>integrated rate law</td><td>[A]= -kt +[A]o</td><td>ln[A] = -kt + In[A]o</td><td>= kt+</td></tr></table></body></html>\n\n",
+        "page_idx": 637
+    },
+    {
+        "type": "table",
+        "img_path": "images/73987ee46d898f0cd5c5f82a8b57b534d896323dae4c8bbf4c5e424b27da4bf5.jpg",
+        "table_caption": [
+            "TABLE 12.2 "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>Zero-Order</td><td>First-Order</td><td>Second-Order</td></tr><tr><td> plot needed for linear fit of rate data</td><td>[A]vs. t</td><td>ln[A] vs. t</td><td>1 vs.t</td></tr><tr><td>eltshipteolia</td><td>k=-slope</td><td>k =-slope</td><td>k = slope</td></tr><tr><td>half-life</td><td>t1/2 = 2k [Al0</td><td>k t1/2 = 0.693</td><td>t112 = [Ak</td></tr></table></body></html>\n\n",
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 12.12 ",
+        "text_level": 1,
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "Half-Life for Zero-Order and Second-Order Reactions ",
+        "text_level": 1,
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "What is the half-life for the butadiene dimerization reaction described in Example 12.8? ",
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "Solution ",
+        "text_level": 1,
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "The reaction in question is second order, is initiated with a $0 . 2 0 0 \\mathrm { m o l } \\mathrm { L } ^ { - 1 }$ reactant solution, and exhibits a rate constant of $0 . 0 5 7 6 \\mathrm { L } \\mathrm { m o l } ^ { - 1 } \\mathrm { m i n } ^ { - 1 }$ . Substituting these quantities into the second-order half-life equation: ",
+        "page_idx": 638
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r c l } { t _ { 1 / 2 } } & { = } & { \\frac { 1 } { [ ( 0 . 0 5 7 6 \\mathrm { L } \\mathrm { m o l } ^ { - 1 } \\mathrm { m i n } ^ { - 1 } ) ( 0 . 2 0 0 \\mathrm { m o l } \\mathrm { L } ^ { - 1 } ) ] } = 1 8 \\mathrm { m i n } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "Check Your Learning ",
+        "text_level": 1,
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "What is the half-life (min) for the thermal decomposition of ammonia on tungsten (see Figure 12.11)? ",
+        "page_idx": 638
+    },
+    {
+        "type": "text",
+        "text": "Answer: 87 min ",
+        "page_idx": 638
+    }
+]

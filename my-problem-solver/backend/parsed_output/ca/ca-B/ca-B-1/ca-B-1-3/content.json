@@ -1,0 +1,28 @@
+[
+    {
+        "type": "text",
+        "text": "B.1.3 Fusion of High Performance Computing and Graphics Computing ",
+        "text_level": 1,
+        "page_idx": 756
+    },
+    {
+        "type": "text",
+        "text": "Towards the late nineties, there was a rapid growth in the field of computer graphics. There was a surge in computer gaming, desktop visual effects, and advanced engineering software that required sophisticated hardware accelerators for computer graphics. Hence, designers increasingly faced the need to create more vivid scenes, and more lifelike objects. Readers can compare the animation movies produced in the late eighties and today\u2019s Hollywood movies. Animated movies today have very lifelike characters with very detailed facial expressions. Thanks to graphics hardware, all of this is possible. To create such immersive experiences it became necessary to add a great degree of flexibility in graphics processors to incorporate different kinds of visual effects. Hence, graphics processor designers exposed a lot of internals of the processor to low level software and allowed the programmers to use the processor more flexibly. A set of programs called shaders were born in the early years of 2000. They allowed the programmer to create flexible fragment, and pixel processing routines. ",
+        "page_idx": 756
+    },
+    {
+        "type": "text",
+        "text": "By 2006, major GPU vendors had the realization that the graphics pipeline can be used for general purpose computations also. For example, heavily numerical scientific code is conceptually similar to fragment, or pixel processing operations. Hence, if we allow regular user programs to access the graphics processor to perform their tasks then we can run a host of scientific programs on graphics processors. In response to this requirement, NVIDIA released the CUDA API that allowed C programmers to write code in C, and run it on a graphics processor. Hence, the term GPGPU (General Purpose GPU) was born. ",
+        "page_idx": 756
+    },
+    {
+        "type": "text",
+        "text": "Definition 164   \nGPGPU stands for General Purpose Graphics Processing Unit. It is essentially a graphics processor that allows regular users to write and run their code on it. Users typically use dedicated languages, or extensions to standard languages for producing code that is compatible with GPGPUs. ",
+        "page_idx": 756
+    },
+    {
+        "type": "text",
+        "text": "In this book we shall discuss the design of the NVIDIA $\\textsuperscript { \\textregistered }$ Tesla $\\textsuperscript { \\textregistered }$ GPU architecture. Specifically, we will discuss the design of the GeForce $\\textsuperscript { \\textregistered }$ 8800 GPU. The fastest parts of the GPU (the cores) typically operate at 1.5 GHz. Other parts operate at 600 MHz, or 750 MHz. ",
+        "page_idx": 756
+    }
+]

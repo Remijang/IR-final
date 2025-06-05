@@ -1,0 +1,32 @@
+[
+    {
+        "type": "text",
+        "text": "11.1.6 Utilizing Spatial and Temporal Locality ",
+        "text_level": 1,
+        "page_idx": 513
+    },
+    {
+        "type": "text",
+        "text": "Section 11.1.4 and 11.1.5 showed the stack and address distance distributions for a sample program. Similar experiments have been performed for thousands of programs that users use in their daily lives. These programs include computer games, word processors, databases, spreadsheet applications, weather simulation programs, financial applications, and software applications that run on mobile computers. Almost all of them exhibit a very high degree of temporal and spatial locality. In other words, temporal and spatial locality, are basic human traits. Whatever we do, including fetching books, or writing programs, these properties tend to hold. Note that these are just mere empirical observations. It is always possible to write a program that does not exhibit any form of temporal and spatial locality. Additionally, it is always possible to find regions of code in commercial programs that do not exhibit these properties. However, these examples are exceptions. They are not the norm. We need to design computer systems for the norm, and not for the exceptions. This is how we can boost performance for a large majority of programs that users are expected to run. ",
+        "page_idx": 513
+    },
+    {
+        "type": "image",
+        "img_path": "images/c769affb4ae74dfdd32a4bf6040a99bcf6db72e22415c990ba173fe99ed4cbf5.jpg",
+        "img_caption": [
+            "Figure 11.2: Address distance distribution "
+        ],
+        "img_footnote": [],
+        "page_idx": 514
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 514
+    },
+    {
+        "type": "text",
+        "text": "From now on, let us take temporal and spatial locality for granted, and see what can be done to boost the performance of the memory system, without compromising on storage capacity. Let us look at temporal locality first. ",
+        "page_idx": 514
+    }
+]

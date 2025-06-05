@@ -1,0 +1,15 @@
+8.6.2 Goldschmidt Division
+
+Let us try to simplify the process of division by dividing it into two stages. In the first stage, we compute the reciprocal of the divisor  . In the next stage, we multiply the obtained reciprocal with the dividend  . The product is equal to  . Floating point multiplication is an  time operation. Hence, let us focus on trying to compute the reciprocal of  .
+
+Let us also ignore exponents in our discussion because, we just need to flip the sign of the exponent in the reciprocal. Let us only focus on the significand,  , and to keep matters simple, let us further assume that  is a normal floating point number. Thus,  . We can represent  . We have:
+
+Let us thus focus on evaluating  . We have:
+
+We need not proceed anymore. The reason for this is as follows. Since  ,  is less than  . The smallest mantissa that we can represent in the IEEE 32-bit floating point notation is  . Hence, there is no point in having terms that have an exponent greater than 23. Given the approximate nature of floating point mathematics, the product  is as close to the real value of  as we can get.
+
+Let us now consider the value –  . It has 5 add operations that can be done in parallel. To obtain  , we can repeatedly multiply each term with itself. For example, to get  , we can multiply  with  and so on. Thus, generating the powers of  takes 4 multiply operations. Lastly, we need to multiply the terms in brackets –  ,  , and  . This will require 4 multiplications. We thus require a total of 8 multiplications and 5 additions.
+
+Let us now compute the time complexity. For an  -bit floating point number, let us assume that a fixed fraction of bits represents the mantissa. Thus, the number of bits required to represent the mantissa is  . Consequently, the number of terms of the form  that we need to consider is  . The total number of additions, and multiplications for finding the reciprocal is also  . Since each addition or multiplication takes  time, the time complexity of finding the reciprocal of  is equal to  . Since the rest of the operations such as adjusting the exponents and multiplying the reciprocal with  take  time, the total complexity is equal to  .
+
+We observe that floating point division is asymptotically much faster than normal integer division. This is primarily because floating point mathematics is approximate, whereas integer mathematics is exact.

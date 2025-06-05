@@ -1,0 +1,30 @@
+# 41.4 Nitrogenous Wastes
+
+Bytheendofthissection,youwil beabletodothefolowing:
+
+Compare and contrast the way in which aquatic animals and terrestrial animals can eliminate toxic ammonia from their systems   
+Compare the major byproduct of ammonia metabolism in vertebrate animals to that of birds, insects, and reptiles
+
+Of the four major macromolecules in biological systems, both proteins and nucleic acids contain nitrogen. During the catabolism, or breakdown, of nitrogen-containing macromolecules, carbon, hydrogen, and oxygen are extracted and stored in the form of carbohydrates and fats. Excess nitrogen is excreted from the body. Nitrogenous wastes tend to form toxic ammonia, which raises the pH of body fluids. The formation of ammonia itself requires energy in the form of ATP and large quantities of water to dilute it out of a biological system. Animals that live in aquatic environments tend to release ammonia into the water. Animals that excrete ammonia are said to be ammonotelic. Terrestrial organisms have evolved other mechanisms to excrete nitrogenous wastes. The animals must detoxify ammonia by converting it into a relatively nontoxic form such as urea or uric acid. Mammals, including humans, produce urea, whereas reptiles and many terrestrial invertebrates produce uric acid. Animals that secrete urea as the primary nitrogenous waste material are called ureotelic animals.
+
+# Nitrogenous Waste in Terrestrial Animals: The Urea Cycle
+
+The urea cycle is the primary mechanism by which mammals convert ammonia to urea. Urea is made in the liver and excreted in urine. The overall chemical reaction by which ammonia is converted to urea is 2 $\mathrm { N H } _ { 3 }$ (ammonia) $+ \mathrm { C O } _ { 2 } + 3 \mathrm { A T P } + \mathrm { H } _ { 2 } \mathrm { O }  \mathrm { H } _ { 2 } \mathrm { N } -$ $\mathrm { C O - N H _ { 2 } ( u r e a ) } + 2 \mathrm { A D P } + 4 \mathrm { P _ { i } } + \mathrm { A M P } .$
+
+The urea cycle utilizes five intermediate steps, catalyzed by five different enzymes, to convert ammonia to urea, as shown in Figure 41.12. The amino acid L-ornithine gets converted into different intermediates before being regenerated at the end of the urea cycle. Hence, the urea cycle is also referred to as the ornithine cycle. The enzyme ornithine transcarbamylase catalyzes a key step in the urea cycle and its deficiency can lead to accumulation of toxic levels of ammonia in the body. The first two reactions occur in the mitochondria and the last three reactions occur in the cytosol. Urea concentration in the blood, called blood urea nitrogen or BUN, is used as an indicator of kidney function.
+
+# EVOLUTION CONNECTION
+
+# Excretion of Nitrogenous Waste
+
+The theory of evolution proposes that life started in an aquatic environment. It is not surprising to see that biochemical pathways like the urea cycle evolved to adapt to a changing environment when terrestrial life forms evolved. Arid conditions probably led to the evolution of the uric acid pathway as a means of conserving water.
+
+# Nitrogenous Waste in Birds and Reptiles: Uric Acid
+
+Birds, reptiles, and most terrestrial arthropods convert toxic ammonia to uric acid or the closely related compound guanine (guano) instead of urea. Mammals also form some uric acid during breakdown of nucleic acids. Uric acid is a compound similar to purines found in nucleic acids. It is water insoluble and tends to form a white paste or powder; it is excreted by birds, insects, and reptiles. Conversion of ammonia to uric acid requires more energy and is much more complex than conversion of ammonia to urea Figure 41.13.
+
+# Everyday Connection
+
+# Gout
+
+Mammals use uric acid crystals as an antioxidant in their cells. However, too much uric acid tends to form kidney stones and may also cause a painful condition called gout, where uric acid crystals accumulate in the joints, as illustrated in Figure 41.14. Food choices that reduce the amount of nitrogenous bases in the diet help reduce the risk of gout. For example, tea, coffee, and chocolate have purine-like compounds, called xanthines, and should be avoided by people with gout and kidney stones.

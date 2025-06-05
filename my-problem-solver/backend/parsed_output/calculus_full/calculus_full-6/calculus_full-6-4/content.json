@@ -1,0 +1,435 @@
+[
+    {
+        "type": "text",
+        "text": "6.4 Logarithms ",
+        "text_level": 1,
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "We have give\u0001n first place to $e ^ { x }$ and a lower place to ln $x$ : In applications that is absolutely correct. But log\u00bbarithms have one important\u00bb theoretical advantage (plus many applications of their own). The advantage is that the derivative of $\\ln x$ is $1 / x$ ; whereas the derivative of $e ^ { x }$ is $e ^ { x }$ : We can\u2019t define $e ^ { x }$ as its own integral, without circular reasoning. But we can and do define $\\ln x$ (the natural logarithm) as the integral of the \u201c $^ { \\cdot } - 1$ power\u201d which is $1 / x$ : ",
+        "page_idx": 321
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln x = \\int _ { 1 } ^ { x } { \\frac { 1 } { x } } d x \\qquad { \\mathrm { o r } } \\qquad \\ln y = \\int _ { 1 } ^ { y } { \\frac { 1 } { u } } d u .\n$$",
+        "text_format": "latex",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Note the dummy variables, first $x$ then $u$ : Note also the live variables, first $x$ the\u0001n $y$ : Especially note the lower limit of integration, which is 1 and not 0: The logarithm is the area measured from 1. Therefore ln $1 = 0$ at that starting poin\u00a1t\u2014as required. ",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Earlier chapters integrated all powers except this $^ { 6 6 } - 1$ power.\u201d The logarithm is that missing integral. The curve in Figure 6.11 has height $y = 1 / x$ \u2014it is a hyperbola. At $x = 0$ the height goes to infinity and the area becomes infinite: $\\log 0 = - \\infty$ : The minus sign is because the integral goes backward from 1 to 0: The integral does not extend past zero to negative $x$ : We are defining $\\ln x$ only for $x > 0 .$ \u008e ",
+        "page_idx": 321
+    },
+    {
+        "type": "image",
+        "img_path": "images/22bc7b57d2a4fa6b6d9103304b905a78f34a07c7f240891dc9afdd7222c68793.jpg",
+        "img_caption": [
+            "Fig. 6.11 Logarithm as area. Neighbors ln $a + \\ln b = \\ln a b$ : Equal areas: $- \\ln { \\frac { 1 } { 2 } } = \\ln 2 = { \\frac { 1 } { 2 } } \\ln 4$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "With this new approach, ln $x$ has a direct definition. $I t$ is an integral (or an area). Its two key properties must follo\u00bbw from thi\u00bbs definition. \u00bbThat step is a beautiful application of the theory behind integrals. ",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "Property 1: $\\ln a b = \\ln a + \\ln b$ : The areas from 1 to $a$ and from $a$ to $a b$ combine into a single area (1 to $a b$ in the middle figure): ",
+        "page_idx": 321
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\mathrm { N e i g h b o r i n g ~ a r e a s : } } \\int _ { 1 } ^ { a } { \\frac { 1 } { x } } d x + \\int _ { a } ^ { a b } { \\frac { 1 } { x } } d x = \\int _ { 1 } ^ { a b } { \\frac { 1 } { x } } d x .\n$$",
+        "text_format": "latex",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "The right side is $\\ln a b$ ; from definition (1). The first term on the left is $\\ln { a }$ : The problem is to show that the second integral ( $a$ to $a b$ ) is $\\ln b$ : ",
+        "page_idx": 321
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { a } ^ { a b } { \\frac { 1 } { x } } d x { \\overset { ( ? ) } { = } } \\int _ { 1 } ^ { b } { \\frac { 1 } { u } } d u = \\ln b .\n$$",
+        "text_format": "latex",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "We need $u = 1$ w\u0001hen $x = a$ (the lower limit) and $u = b$ when $x = a b$ (the upper limit). The choice $u = x / a$ satisfies these requirements. Substituting $x = a u$ and $d x =$ a $d u$ yields $d x / x = d u / u$ : Equation (3) gives $\\ln b$ ; and equation (2) is $\\ln a + \\ln b =$ $\\ln a b$ : ",
+        "page_idx": 321
+    },
+    {
+        "type": "text",
+        "text": "6.4 Logarithms ",
+        "text_level": 1,
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "Property 2: $\\ln b ^ { n } = n \\ln b$ : These are the left and right sides of ",
+        "page_idx": 322
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { 1 } ^ { b ^ { n } } { \\frac { 1 } { x } } d x \\ { \\stackrel { ( ? ) } { = } } \\ n \\int _ { 1 } ^ { b } { \\frac { 1 } { u } } d u .\n$$",
+        "text_format": "latex",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "This comes from the substitution $x = u ^ { n }$ : The lower limit $x = 1$ corresponds to $u = 1$ ; and $x = b ^ { n }$ corresponds to $u = b$ : The differe\u0001ntial $d x$ is $n u ^ { n - 1 } d u$ : Dividing by $x = u ^ { n }$ leaves $d x / x = n d u / u$ : Then equation (4) becomes $\\ln b ^ { n } = n \\ln b$ : ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "Everything comes logically from the definition as an area. Also definite integrals: ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 1 Comp $\\mathrm { u t e } \\int _ { x } ^ { 3 x } { \\frac { 1 } { t } } d t . \\quad \\mathrm  S o l u t i o n : \\ln { 3 x } - \\ln { { x } } = \\ln { \\frac { 3 x } { x } } = \\ln { 3 } .$ EXAMPLE 2 Comput $\\it { \\Psi } = \\int _ { \\bf { - 1 } } ^ { 1 } \\frac { 1 } { x } d x . \\mathrm {  ~ \\cal ~ { ~ S o l u t i o n } : \\ln ~ } 1 - \\ln . 1 = \\ln ~  1 0 . ( { \\bf { W } \\ h y \\cdot \\nabla } )$ EXAMPLE 3 Compute $\\int _ { 1 } ^ { e ^ { 2 } } { \\frac { 1 } { u } } d u$ : Solution: ln $e ^ { 2 } = 2$ : The area from 1 to $e ^ { 2 }$ is 2: ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "Remark While working on the theory this is a chance to straighten out old debts. The book has discussed and computed (and even differentiated) the functions $e ^ { x }$ and $b ^ { x }$ and $x ^ { n }$ ; without defining them properly. When the exponent is an irrational number like $\\pi$ ; how do we multiply $e$ by itself $\\pi$ times ? One approach (not taken) is to come closer and closer to $\\pi$ by rational exponents like $2 2 / 7$ : Another approach (taken now) is to determine the number $e ^ { \\pi } = 2 3 . 1$ : : : by its logarithm. $\\dagger$ Start with $e$ itself: ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "When the area in Figure 6.12 reaches 1; the basepoint is e. When the area reaches $\\pi$ ; the basepoint is $e ^ { \\pi }$ : We are constructing the inverse function (which is $e ^ { x }$ ). But how do we know that the area reaches $\\pi$ or 1000 or $- 1 0 0 0$ at exactly one point ? (The area is 1000 far out at $e ^ { 1 0 0 0 }$ : The area is $- 1 0 0 0$ very near zero at $\\dot { e } ^ { - 1 0 0 \\hat { 0 } }$ :) To define $e$ we have to know that somewhere the area equals 1! ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "For a proof in two steps, go back to Figure 6.11c. The area from 1 to 2 is more than $\\frac { 1 } { 2 }$ (because $1 / x$ is more than $\\frac { 1 } { 2 }$ on that interval of length one). The combined area from 1 to 4 is more than 1: We come to area $= 1$ before reaching 4: (Actually at $e = 2 . 7 1 8 \\dots ,$ ) Since $1 / x$ is positive, the area is increasing and never comes back to 1: ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "To double the area we have to square the distance. The logarithm creeps upwards: ",
+        "page_idx": 322
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln x \\to \\infty \\quad { \\mathrm { b u t } } \\quad { \\frac { \\ln x } { x } } \\to 0 .\n$$",
+        "text_format": "latex",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "The logarithm grows slowly because $e ^ { x }$ grows so fast (and vice versa\u2014they are inverses). Remember that $e ^ { x }$ goes past every power $x ^ { n }$ : Therefore $\\ln x$ is passed by every root $x ^ { 1 / n }$ : Problems 60 and 61 give two proofs that $( \\ln x ) / x ^ { 1 / n }$ approa\u0001ches zero. ",
+        "page_idx": 322
+    },
+    {
+        "type": "text",
+        "text": "We might compare ln $x$ with $\\sqrt { x }$ : At $x = 1 0$ they are close (2:3 versus 3:2). But out at $x = e ^ { 1 0 }$ the comparison is 10 against $e ^ { 5 }$ ; and ln $x$ loses to $\\sqrt { x }$ : ",
+        "page_idx": 322
+    },
+    {
+        "type": "image",
+        "img_path": "images/06a45089153bbeb9bb958bc02435543db57e899ad68f15bac6eb2eb52ab46793.jpg",
+        "img_caption": [
+            "Fig. 6.12 Area is logarithm\u0001of8basepoint. "
+        ],
+        "img_footnote": [],
+        "page_idx": 323
+    },
+    {
+        "type": "image",
+        "img_path": "images/45fa4edd2a4cae7305647748e889e7483d9dac843425373c53accc07bd9f795e.jpg",
+        "img_caption": [
+            "Fig. 6.13 ln $x$ grows more slowly than $x$ : "
+        ],
+        "img_footnote": [],
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "APPROXIMATION OF LOGARITHMS ",
+        "text_level": 1,
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "The limiting cases $\\mathrm { ~ n ~ } 0 = - \\infty$ an\u0013d ln $\\infty = + \\infty$ are i\u0013mportant. More important are logarithms near the starting point ln $1 = 0$ : Our question is: What is $\\ln ( 1 + x )$ for $x$ near zero ? The exact answer is an area. The approximate answer is much simpler. If $x$ (positive or negative) is small, then ",
+        "page_idx": 323
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln ( 1 + x ) \\approx x \\qquad { \\mathrm { a n d } } \\qquad e ^ { x } \\approx 1 + x .\n$$",
+        "text_format": "latex",
+        "page_idx": 323
+    },
+    {
+        "type": "image",
+        "img_path": "images/ff4f5f1f30c076b729dad22cc585d2f596e26165a74490b84a88889368b4accc.jpg",
+        "img_caption": [
+            "Fig. 6.14 "
+        ],
+        "img_footnote": [],
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "The calculator gives ln $1 . 0 1 = . 0 0 9 9 5 0 3$ : This is close to $x = . 0 1$ : Between 1 and $1 + x$ the ar2ea under the graph of $1 / x$ is nearly a rectangle. Its base is $x$ and its height is 1: So the curved area $\\ln ( 1 + x )$ is close to the rectangular area $x$ : Figure 6.14 shows how a small triangle is chopped off at the top. ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "The difference between .0099503 (actual) and .01 (linear approximation) is :0000497: That is predicted almost exactly by the second derivative: $\\frac { 1 } { 2 }$ times $( \\Delta x ) ^ { 2 }$ times $( \\ln x ) ^ { \\prime \\prime }$ is $\\textstyle { \\frac { 1 } { 2 } } { \\bigl ( } . 0 1 { \\bigr ) } ^ { 2 } { \\bigl ( } - 1 { \\bigr ) } = - . 0 0 0 0 5$ : This is the area of the small triangle! ",
+        "page_idx": 323
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r } { \\ln ( 1 + x ) \\approx r e c t a n g u l a r a r e a m i n u s t r i a n g u l a r a r e a = x - \\frac { 1 } { 2 } x ^ { 2 } . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "The remaining mistake of :0000003 is close to ${ \\scriptstyle { \\frac { 1 } { 3 } } } x ^ { 3 }$ (Problem 65). ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "May I switch to $e ^ { x }$ ? Its slope starts at $e ^ { 0 } = 1$ ; so its linear approximation is $1 + x$ : Then $\\ln ( e ^ { x } ) \\approx \\ln ( 1 + x ) \\approx x$ : Two\u0001wrongs do make a right: $\\ln ( e ^ { x } ) = x $ exactly. ",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "The calculator gives $e ^ { . 0 1 }$ as 1:0100502 (actual) instead of 1:01 (approximation). The second-order correction is again a small triangle: ${ \\frac { 1 } { 2 } } x ^ { 2 } = . 0 0 0 0 5$ : The complete series for $\\ln ( 1 + x )$ and $e ^ { x }$ are in Sections 10:1 and 6:6 W ",
+        "page_idx": 323
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln ( 1 + x ) = x - x ^ { 2 } / 2 + x ^ { 3 } / 3 - \\ldots \\qquad e ^ { x } = 1 + x + x ^ { 2 } / 2 + x ^ { 3 } / 6 + \\ldots\n$$",
+        "text_format": "latex",
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "DERIVATIVES BASED ON LOGARITHMS ",
+        "text_level": 1,
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "Logarithms turn up as antiderivatives very often. To build up a collection of integrals, we now differentiate ln $u ( x )$ by the chain rule. ",
+        "page_idx": 323
+    },
+    {
+        "type": "image",
+        "img_path": "images/ea26c29cc247feb98201940de9f4c501d75fc184cecd5faebfdf28d0e16a4377.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 323
+    },
+    {
+        "type": "text",
+        "text": "6.4 Logarithms ",
+        "text_level": 1,
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "The slope of ln $x$ was hard work in Section 6:2: With its new definition (the integral of $1 / x \\mathrm { \\ i }$ ) the work is gone. By the Fundamental Theorem, the slope must be $1 / x$ : ",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "For ln $u ( x )$ the derivative comes from the chain rule. The inside function is $u$ ; the outside function is ln : (Keep $u > 0$ to define ln $u$ :) The chain rule give\u0001s ",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\n{ \\begin{array} { r l r l } & { { \\frac { d } { d x } } \\ln c x = { \\frac { 1 } { c x } } c = { \\frac { 1 } { x } } ( ! ) } & & { { \\frac { d } { d x } } \\ln x ^ { 3 } = 3 x ^ { 2 } / x ^ { 3 } = { \\frac { 3 } { x } } } \\\\ & { { \\frac { d } { d x } } \\ln ( x ^ { 2 } + 1 ) = 2 x / ( x ^ { 2 } + 1 ) } & & { { \\frac { d } { d x } } \\ln \\cos x = { \\frac { - \\sin x } { \\cos x } } = - \\tan x } \\\\ & { { \\frac { d } { d x } } \\ln e ^ { x } = e ^ { x } / e ^ { x } = 1 } & & { { \\frac { d } { d x } } \\ln ( \\ln x ) = { \\frac { 1 } { \\ln x } } { \\frac { 1 } { x } } . } \\end{array} }\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "Those are worth another look, especially the first. Any reasonable person would expect the slope of $\\ln { 3 x }$ to be $3 / x$ : Not so. The 3 cancels, and $\\ln { 3 x }$ has the same slope as $\\ln x$ : (The real reason is that ln $3 x = \\ln 3 + \\ln x .$ ) The antiderivative of $3 / x$ is not ln $3 x$ but $3 \\ln x$ ; which is $\\ln x ^ { 3 }$ : ",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "Before moving to integrals, here is a new method for derivatives: logarithmic differentiation or LD. It applies to produ?cts and powers. The product and power rules are always available, but sometimes there i\u0001s an easier way. ",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "Main idea: The logarithm of a product $p ( x )$ is a sum of logarithms. Switching to $\\ln { p }$ ; the sum rule just adds up the derivatives. But there is a catch at the end, as you see in the example. ",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLE 4 Find $d p / d x$ if $p ( x ) = x ^ { x } { \\sqrt { x - 1 } }$ : Here ln $p ( x ) = x$ ln $\\begin{array} { r } { x + \\frac { 1 } { 2 } \\ln ( x - 1 ) } \\end{array}$ : ",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { r l } { \\mathrm { T a k e ~ t h e ~ d e r i v a t i v e ~ o f ~ l n ~ } p { : } } & { \\displaystyle \\frac { 1 } { p } \\frac { d p } { d x } = x \\cdot \\frac { 1 } { x } + \\ln x + \\frac { 1 } { 2 ( x - 1 ) } \\cdot } \\\\ { \\mathrm { N o w ~ m u l t i p l y ~ b y ~ } p ( x ) { : } } & { \\displaystyle \\frac { d p } { d x } = p \\left( 1 + \\ln x + \\frac { 1 } { 2 ( x - 1 ) } \\right) . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "The catch is that last step. Multiplying by $p$ complicates the answer. This can\u2019t be helped\u2014logarithmic differentiation contains no magic. The derivative of $p = f g$ is the same as from the product rule: ln $p = \\ln f + \\ln g$ gives ",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac { p ^ { \\prime } } { p } = \\frac { f ^ { \\prime } } { f } + \\frac { g ^ { \\prime } } { g } \\quad \\mathrm { a n d } \\quad p ^ { \\prime } = p \\left( \\frac { f ^ { \\prime } } { f } + \\frac { g ^ { \\prime } } { g } \\right) = f ^ { \\prime } g + f g ^ { \\prime } .\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "For $p = x e ^ { x } \\sin x$ ; with three factors, the sum has three terms: ",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\ln p = \\ln x + x + \\ln \\sin x \\mathrm { a n d } p ^ { \\prime } = p \\left[ { \\frac { 1 } { x } } + 1 + { \\frac { \\cos x } { \\sin x } } \\right] .\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "We multiply $p$ times $p ^ { \\prime } / p$ (the derivative of ln $p$ ). Do the same for powers: ",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\np = x ^ { 1 / x } \\Rightarrow \\ln p = { \\frac { 1 } { x } } \\ln x \\Rightarrow { \\frac { d p } { d x } } = p \\left[ { \\frac { 1 } { x ^ { 2 } } } - { \\frac { \\ln x } { x ^ { 2 } } } \\right] .\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\np = x ^ { \\ln x } \\Rightarrow \\ln p = ( \\ln x ) ^ { 2 } \\Rightarrow { \\frac { d p } { d x } } = p \\left[ { \\frac { 2 \\ln x } { x } } \\right] .\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "equation",
+        "text": "$$\np = x ^ { 1 / \\ln x } \\Rightarrow \\ln p = { \\frac { 1 } { \\ln x } } \\ln x = 1 \\Rightarrow { \\frac { d p } { d x } } = 0\n$$",
+        "text_format": "latex",
+        "page_idx": 324
+    },
+    {
+        "type": "text",
+        "text": "INTEGRALS BASED ON LOGARITHMS ",
+        "text_level": 1,
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Now comes an important step. Many integrals produce logarithms. The foremost example is $1 / x$ ; whose integral is ln $x$ : In a certain way that is the only example, but its range is enormously extended by the chain rule. The derivative of $\\ln u ( x )$ is $u ^ { \\prime } / u$ ; so the integral goes from $u ^ { \\prime } / u$ back to ln $u$ : ",
+        "page_idx": 325
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int \\frac { d u / d x } { u ( x ) } d x = \\ln u ( x ) \\quad \\mathrm { o r ~ e q u i v a l e n t l y } \\quad \\int \\frac { d u } { u } = \\ln u .\n$$",
+        "text_format": "latex",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Try to choose $u ( x )$ so that the integral contains $d u / d x$ divided by $u$ : ",
+        "text_level": 1,
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "EXAMPLES ",
+        "text_level": 1,
+        "page_idx": 325
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int { \\frac { d x } { x + 7 } } = \\ln | x + 7 | \\qquad \\int { \\frac { d x } { c x + 7 } } = { \\frac { 1 } { c } } \\ln | c x + 7 |\n$$",
+        "text_format": "latex",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Final remark When $u$ is negative, ln $u$ cannot be the integral of $1 / u$ : The logarithm is not defi n\u0001ed when $u < 0$ : But the integral can go forward by switching to $- u$ : ",
+        "page_idx": 325
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int { \\frac { d u / d x } { u } } d x = \\int { \\frac { - d u / d x } { - u } } d x = \\ln ( - u ) .\n$$",
+        "text_format": "latex",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Thus\u0001 $\\ln ( - u )$ succeed\u0001s when $\\ln u$ fails.\u008e The forbidden case is $u = 0$ . The integrals $\\ln u$ and $\\ln ( - u )$ ; on the plus and minus sides of zero, can be combined as $\\ln \\left| u \\right|$ : Every integral that gives a logarithm allows $u < 0$ by changing to the absolute value $\\left| u \\right|$ : ",
+        "page_idx": 325
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\int _ { - e } ^ { - 1 } { \\frac { d x } { x } } = \\Big [ \\ln | x | \\Big ] _ { - e } ^ { - 1 } = \\ln 1 - \\ln e \\quad \\int _ { 2 } ^ { 4 } { \\frac { d x } { x - 5 } } = \\Big [ \\ln | x - 5 | \\Big ] _ { 2 } ^ { 4 } = \\ln 1 - \\ln 3 .\n$$",
+        "text_format": "latex",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "The areas are $^ { - 1 }$ and $- \\ln 3$ : The graphs of $1 / x$ and $1 / ( x - 5 )$ are below t\u00a0he $x$ axis. We do not have l|og|arithms of negative numbers, and we will not integrate $1 / ( x - 5 )$ from 2\u00bbto 6: That cro\u00bbsses the forbidden point $x = 5$ ; \u00bbwith infinite area on both sides. ",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "The ratio $d u / u$ leads to important integrals. When $u = \\cos x$ or $u = \\sin x$ ; we are integra\u00bbting the tange\u00bbnt and cotangent. When there i\u00bbs a possibility that $u < 0$ ; write the integral as ln $\\left| u \\right|$ : ",
+        "page_idx": 325
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l l } { \\displaystyle { \\int \\tan x d x = \\int \\frac { \\sin x } { \\cos x } d x = - \\ln \\left| \\cos x \\right| } } & { \\quad \\displaystyle { \\int \\frac { x d x } { x ^ { 2 } + 7 } = \\frac { 1 } { 2 } \\ln ( x ^ { 2 } + 7 ) } } \\\\ { \\displaystyle { \\int \\cot x d x = \\int \\frac { \\cos x } { \\sin x } d x = \\ln \\left| \\sin x \\right| } } & { \\quad \\displaystyle { \\int \\frac { d x } { x \\ln x } = \\ln \\left| \\ln x \\right| } } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Now w\u00bbe report on the\u00bbsecant and cosecant. The integrals of $1 / \\cos x$ and $1 / \\sin x$ also surrender to an attack by logarithms\u2014based on a crazy|trick: ",
+        "page_idx": 325
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { \\int \\sec x \\ d x = \\displaystyle \\int \\sec x \\left( \\frac { \\sec x + \\tan x } { \\sec x + \\tan x } \\right) d x = \\ln | \\sec x + \\tan x | . } \\\\ { \\displaystyle \\int \\csc x \\ d x = \\displaystyle \\int \\csc x \\left( \\frac { \\csc x - \\cot x } { \\csc x - \\cot x } \\right) d x = \\ln | \\csc x + \\cot x | . } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "Here $u = \\sec x + \\tan x$ is in the denominator; $d u / d x = \\sec x$ tan $x + \\sec ^ { 2 } x$ is above it. The integral is ln $\\left| u \\right|$ : Similarly (10) contains $d u / d x$ over $u = \\csc x - \\cot x$ : ",
+        "page_idx": 325
+    },
+    {
+        "type": "text",
+        "text": "6.4 Logarithms ",
+        "text_level": 1,
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "In closing we integrate ln $x$ itself. The derivative of $x$ ln $x$ is ln $x + 1$ : To remove the extra 1; subtract $x$ from the integral: $\\textstyle \\int \\ln x d x = x$ ln $x - x$ : ",
+        "page_idx": 326
+    },
+    {
+        "type": "text",
+        "text": "In contrast, the area under $1 / ( \\ln x )$ has no elementary formula. Nevertheless it is the key to the greatest approximation in mathematics\u2014the prime number theorem. The area $\\textstyle \\int _ { a } ^ { b } d x / \\ln x$ is approximately the number of primes between a and $b$ . Near $e ^ { 1 0 0 0 }$ ; about $1 / 1 0 0 0$ of the integers are prime. ",
+        "page_idx": 326
+    }
+]

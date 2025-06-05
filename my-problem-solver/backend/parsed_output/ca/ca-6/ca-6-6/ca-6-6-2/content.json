@@ -1,0 +1,123 @@
+[
+    {
+        "type": "text",
+        "text": "6.6.2 Further Reading ",
+        "text_level": 1,
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "The most definitive resource for understanding the RISC-V ISA is its official manual[ris, ] that can be downloaded from https://riscv.org/. The site hosts two kinds of specifications: unprivileged specification and privileged specification. The privileged specification is for writing system software and operating systems. All the RISC-V specifications undergo active development and periodically new versions are released. A GitHub repository tracks the development of these specifications. It is accessible at https://github.com/riscv/. Readers can additionally refer to two classic books[Waterman, 2016, Patterson and Waterman, 2017] to learn more about the RISC-V ISA. ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Readers should also read a few classical papers [Chen and Patterson, 2016, Greengard, 2020, Asanovi\u00b4c and Patterson, 2014, Mezger et al., 2022] to understand the history of RISC-V. This will give them a perspective of the developmental history of RISC-V and how this ISA came about in an era when instruction set development was considered to be an already solved problem that did not warrant further attention. ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "The next port of call can be papers that critically investigate the RISC-V ISA. The following references [Frolov et al., 2021, Kanter, 2016, Singh and Sarangi, 2021] will prove to be useful. They critique some design choices of the RISC-V ISA and compare it with other RISC and CISC ISAs (particularly reference [Singh and Sarangi, 2021]). In this context, readers should consider the formal specifications of RISC-V [Bourgeat et al., 2021] if they are considering implementing the ISA or designing a machine-accurate emulator for it. ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "Next, let us consider performance and implementation-related aspects. Researchers can look at architecture simulators that simulate RISC-V instructions and their vector extensions such as the simulator released by Ramirez et al. [Ram\u0131\u00b4rez et al., 2020]. The next logical step is to study RISC-V processors such as BOOMv2 [Celio et al., 2017], RISC-V 2 [Patsidis et al., 2020] and the processor in reference [Stangherlin and Sachdev, 2022]. RISC-V processors are also being designed to operate in high-radiation environments like outer space. Many space research organizations are creating their bespoke RISC-V processors [Wessman et al., 2021]. ",
+        "page_idx": 259
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Exercises ",
+        "text_level": 1,
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "RISC-V Assembly Programming ",
+        "text_level": 1,
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 1 \u2014 Solve all the exercises listed at the end of the chapter on the ARM assembly language using RISC-V. ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "RISC-V Assembly Concepts ",
+        "text_level": 1,
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 2 \u2014 Why does RISC-V not have a mov instruction? What is the advantage of making this choice? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 3 \u2014 How does the assembler implement the $l i$ directive (pseudoinstruction)? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 4 \u2014 RISC-V does not have a flags register. However, it stores some information in the f csr register. Why is this required? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 5 \u2014 Explain the different rounding modes in RISC-V. ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 6 \u2014 Why is it not a good idea to have instructions to load floating point immediates directly into registers (similar to addi and lui for integers)? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 7 \u2014 How does the assembler implement the la directive? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 8 \u2014 What is the advantage of maintaining the positions of the fields across the different RISC-V instruction encoding formats? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "\\* Ex. 9 \u2014 How do the opcode, funct3, funct5 and funct7 fields help in implementing RISCV extensions? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Ex. 10 \u2014 What is the advantage of making it easy to extract the sign bit of the immediate in the different formats, especially the B and J formats? ",
+        "page_idx": 260
+    },
+    {
+        "type": "text",
+        "text": "Design Problems ",
+        "text_level": 1,
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Ex. 11 \u2014 Extend the RISC-V assembler available on the author\u2019s website to support the following extensions: double precision, vector, SIMD and cryptographic operations. ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Ex. 12 \u2014 Cross-compile a piece of C code using the RISC-V and ARM cross-compilers. Use the -03 gcc optimization. Next, run them on the Qemu emulation engine. Compare the performance and find the reasons for the differences. ",
+        "page_idx": 261
+    },
+    {
+        "type": "text",
+        "text": "Part II ",
+        "text_level": 1,
+        "page_idx": 263
+    }
+]

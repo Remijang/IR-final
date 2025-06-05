@@ -1,0 +1,141 @@
+[
+    {
+        "type": "text",
+        "text": "8.1.3 Ripple Carry Adder ",
+        "text_level": 1,
+        "page_idx": 311
+    },
+    {
+        "type": "text",
+        "text": "Let us now try to add two $n$ -bit numbers. Let us start with an example: $1 0 1 1 _ { 2 } + 0 1 0 1 _ { 2 }$ . The addition is shown in Figure 8.3. We have seen in Section 2.2.3 that binary numbers can be added the same way as decimal numbers. In the case of base 10 decimal numbers, we start at the unit\u2019s digit and proceed towards higher digits. In each step, a carry might be generated, which is then added to the immediately higher digits. Moreover, the case of binary numbers also, we do the same. The only difference is that instead of base 10, we are using base 2. ",
+        "page_idx": 311
+    },
+    {
+        "type": "image",
+        "img_path": "images/67af63756649b1dfb945d9e9ce25c5c7783dcf85192a0cb51d1f4974ccf7af65.jpg",
+        "img_caption": [
+            "Figure 8.3: Addition of two binary numbers "
+        ],
+        "img_footnote": [],
+        "page_idx": 311
+    },
+    {
+        "type": "text",
+        "text": "For example, in Figure 8.3, we observe that when two binary bits are added a carry might be generated. The value of the carry is equal to 1. This carry needs to be added to the bits in the next position (more significant position). The computation is complete when we have finished the addition of the most significant bits. It is possible that a carry might propagate from one pair of bits to another pair of bits. This process of propagation of the carry from one bit pair to another is known as rippling. ",
+        "page_idx": 311
+    },
+    {
+        "type": "text",
+        "text": "Let us construct a simple adder to implement this procedure. Let us try to add two $n$ - bit binary numbers \u2013 $A$ and $B$ . We number the bits of $A$ and $B$ as $A _ { 1 } \\ldots A _ { n }$ and $B _ { 1 } \\ldots B _ { n }$ , respectively. Let $A _ { 1 }$ refer to $A$ \u2019s LSB, and $A _ { n }$ refer to $A$ \u2019s MSB. We can create an adder for adding $A$ and $B$ as follows. We use a half adder to add the LSBs. Then we use $n - 1$ full adders to add the rest of the corresponding bits of $A$ and $B$ and their input carry values. This $n$ -bit adder is known as a ripple carry adder. Its design is shown in Figure 8.4. We observe that we add two $n$ -bit numbers to produce an $n + 1$ -bit result. The method of addition is exactly similar to the procedure we follow while adding two binary numbers manually. We start from the LSB and move towards the MSB. At every step we propagate the carry to the next pair of digits. ",
+        "page_idx": 311
+    },
+    {
+        "type": "text",
+        "text": "Now, let us calculate the speed of this adder. Let us assume that it takes $t _ { h }$ units of time for a half adder to complete its operation, and $t _ { f }$ units of time for a full adder to complete its operation. If we assume that carries are propagated instantaneously across blocks, then the total time, $f ( n )$ , is equal to $t _ { h } + ( n - 1 ) t _ { f }$ . Here, $n$ is equal to the number of bits being added. ",
+        "page_idx": 311
+    },
+    {
+        "type": "text",
+        "text": "However, as we shall see this is a rather cryptic basis of comparison, especially for large values of $n$ . We do not wish to have a lot of constants in our timing model. Secondly, the values of these constants are heavily dependent on the specific technology used. It is thus hard to derive algorithmic insights. Hence, we introduce the notion of asymptotic time complexity that can significantly simplify the timing models, yet retain their basic characteristics. For example, in the case of a ripple carry adder, we can say that the complexity is almost equal to $n$ multiplied by some constant. We can further abstract away the constant, and say that the time complexity is the order of $n$ . Let us now formally define this notion. ",
+        "page_idx": 311
+    },
+    {
+        "type": "image",
+        "img_path": "images/0daf4e442b132aeac4d06caeef14ac9511f9645b17a7048f03bfd62f82723280.jpg",
+        "img_caption": [
+            "Figure 8.4: Addition of two binary numbers "
+        ],
+        "img_footnote": [],
+        "page_idx": 312
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 312
+    },
+    {
+        "type": "text",
+        "text": "Asymptotic Time Complexity ",
+        "text_level": 1,
+        "page_idx": 312
+    },
+    {
+        "type": "text",
+        "text": "Let us consider two functions $f ( n ) = 2 n ^ { 2 } + 3$ , and $g ( n ) = 1 0 n$ . Here, $n$ is the size of the input, and $f ( n )$ , and $g ( n )$ represent the number of time units it takes for a certain circuit to complete its operation. We plot the time values for different values of $n$ in Figure 8.5. As we can see, $g ( n )$ is greater than $f ( n )$ for small values of $n$ . However, for larger values of $n$ , $f ( n )$ is larger, and it continues to be so. This is because it contains a square term, and $g ( n )$ does not. We can extend this argument to observe that even if $g ( n )$ had been defined to be $1 0 0 n$ , $f ( n )$ would have ultimately exceeded it. The gist of the argument lies in the fact that $f ( n )$ contains a quadratic term $( n ^ { 2 } )$ and $g ( n )$ only contains linear terms. For large $n$ , we can conclude that $f ( n )$ is slower than $g ( n )$ . Consequently, we need to define a new notion of time that precisely captures this fact. We call this new notion of time as the asymptotic time complexity. The name comes from the fact that we are interested in finding an envelope or asymptote to the time function such that the function is contained within this envelope for practically large values of $n$ . ",
+        "page_idx": 312
+    },
+    {
+        "type": "text",
+        "text": "For example, we can define the asymptotic time complexity of $f ( n )$ to be $n ^ { 2 }$ and that of $g ( n )$ to be $n$ , respectively. This notion of time is powerful enough to say that $f ( n )$ is greater than $g ( n )$ for values of $n$ larger than some threshold. What if we consider: $f ( n ) = 2 n ^ { 2 } + 3$ , and $f ^ { \\prime } ( n ) = 3 n ^ { 2 } + 1 0$ . Needless to say, $f ^ { \\prime } ( n ) > f ( n )$ . However, we might not be interested in the difference. If we compare the asymptotic time complexity of $f ( n )$ or $f ^ { \\prime } ( n )$ with another function that has terms with different exponents (other than 2), then the results of the comparison will be the same. Consequently, for the sake of simplicity we can ignore the additive and multiplicative constants. We capture the definition of one form of asymptotic time in the big-O notation. It is precisely defined in Definition 55. ",
+        "page_idx": 312
+    },
+    {
+        "type": "text",
+        "text": "Definition 55   \nWe say that: $f ( n ) = O ( g ( n ) )$   \nif $\\mid f ( n ) \\mid \\leq c \\mid g ( n ) \\mid$ for all $n > n _ { 0 }$ . Here, c is a positive constant. ",
+        "page_idx": 312
+    },
+    {
+        "type": "image",
+        "img_path": "images/ebed4894c47a6b82dfa3728218384f572a090344ca6d8cb5fd8c5957a47bdec4.jpg",
+        "img_caption": [
+            "Figure 8.5: $f ( n ) = 2 n ^ { 2 } + 3$ and $g ( n ) = 1 0 n$ "
+        ],
+        "img_footnote": [],
+        "page_idx": 313
+    },
+    {
+        "type": "text",
+        "text": "The big-O notation is actually a part of a set of asymptotic notations. For more details, the reader can refer to a standard text in computer algorithms [Cormen et al., 2009]. From our point of view, $g ( n )$ gives a worst-case time bound for $f ( n )$ ignoring additive and multiplicative constants. We illustrate this fact with two examples: Examples 121 and 122. In this book, we will refer to asymptotic time complexity as time complexity. ",
+        "page_idx": 313
+    },
+    {
+        "type": "text",
+        "text": "Example 121 ",
+        "text_level": 1,
+        "page_idx": 314
+    },
+    {
+        "type": "text",
+        "text": "$f ( n ) = 3 n ^ { 2 } + 2 n + 3$ . Find its asymptotic time complexity. Answer: ",
+        "page_idx": 314
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array} { l } { f ( n ) = 3 n ^ { 2 } + 2 n + 3 } \\\\ { \\leq 3 n ^ { 2 } + 2 n ^ { 2 } + 3 n ^ { 2 } \\quad ( n > 0 ) } \\\\ { \\leq 8 ( n ^ { 2 } ) } \\end{array}\n$$",
+        "text_format": "latex",
+        "page_idx": 314
+    },
+    {
+        "type": "text",
+        "text": "Hence, $f ( n ) = O ( n ^ { 2 } )$ . ",
+        "page_idx": 314
+    },
+    {
+        "type": "image",
+        "img_path": "images/8a5897f64486ad9a6cd4fb75100b3ae3a007402a5793d953e5493fc72e97fcf6.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 314
+    },
+    {
+        "type": "text",
+        "text": "$8 n ^ { 2 }$ is a strict upper bound on $f ( n )$ as shown in the figure. ",
+        "page_idx": 314
+    },
+    {
+        "type": "text",
+        "text": "Example 122   \n$f ( n ) = 0 . 0 0 0 0 1 n ^ { 1 0 0 } + 1 0 0 0 0 n ^ { 9 9 } + 2 3 4 3 4 4$ . Find its asymptotic time complexity. Answer: $f ( n ) = O ( n ^ { 1 0 0 } )$ ",
+        "page_idx": 314
+    },
+    {
+        "type": "text",
+        "text": "Time Complexity of a Ripple Carry Adder ",
+        "text_level": 1,
+        "page_idx": 314
+    },
+    {
+        "type": "text",
+        "text": "The worst case delay happens when the carry propagates from the least significant bit to the most significant bit. In this case, each full adder waits for the input carry, performs the addition, and then propagates the carry out to the next full adder. Since, there are $n$ 1-bit adders, the total time taken is $O ( n )$ . ",
+        "page_idx": 314
+    }
+]

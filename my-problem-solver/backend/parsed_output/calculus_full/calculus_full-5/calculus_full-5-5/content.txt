@@ -1,0 +1,117 @@
+5.5 The Definite Integral
+
+The integral of  is an antiderivative  plus a constant  . This section takes two steps. First, we choose  . Second, we construct  . The object is to define the integral—in the most frequent case when a suitable  is not directly known.
+
+The indefinite integral contains  .” The constant is not settled because  has the same slope for every  . When we care only about the derivative,  makes no difference. When the goal is a number—a definite integral—  can be assigned a definite value at the starting point.
+
+For mileage traveled, we subtract the reading at the start. This section does the same for area. Distance is  and area is  —while the definite integral is  . Don’t pay attention to  or  , pay attention to the great formula of integral calculus:
+
+Viewpoint  When  is known, the equation gives the area from  to  .
+
+Viewpoint 2 W When  is not known, the equation defines  from the area.
+
+For a typical  , we can’t find  by guessing or substitution. But still  has an “area” under its graph—and this yields the desired integral  .
+
+Most of this section is theoretical, leading to the definition of the integral. You may think we should have defined integrals before computing them—which is logically true. But the idea of area (and the use of rectangles) was already pretty clear in our first examples. Now we go much further. Every continuous function  has an integral (also some discontinuous functions). Then the Fundamental Theorem completes the circle: The integral leads back to  . The area up to  is the antiderivative that we couldn’t otherwise discover.
+
+THE CONSTANT OF INTEGRATION
+
+Our goal is to turn  into a definite integral— the area between  and  . The first requirement is to have are  at the start:
+
+For the area up to  (moving endpoint, indefinite integral), use  as the dummy variable:
+
+the area from a  the area from a
+
+EXAMPLE 1 The area under the graph of  from  to  has  :
+
+The calculation has two separate steps—first find  , then substitute  and  . After the first step, check that  is  . The upper limit in the second step gives plus
+
+ , the lower limit gives minus  . Notice the brackets (or the vertical bar):
+
+Changing the example to  gives an equally good antiderivative— and now  . But  stays the same, because the  disappears:
+
+EXAMPLE 2 When  sin  we recognize  . The area from 0 to 3 is
+
+The upper limit copies the minus sign. The lower limit gives  , which is  . That e»xample shows the »right form for sol»ving exercises on definite integrals.
+
+Example 2 jumped directly to  . But most problems involving the chain rule go more slowly—by substitution. Set  , with  :
+
+We need new limits when u replaces  . Those limits on  are  and  . (In this case  an»d  .) If  go»es from a to  , then  goes from  to  .
+
+In this case  . Therefore  (or  for differentials). We have to account for the missing 2. The integral is  . The limits on  are  and  . That is why the  -integral goes from 5 to 6. The alternative is to find  in one jump (and check it).
+
+EXAMPLE 4  sin  (no elementary function gives this integral).
+
+If we try cos  , the chain rule produces an extra  —no adjustment will work. Does sin  still have an antiderivative? Yes! Every continuous  has an  . Whether  has an algebraic formula or not, we can write it as  . To define that integral, we now take the limit of rectangular areas.
+
+INTEGRALS AS LIMITS OF “RIEMANN SUMS”
+
+We have come to the definition of the integral. The chapter started with the integrals of  and  , from formulas for  and  . We will not go back to those formulas. But for other functions, too irregular to find exact sums, the rectangular areas also approach a limit.
+
+That limit is the integral. This definition is a major step in the theory of calculus. It can be studied in detail, or understood in principle. The truth is that the definition is not so painful—you virtually know it already.
+
+Problem Integrate the continuous function  over the interval  .   
+Step 1 Split  into  subintervals  .
+
+The “meshpoints”  divide up the interval from  to  . The endpoints are  and  . The length of subinterval  is  . In that smaller interval, the minimum of  is  . The maximum is  .
+
+Now construct rectangles. The “lower rectangle” over interval  has height  . The “upper rectangle” re¥aches to  . Since  is co ntinuous, there are points  and  where  and  (extreme value theorem). The graph of  is in between.
+
+Important: The area under  contains the area  of the lower rectangles:
+
+The area under  is contained in the area  of the upper rectangles:
+
+The lower sum  and the upper sum  were computed earlier in special cases— when  was  or  and the spacings  were equal. Figure  shows why  area  .
+
+Notice an important fact. When a new dividing point  is added, the lower sum increases. The minimum in on¤e piec¤e can¤be gre¤ater (see second figure) than the original  . Similarly the upper sum decreases. The maximum in one piece can be below the overall maximum. As new points are added,  goes up and  comes down. So the sums come closer together:
+
+I have left space in between for the curved area—the integral of  .
+
+Now add more and more meshpoints in such a way that  . The lower sums increase and the upper sums decrease. They never pass each other. If  is continuous, those sums close in on a single number  . That number is the definite integral—the area under the graph.
+
+DEFINITION The area  is the common limit of the lower and upper sums:
+
+This limit  exists for all continuous  , and also for some discontinuous functions.   
+When it exists,  is the “Riemann integral” of  from  to  .
+
+5.5 The Definite Integral
+
+REMARKS ON THE INTEGRAL
+
+As for derivatives, so for integrals: The definition involves a limit. Calculus is built on limits, and we always add “if the limit exists.” That is the delicate point. I hope the next five remarks (increasingly technical) will help to distinguish functions that are Riemann integrable from functions that are not.
+
+Remark 1 The sums  and  may fail to approach the same limit. A standard example has  at all fractions  , and  at all other points. Every interval contains rational points (fractions) and irrational points (nonrepeating decimals). Therefore  and  . The lower sum is always  . The upper sum is always  (the sum of 1’s times  ’s). The gap in equation (7) stays open. This function  is not Riemann integrable. The area under its graph is not defined (at least by RiemanÑn—see Remark 5).
+
+Remark 2 The step function  is discontinuous but still integrable. On every interval the minimum  equals the maximum  —except on theÑinterval contÑaining the jump. That jump interval has  and  . But when we multiply by  , and require  Ñ, the difference between  and  goes to zero. The area under a step function is clear—the rectangles fit exactly.
+
+Remark 3 With patience another key step could be proved: If  and  for one sequence of meshpoints, then this limit  is approached by every choice of meshpoints with  . The integral is the lower bound of all upper sums  , and it is the upper bound of all possible  —provided those bounds are equal. The gap must close, to define the integral.
+
+The same limit  is approached by “in-between rectangles.” The height  can be computed at any point  in subinterval  . See Figures  and 5.10. Then the total rectangular area is a “Riemann sum” between  and  :
+
+We cannot tell whether the true area is above or below  . Very often  is closer to  than to  or  . The midpoint rule takes  in the middle of its interval (Figure 5.10), and Section 5.8 will establish its extra accuracy. The extreme sums  and  are used in the definition while  is used in computation.
+
+Remark 4 Every continuous function is Riemann integrable. The proof is optional (in my class), but it belongs here for reference. It starts with continuity at  : “For any " there is a  . . . .” When the rectangles sit between  and  , the bounds  and  differ by less than  . Multiplying by the base  , the areas differ by less than  . Combining all rectangles, the upper and lower sums differ by less than  .
+
+5 Integrals
+
+As  we conclude that  comes arbitrarily close to  . They squeeze in on a single number  . The Riemann sums approach the Riemann integral,  is continuous.
+
+Two problems are hidden by that reasoning. One is at the end, where  and  come together. We have to know that the line of real numbers has no “holes,” so there is a number  to which these sequences converge. That is true.
+
+Any increasing sequence, if it is bounded above, approaches a limit.
+
+The decreasing sequence  , bounded below, converges to the same limit. So  exists.
+
+The other problem is about continuity. We assumed without saying so that the width 2ı is the same around every point  . We did not allow for the possibility that  might approach zero where  is rapidly changing—in which case an infinite number of rectangles could be needed. Our reasoning requires that
+
+ is uniformly continuous: ı depends on " but not on the position of  .
+
+For each  there is a  that works at all points in the interval. A continuous function on a closed interval is uniformly continuous. This fact (proof omitted) makes the reasoning correct, and  is integrable.
+
+On an infinite interval, even  is not uniformly continuous. It changes across a subinterval by  . As  gets larger,  must get smaller— to keep  below  . No single  succeeds at all  . But on a finite interval  , the choice  works everywhere—so  is uniformly continuous.
+
+Remark 5 If those four remarks were fairly optional, this one is totally at your discretion. Modern mathematics needs to integrate the zero-one function  in the first remark. Somehow  has more 0’s than 1’s. The fractions (where  ) can be put in a list, but the irrational numbers (where  are “uncountable.” The integral ought to be zero, but Riemann’s upper sums all involve  .
+
+Lebesgue discovered a major improvement. He allowed infinitely many subintervals (smaller and smaller). Then all fractions can be covered with intervals of total width  : (Amazing, when the fractions are packed so densely.) The idea is to cover  by narrow intervals of total width  . Combining all  ; the total width to cover all fractions is no more than  .raSriyn, cthe  uevienrtyewgrhaelr”e  eslsze,rothaesudpepsieresd.um  is only  
+
+That completes a fair amount of theory, possibly more than you want or need— but it is satisfying to get things straight. The definition of the integral is still being studied by experts (and so is the derivative, again to allow more functions). By contrast, the properties of the integral are used by everybody. Therefore the next section turns from definition to properties, collecting the rules that are needed in applications. They are very straightforward.

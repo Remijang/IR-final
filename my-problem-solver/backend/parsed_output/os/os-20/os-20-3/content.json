@@ -1,0 +1,331 @@
+[
+    {
+        "type": "text",
+        "text": "20.3 Multi-level Page Tables ",
+        "text_level": 1,
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "A different approach doesn’t rely on segmentation but attacks the same problem: how to get rid of all those invalid regions in the page table instead of keeping them all in memory? We call this approach a multi-level page table, as it turns the linear page table into something like a tree. This approach is so effective that many modern systems employ it (e.g., $\\times 8 6$ [BOH10]). We now describe this approach in detail. ",
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "The basic idea behind a multi-level page table is simple. First, chop up the page table into page-sized units; then, if an entire page of page-table entries (PTEs) is invalid, don’t allocate that page of the page table at all. To track whether a page of the page table is valid (and if valid, where it is in memory), use a new structure, called the page directory. The page directory thus either can be used to tell you where a page of the page table is, or that the entire page of the page table contains no valid pages. ",
+        "page_idx": 4
+    },
+    {
+        "type": "image",
+        "img_path": "images/ff1159e3a40d449d117e810a9a332a71395e87fd47ce0b6f261933b10d992cbd.jpg",
+        "img_caption": [
+            "Figure 20.3: Linear (Left) And Multi-Level (Right) Page Tables "
+        ],
+        "img_footnote": [],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Figure 20.3 shows an example. On the left of the figure is the classic linear page table; even though most of the middle regions of the address space are not valid, we still require page-table space allocated for those regions (i.e., the middle two pages of the page table). On the right is a multi-level page table. The page directory marks just two pages of the page table as valid (the first and last); thus, just those two pages of the page table reside in memory. And thus you can see one way to visualize what a multi-level table is doing: it just makes parts of the linear page table disappear (freeing those frames for other uses), and tracks which pages of the page table are allocated with the page directory. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "The page directory, in a simple two-level table, contains one entry per page of the page table. It consists of a number of page directory entries (PDE). A PDE (minimally) has a valid bit and a page frame number (PFN), similar to a PTE. However, as hinted at above, the meaning of this valid bit is slightly different: if the PDE is valid, it means that at least one of the pages of the page table that the entry points to (via the PFN) is valid, i.e., in at least one PTE on that page pointed to by this PDE, the valid bit in that PTE is set to one. If the PDE is not valid (i.e., equal to zero), the rest of the PDE is not defined. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Multi-level page tables have some obvious advantages over approaches we’ve seen thus far. First, and perhaps most obviously, the multi-level table only allocates page-table space in proportion to the amount of address space you are using; thus it is generally compact and supports sparse address spaces. ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Second, if carefully constructed, each portion of the page table fits neatly within a page, making it easier to manage memory; the OS can simply grab the next free page when it needs to allocate or grow a page ",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "TIP: UNDERSTAND TIME-SPACE TRADE-OFFS When building a data structure, one should always consider time-space trade-offs in its construction. Usually, if you wish to make access to a particular data structure faster, you will have to pay a space-usage penalty for the structure. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "table. Contrast this to a simple (non-paged) linear page table2, which is just an array of PTEs indexed by VPN; with such a structure, the entire linear page table must reside contiguously in physical memory. For a large page table (say 4MB), finding such a large chunk of unused contiguous free physical memory can be quite a challenge. With a multi-level structure, we add a level of indirection through use of the page directory, which points to pieces of the page table; that indirection allows us to place page-table pages wherever we would like in physical memory. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "It should be noted that there is a cost to multi-level tables; on a TLB miss, two loads from memory will be required to get the right translation information from the page table (one for the page directory, and one for the PTE itself), in contrast to just one load with a linear page table. Thus, the multi-level table is a small example of a time-space trade-off. We wanted smaller tables (and got them), but not for free; although in the common case (TLB hit), performance is obviously identical, a TLB miss suffers from a higher cost with this smaller table. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Another obvious negative is complexity. Whether it is the hardware or OS handling the page-table lookup (on a TLB miss), doing so is undoubtedly more involved than a simple linear page-table lookup. Often we are willing to increase complexity in order to improve performance or reduce overheads; in the case of a multi-level table, we make page-table lookups more complicated in order to save valuable memory. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "A Detailed Multi-Level Example ",
+        "text_level": 1,
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "To understand the idea behind multi-level page tables better, let’s do an example. Imagine a small address space of size 16KB, with 64-byte pages. Thus, we have a 14-bit virtual address space, with 8 bits for the VPN and 6 bits for the offset. A linear page table would have $2 ^ { 8 }$ (256) entries, even if only a small portion of the address space is in use. Figure 20.4 (page 8) presents one example of such an address space. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "In this example, virtual pages 0 and 1 are for code, virtual pages 4 and 5 for the heap, and virtual pages 254 and 255 for the stack; the rest of the pages of the address space are unused. ",
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "To build a two-level page table for this address space, we start with our full linear page table and break it up into page-sized units. Recall our full table (in this example) has 256 entries; assume each PTE is 4 bytes in size. Thus, our page table is 1KB $( 2 5 6 \\times 4$ bytes) in size. Given that we have 64-byte pages, the 1KB page table can be divided into 16 64-byte pages; each page can hold 16 PTEs. ",
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f6cce4480e41233104796250d210a0346f59a2dc72a06017d72677aca9ec9b6.jpg",
+        "img_caption": [
+            "Figure 20.4: A 16KB Address Space With 64-byte Pages "
+        ],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "What we need to understand now is how to take a VPN and use it to index first into the page directory and then into the page of the page table. Remember that each is an array of entries; thus, all we need to figure out is how to construct the index for each from pieces of the VPN. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Let’s first index into the page directory. Our page table in this example is small: 256 entries, spread across 16 pages. The page directory needs one entry per page of the page table; thus, it has 16 entries. As a result, we need four bits of the VPN to index into the directory; we use the top four bits of the VPN, as follows: ",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/86f9ad8336467d7226f6c7316d2084066ff3e96214e45c053e537bc8772f0b73.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Page Directory Index ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Once we extract the page-directory index (PDIndex for short) from the VPN, we can use it to find the address of the page-directory entry (PDE) with a simple calculation: PDEAddr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ PageDirBase $^ +$ (PDIndex $\\star$ sizeof(PDE)). This results in our page directory, which we now examine to make further progress in our translation. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "If the page-directory entry is marked invalid, we know that the access is invalid, and thus raise an exception. If, however, the PDE is valid, we have more work to do. Specifically, we now have to fetch the pagetable entry (PTE) from the page of the page table pointed to by this pagedirectory entry. To find this PTE, we have to index into the portion of the page table using the remaining bits of the VPN: ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/38bcd50e75ac81ec257b4470bc119fda2346c8ae6dd082d4f002446ab0223e8c.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "This page-table index (PTIndex for short) can then be used to index into the page table itself, giving us the address of our PTE: ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "PTEAddr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (PDE.PFN << SHIFT) $^ +$ (PTIndex $\\star$ sizeof(PTE)) ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Note that the page-frame number obtained from the page-directory entry must be left-shifted into place before combining it with the pagetable index to form the address of the PTE. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "To see if this all makes sense, we’ll now fill in a multi-level page table with some actual values, and translate a single virtual address. Let’s begin with the page directory for this example (left side of Figure 20.5). ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "In the figure, you can see that each page directory entry (PDE) describes something about a page of the page table for the address space. In this example, we have two valid regions in the address space (at the beginning and end), and a number of invalid mappings in-between. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "In physical page 100 (the physical frame number of the 0th page of the page table), we have the first page of 16 page table entries for the first 16 VPNs in the address space. See Figure 20.5 (middle part) for the contents of this portion of the page table. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "This page of the page table contains the mappings for the first 16 VPNs; in our example, VPNs 0 and 1 are valid (the code segment), as ",
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/b2ac4804328474b5a2b4cc94e1c60165b03e794c9673649746ebac1ce0a22201.jpg",
+        "img_caption": [
+            "Figure 20.5: A Page Directory, And Pieces Of Page Table "
+        ],
+        "img_footnote": [],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "TIP: BE WARY OF COMPLEXITY ",
+        "text_level": 1,
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "System designers should be wary of adding complexity into their system. What a good systems builder does is implement the least complex system that achieves the task at hand. For example, if disk space is abundant, you shouldn’t design a file system that works hard to use as few bytes as possible; similarly, if processors are fast, it is better to write a clean and understandable module within the OS than perhaps the most CPU-optimized, hand-assembled code for the task at hand. Be wary of needless complexity, in prematurely-optimized code or other forms; such approaches make systems harder to understand, maintain, and debug. As Antoine de Saint-Exupery famously wrote: “Perfection is finally attained not when there is no longer anything to add, but when there is no longer anything to take away.” What he didn’t write: “It’s a lot easier to say something about perfection than to actually achieve it.” ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "are 4 and 5 (the heap). Thus, the table has mapping information for each of those pages. The rest of the entries are marked invalid. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "The other valid page of the page table is found inside PFN 101. This page contains mappings for the last 16 VPNs of the address space; see Figure 20.5 (right) for details. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "In the example, VPNs 254 and 255 (the stack) have valid mappings. Hopefully, what we can see from this example is how much space savings are possible with a multi-level indexed structure. In this example, instead of allocating the full sixteen pages for a linear page table, we allocate only three: one for the page directory, and two for the chunks of the page table that have valid mappings. The savings for large (32-bit or 64-bit) address spaces could obviously be much greater. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Finally, let’s use this information in order to perform a translation. Here is an address that refers to the 0th byte of VPN 254: 0x3F80, or 11 1111 1000 0000 in binary. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Recall that we will use the top 4 bits of the VPN to index into the page directory. Thus, 1111 will choose the last $( 1 5 \\mathrm { t h } ,$ if you start at the 0th) entry of the page directory above. This points us to a valid page of the page table located at address 101. We then use the next 4 bits of the VPN (1110) to index into that page of the page table and find the desired PTE. 1110 is the next-to-last (14th) entry on the page, and tells us that page 254 of our virtual address space is mapped at physical page 55. By concatenating $\\mathrm { P F N } { = } 5 5$ (or hex $0 \\times 3 7$ ) with offset=000000, we can thus form our desired physical address and issue the request to the memory system: PhysAddr $\\mathbf { \\Sigma } = \\mathbf { \\Sigma }$ (PTE.PFN $< <$ SHIFT) $^ +$ offset $= \\begin{array} { l l l l l l } { { 0 } } & { { 1 1 0 \\bar { 1 } } } & { { \\bar { 1 } 1 0 0 } } & { { 0 0 0 0 } } & { { = } } & { { 0 { \\bf x } 0 \\mathrm { D C } 0 } } \\end{array}$ . ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "You should now have some idea of how to construct a two-level page table, using a page directory which points to pages of the page table. Unfortunately, however, our work is not done. As we’ll now discuss, sometimes two levels of page table is not enough! ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "More Than Two Levels ",
+        "text_level": 1,
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "In our example thus far, we’ve assumed that multi-level page tables only have two levels: a page directory and then pieces of the page table. In some cases, a deeper tree is possible (and indeed, needed). ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Let’s take a simple example and use it to show why a deeper multilevel table can be useful. In this example, assume we have a 30-bit virtual address space, and a small (512 byte) page. Thus our virtual address has a 21-bit virtual page number component and a 9-bit offset. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Remember our goal in constructing a multi-level page table: to make each piece of the page table fit within a single page. Thus far, we’ve only considered the page table itself; however, what if the page directory gets too big? ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "To determine how many levels are needed in a multi-level table to make all pieces of the page table fit within a page, we start by determining how many page-table entries fit within a page. Given our page size of 512 bytes, and assuming a PTE size of 4 bytes, you should see that you can fit 128 PTEs on a single page. When we index into a page of the page table, we can thus conclude we’ll need the least significant 7 bits $( \\bar { l } o g _ { 2 } 1 2 8 )$ of the VPN as an index: ",
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/7537c3c588106d6a52d867cd8c2d1bbc378b76cced38c5831b8c731ff3d494f4.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "What you also might notice from the diagram above is how many bits are left into the (large) page directory: 14. If our page directory has $2 ^ { 1 4 }$ entries (and 4-byte PDEs), it spans not one page but 128, and our goal of making every piece of the multi-level page table fit into a page vanishes. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "To remedy this problem, we build a further level of the tree, by splitting the page directory itself into multiple pages, and then adding another page directory on top of that, to point to the pages of the page directory. We can thus split up our virtual address as follows: ",
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/63026b5e24162e22ee0717b7f62ef95745b34f43e1482ae80fe128a32f8df228.jpg",
+        "img_caption": [],
+        "img_footnote": [],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Now, when indexing the upper-level page directory, we use the very top bits of the virtual address (PD Index 0 in the diagram); this index can be used to fetch the page-directory entry from the top-level page directory. If valid, the second level of the page directory is consulted by combining the physical frame number from the top-level PDE and the next part of the VPN (PD Index 1). Finally, if valid, the PTE address can be formed by using the page-table index combined with the address from the second-level PDE. Whew! That’s a lot of work. And all just to look something up in a multi-level table. ",
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/83f608fe787466ba28fe7a12a3c34f41416fc6f70931514ebfbabce04e567728.jpg",
+        "img_caption": [
+            "Figure 20.6: Multi-level Page Table Control Flow "
+        ],
+        "img_footnote": [],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "The Translation Process: Remember the TLB ",
+        "text_level": 1,
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "To summarize the entire process of address translation using a two-level page table, we once again present the control flow in algorithmic form (Figure 20.6). The figure shows what happens in hardware (assuming a hardware-managed TLB) upon every memory reference. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "As you can see from the figure, before any of the complicated multilevel page table access occurs, the hardware first checks the TLB; upon a hit, the physical address is formed directly without accessing the page table at all, as before. Only upon a TLB miss does the hardware need to perform the full multi-level lookup. On this path, you can see the cost of our traditional two-level page table: two additional memory accesses to look up a valid translation. ",
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 11
+    }
+]

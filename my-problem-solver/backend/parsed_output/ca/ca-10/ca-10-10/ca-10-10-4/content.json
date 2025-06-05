@@ -1,0 +1,34 @@
+[
+    {
+        "type": "text",
+        "text": "10.10.4 Modeling Temperature\\* ",
+        "text_level": 1,
+        "page_idx": 484
+    },
+    {
+        "type": "text",
+        "text": "Modeling the temperature on a chip is a fairly complex problem, and requires a fair amount of background in thermodynamics and heat transfer. Let us state a basic result here, and move on. ",
+        "page_idx": 484
+    },
+    {
+        "type": "text",
+        "text": "Let us divide the area of a silicon die into a grid. Let us number the grid points $1 \\ldots m$ . Let the power vector $\\mathcal { P } _ { t o t }$ represent the total power dissipated by each grid point. Similarly, let the temperature of each grid point be represented by the vector $T$ . Power and temperature are typically related by the following linear equation for a large number of grid points. ",
+        "page_idx": 485
+    },
+    {
+        "type": "equation",
+        "text": "$$\nT - T _ { a m b } = \\Delta T = A \\times \\mathcal { P } _ { t o t }\n$$",
+        "text_format": "latex",
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "$T _ { a m b }$ is known as the ambient temperature \u2013 it is the temperature of the surrounding air. $A$ is an $m \\times m$ matrix, and is also known as the thermal resistance matrix. According to Equation 10.25 the change in temperature $( \\Delta T )$ , and the power consumption are linearly related to each other. ",
+        "page_idx": 485
+    },
+    {
+        "type": "text",
+        "text": "Note that $\\mathcal { P } _ { t o t } = \\mathcal { P } _ { d y n } + \\mathcal { P } _ { l e a k }$ , and $\\mathcal { P } _ { l e a k }$ is a function of temperature. Hence, Equations 10.24, and 10.25 form a feedback loop. We thus need to assume an initial value of temperature, compute the leakage power, estimate the new temperature, compute the leakage power, and keep iterating till the values converge. ",
+        "page_idx": 485
+    }
+]

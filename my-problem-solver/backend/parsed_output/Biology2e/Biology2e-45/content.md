@@ -1,0 +1,15 @@
+# CHAPTER 45 Population and Community Ecology
+
+INTRODUCTION Imagine sailing down a river in a small motorboat on a weekend afternoon; the water is smooth and you are enjoying the warm sunshine and cool breeze when suddenly you are hit in the head by a 20-pound silver carp. This is now a risk on many rivers and canal systems in Illinois and Missouri because of the presence of Asian carp.
+
+This fish—actually a group of species including the silver, black, grass, and big head carp—has been farmed and eaten in China for over 1000 years. It is one of the most important aquaculture food resources worldwide. In the United States, however, Asian carp is considered a dangerous invasive species that disrupts community structure and composition to the point of threatening native species.
+
+# Chapter Outline
+
+45.1 Population Demography   
+45.2 Life Histories and Natural Selection   
+45.3 Environmental Limits to Population Growth   
+45.4 Population Dynamics and Regulation   
+45.5 Human Population Growth   
+45.6 Community Ecology   
+45.7 Behavioral Biology: Proximate and Ultimate Causes of Behavior

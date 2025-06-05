@@ -1,0 +1,466 @@
+Chapter,Section,Page
+1,"Introduction to Computer Architecture",13
+1.1,"What is a Computer?",14
+1.2,"Structure of a Typical Desktop Computer",16
+1.3,"Computers are Dumb Machines",17
+1.4,"The Language of Instructions",18
+1.5,"Instruction Set Design",20
+1.5.1,"Complete - The ISA should be able to Implement all User Programs",20
+1.5.2,"Concise – Limited Size of the Instruction Set",20
+1.5.3,"Generic – Instructions should Capture the Common Case",20
+1.5.4,"Simple – Instructions should be Simple",21
+1.6,"How to Ensure that an ISA is Complete?",22
+1.6.1,"Towards a Universal ISA\*",22
+1.6.2,"Turing Machine\*",23
+1.6.3,"Universal Turing Machine\*",27
+1.6.4,"A Modified Universal Turing Machine\*",28
+1.6.5,"Single Instruction ISA\*",30
+1.6.6,"Multiple Instruction ISA\*",31
+1.6.7,"Summary of Theoretical Results",32
+1.7,"Design of Practical Machines",34
+1.7.1,"Harvard Architecture",34
+1.7.2,"Von Neumann Architecture",34
+1.7.3,"Towards a Modern Machine with Registers and Stacks",36
+1.8,"The Road Ahead",38
+1.8.1,"Representing Information",39
+1.8.2,"Processing Information",40
+1.8.3,"Processing More Information",41
+1.9,"Summary and Further Reading",41
+1.9.1,"Summary",41
+1.9.2,"Further Reading",42
+I,"Architecture: Software Interface",45
+2,"The Language of Bits",47
+2.1,"Logical Operations",48
+2.1.1,"Basic Operators",49
+2.1.2,"Derived Operators",50
+2.1.3,"Boolean Algebra",50
+2.1.4,"De Morgan’s Laws",52
+2.1.5,"Logic Gates",52
+2.1.6,"Implementing Boolean Functions",53
+2.1.7,"The Road Ahead",56
+2.2,"Positive Integers",57
+2.2.1,"Ancient Number Systems",57
+2.2.2,"Binary Number System",59
+2.2.3,"Adding Binary Numbers",61
+2.2.4,"Sizes of Integers",63
+2.3,"Negative Integers",65
+2.3.1,"Sign-Magnitude-Based Representation",65
+2.3.2,"The 1’s Complement Approach",65
+2.3.3,"Bias-Based Approach",66
+2.3.4,"The 2’s Complement Method",67
+2.4,"Floating Point Numbers",74
+2.4.1,"Fixed Point Numbers",74
+2.4.2,"Generic Form of Floating Point Numbers",74
+2.4.3,"IEEE 754 Format for Representing Floating Point Numbers",77
+2.4.4,"Denormal Numbers",79
+2.4.5,"Double Precision Numbers",80
+2.4.6,"Floating Point Mathematics",81
+2.5,"Strings",82
+2.5.1,"ASCII Format",82
+2.5.2,"UTF-8",82
+2.5.3,"UTF-16 and UTF-32",83
+2.6,"Summary and Further Reading",84
+2.6.1,"Summary",84
+2.6.2,"Further Reading",85
+3,"Assembly Language",91
+3.1,"Why Assembly Language",91
+3.1.1,"Software Developer’s Perspective",91
+3.1.2,"Hardware Designer’s Perspective",95
+3.2,"The Basics of Assembly Language",96
+3.2.1,"Machine Model",96
+3.2.2,"View of Memory",97
+3.2.3,"Assembly Language Syntax",99
+3.2.4,"Types of Instructions",103
+3.2.5,"Types of Operands",104
+3.3,"SimpleRisc",107
+3.3.1,"Different Instruction Sets",107
+3.3.2,"Model of the SimpleRisc Machine",108
+3.3.3,"Register Transfer Instruction – mov",108
+3.3.4,"Arithmetic Instructions",108
+3.3.5,"Logical Instructions",110
+3.3.6,"Shift Instructions – lsl, lsr, asr",110
+3.3.7,"Data Transfer Instructions: ld and st",111
+3.3.8,"Unconditional Branch Instructions",111
+3.3.9,"Conditional Branch Instructions",112
+3.3.10,"Functions",114
+3.3.11,"Function Call/Return Instructions",121
+3.3.12,"The nop Instruction",123
+3.3.13,"Modifiers",124
+3.3.14,"Encoding the SimpleRisc Instruction Set",125
+3.4,"Summary and Further Reading",133
+3.4.1,"Summary",133
+3.4.2,"Further Reading",135
+4,"ARM R⃝ Assembly Language",139
+4.1,"The ARM $\textsuperscript { \textregistered }$ Machine Model",139
+4.2,"Basic Assembly Instructions",140
+4.2.1,"Simple Data Processing Instructions",140
+4.2.2,"Advanced Data-Processing Instructions",143
+4.2.3,"Compare Instructions",146
+4.2.4,"Instructions that Set CPSR Flags – The ‘S’ Suffix",147
+4.2.5,"Data Processing Instructions that use CPSR Flags",147
+4.2.6,"Simple Branch Instructions",148
+4.2.7,"Branch and Link Instruction",150
+4.2.8,"Conditional Instructions",152
+4.2.9,"Load-Store Instructions",155
+4.3,"Advanced Features",157
+4.3.1,"Arrays",158
+4.3.2,"Functions",160
+4.4,"Encoding the Instruction Set",163
+4.4.1,"Data Processing Instructions",163
+4.4.2,"Load-Store Instructions",167
+4.4.3,"Branch Instructions",168
+4.5,"Summary and Further Reading",169
+4.5.1,"Summary",169
+4.5.2,"Further Reading",170
+5,"x86 Assembly Language",175
+5.1,"Overview of the x86 Family of Assembly Languages",175
+5.1.1,"Brief History",175
+5.1.2,"Main Features of the x86 ISA",176
+5.2,"x86 Machine Model",177
+5.2.1,"Integer Registers",177
+5.2.2,"Floating Point Registers",179
+5.2.3,"View of Memory",179
+5.2.4,"Addressing Modes",182
+5.2.5,"x86 Assembly Language",184
+5.3,"Integer Instructions",185
+5.3.1,"Data Transfer Instructions",185
+5.3.2,"ALU Instructions",189
+5.3.3,"Branch/ Function Call Instructions",195
+5.3.4,"Advanced Memory Instructions",203
+5.4,"Floating Point Instructions",207
+5.4.1,"Data Transfer Instructions",208
+5.4.2,"Arithmetic Instructions",210
+5.4.3,"Instructions for Special Functions",211
+5.4.4,"Compare Instruction",212
+5.4.5,"Stack Cleanup Instructions",214
+5.5,"Encoding the x86 ISA",214
+5.5.1,"High Level View of x86 Instruction Encoding",215
+5.6,"Summary and Further Reading",218
+5.6.1,"Summary",218
+5.6.2,"Further Reading",219
+6,"RISC-V Assembly Language",225
+6.1,"RISC-V Machine Model",226
+6.1.1,"RISC-V Base ISAs and Extensions",226
+6.1.2,"View of Registers",228
+6.2,"Integer Instructions",229
+6.2.1,"Moving Values to Registers",229
+6.2.2,"Add and Subtract Instructions",231
+6.2.3,"Multiplication and Division Instructions",232
+6.2.4,"Logical and Shift Instructions",233
+6.3,"Control Transfer and Memory Instructions",235
+6.3.1,"Conditional Branches",235
+6.3.2,"Unconditional Branches",239
+6.3.3,"Load and Store Instructions",241
+6.4,"Floating Point Instructions",245
+6.4.1,"View of Registers",245
+6.4.2,"Load and Store Instructions",247
+6.4.3,"Floating Point Arithmetic Instructions",248
+6.4.4,"Floating Point Conversion Instructions",249
+6.4.5,"Floating Point Comparison Instructions",250
+6.5,"Instruction Encoding",251
+6.5.1,"Arithmetic and Data Transfer Instructions",251
+6.5.2,"Control Flow Instructions",252
+6.5.3,"Floating Point Instructions",254
+6.6,"Summary and Further Reading",255
+6.6.1,"Summary",255
+6.6.2,"Further Reading",257
+II,"Organization: Processor Design",261
+7,"Logic Gates, Registers, and Memories",263
+7.1,"Silicon-Based Transistors",264
+7.1.1,"Doping",265
+7.1.2,"P-N Junction",266
+7.1.3,"NMOS Transistor",267
+7.1.4,"PMOS Transistor",268
+7.1.5,"A Basic CMOS-Based Inverter",268
+7.1.6,"NAND and NOR Gates",269
+7.2,"Combinational Logic",271
+7.2.1,"XOR Gate",271
+7.2.2,"Decoder",272
+7.2.3,"Multiplexer",272
+7.2.4,"Demultiplexer",274
+7.2.5,"Encoder",274
+7.2.6,"Priority Encoder",276
+7.3,"Sequential Logic",277
+7.3.1,"SR Latch",277
+7.3.2,"The Clock",279
+7.3.3,"Clocked SR Latch",280
+7.3.4,"Edge Sensitive SR Flip-flop",281
+7.3.5,"JK Flip-flop",282
+7.3.6,"D Flip-flop",283
+7.3.7,"Master-slave D Flip-flop",283
+7.3.8,"Metastability",284
+7.3.9,"Registers",285
+7.4,"Memories",286
+7.4.1,"Static RAM (SRAM)",286
+7.4.2,"Content Addressable Memory (CAM)",289
+7.4.3,"Dynamic RAM (DRAM)",291
+7.4.4,"Read Only Memory (ROM)",293
+7.4.5,"Programmable Logic Arrays",295
+7.5,"Summary and Further Reading",299
+7.5.1,"Summary",299
+7.5.2,"Further Reading",300
+8,"Computer Arithmetic",305
+8.1,"Addition",305
+8.1.1,"Addition of Two 1-bit Numbers",305
+8.1.2,"Addition of Three 1-bit Numbers",306
+8.1.3,"Ripple Carry Adder",309
+8.1.4,"Carry Select Adder",313
+8.1.5,"Carry Lookahead Adder",314
+8.2,"Multiplication",319
+8.2.1,"Overview",319
+8.2.2,"Iterative Multiplier",320
+8.2.3,"Booth Multiplier",324
+8.2.4,"An $O ( l o g ( n ) ^ { 2 } )$ Time Algorithm",330
+8.2.5,"Wallace Tree Multiplier",331
+8.3,"Division",333
+8.3.1,"Overview",333
+8.3.2,"Restoring Division",334
+8.3.3,"Non-Restoring Division",338
+8.4,"Floating Point Addition and Subtraction",341
+8.4.1,"Simple Addition with Same Signs",342
+8.4.2,"Rounding",344
+8.4.3,"Implementing Rounding",345
+8.4.4,"Addition of Numbers with Opposite Signs",346
+8.4.5,"Generic Algorithm for Adding Floating Point Numbers",347
+8.5,"Multiplication of Floating Point Numbers",347
+8.6,"Division of Floating Point Numbers",349
+8.6.1,"Simple Division",349
+8.6.2,"Goldschmidt Division",349
+8.6.3,"Division Using the Newton-Raphson Method",350
+8.7,"Summary and Further Reading",353
+8.7.1,"Summary",353
+8.7.2,"Further Reading",354
+9,"Processor Design",359
+9.1,"Design of a Basic Processor",359
+9.1.1,"Overview",359
+9.2,"Units in a Processor",361
+9.2.1,"Instruction Fetch – Fetch Unit",361
+9.2.2,"Data Path and Control Path",363
+9.2.3,"Operand Fetch Unit",364
+9.2.4,"Execute Unit",369
+9.2.5,"Memory Access Unit",372
+9.2.6,"Register Writeback Unit",374
+9.2.7,"The Data Path",375
+9.3,"The Control Unit",375
+9.4,"Microprogram-Based Processor",379
+9.5,"Microprogrammed Data Path",381
+9.5.1,"Fetch Unit",382
+9.5.2,"Decode Unit",382
+9.5.3,"Register File",383
+9.5.4,"ALU",384
+9.5.5,"Memory Unit",385
+9.5.6,"Overview of the Data Path",385
+9.6,"Microassembly Language",386
+9.6.1,"Machine Model",386
+9.6.2,"Microinstructions",386
+9.6.3,"Implementing Instructions in the Microassembly Language",390
+9.6.4,"3-Address Format ALU Instructions",391
+9.6.5,"2-Address Format ALU Instructions",393
+9.6.6,"The nop Instruction",395
+9.6.7,"ld and st instructions",395
+9.6.8,"Branch Instructions",396
+9.7,"Shared Bus and Control Signals",401
+9.7.1,"Control Signals",402
+9.7.2,"Functional Unit Arguments",402
+9.8,"The Microcontrol Unit",403
+9.8.1,"Vertical Microprogramming",403
+9.8.2,"Horizontal Microprogramming",405
+9.8.3,"Trade-offs between Horizontal and Vertical Microprogramming",406
+9.9,"Summary and Further Reading",407
+9.9.1,"Summary",407
+9.9.2,"Further Reading",408
+10,"Principles of Pipelining",411
+10.1,"A Pipelined Processor",411
+10.1.1,"The Notion of Pipelining",411
+10.1.2,"Overview of Pipelining",412
+10.1.3,"Performance Benefits",413
+10.2,"Design of a Simple Pipeline",414
+10.2.1,"Splitting the Data Path",414
+10.2.2,"Timing",415
+10.2.3,"The Instruction Packet",416
+10.3,"Pipeline Stages",417
+10.3.1,"IF Stage",417
+10.3.2,"OF Stage",417
+10.3.3,"EX Stage",418
+10.3.4,"MA Stage",419
+10.3.5,"RW Stage",419
+10.3.6,"Putting it All Together",420
+10.4,"Pipeline Hazards",420
+10.4.1,"The Pipeline Diagram",420
+10.4.2,"Data Hazards",423
+10.4.3,"Control Hazards",425
+10.4.4,"Structural Hazards",427
+10.5,"Solutions in Software",428
+10.5.1,"RAW Hazards",428
+10.5.2,"Control Hazards",429
+10.6,"Pipeline with Interlocks",431
+10.6.1,"A Conceptual Look at a Pipeline with Interlocks",432
+10.6.2,"Ensuring the Data-Lock Condition",435
+10.6.3,"Ensuring the Branch-Lock condition",438
+10.7,"Pipeline with Forwarding",438
+10.7.1,"Basic Concepts",438
+10.7.2,"Forwarding Paths in a Pipeline",441
+10.7.3,"Data Hazards with Forwarding",444
+10.7.4,"Implementation of a Pipeline with Forwarding",445
+10.7.5,"Forwarding Conditions",450
+10.8,"Support for Interrupts/ Exceptions\*",455
+10.8.1,"Interrupts",455
+10.8.2,"Exceptions",456
+10.8.3,"Precise Exceptions",456
+10.8.4,"Saving and Restoring Program State",459
+10.8.5,"SimpleRisc Assembly Code of an Interrupt Handler",463
+10.8.6,"Processor with Support for Exceptions",463
+10.9,"Performance Metrics",463
+10.9.1,"The Performance Equation",463
+10.9.2,"Performance of an Ideal Pipelined Processor",467
+10.9.3,"Performance of a Non-Ideal Pipeline",470
+10.9.4,"Performance of a Suite of Programs",473
+10.9.5,"Inter-Relationship between Performance, the Compiler, Architecture, and Technology",474
+10.10,"Power and Temperature Issues",477
+10.10.1,"Overview",477
+10.10.2,"Dynamic Power",479
+10.10.3,"Leakage Power",481
+10.10.4,"Modeling Temperature\*",482
+10.10.5,"The $E D ^ { 2 }$ Metric",483
+10.11,"Advanced Techniques\*",485
+10.11.1,"Branch Prediction",485
+10.11.2,"Multiple Issue In-Order Pipeline",489
+10.11.3,"EPIC and VLIW Processors",491
+10.11.4,"Out-of-Order Pipelines",492
+10.12,"Summary and Further Reading",495
+10.12.1,"Summary",495
+10.12.2,"Further Reading",497
+III,"Organization: System Design",503
+11,"The Memory System",505
+11.1,"Overview",506
+11.1.1,"Need for a Fast Memory System",506
+11.1.2,"Memory Access Patterns",507
+11.1.3,"Temporal and Spatial Locality of Instruction Accesses",508
+11.1.4,"Characterizing Temporal Locality",509
+11.1.5,"Characterizing Spatial Locality",511
+11.1.6,"Utilizing Spatial and Temporal Locality",511
+11.1.7,"Exploiting Temporal Locality – Hierarchical Memory System",512
+11.1.8,"Exploiting Spatial Locality – Cache Blocks",515
+11.2,"Caches",517
+11.2.1,"Overview of a Basic Cache",517
+11.2.2,"Cache Lookup and Cache Design",518
+11.2.3,"Data read and data write Operations",526
+11.2.4,"The insert Operation",527
+11.2.5,"The replace Operation",528
+11.2.6,"The evict Operation",530
+11.2.7,"Putting all the Pieces Together",530
+11.3,"The Memory System",532
+11.3.1,"Mathematical Model of the Memory System",533
+11.3.2,"Cache Misses",535
+11.3.3,"Reduction of Hit Time and Miss Penalty",537
+11.3.4,"Summary of Memory System Optimization Techniques",538
+11.4,"Virtual Memory",539
+11.4.1,"Process – A Running Instance of a Program",540
+11.4.2,"The “Overlap” and “Size” Problems",546
+11.4.3,"Implementation of Virtual Memory with Paging",546
+11.4.4,"Swap Space",552
+11.4.5,"Memory Management Unit (MMU)",553
+11.4.6,"Advanced Features of the Paging System",555
+11.5,"Summary and Further Reading",556
+11.5.1,"Summary",556
+11.5.2,"Further Reading",558
+12,"Multiprocessor Systems",565
+12.1,"Background",567
+12.1.1,"Moore’s Law",568
+12.1.2,"Implications of the Moore’s Law",569
+12.2,"Software for Multiprocessor Systems",570
+12.2.1,"Strong and Loosely Coupled Multiprocessing",570
+12.2.2,"Shared Memory vs Message Passing",571
+12.2.3,"Amdahl’s Law",576
+12.3,"Design Space of Multiprocessors",578
+12.4,"MIMD Multiprocessors",579
+12.4.1,"Logical Point of View",579
+12.4.2,"Coherence",581
+12.4.3,"Memory Consistency",583
+12.4.4,"Physical View of Memory",593
+12.4.5,"Shared Caches",596
+12.4.6,"Coherent Private Caches",596
+12.4.7,"Implementing a Memory Consistency Model\*",603
+12.4.8,"Multithreaded Processors",608
+12.5,"SIMD Multiprocessors",612
+12.5.1,"SIMD – Vector Processors",613
+12.5.2,"Software Interface",614
+12.5.3,"A Practical Example using SSE Instructions",616
+12.5.4,"Predicated Instructions",618
+12.5.5,"Design of a Vector Processor",620
+12.6,"Interconnection Networks",620
+12.6.1,"Overview",620
+12.6.2,"Bisection Bandwidth and Network Diameter",622
+12.6.3,"Network Topologies",623
+12.7,"Summary and Further Reading",630
+12.7.1,"Summary",630
+12.7.2,"Further Reading",633
+13,"I/O and Storage Devices",641
+13.1,"I/O System – Overview",642
+13.1.1,"Overview",642
+13.1.2,"Requirements of the I/O System",645
+13.1.3,"Design of the I/O System",646
+13.1.4,"Layers in the I/O System",649
+13.2,"Physical Layer – Transmission Sublayer",650
+13.2.1,"Single Ended Signaling",652
+13.2.2,"Low Voltage Differential Signaling (LVDS)",653
+13.2.3,"Transmission of Multiple Bits",654
+13.2.4,"Return to Zero (RZ) Protocols",655
+13.2.5,"Manchester Encoding",656
+13.2.6,"Non Return to Zero (NRZ) Protocol",657
+13.2.7,"Non Return to Zero (NRZI) Inverted Protocol",658
+13.3,"Physical Layer – Synchronization Sublayer",659
+13.3.1,"Synchronous Buses",659
+13.3.2,"Source Synchronous Bus\*",662
+13.3.3,"Asynchronous Buses",663
+13.4,"Data Link Layer",667
+13.4.1,"Framing and Buffering",667
+13.4.2,"Error Detection and Correction",668
+13.4.3,"Arbitration",674
+13.4.4,"Transaction-Oriented Buses",677
+13.4.5,"Split Transaction Buses",679
+13.5,"Network Layer",680
+13.5.1,"I/O Port Addressing",680
+13.5.2,"Memory-Mapped Addressing",683
+13.6,"Protocol Layer",684
+13.6.1,"Polling",685
+13.6.2,"Interrupts",686
+13.6.3,"DMA",687
+13.7,"Case Studies – I/O Protocols",688
+13.7.1,"PCI Express $\textsuperscript { \textregistered }$",689
+13.7.2,"SATA",691
+13.7.3,"SCSI and SAS",691
+13.7.4,"USB",694
+13.7.5,"FireWire Protocol",697
+13.8,"Storage",699
+13.8.1,"Hard Disks",701
+13.8.2,"RAID Arrays",707
+13.8.3,"Optical Disks – CD, DVD, Blu-ray",711
+13.8.4,"Flash Memory",715
+13.9,"Summary and Further Reading",721
+13.9.1,"Summary",721
+13.9.2,"Further Reading",724
+IV,"Appendix",729
+A,"Case Studies of Real Processors",731
+A.1,"ARM Processors",731
+A.1.1,"ARM Cortex-M3",732
+A.1.2,"ARM Cortex-A8",734
+A.1.3,"ARM Cortex-A15",736
+A.2,"AMD Processors",739
+A.2.1,"AMD Bobcat",739
+A.2.2,"AMD Bulldozer",741
+A.3,"Intel Processors",743
+A.3.1,"Intel Atom",744
+A.3.2,"Intel Sandy Bridge",746
+B,"Graphics Processors",751
+B.1,"Overview",751
+B.1.1,"Graphics Applications",752
+B.1.2,"Graphics Pipeline",753
+B.1.3,"Fusion of High Performance Computing and Graphics Computing",754
+B.2,"NVIDIA Tesla Architecture",754
+B.2.1,"Work Distribution",755
+B.2.2,"GPU Compute Engines",756
+B.2.3,"Interconnection Network, DRAM Modules, L2 Caches, and ROPs",756
+B.3,"Streaming Multiprocessors (SMs)",757
+B.4,"Computation on a GPU",758
+B.5,"CUDA Programs",760

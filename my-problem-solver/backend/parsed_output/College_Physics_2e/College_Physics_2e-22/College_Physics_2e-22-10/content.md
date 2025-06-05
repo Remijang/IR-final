@@ -1,0 +1,48 @@
+# 22.10 Magnetic Force between Two Parallel Conductors
+
+# LEARNING OBJECTIVES
+
+By the end of this section, you will be able to:
+
+Describe the effects of the magnetic force between two conductors.   
+• Calculate the force between two parallel conductors.
+
+You might expect that there are significant forces between current-carrying wires, since ordinary currents produce significant magnetic fields and these fields exert significant forces on ordinary currents. But you might not expect that the force between wires is used to definethe ampere. It might also surprise you to learn that this force has something to do with why large circuit breakers burn up when they attempt to interrupt large currents.
+
+The force between two long straight and parallel conductors separated by a distance $r$ can be found by applying what we have developed in preceding sections. Figure 22.40 shows the wires, their currents, the fields they create, and the subsequent forces they exert on one another. Let us consider the field produced by wire 1 and the force it exerts on wire 2 (call the force $F _ { 2 }$ ). The field due to $I _ { 1 }$ at a distance $r$ is given to be
+
+$$
+B _ { 1 } = \frac { \mu _ { 0 } I _ { 1 } } { 2 \pi r } .
+$$
+
+This field is uniform along wire 2 and perpendicular to it, and so the force $F _ { 2 }$ it exerts on wire 2 is given by $F = I l B$ sin $\theta$ with $\theta = 1$ :
+
+$$
+F _ { 2 } = I _ { 2 } l B _ { 1 } .
+$$
+
+By Newton’s third law, the forces on the wires are equal in magnitude, and so we just write $F$ for the magnitude of $F _ { 2 }$ . (Note that $F _ { 1 } = - F _ { 2 }$ .) Since the wires are very long, it is convenient to think in terms of $F / l$ , the force per unit length. Substituting the expression for $B _ { 1 }$ into the last equation and rearranging terms gives
+
+$$
+{ \frac { F } { l } } = { \frac { \mu _ { 0 } I _ { 1 } I _ { 2 } } { 2 \pi r } } .
+$$
+
+$F / l$ is the force per unit length between two parallel currents $I _ { 1 }$ and $I _ { 2 }$ separated by a distance $r$ . The force is attractive if the currents are in the same direction and repulsive if they are in opposite directions.
+
+This force is responsible for the pinchefectin electric arcs and plasmas. The force exists whether the currents are in wires or not. In an electric arc, where currents are moving parallel to one another, there is an attraction that squeezes currents into a smaller tube. In large circuit breakers, like those used in neighborhood power distribution systems, the pinch effect can concentrate an arc between plates of a switch trying to break a large current, burn holes, and even ignite the equipment. Another example of the pinch effect is found in the solar plasma, where jets of ionized material, such as solar flares, are shaped by magnetic forces.
+
+The operationaldefinitionoftheampereis based on the force between current-carrying wires. Note that for parallel wires separated by 1 meter with each carrying 1 ampere, the force per meter is
+
+$$
+{ \frac { F } { l } } = { \frac { \left( 4 \pi \times 1 0 ^ { - 7 } \ \mathrm { T } \cdot \mathrm { m } / { \mathrm { A } } \right) ( 1 \ \mathrm { A } ) ^ { 2 } } { ( 2 \pi ) ( 1 \ \mathrm { m } ) } } = 2 \times 1 0 ^ { - 7 } \ \mathrm { N } / \mathrm { m } .
+$$
+
+Since $\mu _ { 0 }$ is exactly $4 \pi \times 1 0 ^ { - 7 } \mathrm { T } \cdot \mathrm { m } / \mathrm { A }$ by definition, and because $1 \mathrm { T } = 1 \mathrm { N } / ( \mathrm { A } \cdot \mathrm { m } )$ , the force per meter is exactly $2 \times 1 0 ^ { - 7 } \ \mathrm { N / m }$ . This is the basis of the operational definition of the ampere.
+
+# The Ampere
+
+The official definition of the ampere is:
+
+One ampere of current through each of two parallel conductors of infinite length, separated by one meter in empty space free of other magnetic fields, causes a force of exactly $2 \times 1 0 ^ { - 7 } \mathrm { { N / m } }$ on each conductor.
+
+Infinite-length straight wires are impractical and so, in practice, a current balance is constructed with coils of wire separated by a few centimeters. Force is measured to determine current. This also provides us with a method for measuring the coulomb. We measure the charge that flows for a current of one ampere in one second. That is, $1 { \mathrm { C } } = 1$ . For both the ampere and the coulomb, the method of measuring force between conductors is the most accurate in practice.

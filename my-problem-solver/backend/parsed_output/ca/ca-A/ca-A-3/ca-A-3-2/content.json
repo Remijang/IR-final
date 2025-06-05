@@ -1,0 +1,102 @@
+[
+    {
+        "type": "text",
+        "text": "A.3.2 Intel Sandy Bridge Overview ",
+        "text_level": 1,
+        "page_idx": 748
+    },
+    {
+        "type": "image",
+        "img_path": "images/ebf102bfa61319e479fb3a81b6111d93fd6e33aa0c45aac78b5f24e47e37b51f.jpg",
+        "img_caption": [
+            "Figure A.11: Overview of the Sandy Bridge processor $\\circledcirc$ [2010] The Linley Group. Adapted and reprinted, with permission. (Originally published in the Microprocessor Report. Source [Gwennap, 2010]) "
+        ],
+        "img_footnote": [],
+        "page_idx": 748
+    },
+    {
+        "type": "text",
+        "text": "Let us now discuss the design of a high performance Intel processor called the Sandy Bridge processor, which is a part of some of the latest (as of 2012) Intel Core i7 processors in the market. The main aims [Gwennap, 2010] while designing the Sandy Bridge processor was to support emerging multimedia workloads, numerically intensive applications, and multicore friendly parallel applications. ",
+        "page_idx": 748
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 749
+    },
+    {
+        "type": "text",
+        "text": "The most distinguishing features of the Sandy Bridge processor is that it contains an onchip graphics processor. The graphics processor is loaded with specialized units for performing image rendering, video encoding/decoding, and custom image processing. The CPU and GPU communicate through a large shared on chip L3 cache. An overview of the Sandy Bridge processor is shown in Figure A.11. ",
+        "page_idx": 749
+    },
+    {
+        "type": "text",
+        "text": "Along with the addition of more components on chip, a lot of modifications to the CPU were also made. Sandy Bridge processor has full support for the new AVX instruction set, which is a 256-bit SIMD instruction set. For each SIMD unit, it is possible to perform 4 double precision operations or 8 single precision operations simultaneously. Since so many high performance features were being added it was necessary to add many power saving features also. Nowadays, techniques such as DVFS (dynamic voltage frequency scaling), clock gating (shutting off the clock) and power gating (shutting off the power for a set of functional units) for unused units are common. Additionally, the Sandy Bridge designers modified the design of the core to avoid copying values between units as much as possible. Recall that a similar design decision was taken by the designers of AMD Bobcat also. The designers also made major changes to the design of some core structures such as the branch predictor and branch target buffer for enhancing power efficiency. ",
+        "page_idx": 749
+    },
+    {
+        "type": "text",
+        "text": "An important point to note here is that processors such as the Intel Sandy Bridge are designed to support multiple cores (4-8). Secondly, each core supports 2-way multithreading. Hence, we can run 16 threads on an 8 core machine. These threads can actively communicate between each other, the L3 cache banks, the GPU, and the on chip North Bridge controller. With so many communicating entities we need to design flexible on chip networks that facilitate high bandwidth and low latency communication. The designers of the Sandy Bridge have opted for a ring-based interconnect over the traditional bus. ",
+        "page_idx": 749
+    },
+    {
+        "type": "text",
+        "text": "The Sandy Bridge processor was designed for a $3 2 \\mathrm { n m } ^ { 1 }$ semiconductor process. Its successor is the Intel Ivy Bridge processor, which has the same design, but is designed for a 22 nm process. ",
+        "page_idx": 749
+    },
+    {
+        "type": "text",
+        "text": "Detailed Design ",
+        "text_level": 1,
+        "page_idx": 749
+    },
+    {
+        "type": "text",
+        "text": "Let us now consider the detailed design of a Sandy Bridge Core in Figure A.12 (also refer to [Gwennap, 2010]). The Sandy Bridge processor has a 32 KB instruction cache, that can provide $4 ~ \\mathrm { x } 8 6$ instructions every cycle. The first step in decoding a stream of x86 instructions, is to demarcate their boundaries (known as predecoding). Once, 4 instructions are predecoded, they are sent to the decoders. Sandy Bridge has 4 decoders. Three of them are simple decoders, and one decoder is known as a complex decoder that uses the microprogram memory. All the decoders convert CISC instructions into RISC like micro-ops. Sandy Bridge has a L0 cache for micro-ops that can store roughly 1500 micro-ops. The L0 micro-op cache has performance benefits in terms of both performance and power. It reduces the branch misprediction latency if the instruction at the branch target is available in the L0 cache. Since most of the branches in programs are near branches, we expect to have a good hit rate at the L0 cache. Secondly, we can also save power. If an instruction\u2019s micro-ops are available in the L0 cache, then we do not need to fetch, predecode, and decode the instruction once again. We thus avoid these power hungry operations. ",
+        "page_idx": 749
+    },
+    {
+        "type": "image",
+        "img_path": "images/8377087020d57863a22faf19433e71f600264e4f9cc7ae974390e2387c62c686.jpg",
+        "img_caption": [
+            "Figure A.12: Detailed view of the Sandy Bridge processor $\\circledcirc$ [2010] The Linley Group. Adapted and reprinted, with permission. (Originally published in the Microprocessor Report. Source [Gwennap, 2010]) "
+        ],
+        "img_footnote": [],
+        "page_idx": 750
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 750
+    },
+    {
+        "type": "text",
+        "text": "We need to point out an interesting design decision (see [Gwennap, 2010]) that was taken by the designers with respect to the branch predictor. This design decision is representative of many similar problems in computer architecture. One such problem is whether we should design a small structure with complicated entries, or should we design a large structure with simple entries? For example, should we have a 4-way associative 16 KB cache, or a 2-way associative 32 KB cache? In general, there is no definite answer to questions of this nature. They are highly dependent on the nature of the target workloads. For the Sandy Bridge processors, the designers had a choice. They could have either chosen a branch predictor with 2-bit saturating counters, or a predictor with more entries, and a 1-bit saturating counter. The power and performance trade-offs of the latter design was found to be better. Hence, they chose to have 1-bit counters. ",
+        "page_idx": 750
+    },
+    {
+        "type": "text",
+        "text": "Subsequently, 4 micro-ops are sent to the rename and dispatch units that perform out-oforder scheduling. In earlier processors such as the Nehalem processor, temporary results of instructions that were in flight were saved in the ROB. Once the instructions finished, they were copied to the register file. This operation involves copying data, and is thus not efficient from the point of view of power. Hence, Sandy Bridge avoids this, and saves results directly in the physical register file similar to high performance RISC processors. When an instruction reaches the rename stage, we check the mappings in the rename table, and find the ids of the physical registers that contain, or are supposed to contain at a future point of time, the values of source operands. We subsequently either read the physical register file, or wait for their values to be generated. In your author\u2019s view, using physical register files is a better approach than using other approaches that save the results of unfinished instructions in the ROB, and later copy the results back to the register files. Using physical register files is fast, simple, and power efficient. By using this approach in the Sandy Bridge processor, the ROB got simplified, and it was possible to have 168 in-flight instructions at any point of time. ",
+        "page_idx": 750
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 751
+    },
+    {
+        "type": "text",
+        "text": "The Sandy Bridge processor has 3 integer ALUs, 1 load unit, and 1 load/store unit. The integer units read and write their operands from a 160 entry register file. For supporting floating point operations, it has one FP add unit, and 1 FP multiply unit. They support the AVX SIMD instruction set (256-bit operations on sets of single and double precision numbers). Moreover, to support 256-bit operations, Intel added new 256-bit vector registers (YMM registers) in the x86 AVX ISA. ",
+        "page_idx": 751
+    },
+    {
+        "type": "text",
+        "text": "To implement the AVX instruction set, it is necessary to support 256-bit transfers from the 32 KB data cache. The Sandy Bridge processor can perform two 128-bit loads, and one 128-bit store per cycle. In the case of loading a YMM (256-bit) register, both the 128-bit load operations are fused into one (256-bit) load operation. Sandy Bridge has a 256 KB L2 cache, and a large (1-8 MB) L3 cache that is divided into banks. The L3 banks, cores, GPU, and North Bridge controllers are connected using a unidirectional ring-based interconnect. Note that the diameter of a unidirectional ring is $( N - 1 )$ because we can send messages in only one direction. To overcome this restriction, each node is actually connected to two points on the ring. These points are diametrically opposite to each other. Hence, the effective diameter is close to $N / 2$ . ",
+        "page_idx": 751
+    },
+    {
+        "type": "text",
+        "text": "Let us conclude by describing a unique feature of the Sandy Bridge processor called turbo mode. The idea is as follows. Assume that a processor has a period of quiescence (reduced activity). In this case, the temperature of all the cores will remain relatively low. Now, assume that the user decides to perform a computationally intensive activity such as sharpen an image, and remove \u201cred eyes.\u201d This requires numerically intensive computations that are also power intensive. Every processor has a rated thermal design power (TDP), which is the maximum amount of power a processor is allowed to dissipate. In the turbo mode, the processor is permitted to dissipate more power than the TDP for short durations of time (20-25s). This allows the processor to run all the units at a frequency higher than the nominal value. Once the temperature reaches a certain threshold, the turbo mode is automatically switched off, and the processor resumes normal operation. The main point to note is that dissipating a large amount of power for a short duration is not a problem. However, having very high temperatures for even a short duration is not allowed. This is because high temperature can permanently damage a chip. For example, if a wire melts, then the entire chip is destroyed. Since it takes several seconds for a processor to heat up, we can take advantage of this effect to have high frequency and high power phases to quickly complete sporadic jobs. Note that the turbo mode is not useful for long running jobs that take hours. ",
+        "page_idx": 751
+    }
+]

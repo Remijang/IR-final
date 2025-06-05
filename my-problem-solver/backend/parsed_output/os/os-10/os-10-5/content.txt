@@ -1,0 +1,36 @@
+10.5 Multi-Queue Scheduling
+Because of the problems caused in single-queue schedulers, some systems opt for multiple queues, e.g., one per CPU. We call this approach multi-queue multiprocessor scheduling (or MQMS).  
+In MQMS, our basic scheduling framework consists of multiple scheduling queues. Each queue will likely follow a particular scheduling discipline, such as round robin, though of course any algorithm can be used. When a job enters the system, it is placed on exactly one scheduling queue, according to some heuristic (e.g., random, or picking one with fewer jobs than others). Then it is scheduled essentially independently, thus avoiding the problems of information sharing and synchronization found in the single-queue approach.  
+For example, assume we have a system where there are just two CPUs (labeled CPU 0 and CPU 1), and some number of jobs enter the system: $A , B , C ,$ , and $D$ for example. Given that each CPU has a scheduling queue now, the OS has to decide into which queue to place each job. It might do something like this:  
+ 
+THREE EASY PIECES  
+Depending on the queue scheduling policy, each CPU now has two jobs to choose from when deciding what should run. For example, with round robin, the system might produce a schedule that looks like this:  
+PU 0AAccAAccAAccPU 1BBDDBBDDBBDD
+MQMS has a distinct advantage of SQMS in that it should be inherently more scalable. As the number of CPUs grows, so too does the number of queues, and thus lock and cache contention should not become a central problem. In addition, MQMS intrinsically provides cache affinity; jobs stay on the same CPU and thus reap the advantage of reusing cached contents therein.  
+But, if you’ve been paying attention, you might see that we have a new problem, which is fundamental in the multi-queue based approach: load imbalance. Let’s assume we have the same set up as above (four jobs, two CPUs), but then one of the jobs (say $C$ ) finishes. We now have the following scheduling queues:  
+ 
+If we then run our round-robin policy on each queue of the system, we will see this resulting schedule:  
+CPU 0AAAAAAAAAAAA...CPU 1BBDDBBDDBBDD...
+As you can see from this diagram, $A$ gets twice as much CPU as $B$ and $D$ , which is not the desired outcome. Even worse, let’s imagine that both $A$ and $C$ finish, leaving just jobs $B$ and $D$ in the system. The two scheduling queues, and resulting timeline, will look like this:  
+ 
+CPU 0
+BBD DBBDDBBD D
+How terrible – CPU 0 is idle! (insert dramatic and sinister music here) And thus our CPU usage timeline looks quite sad.  
+OPERATINGSYSTEMS[VERSION 1.10]  
+WWW.OSTEP.ORG  
+So what should a poor multi-queue multiprocessor scheduler do? How can we overcome the insidious problem of load imbalance and defeat the evil forces of ... the Decepticons1? How do we stop asking questions that are hardly relevant to this otherwise wonderful book?  
+CRUX: HOW TO DEAL WITH LOAD IMBALANCE  
+How should a multi-queue multiprocessor scheduler handle load imbalance, so as to better achieve its desired scheduling goals?  
+The obvious answer to this query is to move jobs around, a technique which we (once again) refer to as migration. By migrating a job from one CPU to another, true load balance can be achieved.  
+Let’s look at a couple of examples to add some clarity. Once again, we have a situation where one CPU is idle and the other has some jobs.  
+ 
+In this case, the desired migration is easy to understand: the OS should simply move one of $B$ or $D$ to CPU 0. The result of this single job migration is evenly balanced load and everyone is happy.  
+A more tricky case arises in our earlier example, where $A$ was left alone on CPU 0 and $B$ and $D$ were alternating on CPU 1:  
+$$
+\begin{array} { r } { \texttt { \textsf { Q 0 } } { \to } \texttt { \textsf { A } } \qquad \texttt { \textsf { Q 1 } } { \to } \texttt { \textsf { B } } { \to } \texttt { \textsf { D } } } \end{array}
+$$  
+In this case, a single migration does not solve the problem. What would you do in this case? The answer, alas, is continuous migration of one or more jobs. One possible solution is to keep switching jobs, as we see in the following timeline. In the figure, first $A$ is alone on CPU 0, and $B$ and $D$ alternate on CPU 1. After a few time slices, $B$ is moved to compete with $A$ on CPU 0, while $D$ enjoys a few time slices alone on CPU 1. And thus load is balanced:  
+CPU 0AAAABABABBBB...CPU 1BDBDDDDDADAD
+Of course, many other possible migration patterns exist. But now for the tricky part: how should the system decide to enact such a migration?  
+One basic approach is to use a technique known as work stealing [FLR98]. With a work-stealing approach, a (source) queue that is low on jobs will occasionally peek at another (target) queue, to see how full it is. If the target queue is (notably) more full than the source queue, the source will “steal” one or more jobs from the target to help balance load.  
+Of course, there is a natural tension in such an approach. If you look around at other queues too often, you will suffer from high overhead and have trouble scaling, which was the entire purpose of implementing the multiple queue scheduling in the first place! If, on the other hand, you don’t look at other queues very often, you are in danger of suffering from severe load imbalances. Finding the right threshold remains, as is common in system policy design, a black art.  

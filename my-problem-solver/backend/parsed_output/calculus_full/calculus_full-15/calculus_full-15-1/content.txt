@@ -1,0 +1,69 @@
+This vector field grad  is everywhere perpendicular to the level curves   :
+
+The length grad  tells how fast  is changing (in the direction it changes fastest). Invent a function like  ; and you immediately have its gradient field  : To repeat,  is  and  is  :
+
+For every vector field you should ask two questions:  it a gradient field? If so, what is  Here are answers for the radial fields and spin fields:
+
+15A The radial fields  and  and  are all gradient fields. The spin fields  and  are not gradients of any  : The spin field  is the gradient of the polar angle  :
+
+The derivatives of  are  and  : Thus  is a gradient field. The gradient of  is the unit vector  pointing outwards. Both fields are perpendicular to circles around the origin. Those are the level curves of  and  :
+
+Question Is every  a gradient field? Answer Yes. But among the spin fields, the only gradient is  :
+
+A major goal of this chapter is to recognize gradient fields by a simple test. The rejection of S and  will be interesting. For some reason  is rejected and  is accepted. (It is the gradient of :) The acceptance of  as the gradient of  contains a surprise at the origin (Section 15.3).
+
+Gradient fields are called conservative. The function  is the potential function. These words, and the next examples, come from physics and engineering.
+
+EXAMPLE 5 The velocity field is  and the flow field is  :
+
+Suppose fluid moves steadily down a pipe. Or a river flows smoothly (no waterfall). Or the air circulates in a fixed pattern. The velocity can be different at different points, but there is no change with time. The velocity vector  gives the direction of flow and speed of flow at every point.
+
+In reality the velocity field is  ; with three components  : Those are the velocities  in the  directions. The speed  is the length:  : In a “plane flow” the  component is zero, and the velocity field is  :
+
+For a compact disc or a turning wheel,  is a spin field  ,  angular velocity). A tor|nad|o might be closer to  (except for a dead spot at the center). An explosion could have  : A quieter example is flow in and out of a lake with steady rain as a source term.
+
+The flow field  is the density  times the velocity field. While  gives the rate of movement,  gives the rate of movement of mass. A greater density means a greater rate  of “mass transport.” It is like the number of passengers on a bus times the speed of the bus.
+
+EXAMPLE 6 Force fields from gravity:  is dowBnwa rBd in the classroom,  is radial in space.
+
+When gravity pulls downward, it has only one nonzero component:  : This assumes that vectors to the center of the Earth are parallel—almost true in a classroom. Then  is the gradient of  (note  .
+
+In physics the usual potential is not  but  : The force field is minus grad  also in electrical engineering. Electrons flow from high potential to low potential. The mathematics is the same, but the sign is reversed.
+
+In space, the force is radial inwards:  : Its magnitude is proportional to  (Newton’s inverse square law). The masses are  and  ; and the gravitational constant is  —with distance in meters, mass in kilograms, and time inBseconds. The dimensioBns of  are .force/.diBstance  : This is different fBrom the acceleration  ; whichB already accounts for the mass and radius of the Earth.
+
+Like all radial fields, gravity is a gradient field. It comes from a potential  :
+
+EXAMPLE 7 (a short example) Current in a wire produces a magnetic field B: It is the spin field  around the wire, times the strength of the current.
+
+STREAMLINES AND LINES OF FORCE
+
+Drawing a vector field is not always easy. Even the spin field looks messy when the vectors are too long (they go in circles and fall across each other). The circles give
+
+a clearer picture than the vectors. In any field, the vectors are tangent to “field lines”— which in the spin case are circles.
+
+DEFINITION  is a field line or integral curve if the vectors  are tangent to  : The slope  of the curve  equals the slope  of the vector   :
+
+We are still drawing the field of vectors, but now they are infinitesimally short. They are connected into curves! What is lost is their length, because  and  and  all have the same field lines (circles). For the position field  and gravity field  ; the field lines are rays from the origin. In this case the “curves” are actually straight.
+
+EXAMPLE 8 Show that the field lines for the velocity field  are hyperbolas.
+
+At every point these hyperbolas line up with the velocity V: Each particle of fluid travels on a field line. In fluid flow those hyperbolas are called streamlines. Drop a leaf into a river, and it follows a stre Bamli Bne. Figu rBe 15 B.4 shows the streamlines for a river going around a bend.
+
+Don’t forget the essential question about each vector field. Is it a gradient field? For  the answer is yes, and the potential is  :
+
+When there is a potential, it has level curves. They connect points of equal potential, so the curves  are called equipotentials. Here they are the curves   — also hyperbolas. Since gradients are perpendicular to level curves, the streamlines are perpendicular to the equipotentials. Figure 15.4 is sliced one way by streamlines and the other way by equipotentials.
+
+A gradient field  is tangent to the field lines (streamlines) and perpendicular to the equipotentials (level curves of  ).
+
+15 Vector Calculus
+
+In the gradient direction  changes fastest. In the level direction  doesn’t change at all. The chain rule along  proves these directions to be perpendicular:
+
+EXAMPLE 9 The streamlines of  are circles around  . The equipotentials are rays  : Add rays to Figure 15.2 for the gradient field  :
+
+For the gravity field those are reversed. A body is pulled in along the field lines (rays). The equipotentials are the circles where  is constant. The plane is crisscrossed by “orthogonal trajectories”—curves that meet everywhere at right angles.
+
+If you bring a magnet near a pile of iron filings, a little shake will display the field lines. In a force field, they are “lines of force.” Here are the other new words.
+
+Vector field  Plane field  Radial field: multiple of  Spin field: multiple of  Gradient field  conservative field:  Potential  (not a vector) Equipotential curves  Streamline  field line  integral curve: a curve that has  as its tangent vectors.

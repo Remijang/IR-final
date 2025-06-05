@@ -1,0 +1,103 @@
+5.8 Numerical Integration
+
+This section concentrates on definite integrals. The inputs are  and two endpoints  and  : The output is the integral  : Our goal is to find that number  , accurately and in a short time. Normally this goal is achievable—as soon as we have a good method for computing integrals.
+
+Our two approaches so far have weaknesses. The search for an antiderivative succeeds in important cases, and Chapter 7 extends that range—but generall y  is not available. The other approach (by rectangles) is in the right direction but too crude. The height is set by  at the right and leftend of each small interval. The right and left rectangle rules add the areas (  times  ):
+
+The value of  at the end of interval  is  : The extreme left value  enters  : With  equal intervals of length  , the extreme right value is  : It enters  : Otherwise the sums are the same—simple to compute, easy to visualize, but very inaccurate.
+
+This section goes from slow methods (rectangles) to better methods (trapezoidal and midpoint) to good methods (Simpson and Gauss). Each improvement cuts down the error. You could discover the formulas without the book, by integrating  and  and  : The rule  would come out on one side of the answer, and  would be on the other side. You would figure out what to do next, to come closer to the exact integral. The book can emphasize one key point:
+
+The quality of a formula depends on how many integrals  ; it computes exactly. If  is the first to be wrong, the order of accuracy is  :
+
+By testing the integrals of  , we decide how accurate the formulas are.
+
+Figure 5.18 shows the rectangle rules  and  : They are already wrong when  . These methods are first-order:  : The errors involve the first power of  —where we would much prefer a higher power. A larger  in  means a smaller error.
+
+When the graph of  is a straight line, theint egral  is known. The error triangles  and  have base  : Their heights are the differences  : The areas are  , and the only difference is a minus sign. (  is too low, so the error  is negative.) The total error in  is the sum of the  ’s:
+
+All  ’s between  and  cancel. Similarly for the sum of the  ’s:
+
+The greater the slope of  , the greater the error—since rectangles have zero slope. Formulas (1) and (2) are nice—but those errors are large. To integrate  from  to  ; the error is  : It takes 500; 000 recÑtangles to reduce this error to  . This accuracy is reasonable, but that many rectangles is unacceptable.
+
+The beauty of the error formulas is that they are “asymptotically correct” for all functions. W?hen the graph is curved, the errors don’t fit exactly into triangles. But the ratio of predicted error to actual error approaches 1. As  , the graph is almost straight in each interval—this is linear approximation.
+
+The error prediction  isso simple that wetest it on  :
+
+The error decreases along each row. So does  : Multiplying  by 10 divides  by 10: The error is also divided by 10 (almost). The error is nearly proportional to  —typical of first-order methods.
+
+The predicted error is  , since here  and  : The computed errors in the table come closer and closer to  : The prediction is the “leading term” in the actual error.
+
+The table also shows a curious fact. Subtracting the last row from the row above gives exact numbers 1; :1; :01; and .001: This is  ; which is  : It comes from an extra rectangle at the right, included in  but not  : Its height is 1 and its area is  :
+
+The errors in  and  almost cancel. The average  has less error—it is the “trapezoidal rule.” First we give the rectangle prediction two final tests:
+
+Those errors are falling faster than  : For  the prediction explains why:  equals  : The leading term, with  minus  , is zero. The exact errors are  , dropping from  to  to  to  : In these examples  is identical to  (and also to  ), because the end rectangles are the same. We will see th1ese  errors in the trapezoidal rule.
+
+The last row in the table is more unusual. It shows practically no error. Why do the rectangle rules suddenly achieve such an outstanding success?
+
+The reason is that  is periodic. The leading term in the error is zero, because  : Also the next term will be zero, because  : Every power of  is multiplied by zero, when we integrate over a complete period. S?o the errors go to zero exponentially fast.
+
+Personal note I tried to integrate  by hand and failed. Then I was embarrassed to discover the answer in my book on applied mathematics. The method was a special trick using complex numbers, which applies over an exact period. Finally I found the antiderivative (quite complicated) in a handbook of integrals, and verified the area  :
+
+5.8 Numerical Integration
+
+THE TRAPEZOIDAL AND MIDPOINT RULES
+
+We move to integration formulas that are exact when  : They have second-order accuracy. The  error term disappears. The formulas give the correct area under straight lines. The predicted error is a multiple of  : That multiple is found by testing  —for which the answers are not exact.
+
+The first formula combines  and  : To cancel as much error as possible, take the average  : This yields the trapezoidal rule, which approximates  by  :
+
+Another way to find  is from the area of the “trapezoid” below  in Figure  .
+
+The base is  and the sides have heights  and  : Adding those areas gives  in formula (3)—the coefficients of  combine into  : Only the first and last intervals are missing a neighbor, so the rule has  and  : Because trapezoids (unlike rectangles) fit under a sloping line,  is exact when  :
+
+What is the difference from rectangles? The trapezoidal rule gives weight  to  and  : The rectangle rule  gives full weight  to  (and no weight to  ).  is exactly the leading error  : The change to  knocks out that error.
+
+Another important formula is exact for  : A rectangle has the same area as a trapezoid, if the height of the rectangle is halfway b etween  and  : On a straight line graph that is achieved at the midpoint of the interval. By evaluating  at the halfway points  : : :, we get much better rectangles. This leads to the midpoint rule  :
+
+For  , trapezoids give  : The midpoint rule gives  , again correct.The rules become different when  ; because  is no longer the average of  and  :Try both second-orderrules on  :
+
+The errors fall by 100 when  is multiplied by 10: The midpoint rule is twice as good  vs.  ). Since all smooth functions are close to parabolas (quadratic
+
+approximation in each interval), the leading errors come from Figure 5.19. The trapezoidal error is exactly  when  is  (the 12 in the formula divides the 2 in  ):
+
+For exact error formulas, change  to  : The location of  is unknown (as in the Mean Value Theorem). In practice these formulas are not much used—they involve the  th derivative at an unknown location  : The main point about the error is the factor  :
+
+One crucial fact is easy to overlook in our tests. Each value of  can be extremely hard to compute. Every time a formula asks for  , a computer calls a subroutine. The goal of numerical integration is to get below the error tolerance, while calling for a minimum number of values of  . Second-order rulesneed about a thousand values for a typical tolerance of  : The next methods are better.
+
+FOURTH-ORDER RULE: SIMPSON
+
+The trapezoidal error is nearly twice the midpoint error (  vs.  . So a good combination will have twice as much of  as  : That is Simpson’s rule:
+
+Multiply the midpoint values by  : The endpoint values are multiplied by  ; except at the far ends  and  (with heights  and  ). This   pattern has become famous.
+
+Simpson’s rule goes deeper than a combination of  and  : It comes from a parabolic approximation to  in each interval. When a parabola goes through  ;  , the area under it is  . This is  over the first interval. All our rules are constructed this way: Integrate correctly as many powers  ; : : : as possible. Parabolas are better than straight lines, which are better than flat pieces.  beats  , which beats  : Check Simpson’s rule on powers of  , with  :
+
+Exact ans»wers for  are no surprise.  was selected to get parabolas right. But the zero errors for  were not expected. The accuracy has jumped to fourth order, with errors proportional to  :That explains the popularity of Simpson’s rule.
+
+To understand why  is integrated exactly, look at the interval  : The odd function  has zero integral, and Simpson agrees by symmetry:
+
+THE GAUSS RULE?(OPTIONAL?)
+
+We need a competitor for Simpson, and Gauss can compete with anybody. He calculated integrals in astronomy, and discovered that two points are enough for  fourth-order method. From  to 1 (a single interval) his rule is
+
+Those “Gauss point s”  and  can be founddi?rectly. By placing them symmetrically, all odd powers  ; : : : are correctly integrated. The key is in  ,?whose integral is  : The Gauss points  and  get this integral right:
+
+Figure  shifts to the interval from 0 to  : The Gauss points are  : They are not as convenient as Simpson’s (which hand calculators prefer). Gauss is good for thousands of integrations over one interval. Simpson is good when intervals go back to back—then Simpson also uses two  ’s per interval. For  , you see both errors drop by  in comparing  to  :
+
+DEFINITE INTEGRALS ON A CALCULATOR
+
+It is fascinating to know how numerical integration is actuallydone. The points are not equally spaced! For an integral from 0 to 1, Hewlett-Packard machines might internally replace  by  (the limits on  are also 0 and 1). The machine remembers to change  : For example,
+
+Algebraically that looks worse—but the infinite value of  at  disappears at  : The differential  was chosen to vanish at  and  : We don’t need  at the endpoints—where infinity is most common. In the  variable the integration points are equally spaced—therefore in  they are not.
+
+When a difficult point is inside  , break the interval in two pieces. And chop off integrals that go out to infinity. The integral of  should be stopped by  , since the tail is so thin. (It is bad to go too far.) Rapid oscillations are among the toughest—the answer depends on cancellation of highs and lows, and the calculator requires many integration points.
+
+The change from  to  affects periodic functions. I thought equal spacing was good, since  was integrated above to enormous accuracy. But there is a danger called aliasing. If sin  is sampled with  , it is always zero. A high frequency 8 is confused with a low frequency 0 (its “alias” which agrees at the sample points). With unequal spacing the problem disappears. Notice how any integration method can be deceived:
+
+Ask for the integral of  and specify the accuracy. The calculator samples  at  : (With a PAUSE key, the  ’s may be displayed.) Then integrate  : That also returns the answer zero (now wrong), because the calculator follows the same steps.
+
+On the calculator you enter the function, the endpoints, and the accuracy. The variable  can be named or not (see the margin). The outp¤uts 4:67077 and 4.7E-5 are the requested integral  and the estimated error bound. Your input accuracy .00001 guarantees
+
+The machine estimates accuracy based on its experience in sampling  : If you guarantee  within .00000000001; it thinks you want high accuracy and takes longer. In consulting for HP, William Kahan chose formulas using  sample points. Each new formula uses the samples in the previous formula. The calculator stops when answers are close.

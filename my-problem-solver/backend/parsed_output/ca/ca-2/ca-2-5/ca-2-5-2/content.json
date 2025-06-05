@@ -1,0 +1,33 @@
+[
+    {
+        "type": "text",
+        "text": "2.5.2 UTF-8 ",
+        "text_level": 1,
+        "page_idx": 84
+    },
+    {
+        "type": "text",
+        "text": "UTF (Universal character set Transformation Format - 8 bit) can represent every character in the Unicode character set. The Unicode character set assigns an unsigned binary number to each character of most of the world\u2019s writing systems. UTF-8 encodes 1,112,064 characters defined in the Unicode character set. It uses 1-6 bytes for this purpose. ",
+        "page_idx": 84
+    },
+    {
+        "type": "text",
+        "text": "UTF-8 is compatible with ASCII. The first 128 characters in UTF-8 correspond to the ASCII characters. When using ASCII characters, UTF-8 requires just one byte. It has a leading 0. However, the first byte can contain extra information such as the total number of bytes. This is encoded by having leading ones followed by a zero in the first byte. For example, if the first byte is of the form 11100010, then it means that the character contains 3 bytes. Each continuation byte begins with 10. Most of the languages that use variants of the Roman script such as French, German, and Spanish require 2 bytes in UTF-8. Greek, Russian (Cyrillic), Hebrew, and Arabic, also require 2 bytes. ",
+        "page_idx": 84
+    },
+    {
+        "type": "table",
+        "img_path": "images/6698d733ad6014d78b4332e4e21f58ac15baa50f67c788f73cc847a97108b1ad.jpg",
+        "table_caption": [
+            "Table 2.15: ASCII Character Set "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Character</td><td>Code</td><td>Character</td><td>Code</td><td>Character</td><td>Code</td></tr><tr><td>a</td><td>97</td><td>A</td><td>65</td><td>0</td><td>48</td></tr><tr><td>b</td><td>98</td><td>B</td><td>66</td><td>1</td><td>49</td></tr><tr><td>C</td><td>99</td><td>C</td><td>67</td><td>2</td><td>50</td></tr><tr><td>d</td><td>100</td><td>D</td><td>68</td><td>3</td><td>51</td></tr><tr><td>e</td><td>101</td><td>E</td><td>69</td><td>4</td><td>52</td></tr><tr><td>f</td><td>102</td><td>F</td><td>70</td><td>5</td><td>53</td></tr><tr><td>g</td><td>103</td><td>G</td><td>71</td><td>6</td><td>54</td></tr><tr><td>h</td><td>104</td><td>H</td><td>72</td><td>7</td><td>55</td></tr><tr><td>i</td><td>105</td><td>I</td><td>73</td><td>8</td><td>56</td></tr><tr><td>j</td><td>106</td><td>J</td><td>74</td><td>9</td><td>57</td></tr><tr><td>k</td><td>107</td><td>K</td><td>75</td><td>\uff01</td><td>33</td></tr><tr><td>1</td><td>108</td><td>L</td><td>76</td><td>#</td><td>35</td></tr><tr><td>m</td><td>109</td><td>M</td><td>77</td><td></td><td>36</td></tr><tr><td>n</td><td>110</td><td>N</td><td>78</td><td>%</td><td>37</td></tr><tr><td>0</td><td>111</td><td>0</td><td>79</td><td>&</td><td>38</td></tr><tr><td>p</td><td>112</td><td>P</td><td>80</td><td>\uff08</td><td>40</td></tr><tr><td>q</td><td>113</td><td>Q</td><td>81</td><td>\uff09</td><td>41</td></tr><tr><td>r</td><td>114</td><td>R</td><td>82</td><td>*</td><td>42</td></tr><tr><td>S</td><td>115</td><td>S</td><td>83</td><td>+</td><td>43</td></tr><tr><td>t</td><td>116</td><td>T</td><td>84</td><td>\uff0c</td><td>44</td></tr><tr><td>u</td><td>117</td><td>U</td><td>85</td><td>\uff1a</td><td>46</td></tr><tr><td>V</td><td>118</td><td>V</td><td>86</td><td>\uff1b</td><td>59</td></tr><tr><td>W</td><td>119</td><td>W</td><td>87</td><td>\u4e8c</td><td>61</td></tr><tr><td>X</td><td>120</td><td>X</td><td>88</td><td>\uff1f</td><td>63</td></tr><tr><td>y</td><td>121</td><td>Y</td><td>89</td><td>@</td><td>64</td></tr><tr><td>Z</td><td>122</td><td>Z</td><td>90</td><td>></td><td>94</td></tr></table></body></html>\n\n",
+        "page_idx": 85
+    },
+    {
+        "type": "text",
+        "text": "UTF-8 is a standard for the World Wide Web. Most browsers, applications, and operating systems are required to support it. It is by far the most popular encoding as of 2012. ",
+        "page_idx": 85
+    }
+]

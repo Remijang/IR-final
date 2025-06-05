@@ -1,0 +1,93 @@
+[
+    {
+        "type": "text",
+        "text": "55.4 Using Capabilities For Access Control ",
+        "text_level": 1,
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Access control lists are not your only option for controlling access in computer systems. Almost, but not quite. You can also use capabilities, the option that’s more like keys or tickets. Chez Andrea could give keys to its members to allow admission. Different rooms could have different keys, preventing the more mischievous members from leaving little surprises in other members’ rooms. Each member would carry around a set of keys that would admit him or her to the particular areas of the club she should have access to. Like ACLs, capabilities have a long history of use in computer systems, with Dennis and van Horn [DV64] being perhaps the earliest example. Wulf et al. $[ \\mathsf { W } + 7 4 ]$ describe the Hydra Operating System, which used capabilities as a fundamental control mechanism. Levy [L84] gives a book-length summary of the use of capabilities in early hardware and software systems. In capability systems, a running process has some set of capabilities that specify its access permissions. If you’re using a pure capability system, there is no ACL anywhere, and this set is the entire encoding of the access permissions for this process. That’s not how Linux or Windows work, but other operating systems, such as Hydra, examined this approach to handling access control. ",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "How would we perform that open() call in this kind of pure capabil",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "ity system? When the call is made, either your application would provide a capability permitting your process to open the file in question as a parameter, or the operating system would find the capability for you. In either case, the operating system would check that the capability does or does not allow you to perform a read/write open on file /tmp/foo. If it does, the OS opens it for you. If not, back comes an error to your process, chiding it for trying to open a file it does not have a capability for. (Remember, we’re not talking about Linux here. Linux uses ACLs, not capabilities, to determine if an open() call should be allowed.) ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "There are some obvious questions here. What, precisely, is a capability? Clearly we’re not talking about metal keys or paper tickets. Also, how does the OS check the validity of capability? And where do capabilities come from, in the first place? Just like all other information in a computer, capabilities are bunches of bits. They are data. Given that there are probably lots of resources to protect, and capabilities must be specific to a resource, capabilities are likely to be fairly long, and perhaps fairly complex. But, ultimately, they’re just bits. Anything composed of a bunch of bits has certain properties we must bear in mind. For example, anyone can create any bunch of bits they want. There are no proprietary or reserved bit patterns that processes cannot create. Also, if a process has one copy of a particular set of bits, it’s trivial to create more copies of it. The first characteristic implies that it’s possible for anyone at all to create any capability they want. The second characteristic implies that once someone has a working capability, they can make as many copies of it as they want, and can potentially store them anywhere they want, including on an entirely different machine. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "That doesn’t sound so good from a security perspective. If a process needs a capability with a particular bit pattern to open /tmp/foo for read and write, maybe it can just generate that bit pattern and successfully give itself the desired access to the file. That’s not what we’re looking for in an access control mechanism. We want capabilities to be unforgeable. Even if we can get around that problem, the ability to copy a capability would suggest we can’t take access permission away, once granted, since the process might have copies of the capability stashed away elsewhere6. Further, perhaps the process can grant access to another process merely by using IPC to transfer a copy of the capability to that other process. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "We typically deal with these issues when using capabilities for access control by never letting a process get its metaphoric hands on any capability. The operating system controls and maintains capabilities, storing them somewhere in its protected memory space. Processes can perform various operations on capabilities, but only with the mediation of the operating system. If, for example, process A wishes to give process B read/write access to file /tmp/foo using capabilities, A can’t merely send B the appropriate bit pattern. Instead, A must make a system call requesting the operating system to give the appropriate capability to B. That gives the OS a chance to decide whether its security policy permits B to access /tmp/foo and deny the capability transfer if it does not. ",
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "So if we want to rely on capabilities for access control, the operating system will need to maintain its own protected capability list for each process. That’s simple enough, since the OS already has a per-process protected data structure, the PCB. Slap a pointer to the capability list (stored in kernel memory) into the process’ PCB and you’re all set. Now when the process attempts to open /tmp/foo for read/write, the call traps to the OS, the OS consults the capability list for that process to see if there is a relevant capability for the operation on the list and proceeds accordingly. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "In a general system, keeping an on-line capability list of literally everything some principal is permitted to access would incur high overheads. If we used capabilities for file-based access control, a user might have thousands of capabilities, one for each file the user was allowed to access in any way. Generally, if one is using capabilities, the system persistently stores the capabilities somewhere safe, and imports them as needed. So a capability list attached to a process is not necessarily very long, but there is an issue of deciding which capabilities of the immense set users have at their discretion to give to each process they run. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "There is another option. Capabilities need not be stored in the operating system. Instead, they can be cryptographically protected. If capabilities are relatively long and are created with strong cryptography, they cannot be guessed in a practical way and can be left in the user’s hands. Cryptographic capabilities make most sense in a distributed system, so we’ll talk about them in the chapter on distributed system security. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "There are good and bad points about capabilities, just as there were for access control lists. With capabilities, it’s easy to determine which system resources a given principal can access. Just look through the principal’s capability list. Revoking access merely requires removing the capability from the list, which is easy enough if the OS has exclusive access to the capability (but much more difficult if it does not). If you have the capability readily available in memory, it can be quite cheap to check it, particularly since the capability can itself contain a pointer to the data or software associated with the resource it protects. Perhaps merely having such a pointer is the system’s core implementation of capabilities. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "On the other hand, determining the entire set of principals who can access a resource becomes more expensive. Any principal might have a capability for the resource, so you must check all principals’ capability lists to tell. Simple methods for making capability lists short and manageable have not been as well developed as the Unix method of providing short ACLs. Also, the system must be able to create, store, and retrieve capabilities in a way that overcomes the forgery problem, which can be challenging. ",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "One neat aspect of capabilities is that they offer a good way to create processes with limited privileges. With access control lists, a process in",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "OPERATINGSYSTEMS[VERSION 1.10]",
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "herits the identity of its parent process, also inheriting all of the privileges of that principal. It’s hard to give the process just a subset of the parent’s privileges. Either you need to create a new principal with those limited privileges, change a bunch of access control lists, and set the new process’s identity to that new principal, or you need some extension to your access control model that doesn’t behave quite the way access control lists ordinarily do. With capabilities, it’s easy. If the parent has capabilities for $\\times , \\Upsilon ,$ and $Z ,$ , but only wants the child process to have the X and Y capabilities, when the child is created, the parent transfers X and Y, not Z. ",
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "In practice, user-visible access control mechanisms tend to use access control lists, not capabilities, for a number of reasons. However, under the covers operating systems make extensive use of capabilities. For example, in a typical Linux system, that open() call we were discussing uses ACLs for access control. However, assuming the Linux open() was successful, as long as the process keeps the file open, the ACL is not examined on subsequent reads and writes. Instead, Linux creates a data structure that amounts to a capability indicating that the process has read and write privileges for that file. This structure is attached to the process’s PCB. On each read or write operation, the OS can simply consult this data structure to determine if reading and writing are allowed, without having to find the file’s access control list. If the file is closed, this capabilitylike structure is deleted from the PCB and the process can no longer access the file without performing another open() which goes back to the ACL. Similar techniques can be used to control access to hardware devices and IPC channels, especially since UNIX-like systems treat these resources as if they were files. This combined use of ACLs and capabilities allows the system to avoid some of the problems associated with each mechanism. The cost of checking an access control list on every operation is saved because this form of capability is easy to check, being merely the presence or absence of a pointer in an operating system data structure. The cost of managing capabilities for all accessible objects is avoided because the capability is only set up after a successful ACL check. If the object is never accessed by a process, the ACL is never checked and no capability is required. Since any given process typically opens only a tiny fraction of all the files it is permitted to open, the scaling issue doesn’t usually arise. ",
+        "page_idx": 10
+    }
+]

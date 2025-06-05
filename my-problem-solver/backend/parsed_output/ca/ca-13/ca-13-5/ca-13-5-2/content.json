@@ -1,0 +1,43 @@
+[
+    {
+        "type": "text",
+        "text": "13.5.2 Memory-Mapped Addressing ",
+        "text_level": 1,
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "Let us now take a look at the in and out I/O instructions again. The executing program needs to be aware of the naming schemes for I/O ports. It is possible that different chipsets and motherboards use different addresses for the I/O ports. For example, one motherboard might assign the USB ports the I/O port address range, 0xFF80 to 0xFFC0, and another motherboard might assign the range, 0xFEA0 to 0xFFB0. Consequently, a program that runs on the first motherboard might not work on the second motherboard. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "To solve this issue, we need to add an additional layer between the I/O ports and software. Let us propose a solution similar to virtual memory. In fact, virtualization is a standard technique for solving various problems in computer architecture. Let us proceed to design a virtual layer between user programs and the I/O address space. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "Let us assume that we have a dedicated device driver in the operating system that is specific to the chipset and motherboard. It needs to be aware of the semantics of the I/O ports, and their mappings to actual devices. Now, let us consider a program (user program or OS) that wishes to access the USB ports. At the outset, it is not aware about the I/O port addresses of the USB ports. Hence, it needs to first request the relevant module in the operating system to map a memory region in its virtual address space to the relevant portion of the I/O address space. For example, if the I/O ports for the USB devices are between $0 \\mathrm { { x F } 0 0 0 }$ to 0xFFFF, then this 4 KB region in the I/O address space can be mapped to a page in the program\u2019s virtual address space. We need to add a special bit in the TLB and page table entries to indicate that this page actually maps to I/O ports. Secondly, instead of storing the address of the physical frame, we need to store the I/O port addresses. It is the role of the motherboard driver that is a part of the operating system to create this mapping. After the operating system has mapped the I/O address space to a process\u2019s virtual address space, the process can proceed with the I/O access. Note that before creating the mapping, we need to ensure that the program has sufficient privileges to access the I/O device. ",
+        "page_idx": 685
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "After the mapping has been created, the program is free to access the I/O ports. Instead of using I/O instructions such as in, and out, it uses regular load and store instructions to write to locations in its virtual address space. After such instructions reach the memory access $( M A )$ stage of the pipeline, the effective address is sent to the TLB for translation. If there is a TLB hit, then the pipeline also becomes aware of the fact that the virtual address maps to the I/O address space rather than the physical address space. Secondly, the TLB also translates the virtual address to an I/O port address. Note that at this stage it is not necessary to use the TLB, we can use another dedicated module to translate the address. In any case, the processor receives the equivalent I/O port address in the $M A$ stage. Subsequently, it creates an I/O request and dispatches the request to the I/O port. This part of the processing is exactly similar to the case of port-mapped I/O. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "Definition 156 Memory-mapped I/O is a scheme for addressing and accessing I/O devices by assigning each address in the I/O address space to a unique address in the process\u2019s virtual address space. For accessing an I/O port, the process uses regular load and store instructions. ",
+        "page_idx": 686
+    },
+    {
+        "type": "text",
+        "text": "This scheme is known as memory-mapped I/O. Its main advantage is that it uses regular load and store instructions to access I/O devices instead of dedicated I/O instructions. Secondly, the programmer need not be aware of the actual addresses of the I/O ports in the I/O address space. Since dedicated modules in the operating system, and the memory system, set up a mapping between the I/O address space and the process\u2019s virtual address space, the program can be completely oblivious of the semantics of addressing the I/O ports. ",
+        "page_idx": 686
+    }
+]

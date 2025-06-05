@@ -1,0 +1,115 @@
+2.5 The Product and Quotient and Power Rules
+
+What are the derivatives of  and  sin  and  and  and  Those are made up from the familiar pieces  and sin  , but we need new rules. Fortunately they are rules that apply to every function, so they can be established once and for all. If we know the separate derivatives of two functions  and  , then the derivatives of  and  and  and  and  are immediately available.
+
+This is a straightforward section, with those five rules to learn. It is also an important section, containing most of the working tools of differential calculus. But I am afraid that five rules and thirteen examples (which we need—the eyes glaze over with formulas alone) make a long list. At least the easiest rule comes first. When we add functions, we add their derivatives.
+
+Sum Rule
+
+EXAMPLE 1 The derivative of  is  : That is tremendously simple, but it is fundamental. The interpretation for distances may be more confusing (and more interesting) than the rule itself:
+
+Suppose a train moves with velocity 1: The distance at time  is  : On the train a professor paces back and forth (in simple harmonic motion). His distance from his seat is sin t: Then the total distance from his starting point is  , and his velocity (train speed plus walking speed) is  :
+
+If you add distances, you add velocities. Actually that example is ridiculous, because the professor’s maximum speed equals the train speed  /: He is running like mad, not pacing. Occasionally he is standing still with respect to the ground.
+
+The sum rule is a special case of a bigger rule called “linearity.” It applies when we add or subtract functions and multiply them by constants—as in  : By linearity the derivative is  : The rule works for all functions  and  : A linear combination is  , where  and  are any real numbers. Then  is
+
+The limit on the left is  : The limit on the right is  : We are allowed to take limits separately and add. The result is what we hope for:
+
+Rule of Linearity
+
+The product rule comes next. It can’t be so simple—products are not linear. The sum rule is what you would have done anyway, but products give something new. The derivative of  times  is not  times  . Example: The derivative of  is  : Don’t multiply the derivatives of  and  : (  times  is not  :) For a product of two functions, the derivative has two terms.
+
+Product Rule (the key to this section)
+
+EXAMPLE 2  times  is  : The product rule leads to  :
+
+EXAMPLE 3 In the slope of  sin  , I don’t write  but it’s there:
+
+EXAMPLE 4 If  and  then  : We get two equal terms:
+
+This confirms the “square rule”  , when  is the same as  : Similarly the slope of  is  cos  sin  (minus sign from the slope of the cosine).
+
+Question Those answers for  and  have opposite signs, so the derivative of  is zero (sum rule). How do you see that more quickly ?
+
+After those examples we prove the product rule. Figure 2.13 explains it best. The area of the big rectangle is  : The important changes in area are the two strips  and  . The corner area  is much smaller. When we divide by  , the strips give  and  : The corner gives  , which approaches zero.
+
+Notice how the sum rule is in one dimension and the product rule is in two dimensionsÑ. The rule for uvw would be in three dimensions.
+
+The extra area comes from the whole top strip plus the side strip. By algebra,  (
+
+This increase is  —top plus side. Now divide by  (or  ) and let  . The left side of equation (4) becomes the derivative of  : The right side becomes  times  —we can multiply the two limits—plus  times  : That proves the product rule—definitely useful.
+
+We could go immediately to the quotient rule for  : But start with  : The derivative of  is  (known). What is the derivative of 
+
+Reciprocal Rule
+
+The proof starts with  : The derivative of 1 is 0: Apply the product rule:
+
+It is worth checking the units—in the reciprocal rule and others. A test of dimensions is automatic in science and engineering, and a good idea in mathematics. The test ignores constants and plus or minus signs, but it prevents bad errors. If  is in dollars and  is in hours,  is in dollars per hour. Then dimensions agree:
+
+From this test, the derivative of  cannot be  :A similar test show sthat Einstein’s formula  is dimensionally possible. The theory of relativity might be correct! Both sides have the dimension of (mass)(distance)  , when mass is converted to energy.
+
+EXAMPLE 6 The derivatives of  are 
+
+Those come from the reciprocal rule with  and  and any  :
+
+The beautiful thing is that this answer  fits into the same pattern as  : Multiply by the exponent and reduce it by one.
+
+For negative and positive exponents the derivative of  is 
+
+EXAMPLE 7 The derivatives of  and  are  and 
+
+Those come directly from the reciprocal rule. In trigonometry,  is the secant of the angle  , and  isthe cosecant of  : Now wehave their derivatives:
+
+2.5 The Product and Quotient and Power Rules
+
+Those formulas are often seen in calculus. If you have a good memory they are worth storing. Like most mathematicians, I have to check them every time before using them (maybe once a year). It is really the rules that are basic, not the formulas.
+
+The next rule applies to the quotient  : That is  times  : Combining the product rule and reciprocal rule gives something new and important:
+
+Quotient Rule
+
+You must memorize that last formula. The  is familiar. The rest is new, but not very new. If  the result is  (of course). For  we have the reciprocal rule. Figure  shows thedifference  : The denominator  is responsible for  :
+
+EXAMPLE 8 (only practice) If  (which is  ) the quotient rule gives 
+
+EXAMPLE 9 (important) For  and  , the quotient is sin  tan  : The derivative of tan1  is  . Use the quotient rule and  W
+
+Again to memorize:  : At  , this slope is 1. The graphs of sin  and  and tan  all start with this slope (then they separate). At  the sine curve is flat .cos  / and the tangent curve is vertical .  /:
+
+The slope generally blows up faster than the function. We divide by cos  , once for the tangent and twice for its slope. The slope of  is  : The slope is more sensitive than the function, because of the square in the denominator.
+
+EXAMPLE 10
+
+That one I hesitate to touch at  : Formally it becomes  : In reality it is more like  , and the true derivative is zero. Figure 2.10 showed graphically that  is flat at the center point. The function is even (symmetric across the  axis) so its derivative can only be zero.
+
+This section is full of rules, and I hope you will allow one more. It goes beyond  to  : A power of  changes to a power of  —as in  or  or  : The derivative contains  (copying  ) ,but there is an extra factor  : Watch that factor in  and  and  :
+
+Power Rule
+
+For  this reduces to  : For  we get the square rule  : Next comes  : The best approach is to use mathematical induction,
+
+2 Derivatives
+
+which goes from each  to the next power  by the product rule:
+
+That is exactly equation (12) for the power  : We get all positive powers this way, going up from  —then the negative powers come from the reciprocal rule.
+
+Figure 2.15 shows the power rule for  : The cube makes the point best. The three thin slabs are  by  by  : The change in volume is essentially  : From multiplying out  , the exact change in volume is  —which also accounts for three narrow boxes and a midget cube in the corner. This is the binomial formula in a picture.
+
+EXAMPLE 11  cos  : The extra factor cos  is  :
+
+Our last step finally escapes from a very undesirable restriction—that  must be a whole number. We want to allow fractional powers  , and keep the same formula. The derivative of  is still  .
+
+To deal with square roots I can write  : Its derivative is  : Therefore  is  , which fits the formula when  : Now try  :
+
+Fractional powers Write  as  : Take derivatives, assuming they exist:
+
+EXAMPLE 12 The slope of  is  : The slope is infinite at  and zero at  : But the curve in Figure 2.16 keeps climbing. It doesn’t stay below an “asymptote.”
+
+EXAMPLE 13 The slope of  is  : The slope is zero at  and infinite at  : The graph climbs faster than a line and slower than a parabola (  is between 1 and 2). Its slope follows the cube root curve (times  ).
+
+WE STOP NOW! I am sorry there were so ma1ny rule1s. A c1omputer can memorize them all, but it doesn’t know what they mean and you do. Together with the chain rule that dominates Chapter 4; they achieve virtually all the derivatives ever computed by mankind. We list them in one place for convenien1ce.
+
+The power 1rule applies when  is n1egative, or a fraction, o1r any real number. The derivative of  is  , accordingto Chapter 6: The derivative of  is : And the derivatives of all six trigonometric functions are now established:

@@ -1,0 +1,163 @@
+[
+    {
+        "type": "text",
+        "text": "4.4.1 Data Processing Instructions ",
+        "text_level": 1,
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "The type field is equal to 00 for data processing instructions. The rest of the 26 bits need to contain the instruction type, special conditions, and registers. Figure 4.5 shows the format for ",
+        "page_idx": 165
+    },
+    {
+        "type": "text",
+        "text": "data processing instructions. ",
+        "page_idx": 166
+    },
+    {
+        "type": "image",
+        "img_path": "images/4c1de7407e5c125956fe1c15ae72ea57068e139c0306803533ae35e58b90bdfb.jpg",
+        "img_caption": [
+            "Figure 4.5: Format of the data processing instruction "
+        ],
+        "img_footnote": [],
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "The $2 6 ^ { t h }$ bit is called the I (immediate) bit. It is similar to the $I$ bit in SimpleRisc . If it is set to 1, then the second operand is an immediate, otherwise, it is a register. Since ARM has 16 data processing instructions, we require 4 bits to represent them. This information is saved in bits 22-25. The $2 1 ^ { s t }$ bit saves the S bit. If it is turned on, then the instruction will set the CPSR (see Section 4.2.4). ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "The rest of the 20 bits save the input and output operands. Since ARM has 16 registers, we require 4 bits to encode a register. Bits 17-20 save the identifier of the first input operand $( r s )$ , which needs to be a register. Bits 13-16 save the identifier of the destination register $( r d )$ . ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Bits 1-12 are used to save the immediate value or the shifter operand. Let us see how to make the best use of these 12 bits. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Encoding Immediate Values ",
+        "text_level": 1,
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "ARM supports 32-bit immediate values. However, we observe that we have only 12 bits to encode them. Hence, we cannot possibly encode all the $2 ^ { 3 2 }$ possible values. We need to choose a meaningful subset of them. The idea is to encode a subset of 32-bit values using 12 bits. The hardware is expected to decode these 12 bits, and expand them to 32 bits while processing the instruction. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Now, 12 bits is a rather unwieldy value. Neither is it 1 byte nor is it 2 bytes. Hence, it was necessary to come up with a very ingenious solution. The idea is to split the 12 bits into two parts \u2013 a 4-bit constant $( r o t )$ , and an 8-bit payload (payload) (see Figure 4.6). ",
+        "page_idx": 166
+    },
+    {
+        "type": "image",
+        "img_path": "images/6901dd23d8ead11aa2c8d0a1ba400de376ffe5fb9b5cac26d8bd2fb83b0c3fa3.jpg",
+        "img_caption": [
+            "Figure 4.6: Format of the immediate "
+        ],
+        "img_footnote": [],
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "Let the actual number that is encoded in these 12 bits be $n$ . We have: ",
+        "page_idx": 166
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\boldsymbol { n } = p a y l o a d ~ r o r ~ ( 2 \\times r o t )\n$$",
+        "text_format": "latex",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "The actual number $n$ is obtained by right rotating the payload by 2 times the value in the rot field. Let us now try to understand the logic of doing so. ",
+        "page_idx": 166
+    },
+    {
+        "type": "text",
+        "text": "The final number $n$ is a 32-bit value. A naive solution would have been to use the 12 bits to specify the least significant bits of $n$ . The higher order bits could be 0. However, programmers tend to access data and memory in terms of bytes. Hence, 1.5 bytes is of no use to us. A better solution is to have a 1 byte payload and place it in any location in the 32-bit field. The rest of the 4 bits are used for this purpose. They can encode a number from 0 to 15. The ARM processor doubles this value to consider all even numbers between 0 and 30. It right rotates the payload by this amount. The advantage of doing so is that it is possible to encode a wider set of numbers. For all of these numbers, there are 8 bits that correspond to the payload, and the rest of the 24 bits are all zeros. The rot bits just determine which 8 bits in a 32-bit field are occupied by the payload. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Let us consider a set of examples. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Example 51   \nEncode the decimal number 42.   \nAnswer: 42 in the hex format is 0x2A, or alternatively 0x00 00 00 2A. There is no right rotation involved. Hence, the immediate field is 0x02A. Example 52   \nEncode the number 0x2A 00 00 00.   \nAnswer: This number is obtained by right rotating 0x2A by 8 places. Note that we need to right rotate by 4 places to move a hex digit by one position. We need to now divide 8 by 2, to get 4. Thus, the encoded format for this number is 0x42A. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Example 53 Encode 0x 00 00 2A 00. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Answer: The first step is to count the number of right rotations. We observe that the number 0x2A has been rotated to the right by 24 positions. We now proceed to divide 24 by 2 to obtain 12. Thus, the encoded format of the number is 0xC2A. ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "Example 54   \nEncode the number 0x 00 02 DC 00 as an ARM immediate.   \nAnswer: The first part is to figure out the payload. The payload is \u2013 10 1101 11 \u2013 in binary. This is equal to 0xB7. The next step is to figure out the rotation. Let us simplify the task by observing that right rotating by n places is the same as left rotating by $3 2 - n$ places. Let us concentrate on 0xC00. This is equal to 110000000000 in binary. The rightmost 1 is ",
+        "page_idx": 167
+    },
+    {
+        "type": "text",
+        "text": "now at the $1 1 ^ { t h }$ position. It has moved 10 places from the $\\boldsymbol { { \\mathit { 1 } } ^ { s t } }$ position. Thus, the number has been rotated to the left by 10 places. It has been rotated to the right by 22 places. $2 2 / 2 = 1 1 ( 0 x B )$ . Hence, the encoded number is 0xBB7. ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "The reader needs to understand that this encoding is supposed to be done by the assembler or the compiler. The user simply needs to use those values in her assembly code that can be encoded as an ARM immediate. For example, a number like -1 cannot be encoded as an ARM immediate. It is 0xFF FF FF FF. The payload is greater than 8 bits. Ideally, an instruction of the form: ad $\\iota d \\ r 1 , r 1 , \\# - 1$ is wrong. Some assemblers will try to fix the problem by changing the instruction to $s u b \\ r 1 , r 1 , \\# 1$ . However, all assemblers are not smart enough to figure this out. If the user wishes to use a value that cannot be encoded in ARM\u2019s 12-bit format, then the user (or the program loader) needs to load it byte by byte in a register, and use the register as an operand. ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "Encoding the Shifter Operand ",
+        "text_level": 1,
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "We have 12 bits to encode the shifter operand. Figure 4.7 shows the scheme for encoding it. A shifter operand is of the form: rt $( \\mathrm { l s l } | \\mathrm { l s r } | \\mathrm { a s r } | \\mathrm { r o r } )$ (shift reg/ shift imm.) ",
+        "page_idx": 168
+    },
+    {
+        "type": "image",
+        "img_path": "images/74b8df4d3284125477b85664de98c98487ecab369e37f3f59d19c0540c46c4cf.jpg",
+        "img_caption": [
+            "Figure 4.7: Format of the shifter operand "
+        ],
+        "img_footnote": [],
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "The first four bits (1-4) encode the id of the register $^ { r t }$ . The next bit determines the nature of the shift argument (immediate or register). If it is 0 then the argument is an immediate, otherwise it is a register. Bits 6 and 7 specify the type of the shift (also see Figure 4.7(c)). For example, the type can be lsl (logical shift left). It can also be lsr (logic shift right), asr (arithmetic shift right), or ror (right rotate). If we are shifting by an immediate value, then bits 8-12 specify a 32-bit value called a shift immediate. Otherwise, if we are shifting by a value in a register, then bits 9-12 specify the id of the register. ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "Let us consider an instruction of the form: add $r 3 , r 1 , r 2$ . In this case, the second operand is $r 2$ . We can think of $r 2$ as actually a shifter operand where it is being left shifted by 0. Hence, to encode we need to set the shift type to lsl (00), set the argument to immediate (0), and set the shift immediate to 00000. We thus see that specifying a register as the second argument is easy. It is a special case of a shifter operand, and we just need to set bits 5-12 as 0. ",
+        "page_idx": 168
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 169
+    }
+]

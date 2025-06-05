@@ -1,0 +1,19 @@
+8.2.5 Wallace Tree Multiplier
+
+Before, we introduce the Wallace tree multiplier, let us introduce the carry save adder. A carry save adder adds three numbers,  ,  ,  , and produces two numbers  , and  such that:  (see Figure 8.13). We will extensively use carry save adders in constructing the Wallace tree multiplier that runs in  time.
+
+Carry Save Adder
+
+Let us consider the problem of adding three bits  ,  , and  . The sum can range from  to 3. We can express all numbers between 0-3 in the form  , where  . Using this relationship, we can express the sum of three numbers as the sum of two numbers as follows:
+
+Thus, we have  . The question is how to compute the bits  , and  such that  . This is very simple. We note that if we add  ,  , and  , we get a two-bit result, where  is the sum bit and  is the carry bit. The result of the addition can be written as  . We thus have two equations as follows:
+
+If we set  to the carry bit and  to the sum bit, then we are done! Now,  is equal to  . We can thus obtain  by concatenating all the  bits. Similarly,  is equal to  .  can be computed by concatenating all the  bits and shifting the number to the left by 1 position.
+
+The hardware complexity of a carry save adder is not much. We need  full adders to compute all the sum and carry bits. Then, we need to route the wires appropriately to produce  and  . The asymptotic time complexity of a carry save adder is  (constant time). The key takeaway point is that we can replace a sum of three numbers with a sum of two numbers.  .
+
+Addition of  Numbers with Carry Save Adders
+
+We can use carry save adders to add  partial sums (see Figure 8.14). In the first level, we can use a set of  carry save adders to reduce the sum of  partial sums to a sum of  numbers in the second level. If we use  carry save adders in the second level, then we will have  numbers in the third level, and so on. In every level the set of numbers gets reduced by a factor of  . Thus, after  levels, there will only be two numbers left. Note that  is equivalent to  . Since each stage takes  time because all the carry save adders are working in parallel, the total time taken up till now is  .
+
+In the last stage, when we have just two numbers left, we cannot use a carry save adder anymore. We can use a regular carry lookahead adder to add the two numbers. This will take  time. Hence, the total time taken by the Wallace tree multiplier is   . In terms of asymptotic time complexity, this is the fastest possible multiplier. It is possible to reduce the number of full adders by slightly modifying the design. This is known as the Dadda multiplier. The reader can refer to [Wikipedia, ] for further information on this topic.

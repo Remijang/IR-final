@@ -1,0 +1,69 @@
+[
+    {
+        "type": "text",
+        "text": "3.3.4 Arithmetic Instructions ",
+        "text_level": 1,
+        "page_idx": 110
+    },
+    {
+        "type": "text",
+        "text": "SimpleRisc has 6 arithmetic instructions \u2013 add, sub, mul, div, mod, and cmp. The connotations of add, sub, and mul are self explanatory (also see Table 3.3). For arithmetic instructions, we assume that the first operand in the list of operands is the destination register. The second operand is the first source operand, and the third operand is the second source operand. The first and second operands need to be registers, whereas the last operand (second source register) can be an immediate value. ",
+        "page_idx": 110
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 111
+    },
+    {
+        "type": "table",
+        "img_path": "images/ebca8adcea33689a8fdc30f8afeca68b55228cd0132ca85fd30a0bfcee0c29b8.jpg",
+        "table_caption": [
+            "Table 3.3: Semantics of arithmetic instructions in SimpleRisc "
+        ],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>Semantics</td><td>Example</td><td>Explanation</td></tr><tr><td rowspan=\"2\">add reg, reg, (reg/imm)</td><td>add r1, r2, r3</td><td>r1\u2190r2+r3</td></tr><tr><td>add r1, r2, 10</td><td>r1\u2190r2+10</td></tr><tr><td>sub reg,reg, (reg/imm)</td><td>sub rl,r2, r3</td><td>rl\u2190r2-r3</td></tr><tr><td>mul reg,reg, (reg/imm)</td><td>mul rl, r2, r3</td><td>r1\u2190r2\u00d7r3</td></tr><tr><td>div reg, reg, (reg/imm)</td><td>div rl, r2, r3</td><td>r1\u2190 r2/r3 (quotient)</td></tr><tr><td>mod reg,reg, (reg/imm)</td><td>mod r1,r2,r3</td><td>r1 \u2190 r2 mod r3 (remainder)</td></tr><tr><td>cmp reg, (reg/imm)</td><td>cmp rl, r2</td><td>set flags</td></tr></table></body></html>\n\n",
+        "page_idx": 111
+    },
+    {
+        "type": "text",
+        "text": "Example 26   \nWrite assembly code in SimpleRisc to compute: ${ \\mathit { 3 1 } } ^ { \\mathrm { ~ * ~ } } { \\mathit { 2 9 } } - { \\mathit { 5 0 } } $ , and save the result in $r 4$ . Answer: ",
+        "page_idx": 111
+    },
+    {
+        "type": "table",
+        "img_path": "images/1f691a7967840e38131bf68583dd66fb61618e77862556245f9a2c3566ddf064.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td></td><td>SimpleRisc</td></tr><tr><td>mov r1\uff0c31</td><td></td></tr><tr><td></td><td></td></tr><tr><td>mov r2\uff0c29</td><td></td></tr><tr><td>mul r3\uff0cr1\uff0cr2</td><td></td></tr><tr><td></td><td></td></tr><tr><td>sub r4\uff0cr3\uff0c50</td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 111
+    },
+    {
+        "type": "text",
+        "text": "The div instruction divides the first source operand by the second source operand, computes the quotient, and saves it in the destination register. For example, it will compute $3 0 / 7$ to be 4. The mod instruction computes the remainder of a division. For example, it will compute 30 mod 7 as 2. ",
+        "page_idx": 111
+    },
+    {
+        "type": "text",
+        "text": "Example 27   \nWrite assembly code in SimpleRisc to compute: 31 / 29 - 50, and save the result in $r 4$ . Answer: ",
+        "page_idx": 111
+    },
+    {
+        "type": "table",
+        "img_path": "images/e9e3965324323ad9faca938326a624607283e04ef3001a032b8553be1812f55c.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "\n\n<html><body><table><tr><td>SimpleRisc</td><td></td></tr><tr><td>mov r1\uff0c31</td><td></td></tr><tr><td>mov r2\uff0c29</td><td></td></tr><tr><td></td><td></td></tr><tr><td>div r3\uff0cr1\uff0cr2</td><td></td></tr><tr><td>sub r4\uff0cr3\uff0c50</td><td></td></tr><tr><td></td><td></td></tr></table></body></html>\n\n",
+        "page_idx": 111
+    },
+    {
+        "type": "text",
+        "text": "The cmp instruction is a 2-address instruction that takes two source operands. The first source operand needs to be a register, and the second one can be an immediate or a register. It compares both the operands by subtracting the second from the first. If the operands are equal, or in other words the result of the subtraction is zero, then it sets $f l a g s . E$ to 1. Otherwise, $f l a g s . E$ is set to 0. If the first operand is greater than the second operand, then the result of the subtraction will be positive. In this case, the cmp instruction sets $f l a g s . G T$ to 1, otherwise it sets it to 0. We will require these flags when we implement branch instructions. ",
+        "page_idx": 111
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 112
+    }
+]

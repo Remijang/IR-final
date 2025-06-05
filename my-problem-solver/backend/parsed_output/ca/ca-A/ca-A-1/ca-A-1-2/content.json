@@ -1,0 +1,74 @@
+[
+    {
+        "type": "text",
+        "text": "A.1.2 ARM Cortex-A8 ",
+        "text_level": 1,
+        "page_idx": 736
+    },
+    {
+        "type": "text",
+        "text": "As compared to the Cortex-M3, which is an embedded processor, ARM $\\textsuperscript { \\textregistered }$ Cortex $\\textsuperscript { \\textregistered }$ -A8 was designed to be a full-fledged processor that can run on sophisticated smartphones and tablet processors. Here, $A$ stands for application, and ARM\u2019s intent was to use this processor to run regular applications on mobile devices. Secondly, these processors were designed to support virtual memory, and also contained dedicated floating point and SIMD units. ",
+        "page_idx": 736
+    },
+    {
+        "type": "text",
+        "text": "Overview of the Cortex-A8 ",
+        "text_level": 1,
+        "page_idx": 736
+    },
+    {
+        "type": "text",
+        "text": "The defining feature of the pipeline of the Cortex-A8 core is that it is a dual issue superscalar processor. However, it is not a full blown out-of-order processor. The issue logic is inorder. The Cortex-A8 has a 13-stage integer pipeline with sophisticated branch prediction logic. Since it uses a deep pipeline, it is possible to clock it at a higher frequency than other ARM processors that have shallower pipelines. The Cortex-A8 core is designed to be clocked between 500 MHz and 1GHz, which is a fairly fast clock speed in the embedded domain. ",
+        "page_idx": 736
+    },
+    {
+        "type": "text",
+        "text": "Along with the integer pipeline, the Cortex-A8 contains a dedicated floating point and SIMD unit. The floating point unit implements ARM\u2019s VFP (vector floating point) ISA extension, and the SIMD unit implements the ARM $\\textsuperscript { \\textregistered }$ NEON $\\textsuperscript { \\textregistered }$ instruction set. This unit is also pipelined and has 10 stages. Moreover, the ARM Cortex-A8 processor has a separate instruction and data cache, which can be optionally connected to a large shared L2 cache. ",
+        "page_idx": 736
+    },
+    {
+        "type": "image",
+        "img_path": "images/e48788313605606b98b2e8ac74f316d137b09df94afb311cd9d0eaa6d3db8360.jpg",
+        "img_caption": [
+            "Figure A.3: The pipeline of the ARM Cortex-A8 processor , source [arm, a]. Reproduced with permission from ARM Limited. Copyright $\\circledcirc$ ARM Limited (or its affiliates). "
+        ],
+        "img_footnote": [],
+        "page_idx": 737
+    },
+    {
+        "type": "text",
+        "text": "Design of the Pipeline ",
+        "text_level": 1,
+        "page_idx": 737
+    },
+    {
+        "type": "text",
+        "text": "Figure A.3 shows the design of the pipeline of the ARM Cortex-A8 processor. The fetch unit is pipelined across two stages. Its primary purpose is to fetch an instruction, and update the PC. Additionally, it also has a built-in instruction prefetcher, ITLB (instruction TLB), and branch predictor. The advanced features of the branch predictors of Cortex-A8 and Cortex A-15 are discussed in Section A.1.3. The instructions subsequently pass to the decode unit. ",
+        "page_idx": 737
+    },
+    {
+        "type": "text",
+        "text": "The decode unit is pipelined across 5 stages. The decode unit is more complicated in the Cortex-A8 processor as compared to Cortex-M3. This is because it has the additional responsibility of checking the dependencies across instructions, and issuing two instructions together. The forwarding, stall, and interlock logic is thus much more complicated. Let us number the two instruction issue slots 0 and 1. If the decode stage finds two instructions that do not have any inter-dependencies, then it fills both the issue slots with instructions, and sends them to the execution unit. Otherwise, the decode stage just fills one issue slot. ",
+        "page_idx": 737
+    },
+    {
+        "type": "text",
+        "text": "The execution unit is pipelined across 6 stages, and it contains 4 separate pipelines. It has two ALU pipelines that can be used by both the instructions. It has a multiply pipeline that can be used by the instruction issued in slot 0 only. Lastly, it has a load/store pipeline that can again be used by instructions issued in both the issue slots. ",
+        "page_idx": 737
+    },
+    {
+        "type": "text",
+        "text": "NEON and VFP instructions are sent to the NEON/VFP unit. It takes three cycles to decode and schedule the NEON/VFP instructions. Subsequently, the NEON/VFP unit fetches the operands from the NEON register file that contains thirty two 64-bit registers. NEON instructions can also view the register file as sixteen 128-bit registers. The NEON/VFP unit has six 6-stage pipelines for arithmetic operations, and it has one 6-stage pipeline for load/store operations. As discussed in Section 12.5.2, loading vector data is a very performance critical operation in SIMD processors. Hence, ARM has a dedicated load queue in the NEON unit for populating the NEON register file by loading data from the L1 cache. For storing data, the NEON unit writes data directly back to the L1 cache. ",
+        "page_idx": 737
+    },
+    {
+        "type": "text",
+        "text": "",
+        "page_idx": 738
+    },
+    {
+        "type": "text",
+        "text": "Each L1 cache (instruction/data) has a 64 byte block size, has an associativity of 4, and can either be 16 KB of 32 KB. Secondly, each L1 cache has two ports, and can provide 4 words per cycle for NEON and floating point operations. The point to note here is that the NEON/VFP unit and the integer pipelines share the L1 data cache. The L1 caches are optionally connected to a large L2 cache. It has a block size of 64 bytes, is 8-way set associative, and can be as large as 1 MB. The L2 cache is split into multiple banks. We can look up two tags at the same time, and the data array accesses proceed in parallel. ",
+        "page_idx": 738
+    }
+]

@@ -1,0 +1,65 @@
+8.1.5 Carry Lookahead Adder
+
+We have improved the time complexity from  for a ripple carry adder to  for a carry select adder. The question is, “Can we do better?” In this section, we shall present the carry lookahead adder that can perform addition in  time.  has been proved as the theoretical lower bound for adding two  -bit numbers. Note that the log operation in this book typically has a base equal to 2, unless explicitly mentioned otherwise. Secondly, since logarithms to different bases differ by constant multiplicative factors, the base is immaterial in the big-O notation.
+
+Generate and Propagate Functions
+
+Before introducing the adder, we need to introduce a little bit of theory and terminology. Let us again consider the addition of two numbers –  and  – represented as  and  , respectively. Let us consider a bit pair –  and  . If it is equal to (0,0), then irrespective of the carry in, the carry out is 0. In this case, the carry is absorbed.
+
+However, if the bit pair is equal to (0,1) or (1,0) then the value of the carry out is equal to the value of the carry in. If the carry in is  , then the sum is 1, and the carry out is 0. If the carry in is 1, then the sum is 0, and the carry out is 1. In this case, the carry is propagated.
+
+Lastly, if the bit pair is equal to (1,1), then the carry out is always equal to 1, irrespective of the carry in. In this case, a carry is generated.
+
+We can thus define a  and propagate  function as follows:
+
+The generate function captures the fact that both the bits are 1. The propagate function captures the fact that only one of the bits is 1. We can now compute the carry out  in terms of the carry in  ,  , and  . Note that by our case by case analysis, we can conclude that the carry out is equal to  , only if a carry is either generated, or it is propagated. Thus, we have:
+
+Example 123
+
+ ,  . Let the input carry be  . Compute  ,  and  .
+
+Answer:
+
+Let us now try to generalize the notion of generate and propagate functions to multiple bits. Let us consider a two-bit system that has an input carry, and an output carry. The bit pairs are numbered 1 and 2 (resp.), where 2 represents the most significant bit. Let  represent the output carry obtained after adding the  bit pair. Likewise,  is the input carry for the  bit pair. The output carry of the two-bit system is thus equal to  . We have:
+
+Similarly, for a 3-bit system, we have:
+
+For a 4-bit system, we have:
+
+Let us now try to derive a pattern, in these results (see Table 8.3).
+
+We observe that for a system of  bits, it is possible to define a generate function  and a propagate function  . If we are able to somehow precompute these functions, then we can generate  from  in a single step. However, as we can see from the example of the 4-bit system, the functions are fairly difficult to compute for large values of  . Let us now derive an interesting property of the generate and propagate functions.
+
+Let us consider a sequence of  bits. We divide it into two parts  and  . Let the generate and propagate functions for both the parts be  and  , respectively. Furthermore, let the generate and propagate functions for the entire block be  and  . We wish to find a relationship between the generate and propagate functions for the whole block with  bits and the functions for the sub blocks.
+
+Let the carry out and carry in of the  -bit block be  and  , respectively. Let the carry between the two sub-blocks be  . See Figure 8.7. We have:
+
+Thus, for a block of  bits, we can easily compute  and  from the corresponding functions of its sub blocks. This is a very powerful property and is the basis of the carry lookahead adder.
+
+Carry Lookahead Adder – Stage I
+
+The carry lookahead adder’s operation is divided into two stages. In the first stage, we compute the generate and propagate functions for different subsequences of bits. In the next stage, we use these functions to generate the result.
+
+The diagram for the first stage is shown in Figure 8.8. Like the carry select adder, we divide bit pairs into blocks. In this diagram, we have considered a block size equal to 2. In the first level, we compute the generate and propagate functions for each block. We build a tree of (G,P) circuits(blocks) as follows. Each (G,P) block in level  takes as input the generate and propagate functions of two blocks in level  . Thus, at each level the number of (G,P) blocks decreases by a factor of 2. For example, the first (G,P) block in level 1 processes the bit pairs  . Its parent processes the bit pairs  , and so on. The ranges are shown in Figure 8.8. We create a tree of (G,P) blocks in this fashion.
+
+For an  -bit input, there are  levels. In each level, we are doing a constant amount of work since each (G,P) block is only processing the inputs from two other blocks. Hence, the time complexity of this stage is equal to  .
+
+Carry Lookahead Adder – Stage II
+
+In this stage, we use the information generated in Stage I to compute the final sum bits, and the carry out. The block diagram for the second stage is shown in Figure 8.9.
+
+Let us first focus at the rightmost (G,P) blocks in each level. The ranges for each of these blocks start at 1. They take the input carry,  , as input, and then calculate the output carry for the range of bit pairs that they represent as  . When we are adding two numbers, the input carry at the first bit is typically 0. However, some special instructions (  in ARM) can consider a non-zero value of  also.
+
+Each (G,P) block with a range   ), is connected to all (G,P) blocks that have a range of the form  . The output carry of the block is equal to the input carry of those blocks. To avoid excessive clutter in the diagram (Figure 8.9), we show the connections for only the (G,P) block with range (16-1) using solid lines. Each block is connected to the block to its left in the same level and to one (G,P) block in every lower level.
+
+The arrangement of (G,P) blocks represents a tree like computation where the correct carry values propagate from different levels to the leaves. The leaves at level 0, contain a set of 2-bit ripple carry(RC) adders that compute the result bits by considering the correct value of the input carry. We show an example in Figure 8.9 of the correct carry in value propagating from the block with range (16-1) to the 2-bit adder representing the bits 31 and 32. The path is shown using dotted lines.
+
+Similarly, carry values propagate to every single ripple carry adder at the zeroth level. The operation completes once all the result bits and the output carry have been computed.
+
+The time complexity of this stage is also  because there are  levels in the diagram and there is a constant amount of work done per level. This work comprises computing  and propagating it to (G,P) blocks at lower levels.
+
+Hence, the total time complexity of the carry lookahead adder is 
+
+Way Point 5 Time complexities of different adders:
+
+• Ripple Carry Adder:  Carry Select Adder:  • Carry Lookahead Adder:
