@@ -109,16 +109,22 @@ def get_book_content(book_name, chapter, section):
         return data
 
 
-def get_section_name(book_name, section):
+def get_section_name(book_name, section, chapter=None):
     toc_path = f"parsed_output/{book_name}/toc.csv"
     print(f"Retrieving section name for section: {section} from {toc_path}")
     if not os.path.exists(toc_path):
         return "Unknown Section"
-    section = section.replace("-", ".")
-    with open(toc_path, "r") as f:
-        for line in f:
-            if line.startswith(section + ","):
-                return line.split(",")[1].strip().replace('"', "")
+    if section:
+        section = section.replace("-", ".")
+        with open(toc_path, "r") as f:
+            for line in f:
+                if line.startswith(section + ","):
+                    return line.split(",")[1].strip().replace('"', "")
+    elif chapter:
+        with open(toc_path, "r") as f:
+            for line in f:
+                if line.startswith(chapter + ","):
+                    return line.split(",")[1].strip().replace('"', "")
     return "Unknown Section"
 
 
@@ -260,8 +266,8 @@ def similar_problems():
             {
                 "content": doc["problem"],
                 "filename": f"[{BOOK_NAME_MAP[doc['textbook']]}] "
-                + f"Chapter {doc['section']} - "
-                + get_section_name(doc["textbook"], doc["section"]),
+                + f"Chapter {doc['section'] if len(doc['section']) > 0 else doc['chapter']} - "
+                + get_section_name(doc["textbook"], doc["section"], doc["chapter"]),
             }
             for doc in doc_score_pairs
         ]
