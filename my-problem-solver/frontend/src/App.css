@@ -477,7 +477,80 @@ h1 {
   background-color: #cc0000;
 }
 
-/* Adjust problem form layout if needed */
-.problem-form {
-  /* display: flex; flex-direction: column; gap: 15px; is already there */
+.input-mode-selector {
+  display: flex;
+  gap: 0; /* Remove gap, use borders for separation if needed */
+  margin-bottom: 20px; /* Increased margin */
+  border-radius: 6px; /* Rounded corners for the group */
+  overflow: hidden; /* To make border-radius clip children */
+  border: 1px solid #d1d5db; /* Light grey border for the group - Tailwind's gray-300 */
+  width: fit-content; /* Make the container only as wide as its buttons */
+}
+
+.input-mode-selector button {
+  padding: 10px 18px; /* Slightly more padding */
+  border: none; /* Remove individual borders */
+  /* Add a right border to all but the last child for separation */
+  border-right: 1px solid #d1d5db;
+  background-color: #f9fafb; /* Very light grey, almost white - Tailwind's gray-50 */
+  color: #374151; /* Darker grey text - Tailwind's gray-700 */
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500; /* Medium font weight */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.input-mode-selector button:last-child {
+  border-right: none; /* No right border for the last button */
+}
+
+.input-mode-selector button:hover:not(:disabled):not(.active) {
+  background-color: #f3f4f6; /* Slightly darker on hover - Tailwind's gray-100 */
+}
+
+.input-mode-selector button.active {
+  background-color: #3b82f6; /* A nice blue - Tailwind's blue-500 */
+  color: white;
+  font-weight: 600; /* Slightly bolder for active */
+}
+
+.input-mode-selector button:disabled {
+  background-color: #f3f4f6; /* Keep it light but distinct */
+  color: #9ca3af; /* Lighter text for disabled - Tailwind's gray-400 */
+  cursor: not-allowed;
+  /* opacity: 0.7; Remove opacity, use color changes */
+}
+
+
+.file-input-area { /* Container for image input elements when mode is 'image' */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Center content like preview and buttons */
+}
+
+/* .file-input-container, .file-upload-label, .image-preview-container,
+   .image-preview, .clear-image-button styles can remain as before */
+
+.ocr-button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green for go */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.ocr-button:hover:not(:disabled) {
+  background-color: #218838;
+}
+.ocr-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ocr-error-message {
+  width: 100%; /* Take full width within its container */
+  text-align: center;
 }

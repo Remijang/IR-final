@@ -8,6 +8,7 @@ from flask_cors import CORS  # Import CORS
 from werkzeug.utils import secure_filename
 
 from utils import load_all_documents, load_all_embeddings, get_almost_top15
+from ocr import image_to_text  # Import the OCR function from ocr.py
 
 
 app = Flask(__name__)
@@ -239,7 +240,9 @@ def similar_problems():
     top15_docs = get_almost_top15(doc_score_pairs)
     # print("Top 15 documents retrieved for similar problems:")
     # print(top15_docs)
-    top15_doc_embeddings = model.encode(top15_docs)
+    # print(type(top15_docs[0]))
+    top15_doc_content = [doc['problem'] for doc in top15_docs]
+    top15_doc_embeddings = model.encode(top15_doc_content)
 
     # Encode the query
     query_embedding = model.encode(problem_query)
@@ -267,6 +270,10 @@ def similar_problems():
     doc_score_pairs = sorted(doc_score_pairs, key=lambda x: x["score"], reverse=True)
     # Get top 5 results
     doc_score_pairs = doc_score_pairs[:5]
+    # print scores
+    # print("Top 15 similar problems retrieved:")
+    # print([doc['problem'][:40] for doc in doc_score_pairs])
+    # print([doc['score'] for doc in doc_score_pairs])
 
     results = {
         "documents": [
@@ -282,6 +289,38 @@ def similar_problems():
     # print(results)
 
     return jsonify(results), 200
+
+
+@app.route("/api/ocr-image", methods=["POST"])
+def ocr_image():
+    """
+    Endpoint to handle OCR processing of an uploaded image.
+    This endpoint is used to extract text from an image file.
+    """
+    if 'image' not in request.files:
+        return jsonify({"error": "No image file part in the request"}), 400
+    
+    image_file = request.files['image']
+    if image_file.filename == '':
+        return jsonify({"error": "No image selected for uploading"}), 400
+
+    print(image_file.filename)
+    print(image_file.content_type)
+    print(type(image_file))
+    print(image_file)
+
+    image_filename = secure_filename(image_file.filename)
+    image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
+    image_file.save(image_path)  # Save the uploaded image file
+
+    try:
+        problem_query = image_to_text(image_path)
+    except Exception as e:
+        print(f"Error processing image: {e}")
+        return jsonify({"error": "Failed to process image"}), 500
+    if not problem_query:
+        return jsonify({"error": "No text extracted from image"}), 400
+    return jsonify({"ocr_text": problem_query}), 200
 
 
 @app.route("/api/retrieve-documents-by-image", methods=["POST"])

@@ -24,6 +24,15 @@ def image_to_text(image_path):
     ds = read_local_images(image_path)[0]
 
     result = ds.apply(doc_analyze, ocr=True, formula_enable=False, table_enable=False).pipe_ocr_mode(image_writer).get_markdown(image_dir)
+    
+    # remove all image tags with the image path in the markdown
+    start = result.find("![")
+    while start != -1:
+        end = result.find(")", start)
+        if end == -1:
+            break
+        result = result[:start] + result[end + 1:]
+        start = result.find("![")
 
     # force recursively remove md directory
     os.system(f"rm -rf {local_md_dir}")

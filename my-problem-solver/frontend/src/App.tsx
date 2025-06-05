@@ -24,6 +24,9 @@ interface HistoryItem {
   timestamp: Date;
 }
 
+type InputMode = 'text' | 'image';
+
+
 
 // Helper function to extract title from Markdown (simple version)
 // const extractMarkdownTitle = (markdown: string): string => {
@@ -36,9 +39,13 @@ interface HistoryItem {
 // };
 
 function App() {
+  const [inputMode, setInputMode] = useState<InputMode>('text'); // Default
   const [problem, setProblem] = useState<string>('');
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null); // For image preview
+  const [isOcrLoading, setIsOcrLoading] = useState<boolean>(false); // For OCR processing
+  const [ocrError, setOcrError] = useState<string | null>(null);
+
 
   const [documents, setDocuments] = useState<RetrievedDocument[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -59,7 +66,7 @@ function App() {
     event.preventDefault();
     const currentProblemText = problem.trim();
 
-    if (!problem.trim() && !selectedImage) {
+    if (!currentProblemText) {
       setError('Please enter a problem.');
       setDocuments([]);
       setHasSearched(false);
@@ -79,28 +86,9 @@ function App() {
     setSelectedRelatedProblemIndex(null);
     setRelatedProblemsError(null);
 
-    let requestBody: BodyInit;
-    let requestHeaders: HeadersInit = {};
-    let endpoint: string;
-    let effectiveQueryForHistory = currentProblemText;
-
-    if (selectedImage) {
-      // Image query (potentially with text) - use FormData
-      const formData = new FormData();
-      formData.append('image', selectedImage);
-      formData.append('problem_text', currentProblemText); // Backend handles if it's empty
-
-      requestBody = formData;
-      // DO NOT set Content-Type for FormData, browser does it.
-      endpoint = '/api/retrieve-documents-by-image';
-      effectiveQueryForHistory = `Image: ${selectedImage.name}${currentProblemText ? ` + Text: ${currentProblemText}` : ''}`;
-    } else {
-      // Text-only query - use JSON
-      requestBody = JSON.stringify({ problem: currentProblemText });
-      requestHeaders['Content-Type'] = 'application/json';
-      endpoint = '/api/retrieve-documents';
-      // effectiveQueryForHistory is already currentProblemText
-    }
+    const requestBody = JSON.stringify({ problem: currentProblemText });
+    const requestHeaders: HeadersInit = { 'Content-Type': 'application/json' };
+    const endpoint = '/api/retrieve-documents'; // Always use this endpoint for final submission
 
     try {
       const response = await fetch(endpoint, {
@@ -110,16 +98,17 @@ function App() {
       });
 
       if (!response.ok) {
+        // ... (error handling as before) ...
         let errorData;
         try {
           errorData = await response.json();
         } catch (e) {
-          // If response is not JSON, use text
           const textError = await response.text();
           errorData = { error: textError || `HTTP error! status: ${response.status}` };
         }
         throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
       }
+
 
       const data: DocumentResponse = await response.json();
       setDocuments(data.documents);
@@ -129,7 +118,7 @@ function App() {
 
       const newHistoryItem: HistoryItem = {
         id: crypto.randomUUID(),
-        query: effectiveQueryForHistory, // Use the combined query description for history
+        query: currentProblemText, // Use the combined query description for history
         documents: data.documents,
         timestamp: new Date(),
       };
@@ -151,14 +140,17 @@ function App() {
     }
   };
 
-    // Optional: Clean up object URL when component unmounts or image changes
+  // Optional: Clean up object URL when component unmounts or image changes
   useEffect(() => {
+    // This will run when imagePreviewUrl changes or component unmounts
+    const currentPreviewUrl = imagePreviewUrl; // Capture current value
     return () => {
-      if (imagePreviewUrl) {
-        URL.revokeObjectURL(imagePreviewUrl);
+      if (currentPreviewUrl) {
+        URL.revokeObjectURL(currentPreviewUrl);
       }
     };
   }, [imagePreviewUrl]);
+
 
 
   const fetchSimilarProblems = async (problemQuery: string) => {
@@ -232,25 +224,86 @@ function App() {
     setSelectedRelatedProblemIndex(null);
   };
 
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-      setSelectedImage(file);
-      setImagePreviewUrl(URL.createObjectURL(file)); // Create a temporary URL for preview
-    } else {
-      setSelectedImage(null);
-      setImagePreviewUrl(null);
-    }
-  };
+  // const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (event.target.files && event.target.files[0]) {
+  //     const file = event.target.files[0];
+  //     setSelectedImage(file);
+  //     setImagePreviewUrl(URL.createObjectURL(file)); // Create a temporary URL for preview
+  //   } else {
+  //     setSelectedImage(null);
+  //     setImagePreviewUrl(null);
+  //   }
+  // };
 
   const clearImage = () => {
     setSelectedImage(null);
+    if (imagePreviewUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
     setImagePreviewUrl(null);
-    // If you have a file input ref, you might want to clear its value:
-    // if (fileInputRef.current) fileInputRef.current.value = "";
+    setOcrError(null);
+    // Consider if you want to clear the problem text if an image is cleared
+    // setProblem(''); // If OCR was done and image cleared, text remains for now
   };
 
+  const handleImageSelectionForOCR = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (isOcrLoading) return; // Prevent change during OCR
+    clearImage(); // Clear previous image/OCR error if any
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      setSelectedImage(file);
+      setImagePreviewUrl(URL.createObjectURL(file));
+    }
+  };
 
+  const processImageWithOCR = async () => {
+    if (!selectedImage) return;
+
+    setIsOcrLoading(true);
+    setOcrError(null);
+    setProblem(''); // Clear previous problem text
+
+    const formData = new FormData();
+    formData.append('image', selectedImage);
+
+    try {
+      const response = await fetch('/api/ocr-image', { // New OCR endpoint
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        let errorData;
+        try {
+            errorData = await response.json();
+        } catch(e){
+            const textError = await response.text();
+            errorData = { error: textError || `OCR request failed with status: ${response.status}` };
+        }
+        throw new Error(errorData.error || `OCR request failed`);
+      }
+
+      const data: { ocr_text: string } = await response.json();
+      setProblem(data.ocr_text); // Populate textarea with OCR result
+      setInputMode('text');      // Switch to text mode for editing/submission
+      // Optionally clear the image selection after successful OCR,
+      // as the text is now the primary input.
+      // clearImage(); // Or keep it for reference, user can remove manually
+      // setSelectedImage(null); // Keep preview but no longer the "active" input image for OCR
+      // If you clear the image, the preview will also disappear.
+
+    } catch (err) {
+      if (err instanceof Error) {
+        setOcrError(err.message);
+      } else {
+        setOcrError('An unknown error occurred during OCR processing.');
+      }
+      console.error("OCR failed:", err);
+      // Do not switch inputMode on OCR error, let user try again or switch manually
+    } finally {
+      setIsOcrLoading(false);
+    }
+  };
 
 
   const appContainerClass = `app-container ${hasSearched ? 'searched-layout' : 'initial-layout'}`;
@@ -259,40 +312,85 @@ function App() {
     <div className={appContainerClass}>
       <div className="problem-section">
         <h2>Problem Document Retriever</h2>
-        <form onSubmit={handleSubmit} className="problem-form">
-          <textarea
-            value={problem}
-            onChange={(e) => setProblem(e.target.value)}
-            placeholder="Enter your problem text (optional with image)..."
-            rows={hasSearched ? 8 : 4} // Adjust rows
-            className="problem-input"
-          />
-
-          <div className="file-input-container">
-            <label htmlFor="image-upload" className="file-upload-label">
-              {selectedImage ? `Selected: ${selectedImage.name}` : "Upload Image (Optional)"}
-            </label>
-            <input
-              type="file"
-              id="image-upload"
-              accept="image/png, image/jpeg, image/gif, image/webp" // Specify accepted image types
-              onChange={handleImageChange}
-              style={{ display: 'none' }} // Hide default input, style the label
-            />
-            {selectedImage && imagePreviewUrl && (
-              <div className="image-preview-container">
-                <img src={imagePreviewUrl} alt="Preview" className="image-preview" />
-                <button type="button" onClick={clearImage} className="clear-image-button">
-                  Remove Image
-                </button>
-              </div>
-            )}
-          </div>
-
-          <button type="submit" disabled={isLoading} className="submit-button">
-            {isLoading ? 'Retrieving...' : 'Retrieve Documents'}
+        <div className="input-mode-selector">
+          <button
+            onClick={() => { setInputMode('text'); clearImage(); /* Clear image if switching to text */ }}
+            className={inputMode === 'text' ? 'active' : ''}
+            disabled={isOcrLoading}
+          >
+            Enter Text
           </button>
+          <button
+            onClick={() => { setInputMode('image'); setProblem(''); /* Clear text if switching to image */ }}
+            className={inputMode === 'image' ? 'active' : ''}
+            disabled={isOcrLoading}
+          >
+            Upload Image for OCR
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="problem-form">
+          {inputMode === 'text' && (
+            <textarea
+              value={problem}
+              onChange={(e) => setProblem(e.target.value)}
+              placeholder="Enter your problem or edit OCR result..."
+              rows={hasSearched ? 8 : 6}
+              className="problem-input"
+              disabled={isOcrLoading}
+            />
+          )}
+
+          {inputMode === 'image' && (
+            <div className="file-input-area">
+              <div className="file-input-container">
+                <label htmlFor="image-upload" className="file-upload-label">
+                  {selectedImage ? `Selected: ${selectedImage.name}` : "Choose an Image"}
+                </label>
+                <input
+                  type="file"
+                  id="image-upload"
+                  accept="image/png, image/jpeg, image/gif, image/webp"
+                  onChange={handleImageSelectionForOCR} // New handler
+                  style={{ display: 'none' }}
+                  disabled={isOcrLoading}
+                />
+              </div>
+              {imagePreviewUrl && (
+                <div className="image-preview-container">
+                  <img src={imagePreviewUrl} alt="Preview" className="image-preview" />
+                  <button
+                    type="button"
+                    onClick={processImageWithOCR} // New button to trigger OCR
+                    className="ocr-button"
+                    disabled={!selectedImage || isOcrLoading}
+                  >
+                    {isOcrLoading ? 'Processing OCR...' : 'Get Text from Image (OCR)'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={clearImage}
+                    className="clear-image-button"
+                    disabled={isOcrLoading}
+                  >
+                    Remove Image
+                  </button>
+                </div>
+              )}
+              {ocrError && <p className="error-message ocr-error-message">{ocrError}</p>}
+            </div>
+          )}
+
+          {inputMode === 'text' &&
+          <button
+            type="submit"
+            disabled={isLoading || isOcrLoading || (inputMode === 'text' && !problem.trim())}
+            className="submit-button"
+          >
+            {isLoading ? 'Retrieving...' : 'Retrieve Documents'}
+          </button>}
         </form>
+
         {error && <p className="error-message">Error: {error}</p>}
         {isLoading && !hasSearched && <p className="loading-message">Loading...</p>}
                 {/* History Section - Placed within problem-section */}
