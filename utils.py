@@ -83,7 +83,7 @@ def load_all_embeddings():
         doc_embeddings, doc_metadata = _load_embeddings_and_metadata(embedding_file, metadata_file, textbook)
         embeddings.extend(doc_embeddings)
         metadatas.extend(doc_metadata)
-    return embeddings, metadatas
+    return np.array(embeddings), metadatas
 
 def get_textbook(textbook: str, chapter: str, subchapter: str):
     if subchapter == "":
@@ -119,6 +119,8 @@ def get_textbook(textbook: str, chapter: str, subchapter: str):
             text = f.read()
         f.close()
         return text
+    
+
 
 if __name__ == "__main__":
     book_name = "Chemistry2e"
