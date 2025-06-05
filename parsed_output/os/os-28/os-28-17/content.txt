@@ -12,21 +12,3 @@ References
 [S09] “OpenSolaris Thread Library” by Sun.. Code: src.opensolaris.org/source/xref/ onnv/onnv-gate/usr/src/lib/libc/port/threads/synch.c. Pretty interesting, although who knows what will happen now that Oracle owns Sun. Thanks to Mike Swift for the pointer. [W09] “Load-Link, Store-Conditional” by Many authors.. en.wikipedia.org/wiki/LoadLink/Store-Conditional. Can you believe we referenced Wikipedia? But, we found the information there and it felt wrong not to. Further, it was useful, listing the instructions for the different architectures: ldl l/stl c and ldq l/stq c (Alpha), lwarx/stwcx (PowerPC), ll/sc (MIPS), and ldrex/strex (ARM). Actually Wikipedia is pretty amazing, so don’t be so harsh, OK? [WG00] “The SPARC Architecture Manual: Version $9 ^ { \prime \prime }$ by D. Weaver, T. Germond. SPARC International, 2000. http://www.sparc.org/standards/SPARCV9.pdf. See the website: developers.sun.com/solaris/articles/atomic sparc/ for more on atomics.  
 Homework (Simulation)
 This program, $\tt { x 8 6 . p y }$ , allows you to see how different thread interleavings either cause or avoid race conditions. See the README for details on how the program works and answer the questions below.  
-Questions
-
-Examine flag.s. This code “implements” locking with a single memory flag. Can you understand the assembly?   
-When you run with the defaults, does flag.s work? Use the $- \mathbb { M }$ and $- \mathrm { R }$ flags to trace variables and registers (and turn on $- \mathtt { C }$ to see their values). Can you predict what value will end up in flag?   
-Change the value of the register %bx with the -a flag (e.g., -a bx $: = 2$ , $\mathrm { b x } = 2$ if you are running just two threads). What does the code do? How does it change your answer for the question above?   
-Set bx to a high value for each thread, and then use the $- \mathrm { i }$ flag to generate different interrupt frequencies; what values lead to a bad outcomes? Which lead to good outcomes?   
-Now let’s look at the program test-and-set.s. First, try to understand the code, which uses the xchg instruction to build a simple locking primitive. How is the lock acquire written? How about lock release?   
-Now run the code, changing the value of the interrupt interval $( - \mathrm { i } )$ again, and making sure to loop for a number of times. Does the code always work as expected? Does it sometimes lead to an inefficient use of the CPU? How could you quantify that?   
-Use the $- \mathtt { P }$ flag to generate specific tests of the locking code. For example, run a schedule that grabs the lock in the first thread, but then tries to acquire it in the second. Does the right thing happen? What else should you test?   
-Now let’s look at the code in peterson.s, which implements Peterson’s algorithm (mentioned in a sidebar in the text). Study the code and see if you can make sense of it.   
-Now run the code with different values of -i. What kinds of different behavior do you see? Make sure to set the thread IDs appropriately (using $- a$ $\mathtt { b x } = 0$ , $\mathtt { b x } = 1$ for example) as the code assumes it.   
-Can you control the scheduling (with the $- \mathtt { P }$ flag) to “prove” that the code works? What are the different cases you should show hold? Think about mutual exclusion and deadlock avoidance.   
-Now study the code for the ticket lock in ticket.s. Does it match the code in the chapter? Then run with the following flags: $- a$ $\mathtt { b x } { = } 1 0 0 0$ , $\mathtt { b x } { = } 1 0 0 0$ (causing each thread to loop through the critical section 1000 times). Watch what happens; do the threads spend much time spin-waiting for the lock?   
-How does the code behave as you add more threads?   
-Now examine yield.s, in which a yield instruction enables one thread to yield control of the CPU (realistically, this would be an OS primitive, but for the simplicity, we assume an instruction does the task). Find a scenario where test-and-set.s wastes cycles spinning, but yield.s does not. How many instructions are saved? In what scenarios do these savings arise?   
-Finally, examine test-and-test-and-set.s. What does this lock do? What kind of savings does it introduce as compared to test-and-set.s?  
-
-OPERATINGSYSTEMS[VERSION 1.10]  
