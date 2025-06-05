@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import json
+import random
 
 def load_all_documents(book_name):
     book_path = f"parsed_output/{book_name}"
@@ -85,41 +86,61 @@ def load_all_embeddings():
         metadatas.extend(doc_metadata)
     return np.array(embeddings), metadatas
 
-def get_textbook(textbook: str, chapter: str, subchapter: str):
-    if subchapter == "":
-        dir_path = f"parsed_output/{textbook}/{textbook}-{chapter}/"
-        file_path = os.path.join(dir_path, "content.md")
-        try:
-            with open(file_path, 'r') as f:
-                text = f.read()
-            f.close()
-        except:
-            text = ""
-        finally:
-            lis = sorted(os.listdir(dir_path))
-            for subchapter in lis:
-                sub_dir_path = os.path.join(dir_path, subchapter)
-                if os.path.isdir(sub_dir_path):
-                    file_path = os.path.join(sub_dir_path, "content.md")
-                    try:
-                        with open(file_path, 'r') as f:
-                            text2 = f.read()
-                        f.close()
-                    except:
-                        text2 = ""
-                    finally:
-                        text += text2
-        return text
-
-    else:
-        subchapter.replace('.', '-')
-        dir_path = f"parsed_output/{textbook}/{textbook}-{chapter}/{textbook}-{subchapter}"
+def _get_content_under_dir(dir_path: str):
+    ret = ""
+    lis = sorted(os.listdir(dir_path))
+    if "content.md" in lis:
         file_path = os.path.join(dir_path, "content.md")
         with open(file_path, 'r') as f:
             text = f.read()
         f.close()
-        return text
+        ret += text
+    for sub in lis:
+        sub_path = os.path.join(dir_path, sub)
+        if os.path.isdir(sub_path):
+            ret += _get_content_under_dir(sub_path)
+    return ret
+
+def get_textbook(textbook: str, chapter: str, subchapter: str):
+    if subchapter == "":
+        dir_path = f"parsed_output/{textbook}/{textbook}-{chapter}/"
+    else:
+        subchapter.replace('.', '-')
+        dir_path = f"parsed_output/{textbook}/{textbook}-{chapter}/{textbook}-{subchapter}"
+    return _get_content_under_dir(dir_path=dir_path)
     
+PROBLEM_NO_MATH = False
+
+def almost_top15(top5_docs: list):
+    candidate = []
+    for doc in top5_docs:
+        subchapter = str(doc['section']).replace('-', '.')
+        chapter = str(doc['chapter'])
+        textbook = doc['textbook']
+        if PROBLEM_NO_MATH:
+            problem_path = f"parsed_output/{textbook}/problems_no_math.json"
+        else:
+            problem_path = f"parsed_output/{textbook}/problems.json"
+
+        with open(problem_path, 'r') as f:
+            problems = json.load(f)
+        if subchapter == "":
+            filtered = [p for p in problems if p['chapter'] == chapter]
+        else:
+            filtered = [p for p in problems if p['subchapter'] == subchapter]
+            if len(filtered) == 0:
+                filtered = [p for p in problems if p['chapter'] == chapter]
+        num_to_sample = min(3, len(filtered))
+        sample = random.sample(filtered, num_to_sample)
+        candidate += sample
+    s = set()
+    ret = []
+    for p in candidate:
+        if p["problem"] in s:
+            continue
+        s.add(p["problem"])
+        ret.append(p)
+    return ret
 
 
 if __name__ == "__main__":
@@ -141,3 +162,11 @@ if __name__ == "__main__":
     print(c[:10])
     text = get_textbook("os", "2", "")
     print(text)
+
+    doc = [
+        {'textbook': "os", "chapter": "4", "section": "4.1"},
+        {'textbook': "os", "chapter": 5, "section": "5.1"},
+    ]
+    top15 = almost_top15(doc)
+    for i in top15:
+        print(i)
