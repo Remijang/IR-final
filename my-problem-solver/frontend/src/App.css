@@ -423,3 +423,61 @@ h1 {
   /* padding: 15px; /* Moved from old .document-content */
   /* border: 1px solid #eee; */ /* Adjust styling as needed */
 }
+
+.file-input-container {
+  margin-bottom: 15px;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.file-upload-label {
+  display: inline-block; /* Or block, depending on desired layout */
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+
+.file-upload-label:hover {
+  background-color: #e0e0e0;
+}
+
+.image-preview-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 150px; /* Adjust as needed */
+  border: 1px solid #eee;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.clear-image-button {
+  padding: 6px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.clear-image-button:hover {
+  background-color: #cc0000;
+}
+
+/* Adjust problem form layout if needed */
+.problem-form {
+  /* display: flex; flex-direction: column; gap: 15px; is already there */
+}

@@ -5,6 +5,8 @@ from sentence_transformers import SentenceTransformer
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import CORS
 
+from werkzeug.utils import secure_filename
+
 from utils import load_all_documents, load_all_embeddings, get_almost_top15
 
 
@@ -25,6 +27,11 @@ BOOK_NAME_MAP = {
     "os": "Operating Systems",
     "ca": "Computer Architecture",
 }
+
+# Set up the upload folder
+app.config['UPLOAD_FOLDER'] = 'uploads'  # Folder to save uploaded images
+if not os.path.exists(app.config['UPLOAD_FOLDER']):
+    os.makedirs(app.config['UPLOAD_FOLDER'])  # Create the upload folder if it doesn't exist
 
 
 def load_model_and_embeddings():
@@ -274,6 +281,69 @@ def similar_problems():
     }
     # print(results)
 
+    return jsonify(results), 200
+
+
+@app.route("/api/retrieve-documents-by-image", methods=["POST"])
+def retrieve_by_image():
+    global model, doc_embeddings, doc_metadata
+
+    if model is None:
+        return jsonify({"error": "Model not loaded or failed to load"}), 500
+
+    if doc_embeddings is None or doc_metadata is None:
+        return (
+            jsonify({"error": "Embeddings or metadata not loaded or failed to load"}),
+            500,
+        )
+
+    if len(doc_metadata) == 0:
+        return jsonify({"documents": []}), 200
+
+    # 1. Check for image file
+    if 'image' not in request.files:
+        return jsonify({"error": "No image file part in the request"}), 400
+    
+    image_file = request.files['image']
+    if image_file.filename == '':
+        return jsonify({"error": "No image selected for uploading"}), 400
+
+    print(image_file.filename)
+    print(image_file.content_type)
+    print(type(image_file))
+    print(image_file)
+
+    image_filename = secure_filename(image_file.filename) # Good practice if saving
+    image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
+    image_file.save(image_path)  # Save the uploaded image file
+    from ocr import image_to_text  # Import the OCR function from ocr.py
+    problem_query = image_to_text(image_path)
+
+    # Here you would typically process the image to extract text or features
+    # For simplicity, we'll assume image_data is a string query for now
+    # problem_query = "38 Find the position vector to the shadow of $t \\mathbf { i } + t ^ { 2 } \\mathbf { j } + t ^ { 3 } \\mathbf { k }$ on the $x z$ plane. Is the curve ever parallel to the line $x = y = z$ ? "  # Placeholder for actual image processing
+
+
+
+    if not problem_query:
+        return jsonify({"error": "Query cannot be empty"}), 400
+    doc_score_pairs = get_top5_documents(problem_query)
+    if not doc_score_pairs:
+        return jsonify({"documents": []}), 200
+    results = {
+        "documents": [
+            {
+                "content": get_book_content(
+                    doc["textbook"], doc["chapter"], doc["section"]
+                ),
+                "filename": f"[{BOOK_NAME_MAP[doc['textbook']]}] "
+                + f"Chapter {doc['section']} - "
+                + get_section_name(doc["textbook"], doc["section"]),
+            }
+            for doc in doc_score_pairs
+        ]
+    }
+    # print(results)
     return jsonify(results), 200
 
 

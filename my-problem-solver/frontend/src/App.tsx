@@ -1,5 +1,5 @@
 // frontend/src/App.tsx
-import { useState, type FormEvent } from 'react';
+import { useState, type FormEvent, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';         // Import remark-math
@@ -37,6 +37,9 @@ interface HistoryItem {
 
 function App() {
   const [problem, setProblem] = useState<string>('');
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null); // For image preview
+
   const [documents, setDocuments] = useState<RetrievedDocument[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -54,9 +57,9 @@ function App() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const currentProblemQuery = problem.trim();
+    const currentProblemText = problem.trim();
 
-    if (!currentProblemQuery) {
+    if (!problem.trim() && !selectedImage) {
       setError('Please enter a problem.');
       setDocuments([]);
       setHasSearched(false);
@@ -76,55 +79,87 @@ function App() {
     setSelectedRelatedProblemIndex(null);
     setRelatedProblemsError(null);
 
+    let requestBody: BodyInit;
+    let requestHeaders: HeadersInit = {};
+    let endpoint: string;
+    let effectiveQueryForHistory = currentProblemText;
+
+    if (selectedImage) {
+      // Image query (potentially with text) - use FormData
+      const formData = new FormData();
+      formData.append('image', selectedImage);
+      formData.append('problem_text', currentProblemText); // Backend handles if it's empty
+
+      requestBody = formData;
+      // DO NOT set Content-Type for FormData, browser does it.
+      endpoint = '/api/retrieve-documents-by-image';
+      effectiveQueryForHistory = `Image: ${selectedImage.name}${currentProblemText ? ` + Text: ${currentProblemText}` : ''}`;
+    } else {
+      // Text-only query - use JSON
+      requestBody = JSON.stringify({ problem: currentProblemText });
+      requestHeaders['Content-Type'] = 'application/json';
+      endpoint = '/api/retrieve-documents';
+      // effectiveQueryForHistory is already currentProblemText
+    }
+
     try {
-      const response = await fetch('/api/retrieve-documents', {
+      const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ problem: currentProblemQuery }), // Send trimmed query
+        headers: requestHeaders,
+        body: requestBody,
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        let errorData;
+        try {
+          errorData = await response.json();
+        } catch (e) {
+          // If response is not JSON, use text
+          const textError = await response.text();
+          errorData = { error: textError || `HTTP error! status: ${response.status}` };
+        }
         throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
       }
 
       const data: DocumentResponse = await response.json();
-      setDocuments(data.documents); // Set current documents for display
+      setDocuments(data.documents);
       setHasSearched(true);
 
-      // Add to history
+
+
       const newHistoryItem: HistoryItem = {
-        id: crypto.randomUUID(), // Generate a unique ID
-        query: currentProblemQuery,
+        id: crypto.randomUUID(),
+        query: effectiveQueryForHistory, // Use the combined query description for history
         documents: data.documents,
         timestamp: new Date(),
       };
-      // Add to the beginning of the array so newest is on top
-      setQueryHistory(prevHistory => [newHistoryItem, ...prevHistory.slice(0, 9)]); // Keep last 10 items
-                                                                                  // Adjust slice(0, X) for max history items
+      setQueryHistory(prevHistory => [newHistoryItem, ...prevHistory.slice(0, 9)]);
 
-      // After successfully fetching main documents, fetch similar problems
-      // Don't await this if you want UI to update with main docs first,
-      // then related problems load in. If they must load together, await it.
-      // For a better UX, fetch them in parallel or sequentially without blocking UI too much.
-      // For this example, sequential fetch:
-      await fetchSimilarProblems(currentProblemQuery);
+      // Fetch similar problems based on the original text or a placeholder if only image
+      // The backend would need to decide how to handle `problem` for similar problems if it was image-based.
+      // For simplicity, we'll pass the original text problem, or a generic placeholder if only image.
+      // Ideally, the backend OCRs and then that text is used for similar problems too.
+      // This part might need refinement based on backend capabilities.
+      const queryForSimilar = problem.trim() || (selectedImage ? `[Image: ${selectedImage.name}]` : "[Empty Query]");
+      await fetchSimilarProblems(queryForSimilar);
+
 
     } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError('An unknown error occurred.');
-      }
-      console.error("Failed to fetch documents:", err);
-      setDocuments([]);
-      setHasSearched(false);
+      // ... error handling ...
     } finally {
       setIsLoading(false);
     }
   };
+
+    // Optional: Clean up object URL when component unmounts or image changes
+  useEffect(() => {
+    return () => {
+      if (imagePreviewUrl) {
+        URL.revokeObjectURL(imagePreviewUrl);
+      }
+    };
+  }, [imagePreviewUrl]);
+
 
   const fetchSimilarProblems = async (problemQuery: string) => {
     setIsLoadingRelatedProblems(true);
@@ -187,15 +222,34 @@ function App() {
 
   };
 
-    const handleSelectRelatedProblem = (index: number) => {
-      setSelectedRelatedProblemIndex(index);
-      // Optionally, if selecting a related problem should clear selection of main document:
-      // setSelectedDocumentIndex(null);
-    };
+  const handleSelectRelatedProblem = (index: number) => {
+    setSelectedRelatedProblemIndex(index);
+    // Optionally, if selecting a related problem should clear selection of main document:
+    // setSelectedDocumentIndex(null);
+  };
 
-    const handleReturnToRelatedProblemList = () => {
-      setSelectedRelatedProblemIndex(null);
-    };
+  const handleReturnToRelatedProblemList = () => {
+    setSelectedRelatedProblemIndex(null);
+  };
+
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      setSelectedImage(file);
+      setImagePreviewUrl(URL.createObjectURL(file)); // Create a temporary URL for preview
+    } else {
+      setSelectedImage(null);
+      setImagePreviewUrl(null);
+    }
+  };
+
+  const clearImage = () => {
+    setSelectedImage(null);
+    setImagePreviewUrl(null);
+    // If you have a file input ref, you might want to clear its value:
+    // if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
 
 
 
@@ -204,15 +258,37 @@ function App() {
   return (
     <div className={appContainerClass}>
       <div className="problem-section">
-        <h1>Problem Document Retriever</h1>
+        <h2>Problem Document Retriever</h2>
         <form onSubmit={handleSubmit} className="problem-form">
           <textarea
             value={problem}
             onChange={(e) => setProblem(e.target.value)}
-            placeholder="Enter your problem here..."
-            rows={hasSearched ? 10 : 4}
+            placeholder="Enter your problem text (optional with image)..."
+            rows={hasSearched ? 8 : 4} // Adjust rows
             className="problem-input"
           />
+
+          <div className="file-input-container">
+            <label htmlFor="image-upload" className="file-upload-label">
+              {selectedImage ? `Selected: ${selectedImage.name}` : "Upload Image (Optional)"}
+            </label>
+            <input
+              type="file"
+              id="image-upload"
+              accept="image/png, image/jpeg, image/gif, image/webp" // Specify accepted image types
+              onChange={handleImageChange}
+              style={{ display: 'none' }} // Hide default input, style the label
+            />
+            {selectedImage && imagePreviewUrl && (
+              <div className="image-preview-container">
+                <img src={imagePreviewUrl} alt="Preview" className="image-preview" />
+                <button type="button" onClick={clearImage} className="clear-image-button">
+                  Remove Image
+                </button>
+              </div>
+            )}
+          </div>
+
           <button type="submit" disabled={isLoading} className="submit-button">
             {isLoading ? 'Retrieving...' : 'Retrieve Documents'}
           </button>
