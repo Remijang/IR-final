@@ -2,15 +2,15 @@
 import { useState, type FormEvent, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import remarkMath from 'remark-math';         // Import remark-math
-import rehypeKatex from 'rehype-katex';       // Import rehype-katex
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
-import 'katex/dist/katex.min.css';          // Import KaTeX CSS
+import 'katex/dist/katex.min.css';
 import './App.css';
 
 interface RetrievedDocument {
   filename: string;
-  content: string; // Markdown content
+  content: string;
 }
 
 interface DocumentResponse {
@@ -20,30 +20,19 @@ interface DocumentResponse {
 interface HistoryItem {
   id: string;
   query: string;
-  documents: RetrievedDocument[]; // Update this to use RetrievedDocument
+  documents: RetrievedDocument[];
   timestamp: Date;
 }
 
 type InputMode = 'text' | 'image';
 
 
-
-// Helper function to extract title from Markdown (simple version)
-// const extractMarkdownTitle = (markdown: string): string => {
-//   if (!markdown) return "Untitled Document";
-//   const match = markdown.match(/^\s*#{1,2}\s+(.*)/m);
-//   if (match && match[1]) {
-//     return match[1].trim();
-//   }
-//   return markdown.substring(0, 50).split('\n')[0] + (markdown.length > 50 ? '...' : '');
-// };
-
 function App() {
-  const [inputMode, setInputMode] = useState<InputMode>('text'); // Default
+  const [inputMode, setInputMode] = useState<InputMode>('text');
   const [problem, setProblem] = useState<string>('');
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
-  const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null); // For image preview
-  const [isOcrLoading, setIsOcrLoading] = useState<boolean>(false); // For OCR processing
+  const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
+  const [isOcrLoading, setIsOcrLoading] = useState<boolean>(false);
   const [ocrError, setOcrError] = useState<string | null>(null);
 
 
@@ -52,9 +41,9 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [hasSearched, setHasSearched] = useState<boolean>(false);
   const [selectedDocumentIndex, setSelectedDocumentIndex] = useState<number | null>(null);
-  const [queryHistory, setQueryHistory] = useState<HistoryItem[]>([]); // New state for history
+  const [queryHistory, setQueryHistory] = useState<HistoryItem[]>([]);
 
-  // New state for related problems
+  // related problems
   const [relatedProblems, setRelatedProblems] = useState<RetrievedDocument[]>([]);
   const [isLoadingRelatedProblems, setIsLoadingRelatedProblems] = useState<boolean>(false);
   const [selectedRelatedProblemIndex, setSelectedRelatedProblemIndex] = useState<number | null>(null);
@@ -81,14 +70,14 @@ function App() {
     setDocuments([]);
     setSelectedDocumentIndex(null);
 
-    // Also reset related problems on new search
+    // reset related problems
     setRelatedProblems([]);
     setSelectedRelatedProblemIndex(null);
     setRelatedProblemsError(null);
 
     const requestBody = JSON.stringify({ problem: currentProblemText });
     const requestHeaders: HeadersInit = { 'Content-Type': 'application/json' };
-    const endpoint = '/api/retrieve-documents'; // Always use this endpoint for final submission
+    const endpoint = '/api/retrieve-documents';
 
     try {
       const response = await fetch(endpoint, {
@@ -98,7 +87,6 @@ function App() {
       });
 
       if (!response.ok) {
-        // ... (error handling as before) ...
         let errorData;
         try {
           errorData = await response.json();
@@ -114,36 +102,26 @@ function App() {
       setDocuments(data.documents);
       setHasSearched(true);
 
-
-
       const newHistoryItem: HistoryItem = {
         id: crypto.randomUUID(),
-        query: currentProblemText, // Use the combined query description for history
+        query: currentProblemText,
         documents: data.documents,
         timestamp: new Date(),
       };
       setQueryHistory(prevHistory => [newHistoryItem, ...prevHistory.slice(0, 9)]);
 
-      // Fetch similar problems based on the original text or a placeholder if only image
-      // The backend would need to decide how to handle `problem` for similar problems if it was image-based.
-      // For simplicity, we'll pass the original text problem, or a generic placeholder if only image.
-      // Ideally, the backend OCRs and then that text is used for similar problems too.
-      // This part might need refinement based on backend capabilities.
       const queryForSimilar = problem.trim() || (selectedImage ? `[Image: ${selectedImage.name}]` : "[Empty Query]");
       await fetchSimilarProblems(queryForSimilar);
 
 
     } catch (err) {
-      // ... error handling ...
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Optional: Clean up object URL when component unmounts or image changes
   useEffect(() => {
-    // This will run when imagePreviewUrl changes or component unmounts
-    const currentPreviewUrl = imagePreviewUrl; // Capture current value
+    const currentPreviewUrl = imagePreviewUrl;
     return () => {
       if (currentPreviewUrl) {
         URL.revokeObjectURL(currentPreviewUrl);
@@ -156,8 +134,8 @@ function App() {
   const fetchSimilarProblems = async (problemQuery: string) => {
     setIsLoadingRelatedProblems(true);
     setRelatedProblemsError(null);
-    setRelatedProblems([]); // Clear previous related problems
-    setSelectedRelatedProblemIndex(null); // Clear selected related problem
+    setRelatedProblems([]);
+    setSelectedRelatedProblemIndex(null);
 
     try {
       const response = await fetch('/api/similar-problems', {
@@ -165,7 +143,7 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ problem: problemQuery }), // Assuming it takes the same 'problem' key
+        body: JSON.stringify({ problem: problemQuery }),
       });
 
       if (!response.ok) {
@@ -197,18 +175,16 @@ function App() {
   };
 
   const handleHistoryItemClick = async (historyItem: HistoryItem) => {
-    setProblem(historyItem.query); // Update the textarea with the historical query
+    setProblem(historyItem.query);
     setDocuments(historyItem.documents);
-    setSelectedDocumentIndex(null); // Reset to show document list
-    setHasSearched(true); // Ensure split view is active
-    setError(null); // Clear any previous errors
-    // Optionally, scroll to top of document list or selected document if one was auto-selected
+    setSelectedDocumentIndex(null);
+    setHasSearched(true);
+    setError(null);
 
-    // Reset and re-fetch related problems for the historical query
     setRelatedProblems([]);
     setSelectedRelatedProblemIndex(null);
     setRelatedProblemsError(null);
-    if (historyItem.query) { // Ensure there's a query to fetch for
+    if (historyItem.query) {
       await fetchSimilarProblems(historyItem.query);
     }
 
@@ -216,24 +192,11 @@ function App() {
 
   const handleSelectRelatedProblem = (index: number) => {
     setSelectedRelatedProblemIndex(index);
-    // Optionally, if selecting a related problem should clear selection of main document:
-    // setSelectedDocumentIndex(null);
   };
 
   const handleReturnToRelatedProblemList = () => {
     setSelectedRelatedProblemIndex(null);
   };
-
-  // const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   if (event.target.files && event.target.files[0]) {
-  //     const file = event.target.files[0];
-  //     setSelectedImage(file);
-  //     setImagePreviewUrl(URL.createObjectURL(file)); // Create a temporary URL for preview
-  //   } else {
-  //     setSelectedImage(null);
-  //     setImagePreviewUrl(null);
-  //   }
-  // };
 
   const clearImage = () => {
     setSelectedImage(null);
@@ -242,13 +205,11 @@ function App() {
     }
     setImagePreviewUrl(null);
     setOcrError(null);
-    // Consider if you want to clear the problem text if an image is cleared
-    // setProblem(''); // If OCR was done and image cleared, text remains for now
   };
 
   const handleImageSelectionForOCR = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (isOcrLoading) return; // Prevent change during OCR
-    clearImage(); // Clear previous image/OCR error if any
+    clearImage();
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
       setSelectedImage(file);
@@ -261,13 +222,13 @@ function App() {
 
     setIsOcrLoading(true);
     setOcrError(null);
-    setProblem(''); // Clear previous problem text
+    setProblem('');
 
     const formData = new FormData();
     formData.append('image', selectedImage);
 
     try {
-      const response = await fetch('/api/ocr-image', { // New OCR endpoint
+      const response = await fetch('/api/ocr-image', {
         method: 'POST',
         body: formData,
       });
@@ -284,14 +245,8 @@ function App() {
       }
 
       const data: { ocr_text: string } = await response.json();
-      setProblem(data.ocr_text); // Populate textarea with OCR result
-      setInputMode('text');      // Switch to text mode for editing/submission
-      // Optionally clear the image selection after successful OCR,
-      // as the text is now the primary input.
-      // clearImage(); // Or keep it for reference, user can remove manually
-      // setSelectedImage(null); // Keep preview but no longer the "active" input image for OCR
-      // If you clear the image, the preview will also disappear.
-
+      setProblem(data.ocr_text);
+      setInputMode('text');
     } catch (err) {
       if (err instanceof Error) {
         setOcrError(err.message);
@@ -299,7 +254,6 @@ function App() {
         setOcrError('An unknown error occurred during OCR processing.');
       }
       console.error("OCR failed:", err);
-      // Do not switch inputMode on OCR error, let user try again or switch manually
     } finally {
       setIsOcrLoading(false);
     }
@@ -314,14 +268,14 @@ function App() {
         <h2>Problem Document Retriever</h2>
         <div className="input-mode-selector">
           <button
-            onClick={() => { setInputMode('text'); clearImage(); /* Clear image if switching to text */ }}
+            onClick={() => { setInputMode('text'); clearImage(); }}
             className={inputMode === 'text' ? 'active' : ''}
             disabled={isOcrLoading}
           >
             Enter Text
           </button>
           <button
-            onClick={() => { setInputMode('image'); setProblem(''); /* Clear text if switching to image */ }}
+            onClick={() => { setInputMode('image'); setProblem(''); }}
             className={inputMode === 'image' ? 'active' : ''}
             disabled={isOcrLoading}
           >
@@ -351,7 +305,7 @@ function App() {
                   type="file"
                   id="image-upload"
                   accept="image/png, image/jpeg, image/gif, image/webp"
-                  onChange={handleImageSelectionForOCR} // New handler
+                  onChange={handleImageSelectionForOCR}
                   style={{ display: 'none' }}
                   disabled={isOcrLoading}
                 />
@@ -361,7 +315,7 @@ function App() {
                   <img src={imagePreviewUrl} alt="Preview" className="image-preview" />
                   <button
                     type="button"
-                    onClick={processImageWithOCR} // New button to trigger OCR
+                    onClick={processImageWithOCR}
                     className="ocr-button"
                     disabled={!selectedImage || isOcrLoading}
                   >
@@ -393,7 +347,8 @@ function App() {
 
         {error && <p className="error-message">Error: {error}</p>}
         {isLoading && !hasSearched && <p className="loading-message">Loading...</p>}
-                {/* History Section - Placed within problem-section */}
+
+        {/* History Section */}
         {queryHistory.length > 0 && (
           <div className="history-section">
             <h2>Query History</h2>
@@ -418,7 +373,7 @@ function App() {
       </div>
 
       {hasSearched && (
-        <div className="documents-section"> {/* This is the main right pane */}
+        <div className="documents-section"> {/* right pane */}
           
           {/* Upper Part: Retrieved Documents */}
           <div className="retrieved-documents-pane">
@@ -444,7 +399,7 @@ function App() {
 
             {/* Selected Document View */}
             {!isLoading && !error && selectedDocumentIndex !== null && documents[selectedDocumentIndex] && (
-              <div className="selected-item-view"> {/* Generic class for selected item */}
+              <div className="selected-item-view">
                 <button onClick={handleReturnToList} className="return-button">
                   ← Back to Document List
                 </button>
@@ -458,7 +413,6 @@ function App() {
             )}
           </div>
 
-          {/* Divider (optional) */}
           {(!isLoading || !isLoadingRelatedProblems) && (documents.length > 0 || relatedProblems.length > 0) && <hr className="pane-divider" />}
 
           {/* Lower Part: Related Problems */}
@@ -473,9 +427,9 @@ function App() {
 
             {/* Related Problem List View */}
             {!isLoadingRelatedProblems && !relatedProblemsError && relatedProblems.length > 0 && selectedRelatedProblemIndex === null && (
-              <div className="document-list-container"> {/* Re-use class or make specific */}
+              <div className="document-list-container">
                 <h2>Related Problems</h2>
-                <ul className="document-title-list"> {/* Re-use class or make specific */}
+                <ul className="document-title-list">
                   {relatedProblems.map((rp, index) => (
                     <li key={`rp-${index}`} onClick={() => handleSelectRelatedProblem(index)}>
                       {rp.filename}
@@ -487,11 +441,15 @@ function App() {
 
             {/* Selected Related Problem View */}
             {!isLoadingRelatedProblems && !relatedProblemsError && selectedRelatedProblemIndex !== null && relatedProblems[selectedRelatedProblemIndex] && (
-              <div className="selected-item-view"> {/* Generic class for selected item */}
+              <div className="selected-item-view">
                 <button onClick={handleReturnToRelatedProblemList} className="return-button">
                   ← Back to Related Problems List
                 </button>
-                <h3 className="selected-item-filename">{relatedProblems[selectedRelatedProblemIndex].filename}</h3>
+                <h3 className="selected-item-filename">
+                  <ReactMarkdown>
+                    {relatedProblems[selectedRelatedProblemIndex].filename}
+                  </ReactMarkdown>
+                </h3>
                 <div className="document-content">
                   <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>
                     {relatedProblems[selectedRelatedProblemIndex].content}

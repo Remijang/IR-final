@@ -3,17 +3,16 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS
 
 from werkzeug.utils import secure_filename
 
 from utils import load_all_documents, load_all_embeddings, get_almost_top15
-from ocr import image_to_text  # Import the OCR function from ocr.py
+from ocr import image_to_text
 
 
 app = Flask(__name__)
 
-# Global variable to hold the model
 model = None
 doc_embeddings = None
 doc_metadata = None
@@ -29,10 +28,9 @@ BOOK_NAME_MAP = {
     "ca": "Computer Architecture",
 }
 
-# Set up the upload folder
-app.config['UPLOAD_FOLDER'] = 'uploads'  # Folder to save uploaded images
-if not os.path.exists(app.config['UPLOAD_FOLDER']):
-    os.makedirs(app.config['UPLOAD_FOLDER'])  # Create the upload folder if it doesn't exist
+app.config["UPLOAD_FOLDER"] = "uploads"  # Folder to save uploaded images
+if not os.path.exists(app.config["UPLOAD_FOLDER"]):
+    os.makedirs(app.config["UPLOAD_FOLDER"])  # Create the upload folder if not exists
 
 
 def load_model_and_embeddings():
@@ -71,7 +69,6 @@ def load_embeddings_and_metadata(embeddings_path, metadata_path):
         with open(metadata_path, "r") as f:
             doc_metadata = json.load(f)
 
-        # Check for empty arrays explicitly if that's a valid state after generation errors
         if doc_embeddings.shape[0] == 0 and len(doc_metadata) == 0:
             print("Loaded empty (but valid) embeddings and metadata.")
             return doc_embeddings, doc_metadata
@@ -84,19 +81,13 @@ def load_embeddings_and_metadata(embeddings_path, metadata_path):
 
         print(f"{doc_embeddings.shape[0]} embeddings and metadata entries loaded.")
         return doc_embeddings, doc_metadata
-    except ValueError as ve:
-        print(
-            f"ValueError loading embeddings/metadata: {ve}. Likely indicates a corrupted file or object array issue."
-        )
-        print("Consider deleting the .npy and .json files in the cache to regenerate.")
-        return None, None
     except Exception as e:
-        print(f"Generic error loading embeddings/metadata: {e}")
+        print(f"Error loading embeddings/metadata: {e}")
         return None, None
 
 
 def get_book_name():
-    # This function can be modified to dynamically determine the book name if needed
+    # Deprecated
     return "calculus_full"
 
 
@@ -138,10 +129,7 @@ def get_section_name(book_name, section, chapter=None):
 
 def get_top5_documents(problem_query):
     global model, doc_embeddings, doc_metadata
-    # Encode the query
     query_embedding = model.encode(problem_query)
-
-    # Compute cosine similarities
     scores = model.similarity(query_embedding, doc_embeddings)[0]
 
     doc_score_pairs = []
@@ -157,11 +145,18 @@ def get_top5_documents(problem_query):
             }
         )
 
-    # Sort by score descending
     doc_score_pairs = sorted(doc_score_pairs, key=lambda x: x["score"], reverse=True)
 
     # Get top 5 results
-    doc_score_pairs = doc_score_pairs[:5]
+    # doc_score_pairs = doc_score_pairs[:5]
+    new_doc_score_pairs = []
+    for doc in doc_score_pairs:
+        if doc["textbook"] == "ca":
+            continue
+        new_doc_score_pairs.append(doc)
+        if len(new_doc_score_pairs) >= 5:
+            break
+    doc_score_pairs = new_doc_score_pairs
     print(type(doc_score_pairs))
     print(type(doc_score_pairs[0]))
     print(doc_score_pairs[0])
@@ -241,7 +236,7 @@ def similar_problems():
     # print("Top 15 documents retrieved for similar problems:")
     # print(top15_docs)
     # print(type(top15_docs[0]))
-    top15_doc_content = [doc['problem'] for doc in top15_docs]
+    top15_doc_content = [doc["problem"] for doc in top15_docs]
     top15_doc_embeddings = model.encode(top15_doc_content)
 
     # Encode the query
@@ -270,6 +265,14 @@ def similar_problems():
     doc_score_pairs = sorted(doc_score_pairs, key=lambda x: x["score"], reverse=True)
     # Get top 5 results
     doc_score_pairs = doc_score_pairs[:5]
+    new_doc_score_pairs = []
+    for doc in doc_score_pairs:
+        if doc["textbook"] == "ca":
+            continue
+        new_doc_score_pairs.append(doc)
+        if len(new_doc_score_pairs) >= 5:
+            break
+    doc_score_pairs = new_doc_score_pairs
     # print scores
     # print("Top 15 similar problems retrieved:")
     # print([doc['problem'][:40] for doc in doc_score_pairs])
@@ -293,24 +296,20 @@ def similar_problems():
 
 @app.route("/api/ocr-image", methods=["POST"])
 def ocr_image():
-    """
-    Endpoint to handle OCR processing of an uploaded image.
-    This endpoint is used to extract text from an image file.
-    """
-    if 'image' not in request.files:
+    if "image" not in request.files:
         return jsonify({"error": "No image file part in the request"}), 400
-    
-    image_file = request.files['image']
-    if image_file.filename == '':
+
+    image_file = request.files["image"]
+    if image_file.filename == "":
         return jsonify({"error": "No image selected for uploading"}), 400
 
-    print(image_file.filename)
-    print(image_file.content_type)
-    print(type(image_file))
-    print(image_file)
+    # print(image_file.filename)
+    # print(image_file.content_type)
+    # print(type(image_file))
+    # print(image_file)
 
     image_filename = secure_filename(image_file.filename)
-    image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
+    image_path = os.path.join(app.config["UPLOAD_FOLDER"], image_filename)
     image_file.save(image_path)  # Save the uploaded image file
 
     try:
@@ -339,12 +338,11 @@ def retrieve_by_image():
     if len(doc_metadata) == 0:
         return jsonify({"documents": []}), 200
 
-    # 1. Check for image file
-    if 'image' not in request.files:
+    if "image" not in request.files:
         return jsonify({"error": "No image file part in the request"}), 400
-    
-    image_file = request.files['image']
-    if image_file.filename == '':
+
+    image_file = request.files["image"]
+    if image_file.filename == "":
         return jsonify({"error": "No image selected for uploading"}), 400
 
     print(image_file.filename)
@@ -352,17 +350,14 @@ def retrieve_by_image():
     print(type(image_file))
     print(image_file)
 
-    image_filename = secure_filename(image_file.filename) # Good practice if saving
-    image_path = os.path.join(app.config['UPLOAD_FOLDER'], image_filename)
-    image_file.save(image_path)  # Save the uploaded image file
-    from ocr import image_to_text  # Import the OCR function from ocr.py
+    image_filename = secure_filename(image_file.filename)
+    image_path = os.path.join(app.config["UPLOAD_FOLDER"], image_filename)
+    image_file.save(image_path)
+    from ocr import image_to_text
+
     problem_query = image_to_text(image_path)
 
-    # Here you would typically process the image to extract text or features
-    # For simplicity, we'll assume image_data is a string query for now
     # problem_query = "38 Find the position vector to the shadow of $t \\mathbf { i } + t ^ { 2 } \\mathbf { j } + t ^ { 3 } \\mathbf { k }$ on the $x z$ plane. Is the curve ever parallel to the line $x = y = z$ ? "  # Placeholder for actual image processing
-
-
 
     if not problem_query:
         return jsonify({"error": "Query cannot be empty"}), 400
@@ -386,8 +381,7 @@ def retrieve_by_image():
     return jsonify(results), 200
 
 
-# Enable CORS for the Flask app
-CORS(app, resources={r"/api/*": {"origins": "*"}})  # Allow all origins for API routes
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Load the model when the Flask app starts
 with app.app_context():
@@ -396,4 +390,4 @@ with app.app_context():
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0", port=5001, debug=True
-    )  # Set debug=True for development purposes
+    )

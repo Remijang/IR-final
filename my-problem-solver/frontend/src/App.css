@@ -4,30 +4,29 @@ body {
   margin: 0;
   background-color: #f4f4f9;
   color: #333;
-  /* Ensure body takes full height for initial centering */
+  
   min-height: 100vh;
-  display: flex; /* Helps with centering app-container if needed */
+  display: flex;
   flex-direction: column;
 }
 
 .app-container {
   width: 100%;
   display: flex;
-  transition: all 0.3s ease-in-out; /* Smooth transition for layout change */
+  transition: all 0.3s ease-in-out;
   box-sizing: border-box;
 }
 
-/* Initial Layout: Form Centered */
 .app-container.initial-layout {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh; /* Take up most of the viewport height */
+  min-height: 90vh;
   padding: 20px;
 }
 
 .app-container.initial-layout .problem-section {
-  max-width: 600px; /* Limit width of form in centered view */
+  max-width: 600px;
   width: 100%;
   background-color: #fff;
   padding: 30px;
@@ -35,51 +34,49 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Searched Layout: Split View */
 .app-container.searched-layout {
   flex-direction: row;
-  min-height: 100vh; /* Take full viewport height */
+  min-height: 100vh;
 }
 
 .problem-section {
-  /* Common styles for problem section */
   display: flex;
   flex-direction: column;
 }
 
 .app-container.searched-layout .problem-section {
-  flex: 1; /* Takes 50% of the width */
+  flex: 1;
   padding: 20px;
-  background-color: #fff; /* Give it a background */
-  box-shadow: 2px 0 5px rgba(0,0,0,0.05); /* Subtle shadow for separation */
-  overflow-y: auto; /* Allow scrolling if content is too long */
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  overflow-y: auto;
   max-height: 100vh;
 }
 
 .documents-section {
-  flex: 1; /* Takes 50% of the width */
+  flex: 1;
   padding: 20px;
-  overflow-y: auto; /* Allow scrolling for document list/content */
-  max-height: 100vh; /* Limit height to viewport */
+  overflow-y: auto;
+  max-height: 100vh;
   box-sizing: border-box;
 }
 
 h1 {
   text-align: center;
   color: #333;
-  margin-top: 0; /* Adjust margin for h1 */
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
 .problem-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Increased gap */
+  gap: 15px;
 }
 
 .problem-input {
   width: 100%;
-  padding: 12px; /* Slightly larger padding */
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -88,7 +85,7 @@ h1 {
 }
 
 .submit-button {
-  padding: 12px 18px; /* Slightly larger button */
+  padding: 12px 18px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -113,7 +110,7 @@ h1 {
   border: 1px solid red;
   padding: 10px;
   border-radius: 4px;
-  margin-top: 15px; /* Add margin top */
+  margin-top: 15px;
 }
 
 .loading-message {
@@ -123,7 +120,6 @@ h1 {
   margin: 20px 0;
 }
 
-/* Document List Specific Styles */
 .document-list-container h2 {
   margin-top: 0;
   color: #333;
@@ -155,7 +151,6 @@ h1 {
   color: #0056b3;
 }
 
-/* Selected Document View Styles */
 .selected-document-view {
   background-color: #fff;
   border-radius: 4px;
@@ -181,12 +176,12 @@ h1 {
 .document-content {
   padding: 15px;
   border: 1px solid #eee;
-  border-top: none; /* If button is outside the main content box visually */
-  border-radius: 0 0 4px 4px; /* If combined with button */
+  border-top: none;
+  border-radius: 0 0 4px 4px;
 }
 
 .document-content pre {
-  background-color: #f0f0f0; /* Lighter than previous for contrast with white bg */
+  background-color: #f0f0f0;
   padding: 15px;
   border-radius: 4px;
   overflow-x: auto;
@@ -195,7 +190,7 @@ h1 {
 
 .document-content code {
   font-family: 'Courier New', Courier, monospace;
-  background-color: transparent; /* Code inside pre should be transparent */
+  background-color: transparent;
 }
 
 .document-content h1, .document-content h2, .document-content h3 {
@@ -227,11 +222,6 @@ h1 {
   background-color: #f9f9f9;
 }
 
-/* frontend/src/App.css */
-
-/* ... existing styles ... */
-
-/* History Section Styles */
 .history-section {
   margin-top: 30px;
   padding-top: 20px;
@@ -249,8 +239,8 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 200px; /* Or adjust as needed */
-  overflow-y: auto; /* Scroll if history is long */
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .history-item {
@@ -275,7 +265,7 @@ h1 {
   flex-grow: 1;
   margin-right: 10px;
   font-size: 0.9rem;
-  color: #007bff; /* Make query text stand out */
+  color: #007bff;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -287,47 +277,39 @@ h1 {
   white-space: nowrap;
 }
 
-/* Adjust problem-section for potential scroll with history */
 .app-container.searched-layout .problem-section {
   flex: 1;
   padding: 20px;
   background-color: #fff;
   box-shadow: 2px 0 5px rgba(0,0,0,0.05);
-  overflow-y: auto; /* Already there, but good to confirm */
+  overflow-y: auto;
   max-height: 100vh;
-  display: flex; /* Added for better internal layouting */
-  flex-direction: column; /* Added for better internal layouting */
+  display: flex;
+  flex-direction: column;
 }
 
 .app-container.searched-layout .problem-section .problem-form {
-  /* This ensures the form doesn't shrink when history appears */
   flex-shrink: 0;
 }
 
 .app-container.searched-layout .problem-section .history-section {
-  /* This allows the history section to take remaining space and scroll */
   flex-grow: 1;
-  overflow-y: auto; /* Ensure history section itself can scroll if its content overflows its allocated space */
-  display: flex; /* For internal structure of history-section */
+  overflow-y: auto;
+  display: flex;
   flex-direction: column;
 }
 
 .app-container.searched-layout .problem-section .history-section .history-list {
-   /* Allow history list to take available space within history-section */
   flex-grow: 1;
-  /* max-height: none; */ /* Remove fixed max-height if parent handles scroll */
 }
 
-/* frontend/src/App.css */
-
-/* ... existing styles ... */
 .app-container.searched-layout .documents-section {
   flex: 1;
-  padding: 20px; /* Padding applied to the whole right pane */
-  display: flex; /* Using flex to manage internal components like nav and content */
+  padding: 20px;
+  display: flex;
   flex-direction: column;
   max-height: 100vh;
-  overflow-y: auto; /* The entire right pane scrolls if content is too long */
+  overflow-y: auto;
   box-sizing: border-box;
 }
 
@@ -335,7 +317,7 @@ h1 {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
-  flex-shrink: 0; /* Prevent nav from shrinking */
+  flex-shrink: 0;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
@@ -367,25 +349,18 @@ h1 {
 
 
 .list-view-container {
-  /* This container wraps each list view (docs or related problems) */
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Allows the list content to take available space */
+  flex-grow: 1;
 }
 
 
-/* .retrieved-documents-pane, .related-problems-pane are no longer needed
-   as separate structural elements that split the view. */
-
-/* .pane-divider is no longer needed */
-
-/* Ensure list containers take up available space */
 .document-list-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Allow it to grow */
+  flex-grow: 1;
 }
-.document-list-container h2 { /* Style for titles within list views */
+.document-list-container h2 {
   margin-top: 0;
   color: #333;
   border-bottom: 2px solid #007bff;
@@ -395,33 +370,25 @@ h1 {
 }
 .document-list-container .document-title-list {
   flex-grow: 1;
-  overflow-y: auto; /* If list itself becomes too long for its container */
+  overflow-y: auto;
 }
 
-/* Selected item view takes full space and handles its own internal scroll if necessary */
 .selected-item-view {
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Take all available space in the right pane */
-  /* If content within selected-item-view (like very long markdown) needs to scroll,
-     and the parent .documents-section already scrolls, you might not need overflow-y here.
-     Test carefully. If you want the markdown content itself to scroll independently
-     of the return button, you'd apply overflow-y to .document-content.
-  */
+  flex-grow: 1;
 }
 
 .selected-item-view .return-button {
-  flex-shrink: 0; /* Prevent button from shrinking */
+  flex-shrink: 0;
 }
 .selected-item-view .selected-item-filename {
-  flex-shrink: 0; /* Prevent filename from shrinking */
+  flex-shrink: 0;
 }
 
 .selected-item-view .document-content {
-  flex-grow: 1; /* Markdown content takes remaining space */
-  overflow-y: auto; /* Allow just the markdown content to scroll */
-  /* padding: 15px; /* Moved from old .document-content */
-  /* border: 1px solid #eee; */ /* Adjust styling as needed */
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 .file-input-container {
@@ -433,7 +400,7 @@ h1 {
 }
 
 .file-upload-label {
-  display: inline-block; /* Or block, depending on desired layout */
+  display: inline-block;
   padding: 8px 15px;
   background-color: #f0f0f0;
   color: #333;
@@ -458,7 +425,7 @@ h1 {
 
 .image-preview {
   max-width: 100%;
-  max-height: 150px; /* Adjust as needed */
+  max-height: 150px;
   border: 1px solid #eee;
   border-radius: 4px;
   object-fit: contain;
@@ -479,62 +446,58 @@ h1 {
 
 .input-mode-selector {
   display: flex;
-  gap: 0; /* Remove gap, use borders for separation if needed */
-  margin-bottom: 20px; /* Increased margin */
-  border-radius: 6px; /* Rounded corners for the group */
-  overflow: hidden; /* To make border-radius clip children */
-  border: 1px solid #d1d5db; /* Light grey border for the group - Tailwind's gray-300 */
-  width: fit-content; /* Make the container only as wide as its buttons */
+  gap: 0;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+  width: fit-content;
 }
 
 .input-mode-selector button {
-  padding: 10px 18px; /* Slightly more padding */
-  border: none; /* Remove individual borders */
-  /* Add a right border to all but the last child for separation */
+  padding: 10px 18px;
+  border: none;
+  
   border-right: 1px solid #d1d5db;
-  background-color: #f9fafb; /* Very light grey, almost white - Tailwind's gray-50 */
-  color: #374151; /* Darker grey text - Tailwind's gray-700 */
+  background-color: #f9fafb;
+  color: #374151;
   cursor: pointer;
   font-size: 0.9rem;
-  font-weight: 500; /* Medium font weight */
+  font-weight: 500;
   transition: background-color 0.2s, color 0.2s;
 }
 
 .input-mode-selector button:last-child {
-  border-right: none; /* No right border for the last button */
+  border-right: none;
 }
 
 .input-mode-selector button:hover:not(:disabled):not(.active) {
-  background-color: #f3f4f6; /* Slightly darker on hover - Tailwind's gray-100 */
+  background-color: #f3f4f6;
 }
 
 .input-mode-selector button.active {
-  background-color: #3b82f6; /* A nice blue - Tailwind's blue-500 */
+  background-color: #3b82f6;
   color: white;
-  font-weight: 600; /* Slightly bolder for active */
+  font-weight: 600;
 }
 
 .input-mode-selector button:disabled {
-  background-color: #f3f4f6; /* Keep it light but distinct */
-  color: #9ca3af; /* Lighter text for disabled - Tailwind's gray-400 */
+  background-color: #f3f4f6;
+  color: #9ca3af;
   cursor: not-allowed;
-  /* opacity: 0.7; Remove opacity, use color changes */
 }
 
 
-.file-input-area { /* Container for image input elements when mode is 'image' */
+.file-input-area {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center; /* Center content like preview and buttons */
+  align-items: center;
 }
-
-/* .file-input-container, .file-upload-label, .image-preview-container,
-   .image-preview, .clear-image-button styles can remain as before */
 
 .ocr-button {
   padding: 10px 15px;
-  background-color: #28a745; /* Green for go */
+  background-color: #28a745;
   color: white;
   border: none;
   border-radius: 4px;
@@ -551,6 +514,6 @@ h1 {
 }
 
 .ocr-error-message {
-  width: 100%; /* Take full width within its container */
+  width: 100%;
   text-align: center;
 }
